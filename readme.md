@@ -1,13 +1,11 @@
 ---
-title: Getting started with the Documentation Theme for Jekyll
+title: ALM VM Updated to TFS 2017 and VSTS
 keywords: sample homepage
 tags: [getting_started]
 sidebar: mydoc_sidebar
 permalink: index.html
 summary: 
 ---
-
-# ALM-VM 2017
 
 We are pleased to announce that we have updated our **ALM-VM** to support **[Team Foundation Server 2017](https://www.visualstudio.com/en-us/news/releasenotes/tfs2017-relnotes)** and **[Visual Studio Team Services](https://www.visualstudio.com/team-services/)**. The VM and the accompanying hands-on-labs are now updated to support **[Visual Studio 2017](https://www.visualstudio.com/downloads/)**. We have hands-on-labs including **[Azure labs](https://github.com/Microsoft/DevOps-Immersion/tree/master/labs/09.azure%20labs)**, supplementing the 2017 VM that will help you get started with the ALM capabilities.
 
