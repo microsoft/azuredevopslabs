@@ -32,7 +32,7 @@ We would like to keep this repository dynamic; updated with latest assets - We w
 
 | Hands on Labs | Reference Videos |
 |-----------|----------|
-| [Live Dependency Validation](Labs/Architecture Validation)| [Demo Video](https://channel9.msdn.com/Events/Connect/2016/170) |
+| [Live Dependency Validation](_site/mydoc_about.html)| [Demo Video](https://channel9.msdn.com/Events/Connect/2016/170) |
 | [Coded UI Testing](Labs/Coded UI Testing) | [Demo Video](https://www.youtube.com/watch?v=TKgsMDiPWOs) |
 | [Load Testing](Labs/Load Testing) | [Demo Video](https://channel9.msdn.com/Series/Test-Tools-in-Visual-Studio/Cloud-Loading-Testing-in-Visual-Studio-Team-Services)
 | [IntelliTest]() | [Demo Video](https://channel9.msdn.com/Shows/Visual-Studio-Toolbox/Intellitest)
