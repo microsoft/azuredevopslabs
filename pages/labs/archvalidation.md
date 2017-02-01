@@ -1,7 +1,7 @@
 ---
-title: Live Dependency Validation in Visual Studio 2017 
+title: Live Dependency Validation in Visual Studio 2017
 sidebar: mydoc_sidebar
-permalink: readme.html
+permalink: labs.html
 folder: labs
 ---
 
