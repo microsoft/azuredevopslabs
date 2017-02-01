@@ -1,7 +1,7 @@
 ---
-title: ALM VM Updated to TFS 2017 and VSTS
-keywords: sample homepage
-tags: [getting_started]
+title: Microsft ALM VM 2017
+keywords: ALM VM homepage
+tags: [overview]
 sidebar: mydoc_sidebar
 permalink: index.html
 summary: 
