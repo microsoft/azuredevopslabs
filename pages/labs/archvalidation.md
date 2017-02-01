@@ -6,7 +6,7 @@ folder: labs
 ---
 
 
-#Live Dependency Validation in Visual Studio 2017
+Live Dependency Validation in Visual Studio 2017
 
 <p align="center">
 <img src="images/1.png">
