@@ -27,7 +27,7 @@ In this example, "tooltips"" is the name of the collection.
 
 You can interact with collections by using the `site.collectionname` namespace, where `collectionname` is what you've configured. In this case, if I wanted to loop through all tooltips, I would use `site.tooltips` instead of `site.pages` or `site.posts`.
 
-See [Collections in the Jekyll documentation](http://jekyllrb.com/docs/collections/) for more information.
+See [Collections in the ALM VMumentation](http://jekyllrb.com/docs/collections/) for more information.
 
 ## How to use collections
 
