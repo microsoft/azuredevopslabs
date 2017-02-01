@@ -6,8 +6,9 @@ sidebar: mydoc_sidebar
 permalink: index.html
 summary: 
 ---
+![](https://github.com/Microsoft/ALMVM-2017/blob/master/media/1.png?raw=true) ![](https://github.com/Microsoft/ALMVM-2017/blob/master/media/2.png?raw=true)
 
-We are pleased to announce that we have updated our **ALM-VM** to support **[Team Foundation Server 2017](https://www.visualstudio.com/en-us/news/releasenotes/tfs2017-relnotes)** and **[Visual Studio Team Services](https://www.visualstudio.com/team-services/)**. The VM and the accompanying hands-on-labs are now updated to support **[Visual Studio 2017](https://www.visualstudio.com/downloads/)**. We have hands-on-labs including **[Azure labs](https://github.com/Microsoft/DevOps-Immersion/tree/master/labs/09.azure%20labs)**, supplementing the 2017 VM that will help you get started with the ALM capabilities.
+We are pleased to announce that we have updated our **ALM-VM** to support **[Team Foundation Server 2017](https://www.visualstudio.com/en-us/news/releasenotes/tfs2017-relnotes)** and **[Visual Studio Team Services](https://www.visualstudio.com/team-services/)**. The VM and the accompanying hands-on-labs are now updated to support **[Visual Studio 2017](https://www.visualstudio.com/downloads/)**. We have also refreshed the hands-on-labs and included some new exciting topics!
 
 ## Overview
 
@@ -17,7 +18,7 @@ This VM makes it easier for us to showcase newly introduced features of VS 2017 
 
 We would like to keep this repository dynamic; updated with latest assets - We welcome your feedback and suggestions. Explore Hands on labs by installing this VM today! 
 
-![](https://github.com/Microsoft/ALMVM-2017/blob/master/media/1.png?raw=true) ![](https://github.com/Microsoft/ALMVM-2017/blob/master/media/2.png?raw=true)
+
 
 ## Pre-requisites
 

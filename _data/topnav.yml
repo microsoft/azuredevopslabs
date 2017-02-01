@@ -10,7 +10,7 @@ topnav:
 topnav_dropdowns:
 - title: Topnav dropdowns
   folders:
-    - title: Jekyll Resources
+    - title: External Resources
       folderitems:
         - title: Github Repo
           external_url: https://github.com/Microsoft/ALMVM
@@ -19,7 +19,7 @@ topnav_dropdowns:
         - title: MSDN Documentation
           external_url: http://jekyllrb.com/docs/home/
 
-    - title: Products
+    - title: Virtual Machines
       folderitems:
         - title: ALM VM
           url: /p1_landing_page.html
