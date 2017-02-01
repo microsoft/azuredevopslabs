@@ -84,7 +84,7 @@ You install Bundler by using the gem command with RubyGems:
 
 Although you can use the default command prompt with Windows, it's recommended that you use [Git Bash](https://git-for-windows.github.io/) instead. The Git Bash client will allow you to run shell scripts and execute other Unix commands. 
 
-## Serve the Jekyll Documentation theme
+## Serve the ALM VM Feedback
 
 1. Browse to the directory where you downloaded the Documentation theme for Jekyll.
 2. Type `jekyll serve`

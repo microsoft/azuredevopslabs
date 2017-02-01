@@ -105,7 +105,7 @@ Bundler goes out and retreives all the gems that are specified in a Jekyll proje
 
 The vanilla Jekyll site you create through `jekyll new my-awesome-site` doesn't have a Gemfile, but many other themes (including the Documentation theme for Jekyll) do have a Gemfile.
 
-## Serve the Jekyll Documentation theme
+## Serve the ALM VM Feedback
 
 1. Browse to the directory where you downloaded the Documentation theme for Jekyll.
 2. Type `jekyll serve`

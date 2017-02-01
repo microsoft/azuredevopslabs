@@ -1,4 +1,4 @@
-repository: Microsoft/ALMVM-2017
+repository: Microsoft/ALMVM
 
 output: web
 # this property is useful for conditional filtering of content that is separate from the PDF.
@@ -12,7 +12,7 @@ site_title: Microsoft Visual Studio ALM Virtual machines
 company_name: Microsoft
 # this appears in the footer
 
-github_editme_path: Microsoft/ALMVM-2017
+github_editme_path: Microsoft/ALMVM
 
 # if you're using Github, provide the basepath to the branch you've created for reviews, following the sample here. if not, leave this value blank.
 
@@ -30,7 +30,7 @@ exclude:
   - .gitignore
 # these are the files and directories that jekyll will exclude from the build
 
-feedback_subject_line: Jekyll documentation theme
+feedback_subject_line: ALM VM Feedback
 
 feedback_email: devopsdemos@microsoft.com
 # used as a contact email for the Feedback link in the top navigation bar
@@ -104,4 +104,6 @@ description: "Intended as a documentation theme based on Jekyll for technical wr
 # the description is used in the feed.xml file
 
 # needed for sitemap.xml file only
-url: http://idratherbewriting.com
+url: https://microsoft.github.io
+
+baseurl: 
