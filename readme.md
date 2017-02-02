@@ -1,4 +1,5 @@
 ---
+layout: homepage
 title: Microsft ALM VM 2017
 keywords: ALM VM homepage
 tags: [overview]
@@ -6,7 +7,7 @@ sidebar: mydoc_sidebar
 permalink: index.html
 summary: 
 ---
-![](https://github.com/Microsoft/ALMVM-2017/raw/master/media/1.png?raw=true) ![](https://github.com/Microsoft/ALMVM-2017/blob/master/media/2.png?raw=true)
+![](http://vsalmvm.azurewebsites.net/wp-content/uploads/2015/09/ALM-VM-banner-0915.png)
 
 We are pleased to announce that we have updated our **ALM-VM** to support **[Team Foundation Server 2017](https://www.visualstudio.com/en-us/news/releasenotes/tfs2017-relnotes)** and **[Visual Studio Team Services](https://www.visualstudio.com/team-services/)**. The VM and the accompanying hands-on-labs are now updated to support **[Visual Studio 2017](https://www.visualstudio.com/downloads/)**. We have also refreshed the hands-on-labs and included some new exciting topics!
 
