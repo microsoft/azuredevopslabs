@@ -1,5 +1,6 @@
 body {
     font-size:15px;
+    font-family: FontAwesome;
 }
 
 .bs-callout {
@@ -941,9 +942,9 @@ span.soft {
 }
 
 /* this part adds an icon after external links, using FontAwesome*/
-a[href^="http://"]:after, a[href^="https://"]:after {
+/*a[href^="http://"]:after, a[href^="https://"]:after*/ {
     content: "\f08e";
-    /*font-family: FontAwesome;*/
+    font-family: FontAwesome;
     font-weight: normal;
     font-style: normal;
     display: inline-block;

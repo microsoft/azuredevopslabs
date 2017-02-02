@@ -6,7 +6,7 @@ sidebar: mydoc_sidebar
 permalink: index.html
 summary: 
 ---
-![](https://github.com/Microsoft/ALMVM-2017/blob/master/media/1.png?raw=true) ![](https://github.com/Microsoft/ALMVM-2017/blob/master/media/2.png?raw=true)
+![](https://github.com/Microsoft/ALMVM-2017/raw/master/media/1.png?raw=true) ![](https://github.com/Microsoft/ALMVM-2017/blob/master/media/2.png?raw=true)
 
 We are pleased to announce that we have updated our **ALM-VM** to support **[Team Foundation Server 2017](https://www.visualstudio.com/en-us/news/releasenotes/tfs2017-relnotes)** and **[Visual Studio Team Services](https://www.visualstudio.com/team-services/)**. The VM and the accompanying hands-on-labs are now updated to support **[Visual Studio 2017](https://www.visualstudio.com/downloads/)**. We have also refreshed the hands-on-labs and included some new exciting topics!
 
@@ -28,14 +28,14 @@ We would like to keep this repository dynamic; updated with latest assets - We w
 
 ---------------------------------------------------------------------------------------------------------------------------------------------
 
-##  Hands On Labs.
+##  Hands On Labs
 
 | Hands on Labs | Reference Videos |
 |-----------|----------|
 | [Live Dependency Validation](labs.html)| [Demo Video](https://channel9.msdn.com/Events/Connect/2016/170) |
 |[Agile Planning](agileplan.html)|[Demo Video]()|   
 |[Live Dependency Validation](Labs/Architecture Validation)| [Demo Video](https://channel9.msdn.com/Events/Connect/2016/170) |
-| [Coded UI Testing](Labs/Coded UI Testing) | [Demo Video](https://www.youtube.com/watch?v=TKgsMDiPWOs) |
+| [Coded UI Testing](codedui.html) | [Demo Video](https://www.youtube.com/watch?v=TKgsMDiPWOs) |
 | [Load Testing](Labs/Load Testing) | [Demo Video](https://channel9.msdn.com/Series/Test-Tools-in-Visual-Studio/Cloud-Loading-Testing-in-Visual-Studio-Team-Services)
 | [IntelliTest]() | [Demo Video](https://channel9.msdn.com/Shows/Visual-Studio-Toolbox/Intellitest)
 | [IntelliTrace]() | [Demo Video](https://www.youtube.com/watch?v=r2lIpuTowPg&t=2s) |
@@ -52,7 +52,7 @@ This Virtual Machine is configured with:
 - Sample users and data required to support hands-on-lab scripts
 
 
-## Using the virtual machine-
+## Using the VM-
 
 There are quite a number of important instructions on how to use the VM including activating the VM, taking snapshots/check points, etc, documented. Please also see the note below at the end of the post.
 
