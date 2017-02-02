@@ -6,7 +6,7 @@ output: web
 topnav_title: Microsoft Visual Studio ALM Virtual machines
 # this appears on the top navigation bar next to the home button
 
-site_title: Microsoft Visual Studio ALM Virtual machines
+site_title: Microsoft Visual Studio ALM Virtual machine
 # this appears in the html browser tab for the site title (seen mostly by search engines, not users)
 
 company_name: Microsoft

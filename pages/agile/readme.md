@@ -1,6 +1,6 @@
 ---
 title: Agile Planning
-layout: default
+layout: page
 sidebar: mydoc_sidebar
 permalink: /agile/
 folder: _site
