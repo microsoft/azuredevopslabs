@@ -105,4 +105,4 @@ description: "Intended as a documentation theme based on Jekyll for technical wr
 
 # needed for sitemap.xml file only
 url: https://microsoft.github.io
-baseurl: /ALMVM
+baseurl: /ALMVM/
