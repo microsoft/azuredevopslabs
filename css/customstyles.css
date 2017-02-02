@@ -245,6 +245,7 @@ ul#results-container a:hover {
     box-sizing: border-box;
     float: right;
     margin-top:10px;
+    border-radius: 25px;
 }
 /* end search */
 
