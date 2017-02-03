@@ -1,7 +1,5 @@
-Hands-On Lab
-
 <a name="Title"></a>
-## Agile Planning and Portfolio Management with Team Foundation Server 2017 ##
+# Agile Planning and Portfolio Management with Team Foundation Server 2017 #
 
 Lab version:15.0.26020.0
 
@@ -270,11 +268,12 @@ In this exercise, you will learn how to use Team Foundation Server 2017 to manag
 
     ![](images/042.png)
 
-    Exercise 2: Agile Portfolio Management
+<a name="Exercise2"></a>
+## Exercise 2: Agile Portfolio Management ##
 
-    In this exercise, you will learn about some of the agile portfolio management capabilities provided by Team Foundation Server. These capabilities allow larger organizations to understand the scope of work across several teams and see how that work rolls up into broader initiatives. In this exercise, you will explore how multiple teams at Fabrikam Fiber can collaborate together to work on features.
+In this exercise, you will learn about some of the agile portfolio management capabilities provided by Team Foundation Server. These capabilities allow larger organizations to understand the scope of work across several teams and see how that work rolls up into broader initiatives. In this exercise, you will explore how multiple teams at Fabrikam Fiber can collaborate together to work on features.
 
-<a name="Ex1Task1_1"></a>
+<a name="Ex2Task1"></a>
 ### Task 1: Configuring Team Hierarchy and Area Paths ###
 
 1. Let’s start out by taking a look at the Fabrikam Fiber project from the top-down, in a manner that would typically be associated with a management role.
@@ -311,7 +310,7 @@ In this exercise, you will learn how to use Team Foundation Server 2017 to manag
 
     ![](images/050.png)
 
-<a name="Ex1Task2_1"></a>
+<a name="Ex2Task2"></a>
 ### Task 2: Portfolio Management ###
 
 1. The leadership team can see backlog items across all teams, including status and scheduled iteration.
@@ -649,11 +648,12 @@ In this exercise, you will learn more about Kanban and how it contributes to the
 
     **Note:** Additional filtering can be done by selecting another tag (if there are any in this filtered subset). To remove the filter, simply click the Filter button once again.
 
-    Exercise 4: Work Item Charting
+<a name="Exercise4"></a>
+## Exercise 4: Work Item Charting ##
 
-    In this exercise, we will demonstrate the work item charting capability of Team Foundation Server. Work item charting allows you to create visual chart representations of the data returned from TFS work item queries. This can be used to help better understand the state of projects.
+In this exercise, we will demonstrate the work item charting capability of Team Foundation Server. Work item charting allows you to create visual chart representations of the data returned from TFS work item queries. This can be used to help better understand the state of projects.
 
-<a name="Ex3Task1_1"></a>
+<a name="Ex4Task1"></a>
 ### Task 1: Creating and Sharing Work Item Charts ###
 
 1. Let’s say that the Fabrikam Fiber management team would like to better understand how tasks are broken down by user. Navigate to the work item queries section of the web portal. Select **Work | Queries**.
@@ -735,7 +735,7 @@ In this exercise, you will learn more about Kanban and how it contributes to the
 <a name="![](images/142.png)"></a>
 ### ![](images/142.png) ###
 
-<a name="Ex3Task2_1"></a>
+<a name="Ex4Task2"></a>
 ### Task 2: Customizing Dashboard ###
 
 1. You can also customize a dashboard by clicking the **Edit** button in the bottom right corner. This will switch the dashboard into **edit mode**. You need to be in edit mode in order to rearrange the dashboard or make configuration changes, which removes the risk of accidental edits during normal usage.
