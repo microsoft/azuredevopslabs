@@ -67,6 +67,10 @@ entries:
     - title: Live Unit Testing
       url: /mydoc_install_jekyll_on_windows.html
       output: web, pdf
+    
+    - title: Getting Started with Git
+      url: /git
+      output: web, pdf
 
   - title: Build
     output: web, pdf

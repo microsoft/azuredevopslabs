@@ -1,9 +1,9 @@
 ---
-title: Getting Started with Git using Team Foundation Server 2017
+title: Getting Started with Git with Visual Studio Team Services
 layout: page
 sidebar: mydoc_sidebar
-permalink: /labs/git/
-folder: /labs/git/
+permalink: /labs/vsts/git/
+folder: /labs/vsts/git/
 ---
 
 
@@ -12,83 +12,42 @@ folder: /labs/git/
 
 
 
-<span id="_Toc428376556" class="anchor"><span id="_Toc430533659" class="anchor"><span id="_Toc472630954" class="anchor"></span></span></span>**Overview**
----------------------------------------------------------------------------------------------------------------------------------------------------------
+## Overview
 
-In this lab, you’ll learn about Git support in Team Foundation Server 2017 and Visual Studio 2017. Git is a distributed version 
+In this lab, you’ll learn about Git support in Visual Studio Team Services and Visual Studio 2017. Git is a distributed version 
 control system. Git repositories can live locally (such as on a developer’s machine) and can now be hosted by Team Foundation Server.
 You will learn how to establish a local Git repository, which can easily be synchronized with a centralized Git repository in Team 
 Foundation Server. In addition, you will learn about Git branching and merging support.
 
-### **Pre-requisites**
-
-*  In order to complete this lab you will need the Visual Studio 2017
-    virtual machine provided by Microsoft. For more information on
-    acquiring and using this virtual machine, please see [this blog
-    post](http://aka.ms/ALMVM).
-
-### About the Fabrikam Fiber Scenario
-
-This set of hands-on-labs uses a fictional company, Fabrikam Fiber,
-    as a backdrop to the scenarios you are learning about. Fabrikam
-    Fiber provides cable television and related services to the
-    United States. They are growing rapidly and have embraced Windows
-    Azure to scale their customer-facing web site directly to end-users
-    to allow them to self-service tickets and track technicians. They
-    also use an on-premises ASP.NET MVC application for their customer
-    service representatives to administer customer orders.
-
-In this set of hands-on labs, you will take part in a number of
-    scenarios that involve the development and testing team at
-    Fabrikam Fiber. The team, which consists of 8-10 people, has decided
-    to use Visual Studio application lifecycle management tools to
-    manage their source code, run their builds, test their web sites,
-    and plan and track the project.
+Please refer to this [page](/labs/) for an overview of the scenario and pre-requisite for the hands-on-labs.
 
 
-### Exercises
+**Exercises**
 
 This hands-on lab includes the following exercises:
 
-   * Getting Started with Git
-
-   * Git Branching and Merging
-
+   * Getting Started with Git   
+   * Git Branching and Merging    
 Estimated time to complete this lab: **60 minutes**.
 
-
+-----------------------------------------------------------------------------
 
 ## Exercise 1: Getting Started with Git
-  
 
+There are a few reasons why Fabrikam Fiber might want to use Git as their source control option within Team Foundation Server. One reason could be that they are collaborating with developers using a
+tool such as Xcode, which supports the Git protocol natively. Another reason could be that they have developers working offline (such as during a commute) who want to commit code locally when they
+are offline and check this code into Team Foundation Server when they get into the office. Microsoft now offers teams the ability to utilize Git without sacrificing the integrated application lifecycle
+management capabilities offered by Team Foundation Server. Visual Studio 2017 also provides developers with a great experience for working with any Git repository – whether it’s hosted by Team
+Foundation Server, a local repository, or another Git provider.  
+  
 In this exercise, you will learn how to create, clone, and push commits to a Git repository with Team Foundation Server.    
 
 ### Task 1: Create a Git Repository
 
-1.  Log in as **Sachin Raj** (VSALM\\Sachin). All user passwords are
-    **P2ssw0rd**.
-
-2.  Launch **Visual Studio 2017** from the taskbar and open **Team
-    Explorer**. You should now be connected to the FabrikamFiber
-    team project. If you are not automatically connected to the
-    FabrikamFiber project, click the **Connect to Team Projects** button
-    (<img src="media/image2.png" width="18" height="22" />) to do so.
-
-3.  There are a few reasons why Fabrikam Fiber might want to use Git as
-    their source control option within Team Foundation Server. One
-    reason could be that they are collaborating with developers using a
-    tool such as Xcode, which supports the Git protocol natively.
-    Another reason could be that they have developers working offline
-    (such as during a commute) who want to commit code locally when they
-    are offline and check this code into Team Foundation Server when
-    they get into the office. Microsoft now offers teams the ability to
-    utilize Git without sacrificing the integrated application lifecycle
-    management capabilities offered by Team Foundation Server. Visual
-    Studio 2017 also provides developers with a great experience for
-    working with any Git repository – whether it’s hosted by Team
-    Foundation Server, a local repository, or another Git provider.
-
-4.  Select **File | New | Team Project** from the main menu.
+1. Launch <b>Visual Studio 2017</b> from the taskbar and open <b>Team Explorer</b> and connect to your VSTS account    
+1. You should now be connected to the FabrikamFiber team project. If you are not automatically connected to the FabrikamFiber project, click the <b>Connect to Team Projects</b> button (<img src="media/image2.png" width="18" height="22" />) to do so.</li>
+ 
+4.  Select **File \| New \| Team Project** from the main menu.
 
 5.  Name the new project “**FabrikamCommunity**” and click **Next**.
 
