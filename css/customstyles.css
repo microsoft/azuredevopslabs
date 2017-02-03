@@ -2,9 +2,11 @@
 
 body {
     font-size:15px;
-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+font-family: "Segoe UI";
+
 margin: 0px;
 padding: 0px;
+line-height: 25px;
 }
 
 .bs-callout {
@@ -85,7 +87,8 @@ h5[id],
 h6[id],
 dt[id]{
 padding-top: 20px;
-margin-top: -20px
+margin-top: 25px;
+
 }
 
 body h1 {margin-top:40px;}
@@ -218,10 +221,10 @@ p.post-meta {font-size: 80%; color: #777;}
     font-size: 12px;
     background-color: white;
     position: absolute;
-    top: 40px; /* if you change anything about the nav, you'll prob. need to reset the top and left values here.*/
+    top: 20px; /* if you change anything about the nav, you'll prob. need to reset the top and left values here.*/
     left: 20px;
     z-index: -1;
-    width:123px;
+    width:250px;
     border-left: 1px solid #dedede;
     box-shadow: 2px 3px 2px #dedede;
 }
@@ -242,13 +245,13 @@ ul#results-container a:hover {
 #search-input {
     padding: .5em;
     margin-left:20px;
-    width:10em;
+    width:20em;
     font-size: 0.8em;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     float: right;
-    margin-top:10px;
+    margin-top:0px;
     border-radius: 25px;
 }
 /* end search */
