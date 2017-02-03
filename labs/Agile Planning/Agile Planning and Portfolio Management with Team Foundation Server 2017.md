@@ -50,14 +50,14 @@ This hands-on lab includes the following exercises:
 
 In this exercise, you will learn how to use Team Foundation Server 2017 to manage your product backlog, create work items, break work items into tasks, assign tasks to team members, and track progress using the task board. This overview will demonstrate the basic project management tools that small- to medium-sized development teams can utilize for product development.
 
-**Note:** The team project used in this lab uses a Scrum process template, but the core features demonstrated apply to all process templates.
+> **Note:** The team project used in this lab uses a Scrum process template, but the core features demonstrated apply to all process templates.
 
 <a name="Ex1Task1"></a>
 ### Task 1: Team Foundation Server Web Portal ###
 
 1. Log in as **Sachin Raj** (VSALM\Sachin). All user passwords are **P2ssw0rd**.
 
-    **Note:** In order to fully demonstrate the ALM features in this lab, we will first set the virtual machine to a specific date that lines up with a pre-configured, in-flight iteration. This lab needs to be walked through using the original virtual machine state (without any modifications made to source or work items), otherwise you will see errors.
+    > **Note:** In order to fully demonstrate the ALM features in this lab, we will first set the virtual machine to a specific date that lines up with a pre-configured, in-flight iteration. This lab needs to be walked through using the original virtual machine state (without any modifications made to source or work items), otherwise you will see errors.
 
 1. **Right-click** the **ConfigureALMDemo.bat** file on the Desktop and then select “**Run as administrator**”. This will set the date and time in the virtual machine to be a specific date that lines up with the demonstration data.
 
@@ -71,7 +71,7 @@ In this exercise, you will learn how to use Team Foundation Server 2017 to manag
 
 1. This view shows that the Fabrikam Fiber collection has one project in it named **FabrikamFiber**. This project contains a few different teams, with the **Fabrikam Fiber Leadership Team** being set as the default team for the project. We will take a closer look at teams in a later exercise.
 
-    **Note:** This lab refers to this default team as both the leadership team and the management team. They both refer to the same team.
+    > **Note:** This lab refers to this default team as both the leadership team and the management team. They both refer to the same team.
 
     ![](images/003.png)
 
@@ -83,7 +83,7 @@ In this exercise, you will learn how to use Team Foundation Server 2017 to manag
 
     ![](images/005.png)
 
-    **Note:** Team favorites can be added or removed from within the web portal. For example, navigate to the Build tab to assign build definitions as a team favorite. In addition, team favorite work item queries can be modified from within Visual Studio.
+    > **Note:** Team favorites can be added or removed from within the web portal. For example, navigate to the Build tab to assign build definitions as a team favorite. In addition, team favorite work item queries can be modified from within Visual Studio.
 
     Each team can have different team favorites listed, different work capacity, and even different work items. The determining factor of where a work item will show up is governed by the **Area** field.
 
@@ -100,7 +100,7 @@ In this exercise, you will learn how to use Team Foundation Server 2017 to manag
 
     ![](images/007.png)
 
-    **Note:** The Current iteration shown in the tree on the left side of this screen is Iteration 3. Team Foundation Server uses the current date and time to determine the current iteration. The virtual machine you are using has been set to use a date of July 9, 2013 for purposes of this lab.
+    > **Note:** The Current iteration shown in the tree on the left side of this screen is Iteration 3. Team Foundation Server uses the current date and time to determine the current iteration. The virtual machine you are using has been set to use a date of July 9, 2013 for purposes of this lab.
 
 1. Imagine that the VP of Fabrikam Fiber has requested that a new user story be implemented for the customer-facing service portal. This new user story will enable customers to see weather-related service outages. This user story is being designated as high-priority because many customers requested it and customer service indicated that it would greatly reduce phone support during outages.
 
@@ -108,7 +108,7 @@ In this exercise, you will learn how to use Team Foundation Server 2017 to manag
 
     ![](images/008.png)
 
-    **Note:** New work items are generally inserted above the selected location. The exception is that if you select the last work item, the insertion will be after the selected location.
+    > **Note:** New work items are generally inserted above the selected location. The exception is that if you select the last work item, the insertion will be after the selected location.
 
 1. Click **Add** to add the new user story to the backlog.
 
@@ -126,15 +126,15 @@ In this exercise, you will learn how to use Team Foundation Server 2017 to manag
 
     ![](images/012.png)
 
-    **Note:** Each team may choose to define the **Effort** value as they see fit, using a unit of story points, hours, days, or number of sodas required. The point here is that this measure is a relative value with respect to other work items. Work will be broken down into hours later.
+    > **Note:** Each team may choose to define the **Effort** value as they see fit, using a unit of story points, hours, days, or number of sodas required. The point here is that this measure is a relative value with respect to other work items. Work will be broken down into hours later.
 
-    **Note:** A popular planning approach that helps to eliminate group think and considers input from all team members is known as planning poker. You can read more about it at [http://en.wikipedia.org/wiki/Planning_poker](http://en.wikipedia.org/wiki/Planning_poker).
+    > **Note:** A popular planning approach that helps to eliminate group think and considers input from all team members is known as planning poker. You can read more about it at [http://en.wikipedia.org/wiki/Planning_poker](http://en.wikipedia.org/wiki/Planning_poker).
 
 1. Assign the new user story to the current iteration, _**Iteration 3**_, by dragging and dropping it as shown below.
 
     ![](images/013.png)
 
-    **Note:** If you are a Scrum purist, you are probably cringing at the fact that we just added new work to a mid-flight iteration. While this is something you might never do in the real world, this is a shortcut taken for purposes of this lab in order to simplify the workflow and still show you all of the aspects of the project management interface. Well, that and the VP told you to.
+    > **Note:** If you are a Scrum purist, you are probably cringing at the fact that we just added new work to a mid-flight iteration. While this is something you might never do in the real world, this is a shortcut taken for purposes of this lab in order to simplify the workflow and still show you all of the aspects of the project management interface. Well, that and the VP told you to.
 
 1. Look at the **Iteration Path** for the new user story to make sure that it is assigned to _Iteration 3_ as expected. This user story will remain on the product backlog until the work has been completed.
 
@@ -232,7 +232,7 @@ In this exercise, you will learn how to use Team Foundation Server 2017 to manag
 
     ![](images/034.png)
 
-    **Note:** The task board is touch enabled as well. This will not work within this virtual machine, but you might want to put in your request now for that nice wall-mounted touch-screen monitor you have been desiring for your team.
+    > **Note:** The task board is touch enabled as well. This will not work within this virtual machine, but you might want to put in your request now for that nice wall-mounted touch-screen monitor you have been desiring for your team.
 
 1. **Single-click** the ‘**8**’ value shown on the “**Consume OData feed for weather alerts**” task and change the Remaining Work to **5** to simulate Brian working on the task during the day.
 
@@ -373,7 +373,7 @@ In this exercise, you will learn about some of the agile portfolio management ca
 
     ![](images/065.png)
 
-    **Note:** In the event that you create items within the backlog, you can also easily map them to parent Features by enabling the Mapping feature and then dragging and dropping.
+    > **Note:** In the event that you create items within the backlog, you can also easily map them to parent Features by enabling the Mapping feature and then dragging and dropping.
 
     ![](images/066.png)
 
@@ -435,7 +435,7 @@ In this exercise, you will learn more about Kanban and how it contributes to the
 
     ![](images/077.png)
 
-    **Note:** Work in Progress limits provide feedback when appropriate but they do not prevent a team from taking on additional work. You need to actively check the Kanban board in order to discover that you are exceeding set limits.
+    > **Note:** Work in Progress limits provide feedback when appropriate but they do not prevent a team from taking on additional work. You need to actively check the Kanban board in order to discover that you are exceeding set limits.
 
 1. You can also configure the Kanban boards to show (or hide) bugs as desired. Click the gear icon to return to the settings dialog.
 
@@ -463,7 +463,7 @@ In this exercise, you will learn more about Kanban and how it contributes to the
 
 1. **Clear** the search box.
 
-    **Note:** The New column has an additional search filter box that only applies to work items in the New state, which is useful when you want to search for something from your backlog without losing context of other work items.
+    > **Note:** The New column has an additional search filter box that only applies to work items in the New state, which is useful when you want to search for something from your backlog without losing context of other work items.
 
 1. Let’s say that the devices team has decided that they want to add in a column that represents work that has been tested on a physical device. This is the only team that would desire to keep track of such a state, and they can easily add this to their Kanban board.
 
@@ -491,7 +491,7 @@ In this exercise, you will learn more about Kanban and how it contributes to the
 
     ![](images/089.png)
 
-    **Note:** The CFD shown above does not necessarily represent an ideal scenario where a team is providing continuous output. More typically and ideally, you would see bands of color representing all states increase over time like the following diagram.
+    > **Note:** The CFD shown above does not necessarily represent an ideal scenario where a team is providing continuous output. More typically and ideally, you would see bands of color representing all states increase over time like the following diagram.
 
     **![](images/090.png)**
 
@@ -630,7 +630,7 @@ In this exercise, you will learn more about Kanban and how it contributes to the
 
 1. Repeat the process of tagging any work items that appear to be customer facing. You should end up with something like the following screenshot, but there is no need to match it exactly.
 
-    **Note:** You can create work item queries that include tags.
+    > **Note:** You can create work item queries that include tags.
 
     ![](images/120.png)
 
@@ -646,7 +646,7 @@ In this exercise, you will learn more about Kanban and how it contributes to the
 
     ![](images/123.png)
 
-    **Note:** Additional filtering can be done by selecting another tag (if there are any in this filtered subset). To remove the filter, simply click the Filter button once again.
+    > **Note:** Additional filtering can be done by selecting another tag (if there are any in this filtered subset). To remove the filter, simply click the Filter button once again.
 
 <a name="Exercise4"></a>
 ## Exercise 4: Work Item Charting ##
@@ -672,7 +672,7 @@ In this exercise, we will demonstrate the work item charting capability of Team 
 
     ![](images/127.png)
 
-    **Note:** Work item charts require the associated query to return a flat list of work items.
+    > **Note:** Work item charts require the associated query to return a flat list of work items.
 
 1. Name the query “**All Tasks”**, select the folder “**Shared Queries**”, and then click **OK**.
 
