@@ -1,23 +1,23 @@
 ## Topnav single links
 ## if you want to list an external url, use external_url instead of url. the theme will apply a different link base.
 topnav:
-- title: Topnav
-  items:
-    - title: News
+#- title: Topnav
+#  items:
+ ##   - title: News
       url: /news
 
 #Topnav dropdowns
-topnav_dropdowns:
-- title: Topnav dropdowns
-  folders:
-    - title: External Resources
-      folderitems:
-        - title: Github Repo
-          external_url: https://github.com/Microsoft/ALMVM
-        - title: VSTS Demo Generator
-          external_url: https://talk.jekyllrb.com
-        - title: MSDN Documentation
-          external_url: http://jekyllrb.com/docs/home/
+#topnav_dropdowns:
+#- title: Topnav dropdowns
+#  folders:
+    #- title: External Resources
+#      folderitems:
+#        - title: Github Repo
+#          external_url: https://github.com/Microsoft/ALMVM
+#        - title: VSTS Demo Generator
+#          external_url: https://talk.jekyllrb.com
+#        - title: MSDN Documentation
+#          external_url: http://jekyllrb.com/docs/home/
 
 
 #    - title: Virtual Machines
