@@ -48,8 +48,8 @@ entries:
       url: ..\/agile
       output: web, pdf
 
-    - title: Portfolio Management
-      url: /mydoc_release_notes_50.html
+    - title: Generating Storyboards
+      url: ..\/storyboarding
       output: web, pdf
 
   - title: Develop

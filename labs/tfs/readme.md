@@ -59,17 +59,17 @@ Lab Name
 </td>
 </thead>
 <tr><td>Working with the Visual Studio 2015 ALM Virtual Machine                                  </td></tr>
-<tr><td><a href="/labs/tfs/agile/">Agile Planning and Portfolio Management with Team Foundation Server 2017</a>  </td></tr>
+<tr><td><a href="labs/tfs/agile/">Agile Planning and Portfolio Management with Team Foundation Server 2017</a>  </td></tr>
 <tr><td>Authoring and Running Manual Tests using Microsoft Test Manager 2015                     </td></tr>
 <tr><td>Branching and Merging Visualization with Visual Studio Team Foundation Server 2015       </td></tr>
-<tr><td><a href="/labs/tfs/stroyboarding/">Building the Right Software – Generating Storyboards and Collecting Stakeholder Feedback</a> </td></tr>
+<tr><td><a href="labs/tfs/storyboarding/">Building the Right Software – Generating Storyboards and Collecting Stakeholder Feedback</a> </td></tr>
 <tr><td>Code Discovery using the Architecture Tools in Visual Studio Enterprise 2015             </td></tr>
 <tr><td>Collaboration Experiences for Development Teams using Team Foundation Server 2015        </td></tr>
 <tr><td>Debugging with IntelliTrace using Visual Studio Enterprise 2015                          </td></tr>
 <tr><td>Diagnosing Issues in Production with IntelliTrace and Visual Studio 2015                 </td></tr>
 <tr><td>Embracing Continuous Delivery with Release Management for Visual Studio 2015             </td></tr>
 <tr><td>Exploratory Testing using Microsoft Test Manager 2015                                    </td></tr>
-<tr><td>Getting Started with Git using Team Foundation Server 2015                               </td></tr>
+<tr><td><a href="labs/tfs/git/">Getting Started with Git using Team Foundation Server 2017</a>                              </td></tr>
 <tr><td>Introduction to Coded UI Tests with Visual Studio Enterprise 2015                        </td></tr>
 <tr><td>Introduction to IntelliTest with Visual Studio Enterprise 2015                           </td></tr>
 <tr><td>Introduction to Platform Testing with Microsoft Test Manager 2015                        </td></tr>
