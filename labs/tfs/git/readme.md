@@ -52,18 +52,18 @@ In this exercise, you will learn how to create, clone, and push commits to a Git
 
 5.  Name the new project “**FabrikamCommunity**” and click **Next**.
 
-    <img src="media/image3.png" width="423" height="344" />
+    <img src="media/image3.png" width="423" height="344" /> <br />
     
    
 6.  Select the **Scrum** process template and click **Next**
     to continue.
 
-    <img src="media/image4.png" width="418" height="343" />
+    <img src="media/image4.png" width="418" height="343" /><br />
 
 
 7.  Select the **Git** version control system and then click **Finish**.
 
-    <img src="media/image5.png" width="378" height="308" />
+    <img src="media/image5.png" width="378" height="308" /><br />
 
 
 8.  After the new Git team project has been created, click **Close** to
@@ -74,36 +74,36 @@ In this exercise, you will learn how to create, clone, and push commits to a Git
 
 1.  In **Team Explorer**, click **Clone this repository**.
 
-    <img src="media/image6.png" width="351" height="151" />
+    <img src="media/image6.png" width="351" height="151" /><br />
 
 
 2.  Accept the default endpoint and repository location and then click
     **Clone**.
 
-    <img src="media/image7.png" width="343" height="282" />
+    <img src="media/image7.png" width="343" height="282" /><br />
  
 
 ### Task 3: Commit Code and Link to Work Item
 
 1.  In **Team Explorer – Home**, click **Settings**.
 
-    <img src="media/image8.png" width="225" height="253" />
+    <img src="media/image8.png" width="225" height="253" /><br />
 
 
 2.  Click **Global Settings** under **Git**.
 
-    <img src="media/image9.png" width="251" height="299" />
+    <img src="media/image9.png" width="251" height="299" /><br />
 
 
 3.  Enter an email address for Sachin Raj (**Sachin@vsalm**) and then
     click **Update**.
 
-    <img src="media/image10.png" width="349" height="348" />
+    <img src="media/image10.png" width="349" height="348" /><br />
 
 
 4.  Click the **Home** button in **Team Explorer**.
 
-    <img src="media/image11.png" width="344" height="44" />
+    <img src="media/image11.png" width="344" height="44" /><br />
 
 5.  Create a new work item for the product backlog by selecting **Team |
     New Work Item | Product Backlog Item** from the main menu. This will
@@ -113,30 +113,30 @@ In this exercise, you will learn how to create, clone, and push commits to a Git
     **Save** button. Take note of the **ID** once the work item
     is saved.
 
-    <img src="media/image12.png" width="531" height="213" />
+    <img src="media/image12.png" width="531" height="213" /><br />
 
 
 7.  Return to Visual Studio. In **Team Explorer – Home**, click **New…**
     underneath the **Solutions** section.
 
-    <img src="media/image13.png" width="351" height="409" />
+    <img src="media/image13.png" width="351" height="409" /><br />
 
 
 8.  In the **New Project** window, select the **Visual C\# | Web |
     ASP.NET Web Application** template and click **OK**.
 
-    <img src="media/image14.png" width="624" height="351" />
+    <img src="media/image14.png" width="624" height="351" /><br />
 
 
 9.  Select the **MVC** template, **de-select** the option to “**Host in
     the cloud**”, and then click **OK**.
 
-    <img src="media/image15.png" width="624" height="406" />
+    <img src="media/image15.png" width="624" height="406" /><br />
 
 
 10. In **Team Explorer – Home**, click **Changes**.
 
-    <img src="media/image16.png" width="352" height="249" />
+    <img src="media/image16.png" width="352" height="249" /><br />
 
 
 11. Scroll down the list of included changes to the end and note that
@@ -145,7 +145,7 @@ In this exercise, you will learn how to create, clone, and push commits to a Git
     to control Git behavior whereas the **.gitignore** file specifies
     patterns and extensions to ignore when detecting changes.
 
-    <img src="media/image17.png" width="318" height="146" />
+    <img src="media/image17.png" width="318" height="146" /><br />
 
 
 12. Enter a commit message of “**initial MVC site for work item
@@ -154,25 +154,25 @@ In this exercise, you will learn how to create, clone, and push commits to a Git
     item ID will automatically link the commit to the work item when
     pushed to the server.
 
-    <img src="media/image18.png" width="351" height="116" />
+    <img src="media/image18.png" width="351" height="116" /><br />
 
 
 
 13. Commit the changes by clicking **Commit All**. Note that the commit
     is persisted locally and is not shared with the server.
 
-    <img src="media/image19.png" width="280" height="93" />
+    <img src="media/image19.png" width="280" height="93" /><br />
 
 
 14. Let’s make a small change to the web site. In **Solution Explorer**,
     open **\_Layout.cshtml** from the **Views\\Shared** folder.
 
-    <img src="media/image20.png" width="280" height="261" />
+    <img src="media/image20.png" width="280" height="261" /><br />
 
 15.  Modify the title as shown in the following screenshot (from “**My
      ASP.NET Application**” to “**Community**”).
 
-     <img src="media/image21.png" width="536" height="124" />
+     <img src="media/image21.png" width="536" height="124" /><br />
 
 
 16. In **Team Explorer – Changes**, enter a commit message and then
