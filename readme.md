@@ -19,6 +19,9 @@ This VM makes it easier for us to showcase newly introduced features of VS 2017 
 
 We would like to keep this repository dynamic; updated with latest assets - We welcome your feedback and suggestions. Explore Hands on labs by installing this VM today! 
 
+## Hands-On-Labs/Demo Scripts
 
+If you prefer to use Team Foundation Server - Click [Here](labs/tfs)
 
+If you prefer to use Visual Studio Team Services - Click [Here](labs/vsts)
 

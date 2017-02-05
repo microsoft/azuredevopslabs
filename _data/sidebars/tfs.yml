@@ -2,8 +2,8 @@
 
 entries:
 - title: sidebar
-  product: ALM VM Theme
-  version: 6.0
+  product: ALM VM
+  version: 2017
   folders:
 
   - title:
@@ -24,7 +24,7 @@ entries:
     folderitems:
 
     - title: Get started
-      url: /index.html
+      url: ..\/index.html
       output: web, pdf
       type: homepage
 
@@ -45,7 +45,7 @@ entries:
     folderitems:
 
     - title: Agile Planning
-      url: /mydoc_release_notes_60.html
+      url: ..\/agile
       output: web, pdf
 
     - title: Portfolio Management
@@ -61,7 +61,7 @@ entries:
       output: web, pdf
 
     - title: Branching and Merging
-      url: /mydoc_install_jekyll_on_mac.html
+      url: ..\/branchingandmerging/
       output: web, pdf
 
     - title: Live Unit Testing
@@ -69,7 +69,7 @@ entries:
       output: web, pdf
     
     - title: Getting Started with Git
-      url: /git
+      url: ..\/git
       output: web, pdf
 
   - title: Build

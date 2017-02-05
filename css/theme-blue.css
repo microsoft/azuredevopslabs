@@ -94,9 +94,9 @@ div.sidebarTitle {
 
 li.sidebarTitle {
     margin-top:40px;
-    font-weight:normal;
+    font-weight:bold;
     font-size:130%;
-    color: #ED1951;
+  /*  color: #ED1951; */
     margin-bottom:10px;
     margin-left: 5px;
 

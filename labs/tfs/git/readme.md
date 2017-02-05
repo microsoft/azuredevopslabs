@@ -1,7 +1,7 @@
 ---
 title: Getting Started with Git using Team Foundation Server 2017
 layout: page
-sidebar: mydoc_sidebar
+sidebar: tfs
 permalink: /labs/tfs/git/
 folder: /labs/tfs/git/
 ---

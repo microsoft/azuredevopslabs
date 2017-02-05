@@ -1,5 +1,14 @@
+---
+title: Agile Planning and Portfolio Management with Team Foundation Server 2017 
+layout: page
+sidebar: tfs
+permalink: /labs/tfs/branchingandmerging/
+folder: /labs/tfs/branchingandmerging/
+---
+
+
 Branching and Merging Visualizaton with Visual Studio Team Foundation Server 2017
-=================================================================================
+
 
 <img src="./media/image1.png"/>
 

@@ -1,7 +1,7 @@
 ---
 title: Getting Started with Git with Visual Studio Team Services
 layout: page
-sidebar: mydoc_sidebar
+sidebar: vsts
 permalink: /labs/vsts/git/
 folder: /labs/vsts/git/
 ---

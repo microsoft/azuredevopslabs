@@ -1,7 +1,7 @@
 ---
 title: ALM VM 2017 - Hands-on-Labs 
-layout: page
-sidebar: mydoc_sidebar
+layout: page    
+sidebar: tfs
 permalink: /labs/tfs/
 folder: /labs/tfs/
 ---
@@ -30,9 +30,10 @@ The size of the download is about 30 GB. It is recommended that you use a utilit
 - As the name implies, it’s completely free.
 
 **Steps to download and extract the VM**    
+
 - Download and install Free download manager if you currently do not have one installed – We strongly recommend to download FDM V3 as the latest version does not support batch downloads at this point of time
 fdmv3    
-- Download the ALMVM 2015 Update 2 URL.txt to your machine    
+- Download the ALMVM 2017 Update 2 URL.txt to your machine    
 - Select File-Import-Import list of downloads      
 - Specify a group or accept the default group to begin downloading       
 - When the download is complete, double-click the .exe file to self-extract the RAR files to a folder       
@@ -50,3 +51,37 @@ This set of hands-on-labs uses a fictional company, Fabrikam Fiber, as a backdro
 
 In this set of hands-on labs, you will take part in a number of scenarios that involve the development and testing team at Fabrikam Fiber. The team, which consists of 8-10 people, has decided to use Visual Studio application lifecycle management tools to manage their source code, run their builds, test their web sites, and plan and track the project.
 
+## Hands-On-Labs
+
+<table width="100%">
+<thead><td>
+Lab Name
+</td>
+</thead>
+<tr><td>Working with the Visual Studio 2015 ALM Virtual Machine                                  </td></tr>
+<tr><td><a href="/labs/tfs/agile/">Agile Planning and Portfolio Management with Team Foundation Server 2017</a>  </td></tr>
+<tr><td>Authoring and Running Manual Tests using Microsoft Test Manager 2015                     </td></tr>
+<tr><td>Branching and Merging Visualization with Visual Studio Team Foundation Server 2015       </td></tr>
+<tr><td>Building the Right Software – Generating Storyboards and Collecting Stakeholder Feedback </td></tr>
+<tr><td>Code Discovery using the Architecture Tools in Visual Studio Enterprise 2015             </td></tr>
+<tr><td>Collaboration Experiences for Development Teams using Team Foundation Server 2015        </td></tr>
+<tr><td>Debugging with IntelliTrace using Visual Studio Enterprise 2015                          </td></tr>
+<tr><td>Diagnosing Issues in Production with IntelliTrace and Visual Studio 2015                 </td></tr>
+<tr><td>Embracing Continuous Delivery with Release Management for Visual Studio 2015             </td></tr>
+<tr><td>Exploratory Testing using Microsoft Test Manager 2015                                    </td></tr>
+<tr><td>Getting Started with Git using Team Foundation Server 2015                               </td></tr>
+<tr><td>Introduction to Coded UI Tests with Visual Studio Enterprise 2015                        </td></tr>
+<tr><td>Introduction to IntelliTest with Visual Studio Enterprise 2015                           </td></tr>
+<tr><td>Introduction to Platform Testing with Microsoft Test Manager 2015                        </td></tr>
+<tr><td>Introduction to PreEmptive Analytics                                                     </td></tr>
+<tr><td>Introduction to SmartOffice4TFS                                                          </td></tr>
+<tr><td>Introduction to Team Foundation Build 2015                                               </td></tr>
+<tr><td>Introduction to Test Case Management with Microsoft Test Manager 2015                    </td></tr>
+<tr><td>Introduction to Test Planning with Microsoft Test Manager 2015                           </td></tr>
+<tr><td>Introduction to Web Performance and Load Testing with Visual Studio Enterprise 2015      </td></tr>
+<tr><td>Making Developers More Productive with Visual Studio Team Foundation Server 2015         </td></tr>
+<tr><td>Managing Technical Debt with Team Foundation Server 2015 and SonarQube                   </td></tr>
+<tr><td>Testing and Debugging SharePoint Applications with Visual Studio 2015                    </td></tr>
+<tr><td>Unit Testing, Code Coverage and Code Clone Analysis with Visual Studio 2015              </td></tr>
+<tr><td>Using Code Analysis with Visual Studio 2015 to Improve Code Quality                      </td></tr>
+</table>
