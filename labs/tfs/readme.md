@@ -62,7 +62,7 @@ Lab Name
 <tr><td><a href="/labs/tfs/agile/">Agile Planning and Portfolio Management with Team Foundation Server 2017</a>  </td></tr>
 <tr><td>Authoring and Running Manual Tests using Microsoft Test Manager 2015                     </td></tr>
 <tr><td>Branching and Merging Visualization with Visual Studio Team Foundation Server 2015       </td></tr>
-<tr><td>Building the Right Software – Generating Storyboards and Collecting Stakeholder Feedback </td></tr>
+<tr><td><a href="/labs/tfs/stroyboarding/">Building the Right Software – Generating Storyboards and Collecting Stakeholder Feedback</a> </td></tr>
 <tr><td>Code Discovery using the Architecture Tools in Visual Studio Enterprise 2015             </td></tr>
 <tr><td>Collaboration Experiences for Development Teams using Team Foundation Server 2015        </td></tr>
 <tr><td>Debugging with IntelliTrace using Visual Studio Enterprise 2015                          </td></tr>
