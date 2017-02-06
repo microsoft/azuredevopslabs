@@ -270,7 +270,7 @@ In this exercise, you will learn about the unit testing story in
 
     <img src="./media/image33.png" width="351" height="133" />
 
-### Exercie 2: Code Coverage
+### Exercise 2: Code Coverage
 
 In this exercise, you will learn about code coverage features that
 make it easier to use and integrate into the development cycle.
