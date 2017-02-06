@@ -61,7 +61,7 @@ entries:
       output: web, pdf
 
     - title: Branching and Merging
-      url: ..\/branchingandmerging/
+      url: branchingandmerging
       output: web, pdf
 
     - title: Live Unit Testing
@@ -69,7 +69,7 @@ entries:
       output: web, pdf
     
     - title: Getting Started with Git
-      url: ..\/git
+      url: git
       output: web, pdf
 
   - title: Build
