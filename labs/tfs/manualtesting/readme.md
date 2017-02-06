@@ -374,22 +374,21 @@ In this exercise, you will learn how to create a manual test plan
     **Actions**, only one of which has an **Expected Result**. See the
     next paragraph for an alternate, faster way to add the actions.
 
-| Action                                                                                | Expected Result                                     |
-|---------------------------------------------------------------------------------------|-----------------------------------------------------|
-| Open http://www.partsunlimited.com                                                    |                                                     |
-| Click Brakes                                                                          |                                                     |
-| Click Disk and Pad Combo                                                              |                                                     |
-| Click Add to Cart                                                                     |                                                     |
-| Click Checkout                                                                        |                                                     |
-| Enter @Email, @Password                                                               |                                                     |
-| Enter @Name, @Phone, @Email, @Address, @City, @State, @PostalCode, @Country, @Promo   |                                                     |
-| Click Submit Order                                                                    |                                                     |
-| Confirm order page has order \#                                                       | Order \# should appear on order confirmation page   |
-| Log out                                                                               |                                                     |
-| Close browser                                                                         |                                                     |
+    | Action                                                                                | Expected Result                                     |
+    |---------------------------------------------------------------------------------------|-----------------------------------------------------|
+    | Open http://www.partsunlimited.com                                                    |                                                     |
+    | Click Brakes                                                                          |                                                     |
+    | Click Disk and Pad Combo                                                              |                                                     |
+    | Click Add to Cart                                                                     |                                                     |
+    | Click Checkout                                                                        |                                                     |
+    | Enter @Email, @Password                                                               |                                                     |
+    | Enter @Name, @Phone, @Email, @Address, @City, @State, @PostalCode, @Country, @Promo   |                                                     |
+    | Click Submit Order                                                                    |                                                     |
+    | Confirm order page has order \#                                                       | Order \# should appear on order confirmation page   |
+    | Log out                                                                               |                                                     |
+    | Close browser                                                                         |                                                     |
 
-
-**Note**: If you end up with an extra empty step, delete it.
+    >Note: If you end up with an extra empty step, delete it.
 
 
 9.  At this point, the **Steps** panel should look similar to the
@@ -410,17 +409,15 @@ In this exercise, you will learn how to create a manual test plan
 
 11. Use the following table to set up values for two iterations.
 
-| Email               | Password   | Name         | Phone          | Address              |
-|---------------------|------------|--------------|----------------|----------------------|
-| <admin@test.com>    | P@ssw0rd   | Admin User   | 425-555-1234   | One Microsoft Way    |
-| <sachin@test.com>   | P@ssw0rd   | Sachin Raj   | 555-555-5555   | Two Tailspin Trail   |
+    | Email               | Password   | Name         | Phone          | Address              |
+    |---------------------|------------|--------------|----------------|----------------------|
+    | <admin@test.com>    | P@ssw0rd   | Admin User   | 425-555-1234   | One Microsoft Way    |
+    | <sachin@test.com>   | P@ssw0rd   | Sachin Raj   | 555-555-5555   | Two Tailspin Trail   |
 
-
-
-| City          | State   | PostalCode   | Country   | Promo   |
-|---------------|---------|--------------|-----------|---------|
-| Redmond       | WA      | 98052        | USA       | FREE    |
-| Springfield   | IL      | 11135        | USA       | FREE    |
+    | City          | State   | PostalCode   | Country   | Promo   |
+    |---------------|---------|--------------|-----------|---------|
+    | Redmond       | WA      | 98052        | USA       | FREE    |
+    | Springfield   | IL      | 11135        | USA       | FREE    |
 
 
 12. The **Parameter Values** section should now look like this. Note
@@ -434,8 +431,6 @@ In this exercise, you will learn how to create a manual test plan
 13. Click **Save & Close** to save the test case.
 
     <img src="./media/image51.png" width="624" height="96" />
-
-#### 
 
 #### Task 3: Running a Manual Test Plan
 
@@ -491,7 +486,7 @@ In this task, you will learn how to run the manual test plan that we created ear
 
     <img src="./media/image58.png" width="624" height="176" />
 
-    **Note:** The
+    >**Note:** The
     [www.partsunlimited.com](http://www.partsunlimited.com) URL is
     hardcoded in the hosts file to point at a website on the local VM.
     As a result, you must use this full domain when testing.
