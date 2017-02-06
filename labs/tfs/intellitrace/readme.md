@@ -6,10 +6,6 @@ permalink: /labs/tfs/intellitrace/
 folder: /labs/tfs/intellitrace/
 ---
 
-<p align="center">
-<img src="./media/image1.png"/>
-</p>
-
 ## Overview
 
 IntelliTrace – first released in Visual Studio 2010 – changed the
