@@ -97,8 +97,8 @@ entries:
     output: web, pdf
 
     folderitems:
-    - title: Commenting on files
-      url: /mydoc_commenting_on_files.html
+    - title: Release Management
+      url: releasemanagement
       output: web, pdf
 
   - title: Monitor
