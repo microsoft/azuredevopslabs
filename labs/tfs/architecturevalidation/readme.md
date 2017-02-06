@@ -18,20 +18,20 @@ It first shipped in Visual Studio 2010. The experience of the Layer Designer has
 In Visual Studio 2017 we have re-written the validation code to use **Roslyn analyzers**, which not only fixes many of these issues that were in the previous versions, but also gives us live validation in the IDE. As you type you get issues, and squiggles in the editor, and you can immediately stop introducing architectural flaws.
 We’ve also renamed layer diagrams to **‘dependency validation’** diagrams to make it clearer what they are for.
 
-##Related Resources
+## Related Resources
 
 - Read this [Blog Post](https://blogs.msdn.microsoft.com/visualstudioalm/2016/11/30/live-dependency-validation-in-visual-studio-2017/) for a detailed discussion comparing the new experience with the past
 
 
 
-##Pre-requisites
+## Pre-requisites
 
 - Visual Studio 2017 (download [here](https://www.visualstudio.com/vs/visual-studio-2017-rc/))
 
 - Download the Parts Unlimited project [here](https://github.com/Microsoft/PartsUnlimited/tree/aspnet45)
 
 
-###Task 1: Real Time Dependency Validation in Visual Studio 2017
+### Task 1: Real Time Dependency Validation in Visual Studio 2017
 
 1. Download and extract the zip file
 
@@ -56,7 +56,7 @@ We’ve also renamed layer diagrams to **‘dependency validation’** diagrams 
  This validation is well integrated in the **Error List**, which means I can use all the filters and sorting capabilities. This is implemented as a **static analyzer** and therefore I can change the severity of the error to a warning if I want to.
  
   
-###Task 2: Creating Validation Diagrams in Visual Studio 2017
+### Task 2: Creating Validation Diagrams in Visual Studio 2017
 
 Now that we have seen what the developer experience is in the editor, let's see how to create a dependency diagram.
 
