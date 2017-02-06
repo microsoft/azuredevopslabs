@@ -1,5 +1,5 @@
 ---
-title: Building the Right Software - Generating Storyboards with Visual Studio 2017
+title: Exploratory Testing and Feedback Management with Team Foundation Server 2017
 layout: page    
 sidebar: tfs
 permalink: /labs/tfs/exploratorytesting/
