@@ -61,6 +61,7 @@ Lab Name
 <tr><td>Working with the Visual Studio 2017 ALM Virtual Machine                                  </td></tr>
 <tr><td><a href="agile/">Agile Planning and Portfolio Management with Team Foundation Server 2017</a>  </td></tr>
 <tr><td>Authoring and Running Manual Tests using Microsoft Test Manager 2017                     </td></tr>
+<tr><td><a href="architecturevalidation/">Live Dependency Validation using Visual Studio 2017 </a>   </td></tr>
 <tr><td>Branching and Merging Visualization with Visual Studio Team Foundation Server 2017       </td></tr>
 <tr><td><a href="storyboarding/">Building the Right Software – Generating Storyboards and Collecting Stakeholder Feedback</a> </td></tr>
 <tr><td>Code Discovery using the Architecture Tools in Visual Studio Enterprise 2017             </td></tr>

@@ -1,4 +1,10 @@
-#Live Dependency Validation in Visual Studio 2017
+---
+title: Live Dependency Validation in Visual Studio 2017
+layout: page    
+sidebar: tfs
+permalink: /labs/tfs/architecturevalidation/
+folder: /labs/tfs/architecturevalidation/
+---
 
 <p align="center">
 <img src="images/1.png">
