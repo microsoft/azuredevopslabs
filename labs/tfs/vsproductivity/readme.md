@@ -19,7 +19,7 @@ This lab is all about those “fit-and-finish” scenarios in Visual
     seamlessly, how the new merging experience works, and how you can
     more easily find work items.
 
-### Pre-requisites
+## Pre-requisites
 
 In order to complete this lab you will need the Visual Studio 2017
     virtual machine provided by Microsoft. For more information on
@@ -27,7 +27,7 @@ In order to complete this lab you will need the Visual Studio 2017
     post](http://aka.ms/almvm).
 
 
-### Exercises
+## Exercises
 
 This hands-on lab includes the following exercises:
 
@@ -48,7 +48,7 @@ This hands-on lab includes the following exercises:
 Estimated time to complete this lab: **60 minutes**.
 
 
-## Exercise 1: Team Explorer Overview
+### Exercise 1: Team Explorer Overview
 
 In this exercise, you will see a high-level view of the changes made
     to Team Explorer in this release and learn how to navigate the
@@ -118,7 +118,7 @@ In this exercise, you will see a high-level view of the changes made
 12. We will look at the new **My Work** functionality in the
     remaining exercises.
 
-## Exercise 2: My Work
+### Exercise 2: My Work
 
 In this exercise, you will learn about the new My Work experience for managing your active tasks.
 
@@ -165,7 +165,7 @@ In this exercise, you will learn about the new My Work experience for managing y
     <img src="media/image18.png" width="344" height="79" />
 
 
-## Exercise 3: Local Workspaces
+### Exercise 3: Local Workspaces
 
 In this exercise, you will learn about local workspaces and how they
     improve the offline development experience.
@@ -305,7 +305,7 @@ In this exercise, you will learn about local workspaces and how they
     <img src="media/image33.png" width="195" height="181" />
 
 
-## Exercise 4: Pending Changes
+### Exercise 4: Pending Changes
 
 In this exercise, you will learn about the Pending Changes view within Team Explorer.
 
@@ -359,7 +359,7 @@ In this exercise, you will learn about the Pending Changes view within Team Expl
 
     <img src="media/image41.png" width="345" height="76" />
 
-## Exercise 5: Suspend and Resume
+### Exercise 5: Suspend and Resume
 
 In this exercise, you will learn about the suspend and resume
 functionality for work items and the integrated code reviews.
@@ -498,7 +498,7 @@ functionality for work items and the integrated code reviews.
 
 22. Press **Ctrl+S** to save the changes to the file.
 
-## Exercise 6: Code Reviews
+### Exercise 6: Code Reviews
 
 1. Now that the fix has been made, let’s ask Clemri to perform a
     code review on the changes to make sure things look correct. In
@@ -654,7 +654,7 @@ functionality for work items and the integrated code reviews.
 
     <img src="media/image79.png" width="648" height="208" />
 
-## Exercise 7: Merging
+### Exercise 7: Merging
 
 In this exercise, you will learn about the merging experience in
 Visual Studio 2017.
