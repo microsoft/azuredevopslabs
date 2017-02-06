@@ -76,6 +76,10 @@ entries:
       url: git
       output: web, pdf
 
+    - title: Coded UI Testing
+      url: codedui
+      output: web, pdf
+
   - title: Build
     output: web, pdf
 

@@ -1,6 +1,12 @@
-#Introduction to Coded UI Test with VS Enterprise 2017
+---
+title: Introduction to Coded UI Test with VS Enterprise 2017
+layout: page    
+sidebar: tfs
+permalink: /labs/tfs/codedui/
+folder: /labs/tfs/codedui/
+---
 
-##Overview
+## Overview
 
 **[Coded UI](https://msdn.microsoft.com/en-us/library/dd286726.aspx)** tests provide a way to create fully automated tests to validate the functionality and behavior of your application’s user interface. In this lab, you will gain a basic understanding of coded UI tests by creating a new test and adding validation logic to it.
 
@@ -8,7 +14,7 @@
 <img src="images/Logo.png">
 </p>
 
-##Pre-requisites
+## Pre-requisites
 
 - Visual Studio 2017 (download [here](https://www.visualstudio.com/vs/visual-studio-2017-rc/))
 
@@ -17,7 +23,7 @@
 - Download the **Selenium Components** from [here](https://marketplace.visualstudio.com/items?itemName=AtinBansal.SeleniumcomponentsforCodedUICrossBrowserTesting) and follow the same document for the required setup
 
 
-###Task 1: Recording a User Scenario
+### Task 1: Recording a User Scenario
 
 In this exercise, you will learn how to use the **Coded UI Test Builder** to generate test code for the Parts Unlimited Web application and modify the generated code in order to enable Cross Browser testing.
 
@@ -63,7 +69,7 @@ In this exercise, you will learn how to use the **Coded UI Test Builder** to gen
 
  <img src="images/image10.png">
  
-###Task 2: Cross browser Testing using Coded UI
+### Task 2: Cross browser Testing using Coded UI
 
 Coded UI tests can automate testing for web applications by recording your tests using **Internet Explorer**. You can then customize your test and play it back using either **Internet Explorer or other browser types for these web applications**.
 

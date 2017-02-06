@@ -71,7 +71,7 @@ Lab Name
 <tr><td><a href="releasemanagement/">Embracing Continuous Delivery with Release Management for Visual Studio 2017          </a>   </td></tr>
 <tr><td><a href="exploratorytesting/">Exploratory Testing and Feedback Management with Team Foundation Server 2017</a>                                    </td></tr>
 <tr><td><a href="git/">Getting Started with Git using Team Foundation Server 2017</a>                              </td></tr>
-<tr><td>Introduction to Coded UI Tests with Visual Studio Enterprise 2017                        </td></tr>
+<tr><td><a href="codedui/">Introduction to Coded UI Tests with Visual Studio Enterprise 2017 </a>                       </td></tr>
 <tr><td>Introduction to IntelliTest with Visual Studio Enterprise 2017                           </td></tr>
 <tr><td>Introduction to Platform Testing with Microsoft Test Manager 2017                        </td></tr>
 <tr><td>Introduction to PreEmptive Analytics                                                     </td></tr>
