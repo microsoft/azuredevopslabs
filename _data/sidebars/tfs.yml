@@ -56,8 +56,8 @@ entries:
     output: web, pdf
     folderitems:
 
-    - title: Improving Developer Productivity
-      url: /mydoc_about_ruby_gems_etc.html
+    - title: Collaborations for Dev Teams
+      url: devteamcollaboration
       output: web, pdf
 
     - title: Branching and Merging

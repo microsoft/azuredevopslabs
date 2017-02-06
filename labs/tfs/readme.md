@@ -64,7 +64,7 @@ Lab Name
 <tr><td>Branching and Merging Visualization with Visual Studio Team Foundation Server 2015       </td></tr>
 <tr><td><a href="storyboarding/">Building the Right Software – Generating Storyboards and Collecting Stakeholder Feedback</a> </td></tr>
 <tr><td>Code Discovery using the Architecture Tools in Visual Studio Enterprise 2015             </td></tr>
-<tr><td>Collaboration Experiences for Development Teams using Team Foundation Server 2015        </td></tr>
+<tr><td><a href="devteamcollaboration/">Collaboration Experiences for Development Teams using Team Foundation Server 2015   </a>     </td></tr>
 <tr><td>Debugging with IntelliTrace using Visual Studio Enterprise 2015                          </td></tr>
 <tr><td>Diagnosing Issues in Production with IntelliTrace and Visual Studio 2015                 </td></tr>
 <tr><td>Embracing Continuous Delivery with Release Management for Visual Studio 2015             </td></tr>
