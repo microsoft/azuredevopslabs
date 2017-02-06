@@ -17,7 +17,7 @@ analysis is used to generate test data for a parameterized unit test for each of
 
 When you run IntelliTest, you can easily see which tests are failing and add any necessary code to fix them. You can select which of the generated tests to save into a test project to provide a regression suite. As you change your code, rerun IntelliTest to keep the generated tests in sync with your code changes.
 
-**Pre-requisites**
+## Pre-requisites
 
 - Visual Studio 2017 (download [here](https://www.visualstudio.com/vs/visual-studio-2017-rc/))
 

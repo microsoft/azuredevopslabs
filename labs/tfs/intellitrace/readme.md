@@ -30,32 +30,15 @@ IntelliTrace – first released in Visual Studio 2010 – changed the
     which goes into more detail and provides instructions for
     enabling this.
 
-### Pre-requisites
+## Pre-requisites
 
 In order to complete this lab you will need the Visual Studio 2017
 virtual machine provided by Microsoft. For more information on acquiring
 and using this virtual machine, please see [this blog
 post](http://aka.ms/almvm).
 
-### About the Fabrikam Fiber Scenario
 
-This set of hands-on-labs uses a fictional company, Fabrikam Fiber,
-    as a backdrop to the scenarios you are learning about. Fabrikam
-    Fiber provides cable television and related services to the
-    United States. They are growing rapidly and have embraced Windows
-    Azure to scale their customer-facing web site directly to end-users
-    to allow them to self-service tickets and track technicians. They
-    also use an on-premises ASP.NET MVC application for their customer
-    service representatives to administer customer orders.
-
-In this set of hands-on labs, you will take part in a number of
-    scenarios that involve the development and testing team at
-    Fabrikam Fiber. The team, which consists of 8-10 people, has decided
-    to use Visual Studio application lifecycle management tools to
-    manage their source code, run their builds, test their web sites,
-    plan and track the project.
-
-### Exercises
+## Exercises
 
 This hands-on lab includes the following exercises:
 
@@ -71,7 +54,7 @@ In this exercise, you will learn how to deploy and use IntelliTrace
     in production to capture trace information for an
     ASP.NET application.
 
-#### <span id="_Toc429730062" class="anchor"><span id="_Toc430704257" class="anchor"><span id="_Toc472510377" class="anchor"></span></span></span>Task 1: Discovering a Bug in Production
+### Task 1: Discovering a Bug in Production**
 
 1.  Log in as **Brian Keller** (VSALM\\Brian). All user passwords are
     **P2ssw0rd**.
@@ -101,7 +84,7 @@ In this exercise, you will learn how to deploy and use IntelliTrace
     debugging tools in a production environment may not be an option.
   
 
-#### Task 2: Setting Up For IntelliTrace Data Collection in Production
+### Task 2: Setting Up For IntelliTrace Data Collection in Production
 
 1.  Now let’s look at how to deploy and use IntelliTrace in a production
     environment to collect historical debugging data. Open a Windows
@@ -149,7 +132,7 @@ In this exercise, you will learn how to deploy and use IntelliTrace
           the case.
 ````
 
-#### Task 3: Initiating IntelliTrace Collection and Repro
+### Task 3: Initiating IntelliTrace Collection and Repro
 
 1.  Now we will start IntelliTrace so that we can gather some diagnostic
     data from the web application. You have two options here, you can
