@@ -108,6 +108,10 @@ entries:
       url: intellitest
       output: web, pdf
 
+    - title: Manual Testing
+      url: manualtesting
+      output: web, pdf
+
 
   - title: Deploy
     output: web, pdf
