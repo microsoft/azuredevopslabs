@@ -6,9 +6,7 @@ permalink: /labs/tfs/architecturevalidation/
 folder: /labs/tfs/architecturevalidation/
 ---
 
-<p align="center">
-<img src="images/1.png">
-</p>
+## Overview
 
 Visual Studio enables teams to validate architectural dependencies in their solutions using the [Layer Designer](https://msdn.microsoft.com/en-us/library/dd465141.aspx). 
 It first shipped in Visual Studio 2010. The experience of the Layer Designer has been improved in Visual Studio 2017 with the introduction Dependency Validation experience to help ensure that developers respect the architectural constraints of the application as they edit their code.
