@@ -6,12 +6,6 @@ permalink: /labs/tfs/git/
 folder: /labs/tfs/git/
 ---
 
-
-<img src="media/image1.png" />
-
-
-
-
 ## Overview
 
 In this lab, you’ll learn about Git support in Team Foundation Server 2017 and Visual Studio 2017. Git is a distributed version 
@@ -29,8 +23,6 @@ This hands-on lab includes the following exercises:
    * Getting Started with Git   
    * Git Branching and Merging    
 Estimated time to complete this lab: **60 minutes**.
-
------------------------------------------------------------------------------
 
 ## Exercise 1: Getting Started with Git
 
@@ -223,20 +215,18 @@ In this exercise, you will learn how to create, clone, and push commits to a Git
     the first (bottom) commit.
 
     <img src="media/image29.png" width="480" height="280" />
-````
-Note: It may take a few moments after pushing a commit before the commit size indicators show up. You can refresh the page
+
+    >Note: It may take a few moments after pushing a commit before the commit size indicators show up. You can refresh the page
     if necessary.
-````
 
-Note that the “**Create new web site**” work item is linked to the commit. Click the link to open the work item.
+    Note that the “**Create new web site**” work item is linked to the commit. Click the link to open the work item.
 
-````
-Note: It may take a few minutes before the work item gets linked to the commit. In the event that the link has not been made yet, go
+    >Note: It may take a few minutes before the work item gets linked to the commit. In the event that the link has not been made yet, go
     ahead and continue on with the rest of the lab.
-````
-  <img src="media/image30.png" width="364" height="332" />
 
-  <img src="media/image31.png" width="277" height="113" />
+    <img src="media/image30.png" width="364" height="332" />
+
+    <img src="media/image31.png" width="277" height="113" />
 
 
 
