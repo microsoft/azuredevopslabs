@@ -80,7 +80,7 @@ Lab Name
 <tr><td>Introduction to Test Case Management with Microsoft Test Manager 2017                    </td></tr>
 <tr><td><a hrf="manualtesting/">Introduction to Test Planning with Microsoft Test Manager 2017  </a>                         </td></tr>
 <tr><td>Introduction to Web Performance and Load Testing with Visual Studio Enterprise 2017      </td></tr>
-<tr><td>Making Developers More Productive with Visual Studio Team Foundation Server 2017         </td></tr>
+<tr><td><a href="vsproductivity/">Making Developers More Productive with Visual Studio Team Foundation Server 2017    </a>     </td></tr>
 <tr><td>Managing Technical Debt with Team Foundation Server 2017 and SonarQube                   </td></tr>
 <tr><td>Testing and Debugging SharePoint Applications with Visual Studio 2017                    </td></tr>
 <tr><td>Unit Testing, Code Coverage and Code Clone Analysis with Visual Studio 2017              </td></tr>

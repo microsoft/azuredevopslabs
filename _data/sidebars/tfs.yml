@@ -84,6 +84,10 @@ entries:
       url: intellitrace
       output: web, pdf
 
+    - title: Visual Stduio Productivity Features
+      url: vsproductivity
+      output: web, pdf
+
   - title: Build
     output: web, pdf
 
