@@ -13,7 +13,7 @@ In this lab, you’ll learn about some of the features in Visual
     collaboration experiences for development teams including Team
     Rooms, Lightweight Code Comments, and CodeLens.
 
-### Pre-requisites
+## Pre-requisites
 
 In order to complete this lab you will need the Visual Studio 2017
     virtual machine provided by Microsoft. For more information on
@@ -22,7 +22,7 @@ In order to complete this lab you will need the Visual Studio 2017
 
 
 
-### Exercises
+## Exercises
 
 This hands-on lab includes the following exercises:
 
@@ -33,7 +33,6 @@ This hands-on lab includes the following exercises:
 * CodeLens
 
 Estimated time to complete this lab: **60 minutes**.
-
 
 ## Exercise 1: Team Room Collaboration
 
@@ -414,13 +413,13 @@ In this exercise, you will learn about the CodeLens feature first
 
     <img src="media/image55.png" width="347" height="56" />
 
-  **Note:** With all tests passing, nothing stands out visually in the
+    **Note:** With all tests passing, nothing stands out visually in the
     CodeLens indicator line. This demonstrates one of the goals of
     CodeLens - to provide useful information without getting in the way
     or being distracting. Nevertheless the feature can be customized or
     even turned off in **Tools | Options** if desired.
 
-<img src="media/image56.png" width="564" height="293" />
+    <img src="media/image56.png" width="564" height="293" />
 
 
 As a final note, CodeLens also supports a number of indicators for
