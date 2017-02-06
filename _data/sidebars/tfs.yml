@@ -45,11 +45,11 @@ entries:
     folderitems:
 
     - title: Agile Planning
-      url: ..\/agile
+      url: agile
       output: web, pdf
 
     - title: Generating Storyboards
-      url: ..\/storyboarding
+      url: storyboarding
       output: web, pdf
 
   - title: Develop
@@ -88,8 +88,8 @@ entries:
     output: web, pdf
 
     folderitems:
-    - title: Sidebar navigation
-      url: /mydoc_sidebar_navigation.html
+    - title: Exploratory Testing
+      url: exploratorytesting
       output: web, pdf
 
 

@@ -68,7 +68,7 @@ Lab Name
 <tr><td>Debugging with IntelliTrace using Visual Studio Enterprise 2015                          </td></tr>
 <tr><td>Diagnosing Issues in Production with IntelliTrace and Visual Studio 2015                 </td></tr>
 <tr><td>Embracing Continuous Delivery with Release Management for Visual Studio 2015             </td></tr>
-<tr><td>Exploratory Testing using Microsoft Test Manager 2015                                    </td></tr>
+<tr><td><a href="exploratorytesting/">Exploratory Testing and Feedback Management with Team Foundation Server 2017</a>                                    </td></tr>
 <tr><td><a href="git/">Getting Started with Git using Team Foundation Server 2017</a>                              </td></tr>
 <tr><td>Introduction to Coded UI Tests with Visual Studio Enterprise 2015                        </td></tr>
 <tr><td>Introduction to IntelliTest with Visual Studio Enterprise 2015                           </td></tr>
