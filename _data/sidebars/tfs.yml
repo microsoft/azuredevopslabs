@@ -68,7 +68,7 @@ entries:
       url: /mydoc_install_jekyll_on_windows.html
       output: web, pdf
 
-      - title: Live Dependency Validation
+    - title: Live Dependency Validation
       url: architecturevalidation
       output: web, pdf
     
