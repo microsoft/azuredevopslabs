@@ -67,7 +67,7 @@ Lab Name
 <tr><td>Code Discovery using the Architecture Tools in Visual Studio Enterprise 2017             </td></tr>
 <tr><td><a href="devteamcollaboration/">Collaboration Experiences for Development Teams using Team Foundation Server 2017   </a>     </td></tr>
 <tr><td>Debugging with IntelliTrace using Visual Studio Enterprise 2017                          </td></tr>
-<tr><td>Diagnosing Issues in Production with IntelliTrace and Visual Studio 2017                 </td></tr>
+<tr><td><a href="intellitrace/">Diagnosing Issues in Production with IntelliTrace and Visual Studio 2017  </a>               </td></tr>
 <tr><td><a href="releasemanagement/">Embracing Continuous Delivery with Release Management for Visual Studio 2017          </a>   </td></tr>
 <tr><td><a href="exploratorytesting/">Exploratory Testing and Feedback Management with Team Foundation Server 2017</a>                                    </td></tr>
 <tr><td><a href="git/">Getting Started with Git using Team Foundation Server 2017</a>                              </td></tr>

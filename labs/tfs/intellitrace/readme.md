@@ -1,4 +1,10 @@
-# Diagnosing Issues in Production with IntelliTrace and Visual Studio 2017
+---
+title: Diagnosing Issues in Production with IntelliTrace and Visual Studio 2017
+layout: page
+sidebar: tfs
+permalink: /labs/tfs/intellitrace/
+folder: /labs/tfs/intellitrace/
+---
 
 <p align="center">
 <img src="./media/image1.png"/>
@@ -263,7 +269,7 @@ In this exercise, you will learn how to deploy and use IntelliTrace
     file would be sent to a developer or tester for a more
     detailed look.
 
-## Exercise 1: Debugging with IntelliTrace Files from Production
+## Exercise 2: Debugging with IntelliTrace Files from Production
 
 In this exercise, you will see how we can use the IntelliTrace file
     that was generated on a production server to aid in debugging the

@@ -80,6 +80,10 @@ entries:
       url: codedui
       output: web, pdf
 
+    - title: IntelliTrace
+      url: intellitrace
+      output: web, pdf
+
   - title: Build
     output: web, pdf
 
