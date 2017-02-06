@@ -6,10 +6,7 @@ permalink: /labs/tfs/build/
 folder: /labs/tfs/build/
 ---
 
-<img src="media/CI.png" width="409"/>
-
- 
-# Overview
+## Overview
 
 In this lab, you will learn how to use the new Team Foundation Build
     in order to build, test, and deploy your applications. This new
@@ -20,14 +17,14 @@ In this lab, you will learn how to use the new Team Foundation Build
     out that you can also build for iOS, Android, Java (using Ant,
     Maven, or Gradle), and Linux.
 
-### Prerequisites
+## Prerequisites
 
 In order to complete this lab, you will need the Visual Studio 2017
     virtual machine provided by Microsoft. For more information on
     acquiring and using this virtual machine, please see [this blog
     post](http://aka.ms/almvm).
 
-### Exercises
+## Exercises
 
 This Hands-On Lab comprises the following exercises:
 
@@ -52,7 +49,7 @@ In this exercise, you will learn how to create and configure build
     new scriptable build system is web-based and cross-platform, and is
     recommended for all new and existing builds going forward.
 
-#### Task 1: Build Hub in TFS Web Access
+### Task 1: Build Hub in TFS Web Access
 
 1.  Log in as **Deniz Ercoskun** (VSALM\\Deniz). All user passwords are
     **P2ssw0rd**.
@@ -87,7 +84,7 @@ In this exercise, you will learn how to create and configure build
     existing XAML build to the new system, but first we need to
     configure the infrastructure necessary for the new build system.
 
-#### Task 2: Creating an Agent Pool
+### Task 2: Creating an Agent Pool
 
 1.  The first thing that we need to do is to setup an agent pool for
     the project. This pool can contain both Windows and
@@ -123,7 +120,7 @@ In this exercise, you will learn how to create and configure build
     <img src="media/image9.png" width="199" height="151" />
 
 
-#### Task 3: Creating a Build Queue
+### Task 3: Creating a Build Queue
 
 1.  Before we continue with the installation of an agent, let’s also
     ensure that we set up our team project collection with a build
@@ -179,7 +176,7 @@ In this exercise, you will learn how to create and configure build
     <img src="media/image17.png" width="473" height="425" />
 
 
-#### Task 4: Installing and Configuring an Agent
+### Task 4: Installing and Configuring an Agent
 
 1.  Wait for the agent download to finish if it has not already. Unzip
     it to c:\\agent when complete.
@@ -254,7 +251,7 @@ In this exercise, you will learn how to create a basic build
     definition from one of the provided templates and then queue the
     build for execution.
 
-#### Task 1: Creating a Basic Build Definition from Template
+### Task 1: Creating a Basic Build Definition from Template
 
 1.  Now it is time to create a new build definition for the Fabrikam
     Fiber team. Navigate to the web team’s section of the portal using
@@ -465,7 +462,7 @@ In this exercise, you will learn how to create a basic build
     <img src="media/image46.png" width="612" height="388" />
 
 
-####  Task 2: Queuing and Executing a Build
+### Task 2: Queuing and Executing a Build
 
 1.  Click **Queue new build**.
 
@@ -494,7 +491,7 @@ In this exercise, you will examine the build results and also see
     how to view the results from the tests that were executed as part of
     the build.
 
-#### Task 1: Analyzing Build and Test Results
+### Task 1: Analyzing Build and Test Results
 
 1.  Select the **Logs** tab from the build results.
 
@@ -548,7 +545,7 @@ In this exercise, you will learn how to modify a build to support
     continuous integration. In addition, you will also learn about some
     of the deployment options available.
 
-#### Task 1: Cloning a Build Definition
+### Task 1: Cloning a Build Definition
 
 1.  Now let’s create a similar build definition, but this time include a
     step to deploy the Fabrikam Fiber website. Imagine that this build
@@ -572,7 +569,7 @@ In this exercise, you will learn how to modify a build to support
     <img src="media/image58.png" width="624" height="453" />
   
 
-#### Task 2: Adding a Deployment Step and Defining Machine Group
+### Task 2: Adding a Deployment Step and Defining Machine Group
 
 1.  Click **Add build step**.
 
@@ -610,7 +607,7 @@ In this exercise, you will learn how to modify a build to support
     <img src="media/image62.png" width="624" height="199" />
 
 
-#### Task 3: Configuring Continuous Integration
+### Task 3: Configuring Continuous Integration
 
 1.  Now let’s get the continuous integration functionality hooked up.
     Select the **Triggers** tab and check the **Continuous
@@ -641,7 +638,7 @@ In this exercise, you will learn how to modify a build to support
 
     <img src="media/image66.png" width="587" height="384" />
 
-#### Task 4: Triggering a Continuous Integration Build
+### Task 4: Triggering a Continuous Integration Build
 
 1.  In a new browser window or tab, navigate to the **Code** tab.
 
@@ -679,7 +676,7 @@ In this exercise, you will learn how to scale out your testing needs
     install a test agent installer (approx. 130 MB) over the Internet,
     and therefore it will take a few minutes to complete.
 
-#### Task 1: Modifying Build to use External Test Agents
+### Task 1: Modifying Build to use External Test Agents
 
 1.  Let’s say that we would like to modify our CI build to perform
     testing on dedicated testing hardware using a test agent. Click
@@ -748,7 +745,7 @@ In this exercise, you will learn how to scale out your testing needs
 
     <img src="media/image82.png" width="503" height="153" />
 
-#### Task 2: Testing and Saving Modified Build Draft
+### Task 2: Testing and Saving Modified Build Draft
 
 1.  Click **Queue Build**.
 
@@ -802,7 +799,7 @@ In this exercise, you will learn how to scale out your testing needs
 
     <img src="media/image92.png" width="624" height="390" />
 
-#### Task 3: Reviewing build load
+### Task 3: Reviewing build load
 
 1.  From the **Gear** dropdown menu, select **Agent Queues**.
 
