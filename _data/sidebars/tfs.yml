@@ -84,7 +84,7 @@ entries:
       url: intellitrace
       output: web, pdf
 
-    - title: Visual Stduio Productivity Features
+    - title: Visual Studio Productivity Features
       url: vsproductivity
       output: web, pdf
 
