@@ -30,7 +30,7 @@ When you run IntelliTest, you can easily see which tests are failing and add any
 
 2. Open the solution in **Visual Studio 2017**
 
-3. Scroll down to the **ProductSearch | Depluralize method from StringContainsProductSearch.cs** file. This method is responsible to return singular form of a string value. For example: if you search using a keyword **Batteries**, it returns **Battery.**
+3. Scroll down to the ProductSearch | Depluralize method from StringContainsProductSearch.cs file. This method is responsible to return singular form of a string value. For example: if you search using a keyword **Batteries**, it returns Battery.
 
  
 4. Right Click within the method **Depluralize** and then select **IntelliTest | Run IntelliTest**

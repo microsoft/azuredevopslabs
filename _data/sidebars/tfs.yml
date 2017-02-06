@@ -100,6 +100,10 @@ entries:
       url: exploratorytesting
       output: web, pdf
 
+    - title: IntelliTest
+      url: intellitest
+      output: web, pdf
+
 
   - title: Deploy
     output: web, pdf
