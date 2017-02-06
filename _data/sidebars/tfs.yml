@@ -77,7 +77,7 @@ entries:
 
     folderitems:
     - title: Using Team Foundation Build
-      url: /mydoc_pages.html
+      url: build
       output: web, pdf
 
     - title: Managing Technical Debt

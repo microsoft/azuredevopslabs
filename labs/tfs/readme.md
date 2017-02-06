@@ -75,7 +75,7 @@ Lab Name
 <tr><td>Introduction to Platform Testing with Microsoft Test Manager 2017                        </td></tr>
 <tr><td>Introduction to PreEmptive Analytics                                                     </td></tr>
 <tr><td>Introduction to SmartOffice4TFS                                                          </td></tr>
-<tr><td>Introduction to Team Foundation Build 2017                                               </td></tr>
+<tr><td><a href="build/">Introduction to Team Foundation Build 2017                                 </a>              </td></tr>
 <tr><td>Introduction to Test Case Management with Microsoft Test Manager 2017                    </td></tr>
 <tr><td>Introduction to Test Planning with Microsoft Test Manager 2017                           </td></tr>
 <tr><td>Introduction to Web Performance and Load Testing with Visual Studio Enterprise 2017      </td></tr>
