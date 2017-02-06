@@ -72,7 +72,7 @@ Now that we have seen what the developer experience is in the editor, let's see 
  
    <img src="images/image15.png">
 
- Your Project is amended to enable the **Live Validation**, in particular **Rosyln analyzer** is provisioned as a Nuget package.
+   Your Project is amended to enable the **Live Validation**, in particular **Rosyln analyzer** is provisioned as a Nuget package.
  
 4. Open the file **YOURFILENAME.layerdiagram** in your Visual Studio from the Solution Explorer as shown below
  
