@@ -17,7 +17,7 @@ In this lab, you will learn how to use the new Team Foundation Build
     out that you can also build for iOS, Android, Java (using Ant,
     Maven, or Gradle), and Linux.
 
-## Prerequisites
+## Pre-requisites
 
 In order to complete this lab, you will need the Visual Studio 2017
     virtual machine provided by Microsoft. For more information on
