@@ -34,7 +34,7 @@ This hands-on lab includes the following exercises:
 Estimated time to complete this lab: **45 minutes**.
 
 
-### Exercise 1: Agile Project Management 
+## Exercise 1: Agile Project Management 
 
 In this exercise, you will learn how to use Team Foundation Server 2017 to manage your product backlog, create work items, break work items into tasks, assign tasks to team members, and track progress using the task board. This overview will demonstrate the basic project management tools that small- to medium-sized development teams can utilize for product development.
 
