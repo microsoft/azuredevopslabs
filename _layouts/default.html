@@ -79,4 +79,9 @@
 {% if site.google_analytics %}
 {% include google_analytics.html %}
 {% endif %}
+
+{% if page.comments %} 
+{% include disqus.html %}
+{% endif %}
+
 </html>

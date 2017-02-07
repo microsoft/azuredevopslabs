@@ -72,7 +72,7 @@ defaults:
       layout: "page"
       comments: true
       search: true
-      sidebar: home_sidebar
+     # sidebar: home_sidebar
   -
     scope:
       path: ""

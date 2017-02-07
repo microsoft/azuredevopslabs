@@ -19,10 +19,18 @@
     <div class="col-md-9">
         {{content}}
     </div>
-
+        <div class="col-md-10">&nbsp;</div>
+    <!--div class="col-md-12">
+         {% include homesidebar.html %}
+    </div-->
     </div>
-  
+
+{% if page.comments %} 
+{% include disqus.html %}
+{% endif %}
 </body>
+
+
 {% if site.google_analytics %}
 {% include google_analytics.html %}
 {% endif %}

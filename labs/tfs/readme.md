@@ -3,6 +3,7 @@ title: ALM VM 2017 - Hands-on-Labs
 layout: page    
 sidebar: tfs
 permalink: /labs/tfs/
+comments: true
 folder: /labs/tfs/
 ---
 

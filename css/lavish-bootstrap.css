@@ -1003,6 +1003,10 @@ pre code {
   .col-md-12 {
     width: 100%;
   }
+    .col-md-12r {
+    width: 100%;
+        float: right;
+  }
   .col-md-push-0 {
     left: auto;
   }
