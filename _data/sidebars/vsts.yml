@@ -65,7 +65,7 @@ entries:
       output: web, pdf
     
     - title: Getting Started with Git
-      url: /git
+      url: labs/vsts/git
       output: web, pdf
 
   - title: Build

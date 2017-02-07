@@ -4,6 +4,7 @@ layout: page
 sidebar: mydoc_sidebar
 permalink: /labs/
 folder: /labs/
+comments: true
 ---
 
 ## Overview

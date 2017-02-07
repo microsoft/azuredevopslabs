@@ -45,11 +45,11 @@ entries:
     folderitems:
 
     - title: Agile Planning
-      url: agile
+      url: labs/tfs/agile
       output: web, pdf
 
     - title: Generating Storyboards
-      url: storyboarding
+      url: labs/tfs/storyboarding
       output: web, pdf
 
   - title: Develop
@@ -57,11 +57,11 @@ entries:
     folderitems:
 
     - title: Collaborations for Dev Teams
-      url: devteamcollaboration
+      url: labs/tfs/devteamcollaboration
       output: web, pdf
 
     - title: Branching and Merging
-      url: branchingandmerging
+      url: labs/tfs/branchingandmerging
       output: web, pdf
 
     - title: Live Unit Testing
@@ -69,27 +69,27 @@ entries:
       output: web, pdf
 
     - title: Live Dependency Validation
-      url: architecturevalidation
+      url: labs/tfs/architecturevalidation
       output: web, pdf
     
     - title: Getting Started with Git
-      url: git
+      url: labs/tfs/git
       output: web, pdf
 
     - title: Coded UI Testing
-      url: codedui
+      url: labs/tfs/codedui
       output: web, pdf
 
     - title: IntelliTrace
-      url: intellitrace
+      url: labs/tfs/intellitrace
       output: web, pdf
 
     - title: Visual Studio Productivity Features
-      url: vsproductivity
+      url: labs/tfs/vsproductivity
       output: web, pdf
 
     - title: Unit Testing
-      url: unittesting
+      url: labs/tfs/unittesting
       output: web, pdf
 
   - title: Build
@@ -97,7 +97,7 @@ entries:
 
     folderitems:
     - title: Using Team Foundation Build
-      url: build
+      url: labs/tfs/build
       output: web, pdf
 
     - title: Managing Technical Debt
@@ -109,15 +109,15 @@ entries:
 
     folderitems:
     - title: Exploratory Testing
-      url: exploratorytesting
+      url: labs/tfs/exploratorytesting
       output: web, pdf
 
     - title: IntelliTest
-      url: intellitest
+      url: labs/tfs/intellitest
       output: web, pdf
 
     - title: Manual Testing
-      url: manualtesting
+      url: labs/tfs/manualtesting
       output: web, pdf
 
 
@@ -126,7 +126,7 @@ entries:
 
     folderitems:
     - title: Release Management
-      url: releasemanagement
+      url: labs/tfs/releasemanagement
       output: web, pdf
 
   - title: Monitor

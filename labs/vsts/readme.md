@@ -1,7 +1,7 @@
 ---
-title: ALM VM 2017 - Hands-on-Labs 
+title: ALM VM 2017 with VSTS - Hands-on-Labs 
 layout: page
-sidebar: mydoc_sidebar
+sidebar: vsts
 permalink: /labs/vsts/
 folder: /labs/vsts/
 ---
@@ -16,11 +16,7 @@ In this set of hands-on labs, you will take part in a number of scenarios that i
 
 ## Pre-requisites 
 
-**Using VM with the pre-installed TFS**
+**Using the Hands-on-Labs with the ALM VM**
 
 In order to complete this lab you will need the Visual Studio 2017 virtual machine provided by Microsoft. For more information on acquiring and using this virtual machine, please see this blog post.
 
-
-**Using the VM with Visual Studio Team  Services**
-
-In order to complete this lab with Visual Studio Team Services, please follow the instructions here

@@ -5,6 +5,7 @@ keywords: ALM VM homepage
 tags: [overview]
 sidebar: mydoc_sidebar
 permalink: index.html
+comments: true
 summary: 
 ---
         

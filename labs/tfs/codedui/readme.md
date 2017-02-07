@@ -21,17 +21,18 @@ folder: /labs/tfs/codedui/
 
 ### Task 1: Recording a User Scenario
 
-In this exercise, you will learn how to use the **Coded UI Test Builder** to generate test code for the Parts Unlimited Web application and modify the generated code in order to enable Cross Browser testing.
+In this exercise, you will learn how to use the **Coded UI Test Builder** to generate test code for the Parts Unlimited Web application 
+and modify the generated code in order to enable Cross Browser testing.   
+   
+1. Launch **Visual Studio 2017** in an administer mode     
 
-1. Launch **Visual Studio 2017** in an administer mode.
+2. Go to **File \| New Project** and select **Test \| Coded UI Test**   
 
-2. Go to **File | New Project** and select **Test | Coded UI Test**.
+    <img src="images/image1.png">     
 
-    <img src="images/image1.png">
- 
 3. Since we have generated from the **Action Recording** in our previous demo, we will be going with the **Recording Actions from CUI Test builder**. Select the **first** radio button and click **OK**
 
-    <img src="images/image2.png">
+   <img src="images/image2.png">
  
 4. You should see the **CUI Test Builder** at the right bottom of your screen.
 
@@ -57,7 +58,7 @@ In this exercise, you will learn how to use the **Coded UI Test Builder** to gen
 
     <img src="images/image8.png">
 
-10. Let's add this test as a **regression test** to our **Playlist**. Right click on the **Test** and say **Add to Playlist** | **New**.
+10. Let's add this test as a **regression test** to our **Playlist**. Right click on the **Test** and say **Add to Playlist** \| **New**.
 
     <img src="images/image9.png">
 
