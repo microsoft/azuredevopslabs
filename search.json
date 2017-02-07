@@ -11,11 +11,8 @@ search: exclude
 "title": "{{ page.title | escape }}",
 "tags": "{{ page.tags }}",
 "keywords": "{{page.keywords}}",
-<<<<<<< HEAD
 "url": "{{ page.url}}",
-=======
 "url": "{{ page.url }}",
->>>>>>> 8c6d5300d852650828ca55dacbf7e11150d247cf
 "summary": "{{page.summary | strip }}"
 }
 {% unless forloop.last and site.posts.size < 1 %},{% endunless %}
