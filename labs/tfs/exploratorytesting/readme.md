@@ -6,10 +6,6 @@ permalink: /labs/tfs/exploratorytesting/
 folder: /labs/tfs/exploratorytesting/
 ---
 
-Lab version: 15.0.26020.0
-
-Last updated: 1/30/2017
-
 ## Overview
 
 
@@ -18,25 +14,10 @@ You will learn about how exploratory testing (also called XT, or agile testing) 
 This allows a tester to more flexibly test the underlying software without relying solely on formal est cases. 
 You’ll also learn about how you can manage the process of eliciting and managing the customer feedback lifecycle.
 
-### Prerequisites
-
+## Prerequisites
 
 In order to complete this lab you will need the Visual Studio 2017 virtual machine provided by Microsoft. For more information on
 acquiring and using this virtual machine, please see [this blog post](http://aka.ms/almvm).
-
-### About the Fabrikam Fiber Scenario
-
-
-This set of hands-on-labs uses a fictional company, Fabrikam Fiber, as a backdrop to the scenarios you are learning about. Fabrikam Fiber provides cable television and related services to the 
-United States. They are growing rapidly and have embraced Windows Azure to scale their customer-facing web site directly to end-users to allow them to self-service tickets and track technicians. They
-also use an on-premises ASP.NET MVC application for their customer service representatives to administer customer orders.
-
-In this set of hands-on labs, you will take part in a number of scenarios that involve the development and testing team at 
-Fabrikam Fiber. The team, which consists of 8-10 people has decided to use Visual Studio application lifecycle management tools to
-manage their source code, run their builds, test their web sites, and plan and track the project.
-
-    Estimated time to complete this lab: **30 minutes**.
-
 
 ## Exercise 1: Exploratory Testing
 

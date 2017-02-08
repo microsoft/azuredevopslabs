@@ -6,10 +6,6 @@ permalink: /labs/tfs/releasemanagement/
 folder: /labs/tfs/releasemanagement/
 ---
 
-<p align="center">
-<img src="media/image1.png"/>
-</p>
-
 **Overview**
 
 In this lab, you will learn about the release management features
@@ -30,29 +26,8 @@ In order to complete this lab you will need the Visual Studio 2017
     acquiring and using this virtual machine, please see [this blog
     post](http://aka.ms/ALMVM).
 
-**Exercise 1 of the “Introduction to Team Foundation Build” lab is a
-    prerequisite for this lab**.
-
-### About the Fabrikam Fiber Scenario
-
-This set of hands-on-labs uses a fictional company, Fabrikam Fiber,
-    as a backdrop to the scenarios you are learning about. Fabrikam
-    Fiber provides cable television and related services to the
-    United States. They are growing rapidly and have embraced Windows
-    Azure to scale their customer-facing web site directly to end-users
-    to allow them to self-service tickets and track technicians. They
-    also use an on-premises ASP.NET MVC application for their customer
-    service representatives to administer customer orders.
-
-In this set of hands-on labs, you will take part in a number of
-    scenarios that involve the development and testing team at
-    Fabrikam Fiber. The team, which consists of 8-10 people, has decided
-    to use Visual Studio application lifecycle management tools to
-    manage their source code, run their builds, test their web sites,
-    and plan and track the project.
-
-Estimated time to complete this lab: **60 minutes**
-
+Exercise 1 of the “Introduction to Team Foundation Build” lab is a
+    prerequisite for this lab.
 
  **Exercise 1: Continuous Release Management**
 
