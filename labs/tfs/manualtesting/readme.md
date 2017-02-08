@@ -15,7 +15,7 @@ In this lab, you will learn how to use Microsoft Team Foundation
     manual tests that can be consistently reproduced over the course of
     each release.
 
-### Pre-requisites
+## Pre-requisites
 
 In order to complete this lab you will need the Visual Studio 2017
     virtual machine provided by Microsoft. For more information on
@@ -23,7 +23,7 @@ In order to complete this lab you will need the Visual Studio 2017
     post](http://aka.ms/almvm).
 
 
-### Exercises
+## Exercises
 
 This Hands-On Lab comprises the following exercises:
 
@@ -38,7 +38,7 @@ Estimated time to complete this lab: **60 minutes**.
 
 In this exercise, you will learn how to create and manage test plans, test suites, and test cases.
 
-#### Task 1: Understanding Test Plans, Suites, and Cases
+### Task 1: Understanding Test Plans, Suites, and Cases
 
 1.  Log in as **Sachin Raj** (VSALM\\Sachin). All user passwords are **P2ssw0rd**.
 
@@ -115,7 +115,7 @@ In this exercise, you will learn how to create and manage test plans, test suite
 
     <img src="./media/image10.png" width="624" height="305" />
 
-#### Task 2: Managing Tests
+### Task 2: Managing Tests
 
 1.  Sometimes a set of test cases should be run in a specific order to
     maximize efficiency. Click **Order tests** to specify the order
@@ -199,7 +199,7 @@ In this exercise, you will learn how to create and manage test plans, test suite
 
     <img src="./media/image23.png" width="624" height="217" />
 
-#### Task 3: Authoring Tests
+### Task 3: Authoring Tests
 
 1.  Expand the dropdown next to the **v2.1** test plan and select **New
     static suite.** A **static suite** of test cases is a suite where
@@ -284,7 +284,7 @@ In this exercise, you will learn how to create a manual test plan
     expected behavior of your software. In this lab, we’re going to
     focus on creating a new manual test case and running it.
 
-#### Task 1: Installing the Test & Feedback Extension
+### Task 1: Installing the Test & Feedback Extension
 
 1.  Install **Google Chrome** from <http://google.com/chrome>. The rest
     of this exercise will use Chrome as its browser.
@@ -335,7 +335,7 @@ In this exercise, you will learn how to create a manual test plan
 
     <img src="./media/image41.png" width="480" height="251" />
 
-#### Task 2: Authoring a Manual Test Plan
+### Task 2: Authoring a Manual Test Plan
 
 1.  In Chrome, navigate to <http://vsalm:8080/tfs>.
 
@@ -432,7 +432,7 @@ In this exercise, you will learn how to create a manual test plan
 
     <img src="./media/image51.png" width="624" height="96" />
 
-#### Task 3: Running a Manual Test Plan
+### Task 3: Running a Manual Test Plan
 
 In this task, you will learn how to run the manual test plan that we created earlier.
 
@@ -579,7 +579,7 @@ In this task, you will learn how to run the manual test plan that we created ear
 
 26. Close the test browser windows.
 
-#### Task 4: Analyzing Manual Test Results
+### Task 4: Analyzing Manual Test Results
 
 In this task, you will learn how to review the results of a manual test run.
 
@@ -617,7 +617,7 @@ In this task, you will learn how to review the results of a manual test run.
 
     <img src="./media/image81.png" width="624" height="206" />
 
-#### Task 5: Creating Shared Steps
+### Task 5: Creating Shared Steps
 
 In this task, you will learn how to create shared steps. A shared
     step combines multiple steps that are commonly performed in sequence
