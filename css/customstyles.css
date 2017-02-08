@@ -86,8 +86,8 @@ h4[id],
 h5[id],
 h6[id],
 dt[id]{
-padding-top: 20px;
-margin-top: 25px;
+padding-top: 10px;
+margin-top: 15px;
 
 }
 
@@ -452,6 +452,15 @@ span.projectTitle {
     font-weight: bold;
 }
 
+span.rellinkstitle {
+     font-size: 90%;  
+  color: #FFFFFF;
+}
+
+span.rellinkscontent {
+     font-size: 90%;
+ 
+}
 .footer {
     text-align: right;
 }
@@ -617,7 +626,7 @@ a.fa.fa-envelope-o.mailto {
     font-weight: 600;
 }
 
-h3 {color: #ED1951; font-weight:normal; font-size:130%;}
+h3 {color: #001435; font-weight:normal; font-size:130%;}
 h4 {color: #808080; font-weight:normal; font-size:120%; font-style:italic;}
 
 .alert, .callout {
@@ -688,6 +697,7 @@ button.cursorNorm {
 
 h2  {
     font-size:24px;
+    font-weight: bold;
     line-height:29px;
 }
 span.otherProgrammingLanguages {
