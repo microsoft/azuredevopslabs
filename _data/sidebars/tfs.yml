@@ -76,10 +76,6 @@ entries:
       url: labs/tfs/git
       output: web, pdf
 
-    - title: Coded UI Testing
-      url: labs/tfs/codedui
-      output: web, pdf
-
     - title: IntelliTrace
       url: labs/tfs/intellitrace
       output: web, pdf
@@ -118,6 +114,10 @@ entries:
 
     - title: Manual Testing
       url: labs/tfs/manualtesting
+      output: web, pdf
+
+    - title: Coded UI Testing
+      url: labs/tfs/codedui
       output: web, pdf
 
 
