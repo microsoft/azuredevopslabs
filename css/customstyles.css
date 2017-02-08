@@ -245,7 +245,7 @@ ul#results-container a:hover {
 #search-input {
     padding: .3em;
     margin-left: 17px;
-    padding-left: 10px;
+    padding-left: 35px;
     width: 16.2em;
     font-size: 0.8em;
     -webkit-box-sizing: border-box;
@@ -1204,4 +1204,10 @@ div.box.box1 {
 h4.panel-title {
     padding-top: 0px;
     margin-top: 0px;
+}
+
+i.glyphicon.glyphicon-search {
+    margin-top: 15px;
+    left: 25px;
+    /* max-width: 2px; */
 }
