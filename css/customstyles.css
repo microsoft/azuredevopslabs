@@ -220,14 +220,12 @@ p.post-meta {font-size: 80%; color: #777;}
 #search-demo-container ul#results-container {
     list-style: none;
     font-size: 12px;
-    background-color: white;
     position: absolute;
-    top: 20px; /* if you change anything about the nav, you'll prob. need to reset the top and left values here.*/
+    top: 49px; /* if you change anything about the nav, you'll prob. need to reset the top and left values here.*/
     left: 20px;
     z-index: -1;
-    width:250px;
-    border-left: 1px solid #dedede;
-    box-shadow: 2px 3px 2px #dedede;
+    width:240px;
+    
 }
 
 
