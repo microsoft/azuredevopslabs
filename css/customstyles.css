@@ -225,7 +225,7 @@ p.post-meta {font-size: 80%; color: #777;}
     left: 20px;
     z-index: -1;
     width:240px;
-    
+    background:#ffffff;
 }
 
 
@@ -235,6 +235,7 @@ ul#results-container a {
 
 ul#results-container a:hover {
     color: black;
+    background:#ccc;
 }
 
 
