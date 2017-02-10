@@ -23,7 +23,7 @@ We would like to keep this repository dynamic; updated with latest assets - We w
 
 ## Hands-On-Labs/Demo Scripts
 
-If you prefer to use Team Foundation Server - Click [Here](labs/tfs)
+If you prefer to use Team Foundation Server - Click [here](labs/tfs)
 
-If you prefer to use Visual Studio Team Services - Click [Here](labs/vsts)
+If you prefer to use Visual Studio Team Services - Click [here](labs/vsts)
 
