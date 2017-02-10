@@ -1,19 +1,15 @@
 ---
-title:  "Welcome to Jekyll!"
-categories: jekyll update
-permalink: myupdate.html
+title:  "ALM VM 2017 Progress!"
+categories: VM update
+permalink: almvmupdatenews
 tags: [news]
 ---
 
 
-Theme updates:
+**Great News!** We have begun working on the ALM VM update for TFS and VS 2017. We estimate to complete the update and make the VM and the Hands-on-Labs publicly available by the 2nd week of March 2017.
 
-- Permalinks
-- Kramdown
-- URL specified in config file
-- removed PDF output
-- removed some of the alternative layouts
-- added blog feature
-- sidebars configurable per page
+If you have any questions, feedback or suggestions it would be great to <a href="mailto:devopsdemos@microsoft.com">hear from you.</a>
+
+Until then stay tuned!
 
 {% include links.html %}
