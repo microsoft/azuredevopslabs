@@ -11,7 +11,7 @@ search: exclude
 "title": "{{ page.title | escape }}",
 "tags": "{{ page.tags }}",
 "keywords": "{{page.keywords}}",
-"url": "{{ page.url}}",
+"url": "{{ page.url | prepend: site.baseurl }}",
 "url": "{{ page.url }}",
 "summary": "{{page.summary | strip }}"
 }
