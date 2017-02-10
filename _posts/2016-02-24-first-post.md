@@ -1,7 +1,7 @@
 ---
 title:  "ALM VM 2017 Progress!"
 categories: VM update
-permalink: almvmupdatenews
+permalink: almvmupdatenews.html
 tags: [news]
 ---
 
