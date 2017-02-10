@@ -91,7 +91,11 @@ margin-top: 15px;
 
 }
 
-body h1 {margin-top:40px;}
+body h1 {
+    margin-top:40px;
+    border: 1;
+    border-color: #248ec2;
+}
 
 .post-content img {
     margin: 12px 0px 3px 0px;
