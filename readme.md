@@ -1,6 +1,6 @@
 ---
 layout: homepage
-title: Microsft ALM VM 2017
+title: Microsft ALM VM
 keywords: ALM VM homepage
 tags: [overview]
 permalink: index.html
