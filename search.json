@@ -12,7 +12,7 @@ search: exclude
 "tags": "{{ page.tags }}",
 "keywords": "{{page.keywords}}",
 "url": "{{ page.url | prepend: site.baseurl }}",
-"url": "{{ page.url }}",
+"url": "{{ page.url | prepend: site.baseurl }}",
 "summary": "{{page.summary | strip }}"
 }
 {% unless forloop.last and site.posts.size < 1 %},{% endunless %}

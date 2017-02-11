@@ -405,7 +405,7 @@ background-color: #347DBE;
 }
 
 .nav > li > a {
-    font-size: 14px;
+   /* font-size: 14px; sachin*/
     line-height: 20px;
     padding: 4px 10px;
 }

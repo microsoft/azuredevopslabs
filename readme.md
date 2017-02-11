@@ -12,6 +12,7 @@ summary:
 
  <!--img src="images/home.png" /-->
 
+
 <br>We are pleased to announce that we are updating the **ALM-VM** to support **[Team Foundation Server 2017](https://www.visualstudio.com/en-us/news/releasenotes/tfs2017-relnotes)** and **[Visual Studio Team Services](https://www.visualstudio.com/team-services/)**. The VM and the accompanying hands-on-labs are now updated to support **[Visual Studio 2017](https://www.visualstudio.com/downloads/)**. The hands-on-labs will also be refreshed and included some new exciting topics!
 
 ## Overview   
