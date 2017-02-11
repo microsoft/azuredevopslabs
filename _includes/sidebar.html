@@ -5,7 +5,7 @@
     {% for entry in sidebar %}
     {% for folder in entry.folders %}
     {% if folder.output contains "web" %}
-    <li>
+    <li class="sidebarentry">
         <a href="#">{{ folder.title }}</a>
         <ul>
             {% for folderitem in folder.folderitems %}
