@@ -92,6 +92,10 @@ entries:
       url: labs/tfs/sqlprompt
       output: web, pdf
 
+    - title: ReadyRoll
+      url: labs/tfs/readyroll
+      output: web, pdf
+
   - title: Build
     output: web, pdf
 
