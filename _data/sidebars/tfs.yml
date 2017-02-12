@@ -44,11 +44,11 @@ entries:
     output: web, pdf
     folderitems:
 
-    - title: Agile Planning
+    - title: Agile Planning and Portfolio Management with Team Foundation Server 2017
       url: labs/tfs/agile
       output: web, pdf
 
-    - title: Generating Storyboards
+    - title: Building the Right Software - Generating Storyboards with Visual Studio 2017
       url: labs/tfs/storyboarding
       output: web, pdf
 
@@ -56,35 +56,35 @@ entries:
     output: web, pdf
     folderitems:
 
-    - title: Collaborations for Dev Teams
+    - title: Collaboration Experiences for Development Teams using Team Foundation Server 2017
       url: labs/tfs/devteamcollaboration
       output: web, pdf
 
-    - title: Branching and Merging
+    - title: Branching and Merging Visualization with Visual Studio Team Foundation Server 2017
       url: labs/tfs/branchingandmerging
       output: web, pdf
 
-    - title: Live Unit Testing
+    - title: Live Unit Testing in Visual Studio 2017
       url: /mydoc_install_jekyll_on_windows.html
       output: web, pdf
 
-    - title: Live Dependency Validation
+    - title: Code Discovery using Live Dependency Validation in Visual Studio Enterprise 2017
       url: labs/tfs/architecturevalidation
       output: web, pdf
     
-    - title: Getting Started with Git
+    - title: Version Controlling with Git using Team Foundation Server 2017
       url: labs/tfs/git
       output: web, pdf
 
-    - title: IntelliTrace
+    - title: Diagnosing Issues in Production with IntelliTrace and Visual Studio 2017
       url: labs/tfs/intellitrace
       output: web, pdf
 
-    - title: Visual Studio Productivity Features
+    - title: Making Developers More Productive with Visual Studio Team Foundation Server 2017
       url: labs/tfs/vsproductivity
       output: web, pdf
 
-    - title: Unit Testing
+    - title: Unit Testing, Code Coverage, and Code Clone Analysis with Visual Studio 2017
       url: labs/tfs/unittesting
       output: web, pdf
 
@@ -92,11 +92,11 @@ entries:
     output: web, pdf
 
     folderitems:
-    - title: Using Team Foundation Build
+    - title: Team Foundation Build 2017
       url: labs/tfs/build
       output: web, pdf
 
-    - title: Managing Technical Debt
+    - title: Managing Technical Debt with Team Foundation Server 2017 and SonarQube
       url: /mydoc_pages.html
       output: web, pdf
     
@@ -104,19 +104,19 @@ entries:
     output: web, pdf
 
     folderitems:
-    - title: Exploratory Testing
+    - title: Exploratory Testing and Feedback Management with Team Foundation Server 2017
       url: labs/tfs/exploratorytesting
       output: web, pdf
 
-    - title: IntelliTest
+    - title: Running IntelliTest with Visual Studio Enterprise 2017
       url: labs/tfs/intellitest
       output: web, pdf
 
-    - title: Manual Testing
+    - title: Running Manual Tests using Microsoft Test Runner
       url: labs/tfs/manualtesting
       output: web, pdf
 
-    - title: Coded UI Testing
+    - title: Running Coded UI Tests with Visual Studio Enterprise 2017
       url: labs/tfs/codedui
       output: web, pdf
 
@@ -125,7 +125,7 @@ entries:
     output: web, pdf
 
     folderitems:
-    - title: Release Management
+    - title: Embracing Continuous Delivery with Release Management for Visual Studio 2017
       url: labs/tfs/releasemanagement
       output: web, pdf
 
@@ -133,6 +133,6 @@ entries:
     output: web, pdf
 
     folderitems:
-    - title: Commenting on files
+    - title: Monitoring Applications with Application Insights
       url: /mydoc_commenting_on_files.html
       output: web, pdf
