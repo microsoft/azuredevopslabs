@@ -88,6 +88,10 @@ entries:
       url: labs/tfs/unittesting
       output: web, pdf
 
+    - title: SQL Prompt for Visual Studio Enterprise 2017
+      url: labs/tfs/sqlprompt
+      output: web, pdf
+
   - title: Build
     output: web, pdf
 
