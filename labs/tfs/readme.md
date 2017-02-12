@@ -59,27 +59,28 @@ In this set of hands-on labs, you will take part in a number of scenarios that i
 Lab Name
 </td>
 </thead>
-<tr><td>Working with the Visual Studio 2017 ALM Virtual Machine                                  </td></tr>
-<tr><td><a href="agile/">Agile Planning and Portfolio Management with Team Foundation Server 2017</a>  </td></tr>
-<tr><td><a href="branchingandmerging/">Branching and Merging Visualization with Visual Studio Team Foundation Server 2017 </a>      </td></tr>
-<tr><td><a href="storyboarding/">Building the Right Software - Generating Storyboards and Collecting Stakeholder Feedback with Visual Studio 2017
-</a> </td></tr>
-<tr><td><a href="architecturevalidation/">Code Discovery using the Architecture Tools in Visual Studio Enterprise 2017 </a>            </td></tr>
-<tr><td><a href="devteamcollaboration/">Collaboration Experiences for Development Teams using Team Foundation Server 2017   </a>     </td></tr>
-<tr><td>Debugging with IntelliTrace using Visual Studio Enterprise 2017                          </td></tr>
-<tr><td><a href="intellitrace/">Diagnosing Issues in Production with IntelliTrace and Visual Studio 2017  </a>               </td></tr>
-<tr><td><a href="releasemanagement/">Embracing Continuous Delivery with Release Management for Visual Studio 2017          </a>   </td></tr>
-<tr><td><a href="exploratorytesting/">Exploratory Testing and Feedback Management with Team Foundation Server 2017</a>                                    </td></tr>
-<tr><td><a href="git/">Getting Started with Git using Team Foundation Server 2017</a>                              </td></tr>
-<tr><td><a href="codedui/">Introduction to Coded UI Tests with Visual Studio Enterprise 2017 </a>                       </td></tr>
-<tr><td><a href="intellitest/">Introduction to IntelliTest with Visual Studio Enterprise 2017  </a>                         </td></tr>
-<tr><td>Introduction to PreEmptive Analytics                                                     </td></tr>
-<tr><td>Introduction to SmartOffice4TFS                                                          </td></tr>
-<tr><td><a href="build/">Introduction to Team Foundation Build 2017                                 </a>              </td></tr>
-<tr><td><a hrf="manualtesting/">Test Planning and Management with Team Foundation Server 2017  </a>                         </td></tr>
-<tr><td>Introduction to Web Performance and Load Testing with Visual Studio Enterprise 2017      </td></tr>
-<tr><td><a href="vsproductivity/">Making Developers More Productive with Visual Studio Team Foundation Server 2017    </a>     </td></tr>
-<tr><td>Managing Technical Debt with Team Foundation Server 2017 and SonarQube                   </td></tr>
-<tr><td><a href="unittesting/">Unit Testing, Code Coverage and Code Clone Analysis with Visual Studio 2017   </a>           </td></tr>
-<tr><td>Using Code Analysis with Visual Studio 2017 to Improve Code Quality                      </td></tr>
+<tr><td>Working with the Visual Studio 2017 ALM Virtual Machine</td></tr>
+<tr><td><a href="agile/">Agile Planning and Portfolio Management with Team Foundation Server 2017</a></td></tr>
+<tr><td><a href="branchingandmerging/">Branching and Merging Visualization with Visual Studio Team Foundation Server 2017</a></td></tr>
+<tr><td><a href="storyboarding/">Building the Right Software - Generating Storyboards and Collecting Stakeholder Feedback with Visual Studio 2017</a></td></tr>
+<tr><td><a href="architecturevalidation/">Code Discovery using Live Dependency Validation in Visual Studio Enterprise 2017</a></td></tr>
+<tr><td><a href="devteamcollaboration/">Collaboration Experiences for Development Teams using Team Foundation Server 2017</a></td></tr>
+<tr><td>Debugging with IntelliTrace using Visual Studio Enterprise 2017</td></tr>
+<tr><td><a href="intellitrace/">Diagnosing Issues in Production with IntelliTrace and Visual Studio 2017</a></td></tr>
+<tr><td><a href="releasemanagement/">Embracing Continuous Delivery with Release Management for Visual Studio 2017</a></td></tr>
+<tr><td><a href="exploratorytesting/">Exploratory Testing and Feedback Management with Team Foundation Server 2017</a></td></tr>
+<tr><td><a href="git/">Version Controlling with Git using Team Foundation Server 2017</a></td></tr>
+<tr><td><a href="codedui/">Introduction to Coded UI Tests with Visual Studio Enterprise 2017</a></td></tr>
+<tr><td><a href="intellitest/">Running IntelliTest with Visual Studio Enterprise 2017</a></td></tr>
+<tr><td>Introduction to SmartOffice4TFS</td></tr>
+<tr><td><a href="build/">Team Foundation Build 2017</a></td></tr>
+<tr><td><a hrf="manualtesting/">Test Planning and Management with Team Foundation Server 2017</a></td></tr>
+<tr><td>Web Performance and Load Testing with Visual Studio Enterprise 2017</td></tr>
+<tr><td><a href="vsproductivity/">Making Developers More Productive with Visual Studio Team Foundation Server 2017</a></td></tr>
+<tr><td>Managing Technical Debt with Team Foundation Server 2017 and SonarQube</td></tr>
+<tr><td><a href="unittesting/">Unit Testing, Code Coverage and Code Clone Analysis with Visual Studio 2017</a></td></tr>
+<tr><td>Using Code Analysis with Visual Studio 2017 to Improve Code Quality</td></tr>
+<tr><td>Monitoring Applications using Application Insights</td></tr>
+<tr><td><a href="sqlprompt/">SQL Prompt for Visual Studio Enterprise 2017</a></td></tr>
+<tr><td><a href="readyroll/">ReadyRoll- Develop and deploy databases in Visual Studio Enterprise 2017</a></td></tr>
 </table>

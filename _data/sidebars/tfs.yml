@@ -92,7 +92,7 @@ entries:
       url: labs/tfs/sqlprompt
       output: web, pdf
 
-    - title: ReadyRoll
+    - title: ReadyRoll- Develop and deploy databases in Visual Studio Enterprise 2017
       url: labs/tfs/readyroll
       output: web, pdf
 

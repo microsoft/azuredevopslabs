@@ -1,5 +1,5 @@
 ---
-title: ReadyRoll
+title: ReadyRoll- Develop and deploy databases in Visual Studio Enterprise 2017
 layout: page
 sidebar: tfs
 permalink: /labs/tfs/readyroll/
