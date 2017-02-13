@@ -10,20 +10,36 @@ summary:
         
  <!--<img src="http://vsalmvm.azurewebsites.net/wp-content/uploads/2015/09/ALM-VM-banner-0915.png" width="760" height="177" />-->
 
- <!--img src="images/home.png" /-->
+<br>
+<span class="introText">
+The ALM VM is a virtual machine preinstalled with Visual Studio & Team Foundation server along with other supporting software coming pre-configured with sample projects, users, data and a set of hands-on-labs/demo scripts to get started with all the ALM Capabilities that Microsoft Visual Studio Team Foundation Server provides. 
+</span>
+<br>
+<table class="mainTable" width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td class ="mainTable" width="80%">
+<h2> ALM VM 2017</h2>
+  <span class ="mainPageText" align="right">Bringing you the 2017 version of the Microsoft Visual Studio ALM VM with updated versions, new application, more Hands-on-Labs.To find out what's new and download the vm, please check <a href="labs/tfs">here</a></span>
 
-<br>We are pleased to announce that we are updating the **ALM-VM** to support **[Team Foundation Server 2017](https://www.visualstudio.com/en-us/news/releasenotes/tfs2017-relnotes)** and **[Visual Studio Team Services](https://www.visualstudio.com/team-services/)**. The VM and the accompanying hands-on-labs are now updated to support **[Visual Studio 2017](https://www.visualstudio.com/downloads/)**. The hands-on-labs will also be refreshed and included some new exciting topics!
+  
+<h2> Labs for Visual Studio Team Services </h2>
+<span class="mainPageText">
+We are happy to share that the Hands-on-Labs can be used with Visual Studio Team Services. Find out <a href="labs/vsts">more</a>
+</span>
+  </td>
+  <td  class ="mainTable"  align="center" width="20%">
+          <img style="vertical-align:middle" src="images/devops.png" />
+ </td>
+ </tr>
+ <tr>
+ 
+</tr>
+ </table>
 
-## Overview   
-The ALM VM quickly provides you on-the go TFS environment to get start with all the ALM Capabilities that Microsoft provides. You can try out all the Hands On Labs listed below that supports the latest Developer tools. You can get your hands on the latest set of features which enables the Productivity of a Developer/Tester. Put your teams on-board to get started with all the coolest features of TFS/VSTS to implement DevOps, even before your customers start.
 
-This VM makes it easier for us to showcase newly introduced features of VS 2017 as well as TFS 2017. As we have most of the required software already installed, and also couple of stable .Net projects with database, we have the liberty to showcase all the features of VS and TFS, thus giving a complete ALM overview/ deep-dive to prospective or current users. We will come up with lot more set of features. Stay tuned until.....!!!
 
-We would like to keep this repository dynamic; updated with latest assets - We welcome your feedback and suggestions. Explore Hands on labs by installing this VM today! 
 
-## Hands-On-Labs/Demo Scripts
 
-If you prefer to use Team Foundation Server - Click [here](labs/tfs)
 
-If you prefer to use Visual Studio Team Services - Click [here](labs/vsts)
+
 

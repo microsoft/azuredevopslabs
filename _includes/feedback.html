@@ -4,10 +4,11 @@
 {% else %}
   {% assign feedback_text = "Feedback" %}
 {% endif %}
-
+                <img src="{{site.url}}{{ site.baseurl }}images/contributor.png" />&nbsp;
 {% if site.feedback_link %}
   <a class="email" title="Submit feedback" href="{{site.feedback_link}}">{{feedback_text}}</a>
 {% else %}
-  <a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:{{site.feedback_email}}?subject={{site.feedback_subject_line}} feedback&body=I have some feedback about the {{page.title}} page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> {{feedback_text}}</a>
+  <a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:{{site.feedback_email}}?subject={{site.feedback_subject_line}} feedback&body=I have some feedback about the {{page.title}} page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> <img style="vertical-align:middle" src="{{site.url}}{{ site.baseurl }}images/feedback2.png"></a>
+  
 {% endif %}
 </li>

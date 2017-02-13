@@ -40,7 +40,6 @@
     </script>
     {% if page.datatable == true %}
     <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.5/css/jquery.dataTables.css">
-<link href="https://fonts.googleapis.com/css?family=Arimo|Merriweather|Pangolin|Roboto|Source+Sans+Pro|Trocchi" rel="stylesheet">
     <script type="text/javascript" charset="utf8" src="//cdn.datatables.net/1.10.5/js/jquery.dataTables.js"></script>
     <script>
         $(document).ready(function(){
@@ -54,9 +53,9 @@
     {% endif %}
 
 </head>
-<body>
+<body border="1" border-color="#000000">
 {% include topnav.html %}
-
+<div style="color:#F87431;height:7px;">-------------------</div>
 <!-- Page Content -->
 <div class="container">
     <div class="col-lg-12">&nbsp;</div>
@@ -78,6 +77,8 @@
     </div>
 
  <div class="container">
+ <br />
+<br />
 {% include disqus.html %}
 </div>
 </body>
