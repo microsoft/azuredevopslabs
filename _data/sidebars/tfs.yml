@@ -116,7 +116,7 @@ entries:
       url: labs/tfs/exploratorytesting
       output: web, pdf
 
-    - title: Running IntelliTest with Visual Studio Enterprise 2017
+    - title: Generate Unit Tests with IntelliTest using Visual Studio Enterprise 2017
       url: labs/tfs/intellitest
       output: web, pdf
 
@@ -124,7 +124,7 @@ entries:
       url: labs/tfs/manualtesting
       output: web, pdf
 
-    - title: Running Coded UI Tests with Visual Studio Enterprise 2017
+    - title: UI Automation using Coded UI Tests with Visual Studio Enterprise 2017
       url: labs/tfs/codedui
       output: web, pdf
 

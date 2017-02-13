@@ -70,8 +70,8 @@ Lab Name
 <tr><td><a href="releasemanagement/">Embracing Continuous Delivery with Release Management for Visual Studio 2017</a></td></tr>
 <tr><td><a href="exploratorytesting/">Exploratory Testing and Feedback Management with Team Foundation Server 2017</a></td></tr>
 <tr><td><a href="git/">Version Controlling with Git using Team Foundation Server 2017</a></td></tr>
-<tr><td><a href="codedui/">Introduction to Coded UI Tests with Visual Studio Enterprise 2017</a></td></tr>
-<tr><td><a href="intellitest/">Running IntelliTest with Visual Studio Enterprise 2017</a></td></tr>
+<tr><td><a href="codedui/">UI Automation using Coded UI Tests with Visual Studio Enterprise 2017</a></td></tr>
+<tr><td><a href="intellitest/">Generate Unit Tests with IntelliTest using Visual Studio Enterprise 2017</a></td></tr>
 <tr><td>Introduction to SmartOffice4TFS</td></tr>
 <tr><td><a href="build/">Team Foundation Build 2017</a></td></tr>
 <tr><td><a hrf="manualtesting/">Test Planning and Management with Team Foundation Server 2017</a></td></tr>
