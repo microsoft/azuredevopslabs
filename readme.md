@@ -10,6 +10,7 @@ summary:
         
  <!--<img src="http://vsalmvm.azurewebsites.net/wp-content/uploads/2015/09/ALM-VM-banner-0915.png" width="760" height="177" />-->
 
+<br>
 <span class="introText">
 The ALM VM is a virtual machine preinstalled with Visual Studio & Team Foundation server along with other supporting software coming pre-configured with sample projects, users, data and a set of hands-on-labs/demo scripts to get started with all the ALM Capabilities that Microsoft Visual Studio Team Foundation Server provides. 
 </span>
