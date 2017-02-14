@@ -96,6 +96,10 @@ entries:
       url: labs/tfs/readyroll
       output: web, pdf
 
+    - title: Using Code Analysis with Visual Studio 2017 to Improve Code Quality
+      url: labs/tfs/codeanalysis
+      output: web, pdf
+
   - title: Build
     output: web, pdf
 
