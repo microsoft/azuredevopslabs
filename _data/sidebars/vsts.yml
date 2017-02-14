@@ -84,8 +84,8 @@ entries:
     output: web, pdf
 
     folderitems:
-    - title: Sidebar navigation
-      url: /mydoc_sidebar_navigation.html
+    - title: Exploratory Testing and Feedback Management with Visual Studio Team Services
+      url: labs/vsts/exploratorytesting
       output: web, pdf
 
 

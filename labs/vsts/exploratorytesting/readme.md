@@ -1,5 +1,12 @@
-## Overview
+---
+title: Exploratory Testing and Feedback Management with Visual Studio Team Services
+layout: page
+sidebar: tfs
+permalink: /labs/vsts/exploratorytesting/
+folder: /labs/vsts/exploratorytesting/
+---
 
+## Overview
 
 In this lab, you will learn about the exploratory testing and feedback management capabilities provided in the Test & Feedback extension. 
 You will learn about how exploratory testing (also called XT, or agile testing) has become a first-class experience in the toolset. 
@@ -228,7 +235,7 @@ In this exercise, you will learn about managing the feedback
 
     <img src="images/image28.png" width="230"/>
 
-3.  Select **Work | Backlogs**.
+3.  Select **Work \| Backlogs**.
 
     <img src="images/image29.png" width="314"/>
 
@@ -336,7 +343,7 @@ In this exercise, you will learn about managing the feedback
 
 1. Return to your VSTS account.
 
-2. Navigate to the **Work** /| **Queries** page and click on the **Editor**.
+2. Navigate to the **Work** \| **Queries** page and click on the **Editor**.
    Change the query to search **Feedback Response** work item. You should see 
    1 response in the results.
 
