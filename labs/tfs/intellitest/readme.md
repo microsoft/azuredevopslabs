@@ -1,5 +1,5 @@
 ---
-title: Introduction to IntelliTest
+title: Generate Unit Tests with IntelliTest using Visual Studio Enterprise 2017
 layout: page    
 sidebar: tfs
 permalink: /labs/tfs/intellitest/

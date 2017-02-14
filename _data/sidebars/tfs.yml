@@ -124,7 +124,7 @@ entries:
       url: labs/tfs/intellitest
       output: web, pdf
 
-    - title: Running Manual Tests using Microsoft Test Runner
+    - title: Test Planning and Management with Team Foundation Server 2017
       url: labs/tfs/manualtesting
       output: web, pdf
 

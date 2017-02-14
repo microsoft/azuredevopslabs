@@ -1,5 +1,5 @@
 ---
-title: Introduction to Coded UI Test with VS Enterprise 2017
+title: UI Automation using Coded UI Tests with Visual Studio Enterprise 2017
 layout: page    
 sidebar: tfs
 permalink: /labs/tfs/codedui/
