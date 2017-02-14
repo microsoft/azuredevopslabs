@@ -83,7 +83,7 @@ In this exercise, you will learn about the Code Analysis features in
 
     <img src="./media/image6.png" width="624" height="362" />
 
-**Note:** If you are interested in learning how to create custom
+    **Note:** If you are interested in learning how to create custom
     rule sets, please see
     [this](http://msdn.microsoft.com/en-us/library/dd264974.aspx)
     MSDN documentation.
@@ -101,11 +101,11 @@ In this exercise, you will learn about the Code Analysis features in
 
     <img src="./media/image8.png" width="624" height="199" />
 
-**Note:** Depending on the version of FabrikamFiber that you are
+    **Note:** Depending on the version of FabrikamFiber that you are
     running, you may see more or less results than depicted
     in screenshots.
 
-Code Analysis rules can also be configured to show up as errors
+    >Code Analysis rules can also be configured to show up as errors
     if desired.
 
 
