@@ -47,20 +47,8 @@ entries:
   - title: Develop
     output: web, pdf
     folderitems:
-
-    - title: Improving Developer Productivity
-      url: /mydoc_about_ruby_gems_etc.html
-      output: web, pdf
-
-    - title: Branching and Merging
-      url: /mydoc_install_jekyll_on_mac.html
-      output: web, pdf
-
-    - title: Live Unit Testing
-      url: /mydoc_install_jekyll_on_windows.html
-      output: web, pdf
     
-    - title: Getting Started with Git
+    - title: Getting Started with Git using Visual Studio team Services
       url: labs/vsts/git
       output: web, pdf
 
