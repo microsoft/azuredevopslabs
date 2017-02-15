@@ -40,12 +40,8 @@ entries:
     output: web, pdf
     folderitems:
 
-    - title: Agile Planning
-      url: /lab/tfs/agile/
-      output: web, pdf
-
-    - title: Portfolio Management
-      url: /mydoc_release_notes_50.html
+    - title: Agile Planning and Portfolio Management with Visual Studio Team Services
+      url: labs/vsts/agile
       output: web, pdf
 
   - title: Develop
