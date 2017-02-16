@@ -1,5 +1,5 @@
 ---
-title: Getting Started with Git using Team Foundation Server 2017
+title: Version Controlling with Git using Team Foundation Server 2017
 layout: page
 sidebar: tfs
 permalink: /labs/tfs/git/

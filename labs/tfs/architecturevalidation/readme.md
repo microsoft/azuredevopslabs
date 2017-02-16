@@ -1,5 +1,5 @@
 ---
-title: Live Dependency Validation in Visual Studio 2017
+title: Code Discovery using Live Dependency Validation in Visual Studio Enterprise 2017
 layout: page    
 sidebar: tfs
 permalink: /labs/tfs/architecturevalidation/

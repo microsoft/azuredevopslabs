@@ -6,17 +6,43 @@ permalink: /labs/vsts/
 folder: /labs/vsts/
 ---
 
+
+<img src="agile/images/alm.png" />
+
 ## Overview
 
-**About the Fabrikam Fiber Scenario** 
+Visual Studio Team Services and Azure cloud services help remove barriers between teams, encourage collaboration, and improve the flow of value to your customers.
+Or, use our on-premises server, Team Foundation Server (TFS), when you want to maintain your data within your network.
 
-This set of hands-on-labs uses a fictional company, Fabrikam Fiber, as a backdrop to the scenarios you are learning about. Fabrikam Fiber provides cable television and related services to the United States. They are growing rapidly and have embraced Windows Azure to scale their customer-facing web site directly to end-users to allow them to self-service tickets and track technicians. They also use an on-premises ASP.NET MVC application for their customer service representatives to administer customer orders.
+Both options are enterprise-ready, supporting teams of any size, from tens to thousands. Team Services provides a scalable, reliable, and globally available
+hosted service. It is backed by a 99.9% SLA, monitored by our 24×7 operations team, and available in local data centers around the world.
+Also, you can quickly expand the power of these tools through integration with other services and tools using service hooks and extensions.
 
-In this set of hands-on labs, you will take part in a number of scenarios that involve the development and testing team at Fabrikam Fiber. The team, which consists of 8-10 people, has decided to use Visual Studio application lifecycle management tools to manage their source code, run their builds, test their web sites, and plan and track the project.
 
-## Pre-requisites 
+**Using the Hands-on-Labs with VSTS**
 
-**Using the Hands-on-Labs with the ALM VM**
+In order to complete this lab you will need a **Visual Studio Team Services account**. If you don't have one, you can create from <a href="https://www.visualstudio.com/">here</a>
 
-In order to complete this lab you will need the Visual Studio 2017 virtual machine provided by Microsoft. For more information on acquiring and using this virtual machine, please see this blog post.
+Use the <a href="" >VSTS Demo generator</a> to create the project with the pre-defined data.
+
+
+## Hands-On-Labs
+
+<table width="100%">
+<thead><td>
+Lab Name
+</td>
+</thead>
+<tr><td>Working with the VSTS Demo generator</td></tr>
+<tr><td><a href="agile/">Agile Planning and Portfolio Management using Visual Studio Team Services</a></td></tr>
+<tr><td><a href="git/">Version Controlling with Git using Visual Studio Team Services</a></td></tr>
+<tr><td><a href="build/">Continuous Integration using Visual Studio Team Services</a></td></tr>
+<tr><td><a href="releasemanagement/">Continuous Deployment using Visual Studio Team Services</a></td></tr>
+<tr><td><a hrf="manualtesting/">Test Planning and Management using Visual Studio Team Services</a></td></tr>
+<tr><td><a href="exploratorytesting/">Exploratory Testing and Feedback Management using Visual Studio Team Services</a></td></tr>
+<tr><td>Web Performance and Load Testing using Visual Studio Team Services</td></tr>
+<tr><td>Monitoring Applications using Application Insights</td></tr>
+<tr><td>Package Management using Visual Studio Team Services</td></tr>
+<tr><td>Azure Labs</td></tr>
+</table>
 

@@ -275,7 +275,6 @@ acquiring and using this virtual machine, please see [this blog post](http://aka
 
 8.  Press **Esc** to close the work item.
 
-    1.  
 
 ### Task 2: Using the Feedback Client
 

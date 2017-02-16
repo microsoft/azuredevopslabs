@@ -1,5 +1,5 @@
 ---
-title: Introduction to Team Foundation Build 2017, Test Run Analysis and Machines
+title: Team Foundation Build 2017
 layout: page    
 sidebar: tfs
 permalink: /labs/tfs/build/
