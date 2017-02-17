@@ -48,7 +48,7 @@ entries:
     output: web, pdf
     folderitems:
     
-    - title: Getting Started with Git using Visual Studio team Services
+    - title: Version Controlling with Git using Visual Studio Team Services
       url: labs/vsts/git
       output: web, pdf
 
