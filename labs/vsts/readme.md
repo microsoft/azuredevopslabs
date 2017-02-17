@@ -1,5 +1,5 @@
 ---
-title: ALM VM 2017 with VSTS - Hands-on-Labs 
+title: VSTS Hands-on-Labs 
 layout: page
 sidebar: vsts
 permalink: /labs/vsts/
