@@ -56,8 +56,8 @@ entries:
     output: web, pdf
 
     folderitems:
-    - title: Using Team Foundation Build
-      url: /mydoc_pages.html
+    - title: Continuous Integration using Visual Studio Team Services
+      url: labs/vsts/continuousintegration
       output: web, pdf
 
     - title: Managing Technical Debt
