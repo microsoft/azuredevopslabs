@@ -48,7 +48,7 @@ entries:
     output: web, pdf
     folderitems:
     
-    - title: Getting Started with Git using Visual Studio team Services
+    - title: Version Controlling with Git using Visual Studio Team Services
       url: labs/vsts/git
       output: web, pdf
 
@@ -56,8 +56,8 @@ entries:
     output: web, pdf
 
     folderitems:
-    - title: Using Team Foundation Build
-      url: /mydoc_pages.html
+    - title: Continuous Integration using Visual Studio Team Services
+      url: labs/vsts/continuousintegration
       output: web, pdf
 
     - title: Managing Technical Debt
@@ -77,14 +77,14 @@ entries:
     output: web, pdf
 
     folderitems:
-    - title: Commenting on files
-      url: /mydoc_commenting_on_files.html
+    - title: Continuous Deployment using Visual Studio Team Services
+      url: labs/vsts/continuousdeployment
       output: web, pdf
 
   - title: Monitor
     output: web, pdf
 
     folderitems:
-    - title: Commenting on files
-      url: /mydoc_commenting_on_files.html
+    - title: Monitoring Applications using Application Insights
+      url: /labs/vsts/monitor/
       output: web, pdf

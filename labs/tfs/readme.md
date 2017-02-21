@@ -77,7 +77,7 @@ Lab Name
 <tr><td><a hrf="manualtesting/">Test Planning and Management with Team Foundation Server 2017</a></td></tr>
 <tr><td>Web Performance and Load Testing with Visual Studio Enterprise 2017</td></tr>
 <tr><td><a href="vsproductivity/">Making Developers More Productive with Visual Studio Team Foundation Server 2017</a></td></tr>
-<tr><td>Managing Technical Debt with Team Foundation Server 2017 and SonarQube</td></tr>
+<tr><td><a href="technicaldebt/">Managing Technical Debt with Team Foundation Server 2017 and SonarQube</a></td></tr>
 <tr><td><a href="unittesting/">Unit Testing, Code Coverage and Code Clone Analysis with Visual Studio 2017</a></td></tr>
 <tr><td><a href="codeanalysis/">Using Code Analysis with Visual Studio 2017 to Improve Code Quality</a></td></tr>
 <tr><td>Monitoring Applications using Application Insights</td></tr>
