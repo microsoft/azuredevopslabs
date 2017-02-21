@@ -85,6 +85,6 @@ entries:
     output: web, pdf
 
     folderitems:
-    - title: Commenting on files
-      url: /mydoc_commenting_on_files.html
+    - title: Monitoring Applications using Application Insights
+      url: /labs/vsts/monitor/
       output: web, pdf
