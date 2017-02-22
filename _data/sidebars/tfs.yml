@@ -80,6 +80,10 @@ entries:
       url: labs/tfs/intellitrace
       output: web, pdf
 
+    - title: Debugging with IntelliTrace in Visual Studio Enterprise 2017
+      url: labs/tfs/debugging
+      output: web, pdf
+
     - title: Making Developers More Productive with Visual Studio Team Foundation Server 2017
       url: labs/tfs/vsproductivity
       output: web, pdf
