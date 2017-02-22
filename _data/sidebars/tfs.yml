@@ -132,6 +132,10 @@ entries:
       url: labs/tfs/codedui
       output: web, pdf
 
+    - title: Web Application Load and Performance Testing with Visual Studio 2017
+      url: labs/tfs/load
+      output: web, pdf
+
 
   - title: Deploy
     output: web, pdf

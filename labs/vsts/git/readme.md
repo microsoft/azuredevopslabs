@@ -308,7 +308,7 @@ Branches let you work with multiple versions of the source code in the same loca
      <img src="images/52.png" />
 
 
-### Task 3: Deleting a branch
+### Task 2: Deleting a branch
 
 1. Locate the branches from the web.
  
@@ -322,7 +322,7 @@ Branches let you work with multiple versions of the source code in the same loca
 
    <img src="images/54.png" width="624" />
 
-### Task 4: Locking Branch
+### Task 3: Locking Branch
 
 Locking is ideal for preventing new changes that might conflict with an important merge or to place a branch into a read-only state. 
 Use branch policies and pull requests instead of locking if you just want to ensure that changes in a branch are reviewed before they are merged.
