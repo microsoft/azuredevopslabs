@@ -22,7 +22,32 @@ used it allows you to:**
 
 -   Extend DevOps practices from your application to your database
 
-### Task 1: Create a ReadyRoll Project
+### Task 1: Creating databases from a Script
+
+1. Log in as **Sachin Raj** (VSALM\\Sachin). All user passwords are
+    **P2ssw0rd**.
+
+2. Launch Sql Server Management Studio and connect to VSALM\SQLExpress.
+
+   <img src="images/image26.png" width="624"/>
+
+3. Go to databases and you could see that currently we have only **PartsUnlimitedWebsite-Prod**.
+
+   <img src="images/image27.png" />
+
+4. Let's run a script for generating few more databases. Copy the contents of the script from the path **C:\PartsUnlimitedDB** and paste it in a new query in your 
+   Sql Server Management Studio.
+
+   <img src="images/image28.png" width="624"/>
+
+5. Click on **execute!**. You should see a successful message post execution.
+
+6. Now we have the other databases created as shown.
+
+   <img src="images/image29.png" />
+
+
+### Task 2: Create a ReadyRoll Project
 
 1.  In the Visual Studio menu: File &gt; New &gt; Project…
 
@@ -37,7 +62,7 @@ used it allows you to:**
 
     <img src="./images/image1.png" />
 
-### Task 2: Import the schema
+### Task 3: Import the schema
 
 1.  In the ReadyRoll window, click ‘Connect Database…’
 
@@ -66,7 +91,7 @@ When making changes to the database, there are a number of supported workflows, 
 
 Our database currently has a ‘Price’ column in the ‘Product’ table, but the business has decided that they would like to be able to price products independently depending on region. As a first step we will introduce a new ‘PriceGBP’ column for the British market and rename our existing ‘Price’ column to ‘PriceUSD’ for the US market.
 
-### Task 3: Making a change using SQL Server Object Explorer
+### Task 4: Making a change using SQL Server Object Explorer
 
 1.  Open SQL Server Object Explorer from the View menu
 
@@ -102,7 +127,7 @@ Our database currently has a ‘Price’ column in the ‘Product’ table, but 
 Now let’s use a query window to add our new column and populate it with
 some data
 
-### Task 4: Make a change using a query window
+### Task 5: Make a change using a query window
 
 1.  In the Object explorer, right click on the same database and select **New Query…**
 
@@ -161,7 +186,7 @@ some data
     Now that we’ve updated the values, we need to update this column to not allow null values so that it matches the original ‘Price’ column. 
     This time we’ll use the designer.
 
-### Task 5: Update Database
+### Task 6: Update Database
 
 1.  In the Object Explorer, right click on the ‘Product’ table and click ***‘View Designer’***
 
@@ -186,7 +211,7 @@ some data
     the new ‘not null’ column (PriceGBP) we’ve added to our development database. However, with ReadyRoll we simply concatenate these verified
     migration scripts into a single transaction which ensures a successful deployment.
 
-### Task 6: Configuring builds with VSTS 
+### Task 7: Configuring builds with VSTS 
 
 **Create a build definition**
 
@@ -319,4 +344,3 @@ Your task settings should look similar to this:
 You've now successfully set up ReadyRoll and Visual Studio Team Services
 (VSTS) to build and deploy databases.
 
-## Summary and Close - TBC
