@@ -24,8 +24,6 @@ used it allows you to:**
 
 ### Task 1: Create a ReadyRoll Project
 
-
-
 1.  In the Visual Studio menu: File &gt; New &gt; Project…
 
 2.  From the SQL Server template section, choose ReadyRoll SQL Server
