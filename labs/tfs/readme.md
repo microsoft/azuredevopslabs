@@ -83,4 +83,5 @@ Lab Name
 <tr><td>Monitoring Applications using Application Insights</td></tr>
 <tr><td><a href="sqlprompt/">SQL Prompt for Visual Studio Enterprise 2017</a></td></tr>
 <tr><td><a href="readyroll/">ReadyRoll- Develop and deploy databases in Visual Studio Enterprise 2017</a></td></tr>
+<tr><td><a href="editorconfig/">Working with EditorConfig in Visual Studio 2017</a></td></tr>
 </table>
