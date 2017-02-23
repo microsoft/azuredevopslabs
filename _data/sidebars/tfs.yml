@@ -80,6 +80,10 @@ entries:
       url: labs/tfs/intellitrace
       output: web, pdf
 
+    - title: Debugging with IntelliTrace in Visual Studio Enterprise 2017
+      url: labs/tfs/debugging
+      output: web, pdf
+
     - title: Making Developers More Productive with Visual Studio Team Foundation Server 2017
       url: labs/tfs/vsproductivity
       output: web, pdf
@@ -90,10 +94,6 @@ entries:
 
     - title: SQL Prompt for Visual Studio Enterprise 2017
       url: labs/tfs/sqlprompt
-      output: web, pdf
-
-    - title: ReadyRoll- Develop and deploy databases in Visual Studio Enterprise 2017
-      url: labs/tfs/readyroll
       output: web, pdf
 
     - title: Using Code Analysis with Visual Studio 2017 to Improve Code Quality
@@ -143,6 +143,10 @@ entries:
     folderitems:
     - title: Embracing Continuous Delivery with Release Management for Visual Studio 2017
       url: labs/tfs/releasemanagement
+      output: web, pdf
+
+    - title: ReadyRoll- Develop and deploy databases in Visual Studio Enterprise 2017
+      url: labs/tfs/readyroll
       output: web, pdf
 
   - title: Monitor
