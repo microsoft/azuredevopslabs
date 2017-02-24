@@ -8,7 +8,7 @@ folder: /labs/vsts/exploratorytesting/
 
 ## Overview
 
-In this lab, you will learn about the exploratory testing and feedback management capabilities provided in the Test & Feedback extension. 
+In this lab, you will learn about the <a href="https://www.visualstudio.com/en-us/docs/test/manual-exploratory-testing/getting-started/perform-exploratory-tests/">Exploratory Testing</a> and feedback management capabilities provided in the Test & Feedback extension. 
 You will learn about how exploratory testing (also called XT, or agile testing) has become a first-class experience in the toolset. 
 This allows a tester to more flexibly test the underlying software without relying solely on formal est cases. 
 You’ll also learn about how you can manage the process of eliciting and managing the customer feedback lifecycle.

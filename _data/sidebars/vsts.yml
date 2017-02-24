@@ -81,6 +81,10 @@ entries:
       url: labs/vsts/continuousdeployment
       output: web, pdf
 
+    - title: Package Management in Team Services
+      url: labs/vsts/packagemanagement
+      output: web, pdf
+
   - title: Monitor
     output: web, pdf
 
