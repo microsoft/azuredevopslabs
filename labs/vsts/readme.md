@@ -42,7 +42,7 @@ Lab Name
 <tr><td><a href="exploratorytesting/">Exploratory Testing and Feedback Management using Visual Studio Team Services</a></td></tr>
 <tr><td>Web Performance and Load Testing using Visual Studio Team Services</td></tr>
 <tr><td><a href="monitor/">Monitoring Applications using Application Insights</a></td></tr>
-<tr><td>Package Management using Visual Studio Team Services</td></tr>
-<tr><td>Azure Labs</td></tr>
+<tr><td><a href="packagemanagement/">Package Management using Visual Studio Team Services</a></td></tr>
+<tr><td><a href="azurelabs/">Azure Labs</a></td></tr>
 </table>
 

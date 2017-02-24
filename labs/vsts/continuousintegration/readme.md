@@ -8,7 +8,7 @@ folder: /labs/vsts/continuousintegration/
 
 ## Overview
 
-Visual Studio Team Services simplifies continuous integration for your applications regardless of what platform you are targeting, or what language you are using.
+Visual Studio Team Services simplifies <a href="https://www.visualstudio.com/en-us/docs/build/overview/">Continuous integration</a> for your applications regardless of what platform you are targeting, or what language you are using.
 
 - Build on Linux, Mac, and Windows.
 

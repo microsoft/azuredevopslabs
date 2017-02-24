@@ -8,7 +8,7 @@ folder: /labs/vsts/continuousdeployment/
 
 ## Overview
 
-Release Management is a service in Visual Studio Team Services that helps you automate the deployment and testing of your software in multiple environments. Using Release Management, you can either fully automate the delivery of your software all the way to production, or set up semi-automated processes with approvals and on-demand deployments. It is an essential element of DevOps that helps your team continuously deliver software to your customers at a faster pace and with lower risk.
+<a href="https://www.visualstudio.com/en-us/docs/release/overview/">Release Management</a> is a service in Visual Studio Team Services that helps you automate the deployment and testing of your software in multiple environments. Using Release Management, you can either fully automate the delivery of your software all the way to production, or set up semi-automated processes with approvals and on-demand deployments. It is an essential element of DevOps that helps your team continuously deliver software to your customers at a faster pace and with lower risk.
 
 Release Management can be used by all kinds of software developers for continuous automated deployment, or by large enterprises to improve efficiency and collaboration between various teams that participate in release processes.
 

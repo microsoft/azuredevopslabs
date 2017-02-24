@@ -100,6 +100,10 @@ entries:
       url: labs/tfs/codeanalysis
       output: web, pdf
 
+    - title: Working with EditorConfig in Visual Studio 2017
+      url: labs/tfs/editorconfig
+      output: web, pdf
+
   - title: Build
     output: web, pdf
 

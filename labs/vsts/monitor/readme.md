@@ -8,7 +8,7 @@ folder: /labs/vsts/monitor/
 
 ## Overview
 
-Application Insights comes as part of Visual Studio. You get automatic instrumentation for ASP.NET developers and vital application telemetry data right out of the box; including usage, exceptions, requests, performance, and logs.
+<a href="https://docs.microsoft.com/en-us/azure/application-insights/">Application Insights</a> comes as part of Visual Studio. You get automatic instrumentation for ASP.NET developers and vital application telemetry data right out of the box; including usage, exceptions, requests, performance, and logs.
 
 Monitor web apps—whether written in Java, Ruby, Python, PHP, Node.JS, or other languages—using open source SDKs. Install the Status Monitor on your existing Azure App Services and virtual machines through the Azure portal to get performance monitoring without needing to update and redeploy your application.
 

@@ -8,8 +8,7 @@ folder: /labs/vsts/git/
 
 ## Overview
 
-In this lab, you’ll learn about Git support in Visual Studio Team Services. Git is a distributed version 
-control system. Git repositories can live locally (such as on a developer’s machine).
+<a href="https://www.visualstudio.com/en-us/docs/git/overview/">Git</a> is a distributed version control system. Git repositories can live locally (such as on a developer’s machine).
 You will learn how to establish a local Git repository, which can easily be synchronized with a centralized Git repository in Visual Studio Team Services.
 In addition, you will learn about Git branching and merging support.
 
