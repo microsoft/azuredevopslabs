@@ -157,6 +157,10 @@ entries:
       url: labs/tfs/readyroll
       output: web, pdf
 
+    - title: Package Management in Team Foundation Server 2017
+      url: labs/tfs/packagemanagement
+      output: web, pdf
+
   - title: Monitor
     output: web, pdf
 
