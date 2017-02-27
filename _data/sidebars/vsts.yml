@@ -72,6 +72,10 @@ entries:
       url: labs/vsts/exploratorytesting
       output: web, pdf
 
+    - title: UI Automation using Selenium Tests
+      url: labs/vsts/selenium
+      output: web, pdf
+
 
   - title: Deploy
     output: web, pdf
