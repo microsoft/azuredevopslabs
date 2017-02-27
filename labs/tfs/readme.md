@@ -84,4 +84,5 @@ Lab Name
 <tr><td><a href="sqlprompt/">SQL Prompt for Visual Studio Enterprise 2017</a></td></tr>
 <tr><td><a href="readyroll/">ReadyRoll- Develop and deploy databases in Visual Studio Enterprise 2017</a></td></tr>
 <tr><td><a href="editorconfig/">Working with EditorConfig in Visual Studio 2017</a></td></tr>
+<tr><td><a href="smartword4tfs/">Introduction to the Modern Requirements Suite4TFS & Team Foundation Server 2017</a></td></tr>
 </table>

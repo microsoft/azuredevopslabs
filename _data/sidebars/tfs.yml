@@ -52,6 +52,10 @@ entries:
       url: labs/tfs/storyboarding
       output: web, pdf
 
+    - title: Introduction to the Modern Requirements Suite4TFS & Team Foundation Server 2017
+      url: labs/tfs/smartword4tfs
+      output: web, pdf
+
   - title: Develop
     output: web, pdf
     folderitems:
