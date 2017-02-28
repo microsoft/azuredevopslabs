@@ -11,7 +11,7 @@ folder: /labs/vsts/agile/
 In this lab, you will learn about the agile planning and portfolio management tools and processes provided by Visual Studio Team Services and how they can help you quickly plan, manage, and track work across your entire team. You will explore the product backlog, sprint backlog, and task boards which can be used to track the flow of work during the course of an iteration. We will also take a look at how the tools have been enhanced in this release to scale for larger teams and organizations.
 
 
-## Exercise 1: Connecting to your Project
+**Connecting to your Project**
 
 1.	Go to your VSTS account home page.
 
@@ -22,7 +22,7 @@ In this lab, you will learn about the agile planning and portfolio management to
     <img src="images/6.png" width="624" />
 
     
-## Exercise 2: Working with Team Areas and Iterations
+## Exercise 1: Working with Team Areas and Iterations
 
 1.  Connect to the **MyHealthClinic** project.
 
@@ -90,7 +90,7 @@ We see the default area is set to **Cordova Team**, if not you can change it to 
 
  
 
-## Exercise 3: Work Items in VSTS
+## Exercise 2: Work Items in VSTS
 
 
 1.  Navigate to **Cordova Team** dashboard. This is the main screen for the Cordova team. 
@@ -117,7 +117,7 @@ We see the default area is set to **Cordova Team**, if not you can change it to 
 
     <img src="images/25.png" width="624" />
 
-## Exercise 4: Working with Kanban board 
+## Exercise 3: Working with Kanban board 
 
 
 1. Click on the **Board** from your backlog items.
@@ -159,13 +159,12 @@ We see the default area is set to **Cordova Team**, if not you can change it to 
 
    <img src="images/33.png" width="624" />
 
-8. Let’s say that the devices team has decided that they want to add in a column that represents work that has been tested on a physical device.
-   This is the only team that would desire to keep track of such a state, and they can easily add this to their Kanban board.
-   Navigate to the **Settings** tab and go to **columns** tab and add a new column with the name **Devices Tested**.
+8. Let’s say that the devices team has decided that they want to add in a column that represents features that has been developed should go ahead for deployment.
+   Navigate to the **Settings** tab and go to **columns** tab and add a new column with the name **Deploy**.
 
    <img src="images/34.png" width="624" />
 
-## Exercise 5: Working with Task Board
+## Exercise 4: Working with Task Board
 
 1. Go to **Sprint 2** and click on **Board**.
 
@@ -187,13 +186,13 @@ We see the default area is set to **Cordova Team**, if not you can change it to 
    >The capacity view allows to specify the number of hours per day that each team member will be working on this project, days off per team member, and overall team days off. These capacity settings apply to the current iteration. You can optionally use the activity column to describe the disciplines that each team member specializes in. When tasks are broken down by activity, it can provide another view across your team’s capacity to determine. For example, you have enough people working on documentation to meet the demands for this iteration.
 
 
-4. imagesduce the capacity per day in hours for the users.
+4. Introduce the capacity per day in hours for the users.
 
    <img src="images/38.png" width="624" />
 
    >When you imagesduce the hours available per day for the team you will see how it changes the **Work Details** pane on the right to adapt to the modifications.
 
-5. Click on the column **Days Off** on any user. imagesduce start and end date in an interval inside the dates for the Sprint so he has more work than hours available.
+5. Click on the column **Days Off** on any user. Introduce start and end date in an interval inside the dates for the Sprint so he has more work than hours available.
 
    <img src="images/39.png" />
 
@@ -218,7 +217,7 @@ We see the default area is set to **Cordova Team**, if not you can change it to 
    <img src="images/43.png" width="624" />
 
 
-## Exercise 6: Portfolio Management
+## Exercise 5: Portfolio Management
 
 Portfolio backlogs provide product owners insight into the work performed by several agile feature teams. Product owners can define the high-level goals as
 Epics or Features, and feature teams can break these down into the user stories they'll prioritize and develop.
@@ -262,7 +261,7 @@ Epics or Features, and feature teams can break these down into the user stories 
 7. You can also Drag and Drop any Feature to other state and check how it changes its current state.
 
 
-## Exercise 7: Working with VSTS Dashboards
+## Exercise 6: Working with VSTS Dashboards
 
 Dashboards allow teams to visualize status and monitor progress across the project. At a glance, you can make informed decisions without having to drill down into other parts of your team project site.
 The Overview page provides access to a default team dashboard which you can customize by adding, removing, or rearranging the tiles.
@@ -287,7 +286,7 @@ Each tile corresponds to a widget that provides access to one or more features o
    <img src="images/56.png" />
 
 
-## Exercise 8: Customization
+## Exercise 7: Customization
 
 Sometimes you will need to add more fields for a particular Work Item Type definition, to represent information which is important for your team.
 We can customize the Process Template for our team project by adding new fields, definitions for any Work Item type.
@@ -326,7 +325,7 @@ We can customize the Process Template for our team project by adding new fields,
    <img src="images/64.png" width="624" />
 
 
-9. We will directly add a new field for the PBI Work Item template. Select **Product Backlog item** | **Layout** | **New field**. On the definition screen provide a name **HealthClinicTicketId**.
+9. We will directly add a new field for the PBI Work Item template. Select **Product Backlog item** \| **Layout** \| **New field**. On the definition screen provide a name **HealthClinicTicketId**.
 
    <img src="images/65.png" width="624" />
 
@@ -351,7 +350,7 @@ We can customize the Process Template for our team project by adding new fields,
 
     <img src="images/69.png"  />
 
-12. Let’s review how the new field appears on our Product Backlog Item Template. Go back to **work** | **backlogs**. Open the first product backlog. Look after **Acceptance Criteria** for the **MyHeathClinic** group.
+14. Let’s review how the new field appears on our Product Backlog Item Template. Go back to **work** | **backlogs**. Open the first product backlog. Look after **Acceptance Criteria** for the **MyHeathClinic** group.
     Fill in the information for the **Ticket ID** like **HK89JY13**. Click **save & close**.
 
     <img src="images/70.png" width="624" />
