@@ -165,6 +165,6 @@ entries:
     output: web, pdf
 
     folderitems:
-    - title: Monitoring Applications with Application Insights
-      url: /mydoc_commenting_on_files.html
+    - title: Instrumenting ASP.NET with Application Insights in Visual Studio 2017
+      url: labs/tfs/appinsights
       output: web, pdf
