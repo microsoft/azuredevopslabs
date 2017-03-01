@@ -76,7 +76,7 @@ Lab Name
 <tr><td><a href="technicaldebt/">Managing Technical Debt with Team Foundation Server 2017 and SonarQube</a></td></tr>
 <tr><td><a href="unittesting/">Unit Testing, Code Coverage and Code Clone Analysis with Visual Studio 2017</a></td></tr>
 <tr><td><a href="codeanalysis/">Using Code Analysis with Visual Studio 2017 to Improve Code Quality</a></td></tr>
-<tr><td>Monitoring Applications using Application Insights</td></tr>
+<tr><td><a href="appinsights/">Instrumenting ASP.NET with Application Insights in Visual Studio 2017</a></td></tr>
 <tr><td><a href="sqlprompt/">SQL Prompt for Visual Studio Enterprise 2017</a></td></tr>
 <tr><td><a href="readyroll/">ReadyRoll- Develop and deploy databases in Visual Studio Enterprise 2017</a></td></tr>
 <tr><td><a href="editorconfig/">Working with EditorConfig in Visual Studio 2017</a></td></tr>
