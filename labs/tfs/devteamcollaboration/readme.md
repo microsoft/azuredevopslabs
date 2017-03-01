@@ -21,19 +21,6 @@ In order to complete this lab you will need the Visual Studio 2017
     post](http://aka.ms/ALMVM).
 
 
-
-## Exercises
-
-This hands-on lab includes the following exercises:
-
-* Team Room Collaboration
-
-* Lightweight Code Comments
-
-* CodeLens
-
-Estimated time to complete this lab: **60 minutes**.
-
 ## Exercise 1: Team Room Collaboration
 
 In this exercise, you will learn about the Team Room feature in Team
@@ -42,7 +29,7 @@ In this exercise, you will learn about the Team Room feature in Team
     pertinent events, thereby allowing them to remain in loose contact
     throughout the workday.
 
-#### Task 1: Team Rooms Introduction
+### Task 1: Team Rooms Introduction
 
 1.  Log in as **Sachin Raj** (VSALM\\Sachin). All user passwords are
     **P2ssw0rd**.
@@ -90,7 +77,7 @@ In this exercise, you will learn about the Team Room feature in Team
     <img src="media/image9.png" width="472" height="75" />
 
 
-#### Task 2: Team Room Mentions and Links
+### Task 2: Team Room Mentions and Links
 
 1.  Now let’s take a look at some of the types of mentions and links
     that can be inserted via team room chat. The first type is the team
@@ -141,7 +128,7 @@ In this exercise, you will learn about the Team Room feature in Team
 
     <img src="media/image16.png" width="516" height="165" />
 
-#### Task 3: Team Room Events
+### Task 3: Team Room Events
 
 1.  Another key feature of team rooms is that various events can be
     selected and configured to automatically feed in additional
