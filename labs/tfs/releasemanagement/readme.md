@@ -6,7 +6,7 @@ permalink: /labs/tfs/releasemanagement/
 folder: /labs/tfs/releasemanagement/
 ---
 
-**Overview**
+## Overview
 
 In this lab, you will learn about the release management features
     available in Visual Studio 2017 and its suite of release and
@@ -19,7 +19,7 @@ In this lab, you will learn about the release management features
     processes and track approvals, sign-offs, and visualize their
     release status.
 
-### Pre-requisites
+## Pre-requisites
 
 In order to complete this lab you will need the Visual Studio 2017
     virtual machine provided by Microsoft. For more information on
@@ -29,7 +29,7 @@ In order to complete this lab you will need the Visual Studio 2017
 Exercise 1 of the “Introduction to Team Foundation Build” lab is a
     prerequisite for this lab.
 
- **Exercise 1: Continuous Release Management**
+## Exercise 1: Continuous Release Management
 
 In this exercise, you will use the release management features of
     Team Foundation Server to produce an automated deployment solution.
@@ -37,7 +37,7 @@ In this exercise, you will use the release management features of
     automate its deployment to the development team’s testing
     environment after each source check-in.
 
-#### Task 1: Configuring a continuous build
+### Task 1: Configuring a continuous build
 
 1.  Log in as **Brian Keller** (VSALM\\Brian). All user passwords are **P2ssw0rd**.
 
@@ -132,7 +132,7 @@ In this exercise, you will use the release management features of
 21. You don’t need to wait for the build to complete to move on to the
     next step.
 
-#### Task 2: Creating a continuous release
+### Task 2: Creating a continuous release
 
 1.  Now that there is an automatic build that occurs when changes are
     checked in, it’s time to set up a continuous release so that this
@@ -277,7 +277,7 @@ In this exercise, you will use the release management features of
 
     <img src="media/image37.png" width="358" height="163" />
 
-**Exercise 2: Gated Releases**
+## Exercise 2: Gated Releases
 
 
 While automated releases are great, sometimes you want to gate their
@@ -290,7 +290,7 @@ While automated releases are great, sometimes you want to gate their
     (or alternatively) have this human approval gate prior to
     the deployment.
 
-#### Task 1: Adding a QA environment
+### Task 1: Adding a QA environment
 
 1.  Return to the tab with all the releases (probably the third).
 
@@ -369,14 +369,14 @@ While automated releases are great, sometimes you want to gate their
 
     <img src="media/image50.png" width="456" height="166" />
 
-**Exercise 3: Releasing To Azure (optional)**
+## Exercise 3: Releasing To Azure (optional)
 
 The release management tools are incredibly flexible. Not only can you
 automate virtually anything, you can even leverage some of the
 higher-lever tasks to easily perform complex processes, such as
 deploying to an Azure web site.
 
-#### Task 1: Creating an Azure Web site and database
+### Task 1: Creating an Azure Web site and database
 
 1.  Create an Azure account at <http://azure.com> if you don’t already
     have one.
@@ -526,7 +526,7 @@ deploying to an Azure web site.
 
     <img src="media/image71.png" width="412" height="383" />
 
-#### Task 2: Configuring the build to produce a Web Deploy package
+### Task 2: Configuring the build to produce a Web Deploy package
 
 1.  Return to the browser tabs open to the builds section of the portal.
 
@@ -548,7 +548,7 @@ deploying to an Azure web site.
 
     <img src="media/image74.png" width="284" height="114" />
 
-#### Task 3: Creating a release environment for Azure
+### Task 3: Creating a release environment for Azure
 
 1.  Return to the releases tab.
 
@@ -651,7 +651,7 @@ deploying to an Azure web site.
 
     <img src="media/image88.png" width="434" height="181" />
 
-#### Task 4: Checking in a change to kick off the release workflow
+### Task 4: Checking in a change to kick off the release workflow
 
 1.  Return to the code browser tab and locate the path below.
 
@@ -690,3 +690,151 @@ deploying to an Azure web site.
     the way through the release pipeline and is live in the cloud.
 
     <img src="media/image93.png" width="210" height="54" />
+
+### Task 5: Deploying to Azure from Visual Studio
+
+1. While all of the automation available in Team Foundation Server provides a great “continuous integration, continuous deployment” (CICD) experience, sometimes you may still want to manually deploy a build directly from Visual Studio. And thanks to tight integration between Visual Studio and Azure,   it’s really easy to do.
+
+2. Open a new instance of Visual Studio from the taskbar.
+
+3. Open FabrikamFiber.CallCenter.sln from the Start Page.
+
+   <img src="media/image94.png"/>
+
+4. We’ll continue using the support version number as our change example. In Solution Explorer, double-click FabrikamFiber.Web\Views\Shared\_Layout.cshtml to open it.
+
+   <img src="media/image95.png"/>
+
+5. Locate the tag with the support version and increment it to v5.0.
+
+   <img src="media/image96.png"/>
+
+6. In Solution Explorer, right-click the FabrikamFiber.Web project and select Publish.
+
+   <img src="media/image97.png"/>
+
+7. Since this is the first time this project is being published to Azure, we will need to set up a publish profile. Select the Profile tab and click Microsoft Azure App Service.
+
+   <img src="media/image98.png"/>
+
+8. Since there is not yet an account associated with this instance of Visual Studio, click Add an account from the dropdown.
+
+   <img src="media/image99.png"/>
+
+9. Sign in using the Microsoft account your Azure subscription is associated with.
+
+10. Select the App Service created earlier and click OK.
+
+    <img src="media/image100.png"/>
+
+11.	The Connection tab is automatically populated with the deployment information required to push the project out to the right Azure App Service. There’s nothing to tweak here, so click Next.
+
+    <img src="media/image101.png"/>
+
+12.	The Settings tab enables you to specify the build configuration you want to deploy, as well as file publication options and settings for databases detected from Web.config. We already configured the connection string earlier, so click Next to continue.
+
+    <img src="media/image102.png"/>
+
+13.	The Preview tab enables you to see exactly what will get pushed up to the service. Click Start Preview to see which files have changed.
+
+    <img src="media/image103.png"/>
+
+14.	There should be only one file: _Layout.cshtml. Click Publish.
+
+    <img src="media/image104.png"/>
+
+15.	You can review the publish progress in the Web Publish Activity pane at the bottom if Visual Studio. It should complete quickly since the one file being pushed is small.
+
+    <img src="media/image105.png"/>
+
+16.	Upon completion, the integrated browser will open to the public URL. Note the new version number, which confirms the deployment was successful.
+
+    <img src="media/image106.png"/>
+
+### Task 6: Working with Deployment Slots
+
+1. Azure App Services offer deployment slots, which are parallel targets for application deployment. The most common scenario for using a deployment slot is to have a staging environment for your application to run against productions services, but without replacing the current production              application. If the staging deployment passes review, it can immediately be “swapped” in as the production slot with the click of a button. As an additional benefit, the swap can be quickly reversed in the event an issue is uncovered with the new build.
+
+2. Return to the browser window open to the Azure portal.
+
+3. Select the Resource groups tab from the left menu. Locate and click the fabrikam group created earlier.
+
+   <img src="media/image107.png"/>
+
+4. Click the App Service.
+
+   <img src="media/image108.png"/>
+
+5. Select the Deployment slots tab and click Add Slot. Note that the production slot is considered a “default” slot and is not shown as a separate slot in the user experience.
+
+   <img src="media/image109.png"/>
+
+6. Enter a Name of “staging” and select the Configuration Source that matched your existing deployment (there should be only one). Click OK to create the slot.
+   
+   <img src="media/image110.png"/>
+
+7. Return to _Layout.cshtml in Visual Studio. Update the version text to “5.0”.
+
+   <img src="media/image111.png"/>
+
+8. In Solution Explorer, right-click the FabrikamFiber.Web project and select Publish.
+
+   <img src="media/image112.png"/>
+
+9. The new slot is treated as a unique deployment target, so we’ll need to set up a profile for it. However, your Microsoft and Azure accounts are already configured, so the experience will be even smoother. Select the Profile tab and click Microsoft Azure App Service.
+
+   <img src="media/image113.png"/>
+
+10.	Drill down to select the staging deployment slot and click OK. 
+
+    <img src="media/image114.png"/>
+
+11.	On the Connection tab you’ll notice that the settings are very similar to the production slot, except that the text “staging” is inserted within various strings. The key place of interest is that each URL differs from the production slot by having “-staging” inserted at the end of the lowest        subdomain. For example, if your subdomain started with “fabrikam-johndoe”, then a slot named “staging” would have the URL “fabrikam-johndoe-staging”. Click Publish to deploy.
+
+    <img src="media/image115.png"/>
+
+12.	Once the deployment finishes you’ll see the built-in browser navigate to the staging slot, which can be verified via the support version number.
+
+    <img src="media/image116.png"/>
+
+13.	However, if you take the “-staging” out of the URL and press Enter, you’ll see that the production site is still on v4.0, as expected.
+
+    <img src="media/image117.png"/>
+
+14.	Expand the Server Explorer from the left side of Visual Studio.
+
+    <img src="media/image118.png"/>
+
+15.	Drill down into the Azure node to review all of the assets accessible from within the IDE. Note the production slot is at the default level while the staging slot is one level deeper under Slots. You can do a lot from this pane, including opening file for editing (and saving back to Azure),         reviewing logs, managing WebJobs, and more.
+
+    <img src="media/image119.png"/>
+
+16.	Return to the browser window open to the Azure portal. Click Swap in the slots blade.
+
+    <img src="media/image120.png"/>
+
+17.	The default options here are exactly what we want: to swap the production and staging slots. Click OK. Note that if your apps rely on slot-level configuration settings (such as connection strings or app settings marked “slot”), then the worker processes will be restarted. If you’re working          under those circumstances and would like to warm up the app before the swap completes, you can select the Swap with preview swap type.
+
+    <img src="media/image121.png"/>
+
+18.	Return to Visual Studio and refresh the built-in browser by right-clicking with the document and selecting Refresh. Note that you can’t F5 since that would build and run the solution.
+
+    <img src="media/image122.png"/>
+
+19.	The production site should now show the v5.0 as expected.
+
+    <img src="media/image123.png"/>
+
+20.	You can also confirm that the staging slot is now hosting the former production build of v4.0. In the event something bad happened with the v5.0 build, you could simply run the swap again and this running build would be back in production.
+
+    <img src="media/image124.png"/>
+
+21.	It’s important to note that while we deployed to the staging slot using Visual Studio, you could have just as easily set up CICD in TFS to deploy to the staging slot as well. There are even tasks to automate the swapping of slots, so you could set up everything you need in the release               definition.
+
+    
+
+
+
+
+   
+   
