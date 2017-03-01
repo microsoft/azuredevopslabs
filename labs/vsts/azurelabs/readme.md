@@ -25,5 +25,5 @@ in rapid development, cloud configuration, dependency management and composabili
 
 It has the following labs:
 
-1. <a href="Labs/lab1">Deploy an ASP.NET WebApp in Azure App Service</a>
-2. <a href="Labs/lab2">Deploy and Manage Azure Resources</a>
+1. <a href="labs/lab1">Deploy an ASP.NET WebApp in Azure App Service</a>
+2. <a href="labs/lab2">Deploy and Manage Azure Resources</a>
