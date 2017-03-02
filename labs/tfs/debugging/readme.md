@@ -6,6 +6,9 @@ permalink: /labs/tfs/debugging/
 folder: /labs/tfs/debugging/
 ---
 
+Lab version:	15.0.26020.0
+
+Last updated:	2/21/2017
 
 ## Overview
 

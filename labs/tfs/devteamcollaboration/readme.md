@@ -6,6 +6,10 @@ permalink: /labs/tfs/devteamcollaboration/
 folder: /labs/tfs/devteamcollaboration/
 ---
 
+Lab version: 15.0.26020.0
+
+Last updated: 2/13/2017
+
 ## Overview
 
 In this lab, you’ll learn about some of the features in Visual

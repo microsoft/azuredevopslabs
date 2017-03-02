@@ -6,6 +6,10 @@ permalink: /labs/tfs/codeanalysis/
 folder: /labs/tfs/codeanalysis/
 ---
 
+Lab version:	15.0.26020.0
+
+Last updated:	1/23/2017
+
 ## Overview
 
 The Code Analysis feature of Visual Studio performs static code

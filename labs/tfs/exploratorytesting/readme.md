@@ -6,8 +6,11 @@ permalink: /labs/tfs/exploratorytesting/
 folder: /labs/tfs/exploratorytesting/
 ---
 
-## Overview
+Lab version: 15.0.26020.0
 
+Last updated: 1/30/2017
+
+## Overview
 
 In this lab, you will learn about the exploratory testing and feedback management capabilities provided in the Test & Feedback extension. 
 You will learn about how exploratory testing (also called XT, or agile testing) has become a first-class experience in the toolset. 

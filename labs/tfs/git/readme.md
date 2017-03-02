@@ -6,6 +6,10 @@ permalink: /labs/tfs/git/
 folder: /labs/tfs/git/
 ---
 
+Lab version:	15.0.26020.0
+
+Last updated:	2/13/2017
+
 ## Overview
 
 In this lab, you’ll learn about Git support in Team Foundation Server 2017 and Visual Studio 2017. Git is a distributed version 
