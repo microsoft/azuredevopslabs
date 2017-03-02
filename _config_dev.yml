@@ -102,8 +102,9 @@ sidebars:
 - product2_sidebar
 - other
 
-description: "Intended as a documentation theme based on Jekyll for technical writers documenting software and other technical products, this theme has all the elements you would need to handle multiple products with both multi-level sidebar navigation, tags, and other documentation features."
+
 # the description is used in the feed.xml file
+description: "RSS Feed for Microsoft Visual Studio ALM Virtual Machine"
 
 # needed for sitemap.xml file only
 url: https://localhost:4000

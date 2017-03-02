@@ -6,6 +6,10 @@ permalink: /labs/tfs/codedui/
 folder: /labs/tfs/codedui/
 ---
 
+Lab version:	15.0.26020.0
+
+Last updated:	1/22/2017
+
 ## Overview
 
 **[Coded UI](https://msdn.microsoft.com/en-us/library/dd286726.aspx)** tests provide a way to create fully automated tests to validate the functionality and behavior of your application’s user interface. In this lab, you will gain a basic understanding of coded UI tests by creating a new test and adding validation logic to it.

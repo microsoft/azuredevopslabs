@@ -417,6 +417,7 @@ background-color: #347DBE;
 
 ul#mysidebar {
     border-radius:0px;
+    font-weight: 100%;
 }
 
 .nav ul li ul li a {
@@ -979,7 +980,7 @@ span.soft {
 }
 
 /* this part adds an icon after external links, using FontAwesome*/
-/*a[href^="http://"]:after, a[href^="https://"]:after*/ {
+/*a[href^="http://"]:after, a[href^="https://"]:after {
     content: "\f08e";
     font-family: FontAwesome;
     font-weight: normal;
@@ -987,7 +988,7 @@ span.soft {
     display: inline-block;
     text-decoration: none;
     padding-left: 3px;
-}
+} */
 
 /* Strip the outbound icon when this class is present */
 a[href].noCrossRef::after,
@@ -1236,5 +1237,14 @@ span.introText{
 span.mainPageText{
     font-weight: 90%;
     color: grey;
+}
+
+span.PageTitle{
+    font-size: 24px;
+    font-weight: bold;    
+        padding-top: 8px;
+    padding-bottom: 8px;
+    margin-top: 8px;
+    margin-bottom: 28px;
 }
 
