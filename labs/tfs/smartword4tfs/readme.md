@@ -28,7 +28,7 @@ In this lab, you will learn about scrum management using the Modern
 ## Pre-requisites
 
 In order to complete this lab, you will need SmartWord4TFS,
-    inteGREAT4TFS and a Visual Studio 2017 virtual machine provided
+    inteGREAT4TFS and the Visual Studio ALM Virtual Machine 2017  provided
     by Microsoft. For more information about the Modern Requirements
     Suite4TFS products, please visit [this
     URL](http://www.modernrequirements.com/). The information about
@@ -48,10 +48,10 @@ This lab requires you to use the default state of the virtual
 
 The following prerequisites are required to successfully install SmartOffice4TFS products:
 
--   Microsoft VM environment for Visual Studio 2017
+-   Microsoft ALM Virtual Machine 2017
 
 -   Internet should be working within the VM Refer to “Working with the
-    Visual Studio 2013 Update 3 ALM Virtual Machine.docx”
+    Visual Studio ALM Virtual Machine" document.
 
 **Installing SmartWord4TFS**
 
