@@ -6,6 +6,10 @@ permalink: /labs/tfs/branchingandmerging/
 folder: /labs/tfs/branchingandmerging/
 ---
 
+Lab version:	15.0.26020.0
+
+Last updated:	1/17/2017
+
 ## Overview
 
 In this lab, you will be introduced to the branching and merging visualization support in Visual Studio Team Foundation Server 2017.

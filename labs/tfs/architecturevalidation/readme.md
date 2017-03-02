@@ -6,6 +6,10 @@ permalink: /labs/tfs/architecturevalidation/
 folder: /labs/tfs/architecturevalidation/
 ---
 
+Lab version:	15.0.26020.0
+
+Last updated:	2/19/2017
+
 ## Overview
 
 Visual Studio enables teams to validate architectural dependencies in their solutions using the [Layer Designer](https://msdn.microsoft.com/en-us/library/dd465141.aspx). 

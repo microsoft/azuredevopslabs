@@ -6,6 +6,10 @@ permalink: /labs/tfs/build/
 folder: /labs/tfs/build/
 ---
 
+Lab version:	15.0.26020.0
+
+Last updated:	1/19/2017
+
 ## Overview
 
 In this lab, you will learn how to use the new Team Foundation Build
