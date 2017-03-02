@@ -23,17 +23,8 @@ entries:
     output: web, pdf
     folderitems:
 
-    - title: Get started
-      url: ..\/index.html
-      output: web, pdf
-      type: homepage
-
-    - title: Downloading the VM
-      url: /mydoc_introduction.html
-      output: web, pdf
-
-    - title: Using the labs with VSTS
-      url: /mydoc_supported_features.html
+    - title: Overview and Accessing the VM
+      url: labs/tfs/
       output: web, pdf
 
     - title: Running the labs on cloud
