@@ -1,6 +1,4 @@
 {% include custom/sidebarconfigs.html %}
-<br />
-
 <ul id="mysidebar" class="nav">
     <li class="sidebarTitle">{{sidebar[0].product}} {{sidebar[0].version}}</li>
     {% for entry in sidebar %}
@@ -28,7 +26,7 @@
                     {% for subfolderitem in subfolders.subfolderitems %}
                     {% if subfolderitem.output contains "web" %}
                     {% if subfolderitem.external_url %}
-                    <li><a href="{{subfolderitem.external_url}}" target="_blank">{{subfolderitem.title}}</a></li>
+                    <li><spanc class="sidebarentry"><a href="{{subfolderitem.external_url}}" target="_blank">{{subfolderitem.title}}</a></span></li>
                     {% elsif page.url == subfolderitem.url %}
                     <li class="active"><a href="{{site.url }}{{site.baseurl }}/labs/tfs/{{page.url}}/">{{subfolderitem.title}}</a></li>
                     <!-->Changed by Sachin

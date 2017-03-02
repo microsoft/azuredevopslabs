@@ -20,7 +20,7 @@ The Microsoft Visual Studio ALM Virtual Machine is a virtual machine pre-install
 <td class ="mainTable" width="80%">
 <h2> <a href="labs/tfs">Microsoft Visual Studio ALM VM 2017</a></h2>
   <!--span class ="mainPageText" align="right"-->
-  <p align="left">We are excited to announce the 2017 version of the Microsoft Visual Studio ALM V - with updated versions, new application, more Hands-on-Labs.</p> 
+  <p align="left">We are excited to announce the 2017 version of the Microsoft Visual Studio ALM VM - with updated versions, new application, more Hands-on-Labs.</p> 
   
   Here are the <b>key highlights</b> of the 2017 version:
   <p>
@@ -38,7 +38,7 @@ The Microsoft Visual Studio ALM Virtual Machine is a virtual machine pre-install
 <h2> <a href="labs/vsts">Labs for Visual Studio Team Services</a> </h2>
 <!--span class="mainPageText"-->
 We are also happy to share that we have a new set of hands-on-labs based on Visual Studio Team Services. 
-You can use the ALM VM 2017 or any aother machine that has Visual Studio 2017 installed to follow the lab materials. Find out <a href="labs/vsts">more</a>
+You can use the ALM VM 2017 or any other machine that has Visual Studio 2017 installed to follow the lab materials. Find out <a href="labs/vsts">more</a>
 <!--/span-->
   </td>
   <td  class ="mainTable"  align="center" width="20%" valign="middle">
