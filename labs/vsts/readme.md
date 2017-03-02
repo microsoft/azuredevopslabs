@@ -6,24 +6,15 @@ permalink: /labs/vsts/
 folder: /labs/vsts/
 ---
 
-
-<img src="agile/images/alm.png" />
-
 ## Overview
 
-Visual Studio Team Services and Azure cloud services help remove barriers between teams, encourage collaboration, and improve the flow of value to your customers.
-Or, use our on-premises server, Team Foundation Server (TFS), when you want to maintain your data within your network.
-
-Both options are enterprise-ready, supporting teams of any size, from tens to thousands. Team Services provides a scalable, reliable, and globally available
-hosted service. It is backed by a 99.9% SLA, monitored by our 24×7 operations team, and available in local data centers around the world.
-Also, you can quickly expand the power of these tools through integration with other services and tools using service hooks and extensions.
-
+We have developed a brand new set of hands-on-labs for Visual Studio Team Services. 
 
 **Using the Hands-on-Labs with VSTS**
 
 In order to complete this lab you will need a **Visual Studio Team Services account**. If you don't have one, you can create from <a href="https://www.visualstudio.com/">here</a>
 
-Use the <a href="" >VSTS Demo generator</a> to create the project with the pre-defined data.
+Use the <a href="" >VSTS Demo generator</a> to provison a project with pre-defined data on to your Visual Studio Team Services account. 
 
 
 ## Hands-On-Labs
@@ -44,6 +35,7 @@ Lab Name
 <tr><td>Web Performance and Load Testing using Visual Studio Team Services</td></tr>
 <tr><td><a href="monitor/">Monitoring Applications using Application Insights</a></td></tr>
 <tr><td><a href="packagemanagement/">Package Management using Visual Studio Team Services</a></td></tr>
-<tr><td><a href="azurelabs/">Azure Labs</a></td></tr>
+<tr><td><a href="appservice/">Deploy an ASP.NET WebApp in Azure App Service</a></td></tr>
+<tr><td> <a href="azureresource/">Deploy and Manage Azure Resources</a></td></tr>
 </table>
 

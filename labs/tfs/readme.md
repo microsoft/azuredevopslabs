@@ -52,8 +52,8 @@ Please read through the document prior to using the VM, even if you may have use
 
 We have converted the hands-on-labs from Word to markdown. If you want the labs in Word format, you can find them <a href="https://github.com/Microsoft/almvm/tree/master/labs/Word">here</a>
 <table width="100%">
-<thead><td>
-Lab Name
+<thead><td><b>
+Lab Name</b>
 </td>
 </thead>
 <tr><td>Working with the Visual Studio 2017 ALM Virtual Machine</td></tr>

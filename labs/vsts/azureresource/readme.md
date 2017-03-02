@@ -2,8 +2,8 @@
 title: Deploy and Manage Azure Resources
 layout: page
 sidebar: vsts
-permalink: /labs/vsts/azurelabs/labs/lab2/
-folder: /labs/vsts/azurelabs/labs/lab2/
+permalink: /labs/vsts/azureresource/
+folder: /labs/vsts/azureresource/
 ---
 
 ## Overview
