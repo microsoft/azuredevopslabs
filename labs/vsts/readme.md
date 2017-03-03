@@ -35,15 +35,15 @@ Lab Name
 </thead>
 <tr><td>Working with the VSTS Demo generator</td></tr>
 <tr><td><a href="agile/">Agile Planning and Portfolio Management using Visual Studio Team Services</a></td></tr>
-<tr><td><a href="git/">Version Controlling with Git using Visual Studio Team Services</a></td></tr>
+<tr><td><a href="azurelabs/">Azure Labs</a></td></tr>
 <tr><td><a href="continuousintegration/">Continuous Integration using Visual Studio Team Services</a></td></tr>
 <tr><td><a href="continuousdeployment/">Continuous Deployment using Visual Studio Team Services</a></td></tr>
-<tr><td><a hrf="manualtesting/">Test Planning and Management using Visual Studio Team Services</a></td></tr>
 <tr><td><a href="exploratorytesting/">Exploratory Testing and Feedback Management using Visual Studio Team Services</a></td></tr>
-<tr><td><a href="selenium/">UI Automation using Selenium Tests</a></td></tr>
-<tr><td>Web Performance and Load Testing using Visual Studio Team Services</td></tr>
+<tr><td><a href="load/">Load Testing using Visual Studio Team Services</a></td></tr>
 <tr><td><a href="monitor/">Monitoring Applications using Application Insights</a></td></tr>
 <tr><td><a href="packagemanagement/">Package Management using Visual Studio Team Services</a></td></tr>
-<tr><td><a href="azurelabs/">Azure Labs</a></td></tr>
+<tr><td><a hrf="manualtesting/">Test Planning and Management using Visual Studio Team Services</a></td></tr>
+<tr><td><a href="selenium/">UI Automation using Selenium Tests</a></td></tr>
+<tr><td><a href="git/">Version Controlling with Git using Visual Studio Team Services</a></td></tr>
 </table>
 
