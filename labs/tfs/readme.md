@@ -83,4 +83,5 @@ Lab Name
 <tr><td><a href="editorconfig/">Working with EditorConfig in Visual Studio 2017</a></td></tr>
 <tr><td><a href="smartword4tfs/">Introduction to the Modern Requirements Suite4TFS & Team Foundation Server 2017</a></td></tr>
 <tr><td><a href="packagemanagement/">Package Management in Team Foundation Server 2017</a></td></tr>
+<tr><td><a href="liveunittesting/">Live Unit Testing in Visual Studio 2017</a></td></tr>
 </table>

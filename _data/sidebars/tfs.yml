@@ -2,7 +2,7 @@
 
 entries:
 - title: sidebar
-  product: ALM VM HoLs
+  product: ALM VM HOLs
   version: 2017
   folders:
 
@@ -60,7 +60,7 @@ entries:
       output: web, pdf
 
     - title: Live Unit Testing in Visual Studio 2017
-      url: /mydoc_install_jekyll_on_windows.html
+      url: /labs/tfs/liveunittesting
       output: web, pdf
 
     - title: Code Discovery using Live Dependency Validation in Visual Studio Enterprise 2017
