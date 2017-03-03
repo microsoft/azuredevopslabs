@@ -6,6 +6,11 @@ permalink: /labs/tfs/load/
 folder: /labs/tfs/load/
 ---
 
+Lab version: 15.0.26020.0
+
+Last updated: 1/31/2017
+
+
 ## Overview
 
 In this lab, you will be introduced to the <a href="https://www.visualstudio.com/en-us/docs/test/performance-testing/getting-started/getting-started-with-performance-testing"/>Web performance and Load

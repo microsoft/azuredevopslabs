@@ -6,8 +6,9 @@ permalink: /labs/tfs/intellitrace/
 folder: /labs/tfs/intellitrace/
 ---
 
-Lab version:	15.0.26020.0
-Last updated:	1/23/2017
+Lab version: 15.0.26020.0
+
+Last updated: 1/23/2017
 
 ## Overview
 

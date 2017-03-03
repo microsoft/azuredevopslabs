@@ -6,6 +6,11 @@ permalink: /labs/tfs/packagemanagement/
 folder: /labs/tfs/packagemanagement/
 ---
 
+Lab version: 15.0.26020.0
+
+Last updated: 2/24/2017
+
+
 ## Overview
 
 Package Management is an extension that makes it easy to discover,

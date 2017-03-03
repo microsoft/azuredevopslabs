@@ -6,6 +6,11 @@ permalink: /labs/tfs/unittesting/
 folder: /labs/tfs/unittesting/
 ---
 
+Lab version: 15.0.26020.0
+
+Last updated: 2/15/2017
+
+
 ## Overview
 
 In this lab, you will learn about how the unit testing engine in

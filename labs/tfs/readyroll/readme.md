@@ -4,7 +4,12 @@ layout: page
 sidebar: tfs
 permalink: /labs/tfs/readyroll/
 folder: /labs/tfs/readyroll/
---- 
+---
+
+Lab version: 15.0.26020.0
+
+Last updated: 1/31/2017
+ 
 
 ## Overview
 

@@ -6,6 +6,11 @@ permalink: /labs/tfs/intellitest/
 folder: /labs/tfs/intellitest/
 ---
 
+Lab version: 15.0.26020.0
+
+Last updated: 1/18/2017
+
+
 ## Overview
 
 **[IntelliTest](https://msdn.microsoft.com/en-IN/library/dn823749.aspx)** explores your **.NET code** to generate test data and a suite of unit tests. For every statement in the code, a test input is generated that will execute that statement.

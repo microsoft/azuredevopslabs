@@ -6,6 +6,11 @@ permalink: /labs/tfs/sqlprompt/
 folder: /labs/tfs/sqlprompt/
 --- 
 
+Lab version: 15.0.26020.0
+
+Last updated: 2/15/2017
+
+
 ## Overview
 SQL Prompt for Visual Studio Enterprise is an add-in for Visual Studio that extends and enhances the standard IntelliSense-style code
 completion. SQL Prompt can make your developers twice as fast at working with SQL, and leaves them free to concentrate on how the code actually
