@@ -1,5 +1,5 @@
 ---
-title: "Troubleshooting pages"
+title: ""
 tagName: troubleshooting
 search: exclude
 permalink: tag_troubleshooting.html

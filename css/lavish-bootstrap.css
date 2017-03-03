@@ -12,12 +12,13 @@
     padding: 17px;
     -webkit-border-radius: 100%;
     -webkit-transition: all .3s ease;
-    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.3);
+    box-shadow: 0 1px 1px 0 rgba(0,0,0,0.3);
 }
 
 .nav > li > a > img.custom.rssfeed_cls {background-image: url(../images/rss_blue.png);}
 
-.nav > li > a > img.custom.rssfeed_cls:hover {  background-image: url(../images/rss_black.png);
+.nav > li > a > img.custom.rssfeed_cls:hover { 
+   
 box-shadow: 0 6px 6px 0 rgba(0,0,0,0.3);}
 
 .nav > li > a > img.custom.contributors_cls {background-image: url(../images/group_blue.png);}
