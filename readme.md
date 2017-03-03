@@ -22,7 +22,7 @@ The Microsoft Visual Studio ALM Virtual Machine is a virtual machine pre-install
   <!--span class ="mainPageText" align="right"-->
   <p align="left">We are excited to announce the 2017 version of the Microsoft Visual Studio ALM VM - with updated versions, new application, more Hands-on-Labs.</p> 
   
-  Here are the <b>key highlights</b> of the 2017 version:
+   <p align="left">Here are the <b>key highlights</b> of the 2017 version:</p>
   <p>
   <ul align="left">
     <li> Upgraded Visual Studio and Team Foundation Server to 2017</li>
