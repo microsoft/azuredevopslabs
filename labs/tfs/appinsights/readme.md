@@ -6,6 +6,11 @@ permalink: /labs/tfs/appinsights/
 folder: /labs/tfs/appinsights/
 ---
 
+Lab version: 15.0.26020.0
+
+Last updated: 2/28/2017
+
+
 ## Overview
 
 [Visual Studio Application

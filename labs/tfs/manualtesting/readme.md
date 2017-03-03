@@ -6,6 +6,11 @@ permalink: /labs/tfs/manualtesting/
 folder: /labs/tfs/manualtesting/
 ---
 
+Lab version: 15.0.26020.0
+
+Last updated: 1/31/2017
+
+
 ## Overview
 
 In this lab, you will learn how to use Microsoft Team Foundation

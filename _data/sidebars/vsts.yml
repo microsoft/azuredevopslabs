@@ -76,6 +76,10 @@ entries:
       url: labs/vsts/selenium
       output: web, pdf
 
+    - title: Load and Performance Testing using Visual Stuido Team Services
+      url: labs/vsts/load
+      output: web, pdf
+
 
   - title: Deploy
     output: web, pdf
