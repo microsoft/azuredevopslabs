@@ -51,48 +51,52 @@ entries:
     output: web, pdf
     folderitems:
 
+    - title: Branching and Merging Visualization with Visual Studio Team Foundation Server 2017
+      url: labs/tfs/branchingandmerging
+      output: web, pdf
+
+    - title: Code Discovery using Live Dependency Validation in Visual Studio Enterprise 2017
+      url: labs/tfs/architecturevalidation
+      output: web, pdf
+
     - title: Collaboration Experiences for Development Teams using Team Foundation Server 2017
       url: labs/tfs/devteamcollaboration
       output: web, pdf
 
-    - title: Branching and Merging Visualization with Visual Studio Team Foundation Server 2017
-      url: labs/tfs/branchingandmerging
+    - title: Debugging with IntelliTrace in Visual Studio Enterprise 2017
+      url: labs/tfs/debugging
+      output: web, pdf
+    
+    - title: Diagnosing Issues in Production with IntelliTrace and Visual Studio 2017
+      url: labs/tfs/intellitrace
+      output: web, pdf
+
+    - title: Developer experience enhancements in Visual Studio 2017
+      url: labs/tfs/devexp
       output: web, pdf
 
     - title: Live Unit Testing in Visual Studio 2017
       url: /labs/tfs/liveunittesting
       output: web, pdf
 
-    - title: Code Discovery using Live Dependency Validation in Visual Studio Enterprise 2017
-      url: labs/tfs/architecturevalidation
-      output: web, pdf
-    
-    - title: Version Controlling with Git using Team Foundation Server 2017
-      url: labs/tfs/git
-      output: web, pdf
-
-    - title: Diagnosing Issues in Production with IntelliTrace and Visual Studio 2017
-      url: labs/tfs/intellitrace
-      output: web, pdf
-
-    - title: Debugging with IntelliTrace in Visual Studio Enterprise 2017
-      url: labs/tfs/debugging
-      output: web, pdf
-
     - title: Making Developers More Productive with Visual Studio Team Foundation Server 2017
       url: labs/tfs/vsproductivity
-      output: web, pdf
-
-    - title: Unit Testing, Code Coverage, and Code Clone Analysis with Visual Studio 2017
-      url: labs/tfs/unittesting
       output: web, pdf
 
     - title: SQL Prompt for Visual Studio Enterprise 2017
       url: labs/tfs/sqlprompt
       output: web, pdf
 
+    - title: Unit Testing, Code Coverage, and Code Clone Analysis with Visual Studio 2017
+      url: labs/tfs/unittesting
+      output: web, pdf
+
     - title: Using Code Analysis with Visual Studio 2017 to Improve Code Quality
       url: labs/tfs/codeanalysis
+      output: web, pdf
+
+    - title: Version Controlling with Git using Team Foundation Server 2017
+      url: labs/tfs/git
       output: web, pdf
 
     - title: Working with EditorConfig in Visual Studio 2017
@@ -103,12 +107,12 @@ entries:
     output: web, pdf
 
     folderitems:
-    - title: Team Foundation Build 2017
-      url: labs/tfs/build
-      output: web, pdf
-
     - title: Managing Technical Debt with Team Foundation Server 2017 and SonarQube
       url: /mydoc_pages.html
+      output: web, pdf
+
+    - title: Team Foundation Build 2017
+      url: labs/tfs/build
       output: web, pdf
     
   - title: Test
