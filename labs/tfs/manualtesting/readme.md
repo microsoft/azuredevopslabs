@@ -27,17 +27,6 @@ In order to complete this lab you will need the Visual Studio 2017
     acquiring and using this virtual machine, please see [this blog
     post](http://aka.ms/almvm).
 
-
-## Exercises
-
-This Hands-On Lab comprises the following exercises:
-
-* Managing Test Plans, Suites, and Cases
-
-* Authoring, Running, and Analyzing Manual Tests
-
-Estimated time to complete this lab: **60 minutes**.
-
 ## Exercise 1: Managing Test Plans, Suites, and Cases
 
 
