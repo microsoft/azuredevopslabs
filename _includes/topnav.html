@@ -23,24 +23,24 @@
                 <ul class="nav navbar-nav navbar-right">
                     <!-- entries without drop-downs appear here -->
                     <li>
-                        <a  href="{{site.url}}{{ site.baseurl }}feed.xml">
+                        <a  href="{{site.url}}{{ site.baseurl }}feed.xml"  data-toggle="tooltip" data-placement="bottom" title="RSS Feed">
                            <!--<img src="{{site.url}}{{ site.baseurl }}images/rss-icon.png" height="35px" width="35px" />-->
                        <img class="custom rssfeed_cls"/></a>
                         </a>
                     </li>
                     <li>
                         <li>
-                            <a href="{{site.url}}{{ site.baseurl }}contributors.html"> 
+                            <a href="{{site.url}}{{ site.baseurl }}contributors.html"  data-toggle="tooltip" data-placement="bottom" title="Contributors"> 
                                 <img class="custom contributors_cls"/></a></a>
                         </li>
                         <li>
-                            <a href="#" data-toggle="tooltip" data-placement="left" title="Hooray!" onclick="javascript:window.location='mailto:{{site.feedback_email}}?subject={{site.feedback_subject_line}} feedback&body=I have some feedback about the {{page.title}} page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> 
+                            <a href="#" data-toggle="tooltip" data-placement="left" title="Send Feedback" onclick="javascript:window.location='mailto:{{site.feedback_email}}?subject={{site.feedback_subject_line}} feedback&body=I have some feedback about the {{page.title}} page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> 
                             <img class="custom feedback_cls" /></a>
                         </li>
 
 
                         <li>
-                            <a href="https://github.com/Microsoft/almvm" data-toggle="tooltip" data-placement="bottom" title="Github!">
+                            <a href="https://github.com/Microsoft/almvm" data-toggle="tooltip" data-placement="bottom" title="Edit on GitHub">
                             <img  class="custom github_cls"/></a></a>
                         </li>
 

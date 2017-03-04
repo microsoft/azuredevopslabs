@@ -89,7 +89,8 @@ h6[id],
 dt[id]{
 padding-top: 10px;
 margin-top: 15px;
-
+border-bottom: 1px  solid slategrey;
+padding-bottom: 5px;
 }
 
 body h1 {

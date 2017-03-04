@@ -8,13 +8,7 @@ folder: /labs/tfs/
 ---
 
 ## Overview
-The VM and the accompanying hands-on-labs are now updated to Visual Studio and Team Foundation Server 2017. Please see below for the instructions on how to download the virtual machine and the hands-on-labs/demo scripts. 
-
-<!--img src="tfs.png"/-->
-
-For those who prefer not to download the virtual machine, the hands-on-labs are available on **TechNet Virtual Labs** 
-
-This Virtual Machine is configured with:
+The Microsoft Visual Studio ALM VM and the accompanying hands-on-labs are now updated to Visual Studio and Team Foundation Server 2017. This Virtual Machine is configured with:
 
 - Microsoft Windows Server 2016 Standard Evaluation    
 - Microsoft Visual Studio Enterprise 2017 RC     
@@ -24,15 +18,19 @@ This Virtual Machine is configured with:
 - Microsoft SQL Server 2016 Standard     
 - Sample users and data required to support hands-on-lab scripts      
 
-## Download the Virtual Machine
+## Accessing the Virtual Machine
 
+You can get access to the virtual machine the following ways:
+
+- **Download the Virtual Machine** - You can download the virtual machine, if you prefer to use it offline. Please see below for instructions to download the VM.
+- **Try it on Technet Virtual Labs** - You can also access the virtual machine online on **TechNet Virtual Labs**  - no downloads or complex setup required. You can experience it right from your browser.
+- **Run it on Azure** - If you prefer to run the VM on Azure, you can simply upload the VHD to your Azure storage and create a VM from the VHD. If you are setting up the labs for a traning, you  might want to consider the [Azure DevTest Labs](https://docs.microsoft.com/en-us/azure/devtest-lab/devtest-lab-training-lab) for training.
+
+### Steps to download and extract the VM   
 The size of the download is about 30 GB. It is recommended that you use a utility like [**Free download manager**](http://www.freedownloadmanager.org/).  This utility provides:
-
-- Auto-resume support for interrupted downloads.
-- Multiple simultaneous download streams for (usually) a much faster download experience.
-- As the name implies, it’s completely free.
-
-**Steps to download and extract the VM**    
+    - Auto-resume support for interrupted downloads.
+    - Multiple simultaneous download streams for (usually) a much faster download experience.
+    - As the name implies, it’s completely free.    
 
 - Download and install Free download manager if you currently do not have one installed – We strongly recommend to download FDM V3 as the latest version does not support batch downloads at this point of time
 fdmv3    
@@ -42,15 +40,14 @@ fdmv3
 - When the download is complete, double-click the .exe file to self-extract the RAR files to a folder       
 - Read the “Working with the …” document to start using the VM     
 
-## Using the VM
 
-There are quite a number of important instructions on how to use the VM including activating the VM, taking snapshots/check points, etc, documented. Please also see the note below at the end of the post.
+>There are quite a number of important instructions on how to use the VM including activating the VM, taking snapshots/check points, etc, documented.We highly recommend that you read through the[Working with the Visual Studio 2017 ALM Virtual Machine]() document prior to using the VM, even if you may have used the earlier version of the VM. 
 
-Please read through the document prior to using the VM, even if you may have used the earlier version of the VM. The VM has about 15 GB of free hard disk space. Should you want to increase the size of the disk, you will need to do so before creating snapshots/check points. You can refer this article on [TechNet]() for instructions on expanding the virtual hard disk.
+>Note that The VM has about 15 GB of free hard disk space. Should you want to increase the size of the disk, you will need to do so before creating snapshots/check points. You can refer this article on [TechNet]() for instructions on expanding the virtual hard disk.
 
 ## Hands-On-Labs
 
-We have converted the hands-on-labs from Word to markdown. If you want the labs in Word format, you can find them <a href="https://github.com/Microsoft/almvm/tree/master/labs/Word">here</a>
+Here are the 2017 hands-on-labs for Team Foundation Server. If you want to access the labs offline, you can download them as MS Word documents from <a href="https://github.com/Microsoft/almvm/tree/master/labs/Word">here</a>
 <table width="100%">
 <thead><td><b>
 Lab Name</b>

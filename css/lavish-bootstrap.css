@@ -17,8 +17,7 @@
 
 .nav > li > a > img.custom.rssfeed_cls {background-image: url(../images/rss_blue.png);}
 
-.nav > li > a > img.custom.rssfeed_cls:hover { 
-   
+.nav > li > a > img.custom.rssfeed_cls:hover { background-image: url(../images/rss_black.png);   
 box-shadow: 0 6px 6px 0 rgba(0,0,0,0.3);}
 
 .nav > li > a > img.custom.contributors_cls {background-image: url(../images/group_blue.png);}
