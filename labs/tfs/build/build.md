@@ -28,23 +28,6 @@ In order to complete this lab, you will need the Visual Studio 2017
     acquiring and using this virtual machine, please see [this blog
     post](http://aka.ms/almvm).
 
-## Exercises
-
-This Hands-On Lab comprises the following exercises:
-
-* Build Agent Pools and Queues
-
-* Build Definitions
-
-* Build and Test Result Analysis
-
-* Continuous Integration and Deployment
-
-* Scale out Testing Using Machine Groups
-
-Estimated time to complete this lab: **60 minutes**.
-
-
 ## Exercise 1: Build Agent Pools and Queues
 
 In this exercise, you will learn how to create and configure build
@@ -224,7 +207,7 @@ In this exercise, you will learn how to create and configure build
     <img src="media/image19.png" width="624" height="328" />
 
 
-**Note:** You weren’t prompted for credentials in this case, but
+    **Note:** You weren’t prompted for credentials in this case, but
     under normal circumstances when installing on a remote machine you
     would be asked to sign in as an agent pool administrator. These
     credentials are only used once during the configuration process.
