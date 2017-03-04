@@ -12,9 +12,10 @@ We have developed a brand new set of hands-on-labs for Visual Studio Team Servic
 
 **Using the Hands-on-Labs with VSTS**
 
-In order to complete this lab you will need a **Visual Studio Team Services account**. If you don't have one, you can create from <a href="https://www.visualstudio.com/">here</a>
-
-Use the <a href="" >VSTS Demo generator</a> to provison a project with pre-defined data on to your Visual Studio Team Services account. 
+ - In order to complete this lab you will need a **Visual Studio Team Services account**. If you don't have one, you can create from <a href="https://www.visualstudio.com/">here</a>
+ - You can use the <a href="" >VSTS Demo generator</a> to provison a project with pre-defined data on to your Visual Studio Team Services account. Please use the ***My Health Clinic*** template to follow the hands-on-labs.
+   ***Note:*** You will need enable certain extensions to your account before you provision a new project.  
+- 
 
 
 ## Hands-On-Labs
