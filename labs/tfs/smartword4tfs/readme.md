@@ -464,7 +464,7 @@ report with more freedom in what to include in the report
     <img src="media/95.png" width="561" height="288" />
 
 
-### Appendix A: Designing a SmartWord4TFS Template using Wizard
+## Appendix A: Designing a SmartWord4TFS Template using Wizard
 
 In this appendix you will learn how to create a new SmartWord4TFS
 template from scratch using the Wizard.
