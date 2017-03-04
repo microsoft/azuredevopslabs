@@ -23,22 +23,6 @@ In order to complete this lab you will need the Visual Studio 2017 virtual machi
 
 This lab requires you to use the default state of the virtual machine, before any modifications are made to work items or source in TFS. If you followed the “Working with the Visual Studio 2017 ALM Virtual Machine.docx” instructions you should already have a snapshot/checkpoint of the virtual machine before working with it for the first time. Apply this snapshot/checkpoint before starting this lab.
 
-
-## Exercises 
-
-This hands-on lab includes the following exercises:
-
-* Agile Project Management
-
-* Agile Portfolio Management
-
-* Flexibility of Agile Tools
-
-* Work Item Charting
-
-Estimated time to complete this lab: **45 minutes**.
-
-
 ## Exercise 1: Agile Project Management 
 
 In this exercise, you will learn how to use Team Foundation Server 2017 to manage your product backlog, create work items, break work items into tasks, assign tasks to team members, and track progress using the task board. This overview will demonstrate the basic project management tools that small- to medium-sized development teams can utilize for product development.
@@ -644,7 +628,7 @@ In this exercise, we will demonstrate the work item charting capability of Team 
 
 ### Task 1: Creating and Sharing Work Item Charts ###
 
-1. Let’s say that the Fabrikam Fiber management team would like to better understand how tasks are broken down by user. Navigate to the work item queries section of the web portal. Select **Work | Queries**.
+1. Let’s say that the Fabrikam Fiber management team would like to better understand how tasks are broken down by user. Navigate to the work item queries section of the web portal. Select **Work \| Queries**.
 
     ![](images/124.png)
 
@@ -714,14 +698,14 @@ In this exercise, we will demonstrate the work item charting capability of Team 
 
     ![](images/140.png)
 
-1. These lightweight charts can also be pinned to a dashboard. Click the **Tasks by Team** chart’s ellipses button and select **Add to dashboard | Overview**. This dashboard is used on the project’s home page.
+1. These lightweight charts can also be pinned to a dashboard. Click the **Tasks by Team** chart’s ellipses button and select **Add to dashboard \| Overview**. This dashboard is used on the project’s home page.
 
     ![](images/141.png)
 
 1. Click the **Home** link to return to the leadership team’s homepage and view the pinned chart.
 
 
- ![](images/142.png)
+   ![](images/142.png)
 
 
 ### Task 2: Customizing Dashboard ###
