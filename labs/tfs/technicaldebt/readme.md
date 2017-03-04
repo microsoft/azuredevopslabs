@@ -26,7 +26,7 @@ Technical debt is the set of problems in a development effort that make forward 
 
 This hands-on lab includes the following exercises:
 
-* Install and configure SonarQube Server.
+* Install and configure SonarQube Server and Extensions.
 
 * Install and configure SonarQube Extension.
 
@@ -34,10 +34,12 @@ This hands-on lab includes the following exercises:
 
 Estimated time to complete this lab: **45 minutes**.
 
-**Exercise 1: Install and Configure SonarQube Server**
+## Exercise 1: Install and Configure SonarQube Server and Extensions
 
 In this exercise, you will learn about the main installation and configuration points required to install and configure SonarQube for demo purposes
 > Note: The steps provided below are the main steps needed to install SonarQube and SonarQube Extensions on this VM for demo and evaluation purposes. We recommend following the installation guide created by the Visual Studio ALM Rangers for more detailed instructions, please see this [installation guide on GitHub](https://github.com/SonarSource/sonar-.net-documentation).
+
+### Task 1: Install and Configure SonarQube Server
 
 1.	Download **SonarQube** Server from the SonarQube downloads.
 
@@ -79,4 +81,27 @@ In this exercise, you will learn about the main installation and configuration p
 
 <img src="./media/techdebt_img6.png" />
 
+### Task 2: Install and Configure SonarQube Extension
+
+1. Log in as <b>Sachin Raj</b> (VSALM\\Sachin)</b>. All user passwords are <b>P2ssw0rd</b>
+
+2. Browse for your downloaded TFS extensions (https://vsalm:8080/tfs/_gallery) by clicking **Browse TFS extensions**
+
+<img src="./media/techdebt_img7.png" />
+
+3. Click **Manage your extensions**.
+
+<img src="./media/techdebt_img8.png" />
+
+4. Click **Upload new extension** to upload SonarQube extension that you downloaded.
+
+<img src="./media/techdebt_img9.png" />
+
+5. Install the SonarQube extension in your team project collection, by click **Install** 
+
+<img src="./media/techdebt_img10.png" />
+
+6. Choose the team project collection where you want to install the extension and click **Confirm**
+
+<img src="./media/techdebt_img11.png" />
 
