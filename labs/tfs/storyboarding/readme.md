@@ -19,14 +19,9 @@ In this lab, you’ll learn how the capabilities of Visual Studio 2017 make it p
 software evolves – get rich, actionable feedback from users of your software which can help shape what you deliver.
 
 ## Prerequisites
-
-
-In order to complete this lab you will need the Visual Studio 2017 virtual machine provided by Microsoft. For more information on
-acquiring and using this virtual machine, please see [this blog post](http://aka.ms/almvm).
-
-    Estimated time to complete this lab: **60 minutes**.
-
-
+In order to complete this lab you will need the Microsoft Visual Studio 2017 ALM virtual machine provided by Microsoft. For more information on
+acquiring and using this virtual machine, please see [this  post](http://aka.ms/almvm).
+    
 ## Exercise 1: Introduction to Storyboarding
 
 In this exercise, you will learn how to use the PowerPoint storyboarding add-in to create application storyboards. This will be accomplished by examining an existing storyboard file and by adding in some additional storyboard slides to address an additional user story.

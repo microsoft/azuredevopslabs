@@ -1,5 +1,5 @@
 ---
-title: Agile Planning and Portfolio Management with Team Foundation Server 2017 
+title: Agile Planning & Portfolio Management with Team Foundation Server 2017 
 layout: page
 sidebar: tfs
 permalink: /labs/tfs/agile/
@@ -17,11 +17,9 @@ In this lab, you will learn about the agile planning and portfolio management to
 
 ## Prerequisites 
 
-In order to complete this lab you will need the Visual Studio 2017 virtual machine provided by Microsoft. For more information on acquiring and using this virtual machine, please see [this blog post](http://aka.ms/almvm).
+In order to complete this lab you will need the Microsoft Visual Studio 2017 ALM virtual machine provided by Microsoft. For more information on acquiring and using this virtual machine, please see [this post](http://aka.ms/almvm).
 
-**Important note**:
-
-This lab requires you to use the default state of the virtual machine, before any modifications are made to work items or source in TFS. If you followed the “Working with the Visual Studio 2017 ALM Virtual Machine.docx” instructions you should already have a snapshot/checkpoint of the virtual machine before working with it for the first time. Apply this snapshot/checkpoint before starting this lab.
+> **Important note**: This lab requires you to use the default state of the virtual machine, before any modifications are made to work items or source in TFS. If you followed the “Working with the Visual Studio 2017 ALM Virtual Machine.docx” instructions you should already have a snapshot/checkpoint of the virtual machine before working with it for the first time. Apply this snapshot/checkpoint before starting this lab.
 
 ## Exercise 1: Agile Project Management 
 

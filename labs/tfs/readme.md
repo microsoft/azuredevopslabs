@@ -59,6 +59,7 @@ Lab Name</b>
 <tr><td><a href="storyboarding/">Building the Right Software - Generating Storyboards and Collecting Stakeholder Feedback with Visual Studio 2017</a></td></tr>
 <tr><td><a href="architecturevalidation/">Code Discovery using Live Dependency Validation in Visual Studio Enterprise 2017</a>    <span class="label label-success">New</span></td></tr>
 <tr><td><a href="devteamcollaboration/">Collaboration Experiences for Development Teams using Team Foundation Server 2017</a></td></tr>
+<tr><td><a href="devexp/">Developer experience enhancements in Visual Studio 2017</a>     <span class="label label-success">New</span></td></tr>
 <tr><td><a href="debugging/">Debugging with IntelliTrace using Visual Studio Enterprise 2017</a></td></tr>
 <tr><td><a href="intellitrace/">Diagnosing Issues in Production with IntelliTrace and Visual Studio 2017</a></td></tr>
 <tr><td><a href="releasemanagement/">Embracing Continuous Delivery with Release Management for Visual Studio 2017</a></td></tr>
