@@ -27,18 +27,18 @@ You can get access to the virtual machine the following ways:
 - **Run it on Azure** - If you prefer to run the VM on Azure, you can simply upload the VHD to your Azure storage and create a VM from the VHD. If you are setting up the labs for a traning, you  might want to consider the [Azure DevTest Labs](https://docs.microsoft.com/en-us/azure/devtest-lab/devtest-lab-training-lab) for training.
 
 ### Steps to download and extract the VM   
-The size of the download is about 30 GB. It is recommended that you use a utility like [**Free download manager**](http://www.freedownloadmanager.org/).  This utility provides:
+The size of the download is about 30 GB. It is recommended that you use a utility like [**Free download manager**](http://www.freedownloadmanager.org/).  This utility provides:   
     - Auto-resume support for interrupted downloads.
     - Multiple simultaneous download streams for (usually) a much faster download experience.
     - As the name implies, it’s completely free.    
 
-- Download and install Free download manager if you currently do not have one installed – We strongly recommend to download FDM V3 as the latest version does not support batch downloads at this point of time
-fdmv3    
-- Download the ALMVM 2017 Update 2 URL.txt to your machine    
-- Select File-Import-Import list of downloads      
-- Specify a group or accept the default group to begin downloading       
+- Download and install Free download manager if you currently do not have one installed 
+- Open and select all the [download URLs](almvm2017url.txt) from the text file. Press ***CTRL+C*** to copy the selected URLs to clipboard.
+- Select Menu - ***Paste URLs from clipboard***      
 - When the download is complete, double-click the .exe file to self-extract the RAR files to a folder       
 - Read the “Working with the …” document to start using the VM     
+
+![Free Download Manager](fdm.png)
 
 
 >There are quite a number of important instructions on how to use the VM including activating the VM, taking snapshots/check points, etc, documented.We highly recommend that you read through the[Working with the Visual Studio 2017 ALM Virtual Machine]() document prior to using the VM, even if you may have used the earlier version of the VM. 

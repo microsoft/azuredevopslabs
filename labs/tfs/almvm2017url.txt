@@ -1,0 +1,55 @@
+http://download.microsoft.com/download/A/A/5/AA599506-D15D-432E-B430-BE7A4AE38495/Working with the Visual Studio 2015 ALM Virtual Machine.docx
+http://download.microsoft.com/download/A/A/5/AA599506-D15D-432E-B430-BE7A4AE38495/Agile Planning and Portfolio Management with Team Foundation Server 2015.docx
+http://download.microsoft.com/download/A/A/5/AA599506-D15D-432E-B430-BE7A4AE38495/Authoring and Running Manual Tests using Microsoft Test Manager 2015.docx
+http://download.microsoft.com/download/A/A/5/AA599506-D15D-432E-B430-BE7A4AE38495/Branching and Merging Visualization with Visual Studio Team Foundation Server 2015.docx
+http://download.microsoft.com/download/A/A/5/AA599506-D15D-432E-B430-BE7A4AE38495/Building the Right Software - Generating Storyboards and Collecting Stakeholder Feedback with Visual Studio 201.docx
+http://download.microsoft.com/download/A/A/5/AA599506-D15D-432E-B430-BE7A4AE38495/Code Discovery using the Architecture Tools in Visual Studio Enterprise 2015.docx
+http://download.microsoft.com/download/A/A/5/AA599506-D15D-432E-B430-BE7A4AE38495/Collaboration Experiences for Development Teams using Team Foundation Server 2015.docx
+http://download.microsoft.com/download/A/A/5/AA599506-D15D-432E-B430-BE7A4AE38495/Debugging with IntelliTrace using Visual Studio Enterprise 2015.docx
+http://download.microsoft.com/download/A/A/5/AA599506-D15D-432E-B430-BE7A4AE38495/Diagnosing Issues in Production with IntelliTrace and Visual Studio 2015.docx
+http://download.microsoft.com/download/A/A/5/AA599506-D15D-432E-B430-BE7A4AE38495/Embracing Continuous Delivery with Release Management for Visual Studio 2015.docx
+http://download.microsoft.com/download/A/A/5/AA599506-D15D-432E-B430-BE7A4AE38495/Exploratory Testing using Microsoft Test Manager 2015.docx
+http://download.microsoft.com/download/A/A/5/AA599506-D15D-432E-B430-BE7A4AE38495/Getting Started with Git using Team Foundation Server 2015.docx
+http://download.microsoft.com/download/A/A/5/AA599506-D15D-432E-B430-BE7A4AE38495/Introduction to Coded UI Tests with Visual Studio Enterprise 2015.docx
+http://download.microsoft.com/download/A/A/5/AA599506-D15D-432E-B430-BE7A4AE38495/Introduction to IntelliTest with Visual Studio Enterprise 2015.docx
+http://download.microsoft.com/download/A/A/5/AA599506-D15D-432E-B430-BE7A4AE38495/Introduction to Platform Testing with Microsoft Test Manager 2015.docx
+http://download.microsoft.com/download/A/A/5/AA599506-D15D-432E-B430-BE7A4AE38495/Introduction to PreEmptive Analytics.docx
+http://download.microsoft.com/download/A/A/5/AA599506-D15D-432E-B430-BE7A4AE38495/Introduction to SmartOffice4TFS.docx
+http://download.microsoft.com/download/A/A/5/AA599506-D15D-432E-B430-BE7A4AE38495/Introduction to Team Foundation Build 2015 (vNext).docx
+http://download.microsoft.com/download/A/A/5/AA599506-D15D-432E-B430-BE7A4AE38495/Introduction to Test Case Management with Microsoft Test Manager 2015.docx
+http://download.microsoft.com/download/A/A/5/AA599506-D15D-432E-B430-BE7A4AE38495/Introduction to Test Planning with Microsoft Test Manager 2015.docx
+http://download.microsoft.com/download/A/A/5/AA599506-D15D-432E-B430-BE7A4AE38495/Introduction to Web Performance and Load Testing with Visual Studio Enterprise 2015.docx
+http://download.microsoft.com/download/A/A/5/AA599506-D15D-432E-B430-BE7A4AE38495/Making Developers More Productive with Visual Studio Team Foundation Server 2015.docx
+http://download.microsoft.com/download/A/A/5/AA599506-D15D-432E-B430-BE7A4AE38495/Managing Technical Debt with Team Foundation Server 2015 and SonarQube.docx
+http://download.microsoft.com/download/A/A/5/AA599506-D15D-432E-B430-BE7A4AE38495/Testing and Debugging SharePoint Applications with Visual Studio 2015.docx
+http://download.microsoft.com/download/A/A/5/AA599506-D15D-432E-B430-BE7A4AE38495/Unit Testing, Code Coverage and Code Clone Analysis with Visual Studio 2015.docx
+http://download.microsoft.com/download/A/A/5/AA599506-D15D-432E-B430-BE7A4AE38495/Using Code Analysis with Visual Studio 2015 to Improve Code Quality.docx
+http://download.microsoft.com/download/B/3/E/B3E7E591-A33E-4111-8D06-4DD200BBE351/VisualStudio2015U2.ALM.part01.exe
+http://download.microsoft.com/download/B/3/E/B3E7E591-A33E-4111-8D06-4DD200BBE351/VisualStudio2015U2.ALM.part02.rar
+http://download.microsoft.com/download/B/3/E/B3E7E591-A33E-4111-8D06-4DD200BBE351/VisualStudio2015U2.ALM.part03.rar
+http://download.microsoft.com/download/B/3/E/B3E7E591-A33E-4111-8D06-4DD200BBE351/VisualStudio2015U2.ALM.part04.rar
+http://download.microsoft.com/download/B/3/E/B3E7E591-A33E-4111-8D06-4DD200BBE351/VisualStudio2015U2.ALM.part05.rar
+http://download.microsoft.com/download/B/3/E/B3E7E591-A33E-4111-8D06-4DD200BBE351/VisualStudio2015U2.ALM.part06.rar
+http://download.microsoft.com/download/B/3/E/B3E7E591-A33E-4111-8D06-4DD200BBE351/VisualStudio2015U2.ALM.part07.rar
+http://download.microsoft.com/download/B/3/E/B3E7E591-A33E-4111-8D06-4DD200BBE351/VisualStudio2015U2.ALM.part08.rar
+http://download.microsoft.com/download/B/3/E/B3E7E591-A33E-4111-8D06-4DD200BBE351/VisualStudio2015U2.ALM.part09.rar
+http://download.microsoft.com/download/B/3/E/B3E7E591-A33E-4111-8D06-4DD200BBE351/VisualStudio2015U2.ALM.part10.rar
+http://download.microsoft.com/download/B/3/E/B3E7E591-A33E-4111-8D06-4DD200BBE351/VisualStudio2015U2.ALM.part11.rar
+http://download.microsoft.com/download/B/3/E/B3E7E591-A33E-4111-8D06-4DD200BBE351/VisualStudio2015U2.ALM.part12.rar
+http://download.microsoft.com/download/B/3/E/B3E7E591-A33E-4111-8D06-4DD200BBE351/VisualStudio2015U2.ALM.part13.rar
+http://download.microsoft.com/download/B/3/E/B3E7E591-A33E-4111-8D06-4DD200BBE351/VisualStudio2015U2.ALM.part14.rar
+http://download.microsoft.com/download/B/3/E/B3E7E591-A33E-4111-8D06-4DD200BBE351/VisualStudio2015U2.ALM.part15.rar
+http://download.microsoft.com/download/B/3/E/B3E7E591-A33E-4111-8D06-4DD200BBE351/VisualStudio2015U2.ALM.part16.rar
+http://download.microsoft.com/download/B/3/E/B3E7E591-A33E-4111-8D06-4DD200BBE351/VisualStudio2015U2.ALM.part17.rar
+http://download.microsoft.com/download/B/3/E/B3E7E591-A33E-4111-8D06-4DD200BBE351/VisualStudio2015U2.ALM.part18.rar
+http://download.microsoft.com/download/B/3/E/B3E7E591-A33E-4111-8D06-4DD200BBE351/VisualStudio2015U2.ALM.part19.rar
+http://download.microsoft.com/download/B/3/E/B3E7E591-A33E-4111-8D06-4DD200BBE351/VisualStudio2015U2.ALM.part20.rar
+http://download.microsoft.com/download/B/3/E/B3E7E591-A33E-4111-8D06-4DD200BBE351/VisualStudio2015U2.ALM.part21.rar
+http://download.microsoft.com/download/B/3/E/B3E7E591-A33E-4111-8D06-4DD200BBE351/VisualStudio2015U2.ALM.part22.rar
+http://download.microsoft.com/download/B/3/E/B3E7E591-A33E-4111-8D06-4DD200BBE351/VisualStudio2015U2.ALM.part23.rar
+http://download.microsoft.com/download/B/3/E/B3E7E591-A33E-4111-8D06-4DD200BBE351/VisualStudio2015U2.ALM.part24.rar
+http://download.microsoft.com/download/B/3/E/B3E7E591-A33E-4111-8D06-4DD200BBE351/VisualStudio2015U2.ALM.part25.rar
+http://download.microsoft.com/download/B/3/E/B3E7E591-A33E-4111-8D06-4DD200BBE351/VisualStudio2015U2.ALM.part26.rar
+http://download.microsoft.com/download/B/3/E/B3E7E591-A33E-4111-8D06-4DD200BBE351/VisualStudio2015U2.ALM.part27.rar
+http://download.microsoft.com/download/B/3/E/B3E7E591-A33E-4111-8D06-4DD200BBE351/VisualStudio2015U2.ALM.part28.rar
+http://download.microsoft.com/download/B/3/E/B3E7E591-A33E-4111-8D06-4DD200BBE351/VisualStudio2015U2.ALM.part29.rar
