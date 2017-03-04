@@ -11,8 +11,8 @@ search: include
 "title": "{{ page.title | escape }}",
 "tags": "{{ page.tags }}",
 "keywords": "{{page.keywords}}",
-"url": "{{ page.url | prepend: site.baseurl }}",
-"url": "{{ page.url | prepend: site.baseurl }}",
+"url": "{{ page.url | prepend: site.baseurl | prepend: site.url }}",
+"url": "{{ page.url | prepend: site.baseurl | prepend: site.url }}",
 "summary": "{{page.summary | strip }}"
 }
 {% unless forloop.last and site.posts.size < 1 %},{% endunless %}
