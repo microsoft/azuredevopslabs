@@ -9,9 +9,13 @@ folder: /labs/vsts/
 ## Overview
 
 We have developed a brand new set of hands-on-labs for Visual Studio Team Services. In order to complete this lab you will need 
+
 - **Visual Studio Team Services account**. If you don't have one, you can create from <a href="https://www.visualstudio.com/">here</a>
+
 - **Visual Studio 2017** or higher version
+
 - You can use the **[VSTS Demo Data generator](http://vstsdemogenerator.azurewebsites.net/Environment/Create)** to provison a project with pre-defined data on to your Visual Studio Team Services account. Please use the ***My Health Clinic*** template to follow the hands-on-labs.
+
 - If you are not using the VSTS Demo Data Generator, you can clone the code from here
 
 ## Hands-On-Labs     
