@@ -17,19 +17,8 @@ This support makes it much easier to understand a solution branch hierarchy and 
 
 ## Pre-requisites
 
-*  In order to complete this lab you will need the Visual Studio 2017
-    virtual machine provided by Microsoft. For more information on
-    acquiring and using this virtual machine, please see [this blog
-    post](http://aka.ms/almvm).
-
-## Exercises 
-
-This hands-on lab includes the following exercises:
-
-* Working with Team Foundation Server Code Branches
-
-Estimated time to complete this lab: **30 minutes**.
-
+*  In order to complete this lab you will need the Microsoft Visual Studio 2017 ALM virtual machine provided by Microsoft. For more information on
+    acquiring and using this virtual machine, please see [this post](http://aka.ms/almvm).
 
 ## Exercise 1: Working with Team Foundation Server Code Branches
 
