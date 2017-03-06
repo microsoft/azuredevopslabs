@@ -24,9 +24,7 @@ When you run IntelliTest, you can easily see which tests are failing and add any
 
 ## Pre-requisites
 
-- Visual Studio 2017 (download [here](https://www.visualstudio.com/vs/visual-studio-2017-rc/))
-
-- Download the Parts Unlimited project [here](https://github.com/Microsoft/PartsUnlimited/tree/aspnet45)
+In order to complete this lab you will need the Microsoft Visual Studio 2017 ALM virtual machine provided by Microsoft. For more information on acquiring and using this virtual machine, please see [this post](http://aka.ms/almvm).
 
 
 ### Task 1: Running IntelliTest

@@ -27,6 +27,10 @@ used it allows you to:**
 
 -   Extend DevOps practices from your application to your database
 
+## Pre-requisites
+
+In order to complete this lab you will need the Microsoft Visual Studio 2017 ALM virtual machine provided by Microsoft. For more information on acquiring and using this virtual machine, please see [this post](http://aka.ms/almvm).
+
 ### Task 1: Creating databases from a Script
 
 1. Log in as **Sachin Raj** (VSALM\\Sachin). All user passwords are

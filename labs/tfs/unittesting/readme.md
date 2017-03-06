@@ -22,7 +22,7 @@ In this lab, you will learn about how the unit testing engine in
     by helping you identify blocks of semantically similar code which
     may be candidates for common bug fixes or refactoring.
 
-## Prerequisites
+## Pre-requisites
 
 In order to complete this lab you will need the Visual Studio 2017
     virtual machine provided by Microsoft. For more information on
