@@ -6,8 +6,9 @@ permalink: /labs/tfs/releasemanagement/
 folder: /labs/tfs/releasemanagement/
 ---
 
-Lab version:	15.0.26020.0
-Last updated:	2/27/2017
+Lab version: 15.0.26020.0
+
+Last updated: 2/27/2017
 
 ## Overview
 
@@ -29,7 +30,7 @@ In order to complete this lab you will need the Visual Studio 2017
     acquiring and using this virtual machine, please see [this blog
     post](http://aka.ms/ALMVM).
 
-Exercise 1 of the “Introduction to Team Foundation Build” lab is a
+**Exercise 1** of the “Introduction to Team Foundation Build” lab is a
     prerequisite for this lab.
 
 ## Exercise 1: Continuous Release Management

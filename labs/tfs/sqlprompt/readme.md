@@ -6,6 +6,11 @@ permalink: /labs/tfs/sqlprompt/
 folder: /labs/tfs/sqlprompt/
 --- 
 
+Lab version: 15.0.26020.0
+
+Last updated: 2/15/2017
+
+
 ## Overview
 SQL Prompt for Visual Studio Enterprise is an add-in for Visual Studio that extends and enhances the standard IntelliSense-style code
 completion. SQL Prompt can make your developers twice as fast at working with SQL, and leaves them free to concentrate on how the code actually
@@ -17,7 +22,12 @@ Using SQL Prompt allows you to improve productivity by stripping away the repeti
 such as SELECTs and INSERTs, quick to write, SQL Prompt completes JOIN conditions for you automatically. You don't have to remember any column
 names or aliases.
 
-## Demo Script
+## Pre-requisites     
+In order to complete this lab you will need the Visual Studio 2017
+virtual machine provided by Microsoft. For more information on acquiring
+and using this virtual machine, please see [this blog
+post](http://aka.ms/almvm).
+
 
 Let’s connect to a database from the Server Explorer window in Visual Studio* *and take a look at some of the highlights*
 

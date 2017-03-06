@@ -6,44 +6,39 @@ permalink: /labs/vsts/
 folder: /labs/vsts/
 ---
 
-
-<img src="agile/images/alm.png" />
-
 ## Overview
 
-Visual Studio Team Services and Azure cloud services help remove barriers between teams, encourage collaboration, and improve the flow of value to your customers.
-Or, use our on-premises server, Team Foundation Server (TFS), when you want to maintain your data within your network.
+We are working on providing hands-on-labs for Visual Studio Team Services. Here are the labs, for a start. 
 
-Both options are enterprise-ready, supporting teams of any size, from tens to thousands. Team Services provides a scalable, reliable, and globally available
-hosted service. It is backed by a 99.9% SLA, monitored by our 24×7 operations team, and available in local data centers around the world.
-Also, you can quickly expand the power of these tools through integration with other services and tools using service hooks and extensions.
+In order to complete these labs you will need 
 
+- **Visual Studio Team Services account**. If you don't have one, you can create from <a href="https://www.visualstudio.com/">here</a>
 
-**Using the Hands-on-Labs with VSTS**
+- **Visual Studio 2017** or higher version
 
-In order to complete this lab you will need a **Visual Studio Team Services account**. If you don't have one, you can create from <a href="https://www.visualstudio.com/">here</a>
+- You can use the **[VSTS Demo Data generator](http://vstsdemogenerator.azurewebsites.net/Environment/Create)** to provison a project with pre-defined data on to your Visual Studio Team Services account. Please use the ***My Health Clinic*** template to follow the hands-on-labs.
 
-Use the <a href="" >VSTS Demo generator</a> to create the project with the pre-defined data.
+- If you are not using the VSTS Demo Data Generator, you can clone the code from here
 
-
-## Hands-On-Labs
+## Hands-On-Labs     
 
 <table width="100%">
 <thead><td>
-Lab Name
+<b>Lab Name</b>
 </td>
 </thead>
-<tr><td>Working with the VSTS Demo generator</td></tr>
+<!--tr><td>Working with the VSTS Demo generator</td></tr-->
 <tr><td><a href="agile/">Agile Planning and Portfolio Management using Visual Studio Team Services</a></td></tr>
-<tr><td><a href="git/">Version Controlling with Git using Visual Studio Team Services</a></td></tr>
 <tr><td><a href="continuousintegration/">Continuous Integration using Visual Studio Team Services</a></td></tr>
 <tr><td><a href="continuousdeployment/">Continuous Deployment using Visual Studio Team Services</a></td></tr>
-<tr><td><a hrf="manualtesting/">Test Planning and Management using Visual Studio Team Services</a></td></tr>
 <tr><td><a href="exploratorytesting/">Exploratory Testing and Feedback Management using Visual Studio Team Services</a></td></tr>
-<tr><td><a href="selenium/">UI Automation using Selenium Tests</a></td></tr>
-<tr><td>Web Performance and Load Testing using Visual Studio Team Services</td></tr>
+<tr><td><a href="load/">Load Testing using Visual Studio Team Services</a></td></tr>
 <tr><td><a href="monitor/">Monitoring Applications using Application Insights</a></td></tr>
 <tr><td><a href="packagemanagement/">Package Management using Visual Studio Team Services</a></td></tr>
-<tr><td><a href="azurelabs/">Azure Labs</a></td></tr>
+<tr><td><a href="appservice/">Deploy an ASP.NET WebApp in Azure App Service</a></td></tr>
+<tr><td> <a href="azureresource/">Deploy and Manage Azure Resources</a></td></tr>
+<tr><td><a hrf="manualtesting/">Test Planning and Management using Visual Studio Team Services</a></td></tr>
+<tr><td><a href="selenium/">UI Automation using Selenium Tests</a></td></tr>
+<tr><td><a href="git/">Version Controlling with Git using Visual Studio Team Services</a></td></tr>
 </table>
 

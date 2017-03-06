@@ -6,6 +6,10 @@ permalink: /labs/tfs/smartword4tfs/
 folder: /labs/tfs/smartword4tfs/
 ---
 
+Lab version: 14.0.25123
+
+Last updated: 2/23/2017
+
 ##  Overview
 
 The Modern Requirements Suite4TFS provides a collaborative platform
@@ -35,30 +39,14 @@ In order to complete this lab, you will need SmartWord4TFS,
     acquiring and using the Visual Studio 2017 virtual machine is
     available [here](http://aka.ms/VS15ALMVM).
 
-**Important note**
-
-This lab requires you to use the default state of the virtual
+> **Important note:** This lab requires you to use the default state of the virtual
     machine, before any modifications are made to work items or source
     in TFS. If you followed the “Working With…” instructions, you should
     have a snapshot/checkpoint of the virtual machine before working
     with it for the first time. Apply the snapshots/checkpoints before
     starting this lab.
 
-## Installation 
-
-The following prerequisites are required to successfully install SmartOffice4TFS products:
-
--   Microsoft ALM Virtual Machine 2017
-
--   Internet should be working within the VM Refer to “Working with the
-    Visual Studio ALM Virtual Machine" document.
-
-**Installing SmartWord4TFS**
-
-This Installation Guide elaborates the installation of SmartWord4TFS
-using Web Installer:
-
-**Installation Guidelines**
+## Installing SmartWord4TFS
 
 1.  Go to the following link :
     <http://www.modernrequirements.com/application-lifecycle-management-virtual-machine/>
@@ -460,7 +448,7 @@ report with more freedom in what to include in the report
     <img src="media/95.png" width="561" height="288" />
 
 
-### Appendix A: Designing a SmartWord4TFS Template using Wizard
+## Appendix A: Designing a SmartWord4TFS Template using Wizard
 
 In this appendix you will learn how to create a new SmartWord4TFS
 template from scratch using the Wizard.

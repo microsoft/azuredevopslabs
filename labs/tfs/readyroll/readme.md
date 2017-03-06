@@ -4,7 +4,12 @@ layout: page
 sidebar: tfs
 permalink: /labs/tfs/readyroll/
 folder: /labs/tfs/readyroll/
---- 
+---
+
+Lab version: 15.0.26020.0
+
+Last updated: 1/31/2017
+ 
 
 ## Overview
 
@@ -21,6 +26,10 @@ used it allows you to:**
     to users quickly and efficiently.
 
 -   Extend DevOps practices from your application to your database
+
+## Pre-requisites
+
+In order to complete this lab you will need the Microsoft Visual Studio 2017 ALM virtual machine provided by Microsoft. For more information on acquiring and using this virtual machine, please see [this post](http://aka.ms/almvm).
 
 ### Task 1: Creating databases from a Script
 

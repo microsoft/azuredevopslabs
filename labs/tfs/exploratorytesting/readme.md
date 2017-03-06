@@ -17,7 +17,7 @@ You will learn about how exploratory testing (also called XT, or agile testing) 
 This allows a tester to more flexibly test the underlying software without relying solely on formal est cases. 
 You’ll also learn about how you can manage the process of eliciting and managing the customer feedback lifecycle.
 
-## Prerequisites
+## Pre-requisites
 
 In order to complete this lab you will need the Visual Studio 2017 virtual machine provided by Microsoft. For more information on
 acquiring and using this virtual machine, please see [this blog post](http://aka.ms/almvm).
@@ -246,7 +246,7 @@ acquiring and using this virtual machine, please see [this blog post](http://aka
 
     <img src="media/image28.png" width="230" height="106" />
 
-3.  Select **Work | Backlogs**.
+3.  Select **Work \| Backlogs**.
 
     <img src="media/image29.png" width="314" height="78" />
 
@@ -273,7 +273,7 @@ acquiring and using this virtual machine, please see [this blog post](http://aka
 
     <img src="media/image33.png" width="478" height="290" />
 
-    1.  **Note:** You can add as many feedback items as you want by
+    **Note:** You can add as many feedback items as you want by
         clicking on the ‘**Request feedback**’ link.
 
 8.  Press **Esc** to close the work item.
@@ -297,11 +297,11 @@ acquiring and using this virtual machine, please see [this blog post](http://aka
     message and double-click to open it in **Outlook**. You may need to
     wait for a minute for the email message to show up.
 
-    1.  **Note:** The VM that you are using for this lab does not have a
+    **Note:** The VM that you are using for this lab does not have a
         full email server running on it. Therefore, we will simulate
         sending and receiving email with this extra step.
 
-        <img src="media/image34.png" width="624" height="159" />
+    <img src="media/image34.png" width="624" height="159" />
 
 4.  The email provides the high-level details and easy access to the
     feedback experience. Click **Provide feedback**. If asked to select

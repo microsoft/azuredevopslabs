@@ -33,7 +33,7 @@ automatically collects various events in your application (e.g. ASP.NET,
 ADO.NET, etc), which enables you to view the historical state of the
 application at those points in time.
 
-
+## Prerequisites     
 In order to complete this lab you will need the Visual Studio 2017
 virtual machine provided by Microsoft. For more information on acquiring
 and using this virtual machine, please see [this blog
@@ -190,7 +190,7 @@ the investigation there.
     save any.
 
 ### Task 3: IntelliTrace inside Visual Studio 2017 (“F5” IntelliTrace)
-------------------------------------------------------------------
+
 
 1.  Select **File | Start Page** to open the **Visual Studio Start
     Page**.

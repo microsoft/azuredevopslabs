@@ -2,8 +2,9 @@
 
 entries:
 - title: sidebar
-  product: ALM VM 
-  version: 2017
+  product: VSTS HOLs 
+  version: 
+  url: /labs/vsts
   folders:
 
   - title:
@@ -23,18 +24,10 @@ entries:
     output: web, pdf
     folderitems:
 
-    - title: Get started with VSTS
-      url: /index.html
+    - title: VSTS Hands-on-Labs Overview
+      url: labs/vsts
       output: web, pdf
       type: homepage
-
-    - title: Using the labs with VSTS
-      url: /mydoc_supported_features.html
-      output: web, pdf
-
-    - title: Running the labs on cloud
-      url: /mydoc_about.html
-      output: web, pdf
 
   - title: Plan
     output: web, pdf
@@ -60,10 +53,10 @@ entries:
       url: labs/vsts/continuousintegration
       output: web, pdf
 
-    - title: Managing Technical Debt
-      url: /mydoc_pages.html
+    - title: Package Management in Team Services
+      url: labs/vsts/packagemanagement
       output: web, pdf
-    
+   
   - title: Test
     output: web, pdf
 
@@ -76,6 +69,10 @@ entries:
       url: labs/vsts/selenium
       output: web, pdf
 
+    - title: Load and Performance Testing using Visual Stuido Team Services
+      url: labs/vsts/load
+      output: web, pdf
+
 
   - title: Deploy
     output: web, pdf
@@ -83,10 +80,6 @@ entries:
     folderitems:
     - title: Continuous Deployment using Visual Studio Team Services
       url: labs/vsts/continuousdeployment
-      output: web, pdf
-
-    - title: Package Management in Team Services
-      url: labs/vsts/packagemanagement
       output: web, pdf
 
   - title: Monitor
@@ -101,6 +94,11 @@ entries:
     output: web, pdf
 
     folderitems:
-    - title: Azure Labs
-      url: labs/vsts/azurelabs
+    - title: Deploy an ASP.NET WebApp in Azure App Service
+      url: labs/vsts/appservice
       output: web, pdf
+
+    folderitems:
+    - title: Deploy and Manage Azure Resources
+      url: labs/vsts/azureresource
+      output: web, pdf      

@@ -6,6 +6,11 @@ permalink: /labs/tfs/manualtesting/
 folder: /labs/tfs/manualtesting/
 ---
 
+Lab version: 15.0.26020.0
+
+Last updated: 1/31/2017
+
+
 ## Overview
 
 In this lab, you will learn how to use Microsoft Team Foundation
@@ -21,17 +26,6 @@ In order to complete this lab you will need the Visual Studio 2017
     virtual machine provided by Microsoft. For more information on
     acquiring and using this virtual machine, please see [this blog
     post](http://aka.ms/almvm).
-
-
-## Exercises
-
-This Hands-On Lab comprises the following exercises:
-
-* Managing Test Plans, Suites, and Cases
-
-* Authoring, Running, and Analyzing Manual Tests
-
-Estimated time to complete this lab: **60 minutes**.
 
 ## Exercise 1: Managing Test Plans, Suites, and Cases
 

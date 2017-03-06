@@ -1,38 +1,25 @@
 ---
-title: Agile Planning and Portfolio Management with Team Foundation Server 2017 
+title: Agile Planning & Portfolio Management with Team Foundation Server 2017 
 layout: page
 sidebar: tfs
 permalink: /labs/tfs/agile/
 folder: /labs/tfs/agile/
 ---
 
+Lab version: 15.0.26020.0
+
+Last updated: 2/13/2017
+
+
 ## Overview     
 
 In this lab, you will learn about the agile planning and portfolio management tools and processes provided by Team Foundation Server 2017 and how they can help you quickly plan, manage, and track work across your entire team. You will explore the product backlog, sprint backlog, and task boards which can be used to track the flow of work during the course of an iteration. We will also take a look at how the tools have been enhanced in this release to scale for larger teams and organizations.
 
-## Prerequisites 
+## Pre-requisites 
 
-In order to complete this lab you will need the Visual Studio 2017 virtual machine provided by Microsoft. For more information on acquiring and using this virtual machine, please see [this blog post](http://aka.ms/almvm).
+In order to complete this lab you will need the Microsoft Visual Studio 2017 ALM virtual machine provided by Microsoft. For more information on acquiring and using this virtual machine, please see [this post](http://aka.ms/almvm).
 
-**Important note**:
-
-This lab requires you to use the default state of the virtual machine, before any modifications are made to work items or source in TFS. If you followed the “Working with the Visual Studio 2017 ALM Virtual Machine.docx” instructions you should already have a snapshot/checkpoint of the virtual machine before working with it for the first time. Apply this snapshot/checkpoint before starting this lab.
-
-
-## Exercises 
-
-This hands-on lab includes the following exercises:
-
-* Agile Project Management
-
-* Agile Portfolio Management
-
-* Flexibility of Agile Tools
-
-* Work Item Charting
-
-Estimated time to complete this lab: **45 minutes**.
-
+> **Important note**: This lab requires you to use the default state of the virtual machine, before any modifications are made to work items or source in TFS. If you followed the “Working with the Visual Studio 2017 ALM Virtual Machine.docx” instructions you should already have a snapshot/checkpoint of the virtual machine before working with it for the first time. Apply this snapshot/checkpoint before starting this lab.
 
 ## Exercise 1: Agile Project Management 
 
@@ -639,7 +626,7 @@ In this exercise, we will demonstrate the work item charting capability of Team 
 
 ### Task 1: Creating and Sharing Work Item Charts ###
 
-1. Let’s say that the Fabrikam Fiber management team would like to better understand how tasks are broken down by user. Navigate to the work item queries section of the web portal. Select **Work | Queries**.
+1. Let’s say that the Fabrikam Fiber management team would like to better understand how tasks are broken down by user. Navigate to the work item queries section of the web portal. Select **Work \| Queries**.
 
     ![](images/124.png)
 
@@ -709,14 +696,14 @@ In this exercise, we will demonstrate the work item charting capability of Team 
 
     ![](images/140.png)
 
-1. These lightweight charts can also be pinned to a dashboard. Click the **Tasks by Team** chart’s ellipses button and select **Add to dashboard | Overview**. This dashboard is used on the project’s home page.
+1. These lightweight charts can also be pinned to a dashboard. Click the **Tasks by Team** chart’s ellipses button and select **Add to dashboard \| Overview**. This dashboard is used on the project’s home page.
 
     ![](images/141.png)
 
 1. Click the **Home** link to return to the leadership team’s homepage and view the pinned chart.
 
 
- ![](images/142.png)
+   ![](images/142.png)
 
 
 ### Task 2: Customizing Dashboard ###

@@ -18,20 +18,13 @@ software projects, it is critical that we can accurately capture  requirements f
 In this lab, you’ll learn how the capabilities of Visual Studio 2017 make it possible to both rapidly storyboard your requirements, and – as your 
 software evolves – get rich, actionable feedback from users of your software which can help shape what you deliver.
 
-## Prerequisites
-
-
-In order to complete this lab you will need the Visual Studio 2017 virtual machine provided by Microsoft. For more information on
-acquiring and using this virtual machine, please see [this blog post](http://aka.ms/almvm).
-
-    Estimated time to complete this lab: **60 minutes**.
-
-
+## Pre-requisites
+In order to complete this lab you will need the Microsoft Visual Studio 2017 ALM virtual machine provided by Microsoft. For more information on
+acquiring and using this virtual machine, please see [this  post](http://aka.ms/almvm).
+    
 ## Exercise 1: Introduction to Storyboarding
 
-1.  In this exercise, you will learn how to use the PowerPoint storyboarding add-in to create application storyboards. This will be
-    accomplished by examining an existing storyboard file and by adding in some additional storyboard slides to address an additional
-    user story.
+In this exercise, you will learn how to use the PowerPoint storyboarding add-in to create application storyboards. This will be accomplished by examining an existing storyboard file and by adding in some additional storyboard slides to address an additional user story.
 
 ### Task 1: Creating a Storyboard Linked to Work Item
 
@@ -91,7 +84,7 @@ acquiring and using this virtual machine, please see [this blog post](http://aka
 
     <img src="./media/image9.png" width="502" height="110" />
 
-    1.  **Note:** If you wanted to create a new storyboard from scratch,
+    **Note:** If you wanted to create a new storyboard from scratch,
         you would do so simply by loading PowerPoint and selecting the
         “blank presentation” option. Then use the tools provided in the
         Storyboarding tab.
@@ -105,11 +98,11 @@ acquiring and using this virtual machine, please see [this blog post](http://aka
 
     <img src="./media/image10.png" width="539" height="323" />
 
-    1.  **Note:** If you wanted to make modifications to the slide
+    **Note:** If you wanted to make modifications to the slide
         master layouts, you would do so by selecting the **Edit Layout**
         button from the **Storyboarding** tab.
 
-        <img src="./media/image11.png" width="265" height="71" />
+    <img src="./media/image11.png" width="265" height="71" />
 
 4.  Press the **F5** key to view the storyboard in presentation mode.
     Click through the slides with the mouse or press the right arrow key
@@ -156,12 +149,12 @@ acquiring and using this virtual machine, please see [this blog post](http://aka
     Take a glance at the UI shown here so that we can duplicate some of
     it in the storyboards.
 
-    1.  **Note:** Although storyboards normally precede implementation,
+    **Note:** Although storyboards normally precede implementation,
         in this lab you will occasionally refer to both storyboards in
         development and the finished product in order to help speed up
         the demonstration.
 
-        <img src="./media/image16.png" width="623" height="455" />
+    <img src="./media/image16.png" width="623" height="455" />
 
 11. Back in PowerPoint, add a new **Text Box** to the first slide.
 
@@ -203,11 +196,11 @@ acquiring and using this virtual machine, please see [this blog post](http://aka
     **Add to My Shapes** button from the **Storyboarding** tab, and name
     the new shape “**Fabrikam Button**”.
 
-    1.  **Note:** Make sure you select the outer edge of the button
+    **Note:** Make sure you select the outer edge of the button
         shape (not the center part) in order to make the Add to My
         Shapes button available.
 
-        <img src="./media/image23.png" width="618" height="200" />
+    <img src="./media/image23.png" width="618" height="200" />
 
 18. You can sometimes speed up the storyboarding process by reusing
     existing assets. In this case, let’s take a screen clipping of the

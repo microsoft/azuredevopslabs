@@ -1,5 +1,5 @@
 ---
-title: "Special layout pages"
+title: ""
 tagName: special_layouts
 search: exclude
 permalink: tag_special_layouts.html

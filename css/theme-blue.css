@@ -99,10 +99,10 @@ ul.sidebarTitle {
 li.sidebarTitle {
     margin-top:40px;
     font-weight:bold;
-    font-size:22px;
-  /*  color: #ED1951; */
+    font-size:28px;
+    color: #052456; 
     margin-bottom:10px;
-    margin-left: 5px;
+    margin-left: 0px;
 
 }
 

@@ -6,6 +6,11 @@ permalink: /labs/tfs/vsproductivity/
 folder: /labs/tfs/vsproductivity/
 ---
 
+Lab version: 15.0.26020.0
+
+Last updated: 2/13/2017
+
+
 ## Overview
 
 This lab is all about those “fit-and-finish” scenarios in Visual

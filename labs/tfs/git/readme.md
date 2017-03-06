@@ -20,13 +20,9 @@ Foundation Server. In addition, you will learn about Git branching and merging s
 Please refer to this [page](/labs/) for an overview of the scenario and pre-requisite for the hands-on-labs.
 
 
-**Exercises**
+## Pre-requisites
 
-This hands-on lab includes the following exercises:
-
-   * Getting Started with Git   
-   * Git Branching and Merging    
-Estimated time to complete this lab: **60 minutes**.
+In order to complete this lab you will need the Microsoft Visual Studio 2017 ALM virtual machine provided by Microsoft. For more information on acquiring and using this virtual machine, please see [this post](http://aka.ms/almvm).
 
 ## Exercise 1: Getting Started with Git
 

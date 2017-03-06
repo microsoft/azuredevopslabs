@@ -106,3 +106,5 @@ description: "RSS Feed for Microsoft Visual Studio ALM Virtual Machine"
 # needed for sitemap.xml file only
 url: https://microsoft.github.io
 baseurl: /almvm/
+
+site.google_analytics: UA-93010880-1
