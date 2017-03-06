@@ -12,6 +12,18 @@ folder: /labs/vsts/git/
 You will learn how to establish a local Git repository, which can easily be synchronized with a centralized Git repository in Visual Studio Team Services.
 In addition, you will learn about Git branching and merging support.
 
+## Pre-requisites
+
+In order to complete this lab you will need-
+
+- **Visual Studio Team Services account**. If you don't have one, you can create from <a href="https://www.visualstudio.com/">here</a>
+
+- **Visual Studio 2017** or higher version
+
+- You can use the **[VSTS Demo Data generator](http://vstsdemogenerator.azurewebsites.net/Environment/Create)** to provison a project with pre-defined data on to your Visual Studio Team Services account. Please use the ***My Health Clinic*** template to follow the hands-on-labs.
+
+- If you are not using the VSTS Demo Data Generator, you can clone the code from here
+
 ## Exercise 1: Connect from Visual Studio
 
 1.  Sign in to your **Visual Studio Team Services** account and browse to **MyhealthClinic** Project. 

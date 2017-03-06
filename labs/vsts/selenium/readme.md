@@ -10,6 +10,18 @@ folder: /labs/vsts/selenium/
 
 Performing user interface testing as part of the build process is a great way of detecting unexpected changes and need not be difficult. This lab describes using Selenium to test your website in a continuous integration build.
 
+## Pre-requisites
+
+In order to complete this lab you will need-
+
+- **Visual Studio Team Services account**. If you don't have one, you can create from <a href="https://www.visualstudio.com/">here</a>
+
+- **Visual Studio 2017** or higher version
+
+- You can use the **[VSTS Demo Data generator](http://vstsdemogenerator.azurewebsites.net/Environment/Create)** to provison a project with pre-defined data on to your Visual Studio Team Services account. Please use the ***My Health Clinic*** template to follow the hands-on-labs.
+
+- If you are not using the VSTS Demo Data Generator, you can clone the code from here
+
 ### Task 1: Create the test project
 
 As there is no template for Selenium testing, the easiest way to get started is to use the Unit Test template. This automatically adds the test framework references and enables you run and view the results from Visual Studio Test Explorer.

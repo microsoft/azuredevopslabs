@@ -14,7 +14,17 @@ Release Management can be used by all kinds of software developers for continuou
 
 To use Release Management, you create release definitions, in which you specify the automation tasks that should be run in each environment. These automation tasks can be to deploy your software and to run tests against it. You can group multiple environments in each definition to model your software lifecycle. You can then set up the deployment in each environment to be automatically triggered upon completion of a build, at scheduled times, or on successful deployment to a previous environment.
 
+## Pre-requisites
 
+In order to complete this lab you will need- 
+
+- **Visual Studio Team Services account**. If you don't have one, you can create from <a href="https://www.visualstudio.com/">here</a>
+
+- **Visual Studio 2017** or higher version
+
+- You can use the **[VSTS Demo Data generator](http://vstsdemogenerator.azurewebsites.net/Environment/Create)** to provison a project with pre-defined data on to your Visual Studio Team Services account. Please use the ***My Health Clinic*** template to follow the hands-on-labs.
+
+- If you are not using the VSTS Demo Data Generator, you can clone the code from here
 
 ## Exercise 1: Connect To Microsoft Azure
 
