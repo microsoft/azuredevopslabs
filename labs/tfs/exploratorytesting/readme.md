@@ -17,7 +17,7 @@ You will learn about how exploratory testing (also called XT, or agile testing) 
 This allows a tester to more flexibly test the underlying software without relying solely on formal est cases. 
 You’ll also learn about how you can manage the process of eliciting and managing the customer feedback lifecycle.
 
-## Prerequisites
+## Pre-requisites
 
 In order to complete this lab you will need the Visual Studio 2017 virtual machine provided by Microsoft. For more information on
 acquiring and using this virtual machine, please see [this blog post](http://aka.ms/almvm).
