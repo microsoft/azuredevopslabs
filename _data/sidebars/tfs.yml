@@ -115,6 +115,10 @@ entries:
       url: /mydoc_pages.html
       output: web, pdf
 
+    - title: Package Management in Team Foundation Server 2017
+      url: labs/tfs/packagemanagement
+      output: web, pdf
+
     - title: Team Foundation Build 2017
       url: labs/tfs/build
       output: web, pdf
@@ -154,10 +158,6 @@ entries:
 
     - title: ReadyRoll- Develop and deploy databases in Visual Studio Enterprise 2017
       url: labs/tfs/readyroll
-      output: web, pdf
-
-    - title: Package Management in Team Foundation Server 2017
-      url: labs/tfs/packagemanagement
       output: web, pdf
 
   - title: Monitor
