@@ -8,7 +8,9 @@ folder: /labs/vsts/
 
 ## Overview
 
-We have developed a brand new set of hands-on-labs for Visual Studio Team Services. In order to complete this lab you will need 
+We are working on providing hands-on-labs for Visual Studio Team Services. Here are the labs, for a start. 
+
+In order to complete these labs you will need 
 
 - **Visual Studio Team Services account**. If you don't have one, you can create from <a href="https://www.visualstudio.com/">here</a>
 

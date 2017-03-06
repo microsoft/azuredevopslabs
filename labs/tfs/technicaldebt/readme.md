@@ -6,7 +6,7 @@ permalink: /labs/tfs/technicaldebt/
 folder: /labs/tfs/technicaldebt/
 ---
 
-**Overview**
+## Overview
 
 In this lab, you will be introduced to Technical debt, how to configure your Team Build Definitions to use SonarQube, how to understand the analysis results and finally how to configure quality profile to control the rule set used by SonarQube for analyzing your project.
 
@@ -20,11 +20,11 @@ Technical debt is the set of problems in a development effort that make forward 
 
 2- You will need to manually install SonarQube on the above virtual machine using the recommended installation guide created by the Visual Studio ALM Rangers, please see this installation guide on GitHub. Alternatively, you may follow exercise 1 in this lab to install and configure SoanrQube for demo and evaluation purposes.
 
-3- You will need to download and install SonarQube VSTS extension from [VSTS marketplace] (https://marketplace.visualstudio.com/items?itemName=SonarSource.sonarqube)
+3- You will need to download and install SonarQube VSTS extension from [VSTS marketplace](https://marketplace.visualstudio.com/items?itemName=SonarSource.sonarqube)
 
 4- Complete 
 
-## Exercises 
+### Exercises 
 
 This hands-on lab includes the following exercises:
 

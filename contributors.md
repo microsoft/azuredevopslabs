@@ -8,31 +8,25 @@ comments: true
 <br>
 <br>
 
-The ALM VM update is a massive exercise and takes several weeks from start and finish. I could not have it done without my team. I would like to thank the following indiviudals for their contributions and support
+The ALM VM update is a massive exercise and takes several weeks from start and finish.  I would like to thank the following indiviudals for their contributions and support, without their expertise and generous time, this could not have been a possibility
 
-<table class="mainTable" width="100%" cellspacing="0" cellpadding="0">
-    <tr>
-        <td>
-              <img style="vertical-align:middle; margin-top: 2px;" src="images/srivatsa.jpeg"  />
-         </td>
-         <td>     
-               <b>Srivatsa Marichi</b> <br />Srivatsa had no clue about Markdown when we started the 2017 update but he now qualifies to have a master degree on markdown. Thanks to him for all the VSTS labs and for the new home page for the ALM VM on GitHub. 
-        </td>
-    </tr>
-    <tr>
-     <td>
-                       <img style="vertical-align:middle; margin-top: 2px;" src="images/ed.jpg" />
-        </td>
-        <td>
-             <b> Ed Kaim</b> <br /> Ed is the man behind the VM creation and he is also the brain behind the Hands-on-Labs for Team Foundation Server and Visual Studio. 
+<table class ="mainTable" width="100%" cellspacing="0" cellpadding="0" border="0">
+    <tr class ="mainTable" >
+        <td class ="mainTable"  width="1%">
+                       <img src="images/ed.jpg" />
+             <b> Ed Kaim</b> <br /> For helping me with the VM creation; he is also the brain behind the hands-on-labs for Team Foundation Server and Visual Studio. 
               </td>            
     </tr>
-<tr>
-     <td>
-                       <img style="vertical-align:middle; margin-top: 2px;" src="images/ed.jpg" />
+    <tr class ="mainTable" >
+        <td class ="mainTable"  width="1%">
+              <img src="images/srivatsa.jpeg"  /> 
+               <b>Srivatsa Marichi</b> <br />For helping me with the design and development of this site, migrating all the documents from Word to markdown and for building the VSTS labs. 
         </td>
-        <td>
-             <b> Hosam Kamel</b> <br />Hosam is a partner
+    </tr>    
+<tr class ="mainTable" >
+        <td class ="mainTable"  width="1%">
+                       <img src="images/hkamel.png" />
+             <b> Hosam Kamel</b> <br />For helping me with the "Technical Debt with SonarQube" hands-on-labs. Hosam is our Senior Microsoft PFE who is extremely passionate on this topic and has contributed the lab in every update since it was introduced.
               </td>            
     </tr>    
 </table>
