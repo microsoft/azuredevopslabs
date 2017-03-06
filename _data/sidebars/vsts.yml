@@ -51,6 +51,10 @@ entries:
     - title: Continuous Integration using Visual Studio Team Services
       url: labs/vsts/continuousintegration
       output: web, pdf
+
+    - title: Package Management in Team Services
+      url: labs/vsts/packagemanagement
+      output: web, pdf
    
   - title: Test
     output: web, pdf
@@ -75,10 +79,6 @@ entries:
     folderitems:
     - title: Continuous Deployment using Visual Studio Team Services
       url: labs/vsts/continuousdeployment
-      output: web, pdf
-
-    - title: Package Management in Team Services
-      url: labs/vsts/packagemanagement
       output: web, pdf
 
   - title: Monitor

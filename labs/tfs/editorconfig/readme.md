@@ -22,7 +22,7 @@ codebase take precedence over the individual developer. The simplicity
 and universality of EditorConfig make it an attractive choice for
 team-based code style settings in Visual Studio 2017.
 
-## Prerequisites
+## Pre-requisites
 
 In order to complete this lab you will need the Visual Studio 2017
 virtual machine provided by Microsoft. For more information on acquiring

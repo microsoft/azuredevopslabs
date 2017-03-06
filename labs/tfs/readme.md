@@ -53,7 +53,7 @@ Here are the 2017 hands-on-labs for Team Foundation Server. If you want to acces
 Lab Name</b>
 </td>
 </thead>
-<tr><td>Working with the Visual Studio 2017 ALM Virtual Machine</td></tr>
+<tr><td><a href="started/">Working with the Visual Studio 2017 ALM Virtual Machine</a></td></tr>
 <tr><td><a href="agile/">Agile Planning and Portfolio Management with Team Foundation Server 2017</a></td></tr>
 <tr><td><a href="branchingandmerging/">Branching and Merging Visualization with Visual Studio Team Foundation Server 2017</a></td></tr>
 <tr><td><a href="storyboarding/">Building the Right Software - Generating Storyboards and Collecting Stakeholder Feedback with Visual Studio 2017</a></td></tr>
@@ -65,7 +65,6 @@ Lab Name</b>
 <tr><td><a href="releasemanagement/">Embracing Continuous Delivery with Release Management for Visual Studio 2017</a></td></tr>
 <tr><td><a href="exploratorytesting/">Exploratory Testing and Feedback Management with Team Foundation Server 2017</a></td></tr>
 <tr><td><a href="intellitest/">Generate Unit Tests with IntelliTest using Visual Studio Enterprise 2017</a></td></tr>
-<tr><td><a href="smartword4tfs/">Introduction to SmartOffice4TFS</a></td></tr>
 <tr><td><a href="smartword4tfs/">Introduction to the Modern Requirements Suite4TFS & Team Foundation Server 2017</a></td></tr>
 <tr><td><a href="appinsights/">Instrumenting ASP.NET with Application Insights in Visual Studio 2017</a></td></tr>
 <tr><td><a href="liveunittesting/">Live Unit Testing in Visual Studio 2017</a>    <span class="label label-success">New</span></td></tr>

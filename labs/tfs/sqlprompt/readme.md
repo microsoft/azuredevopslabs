@@ -22,7 +22,7 @@ Using SQL Prompt allows you to improve productivity by stripping away the repeti
 such as SELECTs and INSERTs, quick to write, SQL Prompt completes JOIN conditions for you automatically. You don't have to remember any column
 names or aliases.
 
-## Prerequisites     
+## Pre-requisites     
 In order to complete this lab you will need the Visual Studio 2017
 virtual machine provided by Microsoft. For more information on acquiring
 and using this virtual machine, please see [this blog

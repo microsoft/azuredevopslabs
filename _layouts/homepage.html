@@ -7,7 +7,16 @@
 <link href="https://fonts.googleapis.com/css?family=Arimo|Merriweather|Pangolin|Roboto|Source+Sans+Pro|Trocchi" rel="stylesheet">
     <script type="text/javascript" charset="utf8" src="//cdn.datatables.net/1.10.5/js/jquery.dataTables.js"></script>
  
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
+  ga('create', 'UA-93010880-1', 'auto');
+  ga('send', 'pageview');
+
+</script> 
 </head>
 <body>
 {% include topnav.html %}
@@ -28,7 +37,7 @@
 </body>
 
 
-{% if site.google_analytics %}
-{% include google_analytics.html %}
-{% endif %}
+
+
+
 </html>

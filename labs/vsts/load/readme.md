@@ -11,6 +11,18 @@ folder: /labs/vsts/load/
 Load Testing allow us to stress the application and review how it behaves under diferent load of users so we can take actions on the current infrastructure adding more capacities for the times we think we will need it.    
 Load Testing in visual Studio is billed by Virtual User minutes, more info [here](https://www.visualstudio.com/team-services/pricing/)
 
+## Pre-requisites
+
+In order to complete this lab you will need-
+
+- **Visual Studio Team Services account**. If you don't have one, you can create from <a href="https://www.visualstudio.com/">here</a>
+
+- **Visual Studio 2017** or higher version
+
+- You can use the **[VSTS Demo Data generator](http://vstsdemogenerator.azurewebsites.net/Environment/Create)** to provison a project with pre-defined data on to your Visual Studio Team Services account. Please use the ***My Health Clinic*** template to follow the hands-on-labs.
+
+- If you are not using the VSTS Demo Data Generator, you can clone the code from here
+
 ## Exercise 1: Create a basic URL Load Testing
 
 1.  Sign in to your Visual Studio Team Services account and click on **Load Test** 

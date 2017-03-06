@@ -30,7 +30,7 @@ In order to complete this lab you will need the Visual Studio 2017
     acquiring and using this virtual machine, please see [this blog
     post](http://aka.ms/ALMVM).
 
-Exercise 1 of the “Introduction to Team Foundation Build” lab is a
+**Exercise 1** of the “Introduction to Team Foundation Build” lab is a
     prerequisite for this lab.
 
 ## Exercise 1: Continuous Release Management

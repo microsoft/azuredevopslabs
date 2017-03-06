@@ -18,7 +18,7 @@ software projects, it is critical that we can accurately capture  requirements f
 In this lab, you’ll learn how the capabilities of Visual Studio 2017 make it possible to both rapidly storyboard your requirements, and – as your 
 software evolves – get rich, actionable feedback from users of your software which can help shape what you deliver.
 
-## Prerequisites
+## Pre-requisites
 In order to complete this lab you will need the Microsoft Visual Studio 2017 ALM virtual machine provided by Microsoft. For more information on
 acquiring and using this virtual machine, please see [this  post](http://aka.ms/almvm).
     

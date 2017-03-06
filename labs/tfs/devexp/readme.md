@@ -35,7 +35,7 @@ For a more exhaustive list of what’s new in Visual Studio 2017, please
 check out the <a href="https://www.visualstudio.com/en-us/news/releasenotes/vs2017-relnotes#whats-new-in-visual-studio-2017" />release
 notes</a>.
 
-## Prerequisites
+## Pre-requisites
 
 1.  In order to complete this lab you will need the Visual Studio 2017
     virtual machine provided by Microsoft. For more information on

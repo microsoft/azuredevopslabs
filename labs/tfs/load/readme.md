@@ -23,6 +23,7 @@ users browsing and ordering products, the definition of a load test
 based on the web performance tests, and finally the analysis of the load
 test results.
 
+## Pre-requisites
 In order to complete this lab you will need the Visual Studio 2017
 virtual machine provided by Microsoft. For more information on acquiring
 and using this virtual machine, please see [this blog
