@@ -6,648 +6,469 @@ permalink: /labs/tfs/manualtesting/
 folder: /labs/tfs/manualtesting/
 ---
 
-Lab version: 15.0.26020.0
+Lab version:15.0.26228.0
 
-Last updated: 1/31/2017
+Last updated:3/2/2017
 
+<a name="Overview"></a>
+## Overview ##
 
-## Overview
+In this lab, you will learn how to use Microsoft Team Foundation Server 2017 to manage your project’s testing lifecycle. This project will guide you through creating test plans designed efficiently validate your software milestones. You will also create and execute manual tests that can be consistently reproduced over the course of each release.
 
-In this lab, you will learn how to use Microsoft Team Foundation
-    Server 2017 to manage your project’s testing lifecycle. This project
-    will guide you through creating test plans designed efficiently
-    validate your software milestones. You will also create and execute
-    manual tests that can be consistently reproduced over the course of
-    each release.
+<a name="Prerequisites"></a>
+### Prerequisites ###
 
-## Pre-requisites
+In order to complete this lab you will need the Visual Studio 2017 virtual machine provided by Microsoft. For more information on acquiring and using this virtual machine, please see [this blog post](http://aka.ms/almvm).
 
-In order to complete this lab you will need the Visual Studio 2017
-    virtual machine provided by Microsoft. For more information on
-    acquiring and using this virtual machine, please see [this blog
-    post](http://aka.ms/almvm).
+<a name="About the Parts Unlimited Scenario"></a>
+### About the Parts Unlimited Scenario ###
 
-## Exercise 1: Managing Test Plans, Suites, and Cases
+This set of hands-on-labs uses a fictional company, Parts Unlimited, as a backdrop to the scenarios you are learning about. Parts Unlimited sells automotive products. They are growing rapidly and have embraced Windows Azure to scale their customer-facing web site directly to end-users to allow them to manage their catalog and inventory.
 
+In this set of hands-on labs, you will take part in a number of scenarios that involve the development and testing team at Parts Unlimited. The team, which consists of 8-10 people has decided to use Visual Studio application lifecycle management tools to manage their source code, run their builds, test their web sites, and plan and track the project.
+
+<a name="Exercise1"></a>
+## Exercise 1: Managing Test Plans, Suites, and Cases ##
 
 In this exercise, you will learn how to create and manage test plans, test suites, and test cases.
 
-### Task 1: Understanding Test Plans, Suites, and Cases
+<a name="Ex1Task1"></a>
+### Task 1: Understanding Test Plans, Suites, and Cases ###
 
-1.  Log in as **Sachin Raj** (VSALM\\Sachin). All user passwords are **P2ssw0rd**.
+1. Log in as **Sachin Raj (VSALM\Sachin)**. All user passwords are **P2ssw0rd**.
 
+1. Launch **Internet Explorer** from the taskbar. It should bring you to [http://vsalm:8080/tfs](http://vsalm:8080/tfs).
 
-   >**Note:** If you are connecting to the VM over a RDP, it is
-    recommended that you either run in windowed mode (not full screen)
-    or alternatively ensure that both the host machine and the RDP
-    session use the same resolution. This will help ensure smooth action
-    recordings during this lab.
+1. Use the top navigation dropdown to select the **PartsUnlimited** project.
 
+   ![](images/000.png)
 
-2.  Navigate to <http://vsalm:8080/tfs>.
+1. Select **Test | Test Plans** to open the **Test Hub**. The test hub provides a central place for all test planning, execution, and analysis.
 
+   ![](images/001.png)
 
-3.  Use the top navigation dropdown to select the **PartsUnlimited** project.
+1. In general, every major milestone in a project should have its own **test plan**. Within each test plan are **test suites**, which are collections of **test cases** (and optionally other test suites) designed to validate a work item, such as a feature implementation or bug fix. Each test case is designed to confirm a specific behavior and may belong to one or more test suites. The Parts Unlimited project has multiple milestones (v1.0, v2.0, and v2.1), and each has its own test plan. Confirm the test plan for the current milestone (**v2.1**) is selected.
 
-    <img src="./media/image2.png" width="352" height="125" />
+   ![](images/002.png)
 
-4.  Select **Test | Test Plans** to open the **Test Hub**. The test hub
-    provides a central place for all test planning, execution,
-    and analysis.
+1. Expand the **Regression tests** suite and select the suite of tests for the bug **New products do not show up on site**. This suite of tests focuses on that work item, which happens to be a bug.
 
-    <img src="./media/image3.png" width="265" height="75" />
+   ![](images/003.png)
 
-    In general, every major milestone in a project should have its own
-    **test plan**. Within each test plan are **test suites**, which are
-    collections of **test cases** (and optionally other test suites)
-    designed to validate a work item, such as a feature implementation
-    or bug fix. Each test case is designed to confirm a specific
-    behavior and may belong to one or more test suites. The Parts
-    Unlimited project has multiple milestones (v1.0, v2.0, and v2.1),
-    and each has its own test plan. Confirm the test plan for the
-    current milestone (**v2.1**) is selected.
+1. On the right side you can see that this test suite has two test cases designed to confirm expected behavior of the bug fix. Double-click the **Administrator can create product** test case.
 
-    <img src="./media/image4.png" width="424" height="270" />
+   ![](images/004.png)
 
-5.  Expand the **Regression tests** suite and select the suite of tests
-    for the bug **New products do not show up on site**. This suite of
-    tests focuses on that work item, which happens to be a bug.
+1. This dialog provides all the info you need on this test case. Locate the **Related Work** panel and note that this test case is linked two other work items. The first (red) is a bug and the second (blue) is a user story. Click the user story to view it.
 
-    <img src="./media/image5.png" width="329" height="112" />
+   ![](images/005.png)
 
-6.  On the right side you can see that this test suite has two test
-    cases designed to confirm expected behavior of the bug fix.
-    Double-click the **Administrator can create product** test case.
+1. In the user story view, note that both the bug and test case are linked in the **Related Work** panel. Press **Esc** to close the user story and return to the test case.
 
-    <img src="./media/image6.png" width="624" height="206" />
+   ![](images/006.png)
 
-7.  This dialog provides all the info you need on this test case. Locate
-    the **Related Work** panel and note that this test case is linked
-    two other work items. The first (red) is a bug and the
-    second (blue) is a user story. Click the user story to view it.
+1. Back in the test case dialog, click the related bug to view it.
 
-    <img src="./media/image7.png" width="384" height="164" />
+   ![](images/007.png)
 
-8.  In the user story view, note that both the bug and test case are
-    linked in the **Related Work** panel. Press **Esc** to close the
-    user story and return to the test case.
+1. As expected, the user story is present in the **Related Work** section. It really is easy to navigate through any kind of work item and asset to understand the relationships and dependencies present in a given project. You can also see that there are two separate test cases in use to verify the behavior of this bug, which are the test cases we saw in the panel earlier. Press **Esc** to close the bug. Press **Esc** again to close the test case and return to the test suite view.
 
-    <img src="./media/image8.png" width="624" height="282" />
+<a name="![](images/008.png)"></a>
+### ![](images/008.png) ###
 
-9.  Back in the test case dialog, click the related bug to view it.
+<a name="Ex1Task2"></a>
+### Task 2: Managing Tests ###
 
-    <img src="./media/image9.png" width="384" height="164" />
+1. Sometimes a set of test cases should be run in a specific order to maximize efficiency. Click **Order tests** to specify the order these test cases should be run.
 
-10. As expected, the user story is present in the **Related
-    Work** section. It really is easy to navigate through any kind of
-    work item and asset to understand the relationships and
-    dependencies present in a given project. You can also see that
-    there are two separate test cases in use to verify the behavior of
-    this bug, which are the test cases we saw in the panel earlier.
-    Press **Esc** to close the bug. Press **Esc** again to close the
-    test case and return to the test suite view.
+   ![](images/009.png)
 
-    <img src="./media/image10.png" width="624" height="305" />
+1. The two test cases here are designed to test for a regression against a bug fixed earlier. In that bug, items that were added or edited were no longer visible on the site. While both of these test cases could be run separately to confirm the behavior, it probably makes more sense to run the test case that creates a new item first so that the second case (which involves editing an existing item) can just use that item again. This may not be the right approach for other scenarios, but we’ll use it for this lab. Drag and drop the second test case above the first and click **Done**.
 
-### Task 2: Managing Tests
+   ![](images/010.png)
 
-1.  Sometimes a set of test cases should be run in a specific order to
-    maximize efficiency. Click **Order tests** to specify the order
-    these test cases should be run.
+1. You can now see that the **Order** has been updated and that the list is now sorted by it.
 
-    <img src="./media/image11.png" width="329" height="70" />
+   ![](images/011.png)
 
-2.  The two test cases here are designed to test for a regression
-    against a bug fixed earlier. In that bug, items that were added or
-    edited were no longer visible on the site. While both of these
-    test cases could be run separately to confirm the behavior, it
-    probably makes more sense to run the test case that creates a new
-    item first so that the second case (which involves editing an
-    existing item) can just use that item again. This may not be the
-    right approach for other scenarios, but we’ll use it for this lab.
-    Drag and drop the second test case above the first and click
-    **Done**.
+1. Another significant aspect of testing has to do with the environment each test is run in. For this web app, the browser and operating system are key considerations. Right now all the tests only use one configuration: Windows 10.
 
-    <img src="./media/image12.png" width="505" height="144" />
+   ![](images/012.png)
 
-3.  You can now see that the **Order** has been updated and that the
-    list is now sorted by it.
+1. Now let’s suppose the test team has acquired an iPad Pro and wants to add it into the test matrix. It’s really easy to register this environment as a new configuration so that test cases can specify it. Select the **Configurations** tab.
 
-    <img src="./media/image13.png" width="519" height="168" />
+   ![](images/013.png)
 
-4.  Another significant aspect of testing has to do with the environment
-    each test is run in. For this web app, the browser and operating
-    system are key considerations. Right now all the tests only use
-    one configuration: Windows 10.
+1. Note that there are three existing configurations for **Windows 10**, **iPhone 7**, and **Android 4**. Each test configuration includes a name and a description, as well as a set of customizable **Configuration variables**. This project has two configuration variables for **Browser** and **Operating System**. You can easily add more and/or edit the available entries for each. However, since these variables fit for our iPad Pro scenario, we can just use them as-is. Click the **Add** dropdown and select **New test configuration**.
 
-    <img src="./media/image14.png" width="347" height="88" />
+   ![](images/014.png)
 
-5.  Now let’s suppose the test team has acquired an iPad Pro and wants
-    to add it into the test matrix. It’s really easy to register this
-    environment as a new configuration so that test cases can
-    specify it. Select the **Configurations** tab.
+1. Set the **Name** to **“iPad Pro”**.
 
-    <img src="./media/image15.png" width="624" height="259" />
+   ![](images/015.png)
 
-6.  Note that there are three existing configurations for **Windows
-    10**, **iPhone 7**, and **Android 4**. Each test configuration
-    includes a name and a description, as well as a set of
-    customizable **Configuration variables**. This project has two
-    configuration variables for **Browser** and **Operating System**.
-    You can easily add more and/or edit the available entries
-    for each. However, since these variables fit for our iPad Pro
-    scenario, we can just use them as-is. Click the **Add** dropdown
-    and select **New test configuration**.
+1. Click **Add configuration variable** twice and set the **Browser** to **Safari** and **Operating System** to **iOS 10**.
 
-    <img src="./media/image16.png" width="210" height="141" />
+   ![](images/016.png)
 
-7.  Set the **Name** to **“iPad Pro”**.
+1. Click **Save** to save the new configuration.
 
-    <img src="./media/image17.png" width="556" height="157" />
+   ![](images/017.png)
 
-8.  Click **Add configuration variable** twice and set the **Browser**
-    to **Safari** and **Operating System** to **iOS 10**.
+1. Return to the **Test Plans** tab.
 
-    <img src="./media/image18.png" width="382" height="162" />
+   ![](images/018.png)
 
-9.  Click **Save** to save the new configuration.
+1. Click the dropdown next to the test suite we’ve been working with so far and select **Assign configurations to test suite**.
 
-    <img src="./media/image19.png" width="311" height="182" />
+   ![](images/019.png)
 
-10. Return to the **Test Plans** tab.
+1. Check the **iPad Pro** option and click **Save**.
 
-    <img src="./media/image20.png" width="325" height="81" />
+   ![](images/020.png)
 
-11. Click the dropdown next to the test suite we’ve been working with so
-    far and select **Assign configurations to test suite**.
+1. Notice that each test case has been duplicated with an additional configuration for **iPad Pro**. Now each environment can be tested and tracked separately.
 
-    <img src="./media/image21.png" width="319" height="392" />
+    ![](images/021.png)
 
-12. Check the **iPad Pro** option and click **Save**.
+<a name="Ex1Task3"></a>
+### Task 3: Authoring Tests ###
 
-    <img src="./media/image22.png" width="581" height="198" />
+1. Expand the dropdown next to the **v2.1** test plan and select **New static suite.** A **static suite** of test cases is a suite where the cases have been manually assigned. You can also create suites based on common requirements (**requirement-based suite**) or a query of test cases and/or work items (**query-based suite**).
 
-13. Notice that each test case has been duplicated with an additional
-    configuration for **iPad Pro**. Now each environment can be tested
-    and tracked separately.
+   ![](images/022.png)
 
-    <img src="./media/image23.png" width="624" height="217" />
+1. Set the name of the new suite to **“Authentication tests”**. These tests will all focus on functionality related to user authentication. Remember that you can easily share test cases across suites, so there’s minimal redundancy when having a lot of overlapping suites.
 
-### Task 3: Authoring Tests
+   ![](images/023.png)
 
-1.  Expand the dropdown next to the **v2.1** test plan and select **New
-    static suite.** A **static suite** of test cases is a suite where
-    the cases have been manually assigned. You can also create suites
-    based on common requirements (**requirements-based suite**) or a
-    query of test cases and/or work items (**query-based suite**).
+1. Expand the dropdown next to the newly created suite and select **New requirement-based suite**.
 
-    <img src="./media/image24.png" width="229" height="206" />
+   ![](images/024.png)
 
+1. You could customize the query used to specify which requirements are retrieved, but just leave the defaults and click **Run query**. Locate and select the three user stories related to registering, logging in, and logging out. Click **Create suites** to create a test suite for each user story.
 
-2.  Set the name of the new suite to **“Authentication tests”**. These
-    tests will all focus on functionality related to
-    user authentication. Remember that you can easily share test cases
-    across suites, so there’s minimal redundancy when having a lot of
-    overlapping suites.
+   ![](images/025.png)
 
-    <img src="./media/image25.png" width="237" height="82" />
+1. Select the second user story that focuses on users being able to log in.
 
-3.  Expand the dropdown next to the newly created suite and select **New
-    > requirements-based suite**.
+   ![](images/026.png)
 
-    <img src="./media/image26.png" width="229" height="162" />
+1. While you can create test cases one at a time, it’s sometimes easier to use a grid layout to quickly add many test cases. In the test cases panel, select **New | New test case using grid**.
 
-4.  You could customize the query used to specify which requirements are
-    retrieved, but just leave the defaults and click **Run query**.
-    Locate and select the three user stories related to registering,
-    logging in, and logging out. Click **Create suites** to create a
-    test suite for each user story.
+   ![](images/027.png)
 
-    <img src="./media/image27.png" width="624" height="174" />
+1. Enter a few test cases and click the **Save All** button. The **Title** will be the eventual title of the test case. **Step Action** will be the first (and possibly only) step of the test. If that step has an expected result, you can specify it as **Step Expected Result**.
 
-5.  Select the second user story that focuses on users being able to
-    log in.
+   ![](images/028.png)
 
-    <img src="./media/image28.png" width="298" height="131" />
+1. You can optionally continue to add and edit work items in the grid view. When satisfied, return back to the list view by clicking the **View: Grid** toggle.
 
-6.  While you can create test cases one at a time, it’s sometimes easier
-    to use a grid layout to quickly add many test cases. In the test
-    cases panel, select **New | New test case using grid**.
+   ![](images/029.png)
 
-    <img src="./media/image29.png" width="203" height="187" />
+1. The list view shows the same data, but in a different view.
 
-7.  Enter a few test cases and click the **Save All** button. The
-    **Title** will be the eventual title of the test case. **Step
-    Action** will be the first (and possibly only) step of the test.
-    If that step has an expected result, you can specify it as **Step
-    Expected Result**.
+   ![](images/030.png)
 
-    <img src="./media/image30.png" width="624" height="182" />
+1. Another option to create suites is via work item query. Expand the dropdown next to the **Authentication tests** suite and select **new query-based suite**.
 
-8.  You can optionally continue to add and edit work items in the
-    grid view. When satisfied, return back to the list view by
-    clicking the **View: Grid** toggle.
+   ![](images/031.png)
 
-    <img src="./media/image31.png" width="624" height="199" />
+1. Let’s say you wanted to create a set of test suites based on bugs in the Web site area of the project. Change the **Work Item Type** to **Microsoft.BugCategory** (to search bugs) and change the **Area Path** to **PartsUnlimited\Web site**. Click **Run query**. You now have a list of bugs that you can select to create suites from, if you choose.
 
-9.  The list view shows the same data, but in a different view.
+   ![](images/032.png)
 
-    <img src="./media/image32.png" width="624" height="216" />
+1. Press **Esc** to close the dialog.
 
-10. Another option to create suites is via work item query. Expand the
-    dropdown next to the **Authentication tests** suite and select
-    **new query-based suite**.
+<a name="Exercise2"></a>
+## Exercise 2: Authoring, Running, and Analyzing Manual Tests ##
 
-    <img src="./media/image33.png" width="219" height="205" />
+In this exercise, you will learn how to create a manual test plan and populate it with steps. The plan can later be run to confirm the expected behavior of your software. In this lab, we’re going to focus on creating a new manual test case and running it.
 
-11. Let’s say you wanted to create a set of test suites based on bugs in
-    the Web site area of the project. Change the **Work Item Type** to
-    **Microsoft.BugCategory** (to search bugs) and change the **Area
-    Path** to **PartsUnlimited\\Web site**. Click **Run query**. You
-    now have a list of bugs that you can select to create suites from,
-    if you choose.
+<a name="Ex2Task1"></a>
+### Task 1: Installing the Test & Feedback Extension ###
 
-    <img src="./media/image34.png" width="624" height="284" />
+1. Install **Google Chrome** from [http://google.com/chrome](http://google.com/chrome). The rest of this exercise will use Chrome as its browser.
 
-12. Press **Esc** to close the dialog.
+1. Navigate to the **Visual Studio Marketplace** at [http://marketplace.visualstudio.com](http://marketplace.visualstudio.com/).
 
-## Exercise 2: Authoring, Running, and Analyzing Manual Tests
+1. Select the **Visual Studio Team Services** tab. Search for “**feedback**” and click the **Test & Feedback** extension.
 
-In this exercise, you will learn how to create a manual test plan
-    and populate it with steps. The plan can later be run to confirm the
-    expected behavior of your software. In this lab, we’re going to
-    focus on creating a new manual test case and running it.
+   ![](images/033.png)
 
-### Task 1: Installing the Test & Feedback Extension
+1. Click on **Install** button on the details page.
 
-1.  Install **Google Chrome** from <http://google.com/chrome>. The rest
-    of this exercise will use Chrome as its browser.
+   ![](images/034.png)
 
+1. Click **Install** for the Chrome extension.
 
-2.  Navigate to the **Visual Studio Marketplace** at
-    <http://marketplace.visualstudio.com>.
+   ![](images/035.png)
 
-3.  Select the **Visual Studio Team Services** tab. Search for
-    “**feedback**” and click the **Test & Feedback** extension.
+1. In the **Chrome Web Store**, click **Add to Chrome**.
 
-    <img src="./media/image35.png" width="624" height="378" />
+   ![](images/036.png)
 
-4.  Click on **Install** button on the details page.
+1. Confirm the installation when asked.
 
-    <img src="./media/image36.png" width="624" height="228" />
+   ![](images/037.png)
 
-5.  Click **Install** for the Chrome extension.
+1. To open the extension, click the extension icon that will appear on the right of the address bar. Select the **Connection Settings** tab. Enter “**vsalm**” as the **Server URL** and click **Next**.
 
-    <img src="./media/image37.png" width="624" height="251" />
+   ![](images/038.png)
 
-6.  In the **Chrome Web Store**, click **Add to Chrome**.
+1. The extension can be used in two modes: **Connected** and **Standalone** mode. If you have Team Foundation Server (TFS) connection or a Visual Studio Team Services (VSTS) account, select Connected mode. Standalone mode is for users who don’t have TFS (or VSTS account) and want to use the extension to file bugs and share the report with their team.
 
-    <img src="./media/image38.png" width="624" height="196" />
+1. After connecting to TFS, you will need to select the team you want these efforts associated with. Select the **PartsUnlimitedCollection** and select the **PartsUnlimited Team** at the end of the chain. Click **Save** to continue.
 
-7.  Confirm the installation when asked.
+<a name="![](images/039.png)"></a>
+### ![](images/039.png) ###
 
-    <img src="./media/image39.png" width="342" height="232" />
+<a name="Ex2Task2"></a>
+### Task 2: Authoring a Manual Test Plan ###
 
-8.  To open the extension, click the extension icon that will appear on
-    the right of the address bar. Select the **Connection
-    Settings** tab. Enter “**vsalm**” as the **Server URL** and click
-    **Next**.
+1. In Chrome, navigate to [http://vsalm:8080/tfs](http://vsalm:8080/tfs).
 
-    <img src="./media/image40.png" width="489" height="468" />
+1. From the navigation dropdown, select the **PartsUnlimited** project.
 
-9.  The extension can be used in two modes: **Connected** and
-    **Standalone** mode. If you have Team Foundation Server (TFS)
-    connection or a Visual Studio Team Services (VSTS) account, select
-    Connected mode. Standalone mode is for users who don’t have TFS (or
-    VSTS account) and want to use the extension to file bugs and share
-    the report with their team.
+   ![](images/040.png)
 
-10. After connecting to TFS, you will need to select the team you want
-    these efforts associated with. Select the
-    **PartsUnlimitedCollection** and select the **PartsUnlimited Team**
-    at the end of the chain. Click **Save** to continue.
+1. Select **Test | Test Plans**.
 
-    <img src="./media/image41.png" width="480" height="251" />
+   ![](images/041.png)
 
-### Task 2: Authoring a Manual Test Plan
+1. Expand the dropdown next to the **v2.1** test plan and select **New static suite**.
 
-1.  In Chrome, navigate to <http://vsalm:8080/tfs>.
+   ![](images/042.png)
 
-2.  Asd
+1. Name the new suite **“End-to-end tests”** and press **Enter**.
 
-    <img src="./media/image42.png" width="280" height="110" />
+   ![](images/043.png)
 
-3.  Fds
+1. From the **Tests** tab, select **New | New test case** to create a new test case.
 
-    <img src="./media/image43.png" width="400" height="76" />
+   ![](images/044.png)
 
-4.  ds
+1. In the **Title** box, type “**Confirm that order number appears after successful order**” as the name of the new test case.
 
-    <img src="./media/image44.png" width="334" height="143" />
+   ![](images/045.png)
 
+1. At this point, we’re ready to add steps to this manual test. Each step includes an **Action**, which describes the action the tester needs to perform. Optionally, a step can include an **Expected Result**, which describes the expected result of the given action. In the **Steps** panel, create a step for each of the following **Actions**, only one of which has an **Expected Result**.
 
-5.  Name the new suite **“End-to-end tests”** and press **Enter**.
 
-    <img src="./media/image45.png" width="221" height="60" />
+|Action|Expected Result|
+--- | ---
+|Open http://www.partsunlimited.com||
+|Click Brakes||
+|Click Disk and Pad Combo||
+|Click Add to Cart||
+|Click Checkout||
+|Enter @Email, @Password||
+|Enter @Name, @Phone, @Email, @Address, @City, @State, @PostalCode, @Country, @Promo||
+|Click Submit Order||
+|Confirm order page has order #|Order # should appear on order confirmation page|
+|Log out||
+|Close browser||
+**Note:** If you end up with an extra empty step, delete it.
 
-6.  From the **Tests** tab, select **New | New test case** to create a
-    new test case.
 
-    <img src="./media/image46.png" width="314" height="149" />
+1. At this point, the **Steps** panel should look similar to the following:
 
-7.  In the **Title** box, type “**Confirm that order number appears
-    after successful order**” as the name of the new test case.
+   ![](images/046.png)
 
-    <img src="./media/image47.png" width="404" height="125" />
+1. Note the “Enter @Email, @Password” and “Enter @Name, @Phone, @Email, @Address, @City, @State, @PostalCode, @Country, @Promo” steps. In these steps, we used the **@** sign to indicate that there were iteration-specific variables to be used during the manual test pass. We can define which variables to use by scrolling down to the **Parameter Values** section of this form and entering them for each iteration. Note that you may need to use the scroll bar on the far right side of the test case dialog to view this section.
 
-8.  At this point, we’re ready to add steps to this manual test. Each
-    step includes an **Action**, which describes the action the tester
-    needs to perform. Optionally, a step can include an **Expected
-    Result**, which describes the expected result of the given action.
-    In the **Steps** panel, create a step for each of the following
-    **Actions**, only one of which has an **Expected Result**. See the
-    next paragraph for an alternate, faster way to add the actions.
+   ![](images/047.png)
 
-    | Action                                                                                | Expected Result                                     |
-    |---------------------------------------------------------------------------------------|-----------------------------------------------------|
-    | Open http://www.partsunlimited.com                                                    |                                                     |
-    | Click Brakes                                                                          |                                                     |
-    | Click Disk and Pad Combo                                                              |                                                     |
-    | Click Add to Cart                                                                     |                                                     |
-    | Click Checkout                                                                        |                                                     |
-    | Enter @Email, @Password                                                               |                                                     |
-    | Enter @Name, @Phone, @Email, @Address, @City, @State, @PostalCode, @Country, @Promo   |                                                     |
-    | Click Submit Order                                                                    |                                                     |
-    | Confirm order page has order \#                                                       | Order \# should appear on order confirmation page   |
-    | Log out                                                                               |                                                     |
-    | Close browser                                                                         |                                                     |
+1. Use the following table to set up values for two iterations.
 
-    >Note: If you end up with an extra empty step, delete it.
 
+|Fields|Iteration 1|Iteration 2|
+--- | --- | ---
+|Email|admin@test.com|sachin@test.com|
+|Password|P@ssw0rd|P@ssw0rd|
+|Name|Admin User|Sachin Raj|
+|Phone|425-555-1234|555-555-5555|
+|Address|One Microsoft Way|Two Tailspin Trail|
+|City|Redmond|Springfield|
+|State|WA|IL|
+|PostalCode|98052|11135|
+|Country|USA|USA|
+|Promo|FREE|FREE|
 
-9.  At this point, the **Steps** panel should look similar to the
-    following:
 
-    <img src="./media/image48.png" width="624" height="204" />
+1. The **Parameter Values** section should now look like this. Note that you can enter as many iterations as you need to fully test the breadth of the scenario.
 
+   ![](images/048.png)
 
-10. Note the “Enter @Email, @Password” and “Enter @Name, @Phone, @Email,
-    @Address, @City, @State, @PostalCode, @Country, @Promo” steps. In
-    these steps, we used the **@** sign to indicate that there were
-    iteration-specific variables to be used during the manual
-    test pass. We can define which variables to use by scrolling down
-    to the **Parameter Values** section of this form and entering them
-    for each iteration.
+1. Click **Save & Close** to save the test case.
 
-    <img src="./media/image49.png" width="624" height="79" />
+<a name="![](images/049.png)"></a>
+### ![](images/049.png) ###
 
-11. Use the following table to set up values for two iterations.
+<a name="Ex2Task3"></a>
+### Task 3: Running a Manual Test Plan ###
 
-    | Email               | Password   | Name         | Phone          | Address              |
-    |---------------------|------------|--------------|----------------|----------------------|
-    | <admin@test.com>    | P@ssw0rd   | Admin User   | 425-555-1234   | One Microsoft Way    |
-    | <sachin@test.com>   | P@ssw0rd   | Sachin Raj   | 555-555-5555   | Two Tailspin Trail   |
+1. In this task, you will learn how to run the manual test plan that we created earlier.
 
-    | City          | State   | PostalCode   | Country   | Promo   |
-    |---------------|---------|--------------|-----------|---------|
-    | Redmond       | WA      | 98052        | USA       | FREE    |
-    | Springfield   | IL      | 11135        | USA       | FREE    |
+1. Return to **IE. R**ight-click the test case created earlier and select **Run with options** to begin a manual test run.
 
+   ![](images/050.png)
 
-12. The **Parameter Values** section should now look like this. Note
-    that you can enter as many iterations as you need to fully test
-    the breadth of the scenario.
+1. There are a few options that you can use to customize each test run. The first option is to select a **Runner**, which will be the browser in this scenario. Next, you may have the option to specify which kinds of **data to collect**. Finally, you may optionally specify which build is being tested to make it easier to associate the results with the build they were from. Click the **Browse** button to select a build.
 
-    <img src="./media/image50.png" width="624" height="97" />
+   ![](images/051.png)
 
+1. Click **Find** to search builds. Using the default settings returns all builds.
 
+   ![](images/052.png)
 
-13. Click **Save & Close** to save the test case.
+1. Press **Esc** to dismiss the **Find Builds** window without selecting a build.
 
-    <img src="./media/image51.png" width="624" height="96" />
+1. Click **OK** to continue.
 
-### Task 3: Running a Manual Test Plan
+   ![](images/053.png)
 
-In this task, you will learn how to run the manual test plan that we created earlier.
+1. If the **Test Runner** window does not appear, check to see if it was blocked by the pop-up blocker. If so, click the **Pop-up blocker** button, select **Always allow pop-ups…**, and then click **Done**. You can then launch the test run again with success.
 
-1.  Return to **IE. R**ight-click the test case created earlier and
-    select **Run with options** to begin a manual test run.
+   ![](images/054.png)
 
-    <img src="./media/image52.png" width="624" height="223" />
+1. In the **Test Runner** window, expand the **Test 1 of 1: Iteration 1** dropdown. Note that there are two iterations: one for each set of parameters specified in the test case. In the first iteration, the [admin@test.com](mailto:admin@test.com) account is used. In the second, [sachin@test.com](mailto:sachin@test.com) will be used.
 
-2.  There are a few options that you can use to customize each test run.
-    The first option is to select a **Runner**, which will be the
-    browser in this scenario. Next, you may have the option to specify
-    which kinds of **data to collect**. Finally, you may optionally
-    specify which build is being tested to make it easier to associate
-    the results with the build they were from. Click the **Browse**
-    button to select a build.
+   ![](images/055.png)
 
-    <img src="./media/image53.png" width="476" height="316" />
+1. The first step in the test is to open [www.partsunlimited.com](http://www.partsunlimited.com/). To do this, open a new window in Chrome. If you’re working on a large screen, it may be easier to resize the new window to fit next to the **Test Runner** window. Otherwise you can just switch back and forth.
 
-3.  Das
+    ![](images/056.png)
 
-    <img src="./media/image54.png" width="624" height="260" />
+    > **Note:** The [www.partsunlimited.com](http://www.partsunlimited.com/) URL is hardcoded in the hosts file to point at a website on the local VM. As a result, you must use this full domain when testing.
 
-4.  Press **Esc** to dismiss the **Find Builds** window without
-    selecting a build.
+1. Once the site loads, return to the **Test Runner** and click the **Pass test step** button.
 
-5.  Click **OK** to continue.
+   ![](images/057.png)
 
-    <img src="./media/image55.png" width="476" height="403" />
+1. The next step is to click the **Brakes** menu item.
 
-6.  If the **Test Runner** window does not appear, check to see if it
-    was blocked by the pop-up blocker. If so, click the **Pop-up
-    blocker** button, select **Always allow pop-ups…**, and then click
-    **Done**. You can then launch the test run again with success.
+   ![](images/058.png)
 
-    <img src="./media/image56.png" width="476" height="223" />
+1. Then click the **Disk and Pad Combo** product.
 
-7.  In the **Test Runner** window, expand the **Test 1 of 1: Iteration
-    1** dropdown. Note that there are two iterations: one for each set
-    of parameters specified in the test case. In the first iteration,
-    the <admin@test.com> account is used. In the second,
-    <sachin@test.com> will be used.
+   ![](images/059.png)
 
-    <img src="./media/image57.png" width="357" height="314" />
+1. The next step is to click **Add to cart**.
 
-8.  The first step in the test is to open
-    [www.partsunlimited.com](http://www.partsunlimited.com). To do
-    this, open a new window in Chrome. If you’re working on a large
-    screen, it may be easier to resize the new window to fit next to
-    the **Test Runner** window. Otherwise you can just switch back
-    and forth.
+   ![](images/060.png)
 
-    <img src="./media/image58.png" width="624" height="176" />
+1. On the next page, click **Checkout**.
 
-    >**Note:** The
-    [www.partsunlimited.com](http://www.partsunlimited.com) URL is
-    hardcoded in the hosts file to point at a website on the local VM.
-    As a result, you must use this full domain when testing.
+   ![](images/061.png)
 
-9.  Once the site loads, return to the **Test Runner** and click the
-    **Pass test step** button.
+1. Log in using the credentials specified in the next step.
 
-    <img src="./media/image59.png" width="454" height="154" />
+   ![](images/062.png)
 
-10. The next step is to click the **Brakes** menu item.
+1. Fill out the shipping information and add the promo code. Click **Submit Order**.
 
-    <img src="./media/image60.png" width="403" height="212" />
+   ![](images/063.png)
 
-11. Then click the **Disk and Pad Combo** product.
+1. Confirm the order number is shown on the confirmation page. Be sure to pass this step as it is the only one with an expected result.
 
-    <img src="./media/image61.png" width="288" height="428" />
+   ![](images/064.png)
 
-12. The next step is to click **Add to cart**.
+1. The last steps are to log out via **Profile | Log off** and to close the browser window.
 
-    <img src="./media/image62.png" width="624" height="314" />
+   ![](images/065.png)
 
-13. On the next page, click **Checkout**.
+1. Move to the next iteration by clicking **next** in the **Test Runner**. This will load the next set of parameters.
 
-    <img src="./media/image63.png" width="624" height="269" />
+   ![](images/066.png)
 
-14. Log in using the credentials specified in the next step.
+1. Follow the test case steps until you reach the login step. This will fail because there isn’t a [sachin@test.com](mailto:sachin@test.com) account.
 
-    <img src="./media/image64.png" width="540" height="320" />
+   ![](images/067.png)
 
-15. Fill out the shipping information and add the promo code. Click
-    **Submit Order**.
+1. The **Test Runner** provides three valuable ways to record media from a test run. The first option is to take screenshots. The second is to capture each user action in an image action log. The final is to record the screen as a video. Select the failed step and click the first option to take a screenshot. From the dropdown, select the **Log in** window the tests are being run in.
 
-    <img src="./media/image65.png" width="624" height="315" />
+   ![](images/068.png)
 
-16. Confirm the order number is shown on the confirmation page. Be sure
-    to pass this step as it is the only one with an expected result.
+1. Crop the screen down to show the login form and error message. Specify the name **“No Sachin account”** and click the **Confirm** button.
 
-    <img src="./media/image66.png" width="364" height="291" />
+   ![](images/069.png)
 
-17. The last steps are to log out via **Profile | Log off** and to close
-    the browser window.
+1. Add a comment of **“Sachin account does not exist”** and fail the test using the **Fail test step** button.
 
-    <img src="./media/image67.png" width="445" height="192" />
+   ![](images/070.png)
 
-18. Move to the next iteration by clicking **next** in the **Test
-    Runner**. This will load the next set of parameters.
+1. Click **Create bug** to log a new bug.
 
-    <img src="./media/image68.png" width="451" height="83" />
+   ![](images/071.png)
 
-19. Follow the test case steps until you reach the login step. This will
-    fail because there isn’t a <sachin@test.com> account.
+1. Enter the bug title of **“Sachin test account does not exist”** and click **Save & Close** to log the bug.
 
-    <img src="./media/image69.png" width="432" height="348" />
+   ![](images/072.png)
 
-20. The **Test Runner** provides three valuable ways to record media
-    from a test run. The first option is to take screenshots. The
-    second is to capture each user action in an image action log. The
-    final is to record the screen as a video. Select the failed step
-    and click the first option to take a screenshot. From the
-    dropdown, select the **Log in** window the tests are being run in.
+1. Since the test cannot be completed due to a bug not directly related to the functionality being tested, expand the **Mark test case result** dropdown and select **Block test**. Click **Save and close** to save the test run.
 
-    <img src="./media/image70.png" width="434" height="314" />
+   ![](images/073.png)
 
-21. Crop the screen down to show the login form and error message.
-    Specify the name **“No Sachin account”** and click the
-    **Confirm** button.
+1. Close the test browser windows.
 
-    <img src="./media/image71.png" width="624" height="312" />
+<a name="Ex2Task4"></a>
+### Task 4: Analyzing Manual Test Results ###
 
-22. Add a comment of **“Sachin account does not exist”** and fail the
-    test using the **Fail test step** button.
+1. In this task, you will learn how to review the results of a manual test run.
 
-    <img src="./media/image72.png" width="437" height="233" />
+1. Return to the browser window hosting the **Test Hub**. Select the **Runs** tab and double-click the most recent test run to open it.
 
-23. Click **Create bug** to log a new bug.
+   ![](images/074.png)
 
-    <img src="./media/image73.png" width="317" height="56" />
+1. The **Run summary** tab provides an overview of the test run, as well as high-level details on the results of all tests included as part of the run.
 
-24. Enter the bug title of **“Sachin test account does not exist”** and
-    click **Save & Close** to log the bug.
+   ![](images/075.png)
 
-    <img src="./media/image74.png" width="453" height="153" />
+1. Select the **Test results** tab. This tab lists the results of each individual test case included in the run along with their results. Since there was only one test case included here, double-click it to open.
 
-25. Since the test cannot be completed due to a bug not directly related
-    to the functionality being tested, expand the **Mark test case
-    result** dropdown and select **Block test**. Click **Save and
-    close** to save the test run.
+   ![](images/076.png)
 
-    <img src="./media/image75.png" width="455" height="209" />
+1. You can review all details for this particular test case run from here.
 
-26. Close the test browser windows.
+   ![](images/077.png)
 
-### Task 4: Analyzing Manual Test Results
+1. Scroll to the bottom to locate the iterations. Expand the second iteration.
 
-In this task, you will learn how to review the results of a manual test run.
+   ![](images/078.png)
 
-1.  Return to the browser window hosting the **Test Hub**. Select the
-    > **Runs** tab and double-click the most recent test run to open it.
+1. Review the results of each step in this iteration, as well as the failed login step, which shows the screenshot attached during the test run.
 
-    <img src="./media/image76.png" width="624" height="250" />
+    ![](images/079.png)
 
-2.  The **Run summary** tab provides an overview of the test run, as
-    well as high-level details on the results of all tests included as
-    part of the run.
+<a name="Ex2Task5"></a>
+### Task 5: Creating Shared Steps ###
 
-    <img src="./media/image77.png" width="624" height="391" />
+1. In this task, you will learn how to create shared steps. A shared step combines multiple steps that are commonly performed in sequence into a single logical step, which can be shared across tests. If the process defined by the shared steps ever changes in the future, you can update the shared step in one place and it will be reflected in all tests that reference it.
 
-3.  Select the **Test results** tab. This tab lists the results of each
-    individual test case included in the run along with their results.
-    Since there was only one test case included here, double-click it
-    to open.
+1. Click the test case link in the **Summary** section to open the test case editor.
 
-    <img src="./media/image78.png" width="479" height="144" />
+   ![](images/080.png)
 
-4.  You can review all details for this particular test case run
-    from here.
+1. Select steps 2-4 (use **Shift+Click**) and click the **Create shared steps** button.
 
-    <img src="./media/image79.png" width="624" height="395" />
+   ![](images/081.png)
 
-5.  Scroll to the bottom to locate the iterations. Expand the
-    second iteration.
+1. Set the name of these shared steps to **“Add Disk and Pad Combo to cart”** and click **Create**.
 
-    <img src="./media/image80.png" width="562" height="176" />
+   ![](images/082.png)
 
-6.  Review the results of each step in this iteration, as well as the
-    failed login step, which shows the screenshot attached during the
-    test run.
+1. Now you can see the previous steps replaced with the shared steps. Double-click the shared steps to open.
 
-    <img src="./media/image81.png" width="624" height="206" />
+   ![](images/083.png)
 
-### Task 5: Creating Shared Steps
+1. If necessary, you can revisit these steps later on to update them for new requirements.
 
-In this task, you will learn how to create shared steps. A shared
-    step combines multiple steps that are commonly performed in sequence
-    into a single logical step, which can be shared across tests. If the
-    process defined by the shared steps ever changes in the future, you
-    can update the shared step in one place and it will be reflected in
-    all tests that reference it.
+   ![](images/084.png)
 
+1. Press **Esc** to close the **Shared Steps** dialog.
 
-1.  Click the test case link in the **Summary** section to open the test
-    case editor.
+1. Click **Save & Close** to save the test case.
 
-    <img src="./media/image82.png" width="414" height="235" />
+    ![](images/085.png)
 
-2.  Select steps 2-4 (use **Shift+Click**) and click the **Create shared
-    steps** button.
-
-    <img src="./media/image83.png" width="355" height="251" />
-
-3.  Set the name of these shared steps to **“Add Disk and Pad Combo to
-    cart”** and click **Create**.
-
-    <img src="./media/image84.png" width="408" height="120" />
-
-4.  Now you can see the previous steps replaced with the shared steps.
-    Double-click the shared steps to open.
-
-    <img src="./media/image85.png" width="276" height="116" />
-
-5.  If necessary, you can revisit these steps later on to update them
-    for new requirements.
-
-    <img src="./media/image86.png" width="624" height="376" />
-
-6.  Press **Esc** to close the **Shared Steps** dialog.
-
-7.  Click **Save & Close** to save the test case.
-
-    <img src="./media/image87.png" width="345" height="40" />

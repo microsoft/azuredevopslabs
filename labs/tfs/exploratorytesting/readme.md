@@ -6,409 +6,302 @@ permalink: /labs/tfs/exploratorytesting/
 folder: /labs/tfs/exploratorytesting/
 ---
 
-Lab version: 15.0.26020.0
+Lab version:15.0.26228.0
 
-Last updated: 1/30/2017
+Last updated:3/2/2017
 
-## Overview
+<a name="Overview"></a>
+## Overview ##
 
-In this lab, you will learn about the exploratory testing and feedback management capabilities provided in the Test & Feedback extension. 
-You will learn about how exploratory testing (also called XT, or agile testing) has become a first-class experience in the toolset. 
-This allows a tester to more flexibly test the underlying software without relying solely on formal est cases. 
-You’ll also learn about how you can manage the process of eliciting and managing the customer feedback lifecycle.
+In this lab, you will learn about the exploratory testing and feedback management capabilities provided in the Test & Feedback extension. You will learn about how exploratory testing (also called XT, or agile testing) has become a first-class experience in the toolset. This allows a tester to more flexibly test the underlying software without relying solely on formal test cases. You’ll also learn about how you can manage the process of eliciting and managing the customer feedback lifecycle.
 
-## Pre-requisites
+<a name="Prerequisites"></a>
+### Prerequisites ###
 
-In order to complete this lab you will need the Visual Studio 2017 virtual machine provided by Microsoft. For more information on
-acquiring and using this virtual machine, please see [this blog post](http://aka.ms/almvm).
+In order to complete this lab you will need the Visual Studio 2017 virtual machine provided by Microsoft. For more information on acquiring and using this virtual machine, please see [this blog post](http://aka.ms/almvm).
 
-## Exercise 1: Exploratory Testing
+<a name="About the Fabrikam Fiber Scenario"></a>
+### About the Fabrikam Fiber Scenario ###
 
+This set of hands-on-labs uses a fictional company, Fabrikam Fiber, as a backdrop to the scenarios you are learning about. Fabrikam Fiber provides cable television and related services to the United States. They are growing rapidly and have embraced Windows Azure to scale their customer-facing web site directly to end-users to allow them to self-service tickets and track technicians. They also use an on-premises ASP.NET MVC application for their customer service representatives to administer customer orders.
 
-### Task 1: Installing the Chrome Extension
+In this set of hands-on labs, you will take part in a number of scenarios that involve the development and testing team at Fabrikam Fiber. The team, which consists of 8-10 people has decided to use Visual Studio application lifecycle management tools to manage their source code, run their builds, test their web sites, and plan and track the project.
 
+<a name="Exercise1"></a>
+## Exercise 1: Exploratory Testing ##
 
-1.  Log in as **Deniz** (VSALM\\Deniz). <span id="OLE_LINK1"
-    class="anchor"><span id="OLE_LINK2" class="anchor"></span></span>All
-    user passwords are **P2ssw0rd**.
+<a name="Ex1Task1"></a>
+### Task 1: Installing the Chrome Extension ###
 
-2.  Install **Google Chrome** from <http://google.com/chrome>. This lab
-    requires Chrome to be used as the browser.
+1. Log in as **Deniz Ercoskun (VSALM\Deniz)**. All user passwords are **P2ssw0rd**.
 
-3.  Launch **Chrome** from the taskbar.
+1. Install **Google Chrome** from [http://google.com/chrome](http://google.com/chrome). This lab requires Chrome to be used as the browser.
 
-4.  Navigate to the **Visual Studio Marketplace** at
-    <http://marketplace.visualstudio.com>.
+1. Launch **Chrome** from the taskbar.
 
-5.  Select the **Visual Studio Team Services** tab. Search for
-    “**feedback**” and click the **Test & Feedback** extension.
+1. Navigate to the **Visual Studio Marketplace** at [http://marketplace.visualstudio.com](http://marketplace.visualstudio.com/).
 
-    <img src="media/image1.png" width="624" height="378" />
+1. Select the **Visual Studio Team Services** tab. Search for “**feedback**” and click the **Test & Feedback** extension.
 
-6.  Click on **Install** button on the details page.
+   ![](images/000.png)
 
-    <img src="media/image2.png" width="624" height="228" />
+1. Click on **Install** button on the details page.
 
-7.  Click **Install** for the Chrome extension.
+   ![](images/001.png)
 
-    <img src="media/image3.png" width="624" height="251" />
+1. Click **Install** for the Chrome extension.
 
-8.  In the **Chrome Web Store**, click **Add to Chrome**.
+   ![](images/002.png)
 
-    <img src="media/image4.png" width="624" height="196" />
+1. In the **Chrome Web Store**, click **Add to Chrome**.
 
-9.  Confirm the installation when asked.
+   ![](images/003.png)
 
-    <img src="media/image5.png" width="342" height="232" />
+1. Confirm the installation when asked.
 
-10. To open the extension, click the extension icon that will appear on
-    the right of the address bar. Select the **Connection
-    Settings** tab. Enter “**vsalm**” as the **Server URL** and click
-    **Next**.
+   ![](images/004.png)
 
-    <img src="media/image6.png" width="489" height="468" />
+1. To open the extension, click the extension icon that will appear on the right of the address bar. Select the **Connection Settings** tab. Enter “**vsalm**” as the **Server URL** and click **Next**.
 
-11. The extension can be used in two modes: **Connected** and
-    **Standalone** mode. If you have Team Foundation Server (TFS)
-    connection or a Visual Studio Team Services (VSTS) account, select
-    Connected mode. Standalone mode is for users who don’t have TFS (or
-    VSTS account) and want to use the extension to file bugs and share
-    the report with their team.
+   ![](images/005.png)
 
-12. After connecting to TFS, you will need to select the team you want
-    these efforts associated with. Select the
-    **FabrikamFiberCollection** and type **“web”** to search for the
-    web team. Select the **Fabrikam Fiber Web Team** when available. Now
-    all of your work item creation and searching will be scoped to the
-    area path this team belongs to (**“Development”**). Click **Save**
-    to continue.
+1. The extension can be used in two modes: **Connected** and **Standalone** mode. If you have Team Foundation Server (TFS) connection or a Visual Studio Team Services (VSTS) account, select Connected mode. Standalone mode is for users who don’t have TFS (or VSTS account) and want to use the extension to file bugs and share the report with their team.
 
-    <img src="media/image7.png" width="484" height="311" />
+1. After connecting to TFS, you will need to select the team you want these efforts associated with. Select the **FabrikamFiberCollection** and type **“web”** to search for the web team. Select the **Fabrikam Fiber Web Team** when available. Now all of your work item creation and searching will be scoped to the area path this team belongs to (**“Development”**). Click **Save** to continue.
 
-### Task 2: Exploratory Testing with the Chrome Extension
+<a name="![](images/006.png)"></a>
+### ![](images/006.png) ###
 
+<a name="Ex1Task2"></a>
+### Task 2: Exploratory Testing with the Chrome Extension ###
 
-1.  To start an exploratory testing session, click the **Start session**
-    button from the extension toolbar.
+1. To start an exploratory testing session, click the **Start session** button from the extension toolbar.
 
-    <img src="media/image8.png" width="270" height="64" />
+   ![](images/007.png)
 
-2.  Navigate to <http://intranet.fabrikam.com>.
+1. Navigate to [http://intranet.fabrikam.com](http://intranet.fabrikam.com/).
 
-3.  Click the first dashboard ticket to view it.
+1. Click the first dashboard ticket to view it.
 
-    <img src="media/image9.png" width="270" height="164" />
+   ![](images/008.png)
 
-4.  Click the **Escalate** button to attempt to escalate the ticket.
-    This will lead to a 404 page, which is a bug.
+1. Click the **Escalate** button to attempt to escalate the ticket. This will lead to a 404 page, which is a bug.
 
-    <img src="media/image10.png" width="382" height="102" />
+   ![](images/009.png)
 
-5.  Click the **Exploratory Testing** icon button and click the
-    **Capture screenshot** button.
+1. Click the **Exploratory Testing** icon button and click the **Capture screenshot** button.
 
-    <img src="media/image11.png" width="397" height="76" />
+   ![](images/010.png)
 
-6.  Select a section of the screen and change the name of the screenshot
-    to something more descriptive. Note that there are a variety of
-    drawing tools available to really help you get your point across.
-    Click the **Blur area** button.
+1. Select a section of the screen and change the name of the screenshot to something more descriptive. Note that there are a variety of drawing tools available to really help you get your point across. Click the **Blur area** button.
 
-    <img src="media/image12.png" width="485" height="220" />
+   ![](images/011.png)
 
-7.  Highlight a section of the screenshot, which will be blurred out to
-    become illegible. This makes it easy to report bugs and create other
-    work items without risking sensitive information. Click the **Save
-    screenshot** button to add it to the current session’s timeline.
+1. Highlight a section of the screenshot, which will be blurred out to become illegible. This makes it easy to report bugs and create other work items without risking sensitive information. Click the **Save screenshot** button to add it to the current session’s timeline.
 
-    <img src="media/image13.png" width="480" height="224" />
+   ![](images/012.png)
 
-8.  Click the **Add note** button to start a note. Type in something
-    insightful and click **Save** to save the note to the
-    session’s timeline.
+1. Click the **Add note** button to start a note. Type in something insightful and click **Save** to save the note to the session’s timeline.
 
-    <img src="media/image14.png" width="384" height="280" />
+   ![](images/013.png)
 
-9.  You can also record screen video to capture flaky issues like
-    flickering, abnormal behavior of the web application etc. that are
-    difficult to capture using screenshots alone. To record your screen
-    click the **Record screen** button and click **Start recording**.
+1. You can also record screen video to capture flaky issues like flickering, abnormal behavior of the web application etc. that are difficult to capture using screenshots alone. To record your screen click the **Record screen** button and click **Start recording**.
 
-    <img src="media/image15.png" width="376" height="182" />
+   ![](images/014.png)
 
-10. Select the appropriate screen you want to record from the
-    **Application Window** tab. In this case, select the 404 page and
-    click **Share**. The recording for the screen selected has started.
+1. Select the appropriate screen you want to record from the **Application Window** tab. In this case, select the 404 page and click **Share**. The recording for the screen selected has started.
 
-    <img src="media/image16.png" width="582" height="433" />
+   ![](images/015.png)
 
-11. Slowly highlight part of the page. This task doesn’t need to be
-    critically accurate, but is rather just something to produce video
-    to review later on.
+1. Slowly highlight part of the page. This task doesn’t need to be critically accurate, but is rather just something to produce video to review later on.
 
-    <img src="media/image17.png" width="325" height="135" />
+   ![](images/016.png)
 
-12. Click the **Stop recording** button on the extension to stop
-    recording the screen. The screen recording gets saved.
+1. Click the **Stop recording** button on the extension to stop recording the screen. The screen recording gets saved.
 
-    <img src="media/image18.png" width="495" height="276" />
+   ![](images/017.png)
 
-13. Click on the **View session timeline** button. You can see that all
-    the content – screenshots, notes and videos you’ve captured are
-    available in the current session’s timeline. You can open the
-    screenshots, read your notes or play the video from here.
+1. Click on the **View session timeline** button. You can see that all the content – screenshots, notes and videos you’ve captured are available in the current session’s timeline. You can open the screenshots, read your notes or play the video from here.
 
-    <img src="media/image19.png" width="299" height="334" />
+<a name="![](images/018.png)"></a>
+### ![](images/018.png) ###
 
-### Task 3: Creating Bugs with the Chrome Extension
+<a name="Ex1Task3"></a>
+### Task 3: Creating Bugs with the Chrome Extension ###
 
+1. Click the **Create bug** icon button followed by the expanded **Create bug** text button.
 
-1.  Click the **Create bug** icon button followed by the expanded
-    **Create bug** text button.
+   ![](images/019.png)
 
-    <img src="media/image20.png" width="383" height="111" />
+1. Enter **“Escalate ticket results in 404”** as the name of the bug. All the screenshots and videos captured earlier are already a part of the bug. In addition to this the image action log (user actions) has also been inserted for you so that it’s easy for others to easily reproduce the issue. Click **Save** to save the bug to TFS.
 
-2.  Enter **“Escalate ticket results in 404”** as the name of the bug.
-    All the screenshots and videos captured earlier are already a part
-    of the bug. In addition to this the image action log (user actions)
-    has also been inserted for you so that it’s easy for others to
-    easily reproduce the issue. Click **Save** to save the bug to TFS.
+   ![](images/020.png)
 
-    <img src="media/image21.png" width="488" height="365" />
+1. Another great feature of this extension is its ability to view similar bugs and thus reduce redundant issues. Let’s say you were another tester who happened to find this same bug and weren’t aware that it was already logged. Click the **Create bug** icon button followed by the expended **Create bug** text button again to start a new bug form.
 
-3.  Another great feature of this extension is its ability to view
-    similar bugs and thus reduce redundant issues. Let’s say you were
-    another tester who happened to find this same bug and weren’t aware
-    that it was already logged. Click the **Create bug** icon button
-    followed by the expended **Create bug** text button again to start a
-    new bug form.
+   ![](images/021.png)
 
-    <img src="media/image20.png" width="387" height="112" />
+1. As you type the title **“404 escalate**” for the bug you will notice that the extension has detected that there is already another bug in the backlog with a similar title. Click 1 **similar** to view the similar bug.
 
-4.  As you type the title **“404 escalate**” for the bug you will notice
-    that the extension has detected that there is already another bug in
-    the backlog with a similar title. Click 1 **similar** to view the
-    similar bug.
+   ![](images/022.png)
 
-    <img src="media/image22.png" width="369" height="142" />
+1. This bug appears to be the same as the one we were about to file, so select it and click **Edit** to edit the existing bug rather than to file a new bug.
 
-5.  This bug appears to be the same as the one we were about to file, so
-    select it and click **Edit** to edit the existing bug rather than to
-    file a new bug.
+   ![](images/023.png)
 
-    <img src="media/image23.png" width="366" height="183" />
+1. At this time the current repro steps are added to the image action log. In practice, you would now review the existing repro steps to determine if you located this bug using a different method, in which case you would update the contents to indicate that your method is an alternative repro. Click **Save** to save the bug.
 
-6.  At this time the current repro steps are added to the image
-    action log. In practice, you would now review the existing repro
-    steps to determine if you located this bug using a different method,
-    in which case you would update the contents to indicate that your
-    method is an alternative repro. Click **Save** to save the bug.
+   ![](images/024.png)
 
-    <img src="media/image24.png" width="367" height="381" />
+1. Click the **View session timeline** icon button and click the last created **Bug** link to open it.
 
-7.  Click the **View session timeline** icon button and click the last
-    created **Bug** link to open it.
+   ![](images/025.png)
 
-    <img src="media/image25.png" width="479" height="322" />
+1. Now back on the TFS site, you can update the bug as needed, such as by assigning it to someone or adjusting the severity.
 
-8.  Now back on the TFS site, you can update the bug as needed, such as
-    by assigning it to someone or adjusting the severity.
+   ![](images/026.png)
 
-    <img src="media/image26.png" width="624" height="314" />
+1. In Chrome, end the testing session by clicking the **Stop Session** button.
 
-9.  In Chrome, end the testing session by clicking the **Stop
-    Session** button.
+   ![](images/027.png)
 
-    <img src="media/image27.png" width="543" height="93" />
+1. Close Chrome.
 
-10. Close Chrome.<span id="_Toc429687453" class="anchor"><span
-    id="_Toc473056032" class="anchor"></span></span>
+<a name="Exercise2"></a>
+## Exercise 2: Eliciting and Managing Feedback ##
 
-## Exercise 2: Eliciting and Managing Feedback
+In this exercise, you will learn about managing the feedback lifecycle in TFS. During the course of software development, it is important to capture feedback from project stakeholders (end-users, product owners, and so on) to ensure that the progress the team is making is on track to meet the requirements that the stakeholders have in mind. It enables the capture of audio, video, screenshots, and other attachments to be linked to Team Foundation Server feedback work items.
 
+<a name="Ex2Task1"></a>
+### Task 1: Creating Feedback Requests ###
 
-1.  In this exercise, you will learn about managing the feedback
-    lifecycle in TFS. During the course of software development, it is
-    important to capture feedback from project stakeholders (end-users,
-    product owners, and so on) to ensure that the progress the team is
-    making is on track to meet the requirements that the stakeholders
-    have in mind. It enables the capture of audio, video, screenshots,
-    and other attachments to be linked to Team Foundation Server
-    feedback work items.
+1. In Chrome, navigate to [http://vsalm:8080/tfs](http://vsalm:8080/tfs).
 
-### Task 1: Creating Feedback Requests
+1. Navigate to the **FabrikamFiber** project via the navigation dropdown in the top left corner.
 
+   ![](images/028.png)
 
-1.  In Chrome, navigate to <http://vsalm:8080/tfs>.
+1. Select **Work | Backlogs**.
 
-2.  Navigate to the **FabrikamFiber** project via the navigation
-    dropdown in the top left corner.
+   ![](images/029.png)
 
-    <img src="media/image28.png" width="230" height="106" />
+1. For our purposes in this lab, let’s assume that we would like to get some feedback on the Fabrikam Fiber intranet portal’s ability to edit customer records. Enter a **Title** of **“Improve customer edit experience”** and click **Add** to create a new backlog item.
 
-3.  Select **Work \| Backlogs**.
+   ![](images/030.png)
 
-    <img src="media/image29.png" width="314" height="78" />
+1. Double-click the newly created work item.
 
-4.  For our purposes in this lab, let’s assume that we would like to get
-    some feedback on the Fabrikam Fiber intranet portal’s ability to
-    edit customer records. Enter a **Title** of “**Improve customer edit
-    experience**” and click **Add** to create a new backlog item.
+   ![](images/031.png)
 
-    <img src="media/image30.png" width="609" height="140" />
+1. Expand the extended menu and click **Request feedback** to elicit feedback on this work item.
 
-5.  Double-click the newly created work item.
+   ![](images/032.png)
 
-    <img src="media/image31.png" width="624" height="103" />
+1. In the Request Feedback dialog, select **Lan Kaim** as the stakeholder to request feedback from. Note that Lan is assigned to the **Stakeholder** access level in TFS, so providing feedback via this feature is something they can uniquely offer. Optionally add more color to the subject or body and click **Send**.
 
-6.  Click **Request feedback** to elicit feedback on this work item.
+    ![](images/033.png)
 
-    <img src="media/image32.png" width="624" height="83" />
+    > **Note:** You can add as many feedback items as you want by clicking on the ‘**Request feedback**’ link.
 
-7.  In the Request Feedback dialog, select **Lan Kaim** as the
-    stakeholder to request feedback from. Note that Lan is assigned to
-    the **Stakeholder** access level in TFS, so providing feedback via
-    this feature is something they can uniquely offer. Optionally add
-    more color to the subject or body and click **Send**.
+1. Press **Esc** to close the work item.
 
-    <img src="media/image33.png" width="478" height="290" />
+<a name="Ex2Task2"></a>
+### Task 2: Using the Feedback Client ###
 
-    **Note:** You can add as many feedback items as you want by
-        clicking on the ‘**Request feedback**’ link.
+1. Open a remote desktop session to **VSALM** and log in as **Lan Kaim (VSALM\Lan)**. All user passwords are **P2ssw0rd**. Using remote desktop will allow you to easily switch between users within the VM without having to sign in each time.
 
-8.  Press **Esc** to close the work item.
+1. Launch **Chrome** and install the **Test & Feedback** extension as before. Configure with the same server (“vsalm”) and team (“Fabrikam Fiber Web Team”).
 
+1. Now let’s simulate Lan receiving the email and starting a feedback session from that. Open an explorer window and navigate to the _**c:\inetpub\mailroot\drop**_ folder. Find the most recent email message and double-click to open it in **Outlook**. You may need to wait for a minute for the email message to show up.
 
-### Task 2: Using the Feedback Client
+    > **Note:** The VM that you are using for this lab does not have a full email server running on it. Therefore, we will simulate sending and receiving email with this extra step.
 
+   ![](images/034.png)
 
-1.  Open a remote desktop session to **VSALM** and log in as **Lan
-    Kaim (VSALM\\Lan)**. All user passwords are **P2ssw0rd**. Using
-    remote desktop will allow you to easily switch between users within
-    the VM without having to sign in each time.
+1. The email provides the high-level details and easy access to the feedback experience. Click **Provide feedback**. If asked to select a browser, choose **Chrome**.
 
-2.  Launch **Chrome** and install the **Test & Feedback** extension
-    as before. Configure with the same server (“vsalm”) and team
-    (“Fabrikam Fiber Web Team”).
+   ![](images/035.png)
 
-3.  Now let’s simulate Lan receiving the email and starting a feedback
-    session from that. Open an explorer window and navigate to the
-    ***c:\\inetpub\\mailroot\\drop*** folder. Find the most recent email
-    message and double-click to open it in **Outlook**. You may need to
-    wait for a minute for the email message to show up.
+1. Click the extension button to expand it.
 
-    **Note:** The VM that you are using for this lab does not have a
-        full email server running on it. Therefore, we will simulate
-        sending and receiving email with this extra step.
+   ![](images/036.png)
 
-    <img src="media/image34.png" width="624" height="159" />
+1. The **Work Items** tab will be selected and scoped in to the feedback item.
 
-4.  The email provides the high-level details and easy access to the
-    feedback experience. Click **Provide feedback**. If asked to select
-    a browser, choose **Chrome**.
+   ![](images/037.png)
 
-    <img src="media/image35.png" width="624" height="363" />
+1. Navigate to [http://intranet.fabrikam.com](http://intranet.fabrikam.com/).
 
-5.  Click the extension button to expand it.
+1. Follow the instructions provided by selecting the **Customers** link to navigate to the Customers page.
 
-    <img src="media/image36.png" width="438" height="42" />
+   ![](images/038.png)
 
-6.  The **Work Items** tab will be selected and scoped in to the
-    feedback item.
+1. Next, click an **Edit** link for one of the listed customers.
 
-    <img src="media/image37.png" width="473" height="323" />
+   ![](images/039.png)
 
-7.  Navigate to <http://intranet.fabrikam.com>.
+1. Customer records contain phone numbers, and the users of the Fabrikam Fiber intranet portal commonly need to update these phone numbers for customers who are calling about their service. Here we can see that the edit screen does not allow us to update that customer field.
 
-8.  Follow the instructions provided by selecting the **Customers** link
-    to navigate to the Customers page.
+   ![](images/040.png)
 
-    <img src="media/image38.png" width="624" height="95" />
+1. Expand the feedback extension and select the **Notes** tab. Enter “**We need to provide a way to update customer phone numbers.**” Click **Save**.
 
-9.  Next, select the **Edit** link for one of the listed customers.
+   ![](images/041.png)
 
-    <img src="media/image39.png" width="461" height="251" />
+1. Attach a screenshot by clicking the **Screenshot** button.
 
-10. Customer records contain phone numbers, and the users of the
-    Fabrikam Fiber intranet portal commonly need to update these phone
-    numbers for customers who are calling about their service. Here we
-    can see that the edit screen does not allow us to update that
-    customer field.
+   ![](images/042.png)
 
-    <img src="media/image40.png" width="319" height="420" />
+1. Enter “**Need phone number**” and click the **Confirm** button.
 
-11. Expand the feedback extension and select the **Notes** tab. Enter
-    “**We need to provide a way to update customer phone numbers.**”
-    Click **Save**.
+   ![](images/043.png)
 
-    <img src="media/image41.png" width="489" height="238" />
+1. Select the **Provide feedback** tab and click **Provide feedback**.
 
-12. Attach a screenshot by clicking the **Screenshot** button.
+   ![](images/044.png)
 
-    <img src="media/image42.png" width="486" height="59" />
+1. Enter “**Will be good with phone number**” and set the ratings to five stars. Click **Save**.
 
-13. Enter “**Need phone number**” and click the **Confirm** button.
+   ![](images/045.png)
 
-    <img src="media/image43.png" width="624" height="497" />
+1. Select the **Feedback requests** tab and click the **Complete feedback request** button that appears when you hover. This will also end the feedback session.
 
-14. Select the **Provide feedback** tab and click **Provide feedback**.
+    ![](images/046.png)
 
-    <img src="media/image44.png" width="488" height="105" />
+<a name="Ex2Task3"></a>
+### Task 3: Collecting and Acting on Feedback ###
 
-15. Enter “**Will be good with phone number**” and set the ratings to
-    five stars. Click **Save**.
+1. Return to the **Deniz** account by minimizing the RDP window.
 
-    <img src="media/image45.png" width="488" height="448" />
+1. Navigate to the **Home | Dashboards** page for **FabrikamFiber**.
 
-16. Select the **Feedback requests** tab and click the **Complete
-    feedback request** button that appears when you hover. This will
-    also end the feedback session.
+   ![](images/047.png)
 
-    <img src="media/image46.png" width="472" height="205" />
+1. Click the blue **Feedback** tile, which should indicate that one feedback request has been completed.
 
-    1.  
+   ![](images/048.png)
 
-### Task 3: Collecting and Acting on Feedback
+1. Locate the Feedback Response that was just created. Double-click it to open.
 
+   ![](images/049.png)
 
-1.  Return to the **Deniz** account by minimizing the RDP window.
+1. The feedback response includes the **Stakeholder Comments** section where you can scroll through and review the notes and recordings from the session. It also includes a **System Info** section with details on the client used to provide feedback.
 
-2.  Navigate to the **Home** page, and then click the blue
-    **Feedback** tile.
+   ![](images/050.png)
 
-    <img src="media/image47.png" width="618" height="308" />
+1. Select the **Links** tab and note that this feedback response is automatically a child of the original backlog item it was created from.
 
-3.  Locate the Feedback Response that was just created. Double-click it
-    to open.
+   ![](images/051.png)
 
-    <img src="media/image48.png" width="624" height="108" />
+1. Based on the feedback received, the team can then create additional work items as necessary in order to act upon the feedback. Select **Add link | New item**.
 
-4.  The **Notes** tab is selected by default so that you can see the
-    direct feedback.
+   ![](images/052.png)
 
-    <img src="media/image49.png" width="544" height="332" />
+1. Go with the default work item type of **Bug**, and provide a title such as “**No customer phone number field for updates.**” Select the **OK** button.
 
-5.  Finally, select the **All Links** tab and note that this Feedback
-    Response work item is a child of the original Feedback Request work
-    item that was emailed.
+   ![](images/053.png)
 
-    <img src="media/image50.png" width="624" height="176" />
+1. Click **Save and Close** and note that the new bug is associated with the feedback item as a child.
 
-6.  Based on the feedback received, the team can then create additional
-    work items as necessary in order to act upon the feedback. Select
-    the **New Linked Work Item** button.
-
-    <img src="media/image51.png" width="449" height="126" />
-
-7.  Go with the default work item type of **Bug**, and provide a title
-    such as “**No customer phone number field for updates.**” Select the
-    **OK** button.
-
-    <img src="media/image52.png" width="564" height="365" />
-
-8.  Click **Save and Close** and note the individual that is assigned to
-    the bug will have the associated feedback context linked to it
-    for reference.
-
-
+    ![](images/054.png)
 
