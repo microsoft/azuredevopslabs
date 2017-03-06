@@ -26,7 +26,7 @@ You can get access to the virtual machine the following ways:
 - **Try it on Technet Virtual Labs** - You can also access the virtual machine online on **TechNet Virtual Labs**  - no downloads or complex setup required. You can experience it right from your browser.
 - **Run it on Azure** - If you prefer to run the VM on Azure, you can simply upload the VHD to your Azure storage and create a VM from the VHD. If you are setting up the labs for a traning, you  might want to consider the [Azure DevTest Labs](https://docs.microsoft.com/en-us/azure/devtest-lab/devtest-lab-training-lab) for training.
 
-### Downloading and extracting the VM   
+## Downloading and extracting the VM   
 The size of the download is about 30 GB. It is recommended that you use a utility like [**Free download manager**](http://www.freedownloadmanager.org/).  This utility provides:   
     - Auto-resume support for interrupted downloads.
     - Multiple simultaneous download streams for (usually) a much faster download experience.

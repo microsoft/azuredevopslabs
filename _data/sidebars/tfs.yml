@@ -4,6 +4,7 @@ entries:
 - title: sidebar
   product: ALM VM HOLs
   version: 2017
+  url: /labs/tfs
   folders:
 
   - title:
