@@ -87,7 +87,7 @@ coverage so that you can think about testability as you develop.
     you begin. Rather than running all tests, you can now simply enable
     live unit testing and let it illustrate the coverage.
 
-6.  Select **Test | Live Unit Testing | Start** to start live
+6.  Select **Test \| Live Unit Testing \| Start** to start live
     unit testing. After a moment you will see glyphs appear in the left
     margin of the editor. There are three types of glyphs that indicate
     that all tests for a line pass (a green check), at least one test
