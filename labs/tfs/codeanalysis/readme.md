@@ -10,29 +10,18 @@ Lab version:15.0.26228.0
 
 Last updated:3/1/2017
 
-<a name="Overview"></a>
 ## Overview ##
 
 The Code Analysis feature of Visual Studio performs static code analysis to help developers identify potential design, globalization, interoperability, performance, security, and a host of other categories of potential problems. Code Analysis can be run manually at any time from within the Visual Studio IDE, or even setup to automatically run as part of a Team Build or check-in policy for Team Foundation Server.
 
 In this lab, you will be introduced to Code Analysis, how to configure rules sets to use, and finally how to suppress specific rules at a project and source code level.
 
-<a name="Prerequisites"></a>
-### Prerequisites ###
+## Pre-requisites ##
 
 In order to complete this lab you will need the Visual Studio 2017 virtual machine provided by Microsoft. For more information on acquiring and using this virtual machine, please see [this blog post](http://aka.ms/almvm).
 
-<a name="About the Fabrikam Fiber Scenario"></a>
-### About the Fabrikam Fiber Scenario ###
-
-This set of hands-on-labs uses a fictional company, Fabrikam Fiber, as a backdrop to the scenarios you are learning about. Fabrikam Fiber provides cable television and related services to the United States. They are growing rapidly and have embraced Windows Azure to scale their customer-facing web site directly to end-users to allow them to self-service tickets and track technicians. They also use an on-premises ASP.NET MVC application for their customer service representatives to administer customer orders.
-
-In this set of hands-on labs, you will take part in a number of scenarios that involve the development and testing team at Fabrikam Fiber. The team, which consists of 8-10 people has decided to use Visual Studio application lifecycle management tools to manage their source code, run their builds, test their web sites, and plan and track the project.
-
-<a name="Exercise1"></a>
 ## Exercise 1: Introduction to Code Analysis ##
 
-<a name="Ex1Task1"></a>
 ### Task 1: Working with Code Analysis ###
 
 1. In this exercise, you will learn about the Code Analysis features in Visual Studio 2017 by configuring the rule set used, performing code analysis on a sample project, and **addressing** some of the warnings that are raised.
@@ -45,7 +34,7 @@ In this set of hands-on labs, you will take part in a number of scenarios that i
 
    ![](images/000.png)
 
-1. Select **Build | Rebuild Solution** from the main menu to build the solution.
+1. Select **Build \| Rebuild Solution** from the main menu to build the solution.
 
 1. In **Solution Explorer**, right-click the **FabrikamFiber.Web** project node and select **Properties**.
 
@@ -63,7 +52,7 @@ In this set of hands-on labs, you will take part in a number of scenarios that i
 
     > **Note:** If you are interested in learning how to create custom rule sets, please see [this](http://msdn.microsoft.com/en-us/library/dd264974.aspx) MSDN documentation.
 
-1. In **Solution Explorer**, right-click the **FabrikamFiber.Web** project node and select **Analyze** | **Run Code Analysis**.
+1. In **Solution Explorer**, right-click the **FabrikamFiber.Web** project node and select **Analyze** \| **Run Code Analysis**.
 
    ![](images/004.png)
 
@@ -91,7 +80,6 @@ In this set of hands-on labs, you will take part in a number of scenarios that i
 
 1. Run the code analysis once again to verify that the warning disappears as expected. There should be one less warning than before.
 
-<a name="Ex1Task2"></a>
 ### Task 2: Suppressing Code Analysis Warnings ###
 
 1. In this exercise, you will learn how to suppress Code Analysis warnings at the project and source level.
@@ -100,7 +88,7 @@ In this set of hands-on labs, you will take part in a number of scenarios that i
 
 1. In the **Error List** window, select the first three warnings by clicking the first, holding the **Shift** key, and clicking the third. Imagine that we do not want to address the selected issues and no longer want them to appear when Code Analysis executes.
 
-1. **Right-click** the selected warnings and select **Suppress | In Suppression File** from the context menu. This will add assembly level metadata to a project level **GlobalSuppressions.cs** file.
+1. **Right-click** the selected warnings and select **Suppress \| In Suppression File** from the context menu. This will add assembly level metadata to a project level **GlobalSuppressions.cs** file.
 
    ![](images/009.png)
 
