@@ -28,8 +28,12 @@ entries:
       url: labs/tfs/
       output: web, pdf
 
-    - title: Running the labs on cloud
-      url: /mydoc_about.html
+    - title: Working with the Visual Studio 2017 ALM VM
+      url: labs/tfs/started
+      output: web, pdf
+
+    - title: Running the labs on TechNet Virtual Center
+      url: labs/tfs/technet
       output: web, pdf
 
   - title: Plan

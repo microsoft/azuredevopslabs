@@ -8,15 +8,23 @@ folder: /labs/tfs/
 ---
 
 ## Overview
-The Microsoft Visual Studio ALM VM and the accompanying hands-on-labs are now updated to Visual Studio and Team Foundation Server 2017. This Virtual Machine is configured with:
+The Microsoft Visual Studio ALM VM and the accompanying hands-on-labs are now updated to Visual Studio and Team Foundation Server 2017. 
 
-- Microsoft Windows Server 2016 Standard Evaluation    
-- Microsoft Visual Studio Enterprise 2017     
-- Microsoft Visual Studio Team Foundation Server 2017     
-- Microsoft Office Professional Plus 2016 (Word, PowerPoint, Excel, Outlook)     
-- Microsoft Visio Professional 2016     
-- Microsoft SQL Server 2016 Standard Edition   
-- Sample users and data required to support hands-on-lab scripts      
+The virtual machine contains the following pre-configured software:
+
+1.  Microsoft Windows Server 2016 Standard Evaluation
+
+2.  Microsoft Visual Studio Enterprise 2017
+
+3.  Microsoft Visual Studio Team Foundation Server 2017
+
+4.  Microsoft Office Professional Plus 2016 (Word, PowerPoint,
+    Excel, Outlook)
+
+5.  Microsoft SQL Server 2016 Standard
+
+6.  Sample users and data required to support hands-on-lab scripts which
+    accompany this download.      
 
 ## Accessing the Virtual Machine
 
