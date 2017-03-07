@@ -6,31 +6,20 @@ permalink: /labs/tfs/unittesting/
 folder: /labs/tfs/unittesting/
 ---
 
-Lab version:15.0.26228.0
+Lab version: 15.0.26228.0
 
-Last updated:3/3/2017
+Last updated: 3/3/2017
 
-<a name="Overview"></a>
 ## Overview ##
 
 In this lab, you will learn about how the unit testing engine in Visual Studio is extensible and opens the door for 3rd party unit testing adapters such as NUnit and xUnit.net. In addition, you will see some of the improvements made to code coverage support. You will also learn about how the code clone capability goes hand-in-hand with delivering high quality software by helping you identify blocks of semantically similar code which may be candidates for common bug fixes or refactoring.
 
-<a name="Prerequisites"></a>
-### Prerequisites ###
+## Pre-requisites ##
 
 In order to complete this lab you will need the Visual Studio 2017 virtual machine provided by Microsoft. For more information on acquiring and using this virtual machine, please see [this blog post](http://aka.ms/almvm).
 
-<a name="About the Fabrikam Fiber Scenario"></a>
-### About the Fabrikam Fiber Scenario ###
-
-This set of hands-on-labs uses a fictional company, Fabrikam Fiber, as a backdrop to the scenarios you are learning about. Fabrikam Fiber provides cable television and related services to the United States. They are growing rapidly and have embraced Windows Azure to scale their customer-facing web site directly to end-users to allow them to self-service tickets and track technicians. They also use an on-premises ASP.NET MVC application for their customer service representatives to administer customer orders.
-
-In this set of hands-on labs, you will take part in a number of scenarios that involve the development and testing team at Fabrikam Fiber. The team, which consists of 8-10 people has decided to use Visual Studio application lifecycle management tools to manage their source code, run their builds, test their web sites, and plan and track the project.
-
-<a name="Exercise1"></a>
 ## Exercise 1: Code Quality Tools ##
 
-<a name="Ex1Task1"></a>
 ### Task 1: Unit Testing ###
 
 In this task, you will learn about the unit testing story in Visual Studio 2017.
@@ -41,9 +30,9 @@ In this task, you will learn about the unit testing story in Visual Studio 2017.
 
    ![](images/000.png)
 
-1. Select **Build | Build Solution**.
+1. Select **Build \| Build Solution**.
 
-1. Open the **Test Explorer** window from **Test | Windows | Test Explorer**. Note that discovered tests are initially set to the **Not Run** state.
+1. Open the **Test Explorer** window from **Test \| Windows \| Test Explorer**. Note that discovered tests are initially set to the **Not Run** state.
 
    ![](images/001.png)
 
@@ -51,7 +40,7 @@ In this task, you will learn about the unit testing story in Visual Studio 2017.
 
     ![](images/002.png)
 
-    > **Note:** Visual Studio also provides **Continuous Test Runner** functionality that can be enabled with the **Test | Test Settings | Run Tests After Build** option. With this option selected, tests will always run after builds.
+    > **Note:** Visual Studio also provides **Continuous Test Runner** functionality that can be enabled with the **Test \| Test Settings \| Run Tests After Build** option. With this option selected, tests will always run after builds.
 
 1. Expand the **Passed Tests** group (if necessary) and **double-click** the test with the name **CreateInsertsCustomerAndSaves** to open the source code.
 
@@ -99,7 +88,7 @@ In this task, you will learn about the unit testing story in Visual Studio 2017.
 
 1. The summary view of the failed test run shows that an **ArgumentNullException** exception occurred during the test run and even provides the stack track at the time of the exception. Note that we can follow links to go directly to the source code for the test or to points within the stack trace. **Click** the **source link** to go to the source code for the test method.
 
-    ![](images/013.png)
+   ![](images/013.png)
 
    ![](images/014.png)
 
@@ -115,7 +104,7 @@ In this task, you will learn about the unit testing story in Visual Studio 2017.
 
 1. Up until now, we've walked through the process of manually running tests to find bugs. While this approach does work, there's an even better option that will save you a ton of time: **Live Unit Testing**. Live unit testing continually runs your unit tests in the background as you edit code, providing real-time feedback on how changes impact the quality of the overall codebase.
 
-1. Select **Test | Live Unit Testing | Start** to enable it. After it builds and runs the tests in the background, you'll see some new glyphs alongside the code.
+1. Select **Test \| Live Unit Testing \| Start** to enable it. After it builds and runs the tests in the background, you'll see some new glyphs alongside the code.
 
    ![](images/017.png)
 
@@ -127,10 +116,9 @@ In this task, you will learn about the unit testing story in Visual Studio 2017.
 
 1. Uncomment the line once again to fix the bug.
 
-<a name="Ex1Task2"></a>
 ### Task 2: Unit Test Organization ###
 
-1. So far, we have seen how to run all discovered tests, search for specific tests, and view tests by their outcome. Now let's take a look at a few other ways that you can organize and navigate them to make unit testing easier. To start with, there are a number of useful grouping options. **Right-click** somewhere within the **Test Explorer** window and select **Group By | Class**.
+1. So far, we have seen how to run all discovered tests, search for specific tests, and view tests by their outcome. Now let's take a look at a few other ways that you can organize and navigate them to make unit testing easier. To start with, there are a number of useful grouping options. **Right-click** somewhere within the **Test Explorer** window and select **Group By \| Class**.
 
    ![](images/019.png)
 
@@ -138,7 +126,7 @@ In this task, you will learn about the unit testing story in Visual Studio 2017.
 
    ![](images/020.png)
 
-1. **Right-click** somewhere within the Test Explorer window and select **Group By | Project**.
+1. **Right-click** somewhere within the Test Explorer window and select **Group By \| Project**.
 
    ![](images/021.png)
 
@@ -160,13 +148,13 @@ In this task, you will learn about the unit testing story in Visual Studio 2017.
 
 1. Build the solution by pressing **Ctrl+Shift+B**.
 
-1. **Right-click** within **Test Explorer** and select **Group By | Traits**.
+1. **Right-click** within **Test Explorer** and select **Group By \| Traits**.
 
 1. With the coded UI tests categorized appropriately, it is now easy to select and run just the UI tests if desired.
 
    ![](images/026.png)
 
-1. You can also create sets of tests called **playlists**. This provides custom grouping without the need to modify your unit testing code. **Right-click** the _**CodedUITestMethod1**_ test and select **Add to Playlist | New Playlist**.
+1. You can also create sets of tests called **playlists**. This provides custom grouping without the need to modify your unit testing code. **Right-click** the _**CodedUITestMethod1**_ test and select **Add to Playlist \| New Playlist**.
 
    ![](images/027.png)
 
@@ -188,10 +176,8 @@ In this task, you will learn about the unit testing story in Visual Studio 2017.
 
 1. Playlists can be shared with team members via a team website, emailed, and even added to source control if desired. To load a playlist file, you would select the **Playlist** drop-down and then select the **Open Playlist File** option. You do not need to do this for this lab.
 
-<a name="![](images/032.png)"></a>
-### ![](images/032.png) ###
+   ![](images/032.png)
 
-<a name="Ex1Task3"></a>
 ### Task 3: Code Coverage ###
 
 In this task, you will learn about code coverage features that make it easier to use and integrate into the development cycle.
@@ -264,7 +250,7 @@ In this task, you will learn about code coverage features that make it easier to
 
     In this exercise, you will learn about the Code Clone analysis feature that looks for semantically similar code using a heuristic search technique, rather than simply searching for exact matches.
 
-1. Select **Analyze | Analyze Solution for Code Clones** from the main menu in Visual Studio.
+1. Select **Analyze \| Analyze Solution for Code Clones** from the main menu in Visual Studio.
 
 1. Once the analysis is complete, the **Code Clone Analysis Results** window will show clone candidates grouped by match strength. Expand the **Strong Match** group to expose the two files that had a strong match.
 
@@ -282,7 +268,7 @@ In this task, you will learn about code coverage features that make it easier to
 
    ![](images/051.png)
 
-1. Select **Window | Close All Documents** from the main menu to clear up some screen real estate space.
+1. Select **Window \| Close All Documents** from the main menu to clear up some screen real estate space.
 
 1. You can also narrow the focus of the search for code clones if desired. In **Solution Explorer**, navigate to **Controllers** folder of the **FabrikamFiber.Web** project and open **CustomersController.cs** in the code editor.
 
