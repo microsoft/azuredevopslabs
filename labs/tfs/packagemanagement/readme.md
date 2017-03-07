@@ -14,7 +14,7 @@ Last updated:3/3/2017
 
 Package Management is an extension that makes it easy to discover, install, and publish NuGet and npm packages in Team Foundation Server. It's deeply integrated with other hubs like Build so that package management can become a seamless part of your existing workflows.
 
-## Prerequisites ##
+## Pre-requisites ##
 
 In order to complete this lab you will need the Visual Studio 2017 virtual machine provided by Microsoft. For more information on acquiring and using this virtual machine, please see [this blog post](http://aka.ms/almvm).
 
