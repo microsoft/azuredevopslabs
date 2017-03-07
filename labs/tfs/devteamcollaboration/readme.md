@@ -10,29 +10,20 @@ Lab version:15.0.26228.0
 
 Last updated:3/3/2017
 
-<a name="Overview"></a>
 ## Overview ##
 
 In this lab, you’ll learn about some of the features in Visual Studio 2017 and Team Foundation Server 2017 that enable collaboration experiences for development teams including Team Rooms, Lightweight Code Comments, and CodeLens.
 
-<a name="Prerequisites"></a>
-### Prerequisites ###
+
+### Pre-requisites ###
 
 In order to complete this lab you will need the Visual Studio 2017 virtual machine provided by Microsoft. For more information on acquiring and using this virtual machine, please see [this blog post](http://aka.ms/almvm).
 
-<a name="About the Fabrikam Fiber Scenario"></a>
-### About the Fabrikam Fiber Scenario ###
 
-This set of hands-on-labs uses a fictional company, Fabrikam Fiber, as a backdrop to the scenarios you are learning about. Fabrikam Fiber provides cable television and related services to the United States. They are growing rapidly and have embraced Windows Azure to scale their customer-facing web site directly to end-users to allow them to self-service tickets and track technicians. They also use an on-premises ASP.NET MVC application for their customer service representatives to administer customer orders.
-
-In this set of hands-on labs, you will take part in a number of scenarios that involve the development and testing team at Fabrikam Fiber. The team, which consists of 8-10 people has decided to use Visual Studio application lifecycle management tools to manage their source code, run their builds, test their web sites, and plan and track the project.
-
-<a name="Exercise1"></a>
 ## Exercise 1: Team Room Collaboration ##
 
 In this exercise, you will learn about the Team Room feature in Team Foundation Server 2017 (and at visualstudio.com). Team Rooms provide a durable collaboration space where members can chat and view pertinent events, thereby allowing them to remain in loose contact throughout the workday.
 
-<a name="Ex1Task1"></a>
 ### Task 1: Team Rooms Introduction ###
 
 1. Log in as **Sachin Raj (VSALM\Sachin)**. All user passwords are **P2ssw0rd**.
@@ -67,10 +58,8 @@ In this exercise, you will learn about the Team Room feature in Team Foundation 
 
 1. It appears that we didn’t miss anything important in the team room, so we can return to the current date by clicking the **Live** link.
 
-<a name="![](images/007.png)"></a>
-### ![](images/007.png) ###
+   ![](images/007.png) ###
 
-<a name="Ex1Task2"></a>
 ### Task 2: Team Room Mentions and Links ###
 
 1. Now let’s take a look at some of the types of mentions and links that can be inserted via team room chat. The first type is the team member mention, which can be inserted anywhere by typing the ‘**@**’ symbol followed by the name. As Sachin, try this out by typing “**good morning @**” into the textbox at the bottom of the window. Note that a list of room members is presented as soon as you type the ‘@’ symbol.
@@ -103,7 +92,6 @@ In this exercise, you will learn about the Team Room feature in Team Foundation 
 
     ![](images/014.png)
 
-<a name="Ex1Task3"></a>
 ### Task 3: Team Room Events ###
 
 1. Another key feature of team rooms is that various events can be selected and configured to automatically feed in additional information, thereby providing additional context to active and historical team discussions. Click **Manage events…**.
@@ -136,19 +124,17 @@ In this exercise, you will learn about the Team Room feature in Team Foundation 
 
 1. The Team Room feature has been designed with extensibility in mind, so that will allow development teams to add in custom events and clients in the future. If you are interested in learning more about this extensibility, look at the [Team Rooms REST API](https://www.visualstudio.com/en-us/integrate/api/chat/overview) for more information.
 
-<a name="Exercise2"></a>
 ## Exercise 2: Lightweight Code Comments ##
 
 In this exercise, you will learn about the Lightweight Code Comment feature (first introduced with Team Foundation Server 2013), that allows team members to comment on code. This enables interactive or time shifted conversations about code, all from a very nice inline experience in the browser.
 
-<a name="Ex2Task1"></a>
 ### Task 1: Working With Lightweight Code Comments ###
 
 1. Launch **Internet Explorer** from the taskbar and click the **TFS FF Portal** button from the favorites bar at the top.
 
    ![](images/022.png)
 
-1. Select **Code | Changesets**.
+1. Select **Code \| Changesets**.
 
    ![](images/023.png)
 
@@ -196,15 +182,12 @@ In this exercise, you will learn about the Lightweight Code Comment feature (fir
 
     ![](images/034.png)
 
-<a name="![](images/035.png)"></a>
-## ![](images/035.png) ##
+    ![](images/035.png)
 
-<a name="Exercise3"></a>
 ## Exercise 3: CodeLens ##
 
 In this exercise, you will learn about the CodeLens feature first introduced with Visual Studio 2013 and Team Foundation Server 2013 that provides code insights about classes, methods, and properties directly within the code editor.
 
-<a name="Ex3Task1"></a>
 ### Task 1: Working with CodeLens ###
 
 1. Launch **Visual Studio 2017** from the taskbar.
@@ -217,7 +200,7 @@ In this exercise, you will learn about the CodeLens feature first introduced wit
 
    ![](images/037.png)
 
-1. Select **Build | Rebuild Solution**.
+1. Select **Build \| Rebuild Solution**.
 
 1. After loading **CustomersController.cs** in the code editor, note that both the class and its methods show a single line of indicators. These indicators are meant to provide developers a heads-up-display of sorts - with information about how the code is being used, tested, and changed.
 
@@ -231,7 +214,7 @@ In this exercise, you will learn about the CodeLens feature first introduced wit
 
     > **Note:** You can also hold down the **Alt** key and press the number key shown above each indicator as a shortcut.
 
-1. **![](images/040.png)**
+    ![](images/040.png)
 
 1. If you were to double-click on one of the references, you would be taken to the specified location in code. Press **Esc** instead.
 
@@ -291,9 +274,9 @@ In this exercise, you will learn about the CodeLens feature first introduced wit
 
     ![](images/052.png)
 
-    > **Note:** With all tests passing, nothing stands out visually in the CodeLens indicator line. This demonstrates one of the goals of CodeLens - to provide useful information without getting in the way or being distracting. Nevertheless the feature can be customized or even turned off in **Tools | Options** if desired.
+    > **Note:** With all tests passing, nothing stands out visually in the CodeLens indicator line. This demonstrates one of the goals of CodeLens - to provide useful information without getting in the way or being distracting. Nevertheless the feature can be customized or even turned off in **Tools \| Options** if desired.
 
-1. **![](images/053.png)**
+    ![](images/053.png)
 
 1. As a final note, CodeLens also supports a number of indicators for Git repositories also. This provides author, change and work item indicators that work very similarly to their Team Foundation Version Control counterparts. Unlike the CodeLens support for TFVC, CodeLens for Git is computed solely on the client side. This means that you can use the feature for any Git repository whether it is local, cloned from TFS Git, cloned from GitHub or another Git source.
 
