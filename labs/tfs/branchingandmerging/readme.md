@@ -14,7 +14,7 @@ Last updated:3/1/2017
 
 In this lab, you will be introduced to the branching and merging visualization support in Visual Studio Team Foundation Server 2017. This support makes it much easier to understand a solution branch hierarchy and to propagate changes during the merge process.
 
-### Pre-requisites ###
+## Pre-requisites ##
 
 In order to complete this lab you will need the Visual Studio 2017 virtual machine provided by Microsoft. For more information on acquiring and using this virtual machine, please see [this blog post](http://aka.ms/almvm).
 

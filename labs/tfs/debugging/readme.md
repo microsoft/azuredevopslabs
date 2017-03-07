@@ -16,7 +16,7 @@ Many developers still rely on traditional or live debugging techniques. These ar
 
 IntelliTrace expands this traditional debugging experience by recording specific events and data at these points in time. This lets you see what happened in your application without restarting it, especially if you step past where the bug is. IntelliTrace enables you to seek to a large number of execution points—that occurred in the past—and drill into any of them by comparing variables, call stacks, etc. This makes it much easier to pinpoint the causes of issues without having to restart the application in an attempt to reproduce the problem. IntelliTrace automatically collects various events in your application (e.g. ASP.NET, ADO.NET, etc), which enables you to view the historical state of the application at those points in time.
 
-### Pre-requisites ###
+## Pre-requisites ##
 
 In order to complete this lab you will need the Visual Studio 2017 virtual machine provided by Microsoft. For more information on acquiring and using this virtual machine, please see [this blog post](http://aka.ms/almvm).
 

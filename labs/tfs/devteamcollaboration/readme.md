@@ -15,7 +15,7 @@ Last updated:3/3/2017
 In this lab, you’ll learn about some of the features in Visual Studio 2017 and Team Foundation Server 2017 that enable collaboration experiences for development teams including Team Rooms, Lightweight Code Comments, and CodeLens.
 
 
-### Pre-requisites ###
+## Pre-requisites ##
 
 In order to complete this lab you will need the Visual Studio 2017 virtual machine provided by Microsoft. For more information on acquiring and using this virtual machine, please see [this blog post](http://aka.ms/almvm).
 

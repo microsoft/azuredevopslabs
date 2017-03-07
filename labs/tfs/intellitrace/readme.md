@@ -14,7 +14,7 @@ Last updated:3/2/2017
 
 IntelliTrace – first released in Visual Studio 2010 – changed the game for debugging by allowing developers to step “back in time” to see how an application got into its current state. By exposing events such as file and registry access, exceptions, and method calls, an IntelliTrace file can provide a detailed view into application behavior. In this lab, you will learn how Visual Studio 2017 extends the capabilities of IntelliTrace beyond the development and testing organizations by providing IT administrators with the ability to capture IntelliTrace files running from production servers. These files can then be analyzed by developers to help diagnose production issues.
 
-### Pre-requisites ###
+## Pre-requisites ##
 
 In order to complete this lab you will need the Visual Studio 2017 virtual machine provided by Microsoft. For more information on acquiring and using this virtual machine, please see [this blog post](http://aka.ms/almvm).
 

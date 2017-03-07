@@ -14,7 +14,7 @@ Last updated:3/2/2017
 
 How often have you built the software that your users asked for, but not necessarily what they wanted? In a world of increasingly complex software projects, it is critical that we can accurately capture requirements from users, which can then be translated into working software. In this lab, you'll learn how the capabilities of Visual Studio 2017 make it possible to both rapidly storyboard your requirements, and - as your software evolves - get rich, actionable feedback from users of your software which can help shape what you deliver.
 
-### Pre-requisites ###
+## Pre-requisites ##
 
 In order to complete this lab you will need the Visual Studio 2017 virtual machine provided by Microsoft. For more information on acquiring and using this virtual machine, please see [this blog post](http://aka.ms/almvm).
 
