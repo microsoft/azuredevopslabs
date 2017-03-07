@@ -10,29 +10,24 @@ Lab version:15.0.26228.0
 
 Last updated:3/2/2017
 
-<a name="Overview"></a>
 ## Overview ##
 
 In this lab, you will learn how to use Microsoft Team Foundation Server 2017 to manage your project’s testing lifecycle. This project will guide you through creating test plans designed efficiently validate your software milestones. You will also create and execute manual tests that can be consistently reproduced over the course of each release.
 
-<a name="Prerequisites"></a>
 ### Prerequisites ###
 
 In order to complete this lab you will need the Visual Studio 2017 virtual machine provided by Microsoft. For more information on acquiring and using this virtual machine, please see [this blog post](http://aka.ms/almvm).
 
-<a name="About the Parts Unlimited Scenario"></a>
 ### About the Parts Unlimited Scenario ###
 
 This set of hands-on-labs uses a fictional company, Parts Unlimited, as a backdrop to the scenarios you are learning about. Parts Unlimited sells automotive products. They are growing rapidly and have embraced Windows Azure to scale their customer-facing web site directly to end-users to allow them to manage their catalog and inventory.
 
 In this set of hands-on labs, you will take part in a number of scenarios that involve the development and testing team at Parts Unlimited. The team, which consists of 8-10 people has decided to use Visual Studio application lifecycle management tools to manage their source code, run their builds, test their web sites, and plan and track the project.
 
-<a name="Exercise1"></a>
 ## Exercise 1: Managing Test Plans, Suites, and Cases ##
 
 In this exercise, you will learn how to create and manage test plans, test suites, and test cases.
 
-<a name="Ex1Task1"></a>
 ### Task 1: Understanding Test Plans, Suites, and Cases ###
 
 1. Log in as **Sachin Raj (VSALM\Sachin)**. All user passwords are **P2ssw0rd**.
@@ -43,7 +38,7 @@ In this exercise, you will learn how to create and manage test plans, test suite
 
    ![](images/000.png)
 
-1. Select **Test | Test Plans** to open the **Test Hub**. The test hub provides a central place for all test planning, execution, and analysis.
+1. Select **Test \| Test Plans** to open the **Test Hub**. The test hub provides a central place for all test planning, execution, and analysis.
 
    ![](images/001.png)
 
@@ -73,10 +68,8 @@ In this exercise, you will learn how to create and manage test plans, test suite
 
 1. As expected, the user story is present in the **Related Work** section. It really is easy to navigate through any kind of work item and asset to understand the relationships and dependencies present in a given project. You can also see that there are two separate test cases in use to verify the behavior of this bug, which are the test cases we saw in the panel earlier. Press **Esc** to close the bug. Press **Esc** again to close the test case and return to the test suite view.
 
-<a name="![](images/008.png)"></a>
-### ![](images/008.png) ###
+    ![](images/008.png) ###
 
-<a name="Ex1Task2"></a>
 ### Task 2: Managing Tests ###
 
 1. Sometimes a set of test cases should be run in a specific order to maximize efficiency. Click **Order tests** to specify the order these test cases should be run.
@@ -131,7 +124,6 @@ In this exercise, you will learn how to create and manage test plans, test suite
 
     ![](images/021.png)
 
-<a name="Ex1Task3"></a>
 ### Task 3: Authoring Tests ###
 
 1. Expand the dropdown next to the **v2.1** test plan and select **New static suite.** A **static suite** of test cases is a suite where the cases have been manually assigned. You can also create suites based on common requirements (**requirement-based suite**) or a query of test cases and/or work items (**query-based suite**).
@@ -154,7 +146,7 @@ In this exercise, you will learn how to create and manage test plans, test suite
 
    ![](images/026.png)
 
-1. While you can create test cases one at a time, it’s sometimes easier to use a grid layout to quickly add many test cases. In the test cases panel, select **New | New test case using grid**.
+1. While you can create test cases one at a time, it’s sometimes easier to use a grid layout to quickly add many test cases. In the test cases panel, select **New \| New test case using grid**.
 
    ![](images/027.png)
 
@@ -180,12 +172,10 @@ In this exercise, you will learn how to create and manage test plans, test suite
 
 1. Press **Esc** to close the dialog.
 
-<a name="Exercise2"></a>
 ## Exercise 2: Authoring, Running, and Analyzing Manual Tests ##
 
 In this exercise, you will learn how to create a manual test plan and populate it with steps. The plan can later be run to confirm the expected behavior of your software. In this lab, we’re going to focus on creating a new manual test case and running it.
 
-<a name="Ex2Task1"></a>
 ### Task 1: Installing the Test & Feedback Extension ###
 
 1. Install **Google Chrome** from [http://google.com/chrome](http://google.com/chrome). The rest of this exercise will use Chrome as its browser.
@@ -220,10 +210,8 @@ In this exercise, you will learn how to create a manual test plan and populate i
 
 1. After connecting to TFS, you will need to select the team you want these efforts associated with. Select the **PartsUnlimitedCollection** and select the **PartsUnlimited Team** at the end of the chain. Click **Save** to continue.
 
-<a name="![](images/039.png)"></a>
-### ![](images/039.png) ###
+    ![](images/039.png) ###
 
-<a name="Ex2Task2"></a>
 ### Task 2: Authoring a Manual Test Plan ###
 
 1. In Chrome, navigate to [http://vsalm:8080/tfs](http://vsalm:8080/tfs).
@@ -232,7 +220,7 @@ In this exercise, you will learn how to create a manual test plan and populate i
 
    ![](images/040.png)
 
-1. Select **Test | Test Plans**.
+1. Select **Test \| Test Plans**.
 
    ![](images/041.png)
 
@@ -244,7 +232,7 @@ In this exercise, you will learn how to create a manual test plan and populate i
 
    ![](images/043.png)
 
-1. From the **Tests** tab, select **New | New test case** to create a new test case.
+1. From the **Tests** tab, select **New \| New test case** to create a new test case.
 
    ![](images/044.png)
 
@@ -302,10 +290,8 @@ In this exercise, you will learn how to create a manual test plan and populate i
 
 1. Click **Save & Close** to save the test case.
 
-<a name="![](images/049.png)"></a>
-### ![](images/049.png) ###
+    ![](images/049.png) ###
 
-<a name="Ex2Task3"></a>
 ### Task 3: Running a Manual Test Plan ###
 
 1. In this task, you will learn how to run the manual test plan that we created earlier.
@@ -374,7 +360,7 @@ In this exercise, you will learn how to create a manual test plan and populate i
 
    ![](images/064.png)
 
-1. The last steps are to log out via **Profile | Log off** and to close the browser window.
+1. The last steps are to log out via **Profile \| Log off** and to close the browser window.
 
    ![](images/065.png)
 
@@ -412,7 +398,6 @@ In this exercise, you will learn how to create a manual test plan and populate i
 
 1. Close the test browser windows.
 
-<a name="Ex2Task4"></a>
 ### Task 4: Analyzing Manual Test Results ###
 
 1. In this task, you will learn how to review the results of a manual test run.
@@ -441,7 +426,6 @@ In this exercise, you will learn how to create a manual test plan and populate i
 
     ![](images/079.png)
 
-<a name="Ex2Task5"></a>
 ### Task 5: Creating Shared Steps ###
 
 1. In this task, you will learn how to create shared steps. A shared step combines multiple steps that are commonly performed in sequence into a single logical step, which can be shared across tests. If the process defined by the shared steps ever changes in the future, you can update the shared step in one place and it will be reflected in all tests that reference it.

@@ -10,20 +10,16 @@ Lab version:15.0.26228.0
 
 Last updated:3/3/2017
 
-<a name="Overview"></a>
 ## Overview ##
 
 [EditorConfig](http://editorconfig.org/) is an open source file format that helps developers configure and enforce formatting and code style conventions to achieve consistent, more readable codebases. EditorConfig files are easily checked into source control and are applied at repository and project levels. EditorConfig conventions override their equivalents in your personal settings, such that the conventions of the codebase take precedence over the individual developer. The simplicity and universality of EditorConfig make it an attractive choice for team-based code style settings in Visual Studio 2017.
 
-<a name="Prerequisites"></a>
-### Prerequisites ###
+## Pre-requisites ##
 
 In order to complete this lab you will need the Visual Studio 2017 virtual machine provided by Microsoft. For more information on acquiring and using this virtual machine, please see [this blog post](http://aka.ms/almvm).
 
-<a name="Exercise1"></a>
 ## Exercise 1: Working with EditorConfig ##
 
-<a name="Ex1Task1"></a>
 ### Task 1: Creating an EditorConfig file ###
 
 1. Log in as **Sachin Raj (VSALM\Sachin)**. All user passwords are **P2ssw0rd**.
@@ -34,7 +30,7 @@ In order to complete this lab you will need the Visual Studio 2017 virtual machi
 
    ![](images/000.png)
 
-1. **EditorConfig** files are just ordinary text files that can be added to the project and managed through source control. In **Solution Explorer**, right-click **src** and select **Add | New Item**.
+1. **EditorConfig** files are just ordinary text files that can be added to the project and managed through source control. In **Solution Explorer**, right-click **src** and select **Add \| New Item**.
 
    ![](images/001.png)
 
@@ -68,13 +64,13 @@ In order to complete this lab you will need the Visual Studio 2017 virtual machi
 
    ![](images/004.png)
 
-1. Press **Ctrl+K** followed by **Ctrl+D**. This is a shortcut that will format the document according to the configured styles. Note that you could alternatively do this from the menu via **Edit | Advanced | Format Document**.
+1. Press **Ctrl+K** followed by **Ctrl+D**. This is a shortcut that will format the document according to the configured styles. Note that you could alternatively do this from the menu via **Edit \| Advanced \| Format Document**.
 
 1. Count the indentation now used before the attribute. It should be only two spaces.
 
    ![](images/005.png)
 
-1. Let’s suppose that the team has decided that the **Controllers** directory needs some special settings for C# code. To help enforce this, you can add an **.editorconfig** file to the folder. In **Solution Explorer**, right-click the **Controllers** folder and select **Add | New Item**.
+1. Let’s suppose that the team has decided that the **Controllers** directory needs some special settings for C# code. To help enforce this, you can add an **.editorconfig** file to the folder. In **Solution Explorer**, right-click the **Controllers** folder and select **Add \| New Item**.
 
    ![](images/006.png)
 
@@ -109,7 +105,6 @@ In order to complete this lab you will need the Visual Studio 2017 virtual machi
 
 1. Apply formatting via **Ctrl+K, Ctrl+D** and confirm the extra whitespace has been removed.
 
-<a name="Ex1Task2"></a>
 ### Task 2: EditorConfig extensions for .NET code style ###
 
 1. In addition to some native EditorConfig properties, Visual Studio extends the standard to support many key elements from **.NET Code Style**. For example, the setting csharp_new_line_before_open_brace can enforce whether braces whether or not braces are put on their own lines. Add the following line to **.editorconfig** to change the default behavior such that braces are always appended to the end of the line before them.

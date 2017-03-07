@@ -10,29 +10,16 @@ Lab version:15.0.26228.0
 
 Last updated:3/3/2017
 
-<a name="Overview"></a>
 ## Overview ##
 
 This lab is all about those "fit-and-finish" scenarios in Visual Studio Team Foundation Server that will make developers more productive as they write code and collaborate with other team members. You'll learn about integrated code reviews; the "My Work" experience for managing your active tasks; and once you're "in the zone", Visual Studio will now help you stay focused on the task at hand, no matter how much you're randomized, with a suspend/resume experience. You'll also learn how to work offline seamlessly, how the new merging experience works, and how you can more easily find work items.
 
-<a name="Prerequisites"></a>
-### Prerequisites ###
+### Pre-requisites ###
 
 In order to complete this lab you will need the Visual Studio 2017 virtual machine provided by Microsoft. For more information on acquiring and using this virtual machine, please see [this blog post](http://aka.ms/almvm).
 
-<a name="About the Fabrikam Fiber Scenario"></a>
-### About the Fabrikam Fiber Scenario ###
-
-This set of hands-on-labs uses a fictional company, Fabrikam Fiber, as a backdrop to the scenarios you are learning about. Fabrikam Fiber provides cable television and related services to the United States. They are growing rapidly and have embraced Windows Azure to scale their customer-facing web site directly to end-users to allow them to self-service tickets and track technicians. They also use an on-premises ASP.NET MVC application for their customer service representatives to administer customer orders.
-
-In this set of hands-on labs, you will take part in a number of scenarios that involve the development and testing team at Fabrikam Fiber. The team, which consists of 8-10 people has decided to use Visual Studio application lifecycle management tools to manage their source code, run their builds, test their web sites, and plan and track the project.
-
-Estimated time to complete this lab: **60 minutes**.
-
-<a name="Exercise1"></a>
 ## Exercise 1: Team Explorer Overview ##
 
-<a name="Ex1Task1"></a>
 ### Task 1: Team Explorer Overview ###
 
 In this exercise, you will see a high-level view of the changes made to Team Explorer in this release and learn how to navigate the functionality that is made available there. If you are new to Team Foundation Server, you can think of Team Explorer as the primary way in which a Visual Studio user accesses Team Foundation Server functionality.
@@ -61,13 +48,13 @@ In this exercise, you will see a high-level view of the changes made to Team Exp
 
 1. Click **Source Control Explorer**. This provides a view into everything stored in source control, as well as its local status.
 
-    ![](images/004.png)
+   ![](images/004.png)
 
    ![](images/005.png)
 
 1. Click **Settings** to view the team project and team project collection options.
 
-    ![](images/006.png)
+   ![](images/006.png)
 
    ![](images/007.png)
 
@@ -75,13 +62,12 @@ In this exercise, you will see a high-level view of the changes made to Team Exp
 
 1. Click **Builds** to manage build definitions and view build history.
 
-    ![](images/008.png)
+   ![](images/008.png)
 
    ![](images/009.png)
 
 1. We will look at the new **My Work** functionality in the remaining exercises.
 
-<a name="Ex1Task2"></a>
 ### Task 2: My Work ###
 
 1. In this exercise, you will learn about the new My Work experience for managing your active tasks.
@@ -102,11 +88,11 @@ In this exercise, you will see a high-level view of the changes made to Team Exp
 
 1. Click **Edit Query**.
 
-    ![](images/013.png)
+   ![](images/013.png)
 
-    ![](images/014.png)
+   ![](images/014.png)
 
-    > **Note:** The types of work items offered and whether or not they fit into the "My Work" concept is dependent upon the process template. In the Scrum process template, this includes tasks.
+   > **Note:** The types of work items offered and whether or not they fit into the "My Work" concept is dependent upon the process template. In the Scrum process template, this includes tasks.
 
 1. **Close** the query window without saving changes.
 
@@ -114,10 +100,8 @@ In this exercise, you will see a high-level view of the changes made to Team Exp
 
     ![](images/015.png)
 
-<a name="![](images/016.png)"></a>
-### ![](images/016.png) ###
+    ![](images/016.png) 
 
-<a name="Ex1Task3"></a>
 ### Task 3: Local Workspaces ###
 
 1. In this exercise, you will learn about local workspaces and how they improve the offline development experience.
@@ -188,7 +172,7 @@ In this exercise, you will see a high-level view of the changes made to Team Exp
 
    ![](images/029.png)
 
-1. In the **Explorer** window, right-click **Site.css** and select **Open With | Notepad** from the context menu.
+1. In the **Explorer** window, right-click **Site.css** and select **Open With \| Notepad** from the context menu.
 
 1. In Notepad, change the '**body**' style color to '**red**'.
 
@@ -196,10 +180,8 @@ In this exercise, you will see a high-level view of the changes made to Team Exp
 
 1. In **Notepad**, save and close **Site.css** and return to **Solution Explorer**. Note that Visual Studio detected the change to the file and that the file was not read-only as it would have been in the case of a server-based workspace.
 
-<a name="![](images/031.png)"></a>
-### ![](images/031.png) ###
+   ![](images/031.png) 
 
-<a name="Ex1Task4"></a>
 ### Task 4: Pending Changes ###
 
 1. Click **Home** in **Team Explorer**, then click **Pending Changes**.
@@ -234,10 +216,8 @@ In this exercise, you will see a high-level view of the changes made to Team Exp
 
 1. Return to **Visual Studio** and then click the **refresh** button in the **Team Explorer - Pending Changes** window. We should now be working in a connected state again with the **Check In** button enabled once again. **Do not check in your changes yet**.
 
-<a name="![](images/039.png)"></a>
-### ![](images/039.png) ###
+   ![](images/039.png)
 
-<a name="Ex1Task5"></a>
 ### Task 5: Suspend and Resume ###
 
 1. In this exercise, you will learn about the suspend and resume functionality for work items and the integrated code reviews.
@@ -252,7 +232,7 @@ In this exercise, you will see a high-level view of the changes made to Team Exp
 
    ![](images/041.png)
 
-1. Open the **Immediate** window from **Debug | Windows | Immediate**.
+1. Open the **Immediate** window from **Debug \| Windows\| Immediate**.
 
 1. Now imagine that your boss asks you to stop working on the current task, and work on a high-priority bug instead. We currently have a lot of time invested in getting Visual Studio debugging tools in place, and we would like to be able to return to this current context after the bug fix is complete.
 
@@ -266,9 +246,9 @@ In this exercise, you will see a high-level view of the changes made to Team Exp
 
    ![](images/043.png)
 
-1. Close all document windows by selecting **Window | Close All Documents** from the main menu.
+1. Close all document windows by selecting **Window \| Close All Documents** from the main menu.
 
-1. Reset to the default window layout by selecting **Window | Reset Window Layout** from the main menu. Click **Yes** when asked to confirm the action.
+1. Reset to the default window layout by selecting **Window \| Reset Window Layout** from the main menu. Click **Yes** when asked to confirm the action.
 
    ![](images/044.png)
 
@@ -282,7 +262,7 @@ In this exercise, you will see a high-level view of the changes made to Team Exp
 
     > **Note:** This quick search functionality searches the team project Title, Description, and Repro Steps fields by default for the keyword provided. You can also click the drop-down arrow to show your search history, and to add search parameters for metadata such as work item type, or whom the work item is assigned to.
 
-1. **![](images/047.png)**
+    ![](images/047.png)
 
 1. **Double-click** the bug titled "**Customers with Canadian addresses not displaying properly"**.
 
@@ -292,7 +272,7 @@ In this exercise, you will see a high-level view of the changes made to Team Exp
 
    ![](images/049.png)
 
-1. Imagine that other team members are tackling these child tasks already, but that we know of another problem related to the parent bug that also needs to be fixed. Select **Add link | New item** to add a new task.
+1. Imagine that other team members are tackling these child tasks already, but that we know of another problem related to the parent bug that also needs to be fixed. Select **Add link \| New item** to add a new task.
 
    ![](images/050.png)
 
@@ -328,7 +308,6 @@ In this exercise, you will see a high-level view of the changes made to Team Exp
 
 1. Press **Ctrl+S** to save the changes to the file.
 
-<a name="Ex1Task6"></a>
 ### Task 6: Code Reviews ###
 
 1. Now that the fix has been made, let's ask Clemri to perform a code review on the changes to make sure things look correct. In **Team Explorer - My Work**, click the **Request Review** link.
@@ -367,7 +346,7 @@ In this exercise, you will see a high-level view of the changes made to Team Exp
 
 1. In the Compare Files toolbar, select the **compare mode** drop down button to view the various display modes that the diff viewer can use. Try out a few of the different modes.
 
-    > **Note:** If the Compare Files toolbar is not open, open it from **View | Toolbars | Compare Files** from the main menu in Visual Studio.
+    > **Note:** If the Compare Files toolbar is not open, open it from **View \| Toolbars \| Compare Files** from the main menu in Visual Studio.
 
    ![](images/066.png)
 
@@ -409,7 +388,7 @@ In this exercise, you will see a high-level view of the changes made to Team Exp
 
    ![](images/075.png)
 
-1. For this scenario, let's say that we are done with the code review process. Select **Close Review | Complete**.
+1. For this scenario, let's say that we are done with the code review process. Select **Close Review \| Complete**.
 
    ![](images/076.png)
 
@@ -425,10 +404,8 @@ In this exercise, you will see a high-level view of the changes made to Team Exp
 
 1. After the shelveset is opened and the task context is restored, you will notice that the document windows and tools windows, as well as their positions, are restored to the state that we left them in when we suspended this task. Although you won't notice this in a virtual machine, had you been using multiple monitors you would have also noticed that all of the tool windows would be opened on their respective monitors. This capability allows you to quickly get in and out of tasks to help you deal with the frequent interruptions that many of us face on a daily basis.
 
-<a name="![](images/080.png)"></a>
-### ![](images/080.png) ###
+   ![](images/080.png)
 
-<a name="Ex1Task7"></a>
 ### Task 7: Merging ###
 
 1. You should still be logged in as **Sachin** from the previous exercise.

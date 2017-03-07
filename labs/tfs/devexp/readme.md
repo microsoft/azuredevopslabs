@@ -10,7 +10,6 @@ Lab version:15.0.26228.0
 
 Last updated:3/7/2017
 
-<a name="Overview"></a>
 ## Overview ##
 
 Visual Studio 2017 introduces a wealth of features and enhancements designed to significantly improve the productivity of developers. Many of these improvements focus on saving time and effort on everyday tasks, such as code navigation, IntelliSense, refactoring, code fixes, and debugging. In this lab, we'll take a quick tour of some of the many benefits.
@@ -19,15 +18,12 @@ There are also a wealth of new features and enhancements in Visual Studio 2017 c
 
 For a more exhaustive list of what's new in Visual Studio 2017, please check out the [release notes](https://www.visualstudio.com/en-us/news/releasenotes/vs2017-relnotes).
 
-<a name="Prerequisites"></a>
-### Prerequisites ###
+## Pre-requisites ##
 
 In order to complete this lab you will need the Visual Studio 2017 virtual machine provided by Microsoft. For more information on acquiring and using this virtual machine, please see [this blog post](http://aka.ms/almvm).
 
-<a name="Exercise1"></a>
 ## Exercise 1: Developer experience enhancements in Visual Studio 2017 ##
 
-<a name="Ex1Task1"></a>
 ### Task 1: Working with the new modular installer ###
 
 1. Log in as **Sachin Raj (VSALM\Sachin)**. All user passwords are **P2ssw0rd**.
@@ -50,7 +46,7 @@ In order to complete this lab you will need the Visual Studio 2017 virtual machi
 
    ![](images/003.png)
 
-1. The new lightweight and componentized installer breaks down Visual Studio into independent workloads that lets you install just what you need, helping you get going much faster. Some workloads have already been installed on the VM, such as **.NET desktop development** and **Web development**. Selecting these workloads ensured that the installer would set up everything needed to perform the task associated with those types of development, which you can view in the **Summary | Individual components** section on the right side.
+1. The new lightweight and componentized installer breaks down Visual Studio into independent workloads that lets you install just what you need, helping you get going much faster. Some workloads have already been installed on the VM, such as **.NET desktop development** and **Web development**. Selecting these workloads ensured that the installer would set up everything needed to perform the task associated with those types of development, which you can view in the **Summary \| Individual components** section on the right side.
 
    ![](images/004.png)
 
@@ -64,7 +60,6 @@ In order to complete this lab you will need the Visual Studio 2017 virtual machi
 
 1. Close all installer windows.
 
-<a name="Ex1Task2"></a>
 ### Task 2: Boosting your productivity ###
 
 1. Launch **Visual Studio** from the taskbar.

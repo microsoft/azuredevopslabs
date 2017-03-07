@@ -10,29 +10,20 @@ Lab version:15.0.26228.0
 
 Last updated:3/3/2017
 
-<a name="Overview"></a>
 ## Overview ##
 
 In this lab, you will learn how to use the new Team Foundation Build in order to build, test, and deploy your applications. This new scriptable build system is both web-based and cross-platform, and Microsoft recommends using it instead of the XAML build system whenever feasible. Although we won’t demonstrate all of the cross-platform possibilities in this lab, it is important to point out that you can also build for iOS, Android, Java (using Ant, Maven, or Gradle), and Linux.
 
-<a name="Prerequisites"></a>
-### Prerequisites ###
+## Prerequisites ##
 
 In order to complete this lab you will need the Visual Studio 2017 virtual machine provided by Microsoft. For more information on acquiring and using this virtual machine, please see [this blog post](http://aka.ms/almvm).
 
-<a name="About the Fabrikam Fiber Scenario"></a>
-### About the Fabrikam Fiber Scenario ###
 
-This set of hands-on-labs uses a fictional company, Fabrikam Fiber, as a backdrop to the scenarios you are learning about. Fabrikam Fiber provides cable television and related services to the United States. They are growing rapidly and have embraced Windows Azure to scale their customer-facing web site directly to end-users to allow them to self-service tickets and track technicians. They also use an on-premises ASP.NET MVC application for their customer service representatives to administer customer orders.
-
-In this set of hands-on labs, you will take part in a number of scenarios that involve the development and testing team at Fabrikam Fiber. The team, which consists of 8-10 people has decided to use Visual Studio application lifecycle management tools to manage their source code, run their builds, test their web sites, and plan and track the project.
-
-<a name="Exercise1"></a>
 ## Exercise 1: Build Agent Pools and Queues ##
 
 In this exercise, you will learn how to create and configure build agent pools and queues in order to support the new agents in Team Foundation Build 2017 (formerly referred to as Build vNext). This new scriptable build system is web-based and cross-platform, and is recommended for all new and existing builds going forward.
 
-<a name="Ex1Task1"></a>
+
 ### Task 1: Touring the Build Hub in TFS Web Access ###
 
 1. Log in as **Deniz Ercoskun (VSALM\Deniz)**. All user passwords are **P2ssw0rd**.
@@ -53,7 +44,6 @@ In this exercise, you will learn how to create and configure build agent pools a
 
 1. We’ll return to this view shortly once we are ready to translate the existing XAML build to the new system, but first we need to configure the infrastructure necessary for the new build system.
 
-<a name="Ex1Task2"></a>
 ### Task 2: Creating an Agent Pool ###
 
 1. The first thing that we need to do is to setup an agent pool for the project. This pool can contain both Windows and cross-platform agents.
@@ -80,7 +70,6 @@ In this exercise, you will learn how to create and configure build agent pools a
 
 1. Close the pool management tab. This should leave you with a single queue management tab.
 
-<a name="Ex1Task3"></a>
 ### Task 3: Creating a Build Queue ###
 
 1. Before we continue with the installation of an agent, let’s also ensure that we set up our team project collection with a build **queue** that points to the default agent pool. Since queues are scoped to your team project collection, you can share them across build definitions and team projects.
@@ -111,10 +100,8 @@ In this exercise, you will learn how to create and configure build agent pools a
 
 1. Select the **Build and Release** tab. From here, you can specify the default and maximum settings for how long the system retains completed builds. The default retention policy is set at 10 days, with the maximum at 30 days. This means that regardless of what is set on the individual build definition all builds that have not been marked to "Retain indefinitely" will be deleted 30 days after they complete.
 
-<a name="![](images/014.png)"></a>
-### ![](images/014.png) ###
+   ![](images/014.png) 
 
-<a name="Ex1Task4"></a>
 ### Task 4: Installing and Configuring an Agent ###
 
 1. Wait for the agent download to finish if it has not already. Unzip it to **c:\agent** when complete.
@@ -159,15 +146,13 @@ In this exercise, you will learn how to create and configure build agent pools a
 
 1. Select the **Capabilities** tab to take note of the System Capabilities list shown for the agent. System capabilities are name/value pairs that you can use to ensure that your build definition is only run by build agents that meet specified criteria. Environment variables automatically appear in the list. Some additional capabilities (such as .NET Frameworks) are also added automatically. You can also add your own capabilities to the list based on additional requirements for your builds. Later, when a build is queued, the system sends the job only to agents that have the capabilities demanded by the build definition.
 
-<a name="![](images/018.png)"></a>
-## ![](images/018.png) ##
+   ![](images/018.png) 
 
-<a name="Exercise2"></a>
+
 ## Exercise 2: Build Definitions ##
 
 In this exercise, you will learn how to create a basic build definition from one of the provided templates and then queue the build for execution.
 
-<a name="Ex2Task1"></a>
 ### Task 1: Creating a Basic Build Definition from Template ###
 
 1. Now it is time to create a new build definition for the Fabrikam Fiber team. Navigate to the web team’s section of the portal using the project dropdown.
@@ -278,10 +263,8 @@ In this exercise, you will learn how to create a basic build definition from one
 
 1. Click **Save**. Name the new build definition “**Fabrikam Development Build**” and click **OK**.
 
-<a name="![](images/043.png)"></a>
-### ![](images/043.png) ###
+   ![](images/043.png) 
 
-<a name="Ex2Task2"></a>
 ### Task 2: Queuing and Executing a Build ###
 
 1. Click **Queue new build**.
@@ -294,15 +277,14 @@ In this exercise, you will learn how to create a basic build definition from one
 
 1. Note that once the build starts, you can monitor the real-time build status in the live console view. As the Test step proceeds, you will see some red error text as there are some tests in this project that are designed to fail for demonstration purposes. At the end of the build you should see the message in orange displaying “Build Partially succeeded”. Note that you may need to refresh the browser if the build hasn’t started yet.
 
-<a name="![](images/046.png)"></a>
-## ![](images/046.png) ##
+ ![](images/046.png) 
 
-<a name="Exercise3"></a>
+
 ## Exercise 3: Continuous Integration and Deployment ##
 
 In this exercise, you will learn how to modify a build to support continuous integration. In addition, you will also learn about some of the deployment options available.
 
-<a name="Ex3Task1"></a>
+
 ### Task 1: Cloning a Build Definition ###
 
 1. Now let’s create a similar build definition, but this time include a step to deploy the Fabrikam Fiber website. Imagine that this build definition will be part of a continuous integration scenario.
@@ -315,7 +297,7 @@ In this exercise, you will learn how to modify a build to support continuous int
 
     ![](images/048.png)
 
-<a name="Ex3Task2"></a>
+
 ### Task 2: Adding a Deployment Step and Defining Machine Group ###
 
 1. Click Add build step.
@@ -343,10 +325,8 @@ In this exercise, you will learn how to modify a build to support continuous int
 
 1. Select the **Clean Target** option under **Advanced Options** so that the copy location will be cleaned before each deployment.
 
-<a name="![](images/052.png)"></a>
-### ![](images/052.png) ###
+   ![](images/052.png) 
 
-<a name="Ex3Task3"></a>
 ### Task 3: Configuring Continuous Integration ###
 
 1. Now let’s get the continuous integration functionality hooked up. Select the **Triggers** tab and check the **Continuous integration** option.
@@ -365,10 +345,8 @@ In this exercise, you will learn how to modify a build to support continuous int
 
 1. Click **Save**. Name the new build “**Fabrikam Development CI Build**” and then click **OK**.
 
-<a name="![](images/056.png)"></a>
-### ![](images/056.png) ###
+   ![](images/056.png) 
 
-<a name="Ex3Task4"></a>
 ### Task 4: Triggering a Continuous Integration Build ###
 
 1. In a new browser window or tab, navigate to the **Code** tab.

@@ -10,29 +10,18 @@ Lab version:15.0.26228.0
 
 Last updated:3/2/2017
 
-<a name="Overview"></a>
 ## Overview ##
 
 In this lab, you’ll learn about Git support in Team Foundation Server 2017 and Visual Studio 2017. Git is a distributed version control system. Git repositories can live locally (such as on a developer’s machine) and can now be hosted by Team Foundation Server. You will learn how to establish a local Git repository, which can easily be synchronized with a centralized Git repository in Team Foundation Server. In addition, you will learn about Git branching and merging support.
 
-<a name="Prerequisites"></a>
-### Prerequisites ###
+## Pre-requisites ##
 
 In order to complete this lab you will need the Visual Studio 2017 virtual machine provided by Microsoft. For more information on acquiring and using this virtual machine, please see [this blog post](http://aka.ms/almvm).
 
-<a name="About the Fabrikam Fiber Scenario"></a>
-### About the Fabrikam Fiber Scenario ###
-
-This set of hands-on-labs uses a fictional company, Fabrikam Fiber, as a backdrop to the scenarios you are learning about. Fabrikam Fiber provides cable television and related services to the United States. They are growing rapidly and have embraced Windows Azure to scale their customer-facing web site directly to end-users to allow them to self-service tickets and track technicians. They also use an on-premises ASP.NET MVC application for their customer service representatives to administer customer orders.
-
-In this set of hands-on labs, you will take part in a number of scenarios that involve the development and testing team at Fabrikam Fiber. The team, which consists of 8-10 people has decided to use Visual Studio application lifecycle management tools to manage their source code, run their builds, test their web sites, and plan and track the project.
-
-<a name="Exercise1"></a>
 ## Exercise 1: Getting Started with Git ##
 
 In this exercise, you will learn how to create, clone, and push commits to a Git repository with Team Foundation Server.
 
-<a name="Ex1Task1"></a>
 ### Task 1: Creating a Git Repository ###
 
 1. Log in as **Sachin Raj (VSALM\Sachin)**. All user passwords are **P2ssw0rd**.
@@ -43,7 +32,7 @@ In this exercise, you will learn how to create, clone, and push commits to a Git
 
 1. There are a few reasons why Fabrikam Fiber might want to use Git as their source control option within Team Foundation Server. One reason could be that they are collaborating with developers using a tool such as Xcode, which supports the Git protocol natively. Another reason could be that they have developers working offline (such as during a commute) who want to commit code locally when they are offline and check this code into Team Foundation Server when they get into the office. Microsoft now offers teams the ability to utilize Git without sacrificing the integrated application lifecycle management capabilities offered by Team Foundation Server. Visual Studio 2017 also provides developers with a great experience for working with any Git repository – whether it’s hosted by Team Foundation Server, a local repository, or another Git provider.
 
-1. From the **Home** dropdown menu, select **Projects and My Teams | New Team Project**.
+1. From the **Home** dropdown menu, select **Projects and My Teams \| New Team Project**.
 
    ![](images/001.png)
 
@@ -61,7 +50,6 @@ In this exercise, you will learn how to create, clone, and push commits to a Git
 
 1. After the new Git team project has been created, click **Close** to return to Visual Studio.
 
-<a name="Ex1Task2"></a>
 ### Task 2: Clone Git Repository ###
 
 1. In **Team Explorer**, click **Clone this repository**.
@@ -74,10 +62,8 @@ In this exercise, you will learn how to create, clone, and push commits to a Git
 
 1. Click the **Manage Connections** button and double-click **FabrikamCommunity** to connect to the new team project.
 
-<a name="![](images/007.png)"></a>
-### ![](images/007.png) ###
+   ![](images/007.png)
 
-<a name="Ex1Task3"></a>
 ### Task 3: Commit Code and Link to Work Item ###
 
 1. In **Team Explorer**, click the **Home** button, followed by **Settings**.
@@ -96,7 +82,7 @@ In this exercise, you will learn how to create, clone, and push commits to a Git
 
    ![](images/011.png)
 
-1. Create a new work item for the product backlog by selecting **Team | New Work Item | Product Backlog Item** from the main menu. This will launch the **New Product Backlog Item** form in TFS via your browser.
+1. Create a new work item for the product backlog by selecting **Team \| New Work Item \| Product Backlog Item** from the main menu. This will launch the **New Product Backlog Item** form in TFS via your browser.
 
 1. Enter a title of **“Create new web site”** and then click the **Save** button. Take note of the **ID** once the work item is saved.
 
@@ -106,7 +92,7 @@ In this exercise, you will learn how to create, clone, and push commits to a Git
 
    ![](images/013.png)
 
-1. In the **New Project** window, select the **Visual C# | Web | ASP.NET Web Application** template and click **OK**.
+1. In the **New Project** window, select the **Visual C# \| Web \| ASP.NET Web Application** template and click **OK**.
 
    ![](images/014.png)
 
@@ -140,10 +126,8 @@ In this exercise, you will learn how to create, clone, and push commits to a Git
 
 1. In **Team Explorer – Changes**, enter a commit message and then click **Commit All**. **Save** changes to files when prompted.
 
-<a name="![](images/022.png)"></a>
-### ![](images/022.png) ###
+   ![](images/022.png)
 
-<a name="Ex1Task4"></a>
 ### Task 4: Synchronize Commits with Server ###
 
 1. Navigate to the commits view by clicking **Sync**.
@@ -186,15 +170,12 @@ In this exercise, you will learn how to create, clone, and push commits to a Git
 
 1. Although this version happens to be the latest, you would be able to explore or download the version at this particular commit by clicking one of the links.
 
-<a name="![](images/032.png)"></a>
-## ![](images/032.png) ##
+   ![](images/032.png)
 
-<a name="Exercise2"></a>
 ## Exercise 2: Git Branching and Merging ##
 
 In this exercise, you will learn about Git branching and merging support in Visual Studio. In general, branching is often used to help switch development contexts and to isolate risk. Git branching is no different in that regard. Creating a Git branch is a lightweight (and therefore fast) operation, as you are simply creating a new reference to an existing commit. This is very different from Team Foundation Version Control (TFVC) branching where the entire source tree needs to be duplicated server-side. We will also take a quick look at the merging support for Git projects.
 
-<a name="Ex2Task1"></a>
 ### Task 1: Branching ###
 
 1. Return to Visual Studio and open **Team Explorer – Home**.
@@ -223,7 +204,7 @@ In this exercise, you will learn about Git branching and merging support in Visu
 
    ![](images/038.png)
 
-1. Right-click somewhere in the whitespace of the editor and select **Source Control | Commit**.
+1. Right-click somewhere in the whitespace of the editor and select **Source Control \| Commit**.
 
    ![](images/039.png)
 
@@ -243,13 +224,13 @@ In this exercise, you will learn about Git branching and merging support in Visu
 
 1. You don’t have to publish the branch to the server yet if you want to continue working locally. As you saw in the previous exercise, you can continue to work locally and add additional commits to the new branch. In **Team Explorer – Branches**, **right-click** the **Development** branch and select **View History**.
 
-    ![](images/044.png)
+   ![](images/044.png)
 
    ![](images/045.png)
 
 1. When you are ready, you can delete the branch, merge it back into your master branch, or push it to the server-side repository so that teammates can access it. Let’s go ahead and publish the branch by right-clicking the **Development** branch and selecting the **Push Branch** option.
 
-    ![](images/046.png)
+   ![](images/046.png)
 
    ![](images/047.png)
 
@@ -257,7 +238,7 @@ In this exercise, you will learn about Git branching and merging support in Visu
 
 1. Launch **Visual Studio** from the taskbar.
 
-1. Connect to the **FabrikamCommunity** team project (using the **Manage Connections** button as before, and this time select **Manage Connections | Connect to Team Project**).
+1. Connect to the **FabrikamCommunity** team project (using the **Manage Connections** button as before, and this time select **Manage Connections \| Connect to Team Project**).
 
    ![](images/048.png)
 
@@ -273,7 +254,7 @@ In this exercise, you will learn about Git branching and merging support in Visu
 
    ![](images/051.png)
 
-1. As before, right-click within the whitespace of the code editor and select **Source Control | Commit**.
+1. As before, right-click within the whitespace of the code editor and select **Source Control \| Commit**.
 
 1. In **Team Explorer – Changes**, enter a commit message of “**Deniz version**” and then click **Commit All**. Save changes when prompted. Note that Deniz has committed changes to the master branch.
 
@@ -289,7 +270,6 @@ In this exercise, you will learn about Git branching and merging support in Visu
 
 1. Switch users back to **Sachin** by minimizing the remote desktop session.
 
-<a name="Ex2Task2"></a>
 ### Task 2: Merging ###
 
 1. From Sachin’s perspective, he has so far created a local branch based off the master, made a change to a file, and then published that branch. He would then like to go ahead and merge his **Development** branch back into the **master** branch.
@@ -352,7 +332,7 @@ In this exercise, you will learn about Git branching and merging support in Visu
 
    ![](images/068.png)
 
-1. Select the **Code | History** from the navigation.
+1. Select the **Code \| History** from the navigation.
 
    ![](images/069.png)
 
@@ -362,10 +342,8 @@ In this exercise, you will learn about Git branching and merging support in Visu
 
 1. Select the **Branches** tab to view all branches published to the repository.
 
-<a name="![](images/071.png)"></a>
-### ![](images/071.png) ###
+   ![](images/071.png)
 
-<a name="Ex2Task3"></a>
 ### Task 3: Managing Security and Permissions ###
 
 1. Now let’s take a quick peek at managing security and permissions for Git repositories hosted in Team Foundation Server. Select the **FabrikamCommunity** dropdown and then **Manage Repositories**.
@@ -382,10 +360,8 @@ In this exercise, you will learn about Git branching and merging support in Visu
 
 1. Select the **Master** branch node. Security level settings that affect only the currently selected branch can be made here, providing fine-grained control for your repository if needed.
 
-<a name="![](images/075.png)"></a>
-### ![](images/075.png) ###
+   ![](images/075.png)
 
-<a name="Ex2Task4"></a>
 ### Task 4: Branch Policies ###
 
 1. When you want people on your team to review code in a Git team project, you can use a pull request to review and merge the code. Pull requests enable developers working in topic branches to get feedback on their changes from other developers prior to submitting the code into the master branch. Any developer participating in the review can see the code changes, leave comments in the code, and give a "thumbs up" approval if they're satisfied with those changes.
@@ -422,10 +398,8 @@ In this exercise, you will learn about Git branching and merging support in Visu
 
 1. Click **Save Changes** to update the master branch policies. Close the administration browser tab.
 
-<a name="![](images/083.png)"></a>
-### ![](images/083.png) ###
+   ![](images/083.png)
 
-<a name="Ex2Task5"></a>
 ### Task 5: Code Review and Merge using Pull Requests ###
 
 1. Switch back to the **Deniz** RDP session.
@@ -494,7 +468,7 @@ In this exercise, you will learn about Git branching and merging support in Visu
 
 1. Switch users back to **Sachin** by minimizing the RDP window.
 
-1. In the web portal, navigate to the **FabrikamCommunity** project and select **Code | Pull Requests** view.
+1. In the web portal, navigate to the **FabrikamCommunity** project and select **Code \| Pull Requests** view.
 
    ![](images/099.png)
 
@@ -504,7 +478,7 @@ In this exercise, you will learn about Git branching and merging support in Visu
 
 1. Sachin can now review all of the files and commits associated with the pull request and make a decision. It is also possible for Sachin to have a conversation with Deniz (and perhaps other reviewers) in order to help make the decision, or perhaps even request additional work be performed before the pull request will be approved.
 
-1. Let’s assume that Sachin is ready to approve the request as-is. There are a couple ways to do this. Select **Complete | Auto-complete**.
+1. Let’s assume that Sachin is ready to approve the request as-is. There are a couple ways to do this. Select **Complete \| Auto-complete**.
 
    ![](images/101.png)
 
@@ -520,7 +494,7 @@ In this exercise, you will learn about Git branching and merging support in Visu
 
    ![](images/104.png)
 
-1. Select **Approve | Approve**.
+1. Select **Approve \| Approve**.
 
    ![](images/105.png)
 

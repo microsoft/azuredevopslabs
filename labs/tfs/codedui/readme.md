@@ -2,46 +2,42 @@
 title: UI Automation using Coded UI Tests with Visual Studio Enterprise 2017
 layout: page    
 sidebar: tfs
-permalink: /labs/tfs/liveunittesting/
-folder: /labs/tfs/liveunittesting/
+permalink: /labs/tfs/codedui/
+folder: /labs/tfs/codedui/
 ---
 
 Lab version:15.0.26228.0
 
 Last updated:3/2/2017
 
-<a name="Overview"></a>
 ## Overview ##
 
 Coded UI tests provide a way to create fully automated tests to validate the functionality and behavior of your application's user interface. In this lab, you will gain a basic understanding of coded UI tests by creating a new test and adding validation logic to it.
 
-<a name="Prerequisites"></a>
+
 ### Prerequisites ###
 
 In order to complete this lab you will need the Visual Studio 2017 virtual machine provided by Microsoft. For more information on acquiring and using this virtual machine, please see [this blog post](http://aka.ms/almvm).
 
-<a name="About the Fabrikam Fiber Scenario"></a>
 ### About the Fabrikam Fiber Scenario ###
 
 This set of hands-on-labs uses a fictional company, Fabrikam Fiber, as a backdrop to the scenarios you are learning about. Fabrikam Fiber provides cable television and related services to the United States. They are growing rapidly and have embraced Windows Azure to scale their customer-facing web site directly to end-users to allow them to self-service tickets and track technicians. They also use an on-premises ASP.NET MVC application for their customer service representatives to administer customer orders.
 
 In this set of hands-on labs, you will take part in a number of scenarios that involve the development and testing team at Fabrikam Fiber. The team, which consists of 8-10 people has decided to use Visual Studio application lifecycle management tools to manage their source code, run their builds, test their web sites, and plan and track the project.
 
-<a name="Exercise1"></a>
 ## Exercise 1: Code Generation using Coded UI Test Builder ##
 
 In this exercise, you will learn how to use the Coded UI Test Builder to generate test code for the Fabrikam Fiber web application.
 
-<a name="Ex1Task1"></a>
 ### Task 1: Working with the Coded UI Test Builder ###
 
 1. Log in as **Sachin Raj (VSALM\Sachin)**. All user passwords are **P2ssw0rd**.
 
 1. Launch **Visual Studio** from the taskbar.
 
-1. Select **File | New | Project** to create a new testing project.
+1. Select **File \| New \| Project** to create a new testing project.
 
-1. In the **New Project** window, select the **Coded UI Test Project** template from **Visual C# | Test**, then click **OK** to create the test project.
+1. In the **New Project** window, select the **Coded UI Test Project** template from **Visual C# \| Test**, then click **OK** to create the test project.
 
    ![](images/000.png)
 
@@ -101,9 +97,9 @@ In this exercise, you will learn how to use the Coded UI Test Builder to generat
 
    ![](images/010.png)
 
-1. Select **Build | Build Solution**.
+1. Select **Build \| Build Solution**.
 
-1. Expand the **Test Explorer**. If it's not visible, you can open it from **Test | Windows | Test Explorer**. Click **Run All** to run the test.
+1. Expand the **Test Explorer**. If it's not visible, you can open it from **Test \| Windows \| Test Explorer**. Click **Run All** to run the test.
 
    ![](images/011.png)
 

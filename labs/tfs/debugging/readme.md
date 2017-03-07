@@ -10,24 +10,20 @@ Lab version:15.0.26228.0
 
 Last updated:3/3/2017
 
-<a name="Overview"></a>
 ## Overview ##
 
 Many developers still rely on traditional or live debugging techniques. These are limited in that they only account for your application’s current state with limited data about past events. This forces the developer to either guess what happened based on current state or to attempt to recreate these events by re-running the app. Developers then rely on breakpoints to try to capture some of the errors that might appear because of unknown events, but sometimes even a breakpoint won’t be able to expose the issue.
 
 IntelliTrace expands this traditional debugging experience by recording specific events and data at these points in time. This lets you see what happened in your application without restarting it, especially if you step past where the bug is. IntelliTrace enables you to seek to a large number of execution points—that occurred in the past—and drill into any of them by comparing variables, call stacks, etc. This makes it much easier to pinpoint the causes of issues without having to restart the application in an attempt to reproduce the problem. IntelliTrace automatically collects various events in your application (e.g. ASP.NET, ADO.NET, etc), which enables you to view the historical state of the application at those points in time.
 
-<a name="Prerequisites"></a>
-### Prerequisites ###
+## Pre-requisites ##
 
 In order to complete this lab you will need the Visual Studio 2017 virtual machine provided by Microsoft. For more information on acquiring and using this virtual machine, please see [this blog post](http://aka.ms/almvm).
 
-<a name="Exercise1"></a>
 ## Exercise 1: Debugging with IntelliTrace ##
 
 In this scenario the business owner has asked us to determine why we are seeing a drop in the sales of particular items from the past few days. We know that the last deployment extended the functionality of the search capabilities of this site. With that hunch in place, we’ll start the investigation there.
 
-<a name="Ex1Task1"></a>
 ### Task 1: Using IntelliTrace to collect data from production ###
 
 1. Log in as **Sachin Raj (VSALM\Sachin)**. All user passwords are **P2ssw0rd**.
@@ -74,16 +70,15 @@ In this scenario the business owner has asked us to determine why we are seeing 
     ```
     Stop-IntelliTraceCollection -ApplicationPool PartsUnlimited
     ```
-<a name="Ex1Task2"></a>
 ### Task 2: Historical debugging ###
 
 1. Open **Windows Explorer** and navigate to **C:\LogFileLocation**. Double-click the **iTrace** file to open it in **Visual Studio 2017**. This file contains all of the IntelliTrace recordings from our session.
 
    ![](images/003.png)
 
-1. Since this IntelliTrace session isn’t associated with an active solution, you’ll need to temporarily disable the **Just My Code** feature to get the full experience. From the main menu select **Tools | Options**.
+1. Since this IntelliTrace session isn’t associated with an active solution, you’ll need to temporarily disable the **Just My Code** feature to get the full experience. From the main menu select **Tools \| Options**.
 
-1. In the left tree view, locate **Debugging | General** and uncheck the **Enable Just My Code** option in the right panel. Click **OK** to apply.
+1. In the left tree view, locate **Debugging \| General** and uncheck the **Enable Just My Code** option in the right panel. Click **OK** to apply.
 
    ![](images/004.png)
 
@@ -107,7 +102,7 @@ In this scenario the business owner has asked us to determine why we are seeing 
 
    ![](images/009.png)
 
-1. In order to better visualize the path that led to this exception, right-click the line of code and select **Code Map | Show Call Stack on Code Map**.
+1. In order to better visualize the path that led to this exception, right-click the line of code and select **Code Map \| Show Call Stack on Code Map**.
 
    ![](images/010.png)
 
@@ -117,14 +112,13 @@ In this scenario the business owner has asked us to determine why we are seeing 
 
 1. We can now tell that the issue here is that we’re indexing past the end of the query in our call to **Substring**. This could have been a lot harder to find without IntelliSense.
 
-1. Select **Debugging | Stop Debugging** to end the debug session.
+1. Select **Debugging \| Stop Debugging** to end the debug session.
 
-1. Select **File | Close Solution** to close all files. Do not save any.
+1. Select **File \| Close Solution** to close all files. Do not save any.
 
-<a name="Ex1Task3"></a>
 ### Task 3: IntelliTrace inside Visual Studio 2017 (“F5” IntelliTrace) ###
 
-1. Select **File | Start Page** to open the **Visual Studio Start Page**.
+1. Select **File \| Start Page** to open the **Visual Studio Start Page**.
 
 1. Open the **PartsUnlimited** project.
 
@@ -150,11 +144,11 @@ In this scenario the business owner has asked us to determine why we are seeing 
 
    ![](images/016.png)
 
-1. If so, it will bring us to the same line. At this point you could optionally export an **iTrace** file for this session that you could share with others via **Debug | IntelliTrace | Save IntelliTrace Session**. This makes it very easy to share the exact circumstances under which an issue occurred so that the developer can easily track it down.
+1. If so, it will bring us to the same line. At this point you could optionally export an **iTrace** file for this session that you could share with others via **Debug \| IntelliTrace \| Save IntelliTrace Session**. This makes it very easy to share the exact circumstances under which an issue occurred so that the developer can easily track it down.
 
    ![](images/017.png)
 
-1. Select **Debug | Stop Debugging** to end the debug session.
+1. Select **Debug \| Stop Debugging** to end the debug session.
 
 1. Update the offending line of code by adding **“- 1”** to the end of **query.Length.**
 

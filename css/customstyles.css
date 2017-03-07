@@ -1249,3 +1249,6 @@ span.PageTitle{
     margin-bottom: 28px;
 }
 
+th.text_center{
+    text-align: center;
+}

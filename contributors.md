@@ -8,7 +8,7 @@ comments: true
 <br>
 <br>
 
-The ALM VM update is a massive exercise and takes several weeks from start and finish.  I would like to thank the following indiviudals for their contributions and support, without their expertise and generous time, this could not have been a possibility
+The ALM VM update is a massive exercise and takes several weeks from start and finish.  I would like to thank the following individuals for their contributions and support, without their expertise and generous time, this could not have been a possibility.
 
 <table class ="mainTable" width="100%" cellspacing="0" cellpadding="0" border="0">
     <tr class ="mainTable" >
