@@ -57,7 +57,6 @@ Lab Name</b>
 <tr><td><a href="agile/">Agile Planning and Portfolio Management with Team Foundation Server 2017</a></td></tr>
 <tr><td><a href="branchingandmerging/">Branching and Merging Visualization with Visual Studio Team Foundation Server 2017</a></td></tr>
 <tr><td><a href="storyboarding/">Building the Right Software - Generating Storyboards and Collecting Stakeholder Feedback with Visual Studio 2017</a></td></tr>
-<tr><td><a href="architecturevalidation/">Code Discovery using Live Dependency Validation in Visual Studio Enterprise 2017</a>    <span class="label label-success">New</span></td></tr>
 <tr><td><a href="devteamcollaboration/">Collaboration Experiences for Development Teams using Team Foundation Server 2017</a></td></tr>
 <tr><td><a href="devexp/">Developer experience enhancements in Visual Studio 2017</a>     <span class="label label-success">New</span></td></tr>
 <tr><td><a href="debugging/">Debugging with IntelliTrace using Visual Studio Enterprise 2017</a></td></tr>
@@ -67,7 +66,7 @@ Lab Name</b>
 <tr><td><a href="intellitest/">Generate Unit Tests with IntelliTest using Visual Studio Enterprise 2017</a></td></tr>
 <tr><td><a href="smartword4tfs/">Introduction to the Modern Requirements Suite4TFS & Team Foundation Server 2017</a></td></tr>
 <tr><td><a href="appinsights/">Instrumenting ASP.NET with Application Insights in Visual Studio 2017</a></td></tr>
-<tr><td><a href="liveunittesting/">Live Unit Testing in Visual Studio 2017</a>    <span class="label label-success">New</span></td></tr>
+<tr><td><a href="liveunittesting/">Live Unit Testing and Live Dependency Validation in Visual Studio 2017</a>    <span class="label label-success">New</span></td></tr>
 <tr><td><a href="vsproductivity/">Making Developers More Productive with Visual Studio Team Foundation Server 2017</a></td></tr>
 <tr><td><a href="technicaldebt/">Managing Technical Debt with Team Foundation Server 2017 and SonarQube</a></td></tr>
 <tr><td><a href="packagemanagement/">Package Management in Team Foundation Server 2017</a>    <span class="label label-success">New</span></td></tr>

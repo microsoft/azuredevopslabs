@@ -14,7 +14,7 @@ Technical debt is the set of problems in a development effort that make forward 
 
 > SonarQube is an open source platform for understanding and managing technical debt, it provides different ways to analyze and measure technical quality from project portfolio to method.
 
-### Prerequisites
+## Pre-requisites
 
 1- In order to complete this lab you will need the Visual Studio 2017 virtual machine provided by Microsoft. For more information on acquiring and using this virtual machine, please see [this blog post](http://aka.ms/ALMVM).
 
@@ -23,16 +23,6 @@ Technical debt is the set of problems in a development effort that make forward 
 3- You will need to download and install SonarQube VSTS extension from [VSTS marketplace](https://marketplace.visualstudio.com/items?itemName=SonarSource.sonarqube)
 
 4- Complete 
-
-### Exercises 
-
-This hands-on lab includes the following exercises:
-
-* Install and configure SonarQube Server and Extensions.
-
-* Analyzing Projects with SonarQube Extension for VSTS/TFS.
-
-Estimated time to complete this lab: **45 minutes**.
 
 ## Exercise 1: Install and Configure SonarQube Server and Extensions
 
