@@ -10,29 +10,18 @@ Lab version:15.0.26228.0
 
 Last updated:3/2/2017
 
-<a name="Overview"></a>
 ## Overview ##
 
 IntelliTrace – first released in Visual Studio 2010 – changed the game for debugging by allowing developers to step “back in time” to see how an application got into its current state. By exposing events such as file and registry access, exceptions, and method calls, an IntelliTrace file can provide a detailed view into application behavior. In this lab, you will learn how Visual Studio 2017 extends the capabilities of IntelliTrace beyond the development and testing organizations by providing IT administrators with the ability to capture IntelliTrace files running from production servers. These files can then be analyzed by developers to help diagnose production issues.
 
-<a name="Prerequisites"></a>
-### Prerequisites ###
+### Pre-requisites ###
 
 In order to complete this lab you will need the Visual Studio 2017 virtual machine provided by Microsoft. For more information on acquiring and using this virtual machine, please see [this blog post](http://aka.ms/almvm).
 
-<a name="About the Fabrikam Fiber Scenario"></a>
-### About the Fabrikam Fiber Scenario ###
-
-This set of hands-on-labs uses a fictional company, Fabrikam Fiber, as a backdrop to the scenarios you are learning about. Fabrikam Fiber provides cable television and related services to the United States. They are growing rapidly and have embraced Windows Azure to scale their customer-facing web site directly to end-users to allow them to self-service tickets and track technicians. They also use an on-premises ASP.NET MVC application for their customer service representatives to administer customer orders.
-
-In this set of hands-on labs, you will take part in a number of scenarios that involve the development and testing team at Fabrikam Fiber. The team, which consists of 8-10 people has decided to use Visual Studio application lifecycle management tools to manage their source code, run their builds, test their web sites, and plan and track the project.
-
-<a name="Exercise1"></a>
 ## Exercise 1: Using IntelliTrace in Production ##
 
 In this exercise, you will learn how to deploy and use IntelliTrace in production to capture trace information for an ASP.NET application.
 
-<a name="Ex1Task1"></a>
 ### Task 1: Discovering a Bug in Production ###
 
 1. Log in as **Brian Keller (VSALM\Brian)**. All user passwords are **P2ssw0rd**.
@@ -49,7 +38,6 @@ In this exercise, you will learn how to deploy and use IntelliTrace in productio
 
 1. Typically, the first step in determining the root cause of an error like this would be to check logs and perhaps a stack trace for details. If that does not provide enough information, and the error is not easily reproduced in a development environment the development team may end up taking a long time to determine the root cause and fix the problem. Installing Visual Studio or other debugging tools in a production environment may not be an option.
 
-<a name="Ex1Task2"></a>
 ### Task 2: Setting Up For IntelliTrace Data Collection in Production ###
 
 1. Now let’s look at how to deploy and use IntelliTrace in a production environment to collect historical debugging data. Open a Windows Explorer window and navigate to the root of the C: drive. Note that there are two folders here that were created ahead of time for our use in this lab, **c:\IntelliTrace** is where the standalone IntelliTrace files are placed and **c:\LogFileLocation** is where the IntelliTrace files will be written to later on in this lab.
@@ -72,7 +60,6 @@ In this exercise, you will learn how to deploy and use IntelliTrace in productio
 
     > **Note:** For the purpose of this lab, the production system is the same as our development system, but that will not normally be the case.
 
-<a name="Ex1Task3"></a>
 ### Task 3: Initiating IntelliTrace Collection and Repro ###
 
 1. Now we will start IntelliTrace so that we can gather some diagnostic data from the web application. You have two options here, you can follow steps **2** through **17** or you can run the _StartIntelliTraceDemo.cmd_ file found within the **Scripts** folder on the **Desktop** (run as administrator) and skip ahead to step **18**.
@@ -147,7 +134,6 @@ In this exercise, you will learn how to deploy and use IntelliTrace in productio
 
 1. In a real-world scenario, it is at this point that the IntelliTrace file would be sent to a developer or tester for a more detailed look.
 
-<a name="Exercise2"></a>
 ## Exercise 2: Debugging with IntelliTrace Files from Production ##
 
 In this exercise, you will see how we can use the IntelliTrace file that was generated on a production server to aid in debugging the error that we saw in the previous exercise.
@@ -164,9 +150,9 @@ In this exercise, you will see how we can use the IntelliTrace file that was gen
 
    ![](images/014.png)
 
-1. Since this IntelliTrace session isn’t associated with an active solution, you’ll need to temporarily disable the **Just My Code** feature to get the full experience. From the main menu select **Tools | Options**.
+1. Since this IntelliTrace session isn’t associated with an active solution, you’ll need to temporarily disable the **Just My Code** feature to get the full experience. From the main menu select **Tools \| Options**.
 
-1. In the left tree view, locate **Debugging | General** and uncheck the **Enable Just My Code** option in the right panel. Click **OK** to apply.
+1. In the left tree view, locate **Debugging \| General** and uncheck the **Enable Just My Code** option in the right panel. Click **OK** to apply.
 
    ![](images/015.png)
 
