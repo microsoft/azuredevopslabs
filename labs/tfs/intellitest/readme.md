@@ -16,7 +16,7 @@ IntelliTest explores your .NET code to generate test data and a suite of unit te
 
 When you run IntelliTest, you can easily see which tests are failing and add any necessary code to fix them. You can select which of the generated tests to save into a test project to provide a regression suite. As you change your code, rerun IntelliTest to keep the generated tests in sync with your code changes.
 
-### Prerequisites ###
+## Prerequisites ##
 
 In order to complete this lab you will need the Visual Studio 2017 virtual machine provided by Microsoft. For more information on acquiring and using this virtual machine, please see [this blog post](http://aka.ms/almvm).
 
@@ -42,7 +42,7 @@ In practical terms, white box unit test development includes an iterative workfl
 
 1. **Right-click** somewhere within the **Handle** method and then select **IntelliTest \| Run IntelliTest**.
 
- ![](images/002.png) ###
+   ![](images/002.png)
 
 ### Task 2: Understanding IntelliTest Warnings ###
 
@@ -132,7 +132,7 @@ In practical terms, white box unit test development includes an iterative workfl
 
 1. Once the IntelliTest run completes, note that the bounds exceeded warning is gone.
 
- ![](images/018.png) ###
+   ![](images/018.png)
 
 
 ### Task 4: Focusing on “Just my Code” ###
