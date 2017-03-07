@@ -10,33 +10,29 @@ Lab version:15.0.26228.0
 
 Last updated:3/3/2017
 
-<a name="Overview"></a>
 ## Overview ##
 
 [Visual Studio Application Insights](https://azure.microsoft.com/services/application-insights) is an extensible analytics service that helps you understand the performance and usage of your live web application. It's designed for developers, to help you continuously improve the performance and usability of your app. It works with web apps on .NET or J2EE, hosted on-premises or in the cloud. You can also apply it to Windows background services and desktop apps.
 
 In this lab we will start with a fresh ASP.NET application and explore how you can instrument it with Application Insights. This will make it easier to track site usage and patterns, as well as to detect, diagnose, and triage issues related to performance and more.
 
-<a name="Prerequisites"></a>
 ### Prerequisites ###
 
 In order to complete this lab you will need the Visual Studio 2017 virtual machine provided by Microsoft. For more information on acquiring and using this virtual machine, please see [this blog post](http://aka.ms/almvm).
 
 You will also need an Azure account, which you can set up at [http://azure.com](http://azure.com/).
 
-<a name="Exercise1"></a>
 ## Exercise 1: Instrumenting with Application Insights ##
 
-<a name="Ex1Task1"></a>
 ### Task 1: Adding Application Insights to an ASP.NET Application ###
 
 1. Log in as **Sachin Raj (VSALM\Sachin)**. All user passwords are **P2ssw0rd**.
 
 1. Launch **Visual Studio** from the taskbar.
 
-1. Select **File | New | Project** from the main menu.
+1. Select **File \| New \| Project** from the main menu.
 
-1. From the **Visual C# | Web** section, select the **ASP.NET Web Application (.NET Framework)** template and enter a **Name** of **“AppInsightsLab”**. Click **OK** to continue.
+1. From the **Visual C# \| Web** section, select the **ASP.NET Web Application (.NET Framework)** template and enter a **Name** of **“AppInsightsLab”**. Click **OK** to continue.
 
    ![](images/000.png)
 
@@ -96,10 +92,8 @@ You will also need an Azure account, which you can set up at [http://azure.com](
 
 1. Finally, **packages.config** has been updated to reflect the NuGet packages and **Web.config** has been updated to reflect the assembly references.
 
-<a name="![](images/014.png)"></a>
-### ![](images/014.png) ###
+    ![](images/014.png) ###
 
-<a name="Ex1Task2"></a>
 ### Task 2: Tracking usage data ###
 
 1. Press **F5** to build and run the project. Navigate around the site for a few pages using the navigation links at the top to generate traffic. Be sure to visit the **Contact** page.
@@ -124,10 +118,9 @@ You will also need an Azure account, which you can set up at [http://azure.com](
 
 1. The **Track Operation** tab provides the details and timeline of the steps involved in the request. In this case, it’s a pretty simple single-step operation that succeeded.
 
-<a name="![](images/020.png)"></a>
-### ![](images/020.png) ###
+    ![](images/020.png) ###
 
-<a name="Ex1Task3"></a>
+
 ### Task 3: Working with the Application Insights Portal ###
 
 1. Open a new browser window (not a new tab in the debug browser window) and navigate to [https://portal.azure.com](https://portal.azure.com/). The portal provides even more functionality.
@@ -202,10 +195,10 @@ You will also need an Azure account, which you can set up at [http://azure.com](
 
 1. Besides the **Server**, the **Client** also has a dependency on **AJAX** requests, which you can see here.
 
-<a name="![](images/038.png)"></a>
-### ![](images/038.png) ###
 
-<a name="Ex1Task4"></a>
+  ![](images/038.png) ###
+
+
 ### Task 4: Tracking exceptions ###
 
 1. Return the **Solution Explorer** in **Visual Studio** and double-click **Controllers\HomeController.cs** to open that file.
@@ -283,7 +276,7 @@ You will also need an Azure account, which you can set up at [http://azure.com](
 
 1. Close the debug app browser window.
 
-<a name="Ex1Task5"></a>
+
 ### Task 5: Integrating telemetry ###
 
 1. Add the following code inside the **About** method. This will track a server-side custom event every time someone visits **Home/About**.
