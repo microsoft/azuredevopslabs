@@ -99,12 +99,12 @@ USB 1.1 interfaces.
 
 <table style="width:100%">
 <tr>
-<th>Test</th>
-<th>Requirement for Hyper-V Host Machine</th>
+<th class="text_center">Test</th>
+<th class="text_center">Requirement for Hyper-V Host Machine</th>
 </tr>
 <tr>
-<td><p>Operating System</p></td>
-<td><p>Microsoft Windows® Server 2008 R2 with the Hyper-V role enabled</p></td>
+<td class="text_center"><p>Operating System</p></td>
+<td class="text_center"><p>Microsoft Windows® Server 2008 R2 with the Hyper-V role enabled</p></td>
 </tr>
 <tr>
 <td> </td>

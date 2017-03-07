@@ -162,15 +162,16 @@ In this exercise, you will learn about the main configuration points that are ne
      <img src="./media/techdebt_img18.png" />
 
    * While still in  **SonarQube Scanner for MSBuild - Begin Analysis (new)** provide the following information under The **SonarQube Project Settings** section:
-    * **Project Key** - the unique project key in SonarQube, example **FFDev**
-    * **Project Name** - the name of the project in SonarQube, example **FFDev**
-    * **Project Version** - the version of the project in SonarQube, exmaple **1.0**
+
+     * **Project Key** - the unique project key in SonarQube, example **FFDev**
+     * **Project Name** - the name of the project in SonarQube, example **FFDev**
+     * **Project Version** - the version of the project in SonarQube, exmaple **1.0**
 
      <img src="./media/techdebt_img19.png" />
 
-6. Click **Save**. Name the new build definition "FabrikamFiber.Dev.Quality" and click **OK**.
+6.  Click **Save**. Name the new build definition "FabrikamFiber.Dev.Quality" and click **OK**.
 
-   <img src="./media/techdebt_img20.png" />
+    <img src="./media/techdebt_img20.png" />
 
 ### Task 3: Queuing and Executing a Build
 
