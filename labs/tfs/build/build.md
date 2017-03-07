@@ -14,7 +14,7 @@ Last updated:3/3/2017
 
 In this lab, you will learn how to use the new Team Foundation Build in order to build, test, and deploy your applications. This new scriptable build system is both web-based and cross-platform, and Microsoft recommends using it instead of the XAML build system whenever feasible. Although we won’t demonstrate all of the cross-platform possibilities in this lab, it is important to point out that you can also build for iOS, Android, Java (using Ant, Maven, or Gradle), and Linux.
 
-### Prerequisites ###
+## Prerequisites ##
 
 In order to complete this lab you will need the Visual Studio 2017 virtual machine provided by Microsoft. For more information on acquiring and using this virtual machine, please see [this blog post](http://aka.ms/almvm).
 
@@ -100,7 +100,7 @@ In this exercise, you will learn how to create and configure build agent pools a
 
 1. Select the **Build and Release** tab. From here, you can specify the default and maximum settings for how long the system retains completed builds. The default retention policy is set at 10 days, with the maximum at 30 days. This means that regardless of what is set on the individual build definition all builds that have not been marked to "Retain indefinitely" will be deleted 30 days after they complete.
 
- ![](images/014.png) 
+   ![](images/014.png) 
 
 ### Task 4: Installing and Configuring an Agent ###
 
@@ -146,7 +146,7 @@ In this exercise, you will learn how to create and configure build agent pools a
 
 1. Select the **Capabilities** tab to take note of the System Capabilities list shown for the agent. System capabilities are name/value pairs that you can use to ensure that your build definition is only run by build agents that meet specified criteria. Environment variables automatically appear in the list. Some additional capabilities (such as .NET Frameworks) are also added automatically. You can also add your own capabilities to the list based on additional requirements for your builds. Later, when a build is queued, the system sends the job only to agents that have the capabilities demanded by the build definition.
 
- ![](images/018.png) 
+   ![](images/018.png) 
 
 
 ## Exercise 2: Build Definitions ##
@@ -263,7 +263,7 @@ In this exercise, you will learn how to create a basic build definition from one
 
 1. Click **Save**. Name the new build definition “**Fabrikam Development Build**” and click **OK**.
 
- ![](images/043.png) 
+   ![](images/043.png) 
 
 ### Task 2: Queuing and Executing a Build ###
 
@@ -325,7 +325,7 @@ In this exercise, you will learn how to modify a build to support continuous int
 
 1. Select the **Clean Target** option under **Advanced Options** so that the copy location will be cleaned before each deployment.
 
- ![](images/052.png) 
+   ![](images/052.png) 
 
 ### Task 3: Configuring Continuous Integration ###
 
@@ -345,7 +345,7 @@ In this exercise, you will learn how to modify a build to support continuous int
 
 1. Click **Save**. Name the new build “**Fabrikam Development CI Build**” and then click **OK**.
 
- ![](images/056.png) 
+   ![](images/056.png) 
 
 ### Task 4: Triggering a Continuous Integration Build ###
 
