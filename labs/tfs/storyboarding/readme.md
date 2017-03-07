@@ -10,29 +10,20 @@ Lab version:15.0.26228.0
 
 Last updated:3/2/2017
 
-<a name="Overview"></a>
 ## Overview ##
 
 How often have you built the software that your users asked for, but not necessarily what they wanted? In a world of increasingly complex software projects, it is critical that we can accurately capture requirements from users, which can then be translated into working software. In this lab, you'll learn how the capabilities of Visual Studio 2017 make it possible to both rapidly storyboard your requirements, and - as your software evolves - get rich, actionable feedback from users of your software which can help shape what you deliver.
 
-<a name="Prerequisites"></a>
-### Prerequisites ###
+### Pre-requisites ###
 
 In order to complete this lab you will need the Visual Studio 2017 virtual machine provided by Microsoft. For more information on acquiring and using this virtual machine, please see [this blog post](http://aka.ms/almvm).
 
-<a name="About the Fabrikam Fiber Scenario"></a>
-### About the Fabrikam Fiber Scenario ###
 
-This set of hands-on-labs uses a fictional company, Fabrikam Fiber, as a backdrop to the scenarios you are learning about. Fabrikam Fiber provides cable television and related services to the United States. They are growing rapidly and have embraced Windows Azure to scale their customer-facing web site directly to end-users to allow them to self-service tickets and track technicians. They also use an on-premises ASP.NET MVC application for their customer service representatives to administer customer orders.
 
-In this set of hands-on labs, you will take part in a number of scenarios that involve the development and testing team at Fabrikam Fiber. The team, which consists of 8-10 people has decided to use Visual Studio application lifecycle management tools to manage their source code, run their builds, test their web sites, and plan and track the project.
-
-<a name="Exercise1"></a>
 ## Exercise 1: Introduction to Storyboarding ##
 
 In this exercise, you will learn how to use the PowerPoint storyboarding add-in to create application storyboards. This will be accomplished by examining an existing storyboard file and by adding in some additional storyboard slides to address an additional user story.
 
-<a name="Ex1Task1"></a>
 ### Task 1: Creating a Storyboard Linked to Work Item ###
 
 1. Log in as **Sachin Raj (VSALM\Sachin)**. All user passwords are **P2ssw0rd**.
@@ -59,16 +50,14 @@ In this exercise, you will learn how to use the PowerPoint storyboarding add-in 
 
 1. At this point, the new storyboard can be created from scratch using the full power of PowerPoint, including the tooling found in the **Storyboarding** tab. For the purposes of this lab, however, we will jump ahead to a storyboard that is already in progress. Close the PowerPoint window without saving any changes.
 
-1. As an aside, you also have the ability to link to an existing storyboard, such as one that might be stored in SharePoint or elsewhere. Select the **Links** tab and then click **Add link | Existing item**.
+1. As an aside, you also have the ability to link to an existing storyboard, such as one that might be stored in SharePoint or elsewhere. Select the **Links** tab and then click **Add link \| Existing item**.
 
    ![](images/005.png)
 
 1. This **Location** would be to a location that is accessible to all team members. Click **Cancel**.
 
-<a name="![](images/006.png)"></a>
-### ![](images/006.png) ###
+   ![](images/006.png) ###
 
-<a name="Ex1Task2"></a>
 ### Task 2: Creating Storyboards in PowerPoint ###
 
 1. Open the PowerPoint file at **C:\Samples\FF Storyboard - Start.pptx**.
@@ -197,5 +186,5 @@ In this exercise, you will learn how to use the PowerPoint storyboarding add-in 
 
 1. Press the **F5** key to view the storyboard in presentation mode. Press the right arrow key to start the mouse cursor animation. When it reaches the hyperlink for the service ticket, press the right arrow key to navigate to the second slide. Press the **Esc** key when finished.
 
-1. Close PowerPoint without saving changes.
+1.  Close PowerPoint without saving changes.
 
