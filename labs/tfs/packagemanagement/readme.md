@@ -10,20 +10,16 @@ Lab version:15.0.26228.0
 
 Last updated:3/3/2017
 
-<a name="Overview"></a>
 ## Overview ##
 
 Package Management is an extension that makes it easy to discover, install, and publish NuGet and npm packages in Team Foundation Server. It's deeply integrated with other hubs like Build so that package management can become a seamless part of your existing workflows.
 
-<a name="Prerequisites"></a>
-### Prerequisites ###
+## Prerequisites ##
 
 In order to complete this lab you will need the Visual Studio 2017 virtual machine provided by Microsoft. For more information on acquiring and using this virtual machine, please see [this blog post](http://aka.ms/almvm).
 
-<a name="Exercise1"></a>
 ## Exercise 1: Working with the package management service ##
 
-<a name="Ex1Task1"></a>
 ### Task 1: Configuring the service ###
 
 1. Log in as **Sachin Raj (VSALM\Sachin)**. All user passwords are **P2ssw0rd**.
@@ -56,8 +52,7 @@ In order to complete this lab you will need the Visual Studio 2017 virtual machi
 
 1. There are no feeds by default.
 
-<a name="![](images/006.png)"></a>
-### ![](images/006.png) ###
+   ![](images/006.png)
 
 <a name="Ex1Task2"></a>
 ### Task 2: Creating and connecting to a feed ###
@@ -80,7 +75,7 @@ In order to complete this lab you will need the Visual Studio 2017 virtual machi
 
 1. Launch **Visual Studio** from the taskbar.
 
-1. Select **Tools | NuGet Package Manager | Package Manager Settings**.
+1. Select **Tools \| NuGet Package Manager \| Package Manager Settings**.
 
 1. Locate the **Package Sources** section and click the **Add** button to add a new package source.
 
@@ -88,13 +83,11 @@ In order to complete this lab you will need the Visual Studio 2017 virtual machi
 
 1. Set the **Name** to **“PartsUnlimitedShared”** and paste the **Source** URL copied earlier. Click **Update** followed by **OK**. Visual Studio is now connected to the new feed.
 
-<a name="![](images/012.png)"></a>
-### ![](images/012.png) ###
+   ![](images/012.png)
 
-<a name="Ex1Task3"></a>
 ### Task 3: Creating and publishing a NuGet package ###
 
-1. From the main menu of **Visual Studio**, select **File | New | Project**. We will now create a shared assembly that will be published as a NuGet package so that other teams can integrate it and stay up to date without having to work directly with the project source.
+1. From the main menu of **Visual Studio**, select **File \| New \| Project**. We will now create a shared assembly that will be published as a NuGet package so that other teams can integrate it and stay up to date without having to work directly with the project source.
 
 1. From the **Visual C#** section, select the **Class Library** template and set the **Name** to **“PartsUnlimited.Shared”**. Click **OK** to create the project.
 
@@ -126,7 +119,7 @@ In order to complete this lab you will need the Visual Studio 2017 virtual machi
 
    ![](images/019.png)
 
-1. In the same **Windows Explorer** window, select **File | Open command prompt**.
+1. In the same **Windows Explorer** window, select **File \| Open command prompt**.
 
    ![](images/020.png)
 
@@ -158,10 +151,8 @@ In order to complete this lab you will need the Visual Studio 2017 virtual machi
 
 1. Return to the browser window open to TFS and **refresh** the window. You should now see the organization’s NuGet package is published in the feed.
 
-<a name="![](images/025.png)"></a>
-### ![](images/025.png) ###
+   ![](images/025.png)
 
-<a name="Ex1Task4"></a>
 ### Task 4: Importing a NuGet package ###
 
 1. Open a new instance of **Visual Studio** from the taskbar. We will now add a reference to the **PartsUnlimited.Shared** NuGet package to an existing project.
@@ -189,7 +180,7 @@ In order to complete this lab you will need the Visual Studio 2017 virtual machi
 
 1. Switch to the instance of **Visual Studio** that has the **PartsUnlimited.Shared** project open (the NuGet source project).
 
-1. In **Solution Explorer**, right-click the **PartsUnlimited.Shared** project node and select **Add | New Item**.
+1. In **Solution Explorer**, right-click the **PartsUnlimited.Shared** project node and select **Add \| New Item**.
 
    ![](images/030.png)
 
