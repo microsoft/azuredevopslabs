@@ -108,7 +108,7 @@ In order to complete this lab you will need the Visual Studio 2017 virtual machi
 
    ![](images/013.png)
 
-1. In the **Error List**, Double-click the **CA1704** warning for **Edit** to view the source. Suppose that we want to suppress this specific rule, but this time we only want it applied to the associated source file. **Right-click** the warning in the **Error List** and select **Suppress | In Source**.
+1. In the **Error List**, Double-click the **CA1704** warning for **Edit** to view the source. Suppose that we want to suppress this specific rule, but this time we only want it applied to the associated source file. **Right-click** the warning in the **Error List** and select **Suppress \| In Source**.
 
    ![](images/014.png)
 

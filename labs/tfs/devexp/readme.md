@@ -1,5 +1,5 @@
 ---
-title: Developer experience enhancements in Visual Studio 2017
+title: Developer Experience Enhancements in Visual Studio 2017
 layout: page    
 sidebar: tfs
 permalink: /labs/tfs/devexp/
@@ -68,7 +68,7 @@ In order to complete this lab you will need the Visual Studio 2017 virtual machi
 
    ![](images/007.png)
 
-1. **Navigate To** has been completely overhauled and renamed **Go To All**. From the main menu, select **Edit | Go To** and select **Go To All**.
+1. **Navigate To** has been completely overhauled and renamed **Go To All**. From the main menu, select **Edit \| Go To** and select **Go To All**.
 
    ![](images/008.png)
 
@@ -128,10 +128,8 @@ In order to complete this lab you will need the Visual Studio 2017 virtual machi
 
     ![](images/021.png)
 
-<a name="![](images/022.png)"></a>
-### ![](images/022.png) ###
+    ![](images/022.png)
 
-<a name="Ex1Task3"></a>
 ### Task 3: Using the new Exception Helper ###
 
 1. Press **Alt+Ctrl+E** to bring up the **Exception Settings** panel.
@@ -150,5 +148,5 @@ In order to complete this lab you will need the Visual Studio 2017 virtual machi
 
    ![](images/025.png)
 
-1. Select **Debug | Stop Debugging** from the main menu to end the debug session.
+1. Select **Debug \| Stop Debugging** from the main menu to end the debug session.
 
