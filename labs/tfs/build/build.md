@@ -14,7 +14,7 @@ Last updated:3/3/2017
 
 In this lab, you will learn how to use the new Team Foundation Build in order to build, test, and deploy your applications. This new scriptable build system is both web-based and cross-platform, and Microsoft recommends using it instead of the XAML build system whenever feasible. Although we won’t demonstrate all of the cross-platform possibilities in this lab, it is important to point out that you can also build for iOS, Android, Java (using Ant, Maven, or Gradle), and Linux.
 
-## Prerequisites ##
+## Pre-requisites ##
 
 In order to complete this lab you will need the Visual Studio 2017 virtual machine provided by Microsoft. For more information on acquiring and using this virtual machine, please see [this blog post](http://aka.ms/almvm).
 
@@ -277,7 +277,7 @@ In this exercise, you will learn how to create a basic build definition from one
 
 1. Note that once the build starts, you can monitor the real-time build status in the live console view. As the Test step proceeds, you will see some red error text as there are some tests in this project that are designed to fail for demonstration purposes. At the end of the build you should see the message in orange displaying “Build Partially succeeded”. Note that you may need to refresh the browser if the build hasn’t started yet.
 
- ![](images/046.png) 
+   ![](images/046.png) 
 
 
 ## Exercise 3: Continuous Integration and Deployment ##

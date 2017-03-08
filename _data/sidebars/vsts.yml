@@ -92,13 +92,12 @@ entries:
 
   - title: Azure Labs
     output: web, pdf
-
     folderitems:
+    
     - title: Deploy an ASP.NET WebApp in Azure App Service
       url: labs/vsts/appservice
       output: web, pdf
 
-    folderitems:
     - title: Deploy and Manage Azure Resources
       url: labs/vsts/azureresource
       output: web, pdf      
