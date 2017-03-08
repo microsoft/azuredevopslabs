@@ -1,4 +1,3 @@
-
 https://sharplogic.blob.core.windows.net/drops/ALMVM.170308/VisualStudio2017.RTM.ALM.part01.exe
 https://sharplogic.blob.core.windows.net/drops/ALMVM.170308/VisualStudio2017.RTM.ALM.part02.rar
 https://sharplogic.blob.core.windows.net/drops/ALMVM.170308/VisualStudio2017.RTM.ALM.part03.rar
