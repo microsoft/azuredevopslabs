@@ -220,11 +220,13 @@ some data
     the new ‘not null’ column (PriceGBP) we’ve added to our development database. However, with ReadyRoll we simply concatenate these verified
     migration scripts into a single transaction which ensures a successful deployment.
 
-### Task 7: Configuring builds with VSTS 
+### Task 7: Configuring builds with Team Foundation Server 
+
+In order to proceed this lab, you will need to download the **Redgate ReadyRoll** extension from the [Marketplace](https://marketplace.visualstudio.com/items?itemName=redgatesoftware.redgate-readyroll) and install it on TFS
 
 **Create a build definition**
 
-1.  In VSTS, from the main menu, select Build.
+1.  Navigate to the PartsUnlimited project on TFS and then select ***Build***.
 
 2.  Click + and enter a name for the definition.
 
@@ -307,7 +309,7 @@ Leave the default settings for the other fields.
 
 **Create a release definition**
 
-1.  In VSTS, from the main menu, select Release.
+1.  Select ***Release***
 
 2.  Click + and enter a name for the definition.
 
@@ -350,6 +352,5 @@ Leave the default settings for the other fields.
 Your task settings should look similar to this:  
 <img src="./images/image25.png"  />
 
-You've now successfully set up ReadyRoll and Visual Studio Team Services
-(VSTS) to build and deploy databases.
+You've now successfully set up ReadyRoll and Team Foundation Server to build and deploy databases.
 
