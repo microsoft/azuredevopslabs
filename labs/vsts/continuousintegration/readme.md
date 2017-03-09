@@ -47,7 +47,7 @@ ASP.NET Core is a lean and composable framework for building web and cloud appli
 
    <img src="images/1.png" width="624"/>
 
-3. Click on **New** to create build definition. You can enable **New Build Editor**.
+3. Click on **New** to create build definition.
 
    <img src="images/2.png" width="624"/>
 
