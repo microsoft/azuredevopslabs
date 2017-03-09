@@ -1252,3 +1252,7 @@ span.PageTitle{
 th.text_center{
     text-align: center;
 }
+
+td.text_center{
+    padding-left: 70px;
+}

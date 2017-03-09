@@ -97,36 +97,37 @@ you use an external hard drive, faster interfaces such as eSata or
 Firewire 800 will work better. Be careful with slower laptop drives and
 USB 1.1 interfaces.
 
-<table style="width:100%">
+<table style="width:100%" >
 <tr>
 <th class="text_center">Test</th>
 <th class="text_center">Requirement for Hyper-V Host Machine</th>
 </tr>
 <tr>
-<td class="text_center"><p>Operating System</p></td>
-<td class="text_center"><p>Microsoft Windows® Server 2008 R2 with the Hyper-V role enabled</p></td>
-Microsoft Windows® Server 2012 with the Hyper-V role enabled
-Microsoft Windows® 8 with Hyper-V enabled
-Microsoft Windows® 8.1 with Hyper-V enabled
-Microsoft Windows® Sever 2012 R2 with Hyper-V enabled
-Microsoft Windows® 10 with Hyper-V enabled
-Microsoft Windows® Sever 2016 with Hyper-V enabled</td>
+<td >Operating System</td>
+<td class="text_center">Microsoft Windows® Server 2008 R2 with the Hyper-V role enabled
+<br>Microsoft Windows® Server 2012 with the Hyper-V role enabled
+<br>Microsoft Windows® 8 with Hyper-V enabled
+<br>Microsoft Windows® 8.1 with Hyper-V enabled
+<br>Microsoft Windows® Sever 2012 R2 with Hyper-V enabled
+<br>Microsoft Windows® 10 with Hyper-V enabled
+<br>Microsoft Windows® Sever 2016 with Hyper-V enabled</td>
+
 </tr>
 <tr>
-<td>Drive Formatting</td>
-<td>NTFS</td>
+<td >Drive Formatting</td>
+<td class="text_center">NTFS</td>
 </tr>
 <tr>
 <td>Processor</td>
-<td>Intel VT or AMD-V capable, *SLAT-capable CPU required if using Windows 8*</td>
+<td class="text_center">Intel VT or AMD-V capable, *SLAT-capable CPU required if using Windows 8*</td>
 </tr>
 <tr>
 <td>RAM</td>
-<td>8 GB of free physical RAM (9 GB or more recommended)</td>
+<td class="text_center">8 GB of free physical RAM (9 GB or more recommended)</td>
 </tr>
 <tr>
 <td>Hard disk space required for install</td>
-<td>80 GB (more if using checkpoints)</td>
+<td class="text_center">80 GB (more if using checkpoints)</td>
 </tr>
 </table>
 
@@ -148,7 +149,7 @@ the Hyper-V role enabled.
 <th></th>
 </tr>
 <tr>
-<td><p>1. Import and configure the Virtual Machine</p>
+<td ><p>1. Import and configure the Virtual Machine</p>
 <p>Due to the activation and expiration models in Windows Server, it’s highly
 recommended that you do one of the following:
 
@@ -210,13 +211,13 @@ recommended that you restore to a clean checkpoint before you start each hands-o
 checkpoints.
 <table>
     <tr>
-        <th>Tasks</th>
-        <th>Detailed Steps</th>
+        <th class="text_center">Tasks</th>
+        <th class="text_center">Detailed Steps</th>
     </tr>
     <tr>
         <td><p>1. Create a Checkpoint</p></td>
         <p>Note that having many checkpoints can adversely affect performance. You can delete checkpoints you no longer need and Hyper-V will merge these when the VM is not running.</p>
-        <td>
+        <td class="text_center">
             <p>a. Prepare the VM(s) in the state you wish to capture.</p>
             <p>b. Open or return to the Hyper-V Manager</p>
             <p>c. Select the VM and click Checkpoint under Actions.</p>
@@ -226,7 +227,7 @@ checkpoints.
      </tr>   
     <tr>
         <td>2. Apply a Checkpoint</td>
-        <td><p>a. Open or return to the Hyper-V Manager</p>
+        <td class="text_center"><p>a. Open or return to the Hyper-V Manager</p>
         <p>b.Select the VM, right-click on the checkpoint you wish to use, and choose Apply. You will be prompted to save the current state as a checkpoint. Doing so will retain your current state, skipping will discard it.</p></td> 
     </tr>
 </table>
