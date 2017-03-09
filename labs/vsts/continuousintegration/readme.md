@@ -39,6 +39,9 @@ In order to complete this lab you will need-
 
 ASP.NET Core is a lean and composable framework for building web and cloud applications. Here we'll show you how to automatically build the **HealthClinic ASP.NET Core** application.
 
+If you have provisioned your project using the demo generator, you will notice the build definition already existing in your project
+You can create a new one or use the existing build def and just follow the labs without adding or modifying the tasks to understand how a build pipeline is created in VSTS. 
+
 ### Task1 : Creating New Build Definition
 
 1. From your VSTS account overview page, select your team project. 
@@ -115,6 +118,8 @@ ASP.NET Core is a lean and composable framework for building web and cloud appli
 
 9. Select the **Visual Studio Build** task and update its properties:
     - Solution: 01_Demos_ASPNET5.sln
+    - Platform: $(BuildPlatform)
+    - Configuration: $(BuildConfiguration)
 
     <img src="images/13.png" width="624"/>     
 
