@@ -142,9 +142,9 @@ You can create a new one or use the existing build def and just follow the labs 
 
     <img src="images/18.png" width="624"/>
 
-## Exercise 2: Replicating Build Definitions
+## Exercise 2: Cloning Build Definitions
 
-If your definition has a pattern that you want to replicate in other definitions, clone it or create a template.
+If your definition has a pattern that you want to resuse in other definitions, you can either clone it or save as a template.
 
 1. Go to your **Build** tab and select the definition that you want to clone and click **clone**.
 
