@@ -105,7 +105,7 @@ USB 1.1 interfaces.
 <tr>
 <td class="text_center"><p>Operating System</p></td>
 <td class="text_center"><p>Microsoft Windows® Server 2008 R2 with the Hyper-V role enabled</p></td>
-Microsoft Windows® Server 2012 with the Hyper-V role enabled
+<td>Microsoft Windows® Server 2012 with the Hyper-V role enabled
 Microsoft Windows® 8 with Hyper-V enabled
 Microsoft Windows® 8.1 with Hyper-V enabled
 Microsoft Windows® Sever 2012 R2 with Hyper-V enabled

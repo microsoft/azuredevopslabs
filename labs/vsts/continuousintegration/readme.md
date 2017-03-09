@@ -141,23 +141,8 @@ You can create a new one or use the existing build def and just follow the labs 
 13. A new build is running.
 
     <img src="images/18.png" width="624"/>
-
-## Exercise 2: Cloning Build Definitions
-
-If your definition has a pattern that you want to resuse in other definitions, you can either clone it or save as a template.
-
-1. Go to your **Build** tab and select the definition that you want to clone and click **clone**.
-
-   <img src="images/19.png" width="624"/>
-
-2. You should see a cloned definiton once done from your list of builds with the name **clone.**
-
-   <img src="images/20.png" width="624"/>
-
-3. Click on **New** build definition to create a new build definition from our cloned template.
-
    
-## Exercise 3: Defining process
+## Exercise 2: Defining attributes for the build definition
 
 1. Go to your **Build** from your VSTS account.
 
@@ -290,7 +275,7 @@ Your build definition includes a test task that runs unit tests. For example, if
         
    <img src="images/38.png" width="624"/>
 
-   > Test projects also need to specify a test runner property in project.json using the "testRunner" node. This value should contain the name of the unit test framework.
+   > Test projects include a test runner property in project.json using the "testRunner" node. This value should contain the name of the unit test framework.
 
    <img src="images/39.png" width="624"/>
 
@@ -311,7 +296,7 @@ Your build definition includes a test task that runs unit tests. For example, if
 
    <img src="images/42.png" width="624"/>
 
-7. You can also fail tests. Go to your Visual Studio. Expand **MyHealth.API.IntegrationTests** project. 
+7. You can fail tests by injecting the code into your project as shown below. Go to your Visual Studio. Expand **MyHealth.API.IntegrationTests** project. 
 
 8. Click on **GetDoctors.cs** and modify the assert of the unit test **Administrator_Can_GetDoctors**.
 
@@ -321,25 +306,35 @@ Your build definition includes a test task that runs unit tests. For example, if
 
    <img src="images/44.png" />
 
-10. Review the summary for your test run results, including a comparison between the current build and the last build.
+10. Post build, review the summary for your test run results, including a comparison between the current build and the last build.
 
     <img src="images/45.png" width="624"/>
 
     <img src="images/46.png" width="624"/>
 
+11. The Test duration and failure graphs are also shown.
+
     <img src="images/47.png"/>
 
-11. You can also organize your test results using the group and outcome lists. You'll find changes in new, failed, and passed tests, how long these tests took to run, how long these tests have been failing, and more.
+    <img src="images/53.png"/>
+
+11. You can create a bug from the failed tests so that it gives us the complete Stack Trace to reproduce the issue.
+
+    <img src="images/51.png" width="624"/>
+
+    <img src="images/52.png" width="624"/>
+
+12. You can also organize your test results using the group and outcome lists. You'll find changes in new, failed, and passed tests, how long these tests took to run, how long these tests have been failing, and more.
     
     <img src="images/48.png"/>
 
     <img src="images/49.png"/>
 
-12. To start debugging a failed test, open it and review the resulting error and stack trace.
+13. To start debugging a failed test, open it and review the resulting error and stack trace.
 
     <img src="images/50.png"/>
 
-13. Revert back the changes done and commit so that you have a clean build summary with all passed tests.
+14. Revert back the changes done and commit so that you have a clean build summary with all passed tests.
    
 
 
