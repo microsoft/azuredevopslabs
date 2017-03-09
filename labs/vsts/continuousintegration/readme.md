@@ -232,7 +232,7 @@ An artifact is a deployable component of your application. Visual Studio Team Se
     - Tool: dotnet
     - Arguments: publish -c $(BuildConfiguration) $(WebDir)/project.json
 
-   <img src="images/32.png" width="624"/>
+    <img src="images/32.png" width="624"/>
 
 3. Add **Archive Files** task from the **Utility** section and update its properties to zip the project output.
     - Root Folder: $(Build.SourcesDirectory)\$(WebDir)\bin\$(BuildConfiguration)\netcoreapp1.0\publish
