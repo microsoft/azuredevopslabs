@@ -8,7 +8,7 @@ folder: /labs/vsts/
 
 ## Overview
 
-We are working on providing hands-on-labs for Visual Studio Team Services. Here are the labs, for a start. 
+We are working on providing hands-on-labs for Visual Studio Team Services. Here are a few labs, for a start. 
 
 In order to complete these labs you will need 
 
