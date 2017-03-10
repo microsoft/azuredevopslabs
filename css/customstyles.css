@@ -227,7 +227,7 @@ p.post-meta {font-size: 80%; color: #777;}
     list-style: none;
     font-size: 12px;
     position: absolute;
-    top: 54px; /* if you change anything about the nav, you'll prob. need to reset the top and left values here.*/
+    top: 72px; /* if you change anything about the nav, you'll prob. need to reset the top and left values here.*/
     left: 20px;
     z-index: -1;
     width:240px;
