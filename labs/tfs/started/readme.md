@@ -177,7 +177,7 @@ recommended that you do one of the following:
 <p>c. Click Settings in the Actions pane.</p>
 <p>d. Configure the network adapter to use an external network adapter. *(For information on how to configure an external network adapter with Hyper-V please consult the Hyper-V documentation)*</p>
 <p>e. Your settings should resemble the following screenshot (the actual name of your external network may vary)</p>
-<img src="media/image3.png" style="height:260px;"/>
+<img src="media/image3.png" style="height:325px; padding-left: 10px;"/>
 <p>f. Click OK to close the settings dialog.</p>
 <p>g. <b>Start</b> the virtual machine if it isn’t already running.</p>
 <p>h. Once the machine starts, log in as <b>Sachin</b>. All passwords are <b>P2ssw0rd</b>.</p>
@@ -197,7 +197,7 @@ recommended that you do one of the following:
 <p>c. Click <b>Settings</b> in the Actions pane.</p>
 <p>d. Configure the network adapter to use an internal network adapter. *(For information on how to configure an external network adapter with Hyper-V please consult the Hyper-V documentation)*</p>
 <p>e. Your settings should resemble the following screenshot (the actual name of your internal network may vary)</p>
-<img src="media/image4.png" style="height:260px;"/>
+<img src="media/image4.png" style="height:325px; padding-left: 10px;"/>
 <p>f. Click OK to <b>close</b> the settings dialog.</p>
 <p>g. It is highly recommended that you now take a checkpoint of the virtual machine so that you can return to this state later if you need to. See “*Working with Checkpoints*” below for more information.</p></td>
 </tr>
