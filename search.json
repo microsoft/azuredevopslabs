@@ -6,12 +6,12 @@ search: include
 
 [
 {% for page in site.pages %}
-{% unless page.search == "include" %}
+{% unless page.search == "exclude" %}
 {
 "title": "{{ page.title | escape }}",
 "tags": "{{ page.tags }}",
 "keywords": "{{page.keywords}}",
-"url": "{{ site.url }}{{ site.baseurl|remove: "/" }}{{ page.url }}",
+"url": "{{ site.url }}{{ site.baseurl}}{{ page.url }}",
 "summary": "{{page.summary | strip }}"
 }
 {% unless forloop.last and site.posts.size < 1 %},{% endunless %}
