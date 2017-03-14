@@ -16,7 +16,7 @@ In order to complete these labs you will need
 
 - **Visual Studio 2017** or higher version
 
-- You can use the **[VSTS Demo Data generator](http://vstsdemogenerator.azurewebsites.net/Environment/Create)** to provison a project with pre-defined data on to your Visual Studio Team Services account. Please use the ***My Health Clinic*** template to follow the hands-on-labs.
+- You can use the **[VSTS Demo Data generator](https://vstsdemogenerator.azurewebsites.net)** to provison a project with pre-defined data on to your Visual Studio Team Services account. Please use the ***My Health Clinic*** template to follow the hands-on-labs.
 
 - If you are not using the VSTS Demo Data Generator, you can clone the code from here
 
