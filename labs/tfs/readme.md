@@ -55,7 +55,7 @@ The size of the download is about 30 GB. It is recommended that you use a utilit
 
 ## Hands-On-Labs
 
-Here are the 2017 hands-on-labs for Team Foundation Server. If you want to access the labs offline, you can download them as MS Word documents from <a href="https://github.com/Microsoft/almvm/tree/master/labs/Word">here</a>
+Here are the 2017 hands-on-labs for Team Foundation Server. If you want to access the labs offline, you can download them as MS Word documents from <a href="https://almvm2017.blob.core.windows.net/vm2017/VisualStudio ALMVM 2017 Labs.zip">here</a>
 <table width="100%">
 <thead><td><b>
 Lab Name</b>
