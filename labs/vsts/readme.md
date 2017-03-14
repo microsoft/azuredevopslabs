@@ -37,7 +37,6 @@ In order to complete these labs you will need
 <tr><td><a href="packagemanagement/">Package Management using Visual Studio Team Services</a></td></tr>
 <tr><td><a href="appservice/">Deploy an ASP.NET WebApp in Azure App Service</a></td></tr>
 <tr><td> <a href="azureresource/">Deploy and Manage Azure Resources</a></td></tr>
-<tr><td><a hrf="manualtesting/">Test Planning and Management using Visual Studio Team Services</a></td></tr>
 <tr><td><a href="selenium/">UI Automation using Selenium Tests</a></td></tr>
 <tr><td><a href="git/">Version Controlling with Git using Visual Studio Team Services</a></td></tr>
 </table>
