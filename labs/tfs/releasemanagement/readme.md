@@ -46,7 +46,7 @@ In this exercise, you will use the release management features of Team Foundatio
 
 1. You can easily edit files on the server and check them in from the browser, which is great for scenarios where you only need to make minor tweaks. You'll come back to this tab in future steps, so leave it open as you move forward.
 
-1. Right-click the **Build & Release | Builds** tab and select **Open in new tab** to view builds. You're going to move back and forth between parts of TFS, so keeping these separate tabs open will make things easier as you go along. After the tab opens, switch to it.
+1. Right-click the **Build & Release \| Builds** tab and select **Open in new tab** to view builds. You're going to move back and forth between parts of TFS, so keeping these separate tabs open will make things easier as you go along. After the tab opens, switch to it.
 
    ![](images/002.png)
 
@@ -284,7 +284,7 @@ The release management tools are incredibly flexible. Not only can you automate 
 
 1. In a new browser tab, navigate to [https://portal.azure.com](https://portal.azure.com/).
 
-1. Select **+New | Databases | SQL Database** to create a new database.
+1. Select **+New \| Databases \| SQL Database** to create a new database.
 
    ![](images/050.png)
 
@@ -300,7 +300,7 @@ The release management tools are incredibly flexible. Not only can you automate 
 
 1. Click **Create** on the first blade to create the database and server. It'll take some time to complete, but you can move on to the next step while it works in the background.
 
-1. Select **+New | Web + Mobile | Web App** to create a new Azure web site.
+1. Select **+New \| Web + Mobile \| Web App** to create a new Azure web site.
 
    ![](images/053.png)
 
@@ -357,7 +357,7 @@ The release management tools are incredibly flexible. Not only can you automate 
 
    ![](images/065.png)
 
-1. Right-click the **FabrikamFiber-Express** database and select **Tasks | Deploy Database to Microsoft Azure SQL Database**.
+1. Right-click the **FabrikamFiber-Express** database and select **Tasks \| Deploy Database to Microsoft Azure SQL Database**.
 
    ![](images/066.png)
 
@@ -406,7 +406,7 @@ The release management tools are incredibly flexible. Not only can you automate 
 
    ![](images/074.png)
 
-1. Select **Add environment | Create new environment**.
+1. Select **Add environment \| Create new environment**.
 
    ![](images/075.png)
 
@@ -430,7 +430,7 @@ The release management tools are incredibly flexible. Not only can you automate 
 
    ![](images/080.png)
 
-1. There are many tasks available for managing releases to Azure. Select **Add tasks | Add an agent phase** to review them.
+1. There are many tasks available for managing releases to Azure. Select **Add tasks \| Add an agent phase** to review them.
 
    ![](images/081.png)
 
@@ -438,7 +438,7 @@ The release management tools are incredibly flexible. Not only can you automate 
 
    ![](images/082.png)
 
-1. However, sometimes there are tasks that cannot be automated and require manual intervention. In that case, you can still automate the processes around it and provide an indicator for TFS to wait for the manual process to complete before continuing. Select **Add tasks | Add a server phase**.
+1. However, sometimes there are tasks that cannot be automated and require manual intervention. In that case, you can still automate the processes around it and provide an indicator for TFS to wait for the manual process to complete before continuing. Select **Add tasks \| Add a server phase**.
 
    ![](images/083.png)
 
@@ -454,7 +454,7 @@ The release management tools are incredibly flexible. Not only can you automate 
 
    ![](images/086.png)
 
-1. Click **New Service Endpoint | Azure Classic**.
+1. Click **New Service Endpoint \| Azure Classic**.
 
    ![](images/087.png)
 
@@ -568,7 +568,7 @@ The release management tools are incredibly flexible. Not only can you automate 
 
 1. Upon completion, the integrated browser will open to the public URL. Note the new version number, which confirms the deployment was successful.
 
-    ![](images/108.png) ###
+    ![](images/108.png)
 
 ### Task 6: Working with deployment slots ###
 
