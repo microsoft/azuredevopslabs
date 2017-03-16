@@ -41,7 +41,7 @@ are for.
 ## Related Resources
 
 See this [blog
-post](https://blogs.msdn.microsoft.com/visualstudio/2016/11/18/live-unit-testing-visual-studio-2017-rc/)
+post](https://blogs.msdn.microsoft.com/visualstudio/2017/03/09/live-unit-testing-in-visual-studio-2017-enterprise/)
 for more information on live unit testing.
 
 See this [blog
@@ -86,6 +86,16 @@ coverage so that you can think about testability as you develop.
     and wanted to get an understanding of the quality of the code before
     you begin. Rather than running all tests, you can now simply enable
     live unit testing and let it illustrate the coverage.
+
+1. We will need to update the MS Test adapter and framework versions in our solution. Right-click the solution node at the top of the **Solution Explorer** and click  **Manage NuGet Packages**  for Solution.
+
+1. Select the **Update** tab and select the **MSTest.TestAdapter** and **MSTest.TestFramework** from the packages list.
+
+1. The minmium version of MSTest adapter and framework required for Live Unit Testing to work is 1.1.4-preview. Select a minmium or higer version of the packages and click **Install**
+
+
+    <img src="media/nuget-update.png" width="346" height="208" />
+
 
 6.  Select **Test \| Live Unit Testing \| Start** to start live
     unit testing. After a moment you will see glyphs appear in the left

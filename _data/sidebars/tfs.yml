@@ -72,7 +72,7 @@ entries:
       url: labs/tfs/intellitrace
       output: web, pdf
 
-    - title: Developer experience enhancements in Visual Studio 2017
+    - title: Developer Experience Enhancements in Visual Studio 2017
       url: labs/tfs/devexp
       output: web, pdf
 

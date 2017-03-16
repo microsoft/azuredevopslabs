@@ -242,21 +242,58 @@ In this exercise, you will learn how to create a manual test plan and populate i
 
 1. At this point, we’re ready to add steps to this manual test. Each step includes an **Action**, which describes the action the tester needs to perform. Optionally, a step can include an **Expected Result**, which describes the expected result of the given action. In the **Steps** panel, create a step for each of the following **Actions**, only one of which has an **Expected Result**.
 
+    <table>
+    <tr>
+    <th class="text_center">Action</th>
+    <th class="text_center">Expected Result</th>
+    </tr>
+    <tr>
+    <td >Open http://www.partsunlimited.com|</td>
+    </tr>
 
-|Action|Expected Result|
---- | ---
-|Open http://www.partsunlimited.com||
-|Click Brakes||
-|Click Disk and Pad Combo||
-|Click Add to Cart||
-|Click Checkout||
-|Enter @Email, @Password||
-|Enter @Name, @Phone, @Email, @Address, @City, @State, @PostalCode, @Country, @Promo||
-|Click Submit Order||
-|Confirm order page has order #|Order # should appear on order confirmation page|
-|Log out||
-|Close browser||
-**Note:** If you end up with an extra empty step, delete it.
+    <tr>
+    <td >Click Brakes</td>
+    </tr>
+
+    <tr>
+    <td>Click Disk and Pad Combo</td>
+    </tr>
+
+    <tr>
+    <td>Click Add to Cart</td>
+    </tr>
+
+    <tr>
+    <td>Click Checkout</td>
+    </tr>
+
+    <tr>
+    <td>Enter @Email, @Password</td>
+    </tr>
+
+    <tr>
+    <td>Enter @Name, @Phone, @Email, @Address, @City, @State, @PostalCode, @Country, @Promo</td>
+    </tr>
+
+    <tr>
+    <td>Click Submit Order</td>
+    </tr>
+
+    <tr>
+    <td>Confirm order page has order #</td>
+    <td class="text_center">Order # should appear on order confirmation page</td>
+    </tr>
+
+    <tr>
+    <td>Log out</td>
+    </tr>
+
+    <tr>
+    <td>Close browser</td>
+    </tr>
+    </table>
+
+    **Note:** If you end up with an extra empty step, delete it.
 
 
 1. At this point, the **Steps** panel should look similar to the following:
@@ -269,19 +306,18 @@ In this exercise, you will learn how to create a manual test plan and populate i
 
 1. Use the following table to set up values for two iterations.
 
-
-|Fields|Iteration 1|Iteration 2|
---- | --- | ---
-|Email|admin@test.com|sachin@test.com|
-|Password|P@ssw0rd|P@ssw0rd|
-|Name|Admin User|Sachin Raj|
-|Phone|425-555-1234|555-555-5555|
-|Address|One Microsoft Way|Two Tailspin Trail|
-|City|Redmond|Springfield|
-|State|WA|IL|
-|PostalCode|98052|11135|
-|Country|USA|USA|
-|Promo|FREE|FREE|
+   |Fields|Iteration 1|Iteration 2|
+   --- | --- | ---
+   |Email|admin@test.com|sachin@test.com|
+   |Password|P@ssw0rd|P@ssw0rd|
+   |Name|Admin User|Sachin Raj|
+   |Phone|425-555-1234|555-555-5555|
+   |Address|One Microsoft Way|Two Tailspin Trail|
+   |City|Redmond|Springfield|
+   |State|WA|IL|
+   |PostalCode|98052|11135|
+   |Country|USA|USA|
+   |Promo|FREE|FREE|
 
 
 1. The **Parameter Values** section should now look like this. Note that you can enter as many iterations as you need to fully test the breadth of the scenario.

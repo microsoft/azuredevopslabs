@@ -1,6 +1,6 @@
 ---
 layout: homepage
-title: Microsft ALM VM
+title: Microsoft ALM VM
 keywords: ALM VM homepage
 tags: [overview]
 permalink: index.html
@@ -31,7 +31,7 @@ The Microsoft Visual Studio ALM Virtual Machine is a virtual machine pre-install
     <li> Brand new labs for new features in VS and TFS 2017  </li>
   </ul>
 
- You can download the VM or simply access it from a browser or run it on Azure by uploading the VHD to your own Azure subscripton. To find out more including  download the vm, please check <a href="labs/tfs">here</a>
+ You can download the VM or simply access it from a browser or run it on Azure by uploading the VHD to your own Azure subscription. To find out more including  download the vm, please check <a href="labs/tfs">here</a>
  
 </p>
   

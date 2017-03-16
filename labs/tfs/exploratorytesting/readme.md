@@ -14,7 +14,7 @@ Last updated:3/2/2017
 
 In this lab, you will learn about the exploratory testing and feedback management capabilities provided in the Test & Feedback extension. You will learn about how exploratory testing (also called XT, or agile testing) has become a first-class experience in the toolset. This allows a tester to more flexibly test the underlying software without relying solely on formal test cases. You’ll also learn about how you can manage the process of eliciting and managing the customer feedback lifecycle.
 
-### Prerequisites ###
+## Prerequisites ##
 
 In order to complete this lab you will need the Visual Studio 2017 virtual machine provided by Microsoft. For more information on acquiring and using this virtual machine, please see [this blog post](http://aka.ms/almvm).
 

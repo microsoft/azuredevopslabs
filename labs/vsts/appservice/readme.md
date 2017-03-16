@@ -3,7 +3,7 @@ title: Deploy an ASP.NET Web App in Azure App Service
 layout: page
 sidebar: vsts
 permalink: /labs/vsts/appservice/
-folder: /labs/vsts/azureresource/
+folder: /labs/vsts/appservice/
 ---
 
 ## Overview

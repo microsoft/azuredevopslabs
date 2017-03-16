@@ -14,13 +14,11 @@ Last updated:3/3/2017
 
 This lab is all about those "fit-and-finish" scenarios in Visual Studio Team Foundation Server that will make developers more productive as they write code and collaborate with other team members. You'll learn about integrated code reviews; the "My Work" experience for managing your active tasks; and once you're "in the zone", Visual Studio will now help you stay focused on the task at hand, no matter how much you're randomized, with a suspend/resume experience. You'll also learn how to work offline seamlessly, how the new merging experience works, and how you can more easily find work items.
 
-### Pre-requisites ###
+## Pre-requisites ##
 
 In order to complete this lab you will need the Visual Studio 2017 virtual machine provided by Microsoft. For more information on acquiring and using this virtual machine, please see [this blog post](http://aka.ms/almvm).
 
-## Exercise 1: Team Explorer Overview ##
-
-### Task 1: Team Explorer Overview ###
+## Task 1: Team Explorer Overview ##
 
 In this exercise, you will see a high-level view of the changes made to Team Explorer in this release and learn how to navigate the functionality that is made available there. If you are new to Team Foundation Server, you can think of Team Explorer as the primary way in which a Visual Studio user accesses Team Foundation Server functionality.
 
@@ -68,7 +66,7 @@ In this exercise, you will see a high-level view of the changes made to Team Exp
 
 1. We will look at the new **My Work** functionality in the remaining exercises.
 
-### Task 2: My Work ###
+## Task 2: My Work ##
 
 1. In this exercise, you will learn about the new My Work experience for managing your active tasks.
 
@@ -102,7 +100,7 @@ In this exercise, you will see a high-level view of the changes made to Team Exp
 
     ![](images/016.png) 
 
-### Task 3: Local Workspaces ###
+## Task 3: Local Workspaces ##
 
 1. In this exercise, you will learn about local workspaces and how they improve the offline development experience.
 
@@ -182,7 +180,7 @@ In this exercise, you will see a high-level view of the changes made to Team Exp
 
    ![](images/031.png) 
 
-### Task 4: Pending Changes ###
+## Task 4: Pending Changes ##
 
 1. Click **Home** in **Team Explorer**, then click **Pending Changes**.
 
@@ -218,7 +216,7 @@ In this exercise, you will see a high-level view of the changes made to Team Exp
 
    ![](images/039.png)
 
-### Task 5: Suspend and Resume ###
+## Task 5: Suspend and Resume ##
 
 1. In this exercise, you will learn about the suspend and resume functionality for work items and the integrated code reviews.
 
@@ -308,7 +306,7 @@ In this exercise, you will see a high-level view of the changes made to Team Exp
 
 1. Press **Ctrl+S** to save the changes to the file.
 
-### Task 6: Code Reviews ###
+## Task 6: Code Reviews ##
 
 1. Now that the fix has been made, let's ask Clemri to perform a code review on the changes to make sure things look correct. In **Team Explorer - My Work**, click the **Request Review** link.
 
@@ -406,7 +404,7 @@ In this exercise, you will see a high-level view of the changes made to Team Exp
 
    ![](images/080.png)
 
-### Task 7: Merging ###
+## Task 7: Merging ##
 
 1. You should still be logged in as **Sachin** from the previous exercise.
 

@@ -97,36 +97,37 @@ you use an external hard drive, faster interfaces such as eSata or
 Firewire 800 will work better. Be careful with slower laptop drives and
 USB 1.1 interfaces.
 
-<table style="width:100%">
+<table style="width:100%; background: aliceblue;">
 <tr>
 <th class="text_center">Test</th>
 <th class="text_center">Requirement for Hyper-V Host Machine</th>
 </tr>
 <tr>
-<td class="text_center"><p>Operating System</p></td>
-<td class="text_center"><p>Microsoft Windows® Server 2008 R2 with the Hyper-V role enabled</p></td>
-Microsoft Windows® Server 2012 with the Hyper-V role enabled
-Microsoft Windows® 8 with Hyper-V enabled
-Microsoft Windows® 8.1 with Hyper-V enabled
-Microsoft Windows® Sever 2012 R2 with Hyper-V enabled
-Microsoft Windows® 10 with Hyper-V enabled
-Microsoft Windows® Sever 2016 with Hyper-V enabled</td>
+<td >Operating System</td>
+<td class="text_center">Microsoft Windows® Server 2008 R2 with the Hyper-V role enabled
+<br>Microsoft Windows® Server 2012 with the Hyper-V role enabled
+<br>Microsoft Windows® 8 with Hyper-V enabled
+<br>Microsoft Windows® 8.1 with Hyper-V enabled
+<br>Microsoft Windows® Sever 2012 R2 with Hyper-V enabled
+<br>Microsoft Windows® 10 with Hyper-V enabled
+<br>Microsoft Windows® Sever 2016 with Hyper-V enabled</td>
+
 </tr>
 <tr>
-<td>Drive Formatting</td>
-<td>NTFS</td>
+<td >Drive Formatting</td>
+<td class="text_center">NTFS</td>
 </tr>
 <tr>
 <td>Processor</td>
-<td>Intel VT or AMD-V capable, *SLAT-capable CPU required if using Windows 8*</td>
+<td class="text_center">Intel VT or AMD-V capable, *SLAT-capable CPU required if using Windows 8*</td>
 </tr>
 <tr>
 <td>RAM</td>
-<td>8 GB of free physical RAM (9 GB or more recommended)</td>
+<td class="text_center">8 GB of free physical RAM (9 GB or more recommended)</td>
 </tr>
 <tr>
 <td>Hard disk space required for install</td>
-<td>80 GB (more if using checkpoints)</td>
+<td class="text_center">80 GB (more if using checkpoints)</td>
 </tr>
 </table>
 
@@ -142,13 +143,13 @@ the letter r, and the letter d).
 This section lists the tasks that you must perform using a server with
 the Hyper-V role enabled.
 
-<table style="width:100%">
+<table style="width:100%; border-collapse:collapse; table-layout:fixed; background: aliceblue;">
 <tr>
 <th></th>
 <th></th>
 </tr>
-<tr>
-<td><p>1. Import and configure the Virtual Machine</p>
+<tr >
+<td ><p>1. Import and configure the Virtual Machine</p>
 <p>Due to the activation and expiration models in Windows Server, it’s highly
 recommended that you do one of the following:
 
@@ -158,8 +159,8 @@ recommended that you do one of the following:
 <p>b. If you are going to import to a Windows Server 2008 R2 machine, move the VHD file from the WMIv2\\Virtual Hard Disks folder to the WMIv1\\Virtual Hard Disks folder</p>
 <p>c. Use the <b>Browse</b> button to select the folder where the virtual machine package was extracted. Keep default settings. Browse to either the <b>“WMIv1”</b> or “<b>WMIv2”</b> folder depending upon if you are going to import to Server 2008 R2 or Windows8.1/Server 2012 R2 (or later), respectively</p>
 <p>d. Click <b>Select Folder</b> when you have browsed to this path.
-<img src="media/image1.png" width="624"/>
-<img src="media/image2.png" width="624"/></p>
+<br><img src="media/image1.png" style="height: 260px;"/>
+<br><img src="media/image2.png" style="height: 215px;"/></p>
 <p>e. Click <b>Next</b> through each remaining page of the import wizard, then <b>Finish</b>, and wait for the import operation to complete.</p>
 <p>f. The new virtual machine will show up in your Virtual Machines list.</p>
 <p>g. Optionally, you can right-click this virtual machine to configure various <b>Settings.</b> For example you may wish to increase the number of virtual processors (depending on your hardware) or adjust the amount of RAM allocated to this virtual machine. Read the “Recommended System Configuration” section above for tips about RAM allocation.</p>
@@ -176,7 +177,7 @@ recommended that you do one of the following:
 <p>c. Click Settings in the Actions pane.</p>
 <p>d. Configure the network adapter to use an external network adapter. *(For information on how to configure an external network adapter with Hyper-V please consult the Hyper-V documentation)*</p>
 <p>e. Your settings should resemble the following screenshot (the actual name of your external network may vary)</p>
-<img src="media/image3.png" width="624"/>
+<img src="media/image3.png" style="height:325px; padding-left: 10px;"/>
 <p>f. Click OK to close the settings dialog.</p>
 <p>g. <b>Start</b> the virtual machine if it isn’t already running.</p>
 <p>h. Once the machine starts, log in as <b>Sachin</b>. All passwords are <b>P2ssw0rd</b>.</p>
@@ -196,7 +197,7 @@ recommended that you do one of the following:
 <p>c. Click <b>Settings</b> in the Actions pane.</p>
 <p>d. Configure the network adapter to use an internal network adapter. *(For information on how to configure an external network adapter with Hyper-V please consult the Hyper-V documentation)*</p>
 <p>e. Your settings should resemble the following screenshot (the actual name of your internal network may vary)</p>
-<img src="media/image4.png" width="624"/>
+<img src="media/image4.png" style="height:325px; padding-left: 10px;"/>
 <p>f. Click OK to <b>close</b> the settings dialog.</p>
 <p>g. It is highly recommended that you now take a checkpoint of the virtual machine so that you can return to this state later if you need to. See “*Working with Checkpoints*” below for more information.</p></td>
 </tr>
@@ -208,15 +209,15 @@ Hyper-V introduces the concept of “checkpoints” which can be used to revert 
 hands-on-labs which were built for use with this virtual machine were tested for use with a “clean” state of the virtual machine; it is
 recommended that you restore to a clean checkpoint before you start each hands-on-lab. As delivered, this virtual machine does not include any
 checkpoints.
-<table>
+<table style="background: aliceblue;">
     <tr>
-        <th>Tasks</th>
-        <th>Detailed Steps</th>
+        <th class="text_center">Tasks</th>
+        <th class="text_center">Detailed Steps</th>
     </tr>
     <tr>
         <td><p>1. Create a Checkpoint</p></td>
         <p>Note that having many checkpoints can adversely affect performance. You can delete checkpoints you no longer need and Hyper-V will merge these when the VM is not running.</p>
-        <td>
+        <td class="text_center">
             <p>a. Prepare the VM(s) in the state you wish to capture.</p>
             <p>b. Open or return to the Hyper-V Manager</p>
             <p>c. Select the VM and click Checkpoint under Actions.</p>
@@ -226,7 +227,7 @@ checkpoints.
      </tr>   
     <tr>
         <td>2. Apply a Checkpoint</td>
-        <td><p>a. Open or return to the Hyper-V Manager</p>
+        <td class="text_center"><p>a. Open or return to the Hyper-V Manager</p>
         <p>b.Select the VM, right-click on the checkpoint you wish to use, and choose Apply. You will be prompted to save the current state as a checkpoint. Doing so will retain your current state, skipping will discard it.</p></td> 
     </tr>
 </table>

@@ -32,7 +32,7 @@ You can get access to the virtual machine the following ways:
 
 - **Download the Virtual Machine** - You can download the virtual machine, if you prefer to use it offline. Please see below for instructions to download the VM.
 - **Try it on Technet Virtual Labs** - You can also access the virtual machine online on **TechNet Virtual Labs**  - no downloads or complex setup required. You can experience it right from your browser.
-- **Run it on Azure** - If you prefer to run the VM on Azure, you can simply upload the VHD to your Azure storage and create a VM from the VHD. If you are setting up the labs for a traning, you  might want to consider the [Azure DevTest Labs](https://docs.microsoft.com/en-us/azure/devtest-lab/devtest-lab-training-lab) for training.
+- **Run it on Azure** - If you prefer to run the VM on Azure, you can simply upload the VHD to your Azure storage and create a VM from the VHD. If you are setting up the labs for a training, you  might want to consider the [Azure DevTest Labs](https://docs.microsoft.com/en-us/azure/devtest-lab/devtest-lab-training-lab) for training.
 
 ## Downloading and extracting the VM   
 The size of the download is about 30 GB. It is recommended that you use a utility like [**Free download manager**](http://www.freedownloadmanager.org/).  This utility provides:   
@@ -44,7 +44,7 @@ The size of the download is about 30 GB. It is recommended that you use a utilit
 - Open and select all the [download URLs](almvm2017url.txt) from the text file. Press ***CTRL+C*** to copy the selected URLs to clipboard.
 - Select Menu - ***Paste URLs from clipboard***      
 - When the download is complete, double-click the .exe file to self-extract the RAR files to a folder       
-- Read the “Working with the …” document to start using the VM     
+- Read the “ Working with the …” document to start using the VM     
 
 ![Free Download Manager](fdm.png)
 
@@ -55,7 +55,7 @@ The size of the download is about 30 GB. It is recommended that you use a utilit
 
 ## Hands-On-Labs
 
-Here are the 2017 hands-on-labs for Team Foundation Server. If you want to access the labs offline, you can download them as MS Word documents from <a href="https://github.com/Microsoft/almvm/tree/master/labs/Word">here</a>
+Here are the 2017 hands-on-labs for Team Foundation Server. If you want to access the labs offline, you can download them as MS Word documents from <a href="https://almvm2017.blob.core.windows.net/vm2017/VisualStudio ALMVM 2017 Labs.zip">here</a>
 <table width="100%">
 <thead><td><b>
 Lab Name</b>
