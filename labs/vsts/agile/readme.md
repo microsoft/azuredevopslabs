@@ -152,7 +152,7 @@ We see the default area is set to **Cordova Team**, if not you can change it to 
 
    <img src="images/28.png" width="624" />
 
-4. The WIP limit is already set for **Build and Test** column. You can also set for other columns as well. To do so, from the settings page go to columns tab. Click the **New Commit** column. Set the WIP Limit to **3**.
+4. The WIP limit is already set for **Build and Test** column. You can also set for other columns as well. To do so, from the settings page go to columns tab. Click the **Develop** column. Set the WIP Limit to **3**.
 
    <img src="images/29.png" width="624" />
   

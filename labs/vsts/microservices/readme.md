@@ -1,5 +1,10 @@
-<a name="Title"></a>
-# Microservice development with ASP.NET Core, Docker, and Azure App Services #
+---
+title: Microservice development with ASP.NET Core, Docker, and Azure App Services
+layout: page
+sidebar: vsts
+permalink: /labs/vsts/microservices/
+folder: /labs/vsts/microservices/
+---
 
 Lab version:15.0.26228.0
 

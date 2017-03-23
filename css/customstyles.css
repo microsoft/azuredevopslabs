@@ -1226,7 +1226,7 @@ i.glyphicon.glyphicon-search {
 
 .mainTable{
 border: none;
-background-color: white;
+background-color: #fcfcfc;
 }
 
 span.introText{
@@ -1255,4 +1255,37 @@ th.text_center{
 
 td.text_center{
     padding-left: 70px;
+}
+
+div.headline {
+   /* border: 1px;*/
+    border-width: 1px;
+    border-style: solid;
+    /*border: double #248ec2;*/
+     border-color: #248ec2;
+     padding: 5px;
+    margin:5px;
+    background-color: #fcfcfc;
+}
+
+span.headnews {
+      margin-top:40px;
+    padding-top: 20px;     
+    padding-bottom: 20px;     
+    font-size: 24px;
+    font-weight: bold; 
+    color: black;
+}
+
+div.newsitem {
+    display: block;
+    border-style: solid;
+    border-width: 1px 0px 0px 0px;
+    border-color: dimgrey;
+    
+}
+
+span.newsfooter {
+    font-size: 12px;
+     color: grey;
 }
