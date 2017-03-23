@@ -3,7 +3,7 @@
 
 Lab version:15.0.26228.0
 
-Last updated:3/15/2017
+Last updated:3/17/2017
 
 <a name="Overview"></a>
 ## Overview ##
@@ -25,7 +25,7 @@ This lab requires the following to be installed on your machine:
 
 1. [PuTTY](http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html)
 
-    You also need an [Azure account](https://azure.microsoft.com/) and a [Visual Studio Team Services (VSTS) account](https://www.visualstudio.com/team-services/).
+    You also need [Visual Studio Team Services (VSTS) account](https://www.visualstudio.com/team-services/) and an [Azure account](https://azure.microsoft.com/) ([Get a $25 monthly Azure credit by joining Visual Studio Dev Essentials](https://www.visualstudio.com/dev-essentials/)).
 
 <a name="Exercise1"></a>
 ## Exercise 1: Creating Microservices with ASP.NET Core ##
@@ -181,7 +181,7 @@ This lab requires the following to be installed on your machine:
 <a name="Ex1Task3"></a>
 ### Task 3: Creating an Azure Container Service ###
 
-1. Launch **PuTTYgen**. We will use it to generate the public key required to set up an Azure Container Service instance. There are other options for generating keys that may be more appropriate for the level of control you need in production. Please see [this article](https://docs.microsoft.com/en-us/azure/virtual-machines/virtual-machines-linux-ssh-from-windows?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json) for more details.
+1. Launch **PuTTYgen**. We will use it to generate the public key required to set up an Azure Container Service instance. You will also use the private key later to connect to administration tools available to manage the service. There are other options for generating keys that may be more appropriate for the level of control you need in production, so please see [this article](https://docs.microsoft.com/en-us/azure/virtual-machines/virtual-machines-linux-ssh-from-windows?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json) for more details.
 
 1. Click **Generate** to start the key generation.
 
@@ -191,133 +191,207 @@ This lab requires the following to be installed on your machine:
 
    ![](images/028.png)
 
+1. Click **Save private key** and save the key to somewhere convenient, such as the desktop.
+
+   ![](images/029.png)
+
 1. Open a browser window and log in to [http://portal.azure.com](http://portal.azure.com/).
 
 1. Click **+New** and search for **"container"**. Click **Azure Container Service** as soon as it appears.
 
-   ![](images/029.png)
+   ![](images/030.png)
 
 1. Click **Azure Container Service** in the search results.
 
-   ![](images/030.png)
+   ![](images/031.png)
 
 1. Click **Create** to begin the creation process.
 
-   ![](images/031.png)
-
-1. Select **DC/OS** as the **Orchestrator** and enter a **Resource group** name of **"azuremicroserviceslab"**. Click **OK** to continue.
-
    ![](images/032.png)
 
-1. Return to the **PuTTY Key Generator** and copy the **Public key** to the clipboard.
+1. Select **DC/OS** as the **Orchestrator**, enter a **Resource group** name of **"azuremicroserviceslab"**, and select the **Location** of **West US**. Click **OK** to continue.
 
    ![](images/033.png)
 
-1. Set the **DNS name prefix** to **"azuremicroserviceslab"** and enter a **User name** (such as **"johndoe"**). Paste the **SSH public key** from the clipboard. Click **OK** to continue.
+1. Return to the **PuTTY Key Generator** and copy the **Public key** to the clipboard.
 
    ![](images/034.png)
 
-1. Click **OK** for the default **Agent configuration**.
+1. Set the **DNS name prefix** to **"azuremicroserviceslab"** and enter a **User name** (such as **"johndoe"**). Paste the **SSH public key** from the clipboard. Click **OK** to continue.
 
    ![](images/035.png)
 
-1. Once validated, click **OK** on the summary page to start creation. This may take a while.
+1. Click **OK** for the default **Agent configuration**.
 
    ![](images/036.png)
 
+1. Once validated, click **OK** on the summary page to start creation. This may take a while.
+
+   ![](images/037.png)
+
 1. You can wait for deployment to complete by watching the tile added to your Azure dashboard.
 
-<a name="![](images/037.png)"></a>
-### ![](images/037.png) ###
+<a name="![](images/038.png)"></a>
+### ![](images/038.png) ###
 
 <a name="Ex1Task4"></a>
-### Task 4: Deploying from Visual Studio to your Azure Container Service ###
+### Task 4: Deploying a container from Visual Studio to your Azure Container Service ###
 
-1. Now let's take a look at the process for deploying your containers out to Azure. Return to **Visual Studio** and sign in using the button in the top right corner. Already being signed in will make things easier in this task.
-
-   ![](images/038.png)
-
-1. In **Solution Explorer**, right-click the **Web** project node and select **Publish**.
+1. Now let's take a look at the process for deploying the Web container out to Azure. Return to **Visual Studio** and sign in using the button in the top right corner. Already being signed in will make things easier in this task.
 
    ![](images/039.png)
 
-1. Select the **Azure App Service Linux (Preview)** option and click **Publish**.
+1. In **Solution Explorer**, right-click the **Web** project node and select **Publish**.
 
    ![](images/040.png)
 
-1. Enter a unique **Web App Name**. You might be able to use **"AzureMicroservicesLab"**, or you may need to append some random numbers to find a name all your own. It really doesn't matter what the name is for the purposes of this lab. Review the other options to make sure they're the ones you want to use in this lab. Click **Create**.
+1. Select the **Azure App Service Linux (Preview)** option and click **Publish**.
 
    ![](images/041.png)
 
-1. As the build and publish process progresses, you'll eventually see the push of the bits specific to this solution. Note that the full container isn't deployed, but rather just the differential changes needed to update the application.
+1. Enter a unique **Web App Name**. You might be able to use **"AzureMicroservicesLab"**, or you may need to append some random numbers to find a name all your own. It really doesn't matter what the name is for the purposes of this lab. Review the other options to make sure they're the ones you want to use in this lab. Note that if you don't have an **App Service Plan** or **Container Registry**, they will be newly created for this deployment and denoted by an **asterisk (*)**. Select the **Services** tab.
 
    ![](images/042.png)
 
-1. After the containers have been deployed, a browser will open to the **Site URL** configured earlier. If not, you can open it manually.
+1. Here you can review the resources your app will need to configure as part of the deployment. Click the **Settings** gear for the **Azure Container Registry** resource (your exact name may vary).
 
    ![](images/043.png)
 
-1. Close the browser when satisfied.
+1. Since this registry is being created now, you can customize its creation details if needed. Click **Cancel**.
 
-<a name="![](images/044.png)"></a>
-### ![](images/044.png) ###
+   ![](images/044.png)
+
+1. Click **Create** to begin the publish process.
+
+   ![](images/045.png)
+
+1. As the build and publish process progresses, you'll eventually see the push of the bits specific to this solution. Note that the full container isn't deployed, but rather just the differential changes needed to update the container.
+
+   ![](images/046.png)
+
+1. After the containers have been deployed, a browser will open to the **Site URL** configured earlier. If not, you can open it manually.
+
+   ![](images/047.png)
+
+1. Most of the site should work as expected. However, since we didn't deploy the API project, visiting the **About** page would crash at this time since that dependency will not be available. Close the browser when satisfied.
+
+<a name="![](images/048.png)"></a>
+### ![](images/048.png) ###
 
 <a name="Ex1Task5"></a>
 ### Task 5: Setting up Continuous Delivery via Visual Studio Team Services ###
 
 1. While it's great to be able to push a deployment out from Visual Studio, sophisticated teams look for opportunities to leverage automation where possible. With **Visual Studio Team Services**, it's really easy to set up continuous delivery such that project changes are automatically built, tested, and processed through a release workflow if meeting all requirements. To start to take advantage of all of this opportunity, right-click the solution node in **Solution Explorer** and select **Add Solution to Source Control**.
 
-   ![](images/045.png)
+   ![](images/049.png)
 
 1. From the dropdown in **Team Explorer**, select **Sync**.
 
-   ![](images/046.png)
+   ![](images/050.png)
 
 1. Click **Publish Git Repo**.
 
-   ![](images/047.png)
+   ![](images/051.png)
 
 1. Select the VSTS account you want to use. If you haven't associated an account yet, add one now. Then keep the default **Repository name** and click **Publish repository**.
 
-   ![](images/048.png)
+   ![](images/052.png)
 
 1. In **Solution Explorer**, right-click the **Web** project node and select **Configure Continuous Delivery**.
 
-   ![](images/049.png)
+   ![](images/053.png)
 
 1. The continuous delivery settings are similar to the publish settings we configured earlier. Select the settings you would like to use for this lab (probably the same as earlier) and click **OK**. The process may take a few minutes to complete.
 
-   ![](images/050.png)
+   ![](images/054.png)
 
 1. After the process has completed, locate the **Build Definition** URL from the **Output** pane. Copy this URL and paste it into a new browser window to view the build definition created by Visual Studio.
 
-   ![](images/051.png)
+   ![](images/055.png)
 
 1. The build should complete pretty quickly. However, if you get there quickly enough, you'll see some live build details.
 
-   ![](images/052.png)
+   ![](images/056.png)
 
 1. Once the build completes, take some time to review the results.
 
-   ![](images/053.png)
+   ![](images/057.png)
 
 1. Click **Edit build definition** to view the details of the build configuration and tasks.
 
-   ![](images/054.png)
+   ![](images/058.png)
 
 1. There are many tasks available for build definitions, including some specialized for working with Docker. Select the **Build repository** task and notice that the **docker-compose** file is one of the ones managed at the solution level from earlier.
 
-   ![](images/055.png)
+   ![](images/059.png)
 
-1. Select the **Releases** tab to view release progress.
+1. Select the **Push service images** task. This task describes how the containers are published to the registry, including how they're tagged. By default, they'll be tagged with the build ID, source branch name, source version, and **"latest"**.
 
-   ![](images/056.png)
+   ![](images/060.png)
+
+1. Return to the browser window open to the **Azure portal**. If one isn't open, navigate to [http://portal.azure.com](http://portal.azure.com/).
+
+1. Select the **All Resources** tab from the left nav and search for **"registry"** (assuming you created the Azure Container Registry using that term in the name). Click the registry you've been working with in this lab to open it.
+
+   ![](images/061.png)
+
+1. Select the **Repositories** tab and click **api**.
+
+   ![](images/062.png)
+
+1. Notice that the build has been tagged with all the information configured in the build task.
+
+   ![](images/063.png)
+
+1. Return to the VSTS browser window. Select the **Releases** tab to view release progress.
+
+   ![](images/064.png)
 
 1. In addition to the build, the default configuration for continuous delivery will automatically deploy the containers out to a development environment. Double-click the green bar to view the status of that environment.
 
-   ![](images/057.png)
+   ![](images/065.png)
 
 1. Notice that in addition to the **Dev** environment, there are already **Test** and **Production release** environments available for you to work with.
 
-    ![](images/058.png)
+   ![](images/066.png)
+
+1. Open **PuTTY**. Note that this is the main application and not the key generation app from earlier. We will use it to tunnel into the cluster in order to review the **Dev** deployment.
+
+1. The **Host Name** will be in the format **[username]@[DNS prefix].[location].cloudapp.azure.com**. For example, if you used the **DNS name prefix** of **"azuremicroserviceslab"**, **User name** of **"johndoe"**, and **Location** of **"West US"** when creating the service, your **Host Name** field would be **johndoe@azuremicroserviceslabmgmt.westus.cloudapp.azure.com**. Set the **Port** to **2200**.
+
+   ![](images/067.png)
+
+1. In the left tree view, select **Connection | SSH | Auth**. Set the **Private key** to the local path to the private key saved earlier.
+
+   ![](images/068.png)
+
+1. Select the **Tunnels** tree node. Enter a **Source port** of **"80"** and a **Destination** of **"localhost:80"**. Click **Add**. This is a necessary step to properly use the administration site.
+
+   ![](images/069.png)
+
+1. Click **Open** to open the connection.
+
+   ![](images/070.png)
+
+1. Open a browser and connect to **localhost**. This will provide you a dashboard view of the cluster, including details like **CPU** and **Memory** allocation. Select the **Services** tab.
+
+   ![](images/071.png)
+
+1. The first service in the list is the **dev** service. This environment was created by VSTS during the CICD Release pipeline. Click **dev**.
+
+   ![](images/072.png)
+
+1. You can perform common service-level tasks here, such as scaling up the entire deployment by a constant factor. Click **azuremicroserviceslab**.
+
+   ![](images/073.png)
+
+1. At this level we can see the microservices involved in this deployment and perform key tasks, such as scaling them individually. Click **web** to see more details about that container.
+
+   ![](images/074.png)
+
+1. In the task view, you can review details about the microservice, such as how much CPU and RAM it's using, as well as when it was last updated. Click the first task to review more detail.
+
+    ![](images/075.png)
+
+    ![](images/076.png)
 
