@@ -10,7 +10,7 @@ pageurl: /labs/tfs/
 <tr><td class="mainTable" width="90%">
 We are excited to announce the <b>2017 version of the Microsoft Visual Studio ALM VM</b> - with updated versions, new application, updated and new hands-on-labs based on the new features and enhancements in VS and TFS 2017.
   
-  Here are the <b>key highlights</b> of the 2017 version:
+Here are the <b>key highlights</b> of the 2017 version:
   
   <ul>
     <li> Upgraded Visual Studio and Team Foundation Server to 2017</li>
@@ -19,7 +19,7 @@ We are excited to announce the <b>2017 version of the Microsoft Visual Studio AL
     <li> Brand new labs for new features in VS and TFS 2017  </li>
   </ul>
 
- You can download the VM or simply access it from a browser or run it on Azure by uploading the VHD to your own Azure subscription. To find out more including  download the vm, please check <a href="labs/tfs">here</a>
+You can download the VM or simply access it from a browser or run it on Azure by uploading the VHD to your own Azure subscription. To find out more including  download the vm, please check <a href="labs/tfs">here</a>
   </td><td class="mainTable" width="10%">
   <img src="images/devops.png" />
   </td></tr>
