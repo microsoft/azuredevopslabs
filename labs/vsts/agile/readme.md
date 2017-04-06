@@ -43,60 +43,47 @@ In order to complete this lab you will need-
     <img src="images/7.png" width="624" />
 
 3.  Check the existing teams, there are 3 teams by name **MyHealthClinic Team, Team 1, Team 2**.
-    The default team has the same name that of your VSTS project. Here we will create new teams and assign developers to the teams.
+    The default team has the same name that of your VSTS project. You can create new teams if needed from here.
 
     <img src="images/8.png" width="624" />
 
-4.  Click on **New team** to create. Name the team as **Cordova Team** and leave the rest of the fields with its default values.
-
-    <img src="images/9.png" width="624" />
-
-    Repeat the steps for creating **Xamarin and Web Teams**.
-    This is important to keep the work and the views separated from diferent teams allowing each team to be able to access and see only the information relevant
-     to them.
-
-5.  In the Overview screen for the newly created team, we see our user as the only current member.
+4.  In the Overview screen, we see our user as the only current member.
 
     <img src="images/10.png" width="624" />
+    
 
-
-6.  Click **Add** button to add new members to the team.
+5.  Click **Add** button to add new members to the team.
 
     <img src="images/11.png" width="624" />
 
-7.  Click on the **Work** pane and go to **Areas**.
+6.  Click on the **Work** pane and go to **Areas**.
 
     <img src="images/12.png" width="624" />
 
-8.  Click on **Select area** and select **Cordova Team**.
-
-    <img src="images/13.png" width="624" />
-
-9.  Select the **Cordova Team** node and click on **New child**. Give a name for the area like **IOS**.
+7.  Select the **MyHealthClinic** node and click on **New child**. Give a name for the area like **WEB**.
 
     <img src="images/14.png" width="624" />
 
-10. You should see the areas listed below for the teams.
+8. You should see the areas listed below for the teams.
 
     <img src="images/15.png" width="624" />
 
-
-11. Go to **Iterations** and click **Select Iteration**. Select **Sprint 1**.
+9. Go to **Iterations** and click **Select Iteration**. Select **Sprint 1**.
 
     <img src="images/16.png" width="624" />
 
-12. Click on **Change** for the default iteration. And set **MyHealthClinic** as the default one.
+10. Click on **Change** for the default iteration. And set **MyHealthClinic** as the default one.
 
     <img src="images/17.png"  />
 
     <img src="images/18.png"  />
 
-13. Go to **Areas**. As with iterations, VSTS have areas which can be used to organize the work fr the teams.
+11. Go to **Areas**. As with iterations, VSTS have areas which can be used to organize the work fr the teams.
 We see the default area is set to **Cordova Team**, if not you can change it to Cordova Team area.
 
     <img src="images/19.png" width="624" />
 
-14. Click on the ellipsis button to include sub-areas as shown
+12. Click on the ellipsis button to include sub-areas as shown
 
     <img src="images/20.png" width="624" />
 
