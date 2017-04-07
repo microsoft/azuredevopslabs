@@ -21,7 +21,7 @@ The virtual machine contains the following pre-configured software:
 4.  Microsoft Office Professional Plus 2016 (Word, PowerPoint,
     Excel, Outlook)
 
-5.  Microsoft SQL Server 2016 Standard
+5.  Microsoft SQL Server 2016 Express
 
 6.  Sample users and data required to support hands-on-lab scripts which
     accompany this download.      
