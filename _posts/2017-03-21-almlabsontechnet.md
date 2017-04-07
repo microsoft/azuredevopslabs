@@ -7,7 +7,7 @@ pageurl: /labs/tfs/technet/
 ---
 
 <table class="mainTable" width="100%" border="0">
-<tr><td class="mainTable" width="90%" border="0">
+<tr><td class="mainTable" border="0">
 We now have the Microsoft Visual Studio 2017 ALM VM Labs available on <b>Microsoft TechNet Virtual Labs</b>. If you do not want to download the VM locally, you can experience the labs right from within your browser. It's very simple - there no complex setup or installation required. 
 
 

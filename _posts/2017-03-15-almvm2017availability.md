@@ -7,7 +7,7 @@ pageurl: /labs/tfs/
 ---
 
 <table class="mainTable" width="100%" border="0">
-<tr><td class="mainTable" width="90%">
+<tr><td class="mainTable">
 We are excited to announce the <b>2017 version of the Microsoft Visual Studio ALM VM</b> - with updated versions, new application, updated and new hands-on-labs based on the new features and enhancements in VS and TFS 2017.
   
 Here are the <b>key highlights</b> of the 2017 version:

@@ -21,7 +21,7 @@ The virtual machine contains the following pre-configured software:
 4.  Microsoft Office Professional Plus 2016 (Word, PowerPoint,
     Excel, Outlook)
 
-5.  Microsoft SQL Server 2016 Express
+5.  Microsoft SQL Server Express 2016
 
 6.  Sample users and data required to support hands-on-lab scripts which
     accompany this download.      
@@ -31,11 +31,11 @@ The virtual machine contains the following pre-configured software:
 You can get access to the virtual machine the following ways:
 
 - **Download the Virtual Machine** - You can download the virtual machine, if you prefer to use it offline. Please see below for instructions to download the VM.
-- **Try it on Technet Virtual Labs** - You can also access the virtual machine online on **TechNet Virtual Labs**  - no downloads or complex setup required. You can experience it right from your browser.
+- **Try it on Technet Virtual Labs** - You can also access the virtual machine online on [**TechNet Virtual Labs**](/labs/tfs/technet/)  - no downloads or complex setup required. You can experience it right from within your browser.
 - **Run it on Azure** - If you prefer to run the VM on Azure, you can simply upload the VHD to your Azure storage and create a VM from the VHD. If you are setting up the labs for a training, you  might want to consider the [Azure DevTest Labs](https://docs.microsoft.com/en-us/azure/devtest-lab/devtest-lab-training-lab) for training.
 
 ## Downloading and extracting the VM   
-The size of the download is about 30 GB. It is recommended that you use a utility like [**Free download manager**](http://www.freedownloadmanager.org/).  This utility provides:   
+The size of the download is about 18 GB. It is recommended that you use a utility like [**Free download manager**](http://www.freedownloadmanager.org/).  This utility provides:   
     - Auto-resume support for interrupted downloads.
     - Multiple simultaneous download streams for (usually) a much faster download experience.
     - As the name implies, it’s completely free.    

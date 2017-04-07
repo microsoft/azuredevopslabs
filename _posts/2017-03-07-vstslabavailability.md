@@ -7,7 +7,7 @@ pageurl: /labs/vsts/
 ---
 
 <table class="mainTable" width="100%" border="0">
-<tr><td class="mainTable" width="90%">
+<tr><td class="mainTable">
 <b>Labs for Visual Studio Team Services</b>
 <br />
 We are also happy to share that we have a new set of hands-on-labs based on Visual Studio Team Services. 
