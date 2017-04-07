@@ -1,5 +1,5 @@
 ---
-title: VSTS Hands-on-Labs 
+title: Visual Studio Team Services- Hands-on-Labs 
 layout: page
 sidebar: vsts
 permalink: /labs/vsts/
