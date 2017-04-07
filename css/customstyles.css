@@ -1264,15 +1264,14 @@ div.headline {
     /*border: double #248ec2;*/
      border-color: #248ec2;
      padding: 5px;
-    margin:5px;
+    margin:25px;
     background-color: #fcfcfc;
 }
 
 span.headnews {
-      margin-top:40px;
     padding-top: 20px;     
-    padding-bottom: 20px;     
-    font-size: 24px;
+    padding-bottom: 5px;     
+    font-size: 20px;
     font-weight: bold; 
     color: black;
 }
@@ -1288,4 +1287,39 @@ div.newsitem {
 span.newsfooter {
     font-size: 12px;
      color: grey;
+}
+
+div.lab-columns {
+    width: 1100px;
+}
+div.lab-columns div{
+     height: 280px; float: left; 
+}
+div.lab-item-none {
+    width: 120px;
+    background-color: #ffffff;
+}
+div.lab-item {
+    width: 350px;
+    border-width: 1px;
+    border-style: solid;
+     border-color: #248ec2;
+     padding: 5px;
+    margin:5px;
+    background-color: #FFFFFF;
+        font-weight: 80%;
+}
+div.clear         { clear: both; }
+
+a.c-glyph{
+    width: 180 px;
+ border-width: 1px;
+    border-style: solid;
+     border-color: #000000;
+     padding: 5px;
+    margin:5px;
+    background-color: #248ec2;
+}
+span.lab-details{
+    color: white;
 }

@@ -14,6 +14,7 @@ summary:
 <span class="introText">
 The Microsoft Visual Studio ALM Virtual Machine is a virtual machine pre-installed with Visual Studio & Team Foundation server along with other supporting software coming pre-configured with sample projects, users, data and a set of hands-on-labs/demo scripts to get started with all the ALM Capabilities that Microsoft Visual Studio Team Foundation Server/Visual Studio Team Services provides. 
 </span>
+
 <br />
 <br />
  
@@ -26,7 +27,6 @@ The Microsoft Visual Studio ALM Virtual Machine is a virtual machine pre-install
 <p>
 {{ post.content }}
 </p>
-<br />
 <div class="newsitem">
 <span class="newsfooter">
 <span class="glyphicon glyphicon-time"></span> &nbsp;{{ post.pubdate }}  &nbsp;&nbsp;&nbsp; <span class="glyphicon glyphicon-user"></span> &nbsp; {{ post.Author }}   &nbsp;&nbsp;&nbsp; <span class="glyphicon glyphicon-link"></span>&nbsp;<a href="{{ post.pageurl | prepend: site.baseurl| prepend: site.url }}">   Link</a>
@@ -35,10 +35,6 @@ The Microsoft Visual Studio ALM Virtual Machine is a virtual machine pre-install
 </div>
 <br/>
 {% endfor %}
-
-
- 
-
 
 
 

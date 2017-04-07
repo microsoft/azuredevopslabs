@@ -20,8 +20,8 @@ Here are the <b>key highlights</b> of the 2017 version:
   </ul>
 
 You can download the VM or simply access it from a browser or run it on Azure by uploading the VHD to your own Azure subscription. To find out more including  download the vm, please check <a href="labs/tfs">here</a>
-  </td><td class="mainTable" width="10%">
-  <img src="images/devops.png" />
+  <!--/td><td class="mainTable" width="10%">
+  <img src="images/devops.png" /-->
   </td></tr>
   </table>
  

@@ -12,9 +12,9 @@ We now have the Microsoft Visual Studio 2017 ALM VM Labs available on <b>Microso
 
 
 <p><a href="labs/tfs/technet">Click here </a>to find out more information on system requirements and how you can access the virtual labs</p>
-</td>
+<!--/td>
 <td class="mainTable" width="10%" >
-<img src="images/technet.png">
+<img src="images/technet.png"-->
 </td>
 </tr>
 </table>
