@@ -7,9 +7,15 @@ folder: /labs/vsts/git/
 ---
 
 ## Overview
+Team Services supports two types of version control Git and Team Foundation Version Control (TFVC). Here is a quick overview of the two version control systems:
 
-<a href="https://www.visualstudio.com/en-us/docs/git/overview/">Git</a> is a distributed version control system. Git repositories can live locally (such as on a developer’s machine).
-You will learn how to establish a local Git repository, which can easily be synchronized with a centralized Git repository in Visual Studio Team Services.
+ - **Team Foundation Version Control (TFVC)**: TFVC is a centralized version control system. Typically, team members have only one version of each file on their dev machines. Historical data is maintained only on the server. Branches are path-based and created on the server.
+
+- **Git**: Git is a distributed version control system. Git repositories can live locally (such as on a developer’s machine). Each developer has a copy of the source repository on their dev machine. Developers can commit each set of changes on their dev machine and perform version control operations such as history and compare without a network connection.
+
+Git is the default version control provider for new projects. You should use Git for version control in your projects unless you have a specific need for centralized version control features in TFVC.
+
+In this lab, you will learn how to establish a local Git repository, which can easily be synchronized with a centralized Git repository in Visual Studio Team Services.
 In addition, you will learn about Git branching and merging support.
 
 ## Pre-requisites
