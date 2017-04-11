@@ -31,7 +31,7 @@ The virtual machine contains the following pre-configured software:
 You can get access to the virtual machine the following ways:
 
 - **Download the Virtual Machine** - You can download the virtual machine, if you prefer to use it offline. Please see below for instructions to download the VM.
-- **Try it on Technet Virtual Labs** - You can also access the virtual machine online on [**TechNet Virtual Labs**](/labs/tfs/technet/)  - no downloads or complex setup required. You can experience it right from within your browser.
+- **Try it on Technet Virtual Labs** - You can also access the virtual machine online on [**TechNet Virtual Labs**](technet/)  - no downloads or complex setup required. You can experience it right from within your browser.
 - **Run it on Azure** - If you prefer to run the VM on Azure, you can simply upload the VHD to your Azure storage and create a VM from the VHD. If you are setting up the labs for a training, you  might want to consider the [Azure DevTest Labs](https://docs.microsoft.com/en-us/azure/devtest-lab/devtest-lab-training-lab) for training.
 
 ## Downloading and extracting the VM   
