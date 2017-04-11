@@ -7,7 +7,7 @@ folder: /labs/tfs/technet/
 ---
 
 ## Microsoft TechNet Virtual Labs
-Microsoft TechNet Virtual Labs provides a quick and easy way to evaluate and test Microsoft’s newest products and technologies through virtual environments that do not require any complex setup or installation. You can use virtual labs online immediately for free :)
+[Microsoft TechNet Virtual Labs](https://technet.microsoft.com/en-us/virtuallabs) provides a quick and easy way to evaluate and test Microsoft’s newest products and technologies through virtual environments that do not require any complex setup or installation. You can use virtual labs online immediately for free :)
 
 The ALM VM 2017 and the corresponding labs are now available on TechNet Virtual Labs which means you can try them from a browser or a windows client without having to worry about downloading the entire virtual machine. 
 
@@ -84,8 +84,12 @@ Here are the links to the labs on TechNet Virtual Labs:
     <td ><a href="https://vlabs.holsystems.com/vlabs/technet?eng=VLabs&amp;auth=none&amp;src=vlabs&amp;altadd=true&amp;labid=32186&amp;lod=true">Start Virtual Labs</a></td>
   </tr>
   <tr>
-    <td ></td>
-    <td ></td>
+    <td >	ReadyRoll- Develop and deploy databases in Visual Studio Enterprise 2017</td>
+    <td ><a href="https://vlabs.holsystems.com/vlabs/technet?eng=VLabs&auth=none&src=vlabs&altadd=true&labid=32382&lod=true"> Start Virtual Labs</a></td>
+  </tr>
+    <tr>
+    <td >	SQL Prompt for Visual Studio Enterprise 2017</td>
+    <td ><a href="https://vlabs.holsystems.com/vlabs/technet?eng=VLabs&auth=none&src=vlabs&altadd=true&labid=32384&lod=true"> Start Virtual Labs</a></td>
   </tr>
   <tr>
     <td >Making Developers More Productive with Visual Studio Team Foundation Server 2017</td>
@@ -110,5 +114,9 @@ Here are the links to the labs on TechNet Virtual Labs:
   <tr>
     <td >Test Planning and Management with Team Foundation Server 2017</td>
     <td ><a href="https://vlabs.holsystems.com/vlabs/technet?eng=VLabs&amp;auth=none&amp;src=vlabs&amp;altadd=true&amp;labid=32189&amp;lod=true">Start Virtual Labs</a></td>
+  </tr>
+    <tr>
+    <td >	Managing Technical Debt with Team Foundation Server 2017 and SonarQube</td>
+    <td ><a href="https://vlabs.holsystems.com/vlabs/technet?eng=VLabs&auth=none&src=vlabs&altadd=true&labid=32383&lod=true">Start Virtual Labs</a></td>
   </tr>
 </table>
