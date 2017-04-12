@@ -28,10 +28,13 @@ virtual machine provided by Microsoft. For more information on acquiring
 and using this virtual machine, please see [this blog
 post](http://aka.ms/almvm).
 
+**Important Note: Redgate Data Tools (ReadyRoll Core, SQL Prompt Core, and SQL Search) are available now out of the box with Visual Studio Enterprise but we missed to include these components in the VM. You will need to install these components before you proceed further with the lab. Please see this [page](../redgateinstall/) for step-by-step instructions on installing Redgate Data Tools in Visual Studio and ReadyRoll Extension for Team Foundation Server.**
 
-Let’s connect to a database from the Server Explorer window in Visual Studio* *and take a look at some of the highlights*
+**Alternatively, you can try this labs on [TechNet Virtual Centre](../technet/) where we have the Redgate Data tools pre-installed in the VM.**
 
 ### Task 1: Writing our first query with SQL Prompt
+
+Let’s connect to a database from the Server Explorer window in Visual Studio* *and take a look at some of the highlights*
 
 |Action       | Screenshot     |
 |-------------|----------------|
