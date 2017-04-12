@@ -18,46 +18,26 @@ Git is the default version control provider for new projects. You should use Git
 In this lab, you will learn how to establish a local Git repository, which can easily be synchronized with a centralized Git repository in Visual Studio Team Services.
 In addition, you will learn about Git branching and merging support.
 
-## Pre-requisites
-
-In order to complete this lab you will need-
-
-- **Visual Studio Team Services account**. If you don't have one, you can create from <a href="https://www.visualstudio.com/">here</a>
-
-- **Visual Studio 2017** or higher version
-
-- You can use the **[VSTS Demo Data generator](http://vstsdemogenerator.azurewebsites.net/Environment/Create)** to provison a project with pre-defined data on to your Visual Studio Team Services account. Please use the ***My Health Clinic*** template to follow the hands-on-labs.
-
-- If you are not using the VSTS Demo Data Generator, you can clone the code from here
-
 ## Exercise 1: Connect from Visual Studio
 
-1.  Sign in to your **Visual Studio Team Services** account and browse to **MyhealthClinic** Project. 
-
-2.	From your account overview page, select your team project. You can also search.
-
+1.  Sign in to your **Visual Studio Team Services** account and browse to **MyhealthClinic** project. 
     <img src="images/78.png" width="624" />
+
+2. Navigate to the **Code** hub. Select **Clone** and select **Clone in Visual Studio**    
+    <img src="images/clonecode.png" width="624" />
     
-    <img src="images/1.png" width="624" />
-
-3.	Click on the **Open Visual Studio** widget from the dashboard.
-
-    <img src="images/2.png"/>
-
-4.	Click Yes.	
-
+4.	Click **Yes**	    
     <img src="images/9.png" width="624" />
 
-5.	Click on **Clone this repository**.
+1. You might be prompted to sign into to your account from Visual Studio. Sign in to your account
 
+5.	Click on **Clone this repository**    
     <img src="images/3.png" />
 
-6.	Set the local path for your repository and click **Clone**.
-
+6.	Set the local path for your repository and click **Clone**.      
     <img src="images/4.png" />
 
-7.	Go to Visual Studio and click on **Changes** from **Team Explorer**.
-
+7.	Go to Visual Studio and click on **Changes** from **Team Explorer**.    
     <img src="images/5.png" />
 
 8.	Choose the directory from the changes section and click on **Stage**.
