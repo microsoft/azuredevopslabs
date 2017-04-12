@@ -6,9 +6,9 @@ permalink: /labs/tfs/readyroll/
 folder: /labs/tfs/readyroll/
 ---
 
-Lab version: 15.0.26020.0
+Lab version: 15.0.26020.1
 
-Last updated: 1/31/2017
+Last updated: 4/11/2017
  
 
 ## Overview
@@ -30,6 +30,11 @@ used it allows you to:**
 ## Pre-requisites
 
 In order to complete this lab you will need the Microsoft Visual Studio 2017 ALM virtual machine provided by Microsoft. For more information on acquiring and using this virtual machine, please see [this post](http://aka.ms/almvm).
+
+**Important Note: Redgate Data Tools (ReadyRoll Core, SQL Prompt Core, and SQL Search) are available now out of the box with Visual Studio Enterprise but we missed to include these components in the VM. You will need to install these components before you proceed further with the lab. Please see this [page](../redgateinstall/) for step-by-step instructions on installing Redgate Data Tools in Visual Studio and ReadyRoll Extension for Team Foundation Server.**
+
+**Alternatively, you can try this labs on [TechNet Virtual Centre](../technet/) where we have the Redgate Data tools pre-installed in the VM.**
+
 
 ### Task 1: Creating databases from a Script
 
