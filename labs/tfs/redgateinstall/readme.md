@@ -12,10 +12,10 @@ Last updated: 4/11/2017
 
 ## Installing Redgate Data Tools for Visual Studio Enterprise 2017
 
-1. Launch **Visual Studio Installer** from the Start menu. 
+1. Launch **Visual Studio Installer** from the Start menu.        
     <img src="images/vsinstaller.png" />
 
-1. The installer will prompt for an update. Select **Update**. Once the update is complete, it will launch the Installer Window. Select ***Modify*** under Visual Studio Enterprise 2017
+1. The installer will prompt for an update. Select **Update**. Once the update is complete, it will launch the Installer Window. Select ***Modify*** under Visual Studio Enterprise 2017         
     <img src="images/vsupdate.png" />
 
 1.	Select the check box next to **Data Storage and Processing** to add the components relating to this workload. Click the **Modify** button to complete the installation
