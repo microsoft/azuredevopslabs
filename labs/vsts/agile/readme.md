@@ -63,7 +63,7 @@ To complete this lab, you will need:
 
     <img src="images/11.png" width="624" />
 
-8.  Because we are currently in the sub-area for the **Web** team.  We need to navigate back up to the default team so we can setup management of sub-area paths.  
+8.  Because we are currently in the sub-area for the **Web** team.  We need to navigate back up to the default team, so we can setup management of sub-area paths.  
 
     <img src="images/74.png" width="624" />
 
