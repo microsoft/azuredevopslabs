@@ -28,12 +28,12 @@ Wait for the installer to finish and launch Visual Studio. You will now find **R
 
 In order to use the **ReadyRoll** tasks in your build and release defintions, you will need to install the extension from the [Marketplace](https://marketplace.visualstudio.com/)
 
-1. Open a browser and navigate to the ReadyRoll extension page on the Visual Studio Marketplace - https://marketplace.visualstudio.com/items?itemName=redgatesoftware.redgate-readyroll
+1. Open a browser and navigate to the ReadyRoll extension page on the Visual Studio Marketplace - [https://marketplace.visualstudio.com/items?itemName=redgatesoftware.redgate-readyroll](https://marketplace.visualstudio.com/items?itemName=redgatesoftware.redgate-readyroll)
 
 1. Select the **Download** button to download and save the vsix file 
     <img src="images/rrextension.png" />
 
-1. Navigate to http://vsalm:8080/tfs/_gallery/manage to access the **Manage Extension** page in TFS. Select the **Upload new extension** button to add the downloaded ReadyRoll extension
+1. Navigate to [http://vsalm:8080/tfs/_gallery/manage](http://vsalm:8080/tfs/_gallery/manage) to access the **Manage Extension** page in TFS. Select the **Upload new extension** button to add the downloaded ReadyRoll extension
     <img src="images/uploadextension.png" />    
 
 1. Locate the extension file you downloaded and select **Open**

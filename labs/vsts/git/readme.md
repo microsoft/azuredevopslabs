@@ -34,32 +34,19 @@ In addition, you will learn about Git branching and merging support.
 5.	Click on **Clone this repository**    
     <img src="images/3.png" />
 
-6.	Set the local path for your repository and click **Clone**.      
-    <img src="images/4.png" />
+6.	Set the local path where you want the local repository to be placed and select **Clone**.      
+    <img src="images/clonewindowvs.png" />
 
-7.	Go to Visual Studio and click on **Changes** from **Team Explorer**.    
-    <img src="images/5.png" />
+    This will clone the remote repository to the local repository. 
 
-8.	Choose the directory from the changes section and click on **Stage**.
+7. Select **Show Folder View** under *Solutions* to see all the solutions in the local git folder
+    <img src="images/showfolderview.png" />
 
-    <img src="images/6.png" />
-
-9.	Add a comment and click **Commit Staged and Sync**. Sync the changes to push your commits and pull changes from others.
-  
-    <img src="images/7.png" />
-
-    <img src="images/8.png" />
-
-10.	Go to your VSTS project and click on **Code** tab to see the latest commit.
-
-    <img src="images/10.png" width="624" />
-
+8. Double click the **MHC_ASPNetCore.sln** to open the solution
 
 ## Exercise 2: Save work with commits
 
-When you reach a point where you want to save your work, you'll need to record the changes in Git. Git saves your work by first staging your changes and then recording the staged changes with commit.
-Commits are always made against your local Git repository, so you don't have to worry about the commit being perfect or ready to share with others. You can make more commits as you continue to work, 
-sharing the code when you are ready to do so.
+When you make changes to your files, Git will record the changes in the local repository. You can select the changes that you want to commit by staging the changes. Commits are always made against your local Git repository, so you don't have to worry about the commit being perfect or ready to share with others. You can make more commits as you continue to work, and push the changes to others when they are ready to be shared.
 
 What's in a commit?
 
