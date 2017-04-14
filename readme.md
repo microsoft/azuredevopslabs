@@ -1,8 +1,7 @@
 ---
 layout: homepage
 title: Microsoft ALM VM
-redirect_to:
-  - http://msalmvm.azurewebsites.net/
+redirect_to: http://msalmvm.azurewebsites.net/
 keywords: ALM VM homepage
 tags: [overview]
 permalink: index.html
