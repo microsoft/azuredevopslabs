@@ -8,91 +8,88 @@ folder: /labs/vsts/agile/
 
 ## Overview     
 
-In this lab, you will learn about the agile planning and portfolio management tools and processes provided by Visual Studio Team Services and how they can help you quickly plan, manage, and track work across your entire team. You will explore the product backlog, sprint backlog, and task boards which can be used to track the flow of work during the course of an iteration. We will also take a look at how the tools have been enhanced in this release to scale for larger teams and organizations.
+In this lab, you will learn about the agile planning and portfolio management tools and processes provided by Visual Studio Team Services and how they can help you quickly plan, manage, and track work across your entire team. You will explore the product backlog, sprint backlog, and task boards which can be used to track the flow of work during an iteration. We will also look at how the tools have been enhanced in this release to scale for larger teams and organizations.
 
 ## Pre-requisites
 
-In order to complete this lab you will need- 
+To complete this lab, you will need: 
 
 - **Visual Studio Team Services account**. If you don't have one, you can create from <a href="https://www.visualstudio.com/">here</a>
 
 - **Visual Studio 2017** or higher version
 
-- You can use the **[VSTS Demo Data generator](http://vstsdemogenerator.azurewebsites.net/Environment/Create)** to provison a project with pre-defined data on to your Visual Studio Team Services account. Please use the ***My Health Clinic*** template to follow the hands-on-labs.
-
-- If you are not using the VSTS Demo Data Generator, you can clone the code from here
+- You can use the **[VSTS Demo Data generator](http://vstsdemogenerator.azurewebsites.net/Environment/Create)** to provision a project with pre-defined data on to your Visual Studio Team Services account. Please use the ***My Health Clinic*** template to follow the hands-on-labs.
 
 
-**Connecting to your Project**
+## Connecting to your Project
 
 1.	Go to your VSTS account home page.
 
-2.	Click on the VS icon and browse to the MyHealthClinic project. At this moment we have only 1 project. You could select/create as many projects from here.
+2.	Click on the VS icon and brwse to the MyHealthClinic project. At this moment, we have only one project. You could select/create as many projects from here.
 
-    > If you haven't already, sign in to your Visual Studio Team Services account you can sign in by going to (https://{youraccount}.visualstudio.com />.
+    > If you haven't already, browse to your Visual Studio Team Services account you can sign in by going to (https://{youraccount}.visualstudio.com).
 
     <img src="images/6.png" width="624" />
 
     
-## Exercise 1: Working with Team Areas and Iterations
+## Exercise 1: Working with Teams, Areas, and Iterations
 
 1.  Connect to the **MyHealthClinic** project.
 
-2.  Navigate to the administration overview page by choosing the gear icon.
+2.  Navigate to the **Administration Overview** page by choosing the gear icon.
 
     <img src="images/7.png" width="624" />
 
-3.  Check the existing teams, there are 3 teams by name **MyHealthClinic Team, Team 1, Team 2**.
-    The default team has the same name that of your VSTS project. You can create new teams if needed from here.
+3.  Check the existing teams, there are three teams by name **MyHealthClinic Team, Team1, and Team2**.
+    The default team has the same name as your VSTS project. You can create new teams if needed from here.
 
     <img src="images/8.png" width="624" />
 
-4.  In the Overview screen, we see our user as the only current member.
+4.  Delete both **Team 1** and **Team 2** by clicking the ellipsis next to each team and selecting **Delete**.
+
+    <img src="images/71.png" width="624" />
+
+5.  Now create a new team by clicking the **New team** link and giving it a name of **Web**. Make sure the **Team area** has a check mark. This option will create a corresponding area for the team so they can group all their work items and keep them seperate from other teams. If you do not select this option, you will have to set the default area path for the team once you create it. Follow the same steps to create a team called **Database**.
+
+    <img src="images/72.png" width="624" />
+    <img src="images/73.png" width="624" />
+
+6.  While on the **Overview** screen, click on the default team to view the members.   We see our user as the only current member.
 
     <img src="images/10.png" width="624" />
     
 
-5.  Click **Add** button to add new members to the team.
+7.  Click **Add** button to add new members to the team.
 
     <img src="images/11.png" width="624" />
 
-6.  Click on the **Work** pane and go to **Areas**.
+8.  Because we are currently in the sub-area for the **Web** team.  We need to navigate back up to the default team, so we can setup management of sub-area paths.  
 
-    <img src="images/12.png" width="624" />
+    <img src="images/74.png" width="624" />
 
-7.  Select the **MyHealthClinic** node and click on **New child**. Give a name for the area like **WEB**.
+9.  Select the **Work** tab at the top then select **Areas** option to view the area path for the team.
 
-    <img src="images/14.png" width="624" />
+    <img src="images/75.png" width="624" />
 
-8. You should see the areas listed below for the teams.
+10. Now we want to change the area path setting for management areas to include sub-area paths.  The default setting for all teams is to exclude sub-area paths. We will change it to include sub-areas so that the team gets visisbility into all of the work items from all teams. Optionally, the management team could also choose to not include sub-areas. Thereby removing work items from their view as soon as they are assigned to one of the teams. Click on the ellipsis for **MyHealthClinic** and select **Include sub-areas**.
 
-    <img src="images/15.png" width="624" />
+    <img src="images/76.png" width="624" />
 
-9. Go to **Iterations** and click **Select Iteration**. Select **Sprint 1**.
+11. Go to **Iterations** and click **Select Iteration**. Select **Sprint 1**.
 
     <img src="images/16.png" width="624" />
 
-10. Click on **Change** for the default iteration. And set **MyHealthClinic** as the default one.
+12. Click on **Change** for the default iteration. And set **MyHealthClinic** as the default one.
 
     <img src="images/17.png"  />
 
     <img src="images/18.png"  />
 
-11. Go to **Areas**. As with iterations, VSTS have areas which can be used to organize the work fr the teams.
-We see the default area is set to **Cordova Team**, if not you can change it to Cordova Team area.
-
-    <img src="images/19.png" width="624" />
-
-12. Click on the ellipsis button to include sub-areas as shown
-
-    <img src="images/20.png" width="624" />
-
- 
 
 ## Exercise 2: Work Items in VSTS
 
 
-1.  Navigate to **Cordova Team** dashboard. This is the main screen for the Cordova team. 
+1.  Navigate to **Web** team dashboard. This is the main screen for the Web team. 
 
     <img src="images/21.png" width="624" />
 
@@ -101,18 +98,18 @@ We see the default area is set to **Cordova Team**, if not you can change it to 
 
     <img src="images/22.png" width="624" />
 
-3.  You can see that the product backlog would open automatically. Enter the description **As user I want to create appointments.**
-    Enter the acceptance criteria as **Any user can create appointments. After creating an appointment it should appear in the user appointment list.**
+3.  You can see that the product backlog would open automatically. Enter the description **As a user, I want to create appointments.**
+    Enter the acceptance criteria as **Any user can create appointments. After creating an appointment, it should appear in the user appointment list.**
    
     <img src="images/23.png" width="624" />
 
 4.  Click **Save & close**.
 
-5.  You can create several backlog items repeating the above steps. Since you would have already opted the template during the creation of project, you can see pre-defined work items in your backlog list.
+5.  You can create several backlog items repeating the above steps. If you used the **[VSTS Demo Data generator](http://vstsdemogenerator.azurewebsites.net/Environment/Create)** then you can see pre-defined work items in your backlog list.
     
     <img src="images/24.png" width="624" />
 
-6. Select the desired product backlog items, drag and drop it to the current sprint. In this case the current sprint happens to be **Sprint 2**.
+6. Select the desired product backlog items, drag and drop it to the current sprint. In this case the current sprint happens to be **Sprint 1**.
 
     <img src="images/25.png" width="624" />
 
