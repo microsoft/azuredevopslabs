@@ -111,3 +111,5 @@ url: http://msalmvm.azurewebsites.net/
 baseurl: /
 
 site.google_analytics: UA-93010880-1
+
+redirects: yes
