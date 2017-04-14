@@ -85,16 +85,19 @@ To complete this lab, you will need:
 
     <img src="images/18.png"  />
 
+13. Repeat steps 11 and 12 for both the **Web** team as well as the **Database** team. You can switch your team focus to a team project or team you've recently viewed from the team project/team drop-down menu. If you don't see the team or team project you want, click Browse… to browse all team projects and teams.
+
+    <img src="images/77.png"  />
 
 ## Exercise 2: Work Items in VSTS
 
 
-1.  Navigate to **Web** team dashboard. This is the main screen for the Web team. 
+1.  Navigate to **Web** team dashboard by selecting **MyHealthClinic\Web** from the project/team drop-down menu. This is the main screen for the Web team.
 
     <img src="images/21.png" width="624" />
 
 
-2.  Let's create our **first Product Backlog** item. On the **New Work Item** widget name the title **Create appointment** and change the work item type to **Product Backlog**. We can also create Bugs, Tasks, and several other Work item types.
+2.  Let's create our **first Product Backlog** item. On the **New Work Item** widget, enter the title of **Create appointment** and change the work item type to **Product Backlog**. We can also create Bugs, Tasks, Features and several other Work item types.
 
     <img src="images/22.png" width="624" />
 
@@ -105,11 +108,15 @@ To complete this lab, you will need:
 
 4.  Click **Save & close**.
 
-5.  You can create several backlog items repeating the above steps. If you used the **[VSTS Demo Data generator](http://vstsdemogenerator.azurewebsites.net/Environment/Create)** then you can see pre-defined work items in your backlog list.
+5. Navigate to the default team's backlog by selecting **MyHealthClinic Team** from the project/team drop-down menu. If you are not on the **Work** tab, then click **Work** option from the top menu.
+
+    <img src="images/77.png" width="624" />
+
+6.  You can create several backlog items repeating the above steps. If you used the **[VSTS Demo Data generator](http://vstsdemogenerator.azurewebsites.net/Environment/Create)** then you can see pre-defined work items in the default team's backlog list.
     
     <img src="images/24.png" width="624" />
 
-6. Select the desired product backlog items, drag and drop it to the current sprint. In this case the current sprint happens to be **Sprint 1**.
+7. Select the desired product backlog items, drag and drop it to the current sprint. In this case the current sprint happens to be **Sprint 1**.
 
     <img src="images/25.png" width="624" />
 
@@ -120,7 +127,7 @@ To complete this lab, you will need:
 
    <img src="images/26.png" width="624" />
 
-   >Kanban board turns backlog into an interactive signboard, providing a visual workflow. As work progresses from idea to completion, you update the items on the board.
+   >Kanban board turns the backlog into an interactive signboard, providing a visual workflow. As work progresses from idea to completion, you update the items on the board.
   Each column represents a work stage, and each card represents a product backlog item (blue cards) or a bug (red cards) at that stage of work.
   The Kanban board allows you to set Work in Progress (WIP) limits for each state. One of the primary reasons for using Kanban and limiting work in progress is that it helps
   identify bottlenecks in your development process and minimize lead time for new features. Let’s say that the devices team is not delivering finished work as quickly as desired,
@@ -132,33 +139,71 @@ To complete this lab, you will need:
 
    <img src="images/27.png" width="624" />
 
-3. Click the gear icon to open the settings dialog.
+3. We are going to modify the **Kanban board** to show some of the features. Click the gear icon to open the settings dialog.
 
    <img src="images/28.png" width="624" />
 
-4. The WIP limit is already set for **Build and Test** column. You can also set for other columns as well. To do so, from the settings page go to columns tab. Click the **Develop** column. Set the WIP Limit to **3**.
+4. You can either increase or simplify the information that displays on your cards. Your best bet is to show fields on cards based on what your team frequently refers to or updates when using the **Kanban** and **Task** boards. Make sure the fields for your cards match the following image.
 
-   <img src="images/29.png" width="624" />
+    <img src="images/78.png" width="624" />
+
+5. To cause a card on the **Kanban** board to change color based on criteria you specify, open **Styles**. Add a styling rule and set the criteria for the rule. Create the **High Effort** styling as follows.
+
+    <img src="images/79.png" width="624" />
+
+6. Prior to setting tag colors, first add tags to backlog items that you want to highlight with color. To add color to **Kanban** cards, open **Tag colors** and select a tag and the color you want it to display. If you used the **[VSTS Demo Data generator](http://vstsdemogenerator.azurewebsites.net/Environment/Create)** then you will already have a **Doctor** tag and set to green.
+
+    <img src="images/80.png" width="624" />
+
+7. With the Kanban board, you gain a rich set of tools and a rich set of customization options. **Annotations** provide visual cues about work items, indicating the number of tasks or tests that have been defined for that work item. Click an annotation to expand the set or gain more information.
+
+    <img src="images/81.png" width="624" />
+
+8. You can control the test plan under which inline tests you add through the Kanban board are created. You can choose to create a new test plan for each new test that you add, or add all new tests to a selected test plan going forward.
+
+    <img src="images/82.png" width="624" />
+
+9. Kanban's number one practice is to visualize the flow of work. Accordingly, your number one task is to visualize your team's workflow. You do this by identifying the types of work and handoffs that occur regularly as your team moves items off the backlog and into a shippable state.
+
+    After you identify your team's workflow stages, you're ready to configure your Kanban board to map to them. Once configured, you use your Kanban board to update status, reassign work, and reorder items to reflect changing priorities.
+    
+    Our team came up with these stages as essential to thier process:
+    * Backlog: Prioritized list of items which aren't yet ready to work on.
+    * Analyze: Well understood and shared acceptance criteria identified and overall work required to develop and test item.
+    * Develop: Code and run unit tests for the item.
+    * Test: Perform exploratory, automated, integration, and other tests.
+    * Done: Item ready to handoff to production.
+
+    Rename the **New** column to **Backlog**. Click the **+ Column** to create a new column. Name the column **Analyze** and set the state mapping to **Approved** for both **Bug** and **Product Backlog Item**. Rename the **Build and test** to **Test**.
+
+    <img src="images/83.png" width="624" />
+
+10. The WIP limit is already set for **Test** column. You can also set for other columns as well. To do so, from the settings page go to columns tab. Click the **Develop** column. Set the WIP Limit to **3**.
+
+   <img src="images/84.png" width="624" />
   
-5. You can also define Kanban **Definition of Done** as **PBIs has been reviewed by Product Owner and Development team. They are ok to start with** to that column.
+11. As your team updates the status of work as it progresses from one stage to the next, it helps that they agree on what “done” means. By specifying the **Definition of Done** criteria for each Kanban column, you help share the essential tasks to complete before moving an item into a downstream stage. For the **Develop** column, add the following definition:
+    >1. Code complete, commented, and run against current version.
+    >2. Code peer reviewed and meets team standards.
+    >3. Builds without error.
+    >4. Passes unit and system tests.
+    >5. Remaining hours for tasks set to zero and task closed.
 
-   <img src="images/30.png" width="624" />
+   <img src="images/85.png" width="624" />
 
-   <img src="images/31.png" width="624" />
+   <img src="images/86.png" width="624" />
 
-6. We can add style rules to make the cards with information stand out. When a work item mathces more than one rule, the first rule is used.
-   Click on **Styles**. 
+12. Your Kanban board supports your ability to visualize the flow of work as it moves from new to done. When you add swimlanes, you can also visualize the status of work that supports different service-level classes. You can create a swimlane to represent any other dimension that supports your tracking needs.
 
-   <img src="images/32.png" width="624" />
+    For example, you can create three swimlanes-**Expedite**, **Standard**, and **Park**-to track high-priority work, standard work, and work that's currently blocked.
 
-7. Go back to Kanban board, you should see all the styling rules used. In the below picture you see the PBIs distinguished in 2 colors (Pink and Blue).
+    From your Kanban board, click **Configure board settings** then click Swimlanes. Use the add Swimlane to add **Expedite** swimlane.
 
-   <img src="images/33.png" width="624" />
+    <img src="images/87.png" width="624" />
 
-8. Let’s say that the devices team has decided that they want to add in a column that represents features that has been developed should go ahead for deployment.
-   Navigate to the **Settings** tab and go to **columns** tab and add a new column with the name **Deploy**.
+13. Now rename the default swimlane to **Standard**. Add one more swimlane named **Park**. You can drag the swimlanes to organize them in the order you wish. Drag **Park** below Standard.
 
-   <img src="images/34.png" width="624" />
+    <img src="images/88.png" width="624" />
 
 ## Exercise 4: Working with Task Board
 
