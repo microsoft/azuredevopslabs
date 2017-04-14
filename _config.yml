@@ -108,7 +108,7 @@ description: "RSS Feed for Microsoft Visual Studio ALM Virtual Machine"
 #baseurl: /almvm/
 # changing to Azure
 url: https://almvm.azurewebsites.net/
-baseurl: 
+baseurl: /
 
 site.google_analytics: UA-93010880-1
 
