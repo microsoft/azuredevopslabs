@@ -6,13 +6,14 @@ permalink: /labs/vsts/testmanagement/
 folder: /labs/vsts/testmanagement/
 ---
 
-
 ## Overview
 
  In this lab, you will learn how to manage your project test lifecycle using the Visual Studio Team Services. This lab will guide you through creating Test Plans designed efficiently validate your software milestones. You will also create and execute Manual Tests that can be consistently reproduced over the course of each release.
 
 
-## Task 1: Authoring Tests
+## Task 1: Creating Test Plan
+
+Test plans are used to track manual testing for sprints or milestones. That way, you can see when the testing for a specific sprint or milestone is complete.
 
 1. Go to your VSTS account and project. Select **Test** hub.
 
@@ -34,11 +35,11 @@ folder: /labs/vsts/testmanagement/
 
    <img src="images/5.png" width="624">
 
-6. Select the first user story that focuses on Creating New Appointment.
+6. Select the user story that focuses on Creating New Appointment.
 
    <img src="images/6.png" >
 
-7. While you can create test cases one at a time, it’s sometimes easier to use a grid layout to quickly add many test cases. In the test cases panel, select **New \| New test case using grid**.
+7. While you can create test cases one at a time, it’s sometimes easier to use a grid layout to quickly add many test cases. In the test case panel, select **New \| New test case using grid**.
 
    <img src="images/7.png" >
 
@@ -46,24 +47,34 @@ folder: /labs/vsts/testmanagement/
 
    <img src="images/8.png" width="624">
 
+   <table>
+    <tr>
+    <th class="text_center">Title</th>
+    <th class="text_center">Step Action</th>
+    <th class="text_center">Step Expected Result</th>
+    </tr>
+
+    <tr>
+    <td >Appointment should be created based on Doctors availability</td>
+    <td>Check for the Doctors availability</td>
+    <td class="text_center">If slot is available, appointment should be created else user should be alerted that slot is not available</td>
+    </tr>
+
+    <tr>
+    <td >User should be able to re-schedule/cancel an appointment</td>
+    <td>Re-scheduling or Cancelling appointments</td>
+    <td class="text_center">Appointment should get updated if it is re-scheduled or cancelled</td>
+    </tr>
+
+    <tr>
+    <td >Creating appointments for past dates</td>
+    <td>Create appointment with past dates</td>
+    <td class="text_center">Users should not be able to create appointments for past dates</td>
+    </tr>
+
 9. You can optionally continue to add and edit work items in the grid view. When satisfied, return back to the list view by clicking the **View: Grid** toggle.
 
     <img src="images/9.png" width="624">
-
-    <table>
-    <tr>
-    <th class="text_center">Action</th>
-    <th class="text_center">Expected Result</th>
-    </tr>
-    <tr>
-    <td >Open <a href="https://myhealthclinic.azurewebsites.net">MyHealthClinicWebsite</a></td>
-    <td>Landing page should be displayed</td>
-    </tr>
-
-    <tr>
-    <td >Click on "Private area"</td>
-    <td>Should navigate to Login screen</td>
-    </tr>
 
 10. The list view shows the same data, but in a different view.
 
@@ -79,7 +90,9 @@ folder: /labs/vsts/testmanagement/
 
 13. Press Esc to close the dialog.
 
-## Task 2: Authoring a Manual Test Plan
+## Task 2: Create test cases
+
+Create manual test cases to check that each of the deliverables meet your users' needs. Organize your test cases by adding test cases to test suites. Then choose which testers you want to run the tests.
 
 1. Navigate to your **VSTS** account.
 
@@ -105,28 +118,28 @@ folder: /labs/vsts/testmanagement/
     <th class="text_center">Expected Result</th>
     </tr>
     <tr>
-    <td >Open <a href="https://myhealthclinic.azurewebsites.net">MyHealthClinicWebsite</a></td>
-    <td>Landing page should be displayed</td>
+    <td class="text_center">Open<a href="">YOUR_HOSTED_SITE</a></td>
+    <td class="text_center">Landing page should be displayed</td>
     </tr>
 
     <tr>
-    <td >Click on "Private area"</td>
-    <td>Should navigate to Login screen</td>
+    <td class="text_center">Click on **Private area**</td>
+    <td class="text_center">Should navigate to Login screen</td>
     </tr>
 
     <tr>
-    <td>Enter Username (User)</td>
-    <td>User should be able to see the username</td>
+    <td class="text_center">Enter Username (User)</td>
+    <td class="text_center">User should be able to see the username</td>
     </tr>
 
     <tr>
-    <td>Enter Password (P2ssw0rd@1)</td>
-    <td>Password should look encrypted</td>
+    <td class="text_center">Enter Password (P2ssw0rd@1)</td>
+    <td class="text_center">Password should look encrypted</td>
     </tr>
 
     <tr>
-    <td>Click on Login button</td>
-    <td>User should be able to see the dashboard</td>
+    <td class="text_center">Click on Login button</td>
+    <td class="text_center">User should be able to see the dashboard</td>
     </tr>
     </table>
 
@@ -137,9 +150,9 @@ folder: /labs/vsts/testmanagement/
 8. Click **Save & Close** to save the test case.
 
 
-## Task 3: Running a Manual Test Plan
+## Task 3: Run Manual Tests
 
-Before running tests manually, you should start the trial version for accessing all the features of **Test Manager** extension.
+Before running tests manually, you should start the trial version of **Test Manager** extension for accessing all the features.
 
 1. To do that **Browse MarketPlace** from your account by clicking on the **shopping bag** icon.
 
@@ -191,7 +204,7 @@ Before running tests manually, you should start the trial version for accessing 
 
 14. Let's start executing the Test Case now. 
 
-    - **Test Step 1**: The first test step in this test case is to open <a href="https://myhealthclinic.azurewebsites.net">MyHealthClinicWebsite</a>. To do this, open a new window in Chrome. If you’re working on a large screen, it may be easier to resize the new window to fit next to the **Test Runner** window. Otherwise you can just switch back and forth.
+    - **Test Step 1**: The first test step in this test case is to open <a href="">MyHealthClinicWebsite</a>. To do this, open a new window in Chrome. If you’re working on a large screen, it may be easier to resize the new window to fit next to the **Test Runner** window. Otherwise you can just switch back and forth.
 
       <img src="images/36.png" width="624">
 
@@ -201,34 +214,42 @@ Before running tests manually, you should start the trial version for accessing 
 
       >**Note**: When you execute each Test step and the step passes, you can mark it as passed. Do this for the remaining test steps.
 
-    - **Test Step 3**: The next step is to click the **Private area**.
-
-      <img src="images/38.png" width="624">
-
-    - **Test Step 4**: Enter the **Username**. Use the below Username.
-    
-      >Username: User
-
-      <img src="images/40.png" width="624">
-
-    - **Test Step 5**: Enter the **Password**.
-
-      >Value: P2ssw0rd@1
-
-      <img src="images/39.png" width="624">
-
-    - **Test Step 6**: Click on the **Login Button**.
-
-      <img src="images/41.png" width="624">
-
-      <img src="images/43.png" width="624">
-
 15. Click **Save and close** from the Test runner.
 
     <img src="images/42.png">
 
+## Task 4: Creating Shared Steps
 
-## Task 4: Analyzing Manual Test Results
+Shared Steps combines multiple steps that are commonly performed in sequence into a single logical step, which can be shared across tests. If the process defined by the shared steps ever changes in the future, you can update the shared step in one place and it will be reflected in all tests that reference it.
+
+1. Click the test case link in the Summary section to open the test case editor.
+
+   <img src="images/49.png" width="624">
+
+2. Select steps 3-5 (use **Shift+Click**) and click the **Create shared steps** button.
+
+   <img src="images/50.png" width="624">
+
+3. Set the name of these shared steps to **Login to the site** and click **Create**.
+
+   <img src="images/51.png" >
+
+4. Now you can see the previous steps replaced with the shared steps. Double-click the shared steps to open.
+
+   <img src="images/52.png" >
+
+5. If necessary, you can revisit these steps later on to update them for new requirements.
+
+   <img src="images/53.png" width="624">
+
+6. Press **Esc** to close the **Shared Steps** dialog.
+
+7. Click **Save & Close** to save the test case.
+
+   <img src="images/54.png" width="624">
+
+
+## Task 5: Analyzing Test Results
 
 1. In this task, you will learn how to review the results of a manual test run.
 
@@ -252,35 +273,7 @@ Before running tests manually, you should start the trial version for accessing 
 
    <img src="images/48.png" width="624">
 
-## Task 6: Creating Shared Steps
 
-1. In this task, you will learn how to create shared steps. A shared step combines multiple steps that are commonly performed in sequence into a single logical step, which can be shared across tests. If the process defined by the shared steps ever changes in the future, you can update the shared step in one place and it will be reflected in all tests that reference it.
-
-2. Click the test case link in the Summary section to open the test case editor.
-
-   <img src="images/49.png" width="624">
-
-3. Select steps 3-5 (use **Shift+Click**) and click the **Create shared steps** button.
-
-   <img src="images/50.png" width="624">
-
-4. Set the name of these shared steps to **Login to the site** and click **Create**.
-
-   <img src="images/51.png" >
-
-5. Now you can see the previous steps replaced with the shared steps. Double-click the shared steps to open.
-
-   <img src="images/52.png" >
-
-6. If necessary, you can revisit these steps later on to update them for new requirements.
-
-   <img src="images/53.png" width="624">
-
-7. Press **Esc** to close the **Shared Steps** dialog.
-
-8. Click **Save & Close** to save the test case.
-
-   <img src="images/54.png" width="624">
 
 
 
