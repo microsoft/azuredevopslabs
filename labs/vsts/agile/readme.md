@@ -27,7 +27,7 @@ To complete this lab, you will need:
 
 2.	Click on the VS icon and brwse to the MyHealthClinic project. At this moment, we have only one project. You could select/create as many projects from here.
 
-    > If you haven't already, sign in to your Visual Studio Team Services account you can sign in by going to (https://{youraccount}.visualstudio.com).
+    > If you haven't already, browse to your Visual Studio Team Services account you can sign in by going to (https://{youraccount}.visualstudio.com).
 
     <img src="images/6.png" width="624" />
 
@@ -49,7 +49,7 @@ To complete this lab, you will need:
 
     <img src="images/71.png" width="624" />
 
-5.  Now create a new team by clicking the **New team** link and giving it a name of **Web**.  Follow the same steps to create a team called **Database**.
+5.  Now create a new team by clicking the **New team** link and giving it a name of **Web**. Make sure the **Team area** has a check mark. This option will create a corresponding area for the team so they can group all their work items and keep them seperate from other teams. If you do not select this option, you will have to set the default area path for the team once you create it. Follow the same steps to create a team called **Database**.
 
     <img src="images/72.png" width="624" />
     <img src="images/73.png" width="624" />
@@ -71,7 +71,7 @@ To complete this lab, you will need:
 
     <img src="images/75.png" width="624" />
 
-10. Now we want to change the area path setting for management areas to include sub-area paths.  The default setting for all teams is to exclude sub-area paths.  Click on the ellipsis for **MyHealthClinic** and select **Include sub-areas**.
+10. Now we want to change the area path setting for management areas to include sub-area paths.  The default setting for all teams is to exclude sub-area paths. We will change it to include sub-areas so that the team gets visisbility into all of the work items from all teams. Optionally, the management team could also choose to not include sub-areas. Thereby removing work items from their view as soon as they are assigned to one of the teams. Click on the ellipsis for **MyHealthClinic** and select **Include sub-areas**.
 
     <img src="images/76.png" width="624" />
 
@@ -98,18 +98,18 @@ To complete this lab, you will need:
 
     <img src="images/22.png" width="624" />
 
-3.  You can see that the product backlog would open automatically. Enter the description **As user I want to create appointments.**
-    Enter the acceptance criteria as **Any user can create appointments. After creating an appointment it should appear in the user appointment list.**
+3.  You can see that the product backlog would open automatically. Enter the description **As a user, I want to create appointments.**
+    Enter the acceptance criteria as **Any user can create appointments. After creating an appointment, it should appear in the user appointment list.**
    
     <img src="images/23.png" width="624" />
 
 4.  Click **Save & close**.
 
-5.  You can create several backlog items repeating the above steps. Since you would have already opted the template during the creation of project, you can see pre-defined work items in your backlog list.
+5.  You can create several backlog items repeating the above steps. If you used the **[VSTS Demo Data generator](http://vstsdemogenerator.azurewebsites.net/Environment/Create)** then you can see pre-defined work items in your backlog list.
     
     <img src="images/24.png" width="624" />
 
-6. Select the desired product backlog items, drag and drop it to the current sprint. In this case the current sprint happens to be **Sprint 2**.
+6. Select the desired product backlog items, drag and drop it to the current sprint. In this case the current sprint happens to be **Sprint 1**.
 
     <img src="images/25.png" width="624" />
 
