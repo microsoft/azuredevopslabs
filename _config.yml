@@ -115,3 +115,4 @@ site.google_analytics: UA-93010880-1
 
 gems:
   - jekyll-redirect-from
+  - jekyll-redirect-to
