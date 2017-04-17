@@ -114,5 +114,5 @@ site.google_analytics: UA-93010880-1
 
 
 gems:
-  - jekyll-redirect-to
+  - jekyll-redirect-from
   
