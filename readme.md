@@ -3,7 +3,7 @@ layout: homepage
 title: Microsoft ALM VM
 keywords: ALM VM homepage
 tags: [overview]
-permalink: index.html
+permalink: default.html
 comments: true
 summary: 
 ---
