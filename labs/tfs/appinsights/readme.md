@@ -4,6 +4,7 @@ layout: page
 sidebar: tfs
 permalink: /labs/tfs/appinsights/
 folder: /labs/tfs/appinsights/
+redirect_to: https://almvm.azurewebsites.net/labs/tfs/appinsights/
 ---
 
 Lab version:15.0.26228.0

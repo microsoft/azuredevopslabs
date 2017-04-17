@@ -4,6 +4,7 @@ layout: page
 sidebar: tfs
 permalink: /labs/tfs/agile/
 folder: /labs/tfs/agile/
+redirect_to: https://almvm.azurewebsites.net/labs/tfs/agile/
 ---
 
 Lab version:15.0.26228.0
