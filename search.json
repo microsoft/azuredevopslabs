@@ -1,7 +1,7 @@
 ---
 title: search
 layout: none
-search: exclude
+search: include
 ---
 
 [
