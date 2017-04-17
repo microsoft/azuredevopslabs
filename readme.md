@@ -4,7 +4,6 @@ title: Microsoft ALM VM
 keywords: ALM VM homepage
 tags: [overview]
 permalink: index.html
-redirect_to: https://almvm.azurewebsites.net/
 comments: true
 summary: 
 ---
