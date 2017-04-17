@@ -8,8 +8,8 @@ comments: true
 summary: 
 redirect_from: 
      
-    - /https://microsoft.github.io/almvm/
-    - /https://almvm.azurewebsites.net/
+    - "/https://microsoft.github.io/almvm/"
+    - "/https://almvm.azurewebsites.net/"
 ---
         
  <!--<img src="http://vsalmvm.azurewebsites.net/wp-content/uploads/2015/09/ALM-VM-banner-0915.png" width="760" height="177" />-->
