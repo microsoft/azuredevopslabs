@@ -5,7 +5,6 @@ sidebar: tfs
 permalink: /labs/tfs/
 comments: true
 folder: /labs/tfs/
-redirect_to: https://almvm.azurewebsites.net/labs/tfs/
 ---
 
 ## Overview

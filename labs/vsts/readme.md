@@ -4,7 +4,6 @@ layout: page
 sidebar: vsts
 permalink: /labs/vsts/
 folder: /labs/vsts/
-redirect_to: https://almvm.azurewebsites.net/labs/vsts/
 ---
 
 ## Overview
