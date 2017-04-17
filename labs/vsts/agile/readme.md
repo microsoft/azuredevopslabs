@@ -321,30 +321,29 @@ Epics or Features, and feature teams can break these down into the user stories 
 
    <img src="images/45.png" width="624" />
 
-  >As you advance in the product development, stories can go bigger, making them difficult to handle. We will use the Feature Work Item Type for this purpose.
+  >As you advance in the product development, stories can get bigger, making them difficult to handle. We will use the **Feature** Work Item Type for this purpose.
    With Features we will group Product Backlog Items to handle an information unit at a bigger level.
 
 1. Click on **Features**. You will see list of feature work items available already. If you wish to add few more you can add.
 
    <img src="images/44.png" width="624" />
 
-2. Go back to **Backlog items**. Click on **Mapping** to enable as shown.
+2. If you've already created your backlog, and now you want to organize it, you can do that most easily by mapping them. Go back to **Backlog items**. Click on **Mapping** to enable as shown.
 
    <img src="images/46.png" width="624" />
 
    <img src="images/47.png" width="624" />
 
-3. With the mapping panel enabled, drag and drop the Product Backlog Items to the Feature you want to link to.
+3. With the mapping panel enabled, drag items that are currently unparented to the feature under which they belong. Also, you can drag a backlog item to a different feature to change its parent.
 
    <img src="images/48.png" width="624" />
 
 4. To have a full view of the work escalation and decomposition to tasks Click on **Features**. Expand all the levels by clicking twice on the + icon.
    Review the full structure from Feature to tasks.
-   
-   >It is important to keep track of all artifacts involved in
-   product development so we are able to plan and keep track of what has been done, and what needs to be done.
 
    <img src="images/49.png" width="624" />
+
+   >It is important to keep track of all artifacts involved in product development so we are able to plan and keep track of what has been done, and what needs to be done.
 
 5. Go to the **Board**. As we have a Kanban board for checking the states of the Product Backlog Items, we also have a Kanban Board to see the transition
    and check visually the current state of any particular feature. This is also customizable as we saw in our Sprint Backlog view, and the Product Backlog view.
@@ -357,6 +356,7 @@ Epics or Features, and feature teams can break these down into the user stories 
 
 7. You can also Drag and Drop any Feature to other state and check how it changes its current state.
 
+   <img src="images/100.png" width="624" />
 
 ## Exercise 6: Working with VSTS Dashboards
 
