@@ -364,24 +364,67 @@ Dashboards allow teams to visualize status and monitor progress across the proje
 The Overview page provides access to a default team dashboard which you can customize by adding, removing, or rearranging the tiles.
 Each tile corresponds to a widget that provides access to one or more features or functions.
 
-1. Go to **Dashboard**
+1. Go to the default **Dashboard** called Overview.
 
    <img src="images/52.png" width="624" />
 
-2. Click on **edit** to modify the dashboard and add your widgets like **Build Summary, Release Summary, Markdowns etc**.
+   >The Overview page provides access to a default team dashboard which you can customize by adding, removing, or rearranging the tiles. Each tile corresponds to a widget that provides access to one or more features or functions.
 
-3. You can also add role based dashboards by clicking the **New +** button.
+2. You can also add dashboards. From the dashboards tab, click the plus icon and enter a dashboard name.
 
    <img src="images/53.png" />
 
+   With the dashboard selected, you can add a widget to the dashboard. Or, you can add a chart to a team dashboard from the Work, Build, or Test hubs.
+
    <img src="images/54.png" width="624" />
 
-4. You can also manage dashboard settings by adding permissions and auto-refresh functionalities.
+   When finished, click the **Close** button. Then click the checkmark to take the dashboard out of edit mode.
 
-   <img src="images/55.png" />
+3. Click on **edit** button to modify the dashboard and add your widgets like **Build Summary, Release Summary, Markdowns** etc..
 
-   <img src="images/56.png" />
+    <img src="images/101.png" width="624" />
 
+4. Add the **Query Tile** to the Test dashboard.
+
+    <img src="images/102.png" width="624" />
+
+5. After you add the widget, you may need to configure it. For example, to configure the **Query tile** widget, click the Configure widget icon to open the configuration dialog.
+
+    <img src="images/103.png" width="624" />
+
+6. Then select the query and specify any rules you want. 
+
+    <img src="images/104.png" width="624" />
+
+    >You can also add conditional formatting so the widget will visually alert the user.
+    <img src="images/105.png" width="624" />
+
+7. In addition to widgets, you can add a chart to your dashboard. You add an item to a dashboard from the code, work, and build pages. First, make sure you have the team context selected from the Queries page to which you want to add a query or chart. Go to the **Work** tab and click **Queries** on the top left.
+
+    <img src="images/106.png" width="624" />
+
+8. Select the query that you want to create the chart from and click the **Charts** option.
+
+    <img src="images/107.png" width="624" />
+
+9. Next, click the **New chart** option to bring up the configuration of the chart.
+
+    <img src="images/108.png" width="624" />
+
+10. And, you can add a chart to a team dashboard by clicking on the ellipsis and choosing **Add to dashboard** > select the dashbard you want to add the chart to in the context menu.
+
+    <img src="images/109.png" width="624" />
+    <img src="images/110.png" width="624" />
+
+11. You can move or delete a widget from the dashboard by clicking **Edit** dashboard icon to modify your dashboard. You can then drag tiles to reorder their sequence on the dashboard. To remove a widget, click the widget's **Trash** icon or **Delete** icon. When you're finished with your changes, click **Exit edit-dashboard-mode** icon to exit dashboard editing.
+
+    <img src="images/111.png" width="624" />
+
+12. You can rename, reorder, or delete a dashboard. Also, you can enable auto-refresh, and the dashboard will automatically update every 5 minutes.
+
+    <img src="images/55.png" />
+
+    <img src="images/56.png" />
 
 ## Exercise 7: Customization
 
