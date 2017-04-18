@@ -1300,7 +1300,7 @@ div.lab-item-none {
     background-color: #ffffff;
 }
 div.lab-item {
-    
+    width: 350px;
     border-width: 1px;
     border-style: solid;
     border-color: #248ec2;
