@@ -1300,14 +1300,17 @@ div.lab-item-none {
     background-color: #ffffff;
 }
 div.lab-item {
-    width: 350px;
+    
     border-width: 1px;
     border-style: solid;
-     border-color: #248ec2;
-     padding: 5px;
-    margin:5px;
+    border-color: #248ec2;
+    padding: 15px;
+    margin-bottom: 25px;
+    margin-top: 25px;
+    margin-left: 35px;
+    margin-right: 35px;
     background-color: #FFFFFF;
-        font-weight: 80%;
+    font-weight: 80%;
 }
 div.clear         { clear: both; }
 
@@ -1322,4 +1325,11 @@ a.c-glyph{
 }
 span.lab-details{
     color: white;
+}
+button.custom-btn {
+    margin-top: 19px;
+    background-color: black;
+}
+.top-ul>li {
+    float: left;
 }
