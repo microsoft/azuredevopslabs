@@ -426,29 +426,31 @@ Each tile corresponds to a widget that provides access to one or more features o
 
     <img src="images/56.png" />
 
-## Exercise 7: Customization
+## Exercise 7: Process Customization
 
-Sometimes you will need to add more fields for a particular Work Item Type definition, to represent information which is important for your team.
-We can customize the Process Template for our team project by adding new fields, definitions for any Work Item type.
+In Team Services, you customize your work tracking experience through a process. A process defines the building blocks of the work item tracking system as well as other sub-systems you access through Team Services. Whenever you create a team project, you select the process which contains the building blocks you want for your project.
 
-1. Navigate to the administration page by clicking on the **gear icon**.
+### Manage processes
+
+Team Services supports two process types. The first, the core system processes—Scrum, Agile, and CMMI system processes—are locked. You can not customize these processes. The second type, inherited processes, you create from a core system process. These processes you can customize.
+
+In addition, all processes are shared. That is, one or more team projects can reference a single process. Instead of customizing a single team project, you customize a process. Changes made to the process automatically update all team projects that reference that process.
+
+Once you've created an inherited process, you can customize it, create team projects based on it, and migrate existing team projects to reference it. The Git team project can't be customized until its migrated to an inherited process.
+
+1. To open the admin context from the user context, click the gear Settings icon and choose **Account settings**.
 
    <img src="images/57.png" width="624" />
 
-2. Navigate to your Account and click **gear icon** and select **process**.
+2. Click **Process**.
 
    <img src="images/58.png" width="624" />
 
-3. In the process tab you will see all of your Process Templates.
+3. You can create an inherited process from any one of the three system processes: Agile, Scrum, or CMMI. From the **Process** page, open the context menu of the process you'll use to create an inherited process. Here, we create an inherited process from the **Scrum** system process. Then click on **Create inherited process**.
 
    <img src="images/59.png" width="624" />
 
-4. Click on the **ellipsis** near the Scrum template. Currently we are using the default Scrum template, default templates can’t be modified.
-   We need to create an inherited template from the Scrum template, so that we can add new fields. Click on **create inherited process**.
-
-   <img src="images/60.png" width="624" />
-
-5. Provide a name for the inherited process template like **MyHealthClinic Scrum template**.
+5. Enter a name for your process and optionally a description. Something like **MyHealthClinic Scrum template**.
 
    <img src="images/61.png" />
 
@@ -456,56 +458,48 @@ We can customize the Process Template for our team project by adding new fields,
 
    <img src="images/62.png" />
 
-7. Select the inherited template that was created.
+### Customize a field for a process
+
+Each process—Agile, Scrum, or CMMI—contains 100 or more work item fields. You can add a custom field to support tracking additional data requirements or modify select attributes of an inherited field.
+
+1. Select the inherited template that was created.
 
    <img src="images/63.png" width="624" />
 
-8. Navigate to **Work Item Types** tab. Now we have different options to modify this scrum template.
+2. Navigate to **Work Item Types** tab. Now we have different options to modify this scrum template.
 
    <img src="images/64.png" width="624" />
 
 
-9. We will directly add a new field for the PBI Work Item template. Select **Product Backlog item** \| **Layout** \| **New field**. On the definition screen provide a name **HealthClinicTicketId**.
+3. We will directly add a new field for the PBI Work Item template. Select **Product Backlog item** \| **Layout** \| **New field**. On the definition screen provide a name **HealthClinicTicketId**.
 
    <img src="images/65.png" width="624" />
 
    > We are creating a text field for an internal id of the ticketing system inside MyHealthClinic.
 
-10. Click on **Layout**. Provide a name for Label as **Ticket ID**. Until now we have only created the field definition, we have to add it to the layout of the Work Item.
-    We will create a new group to show our custom information, so all of our customized fields appear together. Provide a name for the group as **MyHealthClinic** and click **add field**.
+4. Click on **Layout**. Provide a name for Label as **Ticket ID**. Until now we have only created the field definition, we have to add it to the layout of the Work Item.
+    We will create a new group to show our custom information, so all of our customized fields appear together. Provide a name for the group as **MyHealthClinic** and click **Add field**.
 
     <img src="images/66.png" width="624" />
 
-11. At this moment we have only created the template, we must assign this template to our VSTS Project so that we can use this new field. We can change the process template from a VSTS Project,
-    with their inherited templates or default templates. This is done in the main process screen. Go back to **Process** tab, click on ellipsis button on our new template
-    and select **Change Team Projects to use MyHealthClinic Scrum template**.
+### Change the process referenced by a team project
+
+You can change the process a team project references to an inherited process or a system core process. However, you can only change team projects to another process that is derivative of the same core system process. That is, you can change an Agile-based team project to any process you created from the Agile system process as well as to the Agile core process. Whereas, you can't change a Scrum-based team project to an Agile-derived inherited process.
+
+1. At this moment we have only created the template. We must assign this template to our VSTS Project so that we can use this new field. We can change the process template from a VSTS Project, with their inherited templates or default templates. This is done in the main process screen. Go back to **Process** tab, click on ellipsis button on our new template and select **Change Team Projects to use MyHealthClinic Scrum template**.
 
     <img src="images/67.png" width="624" />
 
-12. Select the **MyHealthClinic** project to change the process and click **>** button.
+2. Select the **MyHealthClinic** project to change the process and click **>** button.
 
     <img src="images/68.png"  />
 
-13. Click **ok** button. You should see a successful message after changing the process.
+3. Click **Ok** button. You should see a successful message after changing the process.
 
     <img src="images/69.png"  />
 
-14. Let’s review how the new field appears on our Product Backlog Item Template. Go back to **work** | **backlogs**. Open the first product backlog. Look after **Acceptance Criteria** for the **MyHeathClinic** group.
-    Fill in the information for the **Ticket ID** like **HK89JY13**. Click **save & close**.
+4. Let’s review how the new field appears on our Product Backlog Item Template. Go back to **Work** \| **Backlogs**. Open the first product backlog. Look after **Acceptance Criteria** for the **MyHeathClinic** group. Fill in the information for the **Ticket ID** like **HK89JY13**. Click **Save & close**.
 
     <img src="images/70.png" width="624" />
 
     >Once the Work Item is saved,  VSTS will also save the new custom information we have added to the PBI and will be available for queries and the rest of the VSTS system.
-   
-
-   
-
-
-
-
-   
-
-
-
-
-   
