@@ -75,9 +75,11 @@ To complete this lab, you will need:
 
     <img src="images/76.png" width="624" />
 
-11. Go to **Iterations** and click **Select Iteration**. Select **Sprint 1**.
+11. Go to **Iterations** and click **Select Iteration**. Select **Sprint 1**. Repeat this step to add **Sprint 2**.
 
     <img src="images/16.png" width="624" />
+    
+    >You may need to adjust the dates for the sprints you have selected. Pick dates that correspond to the current calendar dates to make more relevant.
 
 12. Click on **Change** for the default iteration. And set **MyHealthClinic** as the default one.
 
@@ -120,84 +122,82 @@ To complete this lab, you will need:
 
     <img src="images/25.png" width="624" />
 
-## Exercise 3: Working with Kanban board 
+## Exercise 3: Working with Kanban boards 
 
-
-1. Click on the **Board** from your backlog items.
+1. To view your Kanban board, click the **Board** link from the **Work>Backlogs** page.
 
    <img src="images/26.png" width="624" />
 
-   >Kanban board turns the backlog into an interactive signboard, providing a visual workflow. As work progresses from idea to completion, you update the items on the board.
-  Each column represents a work stage, and each card represents a product backlog item (blue cards) or a bug (red cards) at that stage of work.
-  The Kanban board allows you to set Work in Progress (WIP) limits for each state. One of the primary reasons for using Kanban and limiting work in progress is that it helps
-  identify bottlenecks in your development process and minimize lead time for new features. Let’s say that the devices team is not delivering finished work as quickly as desired,
-  and it is suspected that the underlying issue may have to do with taking on too many tasks at the beginning of each sprint. If we are more careful about the number of tasks that
-  we commit to, perhaps we can better focus our efforts.
+   >To maximize a team's ability to consistently deliver high quality software, Kanban emphasize two main practices. The first, visualize the flow of work, requires you to map your team's workflow stages and configure your Kanban board to match. The second, constrain the amount of work in progress, requires you to set work-in-progress (WIP) limits. You're then ready to track progress on your Kanban board and monitor key metrics to reduce lead or cycle time.
+
+   >Your Kanban board turns your backlog into an interactive signboard, providing a visual flow of work. As work progresses from idea to completion, you update the items on the board. Each column represents a work stage, and each card represents a user story (blue cards) or a bug (red cards) at that stage of work.
 
 
-2. Drag and drop the items that were selected for the Sprint 2 from **New** to **New Commit**.
-
-   <img src="images/27.png" width="624" />
-
-3. We are going to modify the **Kanban board** to show some of the features. Click the gear icon to open the settings dialog.
+2. We are going to modify the **Kanban board** to map the flow of how our team works. Click the gear icon to open the settings dialog.
 
    <img src="images/28.png" width="624" />
 
-4. You can either increase or simplify the information that displays on your cards. Your best bet is to show fields on cards based on what your team frequently refers to or updates when using the **Kanban** and **Task** boards. Make sure the fields for your cards match the following image.
+3. You can either increase or simplify the information that displays on your cards. Your best bet is to show fields on cards based on what your team frequently refers to or updates when using the **Kanban** and **Task** boards. Make sure the fields for your cards match the following image.
 
     <img src="images/78.png" width="624" />
 
-5. To cause a card on the **Kanban** board to change color based on criteria you specify, open **Styles**. Add a styling rule and set the criteria for the rule. Create the **High Effort** styling as follows.
+4. To cause a card on the **Kanban** board to change color based on criteria you specify, open **Styles**. Add a styling rule and set the criteria for the rule. Create the **High Effort** styling as follows.
 
     <img src="images/79.png" width="624" />
 
-6. Prior to setting tag colors, first add tags to backlog items that you want to highlight with color. To add color to **Kanban** cards, open **Tag colors** and select a tag and the color you want it to display. If you used the **[VSTS Demo Data generator](http://vstsdemogenerator.azurewebsites.net/Environment/Create)** then you will already have a **Doctor** tag and set to green.
+5. Prior to setting tag colors, first add tags to backlog items that you want to highlight with color. To add color to **Kanban** cards, open **Tag colors** and select a tag and the color you want it to display. If you used the **[VSTS Demo Data generator](http://vstsdemogenerator.azurewebsites.net/Environment/Create)** then you will already have a **Doctor** tag and set to green.
 
     <img src="images/80.png" width="624" />
 
-7. With the Kanban board, you gain a rich set of tools and a rich set of customization options. **Annotations** provide visual cues about work items, indicating the number of tasks or tests that have been defined for that work item. Click an annotation to expand the set or gain more information.
+6. With the Kanban board, you gain a rich set of tools and a rich set of customization options. **Annotations** provide visual cues about work items, indicating the number of tasks or tests that have been defined for that work item. Click an annotation to expand the set or gain more information.
 
     <img src="images/81.png" width="624" />
 
-8. You can control the test plan under which inline tests you add through the Kanban board are created. You can choose to create a new test plan for each new test that you add, or add all new tests to a selected test plan going forward.
+7. You can control the test plan under which inline tests you add through the Kanban board are created. You can choose to create a new test plan for each new test that you add, or add all new tests to a selected test plan going forward.
 
     <img src="images/82.png" width="624" />
 
-9. Kanban's number one practice is to visualize the flow of work. Accordingly, your number one task is to visualize your team's workflow. You do this by identifying the types of work and handoffs that occur regularly as your team moves items off the backlog and into a shippable state.
+   Kanban's number one practice is to visualize the flow of work. Accordingly, your number one task is to visualize your team's workflow. You do this by identifying the types of work and handoffs that occur regularly as your team moves items off the backlog and into a shippable state.
 
-    After you identify your team's workflow stages, you're ready to configure your Kanban board to map to them. Once configured, you use your Kanban board to update status, reassign work, and reorder items to reflect changing priorities.
-    
-    Our team came up with these stages as essential to thier process:
-    * Backlog: Prioritized list of items which aren't yet ready to work on.
-    * Analyze: Well understood and shared acceptance criteria identified and overall work required to develop and test item.
-    * Develop: Code and run unit tests for the item.
-    * Test: Perform exploratory, automated, integration, and other tests.
-    * Done: Item ready to handoff to production.
+   After you identify your team's workflow stages, you're ready to configure your Kanban board to map to them. Once configured, you use your Kanban board to update status, reassign work, and reorder items to reflect changing priorities.
 
-    Rename the **New** column to **Backlog**. Click the **+ Column** to create a new column. Name the column **Analyze** and set the state mapping to **Approved** for both **Bug** and **Product Backlog Item**. Rename the **Build and test** to **Test**.
+   Our team came up with these stages as essential to thier process:
+
+   >**Backlog**: Prioritized list of items which aren't yet ready to work on.    
+   >**Analyze**: Well understood and shared acceptance criteria identified and overall work required to develop and test item.    
+   >**Develop**: Code and run unit tests for the item.    
+   >**Test**: Perform exploratory, automated, integration, and other tests.    
+   >**Done**: Item ready to handoff to production.
+
+8. Rename the **New** column to **Backlog**. Click the **+ Column** to create a new column. Name the new column **Analyze** and set the state mapping to **Approved** for both **Bug** and **Product Backlog Item**. Rename the **Build and test** to **Test**.
 
     <img src="images/83.png" width="624" />
 
-10. The WIP limit is already set for **Test** column. You can also set for other columns as well. To do so, from the settings page go to columns tab. Click the **Develop** column. Set the WIP Limit to **3**.
+9. The WIP limit is already set for **Test** column. You can also set for other columns as well. To do so, from the settings page go to columns tab. Click the **Develop** column. Set the WIP Limit to **3**.
 
-   <img src="images/84.png" width="624" />
-  
+    <img src="images/84.png" width="624" />
+
+    However, a lag often exists between when work gets moved into a column and when work actually starts. To counter that lag and reveal the actual state of work in progress, you can turn on split columns.
+
+    When split, each column contains two sub-columns, **Doing** and **Done**.
+
+    Split columns lets your team to implement a pull model. Without split columns, teams push work forward, to signal that they've completed their stage of work. However, pushing it to the next stage doesn't necessarily mean that a team member immediately starts work on that item.
+
+10. Now that you understand how your team can use split columns, here's how to turn them on. Select the **Develop** column and click the **Split column into doing and done** checkbox. Do the same thing for the **Test** column.
+
+    <img src="images/89.png" width="624" />
+
 11. As your team updates the status of work as it progresses from one stage to the next, it helps that they agree on what “done” means. By specifying the **Definition of Done** criteria for each Kanban column, you help share the essential tasks to complete before moving an item into a downstream stage. For the **Develop** column, add the following definition:
-    >1. Code complete, commented, and run against current version.
-    >2. Code peer reviewed and meets team standards.
-    >3. Builds without error.
-    >4. Passes unit and system tests.
-    >5. Remaining hours for tasks set to zero and task closed.
+    
+    <img src="images/85.png" width="624" />
 
-   <img src="images/85.png" width="624" />
+    <img src="images/86.png" width="624" />
 
-   <img src="images/86.png" width="624" />
+    Your Kanban board supports your ability to visualize the flow of work as it moves from new to done. When you add swimlanes, you can also visualize the status of work that supports different service-level classes. You can create a swimlane to represent any other dimension that supports your tracking needs.
 
-12. Your Kanban board supports your ability to visualize the flow of work as it moves from new to done. When you add swimlanes, you can also visualize the status of work that supports different service-level classes. You can create a swimlane to represent any other dimension that supports your tracking needs.
+    > For example, you can create three swimlanes-**Expedite**, **Standard**, and **Park**-to track high-priority work, standard work, and work that's currently blocked.
 
-    For example, you can create three swimlanes-**Expedite**, **Standard**, and **Park**-to track high-priority work, standard work, and work that's currently blocked.
-
-    From your Kanban board, click **Configure board settings** then click Swimlanes. Use the add Swimlane to add **Expedite** swimlane.
+12. From your Kanban board, click **Configure board settings** then click Swimlanes. Use the add Swimlane to add **Expedite** swimlane.
 
     <img src="images/87.png" width="624" />
 
@@ -205,57 +205,113 @@ To complete this lab, you will need:
 
     <img src="images/88.png" width="624" />
 
-## Exercise 4: Working with Task Board
+## Exercise 4: Sprint Planning and Task Board
 
-1. Go to **Sprint 2** and click on **Board**.
+Your team builds the sprint backlog during the sprint planning meeting, typically held on the first day of the sprint. Each sprint corresponds to a time-boxed interval which supports your team's ability to work using Agile processes and tools. During the planning meeting, your product owner works with your team to identify those stories or backlog items to complete in the sprint.
 
-   <img src="images/35.png" width="624" />
+Planning meetings typically consist of two parts. In the first part, the team and product owner identify the backlog items that the team feels it can commit to completing in the sprint, based on experience with previous sprints. These items get added to the sprint backlog. In the second part, your team determines how it will develop and test each item. They then define and estimate the tasks required to complete each item. Finally, your team commits to implementing some or all of the items based on these estimates.
 
-   > Your task board provides a visualization of flow and status of each sprint task. With it, you can focus on the status of backlog items as well as work assigned to each team member.
-  It also summarizes the total amount of remaining work to complete for a task or within a column.
+### Sprint Planning
 
-2. Click on the upper right corner where the sprint burndown is shown. Throughout your sprint, you can monitor the sprint burndown chart to determine if your team is on track to
-   complete its sprint plan.
+Your sprint backlog should contain all the information your team needs to successfully plan and complete work within the time allotted without having to rush at the end. Before you start planning your sprint, you'll want to have created, prioritized, and estimated your backlog and defined your sprints.
+
+1. You begin your planning efforts from your product backlog. Move items that you expect to work on into the current sprint, one item at a time. Simply drag each item from the product backlog onto the sprint.
+
+   <img src="images/25.png" width="624" />
+
+   >If you don't see any links listed under Current or Future, you need to configure your team's sprint schedule.
+
+2. Next, check the total level of effort of your sprint items.
+   <img src="images/90.png" width="624" />
+
+   >Your initial plan should identify the subset of requirements that's within your team's capacity based on estimated effort and team velocity. Velocity corresponds to the total Effort or Story Points a team can complete within the sprint time period.
+
+3. As a next step, you'll want to determine your team's actual capacity. Whereas velocity correlates to how your team estimates requirements, capacity correlates to actual task time - either hours or days. Capacity takes into account variation in work hours by team members as well as holidays, vacation days, and non-working days.
+
+   Because days off and time available for each team member can vary from sprint to sprint, you set capacity for each sprint. The capacity tool helps you make sure your team isn't over or under committed for the sprint. Also, as you work day-to-day, you'll be able to see if your team is on track.
+
+   From the Capacity page, enter the capacity and days off for each member of your team.
+
+   <img src="images/91.png" width="624" />
+
+   >Most teams specify capacity in terms of hours, however, you can also specify it in days. For example, .5 days would correspond to 4 hours for a typical 8 hour day. Choose the same unit you will use to estimate the time a task will take to complete.
+
+   >If you don't see a team member listed, you need to add them to the team. Also, you only have to indicate planned days off. You manage weekend days or other recurring days off under team settings.
+   
+   >Additional options available from the Capacity page include copying capacity from the previous iteration, adding team members, adding multiple activities.
+
+4. Click on the column **Days Off** on any user. Introduce start and end date in an interval inside the dates for the Sprint so he has more work than hours available.
+
+   <img src="images/95.png" width="624" />
+
+   >When you add days off to a Team Member the **Work Details** planning graph will adapt itself and show red if there is more work assigned to any team member than the work hours we have available for the sprint.
+
+5. In the sprint backlog, add a task. Creating tasks from the sprint backlog automatically links the task to it parent backlog item.
+
+   <img src="images/92.png" width="624" />
+
+6. Name the task and enter an estimate for Remaining Work. Also, if you know who'll perform the work, go ahead and assign the task to that team member.
+
+   <img src="images/93.png" width="624" />
+
+   >At the planning stage, Remaining Work corresponds to an estimate of how long it will take to complete the task.
+
+   >A good rule of thumb is to size tasks to take no more than a day to complete. If a task is too large, the team should break it down. In some cases, you may not be able to estimate some tasks effectively until other tasks have been completed. Create the task now, but estimate it when you have enough information.
+
+   >During the sprint, team members update remaining work to continually reflect the time required to complete the task. This value can actually increase after work begins. For example, after working 4 hours on a task that was estimated to take 8 hours, the team member realizes he needs 16 hours over what he estimated. He would update the Remaining Work field with 20 (8-4+16). As you perform a task, you might find that more time is required. Always update the task with your best estimate of remaining work. That way, you help accurately reflect the total amount of work remaining in the sprint.
+
+7. As you define tasks and estimate the work, you'll see capacity charts start to fill in for each team member. Capacity bars track the remaining work against the capacity for each team member as well as the entire team.
+
+   You'll also see a roll-up of the remaining work required to complete each requirement or bug.
+
+   <img src="images/94.png" width="624" />
+
+8. Click on the upper right corner where the sprint burndown is shown. Throughout your sprint, you can monitor the sprint burndown chart to determine if your team is on track to complete its sprint plan.
 
    <img src="images/36.png" width="624" />
 
-3. When you estimate the tasks, you can also use the **Capacity** tool to check the capacity of the team against the planning. Ensure you have all tasks assigned and with an
-   estimation for the **Capacity** tool to work. Click on **Capacity** from your Task board and add users.
+### Task Board
 
-   <img src="images/37.png" width="624" />
+1. Once you have your sprint plan in place, you'll execute that plan for the duration of the sprint. In your daily Scrum meetings, your team can view progress made to backlog items and tasks from the sprint task board.
 
-   >The capacity view allows to specify the number of hours per day that each team member will be working on this project, days off per team member, and overall team days off. These capacity settings apply to the current iteration. You can optionally use the activity column to describe the disciplines that each team member specializes in. When tasks are broken down by activity, it can provide another view across your team’s capacity to determine. For example, you have enough people working on documentation to meet the demands for this iteration.
+   <img src="images/99.png" width="624" />
 
+   During your daily Scrum, you can filter your task board to help focus on items of interest.
 
-4. Introduce the capacity per day in hours for the users.
+   * Group by Backlog items or Group by stories to monitor progress of your product backlog items, stories, requirements, or bugs.
+   <img src="images/96.png" width="624" />
+   * Group by People when you want to monitor progress of individual team members.
+   <img src="images/97.png" width="624" />
+   Use the Person filter when you want to focus on work assigned to individual team members.
 
-   <img src="images/38.png" width="624" />
-
-   >When you imagesduce the hours available per day for the team you will see how it changes the **Work Details** pane on the right to adapt to the modifications.
-
-5. Click on the column **Days Off** on any user. Introduce start and end date in an interval inside the dates for the Sprint so he has more work than hours available.
-
-   <img src="images/39.png" />
-
-   <img src="images/40.png" />
-
-   >When you add days off to a Team Member the **Work Details** planning graph will adapt itself and show red if there is more work assigned to any team member
-    than the work hours we have available for the sprint.
-
-6. Click on **gear icon** for the settings. Select the **Task** tab.
+2. Click on **gear icon** for the settings. Select the **Task** tab.
 
    <img src="images/41.png" width="624" />
 
    >Rich cards not only provide at-a-glance info of interest to you and your team, they also provide a way for you to update a field without opening the work item.
     With style rules, you can highlight those work items with colors, based on the criteria you set. 
 
-7. You can see the Avatar and other information on the cards.
+3. You can see the Avatar and other information on the cards.
 
    <img src="images/42.png" width="624" />
 
-8. The tasks can be easily dragged and dropped once the work is started.
+4. The task board makes quick work of updating both task status and remaining work. Simply drag tasks to a downstream column to reflect if they are in progress or completed.
 
    <img src="images/43.png" width="624" />
+
+5. Updating Remaining Work, preferably prior to the daily Scrum meeting, helps the team stay informed of the progress being made. It also ensures a smoother burndown chart.
+
+   Each team member can review the tasks they've worked on and estimate the work remaining. If they've discovered that it's taking longer than expected to complete, they should increase the remaining work for the task. Remaining work should always reflect exactly how much work the team member estimates is remaining to complete the task.
+
+   <img src="images/98.png" width="624" />
+
+At the end of the sprint, you'll want to perform these final tasks:
+
+* Zero out remaining work of all completed tasks
+* Update the status of all completed backlog items
+* Move incomplete tasks or backlog items to the next sprint or back to the product backlog.
+
+Dragging an incomplete item to the product backlog or to a future sprint updates the Iteration Path of all uncompleted child tasks to correspond to the product backlog iteration path or future sprint.
 
 
 ## Exercise 5: Portfolio Management
