@@ -61,6 +61,11 @@ entries:
     output: web, pdf
 
     folderitems:
+    - title: Test Planning and Management with Visual Studio Team Services
+      url: labs/vsts/testmanagement
+      output: web, pdf
+    
+    folderitems:
     - title: Exploratory Testing and Feedback Management with Visual Studio Team Services
       url: labs/vsts/exploratorytesting
       output: web, pdf
