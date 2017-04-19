@@ -25,7 +25,7 @@ To complete this lab, you will need:
 
 1.	Go to your VSTS account home page.
 
-2.	Click on the VS icon and brwse to the MyHealthClinic project. At this moment, we have only one project. You could select/create as many projects from here.
+2.	Click on the VS icon and browse to the MyHealthClinic project. At this moment, we have only one project. You could select/create as many projects from here.
 
     > If you haven't already, browse to your Visual Studio Team Services account you can sign in by going to (https://{youraccount}.visualstudio.com).
 
@@ -49,7 +49,7 @@ To complete this lab, you will need:
 
     <img src="images/71.png" width="624" />
 
-5.  Now create a new team by clicking the **New team** link and giving it a name of **Web**. Make sure the **Team area** has a check mark. This option will create a corresponding area for the team so they can group all their work items and keep them seperate from other teams. If you do not select this option, you will have to set the default area path for the team once you create it. Follow the same steps to create a team called **Database**.
+5.  Now create a new team by clicking the **New team** link and giving it a name of **Web**. Make sure the **Team area** has a check mark. This option will create a corresponding area for the team, so they can group all their work items and keep them separate from other teams. If you do not select this option, you will have to set the default area path for the team once you create it. Follow the same steps to create a team called **Database**.
 
     <img src="images/72.png" width="624" />
     <img src="images/73.png" width="624" />
@@ -71,7 +71,7 @@ To complete this lab, you will need:
 
     <img src="images/75.png" width="624" />
 
-10. Now we want to change the area path setting for management areas to include sub-area paths.  The default setting for all teams is to exclude sub-area paths. We will change it to include sub-areas so that the team gets visisbility into all of the work items from all teams. Optionally, the management team could also choose to not include sub-areas. Thereby removing work items from their view as soon as they are assigned to one of the teams. Click on the ellipsis for **MyHealthClinic** and select **Include sub-areas**.
+10. Now we want to change the area path setting for management areas to include sub-area paths.  The default setting for all teams is to exclude sub-area paths. We will change it to include sub-areas so that the team gets visibility into all of the work items from all teams. Optionally, the management team could also choose to not include sub-areas. Thereby removing work items from their view as soon as they are assigned to one of the teams. Click on the ellipsis for **MyHealthClinic** and select **Include sub-areas**.
 
     <img src="images/76.png" width="624" />
 
@@ -103,8 +103,7 @@ To complete this lab, you will need:
 
     <img src="images/22.png" width="624" />
 
-3.  You can see that the product backlog would open automatically. Enter the description **As a user, I want to create appointments.**
-    Enter the acceptance criteria as **Any user can create appointments. After creating an appointment, it should appear in the user appointment list.**
+3.  You can see that the product backlog would open automatically. Enter the description **As a user, I want to create appointments.** Enter the acceptance criteria as **Any user can create appointments. After creating an appointment, it should appear in the user appointment list.**
    
     <img src="images/23.png" width="624" />
 
@@ -114,11 +113,11 @@ To complete this lab, you will need:
 
     <img src="images/77.png" width="624" />
 
-6.  You can create several backlog items repeating the above steps. If you used the **[VSTS Demo Data generator](http://vstsdemogenerator.azurewebsites.net/Environment/Create)** then you can see pre-defined work items in the default team's backlog list.
+6.  You can create several backlog items repeating the above steps. If you used the **[VSTS Demo Data generator,](http://vstsdemogenerator.azurewebsites.net/Environment/Create)** then you can see pre-defined work items in the default team's backlog list.
     
     <img src="images/24.png" width="624" />
 
-7. Select the desired product backlog items, drag and drop it to the current sprint. In this case the current sprint happens to be **Sprint 1**.
+7. Select the desired product backlog items, drag and drop it to the current sprint. In this case, the current sprint happens to be **Sprint 1**.
 
     <img src="images/25.png" width="624" />
 
@@ -164,7 +163,7 @@ To complete this lab, you will need:
    Our team came up with these stages as essential to thier process:
 
    >**Backlog**: Prioritized list of items which aren't yet ready to work on.    
-   >**Analyze**: Well understood and shared acceptance criteria identified and overall work required to develop and test item.    
+   >**Analyze**: Well understood and shared acceptance criteria identified, and overall work required to develop and test item.    
    >**Develop**: Code and run unit tests for the item.    
    >**Test**: Perform exploratory, automated, integration, and other tests.    
    >**Done**: Item ready to handoff to production.
@@ -177,11 +176,11 @@ To complete this lab, you will need:
 
     <img src="images/84.png" width="624" />
 
-    However, a lag often exists between when work gets moved into a column and when work actually starts. To counter that lag and reveal the actual state of work in progress, you can turn on split columns.
+    However, a lag often exists between when work gets moved into a column and when work starts. To counter that lag and reveal the actual state of work in progress, you can turn on split columns.
 
     When split, each column contains two sub-columns, **Doing** and **Done**.
 
-    Split columns lets your team to implement a pull model. Without split columns, teams push work forward, to signal that they've completed their stage of work. However, pushing it to the next stage doesn't necessarily mean that a team member immediately starts work on that item.
+    Split columns let your team to implement a pull model. Without split columns, teams push work forward, to signal that they've completed their stage of work. However, pushing it to the next stage doesn't necessarily mean that a team member immediately starts work on that item.
 
 10. Now that you understand how your team can use split columns, here's how to turn them on. Select the **Develop** column and click the **Split column into doing and done** checkbox. Do the same thing for the **Test** column.
 
@@ -209,7 +208,7 @@ To complete this lab, you will need:
 
 Your team builds the sprint backlog during the sprint planning meeting, typically held on the first day of the sprint. Each sprint corresponds to a time-boxed interval which supports your team's ability to work using Agile processes and tools. During the planning meeting, your product owner works with your team to identify those stories or backlog items to complete in the sprint.
 
-Planning meetings typically consist of two parts. In the first part, the team and product owner identify the backlog items that the team feels it can commit to completing in the sprint, based on experience with previous sprints. These items get added to the sprint backlog. In the second part, your team determines how it will develop and test each item. They then define and estimate the tasks required to complete each item. Finally, your team commits to implementing some or all of the items based on these estimates.
+Planning meetings typically consist of two parts. In the first part, the team and product owner identify the backlog items that the team feels it can commit to completing in the sprint, based on experience with previous sprints. These items get added to the sprint backlog. In the second part, your team determines how it will develop and test each item. They then define and estimate the tasks required to complete each item. Finally, your team commits to implementing some or all the items based on these estimates.
 
 ### Sprint Planning
 
@@ -234,7 +233,7 @@ Your sprint backlog should contain all the information your team needs to succes
 
    <img src="images/91.png" width="624" />
 
-   >Most teams specify capacity in terms of hours, however, you can also specify it in days. For example, .5 days would correspond to 4 hours for a typical 8 hour day. Choose the same unit you will use to estimate the time a task will take to complete.
+   >Most teams specify capacity in terms of hours, however, you can also specify it in days. For example, .5 days would correspond to 4 hours for a typical 8-hour day. Choose the same unit you will use to estimate the time a task will take to complete.
 
    >If you don't see a team member listed, you need to add them to the team. Also, you only have to indicate planned days off. You manage weekend days or other recurring days off under team settings.
    
@@ -258,7 +257,7 @@ Your sprint backlog should contain all the information your team needs to succes
 
    >A good rule of thumb is to size tasks to take no more than a day to complete. If a task is too large, the team should break it down. In some cases, you may not be able to estimate some tasks effectively until other tasks have been completed. Create the task now, but estimate it when you have enough information.
 
-   >During the sprint, team members update remaining work to continually reflect the time required to complete the task. This value can actually increase after work begins. For example, after working 4 hours on a task that was estimated to take 8 hours, the team member realizes he needs 16 hours over what he estimated. He would update the Remaining Work field with 20 (8-4+16). As you perform a task, you might find that more time is required. Always update the task with your best estimate of remaining work. That way, you help accurately reflect the total amount of work remaining in the sprint.
+   >During the sprint, team members update remaining work to continually reflect the time required to complete the task. This value can increase after work begins. For example, after working 4 hours on a task that was estimated to take 8 hours, the team member realizes he needs 16 hours over what he estimated. He would update the Remaining Work field with 20 (8-4+16). As you perform a task, you might find that more time is required. Always update the task with your best estimate of remaining work. That way, you help accurately reflect the total amount of work remaining in the sprint.
 
 7. As you define tasks and estimate the work, you'll see capacity charts start to fill in for each team member. Capacity bars track the remaining work against the capacity for each team member as well as the entire team.
 
@@ -321,33 +320,31 @@ Epics or Features, and feature teams can break these down into the user stories 
 
    <img src="images/45.png" width="624" />
 
-  >As you advance in the product development, stories can go bigger, making them difficult to handle. We will use the Feature Work Item Type for this purpose.
-   With Features we will group Product Backlog Items to handle an information unit at a bigger level.
+  >As you advance in the product development, stories can get bigger, making them difficult to handle. We will use the **Feature** Work Item Type for this purpose. With Features, we will group Product Backlog Items to handle an information unit at a bigger level.
 
 1. Click on **Features**. You will see list of feature work items available already. If you wish to add few more you can add.
 
    <img src="images/44.png" width="624" />
 
-2. Go back to **Backlog items**. Click on **Mapping** to enable as shown.
+2. If you've already created your backlog, and now you want to organize it, you can do that most easily by mapping them. Go back to **Backlog items**. Click on **Mapping** to enable as shown.
 
    <img src="images/46.png" width="624" />
 
    <img src="images/47.png" width="624" />
 
-3. With the mapping panel enabled, drag and drop the Product Backlog Items to the Feature you want to link to.
+3. With the mapping panel enabled, drag items that are currently unparented to the feature under which they belong. Also, you can drag a backlog item to a different feature to change its parent.
 
    <img src="images/48.png" width="624" />
 
 4. To have a full view of the work escalation and decomposition to tasks Click on **Features**. Expand all the levels by clicking twice on the + icon.
    Review the full structure from Feature to tasks.
-   
-   >It is important to keep track of all artifacts involved in
-   product development so we are able to plan and keep track of what has been done, and what needs to be done.
 
    <img src="images/49.png" width="624" />
 
-5. Go to the **Board**. As we have a Kanban board for checking the states of the Product Backlog Items, we also have a Kanban Board to see the transition
-   and check visually the current state of any particular feature. This is also customizable as we saw in our Sprint Backlog view, and the Product Backlog view.
+   >It is important to keep track of all artifacts involved in product development, so we can plan and keep track of what has been done, and what needs to be done.
+   
+
+5. Go to the **Board**. As we have a Kanban board for checking the states of the Product Backlog Items, we also have a Kanban Board to see the transition and check visually the current state of any particular feature. This is also customizable as we saw in our Sprint Backlog view, and the Product Backlog view.
   
    <img src="images/50.png" width="624" />
 
@@ -357,6 +354,7 @@ Epics or Features, and feature teams can break these down into the user stories 
 
 7. You can also Drag and Drop any Feature to other state and check how it changes its current state.
 
+   <img src="images/100.png" width="624" />
 
 ## Exercise 6: Working with VSTS Dashboards
 
@@ -364,48 +362,93 @@ Dashboards allow teams to visualize status and monitor progress across the proje
 The Overview page provides access to a default team dashboard which you can customize by adding, removing, or rearranging the tiles.
 Each tile corresponds to a widget that provides access to one or more features or functions.
 
-1. Go to **Dashboard**
+1. Go to the default **Dashboard** called Overview.
 
    <img src="images/52.png" width="624" />
 
-2. Click on **edit** to modify the dashboard and add your widgets like **Build Summary, Release Summary, Markdowns etc**.
+   >The Overview page provides access to a default team dashboard which you can customize by adding, removing, or rearranging the tiles. Each tile corresponds to a widget that provides access to one or more features or functions.
 
-3. You can also add role based dashboards by clicking the **New +** button.
+2. You can also add dashboards. From the dashboards tab, click the plus icon and enter a dashboard name.
 
    <img src="images/53.png" />
 
+   With the dashboard selected, you can add a widget to the dashboard. Or, you can add a chart to a team dashboard from the Work, Build, or Test hubs.
+
    <img src="images/54.png" width="624" />
 
-4. You can also manage dashboard settings by adding permissions and auto-refresh functionalities.
+   When finished, click the **Close** button. Then click the checkmark to take the dashboard out of edit mode.
 
-   <img src="images/55.png" />
+3. Click on **edit** button to modify the dashboard and add your widgets like **Build Summary, Release Summary, Markdowns** etc.
 
-   <img src="images/56.png" />
+    <img src="images/101.png" width="624" />
 
+4. Add the **Query Tile** to the Test dashboard.
 
-## Exercise 7: Customization
+    <img src="images/102.png" width="624" />
 
-Sometimes you will need to add more fields for a particular Work Item Type definition, to represent information which is important for your team.
-We can customize the Process Template for our team project by adding new fields, definitions for any Work Item type.
+5. After you add the widget, you may need to configure it. For example, to configure the **Query tile** widget, click the Configure widget icon to open the configuration dialog.
 
-1. Navigate to the administration page by clicking on the **gear icon**.
+    <img src="images/103.png" width="624" />
+
+6. Then select the query and specify any rules you want. 
+
+    <img src="images/104.png" width="624" />
+
+    >You can also add conditional formatting, so the widget will visually alert the user.
+    <img src="images/105.png" width="624" />
+
+7. In addition to widgets, you can add a chart to your dashboard. You add an item to a dashboard from the code, work, and build pages. First, make sure you have the team context selected from the Queries page to which you want to add a query or chart. Go to the **Work** tab and click **Queries** on the top left.
+
+    <img src="images/106.png" width="624" />
+
+8. Select the query that you want to create the chart from and click the **Charts** option.
+
+    <img src="images/107.png" width="624" />
+
+9. Next, click the **New chart** option to bring up the configuration of the chart.
+
+    <img src="images/108.png" width="624" />
+
+10. And, you can add a chart to a team dashboard by clicking on the ellipsis and choosing **Add to dashboard** > select the dashboard you want to add the chart to in the context menu.
+
+    <img src="images/109.png" width="624" />
+    <img src="images/110.png" width="624" />
+
+11. You can move or delete a widget from the dashboard by clicking **Edit** dashboard icon to modify your dashboard. You can then drag tiles to reorder their sequence on the dashboard. To remove a widget, click the widget's **Trash** icon or **Delete** icon. When you're finished with your changes, click **Exit edit-dashboard-mode** icon to exit dashboard editing.
+
+    <img src="images/111.png" width="624" />
+
+12. You can rename, reorder, or delete a dashboard. Also, you can enable auto-refresh, and the dashboard will automatically update every 5 minutes.
+
+    <img src="images/55.png" />
+
+    <img src="images/56.png" />
+
+## Exercise 7: Process Customization
+
+In Team Services, you customize your work tracking experience through a process. A process defines the building blocks of the work item tracking system as well as other sub-systems you access through Team Services. Whenever you create a team project, you select the process which contains the building blocks you want for your project.
+
+### Manage processes
+
+Team Services supports two process types. The first, the core system processes—Scrum, Agile, and CMMI system processes—are locked. You cannot customize these processes. The second type, inherited processes, you create from a core system process. These processes you can customize.
+
+In addition, all processes are shared. That is, one or more team projects can reference a single process. Instead of customizing a single team project, you customize a process. Changes made to the process automatically update all team projects that reference that process.
+
+Once you've created an inherited process, you can customize it, create team projects based on it, and migrate existing team projects to reference it. The Git team project can't be customized until its migrated to an inherited process.
+
+1. To open the admin context from the user context, click the gear Settings icon and choose **Account settings**.
 
    <img src="images/57.png" width="624" />
 
-2. Navigate to your Account and click **gear icon** and select **process**.
+2. Click **Process**.
 
    <img src="images/58.png" width="624" />
 
-3. In the process tab you will see all of your Process Templates.
+3. You can create an inherited process from any one of the three system processes: Agile, Scrum, or CMMI. From the **Process** page, open the context menu of the process you'll use to create an inherited process. Here, we create an inherited process from the **Scrum** system process. Then click on **Create inherited process**.
 
    <img src="images/59.png" width="624" />
 
-4. Click on the **ellipsis** near the Scrum template. Currently we are using the default Scrum template, default templates can’t be modified.
-   We need to create an inherited template from the Scrum template, so that we can add new fields. Click on **create inherited process**.
-
-   <img src="images/60.png" width="624" />
-
-5. Provide a name for the inherited process template like **MyHealthClinic Scrum template**.
+5. Enter a name for your process and optionally a description. Something like **MyHealthClinic Scrum template**.
 
    <img src="images/61.png" />
 
@@ -413,56 +456,49 @@ We can customize the Process Template for our team project by adding new fields,
 
    <img src="images/62.png" />
 
-7. Select the inherited template that was created.
+### Customize a field for a process
+
+Each process—Agile, Scrum, or CMMI—contains 100 or more work item fields. You can add a custom field to support tracking additional data requirements or modify select attributes of an inherited field.
+
+1. Select the inherited template that was created.
 
    <img src="images/63.png" width="624" />
 
-8. Navigate to **Work Item Types** tab. Now we have different options to modify this scrum template.
+2. Navigate to **Work Item Types** tab. Now we have different options to modify this scrum template.
 
    <img src="images/64.png" width="624" />
 
 
-9. We will directly add a new field for the PBI Work Item template. Select **Product Backlog item** \| **Layout** \| **New field**. On the definition screen provide a name **HealthClinicTicketId**.
+3. We will directly add a new field for the PBI Work Item template. Select **Product Backlog item** \| **Layout** \| **New field**. On the definition screen provide a name **HealthClinicTicketId**.
 
    <img src="images/65.png" width="624" />
 
    > We are creating a text field for an internal id of the ticketing system inside MyHealthClinic.
 
-10. Click on **Layout**. Provide a name for Label as **Ticket ID**. Until now we have only created the field definition, we have to add it to the layout of the Work Item.
-    We will create a new group to show our custom information, so all of our customized fields appear together. Provide a name for the group as **MyHealthClinic** and click **add field**.
+   
+4. Click on **Layout**. Provide a name for Label as **Ticket ID**. Until now we have only created the field definition, we must add it to the layout of the Work Item.
+    We will create a new group to show our custom information, so all of our customized fields appear together. Provide a name for the group as **MyHealthClinic** and click **Add field**.
 
     <img src="images/66.png" width="624" />
 
-11. At this moment we have only created the template, we must assign this template to our VSTS Project so that we can use this new field. We can change the process template from a VSTS Project,
-    with their inherited templates or default templates. This is done in the main process screen. Go back to **Process** tab, click on ellipsis button on our new template
-    and select **Change Team Projects to use MyHealthClinic Scrum template**.
+### Change the process referenced by a team project
+
+You can change the process a team project references to an inherited process or a system core process. However, you can only change team projects to another process that is derivative of the same core system process. That is, you can change an Agile-based team project to any process you created from the Agile system process as well as to the Agile core process. Whereas, you can't change a Scrum-based team project to an Agile-derived inherited process.
+
+1. At this moment, we have only created the template. We must assign this template to our VSTS Project so that we can use this new field. We can change the process template from a VSTS Project, with their inherited templates or default templates. This is done in the main process screen. Go back to **Process** tab, click on ellipsis button on our new template and select **Change Team Projects to use MyHealthClinic Scrum template**.
 
     <img src="images/67.png" width="624" />
 
-12. Select the **MyHealthClinic** project to change the process and click **>** button.
+2. Select the **MyHealthClinic** project to change the process and click **>** button.
 
     <img src="images/68.png"  />
 
-13. Click **ok** button. You should see a successful message after changing the process.
+3. Click **Ok** button. You should see a successful message after changing the process.
 
     <img src="images/69.png"  />
 
-14. Let’s review how the new field appears on our Product Backlog Item Template. Go back to **work** | **backlogs**. Open the first product backlog. Look after **Acceptance Criteria** for the **MyHeathClinic** group.
-    Fill in the information for the **Ticket ID** like **HK89JY13**. Click **save & close**.
+4. Let’s review how the new field appears on our Product Backlog Item Template. Go back to **Work** \| **Backlogs**. Open the first product backlog. Look after **Acceptance Criteria** for the **MyHeathClinic** group. Fill in the information for the **Ticket ID** like **HK89JY13**. Click **Save & close**.
 
     <img src="images/70.png" width="624" />
 
     >Once the Work Item is saved,  VSTS will also save the new custom information we have added to the PBI and will be available for queries and the rest of the VSTS system.
-   
-
-   
-
-
-
-
-   
-
-
-
-
-   
