@@ -1301,11 +1301,11 @@ div.lab-item-none {
     background-color: #ffffff;
 }
 div.lab-item {
-    width: 350px;
+    /*width: 350px;*/
     border-width: 1px;
     border-style: solid;
     border-color: #248ec2;
-    padding: 15px 0;
+    padding: 15px;
     margin-bottom: 25px;
     margin-top: 25px;
     margin-left: 35px;
