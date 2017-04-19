@@ -10,6 +10,9 @@ folder: /labs/vsts/testmanagement/
 
  In this lab, you will learn how to manage your project test lifecycle using the Visual Studio Team Services. This lab will guide you through creating test plans designed efficiently to validate your software milestones. You will also create and execute manual tests that can be consistently reproduced over the course of each release.
 
+## Test Manager Extension
+
+You will need the **Test Manager** Extension to be enabled to your Visual Studio Team Services account. This extension is included with Visual Studio Enterprise, MSDN Platforms and Test Professional subscriptions. If you do not have any of these subscriptions, then you will need to acquire or request a trial version from the [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=ms.vss-testmanager-web). Please see the **"Installing the Test Manager Extension"** section below for step-by-step instructions to install the extension.
 
 ## Task 1: Creating Test Plan
 
@@ -71,33 +74,9 @@ Visual Studio Team Services (VSTS) allows teams to organize test cases into a hi
 
 
 
-## Task 2: Run Manual Tests
+## Task 2: Running Manual Tests
 
-Before running tests manually, you should start the trial version of **Test Manager** extension for accessing all the features.
-
-1. To do that **Browse MarketPlace** from your account by clicking on the **shopping bag** icon.
-
-   <img src="images/25.png" width="624">
-
-2. Under **Visual Studio Team Services** section, search for **Test Manager** extension in the Marketplace.
-
-   <img src="images/26.png" width="624">
-
-3. Install the extension by clicking **Start Trial**.
-
-   <img src="images/27.png" width="624">
-
-4. Select the account to which the extension has to be installed and click **Continue**.
-
-   <img src="images/28.png" >
-
-5. You should see a confirmation message. Click on **Confirm** to go ahead with the installation.
-
-   <img src="images/29.png" >
-
-6. Now that we are good to go, let's explore the features.
-
-7. Return to Internet Explorer. Right-click the test case created earlier and select **Run with options** to begin a manual test run.
+7.  Right-click the test case created earlier and select **Run with options** to begin a manual test run.
 
    <img src="images/30.png" width="624">
 
@@ -194,7 +173,29 @@ Shared Steps combines multiple steps that are commonly performed in sequence int
 
    <img src="images/48.png" width="624">
 
+## Installing the Test Manager Extension
+ 
+1. To acquire a full or a trial version of the **Test Manager** extension, select **Browse MarketPlace** from your account by clicking on the **shopping bag** icon.
 
+   <img src="images/25.png" width="624">
+
+2. Under **Visual Studio Team Services** section, search for **Test Manager** extension in the Marketplace.
+
+   <img src="images/26.png" width="624">
+
+3. Install the extension by clicking **Start Trial**.
+
+   <img src="images/27.png" width="624">
+
+4. Select the account to which the extension has to be installed and click **Continue**.
+
+   <img src="images/28.png" >
+
+5. You should see a confirmation message. Click on **Confirm** to go ahead with the installation.
+
+   <img src="images/29.png" >
+
+6. Now that we are good to go, let's explore the features.
 
 
 
