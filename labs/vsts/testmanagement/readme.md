@@ -113,45 +113,47 @@ You will need to select from the dropdown list , an open window from which you w
 4. Select the **Stop** button to finish capturing your actions. The action log will be added to the test results as an attachment. 
   <img src="images/imagelogattach.png" />
 
-4. To view the data captured, you can click the attachement to open it in a browser 
+4. To view the data captured, you can click the attachment to open it in a browser 
   <img src="images/imagelog.png" />
 
 ## Task 4: Creating Shared Steps
 
-Shared Steps combines multiple steps that are commonly performed in sequence into a single logical step, which can be shared across tests. If the process defined by the shared steps ever changes in the future, you can update the shared step in one place and it will be reflected in all tests that reference it.
+Shared Steps combines multiple steps that are commonly performed in sequence into a single logical step, which can be shared across tests. If the process defined by the shared steps ever changes in the future, you can update the shared step in one place and it will be reflected in all tests that reference it. 
 
-1. Click the test case link in the Summary section to open the test case editor.
+As you may have observed, the login sequence is repeated in the two test cases created above. This is a perfect candidate for shared steps. Let's convert it to shared steps. 
 
-   <img src="images/49.png" width="624">
+1. Open the "Create New Appointment" test case that you created above
+   <img src="images/testcasecreatenewappt.png">
 
-2. Select steps 3-5 (use **Shift+Click**) and click the **Create shared steps** button.
+2. Select steps 1-5 (use **Shift+Click**) and right-click and select **Create shared steps** 
 
-   <img src="images/50.png" width="624">
+   <img src="images/createsharedsteps.png" width="624">
 
-3. Set the name of these shared steps to **Login to the site** and click **Create**.
-
+3. Provide a name for the shared steps and click **Create**.
    <img src="images/51.png" >
 
-4. Now you can see the previous steps replaced with the shared steps. Double-click the shared steps to open.
+4. Now you can see the steps you selected are replaced with a link to the new shared steps. You can double-click the link to open the shared steps for viewing/editing.
 
    <img src="images/52.png" >
 
-5. If necessary, you can revisit these steps later on to update them for new requirements.
-
-   <img src="images/53.png" width="624">
-
-6. Press **Esc** to close the **Shared Steps** dialog.
-
 7. Click **Save & Close** to save the test case.
 
-   <img src="images/54.png" width="624">
+8. You can use the shared steps in other test cases. Open the other test case that you created. **Delete** the steps that you want to be replaced. Select the **Insert shared steps** button
+
+   <img src="images/53.png" />
+
+9. This will bring a query window with a query that will fetch all work items of **Microsoft.SharedStepsCategory**. You can add more clauses, if required. Click **Run** to run the query. Select the shared step that we created above and select the **Insert shared steps** button
+
+   <img src="images/54.png" >
+
+ When you run the tests case now, the shared steps will be expanded. You can mark the entire sequence as passed or failed or mark each step separately. 
 
 
 ## Task 5: Analyzing Test Results
 
 1. In this task, you will learn how to review the results of a manual test run.
 
-2. Return to the browser window hosting the **Test Hub**. Select the **Runs** tab and double-click the most recent test run to open it.
+2. Select the **Runs** tab under the **Test** hub. Double-click the most recent test run to open it.
 
    <img src="images/44.png" width="624">
 
@@ -170,6 +172,10 @@ Shared Steps combines multiple steps that are commonly performed in sequence int
 6. Review the results of each step in this iteration, during the test run.
 
    <img src="images/48.png" width="624">
+
+ 7. If you update the test results , you can select **Update Analysis** to change the test owner, test result and resolution type 
+
+ <img src="images/updateanalysis.png" />
 
 ## Installing the Test Manager Extension
  
@@ -192,6 +198,9 @@ Shared Steps combines multiple steps that are commonly performed in sequence int
 5. You should see a confirmation message. Click on **Confirm** to go ahead with the installation.
 
    <img src="images/29.png" >
+
+  6. Trial extensions are available to all users. If you have requested for a trial version of the Test Manager extension, you do not have to do anything further. You are ready to start using the test management capabilities of Visual Studio Team Services
+
 
 
 
