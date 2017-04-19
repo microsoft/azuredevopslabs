@@ -12,7 +12,7 @@ folder: /labs/vsts/testmanagement/
 
 ## Test Manager Extension
 
-You will need the **Test Manager** Extension to be enabled to your Visual Studio Team Services account. This extension is included with Visual Studio Enterprise, MSDN Platforms and Test Professional subscriptions. If you do not have any of these subscriptions, then you will need to acquire or request a trial version from the [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=ms.vss-testmanager-web). Please see the **"Installing the Test Manager Extension"** section below for step-by-step instructions to install the extension.
+You will need the **Test Manager** extension to get the comprehensive set of testing features in your Visual Studio Team Services account. This extension is included with Visual Studio Enterprise, MSDN Platforms and Test Professional subscriptions. If you do not have any of these subscriptions, then you will need to acquire or request a trial version from the [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=ms.vss-testmanager-web). Please see the **"Installing the Test Manager Extension"** section below for step-by-step instructions to install the extension.
 
 ## Task 1: Creating Test Plan
 
@@ -54,8 +54,6 @@ Visual Studio Team Services (VSTS) allows teams to organize test cases into a hi
 
 1. Enter a few test cases. Select the **Save All** button when you are done and select the **View: Grid** to toggle back to the list view
 
-    <img src="images/testcasegrid.png" />  
-
 |Title|Step Action| Step Expected Result|
 |-----|-----------|---------------------|
 | Appointments on Dashboard Page |             |        |
@@ -72,51 +70,51 @@ Visual Studio Team Services (VSTS) allows teams to organize test cases into a hi
 |                                | Click on Login button     | dashboard screen displayed         |
 |                                | Select Appointments       | Appointments main screen displayed |
 
-
+  <img src="images/testcasegrid.png" />  
 
 ## Task 2: Running Manual Tests
 
-7.  Right-click the test case created earlier and select **Run with options** to begin a manual test run.
+You can run your manual tests and record the test results for each test step using Microsoft Test Runner. You can also capture and attach documents and screen shots to the test and save them together with the test result. 
 
+Microsoft Test Runner is available both in web  and as a Windows desktop client. If you are testing a web-based app or just want to capture screen recordings when testing a desktop app, use the web-based Microsoft Test Runner. The Windows client is only recommended when you want to collect more types of data when testing a desktop.
+
+We will use the web-based Test Runner since we are testing a web application.
+
+1. Right-click the test case created earlier and select **Run** to start the test execution.
    <img src="images/30.png" width="624">
 
-8. There are a few options that you can use to customize each test run. The first option is to select a **Runner**, which will be the browser in this scenario. Next, you have the option to specify what kind of **data to collect**. Finally, you may optionally specify which build is being tested to make it easier to associate the results with the build they were from. Click the **...** button to select a build.
-
+>You can select  **Run with Options**  to customize each test run. The first option is to select a **Runner**, which will be the browser in this scenario. Next, you have the option to specify what kind of **data to collect**. Finally, you may optionally specify which build is being tested to make it easier to associate the results with the build they were from. 
    <img src="images/31.png" >
 
-9. Click **Find** to search builds. Using the default settings returns all builds.
-
-   <img src="images/32.png" width="624">
-
-10. If you do not want to select any builds, then press **Esc** within the **Find Builds** window.
-
-11. Click **OK** to continue.
-
-    <img src="images/33.png" >
-
-12. If the Test Runner window does not appear, check if the window is blocked by the pop-up blocker. If so, click the Pop-up blocker button, select **Always allow** and then click Done. You can then launch the **Test runner** window successfully.
-
-    <img src="images/34.png" width="624">
+2. If the Test Runner window does not appear, check if the window is blocked by the pop-up blocker. If so, click the Pop-up blocker button, select **Always allow** and then click Done. You can then launch the **Test runner** window successfully.
+    <img src="images/popupblocker.png" width="624">
 
 13. You can see the **Test Runner** window now.
-
     <img src="images/35.png" >
 
-14. Let's start executing the Test Case now. 
+14. As you go about performing the test steps, you can capture the results for every step. If the step results in the expected outcome, you can mark the step as "Passed" by selecting the OK symbol next to the test step. To mark a test step as "Failed", you can select the cancel symbol. You can also right-click the test step to mark the results. You can also add comments and attachments to the test step
+    <img src="images/stepresults.png" >
 
-    - **Test Step 1**: The first test step in this test case is to open <a href="">MyHealthClinicWebsite</a>. To do this, open a new window in Chrome. If you’re working on a large screen, it may be easier to resize the new window to fit next to the **Test Runner** window. Otherwise you can just switch back and forth.
+### Capturing rich data 
+Often when you do manual testing, you want to capture just more than a pass or fail status. Microsoft Test Runner allows you to capture rich information including screen shots, action log and even screen recording. 
 
-      <img src="images/36.png" width="624">
+1. You can use the buttons on the top of the Test Runner window to capture a screen shot or start/stop recording a video. 
+<img src="images/capturescreenshot.png" />
 
-    - **Test Step 2**: Once the site loads, return to the **Test Runner** and click the **Pass test** step button.
+You will need to select from the dropdown list , an open window from which you want to capture the screenshot. 
 
-      <img src="images/37.png" >
+2. You can also capture your interactions with the app that you are testing, as image action logs. This can be very helpful when you identify a bug and want to record the steps that led to the bug. To start recording your action, select the **Capture user actions...** icon and choose the window that contains the app that you are testing
+ <img src="images/captureuseraction.png" />
 
-      >**Note**: When you execute each Test step and the step passes, you can mark it as passed. Do this for the remaining test steps.
+3. Select **Start** to start capturing the actions. The Test Runner will now record all the actions you take on the app's browser tab. 
 
-15. Click **Save and close** from the Test runner.
+    >If you create a bug while recording your actions, all the data collected up to that point will be included in the bug.
 
-    <img src="images/42.png">
+4. Select the **Stop** button to finish capturing your actions. The action log will be added to the test results as an attachment. 
+  <img src="images/imagelogattach.png" />
+
+4. To view the data captured, you can click the attachement to open it in a browser 
+  <img src="images/imagelog.png" />
 
 ## Task 4: Creating Shared Steps
 
@@ -195,7 +193,7 @@ Shared Steps combines multiple steps that are commonly performed in sequence int
 
    <img src="images/29.png" >
 
-6. Now that we are good to go, let's explore the features.
+
 
 
 
