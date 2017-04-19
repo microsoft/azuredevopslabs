@@ -8,175 +8,75 @@ folder: /labs/vsts/testmanagement/
 
 ## Overview
 
- In this lab, you will learn how to manage your project test lifecycle using the Visual Studio Team Services. This lab will guide you through creating Test Plans designed efficiently validate your software milestones. You will also create and execute Manual Tests that can be consistently reproduced over the course of each release.
+ In this lab, you will learn how to manage your project test lifecycle using the Visual Studio Team Services. This lab will guide you through creating test plans designed efficiently to validate your software milestones. You will also create and execute manual tests that can be consistently reproduced over the course of each release.
 
+## Test Manager Extension
+
+You will need the **Test Manager** Extension to be enabled to your Visual Studio Team Services account. This extension is included with Visual Studio Enterprise, MSDN Platforms and Test Professional subscriptions. If you do not have any of these subscriptions, then you will need to acquire or request a trial version from the [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=ms.vss-testmanager-web). Please see the **"Installing the Test Manager Extension"** section below for step-by-step instructions to install the extension.
 
 ## Task 1: Creating Test Plan
 
-Test plans are used to track manual testing for sprints or milestones. That way, you can see when the testing for a specific sprint or milestone is complete.
+Visual Studio Team Services (VSTS) allows teams to organize test cases into a hierarchy of test suites inside test plans. Test plans are used to track manual testing for sprints or milestones. That way, you can see when the testing for a specific sprint or milestone is complete. Let's start with creating a new test plan.
 
-1. Go to your VSTS account and project. Select **Test** hub.
+1. Go to your Visual Studio Team Services (VSTS) account and project. Select **Test** hub.
 
-2. Create a **Test Plan** as shown below and give a name.
+2. Click the green + to create a new  **Test Plan**. We will create a test plan for testing our backlog items in Sprint1. Name the test plan and select ***MyHealthClinic\Sprint 1*** for the iteration
 
    <img src="images/1.png" width="624">
 
    <img src="images/2.png" >
 
-3. Select **New static suite** and give a name. A static suite of test cases is a suite where the Test cases have been manually assigned. Remember that you can easily share test cases across suites, so there’s minimal redundancy when having a lot of overlapping suites. You can also create suites based on common requirements (requirement-based suite) or a query of test cases and/or work items (query-based suite).
-
-   <img src="images/3.png" width="624" >
+3. Add a **Test Suite** now to group test cases further. You can create three types of test suites:  
+  * Static test suites are like folders. A static test suite can contain both test cases and other suites.
+  * Requirements-based suites are derived from Product Backlog Items, User Stories, or other requirements. The suite contains all the test cases that are linked to its requirement. This type helps you track how well each requirement has been tested. 
+  * Query-based suites show the results of a query that you define. For example, you could select all the test cases that have Priority = 1.
 
 4. Expand the dropdown next to the newly created suite and select **New requirement-based suite.**
 
    <img src="images/4.png" >
 
-5. You could customize the query used to specify which requirements are retrieved, but just leave the defaults and click **Run query**. Locate and select the user stories. Click **Create** suites to create a test suite for each user story.
-
+5. Add a clause to filter by the iteration path for the sprint and click **Run query**. Select the backlog items that you want to test this sprint and select **Create suites** to add them as requirements to your test plan by creating test suites from them.
    <img src="images/5.png" width="624">
 
-6. Select the user story that focuses on Creating New Appointment.
+6. Now, you can start adding test cases.  Select the backlog item to which you want to add a test case and select **New Test Case**
 
    <img src="images/6.png" >
 
-7. While you can create test cases one at a time, it’s sometimes easier to use a grid layout to quickly add many test cases. In the test case panel, select **New \| New test case using grid**.
+1. Enter a name for the test case and add some test steps. Each step includes an **Action**, which describes the action the tester needs to perform. Optionally, a step can include an **Expected Result**, which describes the expected result of the given action. You can add attachments to a step if you want.
+
+   <img src="images/newtestcase.png" >
+
+1. Select **Save & Close** to save the test case and return to the previous page
+
+1. While you can create test cases one at a time, it’s sometimes easier to use a grid layout to quickly add many test cases. In the test case panel, select **New \| New test case using grid**.
 
    <img src="images/7.png" >
 
-8. Enter a few test cases and click the **Save All** button.
+1. Enter a few test cases. Select the **Save All** button when you are done and select the **View: Grid** to toggle back to the list view
 
-   <img src="images/8.png" width="624">
+    <img src="images/testcasegrid.png" />  
 
-   <table>
-    <tr>
-    <th class="text_center">Title</th>
-    <th class="text_center">Step Action</th>
-    <th class="text_center">Step Expected Result</th>
-    </tr>
-
-    <tr>
-    <td >Appointment should be created based on Doctors availability</td>
-    <td>Check for the Doctors availability</td>
-    <td class="text_center">If slot is available, appointment should be created else user should be alerted that slot is not available</td>
-    </tr>
-
-    <tr>
-    <td >User should be able to re-schedule/cancel an appointment</td>
-    <td>Re-scheduling or Cancelling appointments</td>
-    <td class="text_center">Appointment should get updated if it is re-scheduled or cancelled</td>
-    </tr>
-
-    <tr>
-    <td >Creating appointments for past dates</td>
-    <td>Create appointment with past dates</td>
-    <td class="text_center">Users should not be able to create appointments for past dates</td>
-    </tr>
-
-9. You can optionally continue to add and edit work items in the grid view. When satisfied, return back to the list view by clicking the **View: Grid** toggle.
-
-    <img src="images/9.png" width="624">
-
-10. The list view shows the same data, but in a different view.
-
-    <img src="images/10.png" width="624">
-
-11. Another option to create suites is via work item query. Expand the dropdown next to the **Functional tests** suite and select new query-based suite.
-
-    <img src="images/11.png" >
-
-12. Let’s say you wanted to create a set of test suites based on bugs in the project. Change the Work Item Type to **Microsoft.BugCategory** (to search bugs)
-
-    <img src="images/12.png" width="624">
-
-13. Press Esc to close the dialog.
-
-## Task 2: Create test cases
-
-Create manual test cases to check that each of the deliverables meet your users' needs. Organize your test cases by adding test cases to test suites. Then choose which testers you want to run the tests.
-
-1. Navigate to your **VSTS** account.
-
-2. Select the **MyHealthClinic** project.
-
-3. Select **Test \| Test Plans**.
-
-   <img src="images/21.png" >
-
-4. Expand the dropdown next to the test plan and select **New static suite**.
-
-   <img src="images/22.png" >
-
-5. In the Title box, type **User Should Login successfully** as the name of the new test case.
-
-   <img src="images/23.png" width="624">
-
-6. At this point, we’re ready to add steps to this manual test. Each step includes an **Action**, which describes the action the tester needs to perform. Optionally, a step can include an **Expected Result**, which describes the expected result of the given action. In the **Steps** panel, create a step for each of the following **Actions**, only one of which has an **Expected Result**.
-
-   <table>
-    <tr>
-    <th class="text_center">Action</th>
-    <th class="text_center">Expected Result</th>
-    </tr>
-    <tr>
-    <td class="text_center">Open<a href="">YOUR_HOSTED_SITE</a></td>
-    <td class="text_center">Landing page should be displayed</td>
-    </tr>
-
-    <tr>
-    <td class="text_center">Click on **Private area**</td>
-    <td class="text_center">Should navigate to Login screen</td>
-    </tr>
-
-    <tr>
-    <td class="text_center">Enter Username (User)</td>
-    <td class="text_center">User should be able to see the username</td>
-    </tr>
-
-    <tr>
-    <td class="text_center">Enter Password (P2ssw0rd@1)</td>
-    <td class="text_center">Password should look encrypted</td>
-    </tr>
-
-    <tr>
-    <td class="text_center">Click on Login button</td>
-    <td class="text_center">User should be able to see the dashboard</td>
-    </tr>
-    </table>
-
-7. At this point, the **Steps** panel should look similar to the following:
-
-   <img src="images/24.png" width="624">
-
-8. Click **Save & Close** to save the test case.
+|Title|Step Action| Step Expected Result|
+|-----|-----------|---------------------|
+| Appointments on Dashboard Page |             |        |
+|                                | Navigate to the main page | Home page should be displayed      |
+|                                | Click on **Private area** | Login screen displayed             |
+|                                | Enter Username            |                                    |
+|                                | Enter Password            |                                    |
+|                                | SelectLogin button        | dashboard screen displayed         |
+| Create New Appointment         |                           |                                    |
+|                                | Navigate to the main page | Home page should be displayed      |
+|                                | Click on **Private area** | Login screen displayed             |
+|                                | Enter Username            |                                    |
+|                                | Enter Password            |                                    |
+|                                | Click on Login button     | dashboard screen displayed         |
+|                                | Select Appointments       | Appointments main screen displayed |
 
 
-## Task 3: Run Manual Tests
 
-Before running tests manually, you should start the trial version of **Test Manager** extension for accessing all the features.
+## Task 2: Running Manual Tests
 
-1. To do that **Browse MarketPlace** from your account by clicking on the **shopping bag** icon.
-
-   <img src="images/25.png" width="624">
-
-2. Under **Visual Studio Team Services** section, search for **Test Manager** extension in the Marketplace.
-
-   <img src="images/26.png" width="624">
-
-3. Install the extension by clicking **Start Trial**.
-
-   <img src="images/27.png" width="624">
-
-4. Select the account to which the extension has to be installed and click **Continue**.
-
-   <img src="images/28.png" >
-
-5. You should see a confirmation message. Click on **Confirm** to go ahead with the installation.
-
-   <img src="images/29.png" >
-
-6. Now that we are good to go, let's explore the features.
-
-7. Return to Internet Explorer. Right-click the test case created earlier and select **Run with options** to begin a manual test run.
+7.  Right-click the test case created earlier and select **Run with options** to begin a manual test run.
 
    <img src="images/30.png" width="624">
 
@@ -273,7 +173,29 @@ Shared Steps combines multiple steps that are commonly performed in sequence int
 
    <img src="images/48.png" width="624">
 
+## Installing the Test Manager Extension
+ 
+1. To acquire a full or a trial version of the **Test Manager** extension, select **Browse MarketPlace** from your account by clicking on the **shopping bag** icon.
 
+   <img src="images/25.png" width="624">
+
+2. Under **Visual Studio Team Services** section, search for **Test Manager** extension in the Marketplace.
+
+   <img src="images/26.png" width="624">
+
+3. Install the extension by clicking **Start Trial**.
+
+   <img src="images/27.png" width="624">
+
+4. Select the account to which the extension has to be installed and click **Continue**.
+
+   <img src="images/28.png" >
+
+5. You should see a confirmation message. Click on **Confirm** to go ahead with the installation.
+
+   <img src="images/29.png" >
+
+6. Now that we are good to go, let's explore the features.
 
 
 
