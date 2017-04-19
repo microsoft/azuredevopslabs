@@ -1305,7 +1305,7 @@ div.lab-item {
     border-width: 1px;
     border-style: solid;
     border-color: #248ec2;
-    padding: 15px;
+    padding: 15px 0;
     margin-bottom: 25px;
     margin-top: 25px;
     margin-left: 35px;
