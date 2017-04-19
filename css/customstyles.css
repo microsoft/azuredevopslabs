@@ -1294,7 +1294,7 @@ div.lab-columns {
     background-color: #ffffff;
 }
 div.lab-columns div{
-     height: 280px; float: left; 
+     height: 280px; float: left; padding: 0 120px;
 }
 div.lab-item-none {
     width: 120px;
