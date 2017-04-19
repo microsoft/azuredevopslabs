@@ -49,40 +49,27 @@ Visual Studio Team Services (VSTS) allows teams to organize test cases into a hi
 
    <img src="images/7.png" >
 
-1. Enter a few test cases.
+1. Enter a few test cases. Select the **Save All** button when you are done and select the **View: Grid** to toggle back to the list view
 
-   <!--img src="images/8.png" width="624"-->
+    <img src="images/testcasegrid.png" />  
 
-   <table>
-    <thead>
-    <th class="text_center">Title</th>
-    <th class="text_center">Step Action</th>
-    <th class="text_center">Step Expected Result</th>
-    </thead>
+|Title|Step Action| Step Expected Result|
+|-----|-----------|---------------------|
+| Appointments on Dashboard Page |             |        |
+|                                | Navigate to the main page | Home page should be displayed      |
+|                                | Click on **Private area** | Login screen displayed             |
+|                                | Enter Username            |                                    |
+|                                | Enter Password            |                                    |
+|                                | SelectLogin button        | dashboard screen displayed         |
+| Create New Appointment         |                           |                                    |
+|                                | Navigate to the main page | Home page should be displayed      |
+|                                | Click on **Private area** | Login screen displayed             |
+|                                | Enter Username            |                                    |
+|                                | Enter Password            |                                    |
+|                                | Click on Login button     | dashboard screen displayed         |
+|                                | Select Appointments       | Appointments main screen displayed |
 
-    <tr><td> Appointments on Dashboard Page</td><td></td><td></td></tr>
-    <tr><td></td><td>Navigate to the main page</td><td>Home page should be displayed</td></tr>
-    <tr><td></td><td>Click on **Private area**</td><td>	Login screen displayed</td></tr>
-    <tr><td></td><td>Enter Username </td><td></td>v
-    <tr><td></td><td>Enter Password </td><td></td></tr>
-    <tr><td></td><td>SelectLogin button</td><td>	dashboard screen displayed</td>
-    </tr>
 
-    <tr><td>Create New Appointment</td><td></td><td></td></tr>
-    <tr><td></td><td>Navigate to the main page</td><td>Home page should be displayed</td></tr>
-    <tr><td></td><td>Click on **Private area**</td><td>	Login screen displayed</td></tr>
-    <tr><td></td><td>Enter Username </td><td></td>v
-    <tr><td></td><td>Enter Password </td><td></td></tr>
-    <tr><td></td><td>Click on Login button</td><td>	dashboard screen displayed</td>
-        <tr><td></td><td>Select Appointments</td><td>	Appointments main screen displayed</td>
-    </tr>
-</table>
-
-1. Select the **Save All** button when you are done
-
-9. Select the **View: Grid** to toggle back to the list view
-
-    <img src="images/9.png" width="624">
 
 ## Task 2: Run Manual Tests
 
