@@ -15,10 +15,9 @@ Team Services supports two types of version control Git and Team Foundation Vers
 
 Git is the default version control provider for new projects. You should use Git for version control in your projects unless you have a specific need for centralized version control features in TFVC.
 
-In this lab, you will learn how to establish a local Git repository, which can easily be synchronized with a centralized Git repository in Visual Studio Team Services.
-In addition, you will learn about Git branching and merging support.
+In this lab, you will learn how to establish a local Git repository, which can easily be synchronized with a centralized Git repository in Visual Studio Team Services. In addition, you will learn about Git branching and merging support.
 
-## Exercise 1: Connect from Visual Studio
+## Exercise 1: Cloning an existing repository
 
 1.  Sign in to your **Visual Studio Team Services** account and browse to **MyhealthClinic** project. 
     <img src="images/78.png" width="624" />
