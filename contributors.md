@@ -29,4 +29,10 @@ The ALM VM update is a massive exercise and takes several weeks from start and f
              <b> Hosam Kamel</b> <br />For helping me with the "Technical Debt with SonarQube" hands-on-labs. Hosam is our Senior Microsoft PFE who is extremely passionate on this topic and has contributed the lab in every update since it was introduced.
               </td>            
     </tr>    
+    <tr class ="mainTable" >
+        <td class ="mainTable"  width="1%">
+                       <img src="images/bspann.png" />
+             <b> Brian Spann</b> <br />Brian Spann is Microsoft Developer Tools Technical Specialist. He has been an active contributor writing new and reviewing the labs created by others. Thanks to Brain for sparing his free time to contribute to the ALM Labs. 
+              </td>            
+    </tr>  
 </table>
