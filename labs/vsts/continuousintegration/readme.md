@@ -30,17 +30,16 @@ In order to complete this lab you will need-
 
 - **Visual Studio 2017** or higher version
 
-- You can use the **[VSTS Demo Data generator](http://vstsdemogenerator.azurewebsites.net/Environment/Create)** to provison a project with pre-defined data on to your Visual Studio Team Services account. Please use the ***My Health Clinic*** template to follow the hands-on-labs.
+- You can use the **[Visual Studio team Services Demo Data generator](http://vstsdemogenerator.azurewebsites.net/Environment/Create)** to provision a project with pre-defined data on to your Visual Studio Team Services account. Please use the ***My Health Clinic*** template to follow the hands-on-labs.
 
-- If you are not using the VSTS Demo Data Generator, you can clone the code from here
+If you are not using the VSTS Demo Data Generator, you can clone the code from this [GitHub repository](https://github.com/Microsoft/myhealthclinic2017)
 
 
 ## Exercise 1: Build ASP.NET CORE
 
 ASP.NET Core is a lean and composable framework for building web and cloud applications. Here we'll show you how to automatically build the **HealthClinic ASP.NET Core** application.
 
-If you have provisioned your project using the demo generator, you will notice the build definition already existing in your project
-You can create a new one or use the existing build def and just follow the labs without adding or modifying the tasks to understand how a build pipeline is created in VSTS. 
+If you have provisioned your project using the demo generator, you will notice the build definition already existing in your project. You can follow the labs without adding or modifying the tasks to understand how a build pipeline works in VSTS. Otherwise, you can follow the steps to create a new one. 
 
 ### Task1 : Creating New Build Definition
 
@@ -48,100 +47,74 @@ You can create a new one or use the existing build def and just follow the labs 
 
 2. Click **Build and Release** tab and select **Builds**.
 
-   <img src="images/1.png" width="624"/>
-
 3. Click on **New** to create build definition.
 
-   <img src="images/2.png" width="624"/>
+   <img src="images/1.png" width="624"/>
 
-4. Select the **Empty** template to start a new build definition from scratch.
-   If a template is relevant to your scenario, select to automatically add some steps and apply typical settings.
-   If there's no template for your scenario, select **Empty Process** and then add the build steps you need.
+4. You can start by selecting a template that will add a set of tasks and apply typical settings for the kind of app that you are building or start with an empty process and build from scratch. There is a template available for building ASP.NET Core apps. We will use that. Select  **ASP.NET Core (PREVIEW)**  and click apply to apply the template for the build definition 
 
    <img src="images/3.png" width="624"/>
 
-5. Specify the code you want to build by selecting **Get Sources**. You can fetch your code from **GitHub, SVN** etc. Since we have our code in this project, we would select **This Project**.
-   You can also specify as to which branch you want to build. Select **master** branch as we would have stable code.
+5. As you can see, the template has applied a set of tasks that are typically involved in building an ASP.NET Core app. In many cases, you might not require to do anything further other than just pointing to the correct repo and branch and you will be good to go. In this case, you will need to make some customizations to the build. Select the **Get sources** task.  You can fetch your code from various source including ***GitHub, SVN, or any other Git repository*** but since you have our code in the VSTS project itself, select **This Project**. Change the repository and branch if it is not pointing to the correct ones.
 
    <img src="images/4.png" width="624"/>
 
+6. The next tasks **Restore** needs no change. Leave it as it is. 
+
+7. The My Health Clinic web application depends on node components and additional libraries. You will need to add tasks to download and install these packages before it can be built. We will see how to add tasks to our build definition in the next task.
 
 ### Task 2: Adding Build Tasks
 
-1. Click **Add Task**.
+1. Select **Add Task** and then select **Package** to find tasks relating to the category. Select **npm** and click **Add**
 
-    <img src="images/5.png" width="624"/>
-
-2. Add a **Command Line** task to restore the project dependencies from the **Utility** section.
-   
+    <img src="images/5.png" />
+2.   Change the *working folder* to ***src/MyHealth.Web***. The project has the json file which the npm install command will require to know what packages needs to be installed.
     <img src="images/6.png" width="624"/>
    
-3. Add **npm** task from the **Package** section.
+3. Next, you will need to run *bower* to install the web packages. Select **Add Task** and select the **Package** tab. You can run bower commands using the **Command Line/Shell Script** utility but a better way to do that would be is to use the **Bower** task. This task is not out-of-the-box and needs to be installed from the Marketplace.
 
-    <img src="images/7.png" width="624"/>
+4. From an another tab, navigate to the [Bower extension page](https://marketplace.visualstudio.com/items?itemName=touchify.vsts-bower) on the Marketplace and install it. Close the tab when you are done.
 
-4. Add **gulp** task from the **Build** section.
+5. Back in tab where you are editing the build definition. Save the build definition and refresh the page. You should see the **Bower** task under the *Package* tab. Select the task and click **Add**
 
-    <img src="images/8.png" width="624"/>
+    <img src="images/7.png" />
 
-5. Add **Visual Studio Build** task from the **Build** section.
+6. Select the **Bower** task and change the *Bower JSON Path* to point to the *bower.json* file under the MyHealth.Web folder
 
-    <img src="images/9.png" width="624"/>
-    
-6. Select the **Command Line** task and update its properties:
-    - Tool: dotnet
-    - Arguments: restore
+    <img src="images/8.png" />
 
-    > **dotnet** is a general driver for running the .NET core command-line commands.
+7. Next you will need the **gulp** task. Select **Add Task** and look for the **Gulp from the **Build** section. Add that to the build definition. 
 
-    > **dotnet restore** command uses NuGet to restore dependencies as well as project-specific tools that are specified in the project.json file. By default, the restoration of dependencies and tools are done in parallel.
+    <img src="images/8-1.png"/>
 
-     <img src="images/10.png" width="624"/>
-    
+8. Change the *Gulp file path* to point to the gulp file under the MyHealth.Web folder
 
-7. Select the **npm** task and update its properties:
-    - Commands: install
-    - working folder: src/MyHealth.Web
-    
-    > This command installs all the  packages described by the package.json file, and any packages that it depends on.
-    > It also installs the dependencies in the local **node_modules** folder.
+    <img src="images/9.png"/>
 
-    <img src="images/11.png" width="624"/>
+9. The rest of the tasks do not need any change. You are ready to run the build. 11. You can make the builds to run as a *Continuous Integratoion* build so that it runs upon every check-in on the branch. We will see that later in the lab. For now, we will run it manually.
 
-8. Select the **gulp** task and update its properties:
-    - Gulp File Path: src/MyHealth.Web/gulpfile.js
-    - Advanced>Working Directory: src/MyHealth.Web
-
-    > **Gulp** is a task runner that solves the problem of repetition. It's often used to do front-end tasks like using pre-processors like Sass or LESS, optimizing assets like CSS, JavaScript, and images, Reloading the browser automatically whenever a file is saved.
-
-     <img src="images/12.png" width="624"/>     
-
-9. Select the **Visual Studio Build** task and update its properties:
-    - Solution: 01_Demos_ASPNET5.sln
-    - Platform: $(BuildPlatform)
-    - Configuration: $(BuildConfiguration)
-
-    <img src="images/13.png" width="624"/>     
-
-10. Click **Save.**
+10. Select **Save & queue** to save the build definition and queue the build immediately. If you have already saved the build definition, select **Queue** from the menu
 
     <img src="images/14.png" width="624"/>
 
+11. You will need to select the build agent where you want to run this build. You can choose to run the builds on an-premise agent or use the agents hosted on Azure. We will use the **Hosted VS2017** agent as it has the .NET core framework and all other components that are required to build the app. Select **Queue**
+
     <img src="images/15.png" width="624"/>
          
+12. You will see the build waiting to find an agent to run. It may take a couple of minutes and it once gets an agent, the build starts executing. You can see the output logs in real-time as the build is running. You can also download the log later should you need to a deeper analysis.
 
-11. You can queue builds automatically or manually. Now, you will run it manually.
+    <img src="images/18.png"/>
 
-12. Click **Queue Build.**
-    
-    <img src="images/16.png" width="624"/>
+13. Once all the steps are completed, you can select the *Build number* on the top to get the detailed information on the run. The **Summary** tab shows the summary of the run including the who triggered it, at what time, what code and commit was fetched, associated work items, tests, etc., 
 
-    <img src="images/17.png" width="624"/>
+    <img src="images/19.png"/>
 
-13. A new build is running.
-
-    <img src="images/18.png" width="624"/>
+14. The **Timeline** view will help you find out how much time did every task to run. If the build definition included publish task and if any files were published, you can find it from the **Artifacts** tab.
    
+       <img src="images/20.png"/>
+
+We will now see how you can deal with variables, setup different trigger mechanisms, etc on the build. 
+
 ## Exercise 2: Defining attributes for the build definition
 
 1. Go to your **Build** from your VSTS account.
@@ -177,8 +150,10 @@ You can create a new one or use the existing build def and just follow the labs 
 4. Click on **Scheduled**. Select the days and time when you want to run the build and configure accordingly.
 
    <img src="images/23.png" width="624"/>
-
-5. Click on the **Variables** tab. We can add new user-defined variables.
+   
+1. Click on the **Retention** tab. In most cases you don't need completed builds longer than a certain number of days. Your retention policies automatically delete old completed builds to minimize clutter.
+   You modify these policies on the Retention tab of your build definition.
+<!-- 5. Click on the **Variables** tab. We can add new user-defined variables.
 
    > - BuildConfiguration: debug
    > - BuildPlatform: any cpu
@@ -204,8 +179,9 @@ You can create a new one or use the existing build def and just follow the labs 
    
    <img src="images/27.png" width="624"/>
 
-9. Click on the **Retention** tab. In most cases you don't need completed builds longer than a certain number of days. Your retention policies automatically delete old completed builds to minimize clutter.
-   You modify these policies on the Retention tab of your build definition.
+  -->
+
+
 
 ## Exercise 4: Working with Artifacts
 
