@@ -3,7 +3,7 @@ repository: Microsoft/ALMVM
 output: web
 # this property is useful for conditional filtering of content that is separate from the PDF.
 
-topnav_title: Microsoft Visual Studio ALM Virtual Machines
+topnav_title: Microsoft Visual Studio ALM Virtual Machine
 # this appears on the top navigation bar next to the home button
 
 site_title: Microsoft Visual Studio ALM Virtual Machine
@@ -104,7 +104,15 @@ description: "RSS Feed for Microsoft Visual Studio ALM Virtual Machine"
 # the description is used in the feed.xml file
 
 # needed for sitemap.xml file only
-url: https://microsoft.github.io
-baseurl: /almvm/
+#url: https://microsoft.github.io
+#baseurl: /almvm/
+# changing to Azure
+url: https://almvm.azurewebsites.net
+baseurl: /
 
 site.google_analytics: UA-93010880-1
+
+
+gems:
+  - jekyll-redirect-from
+  

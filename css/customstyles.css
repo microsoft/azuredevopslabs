@@ -698,7 +698,7 @@ div.tags {padding: 10px 5px;}
 
 hr {
     background: #999;
-    margin: 30px 0px;
+    margin:0px;
     width: 90%;
     margin-left: auto;
     margin-right: auto;
@@ -1291,23 +1291,27 @@ span.newsfooter {
 
 div.lab-columns {
     width: 1100px;
+    background-color: #ffffff;
 }
 div.lab-columns div{
-     height: 280px; float: left; 
+     height: 280px; float: left; padding: 0 120px;
 }
 div.lab-item-none {
     width: 120px;
     background-color: #ffffff;
 }
 div.lab-item {
-    width: 350px;
+    /*width: 350px;*/
     border-width: 1px;
     border-style: solid;
-     border-color: #248ec2;
-     padding: 5px;
-    margin:5px;
+    border-color: #248ec2;
+    padding: 15px;
+    margin-bottom: 25px;
+    margin-top: 25px;
+    margin-left: 35px;
+    margin-right: 35px;
     background-color: #FFFFFF;
-        font-weight: 80%;
+    font-weight: 80%;
 }
 div.clear         { clear: both; }
 
@@ -1322,4 +1326,11 @@ a.c-glyph{
 }
 span.lab-details{
     color: white;
+}
+button.custom-btn {
+    margin-top: 19px;
+    background-color: black;
+}
+.top-ul>li {
+    float: left;
 }

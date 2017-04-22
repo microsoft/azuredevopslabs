@@ -3,7 +3,7 @@ layout: homepage
 title: Microsoft ALM VM
 keywords: ALM VM homepage
 tags: [overview]
-permalink: index.html
+permalink: default.html
 comments: true
 summary: 
 ---
@@ -17,22 +17,23 @@ The Microsoft Visual Studio ALM Virtual Machine is a virtual machine pre-install
 <br />
 <br />
  
-<div class="lab-columns">
-    <div class="lab-item-none"></div>
-    <div class="lab-item" align="center">
+<div class="row">
+    <div class="col-md-1"></div>
+    <div class="lab-item col-md-4" align="center">
           <span class="headnews"> <b> Team Foundation Server Labs</b></span><br />
              <a href="labs/tfs"><img src="images/vside.png"/></a><br />
            <span class="mainPageText"> Access the Microsoft ALM Virtual Machine and Team Foundation Server Hands-on-Labs</span><br /><br />
            <a href="labs/tfs" class="c-glyph"><span class="lab-details">View Details</span></a>
     </div>
-    <div class="lab-item-none"></div>
-    <div class="lab-item" align="center">
+    <div class="col-md-1"></div>
+    <div class="lab-item col-md-4" align="center">
          <span class="headnews"> <b> Team Services Labs</b></span><br />
         <a href="labs/vsts"><img src="images/vstslogo.png"/></a><br />
        <span class="mainPageText"> Follow the Visual Studio Team Services Hands-on-Labs</span><br /><br />
        <a href="labs/vsts" class="c-glyph"><span class="lab-details">View Details</span></a>
     </div>
 </div>
+
  <div class="clear"></div>
 
 <br />
