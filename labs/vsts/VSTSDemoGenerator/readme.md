@@ -2,7 +2,7 @@
 
 ## Overview 
 
-VSTS Demo Generator helps you create projects on your Visual Studio Team Services account with preset sample content which includes source code, work items, iterations, service endpoints, build and release definitions based on a template you choose.
+VSTS Demo Generator helps you create projects on your Visual Studio Team Services account with preset sample content which includes source code, work items, service endpoints, build and release definitions based on a template you choose.
 
 The purpose of this system is to help follow hands-on-labs, demos and other education material provided by the Microsoft Visual Studio marketing team.
 
