@@ -81,19 +81,24 @@ Microsoft Test Runner is available both in web  and as a Windows desktop client.
 We will use the web-based Test Runner since we are testing a web application.
 
 1. Right-click the test case created earlier and select **Run** to start the test execution.
+   
    <img src="images/30.png" width="624">
 
 2. You can select  **Run with Options**  to customize each test run. The first option is to select a **Runner**, which will be the browser in this scenario. Next, you have the option to specify what kind of **data to collect**. Finally, you may optionally specify which build is being tested to make it easier to associate the results with the build they were from. 
+   
    <img src="images/31.png" >
 
 3. If the Test Runner window does not appear, check if the window is blocked by the pop-up blocker. If so, click the Pop-up blocker button, select **Always allow** and then click Done. You can then launch the **Test runner** window successfully.
-    <img src="images/popupblocker.png" width="624">
+    
+   <img src="images/popupblocker.png" width="624">
 
 4. You can see the **Test Runner** window now.
-    <img src="images/35.png" >
+   
+   <img src="images/35.png" >
 
 5. As you go about performing the test steps, you can capture the results for every step. If the step results in the expected outcome, you can mark the step as "Passed" by selecting the OK symbol next to the test step. To mark a test step as "Failed", you can select the cancel symbol. You can also right-click the test step to mark the results. You can also add comments and attachments to the test step
-    <img src="images/stepresults.png" >
+
+   <img src="images/stepresults.png" >
 
 ### Capturing rich data 
 
