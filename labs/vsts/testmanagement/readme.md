@@ -54,23 +54,23 @@ Visual Studio Team Services (VSTS) allows teams to organize test cases into a hi
 
 1. Enter a few test cases. Select the **Save All** button when you are done and select the **View: Grid** to toggle back to the list view
 
-|Title|Step Action| Step Expected Result|
-|-----|-----------|---------------------|
-| Appointments on Dashboard Page |             |        |
-|                                | Navigate to the main page | Home page should be displayed      |
-|                                | Click on **Private area** | Login screen displayed             |
-|                                | Enter Username            |                                    |
-|                                | Enter Password            |                                    |
-|                                | SelectLogin button        | dashboard screen displayed         |
-| Create New Appointment         |                           |                                    |
-|                                | Navigate to the main page | Home page should be displayed      |
-|                                | Click on **Private area** | Login screen displayed             |
-|                                | Enter Username            |                                    |
-|                                | Enter Password            |                                    |
-|                                | Click on Login button     | dashboard screen displayed         |
-|                                | Select Appointments       | Appointments main screen displayed |
+    |Title|Step Action| Step Expected Result|
+    |-----|-----------|---------------------|
+    | Appointments on Dashboard Page |             |        |
+    |                                | Navigate to the main page | Home page should be displayed      |
+    |                                | Click on **Private area** | Login screen displayed             |
+    |                                | Enter Username            |                                    |
+    |                                | Enter Password            |                                    |
+    |                                | SelectLogin button        | dashboard screen displayed         |
+    | Create New Appointment         |                           |                                    |
+    |                                | Navigate to the main page | Home page should be displayed      |
+    |                                | Click on **Private area** | Login screen displayed             |
+    |                                | Enter Username            |                                    |
+    |                                | Enter Password            |                                    |
+    |                                | Click on Login button     | dashboard screen displayed         |
+    |                                | Select Appointments       | Appointments main screen displayed |
 
-  <img src="images/testcasegrid.png" />  
+    <img src="images/testcasegrid.png" />  
 
 ## Task 2: Running Manual Tests
 
@@ -83,16 +83,16 @@ We will use the web-based Test Runner since we are testing a web application.
 1. Right-click the test case created earlier and select **Run** to start the test execution.
    <img src="images/30.png" width="624">
 
->You can select  **Run with Options**  to customize each test run. The first option is to select a **Runner**, which will be the browser in this scenario. Next, you have the option to specify what kind of **data to collect**. Finally, you may optionally specify which build is being tested to make it easier to associate the results with the build they were from. 
+2. You can select  **Run with Options**  to customize each test run. The first option is to select a **Runner**, which will be the browser in this scenario. Next, you have the option to specify what kind of **data to collect**. Finally, you may optionally specify which build is being tested to make it easier to associate the results with the build they were from. 
    <img src="images/31.png" >
 
-2. If the Test Runner window does not appear, check if the window is blocked by the pop-up blocker. If so, click the Pop-up blocker button, select **Always allow** and then click Done. You can then launch the **Test runner** window successfully.
+3. If the Test Runner window does not appear, check if the window is blocked by the pop-up blocker. If so, click the Pop-up blocker button, select **Always allow** and then click Done. You can then launch the **Test runner** window successfully.
     <img src="images/popupblocker.png" width="624">
 
-13. You can see the **Test Runner** window now.
+4. You can see the **Test Runner** window now.
     <img src="images/35.png" >
 
-14. As you go about performing the test steps, you can capture the results for every step. If the step results in the expected outcome, you can mark the step as "Passed" by selecting the OK symbol next to the test step. To mark a test step as "Failed", you can select the cancel symbol. You can also right-click the test step to mark the results. You can also add comments and attachments to the test step
+5. As you go about performing the test steps, you can capture the results for every step. If the step results in the expected outcome, you can mark the step as "Passed" by selecting the OK symbol next to the test step. To mark a test step as "Failed", you can select the cancel symbol. You can also right-click the test step to mark the results. You can also add comments and attachments to the test step
     <img src="images/stepresults.png" >
 
 ### Capturing rich data 
@@ -175,7 +175,7 @@ As you may have observed, the login sequence is repeated in the two test cases c
 
  7. If you update the test results , you can select **Update Analysis** to change the test owner, test result and resolution type 
 
- <img src="images/updateanalysis.png" />
+    <img src="images/updateanalysis.png" />
 
 ## Installing the Test Manager Extension
  
