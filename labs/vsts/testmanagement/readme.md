@@ -206,7 +206,7 @@ As you may have observed, the login sequence is repeated in the two test cases c
 
    <img src="images/29.png" >
 
-  6. Trial extensions are available to all users. If you have requested for a trial version of the Test Manager extension, you do not have to do anything further. You are ready to start using the test management capabilities of Visual Studio Team Services
+6. Trial extensions are available to all users. If you have requested for a trial version of the Test Manager extension, you do not have to do anything further. You are ready to start using the test management capabilities of Visual Studio Team Services
 
 
 
