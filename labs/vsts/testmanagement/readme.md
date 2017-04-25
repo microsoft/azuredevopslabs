@@ -96,25 +96,30 @@ We will use the web-based Test Runner since we are testing a web application.
     <img src="images/stepresults.png" >
 
 ### Capturing rich data 
+
 Often when you do manual testing, you want to capture just more than a pass or fail status. Microsoft Test Runner allows you to capture rich information including screen shots, action log and even screen recording. 
 
-1. You can use the buttons on the top of the Test Runner window to capture a screen shot or start/stop recording a video. 
-<img src="images/capturescreenshot.png" />
+1. You can use the buttons on the top of the Test Runner window to capture a screen shot or start/stop recording a video.
 
-You will need to select from the dropdown list , an open window from which you want to capture the screenshot. 
+   <img src="images/capturescreenshot.png" />
+
+   You will need to select from the dropdown list , an open window from which you want to capture the screenshot. 
 
 2. You can also capture your interactions with the app that you are testing, as image action logs. This can be very helpful when you identify a bug and want to record the steps that led to the bug. To start recording your action, select the **Capture user actions...** icon and choose the window that contains the app that you are testing
- <img src="images/captureuseraction.png" />
+ 
+   <img src="images/captureuseraction.png" />
 
 3. Select **Start** to start capturing the actions. The Test Runner will now record all the actions you take on the app's browser tab. 
 
-    >If you create a bug while recording your actions, all the data collected up to that point will be included in the bug.
+   >If you create a bug while recording your actions, all the data collected up to that point will be included in the bug.
 
 4. Select the **Stop** button to finish capturing your actions. The action log will be added to the test results as an attachment. 
-  <img src="images/imagelogattach.png" />
+  
+   <img src="images/imagelogattach.png" />
 
-4. To view the data captured, you can click the attachment to open it in a browser 
-  <img src="images/imagelog.png" />
+5. To view the data captured, you can click the attachment to open it in a browser 
+  
+   <img src="images/imagelog.png" />
 
 ## Task 4: Creating Shared Steps
 
@@ -123,6 +128,7 @@ Shared Steps combines multiple steps that are commonly performed in sequence int
 As you may have observed, the login sequence is repeated in the two test cases created above. This is a perfect candidate for shared steps. Let's convert it to shared steps. 
 
 1. Open the "Create New Appointment" test case that you created above
+   
    <img src="images/testcasecreatenewappt.png">
 
 2. Select steps 1-5 (use **Shift+Click**) and right-click and select **Create shared steps** 
@@ -130,6 +136,7 @@ As you may have observed, the login sequence is repeated in the two test cases c
    <img src="images/createsharedsteps.png" width="624">
 
 3. Provide a name for the shared steps and click **Create**.
+   
    <img src="images/51.png" >
 
 4. Now you can see the steps you selected are replaced with a link to the new shared steps. You can double-click the link to open the shared steps for viewing/editing.
