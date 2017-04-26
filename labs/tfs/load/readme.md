@@ -18,9 +18,9 @@ In this lab, you will be introduced to the [Web performance and Load testing cap
 
 In order to complete this lab you will need the Visual Studio 2017 virtual machine provided by Microsoft. For more information on acquiring and using this virtual machine, please see [this blog post](http://aka.ms/almvm).
 
-## Exercise 1: Live Unit Testing in Visual Studio 2017 ##
+## Exercise 1:Creating Web Performance Tests
 
-Live Unit Testing is a service that watches your codebase for changes. As you edit files, it automatically detects which tests are impacted and runs those tests in the background. The results are provided immediately so that you can get feedback on how your changes affect the overall codebase quality. It also indicates which lines of code have no test coverage so that you can think about testability as you develop.
+In this exercise, you will setup and execute a basic Web performance test. This type of test generates HTTP requests and records expected responses while measuring response times and throughput.
 
 ### Task 1: Recording web tests ###
 
