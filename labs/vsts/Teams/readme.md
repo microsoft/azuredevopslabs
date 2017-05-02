@@ -19,15 +19,15 @@ In this lab, you’ll learn about some of the features of **Microsoft Teams** th
 
 ## Getting started with Microsoft Teams
 
-1. You can launch the Microsoft Teams either from the WebApp or Download the desktop client from <a href="http://bit.ly/2ouq6eN">here</a> as shown below.
+1. Launch the **Microsoft Teams** either from the WebApp or Download the desktop client from <a href="http://bit.ly/2ouq6eN">here</a> as shown below.
 
    <img src="images/2.png" />
 
-2. After launching the app, you can see the **General Team**.
+2. After launching the app, you will see the **General Team**.
 
    <img src="images/3.png" />
 
-3. We could start adding Teams by clicking on the left bottom on **Add Team** button.
+3. Start adding Teams by clicking on the bottom left on **Add Team** button.
 
    <img src="images/4.png" />
 
@@ -35,7 +35,7 @@ In this lab, you’ll learn about some of the features of **Microsoft Teams** th
 
    <img src="images/5.png" />
 
-5. Give a name for your team and description if needed. You can select the privacy settings and click on **Next**.
+5. Give a name for your team and description if needed. Select the privacy settings and click on **Next**.
 
    <img src="images/6.png" />
 
@@ -46,5 +46,43 @@ In this lab, you’ll learn about some of the features of **Microsoft Teams** th
 7. Now that you can add members for your team in order to get notify the events that occur and also you could start conversations with your team members.
 
    <img src="images/8.png" />
+
+## Integrating Visual Studio Team Services with Microsoft Teams 
+
+Having an integration with Microsoft Teams would help us to have a collaborative experience with the teams for having daily standups, work item tracking, to view pertinent events and lot more.
+
+1. Click on ellipsis button for the **VSTS Team** that was created and select **Connectors**.
+
+   <img src="images/9.png" />
+
+2. Select **Visual Studio Team Services** and add.
+
+   <img src="images/10.png" />
+
+3. Select the following and click on **save**.
+
+   - VSTS Profile
+   - VSTS Account
+   - Project
+   - Team 
+   - Event Type
+
+   <br>
+
+   <img src="images/11.png" />
+
+4. Since VSTS is configured now all the events will be seen under the  conversations tab. The events can be set accordingly depending upon the needs like **Work Item Updates, Build Summary** etc.
+
+   <img src="images/12.png" />
+
+
+## Working with Kanban Boards within the Microsoft Teams
+
+Your Kanban board turns your backlog into an interactive signboard, providing a visual flow of work. As work progresses from idea to completion, you update the items on the board. Each column represents a work stage, and each card represents a user story (blue cards) or a bug (red cards) at that stage of work.
+
+
+
+
+
 
 
