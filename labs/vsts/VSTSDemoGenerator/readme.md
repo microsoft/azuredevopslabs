@@ -48,17 +48,13 @@ This template contains End-to-End preset sample data including work items, sourc
 
    <img src="images/6.png"/>
 
-7. Upon successful creation of a project, you will see a link to navigate.
+7. Upon successful creation of a project, you will see a link with the URL to the team project you created.
 
    <img src="images/7.png"/>
 
-8. Click on the link which would navigate to the project that was created.
+8. Select the link to navigate to the project and confirm the project was successfully generated.
 
    <img src="images/8.png"/>
-
-9. Just to confirm, you can go to dashboard where you can see all the sample data that was generated.
-
-   <img src="images/9.png"/>
 
 ## Features to be coming soon
 

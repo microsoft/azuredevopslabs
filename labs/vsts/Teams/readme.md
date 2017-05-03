@@ -15,11 +15,11 @@ hub for teamwork, that brings your teams, conversations, content and tools from 
 
 You can start a free trial if you don't have Office365 account from <a href="https://teams.microsoft.com/start" />here.</a>
 
-In this lab, you’ll learn about some of the features of **Microsoft Teams** that provide a durable collaboration space where members can chat and view pertinent events, thereby allowing them to remain in loose contact throughout the workday by integrating it with Visual Studio Team Services.
+In this lab, you’ll learn about how Visual Studio Team Services integrates with **Microsoft Teams** to provide a comprehensive chat and collaboration experience, across your Agile and development work.
 
 ## Getting started with Microsoft Teams
 
-1. Launch the **Microsoft Teams** either from the WebApp or Download the desktop client from <a href="http://bit.ly/2ouq6eN">here</a> as shown below.
+1. Launch **Microsoft Teams** - you can either open the web app or download the app to your desktop from <a href="http://bit.ly/2ouq6eN">here</a>
 
    <img src="images/2.png" />
 
@@ -49,7 +49,7 @@ In this lab, you’ll learn about some of the features of **Microsoft Teams** th
 
 ## Integrating Visual Studio Team Services with Microsoft Teams 
 
-Having an integration with Microsoft Teams would help us to have a collaborative experience with the teams for having daily standups, work item tracking, to view pertinent events and lot more.
+VSTS integration with Microsoft Teams provides a comprehensive chat and collaborative experience across the development cycle. Teams can easily stay informed of important activities in your VSTS team projects with notifications and alerts on work items, pull requests, code commits, build and release.
 
 1. Click on ellipsis button for the **VSTS Team** that was created and select **Connectors**.
 
