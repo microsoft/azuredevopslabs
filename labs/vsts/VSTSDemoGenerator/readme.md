@@ -80,6 +80,7 @@ This template contains End-to-End preset sample data including work items, sourc
                 <td>May 4th week</td>
             </tr>
     </thead>
+</table>    
 
 
 
