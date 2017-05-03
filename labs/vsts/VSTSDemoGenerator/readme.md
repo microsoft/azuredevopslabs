@@ -56,11 +56,30 @@ This template contains End-to-End preset sample data including work items, sourc
 
    <img src="images/8.png"/>
 
-## Features to be coming soon
+## Features under development
 
-- Pull requests
-- Work Item updates with links and attachments
-- Team Areas and Iterations
+<table>
+    <thead>
+        <th>Feature</th>
+        <th>Status</th>
+        <th>Timeline</th>
+        <tbody>
+            <tr>
+                <td>Pull Requests</td>
+                <td>In-progress</td>
+                <td>10th May</td>
+            </tr>
+            <tr>
+                <td>Work Item updates with links and attachments</td>
+                <td>TBD</td>
+                <td>May 3rd week</td>
+            </tr>
+            <tr>
+                <td>Team Areas and Iterations</td>
+                <td>TBD</td>
+                <td>May 4th week</td>
+            </tr>
+    </thead>
 
 
 
