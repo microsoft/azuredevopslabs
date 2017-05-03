@@ -63,6 +63,7 @@ This template contains End-to-End preset sample data including work items, sourc
         <th>Feature</th>
         <th>Status</th>
         <th>Timeline</th>
+    </thead>
         <tbody>
             <tr>
                 <td>Pull Requests</td>
@@ -79,7 +80,7 @@ This template contains End-to-End preset sample data including work items, sourc
                 <td>TBD</td>
                 <td>May 4th week</td>
             </tr>
-    </thead>
+        </tbody>    
 </table>    
 
 
