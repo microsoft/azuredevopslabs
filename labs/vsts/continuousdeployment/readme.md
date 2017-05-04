@@ -76,19 +76,21 @@ In order to complete this lab you will need-
 
     <img src="images/12.png" width="624"/>
 
-7. If you would have hosted the WebApp on Azure, you will get an App Service which has to be mapped in your release definition. If you haven't published on Azure, you can follow this <a href=""/>post</a> to host.
+7. If you would have hosted the WebApp on Azure, you will get an App Service which has to be mapped in your release definition. If you haven't published on Azure, you can follow this <a href="https://almvm.azurewebsites.net/labs/vsts/appservice/"/>post</a> to host.
 
     <img src="images/13.png" width="624"/>
 
-8. Select the **artifact** to deploy.
+8. Select the **MyHealth.Web.zip** file to deploy.
 
     <img src="images/14.png" width="624"/>
 
-9. Specify a JSON variable substitution with the value **appsettings.json**.
+9. We will replace the database connection string in the **appsettings.json** to point to a database server on Azure.
 
    <img src="images/48.png" />
 
 10. Go to **Variables** tab and create a variable with the below name and value.
+
+    >Note: Database server must be created on Azure. You can follow this <a href="https://almvm.azurewebsites.net/labs/vsts/appservice/">post</a> to deploy
 
     >Name: ConnectionStrings.DefaultConnection
 
