@@ -21,7 +21,7 @@ Before you start:
 
    <img src="images/1.png"/>
 
-2. ENter your ***VSTS account name*** and ***personal access token** and then Click on **Verify & Continue** 
+2. ENter your ***VSTS account name*** and ***personal access token*** and then Click on **Verify & Continue** 
 
    <img src="images/2.png"/>
 
@@ -37,7 +37,7 @@ Before you start:
 
    <img src="images/5.png"/>
 
-. After the extension is installed, return back to the VSTS Demo Generator tab and refresh the page.  Select **Create Project**. You will see the status while project is being created.
+6. After the extension is installed, return back to the VSTS Demo Generator tab and refresh the page.  Select **Create Project**. You will see the status while project is being created.
 
    <img src="images/6.png"/>
 
