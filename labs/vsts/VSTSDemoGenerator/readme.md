@@ -23,7 +23,7 @@ Before you start:
 
 ## How to use?
 
-1. Browse to <a href="https://vstsdemogenerator.azurewebsites.net/">VSTS Demo Generator</a>
+1. Browse to <a href="https://vstsdemogenerator.azurewebsites.net/" target="_blank">VSTS Demo Generator</a>
 
    <img src="images/1.png"/>
 
