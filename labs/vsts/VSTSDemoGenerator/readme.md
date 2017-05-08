@@ -1,3 +1,11 @@
+---
+title: Visual Studio Team Services Demo Generator- Overview 
+layout: page
+sidebar: vsts
+permalink: /labs/vsts/VSTSDemoGenerator/
+folder: /labs/vsts/VSTSDemoGenerator/
+---
+
 # Visual Studio Team Services Demo Generator
 
 ## Overview 
