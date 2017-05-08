@@ -20,8 +20,6 @@ Before you start:
 <a href="http://bit.ly/2dwMwYR">create</a> one now
 - You will need a Personal Access Token for the account. An overview of PAT with instructions to create is available <a href="http://bit.ly/2okeOyJ">here</a>
 
->**Note:** The endpoints created through the systems may not be complete - you will need to provide your own information such as URLs, user name, password, etc.
-
 
 ## How to use?
 
@@ -29,7 +27,7 @@ Before you start:
 
    <img src="images/1.png"/>
 
-2. ENter your ***VSTS account name*** and ***personal access token*** and then Click on **Verify & Continue** 
+2. Enter your ***VSTS account name*** and ***personal access token*** and then Click on **Verify & Continue** 
 
    <img src="images/2.png"/>
 
@@ -57,6 +55,7 @@ Before you start:
 
    <img src="images/8.png"/>
 
+>**Note:** You will need to provide your own information such as URLs, user name, password, etc for the endpoints created. You will need to provide them before you attempt to use them, say in build, release defintions, for example.
 <!--
 ## Features under development
 
