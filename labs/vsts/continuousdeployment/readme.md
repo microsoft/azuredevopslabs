@@ -42,25 +42,13 @@ In order to complete this lab you will need-
 
     <img src="images/3.png" width="624"/> 
 
-5.	From the drop down, select **Azure Classic**.
+5.	From the drop down, select **Azure Resource Manager**.
 
     <img src="images/4.png" />
 
-6.	Choose **Certificate Based** and fill out the following fields with the proper Azure Details.
+6.	Provide a Connection name **MHC-Azure** and select the subscription.
 
-    Copy the following values from the Azure publish settings file you downloaded earlier into the Azure connection dialog fields:
-    
-    > ID: Subscription ID
-
-    > Name: Subscription Name
-    
-    > ManagementCertificate: Management Certificate
-   
     <img src="images/5.png" />
-
-7.	Verify the connection and click **OK** to save and close.
-
-    <img src="images/6.png" />
 
 ## Exercise 2: Creating Release Definitions
 
@@ -76,7 +64,7 @@ In order to complete this lab you will need-
 
     <img src="images/9.png" />
 
-4. In the next page, select the **build definition** you created earlier and choose **Create.** You can use **Hosted** agents or your own **Private** agents.
+4. In the next page, select the **build definition** you created earlier and choose **Create.** 
 
     <img src="images/10.png" />
 
@@ -88,14 +76,25 @@ In order to complete this lab you will need-
 
     <img src="images/12.png" width="624"/>
 
-7. If you would have hosted the WebApp on Azure, you will get an App Service which has to be mapped in your release definition. If you haven't published on Azure,
-   you can see follow this <a href=""/>post</a> to host.
+7. If you would have hosted the WebApp on Azure, you will get an App Service which has to be mapped in your release definition. If you haven't published on Azure, you can follow this <a href="https://almvm.azurewebsites.net/labs/vsts/appservice/"/>post</a> to host.
 
     <img src="images/13.png" width="624"/>
 
-8. Select the **artifact** to deploy.
+8. Select the **MyHealth.Web.zip** file to deploy.
 
     <img src="images/14.png" width="624"/>
+
+9. We will replace the database connection string in the **appsettings.json** to point to a database server on Azure.
+
+   <img src="images/48.png" />
+
+10. Go to **Variables** tab and create a variable with the below name and value.
+
+    >Note:  You will need to create a SQL database server on Azure prior to this step. If you have an existing SQL Server on Azure, you can use it, Otherwise follow this <a href="http://bit.ly/2o2IDTy" >blog post</a>for step-by-step intsructions.
+
+    >Name: ConnectionStrings.DefaultConnection
+
+    >Value: Server=tcp:{yourdbserver},1433;Database=myhealthclinic;User ID={dbuserid};Password={dbpassword};Trusted_Connection=False;Encrypt=True;
 
 9. Give a name for the new release definition and Save the release definition.
 
