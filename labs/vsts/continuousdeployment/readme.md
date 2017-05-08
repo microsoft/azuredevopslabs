@@ -90,7 +90,7 @@ In order to complete this lab you will need-
 
 10. Go to **Variables** tab and create a variable with the below name and value.
 
-    >Note: Database server must be created on Azure. You can follow this <a href="https://almvm.azurewebsites.net/labs/vsts/appservice/">post</a> to deploy
+    >Note:  You will need to create a SQL database server on Azure prior to this step. If you have an existing SQL Server on Azure, you can use it, Otherwise follow this <a href="http://bit.ly/2o2IDTy" >blog post</a>for step-by-step intsructions.
 
     >Name: ConnectionStrings.DefaultConnection
 
