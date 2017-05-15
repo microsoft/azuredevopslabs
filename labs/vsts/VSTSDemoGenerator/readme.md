@@ -68,8 +68,13 @@ Before you start:
         <tbody>
             <tr>
                 <td>Pull Requests</td>
-                <td>In-progress</td>
-                <td>10th May</td>
+                <td>Available</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>VSTS Extension Validator</td>
+                <td>Available</td>
+                <td></td>
             </tr>
             <tr>
                 <td>Work Item updates with links and attachments</td>
@@ -83,7 +88,6 @@ Before you start:
             </tr>
         </tbody>    
 </table>    
-
 -->
 
 
