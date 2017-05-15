@@ -49,7 +49,7 @@ In this lab, you’ll learn about how Visual Studio Team Services integrates wit
 
 ## Integrating Visual Studio Team Services with Microsoft Teams 
 
-VSTS integration with Microsoft Teams provides a comprehensive chat and collaborative experience across the development cycle. Teams can easily stay informed of important activities in your VSTS team projects with notifications and alerts on work items, pull requests, code commits, build and release.
+**VSTS** integration with Microsoft Teams provides a comprehensive chat and collaborative experience across the development cycle. Teams can easily stay informed of important activities in your VSTS team projects with notifications and alerts on work items, pull requests, code commits, build and release.
 
 1. Click on ellipsis button for the **VSTS Team** that was created and select **Connectors**.
 
