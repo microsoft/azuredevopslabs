@@ -18,7 +18,7 @@ Your product is successful, your organization is growing, and it’s time to sca
 - How do I enable my feature teams to iterate rapidly without stepping on other teams’ work?
 - How do I give my teams autonomy to iterate at the pace that’s right for them?
 
-These questions aren’t just applicable to newly growing teams. If you’re an established team with a legacy codebase, you may be asking these same questions as you’re being asked to deliver more value, ever faster. Regardless of your situation, componentization can help you build a codebase that scales to the size of your team and the speed of today’s development.
+These questions aren’t just applicable to newly growing teams. If you’re an established team with a legacy code base, you may be asking these same questions as you’re being asked to deliver more value, ever faster. Regardless of your situation, componentization can help you build a code base that scales to the size of your team and the speed of today’s development.
 
 In this module, we'll explore how binary composition through package management can help you manage and share your external dependencies, your OSS, and your isolated shared components.
 
@@ -30,7 +30,7 @@ In order to complete this lab you will need-
 
 - **Visual Studio 2017** or higher version
 
-- You can use the **[VSTS Demo Data generator](http://vstsdemogenerator.azurewebsites.net/Environment/Create)** to provison a project with pre-defined data on to your Visual Studio Team Services account. Please use the ***My Health Clinic*** template to follow the hands-on-labs.
+- You can use the **[VSTS Demo Data generator](http://vstsdemogenerator.azurewebsites.net/Environment/Create)** to provision a project with pre-defined data on to your Visual Studio Team Services account. Please use the ***My Health Clinic*** template to follow the hands-on-labs.
 
 - If you are not using the VSTS Demo Data Generator, you can clone the code from here
 
@@ -88,7 +88,7 @@ In the **07\_Demos\_PackageManagement** solution we created a class library with
 
 It is also important to take care of package versioning, so developers know which version of the package is the latest, previous versions, and the one they are using as well as the differences between them.  
 
-We will publish packages to the feed with an automated build. So we will start creating a new Build definition (check Continous integration lab for more details).  
+We will publish packages to the feed with an automated build. So we will start creating a new Build definition (check Continuous integration lab for more details).  
 
 1. We will start from the Visual Studio build template. Select the template **Visual Studio build** by creating a new build definition.
 
@@ -116,9 +116,9 @@ We will publish packages to the feed with an automated build. So we will start c
 
    <img src="images/13.png" width="624">
 
-   > Look also at the **Path/Pattern to nupkg** the default filter will only include the package we just built, it will exclude other packages which are references to this one with the *-:\*\*/packages/\*\*/\*.nupkg* filter and also exclude the symbols package with this filter  _-:\*\*/\*.symbols.nupkg_ which are currently not suported.
+   > Look also at the **Path/Pattern to nupkg** the default filter will only include the package we just built, it will exclude other packages which are references to this one with the *-:\*\*/packages/\*\*/\*.nupkg* filter and also exclude the symbols package with this filter  _-:\*\*/\*.symbols.nupkg_ which are currently not supported.
 
-7. Once the build completes, you should see the package is already publishd to the feed and ready to be used. Go to **Packages** and check.
+7. Once the build completes, you should see the package is already published to the feed and ready to be used. Go to **Packages** and check.
 
    <img src="images/14.png" width="624">
 
@@ -134,7 +134,7 @@ We will publish packages to the feed with an automated build. So we will start c
 
    <img src="images/16.png" width="624">
 
-   > In this screen we will manage our own package feeds so they are availables when adding NuGet packages to a project.
+   > In this screen we will manage our own package feeds so they are available when adding NuGet packages to a project.
 
 3. Click **+** icon. A new Package source line has been added with default values. Change the **Name** to the desired name (i.e. "HealthClinic Feed") and in the **URL** paste the value of the URL for the feed we noted before. Click **Ok**.
    
@@ -173,7 +173,7 @@ When we create builds, the first step is the **Nuget package restore** step, but
 
    <img src="images/19.png" width="624">
 
-4. During the build you can see the console ouput while building the project which references the internal Nuget feed.
+4. During the build you can see the console output while building the project which references the internal Nuget feed.
 
    ```
    Feeds used:

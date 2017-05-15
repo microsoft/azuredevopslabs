@@ -22,7 +22,7 @@ In order to complete these labs you will need
 
 - **Visual Studio 2017** or higher version - You will need Visual Studio for some of the labs. You can use your own machine with VS 2017 installed, or download and use the latest [ALM VM](../tfs/),  or spin up a VM pre-installed with Visual Studio on [Azure](https://portal.azure.com). 
 
-- You can use the **[Visual Studio Team Services Demo Data generator](https://vstsdemogenerator.azurewebsites.net)** to provison a project with pre-defined data on to your Visual Studio Team Services account. Please use the ***My Health Clinic*** template to follow the hands-on-labs.
+- You can use the **[Visual Studio Team Services Demo Data generator](https://vstsdemogenerator.azurewebsites.net)** to provision a project with pre-defined data on to your Visual Studio Team Services account. Please use the ***My Health Clinic*** template to follow the hands-on-labs.
 
 If you are not using the VSTS Demo Data Generator, you can clone the code from this [GitHub repository](https://github.com/Microsoft/myhealthclinic2017)
 
@@ -44,7 +44,7 @@ If you are not using the VSTS Demo Data Generator, you can clone the code from t
 <tr><td><a href="selenium/">UI Automation using Selenium Tests</a></td></tr>
 <tr><td><a href="load/">Load Testing using Visual Studio Team Services</a></td></tr>
 <tr><td><a href="monitor/">Monitoring Applications using Application Insights</a></td></tr>
-<tr><td><a href="appservice/">Deploy an ASP.NET WebApp in Azure App Service from Visual Studio</a></td></tr>
+<tr><td><a href="appservice/">Deploy an ASP.NET Web App in Azure App Service from Visual Studio</a></td></tr>
 <tr><td><a href="azureresource/">Deploy and Manage Azure Resources from Visual Studio</a></td></tr>
 </table>
 

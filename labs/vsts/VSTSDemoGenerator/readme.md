@@ -31,7 +31,7 @@ Before you start:
 
    <img src="images/2.png"/>
 
-3. Provide a name for your project and select the template you want to provison from the drop-down list
+3. Provide a name for your project and select the template you want to provision from the drop-down list
 
    <img src="images/3.png"/>
 
@@ -55,7 +55,7 @@ Before you start:
 
    <img src="images/8.png"/>
 
->**Note:** You will need to provide your own information such as URLs, user name, password, etc for the endpoints created. You will need to provide them before you attempt to use them, say in build, release defintions, for example.
+>**Note:** You will need to provide your own information such as URLs, user name, password, etc for the endpoints created. You will need to provide them before you attempt to use them, say in build, release definitions, for example.
 <!--
 ## Features under development
 
