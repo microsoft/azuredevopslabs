@@ -43,7 +43,7 @@ In this lab, you’ll learn about how Visual Studio Team Services integrates wit
 
    <img src="images/7.png" />
 
-7. Now that you can add members for your team in order to get notify the events that occur and also you could start conversations with your team members.
+7. Add members for your team in order to get notify the events that occur and also you could start conversations with your team members.
 
    <img src="images/8.png" />
 
@@ -76,9 +76,60 @@ VSTS integration with Microsoft Teams provides a comprehensive chat and collabor
    <img src="images/12.png" />
 
 
-## Working with Kanban Boards within the Microsoft Teams
+## Working with Kanban Board within the Microsoft Teams
 
 Your Kanban board turns your backlog into an interactive signboard, providing a visual flow of work. As work progresses from idea to completion, you update the items on the board. Each column represents a work stage, and each card represents a user story (blue cards) or a bug (red cards) at that stage of work.
+
+The Kanban board can be added using Tabs. **Tabs** allow team members to access your service on a dedicated canvas, within a channel or in user's personal app space. You can leverage your existing web app to create a great tab experience within Teams.
+
+1. Click on **+** icon to add new tab and select **Visual Studio**
+
+   <img src="images/13.png"/>
+
+   <img src="images/14.png"/>
+
+2. Select the account
+
+   <img src="images/15.png"/>
+
+3. Select the desired account from the list and click on **continue**
+
+   <img src="images/16.png"/>
+
+4. You can see the **Kanban Board** appearing in the tab.
+
+   <img src="images/17.png"/>
+
+5. All the work can be monitored during the daily standup's and the updates are real when the work items states are changed. It also allows us to customize the Kanban Board from within the Teams and synced.
+
+## Messaging Experience
+
+Messages are a good way to connect and keep a history of the conversation. It's even better to use emoji, stickers, and GIFs to make a great impression.
+
+1. You can start having conversations with your team members by selecting the **Conversations** tab.
+
+   <img src="images/18.png" />
+
+2. All the conversations had could be retrieved at anytime without losing the history which helps the entore team t ahve a collaborative experience
+
+3. Teams can have a collaborative experience with the latest updates with respect to the work items, build summary etc so that it helps in better transparency
+
+## Sharing the Contents
+
+Sharing the contents with team members is now easy with Microsoft Teams. You can attach any kind of document like Word, PDF, GIF, Image etc to make it easy for the teams to make sure that all are under one hood.
+
+1. Click on **Files** and select **Upload** to share a document with the team
+
+   <img src="images/19.png" />
+
+2. Click on the document that was uploaded from the list to start editing and having a live conversation with your team members
+
+   <img src="images/20.png" />
+
+
+
+
+
 
 
 
