@@ -106,7 +106,7 @@ The Kanban board can be added using Tabs. **Tabs** allow team members to access 
 
 Messages are a good way to connect and keep a history of the conversation. It's even better to use emoji, stickers, and GIFs to make a great impression.
 
-1. You can start having conversations with your team members by selecting the **Conversations** tab.
+1. Start having conversations with your team members by selecting the **Conversations** tab.
 
    <img src="images/18.png" />
 
@@ -126,7 +126,7 @@ Sharing the contents with team members is now easy with Microsoft Teams. You can
 
    <img src="images/20.png" />
 
-3. You can also share the related websites within the Teams as Tabs. Click on **+** and select **Website**
+3. Share the related websites within the Teams as Tabs. Click on **+** and select **Website**
 
    <img src="images/21.png" />
 
