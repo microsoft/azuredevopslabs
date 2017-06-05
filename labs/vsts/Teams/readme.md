@@ -110,13 +110,13 @@ Messages are a good way to connect and keep a history of the conversation. It's 
 
    <img src="images/18.png" />
 
-2. All the conversations had could be retrieved at anytime without losing the history which helps the entore team t ahve a collaborative experience
+2. All the conversations had could be retrieved at anytime without losing the history which helps the entire team to have a collaborative experience
 
-3. Teams can have a collaborative experience with the latest updates with respect to the work items, build summary etc so that it helps in better transparency
+3. Teams can have a collaborative experience with the latest updates with respect to the **work items, build summary** etc so that it helps in better transparency
 
 ## Sharing the Contents
 
-Sharing the contents with team members is now easy with Microsoft Teams. You can attach any kind of document like Word, PDF, GIF, Image etc to make it easy for the teams to make sure that all are under one hood.
+Sharing the contents with team members is now easy with Microsoft Teams. You can attach any kind of document like **Word, PDF, GIF, Image** etc to make it easy for the teams to make sure that all are under one hood.
 
 1. Click on **Files** and select **Upload** to share a document with the team
 
@@ -126,7 +126,7 @@ Sharing the contents with team members is now easy with Microsoft Teams. You can
 
    <img src="images/20.png" />
 
-3. You can also share the related websites within the Teams as a Tabs. Click on **+** and select **Website**
+3. You can also share the related websites within the Teams as Tabs. Click on **+** and select **Website**
 
    <img src="images/21.png" />
 
