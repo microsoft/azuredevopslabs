@@ -15,7 +15,7 @@ hub for teamwork, that brings your teams, conversations, content and tools from 
 
 ### You can start a free trial if you don't have Office365 account from <a href="https://teams.microsoft.com/start" />here.</a>
 
-In this lab, you’ll learn about how Visual Studio Team Services integrates with **Microsoft Teams** to provide a comprehensive chat and collaboration experience, across your Agile and development work.
+In this lab, you’ll learn about how **Visual Studio Team Services** integrates with **Microsoft Teams** to provide a comprehensive chat and collaboration experience, across your Agile and development work.
 
 ## Getting started with Microsoft Teams
 
@@ -43,7 +43,7 @@ In this lab, you’ll learn about how Visual Studio Team Services integrates wit
 
    <img src="images/7.png" />
 
-7. Add members for your team in order to get notify the events that occur and also you could start conversations with your team members.
+7. Add members for your team in order to get notify the events that occur and also start conversations with your team members.
 
    <img src="images/8.png" />
 
@@ -102,7 +102,7 @@ The Kanban board can be added using Tabs. **Tabs** allow team members to access 
 
 5. All the work can be monitored during the daily standup's and the updates are real when the work items states are changed. It also allows us to customize the Kanban Board from within the Teams and synced.
 
-## Messaging Experience
+## Collaboration Experience
 
 Messages are a good way to connect and keep a history of the conversation. It's even better to use emoji, stickers, and GIFs to make a great impression.
 
