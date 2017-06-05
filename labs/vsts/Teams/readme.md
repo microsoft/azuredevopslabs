@@ -9,11 +9,11 @@ hub for teamwork, that brings your teams, conversations, content and tools from 
 
 ## Pre-requisites
 
-1. You should have Office365 account in order to integrate **Microsoft Teams** with **Visual Studio Team Services**.
+1. You should have Office365 account in order to integrate **Visual Studio Team Services** with **Microsoft Teams**.
 
 2. Only VSTS accounts in the same organization (AAD tenant) can be used to integrate with your Microsoft Teams account.
 
-You can start a free trial if you don't have Office365 account from <a href="https://teams.microsoft.com/start" />here.</a>
+### You can start a free trial if you don't have Office365 account from <a href="https://teams.microsoft.com/start" />here.</a>
 
 In this lab, you’ll learn about how Visual Studio Team Services integrates with **Microsoft Teams** to provide a comprehensive chat and collaboration experience, across your Agile and development work.
 
