@@ -53,7 +53,9 @@ Workspaces in Power BI allows you to have isolated area to monitor your teams wo
 
    <img src="images/13.png" />
 
-### Import Data into Power BI
+### Connect to services with content packs for Power BI
+
+You can connect to content packs for a number of services you use to run your business, such as Salesforce, Microsoft Dynamics, Visual Studio Team Services and Google Analytics. Power BI starts by using your credentials to connect to the service, and then creates a Power BI dashboard and a set of Power BI reports that automatically show your data and provide visual insights about your business.
 
 1. Click **Get Data** on the left bottom corner to select .
 
@@ -63,27 +65,31 @@ Workspaces in Power BI allows you to have isolated area to monitor your teams wo
 
    <img src="images/4.png" />
 
-3. In the search box, type **Visual Studio** and click on **Get it now**.
+3. Browse the content packs, or tap in the search box and type keywords:
+
+   <img src="images/29.png" />
+
+4. In the search box, type **Visual Studio** and click on **Get it now**.
 
    <img src="images/5.png" />
 
-4. Enter **YOUR ACCOUNT NAME**, if your Team Services URl is **YOURACCOUNTNAME.visualstudio.com**. Also enter the Project name that you want to track and click on **Next**
+5. Enter **YOUR ACCOUNT NAME**, if your Team Services URl is **YOURACCOUNTNAME.visualstudio.com**. Also enter the Project name that you want to track and click on **Next**
 
    <img src="images/6.png" />
 
-5. A window would appear to allow the access to your VSTS account. Click **Sign in**.
+6. A window would appear to allow the access to your VSTS account. Click **Sign in**.
 
    <img src="images/8.png" />
 
-6. A window would pop up to allow the permission to read the data from the VSTS account. Click on **Accept**.
+7. A window would pop up to allow the permission to read the data from the VSTS account. Click on **Accept**.
 
    <img src="images/9.png" />
 
-6. Now the data is being imported and you will see the notification on the right corner top.
+8. Now the data is being imported and you will see the notification on the right corner top.
 
    <img src="images/7.png" />
 
-7. Once the data is imported, you will see the dashboard with the data.
+9. Once the data is imported, you will see the dashboard with the data.
 
    <img src="images/10.png" />
 
