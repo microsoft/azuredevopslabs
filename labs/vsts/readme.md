@@ -26,6 +26,10 @@ In order to complete these labs you will need
 
 If you are not using the VSTS Demo Data Generator, you can clone the code from this [GitHub repository](https://github.com/Microsoft/myhealthclinic2017)
 
+## Working with VSTS DemoGenerator
+
+Follow the link <a href="/labs/vsts/VSTSDemoGenerator">here</a> to know more
+
 ## Hands-On-Labs     
 
 <table width="100%">
