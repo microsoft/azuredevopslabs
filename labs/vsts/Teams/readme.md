@@ -73,11 +73,11 @@ In this lab, you’ll learn about how **Visual Studio Team Services** integrates
 
 4. You can see the list of connectors that are configured to your team from the configured section.
 
-   <img src="images/24.png" />
+    <img src="images/24.png" />
 
 5. Since VSTS is configured now all the events will be seen under the  conversations tab. The events can be set accordingly depending upon the needs like **Work Item Updates, Build Summary** etc.
 
-   <img src="images/25.png" />
+    <img src="images/25.png" />
 
 ## Working with Kanban Board within the Microsoft Teams
 
