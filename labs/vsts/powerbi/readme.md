@@ -131,7 +131,7 @@ Asking the question is just the beginning. Have fun traveling through your data 
 The experience is truly interactive…and fast! Powered by an in-memory storage, response is almost instantaneous.
 
 
-1. From your workspace, click on **Ask a question about your data**
+1. From your workspace, go to Dashboard and click on **Ask a question about your data**
 
    <img src="images/21.png" />
 
