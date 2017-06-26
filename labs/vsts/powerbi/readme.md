@@ -25,7 +25,7 @@ Your first step requires you to authorize Power BI to access your Team Services 
 
 ### Log in to Power BI
 
-1. Go to <a href="http://powerbi.com">Power Bi</a> site
+1. Go to <a href="http://powerbi.com">Power BI</a> site
 
    <img src="images/1.png" />
 
