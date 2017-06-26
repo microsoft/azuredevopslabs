@@ -71,10 +71,13 @@ In this lab, you’ll learn about how **Visual Studio Team Services** integrates
 
    <img src="images/11.png" />
 
-4. Since VSTS is configured now all the events will be seen under the  conversations tab. The events can be set accordingly depending upon the needs like **Work Item Updates, Build Summary** etc.
+4. You can see the list of connectors that are configured to your team from the configured section.
 
-   <img src="images/12.png" />
+   <img src="images/24.png" />
 
+5. Since VSTS is configured now all the events will be seen under the  conversations tab. The events can be set accordingly depending upon the needs like **Work Item Updates, Build Summary** etc.
+
+   <img src="images/25.png" />
 
 ## Working with Kanban Board within the Microsoft Teams
 
@@ -91,6 +94,9 @@ The Kanban board can be added using Tabs. **Tabs** allow team members to access 
 2. Select the account
 
    <img src="images/15.png"/>
+
+   >Note: Only VSTS accounts in the same organization (AAD tenant) can be used to integrate with your Microsoft Teams account.
+
 
 3. Select the desired account from the list and click on **continue**
 
@@ -110,7 +116,7 @@ Messages are a good way to connect and keep a history of the conversation. It's 
 
    <img src="images/18.png" />
 
-2. All the conversations had could be retrieved at anytime without losing the history which helps the entire team to have a collaborative experience
+2. All the conversations could be retrieved at anytime without losing the history which helps the entire team to have a collaborative experience
 
 3. Teams can have a collaborative experience with the latest updates with respect to the **work items, build summary** etc so that it helps in better transparency
 
