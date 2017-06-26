@@ -120,6 +120,24 @@ Messages are a good way to connect and keep a history of the conversation. It's 
 
 3. Teams can have a collaborative experience with the latest updates with respect to the **work items, build summary** etc so that it helps in better transparency
 
+## Working with Channels
+
+Channels are key to organizing team collaboration. Name them by discussion topic, project, role, location, or for fun, so conversations and content are easy to find by everyone in the team.
+
+Channels are the biggest “containers” within a Team and contain content & conversations pertaining to some theme. A Team can have many Channels, but a Channel only relates to a single Team.
+
+1. Select the **Team** that was created earlier and click on **elipsis.**
+
+   <img src="images/26.png" />
+
+2. Give a name and description for your channel and click on **add.**
+
+   <img src="images/27.png" />
+
+3. Once the channel is created, the conversations can be started amongst the team members.
+
+   <img src="images/28.png" />
+
 ## Sharing the Contents
 
 Sharing the contents with team members is now easy with Microsoft Teams. You can attach any kind of document like **Word, PDF, GIF, Image** etc to make it easy for the teams to make sure that all are under one hood.
