@@ -50,5 +50,7 @@ Follow the link <a href="/labs/vsts/VSTSDemoGenerator">here</a> to know more
 <tr><td><a href="monitor/">Monitoring Applications using Application Insights</a></td></tr>
 <tr><td><a href="appservice/">Deploy an ASP.NET Web App in Azure App Service from Visual Studio</a></td></tr>
 <tr><td><a href="azureresource/">Deploy and Manage Azure Resources from Visual Studio</a></td></tr>
+<tr><td><a href="teams/">Microsoft Teams Integration (Collaborate, Communicate and Celebrate)</a><span class="label label-success">New</span></td></tr>
+<tr><td><a href="powerbi/">Connect to Visual Studio Team Services with Power BI</a><span class="label label-success">New</span></td></tr>
 </table>
 

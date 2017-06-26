@@ -1,4 +1,10 @@
-# Connect to Visual Studio Team Services with Power BI
+---
+title: Connect to Visual Studio Team Services with Power BI
+layout: page
+sidebar: vsts
+permalink: /labs/vsts/powerbi/
+folder: /labs/vsts/powerbi/
+---
 
 ## Overview
 
@@ -6,16 +12,16 @@ You can gain insight and analyze the progress and quality of your project by con
 
 Power BI is a suite of business analytics tools that deliver insights throughout your organization. Connect to hundreds of data sources, simplify data prep, and drive ad hoc analysis. Produce beautiful reports, then publish them for your organization to consume on the web and across mobile devices. Everyone can create personalized dashboards with a unique, 360-degree view of their business. And scale across the enterprise, with governance and security built-in.
 
-**Pre-requisites**
+## Pre-requisites
 
 1. You should have Office365 account in order to integrate Visual Studio Team Services with Power BI
 
 2. Visual Studio Team Services account. If you don't have one, you can create from <a href="https://www.visualstudio.com/">here</a>
 
 
-## You can start a free trial if you don't have Office365 account from <a href="https://teams.microsoft.com/start">here</a>
+**You can start a free trial if you don't have Office365 account from <a href="https://teams.microsoft.com/start">here</a>**
 
-### Authorize Power BI to access your account data
+## Authorize Power BI to access your account data
 
 Your first step requires you to authorize Power BI to access your Team Services account. Choose between one of these two connection scenarios when connecting to Power BI:
 
@@ -23,7 +29,7 @@ Your first step requires you to authorize Power BI to access your Team Services 
 
 **Scenario #2**: You use an MSA (Microsoft account/LiveID) to log in to Team Services or you use different AAD credentials to log into Team Services than you use to log into Power BI.
 
-### Log in to Power BI
+## Log in to Power BI
 
 1. Go to <a href="http://powerbi.com">Power BI</a> site
 
@@ -37,7 +43,7 @@ Your first step requires you to authorize Power BI to access your Team Services 
 
    >Note: If you don't have a Power BI account you can create one by entering your email address and click Use it free.
 
-### Managing Workspaces
+## Managing Workspaces
 
 Workspaces in Power BI allows you to have isolated area to monitor your teams work. You can add, remove, edit and grant permissions either to edit or read the contents present in the workspace.
 
@@ -53,7 +59,7 @@ Workspaces in Power BI allows you to have isolated area to monitor your teams wo
 
    <img src="images/13.png" />
 
-### Connect to services with content packs for Power BI
+## Connect to services with content packs for Power BI
 
 You can connect to content packs for a number of services you use to run your business, such as Salesforce, Microsoft Dynamics, Visual Studio Team Services and Google Analytics. Power BI starts by using your credentials to connect to the service, and then creates a Power BI dashboard and a set of Power BI reports that automatically show your data and provide visual insights about your business.
 
@@ -93,7 +99,7 @@ You can connect to content packs for a number of services you use to run your bu
 
    <img src="images/10.png" />
 
-### Reports in Power BI
+## Reports in Power BI
 
 A Power BI report is a multi-perspective view into a dataset, with visualizations that represent different findings and insights from that dataset.  A report can have a single visualization or pages full of visualizations. Depending on your job role, you may be someone who creates reports and/or you may be someone who consumes or uses reports.
 
@@ -122,7 +128,7 @@ A Power BI report is a multi-perspective view into a dataset, with visualization
    <img src="images/20.png" />
 
 
-### Q&A in Power BI
+## Q&A in Power BI
 
 Sometimes the fastest way to get an answer from your data, is to ask a question using natural language.  For example, **what were total sales last year?**  Use Q&A to explore your data using intuitive, natural language capabilities and receive answers in the form of charts and graphs. Q&A is different from a search engine -- Q&A only provides results about the data in Power BI.
 

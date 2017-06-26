@@ -37,6 +37,10 @@ entries:
       url: labs/vsts/agile
       output: web, pdf
 
+    - title: Microsoft Teams Integration (Collaborate, Communicate and Celebrate)
+      url: labs/vsts/teams
+      output: web, pdf
+
   - title: Develop
     output: web, pdf
     folderitems:
@@ -92,6 +96,14 @@ entries:
     folderitems:
     - title: Monitoring Applications using Application Insights
       url: labs/vsts/monitor
+      output: web, pdf
+
+  - title: Reporting
+    output: web, pdf
+
+    folderitems:
+    - title: Connect to Visual Studio Team Services with Power BI
+      url: labs/vsts/powerbi
       output: web, pdf
 
   - title: Azure Labs
