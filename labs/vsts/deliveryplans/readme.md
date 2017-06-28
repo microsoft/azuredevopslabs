@@ -8,6 +8,8 @@ Delivery Plans help drive alignment by overlaying backlogs from different teams 
 
 In order to add and configure a plan, you must have the following in place: 
 
+- Delivery Plan Extension
+
 - Be granted Basic access in Team Services (Users with Stakeholder access can't add or view plans)
 
 - Defined iteration paths for the team project
@@ -15,6 +17,22 @@ In order to add and configure a plan, you must have the following in place:
 - Configured teams and set team defaults and team sprints
 
 - Teams have defined user stories, features, or other product or portfolio backlogs and assigned them to iterations
+
+## Adding Delivery Plan Extension to the VSTS account
+
+1. Go to <a href="https://marketplace.visualstudio.com">Visual Studio MarketPlace</a>
+
+   <img src="images/15.png" />
+
+2. Search for **Delivery Plans** in the search box and click on **install**
+
+   <img src="images/16.png"/>
+
+   <img src="images/17.png"/>
+
+3. Select the desired account to be installed and click continue to proceed with the installation.
+
+   <img src="images/18.png"/>
 
 ## Add a Plan
 
