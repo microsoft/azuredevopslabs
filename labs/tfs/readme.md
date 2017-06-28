@@ -41,12 +41,12 @@ The size of the download is about 18 GB. It is recommended that you use a utilit
     - As the name implies, it’s completely free.    
 
 - Download and install Free download manager if you currently do not have one installed 
-- Open and select all the [download URLs](./almvm2017url.txt) from the text file. Press ***CTRL+C*** to copy the selected URLs to clipboard.
+- Open and select all the [download URLs](media/almvm2017url.txt) from the text file. Press ***CTRL+C*** to copy the selected URLs to clipboard.
 - Select Menu - ***Paste URLs from clipboard***      
 - When the download is complete, double-click the .exe file to self-extract the RAR files to a folder       
 - Read the “ Working with the …” document to start using the VM     
 
-![Free Download Manager](./fdm.png)
+![Free Download Manager](media/fdm.png)
 
 
 >There are quite a number of important instructions on how to use the VM including activating the VM, taking snapshots/check points, etc, documented.We highly recommend that you read through the[Working with the Visual Studio 2017 ALM Virtual Machine]() document prior to using the VM, even if you may have used the earlier version of the VM. 
