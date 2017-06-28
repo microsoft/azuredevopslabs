@@ -135,9 +135,9 @@ You can interact with the plan in the following ways:
 
 - Expand or collapse a single team row to view details for that team by clicking the team name or team sprint
 
-- Expand and collapse all team rows (Enter u to collapse, o to expand all rows)
+- Expand and collapse all team rows (Enter **u** to collapse, **o** to expand all rows)
 
-- Enter t to quickly toggle fields shown on cards to just the Title or all other card field settings
+- Enter **t** to quickly toggle fields shown on cards to just the Title or all other card field settings
 
 - Click the settings gear to edit the plan and change the fields displayed on the cards
 
