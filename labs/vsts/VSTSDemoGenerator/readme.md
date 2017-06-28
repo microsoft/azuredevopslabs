@@ -6,8 +6,6 @@ permalink: /labs/vsts/VSTSDemoGenerator/
 folder: /labs/vsts/VSTSDemoGenerator/
 ---
 
-# Visual Studio Team Services Demo Generator
-
 ## Overview 
 
 Visual Studio Team Services Demo Generator helps you create projects on your Visual Studio Team Services account with preset sample content which includes source code, work items, service endpoints, build and release definitions based on a template you choose.
@@ -56,35 +54,6 @@ Before you start:
    <img src="images/8.png"/>
 
 >**Note:** You will need to provide your own information such as URLs, user name, password, etc for the endpoints created. You will need to provide them before you attempt to use them, say in build, release definitions, for example.
-<!--
-## Features under development
-
-<table>
-    <thead>
-        <th>Feature</th>
-        <th>Status</th>
-        <th>Timeline</th>
-    </thead>
-        <tbody>
-            <tr>
-                <td>Pull Requests</td>
-                <td>In-progress</td>
-                <td>10th May</td>
-            </tr>
-            <tr>
-                <td>Work Item updates with links and attachments</td>
-                <td>TBD</td>
-                <td>May 3rd week</td>
-            </tr>
-            <tr>
-                <td>Team Areas and Iterations</td>
-                <td>TBD</td>
-                <td>May 4th week</td>
-            </tr>
-        </tbody>    
-</table>    
-
--->
 
 
 

@@ -22,7 +22,7 @@ Technical debt is the set of problems in a development effort that make forward 
 
 3- You will need to download and install SonarQube VSTS extension from [VSTS marketplace](https://marketplace.visualstudio.com/items?itemName=SonarSource.sonarqube)
 
-4- Complete 
+4- Complete Lab [Team Foundation Build 2017](https://github.com/hkamel/almvm-1/blob/master/labs/tfs/build)
 
 ## Exercise 1: Install and Configure SonarQube Server and Extensions
 

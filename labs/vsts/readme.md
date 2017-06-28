@@ -26,6 +26,10 @@ In order to complete these labs you will need
 
 If you are not using the VSTS Demo Data Generator, you can clone the code from this [GitHub repository](https://github.com/Microsoft/myhealthclinic2017)
 
+## Working with VSTS DemoGenerator
+
+Follow the link <a href="/labs/vsts/VSTSDemoGenerator">here</a> to know more
+
 ## Hands-On-Labs     
 
 <table width="100%">
@@ -46,5 +50,7 @@ If you are not using the VSTS Demo Data Generator, you can clone the code from t
 <tr><td><a href="monitor/">Monitoring Applications using Application Insights</a></td></tr>
 <tr><td><a href="appservice/">Deploy an ASP.NET Web App in Azure App Service from Visual Studio</a></td></tr>
 <tr><td><a href="azureresource/">Deploy and Manage Azure Resources from Visual Studio</a></td></tr>
+<tr><td><a href="teams/">Microsoft Teams Integration (Collaborate, Communicate and Celebrate)</a><span class="label label-success">New</span></td></tr>
+<tr><td><a href="powerbi/">Connect to Visual Studio Team Services with Power BI</a><span class="label label-success">New</span></td></tr>
 </table>
 
