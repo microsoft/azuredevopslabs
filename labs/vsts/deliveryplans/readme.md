@@ -114,6 +114,12 @@ Once you've defined a plan, you can further customize it.
 
    <img src="images/12.png" />
 
+8. Delivery Plans show the scheduled work items by sprint (iteration path) of selected teams against a calendar view to ensure your teams are aligned with your organizational goals.
+
+   For example, here you can see the features and backlogs of multiple teams that are delivered and are in progress states. This gives the teams heads up as to how many features/backlogs are delivered in the current sprint.
+
+   <img src="images/19.png" /> 
+
 
 ## Interactive elements of plans
 
