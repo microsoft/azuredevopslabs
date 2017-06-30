@@ -6,6 +6,8 @@ permalink: /labs/vsts/powerbi/
 folder: /labs/vsts/powerbi/
 ---
 
+Last updated:6/28/2017
+
 ## Overview
 
 You can gain insight and analyze the progress and quality of your project by connecting Power BI to the data collected and stored for Team Services.

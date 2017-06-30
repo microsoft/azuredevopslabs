@@ -6,6 +6,8 @@ permalink: /labs/vsts/teams/
 folder: /labs/vsts/teams/
 ---
 
+Last updated:6/27/2017
+
 ## Overview
 
 <a href="https://teams.microsoft.com/start">**Microsoft Teams**</a> is your chat-centered workspace in Office 365. Software development teams get instant access to everything they need in a dedicated
