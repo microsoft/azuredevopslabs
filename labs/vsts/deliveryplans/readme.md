@@ -2,7 +2,7 @@
 
 ## Overview
 
-Delivery Plans help drive alignment by overlaying backlogs from different teams onto a shared sprint schedule. As you assemble a Delivery Plan to meet your needs, add details from your work items (state, tags, additional fields, etc.) along with visual date markers highlighting important events and milestones.
+Delivery Plans provides an easier way to see work across teams and projects. Available as an extension, Delivery plan makes it easy for you to review the schedule of stories or features your teams plan to deliver . You can see scheduled work items by sprint (iteration path) of selected teams against a calendar view.
 
 ## Pre-requisites
 
@@ -14,9 +14,7 @@ In order to add and configure a plan, you must have the following in place:
 
 - Defined iteration paths for the team project
 
-- Configured teams and set team defaults and team sprints
-
-- Teams have defined user stories, features, or other product or portfolio backlogs and assigned them to iterations
+- You will need to install the Delivery plan extension to your VSTS account in order to continue this lab
 
 ## Adding Delivery Plan Extension to the VSTS account
 
@@ -30,7 +28,7 @@ In order to add and configure a plan, you must have the following in place:
 
    <img src="images/17.png"/>
 
-3. Select the desired account to be installed and click continue to proceed with the installation.
+3. Select the account to which you want to install the extension and select **Continue** to proceed with the installation.
 
    <img src="images/18.png"/>
 
@@ -74,9 +72,9 @@ Once you've defined a plan, you can further customize it.
 
    <img src="images/5.png" />
 
-2. Then, click the page you want to edit. You can customize the plan in the following ways:
+2. You can customize the plan in the following ways:
 
-   - Edit the teams you've selected and their backlog level
+   - Edit the teams you've selected (Team 1, Team 2) and their backlog level
 
    - Set field criteria to further limit the work items that will appear on the plan
 
