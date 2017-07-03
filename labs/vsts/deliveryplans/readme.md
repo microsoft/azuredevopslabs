@@ -44,7 +44,7 @@ In order to add and configure a plan, you must have the following in place:
 
    >All users, except users assigned Stakeholder access, have permissions to create a plan and manage the plans they create. 
 
-3. Fill in the form to name, describe, and specify the team backlogs that you want to appear within your plan.
+3. Provide a name for the plan **MyHealth Clinin Release 1**. Select the project, **MyHealth Clinic team** and the backlog to appear in your plan.
 
    <img src="images/3.png" />
 
