@@ -10,11 +10,13 @@ comments: true
 This exercise will walk you through the steps to creating your Visual
 Studio Team Services account and create a new project. **If you already
 have a VSTS account, you can skip a few steps and jump to step 13.**
+
 Before you do step 13, you’ll need to log in to your VSTS account and
-start the New Team Project wizard. You can then follow the steps (the
-instructions assume you’re creating an account *and* a Team Project at
+start the New Team Project wizard. You can then follow the steps.
+
+>The instructions assume you’re creating an account *and* a Team Project at
 the same time but that’s not mandatory—you just need an account in which
-you have Project Collection Administrator permissions).
+you have Project Collection Administrator permissions.
 
 Depending upon whether or not you have an MSDN Subscription, and whether
 you’ve tried Visual Studio Team Services before, you can get started a
@@ -24,9 +26,7 @@ linked Organizational Account to move forward.
 Creating your Visual Studio Team Services account
 -------------------------------------------------
 
-1.  Login to the virtual machine.
-
-2.  Start the Firefox web browser.
+1.  Login to the virtual machine and open a web browser.
 
 3.  If you don’t have an existing Microsoft account that you want to
     use, visit <http://www.outlook.com> to create a Microsoft Account
@@ -164,5 +164,6 @@ Creating your Visual Studio Team Services account
 
 Now you’re going to manage your backlog with Visual Studio Team
 Services. You can read more about account creation and more at
-<https://www.visualstudio.com/en-us/docs/setup-admin/team-services/connect-to-visual-studio-team-services>
+<https://www.visualstudio.com/en-us/docs/setup-admin/team-services/connect-to-visual-studio-team-
+>
 
