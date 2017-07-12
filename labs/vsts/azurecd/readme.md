@@ -122,7 +122,7 @@ You must store your app's source code in a Team Services Git, GitHub, or any oth
 
     To ensure the build and release history is preserved, the build and release definitions are not deleted from Team Services when you disconnect.
 
-## Modify the Build and Re-deploy
+## Modify Build and Re-deploy
 
 1. Go to your build definition from your VSTS account that was created and edit.
 
@@ -173,6 +173,8 @@ You must store your app's source code in a Team Services Git, GitHub, or any oth
     <img src="images/27.png">
 
 ## Add Tests to build
+
+To Do
 
 
 
