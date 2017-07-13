@@ -1,7 +1,7 @@
 ---
 title: Creating your Visual Studio Team Services account and Team project 
 layout: page
-sidebar: mydoc_sidebar
+sidebar: java
 permalink: /labs/java/creatingvstsaccount.html
 folder: /labs/java/
 comments: true

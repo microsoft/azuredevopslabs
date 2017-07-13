@@ -1,7 +1,7 @@
 ---
 title: Setting up a Private Docker VSTS Build Agent 
 layout: page
-sidebar: mydoc_sidebar
+sidebar: java
 permalink: /labs/java/vstsbuildagent.html
 folder: /labs/java/
 comments: true
