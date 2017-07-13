@@ -264,6 +264,8 @@ ul#results-container a:hover {
     margin-top: 16px;
     border-color: #248ec2;
     border: 1px solid #248ec2;
+    outline: none;
+    border-radius: 18px;
 }
 /* end search */
 
@@ -462,7 +464,8 @@ ul#mysidebar {
 span.projectTitle {
     font-family: Helvetica;
     font-weight: bold;
-      color: #000000;
+    color: #000000;
+    padding-left: 10px;
 }
 
 span.rellinkstitle {
