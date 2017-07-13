@@ -10,7 +10,6 @@ Lab version:15.0.26228.0
 
 Last updated:3/17/2017
 
-
 ## Overview
 
 [Microservices](https://docs.microsoft.com/en-us/azure/service-fabric/service-fabric-overview-microservices) have become popular approach to designing sophisticated applications. By adopting a microservices architecture, teams can easily scale different parts of their applications depending on the needs of their customers. They can also be more agile as they roll out changes and thus provide features to customers faster and more frequently.
@@ -180,7 +179,7 @@ This lab requires the following to be installed on your machine:
 
 1. Close the browser window.
 
-1. In **Visual Studio**, select **Debug | Stop Debugging**.
+1. In **Visual Studio**, select **Debug \| Stop Debugging**.
 
 
 ### Task 3: Creating an Azure Container Service
@@ -235,11 +234,9 @@ This lab requires the following to be installed on your machine:
 
 1. You can wait for deployment to complete by watching the tile added to your Azure dashboard.
 
-<a name="![](images/038.png)"></a>
-### ![](images/038.png) ###
+   ![](images/038.png)
 
-<a name="Ex1Task4"></a>
-### Task 4: Deploying a container from Visual Studio to your Azure Container Service ###
+### Task 4: Deploying a container from Visual Studio to your Azure Container Service
 
 1. Now let's take a look at the process for deploying the Web container out to Azure. Return to **Visual Studio** and sign in using the button in the top right corner. Already being signed in will make things easier in this task.
 
@@ -279,11 +276,9 @@ This lab requires the following to be installed on your machine:
 
 1. Most of the site should work as expected. However, since we didn't deploy the API project, visiting the **About** page would crash at this time since that dependency will not be available. Close the browser when satisfied.
 
-<a name="![](images/048.png)"></a>
-### ![](images/048.png) ###
+   ![](images/048.png) ###
 
-<a name="Ex1Task5"></a>
-### Task 5: Setting up Continuous Delivery via Visual Studio Team Services ###
+### Task 5: Setting up Continuous Delivery via Visual Studio Team Services
 
 1. While it's great to be able to push a deployment out from Visual Studio, sophisticated teams look for opportunities to leverage automation where possible. With **Visual Studio Team Services**, it's really easy to set up continuous delivery such that project changes are automatically built, tested, and processed through a release workflow if meeting all requirements. To start to take advantage of all of this opportunity, right-click the solution node in **Solution Explorer** and select **Add Solution to Source Control**.
 
@@ -365,7 +360,7 @@ This lab requires the following to be installed on your machine:
 
    ![](images/067.png)
 
-1. In the left tree view, select **Connection | SSH | Auth**. Set the **Private key** to the local path to the private key saved earlier.
+1. In the left tree view, select **Connection \| SSH \| Auth**. Set the **Private key** to the local path to the private key saved earlier.
 
    ![](images/068.png)
 
