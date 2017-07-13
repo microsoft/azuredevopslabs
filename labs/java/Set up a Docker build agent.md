@@ -1,9 +1,9 @@
 ---
-title: Setting up a Private Build Agent
+title: Setting up a Private Docker VSTS Build Agent 
 layout: page
 sidebar: mydoc_sidebar
-permalink: /labs/java/buildagent/
-folder: /labs/java/buildagent/
+permalink: /labs/java/vstsbuildagent.html
+folder: /labs/java/
 comments: true
 ---
 
@@ -24,7 +24,7 @@ In this task you will generate a PAT for yourself. You will use this PAT to conn
 1. Open Chrome and browse to `http://<youraccount>.visualstudio.com` (where `youraccount` is the account you created in VSTS).
 1. In the upper right, click on your profile image and Click Security.
 
-    <img src="./images/click-security.png" alt="Click on Security" />
+    ![Click on Security](images/docker-build-agent/click-security.png "Click on Security")
 
 1. On the Personal access tokens page, click the "Add" button. Enter "java" (or whatever you want) for the Description. Scroll to the bottom of the page and click "Create token".
 
@@ -32,7 +32,7 @@ In this task you will generate a PAT for yourself. You will use this PAT to conn
 
 1. Click on the Visual Studio Code icon in the toolbar to open Visual Studio Code.
 
-    <img src="./images//vs-code.png" alt= "Open VS Code"/>
+    ![Open VS Code](images/docker-build-agent/vs-code.png "Open VS Code")
 
 1. Press Ctrl-N (or use File->New File) to create a new file. Paste in your PAT. Save this file (File->Save or Ctrl-S) to `/home/vmadmin/pat.txt`.
 
@@ -44,7 +44,7 @@ In this task you will start a VSTS build agent container using Docker. This cont
 
 1. On your VM, open a terminal by clicking on the Terminal Emulator icon in the toolbar.
 
-    <img src="images//click-terminal.png" alt="Click on the terminal icon in the Toolbar"/>
+    ![Click on the terminal icon in the Toolbar](images/docker-build-agent/click-terminal.png "Click on the terminal icon in the Toolbar")
 
 1. Enter the following command:
 
@@ -59,7 +59,7 @@ In this task you will start a VSTS build agent container using Docker. This cont
     You should see a message indicating "Listening for Jobs":
 
     ```
-    <img src="images//agent-container-running.png" alt="The agent container running"/>
+    ![The agent container running](images/docker-build-agent/agent-container-running.png "The agent container running")
     ```
 
     > **Note**: This starts a docker container (called vstsagent) that has a VSTS agent running inside it. The agent is connected to your VSTS account and has also mounted the VM Docker socket so that the container can perform Docker operations (like building containers). It is created from a Dockerfile (listed below) that installs PhantomJS for running headless Selenium tests and configures Docker certs and environment variables. You can move this terminal to the side since the container is running interactively, so the prompt you are seeing is actually inside the container. Open a new terminal by clicking on the Terminal Emulator icon in the toolbar.
