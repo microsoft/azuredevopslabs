@@ -112,17 +112,9 @@ You must store your app's source code in a Team Services Git, GitHub, or any oth
 
    <img src="images/19.png">
 
-   This is because during the compilation couple of js dependencies are missed out which we would be adding in the build definition in our next exercise.
+   This is because during the compilation couple of js dependencies are missed out which we will be adding to the build definition in our next task.
 
-10. Verify that continuous deployment is occurring from the repository containing your app by pushing a change to the repository. Your app should update to reflect the changes shortly after the push to the repository completes.
-
-11. You can stop a deployment to your Azure App Service by choosing **Disconnect** at the top of the **Continuous Deployment** blade. This deletes the Azure Continuous Delivery configuration in the Azure portal and turns off the build triggers in your Team Services account for this configuration.
-
-    <img src="images/17.png">
-
-    To ensure the build and release history is preserved, the build and release definitions are not deleted from Team Services when you disconnect.
-
-## Modify Build and Re-deploy
+## Customizing the CD pipeline
 
 1. Go to your build definition from your VSTS account that was created and edit.
 
@@ -132,49 +124,41 @@ You must store your app's source code in a Team Services Git, GitHub, or any oth
 
    <img src="images/21.png">
 
-3. Place the task after .NET restore step.
+3. Place the task after .NET restore step. Set the **Working folder** to **src/MyHealth.Web** and retain the rest as it is.
 
    <img src="images/22.png">
-
-   Parameters to be set
-
-   Set the **Working folder** to **src/MyHealth.Web** and retain the rest as it is.
 
 4. Click on **Add task** and search for **bower** task from the search box.
 
    <img src="images/23.png">
 
-5. Place the task after npm step.
+5. Place the task after npm step. Set the **Bower JSON Path** to **src/MyHealth.Web/bower.json**
 
    <img src="images/24.png">
-
-   Parameters to be set
-
-   Set the **Bower JSON Path** to **src/MyHealth.Web/bower.json**
 
 6. Click on **Add task** and search for **gulp** task from the search box.
 
    <img src="images/25.png">
 
-7. Place the task after bower step.
+7. Place the task after bower step. Set the **Gulp File path** to **src/MyHealth.Web/gulpfile.js**
 
    <img src="images/26.png">
 
-   Parameters to be set
+8. Click **save** and Queue the build. 
 
-   Set the **Gulp File path** to **src/MyHealth.Web/gulpfile.js**
+9. Once the build is completed successfully, we see the pipeline triggered automatically.
 
-8. Click on save and Queue the build. 
-
-9. Post build, successful build summary should show up with all the modifications.
-
-10. Go to release and check if the deployment is success, if yes then browse to the website. You should see with all the images, stylings etc as shown below.
+10. You can verify this by going to the release hub and check if the deployment is successfully completed. You can refresh the web page and you should see the web page with all the images, stylings etc as shown below.
 
     <img src="images/27.png">
 
-## Add Tests to build
+> You can stop a deployment to your Azure App Service by choosing **Disconnect** at the top of the **Continuous Deployment** blade. This deletes the Azure Continuous Delivery configuration in the Azure portal and turns off the build triggers in your Team Services account for this configuration.
 
-To Do
+<img src="images/17.png">
+
+To ensure the build and release history is preserved, the build and release definitions are not deleted from Team Services when you disconnect.
+
+
 
 
 
