@@ -9,15 +9,20 @@ comments: true
 
 [Visual Studio Team Services(VSTS)](https://www.visualstudio.com/products/visual-studio-team-services-vs) and [Team Foundation Server (TFS)](https://www.visualstudio.com/tfs/) provide an integrated set of services and tools to manage your software projects, from planning and development through testing and deployment to speed the development and delivery of your software applications across platforms, including iOS, Android, Java, Linux or Windows. 
 
-Team Services is the cloud offering that provides a scalable, reliable, and globally available hosted service. It is backed by a 99.9% SLA, monitored by our 24—7 operations team, and available in local data centers around the world.
-
-Team Foundation Server is the on-premises offering built on a SQL Server backend. Organizations typically choose on-premises TFS when they need their data to stay within your network, or they want access to SharePoint sites and SQL Server reporting services that integrate with TFS data and tools.
-
 ## Overview  of the Java Hands-on-Lab
 
-DevOps for Java teams with Microsoft Visual Studio Team Services hands-on-lab is provided to give you a first-hand, technical experience on how you can leverage the Microsoft DevOps platform for Java development. The labs cover both using the built-in first-party cross-platform tools and as well as using your existing tool set to build and deploy Java applications.
+DevOps for Java teams with Microsoft Visual Studio Team Services hands-on-lab is provided to give you a first-hand, technical experience on how you can leverage the Microsoft DevOps platform for Java development. The labs cover 
+  * Creating a new VSTS account
+  * Using the Agile  tools to plan and track work items  
+  * Using VSTS with your Eclipse and IntelliJ
+  * Running Junit tests and analyzing code coverage with Jacoco and Cobertura
+  * Continuous Integration with Team Build or Jenkins
+  * Managing Technical Debt with SonarQube 
+  * Deploying Docker containers to Azure with an Automated delivery pipeline 
 
-Thanks to our partners NorthWest Cadence for building a pre-built virtual machine image that is pre-configured with all the software you require to run through the labs. The "Creating the VM" section below has instructions on how you can run a copy of this image in your own Azure subscription.
+
+## Pre-requiste 
+You will need a Windows/Linux/MacOs machine installed with a browser of your choice, JDK 1.9, Eclipse or IntelliJ, Git, Docker and optionally Jenkins. Courtesy of our partner NorthWest Cadence, we have a pre-built virtual machine image that is pre-configured with all the software you require to run through the labs. The "Creating the VM" section below has instructions on how you can run a copy of this image in your own Azure subscription.
 
 ## Target Audience
 
@@ -58,13 +63,13 @@ The labs should be followed in the following order, though there are some equiva
 <tr>
 <td><b>Plan</b></td><td><a href="agile.html">2. Agile Planning and Portfolio Management with Visual Studio Team Services </a></td>
 </tr>
-<tr><td><b>Develop</b></td><td>If your choice of IDE is IntelliJ - <a href="intellij.html">Cloning a VSTS Repo - IntelliJ</a> <b>OR</b>If you prefer Eclipse - <a href="intellij.html"> Cloning a VSTS Repo - Eclipse</a></td>
+<tr><td><b>Develop</b></td><td><a href="intellij.html">3. Cloning a VSTS Repo - IntelliJ</a> <i>(If IntelliJ is your choice of IDE)</i> <b>OR</b><br /><a href="intellij.html">3. Cloning a VSTS Repo - Eclipse</a><i>(If you prefer Eclipse)</i></td>
 </tr>
 <tr rowspan="3">
 <td> <b>Continuous Integration</b></td><td><a href="vstsbuildagent.html">3. Set up a Docker build agent</a></td></tr>
-<tr> <td></td><td> <a href="mavenjenkins.html">4. Using Jenkins with Visual Studio Team Services</a> or <a href="mavenvsts.html">Using VSTS Team Build with Visual Studio Team Services</a></td></tr>
+<tr> <td></td><td> <a href="mavenjenkins.html">4. Using Jenkins with Visual Studio Team Services</a> <b>OR</b><br /> <a href="mavenvsts.html">Using VSTS Team Build with Visual Studio Team Services</a></td></tr>
 <tr><td></td> <td> <a href="vstsbuildagent.html">5. Building and Publishing Docker Images with VSTS</a></td></tr>
 <td><b>Test</b></td><td><a href="techdebt.html">6. Managing Technical Debt with SonarQube and VSTS Team Build </a></td>
 <tr rowspan="2">
 <td> <b>Continuous Delivery</b></td><td><a href="vstsbuildagent.html">7.Release Management with VSTS</a></td>
-<tr> <td></td><td> <a href="mavenjenkins.html">8.Release Containers to ACS Kubernetes with VSTS </a> or <a href="mavenvsts.html">Using VSTS Team Build with Visual Studio Team Services</a></td></tr></table>
+<tr> <td></td><td> <a href="mavenjenkins.html">8.Release Containers to ACS Kubernetes with VSTS </a> <b>OR</b><br /> <a href="mavenvsts.html">Using VSTS Team Build with Visual Studio Team Services</a></td></tr></table>
