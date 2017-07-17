@@ -28,15 +28,15 @@ You must store your app's source code in a Team Services Git, GitHub, or any oth
 
    <img src="images/2.png">
 
-4. Select **Choose repository** and select the type of repository where you stored your app's source code. You have a choice of **Visual Studio Team Services, GitHub** or **External Git** (a Git type repository not hosted in Team Services or GitHub).
+4. Select **Choose repository** and select **Visual Studio Team Services** 
 
    <img src="images/3.png">
 
-5. Select the **project, repository**, and **branch** to deploy from. When you're done, choose OK.
+5. Select the ** VSTS account, project, repository**, and **branch** where you have your ***My Health Clinic*** project. When you're done, choose OK.
 
    <img src="images/4.png">
 
-   If you chose to use GitHub complete the authorization steps. If you chose to use an external Git repository, enter the repository name, branch, and (if required) your credentials.
+  > In addition to Visual Studio Team Services, you can also select other Git repositories such as GitHub or External Git (a Git  repository not hosted in Team Services or GitHub, For instance, BitBucket). You will have to provide the account, repository and branch details and if it is a private repository, you will need to provide the credentials
 
 6. Select **Configure Continuous Delivery** and choose the web application framework you used to develop your app. Since we are targeting .NET Core, select **Asp.NET Core**.
 
