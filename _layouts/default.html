@@ -3,7 +3,7 @@
 <head>
     {% include head.html %}
     <script>
-        $(document).ready(function () {
+        $(document).ready(function() {
             // Initialize navgoco with default options
             $("#mysidebar").navgoco({
                 caretHtml: '',
@@ -21,12 +21,12 @@
                 }
             });
 
-            $("#collapseAll").click(function (e) {
+            $("#collapseAll").click(function(e) {
                 e.preventDefault();
                 $("#mysidebar").navgoco('toggle', false);
             });
 
-            $("#expandAll").click(function (e) {
+            $("#expandAll").click(function(e) {
                 e.preventDefault();
                 $("#mysidebar").navgoco('toggle', true);
             });
@@ -34,7 +34,7 @@
         });
     </script>
     <script>
-        $(function () {
+        $(function() {
             $('[data-toggle="tooltip"]').tooltip()
         })
     </script>
@@ -42,25 +42,30 @@
     <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.5/css/jquery.dataTables.css">
     <script type="text/javascript" charset="utf8" src="//cdn.datatables.net/1.10.5/js/jquery.dataTables.js"></script>
     <script>
-        $(document).ready(function () {
+        $(document).ready(function() {
 
-            $('table.datatable').DataTable({
-                paging: false,
-                stateSave: true
-            }
-            );
+                    $('table.datatable').DataTable({
+                        paging: false,
+                        stateSave: true
+                    });
     </script>
     {% endif %}
     <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+        (function(i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function() {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
 
-  ga('create', 'UA-93010880-1', 'auto');
-  ga('send', 'pageview');
-
-</script> 
+        ga('create', 'UA-93010880-1', 'auto');
+        ga('send', 'pageview');
+    </script>
 
 </head>
 
@@ -93,6 +98,6 @@
             <br /> {% include disqus.html %}
         </div>
 </body>
- {% include google_analytics.html %}
+{% include google_analytics.html %} {% include gototop.html %}
 
 </html>
