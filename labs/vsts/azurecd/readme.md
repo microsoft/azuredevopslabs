@@ -1,8 +1,8 @@
 # Generate CI/CD pipeline automatically from Azure Portal
 
-CD is a great option for projects that require multiple and frequent contributions to be integrated.
+Continuous Delivery is a great option for projects that require multiple and frequent contributions to be integrated.
 
-CD in Team Services simplifies setting up a robust deployment pipeline for your app to publish the most recent updates to Azure App Service. The pipeline can be configured to build, runs tests, and deploy to a staging slot and then to production.
+Continuous Delivery in Team Services simplifies setting up a robust deployment pipeline for your app to publish the most recent updates to Azure App Service. The pipeline can be configured to build, runs tests, and deploy to a staging slot and then to production.
 
 You must store your app's source code in a Team Services Git, GitHub, or any other Git repository to use Azure Continuous Delivery. Team Foundation Version Control (TFVC) repositories are not supported at present.
 
@@ -44,9 +44,7 @@ You must store your app's source code in a Team Services Git, GitHub, or any oth
 
    This choice influences the way that Azure Continuous Delivery builds and packages the app for deployment. At present, ASP.NET, ASP.NET Core, PHP, Python, and Node.js are supported. When you're done, choose **OK**.
 
-7. Select **Set up load test** and decide if you want to run a load test on your app before deploying the latest changes to production. The default is **NO**. If you want to set up a load test (25 virtual users concurrently accessing the app for 60 seconds), choose **YES** then specify whether to use an existing Azure App Service instance, or create a new one in a new App Service plan. When you're done, choose **OK**
-
-   <img src="images/6.png">
+7. At this moment we will not consider running load tests, hence skip and move to the next step.
 
 8. Select **Configure deployment** and decide if you want to deploy your latest changes first to staging, and then promote to production. The default is **NO**. If you want to set this up, choose **YES** then specify whether you want to use an existing Azure App Service slot, or create a new one. When you're done, choose **OK**.
 
@@ -82,13 +80,13 @@ You must store your app's source code in a Team Services Git, GitHub, or any oth
 
    <img src="images/11.png">
 
-4. Choose Edit to see the tasks that have been added and configured.
+4. Choose **Edit** to see the tasks that have been added and configured.
 
    <img src="images/13.png">
 
    Different tasks are added to the build definition depending on the app framework you selected. For example, .NET Core task is used for ASP.NET Core apps.
 
-5. In the **Successfully set up Continuous Delivery...** item, choose the Release Definition link to open the project containing your app in Team Services, and see the list of releases for this definition. Choose Edit to see the tasks that have been added and configured.
+5. In the **Successfully set up Continuous Delivery...** item, choose the Release Definition link to open the project containing your app in Team Services, and see the list of releases for this definition. Choose **Edit** to see the tasks that have been added and configured.
 
    <img src="images/14.png">
 
@@ -104,7 +102,7 @@ You must store your app's source code in a Team Services Git, GitHub, or any oth
 
    There are also links in other items in the Activity Log that open commits, builds, build reports, releases, deployment slots, and the deployed app itself, in relevant windows or apps.
 
-8. Click on Release summary to ensure the deployment was successful. 
+8. Click on **Release summary** to ensure the deployment was successful. 
 
    <img src="images/18.png">
 
@@ -112,7 +110,7 @@ You must store your app's source code in a Team Services Git, GitHub, or any oth
 
    <img src="images/19.png">
 
-   This is because during the compilation couple of js dependencies are missed out which we will be adding to the build definition in our next task.
+   This is because during the compilation couple of **js dependencies** are missed out which we will be adding to the build definition in our next task.
 
 ## Customizing the CD pipeline
 
