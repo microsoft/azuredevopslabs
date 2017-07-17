@@ -32,45 +32,31 @@ You must store your app's source code in a Team Services Git, GitHub, or any oth
 
    <img src="images/3.png">
 
-5. Select the ** VSTS account, project, repository**, and **branch** where you have your ***My Health Clinic*** project. When you're done, choose OK.
+5. Select the **VSTS account, project, repository**, and **branch** where you have your ***My Health Clinic*** project. When you're done, choose OK.
 
    <img src="images/4.png">
 
   > In addition to Visual Studio Team Services, you can also select other Git repositories such as GitHub or External Git (a Git  repository not hosted in Team Services or GitHub, For instance, BitBucket). You will have to provide the account, repository and branch details and if it is a private repository, you will need to provide the credentials
 
-6. Select **Configure Continuous Delivery** and choose the web application framework you used to develop your app. Since we are targeting .NET Core, select **Asp.NET Core**.
+6. Select **Configure Continuous Delivery** and choose the web application framework you used to develop your app. Since we are targeting .NET Core, select **ASP.NET Core**.
 
    <img src="images/5.png">
 
    This choice influences the way that Azure Continuous Delivery builds and packages the app for deployment. At present, ASP.NET, ASP.NET Core, PHP, Python, and Node.js are supported. When you're done, choose **OK**.
 
-7. At this moment we will not consider running load tests, hence skip and move to the next step.
+7. You can load test your web application before the changes are deployed to production. You will need to select a web app within the same resource group. If you are specifying for the first time, you can select **Create New** and provide the information to create a new instance. For this exercise, we will skip load test and move to the next step.
 
-8. Select **Configure deployment** and decide if you want to deploy your latest changes first to staging, and then promote to production. The default is **NO**. If you want to set this up, choose **YES** then specify whether you want to use an existing Azure App Service slot, or create a new one. When you're done, choose **OK**.
+8. You can also select to deploy the changes to staging first (for testing purposes) and then promote the changes to production. Select **Configure deployment** and choose **YES**. Select **Create New** option for ***Deployment Slot***  and select **OK**.
 
    <img src="images/7.png">
-
-## Build and Deploy
 
 1. Choose **OK** to create and execute the Continuous Delivery workflow.
 
    <img src="images/8.png">
 
-   The following sequence of events occurs:
-
-    - Azure Continuous Delivery creates a build and a release definition in the Team Services account you specified, together with a service endpoint to connect to Azure
-
-    - If you chose to create a new Azure App Service instance for load tests, and/or a new slot for staging, these are created in your Azure subscription
-
-    - After setup has completed successfully, a build is triggered that builds and packages the application for deployment
-
-    - After the build has completed successfully, a new release is created and the deployment triggered
-
-    - If you chose to include a load test, the latest changes are first deployed to the Azure App Service you selected, and then the load test is executed after the deployment succeeds
-
-    - If you chose to use a staging slot, the latest changes are deployed to the staging slot and then a slot swap is performed to complete the continuous delivery workflow
-
-2. After all these actions have completed, the Azure portal shows the results in the Activity Log.
+  >The workflow will create a build and a release definition in the Team Services account together with a service endpoint to connect to Azure. A new slot for staging is created for the web app. Once the setup has completed successfully, a build is triggered that builds and packages the application for deployment and when the build has completed successfully, a new release is created and the deployment triggered
+  
+2. You can see the status of the steps from the the Activity Log.
 
    <img src="images/9.png">
 
