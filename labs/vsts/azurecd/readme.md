@@ -24,11 +24,15 @@ This lab will walk you through the steps to create CI/CD pipeline from the azure
 
    <img src="images/4.png">
 
+   <br/>
+
    > In addition to Visual Studio Team Services, you can also select other Git repositories such as GitHub or External Git (a Git  repository not hosted in Team Services or GitHub, For instance, BitBucket). You will have to provide the account, repository and branch details and if it is a private repository, you will need to provide the credentials
 
 6. Select **Configure Continuous Delivery** and choose the web application framework you used to develop your app. Since we are targeting .NET Core, select **ASP.NET Core**.
 
    <img src="images/5.png">
+
+   <br/>
 
    >This choice influences the way that Azure Continuous Delivery builds and packages the app for deployment. At present, ASP.NET, ASP.NET Core, PHP, Python, and Node.js are supported. When you're done, choose **OK**.
 
@@ -41,6 +45,8 @@ This lab will walk you through the steps to create CI/CD pipeline from the azure
 9. Choose **OK** to create and execute the Continuous Delivery workflow.
 
    <img src="images/8.png">
+
+   <br/>
 
   >The workflow will create a build and a release definition in the Team Services account together with a service endpoint to connect to Azure. A new slot for staging is created for the web app. Once the setup has completed successfully, a build is triggered that builds and packages the application for deployment and when the build has completed successfully, a new release is created and the deployment triggered
   
