@@ -67,7 +67,7 @@ This lab will walk you through the steps to create CI/CD pipeline from the azure
 
     <img src="images/13.png">
 
-   Different tasks are added to the build definition depending on the app framework you selected. For example, .NET Core task is used for ASP.NET Core apps.
+    >Different tasks are added to the build definition depending on the app framework you selected. For example, .NET Core task is used for ASP.NET Core apps.
 
 13. Select the release definition from **Successfully set up Continuous Delivery**, to open the project containing your app in Team Services, and see the list of releases for this definition. Select **Edit** to see the tasks that have been added and configured.
 
@@ -77,7 +77,7 @@ This lab will walk you through the steps to create CI/CD pipeline from the azure
 
     <img src="images/16.png">
 
-   There are also links in other items in the Activity Log that open commits, builds, build reports, releases, deployment slots, and the deployed app itself, in relevant windows or apps.
+    >There are also links in other items in the Activity Log that open commits, builds, build reports, releases, deployment slots, and the deployed app itself, in relevant windows or apps.
 
 15. Click on **Release summary** to view the successful deployment. 
 
@@ -87,7 +87,7 @@ This lab will walk you through the steps to create CI/CD pipeline from the azure
 
     <img src="images/19.png">
 
-   This is because during the compilation couple of **js dependencies** are missed out which we will be adding to the build definition in our next task.
+    >This is because during the compilation couple of **js dependencies** are missed out which we will be adding to the build definition in our next task.
 
 ## Customizing the CD pipeline
 
