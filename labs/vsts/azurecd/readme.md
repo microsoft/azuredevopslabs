@@ -1,4 +1,12 @@
-# Continuous Delivery(CD) workflow for Azure App Services
+---
+title: Setting up Continuous Delivery workflow from the Azure Portal
+layout: page
+sidebar: vsts
+permalink: /labs/vsts/azurecd/
+folder: /labs/vsts/azurecd/
+---
+
+## Overview
 
 Continuous Delivery is a great option for projects that require multiple and frequent contributions to be integrated. Continuous Delivery in Team Services simplifies setting up a robust deployment pipeline for your app to publish the most recent updates to Azure App Service. The pipeline can be configured to build, runs tests, and deploy to a staging slot and then to production.
 
