@@ -1,8 +1,8 @@
-# Generate CI/CD pipeline automatically from Azure Portal
+# Continuous Delivery(CD) workflow for Azure App Services
 
 Continuous Delivery is a great option for projects that require multiple and frequent contributions to be integrated. Continuous Delivery in Team Services simplifies setting up a robust deployment pipeline for your app to publish the most recent updates to Azure App Service. The pipeline can be configured to build, runs tests, and deploy to a staging slot and then to production.
 
-This lab will walk you through the steps to create CI/CD pipeline from the azure portal.
+This lab will walk you through the steps to create CI/CD pipeline directly from the azure portal.
 
 ## Configuring the CD pipeline
 
@@ -83,14 +83,14 @@ This lab will walk you through the steps to create CI/CD pipeline from the azure
 
     <img src="images/18.png">
 
-16. Browse to the web app post deployment. You will notice that the app is running, but is missing out all the stylings, images etc. You should see something like this as shown below.
+16. Browse to the web app. You will notice that the app is running, but is missing out all the stylings, images etc. You should see something like this as shown below.
 
     <img src="images/19.png">
 
     <br/>
     <br/>
 
-    >This is because during the compilation couple of **js dependencies** are missed out which we will be adding to the build definition in our next task.
+    >This is because, during the compilation, couple of **js dependencies** are missed out which we will be adding to the build definition in our next task.
 
 ## Customizing the CD pipeline
 
@@ -122,11 +122,11 @@ This lab will walk you through the steps to create CI/CD pipeline from the azure
 
    <img src="images/26.png">
 
-8. Click **save** and Queue the build. 
+8. Click **Save** and Queue the build. 
 
 9. Once the build is completed successfully, we see the pipeline triggered automatically.
 
-10. You can verify this by going to the release hub and check if the deployment is successfully completed. You can refresh the web page and you should see the web page with all the images, stylings etc as shown below.
+10. You can verify this by going to the release hub and check if the deployment is successfully completed. You can refresh the web page and you should see the web page with all the images, stylings etc., as shown below.
 
     <img src="images/27.png">
 
