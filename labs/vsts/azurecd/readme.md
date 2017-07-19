@@ -6,7 +6,7 @@ This lab will walk you through the steps to create CI/CD pipeline from the azure
 
 ## Configuring the CD pipeline
 
-1. Open your browser and sign in to <a href="https://portal.azure.com">Azure Portal</a>(make sure you use the same email id for both Azure and VSTS)
+1. Open your browser and sign in to <a href="https://portal.azure.com">Azure Portal</a> (make sure you use the same email id for both Azure and VSTS)
 
 2. Create a web app by choosing the "+" icon, selecting **Web App** from the **Web + Mobile** category, and providing a unique name and a resource group.
 
