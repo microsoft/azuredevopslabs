@@ -59,6 +59,10 @@ Follow the link <a href="/labs/vsts/VSTSDemoGenerator">here</a> to know more
       <td><a href="continuousdeployment/">Continuous Deployment using Visual Studio Team Services</a></td>
       <td>May 10, 2017</td>
    </tr>
+      <tr>
+      <td><a href="azurecd/">Setting up Continuous Delivery workflow from the Azure Portal</a></td>
+      <td>July 19, 2017</td>
+   </tr>
    <tr>
       <td><a href="testmanagement/">Test Planning and Management with Visual Studio Team Services</a></td>
       <td>April 25, 2017</td>
