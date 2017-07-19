@@ -2,11 +2,11 @@
 
 Continuous Delivery is a great option for projects that require multiple and frequent contributions to be integrated. Continuous Delivery in Team Services simplifies setting up a robust deployment pipeline for your app to publish the most recent updates to Azure App Service. The pipeline can be configured to build, runs tests, and deploy to a staging slot and then to production.
 
->The email ID should be same both in VSTS and Azure
+This lab will walk you through the steps to create CI/CD pipeline from the azure portal.
 
 ## Configuring the CD pipeline
 
-1. Open your browser and sign in to <a href="https://portal.azure.com">Azure Portal</a>
+1. Open your browser and sign in to <a href="https://portal.azure.com">Azure Portal</a>(make sure you use the same email id for both Azure and VSTS)
 
 2. Create a web app by choosing the "+" icon, selecting **Web App** from the **Web + Mobile** category, and providing a unique name and a resource group.
 
@@ -118,11 +118,13 @@ Continuous Delivery is a great option for projects that require multiple and fre
 
     <img src="images/27.png">
 
-    > You can stop a deployment to your Azure App Service by choosing **Disconnect** at the top of the **Continuous Deployment** blade. This deletes the Azure Continuous Delivery configuration in the Azure portal and turns off the build triggers in your Team Services account for this configuration.
+## Disconnecting the configuration for CD pipeline
 
-    <img src="images/17.png">
+If in case you have to disconnect, you can stop a deployment to your Azure App Service by choosing **Disconnect** at the top of the **Continuous Deployment** blade. This deletes the Azure Continuous Delivery configuration in the Azure portal and turns off the build triggers in your Team Services account for this configuration.
 
-    To ensure the build and release history is preserved, the build and release definitions are not deleted from Team Services when you disconnect.
+<img src="images/17.png">
+
+To ensure the build and release history is preserved, the build and release definitions are not deleted from Team Services when you disconnect.
 
 
 
