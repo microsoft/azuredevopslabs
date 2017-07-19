@@ -25,6 +25,7 @@ This lab will walk you through the steps to create CI/CD pipeline from the azure
    <img src="images/4.png">
 
    <br/>
+   <br/>
 
    > In addition to Visual Studio Team Services, you can also select other Git repositories such as GitHub or External Git (a Git  repository not hosted in Team Services or GitHub, For instance, BitBucket). You will have to provide the account, repository and branch details and if it is a private repository, you will need to provide the credentials
 
@@ -32,6 +33,7 @@ This lab will walk you through the steps to create CI/CD pipeline from the azure
 
    <img src="images/5.png">
 
+   <br/>
    <br/>
 
    >This choice influences the way that Azure Continuous Delivery builds and packages the app for deployment. At present, ASP.NET, ASP.NET Core, PHP, Python, and Node.js are supported. When you're done, choose **OK**.
