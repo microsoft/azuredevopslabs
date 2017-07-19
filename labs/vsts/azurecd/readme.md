@@ -118,11 +118,11 @@ Continuous Delivery is a great option for projects that require multiple and fre
 
     <img src="images/27.png">
 
-> You can stop a deployment to your Azure App Service by choosing **Disconnect** at the top of the **Continuous Deployment** blade. This deletes the Azure Continuous Delivery configuration in the Azure portal and turns off the build triggers in your Team Services account for this configuration.
+    > You can stop a deployment to your Azure App Service by choosing **Disconnect** at the top of the **Continuous Deployment** blade. This deletes the Azure Continuous Delivery configuration in the Azure portal and turns off the build triggers in your Team Services account for this configuration.
 
-<img src="images/17.png">
+    <img src="images/17.png">
 
-To ensure the build and release history is preserved, the build and release definitions are not deleted from Team Services when you disconnect.
+    To ensure the build and release history is preserved, the build and release definitions are not deleted from Team Services when you disconnect.
 
 
 
