@@ -2,7 +2,7 @@
 
 Continuous Delivery is a great option for projects that require multiple and frequent contributions to be integrated. Continuous Delivery in Team Services simplifies setting up a robust deployment pipeline for your app to publish the most recent updates to Azure App Service. The pipeline can be configured to build, runs tests, and deploy to a staging slot and then to production.
 
->The email ID should both in VSTS and Azure should be same
+>The email ID should be same both in VSTS and Azure
 
 ## Configuring the CD pipeline
 
