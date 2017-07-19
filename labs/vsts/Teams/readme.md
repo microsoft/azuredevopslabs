@@ -162,7 +162,7 @@ Sharing the contents with team members is now easy with Microsoft Teams. You can
 
    <img src="images/21.png" />
 
-4. Provide a name for the website and click on **save**. It appeasrs on the channel where all of the team members can access to get a quick information if there were any updates done
+4. Provide a name for the website and click on **save**. It appears on the channel where all of the team members can access to get a quick information if there were any updates done
 
    <img src="images/22.png"/>
 
