@@ -49,6 +49,7 @@ This lab will walk you through the steps to create CI/CD pipeline from the azure
    <img src="images/8.png">
 
    <br/>
+   <br/>
 
     >The workflow will create a build and a release definition in the Team Services account together with a service endpoint to connect to Azure. A new slot for staging is created for the web app. Once the setup has completed successfully, a build is triggered that builds and packages the application for deployment and when the build has completed successfully, a new release is created and the deployment triggered
   
