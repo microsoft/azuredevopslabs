@@ -55,37 +55,37 @@ This lab will walk you through the steps to create CI/CD pipeline from the azure
   
 10. You can see the status of the steps from the the Activity Log.
 
-   <img src="images/9.png">
+    <img src="images/9.png">
 
 11. In the **Successfully set up Continuous Delivery** item, choose the Build Definition link to open the project containing your app in Team Services, and see the summary for the build definition. 
 
-   <img src="images/12.png">
+    <img src="images/12.png">
 
-   <img src="images/11.png">
+    <img src="images/11.png">
 
 12. Choose **Edit** to see the tasks that have been added and configured.
 
-   <img src="images/13.png">
+    <img src="images/13.png">
 
    Different tasks are added to the build definition depending on the app framework you selected. For example, .NET Core task is used for ASP.NET Core apps.
 
 13. Select the release definition from **Successfully set up Continuous Delivery**, to open the project containing your app in Team Services, and see the list of releases for this definition. Select **Edit** to see the tasks that have been added and configured.
 
-   <img src="images/14.png">
+    <img src="images/14.png">
 
 14. The **Production** environment, has an **Azure App Service Deploy** task. The latest changes are deployed to the staging slot and then an **Azure App Service Manage** task performs a slot swap between staging and production slots.
 
-   <img src="images/16.png">
+    <img src="images/16.png">
 
    There are also links in other items in the Activity Log that open commits, builds, build reports, releases, deployment slots, and the deployed app itself, in relevant windows or apps.
 
 15. Click on **Release summary** to view the successful deployment. 
 
-   <img src="images/18.png">
+    <img src="images/18.png">
 
 16. Browse to the web app post deployment. You will notice that the app is running, but is missing out all the stylings, images etc. You should see something like this as shown below.
 
-   <img src="images/19.png">
+    <img src="images/19.png">
 
    This is because during the compilation couple of **js dependencies** are missed out which we will be adding to the build definition in our next task.
 
