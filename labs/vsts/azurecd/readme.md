@@ -87,6 +87,9 @@ This lab will walk you through the steps to create CI/CD pipeline from the azure
 
     <img src="images/19.png">
 
+    <br/>
+    <br/>
+
     >This is because during the compilation couple of **js dependencies** are missed out which we will be adding to the build definition in our next task.
 
 ## Customizing the CD pipeline
