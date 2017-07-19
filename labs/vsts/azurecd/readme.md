@@ -20,7 +20,7 @@ Continuous Delivery is a great option for projects that require multiple and fre
 
    <img src="images/3.png">
 
-5. Select the **VSTS account, project, repository**, and **branch** where you have your ***My Health Clinic*** project. When you're done, choose OK.
+5. Select the **VSTS account, project, repository**, and **branch** where you have your **My Health Clinic** project. When you're done, choose OK.
 
    <img src="images/4.png">
 
