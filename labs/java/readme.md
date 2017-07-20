@@ -20,9 +20,7 @@ DevOps for Java teams with Microsoft Visual Studio Team Services hands-on-lab is
   * Managing Technical Debt with SonarQube 
   * Deploying Docker containers to Azure with an Automated delivery pipeline 
 
-
-## Pre-requiste 
-You will need a Windows/Linux/MacOs machine installed with a browser of your choice, JDK 1.9, Eclipse or IntelliJ, Git, Docker and optionally Jenkins. Courtesy of our partner NorthWest Cadence, we have a pre-built virtual machine image that is pre-configured with all the software you require to run through the labs. The "Creating the VM" section below has instructions on how you can run a copy of this image in your own Azure subscription.
+Courtesy of our partner NorthWest Cadence, we have a pre-built virtual machine image that is pre-configured with all the software you require to run through the labs. The "Creating the VM" section below has instructions on how you can run a copy of this image in your own Azure subscription.
 
 ## Target Audience
 
