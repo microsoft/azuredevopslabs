@@ -1,0 +1,40 @@
+# This is your sidebar TOC. The sidebar code loops through sections here and provides the appropriate formatting.
+
+entries:
+- title: sidebar
+  product: Java HOLs 
+  version: 
+  url: /labs/java
+  folders:
+
+  - title:
+    output: pdf
+    type: frontmatter
+    folderitems:
+    - title:
+      url: /titlepage
+      output: pdf
+      type: frontmatter
+    - title:
+      url: /tocpage
+      output: pdf
+      type: frontmatter
+
+  - title: Overview
+    output: web, pdf
+    folderitems:
+
+    - title: Java Devops with VSTS Labs Overview
+      url: labs/java
+      output: web, pdf
+      type: homepage
+
+    - title: Agile Planning and Portfolio Management with Visual Studio Team Services
+      url: labs/java/creatingvstsaccount.html
+      output: web, pdf
+
+    - title: Setting up Private Build Agent
+      url: labs/java/vstsbuildagent.html
+      output: web, pdf
+
+   
