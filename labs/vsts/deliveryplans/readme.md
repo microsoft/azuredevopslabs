@@ -44,22 +44,10 @@ In order to add and configure a plan, you must have the following in place:
 
    >All users, except users assigned Stakeholder access, have permissions to create a plan and manage the plans they create. 
 
-3. Provide a name for the plan **MyHealth Clinin Release 1**. Select the project, **MyHealth Clinic team** and the backlog to appear in your plan.
+3. Provide a name for the plan **MyHealth Clinic Release 1**. Select the project, **MyHealth Clinic team** and the backlog to appear in your plan.
 
    <img src="images/3.png" />
-
-   When defining a plan, note the following: 
-
-   - Use the name and description field to clearly identify your plan within the project
-
-   - You can choose one or more teams from any team project defined in the account or collection 
-
-   - You can choose one or more active backlogs for a team
-
-   - The order in which you enter the teams and team backlogs defines the order in which they'll appear in the plan
-
-   - To limit the number or types of work items, specify the field criteria
-
+   
 4. Click on **create**. You should now see the plan which is created.
 
    <img src="images/4.png" />
@@ -72,15 +60,7 @@ Once you've defined a plan, you can further customize it.
 
    <img src="images/5.png" />
 
-2. You can customize the plan in the following ways:
-
-   - Edit the teams you've selected (Team 1, Team 2) and their backlog level
-
-   - Set field criteria to further limit the work items that will appear on the plan
-
-   - Add markers to show important upcoming events on your timeline
-
-   - Customize the fields that display on the cards, similar to how you customize them for your Kanban or task board
+2. You can customize the plan by editing the teams, setting field criteria, adding markers etc.
 
    Here, we add the **Effort** field criteria. Only work items that contain the effort greater than 5 will appear in the Delivery Plan.
 
@@ -102,7 +82,7 @@ Once you've defined a plan, you can further customize it.
 
    <img src="images/10.png" />
 
-6. As changes occur to the schedule, you you can update the iteration for a backlog item by moving a card to a different iteration. This will help to drive alignment across your organization.
+6. As changes occur to the schedule, you can update the iteration for a backlog item by moving a card to a different iteration. This will help to drive alignment across your organization.
 
    <img src="images/11.png" />
 
@@ -124,26 +104,6 @@ Once you've defined a plan, you can further customize it.
 Each team's backlog specified in a Delivery Plan appears as a row within the plan view. When collapsed, a roll-up of the backlog items shows. When expanded, a card for each backlog item appears, organized by their assigned iteration.
 
 <img src="images/13.png" />
-
-You can interact with the plan in the following ways: 
-
-- Scale the size of the cards (enter + or - to also scale)
-
-- Scroll the view horizontally via the calendar to view previous months or future months (Enter Shift-left or Shift-right to scroll)
-
-- You can also scroll the plan via click and dragging your mouse
-
-- Scroll the view vertically to view teams that appear lower within the plan view
-
-- Click a card to view the details of a backlog item
-
-- Expand or collapse a single team row to view details for that team by clicking the team name or team sprint
-
-- Expand and collapse all team rows (Enter **u** to collapse, **o** to expand all rows)
-
-- Enter **t** to quickly toggle fields shown on cards to just the Title or all other card field settings
-
-- Click the settings gear to edit the plan and change the fields displayed on the cards
 
 In the following example, MyHealthClinic Team backlogs expanded, two items are scheduled for delivery in Sprint 5.
 
