@@ -60,7 +60,7 @@ Follow the link <a href="/labs/vsts/VSTSDemoGenerator">here</a> to know more
       <td>May 10, 2017</td>
    </tr>
       <tr>
-      <td><a href="azurecd/">Setting up Continuous Delivery workflow from the Azure Portal</a></td>
+      <td><a href="azurecd/">Setting up Continuous Delivery workflow from the Azure Portal</a> <span class="label label-success">New</span></td>
       <td>July 19, 2017</td>
    </tr>
    <tr>
