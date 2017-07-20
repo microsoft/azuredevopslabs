@@ -92,6 +92,10 @@ Follow the link <a href="/labs/vsts/VSTSDemoGenerator">here</a> to know more
       <td>March 2, 2017</td>
    </tr>
    <tr>
+      <td><a href="azureresource/">Setting up Continuous Delivery workflow from the Azure Portal</a> <span class="label label-success">New</span></td>
+      <td>July 19, 2017</td>
+   </tr>
+   <tr>
       <td><a href="teams/">Microsoft Teams Integration (Collaborate, Communicate and Celebrate)</a> <span class="label label-success">New</span></td>
       <td>June 30, 2017</td>
    </tr>
