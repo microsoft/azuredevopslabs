@@ -49,7 +49,7 @@ If you require assistance with these labs, you can contact Northwest Cadence thr
 
 The labs should be followed in the following order, though there are some equivalent labs that allow you a "choose your adventure" experience:
 
-<table>
+<!--<table>
 <tr>
 <td>Phase</td>
 <td>Lab Name</td>
@@ -70,4 +70,44 @@ The labs should be followed in the following order, though there are some equiva
 <td><b>Test</b></td><td><a href="techdebt.html">6. Managing Technical Debt with SonarQube and VSTS Team Build </a></td>
 <tr rowspan="2">
 <td> <b>Continuous Delivery</b></td><td><a href="vstsbuildagent.html">7.Release Management with VSTS</a></td>
-<tr> <td></td><td> <a href="mavenjenkins.html">8.Release Containers to ACS Kubernetes with VSTS </a> <b>OR</b><br /> <a href="mavenvsts.html">Using VSTS Team Build with Visual Studio Team Services</a></td></tr></table>
+<tr> <td></td><td> <a href="mavenjenkins.html">8.Release Containers to ACS Kubernetes with VSTS </a> <b>OR</b><br /> <a href="mavenvsts.html">Using VSTS Team Build with Visual Studio Team Services</a></td></tr></table>-->
+
+<table width="100%">
+   <thead>
+      <tr>
+         <th width="25%"><b>Phase</b></th>
+		 <th width="55%"><b>Lab Name</b></th>
+         <th width="75%"><b>Last Updated</b></th>
+      </tr>
+   </thead>
+   <tr>
+      <td><a href="/">Getting Started</a></td>
+	  <td><a href="/">Setting up a new project on VSTS</a></td>
+      <td>April 19, 2017</td>
+   </tr>
+   <tr>
+      <td><a href="/">Plan</a></td>
+	  <td><a href="/">Agile Planning and Portfolio Management with Visual Studio Team Services </a></td>
+      <td>April 22, 2017</td>
+   </tr>
+   <tr>
+      <td><a href="/">Develop</a></td>
+	  <td><a href="/">Cloning a VSTS Repo - IntelliJ</a> (If IntelliJ is your choice of IDE) <b>OR</b> <br/> <a href="/">Cloning a VSTS Repo - Eclipse</a> (If you prefer Eclipse)</td>
+      <td>May 15, 2017</td>
+   </tr>
+   <tr>
+      <td><a href="/">Continuous Integration</a></td>
+	  <td><a href="/">Using Jenkins with Visual Studio Team Services</a> <b>OR</b> <br/><a href="" >Using VSTS Team Build with Visual Studio Team Services</a><br/><br/> <a href="/">Building and Publishing Docker Images with VSTS</a></td>
+      <td>April 22, 2017</td>
+   </tr>
+   <tr>
+      <td><a href="/">Test</a></td>
+	  <td><a href="/">Managing Technical Debt with SonarQube and VSTS Team Build </a></td>
+      <td>May 10, 2017</td>
+   </tr>
+      <tr>
+      <td><a href="/">Continuous Delivery</a></td>
+	  <td><a href="azurecd/">Release Management with VSTS</a><br/><br/><a href="/">Release Containers to ACS Kubernetes with VSTS</a> <b>OR</b> <br/> <a href="" >Using VSTS Team Build with Visual Studio Team Service</a></td>
+	  <td>July 19, 2017</td>
+   </tr>
+</table>
