@@ -6,8 +6,6 @@ permalink: /labs/vsts/VSTSDemoGenerator/
 folder: /labs/vsts/VSTSDemoGenerator/
 ---
 
-# Visual Studio Team Services Demo Generator
-
 ## Overview 
 
 Visual Studio Team Services Demo Generator helps you create projects on your Visual Studio Team Services account with preset sample content which includes source code, work items, service endpoints, build and release definitions based on a template you choose.
@@ -31,7 +29,7 @@ Before you start:
 
    <img src="images/2.png"/>
 
-3. Provide a name for your project and select the template you want to provison from the drop-down list
+3. Provide a name for your project and select the template you want to provision from the drop-down list
 
    <img src="images/3.png"/>
 
@@ -55,40 +53,7 @@ Before you start:
 
    <img src="images/8.png"/>
 
->**Note:** You will need to provide your own information such as URLs, user name, password, etc for the endpoints created. You will need to provide them before you attempt to use them, say in build, release defintions, for example.
-<!--
-## Features under development
-
-<table>
-    <thead>
-        <th>Feature</th>
-        <th>Status</th>
-        <th>Timeline</th>
-    </thead>
-        <tbody>
-            <tr>
-                <td>Pull Requests</td>
-                <td>Available</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>VSTS Extension Validator</td>
-                <td>Available</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>Work Item updates with links and attachments</td>
-                <td>TBD</td>
-                <td>May 3rd week</td>
-            </tr>
-            <tr>
-                <td>Team Areas and Iterations</td>
-                <td>TBD</td>
-                <td>May 4th week</td>
-            </tr>
-        </tbody>    
-</table>    
--->
+>**Note:** You will need to provide your own information such as URLs, user name, password, etc for the endpoints created. You will need to provide them before you attempt to use them, say in build, release definitions, for example.
 
 
 

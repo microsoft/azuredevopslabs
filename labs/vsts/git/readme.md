@@ -57,7 +57,7 @@ Git commits consists of the following-
 
 - A message describing a commit. You give this message to Git when you create the commit. It's a good idea to keep this message descriptive, but to the point.
 
-### Task 1: Commit
+### Task 1: Committing Changes
 
 1. Open Visual Studio.
 
@@ -85,7 +85,7 @@ Git commits consists of the following-
 
    <img src="images/16.png" />   
 
-### Task 2: Sync
+### Task 2: Syncing changes 
 
 1. Before syncing, fetch the commits to view changes that your team has made. Fetching changes does not merge the commits into your local repository.
    You will need to pull the changes to merge them into your local repository.

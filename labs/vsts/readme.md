@@ -20,15 +20,15 @@ In order to complete these labs you will need
 
     - If you are not a Visual Studio Subscriber, you can sign up for the FREE [Visual Studio Dev Essentials](https://www.visualstudio.com/dev-essentials/) program and get $25 per month of Azure credits.
 
-- **Visual Studio 2017** or higher version - You will need Visual Studio for some of the labs. You can use your own machine with VS 2017 installed, or download and use the latest [ALM VM](https://microsoft.github.io/almvm/labs/tfs/),  or spin up a VM preinstalled with VS one on [Azure](https://portal.azure.com). 
+- **Visual Studio 2017** or higher version - You will need Visual Studio for some of the labs. You can use your own machine with VS 2017 installed, or download and use the latest [ALM VM](../tfs/),  or spin up a VM pre-installed with Visual Studio on [Azure](https://portal.azure.com). 
 
-- You can use the **[Visual Studio Team Services Demo Data generator](https://vstsdemogenerator.azurewebsites.net)** to provison a project with pre-defined data on to your Visual Studio Team Services account. Please use the ***My Health Clinic*** template to follow the hands-on-labs.
+- You can use the **[Visual Studio Team Services Demo Data generator](https://vstsdemogenerator.azurewebsites.net)** to provision a project with pre-defined data on to your Visual Studio Team Services account. Please use the ***My Health Clinic*** template to follow the hands-on-labs.
 
 If you are not using the VSTS Demo Data Generator, you can clone the code from this [GitHub repository](https://github.com/Microsoft/myhealthclinic2017)
 
-### Working with VSTS Demo Data Generator
+## Working with VSTS DemoGenerator
 
-Follow the link [here]() to know more
+Follow the link <a href="/labs/vsts/VSTSDemoGenerator">here</a> to know more
 
 ## Hands-On-Labs     
 
@@ -48,7 +48,9 @@ Follow the link [here]() to know more
 <tr><td><a href="selenium/">UI Automation using Selenium Tests</a></td></tr>
 <tr><td><a href="load/">Load Testing using Visual Studio Team Services</a></td></tr>
 <tr><td><a href="monitor/">Monitoring Applications using Application Insights</a></td></tr>
-<tr><td><a href="appservice/">Deploy an ASP.NET WebApp in Azure App Service from Visual Studio</a></td></tr>
+<tr><td><a href="appservice/">Deploy an ASP.NET Web App in Azure App Service from Visual Studio</a></td></tr>
 <tr><td><a href="azureresource/">Deploy and Manage Azure Resources from Visual Studio</a></td></tr>
+<tr><td><a href="teams/">Microsoft Teams Integration (Collaborate, Communicate and Celebrate)</a><span class="label label-success">New</span></td></tr>
+<tr><td><a href="powerbi/">Connect to Visual Studio Team Services with Power BI</a><span class="label label-success">New</span></td></tr>
 </table>
 
