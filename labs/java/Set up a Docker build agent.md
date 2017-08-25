@@ -7,6 +7,8 @@ folder: /labs/java/
 comments: true
 ---
 
+## Set up a Private Docker VSTS Build Agent
+
 In this exercise, you are going to configure a private build agent that runs in a Docker container.
 
 This exercise assumes you have completed the exercises to create a Team Project. This exercise uses a team project named **jdev**, though your team project name may differ.
@@ -69,7 +71,6 @@ In this task you will start a VSTS build agent container using Docker. This cont
     FROM microsoft/vsts-agent
 
     # install phantomjs
-    ARG PHANTOM=phantomjs-2.1.1-linux-x86_64
     RUN curl -L https://bitbucket.org/ariya/phantomjs/downloads/$PHANTOM.tar.bz2 > $PHANTOM.tar.bz2 && \
     tar xvjf $PHANTOM.tar.bz2 -C /usr/local/share && \
     ln -sf /usr/local/share/$PHANTOM/bin/phantomjs /usr/local/share/phantomjs && \
@@ -79,10 +80,10 @@ In this task you will start a VSTS build agent container using Docker. This cont
 
     # configure docker
     COPY .docker /root/.docker/
-    ENV DOCKER_HOST=tcp://$HOSTNAME.$azureregion.cloudapp.azure.com:2376 DOCKER_TLS_VERIFY=1
+    ENV DOCKER_HOST=tcp://$HOSTNAME:2376 DOCKER_TLS_VERIFY=1
     ```
 
-    > **Note**: `$HOSTNAME` and `$azureregion` are variables that resolve in the setup script that executed when you set up your Azure VM.
+    > **Note**: `$HOSTNAME` is a variable that resolves in the setup script that executed when you set up your Azure VM.
 
 1. If your container stops running for some reason, you can run the following commands to restart and attach to it:
 
