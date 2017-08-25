@@ -1,13 +1,11 @@
 ---
-title: Connecting to VSTS from Eclipse 
+title: Cloning a VSTS code repository in Eclipse 
 layout: page
 sidebar: java
-permalink: /labs/java/eclipse.html
+permalink: /labs/java/eclipse-vsts.html
 folder: /labs/java/
 comments: true
 ---
-
-## Eclipse - Working with Git
 
 In this exercise, you are going to import the MyShuttle2 repo in your VSTS account into to your VM for editing in Eclipse.
 

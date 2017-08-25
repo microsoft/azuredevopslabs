@@ -53,17 +53,17 @@ If you require assistance with these labs, you can contact Northwest Cadence thr
 
 The labs should be followed in the following order, though there are some equivalent labs that allow you a "choose your adventure" experience:
 
-1. [Setting up a new project on VSTS](Setting%20up%20a%20new%20project%20on%20VSTS.md)
-1. [Set up a Docker build agent](vstsbuildagent.html)
+1. [Setting up a new project on VSTS](creatingvstsaccount.html)
+1. [Set up a Docker build agent](builddocker.html)
 1. Either:
-    1. [Cloning a VSTS Repo - IntelliJ](Cloning%20a%20VSTS%20Repo-IntelliJ.md) **OR**
-    1. [Cloning a VSTS Repo - Eclipse](Cloning%20a%20VSTS%20Repo-Eclipse.md)
+    1. [Cloning a VSTS Repo - IntelliJ](intellij-vsts.html) **OR**
+    1. [Cloning a VSTS Repo - Eclipse](eclipse-vsts.html)
 1. Either:
-    1. [Maven Package Management with VSTS and Jenkins](Maven%20Package%20Management%20with%20VSTS%20and%20Jenkins.md) **OR**
-    1. [Maven Package Management with VSTS Team Build](Maven%20Package%20Management%20with%20VSTS%20Team%20Build.md)
+    1. [Maven Package Management with VSTS and Jenkins](maven-jenkins.html) **OR**
+    1. [Maven Package Management with VSTS Team Build](maven-vsts.html)
 1. [Build Docker containers with VSTS](Build%20Docker%20containers%20with%20VSTS.md)
-1. (Optional) [Managing Technical Debt with SonarQube and VSTS Team Build](Managing%20Technical%20Debt%20with%20SonarQube%20and%20VSTS%20Team%20Build.md)
-1. [Release Management with VSTS](Release%20Management%20with%20VSTS.md)
+1. (Optional) [Managing Technical Debt with SonarQube and VSTS Team Build](techdebt.html)
+1. [Release Management with VSTS](deploy.html)
 1. Either:
     1. [End to End Workflow - IntelliJ](intellij.html)
     1. [End to End Workflow - Eclipse](eclipsee2e.html) 

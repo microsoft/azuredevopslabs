@@ -7,7 +7,6 @@ folder: /labs/java/
 comments: true
 ---
 
-
 In this exercise, you are going to create a Release Definition that will start the container images from the build lab. You will then create an Azure Container Service (ACS) and modify the Release to start containers in ACS.
 
 This exercise assumes you have completed the exercises to create a Team Project and have set up the Docker private VSTS agent. You should also have set up Maven package management and have a MyShuttleCalc package in the feed and created a build that creates and publishes Docker images to the Azure Container Registry. This exercise uses a team project named **jdev**, though your team project name may differ.
@@ -41,19 +40,33 @@ In this task you will create a Release Definition with a single environment call
 1. Connect to the virtual machine with the user credentials which you specified when creating the VM in Azure.
 1. Open Chrome and browse to `http://<youraccount>.visualstudio.com` (where `youraccount` is the account you created in VSTS).
 1. Click on the `jdev` team project to navigate to it.
-1. Navigate to the latest successful MyShuttle2 build summary page. Click on "Build & Release" in the blue toolbar at the top to open the Build & Release Hub and then click on Builds in the grey toolbar. Click the build number next to the MyShuttle build.
+1. Under the "Build and Releases" hub, click on "Releases" and click the button in the page to create a new release definition.
 
-    ![Navigate to the latest MyShuttle2 build](images/docker-release/navigate-to-build.png "Navigate to the latest MyShuttle2 build")
+    ![Go to the Releases tab](images/docker-release/goto-releases.png "Go to the Releases tab")
 
-1. Click "Create Release" in the Deployment section below the Code Coverage results.
-1. A new Release Definition is created. In the flyout, click on "Empty process" at the top of the templates selection page to start with an empty template.
-1. Click on the trigger icon on the Build Artifact. In the property flyout, ensure that the Continous Deployment trigger is enabled. Set the branch filter to master so that only builds from the master branch trigger the deployment automatically.
+1. In the template flyout (on the right side), select an empty process as the template for the release definition. 
 
-    ![Continuous Deployment trigger](images/docker-release/release-trigger.png "Continuous Deployment trigger")
+    ![Select empty process](images/docker-release/select-emptyprocess.png "Select empty process")
 
 1. Click on Environment1 to open the properties flyout. Change the name to "AzureVM".
 
     ![Rename Environment1](images/docker-release/rename-env1.png "Rename Environment1")
+
+1. In the "Artifacts" component of the release definition, click on the "Add artifact" button to add a build definition as an artifact source to the release definition. 
+
+    ![Add artifact](images/docker-release/add-artifact.png "Add artifact")
+
+1. In the Artifacts flyout, choose the MyShuttle2 build definition as the artifact, keep the default version as latest and the default value of the source alias. Then press the "Add" button.
+
+    ![Add MyShuttle2 artifact](images/docker-release/add-myshuttle2artifact.png "Add MyShuttle2 artifact")
+
+1. Click in the name of the release definition and rename it. 
+
+    ![Rename release definition](images/docker-release/edit-definitionname.png "Rename release definition")
+
+1. Click on the trigger icon on the Build Artifact. In the property flyout, ensure that the Continuous Deployment trigger is enabled. Set the branch filter to master so that only builds from the master branch trigger the deployment automatically.
+
+    ![Continuous Deployment trigger](images/docker-release/release-trigger.png "Continuous Deployment trigger")
 
 1. Click the link labelled "1 phase(s), 0 task(s)" in the AzureVM environment card to open the phases/tasks editor for the environment.
 1. Click on the "Agent Phase" row and change the Queue to "default" so that your private agent executes the release tasks for this phase of the release.
@@ -62,41 +75,54 @@ In this task you will create a Release Definition with a single environment call
 
 1. Click the "+" icon on the phase to add a new task. Type "replace" in the search box. Add a "Replace Tokens" task.
 1. Set the following properties for the Replace Tokens task:
-    Parameter | Value | Notes
-    --- | --- | ---
-    Source Path | `$(System.DefaultWorkingDirectory)/MyShuttle2/drop` | The path in which to search for tokenized files
-    Target File Pattern | `*.release.*` | The filepattern to use to find tokenized files in the Source Path
 
-    > **Note**: There are 2 tokenized files that the release will take advantage of, both of which live in the root of the MyShuttle2 repo. The build process published these files so that they are available as outputs of the build, ready for use in the Release process. `docker-compose.release.yml` contains tokens for the host port, container image names and tags.  `testng.release.xml` contains tokens for the baseUrl to test. These tokenized files make it possible to "Build Once, Deploy Many Times" since they separete the environment configuration and the binaries from the build. The Replace Tokens task inject release variables (which you will define shortly) into the tokens in the files.
+    | Parameter | Value | Notes |
+    | --------------- | ---------------------------- | ----------------------------------------------------------- |
+    | Source Path | `$(System.DefaultWorkingDirectory)/MyShuttle2/drop` | The path in which to search for tokenized files |
+    | Target File Pattern | `*.release.*` | The file pattern to use to find tokenized files in the Source Path |
+
+    ![Replace Tokens task](images/docker-release/replace-tokens.png "Replace Tokens task")
+
+    > **Note**: There are 2 tokenized files that the release will take advantage of, both of which live in the root of the MyShuttle2 repo. The build process published these files so that they are available as outputs of the build, ready for use in the Release process. `docker-compose.release.yml` contains tokens for the host port, container image names and tags.  `testng.release.xml` contains tokens for the baseUrl to test. These tokenized files make it possible to "Build Once, Deploy Many Times" since they separate the environment configuration and the binaries from the build. The Replace Tokens task inject release variables (which you will define shortly) into the tokens in the files.
 
 1. Click the "+" icon on the phase to add a new task. Type "docker" in the search box. Add a "Docker Compose" task.
 1. Set the following properties for the Docker Compose task:
-    Parameter | Value | Notes
-    --- | --- | ---
-    Container Registry Type | Azure Container Registry | The release will get images from an Azure Container Registry
-    Azure subscription | `<your sub>` | The subscription with your Azure Container Registry
-    Azure Container Registry | `<your acr>` | The container registry you created in a previous lab
-    Action | Run service images | Sets the action to perform (in this case an `up` command)
-    Build Images | Unchecked | Use the images that were built in the build process
+
+    | Parameter | Value | Notes |
+    | --------------- | ---------------------------- | ----------------------------------------------------------- |
+    | Container Registry Type | Azure Container Registry | The release will get images from an Azure Container Registry |
+    | Azure subscription | `<your sub>` | The subscription with your Azure Container Registry |
+    | Azure Container Registry | `<your acr>` | The container registry you created in a previous lab |
+    | Docker compose file | `$(System.DefaultWorkingDirectory)/MyShuttle2/drop/docker-compose.release.yml` | The compose file to use for the release |
+    | Action | Run service images | Sets the action to perform (in this case an `up` command) |
+    | Build Images | Unchecked | Use the images that were built in the build process |
+
+    ![Run Services task](images/docker-release/run-services.png "Run Services task")
 
     > **Note**: This task will start the 2 container apps in the docker engine of the host VM.
 
 1. Click the "+" icon on the phase to add a new task. Type "command" in the search box. Add a "Command Line" task.
 1. Set the following properties for the Command Line task:
-    Parameter | Value | Notes
-    --- | --- | ---
-    Tool | `java` | Invoke java
-    Arguments | `-cp myshuttledev-tests.jar:test-jars/* org.testng.TestNG ../testng.release.xml` | Arguments for the java command to invoke the integration tests
-    Advanced/Working folder | `$(System.DefaultWorkingDirectory)/MyShuttle2/drop/target` | Run the command in the correct folder
+
+    | Parameter | Value | Notes |
+    | --------------- | ---------------------------- | ----------------------------------------------------------- |
+    | Tool | `java` | Invoke java |
+    | Arguments | `-cp myshuttledev-tests.jar:test-jars/* org.testng.TestNG ../testng.release.xml` | Arguments for the java command to invoke the integration tests |
+    | Advanced/Working folder | `$(System.DefaultWorkingDirectory)/MyShuttle2/drop/target` | Run the command in the correct folder |
+
+    ![Run Java task](images/docker-release/run-java.png "Run Java task")
 
     > **Note**: This command invokes Java to run testNG tests. The run uses the `testng.release.xml` file which at this point in the release contains the correct `baseUrl` for the tests. If the tests fail, the release will fail.
 
 1. Click the "+" icon on the phase to add a new task. Type "publish test" in the search box. Add a "Publish Test Results" task.
 1. Set the following properties for the Publish Test Results task:
-    Parameter | Value | Notes
-    --- | --- | ---
-    Test results files | `**/TEST-*.xml` | Invoke java
-    Control Options/Continue on error | Checked | Uploads the results even if the tests from the previous step fail.
+    
+    | Parameter | Value | Notes |
+    | --------------- | ---------------------------- | ----------------------------------------------------------- |
+    | Test results files | `**/TEST-*.xml` | Invoke java |
+    | Control Options/Continue on error | Checked | Uploads the results even if the tests from the previous step fail. |
+
+    ![Publish Test Results task](images/docker-release/publish-testresults.png "Publish Test Results task")
 
     > **Note**: This command grabs the JUnit test results file from the test run and publishes them to the release so that the test results are available in the Release summary.
 
@@ -105,13 +131,14 @@ In this task you will create a Release Definition with a single environment call
     ![Tasks for the Release](images/docker-release/tasks-view.png "Tasks for the Release")
 
 1. Click on the Variables tab. Enter the following variables and scopes:
-    Name | Value | Scope | Notes
-    --- | --- | --- | ---
-    baseUrl | `http://10.0.0.4:8081/myshuttledev` | AzureVM | BaseUrl for test run
-    DbImageName | `<your azure container reg>/db` | Release | Image name of the database container
-    WebImageName | `<your azure container reg>/web` | Release | Image name of the web container
-    HostPort | 8081 | AzureVM | The port to expose the web app to on the host
-    Tag | $(Build.BuildNumber) | Release | The tag to use for the container images - tied to the build number.
+
+    | Name | Value | Scope | Notes |
+    | --------------- | ------------- | ---------------------------- | ----------------------------------------------------------- |
+    | baseUrl | `http://10.0.0.4:8081/myshuttledev` | AzureVM | BaseUrl for test run |
+    | DbImageName | `<your azure container reg>/db` | Release | Image name of the database container |
+    | WebImageName | `<your azure container reg>/web` | Release | Image name of the web container |
+    | HostPort | 8081 | AzureVM | The port to expose the web app to on the host |
+    | Tag | $(Build.BuildNumber) | Release | The tag to use for the container images - tied to the build number. |
 
     ![Variables for the release](images/docker-release/release-vars.png "Variables for the release")
 

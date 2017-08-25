@@ -24,21 +24,16 @@ In this task you will create a Generic SonarQube Endpoint in VSTS. This endpoint
     ![Log in to SonarQube](images/sonarqube/login.png "Log in to SonarQube")
 
 1. Log in as the administrator using username `admin` and password `admin`.
-1. Click on the profile icon (the "A") in the upper right of the toolbar. Click "My Account" to open your account settings. Click on the Security tab, and enter VSTS in the Generate New Token textbox. Click Generate.
-
-    ![Generate a Sonarqube token](images/sonarqube/create-token.png "Generate a Sonarqube token")
-
-1. Click Copy to copy the token into the clipboard.
 1. Open a new tab in Chrome and browse to `http://<youraccount>.visualstudio.com` (where `youraccount` is the account you created in VSTS).
 1. Click on the `jdev` team project to navigate to it.
 1. Click on the gear icon and select Services to navigate to the service endpoint configuration page. Click "+ New Service Endpoint" and select Generic from the list of options. Enter the following information and click OK.
 
-    Property | Value | Notes
-    --- | --- | ---
-    Connection name | `Azure VM SonarQube` | Display name for the endpoint
-    Server URL | `http://10.0.0.4:9000` | The URL for the SonarQube server. Use the Azure internal network IP address so that the build agent running in the Docker container can reach Sonarqube.
-    User name | `admin` | This could be anything - it won't be used for SonarQube since the token is sufficient
-    Password/Token Key | `<your token>` | The token you generated in SonarQube
+    | Property | Value | Notes |
+    | --------------- | ---------------------------- | ----------------------------------------------------------- |
+    | Connection name | `Azure VM SonarQube` | Display name for the endpoint |
+    | Server URL | `http://10.0.0.4:9000` | The URL for the SonarQube server. Use the Azure internal network IP address so that the build agent running in the Docker container can reach Sonarqube. |
+    | User name | `admin` | This could be anything - it won't be used for SonarQube since the token is sufficient |
+    | Password/Token Key | `admin` | The default password for admin user in SonarQube |
 
     ![Create the Sonarqube Endpoint](images/sonarqube/create-endpoint.png "Create the Sonarqube Endpoint")
 
@@ -50,6 +45,9 @@ In this task you will create a Sonarqube project.
 1. In Chrome, go back to Sonarqube (http://localhost:9000) and log in as administrator if you are not already logged in.
 1. Click on Administration in the toolbar and then click on the Projects tab.
 1. Click the Create Project button.
+
+    ![Go to projects](images/sonarqube/goto-projects.png "Go to projects")
+
 1. Enter `MyShuttle2` for both the name and key of the project (name is the display name and key is the unique identifier within SonarQube).
 
     ![Create a SonarQube project](images/sonarqube/create-project.png "Create a SonarQube project")
@@ -59,20 +57,23 @@ Modify the Build to Integrate with SonarQube
 
 In this task you will modify the MyShuttle2 build to integrate with SonarQube.
 
-1. In VSTS in your browser, click on Build & Release and then Builds to view your builds. Click on the MyShuttle2 build. In the upper right click the Edit icon.
+1. In VSTS in your browser, click on Build & Release and then Builds to view your builds. Click on the MyShuttle2 build. Click on the "..." to the right of the build definition, then click the "Edit" button. 
+
+    ![Edit build definition](images/sonarqube/edit-builddefinition.png "Edit build definition")
+
 1. Click on the Maven task.
 1. Scroll down to the Code Analysis section.
 1. Check the "Run SonarQube Analysis" checkbox
 1. Configure the remaining settings as follows:
 
-    Parameter | Value | Notes
-    --- | --- | ---
-    SonarQube Endpoint | `<your endpoint>` | The generic Service Endpoint to SonarQube you just created
-    SonarQube Project Name | `MyShuttle2` | The name of the project in SonarQube
-    SonarQube Project Key | `MyShuttle2` | The key of the project in SonarQube
-    SonarQube Project Version | `1.0` | A major version number
-    Include full analysis report... | Checked | Waits for SonarQube analysis to complete before proceeding
-    Fail the build on quality gate failure... | Checked | Fails the build if SonarQube quality gates fail
+    | Parameter | Value | Notes |
+    | --------------- | ---------------------------- | ----------------------------------------------------------- |
+    | SonarQube Endpoint | `<your endpoint>` | The generic Service Endpoint to SonarQube you just created |
+    | SonarQube Project Name | `MyShuttle2` | The name of the project in SonarQube |
+    | SonarQube Project Key | `MyShuttle2` | The key of the project in SonarQube |
+    | SonarQube Project Version | `1.0` | A major version number |
+    | Include full analysis report... | Checked | Waits for SonarQube analysis to complete before proceeding |
+    | Fail the build on quality gate failure... | Checked | Fails the build if SonarQube quality gates fail |
 
     ![Maven SonarQube settings](images/sonarqube/build-sonarqube.png "Maven SonarQube settings")
 
@@ -105,7 +106,10 @@ In this task you will update a quality gate in SonarQube and see that failing th
 
     ![Failing quality gates fails the build](images/sonarqube/quality-gate-fail.png "Failing quality gates fails the build")
 
-1. Go back to SonarQube and edit the Quality Gate that you just modified. Clear the Error value so that you only get a warning if the coverage < 50% instead of failing the build.
+1. Go back to SonarQube and edit the Quality Gate that you just modified. Clear the Error value so that you only get a warning if the coverage < 50% instead of failing the build, then click the update button. Additionally, under the Coverage on New Code metric, move the 80% to a warning message instead of error and update. In the Reliability Rating on New Code metric, change the error threshold from A to blank (click on the "X" next to the A), then click on update. 
+
+    ![Update Quality Gates in SonarQube](images/sonarqube/update-qualitygates.png "Update Quality Gates in SonarQube")
+
 1. Queue a new build and see that now the build succeeds, but there is a Quality Gate warning.
 
     ![Quality gate warning](images/sonarqube/quality-gate-warn.png "Quality gate warning")

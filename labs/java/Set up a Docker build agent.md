@@ -7,8 +7,6 @@ folder: /labs/java/
 comments: true
 ---
 
-## Set up a Private Docker VSTS Build Agent
-
 In this exercise, you are going to configure a private build agent that runs in a Docker container.
 
 This exercise assumes you have completed the exercises to create a Team Project. This exercise uses a team project named **jdev**, though your team project name may differ.
