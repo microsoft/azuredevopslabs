@@ -24,10 +24,14 @@ entries:
     output: web, pdf
     folderitems:
 
-    - title: Java Devops with VSTS Labs Overview
+    - title: Java Hands-on-Labs Overview
       url: labs/java
       output: web, pdf
       type: homepage
+
+  - title: Plan
+    output: web, pdf
+    folderitems:
 
     - title: Agile Planning and Portfolio Management with Visual Studio Team Services
       url: labs/java/creatingvstsaccount.html
@@ -37,4 +41,15 @@ entries:
       url: labs/java/vstsbuildagent.html
       output: web, pdf
 
-   
+  - title: Develop
+    output: web, pdf
+    folderitems:
+
+  - title: Build
+    output: web, pdf
+
+  - title: Test
+    output: web, pdf
+
+  - title: Deploy
+    output: web, pdf
