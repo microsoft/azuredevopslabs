@@ -1,7 +1,7 @@
 ---
 title: Managing Technical Debt with SonarQube and VSTS
 layout: page
-sidebar: mydoc_sidebar
+sidebar: java
 permalink: /labs/java/techdebt.html
 folder: /labs/java/
 comments: true

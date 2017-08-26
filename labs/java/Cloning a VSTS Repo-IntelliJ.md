@@ -1,7 +1,7 @@
 ---
 title: Working with IntelliJ 
 layout: page
-sidebar: mydoc_sidebar
+sidebar: java
 permalink: /labs/java/intellij-vsts.html
 folder: /labs/java/
 comments: true

@@ -1,7 +1,7 @@
 ---
 title: Build and publishing Docker images
 layout: page
-sidebar: mydoc_sidebar
+sidebar: java
 permalink: /labs/java/builddocker.html
 folder: /labs/java/
 comments: true

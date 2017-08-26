@@ -3,7 +3,7 @@
 entries:
 - title: sidebar
   product: Java HOLs 
-  version: 
+  version: 2017
   url: /labs/java
   folders:
 
@@ -20,36 +20,52 @@ entries:
       output: pdf
       type: frontmatter
 
-  - title: Overview
+  - title: Hands-on-Labs
     output: web, pdf
     folderitems:
 
-    - title: Java Hands-on-Labs Overview
-      url: labs/java
+    - title: Overview and Accessing the VM
+      url: labs/java/
       output: web, pdf
-      type: homepage
 
-  - title: Plan
-    output: web, pdf
-    folderitems:
-
-    - title: Agile Planning and Portfolio Management with Visual Studio Team Services
+    - title: Setting up a new project on VSTS
       url: labs/java/creatingvstsaccount.html
       output: web, pdf
 
-    - title: Setting up Private Build Agent
-      url: labs/java/vstsbuildagent.html
+    - title: Set up a Docker build agent
+      url: labs/java/builddocker.html
       output: web, pdf
 
-  - title: Develop
-    output: web, pdf
-    folderitems:
+    - title: Cloning a VSTS Repo - IntelliJ
+      url: labs/java/intellij-vsts.html
+      output: web, pdf
 
-  - title: Build
-    output: web, pdf
+    - title: Cloning a VSTS Repo - Eclipse
+      url: labs/java/eclipse-vsts.html
+      output: web, pdf
 
-  - title: Test
-    output: web, pdf
+    - title: Maven Package Management with VSTS and Jenkins
+      url: labs/java/maven-jenkins.html
+      output: web, pdf
 
-  - title: Deploy
-    output: web, pdf
+    - title: Maven Package Management with VSTS Team Build
+      url: labs/java/maven-vsts.html
+      output: web, pdf
+
+    - title: Build Docker containers with VSTS
+      url: labs/java/builddocker.html
+      output: web, pdf
+
+    - title: Release Management with VSTS
+      url: labs/java/deplpoy.html
+      output: web, pdf 
+
+    - title: End to End Workflow - IntelliJ
+      url: labs/java/intellij.html
+      output: web, pdf
+
+    - title: End to End Workflow - IntelliJ
+      url: labs/java/eclipsee2e.html
+      output: web, pdf
+
+

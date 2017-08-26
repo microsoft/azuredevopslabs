@@ -1,7 +1,7 @@
 ---
 title: Maven Package Management with Visual Studio Team Services
 layout: page
-sidebar: mydoc_sidebar
+sidebar: java
 permalink: /labs/java/maven-vsts.html
 folder: /labs/java/
 comments: true

@@ -1,7 +1,7 @@
 ---
 title: Deploying to Azure
 layout: page
-sidebar: mydoc_sidebar
+sidebar: java
 permalink: /labs/java/deploy.html
 folder: /labs/java/
 comments: true
