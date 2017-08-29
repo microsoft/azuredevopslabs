@@ -116,4 +116,8 @@ entries:
 
     - title: Deploy and Manage Azure Resources
       url: labs/vsts/azureresource
-      output: web, pdf      
+      output: web, pdf
+
+    - title: Setting up Continuous Delivery workflow from the Azure Portal
+      url: labs/vsts/azurecd     
+      output: web, pdf

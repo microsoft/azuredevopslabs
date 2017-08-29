@@ -10,15 +10,14 @@ Lab version:15.0.26228.0
 
 Last updated:3/17/2017
 
-<a name="Overview"></a>
-## Overview ##
+## Overview
 
 [Microservices](https://docs.microsoft.com/en-us/azure/service-fabric/service-fabric-overview-microservices) have become popular approach to designing sophisticated applications. By adopting a microservices architecture, teams can easily scale different parts of their applications depending on the needs of their customers. They can also be more agile as they roll out changes and thus provide features to customers faster and more frequently.
 
 In this lab you will develop microservices using ASP.NET Core, and then you will deploy and debug them in local Docker containers. You will then use the ASP.NET publishing experience to deploy those containers to the Azure App Service, as well as configure continuous delivery for Visual Studio Team Services to enable an automated build and deploy workflow to Azure Container Service.
 
-<a name="Prerequisites"></a>
-### Prerequisites ###
+
+## Prerequisites
 
 This lab requires the following to be installed on your machine:
 
@@ -32,17 +31,16 @@ This lab requires the following to be installed on your machine:
 
     You also need [Visual Studio Team Services (VSTS) account](https://www.visualstudio.com/team-services/) and an [Azure account](https://azure.microsoft.com/) ([Get a $25 monthly Azure credit by joining Visual Studio Dev Essentials](https://www.visualstudio.com/dev-essentials/)).
 
-<a name="Exercise1"></a>
-## Exercise 1: Creating Microservices with ASP.NET Core ##
 
-<a name="Ex1Task1"></a>
-### Task 1: Creating a microservice project using ASP.NET Core and Docker ###
+## Exercise 1: Creating Microservices with ASP.NET Core
+
+### Task 1: Creating a microservice project using ASP.NET Core and Docker
 
 1. Launch **Visual Studio**.
 
-1. From the main menu, select **File | New | Project**.
+1. From the main menu, select **File \| New \| Project**.
 
-1. From the **Visual C# | .NET Core** category, select the **ASP.NET Core Web Application** template. Enter the **Name** of **"Web"** and the **Solution Name** of **"AzureMicroservicesLab"**. Click **OK**.
+1. From the **Visual C# \| .NET Core** category, select the **ASP.NET Core Web Application** template. Enter the **Name** of **"Web"** and the **Solution Name** of **"AzureMicroservicesLab"**. Click **OK**.
 
    ![](images/000.png)
 
@@ -50,7 +48,7 @@ This lab requires the following to be installed on your machine:
 
    ![](images/001.png)
 
-1. In **Solution Explorer**, right-click the **Web** project node and select **Add | Docker Support**. This is all you need to do to Docker-enable a project in Visual Studio.
+1. In **Solution Explorer**, right-click the **Web** project node and select **Add \| Docker Support**. This is all you need to do to Docker-enable a project in Visual Studio.
 
    ![](images/002.png)
 
@@ -99,16 +97,16 @@ This lab requires the following to be installed on your machine:
 
    ![](images/012.png)
 
-1. Return to **Visual Studio** and select **Debug | Stop Debugging**.
+1. Return to **Visual Studio** and select **Debug \| Stop Debugging**.
 
-<a name="Ex1Task2"></a>
-### Task 2: Adding and debugging an API microservice project ###
 
-1. Since microservice applications are designed to be composed of multiple services, we will now add an additional service to provide an API for the web application to use. In **Solution Explorer**, right-click the solution node and select **Add | New Project**.
+### Task 2: Adding and debugging an API microservice project
+
+1. Since microservice applications are designed to be composed of multiple services, we will now add an additional service to provide an API for the web application to use. In **Solution Explorer**, right-click the solution node and select **Add \| New Project**.
 
    ![](images/013.png)
 
-1. From the **Visual C# | .NET Core** category, select the **ASP.NET Core Web Application** template. Set the **Name** to **"Api"** and click **OK**.
+1. From the **Visual C# \| .NET Core** category, select the **ASP.NET Core Web Application** template. Set the **Name** to **"Api"** and click **OK**.
 
    ![](images/014.png)
 
@@ -181,10 +179,10 @@ This lab requires the following to be installed on your machine:
 
 1. Close the browser window.
 
-1. In **Visual Studio**, select **Debug | Stop Debugging**.
+1. In **Visual Studio**, select **Debug \| Stop Debugging**.
 
-<a name="Ex1Task3"></a>
-### Task 3: Creating an Azure Container Service ###
+
+### Task 3: Creating an Azure Container Service
 
 1. Launch **PuTTYgen**. We will use it to generate the public key required to set up an Azure Container Service instance. You will also use the private key later to connect to administration tools available to manage the service. There are other options for generating keys that may be more appropriate for the level of control you need in production, so please see [this article](https://docs.microsoft.com/en-us/azure/virtual-machines/virtual-machines-linux-ssh-from-windows?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json) for more details.
 
@@ -236,11 +234,9 @@ This lab requires the following to be installed on your machine:
 
 1. You can wait for deployment to complete by watching the tile added to your Azure dashboard.
 
-<a name="![](images/038.png)"></a>
-### ![](images/038.png) ###
+   ![](images/038.png)
 
-<a name="Ex1Task4"></a>
-### Task 4: Deploying a container from Visual Studio to your Azure Container Service ###
+### Task 4: Deploying a container from Visual Studio to your Azure Container Service
 
 1. Now let's take a look at the process for deploying the Web container out to Azure. Return to **Visual Studio** and sign in using the button in the top right corner. Already being signed in will make things easier in this task.
 
@@ -280,11 +276,9 @@ This lab requires the following to be installed on your machine:
 
 1. Most of the site should work as expected. However, since we didn't deploy the API project, visiting the **About** page would crash at this time since that dependency will not be available. Close the browser when satisfied.
 
-<a name="![](images/048.png)"></a>
-### ![](images/048.png) ###
+   ![](images/048.png) ###
 
-<a name="Ex1Task5"></a>
-### Task 5: Setting up Continuous Delivery via Visual Studio Team Services ###
+### Task 5: Setting up Continuous Delivery via Visual Studio Team Services
 
 1. While it's great to be able to push a deployment out from Visual Studio, sophisticated teams look for opportunities to leverage automation where possible. With **Visual Studio Team Services**, it's really easy to set up continuous delivery such that project changes are automatically built, tested, and processed through a release workflow if meeting all requirements. To start to take advantage of all of this opportunity, right-click the solution node in **Solution Explorer** and select **Add Solution to Source Control**.
 
@@ -366,7 +360,7 @@ This lab requires the following to be installed on your machine:
 
    ![](images/067.png)
 
-1. In the left tree view, select **Connection | SSH | Auth**. Set the **Private key** to the local path to the private key saved earlier.
+1. In the left tree view, select **Connection \| SSH \| Auth**. Set the **Private key** to the local path to the private key saved earlier.
 
    ![](images/068.png)
 

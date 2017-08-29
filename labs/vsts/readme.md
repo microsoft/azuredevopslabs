@@ -33,24 +33,71 @@ Follow the link <a href="/labs/vsts/VSTSDemoGenerator">here</a> to know more
 ## Hands-On-Labs     
 
 <table width="100%">
-<thead><td>
-<b>Lab Name</b>
-</td>
-</thead>
-<!--tr><td>Working with the VSTS Demo generator</td></tr-->
-<tr><td><a href="agile/">Agile Planning and Portfolio Management using Visual Studio Team Services</a></td></tr>
-<tr><td><a href="git/">Version Controlling with Git using Visual Studio Team Services</a></td></tr>
-<tr><td><a href="packagemanagement/">Package Management using Visual Studio Team Services</a></td></tr>
-<tr><td><a href="continuousintegration/">Continuous Integration using Visual Studio Team Services</a></td></tr>
-<tr><td><a href="continuousdeployment/">Continuous Deployment using Visual Studio Team Services</a></td></tr>
-<tr><td><a href="testmanagement/">Test Planning and Management with Visual Studio Team Services</a></td></tr>
-<tr><td><a href="exploratorytesting/">Exploratory Testing and Feedback Management using Visual Studio Team Services</a></td></tr>
-<tr><td><a href="selenium/">UI Automation using Selenium Tests</a></td></tr>
-<tr><td><a href="load/">Load Testing using Visual Studio Team Services</a></td></tr>
-<tr><td><a href="monitor/">Monitoring Applications using Application Insights</a></td></tr>
-<tr><td><a href="appservice/">Deploy an ASP.NET Web App in Azure App Service from Visual Studio</a></td></tr>
-<tr><td><a href="azureresource/">Deploy and Manage Azure Resources from Visual Studio</a></td></tr>
-<tr><td><a href="teams/">Microsoft Teams Integration (Collaborate, Communicate and Celebrate)</a><span class="label label-success">New</span></td></tr>
-<tr><td><a href="powerbi/">Connect to Visual Studio Team Services with Power BI</a><span class="label label-success">New</span></td></tr>
+   <thead>
+      <tr>
+         <th width="75%"><b>Lab Name</b></th>
+         <th><b>Last Updated</b></th>
+      </tr>
+   </thead>
+   <tr>
+      <td><a href="agile/">Agile Planning and Portfolio Management using Visual Studio Team Services</a></td>
+      <td>April 19, 2017</td>
+   </tr>
+   <tr>
+      <td><a href="git/">Version Controlling with Git using Visual Studio Team Services</a></td>
+      <td>April 22, 2017</td>
+   </tr>
+   <tr>
+      <td><a href="packagemanagement/">Package Management using Visual Studio Team Services</a></td>
+      <td>May 15, 2017</td>
+   </tr>
+   <tr>
+      <td><a href="continuousintegration/">Continuous Integration using Visual Studio Team Services</a></td>
+      <td>April 22, 2017</td>
+   </tr>
+   <tr>
+      <td><a href="continuousdeployment/">Continuous Deployment using Visual Studio Team Services</a></td>
+      <td>May 10, 2017</td>
+   </tr>
+      <tr>
+      <td><a href="azurecd/">Setting up Continuous Delivery workflow from the Azure Portal</a> <span class="label label-success">New</span></td>
+      <td>July 19, 2017</td>
+   </tr>
+   <tr>
+      <td><a href="testmanagement/">Test Planning and Management with Visual Studio Team Services</a></td>
+      <td>April 25, 2017</td>
+   </tr>
+   <tr>
+      <td><a href="exploratorytesting/">Exploratory Testing and Feedback Management using Visual Studio Team Services</a></td>
+      <td>March 6, 2017</td>
+   </tr>
+   <tr>
+      <td><a href="selenium/">UI Automation using Selenium Tests</a></td>
+      <td>March 6, 2017</td>
+   </tr>
+   <tr>
+      <td><a href="load/">Load Testing using Visual Studio Team Services</a></td>
+      <td>March 6, 2017</td>
+   </tr>
+   <tr>
+      <td><a href="monitor/">Monitoring Applications using Application Insights</a></td>
+      <td>March 6, 2017</td>
+   </tr>
+   <tr>
+      <td><a href="appservice/">Deploy an ASP.NET Web App in Azure App Service from Visual Studio</a></td>
+      <td>March 8, 2017</td>
+   </tr>
+   <tr>
+      <td><a href="azureresource/">Deploy and Manage Azure Resources from Visual Studio</a></td>
+      <td>March 2, 2017</td>
+   </tr>
+   <tr>
+      <td><a href="teams/">Microsoft Teams Integration (Collaborate, Communicate and Celebrate)</a> <span class="label label-success">New</span></td>
+      <td>June 30, 2017</td>
+   </tr>
+   <tr>
+      <td><a href="powerbi/">Connect to Visual Studio Team Services with Power BI</a> <span class="label label-success">New</span></td>
+      <td>June 30, 2017</td>
+   </tr>
 </table>
 
