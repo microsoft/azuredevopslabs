@@ -1,30 +1,28 @@
 ---
-title: Maven Package Management with Visual Studio Team Services and Jenkins
+title: Maven Package Management with VSTS and Jenkins
 layout: page
-sidebar: mydoc_sidebar
-permalink: /labs/java/mavenjenkins.html
+sidebar: java
+permalink: /labs/java/maven-jenkins.html
 folder: /labs/java/
 comments: true
 ---
 
-In this exercise, you are going to clone a Github repo into VSTS, if you have not already done so. This repo contains a class library (MyShuttleCalc) that is used by the MyShuttle2 application. You will configure a Jenkins build to get the source code from the VSTS repo, build and then publish the MyShuttleCalc package to a VSTS Maven Package feed so that it can be consumed by MyShuttle2 and any other applications that require the calculation code.
+In this exercise, you are going to clone a GitHub repo into VSTS, if you have not already done so. This repo contains a class library (MyShuttleCalc) that is used by the MyShuttle2 application. You will configure a Jenkins build to get the source code from the VSTS repo, build and then publish the MyShuttleCalc package to a VSTS Maven Package feed so that it can be consumed by MyShuttle2 and any other applications that require the calculation code.
 
-This exercise assumes you have completed the exercises to create a Team Project and have set up the Docker private VSTS agent. This exercise uses a team project named **jdev**, though your team project name may differ.
+This exercise assumes you have completed the exercises to create a Team Project, have set up the Docker private VSTS agent, and imported the MyShuttleCalc and MyShuttle2 GitHub repos into your VSTS team project. This exercise also assumes that you have cloned the repos in either IntelliJ or Eclipse. This exercise uses a team project named **jdev**, though your team project name may differ.
 
-> **Note**: It is not necessary to clone Github repos into VSTS. VSTS will work just fine with Github (or other Git hoster)  repos. However, some linkages from source code to other aspects of the DevOps pipeline (such as work items, builds or releases) work best if the code is in VSTS.
+> **Note**: It is not necessary to clone GitHub repos into VSTS. VSTS will work just fine with GitHub (or other Git hosted) repos. However, some linkages from source code to other aspects of the DevOps pipeline (such as work items, builds or releases) work best if the code is in VSTS.
 
 > **Note**: This exercise shows how to do a Maven build using Jenkins. To see how to perform a Maven build using just VSTS Team Build that integrates into the VSTS Package Feed, please refer to [Maven Package Management with VSTS and Jenkins](./Maven Package Management with VSTS and Jenkins,md).
 
-> **Note**: Jenkins is running in a Docker container on the Azure VM you created for these labs. Port 8080 is open, meaning anyone can browse to your VM and interact with Jenkins. This is not a recommended production setup - typically authentication is required to interact with a Jenkins server that is publicly avaliable.
+> **Note**: Port 8080 is not open on the Azure VM for security purposes. However, since a local agent is running in Docker on the VM, it will be able to build and interact with VSTS anyway. 
 
-Clone the Repo and Configure Package Management
+Configure Package Management
 -----------------------------------------------
 
-Before getting to the build, you will need to clone the code from Github into VSTS, create the Maven Package Feed and then update the Maven settings file in the project to specify where to publish the package to. All these instructions are in the [Maven Package Management with VSTS and Jenkins](./Maven Package Management with VSTS and Jenkins,md). Please complete the following exercises from that lab:
+Before getting to the build, you will need to create the Maven Package Feed and then update the Maven settings file in the project to specify where to publish the package to. All these instructions are in the [Maven Package Management with VSTS Team Build](./Maven%20Package%20Management%20with%20VSTS%20Team%20Build.md). Please complete the following exercises from that lab:
 
-- Importing the MyShuttleCalc code from Github into VSTS
 - Create a Maven Package Feed
-- Clone the MyShuttleCalc repo
 - Create a Maven Settings File with the Feed Credentials
 
 ### Create an SSH Key for Git authentication
@@ -73,9 +71,9 @@ Configure the Jenkins Maven installation
 In this task you will configure the Maven installation settings for Jenkins.
 
 1. On your VM, open Chrome and browse to `http://localhost:8080` to open Jenkins.
-1. One the list of links in the left, click "Manage Jenkins". On the mangement page, click "Global Tool Configuration".
+1. One the list of links in the left, click "Manage Jenkins". On the management page, click "Global Tool Configuration".
 1. Scroll down to Maven. Click "Add Maven" to add a new Maven installation.
-1. Enter `default` as the name. Uncheck the "Install Automticall" checkbox and enter `/usr/share/maven` for the MAVEN_HOME property.
+1. Enter `default` as the name. Uncheck the "Install Automatically" checkbox and enter `/usr/share/maven` for the MAVEN_HOME property.
 
     ![Configure the Jenkins Maven installation](images/jenkins-build/configure-maven.png "Configure the Jenkins Maven installation")
 
@@ -109,7 +107,7 @@ In this task you will create a Maven job in Jenkins to build MyShuttleCalc and t
 
     ![Source Code Management](images/jenkins-build/sc-management.png "Source Code Management")
 
-1. In the Build section, ensure that "Root POM" is `pom.xml`. Set the "Goals and options" to `deploy -Dbuildversion=1.0.${BUILD_NUMBER}`. Click the Advanced button to expand the advanved settings. Change the "Settings file" to "Settings file in filesystem" and set the "File path" to `maven/settings.xml`. These settings instruct Maven to build, test and package the code and then publish the package to the repository defined in the settings.xml file, which you previously modified to include the authentication token.
+1. In the Build section, ensure that "Root POM" is `pom.xml`. Set the "Goals and options" to `deploy -Dbuildversion=1.0.${BUILD_NUMBER}`. Click the Advanced button to expand the advanced settings. Change the "Settings file" to "Settings file in filesystem" and set the "File path" to `maven/settings.xml`. These settings instruct Maven to build, test and package the code and then publish the package to the repository defined in the settings.xml file, which you previously modified to include the authentication token.
 
     ![Build settings](images/jenkins-build/build-settings.png "Build settings")
 
@@ -159,14 +157,15 @@ In this task you will configure a VSTS Team Build in VSTS that will trigger the 
 1. Navigate to your VSTS Team Project and click on the gear icon and then Services.
 1. Click "+ New Service Endpoint" and select Jenkins from the list.
 1. Enter the following:
-    Name | Value | Notes
-    --- | --- | ---
-    Connection Name | `Azure VM Jenkins` | The name of this connection
-    Server URL | `http://<machineName>.<location>.cloudapp.azure.com:8080` | The FQDN to your Azure VM on port 8080 (the Jenkins port)
-    Username | The username you created in Jenkins |
-    Password | The password you created in Jenkins |
 
-1. Click on "Verify connection" to ensure that the connection is valid.
+    | Name | Value | Notes |
+    | --------------- | ---------------------------- | ----------------------------------------------------------- |
+    | Connection Name | `Azure VM Jenkins` | The name of this connection |
+    | Server URL | `http://10.0.0.4:8080`  | The internal IP address of the Azure VM on port 8080 (the Jenkins port)
+    | Username | The username you created in Jenkins | |
+    | Password | The password you created in Jenkins | |
+
+8. Click on "Verify connection" to ensure that the connection is valid.
 
     ![Jenkins endpoint](images/jenkins-build/jenkins-endpoint.png "Jenkins endpoint")
 
@@ -174,11 +173,13 @@ In this task you will configure a VSTS Team Build in VSTS that will trigger the 
 1. Click the "+ New" button to create a new definition.
 1. Enter "jenkins" into the search box and press enter. Click on the Jenkins template and click Apply. Configure the following settings and tasks.
 1. **Tasks->Process**
-    Parameter | Value | Notes
-    --- | --- | ---
-    Default agent queue | `default` | Run this build on your VSTS agent container
-    Job Name | `MyShuttleCalc` | The name of the Jenkins job
-    Jenkins service endpoint | `Azure VM Jenkins` | The endpoint you just created to Jenkins
+
+    | Parameter | Value | Notes |
+    | --------------- | ---------------------------- | --------------------------------------- |
+    | Default agent queue | `default` | Run this build on your VSTS agent container |
+    | Job Name | `MyShuttleCalc` | The name of the Jenkins job
+    | Jenkins service endpoint | `Azure VM Jenkins` | The endpoint you just created to Jenkins |
+
 1. **Tasks->Get Sources**
     Connect to the MyShuttleCalc repo on the master branch.
 1. Configure the "Queue Jenkins Job: MyShuttleCalc" task as follows:
@@ -190,20 +191,22 @@ In this task you will configure a VSTS Team Build in VSTS that will trigger the 
     ![Download artifacts task](images/jenkins-build/download-artifacts.png "Download artifacts task")
 
 1. Insert a "Publish Test Results" task and configure it as follows:
-    Parameter | Value | Notes
-    --- | --- | ---
-    Test result format | `JUnit` | Publish JUnit results
-    Test results files | `**/TEST-*.xml` | File containing test results
-    Search Folder | `$(Build.ArtifactStagingDirectory)` | Root folder for search operation
+
+    | Parameter | Value | Notes |
+    | --------------- | ---------------------------- | ------------------------------------- |
+    | Test result format | `JUnit` | Publish JUnit results |
+    | Test results files | `**/TEST-*.xml` | File containing test results
+    | Search Folder | `$(Build.ArtifactStagingDirectory)` | Root folder for search operation |
 
     ![Publish test results task](images/jenkins-build/publish-test-results.png "Publish test results task")
 
 1. Insert a "Publish Code Coverage Results" task and configure it as follows:
-    Parameter | Value | Notes
-    --- | --- | ---
-    Code Coverage Tool | `JaCoCo` | Publish JaCoCo results
-    Summary File | `$(Build.ArtifactStagingDirectory)/jenkinsResults/MyShuttleCalc/team-results/jacoco/target/site/jacoco/jacoco.xml` | File containing JaCoCo results
-    Report Directory | `$(Build.ArtifactStagingDirectory)/jenkinsResults/MyShuttleCalc/team-results/jacoco/target/site/jacoco` | Folder containing detailed coverage reports
+
+    | Parameter | Value | Notes |
+    | --------------- | ---------------------------- | ------------------------------------------------------------------------------------------------- |
+    | Code Coverage Tool | `JaCoCo` | Publish JaCoCo results |
+    | Summary File | `$(Build.ArtifactStagingDirectory)/jenkinsResults/MyShuttleCalc/team-results/jacoco/target/site/jacoco/jacoco.xml` | File containing JaCoCo results
+    | Report Directory | `$(Build.ArtifactStagingDirectory)/jenkinsResults/MyShuttleCalc/team-results/jacoco/target/site/jacoco` | Folder containing detailed coverage reports |
 
     ![Publish code coverage results task](images/jenkins-build/publish-coverage-results.png "Publish code coverage results task")
 

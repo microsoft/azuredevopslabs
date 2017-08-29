@@ -1,7 +1,7 @@
 ---
 title: Build and publishing Docker images
 layout: page
-sidebar: mydoc_sidebar
+sidebar: java
 permalink: /labs/java/builddocker.html
 folder: /labs/java/
 comments: true
@@ -24,7 +24,7 @@ Create a Docker Container Registry in Azure
 
     ![Click Create](images/vsts-build-docker/start-acr-wizard.png "Click Create")
 
-1. Enter a name, resource group, location and storage account. Click Create when you are done.
+1. Enter a name, create or use an existing resource group, and choose a location. Enable the Admin user option, and enable managed registry. This allows you to not have to manage a storage account for the images (similar to managed disks with VMs). Select the Basic pricing tier. Click Create when you are done.
 
     ![Settings for the Registry](images/vsts-build-docker/new-reg-settings.png "Settings for the Registry")
 
@@ -39,27 +39,54 @@ In this task you will update the pom.xml file for the MyShuttle2 application so 
 
     ![Get the package repository settings from VSTS](images/vsts-build-docker/maven-packagefeed-settings.png "Get the package repository settings from VSTS")
 
-1. Open IntelliJ by clicking on the IntelliJ icon in the toolbar.
-
-    ![Open IntelliJ](images/vsts-build-docker/click-intellij.png "Open IntelliJ")
-
 1. Open the MyShuttle2 project.
 1. Click on the pom.xml file.
 1. In the `<repositories>` element there is a reference to a Maven repo. Paste in the repository settings you got from VSTS.
-1. Find the `<dependency>` with `<groupId>com.microsoft.exampledep</groupId>` and update the version number to match the version number of the MyShuttleCalc package in your package feed.
+1. Find the `<dependency>` with `<groupId>com.microsoft.exampledep</groupId>` and update the version number to match the version number of the MyShuttleCalc package in your package feed. This may look something like:
 
-> **Note**: You may have to reload the Maven project to update the plugins and dependencies. You can do this by clicking `View->Tool Windows->Maven` and then clicking the reload button (the top-left icon in the Maven project view).
+    ```
+    ...
+    <dependency>
+      <groupId>com.microsoft.exampledep</groupId>
+      <artifactId>MyShuttleCalc</artifactId>
+      <version>1.0.6</version>
+	</dependency>
+    ...
+    ```
 
-1. Click Build->Build Project and make sure there are no errors.
 1. Copy the maven settings file from the MyShuttleCalc project (you updated this file in another lab to include the authentication settings for the Maven package feed). Run the following command in a terminal:
 
-```sh
-cp ~/MyShuttleCalc/maven/settings.xml ~/MyShuttle2/maven/
-```
+    ```sh
+    cp ~/MyShuttleCalc/maven/settings.xml ~/MyShuttle2/maven/
+    ```
+
+- IntelliJ
+1. You may have to reload the Maven project to update the plugins and dependencies. You can do this by clicking `View->Tool Windows->Maven` and then clicking the reload button (the top-left icon in the Maven project view).
+
+    ![Refresh Maven](images/vsts-build-docker/reload-maven.png "Refresh Maven")
+
+1. From the top toolbar of IntelliJ, click Build->Build Project and make sure there are no errors.
 
 1. Click VCS->Commit. Add a commit message "Updating feed settings". Click the drop-down on the Commit button and select Commit and Push. Click Push on the prompt.
 
     ![Commit the changes to the pom.xml file](images/vsts-build-docker/commit-changes.png "Commit the changes to the pom.xml file")
+
+- Eclipse
+1. You may have to reload the Maven project to update the plugins and dependencies. You can do this by right-clicking on the `myshuttle` working set/project, then selecting Maven -> Update Project. Then, keep the checkbox for `myshuttle` checked and press the OK button. 
+
+    ![Refresh Maven](images/vsts-build-docker/eclipse-update-project.png "Refresh Maven")
+
+1. Right-click on the `myshuttle` working set/project, then select Run As -> Maven build. 
+
+    ![Build Maven](images/vsts-build-docker/eclipse-maven-build.png "Build Maven")
+
+    In the configuration window, type in "compile" as the Maven Goal then press the Run button. 
+
+    ![Build Maven](images/vsts-build-docker/eclipse-maven-configuration.png "Build Maven")
+
+>Note: Ensure that you have already copied the settings.xml file from MyShuttleCalc to the .m2 folder before you run this. Otherwise, you can specify the settings.xml file in MyShuttle2 by clicking on the "File System..." button to the right of the User settings field in the configuration window to reference a settings file other than in the default .m2 folder. 
+
+1. Commit and push your changes through Team Explorer Everywhere. 
 
 Create a VSTS Build to Build Docker Images
 ------------------------------------------
@@ -80,11 +107,14 @@ In this task you will create a VSTS build definition that will create two contai
     ![Get Sources settings](images/vsts-build-docker/get-sources-settings.png "Get Sources settings")
 
 1. Click on the `Maven pom.xml` step and edit the following values:
-    Parameter | Value | Notes
-    --- | --- | ---
-    Options | `-DskipITs --settings ./maven/settings.xml` | Skips integration tests during the build
-    Code Coverage Tool | `JaCoCo` | Selects JaCoCo as the coverage tool
-    Source Files Directory | `src/main` | Sets the source files directory for JaCoCo
+
+    | Parameter | Value | Notes |
+    | --------------- | ---------------------------- | ----------------------------------------------------------- |
+    | Options | `-DskipITs --settings ./maven/settings.xml` | Skips integration tests during the build |
+    | Server URL | `http://10.0.0.4:8080`  | Selects JaCoCo as the coverage tool |
+    | Source Files Directory | `src/main` | Sets the source files directory for JaCoCo |
+
+    ![Maven task settings](images/vsts-build-docker/vsts-maven.png "Maven task settings")
 
 1. Click on the "Copy Files" task. Set the Contents property to:
     ```
@@ -93,6 +123,8 @@ In this task you will create a VSTS build definition that will create two contai
     *.release.*
     ```
 
+    ![Copy Files task settings](images/vsts-build-docker/vsts-copyfiles.png "Copy Files task settings")
+    
     The Publish Build Artifacts task publishes everything in the artifact staging directory. The Copy Files task copies the following artifacts into this directory so that they are available for Release (which you will create in a later lab):
     - **myshuttledev.war** - the site war file
     - **myshuttledev-tests.jar** - integration test jar
@@ -106,13 +138,14 @@ In this task you will create a VSTS build definition that will create two contai
 
 1. If it is not positioned after the Publish Artifact task, then drag the Docker Compose task under it so that it is the last step in the build.
 1. Configure the settings of the Docker Compose task as follows:
-    Parameter | Value | Notes
-    --- | --- | ---
-    Container Registry Type | Azure Container Registry | This is to connect to the Azure Container Registry you created earlier
-    Azure Subscription | Your Azure subscription | The subscription that contains your registry
-    Azure Container Registry | Your registry | Select the Azure Container registry you created earlier
-    Additional Image Tags | `$(Build.BuildNumber)` | Sets a unique tag for each instance of the build
-    Include Latest Tag | Check (set to true) | Adds the `latest` tag to the images produced by this build
+
+    | Parameter | Value | Notes |
+    | --------------- | ---------------------------- | ----------------------------------------------------------- |
+    | Container Registry Type | Azure Container Registry | This is to connect to the Azure Container Registry you created earlier |
+    | Azure Subscription | Your Azure subscription | The subscription that contains your registry |
+    | Azure Container Registry | Your registry | Select the Azure Container registry you created earlier |
+    | Additional Image Tags | `$(Build.BuildNumber)` | Sets a unique tag for each instance of the build |
+    | Include Latest Tag | Check (set to true) | Adds the `latest` tag to the images produced by this build |
 
     ![Build Service Images Docker Compose task](images/vsts-build-docker/docker-compose-build-task.png "Build Service Images Docker Compose task")
 

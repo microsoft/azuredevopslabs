@@ -715,12 +715,14 @@ h3 {
     font-size: 130%;
 }
 
+
 h4 {
     color: #808080;
     font-weight: normal;
     font-size: 120%;
     font-style: italic;
 }
+
 
 .alert,
 .callout {
@@ -737,6 +739,7 @@ h4 {
 ol li ol li {
     list-style-type: lower-alpha;
 }
+
 
 ol li ul li {
     list-style-type: disc;
