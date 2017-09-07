@@ -19,19 +19,23 @@ The Microsoft Visual Studio ALM Virtual Machine is a virtual machine pre-install
 <br />
  
 <div class="row">
-    <div class="col-md-1"></div>
     <div class="lab-item col-md-4" align="center">
           <span class="headnews"> <b> Team Foundation Server Labs</b></span><br />
-             <a href="labs/tfs"><img src="images/vside.png"/></a><br />
-           <span class="mainPageText"> Access the Microsoft ALM Virtual Machine and Team Foundation Server Hands-on-Labs</span><br /><br />
+             <a href="labs/tfs"><img style="margin: 10px;" src="images/vside.png"/></a><br />
+           <span class="mainPageText"> Access the Microsoft ALM VM and TFS Hands-on-Labs</span><br /><br />
            <a href="labs/tfs" class="c-glyph"><span class="lab-details">View Details</span></a>
     </div>
-    <div class="col-md-1"></div>
     <div class="lab-item col-md-4" align="center">
          <span class="headnews"> <b> Team Services Labs</b></span><br />
-        <a href="labs/vsts"><img src="images/vstslogo.png"/></a><br />
+        <a href="labs/vsts"><img style="margin: 10px;" src="images/vstslogo.png"/></a><br />
        <span class="mainPageText"> Follow the Visual Studio Team Services Hands-on-Labs</span><br /><br />
        <a href="labs/vsts" class="c-glyph"><span class="lab-details">View Details</span></a>
+    </div>
+     <div class="lab-item col-md-4" align="center">
+         <span class="headnews"> <b> Java Labs</b></span><br />
+        <a href="labs/java"><img style="margin: 10px;" src="images/java.png"/></a><br />
+       <span class="mainPageText"> DevOps with Visual Studio Team Services for Java</span><br /><br />
+       <a href="labs/java" class="c-glyph"><span class="lab-details">View Details</span></a>
     </div>
 </div>
  <div class="clear"></div>
@@ -54,7 +58,6 @@ The Microsoft Visual Studio ALM Virtual Machine is a virtual machine pre-install
 </span>
 </div>
 </div>
-
 {% endfor %}
 
 

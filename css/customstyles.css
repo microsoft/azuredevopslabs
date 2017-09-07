@@ -1413,12 +1413,12 @@ td.text_center {
 div.headline {
     /* border: 1px;*/
     border-width: 1px;
-    border-style: solid;
+    /* border-style: solid; */
     /*border: double #248ec2;*/
     border-color: #248ec2;
     padding: 5px;
     margin: 25px;
-    background-color: #fcfcfc;
+    background-color: #fbfbfb;
 }
 
 span.headnews {
@@ -1460,13 +1460,13 @@ div.lab-item-none {
 div.lab-item {
     /*width: 350px;*/
     border-width: 1px;
-    border-style: solid;
+    /**border-style: solid;*/
     border-color: #248ec2;
     padding: 15px;
     margin-bottom: 25px;
     margin-top: 25px;
-    margin-left: 35px;
-    margin-right: 35px;
+    /* margin-left: 35px;
+    margin-right: 35px; */
     background-color: #FFFFFF;
     font-weight: 80%;
 }
@@ -1477,12 +1477,17 @@ div.clear {
 
 a.c-glyph {
     width: 180 px;
-    border-width: 1px;
+    /* border-width: 1px;
     border-style: solid;
-    border-color: #000000;
-    padding: 5px;
+    border-color: #000000;*/
+    padding: 7px;
     margin: 5px;
-    background-color: #248ec2;
+    background-color: #333333;
+    text-decoration: none;
+}
+
+a.c-glyph:hover {
+    box-shadow: 2px 2px 1px #797979;
 }
 
 span.lab-details {
