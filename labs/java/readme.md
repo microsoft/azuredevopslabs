@@ -30,7 +30,7 @@ DevOps for Java teams with Microsoft Visual Studio Team Services hands-on-lab is
 
 <img src="images/nwc_logo.png"  align="bottom" />
 
-Our partner NorthWest Cadence have built a virtual machine image that is pre-configured with all the software you require to run through the labs. You can find instructions on provisioning and connecting to the virtual machine <a href="https://github.com/nwcadence/java-dev-vsts">here</a>
+Our partner NorthWest Cadence has built a virtual machine image that is pre-configured with all the software you require to run through the labs. You can find instructions on provisioning and connecting to the virtual machine <a href="https://github.com/nwcadence/java-dev-vsts">here</a>
 
 
 ## Target Audience
