@@ -20,6 +20,10 @@ DevOps for Java teams with Microsoft Visual Studio Team Services hands-on-lab is
   * Continuous Integration with Team Build or Jenkins
   * Managing Technical Debt with SonarQube 
   * Deploying Docker containers to Azure with an Automated delivery pipeline 
+          
+ ## VSTS for Java on Ubuntu Virtual Machine Virtual Machine
+      
+<img src="images/nwc_logo.png"  align="bottom" />
 
 
 ## Virtual Machine
@@ -51,8 +55,4 @@ The labs should be followed in the following order, though there are some equiva
 1. Either:
     1. [End to End Workflow - IntelliJ](intellij.html)
     1. [End to End Workflow - Eclipse](eclipsee2e.html)
-
-
-
-
 
