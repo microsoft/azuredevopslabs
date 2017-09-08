@@ -21,11 +21,6 @@ DevOps for Java teams with Microsoft Visual Studio Team Services hands-on-lab is
   * Managing Technical Debt with SonarQube 
   * Deploying Docker containers to Azure with an Automated delivery pipeline 
           
- ## VSTS for Java on Ubuntu Virtual Machine Virtual Machine
-      
-<img src="images/nwc_logo.png"  align="bottom" />
-
-
 ## Virtual Machine
 
 <img src="images/nwc_logo.png"  align="bottom" />
