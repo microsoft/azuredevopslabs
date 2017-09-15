@@ -121,3 +121,11 @@ entries:
     - title: Setting up Continuous Delivery workflow from the Azure Portal
       url: labs/vsts/azurecd     
       output: web, pdf
+
+  - title: Others
+    output: web, pdf
+    folderitems:
+
+    - title: DevOps with Node.js, Team Services, and Azure App Service
+      url: labs/vsts/nodejs     
+      output: web, pdf
