@@ -19,7 +19,7 @@ The Microsoft Visual Studio ALM Virtual Machine is a virtual machine pre-install
  
 <div class="row">
     <div class="lab-item col-md-4" align="center">
-          <span class="headnews"> <b> Team Foundation Server Labs</b></span><br />
+          <span class="headnews"> <b> Visual Studio & Team Foundation Server Labs</b></span><br />
              <a href="labs/tfs"><img style="margin: 10px;" src="images/vside.png"/></a><br />
            <span class="mainPageText"> Access the Microsoft ALM VM and TFS Hands-on-Labs</span><br /><br />
            <a href="labs/tfs" class="c-glyph"><span class="lab-details">View Details</span></a>
