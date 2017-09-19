@@ -1,54 +1,42 @@
 {% include custom/sidebarconfigs.html %}
 <ul id="mysidebar" class="nav">
     <li class="sidebarTitle"><a href="{{site.url }}{{site.baseurl }}{{ sidebar[0].url }}">{{sidebar[0].product}}</a></li>
-    {% for entry in sidebar %}
-    {% for folder in entry.folders %}
-    {% if folder.output contains "web" %}
+    {% for entry in sidebar %} {% for folder in entry.folders %} {% if folder.output contains "web" %}
     <li class="sidebarentry">
         <a href="{{ folder.url }}">{{ folder.title }}</a>
         <ul>
-            {% for folderitem in folder.folderitems %}
-            {% if folderitem.output contains "web" %}
-            {% if folderitem.external_url %}
+            {% for folderitem in folder.folderitems %} {% if folderitem.output contains "web" %} {% if folderitem.external_url %}
             <li><a href="{{folderitem.external_url}}" target="_blank">{{folderitem.title}}</a></li>
             {% elsif page.url == folderitem.url %}
-            <li class="active"><a href="{{site.url }}{{site.baseurl }}{{folderitem.url}}/">{{folderitem.title}}</a></li>
+            <li class="active"><a href="{{site.url }}{{site.baseurl }}{{folderitem.url}}">{{folderitem.title}}</a></li>
             <!--li class="active"><a href="{{folderitem.url | remove: "/"}}">{{folderitem.title}}</a></li-->
             {% else %}
             <li><a href="{{site.url }}{{site.baseurl }}{{folderitem.url}}/">{{folderitem.title}}</a></li>
             <!--li><a href="{{folderitem.url | remove: "/"}}">{{folderitem.title}}</a></li-->
-            {% endif %}
-            {% for subfolders in folderitem.subfolders %}
-            {% if subfolders.output contains "web" %}
+            {% endif %} {% for subfolders in folderitem.subfolders %} {% if subfolders.output contains "web" %}
             <li class="subfolders">
                 <a href="#">{{ subfolders.title }}</a>
                 <ul>
-                    {% for subfolderitem in subfolders.subfolderitems %}
-                    {% if subfolderitem.output contains "web" %}
-                    {% if subfolderitem.external_url %}
-                    <li><spanc class="sidebarentry"><a href="{{subfolderitem.external_url}}" target="_blank">{{subfolderitem.title}}</a></span></li>
+                    {% for subfolderitem in subfolders.subfolderitems %} {% if subfolderitem.output contains "web" %} {% if subfolderitem.external_url %}
+                    <li>
+                        <spanc class="sidebarentry"><a href="{{subfolderitem.external_url}}" target="_blank">{{subfolderitem.title}}</a></span>
+                    </li>
                     {% elsif page.url == subfolderitem.url %}
                     <li class="active"><a href="{{site.url }}{{site.baseurl }}/labs/tfs/{{page.url}}/">{{subfolderitem.title}}</a></li>
                     <!-->Changed by Sachin
-                    <li class="active"><a href="{{subfolderitem.url | remove: "/"}}">{{subfolderitem.title}}</a></li>
+                    <li class="active"><a href="{{subfolderitem.url | remove: " / "}}">{{subfolderitem.title}}</a></li>
                     <-->
-                    {% else %}
-                    <li><a href="{{site.url }}{{site.baseurl }}/labs/tfs/{{page.url}}/">{{subfolderitem.title}}</a></li>
-                    <!-->Changed by Sachin
-                    <li><a href="{{subfolderitem.url | remove: "/"}}">{{subfolderitem.title}}</a></li><-->
-                    {% endif %}
-                    {% endif %}
-                    {% endfor %}
+                        {% else %}
+                        <li><a href="{{site.url }}{{site.baseurl }}/labs/tfs/{{page.url}}/">{{subfolderitem.title}}</a></li>
+                        <!-->Changed by Sachin
+                        <li><a href="{{subfolderitem.url | remove: " / "}}">{{subfolderitem.title}}</a></li>
+                        <-->
+                            {% endif %} {% endif %} {% endfor %}
                 </ul>
             </li>
-            {% endif %}
-            {% endfor %}
-            {% endif %}
-            {% endfor %}
+            {% endif %} {% endfor %} {% endif %} {% endfor %}
         </ul>
-        {% endif %}
-        {% endfor %}
-        {% endfor %}
+        {% endif %} {% endfor %} {% endfor %}
         <!-- if you aren't using the accordion, uncomment this block:
            <p class="external">
                <a href="#" id="collapseAll">Collapse All</a> | <a href="#" id="expandAll">Expand All</a>
@@ -59,6 +47,6 @@
 </div>
 
 <!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above. Otherwise, if placed inside customscripts.js, the script runs before the sidebar code runs and the class never gets inserted.-->
-<script>$("li.active").parents('li').toggleClass("active");</script>
-
-
+<script>
+    $("li.active").parents('li').toggleClass("active");
+</script>

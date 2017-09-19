@@ -1,5 +1,5 @@
 ---
-title: DevOps with Node.js, Team Services, and Azure App Service
+title: DevOps for Node.js with Visual Studio Team Services and Azure
 layout: page
 sidebar: vsts
 permalink: /labs/vsts/nodejs/

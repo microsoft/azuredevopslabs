@@ -41,15 +41,15 @@ entries:
     folderitems:
 
     - title: Agile Planning and Portfolio Management with Team Foundation Server 2017
-      url: labs/tfs/agile
+      url: labs/tfs/agile/
       output: web, pdf
 
     - title: Building the Right Software - Generating Storyboards with Visual Studio 2017
-      url: labs/tfs/storyboarding
+      url: labs/tfs/storyboarding/
       output: web, pdf
 
     - title: Introduction to the Modern Requirements Suite4TFS & Team Foundation Server 2017
-      url: labs/tfs/smartword4tfs
+      url: labs/tfs/smartword4tfs/
       output: web, pdf
 
   - title: Develop
@@ -57,55 +57,55 @@ entries:
     folderitems:
 
     - title: Branching and Merging Visualization with Visual Studio Team Foundation Server 2017
-      url: labs/tfs/branchingandmerging
+      url: labs/tfs/branchingandmerging/
       output: web, pdf
 
     - title: Collaboration Experiences for Development Teams using Team Foundation Server 2017
-      url: labs/tfs/devteamcollaboration
+      url: labs/tfs/devteamcollaboration/
       output: web, pdf
 
     - title: Debugging with IntelliTrace in Visual Studio Enterprise 2017
-      url: labs/tfs/debugging
+      url: labs/tfs/debugging/
       output: web, pdf
     
     - title: Diagnosing Issues in Production with IntelliTrace and Visual Studio 2017
-      url: labs/tfs/intellitrace
+      url: labs/tfs/intellitrace/
       output: web, pdf
 
     - title: Developer Experience Enhancements in Visual Studio 2017
-      url: labs/tfs/devexp
+      url: labs/tfs/devexp/
       output: web, pdf
 
     - title: Generate Unit Tests with IntelliTest using Visual Studio Enterprise 2017
-      url: labs/tfs/intellitest
+      url: labs/tfs/intellitest/
       output: web, pdf
 
     - title: Live Unit Testing and Live Dependency Validation in Visual Studio 2017
-      url: /labs/tfs/liveunittesting
+      url: /labs/tfs/liveunittesting/
       output: web, pdf
 
     - title: Making Developers More Productive with Visual Studio Team Foundation Server 2017
-      url: labs/tfs/vsproductivity
+      url: labs/tfs/vsproductivity/
       output: web, pdf
 
     - title: SQL Prompt for Visual Studio Enterprise 2017
-      url: labs/tfs/sqlprompt
+      url: labs/tfs/sqlprompt/
       output: web, pdf
 
     - title: Unit Testing, Code Coverage, and Code Clone Analysis with Visual Studio 2017
-      url: labs/tfs/unittesting
+      url: labs/tfs/unittesting/
       output: web, pdf
 
     - title: Using Code Analysis with Visual Studio 2017 to Improve Code Quality
-      url: labs/tfs/codeanalysis
+      url: labs/tfs/codeanalysis/
       output: web, pdf
 
     - title: Version Controlling with Git using Team Foundation Server 2017
-      url: labs/tfs/git
+      url: labs/tfs/git/
       output: web, pdf
 
     - title: Working with EditorConfig in Visual Studio 2017
-      url: labs/tfs/editorconfig
+      url: labs/tfs/editorconfig/
       output: web, pdf
 
   - title: Build
@@ -113,15 +113,15 @@ entries:
 
     folderitems:
     - title: Managing Technical Debt with Team Foundation Server 2017 and SonarQube
-      url: labs/tfs/technicaldebt
+      url: labs/tfs/technicaldebt/
       output: web, pdf
 
     - title: Package Management in Team Foundation Server 2017
-      url: labs/tfs/packagemanagement
+      url: labs/tfs/packagemanagement/
       output: web, pdf
 
     - title: Team Foundation Build 2017
-      url: labs/tfs/build
+      url: labs/tfs/build/
       output: web, pdf
     
   - title: Test
@@ -129,23 +129,23 @@ entries:
 
     folderitems:
     - title: Exploratory Testing and Feedback Management with Team Foundation Server 2017
-      url: labs/tfs/exploratorytesting
+      url: labs/tfs/exploratorytesting/
       output: web, pdf
 
     - title: Generate Unit Tests with IntelliTest using Visual Studio Enterprise 2017
-      url: labs/tfs/intellitest
+      url: labs/tfs/intellitest/
       output: web, pdf
 
     - title: Test Planning and Management with Team Foundation Server 2017
-      url: labs/tfs/manualtesting
+      url: labs/tfs/manualtesting/
       output: web, pdf
 
     - title: UI Automation using Coded UI Tests with Visual Studio Enterprise 2017
-      url: labs/tfs/codedui
+      url: labs/tfs/codedui/
       output: web, pdf
 
     - title: Web Application Load and Performance Testing with Visual Studio 2017
-      url: labs/tfs/load
+      url: labs/tfs/load/
       output: web, pdf
 
 
@@ -154,11 +154,11 @@ entries:
 
     folderitems:
     - title: Embracing Continuous Delivery with Release Management for Visual Studio 2017
-      url: labs/tfs/releasemanagement
+      url: labs/tfs/releasemanagement/
       output: web, pdf
 
     - title: ReadyRoll- Develop and deploy databases in Visual Studio Enterprise 2017
-      url: labs/tfs/readyroll
+      url: labs/tfs/readyroll/
       output: web, pdf
 
   - title: Monitor
@@ -166,5 +166,5 @@ entries:
 
     folderitems:
     - title: Instrumenting ASP.NET with Application Insights in Visual Studio 2017
-      url: labs/tfs/appinsights
+      url: labs/tfs/appinsights/
       output: web, pdf
