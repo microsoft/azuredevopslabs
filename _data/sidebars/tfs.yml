@@ -157,14 +157,14 @@ entries:
       url: labs/tfs/releasemanagement/
       output: web, pdf
 
-    - title: ReadyRoll- Develop and deploy databases in Visual Studio Enterprise 2017
-      url: labs/tfs/readyroll/
-      output: web, pdf
-
     - title:  Installing Redgate Data Tools in VS 2017 and ReadyRoll Extension for Team Foundation Server
       url: labs/tfs/redgateinstall/
       output: web, pdf
       
+    - title: ReadyRoll- Develop and deploy databases in Visual Studio Enterprise 2017
+      url: labs/tfs/readyroll/
+      output: web, pdf
+
   - title: Monitor
     output: web, pdf
 
