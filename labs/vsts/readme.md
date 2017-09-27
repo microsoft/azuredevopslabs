@@ -60,7 +60,7 @@ Follow the link <a href="/labs/vsts/VSTSDemoGenerator">here</a> to know more
       <td>May 10, 2017</td>
    </tr>
       <tr>
-      <td><a href="azurecd/">Setting up Continuous Delivery workflow from the Azure Portal</a> <span class="label label-success">New</span></td>
+      <td><a href="azurecd/">Setting up Continuous Delivery workflow from the Azure Portal</a></td>
       <td>July 19, 2017</td>
    </tr>
    <tr>
@@ -92,12 +92,16 @@ Follow the link <a href="/labs/vsts/VSTSDemoGenerator">here</a> to know more
       <td>March 2, 2017</td>
    </tr>
    <tr>
-      <td><a href="teams/">Microsoft Teams Integration (Collaborate, Communicate and Celebrate)</a> <span class="label label-success">New</span></td>
+      <td><a href="teams/">Microsoft Teams Integration (Collaborate, Communicate and Celebrate)</a></td>
       <td>June 30, 2017</td>
    </tr>
    <tr>
-      <td><a href="powerbi/">Connect to Visual Studio Team Services with Power BI</a> <span class="label label-success">New</span></td>
+      <td><a href="powerbi/">Connect to Visual Studio Team Services with Power BI</a></td>
       <td>June 30, 2017</td>
+   </tr>
+   <tr>
+      <td><a href="nodejs/">DevOps for Node.js with Visual Studio Team Services and Azure</a></td> <span class="label label-success">New</span>
+      <td>September 14, 2017</td>
    </tr>
 </table>
 

@@ -340,7 +340,7 @@ Now the build definition is complete running it will result in the code being de
         {{ "{{#each articles"}}}}
         <dt>{{title}}</dt>
         <dd>{{text}}</dd>
-        {{/each}}
+        {{"{{/each"}}}}
     </dl>
     ````
 
