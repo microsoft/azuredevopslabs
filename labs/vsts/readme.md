@@ -100,7 +100,7 @@ Follow the link <a href="/labs/vsts/VSTSDemoGenerator">here</a> to know more
       <td>June 30, 2017</td>
    </tr>
    <tr>
-      <td><a href="nodejs/">DevOps for Node.js with Visual Studio Team Services and Azure</a></td> <span class="label label-success">New</span>
+      <td><a href="nodejs/">DevOps for Node.js with Visual Studio Team Services and Azure</a> <span class="label label-success">New</span></td>
       <td>September 14, 2017</td>
    </tr>
 </table>
