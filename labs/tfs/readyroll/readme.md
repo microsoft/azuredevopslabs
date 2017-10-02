@@ -49,8 +49,8 @@ In order to complete this lab you will need the Microsoft Visual Studio 2017 ALM
 
    <img src="images/image27.png" />
 
-4. Let's run a script for generating a few more databases. Copy the contents of the script from the path **C:\PartsUnlimitedDB** and paste it in a new query in your 
-   Sql Server Management Studio.
+
+4. Let's run a script for generating few more databases. In SQL Server Management Studio, open **C:\PartsUnlimitedDB\backupAndRestore.sql**.
 
    <img src="images/image28.png" width="624"/>
 
