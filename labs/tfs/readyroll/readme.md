@@ -49,6 +49,7 @@ In order to complete this lab you will need the Microsoft Visual Studio 2017 ALM
 
    <img src="images/image27.png" />
 
+
 4. Let's run a script for generating few more databases. In SQL Server Management Studio, open **C:\PartsUnlimitedDB\backupAndRestore.sql**.
 
    <img src="images/image28.png" width="624"/>
