@@ -1520,3 +1520,7 @@ button.custom-btn {
     -webkit-transition: all .2s ease-in-out 0s;
     border-radius: 4px 4px 0 0;
 }
+
+a.labmain:link {color:#000000;text-decoration:none;    padding-top: 20px;     padding-bottom: 5px;     font-size: 20px;     font-weight: bold; }
+a.labmain:visited {color:#000000; padding-top: 20px;     padding-bottom: 5px;     font-size: 20px;     font-weight: bold; }
+a.labmain:hover {color:#11b2E8; padding-top: 20px;     padding-bottom: 5px;     font-size: 20px;     font-weight: bold; }
