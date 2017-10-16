@@ -45,7 +45,7 @@ entries:
     output: web, pdf
     folderitems:
     
-    - title: Version Controlling with Git using Visual Studio Team Services
+    - title: Version Control with Git using Visual Studio Team Services
       url: labs/vsts/git/
       output: web, pdf
 
@@ -77,7 +77,7 @@ entries:
       url: labs/vsts/selenium/
       output: web, pdf
 
-    - title: Load and Performance Testing using Visual Stuido Team Services
+    - title: Load and Performance Testing using Visual Studio Team Services
       url: labs/vsts/load/
       output: web, pdf
 
