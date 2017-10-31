@@ -128,8 +128,8 @@ entries:
     output: web, pdf
 
     folderitems:
-    - title: Exploratory Testing and Feedback Management with Team Foundation Server 2017
-      url: labs/tfs/exploratorytesting/
+    - title: Unit Testing, Code Coverage, and Code Clone Analysis with Visual Studio 2017
+      url: labs/tfs/unittesting/
       output: web, pdf
 
     - title: Generate Unit Tests with IntelliTest using Visual Studio Enterprise 2017
@@ -142,6 +142,10 @@ entries:
 
     - title: Test Planning and Management with Team Foundation Server 2017
       url: labs/tfs/manualtesting/
+      output: web, pdf
+
+   - title: Exploratory Testing and Feedback Management with Team Foundation Server 2017
+      url: labs/tfs/exploratorytesting/
       output: web, pdf
 
     - title: UI Automation using Coded UI Tests with Visual Studio Enterprise 2017

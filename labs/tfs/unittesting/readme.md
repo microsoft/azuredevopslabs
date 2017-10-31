@@ -1,5 +1,5 @@
 ---
-title: Live Unit Testing, Code Coverage and Code Clone Analysis with Visual Studio 2017
+title: Unit Testing, Code Coverage and Code Clone Analysis with Visual Studio 2017
 layout: page    
 sidebar: tfs
 permalink: /labs/tfs/unittesting/
