@@ -233,45 +233,7 @@ The **Test** task that we have in the build defintion will need to be modified t
 
    <img src="images/42.png" width="624"/>
 
-7. You can fail tests by injecting the code into your project as shown below. Go to your Visual Studio. Expand **MyHealth.API.IntegrationTests** project. 
-
-8. Click on **GetDoctors.cs** and modify the assert of the unit test **Administrator_Can_GetDoctors**.
-
-   <img src="images/43.png" width="624"/>
-
-9. Commit and Sync the changes.
-
-   <img src="images/44.png" />
-
-10. Post build, review the summary for your test run results, including a comparison between the current build and the last build.
-
-    <img src="images/45.png" width="624"/>
-
-    <img src="images/46.png" width="624"/>
-
-11. The Test duration and failure graphs are also shown.
-
-    <img src="images/47.png"/>
-
-    <img src="images/53.png"/>
-
-11. You can create a bug from the failed tests so that it gives us the complete Stack Trace to reproduce the issue.
-
-    <img src="images/51.png" width="624"/>
-
-    <img src="images/52.png" width="624"/>
-
-12. You can also organize your test results using the group and outcome lists. You'll find changes in new, failed, and passed tests, how long these tests took to run, how long these tests have been failing, and more.
-    
-    <img src="images/48.png"/>
-
-    <img src="images/49.png"/>
-
-13. To start debugging a failed test, open it and review the resulting error and stack trace.
-
-    <img src="images/50.png"/>
-
-14. Revert back the changes done and commit so that you have a clean build summary with all passed tests.
+7. We now have an automated CI build with automated tests that wil run every time a change is committed and verify the changes are not breaking the code. The next lab will cover **Continuous Delivery (CD)** - the ability to release frequently and consistently into various environments including dev, staging, production.
    
 
 
