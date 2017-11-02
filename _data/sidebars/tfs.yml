@@ -144,7 +144,7 @@ entries:
       url: labs/tfs/manualtesting/
       output: web, pdf
 
-   - title: Exploratory Testing and Feedback Management with Team Foundation Server 2017
+    - title: Exploratory Testing and Feedback Management with Team Foundation Server 2017
       url: labs/tfs/exploratorytesting/
       output: web, pdf
 
@@ -155,7 +155,6 @@ entries:
     - title: Web Application Load and Performance Testing with Visual Studio 2017
       url: labs/tfs/load/
       output: web, pdf
-
 
   - title: Deploy
     output: web, pdf

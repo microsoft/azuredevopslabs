@@ -8,19 +8,22 @@ folder: /labs/vsts/continuousintegration/
 
 ## Overview
 
-Visual Studio Team Services simplifies <a href="https://www.visualstudio.com/en-us/docs/build/overview/">Continuous integration</a> for your applications regardless of what platform you are targeting, or what language you are using.
-
-- Build on Linux, Mac, and Windows.
-
-- Use multi-platform build agents for Android, iOS, Java, .NET, and other applications.
-
-- Seamless integration with work, test, code, build, and release.
-
-- Track your builds with real-time build status.
+Continuous integration (CI) is the process of integrating your code into a shared repository as frequently as possible. During code integration, a build break or a test failure can inform you, in a timely manner, of an error in your code.
 
 When many developers collaborate on complex software projects, it can be a long and unpredictable process to integrate different parts of code together. However, you can make this process more efficient and more reliable if you build and deploy your project continuously.
 
-Continuous integration (CI) is the process of integrating your code into a shared repository as frequently as possible. During code integration, a build break or a test failure can inform you, in a timely manner, of an error in your code.
+Visual Studio Team Services simplifies <a href="https://www.visualstudio.com/en-us/docs/build/overview/">Continuous integration</a> for your applications regardless of what platform you are targeting, or what language you are using. VSTS Team Build allows you to:
+
+- Build on Linux, Mac, and Windows
+
+- Use a private or a hosted (Azure) build agent
+
+- Use multi-platform build agents for Android, iOS, Java, .NET, and other applications
+
+- Seamless integration with work, test, code, build, and release
+
+- Track your builds with real-time build status
+
 
 ## Pre-requisites
 
@@ -35,11 +38,11 @@ In order to complete this lab you will need-
 If you are not using the VSTS Demo Data Generator, you can clone the code from this [GitHub repository](https://github.com/Microsoft/myhealthclinic2017)
 
 
-## Exercise 1: Build ASP.NET CORE
+## Exercise 1: Build ASP.NET Core
 
 ASP.NET Core is a lean and composable framework for building web and cloud applications. Here we'll show you how to automatically build the **HealthClinic ASP.NET Core** application.
 
-If you have provisioned your project using the demo generator, you will notice the build definition already existing in your project. You can follow the labs without adding or modifying the tasks to understand how a build pipeline works in VSTS. Otherwise, you can follow the steps to create a new one. 
+If you have provisioned your project using the demo generator, the build definition should have been automatically created for you. You can follow the labs without adding or modifying the tasks to understand how a build pipeline works in VSTS. Otherwise, you can follow the steps to create a new one. 
 
 ### Task1 : Creating New Build Definition
 
@@ -61,21 +64,24 @@ If you have provisioned your project using the demo generator, you will notice t
 
 6. The next tasks **Restore** needs no change. Leave it as it is. 
 
-7. The My Health Clinic web application depends on node components and additional libraries. You will need to add tasks to download and install these packages before it can be built. We will see how to add tasks to our build definition in the next task.
+7. Save the build defintion - we will name it as MHC.Web.CI 
+
+The My Health Clinic web application depends on node components and additional libraries. You will need to add tasks to download and install these packages before it can be built. We will see how to add tasks to our build definition in the next task.
 
 ### Task 2: Adding Build Tasks
 
-1. Select **Add Task** and then select **Package** to find tasks relating to the category. Select **npm** and click **Add**
+1. Select **Add Task** and then select **Package** to find tasks relating to the category. Select **npm** and click **Add**. Place it after the **Build** task
 
     <img src="images/5.png" />
-2.   Change the *working folder* to ***src/MyHealth.Web***. The project has the json file which the npm install command will require to know what packages needs to be installed.
+
+2. Change the *working folder* to ***src/MyHealth.Web***. The project has the json file which the npm install command will require to know what packages needs to be installed.
     <img src="images/6.png" width="624"/>
-   
-3. Next, you will need to run *bower* to install the web packages. Select **Add Task** and select the **Package** tab. You can run bower commands using the **Command Line/Shell Script** utility but a better way to do that would be is to use the **Bower** task. This task is not out-of-the-box and needs to be installed from the Marketplace.
+  
+    >  Next, you will need to run *bower* to install the web packages. You can run bower commands using the **Command Line/Shell Script** utility but a better way to do that would be is to use the **Bower** task. This task is not out-of-the-box and needs to be installed from the Marketplace.
+    
+From an another tab, navigate to the <a target ="blank" href="https://marketplace.visualstudio.com/items?itemName=touchify.vsts-bower">Bower extension page</a> on the Marketplace and install it. Close the tab when you are done to return back to the tab where you are editing the build definition. 
 
-4. From an another tab, navigate to the [Bower extension page](https://marketplace.visualstudio.com/items?itemName=touchify.vsts-bower) on the Marketplace and install it. Close the tab when you are done.
-
-5. Back in tab where you are editing the build definition. Save the build definition and refresh the page. You should see the **Bower** task under the *Package* tab. Select the task and click **Add**
+1. Save the build definition and refresh the page. You should see the **Bower** task under the *Package* tab. Select the task and click **Add**
 
     <img src="images/7.png" />
 
@@ -91,7 +97,7 @@ If you have provisioned your project using the demo generator, you will notice t
 
     <img src="images/9.png"/>
 
-9. The rest of the tasks do not need any change. You are ready to run the build. 11. You can make the builds to run as a *Continuous Integratoion* build so that it runs upon every check-in on the branch. We will see that later in the lab. For now, we will run it manually.
+9. The rest of the tasks do not need any change. You are ready to run the build. You can make the builds to run as a *Continuous Integration* build so that it runs upon every check-in on the branch. We will see that later in the lab. For now, we will run it manually.
 
 10. Select **Save & queue** to save the build definition and queue the build immediately. If you have already saved the build definition, select **Queue** from the menu
 
@@ -153,114 +159,69 @@ We will now see how you can deal with variables, setup different trigger mechani
    
 1. Click on the **Retention** tab. In most cases you don't need completed builds longer than a certain number of days. Your retention policies automatically delete old completed builds to minimize clutter.
    You modify these policies on the Retention tab of your build definition.
-<!-- 5. Click on the **Variables** tab. We can add new user-defined variables.
 
-   > - BuildConfiguration: debug
+1. Click on the **Variables** tab. We can add new user-defined variables.
+
+   > - BuildConfiguration: release 
    > - BuildPlatform: any cpu
    > - WebDir: src/MyHealth.Web
    > **Secret Variables:** We recommend that you make the variable **Secret** if it contains a password, keys, or some other kind of data that you need to avoid exposing.
 
    <img src="images/24.png" width="624"/>
 
-6. Now, modify the build steps to use the new variables. Click on the **Visual Studio Build** task from your build definition.
-   Update the task to use the new variables.
-
-   <img src="images/25.png" width="624"/>
-
-7. Click on the **gulp** task and use the **WebDir** variable in the working directory property.
+6. Now, modify the build steps to use the new variables. Click on the **npm** task and use the **WebDir** variable in the working directory property.
 
    <img src="images/26.png" width="624"/>
 
-8. At the beginning of the build process, the build agent downloads the files from your remote repository into a local sources directory. After you select the repository, you can specify options for how the files are downloaded.
 
-   > You can build code from different repos: Git, GitHub, Subversion and External Git.
-   > - **Repository:** Select a repository in your team project.
-   > - **Default branch:** Select the branch that you want to be the default when you manually queue this build.
-   
-   <img src="images/27.png" width="624"/>
-
-  -->
-
-
-
-## Exercise 4: Working with Artifacts
+## Exercise 3: Working with Artifacts
 
 An artifact is a deployable component of your application. Visual Studio Team Services has the ability to explicitly manage the content of artifacts during a build. 
 
-1.  Go to your **Build** Definition and edit. Click on **Add Task** ti add few tasks.
+1.  Go to the build definition and select the **Publish** task. Note that the task has two properties:
+    * **Publish Web Projects** - When selected, the task will try to find the web projects in the repo and run publish command on them. A presence of *wwconfig* file or *wwwroot* folder is used to identify web projects
+    * **Zip Published Projects** - When this option is selected, the folder created by the publish command is zipped
 
-2.  Add **Command Line** task from the **Utility** section and update its properties.
-    - Tool: dotnet
-    - Arguments: publish -c $(BuildConfiguration) $(WebDir)/project.json
+    <img src="images/33.png" width="624"/>
 
-    <img src="images/32.png" width="624"/>
-
-3. Add **Archive Files** task from the **Utility** section and update its properties to zip the project output.
-    - Root Folder: $(Build.SourcesDirectory)\$(WebDir)\bin\$(BuildConfiguration)\netcoreapp1.0\publish
-    - Prefix root folder name to archive paths: Uncheck this option.
-    - Archive File to create: $(Build.SourcesDirectory)\$(WebDir)\bin\webapp.zip
-
-   <img src="images/28.png" width="624"/>
-
-   <img src="images/31.png" width="624"/>
-
-4. Add **Publish Build Artifacts** task from the **Utility** section and update its properties to publish the web project.
-    - Path to publish: $(Build.SourcesDirectory)\$(WebDir)\bin\webapp.zip
-    - Artifact Name: WebApp
-    - Artifact Type: Server
-   
-   <img src="images/29.png" width="624"/>
-
-   <img src="images/30.png" width="624"/>
-
-5. Click **Save and Queue** build. 
-
-6. You should see the **Build Summary** once completed.
-
-   <img src="images/33.png" width="624"/>
-
-7. Click on **artifacts** to view the packaged content.
+1. Save and queue the  build. Once the build is completed, go to the build summary and select the **Artifacts** tab. Select the **Explore** button to view the published artifacts
 
    <img src="images/34.png" width="624"/>
-   
+
+1. Expand the drop folder and you should see **MyHealth.Web.zip** file created in the folder
    <img src="images/35.png" />
 
-8. The webapp artifact contains the application files ready to be deployed.
+8. We will need the zip file for deployment. We will cover that in the ***Continious Delivery*** lab
    
 
-## Exercise 5: Running Tests with Build
+## Exercise 4: Running Tests with Build
 
-Make sure your app still works after every commit and build using VSTS. Find problems earlier by running tests automatically with each build. When your build is done, review your test results to start resolving the problems that you find.
+It's always a good practice to run tests with your build to verify the integration. 
 
-Your build definition includes a test task that runs unit tests. For example, if you're building a Visual Studio solution in Team Services, your build definition includes a Visual Studio Test task. After your build starts, this task automatically runs all the unit tests in your solution on the same build machine.
-
->**Note**- HealthClinic uses ASP.NET core so you need to use the dotnet tool to run the tests.
+The ***MyHealth.API.IntegrationTests*** project contains the unit tests. 
 
 <img src="images/36.png" />
 
+If you open the My Health Clinic solution in Visual Studio, you will see the following test cases in the "Test Ecplorer" window.
+
 <img src="images/37.png" />
 
-1. Go to your build definition and edit. 
+The **Test** task that we have in the build defintion will need to be modified to point to the test projects in the repository. 
 
-2. Add **Command Line** task from the **Utility** section and update its properties.
-    - Tool: dotnet
-    - Arguments: test -xml TestResults.xml - the test command is defined in the unit test project.
-    - Working Folder: 
+1. Go to your build definition and select edit. 
 
-    > The dotnet test command is used to execute unit tests in a given project. Unit tests are class library projects that have dependencies on the unit test framework (for example, NUnit or xUnit) and the dotnet test runner for that unit testing framework. These are packaged as NuGet packages and    are restored as ordinary dependencies for the project.
-        
+2. Select the **Test** task. Change the *Project* and *Arguments* parameters as follows:
+    * **Projects** - test/MyHealth.API.IntegrationTests/*.csproj
+    * **Arguments** - --configuration $(BuildConfiguration) --logger "trx;LogFileName=TestResults.xml"
+
    <img src="images/38.png" width="624"/>
 
-   > Test projects include a test runner property in project.json using the "testRunner" node. This value should contain the name of the unit test framework.
-
-   <img src="images/39.png" width="624"/>
-
-3. Add **Publish Test Result** task from the **Test** section and update its properties.
-    - Test Result Format: XUnit
-    - Test Results Files: **/*TestResults.xml
+3. We will use the **Publish Test Result** task to publish the results of the tests to the Build summary section. Add the task and change the parameters as follows:
+    - Test Result Format: VSTest
+    - Test Results Files: **/TestResults.xml
     - Always run: true - to be sure that the results are published when the unit tests fail.
-
    <img src="images/40.png" width="624"/>
+   <img src="images/40-1.png" width="624"/>
 
 4. Save the build and queue.
 
@@ -268,7 +229,7 @@ Your build definition includes a test task that runs unit tests. For example, if
 
    <img src="images/41.png" width="624"/> 
 
-6. Click on **Test** to view detailed summary of Test Results.
+6. Click on **Test** to view detailed summary of Test Results. Make sure that you selected *All* for the **Outcome** filter
 
    <img src="images/42.png" width="624"/>
 
