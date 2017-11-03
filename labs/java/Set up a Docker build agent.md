@@ -1,5 +1,5 @@
 ---
-title: Setting up a Private Docker VSTS Build Agent 
+title: Setting up a Private VSTS Build Agent (Docker)
 layout: page
 sidebar: java
 permalink: /labs/java/vstsbuildagent.html

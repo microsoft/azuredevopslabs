@@ -32,8 +32,8 @@ entries:
       url: labs/java/creatingvstsaccount.html
       output: web, pdf
 
-    - title: Set up a Docker build agent
-      url: labs/java/builddocker.html
+    - title: Setting up a Docker build agent
+      url: labs/java/vstsbuildagent.html
       output: web, pdf
 
     - title: Cloning a VSTS Repo - IntelliJ
