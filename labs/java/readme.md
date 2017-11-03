@@ -32,6 +32,10 @@ Our partner NorthWest Cadence has built a virtual machine image that is pre-conf
 
 The image and the accompanying hand-on-labs is for technical audience. As such, familiarity with Visual Studio Team Services, Java and Linux operating system would be preferred although it is not a strict prerequisite.
 
+## Provisioning the Project using VSTSDemoGenerator
+
+You can use <a href="http://bit.ly/2lKuESe">Visual Studio Team Services Demo Generator</a> to provision a project with pre-defined data on to your VSTS account to follow the hands-on-labs.
+
 ## Hands on Labs
 
 The labs should be followed in the following order, though there are some equivalent labs that allow you a "choose your adventure" experience:
