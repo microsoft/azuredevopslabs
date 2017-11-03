@@ -28,4 +28,14 @@ In this session, we will present a scenario where Visual Studio Team Services (V
 
 ## Demo Steps
 
-- <a href="/labs/vsts/nodejs/express/">Express MVC Web App Scenario</a> - Contains the end-to-end demo steps. 
+- <a href="/labs/vsts/nodejs/express/">Express MVC Web App Scenario</a> - Contains the end-to-end demo steps.
+
+## Setting up the Environment
+
+Click on **Deploy to Azure** to create **Visual Studio 2017 Enterprise** Virtual Machine.
+
+<a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FMicrosoft%2Falmvm%2Fmaster%2Farmtemplates%2Fnodejs%2Ftemplate.json" target="_blank">
+    <img src="http://azuredeploy.net/deploybutton.png"/>
+    </a>
+
+    
