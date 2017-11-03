@@ -41,7 +41,7 @@ You can use <a href="http://bit.ly/2lKuESe">Visual Studio Team Services Demo Gen
 The labs should be followed in the following order, though there are some equivalent labs that allow you a "choose your adventure" experience:
 
 1. [Setting up a new project on VSTS](creatingvstsaccount.html)
-1. [Set up a Docker build agent](builddocker.html)
+1. [Set up a Docker build agent](vstsbuildagent.html)
 1. Either:
     1. [Cloning a VSTS Repo - IntelliJ](intellij-vsts.html) **OR**
     1. [Cloning a VSTS Repo - Eclipse](eclipse-vsts.html)
