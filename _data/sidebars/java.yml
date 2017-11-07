@@ -57,14 +57,14 @@ entries:
       output: web, pdf
 
     - title: Release Management with VSTS
-      url: labs/java/deplpoy.html
+      url: labs/java/deploy.html
       output: web, pdf 
 
     - title: End to End Workflow - IntelliJ
       url: labs/java/intellij.html
       output: web, pdf
 
-    - title: End to End Workflow - IntelliJ
+    - title: End to End Workflow - Eclipse
       url: labs/java/eclipsee2e.html
       output: web, pdf
 
