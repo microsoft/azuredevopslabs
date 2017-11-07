@@ -33,8 +33,42 @@ In order to complete this lab you will need-
 
 - If you are not using the VSTS Demo Data Generator, you can clone the code from here
 
+## Exercise 1: Creating Instrumentation Key
 
-## Exercise 1: Configure Application Insights
+1. Go to **Azure Portal** from <a href ="https://portal.azure.com">here</a>
+
+2. Click on **+ New** icon to create a new **Application Insights**.
+
+   <img src="images/new.png">
+
+3. Search for **Application Insights** in the search box.
+
+   <img src="images/search_app_insights.png">
+
+4. Click on **Create**.
+
+   <img src="images/create.png">
+
+5. Fill in the following details:-
+
+   - **Name**: Provide the name as **mhcapp**
+   - **Application Type**: Select **ASP.NET web application** as the type
+   - **Subscription**: Select your subscription
+   - **Resource Group**: Create a new resource group with the name **mhcapp**
+   - **Location**: Select desired location
+   
+   <br/>
+   <img src="images/fill_details.png">
+
+6. Browse to the resource group **mhcapp** which was created and click on the app insights resource.
+
+   <img src="images/resource_group.png">
+
+7. Copy the the **Instrumentation Key** from the top as shown below.
+
+   <img src="images/instrumentation_key.png">
+
+## Exercise 2: Configure Application Insights
 
 In this lab we have the existing **01_Demos_ASPNET5** .NET Core application, when creating all the infrastructure for the labs, we will need the newly created **Instrumentation key** to be configured in this project so Application Insights can work. 
 
@@ -107,7 +141,7 @@ In this lab we have the existing **01_Demos_ASPNET5** .NET Core application, whe
 
     <img src="images/13.png" />
 
-## Exercise 2: Viewing Telemetry
+## Exercise 3: Viewing Telemetry
 
 Now that we have configured the application to send telemetry data to Application Insights, let's review how to send the date and see the telemetry from Visual Studio and the Azure Portal.
 
@@ -153,7 +187,7 @@ Now that we have configured the application to send telemetry data to Applicatio
 
    <img src="images/23.png" width="624"/>
 
-## Exercise 3: Adding Application Insights to New Web Application
+## Exercise 4: Adding Application Insights to New Web Application
 
 Let's create a new web application and review how can we add Application Insights from the beginning.
 
