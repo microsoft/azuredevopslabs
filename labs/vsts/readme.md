@@ -18,7 +18,7 @@ In order to complete these labs you will need
 
     - If you are a Visual Studio Active Subscriber, you are entitled for a $50-$150 credit per month. You can refer to this [link](https://azure.microsoft.com/en-us/pricing/member-offers/msdn-benefits-details/) to find out more including how to activate and start using your monthly Azure credit.
 
-    - If you are not a Visual Studio Subscriber, you can sign up for the FREE [Visual Studio Dev Essentials](https://www.visualstudio.com/dev-essentials/) program and get $25 per month of Azure credits.
+    - If you are not a Visual Studio Subscriber, you can sign up for the FREE [Visual Studio Dev Essentials](https://www.visualstudio.com/dev-essentials/) program to create **Azure free account** (includes 1 yr of free services, $200 for 1st month).
 
 - **Visual Studio 2017** or higher version - You will need Visual Studio for some of the labs. You can use your own machine with VS 2017 installed, or download and use the latest [ALM VM](../tfs/),  or spin up a VM pre-installed with Visual Studio on [Azure](https://portal.azure.com). 
 
