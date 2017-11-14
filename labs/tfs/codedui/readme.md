@@ -79,7 +79,7 @@ In this exercise, you will learn how to use the Coded UI Test Builder to generat
 
    ![](images/006.png)
 
-1. Click the **Pause** button from the **Coded UI Test Builder** to pause the recording. This will give you an opportunity to review the steps recorded so far. Expand the list so you can see all of the steps. Note that some of the steps may be unnecessary, such as clicks or hovers over parts of the browser. You my delete these steps if you like.
+1. Click the **Pause** button from the **Coded UI Test Builder** to pause the recording. This will give you an opportunity to review the steps recorded so far. Expand the list so you can see all of the steps. Note that some of the steps may be unnecessary, such as clicks or hovers over parts of the browser. You may delete these steps if you like.
 
    ![](images/007.png)
 
