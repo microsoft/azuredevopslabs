@@ -74,7 +74,7 @@ Before you start:
 
    <img src="images/8.png"/>
 
->**Note:** You will need to provide your own information such as URLs, user name, password, etc for the endpoints created. You will need to provide them before you attempt to use them, say in build, release definitions, for example.
+   >**Note:** You will need to provide your own information such as URLs, user name, password, etc for the endpoints created. You will need to provide them before you attempt to use them, say in build, release definitions, for example.
 
 ## Hands-On-Labs     
 
