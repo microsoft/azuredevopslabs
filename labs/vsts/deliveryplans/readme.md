@@ -6,7 +6,7 @@ Delivery Plans provides an easier way to see work across teams and projects. Ava
 
 ## Pre-requisite
 
-- You will need to install the Delivery plan extension to your VSTS account in order to continue this lab
+- You will need to install the Delivery Plan extension to your VSTS account in order to continue this lab
 
 ## Adding Delivery Plan Extension to the VSTS account
 
@@ -26,7 +26,7 @@ Delivery Plans provides an easier way to see work across teams and projects. Ava
 
 ## Add a Plan
 
-1. From your VSTS account, go to **Plans** page that appears under **work hub**
+1. From your VSTS account, go to **Plans** page that appears under **Work** hub.
 
    <img src="images/1.png" />
 
