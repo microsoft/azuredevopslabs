@@ -1,510 +1,582 @@
 ---
-title: Version Controlling with Git using Team Foundation Server 2017
+title: Version Controlling with Git using Team Foundation Server 2018
 layout: page
 sidebar: tfs
 permalink: /labs/tfs/git/
 folder: /labs/tfs/git/
 ---
 
-Lab version:15.0.26228.0
+Lab version:15.4
 
-Last updated:3/2/2017
+Last updated:11/15/2017
 
+<a name="Overview"></a>
 ## Overview ##
 
-In this lab, you’ll learn about Git support in Team Foundation Server 2017 and Visual Studio 2017. Git is a distributed version control system. Git repositories can live locally (such as on a developer’s machine) and can now be hosted by Team Foundation Server. You will learn how to establish a local Git repository, which can easily be synchronized with a centralized Git repository in Team Foundation Server. In addition, you will learn about Git branching and merging support.
+In this lab, you'll learn about Git support in Team Foundation Server 2018 and Visual Studio 2017. Git is a distributed version control system with repositories that live both locally (such as on a developer's machine) and hosted on Team Foundation Server. And if you have any doubt about the scalability of Git, rest assured that TFS support for Git Virtual File System ([GVFS](http://www.gvfs.io/)) empowers you to virtually unlimited scale. Just ask the Windows team-they use it to manage over 300GB across 3.5 million files.
 
-## Pre-requisites ##
+<a name="Prerequisites"></a>
+### Prerequisites ###
 
 In order to complete this lab you will need the Visual Studio 2017 virtual machine provided by Microsoft. For more information on acquiring and using this virtual machine, please see [this blog post](http://aka.ms/almvm).
 
-## Exercise 1: Getting Started with Git ##
+<a name="About the Fabrikam Fiber Scenario"></a>
+### About the Fabrikam Fiber Scenario ###
 
-In this exercise, you will learn how to create, clone, and push commits to a Git repository with Team Foundation Server.
+This set of hands-on-labs uses a fictional company, Fabrikam Fiber, as a backdrop to the scenarios you are learning about. Fabrikam Fiber provides cable television and related services to the United States. They are growing rapidly and have embraced Windows Azure to scale their customer-facing web site directly to end-users to allow them to self-service tickets and track technicians. They also use an on-premises ASP.NET MVC application for their customer service representatives to administer customer orders.
 
-### Task 1: Creating a Git Repository ###
+In this set of hands-on labs, you will take part in a number of scenarios that involve the development and testing team at Fabrikam Fiber. The team, which consists of 8-10 people has decided to use Visual Studio application lifecycle management tools to manage their source code, run their builds, test their web sites, and plan and track the project.
+
+<a name="Exercise1"></a>
+## Exercise 1: Getting started with Git ##
+
+In this exercise, you will learn how to create, clone, and push commits to a Git repository in Team Foundation Server.
+
+<a name="Ex1Task1"></a>
+### Task 1: Creating a Git repository ###
 
 1. Log in as **Sachin Raj (VSALM\Sachin)**. All user passwords are **P2ssw0rd**.
 
 1. Launch **Visual Studio 2017** from the taskbar and open **Team Explorer**. You should now be connected to the **FabrikamFiber** team project. If you are not automatically connected to the **FabrikamFiber** project, click the **Manage Connections** and then double-click the **FabrikamFiber** project to do so.
 
-   ![](images/000.png)
+    ![](images/000.png)
 
-1. There are a few reasons why Fabrikam Fiber might want to use Git as their source control option within Team Foundation Server. One reason could be that they are collaborating with developers using a tool such as Xcode, which supports the Git protocol natively. Another reason could be that they have developers working offline (such as during a commute) who want to commit code locally when they are offline and check this code into Team Foundation Server when they get into the office. Microsoft now offers teams the ability to utilize Git without sacrificing the integrated application lifecycle management capabilities offered by Team Foundation Server. Visual Studio 2017 also provides developers with a great experience for working with any Git repository – whether it’s hosted by Team Foundation Server, a local repository, or another Git provider.
+1. There are a few reasons why Fabrikam Fiber might want to use Git as their source control option within Team Foundation Server. One reason could be that they are collaborating with developers using a tool such as Xcode, which supports the Git protocol natively. Another reason could be that they have developers working offline (such as during a commute) who want to commit code locally when they are offline and check this code into Team Foundation Server when they get into the office. Microsoft now offers teams the ability to utilize Git without sacrificing the integrated application lifecycle management capabilities offered by Team Foundation Server. Visual Studio 2017 also provides developers with a great experience for working with any Git repository - whether it's hosted by Team Foundation Server, a local repository, or another Git provider.
 
-1. From the **Home** dropdown menu, select **Projects and My Teams \| New Team Project**.
+1. From the **Home** dropdown menu, select **Projects and My Teams | New Team Project**.
 
-   ![](images/001.png)
+    ![](images/001.png)
 
-1. Name the new project **“FabrikamCommunity”** and click **Next**.
+1. Name the new project **"FabrikamCommunity"** and click **Next**.
 
-   ![](images/002.png)
+    ![](images/002.png)
 
 1. Select the **Scrum** process template and click **Next** to continue.
 
-   ![](images/003.png)
+    ![](images/003.png)
 
 1. Select the **Git** version control system and then click **Finish**.
 
-   ![](images/004.png)
+    ![](images/004.png)
 
 1. After the new Git team project has been created, click **Close** to return to Visual Studio.
 
-### Task 2: Clone Git Repository ###
+<a name="Ex1Task2"></a>
+### Task 2: Cloning a Git repository ###
 
 1. In **Team Explorer**, click **Clone this repository**.
 
-   ![](images/005.png)
+    ![](images/005.png)
 
 1. Accept the default endpoint and repository location and then click **Clone**.
 
-   ![](images/006.png)
+    ![](images/006.png)
 
 1. Click the **Manage Connections** button and double-click **FabrikamCommunity** to connect to the new team project.
 
-   ![](images/007.png)
+    ![](images/007.png)
 
-### Task 3: Commit Code and Link to Work Item ###
+<a name="Ex1Task3"></a>
+### Task 3: Committing code and linking to work items ###
 
 1. In **Team Explorer**, click the **Home** button, followed by **Settings**.
 
-   ![](images/008.png)
+    ![](images/008.png)
 
 1. Click **Global Settings** under **Git**.
 
-   ![](images/009.png)
+    ![](images/009.png)
 
 1. Enter an email address for Sachin Raj (**sachin@vsalm.local**) and then click **Update**.
 
-   ![](images/010.png)
+    ![](images/010.png)
 
 1. Click the **Home** button in **Team Explorer**.
 
-   ![](images/011.png)
+    ![](images/011.png)
 
-1. Create a new work item for the product backlog by selecting **Team \| New Work Item \| Product Backlog Item** from the main menu. This will launch the **New Product Backlog Item** form in TFS via your browser.
+1. Create a new work item for the product backlog by selecting **Team | New Work Item | Product Backlog Item** from the main menu. This will launch the **New Product Backlog Item** form in TFS via your browser.
 
-1. Enter a title of **“Create new web site”** and then click the **Save** button. Take note of the **ID** once the work item is saved.
+1. Enter a title of **"Create new web site"** and then click the **Save** button. Take note of the **ID** once the work item is saved.
 
-   ![](images/012.png)
+    ![](images/012.png)
 
-1. Return to Visual Studio. In **Team Explorer – Home**, click **New…** underneath the **Solutions** section.
+1. Return to Visual Studio. In **Team Explorer**, click **New...** underneath the **Solutions** section.
 
-   ![](images/013.png)
+    ![](images/013.png)
 
-1. In the **New Project** window, select the **Visual C# \| Web \| ASP.NET Web Application** template and click **OK**.
+1. In the **New Project** window, select the **Visual C# | Web | ASP.NET Web Application** template and click **OK**.
 
-   ![](images/014.png)
+    ![](images/014.png)
 
 1. Select the **MVC** template and click **OK**.
 
-   ![](images/015.png)
+    ![](images/015.png)
 
 1. Once the project has finished creating, click **Changes** in **Team Explorer** to see the list of files to commit.
 
-   ![](images/016.png)
+    ![](images/016.png)
 
 1. Scroll down the list of included changes to the end and note that .gitattributes and .gitignore files were automatically added to the project. The **.gitattributes** file contains various settings to control Git behavior whereas the **.gitignore** file specifies patterns and extensions to ignore when detecting changes.
 
-   ![](images/017.png)
+    ![](images/017.png)
 
-1. Enter a commit message of **“initial MVC site for work item #247”**. Typing **“#”** followed by the work item ID will automatically link the commit to the work item when pushed to the server. If the Product Backlog Item that you saved has a different ID, use that number instead.
+1. If you'd like to exclude a specific file (or type of file based on extension), you can right-click it here and select one of the options. This will update **.gitignore** for you. Don't do that now.
 
-   ![](images/018.png)
+    ![](images/018.png)
+
+1. Enter a commit message of **"initial MVC site for work item #247"**. Typing **"#"** followed by the work item ID will automatically link the commit to the work item when pushed to the server. If the Product Backlog Item that you saved has a different ID, use that number instead.
+
+    ![](images/019.png)
 
 1. Commit the changes by clicking **Commit All**.
 
-   ![](images/019.png)
+    ![](images/020.png)
 
-1. Let’s make a small change to the web site. In **Solution Explorer**, open **_Layout.cshtml** from the **Views\Shared** folder.
+1. Let's make a small change to the web site. In **Solution Explorer**, open **_Layout.cshtml** from the **Views\Shared** folder.
 
-   ![](images/020.png)
+    ![](images/021.png)
 
-1. Modify the end of the page title **“My ASP.NET Application”** to **“Community”** (around line **6**).
+1. Modify the end of the page title **"My ASP.NET Application"** to **"Community"** (around line **6**).
 
-   ![](images/021.png)
+    ![](images/022.png)
 
-1. In **Team Explorer – Changes**, enter a commit message and then click **Commit All**. **Save** changes to files when prompted.
+1. In **Team Explorer**, enter a commit message and then click **Commit All**. **Save** changes to files when prompted.
 
-   ![](images/022.png)
+    ![](images/023.png)
 
-### Task 4: Synchronize Commits with Server ###
+<a name="Ex1Task4"></a>
+### Task 4: Synchronizing commits with the server ###
 
 1. Navigate to the commits view by clicking **Sync**.
 
-   ![](images/023.png)
-
-1. The **Team Explorer – Synchronization** view shows both incoming and outgoing commits. However, since this project has not yet been published to source control, you only need to click **push**.
-
     ![](images/024.png)
 
-   ![](images/025.png)
+1. The **Synchronization** view in **Team Explorer** shows both incoming and outgoing commits. However, since this project has not yet been published to source control, you only need to click **push**.
 
-1. Finally, let’s take a quick peek at what these commits look like in the web portal. In **Team Explorer – Home**, click **Web Portal**.
+    ![](images/025.png)
 
-   ![](images/026.png)
+    ![](images/026.png)
 
-1. From the **Code** dropdown in the web portal, select **History**.
+1. Finally, let's take a quick peek at what these commits look like in the web portal. In **Team Explorer**, click **Web Portal**.
 
-   ![](images/027.png)
+    ![](images/027.png)
 
-1. Select the **Commits** tab. Note that the relative size of the commits (in terms of number of modified files) can be determined by viewing the size of the circles rendered to the left of the commits. Click the first (bottom) commit.
+1. From the **Code** dropdown in the web portal, select **Commits**.
 
     ![](images/028.png)
 
-    > **Note:** It may take a few moments after pushing a commit before the commit size indicators show up. You can refresh the page if necessary.
-
-1. Note that the **“Create new web site”** work item is linked to the commit. Click the link to open the work item.
-
-    > **Note:** It may take a few minutes before the work item gets linked to the commit. In the event that the link has not been made yet, go ahead and continue on with the rest of the lab.
+1. Click the first (bottom) commit.
 
     ![](images/029.png)
 
-   ![](images/030.png)
+1. Note that one work item has been linked to the commit based on the ID tag in the comment. Click it to expand and then select the **"Create new web site"** work item to view it in a new tab.
 
-1. Press **Esc** to dismiss the work item dialog.
+    ![](images/030.png)
 
-1. Expand the dropdown next to Sachin’s authored line item and click the **Sachin Raj pushed…** link
+1. Close the work item tab when satisfied.
 
-   ![](images/031.png)
+1. Click Sachin's name and click the **Pushed on** link.
+
+    ![](images/031.png)
 
 1. Although this version happens to be the latest, you would be able to explore or download the version at this particular commit by clicking one of the links.
 
-   ![](images/032.png)
+    ![](images/032.png)
 
-## Exercise 2: Git Branching and Merging ##
+<a name="Ex1Task5"></a>
+### Task 5: Tagging a release ###
 
-In this exercise, you will learn about Git branching and merging support in Visual Studio. In general, branching is often used to help switch development contexts and to isolate risk. Git branching is no different in that regard. Creating a Git branch is a lightweight (and therefore fast) operation, as you are simply creating a new reference to an existing commit. This is very different from Team Foundation Version Control (TFVC) branching where the entire source tree needs to be duplicated server-side. We will also take a quick look at the merging support for Git projects.
+1. While it may not seem like much, the product team has decided that this version of the site is exactly what's needed for v1.0. In order to mark it as such, navigate to the **Tags** tab and click **Create Tag**.
 
-### Task 1: Branching ###
+    ![](images/033.png)
 
-1. Return to Visual Studio and open **Team Explorer – Home**.
+1. Enter a **name** of **"v1.0"** and a **Description** of **"First release!"**. Click **Create**.
 
-1. Click **Branches**.
+    ![](images/034.png)
 
-   ![](images/033.png)
+1. You have now tagged the project at this release. You could tag commits for a variety of reasons, and TFS offers the flexibility to edit and delete them, as well as manage their permissions.
 
-1. Let’s say that we would like to create a new branch to do some development work on the web site. Right-click the **master** branch node and select **New Local Branch From**.
+    ![](images/035.png)
 
-   ![](images/034.png)
+<a name="Exercise2"></a>
+## Exercise 2: Git forking, branching, and merging ##
 
-1. Provide a name of **Development**, select the **master** branch, select the **Checkout Branch** option, and then click **Create Branch**.
+In this exercise, you will learn about Git forking, branching, and merging support in Visual Studio. In general, forking and branching are often used to help switch development contexts and to isolate risk. For example, a core project team might use Git forks to allow people from outside the team to contribute to the project without allowing them direct commit access. Since a Git fork is a server-side copy of the project, the experience is the same, except that it provides a layer of manageability for the owner. Git branching is a similar concept that allows someone to work within a project without committing to the master branch. For teams of 2-5, it is recommended that you use only branches (and not forks) for most scenarios. Creating a Git branch is a lightweight (and therefore fast) operation, as you are simply creating a new reference to an existing commit. This is very different from a Git fork or Team Foundation Version Control (TFVC) branching where the entire source tree needs to be duplicated server-side. We will also take a quick look at the merging support for Git projects.
 
-   ![](images/035.png)
+<a name="Ex2Task1"></a>
+### Task 1: Forking a repository ###
 
-1. Note that you are now connected to the new local branch, and that it has not been published to the server yet.
+1. From the navigation bar, click **Fork**. This fork will be intended for people outside the team to contribute changes to the project. For example, if someone wants to offer a bug fix, they would push it to a branch on this fork and request a pull. Someone from the team (Sachin, in this case) will monitor the pull requests and manage changes back through merges until they get to the primary project.
 
-   ![](images/036.png)
+    ![](images/036.png)
 
-1. In **Solution Explorer**, open the **HomeController.cs** file from the **Controllers** folder.
+1. Set the **Repository name** to **"FabrikamCommunity.External.fork"** and click **Fork**. Note that you could specify to include all branches, although only the **default branch** is usually forked.
 
-   ![](images/037.png)
+    ![](images/037.png)
 
-1. Modify the **About** method as shown in the following screenshot.
+1. Click **Clone** and click **Clone in Visual Studio**. This will speed up the process of getting a copy of the code into your development environment.
 
-   ![](images/038.png)
+    ![](images/038.png)
 
-1. Right-click somewhere in the whitespace of the editor and select **Source Control \| Commit**.
+1. Click **Allow** to allow Visual Studio to read the clone file.
 
-   ![](images/039.png)
+    ![](images/039.png)
 
-1. In **Team Explorer - Changes**, enter a commit message of “**dev version**” and click **Commit All**. Save the changes when prompted.
+1. Click **Clone** to clone the repo.
 
-   ![](images/040.png)
+    ![](images/040.png)
 
-1. At this point, the changes have been committed locally. In the **Team Explorer – Changes** window, click the **Development** branch link to quickly navigate to the **Team Explorer - Branches** view.
+1. After cloning has completed, locate **WebApplication1.sln** in **Solution Explorer** and double-click to open it. Note that while it's virtually identical to the solution committed to Git earlier, it's an entirely separate copy that's associated with a completely different repo.
 
-   ![](images/041.png)
+    ![](images/041.png)
 
-1. Double-click the **Master** branch and note that original version of the **HomeController.cs** file is shown in the code editor window.
+<a name="Ex2Task2"></a>
+### Task 2: Branching code ###
+
+1. In **Team Explorer**, click **Branches**.
 
     ![](images/042.png)
 
-   ![](images/043.png)
+1. Let's say that we would like to create a new branch to do some development work on the web site. Right-click the **master** branch node and select **New Local Branch From**.
 
-1. You don’t have to publish the branch to the server yet if you want to continue working locally. As you saw in the previous exercise, you can continue to work locally and add additional commits to the new branch. In **Team Explorer – Branches**, **right-click** the **Development** branch and select **View History**.
+    ![](images/043.png)
 
-   ![](images/044.png)
+1. Set the name to **"users/sachin/about"** and click **Create Branch**. Note that the name uses a branching naming convention so that **"sachin/about"** will be treated as a subsection of **"users"**.
 
-   ![](images/045.png)
+    ![](images/044.png)
 
-1. When you are ready, you can delete the branch, merge it back into your master branch, or push it to the server-side repository so that teammates can access it. Let’s go ahead and publish the branch by right-clicking the **Development** branch and selecting the **Push Branch** option.
+1. Double-click the **about** branch to make it the active branch.
 
-   ![](images/046.png)
+    ![](images/045.png)
 
-   ![](images/047.png)
+1. In **Solution Explorer**, open the **HomeController.cs** file from the **Controllers** folder.
 
-1. Open a **Remote Desktop** session to **VSALM**. Connect using user **Deniz Ercoskun (VSALM\Deniz)**. All user passwords are **P2ssw0rd**. Deniz is about to commit a change to the **master** branch before Sachin has a chance to merge his branch changes.
+    ![](images/046.png)
 
-1. Launch **Visual Studio** from the taskbar.
+1. Modify the **About** method as shown in the following screenshot.
 
-1. Connect to the **FabrikamCommunity** team project (using the **Manage Connections** button as before, and this time select **Manage Connections \| Connect to Team Project**).
+    ![](images/047.png)
 
-   ![](images/048.png)
+1. Right-click somewhere in the whitespace of the editor and select **Source Control | Commit**.
 
-1. Select the **FabrikamCommunity** team project and then click **Clone**.
+    ![](images/048.png)
 
-   ![](images/049.png)
+1. In **Team Explorer**, enter a commit message of "**Sachin version**" and click **Commit All**. Save the changes when prompted.
 
-1. **Double-click** the **MvcApplication1.sln** solution shown in **Solution Explorer**.
+    ![](images/049.png)
 
-   ![](images/050.png)
+1. At this point, the changes have been committed locally. Navigate to the **Branches** view.
 
-1. Modify the same **HomeController.cs** file that Sachin did, but this time change the text to be something different.
+    ![](images/050.png)
 
-   ![](images/051.png)
+1. Double-click the **Master** branch and note that original version of the **HomeController.cs** file is shown in the code editor window.
 
-1. As before, right-click within the whitespace of the code editor and select **Source Control \| Commit**.
+    ![](images/051.png)
 
-1. In **Team Explorer – Changes**, enter a commit message of “**Deniz version**” and then click **Commit All**. Save changes when prompted. Note that Deniz has committed changes to the master branch.
+    ![](images/052.png)
 
-   ![](images/052.png)
+1. You don't have to publish the branch to the server yet if you want to continue working locally. As you saw in the previous exercise, you can continue to work locally and add additional commits to the new branch. In **Team Explorer**, right-click the **about** branch and select **View History**.
 
-1. Click **Sync** from the commit response.
+    ![](images/053.png)
 
-   ![](images/053.png)
+    ![](images/054.png)
 
-1. Click **Sync** to execute the actual sync.
+1. When you are ready, you can delete the branch, merge it back into your master branch, or push it to the server-side repository so that teammates can access it. Let's go ahead and publish the branch by right-clicking the **about** branch and selecting the **Push Branch** option.
 
-   ![](images/054.png)
+    ![](images/055.png)
 
-1. Switch users back to **Sachin** by minimizing the remote desktop session.
+1. Open a **Remote Desktop** session to **VSALM**. Connect using user **Clemri Steyn (VSALM\Clemri)**. All user passwords are **P2ssw0rd**.
 
-### Task 2: Merging ###
+1. Launch **Internet Explorer** from the taskbar.
 
-1. From Sachin’s perspective, he has so far created a local branch based off the master, made a change to a file, and then published that branch. He would then like to go ahead and merge his **Development** branch back into the **master** branch.
+1. From the project dropdown, select **FabrikamFiberCollection**.
 
-1. In **Team Explorer – Branches**, select the **Merge** dropdown.
+    ![](images/056.png)
 
-   ![](images/055.png)
+1. Mouse over the **FabrikamCommunity** team and select **Code**.
 
-1. Select **Development** as the source and **Master** as the target. Click **Merge** to start the process.
+    ![](images/057.png)
 
-   ![](images/056.png)
+1. From the **FabrikamCommunity** repo dropdown, select **FabrikamCommunity.External.fork**.
 
-1. Note that the **Master** repository is currently selected and that **HomeController.cs** shows the **Development** version of the text. The merge was performed locally by updating the **Master** branch to point to the latest commit of the **Development** branch.
+    ![](images/058.png)
 
-   ![](images/057.png)
+1. Click the **Clone** button and follow the workflow from earlier to clone the project in Visual Studio.
 
-1. **Right-click** the **Master** branch in **Team Explorer – Branches** and select the **View History…** option.
+    ![](images/059.png)
 
-   ![](images/058.png)
+1. From **Solution Explorer**, double-click the **WebApplication1.sln** solution to open it.
 
-1. The history view should look identical to the one you saw earlier, except this time both the Development and Master branch designators (in red) point to the same commit.
+    ![](images/060.png)
 
-   ![](images/059.png)
-
-1. Still unaware of Deniz’s change that she pushed to the **Main** branch earlier, Sachin will now attempt to push his commit. Navigate to **Team Explorer – Synchronization** via the Team Explorer dropdown.
-
-   ![](images/060.png)
-
-1. Click **Sync** to attempt a pull and a push with the server.
+1. Modify the same **HomeController.cs** file that Sachin did, but this time change the text to be something different. Ordinarily Clemri would make this change in a branch like Sachin did, but for the purposes of this lab he will check directly into the **master** branch.
 
     ![](images/061.png)
 
+1. As before, right-click within the whitespace of the code editor and select **Source Control | Commit**.
+
+1. In **Team Explorer**, enter a commit message of "**Clemri version**" and then click **Commit All**. Save changes when prompted. Note that Clemri has committed changes to the master branch.
+
+    ![](images/062.png)
+
+1. Click **Sync** from the commit response.
+
+    ![](images/063.png)
+
+1. Click **Sync** to execute the actual sync.
+
+    ![](images/064.png)
+
+1. Switch users back to **Sachin** by minimizing the remote desktop session.
+
+<a name="Ex2Task3"></a>
+### Task 3: Merging changes in a repository ###
+
+1. From Sachin's perspective, he has so far created a local branch based off the master, made a change to a file, and then published that branch. He would then like to go ahead and merge his **about** branch back into the **master** branch.
+
+1. In **Team Explorer**, double-click the **master** branch to make it active.
+
+    ![](images/065.png)
+
+1. Expand the **Merge** option.
+
+    ![](images/066.png)
+
+1. Select the **about** branch as the source and click **Merge**.
+
+    ![](images/067.png)
+
+1. Note that the **master** repository is currently selected and that **HomeController.cs** shows the **about** version of the text. The merge was performed locally by updating the **master** branch to point to the latest commit of the **about** branch.
+
+    ![](images/068.png)
+
+1. Right-click the **master** branch in **Team Explorer** and select the **View History...** option.
+
+    ![](images/069.png)
+
+1. The history view now provides a visualization of how the current code came to be by the various branches and commits involved.
+
+    ![](images/070.png)
+
+1. Still unaware of Clemri's change pushed directly to the **master** branch earlier, Sachin will now attempt to push his commit. Navigate to the **Sync** view in **Team Explorer** via the navigation dropdown.
+
+    ![](images/071.png)
+
+1. Click **Sync** to attempt a pull and a push with the server.
+
+    ![](images/072.png)
+
     > **Note:** If you see a popup notifying that an open file has been changed externally, click **Yes** as this is expected.
 
-1. Visual Studio reports that we can’t push our commit yet due to a conflict. Click **Resolve the Conflicts**.
+1. Visual Studio reports that we can't push our commit yet due to a conflict. Click **Resolve the conflicts**.
 
-   ![](images/062.png)
+    ![](images/073.png)
 
-1. In the **Team Explorer – Resolve Conflicts** view, select **HomeController.cs** from the **Conflicts** section and click **Merge**.
+1. In the **Resolve Conflicts** view, select **HomeController.cs** from the **Conflicts** section and click **Merge**.
 
-   ![](images/063.png)
+    ![](images/074.png)
 
-1. The **Merge** window used for Git conflict resolution is very similar to the one used with Team Foundation Version Control. We will go ahead and assume that Sachin’s change is correct, so check the box shown in the top-right pane.
+1. The **Merge** window used for Git conflict resolution is very similar to the one used with Team Foundation Version Control. Go ahead and assume that Sachin's change is correct, so check the box shown in the top right pane.
 
-   ![](images/064.png)
+    ![](images/075.png)
 
 1. Click **Accept Merge**.
 
-   ![](images/065.png)
+    ![](images/076.png)
 
 1. Click **Commit Merge**.
 
-   ![](images/066.png)
+    ![](images/077.png)
 
-1. In the **Team Explorer – Changes** view, note that conflicts have been resolved but the changes still need to be committed. Enter a message and then click the **Commit All** dropdown and select **Commit All and Sync**.
+1. In the **Changes** view, note that conflicts have been resolved but the changes still need to be committed. Enter a message and then click the **Commit All** dropdown and select **Commit All and Sync**.
 
-   ![](images/067.png)
+    ![](images/078.png)
 
-1. Navigate to **Team Explorer – Home** and click **Web Portal**.
-
-   ![](images/068.png)
-
-1. Select the **Code \| History** from the navigation.
-
-   ![](images/069.png)
-
-1. Here we can see a full list of our commits so far.
-
-   ![](images/070.png)
-
-1. Select the **Branches** tab to view all branches published to the repository.
-
-   ![](images/071.png)
-
-### Task 3: Managing Security and Permissions ###
-
-1. Now let’s take a quick peek at managing security and permissions for Git repositories hosted in Team Foundation Server. Select the **FabrikamCommunity** dropdown and then **Manage Repositories**.
-
-   ![](images/072.png)
-
-1. The first thing to note is that you can easily create additional Git repositories within the same team project.
-
-   ![](images/073.png)
-
-1. Select the **FabrikamCommunity** repository node. You can manage repository level security here for your users and security groups.
-
-   ![](images/074.png)
-
-1. Select the **Master** branch node. Security level settings that affect only the currently selected branch can be made here, providing fine-grained control for your repository if needed.
-
-   ![](images/075.png)
-
-### Task 4: Branch Policies ###
-
-1. When you want people on your team to review code in a Git team project, you can use a pull request to review and merge the code. Pull requests enable developers working in topic branches to get feedback on their changes from other developers prior to submitting the code into the master branch. Any developer participating in the review can see the code changes, leave comments in the code, and give a "thumbs up" approval if they're satisfied with those changes.
-
-1. Although it is possible to utilize pull requests without any further configuration, let’s take a quick look at how to setup branch policies. Select the **Branch Policies** tab.
-
-   ![](images/076.png)
-
-1. You can make use of branch policies that effectively put in a gate that helps prevent inadvertent or low quality commits by automatically initiating a build, or by requiring code reviews by certain individuals. For example, you can use **Automatically build pull requests** to block pull requests if the pull request changes don’t build.
-
-   ![](images/077.png)
-
-1. You can also require that every pull request has at least one linked work item and block them if they don’t.
-
-   ![](images/078.png)
-
-1. Locate the **Code review requirements** section and select the option to **Require…reviewers per pull request** and set the minimum number of reviewers to **“1”**. Also check **allow users to approve their own changes**.
+1. Navigate to the **Home** view in **Team Explorer** and click **Web Portal**.
 
     ![](images/079.png)
 
+1. Select the **Code | Commits** from the navigation.
+
+    ![](images/080.png)
+
+1. Here we can see a full list of our commits so far, along with a handy visualization of the branches and commits.
+
+    ![](images/081.png)
+
+1. Select the **Branches** tab to view all branches published to the repository.
+
+    ![](images/082.png)
+
+<a name="Ex2Task4"></a>
+### Task 4: Managing repo security and permissions ###
+
+1. Now let's take a quick peek at managing security and permissions for Git repositories hosted in Team Foundation Server. From the **Repositories** dropdown select **Manage Repositories**.
+
+    ![](images/083.png)
+
+1. The first thing to note is that you can easily create additional Git repositories within the same team project.
+
+    ![](images/084.png)
+
+1. Select the **FabrikamCommunity.External.fork** repository node. You can manage repository level security here for your users and security groups.
+
+    ![](images/085.png)
+
+1. Select the **Master** branch node. Security level settings that affect only the currently selected branch can be made here, providing fine-grained control for your repository if needed.
+
+    ![](images/086.png)
+
+<a name="Ex2Task5"></a>
+### Task 5: Managing branch policies ###
+
+1. When you want people on your team to review code in a Git team project, you can use a pull request to review and merge the code. Pull requests enable developers working in topic branches to get feedback on their changes from other developers prior to submitting the code into the master branch. Any developer participating in the review can see the code changes, leave comments in the code, and give a "thumbs up" approval if they're satisfied with those changes.
+
+1. Although it is possible to utilize pull requests without any further configuration, let's take a quick look at how to setup branch policies. Select the **Branch Policies** tab.
+
+    ![](images/087.png)
+
+1. Since there could be issues from anyone committing directly to the **master** branch (like Clemri did earlier), Sachin has decided to put some policies in place to prevent certain problems. Check **Protect this branch** to get started.
+
+    ![](images/088.png)
+
+1. Check the option to **Require a minimum number of reviewers** and set the minimum number of reviewers to **"1"**. Also check **Allow users to approve their own changes** (to keep things simple in this lab).
+
+    ![](images/089.png)
+
     > **Note:** It is also possible to configure branch policy such that a build is triggered whenever updates are made to the master branch. You can even have the merge fail when the build fails. This is useful for teams looking to adopt continuous integration.
 
-1. It is also possible to require specific reviewers for specific portions of your code base. For example, let’s say that Sachin needs to sign off on all changes made to the ASP.NET MVC controllers. Click **Add a new path**.
+1. There are also options to check or (or even require) work item linking, comment resolution, and specific merge strategies.
 
-   ![](images/080.png)
+    ![](images/090.png)
 
-1. Leave the default options of **Enabled** and **Required** selected, set the **Path** to be everything in the **Controllers** folder at **“/WebApplication1/WebApplication1/Controllers/*”**, and then click **Add User**.
+1. You can make use of branch policies that effectively put in a gate that helps prevent inadvertent or low quality commits by automatically initiating a build, or by requiring code reviews by certain individuals. For example, you can use **Build validation** to block pull requests if the pull request changes don't build.
 
-   ![](images/081.png)
+    ![](images/091.png)
 
-1. Select **Sachin Raj** from the **Add Required Reviewers** window and then click **Save Changes**. Now Sachin must sign off on any pull requests that involve changes to code in this folder.
+1. It is also possible to require specific reviewers for specific portions of your code base. For example, let's say that Sachin now needs to sign off on all changes made to the ASP.NET MVC controllers. Click **Add automatic reviewers**.
 
-   ![](images/082.png)
+    ![](images/092.png)
+
+1. Add **Sachin** as a **Reviewer** and set **Paths** to cover everything in the **Controllers** folder at **"/WebApplication1/WebApplication1/Controllers/*"**. Click **Save**.
+
+    ![](images/093.png)
 
 1. Click **Save Changes** to update the master branch policies. Close the administration browser tab.
 
-   ![](images/083.png)
+    ![](images/094.png)
 
-### Task 5: Code Review and Merge using Pull Requests ###
+<a name="Ex2Task6"></a>
+### Task 6: Reviewing code and merging using pull requests ###
 
-1. Switch back to the **Deniz** RDP session.
+1. Switch back to the **Clemri** RDP session.
 
-1. Click **Sync** to ensure that the local copy of **master** matches what’s on the server. If you have **HomeController.cs** open in the editor, you may be prompted to reload it.
+1. Click **Sync** to ensure that the local copy of **master** matches what's on the server. If you have **HomeController.cs** open in the editor, you may be prompted to reload it. It will reflect Sachin's merged changes.
 
-   ![](images/084.png)
+    ![](images/095.png)
 
-1. Now let’s say that Deniz is working on the project and needs to update some of the controller code. To do this, she will first create a topic branch based on master. Navigate to **Team Explorer - Branches**, right-click the **master** branch, and select **New Local Branch From**…
+1. Now let's say that Clemri is working on the project and needs to update some of the controller code. To do this, he will first create a topic branch based on **master**. Navigate to **Branches** in **Team Explorer**. Right-click the **master** branch and select **New Local Branch From**...
 
-   ![](images/085.png)
+    ![](images/096.png)
 
-1. For the branch name, use something like **“users/deniz/controllerupdate”.** Use the default option to **Checkout branch**. Click **Create Branch**.
+1. For the branch name, use something like **"users/clemri/controllerupdate".** Use the default option to **Checkout branch**. Click **Create Branch**.
 
-   ![](images/086.png)
+    ![](images/097.png)
 
-1. The new branch will now appear using the folder structure you specified. This can make dealing with many branches much easier.
+1. As before, the new branch will appear using the folder structure you specified. This can make dealing with many branches much easier, especially when using multiple levels of categorization.
 
-   ![](images/087.png)
+    ![](images/098.png)
 
-1. Locate the **Development** branch under **remotes/origin** and right-click it to expose some additional branch management options. Note that you have the option to **cherry-pick** commits to apply to the current branch (but don’t do it now). Press **Esc** to dismiss the context menu.
+1. Locate the **users/sachin/about** branch under **remotes/origin**. Although we know that these changes were already merged into the local **master** branch we're working with, it would be very easy to pick specific commits from another branch to pull into the code here. Right-click the **about** branch to expose some additional branch management options. Note that you have the option to **cherry-pick** commits to apply to the current branch (but don't do it now). Press **Esc** to dismiss the context menu.
 
-   ![](images/088.png)
+    ![](images/099.png)
 
-1. Update the **About** method from **HomeController.cs** with a new message, something like **“Deniz’s enhanced description page.”**
+1. Update the **About** method from **HomeController.cs** with the new message **"Clemri's enhanced description page."**
 
-   ![](images/089.png)
+    ![](images/100.png)
 
-1. In **Team Explorer - Changes**, provide a commit message and then **Commit All**. Save the changes when prompted.
+1. In **Team Explorer**, provide a commit message and then click **Commit All**. Save the changes when prompted.
 
-   ![](images/090.png)
+    ![](images/101.png)
 
-1. In **Team Explorer - Branches**, right-click the topic branch and select **Push Branch**.
+1. In the **Branches** view of **Team Explorer**, right-click the topic branch and select **Push Branch**.
 
-   ![](images/091.png)
+    ![](images/102.png)
 
 1. After successfully publishing the branch, click **Create a pull request**. This will open the pull request on the portal via your browser.
 
-   ![](images/092.png)
+    ![](images/103.png)
 
-1. Click **New pull request** to create a pull request with the default options. Note that you could optionally add additional users to review or associate work items if desired.
+1. Make sure the **FabrikamCommunity.External.fork** branch is selected and click **Create** to create a pull request with the default options. Note that you could optionally add additional users to review or associate work items if desired.
 
-   ![](images/093.png)
+    ![](images/104.png)
 
-1. After the pull request is created, the pull request view shows what merge is proposed, the provided description, and a set of tabs listing associated files and commits. It also indicates that there are no merge conflicts detected, and that due to branch policy, **Sachin** must approve the changes in order to proceed.
+1. After the pull request is created, the pull request view shows what merge is proposed, the provided description, and a set of tabs listing associated files and commits. You can also see the required policies and reviewers.
 
-   ![](images/094.png)
+    ![](images/105.png)
 
-1. To demonstrate the branch policy in action, let’s say Deniz attempts to complete the pull request by herself. Click **Complete** and then **Complete Merge**.
+1. To demonstrate the branch policy in action, let's say Clemri attempts to complete the pull request by himself. Select **Set auto-complete | Complete**.
 
-   ![](images/095.png)
+    ![](images/106.png)
 
-1. Note that Deniz is notified that the request first needs to be approved by at least one reviewer first.
+1. Despite the reminder about policy violations, click **Complete merge** anyway to see what happens.
 
-   ![](images/096.png)
+    ![](images/107.png)
+
+1. As expected, Clemri is notified that the request first needs to be approved by at least one reviewer first.
+
+    ![](images/108.png)
 
 1. Click **Approve**, followed by **Complete**, and then **Complete Merge** in the dialog.
 
-   ![](images/097.png)
+    ![](images/109.png)
 
-1. Note that although we’ve fulfilled the reviewer quantity, we didn’t fulfill the requirement for **Sachin** to approve any changes to the controllers.
+1. Note that although we've fulfilled the reviewer quantity, we didn't fulfill the requirement for **Sachin** to approve any changes to the controllers.
 
-   ![](images/098.png)
+    ![](images/110.png)
 
 1. At this point in the workflow, **Sachin** needs to be notified of this pull request through some communication channel, whether that is in person, through Skype, through team room notification, or via TFS pull request alert. For the purposes of this short exercise, however, we will just skip to Sachin checking pull requests for this project.
 
 1. Switch users back to **Sachin** by minimizing the RDP window.
 
-1. In the web portal, navigate to the **FabrikamCommunity** project and select **Code \| Pull Requests** view.
+1. In the web portal, navigate to **Code | Pull Requests**.
 
-   ![](images/099.png)
+    ![](images/111.png)
 
-1. Select the link provided on the pull request from Deniz.
+1. Select the link provided on the pull request from Clemri.
 
-   ![](images/100.png)
+    ![](images/112.png)
 
-1. Sachin can now review all of the files and commits associated with the pull request and make a decision. It is also possible for Sachin to have a conversation with Deniz (and perhaps other reviewers) in order to help make the decision, or perhaps even request additional work be performed before the pull request will be approved.
+1. Sachin can now review all of the files and commits associated with the pull request and make a decision. It is also possible for Sachin to have a conversation with Clemri (and perhaps other reviewers) in order to help make the decision, or perhaps even request additional work be performed before the pull request will be approved.
 
-1. Let’s assume that Sachin is ready to approve the request as-is. There are a couple ways to do this. Select **Complete \| Auto-complete**.
+1. Let's assume that Sachin is ready to approve the request as-is. There are a couple ways to do this. Click **Set auto-complete**.
 
-   ![](images/101.png)
+    ![](images/113.png)
 
 1. The automatic completion feature enables you to approve pull request for automatic completion before all policies have been applied. For example, if a successful build is required before the PR can be completed, this step enables that to happen automatically after all policies have succeeded. You can also specify whether to delete the branch after merging and/or if you want to **squash changes**. Selecting the option to squash changes will merge all commits from the target branch into a single commit in order to help keep things a little tidier.
 
-   ![](images/102.png)
+    ![](images/114.png)
 
-1. In this case, we won’t use automatic completion, so click **Cancel**.
+1. In this case, we won't use automatic completion, so click **Cancel**.
 
-   ![](images/103.png)
+    ![](images/115.png)
 
-1. Before approving, provide some positive feedback to **Deniz**, such as **“This looks **good**. Way to go @<VSALM\Deniz> :-)”** and click **Comment**. Note that you can use markdown and emojis, as well as @ reference other users. You can also use # references for work items, such as “#47”. As you type, there is a live preview below so that you can see exactly what will show up.
+1. Before approving, provide some positive feedback to **Clemri**, such as **"This looks **good**. Way to go @<VSALM\Clemri> :-)"** and click **Comment**. Note that you can use markdown and emojis, as well as @ reference other users. You can also use # references for work items, such as "#47". As you type, there is a live preview below so that you can see exactly what will show up.
 
-   ![](images/104.png)
+    ![](images/116.png)
 
-1. Select **Approve \| Approve**.
+1. Select **Approve | Approve**.
 
-   ![](images/105.png)
+    ![](images/117.png)
 
 1. Now that all policies have been fulfilled, click **Complete** and **Complete merge** to finish the process.
 
-   ![](images/106.png)
+    ![](images/118.png)
 
-1. Switch users back to **Deniz**.
+1. Switch users back to **Clemri** by bringing up the RDP window.
 
-1. Refresh the pull request view and note that it has been updated as expected with the actions made by Sachin.
+1. Thanks to live updates, the pull request should already show the comment and that it was approved.
 
-    ![](images/107.png)
+    ![](images/119.png)
 

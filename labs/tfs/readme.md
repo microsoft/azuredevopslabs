@@ -21,7 +21,7 @@ The virtual machine contains the following pre-configured software:
 4.  Microsoft Office Professional Plus 2016 (Word, PowerPoint,
     Excel, Outlook)
 
-5.  Microsoft SQL Server Express 2016
+5.  Microsoft SQL Server Standard 2016
 
 6.  Sample users and data required to support hands-on-lab scripts which
     accompany this download.      
@@ -62,30 +62,33 @@ Lab Name</b>
 </td>
 </thead>
 <tr><td><a href="started/">Working with the Visual Studio 2017 ALM Virtual Machine</a></td></tr>
-<tr><td><a href="agile/">Agile Planning and Portfolio Management with Team Foundation Server 2017</a></td></tr>
-<tr><td><a href="branchingandmerging/">Branching and Merging Visualization with Visual Studio Team Foundation Server 2017</a></td></tr>
-<tr><td><a href="storyboarding/">Building the Right Software - Generating Storyboards and Collecting Stakeholder Feedback with Visual Studio 2017</a></td></tr>
-<tr><td><a href="devteamcollaboration/">Collaboration Experiences for Development Teams using Team Foundation Server 2017</a></td></tr>
-<tr><td><a href="devexp/">Developer experience enhancements in Visual Studio 2017</a>     <span class="label label-success">New</span></td></tr>
+<tr><td><a href="agile/">Agile Planning and Portfolio Management with Team Foundation Server 2018</a></td></tr>
+<tr><td><a href="agileworkitems/">Agile Work Item Management with Team Foundation Server 2018</a></td></tr>
+<tr><td><a href="armtemplates/">Authoring ARM Templates with Visual Studio     <span class="label label-success">New</span></a></td></tr>
+<tr><td><a href="aspnetazure/">Building ASP.NET apps in Azure with SQL Database     <span class="label label-success">New</span></a></td></tr>
+<tr><td><a href="devteamcollaboration/">Collaboration Experiences for Development Teams using Team Foundation Server 2018</a></td></tr>
+<tr><td><a href="snapshotdebugger/">Debugging with Snapshot Debugger</a>     <span class="label label-success">New</span></td></tr>
 <tr><td><a href="debugging/">Debugging with IntelliTrace using Visual Studio Enterprise 2017</a></td></tr>
+<tr><td><a href="devexp/">Developer experience enhancements in Visual Studio 2017</a>     <span class="label label-success">New</span></td></tr>
 <tr><td><a href="intellitrace/">Diagnosing Issues in Production with IntelliTrace and Visual Studio 2017</a></td></tr>
 <tr><td><a href="releasemanagement/">Embracing Continuous Delivery with Release Management for Visual Studio 2017</a></td></tr>
-<tr><td><a href="exploratorytesting/">Exploratory Testing and Feedback Management with Team Foundation Server 2017</a></td></tr>
+<tr><td><a href="exploratorytesting/">Exploratory Testing and Feedback Management with Team Foundation Server 2018</a></td></tr>
+<tr><td><a href="git/">Getting Started with Git using Team Foundation Server 2018</a></td></tr>
+<tr><td><a href="appinsights/">Instrumenting ASP.NET with Application Insights in Visual Studio 2017</a></td></tr>
 <tr><td><a href="intellitest/">Generate Unit Tests with IntelliTest using Visual Studio Enterprise 2017</a></td></tr>
 <tr><td><a href="smartword4tfs/">Introduction to the Modern Requirements Suite4TFS & Team Foundation Server 2017</a></td></tr>
-<tr><td><a href="appinsights/">Instrumenting ASP.NET with Application Insights in Visual Studio 2017</a></td></tr>
-<tr><td><a href="liveunittesting/">Live Unit Testing and Live Dependency Validation in Visual Studio 2017</a>    <span class="label label-success">New</span></td></tr>
-<tr><td><a href="vsproductivity/">Making Developers More Productive with Visual Studio Team Foundation Server 2017</a></td></tr>
+<tr><td><a href="livedependencyvalidation/">Live Dependency Validation with Visual Studio 2017</a>    <span class="label label-success">New</span></td></tr>
+<tr><td><a href="liveunittesting/">Live Unit Testing, Code Coverage and Code Clone Analysis with Visual Studio 2017</a>    <span class="label label-success">New</span></td></tr>
+<tr><td><a href="vsproductivity/">Making Developers More Productive with Visual Studio Team Foundation Server 2018</a></td></tr>
+<tr><td><a href="deliveryplans/">Managing Delivery Plans with Team Foundation Server 2018     <span class="label label-success">New</span></a></td></tr>
 <tr><td><a href="technicaldebt/">Managing Technical Debt with Team Foundation Server 2017 and SonarQube</a></td></tr>
-<tr><td><a href="packagemanagement/">Package Management in Team Foundation Server 2017</a>    <span class="label label-success">New</span></td></tr>
+<tr><td><a href="packagemanagement/">Package Management in Team Foundation Server 2018</a>    <span class="label label-success">New</span></td></tr>
 <tr><td><a href="readyroll/">ReadyRoll- Develop and deploy databases in Visual Studio Enterprise 2017</a>    <span class="label label-success">New</span></td></tr>
 <tr><td><a href="sqlprompt/">SQL Prompt for Visual Studio Enterprise 2017</a>    <span class="label label-success">New</span></td></tr>
 <tr><td><a href="build/">Team Foundation Build 2017</a></td></tr>
-<tr><td><a hrf="manualtesting/">Test Planning and Management with Team Foundation Server 2017</a></td></tr>
+<tr><td><a hrf="manualtesting/">Test Planning and Management with Team Foundation Server 2018</a></td></tr>
 <tr><td><a href="codedui/">UI Automation using Coded UI Tests with Visual Studio Enterprise 2017</a></td></tr>
-<tr><td><a href="unittesting/">Unit Testing, Code Coverage and Code Clone Analysis with Visual Studio 2017</a></td></tr>
 <tr><td><a href="codeanalysis/">Using Code Analysis with Visual Studio 2017 to Improve Code Quality</a></td></tr>
-<tr><td><a href="git/">Version Controlling with Git using Team Foundation Server 2017</a></td></tr>
 <tr><td><a href="load/">Web Application Load and Performance Testing with Visual Studio 2017</a></td></tr>
 <tr><td><a href="editorconfig/">Working with EditorConfig in Visual Studio 2017</a>    <span class="label label-success">New</span></td></tr>
 </table>
