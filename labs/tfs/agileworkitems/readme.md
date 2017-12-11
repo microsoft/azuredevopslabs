@@ -10,13 +10,11 @@ Lab version:15.4
 
 Last updated:12/5/2017
 
-<a name="Overview"></a>
-## Overview ##
+# Overview
 
 In this lab, you will learn about the agile planning and portfolio management tools and processes provided by Team Foundation Server 2018 and how they can help you quickly plan, manage, and track work across your entire team. You will explore the product backlog, sprint backlog, and task boards which can be used to track the flow of work during the course of an iteration. We will also take a look at how the tools have been enhanced in this release to scale for larger teams and organizations.
 
-<a name="Prerequisites"></a>
-### Prerequisites ###
+# Prerequisites
 
 In order to complete this lab you will need the Visual Studio 2017 virtual machine provided by Microsoft. For more information on acquiring and using this virtual machine, please see [this blog post](http://aka.ms/almvm).
 
@@ -24,22 +22,19 @@ In order to complete this lab you will need the Visual Studio 2017 virtual machi
 
 This lab requires you to use the default state of the virtual machine, before any modifications are made to work items or source in TFS. If you followed the "Working with the Visual Studio 2017 ALM Virtual Machine.docx" instructions you should already have a snapshot/checkpoint of the virtual machine before working with it for the first time. Apply this snapshot/checkpoint before starting this lab.
 
-<a name="About the Fabrikam Fiber Scenario"></a>
-### About the Fabrikam Fiber Scenario ###
+# About the Fabrikam Fiber Scenario
 
 This set of hands-on-labs uses a fictional company, Fabrikam Fiber, as a backdrop to the scenarios you are learning about. Fabrikam Fiber provides cable television and related services to the United States. They are growing rapidly and have embraced Windows Azure to scale their customer-facing web site directly to end-users to allow them to self-service tickets and track technicians. They also use an on-premises ASP.NET MVC application for their customer service representatives to administer customer orders.
 
 In this set of hands-on labs, you will take part in a number of scenarios that involve the development and testing team at Fabrikam Fiber. The team, which consists of 8-10 people has decided to use Visual Studio application lifecycle management tools to manage their source code, run their builds, test their web sites, and plan and track the project.
 
-<a name="Exercise1"></a>
-## Exercise 1: Flexibility of Agile Tools ##
+## Exercise 1: Flexibility of Agile Tools
 
 In the previous exercise, you learned about how Team Foundation Server can scale to meet the needs of larger teams working towards common goals. This approach requires that everybody in the organization uses the same team project within Team Foundation Server and therefore the same process template (which defines the way work items and their workflows are defined). Understanding this, Microsoft has begun to allow individual teams to customize certain aspects of the ways in which they manage and track their work without requiring centralized changes to their process templates.
 
 In this exercise, you will learn more about Kanban and how it contributes to the flexibility of the agile toolset. You will also learn about work item tagging. Both of these features can be utilized and customized independently by different teams, without making changes to the underlying process template.
 
-<a name="Ex1Task1"></a>
-### Task 1: Introduction to Kanban Tools ###
+### Task 1: Introduction to Kanban Tools
 
 1. The **Kanban** board was first introduced with Team Foundation Server 2012 Update 1. Kanban is a process improvement tool that can be used in an incremental fashion regardless of the current software development methodology that you are using. It assists with the throttling and tracking of work and illustrates the delivery of value over time to the project stakeholders. Each backlog has its own Kanban board, and each team has its own view of that.
 
@@ -215,11 +210,9 @@ In this exercise, you will learn more about Kanban and how it contributes to the
 
 1. Note that the bug card is now colored red to indicate its critical severity.
 
-<a name="![](images/040.png)"></a>
-### ![](images/040.png) ###
+   ![](images/040.png)
 
-<a name="Ex1Task2"></a>
-### Task 2: Kanban prioritization ###
+### Task 2: Kanban prioritization
 
 1. As cards are reordered within a column on the Kanban board, their relative priorities are adjusted in the backlog. Select the **Backlog** tab and notice that the "Technician can see service tickets..." work item is prioritized above "Technician can report busy/late...".
 
@@ -253,11 +246,9 @@ In this exercise, you will learn more about Kanban and how it contributes to the
 
 1. In addition to viewing by backlog items, you can also view the Kanban board relative to features. Click **Features** to switch the board mode. You can then click on the **Backlog Item** annotations to expand their checklists.
 
-<a name="![](images/048.png)"></a>
-### ![](images/048.png) ###
+   ![](images/048.png)
 
-<a name="Ex1Task3"></a>
-### Task 3: Work Item Tagging ###
+### Task 3: Work Item Tagging
 
 1. **Work item tagging** allows you to easily categorize, query and filter lists of work items.
 
@@ -305,13 +296,11 @@ In this exercise, you will learn more about Kanban and how it contributes to the
 
     > **Note:** Additional filtering can be done by selecting another tag (if there are any in this filtered subset). To remove the filter, simply click the Filter button once again.
 
-<a name="Exercise2"></a>
-## Exercise 2: Work Item Charting ##
+## Exercise 2: Work Item Charting
 
 In this exercise, we will demonstrate the work item charting capability of Team Foundation Server. Work item charting allows you to create visual chart representations of the data returned from TFS work item queries. This can be used to help better understand the state of projects.
 
-<a name="Ex2Task1"></a>
-### Task 1: Creating and Sharing Work Item Charts ###
+### Task 1: Creating and Sharing Work Item Charts
 
 1. Let's say that the Fabrikam Fiber management team would like to better understand how tasks are broken down by user. Navigate to the work item queries section of the web portal. Select **Work | Queries**.
 
@@ -393,11 +382,9 @@ In this exercise, we will demonstrate the work item charting capability of Team 
 
 1. Click the **Home** link to return to the leadership team's homepage and view the pinned chart.
 
-<a name="![](images/077.png)"></a>
-### ![](images/077.png) ###
+   ![](images/077.png)
 
-<a name="Ex2Task2"></a>
-### Task 2: Customizing the dashboard ###
+### Task 2: Customizing the dashboard
 
 1. You can also customize a dashboard by clicking the **Edit** button in the bottom right corner. This will switch the dashboard into **edit mode**. You need to be in edit mode in order to rearrange the dashboard or make configuration changes, which removes the risk of accidental edits during normal usage.
 
@@ -448,4 +435,3 @@ In this exercise, we will demonstrate the work item charting capability of Team 
     ![](images/089.png)
 
     **Note**: After completing this lab, the virtual machine will continue to run with the date & time that was set for demonstration purposes at the beginning of this lab. Don't forget to reset the virtual machine to its original snapshot/checkpoint after you complete this lab.
-
