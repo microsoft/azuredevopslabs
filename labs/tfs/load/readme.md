@@ -10,21 +10,17 @@ Lab version:15.4
 
 Last updated:11/3/2017
 
-<a name="Overview"></a>
-## Overview ##
+# Overview
 
 In this lab, you will be introduced to the [Web performance and Load testing capabilities](https://www.visualstudio.com/en-us/docs/test/performance-testing/getting-started/getting-started-with-performance-testing) provided in Visual Studio Enterprise 2017. You will walk through a scenario using a fictional online storefront where your goal is to model and analyze its performance with a number of simultaneous users. This will involve the definition of web performance tests that represent users browsing and ordering products, the definition of a load test based on the web performance tests, and finally the analysis of the load test results.
 
-<a name="Prerequisites"></a>
-### Prerequisites ###
+# Prerequisites
 
 In order to complete this lab you will need the Visual Studio 2017 virtual machine provided by Microsoft. For more information on acquiring and using this virtual machine, please see [this blog post](http://aka.ms/almvm).
 
-<a name="Exercise1"></a>
-## Exercise 1: Web Application Load and Performance Testing with Visual Studio 2017 ##
+## Exercise 1: Web Application Load and Performance Testing with Visual Studio 2017
 
-<a name="Ex1Task1"></a>
-### Task 1: Recording web tests ###
+### Task 1: Recording web tests
 
 1. Log in as **Sachin Raj (VSALM\Sachin)**. All user passwords are **P2ssw0rd**.
 
@@ -76,8 +72,7 @@ In order to complete this lab you will need the Visual Studio 2017 virtual machi
 
 1. Close the test results.
 
-<a name="Ex1Task2"></a>
-### Task 2: Working with web tests ###
+### Task 2: Working with web tests
 
 1. From **Solution Explorer**, open **WebTest1.webtest** if it's not already open.
 
@@ -97,11 +92,9 @@ In order to complete this lab you will need the Visual Studio 2017 virtual machi
 
 1. This dialog enables you to configure the **Think Time** to use for each step. **Think Time** simulates the time an end user would stop to read the current page, think about their next action, etc. Here you can manually set how much time to use for each step, as well as to set goals for response time on each navigation. Click **Cancel**.
 
-<a name="![](images/015.png)"></a>
-### ![](images/015.png) ###
+   ![](images/015.png)
 
-<a name="Ex1Task3"></a>
-### Task 3: Recording sophisticated tests ###
+### Task 3: Recording sophisticated tests
 
 1. Now let's add a more sophisticated test that involves completing a purchase. In **Solution Explorer**, right-click the **PULWebTest** project and select **Add | Web Performance Test**.
 
@@ -153,11 +146,9 @@ In order to complete this lab you will need the Visual Studio 2017 virtual machi
 
 1. In **Solution Explorer**, rename **WebTest1.webtest** to **Buying.webtest**.
 
-<a name="![](images/028.png)"></a>
-### ![](images/028.png) ###
+   ![](images/028.png)
 
-<a name="Ex1Task4"></a>
-### Task 4: Viewing web test result details ###
+### Task 4: Viewing web test result details
 
 1. As before, Visual Studio will process the recorded steps and then attempt to execute the test. However, note that it failed this time. Double-click the failed test run to view it.
 
@@ -189,11 +180,9 @@ In order to complete this lab you will need the Visual Studio 2017 virtual machi
 
 1. Since we're going to use this test as part of a load testing run, let's update the **Think Time** columns with some realistic numbers. Try to have the whole run use around 30 seconds of total think time. For example, you may want the obvious navigations to each have 5 seconds of think time while all the other requests have 0. Click **OK** when done.
 
-<a name="![](images/036.png)"></a>
-### ![](images/036.png) ###
+   ![](images/036.png)
 
-<a name="Ex1Task5"></a>
-### Task 5: Adding a load test ###
+### Task 5: Adding a load test
 
 1. Now that we have two tests that cover common scenarios, let's use them as part of a load test to see how the system might perform with a variety of simultaneous users. In **Solution Explorer**, right-click the **PULWebTest** project and select **Add | Load Test**.
 
@@ -257,11 +246,9 @@ In order to complete this lab you will need the Visual Studio 2017 virtual machi
 
 1. Select the **Data and Diagnostics** tab to view the available adapters. Options include those for **ASP.NET**, **Event Log**, **IntelliTrace**, **Network Emulation**, and more. No adapters are selected by default because many of them have a significant impact on the machines under test and can generate a large amount of data to be stored over the course of long load tests.
 
-<a name="![](images/052.png)"></a>
-### ![](images/052.png) ###
+   ![](images/052.png)
 
-<a name="Ex1Task6"></a>
-### Task 6: Configuring the test controller ###
+### Task 6: Configuring the test controller
 
 1. **LoadTest1.loadtest** should already be open. Click the **Manage Test Controllers** button.
 
@@ -277,8 +264,7 @@ In order to complete this lab you will need the Visual Studio 2017 virtual machi
 
 1. Press **Esc** to close the **Manage Test Controller** dialog.
 
-<a name="Ex1Task7"></a>
-### Task 7: Executing, monitoring, and reviewing load tests ###
+### Task 7: Executing, monitoring, and reviewing load tests
 
 1. Click the **Run Load Test** button to begin a load test.
 
@@ -306,11 +292,9 @@ In order to complete this lab you will need the Visual Studio 2017 virtual machi
 
 1. Click the **Pages/Sec** row from the **Key Indicators** section of the counter grid to highlight it in the graph. In the screenshot shown below we can see that the average number of pages per second over the duration of the test was **1.18** (this may vary for you).
 
-<a name="![](images/062.png)"></a>
-### ![](images/062.png) ###
+   ![](images/062.png)
 
-<a name="Ex1Task8"></a>
-### Task 8: Generating and viewing load test trend reports ###
+### Task 8: Generating and viewing load test trend reports
 
 1. Even though the initial load test may result in some numbers that don't seem to provide a wealth of information it does provide a good baseline and allow us to make relative measures between test runs to help measure performance impacts of code changes. For example, if we had seen a relatively high level of batch requests per second during our initial load tests, perhaps that could be addressed by adding in some additional caching, and then re-testing to make sure that the request per second goes down.
 
@@ -353,4 +337,3 @@ In order to complete this lab you will need the Visual Studio 2017 virtual machi
 1. Your report will vary based on the test results and number of tests. However, you can easily see how this would be very useful when analyzing how changes in the solution impacted performance. You would very easily be able to track a performance regression to a time (and build).
 
     ![](images/072.png)
-
