@@ -10,7 +10,7 @@ Lab version: 14.0.25123
 
 Last updated: 2/23/2017
 
-##  Overview
+# Overview
 
 The Modern Requirements Suite4TFS provides a collaborative platform
     based on ‘a single source of truth’, while automating each phase of
@@ -39,26 +39,21 @@ In order to complete this lab, you will need SmartWord4TFS,
     acquiring and using the Visual Studio 2017 virtual machine is
     available [here](http://aka.ms/VS15ALMVM).
 
-> **Important note:** This lab requires you to use the default state of the virtual
-    machine, before any modifications are made to work items or source
-    in TFS. If you followed the “Working With…” instructions, you should
-    have a snapshot/checkpoint of the virtual machine before working
-    with it for the first time. Apply the snapshots/checkpoints before
-    starting this lab.
+> **Important note:** This lab requires you to use the default state of the virtual machine, before any modifications are made to work items or source in TFS. If you followed the “Working With…” instructions, you should have a snapshot/checkpoint of the virtual machine before working with it for the first time. Apply the snapshots/checkpoints before starting this lab.
 
 ## Installing SmartWord4TFS
 
-1.  Go to the following link :
+1. Go to the following link :
     <http://www.modernrequirements.com/application-lifecycle-management-virtual-machine/>
 
-2.  Please submit the online registration form and click submit to
+2. Please submit the online registration form and click submit to
     download button (refer to the screen shot).
 
     <img src="media/130.png" width="538" height="358" />
 
-3.  You will be navigated to the download page.
+3. You will be navigated to the download page.
 
-4.  Click on **SmartWord4TFS web installer (590 KB)**.
+4. Click on **SmartWord4TFS web installer (590 KB)**.
 
     <img src="media/131.png" width="610" height="494" />
 
@@ -67,7 +62,7 @@ In order to complete this lab, you will need SmartWord4TFS,
     & [SmartWord4TFS installation
     guide](file:///C:\Users\bsavelson\AppData\Local\Microsoft\Windows\INetCache\Content.Outlook\VG0J8XD1\SmartWord4TFS%20installation%20guide)
 
-5.  Once the installer is downloaded click the installer to start the
+5. Once the installer is downloaded click the installer to start the
     installation process.
 
 **Installation Process**
@@ -122,17 +117,14 @@ The following screenshot shows the online installer.
 
     <img src="media/141.png" width="625" height="60" />
 
-    >The downloaded version provides 30 days trial period for users to
-    evaluate the application.
+    >The downloaded version provides 30 days trial period for users to evaluate the application.
 
 11. Click the **About** option in Ribbon Bar **Activate** Button (in the
     **About** window)
 
     <img src="media/142.png" width="623" height="245" />
 
-    >After submitting the online registration form you will receive the
-    License key for 6 month duration to the provided email address.
-    This software key is provided for non-production use only.  
+    >After submitting the online registration form you will receive the License key for 6 month duration to the provided email address. This software key is provided for non-production use only.
 
 12. Enter the provided Activation key and click **Activate** button.
 
@@ -159,12 +151,11 @@ Download the inteGREAT4TFS installer using the same process described above for 
 
    > Username = **Administrator**  
    > Password = **P2ssw0rd**
-   
+
    <img src="media/147.png" width="433" height="536" />
 
    > Application would be installed, even if incorrect windows
-    credentials entered during the installation, however user will not be
-    able to login into the application.
+    credentials entered during the installation, however user will not be able to login into the application.
 
 4. Configure **Redis Installation** options\* and click the
     **Install** Button.
@@ -238,9 +229,7 @@ create the template being used in this exercise.
    <img src="media/123.png" width="602" height="204" />
 
    >The ID of a Work Item is automatically given by the connected Team
-    Project, when that Work Item is first published on the Team Project
-    therefore we would leave that field for the time being as it would
-    be populated after the Work Item is published.
+    Project, when that Work Item is first published on the Team Project therefore we would leave that field for the time being as it would be populated after the Work Item is published.
 
 8. Similarly, enter values in all Smart Parts of the Work Items.
 
@@ -447,7 +436,6 @@ report with more freedom in what to include in the report
 
     <img src="media/95.png" width="561" height="288" />
 
-
 ## Appendix A: Designing a SmartWord4TFS Template using Wizard
 
 In this appendix you will learn how to create a new SmartWord4TFS
@@ -569,7 +557,6 @@ template from scratch using the Wizard.
 
 20. Save the document as a template (with .dotx extension) to complete
     the template creation process.
-
 
 ## Exercise 2: Traceability Management with inteGREAT4TFS
 
@@ -726,7 +713,6 @@ the Intersection Matrix.
 
    <img src="media/image4.png" width="23" height="22" />
 
-
 **Adding a Relationship**
 
 1. Invoke **Trace Analysis** module from Dashboard.
@@ -785,7 +771,6 @@ Deleting the relationship is very similar to how we created the relationship.
 
     <img src="media/image12.png" width="583" height="415" />
 
-
 ### Task 3: Editing Work Items
 
 In this exercise you will learn how to edit Work Item properties (apart
@@ -814,7 +799,6 @@ previous exercise).
    <img src="media/image16.png" width="550" height="273" />
 
 7. The changes to the Work Item are saved.
-
 
 ### Task 4: Creating a Horizontal Matrix
 
@@ -893,7 +877,6 @@ In this exercise you would learn how to export the desired type of matrix (Inter
     option as desired.
 
    <img src="media/image27.png" width="584" height="415" />
-
 
 ## Exercise 3: Baseline Management with inteGREAT4TFS
 
@@ -1193,8 +1176,7 @@ inteGREAT4TFS is an online application that complements
    <img src="media/78.png" width="391" height="299" />
 
    > **Reviewers** only provide comments while **Approvers** can
-    also approve/reject. A particular person can be either selected as a
-    reviewer or an approver.
+    also approve/reject. A particular person can be either selected as a reviewer or an approver.
 
 9. Enter appropriate subject for the review request.
 
@@ -1291,11 +1273,3 @@ using the Review Management module of inteGREAT4TFS.
     simple Accept/Reject then the response is finalized for all Work
     Items of the Review Request and the user does not have to repeat the
     whole process for each Work Item as mentioned in last step.
-
-
-
-
-
-
-
-
