@@ -10,21 +10,17 @@ Lab version:15.4
 
 Last updated:11/2/2017
 
-<a name="Overview"></a>
-## Overview ##
+# Overview
 
 [EditorConfig](http://editorconfig.org/) is an open source file format that helps developers configure and enforce formatting and code style conventions to achieve consistent, more readable codebases. EditorConfig files are easily checked into source control and are applied at repository and project levels. EditorConfig conventions override their equivalents in your personal settings, such that the conventions of the codebase take precedence over the individual developer. The simplicity and universality of EditorConfig make it an attractive choice for team-based code style settings in Visual Studio 2017.
 
-<a name="Prerequisites"></a>
-### Prerequisites ###
+# Prerequisites
 
 In order to complete this lab you will need the Visual Studio 2017 virtual machine provided by Microsoft. For more information on acquiring and using this virtual machine, please see [this blog post](http://aka.ms/almvm).
 
-<a name="Exercise1"></a>
-## Exercise 1: Working with EditorConfig ##
+## Exercise 1: Working with EditorConfig
 
-<a name="Ex1Task1"></a>
-### Task 1: Creating an EditorConfig file ###
+### Task 1: Creating an EditorConfig file
 
 1. Log in as **Sachin Raj (VSALM\Sachin)**. All user passwords are **P2ssw0rd**.
 
@@ -44,17 +40,17 @@ In order to complete this lab you will need the Visual Studio 2017 virtual machi
 
 1. When managing a file in the editor, Visual Studio will look for an **.editorconfig** file in the same folder (and recursive parent directories) to override configured settings in the IDE. Settings set in the directory closest to the file being edited take precedence. However, you can cut off the parent directory search by setting a **root** marker in the to-most **.editorconfig** file. This will be ours, so add the following line to the newly created **.editorconfig**.
 
-    ```
+    ```cmd
     root = true
     ```
 1. EditorConfig files are separated into sections based on patterns that match the files they apply to. For example, a filter like **"[*.cs,*.js,code.ts]"** would apply to any C# or JavaScript file, and files with the exact name **code.ts**. You may have as many sections as needed. For the purposes of this lab, we will just work with C# files, so add the following line to **.editorconfig**.
 
-    ```
+    ```cmd
     [*.cs]
     ```
 1. One of the most common uses of EditorConfig files is to enforce how indents are handled in code. Add these two lines to the file to specify that every indentation should cover two characters and that the indentations should only use spaces.
 
-    ```
+    ```cmd
     indent_style = space
     indent_size = 2
     ```
@@ -84,7 +80,7 @@ In order to complete this lab you will need the Visual Studio 2017 virtual machi
 
 1. For this folder we'll override some of the existing settings by setting the indents to use tabs and cover eight characters. We'll also set the width of tabs to four characters, which means each indentation will require two tabs. Add the lines below to the new **.editorconfig** file.
 
-    ```
+    ```cmd
     [*.cs]
     indent_style = tab
     indent_size = 8
@@ -98,7 +94,7 @@ In order to complete this lab you will need the Visual Studio 2017 virtual machi
 
 1. We can also configure the editor to automatically trim whitespace from the end of lines. While this isn't necessarily a huge issue for C# code, it is an important consideration for some other types of files.
 
-    ```
+    ```cmd
     trim_trailing_whitespace = true
     ```
 1. Save **.editorconfig**. Close and reopen **AccountController.cs**. Press **Ctrl+K** followed by **Ctrl+D** to apply the new formatting.
@@ -109,12 +105,11 @@ In order to complete this lab you will need the Visual Studio 2017 virtual machi
 
 1. Apply formatting via **Ctrl+K, Ctrl+D** and confirm the extra whitespace has been removed.
 
-<a name="Ex1Task2"></a>
-### Task 2: EditorConfig extensions for .NET code style ###
+### Task 2: EditorConfig extensions for .NET code style
 
 1. In addition to some native EditorConfig properties, Visual Studio extends the standard to support many key elements from **.NET Code Style**. For example, the setting csharp_new_line_before_open_brace can enforce whether braces whether or not braces are put on their own lines. Add the following line to **.editorconfig** to change the default behavior such that braces are always appended to the end of the line before them.
 
-    ```
+    ```cmd
     csharp_new_line_before_open_brace = none
     ```
 1. Save **.editorconfig**. Close and reopen **AccountController.cs**. Press **Ctrl+K** followed by **Ctrl+D** to apply the new formatting.
@@ -125,14 +120,14 @@ In order to complete this lab you will need the Visual Studio 2017 virtual machi
 
 1. You can also use settings to specify how rules are applied to code in the editor. For example, the setting **dotnet_style_predefined_type_for_locals_parameters_members** can be used to enforce whether native types (such as **string**) should be preferred over wrapped types (such as **System.String**). Add the following line to **.editorconfig**.
 
-    ```
+    ```cmd
     dotnet_style_predefined_type_for_locals_parameters_members = true:error
     ```
 1. Save **.editorconfig**. Close and reopen **AccountController.cs**. Press **Ctrl+K** followed by **Ctrl+D** to apply the new formatting.
 
 1. Add the following code just inside the **SignInManager get** method.
 
-    ```
+    ```cmd
     System.String s = "test";
     ```
 1. Note that Visual Studio puts a red squiggle beneath the **System.String** since the rule identifies it as an error. Alternatively, you could have indicated that it should be handled as a **warning** (green squiggle), a **suggestion** (gray dots), or as **none** (ignore). Mouse over the offending code to read the error.
@@ -148,4 +143,3 @@ In order to complete this lab you will need the Visual Studio 2017 virtual machi
     ![](images/013.png)
 
 1. Press **Ctrl+Shift+B** to build the project. There should be no errors now. For a more complete list of extensions you can use, please see [this file](https://github.com/dotnet/roslyn/blob/master/.editorconfig).
-
