@@ -22,13 +22,13 @@ In order to complete these labs you will need
 
 - **Visual Studio 2017** or higher version - You will need Visual Studio for some of the labs. You can use your own machine with VS 2017 installed, or download and use the latest [ALM VM](../tfs/),  or spin up a VM pre-installed with Visual Studio on [Azure](https://portal.azure.com). 
 
-- You can use the **[Visual Studio Team Services Demo Data generator](https://vstsdemogenerator.azurewebsites.net)** to provision a project with pre-defined data on to your Visual Studio Team Services account. Please use the ***My Health Clinic*** template to follow the hands-on-labs.
+## Setting up the VSTS Project
 
-If you are not using the VSTS Demo Data Generator, you can clone the code from this [GitHub repository](https://github.com/Microsoft/myhealthclinic2017)
+You can use the **[Visual Studio Team Services Demo Data generator](https://vstsdemogenerator.azurewebsites.net)** to provision a project with pre-defined data on to your Visual Studio Team Services account. Please use the **My Health Clinic** template to follow the hands-on-labs.
 
-## Working with VSTS DemoGenerator
+If you are not using the VSTS Demo Data Generator, you can clone the code from this [GitHub repository](https://github.com/Microsoft/myhealthclinic2017).
 
-Follow the link <a href="/labs/vsts/VSTSDemoGenerator">here</a> to know more
+To know more about **VSTSDemoGenerator**, click [here](/labs/vsts/vstsdemogenerator).
 
 ## Hands-On-Labs     
 
@@ -53,7 +53,7 @@ Follow the link <a href="/labs/vsts/VSTSDemoGenerator">here</a> to know more
    </tr>
    <tr>
       <td><a href="continuousintegration/">Continuous Integration using Visual Studio Team Services</a></td>
-      <td>April 22, 2017</td>
+      <td>November 2, 2017</td>
    </tr>
    <tr>
       <td><a href="continuousdeployment/">Continuous Deployment using Visual Studio Team Services</a></td>
@@ -61,7 +61,7 @@ Follow the link <a href="/labs/vsts/VSTSDemoGenerator">here</a> to know more
    </tr>
       <tr>
       <td><a href="azurecd/">Setting up Continuous Delivery workflow from the Azure Portal</a></td>
-      <td>July 19, 2017</td>
+      <td>July 20, 2017</td>
    </tr>
    <tr>
       <td><a href="testmanagement/">Test Planning and Management with Visual Studio Team Services</a></td>
@@ -77,11 +77,11 @@ Follow the link <a href="/labs/vsts/VSTSDemoGenerator">here</a> to know more
    </tr>
    <tr>
       <td><a href="load/">Load Testing using Visual Studio Team Services</a></td>
-      <td>March 6, 2017</td>
+      <td>October 16, 2017</td>
    </tr>
    <tr>
       <td><a href="monitor/">Monitoring Applications using Application Insights</a></td>
-      <td>March 6, 2017</td>
+      <td>November 7, 2017</td>
    </tr>
    <tr>
       <td><a href="appservice/">Deploy an ASP.NET Web App in Azure App Service from Visual Studio</a></td>
@@ -93,7 +93,7 @@ Follow the link <a href="/labs/vsts/VSTSDemoGenerator">here</a> to know more
    </tr>
    <tr>
       <td><a href="teams/">Microsoft Teams Integration (Collaborate, Communicate and Celebrate)</a></td>
-      <td>June 30, 2017</td>
+      <td>July 19, 2017</td>
    </tr>
    <tr>
       <td><a href="powerbi/">Connect to Visual Studio Team Services with Power BI</a></td>
@@ -101,7 +101,7 @@ Follow the link <a href="/labs/vsts/VSTSDemoGenerator">here</a> to know more
    </tr>
    <tr>
       <td><a href="nodejs/">DevOps for Node.js with Visual Studio Team Services and Azure</a></td>
-      <td>September 14, 2017</td>
+      <td>November 3, 2017</td>
    </tr>
 </table>
 

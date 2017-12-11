@@ -202,7 +202,7 @@ The ***MyHealth.API.IntegrationTests*** project contains the unit tests.
 
 <img src="images/36.png" />
 
-If you open the My Health Clinic solution in Visual Studio, you will see the following test cases in the "Test Ecplorer" window.
+If you open the My Health Clinic solution in Visual Studio, you will see the following test cases in the **Test Explorer** window.
 
 <img src="images/37.png" />
 
@@ -210,7 +210,7 @@ The **Test** task that we have in the build defintion will need to be modified t
 
 1. Go to your build definition and select edit. 
 
-2. Select the **Test** task. Change the *Project* and *Arguments* parameters as follows:
+2. Select the **Test** task. Change the **Project** and **Arguments** parameters as follows:
     * **Projects** - test/MyHealth.API.IntegrationTests/*.csproj
     * **Arguments** - --configuration $(BuildConfiguration) --logger "trx;LogFileName=TestResults.xml"
 
@@ -225,11 +225,11 @@ The **Test** task that we have in the build defintion will need to be modified t
 
 4. Save the build and queue.
 
-5. You should see the build summary showing along with Test results.
+5. You will see the build summary showing along with Test results.
 
    <img src="images/41.png" width="624"/> 
 
-6. Click on **Test** to view detailed summary of Test Results. Make sure that you selected *All* for the **Outcome** filter
+6. Click on **Test** to view detailed summary of Test Results. Make sure that you select **All** for the **Outcome** filter
 
    <img src="images/42.png" width="624"/>
 

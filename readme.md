@@ -3,8 +3,9 @@ layout: homepage
 title: Microsoft ALM VM
 keywords: ALM VM homepage
 tags: [overview]
-permalink: default.html
+permalink: /default.html
 comments: true
+redirect_from:
 summary: 
 ---
         
