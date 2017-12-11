@@ -10,37 +10,31 @@ Lab version:15.4
 
 Last updated:11/10/2017
 
-<a name="Overview"></a>
-## Overview ##
+# Overview
 
 In this lab, you will learn about the release management features available in Visual Studio 2017 and its suite of release and deployment tools that automate the deployment of applications across the desktop, server, and the cloud. The release management features of Visual Studio 2017 help development and operations teams integrate with Team Foundation Server to configure and automate complex deployments of their automated builds to target environments more easily. Development teams can also model their release processes and track approvals, sign-offs, and visualize their release status.
 
-<a name="Prerequisites"></a>
-### Prerequisites ###
+# Prerequisites
 
 In order to complete this lab you will need the Visual Studio 2017 virtual machine provided by Microsoft. For more information on acquiring and using this virtual machine, please see [this blog post](http://aka.ms/almvm).
 
 This lab also requires the latest version of **SQL Server Management Studio (SSMS)** in order to ensure compatibility with Azure. You can check for updates by launching SSMS and selecting **Tools | Check for Updates**.
 
-<a name="About the Fabrikam Fiber Scenario"></a>
-### About the Fabrikam Fiber Scenario ###
+# About the Fabrikam Fiber Scenario
 
 This set of hands-on-labs uses a fictional company, Fabrikam Fiber, as a backdrop to the scenarios you are learning about. Fabrikam Fiber provides cable television and related services to the United States. They are growing rapidly and have embraced Windows Azure to scale their customer-facing web site directly to end-users to allow them to self-service tickets and track technicians. They also use an on-premises ASP.NET MVC application for their customer service representatives to administer customer orders.
 
 In this set of hands-on labs, you will take part in a number of scenarios that involve the development and testing team at Fabrikam Fiber. The team, which consists of 8-10 people has decided to use Visual Studio application lifecycle management tools to manage their source code, run their builds, test their web sites, and plan and track the project.
 
-<a name="Prerequisite Exercise"></a>
-## Prerequisite Exercise ##
+## Prerequisite Exercise
 
 This lab requires a build agent to be installed and configured. These steps are covered in the first exercise of the **Introduction to Team Foundation Build** lab. Complete those steps first (required only once) and then continue here.
 
-<a name="Exercise1"></a>
-## Exercise 1: Continuous Release Management ##
+## Exercise 1: Continuous Release Management
 
 In this exercise, you will use the release management features of Team Foundation Server to produce an automated deployment solution. This exercise will take an existing enterprise application and automate its deployment to the development team's testing environment after each source check-in.
 
-<a name="Ex1Task1"></a>
-### Task 1: Configuring a continuous build ###
+### Task 1: Configuring a continuous build
 
 1. Log in as **Sachin Raj (VSALM\Sachin)**. All user passwords are **P2ssw0rd**.
 
@@ -86,7 +80,7 @@ In this exercise, you will use the release management features of Team Foundatio
 
 1. Select **Visual Studio 2017** as the **Visual Studio Version** and set the **MSBuild Arguments** to the text below.
 
-    ```
+    ```cmd
     /p:OutDir=$(build.stagingDirectory)
     ```
     ![](images/009.png)
@@ -107,7 +101,7 @@ In this exercise, you will use the release management features of Team Foundatio
 
 1. Navigate to the path below to open a shared layout file used to present a consistent look and feel for the site.
 
-    ```
+    ```cmd
     $/FabrikamFiber/Dev/FabrikamFiber.CallCenter/FabrikamFiber.Web/Views/Shared/_Layout.cshtml
     ```
     ![](images/013.png)
@@ -134,8 +128,7 @@ In this exercise, you will use the release management features of Team Foundatio
 
 1. You don't need to wait for the build to complete to move on to the next step.
 
-<a name="Ex1Task2"></a>
-### Task 2: Creating a continuous release ###
+### Task 2: Creating a continuous release
 
 1. Now that there is an automatic build that occurs when changes are checked in, it's time to set up a continuous release so that this new build can make its way out to stakeholders. Right-click the **Release** tab and select **Open in new tab**. You should now have three tabs open: **Code**, **Build**, and **Release**. Switch to the **Release** tab.
 
@@ -195,12 +188,12 @@ In this exercise, you will use the release management features of Team Foundatio
 
 1. There are three key settings for the **Copy Files** task. First, set **Source Folder** to the path below (this is a single line).
 
-    ```
+    ```cmd
     $(System.DefaultWorkingDirectory)/Fabrikam Development CI/drop/_PublishedWebSites/FabrikamFiber.Web
     ```
 1. Next, set **Target Folder** to the path below.
 
-    ```
+    ```cmd
     c:\FabrikamRM\WebSite\DEV
     ```
 1. Finally, expand **Advanced** and check **Overwrite** to indicate that it's okay to overwrite existing files at the destination.
@@ -247,13 +240,11 @@ In this exercise, you will use the release management features of Team Foundatio
 
     ![](images/041.png)
 
-<a name="Exercise2"></a>
-## Exercise 2: Gated Releases ##
+## Exercise 2: Gated Releases
 
 While automated releases are great, sometimes you want to gate their progress by requiring user approval. In this exercise, you will add a second environment to the release process for QA and user acceptance testing. In this scenario, you will allow the release to reach the QA site, but only if it successfully deploys to Dev. Once it's available on QA, it won't be considered "success" until approved manually. Note that it's just as easy to also (or alternatively) have this human approval gate prior to the deployment.
 
-<a name="Ex2Task1"></a>
-### Task 1: Adding a QA environment ###
+### Task 1: Adding a QA environment
 
 1. Return to the tab with all the releases (probably the third).
 
@@ -327,13 +318,11 @@ While automated releases are great, sometimes you want to gate their progress by
 
     ![](images/058.png)
 
-<a name="Exercise3"></a>
-## Exercise 3: Releasing To Azure ##
+## Exercise 3: Releasing To Azure
 
 The release management tools are incredibly flexible. Not only can you automate virtually anything, you can even leverage some of the higher-lever tasks to easily perform complex processes, such as deploying to an Azure web site.
 
-<a name="Ex3Task1"></a>
-### Task 1: Creating an Azure Web site and database ###
+### Task 1: Creating an Azure Web site and database
 
 1. Create an Azure account at [http://azure.com](http://azure.com/) if you don't already have one.
 
@@ -399,7 +388,7 @@ The release management tools are incredibly flexible. Not only can you automate 
 
 1. On this blade you can configure settings for your app, such as connection strings. Locate the **Connection strings** section and add a new entry with the key **"FabrikamFiber-Express"** and the value pasted from the clipboard. You'll need to locate the "{your_username}" and "{your_password}" sections and replace them (including braces) with the actual SQL credentials entered earlier. Press **Enter** to complete.
 
-    ```
+    ```cmd
     Server=tcp:fabrikam-johndoe.database.windows.net,1433;Initial Catalog=fabrikam;Persist Security Info=False;User ID={your_username};Password={your_password};MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;
     ```
     ![](images/072.png)
@@ -438,8 +427,7 @@ The release management tools are incredibly flexible. Not only can you automate 
 
     ![](images/080.png)
 
-<a name="Ex3Task2"></a>
-### Task 2: Configuring the build to produce a Web Deploy package ###
+### Task 2: Configuring the build to produce a Web Deploy package
 
 1. Return to the browser tabs open to the builds section of the portal.
 
@@ -449,15 +437,14 @@ The release management tools are incredibly flexible. Not only can you automate 
 
 1. Select the **Build Solution** step and add the following arguments after the existing arguments. Be sure to include a space before adding the new arguments.
 
-    ```
+    ```cmd
     /p:DeployOnBuild=true /p:WebPublishMethod=Package /p:PackageAsSingleFile=true /p:SkipInvalidConfigurations=true
     ```
     ![](images/082.png)
 
 1. **Save** the build definition.
 
-<a name="Ex3Task3"></a>
-### Task 3: Creating a release environment for Azure ###
+### Task 3: Creating a release environment for Azure
 
 1. Return to the **Releases** tab.
 
@@ -549,19 +536,18 @@ The release management tools are incredibly flexible. Not only can you automate 
 
 1. Set the **Web Deploy Package** to the path below. Note that you could also specify additional arguments, such as a connection string, as part of this workflow if required.
 
-    ```
+    ```cmd
     $(System.DefaultWorkingDirectory)/Fabrikam Development CI/drop/_PublishedWebsites/FabrikamFiber.Web_Package/FabrikamFiber.Web.zip
     ```
     ![](images/103.png)
 
 1. **Save** the release definition.
 
-<a name="Ex3Task4"></a>
-### Task 4: Checking in a change to kick off the release workflow ###
+### Task 4: Checking in a change to kick off the release workflow
 
 1. Return to the code browser tab and locate the path below.
 
-    ```
+    ```cmd
     $/FabrikamFiber/Dev/FabrikamFiber.CallCenter/FabrikamFiber.Web/Global.asax.cs
     ```
 1. Click the **Edit** button and comment out the **Database.SetInitializer** call in **Application_Start**. This won't work properly in Azure, so it needs to be commented out. It doesn't matter since the DB was already set up manually.
@@ -590,8 +576,7 @@ The release management tools are incredibly flexible. Not only can you automate 
 
     ![](images/109.png)
 
-<a name="Ex3Task5"></a>
-### Task 5: Deploying to Azure from Visual Studio ###
+### Task 5: Deploying to Azure from Visual Studio
 
 1. While all of the automation available in **Team Foundation Server** provides a great "continuous integration, continuous deployment" (CICD) experience, sometimes you may still want to manually deploy a build directly from Visual Studio. And thanks to tight integration between Visual Studio and Azure, it's really easy to do.
 
@@ -641,11 +626,9 @@ The release management tools are incredibly flexible. Not only can you automate 
 
 1. Upon completion, the integrated browser will open to the public URL. Note the new version number, which confirms the deployment was successful.
 
-<a name="![](images/120.png)"></a>
-### ![](images/120.png) ###
+   ![](images/120.png)
 
-<a name="Ex3Task6"></a>
-### Task 6: Working with deployment slots ###
+### Task 6: Working with deployment slots
 
 1. Azure App Services offer **deployment slots**, which are parallel targets for application deployment. The most common scenario for using a deployment slot is to have a staging environment for your application to run against productions services, but without replacing the current production application. If the staging deployment passes review, it can immediately be "swapped" in as the production slot with the click of a button. As an additional benefit, the swap can be quickly reversed in the event an issue is uncovered with the new build.
 
@@ -728,4 +711,3 @@ The release management tools are incredibly flexible. Not only can you automate 
     ![](images/139.png)
 
 1. It's important to note that while we deployed to the staging slot using Visual Studio, you could have just as easily set up CICD in TFS to deploy to the staging slot as well. There are even tasks to automate the swapping of slots, so you could set up everything you need in the release definition.
-
