@@ -8,7 +8,7 @@ folder: /labs/tfs/started/
 
 ## Overview
 
-The Microsoft® Visual Studio® 2017 Application Lifecycle Management
+The Microsoft® Visual Studio® 2018 Application Lifecycle Management
 Virtual Machine is a single virtual machine image that contains fully
 installed and configured copies of the software listed below. This
 virtual machine requires Hyper-V, and can be used with Windows Server
@@ -22,9 +22,9 @@ The virtual machine contains the following pre-configured software:
 
 1.  Microsoft Windows Server 2016 Standard Evaluation
 
-2.  Microsoft Visual Studio Enterprise 2017
+2.  Microsoft Visual Studio Enterprise 2017 (build number 15.5)
 
-3.  Microsoft Visual Studio Team Foundation Server 2017
+3.  Microsoft Visual Studio Team Foundation Server 2018
 
 4.  Microsoft Office Professional Plus 2016 (Word, PowerPoint,
     Excel, Outlook)
@@ -74,7 +74,7 @@ management capabilities of Visual Studio 2017, as well as application
 lifecycle management features which have been introduced since Visual
 Studio 2010.
 
-## Recommend System Configuration
+## Recommended System Configuration
 
 You will want to provide as much RAM as possible to this virtual
 machine. A minimum of 8GB is suggested. But you should not allocate all

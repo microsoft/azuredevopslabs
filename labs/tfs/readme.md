@@ -8,15 +8,16 @@ folder: /labs/tfs/
 ---
 
 ## Overview
-The Microsoft Visual Studio ALM VM and the accompanying hands-on-labs are now updated to Visual Studio and Team Foundation Server 2017. 
+
+The Microsoft Visual Studio ALM VM and the accompanying hands-on-labs are now updated to Visual Studio and Team Foundation Server 2018. 
 
 The virtual machine contains the following pre-configured software:
 
 1.  Microsoft Windows Server 2016 Standard Evaluation
 
-2.  Microsoft Visual Studio Enterprise 2017
+2.  Microsoft Visual Studio Enterprise 2017 (build number 15.5)
 
-3.  Microsoft Visual Studio Team Foundation Server 2017
+3.  Microsoft Visual Studio Team Foundation Server 2018
 
 4.  Microsoft Office Professional Plus 2016 (Word, PowerPoint,
     Excel, Outlook)
@@ -49,7 +50,7 @@ The size of the download is about 18 GB. It is recommended that you use a utilit
 <img src="media/fdm.png" />
 
 
->There are quite a number of important instructions on how to use the VM including activating the VM, taking snapshots/check points, etc, documented.We highly recommend that you read through the[Working with the Visual Studio 2017 ALM Virtual Machine]() document prior to using the VM, even if you may have used the earlier version of the VM. 
+>There are quite a number of important instructions on how to use the VM including activating the VM, taking snapshots/check points, etc, documented. We highly recommend that you read through the [Working with the Visual Studio 2018 ALM Virtual Machine]() document prior to using the VM, even if you may have used the earlier version of the VM. 
 
 >Note that The VM has about 15 GB of free hard disk space. Should you want to increase the size of the disk, you will need to do so before creating snapshots/check points. You can refer this article on [TechNet]() for instructions on expanding the virtual hard disk.
 
