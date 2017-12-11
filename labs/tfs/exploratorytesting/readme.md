@@ -10,28 +10,23 @@ Lab version:15.4
 
 Last updated:11/5/2017
 
-<a name="Overview"></a>
-## Overview ##
+# Overview
 
 In this lab, you will learn about the exploratory testing and feedback management capabilities provided in the Test & Feedback extension. You will learn about how exploratory testing (also called XT, or agile testing) has become a first-class experience in the toolset. This allows a tester to more flexibly test the underlying software without relying solely on formal test cases. You'll also learn about how you can manage the process of eliciting and managing the customer feedback lifecycle.
 
-<a name="Prerequisites"></a>
-### Prerequisites ###
+# Prerequisites
 
 In order to complete this lab you will need the Visual Studio 2017 virtual machine provided by Microsoft. For more information on acquiring and using this virtual machine, please see [this blog post](http://aka.ms/almvm).
 
-<a name="About the Fabrikam Fiber Scenario"></a>
-### About the Fabrikam Fiber Scenario ###
+# About the Fabrikam Fiber Scenario
 
 This set of hands-on-labs uses a fictional company, Fabrikam Fiber, as a backdrop to the scenarios you are learning about. Fabrikam Fiber provides cable television and related services to the United States. They are growing rapidly and have embraced Windows Azure to scale their customer-facing web site directly to end-users to allow them to self-service tickets and track technicians. They also use an on-premises ASP.NET MVC application for their customer service representatives to administer customer orders.
 
 In this set of hands-on labs, you will take part in a number of scenarios that involve the development and testing team at Fabrikam Fiber. The team, which consists of 8-10 people has decided to use Visual Studio application lifecycle management tools to manage their source code, run their builds, test their web sites, and plan and track the project.
 
-<a name="Exercise1"></a>
-## Exercise 1: Exploratory Testing ##
+## Exercise 1: Exploratory Testing
 
-<a name="Ex1Task1"></a>
-### Task 1: Installing the Chrome Extension ###
+### Task 1: Installing the Chrome Extension
 
 1. Log in as **Deniz Ercoskun (VSALM\Deniz)**. All user passwords are **P2ssw0rd**.
 
@@ -69,11 +64,9 @@ In this set of hands-on labs, you will take part in a number of scenarios that i
 
 1. After connecting to TFS, you will need to select the team you want these efforts associated with. Select the **FabrikamFiberCollection** and type **"web"** to search for the web team. Select the **Fabrikam Fiber Web Team** when available. Now all of your work item creation and searching will be scoped to the area path this team belongs to (**"Development"**). Click **Save** to continue.
 
-<a name="![](images/006.png)"></a>
-### ![](images/006.png) ###
+   ![](images/006.png)
 
-<a name="Ex1Task2"></a>
-### Task 2: Exploratory Testing with the Chrome Extension ###
+### Task 2: Exploratory Testing with the Chrome Extension
 
 1. To start an exploratory testing session, click the **Start session** button from the extension toolbar.
 
@@ -123,11 +116,9 @@ In this set of hands-on labs, you will take part in a number of scenarios that i
 
 1. Click on the **View session timeline** button. You can see that all the content - screenshots, notes and videos you've captured are available in the current session's timeline. You can open the screenshots, read your notes or play the video from here.
 
-<a name="![](images/018.png)"></a>
-### ![](images/018.png) ###
+   ![](images/018.png)
 
-<a name="Ex1Task3"></a>
-### Task 3: Creating Bugs with the Chrome Extension ###
+### Task 3: Creating Bugs with the Chrome Extension
 
 1. Click the **Create bug** icon button followed by the expanded **Create bug** text button.
 
@@ -163,16 +154,13 @@ In this set of hands-on labs, you will take part in a number of scenarios that i
 
 1. In Chrome, end the testing session by clicking the **Stop Session** button.
 
-<a name="![](images/027.png)"></a>
-## ![](images/027.png) ##
+    ![](images/027.png)
 
-<a name="Exercise2"></a>
-## Exercise 2: Eliciting and Managing Feedback ##
+## Exercise 2: Eliciting and Managing Feedback
 
 In this exercise, you will learn about managing the feedback lifecycle in TFS. During the course of software development, it is important to capture feedback from project stakeholders (end-users, product owners, and so on) to ensure that the progress the team is making is on track to meet the requirements that the stakeholders have in mind. It enables the capture of audio, video, screenshots, and other attachments to be linked to Team Foundation Server feedback work items.
 
-<a name="Ex2Task1"></a>
-### Task 1: Creating Feedback Requests ###
+### Task 1: Creating Feedback Requests
 
 1. Mouse over the **Fabrikam Fiber** project and select **Work**.
 
@@ -202,8 +190,7 @@ In this exercise, you will learn about managing the feedback lifecycle in TFS. D
 
 1. Press **Esc** to close the work item.
 
-<a name="Ex2Task2"></a>
-### Task 2: Using the Feedback Client ###
+### Task 2: Using the Feedback Client
 
 1. Open a remote desktop session to **VSALM** and log in as **Lan Kaim (VSALM\Lan)**. All user passwords are **P2ssw0rd**. Using remote desktop will allow you to easily switch between users within the VM without having to sign in each time.
 
@@ -265,8 +252,7 @@ In this exercise, you will learn about managing the feedback lifecycle in TFS. D
 
     ![](images/046.png)
 
-<a name="Ex2Task3"></a>
-### Task 3: Collecting and Acting on Feedback ###
+### Task 3: Collecting and Acting on Feedback
 
 1. Return to the **Deniz** account by minimizing the RDP window.
 
@@ -301,4 +287,3 @@ In this exercise, you will learn about managing the feedback lifecycle in TFS. D
 1. Click **Save and Close** and note that the new bug is associated with the feedback item as a child.
 
     ![](images/054.png)
-
