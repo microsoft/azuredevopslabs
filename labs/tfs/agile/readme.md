@@ -20,7 +20,7 @@ In order to complete this lab you will need the Visual Studio 2017 virtual machi
 
 **Important note**:
 
-This lab requires you to use the default state of the virtual machine, before any modifications are made to work items or source in TFS. If you followed the “Working with the Visual Studio 2017 ALM Virtual Machine.docx” instructions you should already have a snapshot/checkpoint of the virtual machine before working with it for the first time. Apply this snapshot/checkpoint before starting this lab.
+This lab requires you to use the default state of the virtual machine, before any modifications are made to work items or source in TFS. If you followed the **Working with the Visual Studio 2017 ALM Virtual Machine.docx** instructions you should already have a snapshot/checkpoint of the virtual machine before working with it for the first time. Apply this snapshot/checkpoint before starting this lab.
 
 ## Exercise 1: Agile Project Management
 
