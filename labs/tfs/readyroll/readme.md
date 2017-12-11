@@ -9,9 +9,8 @@ folder: /labs/tfs/readyroll/
 Lab version: 15.0.26020.1
 
 Last updated: 4/11/2017
- 
 
-## Overview
+# Overview
 
 Development teams adopting DevOps often struggle to apply DevOps processes to their SQL Server databases.  ReadyRoll is a tool designed to make this easy, so teams can safely automate their database deployments.
 Development teams use ReadyRoll to develop, source control, build, validate, test, package, review and release database changes alongside application changes with precision and control.
@@ -19,13 +18,13 @@ Development teams use ReadyRoll to develop, source control, build, validate, tes
 **ReadyRoll includes a new project type in visual studio that can be used as an alternative to the standard SQL Server Database Project, if
 used it allows you to:**
 
--   Easily and accurately automate deployments of SQL Server
+- Easily and accurately automate deployments of SQL Server
     database changes alongside application changes.
 
--   Keep up with the pace of application development and deliver value
+- Keep up with the pace of application development and deliver value
     to users quickly and efficiently.
 
--   Extend DevOps practices from your application to your database
+- Extend DevOps practices from your application to your database
 
 ## Pre-requisites
 
@@ -35,11 +34,9 @@ In order to complete this lab you will need the Microsoft Visual Studio 2017 ALM
 
 **Alternatively, you can try this labs on [TechNet Virtual Centre](../technet/) where we have the Redgate Data tools and the TFS extension pre-installed in the VM.**
 
-
 ### Task 1: Creating databases from a Script
 
-1. Log in as **Sachin Raj** (VSALM\\Sachin). All user passwords are
-    **P2ssw0rd**.
+1. Log in as **Sachin Raj** (VSALM\\Sachin). All user passwords are **P2ssw0rd**.
 
 2. Launch Sql Server Management Studio and connect to VSALM\SQLExpress.
 
@@ -60,31 +57,29 @@ In order to complete this lab you will need the Microsoft Visual Studio 2017 ALM
 
    <img src="images/image29.png" />
 
-
 ### Task 2: Create a ReadyRoll Project
 
-1.  In the Visual Studio menu: File &gt; New &gt; Project…
+1. In the Visual Studio menu: File &gt; New &gt; Project…
 
-2.  From the SQL Server template section, choose ReadyRoll SQL Server
-    Database Project
+2. From the SQL Server template section, choose ReadyRoll SQL Server Database Project
 
-3.  In the Name textbox type ‘PartsUnlimitedDB’
+3. In the Name textbox type ‘PartsUnlimitedDB’
 
-4.  Edit the Solution name textbox to be ‘PartsUnlimited’
+4. Edit the Solution name textbox to be ‘PartsUnlimited’
 
-5.  Click OK
+5. Click OK
 
     <img src="./images/image1.png" />
 
 ### Task 3: Import the schema
 
-1.  In the ReadyRoll window, click ‘Connect Database…’
+1. In the ReadyRoll window, click ‘Connect Database…’
 
-2.  Browse to the PartsUnlimited development database and click OK
+2. Browse to the PartsUnlimited development database and click OK
 
     <img src="./images/image2.png" />
 
-3.  In the ReadyRoll window, click ‘Import Database…’
+3. In the ReadyRoll window, click ‘Import Database…’
 
     <img src="./images/image3.png"  />
 
@@ -98,8 +93,7 @@ In order to complete this lab you will need the Microsoft Visual Studio 2017 ALM
 
 Your project is now ready to use.
 
-
-<b>Making changes</b>
+### Making changes
 
 When making changes to the database, there are a number of supported workflows, we will use a range of approaches for a series of changes we’d like to make.
 
@@ -107,32 +101,31 @@ Our database currently has a ‘Price’ column in the ‘Product’ table, but 
 
 ### Task 4: Making a change using SQL Server Object Explorer
 
-1.  Open SQL Server Object Explorer from the View menu
+1. Open SQL Server Object Explorer from the View menu
 
-2.  Browse to the PartUnlimited\_Dev database
+2. Browse to the PartUnlimited\_Dev database
 
-3.  Expand ‘Tables’, ‘Product’ and ‘Columns’ to find the ‘Price’ column
+3. Expand ‘Tables’, ‘Product’ and ‘Columns’ to find the ‘Price’ column
 
-4.  Right click ‘Rename’, and change the name to ‘PriceUSD’
+4. Right click ‘Rename’, and change the name to ‘PriceUSD’
 
     <img src="./images/image6.png" />
 
-5.  When the preview Database Update window launches, click ‘Generate Script’
+5. When the preview Database Update window launches, click ‘Generate Script’
 
     This adds the new migration script to our solution
 
-6.  Click ‘Deploy Project’
+6. Click ‘Deploy Project’
 
     <img src="./images/image7.png" />
 
     This applies the change to the database
 
-7.  In the Object Explorer, right click on ‘Columns’ and click ‘Refresh’
-    to check the change.
+7. In the Object Explorer, right click on ‘Columns’ and click ‘Refresh’ to check the change.
 
     <img src="./images/image8.png" />
 
-8.  In the Solution Explorer, we can rename the produced migration
+8. In the Solution Explorer, we can rename the produced migration
     script to something more descriptive such as
     ‘Rename\_Price\_To\_USD’
 
@@ -143,46 +136,46 @@ some data
 
 ### Task 5: Make a change using a query window
 
-1.  In the Object explorer, right click on the same database and select **New Query…**
+1. In the Object explorer, right click on the same database and select **New Query…**
 
-2.  In the query window, type the code to add the new ‘PriceGBP’ column and execute
+2. In the query window, type the code to add the new ‘PriceGBP’ column and execute
 
     <img src="./images/image10.png" />
 
-3.  Check it’s been added by typing and executing ‘SELECT * FROM
+3. Check it’s been added by typing and executing ‘SELECT * FROM
     Product’ in the query window
 
     <img src="./images/image11.png" />
 
     We can see that the ‘PriceGBP’ column now exists but all or the values null. We would like to set this new price to the correct amount based upon the current exchange rate.
 
-4.  In the query window, type the code to add update the values and execute
+4. In the query window, type the code to add update the values and execute
 
     <img src="./images/image12.png" />
 
-5.  Rerun the select statement from earlier to check the new values
+5. Rerun the select statement from earlier to check the new values
 
     <img src="./images/image13.png" />
 
-6.  Open the ReadyRoll window and click ***‘Refresh’***
+6. Open the ReadyRoll window and click ***‘Refresh’***
 
     <img src="./images/image14.png" width="416" height="93" />
 
     This will list the changes made to the database ready for us to import them into our project
 
-7.  Click *‘Import and generate script’* to generate and add the script to
+7. Click *‘Import and generate script’* to generate and add the script to
     the project
 
     <img src="./images/image15.png" />
 
     SSDT would generate this script at deployment time but as ReadyRoll produces the script here, at development time, we can add to or amend the deployment script. In this case to include the missing detail of updating the PriceGBP values
 
-8.  Copy and paste the update statement from your query to add it to the
+8. Copy and paste the update statement from your query to add it to the
     generated script
 
     <img src="./images/image16.png" />
 
-9.  We can now save this new version of the change script by pressing
+9. We can now save this new version of the change script by pressing
     Ctrl+S
 
 10. Click ***‘Mark as Deployed’*** to tell ReadyRoll that we’ve already
@@ -229,7 +222,7 @@ some data
 
 In order to proceed this lab, you will need to download the **Redgate ReadyRoll** extension from the [Marketplace](https://marketplace.visualstudio.com/items?itemName=redgatesoftware.redgate-readyroll) and install it on TFS
 
-**Create a build definition**
+### Create a build definition
 
 1.  Navigate to the PartsUnlimited project on TFS and then select ***Build***.
 
@@ -248,7 +241,7 @@ In order to proceed this lab, you will need to download the **Redgate ReadyRoll*
 
 6.  Update the MSBuild Arguments field to include the following
     ReadyRoll-specific properties:
-    ````
+    ````cmd
     /p:TargetServer="&lt;TargetServer&gt;" /p:ShadowServer="&lt;ShadowServer&gt;" /p:TargetDatabase="&lt;TargetDatabase&gt;"
 
     /p:GenerateSqlPackage=True /p:ReportStyle=Simple
@@ -266,7 +259,7 @@ In order to proceed this lab, you will need to download the **Redgate ReadyRoll*
 -   **TargetDatabase**: The name of a database on the target server to
     generate the preview against.
 
-**Using SQL Server Auth instead of Windows Auth**
+### Using SQL Server Auth instead of Windows Auth
 
 By default, ReadyRoll will connect to the specified **TargetServer** and **ShadowServer** using Windows
 Authentication. If you would prefer to use SQL Server Authentication, add the **TargetUsername**/**TargetPassword** and **ShadowUsername**/**ShadowPassword** properties
@@ -289,7 +282,7 @@ Variables:
 
 Leave the default settings for the other fields.
 
-**Add a Copy Publish Artifact task**
+### Add a Copy Publish Artifact task
 
 1.  In your build definition, click Add build step.
 
@@ -312,7 +305,7 @@ Leave the default settings for the other fields.
     Your build definition now looks like this:  
         <img src="./images/image24.png" width="283" height="150" />
 
-**Create a release definition**
+### Create a release definition
 
 1.  Select ***Release***
 
@@ -348,14 +341,14 @@ Leave the default settings for the other fields.
     it, you'll use SQL Server authentication and will need to enter the
     following:
 
-    -   **Database username**: The SQL Server username used to connect
+    - **Database username**: The SQL Server username used to connect
         to the database.
 
-    -   **Database password**: The SQL Server password used to connect
+    - **Database password**: The SQL Server password used to connect
         to the database.
 
-Your task settings should look similar to this:  
+Your task settings should look similar to this:
+
 <img src="./images/image25.png"  />
 
 You've now successfully set up ReadyRoll and Team Foundation Server to build and deploy databases.
-
