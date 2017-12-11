@@ -10,8 +10,7 @@ Lab version:15.4.1
 
 Last updated:10/26/2017
 
-<a name="Overview"></a>
-## Overview ##
+# Overview
 
 With Visual Studio and the [Azure SDK](https://azure.microsoft.com/downloads/), you can create a project that deploys your infrastructure and code to Azure. For example, you can define the web host, web site, and database for your app, and then deploy that infrastructure along with the code. Or, you can define a virtual machine, virtual network, and storage account to be deployed along with a script to execute on the new virtual machine. The **Azure Resource Group** deployment project enables you to deploy all the needed resources in a single, repeatable operation. For more information about deploying and managing your resources, see [Azure Resource Manager overview](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-overview).
 
@@ -19,18 +18,15 @@ Azure Resource Group projects contain Azure Resource Manager JSON templates, whi
 
 In this lab, you will deploy a web app and SQL database. However, the steps are almost the same for any type resource. You can as easily deploy a virtual machine and its related resources. Visual Studio provides many different starter templates for deploying common scenarios.
 
-<a name="Prerequisites"></a>
-### Prerequisites ###
+# Prerequisites
 
 In order to complete this lab you will need the Visual Studio 2017 virtual machine provided by Microsoft. For more information on acquiring and using this virtual machine, please see [this blog post](http://aka.ms/almvm).
 
 You also need an [Azure account](https://azure.microsoft.com/) ([Get a $25 monthly Azure credit by joining Visual Studio Dev Essentials](https://www.visualstudio.com/dev-essentials/)).
 
-<a name="Exercise1"></a>
-## Exercise 1: Authoring ARM Templates with Visual Studio ##
+## Exercise 1: Authoring ARM Templates with Visual Studio
 
-<a name="Ex1Task1"></a>
-### Task 1: Creating an Azure Resource Group project ###
+### Task 1: Creating an Azure Resource Group project
 
 1. Log in as **Sachin Raj (VSALM\Sachin)**. All user passwords are **P2ssw0rd**.
 
@@ -56,8 +52,7 @@ You also need an [Azure account](https://azure.microsoft.com/) ([Get a $25 month
 
 1. **WebSiteSQLDatabase.parameters.json** is a parameters file that contains values needed by the template. You pass in parameter values to customize each deployment.
 
-<a name="Ex1Task2"></a>
-### Task 2: Customizing the Resource Manager template ###
+### Task 2: Customizing the Resource Manager template
 
 1. You can customize a deployment project by modifying the JSON templates that describe the resources you want to deploy. These JSON files use a schema that you reference at the top of each file. To learn about the elements of the Resource Manager template, see [Authoring Azure Resource Manager templates](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-authoring-templates).
 
@@ -97,8 +92,7 @@ You also need an [Azure account](https://azure.microsoft.com/) ([Get a $25 month
 
     ![](images/011.png)
 
-<a name="Ex1Task3"></a>
-### Task 3: Deploying the Resource Group project to Azure ###
+### Task 3: Deploying the Resource Group project to Azure
 
 1. From **Solution Explorer**, right-click the **AzureResourceGroup1** project nod and select **Deploy | New**. When you deploy an Azure Resource Group project, you deploy it to an Azure resource group. The resource group is a logical grouping of resources that share a common lifecycle.
 
@@ -154,8 +148,7 @@ You also need an [Azure account](https://azure.microsoft.com/) ([Get a $25 month
 
     ![](images/023.png)
 
-<a name="Ex1Task4"></a>
-### Task 4: Deploying code with your infrastructure ###
+### Task 4: Deploying code with your infrastructure
 
 1. At this point, you have deployed the infrastructure for your app, but there is no actual code deployed with the project. This task walks through the process of deploying a web app and SQL database tables. Note that if you were deploying a virtual machine instead of a web app, you would instead want to run some code on the machine as part of deployment. The processes for deploying code for a web app or for setting up a virtual machine are very similar.
 
@@ -220,4 +213,3 @@ You also need an [Azure account](https://azure.microsoft.com/) ([Get a $25 month
 1. The site will load in a new tab.
 
     ![](images/037.png)
-
