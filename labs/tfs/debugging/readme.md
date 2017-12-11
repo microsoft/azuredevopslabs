@@ -10,25 +10,21 @@ Lab version:15.5
 
 Last updated:12/6/2017
 
-<a name="Overview"></a>
-## Overview ##
+# Overview
 
 Many developers still rely on traditional or live debugging techniques. These are limited in that they only account for your application's current state with limited data about past events. This forces the developer to either guess what happened based on current state or to attempt to recreate these events by re-running the app. Developers then rely on breakpoints to try to capture some of the errors that might appear because of unknown events, but sometimes even a breakpoint won't be able to expose the issue.
 
 IntelliTrace expands this traditional debugging experience by recording specific events and data at these points in time. This lets you see what happened in your application without restarting it, especially if you step past where the bug is. IntelliTrace enables you to seek to a large number of execution points-that occurred in the past-and drill into any of them by comparing variables, call stacks, etc. This makes it much easier to pinpoint the causes of issues without having to restart the application in an attempt to reproduce the problem. IntelliTrace automatically collects various events in your application (e.g. ASP.NET, ADO.NET, etc), which enables you to view the historical state of the application at those points in time.
 
-<a name="Prerequisites"></a>
-### Prerequisites ###
+# Prerequisites
 
 In order to complete this lab you will need the Visual Studio 2017 virtual machine provided by Microsoft. For more information on acquiring and using this virtual machine, please see [this blog post](http://aka.ms/almvm).
 
-<a name="Exercise1"></a>
-## Exercise 1: Debugging with IntelliTrace ##
+## Exercise 1: Debugging with IntelliTrace
 
 In this scenario the business owner has asked us to determine why we are seeing a drop in the sales of particular items from the past few days. We know that the last deployment extended the functionality of the search capabilities of this site. With that hunch in place, we'll start the investigation there.
 
-<a name="Ex1Task1"></a>
-### Task 1: Using IntelliTrace to collect data from production ###
+### Task 1: Using IntelliTrace to collect data from production
 
 1. Log in as **Sachin Raj (VSALM\Sachin)**. All user passwords are **P2ssw0rd**.
 
@@ -36,17 +32,17 @@ In this scenario the business owner has asked us to determine why we are seeing 
 
 1. Enter the following command to change to the IntelliTrace directory.
 
-    ```
+    ```cmd
     cd \intellitrace
     ```
 1. Enter the following command to import the IntelliTrace cmdlets.
 
-    ```
+    ```cmd
     Import-Module .\Microsoft.VisualStudio.IntelliTrace.PowerShell.dll
     ```
 1. Enter the following command to begin the collection. Note that it should all be one line.
 
-    ```
+    ```cmd
     Start-IntelliTraceCollection -ApplicationPool PartsUnlimited -CollectionPlan .\collection_plan.ASP.NET.trace.xml -OutputPath C:\LogFileLocation
     ```
 1. Confirm the action by entering **"Y"**. This will start IntelliTrace, which gathers diagnostic logs on the **PartsUnlimited**. We specified the **trace.xml** collection plan which will give us a verbose log and have a slightly heavier impact on performance (hence we only want to run this for short periods). For a lighter log, we could have used the **default.xml** collection plan.
@@ -71,11 +67,11 @@ In this scenario the business owner has asked us to determine why we are seeing 
 
 1. Return to PowerShell and enter the following command to stop the collection. Confirm the stop when requested.
 
-    ```
+    ```cmd
     Stop-IntelliTraceCollection -ApplicationPool PartsUnlimited
     ```
-<a name="Ex1Task2"></a>
-### Task 2: Historical debugging ###
+
+### Task 2: Historical debugging
 
 1. Open **Windows Explorer** and navigate to **C:\LogFileLocation**. Double-click the **iTrace** file to open it in **Visual Studio 2017**. This file contains all of the IntelliTrace recordings from our session.
 
@@ -121,8 +117,7 @@ In this scenario the business owner has asked us to determine why we are seeing 
 
 1. Select **File | Close Solution** to close all files. Do not save any.
 
-<a name="Ex1Task3"></a>
-### Task 3: IntelliTrace inside Visual Studio 2017 ("F5" IntelliTrace) ###
+### Task 3: IntelliTrace inside Visual Studio 2017 ("F5" IntelliTrace)
 
 1. Select **File | Start Page** to open the **Visual Studio Start Page**.
 
@@ -158,7 +153,7 @@ In this scenario the business owner has asked us to determine why we are seeing 
 
 1. Update the offending line of code by adding **"- 1"** to the end of **query.Length.**
 
-    ```
+    ```cmd
     query = query.Substring(1, query.Length - 1);
     ```
 1. Press **F5** to build and run the project to confirm the fix.
@@ -167,8 +162,7 @@ In this scenario the business owner has asked us to determine why we are seeing 
 
 1. Keep the browser window open to continue the debugging session in the next task.
 
-<a name="Ex1Task4"></a>
-### Task 4: Step-back debugging ###
+### Task 4: Step-back debugging
 
 1. Step-back debugging enables you to retrace your steps during a debugging session. As you move back and forth in this historical debugging mode, the variables, events, and diagnostic data are kept in sync with the state of the application at the time of that step. It's available for Windows Forms, WPF, and managed console apps, as well as managed class libraries. Support for debugging ASP.NET applications with IIS Express will be available in an upcoming release of Visual Studio.
 
@@ -205,4 +199,3 @@ In this scenario the business owner has asked us to determine why we are seeing 
 1. Press **F5** to return to live debugging.
 
 1. Select **Debug | Stop Debugging** to end the session.
-
