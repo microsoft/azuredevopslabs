@@ -10,21 +10,17 @@ Lab version:15.4.1
 
 Last updated:10/31/2017
 
-<a name="Overview"></a>
-## Overview ##
+# Overview
 
 It takes several teams to develop large software projects. Very large projects require multiple autonomous teams that can manage their own backlog and priority while contributing to a unified direction for that project. Regular reviews of the project schedule with these teams help ensure that the teams are working toward common goals. Delivery Plans provide the needed multi-team view of your project schedule.
 
-<a name="Prerequisites"></a>
-### Prerequisites ###
+# Prerequisites
 
 In order to complete this lab you will need the Visual Studio 2017 virtual machine provided by Microsoft. For more information on acquiring and using this virtual machine, please see [this blog post](http://aka.ms/almvm).
 
-<a name="Exercise1"></a>
-## Exercise 1: Managing Delivery Plans with Team Foundation Server 2018 ##
+## Exercise 1: Managing Delivery Plans with Team Foundation Server 2018
 
-<a name="Ex1Task1"></a>
-### Task 1: Demo setup ###
+### Task 1: Demo setup
 
 1. Log in as **Sachin Raj (VSALM\Sachin)**. All user passwords are **P2ssw0rd**.
 
@@ -48,11 +44,9 @@ In order to complete this lab you will need the Visual Studio 2017 virtual machi
 
 1. Edit **Iteration 3** in the same manner, but set its start date to the Monday after **Iteration 2's End Date**. **Iteration 3** should end on the Friday eleven days later.
 
-<a name="![](images/004.png)"></a>
-### ![](images/004.png) ###
+   ![](images/004.png)
 
-<a name="Ex1Task2"></a>
-### Task 2: Installing the Delivery Plans extension ###
+### Task 2: Installing the Delivery Plans extension
 
 1. Delivery Plans is provided as an optional extension to TFS. From the **Marketplace** navigation dropdown, select **Manage extensions**.
 
@@ -80,8 +74,7 @@ In order to complete this lab you will need the Visual Studio 2017 virtual machi
 
 1. Close the browser tab.
 
-<a name="Ex1Task3"></a>
-### Task 3: Creating a delivery plan ###
+### Task 3: Creating a delivery plan
 
 1. Click the **TFS PU Portal** shortcut to navigate to the project's landing page.
 
@@ -133,11 +126,9 @@ In order to complete this lab you will need the Visual Studio 2017 virtual machi
 
 1. Slide it all the way to the right to zoom in to a much more precise view.
 
-<a name="![](images/023.png)"></a>
-### ![](images/023.png) ###
+   ![](images/023.png)
 
-<a name="Ex1Task4"></a>
-### Task 4: Adding a second team to the project ###
+### Task 4: Adding a second team to the project
 
 1. Our delivery plan has been pretty simple so far because we only have the one team. However, the real power of delivery planning comes into play when orchestrating multiple autonomous teams across their efforts. From the **Settings** navigation dropdown, select **Overview**.
 
@@ -181,11 +172,9 @@ In order to complete this lab you will need the Visual Studio 2017 virtual machi
 
 1. Click **Select iterations** and use the **+ Iteration** button to select **Sprint 50** and **Sprint 51**. Click **Save and close**.
 
-<a name="![](images/034.png)"></a>
-### ![](images/034.png) ###
+   ![](images/034.png)
 
-<a name="Ex1Task5"></a>
-### Task 5: Making delivery decisions ###
+### Task 5: Making delivery decisions
 
 1. From the **Work** dropdown, select **Plans**.
 
@@ -246,4 +235,3 @@ In order to complete this lab you will need the Visual Studio 2017 virtual machi
 1. You can also collapse all teams (or specific teams) using the toggle buttons next to their names.
 
     ![](images/049.png)
-
