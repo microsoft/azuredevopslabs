@@ -10,23 +10,19 @@ Lab version:15.4.1
 
 Last updated:10/26/2017
 
-<a name="Overview"></a>
-## Overview ##
+# Overview
 
 [Azure Web Apps](https://docs.microsoft.com/en-us/azure/app-service/app-service-web-overview) provides a highly scalable, self-patching web hosting service. This lab walks guides you through the process of deploying a data-driven ASP.NET web app in Azure and connecting it to [Azure SQL Database](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-technical-overview).
 
-<a name="Prerequisites"></a>
-### Prerequisites ###
+# Prerequisites
 
 In order to complete this lab you will need the Visual Studio 2017 virtual machine provided by Microsoft. For more information on acquiring and using this virtual machine, please see [this blog post](http://aka.ms/almvm).
 
 You also need an [Azure account](https://azure.microsoft.com/) ([Get a $25 monthly Azure credit by joining Visual Studio Dev Essentials](https://www.visualstudio.com/dev-essentials/)).
 
-<a name="Exercise1"></a>
-## Exercise 1: Building ASP.NET apps in Azure with SQL Database ##
+## Exercise 1: Building ASP.NET apps in Azure with SQL Database
 
-<a name="Ex1Task1"></a>
-### Task 1: Building and running the sample app locally ###
+### Task 1: Building and running the sample app locally
 
 1. Log in as **Sachin Raj (VSALM\Sachin)**. All user passwords are **P2ssw0rd**.
 
@@ -40,8 +36,7 @@ You also need an [Azure account](https://azure.microsoft.com/) ([Get a $25 month
 
     ![](images/000.png)
 
-<a name="Ex1Task2"></a>
-### Task 2: Setting up an initial deployment to Azure ###
+### Task 2: Setting up an initial deployment to Azure
 
 1. In **Solution Explorer**, right-click the **DotNetAppSqlDb** project node and select **Publish**.
 
@@ -111,8 +106,7 @@ You also need an [Azure account](https://azure.microsoft.com/) ([Get a $25 month
 
     ![](images/017.png)
 
-<a name="Ex1Task3"></a>
-### Task 3: Accessing the Azure SQL database locally ###
+### Task 3: Accessing the Azure SQL database locally
 
 1. Select **View | SQL Server Object Explorer**.
 
@@ -138,8 +132,7 @@ You also need an [Azure account](https://azure.microsoft.com/) ([Get a $25 month
 
     ![](images/022.png)
 
-<a name="Ex1Task4"></a>
-### Task 4: Updating the app with Code First Migrations ###
+### Task 4: Updating the app with Code First Migrations
 
 1. This application uses the Entity Framework Code First model to infer the database schema from the application's model classes. In this case, the **Todo** class contains the schema information used for the one data table in the database. As a result, typical changes to the schema can be made by simply updating the class itself and using Code First Migrations to migrate the database forward. From **Solution Explorer**, open **Models/Todo.cs**.
 
@@ -154,19 +147,19 @@ You also need an [Azure account](https://azure.microsoft.com/) ([Get a $25 month
 
 1. Execute the command below to enable Code First Migrations for the project. This will also create an initial schema class based on the current database.
 
-    ```
+    ```powershell
     # PowerShell
     Enable-Migrations
     ```
 1. Execute the command below to add a new migration. This will create a second schema class that provides instructions for how to get from the previous (initial) state to the current one (that includes the **Done** property).
 
-    ```
+    ```powershell
     # PowerShell
     Add-Migration AddProperty
     ```
 1. Execute the command below to apply the new migration to the local database.
 
-    ```
+    ```powershell
     # PowerShell
     Update-Database
     ```
@@ -188,8 +181,7 @@ You also need an [Azure account](https://azure.microsoft.com/) ([Get a $25 month
 
 1. Insert the snippet below before the **form-group** div containing the **submit** button.
 
-    ```
-    <!-- ASP.NET -->
+    ```ASP.NET
     <div class="form-group">
         @Html.LabelFor(model => model.Done,
                            htmlAttributes: new { @class = "control-label col-md-2" })
@@ -212,8 +204,7 @@ You also need an [Azure account](https://azure.microsoft.com/) ([Get a $25 month
 
 1. Insert the snippet below as the third table header column on the page.
 
-    ```
-    <!-- ASP.NET -->
+    ```ASP.NET
     <th>
         @Html.DisplayNameFor(model => model.Done)
     </th>
@@ -224,8 +215,7 @@ You also need an [Azure account](https://azure.microsoft.com/) ([Get a $25 month
 
 1. Insert the code below as the third column template in the same table as above.
 
-    ```
-    <!-- ASP.NET -->
+    ```ASP.NET
     <td>
         @Html.DisplayFor(modelItem => item.Done)
     </td>
@@ -238,8 +228,7 @@ You also need an [Azure account](https://azure.microsoft.com/) ([Get a $25 month
 
     ![](images/030.png)
 
-<a name="Ex1Task5"></a>
-### Task 5: Enabling Code First Migrations in Azure ###
+### Task 5: Enabling Code First Migrations in Azure
 
 1. Now that the changes have been developed and tested locally, it's time to apply them to Azure. In **Solution Explorer**, right-click the **DotNetAppSqlDb** project node and select **Publish**.
 
@@ -265,8 +254,7 @@ You also need an [Azure account](https://azure.microsoft.com/) ([Get a $25 month
 
     ![](images/036.png)
 
-<a name="Ex1Task6"></a>
-### Task 6: Streaming application logs from Azure ###
+### Task 6: Streaming application logs from Azure
 
 1. You can stream application tracing messages directly from your Azure web app to Visual Studio. This application uses this tracing to track and share diagnostic info. Open **Controllers/TodosController.cs**.
 
@@ -302,8 +290,7 @@ You also need an [Azure account](https://azure.microsoft.com/) ([Get a $25 month
 
     ![](images/044.png)
 
-<a name="Ex1Task6_1"></a>
-### Task 6: Managing your Azure web app ###
+### Task 7: Managing your Azure web app
 
 1. You can easily access the full management portal experience from Visual Studio. Right-click the Azure application node and select **Open in Management Portal**.
 
@@ -314,4 +301,3 @@ You also need an [Azure account](https://azure.microsoft.com/) ([Get a $25 month
 1. If you want to delete this web app, you can click **Delete** and follow the confirmation instructions. However, that would only delete the web app component of your deployment. If you would like to delete everything created as part of this lab at once, you can do so by clicking **MyResourceGroup** and following the **Delete resource group** process to remove the SQL resources as well.
 
     ![](images/047.png)
-
