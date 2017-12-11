@@ -10,7 +10,7 @@ Lab version: 15.0.26020.1
 
 Last updated: 4/11/2017
 
-## Installing Redgate Data Tools for Visual Studio Enterprise 2017
+# Installing Redgate Data Tools for Visual Studio Enterprise 2017
 
 1. Launch **Visual Studio Installer** from the Start menu.        
     <img src="images/vsinstaller.png" />
@@ -23,8 +23,7 @@ Last updated: 4/11/2017
 
 Wait for the installer to finish and launch Visual Studio. You will now find **Redgate Data Tools** for Visual Studio Enterprise 2017 installed and available.
 
-
-## Installing ReadyRoll extension for Team Foundation Server
+# Installing ReadyRoll extension for Team Foundation Server
 
 In order to use the **ReadyRoll** tasks in your build and release defintions, you will need to install the extension from the [Marketplace](https://marketplace.visualstudio.com/)
 
