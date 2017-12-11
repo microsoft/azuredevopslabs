@@ -25,9 +25,11 @@ For a more exhaustive list of what's new in Visual Studio 2017, please check out
 In order to complete this lab you will need the Visual Studio 2017 virtual machine provided by Microsoft. For more information on acquiring and using this virtual machine, please see [this blog post](http://aka.ms/almvm).
 
 <a name="Exercise1"></a>
+
 ## Exercise 1: Developer experience enhancements in Visual Studio 2017 ##
 
 <a name="Ex1Task1"></a>
+
 ### Task 1: Working with the new modular installer ###
 
 1. Log in as **Sachin Raj (VSALM\Sachin)**. All user passwords are **P2ssw0rd**.
@@ -65,6 +67,7 @@ In order to complete this lab you will need the Visual Studio 2017 virtual machi
 1. Close all installer windows.
 
 <a name="Ex1Task2"></a>
+
 ### Task 2: Boosting your productivity ###
 
 1. Launch **Visual Studio** from the taskbar.
@@ -133,10 +136,10 @@ In order to complete this lab you will need the Visual Studio 2017 virtual machi
 
     ![](images/021.png)
 
-<a name="![](images/022.png)"></a>
-### ![](images/022.png) ###
+    ![](images/022.png)
 
 <a name="Ex1Task3"></a>
+
 ### Task 3: Using the new Exception Helper ###
 
 1. Press **Alt+Ctrl+E** to bring up the **Exception Settings** panel.
@@ -156,4 +159,3 @@ In order to complete this lab you will need the Visual Studio 2017 virtual machi
     ![](images/025.png)
 
 1. Select **Debug | Stop Debugging** from the main menu to end the debug session.
-

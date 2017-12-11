@@ -40,15 +40,15 @@ entries:
     output: web, pdf
     folderitems:
 
-    - title: Agile Planning and Portfolio Management with Team Foundation Server 2017
+    - title: Agile Planning and Portfolio Management with Team Foundation Server 2018
       url: labs/tfs/agile/
       output: web, pdf
 
-    - title: Building the Right Software - Generating Storyboards with Visual Studio 2017
-      url: labs/tfs/storyboarding/
+    - title: Agile Work Item Management with Team Foundation Server 2018
+      url: labs/tfs/agileworkitems/
       output: web, pdf
 
-    - title: Introduction to the Modern Requirements Suite4TFS & Team Foundation Server 2017
+    - title: Introduction to the Modern Requirements Suite4TFS & Team Foundation Server 2018
       url: labs/tfs/smartword4tfs/
       output: web, pdf
 
@@ -56,7 +56,7 @@ entries:
     output: web, pdf
     folderitems:
 
-    - title: Branching and Merging Visualization with Visual Studio Team Foundation Server 2017
+    - title: Branching and Merging Visualization with Visual Studio Team Foundation Server 2018
       url: labs/tfs/branchingandmerging/
       output: web, pdf
 
@@ -112,15 +112,15 @@ entries:
     output: web, pdf
 
     folderitems:
-    - title: Managing Technical Debt with Team Foundation Server 2017 and SonarQube
+    - title: Managing Technical Debt with Team Foundation Server 2018 and SonarQube
       url: labs/tfs/technicaldebt/
       output: web, pdf
 
-    - title: Package Management in Team Foundation Server 2017
+    - title: Package Management in Team Foundation Server 2018
       url: labs/tfs/packagemanagement/
       output: web, pdf
 
-    - title: Team Foundation Build 2017
+    - title: Team Foundation Build 2018
       url: labs/tfs/build/
       output: web, pdf
     
@@ -140,11 +140,11 @@ entries:
       url: /labs/tfs/liveunittesting/
       output: web, pdf
 
-    - title: Test Planning and Management with Team Foundation Server 2017
+    - title: Test Planning and Management with Team Foundation Server 2018
       url: labs/tfs/manualtesting/
       output: web, pdf
 
-    - title: Exploratory Testing and Feedback Management with Team Foundation Server 2017
+    - title: Exploratory Testing and Feedback Management with Team Foundation Server 2018
       url: labs/tfs/exploratorytesting/
       output: web, pdf
 
