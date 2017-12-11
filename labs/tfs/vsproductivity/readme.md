@@ -10,28 +10,23 @@ Lab version:15.4
 
 Last updated:11/6/2017
 
-<a name="Overview"></a>
-## Overview ##
+# Overview
 
 This lab is all about those "fit-and-finish" scenarios in Visual Studio Team Foundation Server that will make developers more productive as they write code and collaborate with other team members. You'll learn about integrated code reviews; the "My Work" experience for managing your active tasks; and once you're "in the zone", Visual Studio will now help you stay focused on the task at hand, no matter how much you're randomized, with a suspend/resume experience. You'll also learn how to work offline seamlessly, how the new merging experience works, and how you can more easily find work items.
 
-<a name="Prerequisites"></a>
-### Prerequisites ###
+# Prerequisites
 
 In order to complete this lab you will need the Visual Studio 2017 virtual machine provided by Microsoft. For more information on acquiring and using this virtual machine, please see [this blog post](http://aka.ms/almvm).
 
-<a name="About the Fabrikam Fiber Scenario"></a>
-### About the Fabrikam Fiber Scenario ###
+# About the Fabrikam Fiber Scenario
 
 This set of hands-on-labs uses a fictional company, Fabrikam Fiber, as a backdrop to the scenarios you are learning about. Fabrikam Fiber provides cable television and related services to the United States. They are growing rapidly and have embraced Windows Azure to scale their customer-facing web site directly to end-users to allow them to self-service tickets and track technicians. They also use an on-premises ASP.NET MVC application for their customer service representatives to administer customer orders.
 
 In this set of hands-on labs, you will take part in a number of scenarios that involve the development and testing team at Fabrikam Fiber. The team, which consists of 8-10 people has decided to use Visual Studio application lifecycle management tools to manage their source code, run their builds, test their web sites, and plan and track the project.
 
-<a name="Exercise1"></a>
-## Exercise 1: Making Developers More Productive with Visual Studio Team Foundation Server 2018 ##
+## Exercise 1: Making Developers More Productive with Visual Studio Team Foundation Server 2018
 
-<a name="Ex1Task1"></a>
-### Task 1: Team Explorer Overview ###
+### Task 1: Team Explorer Overview
 
 In this exercise, you will see a high-level view of the changes made to Team Explorer in this release and learn how to navigate the functionality that is made available there. If you are new to Team Foundation Server, you can think of Team Explorer as the primary way in which a Visual Studio user accesses Team Foundation Server functionality.
 
@@ -79,8 +74,7 @@ In this exercise, you will see a high-level view of the changes made to Team Exp
 
 1. We will look at the new **My Work** functionality in the remaining exercises.
 
-<a name="Ex1Task2"></a>
-### Task 2: My Work ###
+### Task 2: My Work
 
 1. In this exercise, you will learn about the new My Work experience for managing your active tasks.
 
@@ -112,11 +106,9 @@ In this exercise, you will see a high-level view of the changes made to Team Exp
 
     ![](images/015.png)
 
-<a name="![](images/016.png)"></a>
-### ![](images/016.png) ###
+    ![](images/016.png)
 
-<a name="Ex1Task3"></a>
-### Task 3: Local Workspaces ###
+### Task 3: Local Workspaces
 
 1. In this exercise, you will learn about local workspaces and how they improve the offline development experience.
 
@@ -194,11 +186,9 @@ In this exercise, you will see a high-level view of the changes made to Team Exp
 
 1. In **Notepad**, save and close **Site.css** and return to **Solution Explorer**. Note that Visual Studio detected the change to the file and that the file was not read-only as it would have been in the case of a server-based workspace.
 
-<a name="![](images/031.png)"></a>
-### ![](images/031.png) ###
+   ![](images/031.png)
 
-<a name="Ex1Task4"></a>
-### Task 4: Pending Changes ###
+### Task 4: Pending Changes
 
 1. Click **Home** in **Team Explorer**, then click **Pending Changes**.
 
@@ -234,8 +224,7 @@ In this exercise, you will see a high-level view of the changes made to Team Exp
 
     ![](images/039.png)
 
-<a name="Ex1Task5"></a>
-### Task 5: Suspend and Resume ###
+### Task 5: Suspend and Resume
 
 1. In this exercise, you will learn about the suspend and resume functionality for work items and the integrated code reviews.
 
@@ -325,8 +314,7 @@ In this exercise, you will see a high-level view of the changes made to Team Exp
 
 1. Press **Ctrl+S** to save the changes to the file.
 
-<a name="Ex1Task6"></a>
-### Task 6: Code Reviews ###
+### Task 6: Code Reviews
 
 1. Now that the fix has been made, let's ask Clemri to perform a code review on the changes to make sure things look correct. In **Team Explorer - My Work**, click the **Request Review** link.
 
@@ -422,11 +410,9 @@ In this exercise, you will see a high-level view of the changes made to Team Exp
 
 1. After the shelveset is opened and the task context is restored, you will notice that the document windows and tools windows, as well as their positions, are restored to the state that we left them in when we suspended this task. Although you won't notice this in a virtual machine, had you been using multiple monitors you would have also noticed that all of the tool windows would be opened on their respective monitors. This capability allows you to quickly get in and out of tasks to help you deal with the frequent interruptions that many of us face on a daily basis.
 
-<a name="![](images/080.png)"></a>
-### ![](images/080.png) ###
+   ![](images/080.png)
 
-<a name="Ex1Task7"></a>
-### Task 7: Merging ###
+### Task 7: Merging
 
 1. You should still be logged in as **Sachin** from the previous exercise.
 
@@ -492,8 +478,7 @@ In this exercise, you will see a high-level view of the changes made to Team Exp
 
     ![](images/091.png)
 
-<a name="Ex1Task8"></a>
-### Task 8: Updating a Source Control Branch ###
+### Task 8: Updating a Source Control Branch
 
 1. Open the **Source Control Explorer** window by selecting the Source Control Explorer tile.
 
@@ -553,8 +538,7 @@ In this exercise, you will see a high-level view of the changes made to Team Exp
 
 1. In the next task, we will merge the changes to the other branches.
 
-<a name="Ex1Task9"></a>
-### Task 9: Branching and Merging Visualization ###
+### Task 9: Branching and Merging Visualization
 
 In this task, you will learn how to visualize and track changesets while merging the changes that you made in the previous exercise.
 
@@ -631,4 +615,3 @@ In this task, you will learn how to visualize and track changesets while merging
 1. In the annotation column on the left-hand side, mouse over the recent changeset (it should show the date of the guest virtual machine). Note that the changeset path and comment refer to the Production branch where the original change was made.
 
     ![](images/119.png)
-
