@@ -10,25 +10,21 @@ Lab version:15.4
 
 Last updated:11/2/2017
 
-<a name="Overview"></a>
-## Overview ##
+# Overview
 
 IntelliTest explores your .NET code to generate test data and a suite of unit tests. For every statement in the code, a test input is generated that will execute that statement. A case analysis is performed for every conditional branch in the code. For example, if statements, assertions, and all operations that can throw exceptions are analyzed. This analysis is used to generate test data for a parameterized unit test for each of your methods, creating unit tests with high code coverage.
 
 When you run IntelliTest, you can easily see which tests are failing and add any necessary code to fix them. You can select which of the generated tests to save into a test project to provide a regression suite. As you change your code, rerun IntelliTest to keep the generated tests in sync with your code changes.
 
-<a name="Prerequisites"></a>
-### Prerequisites ###
+# Prerequisites
 
 In order to complete this lab you will need the Visual Studio 2017 virtual machine provided by Microsoft. For more information on acquiring and using this virtual machine, please see [this blog post](http://aka.ms/almvm).
 
-<a name="Exercise1"></a>
-## Exercise 1: Introduction to IntelliTest ##
+## Exercise 1: Introduction to IntelliTest
 
 In practical terms, white box unit test development includes an iterative workflow informed by code coverage - write a unit test, see what parts of the code are not covered by the test, write more tests to cover those parts, repeat until all of the code is covered. This workflow is similar to what we would use while working with IntelliTest, as you will see in this exercise.
 
-<a name="Ex1Task1"></a>
-### Task 1: Running IntelliTest ###
+### Task 1: Running IntelliTest
 
 1. Log in as **Deniz Ercoskun (VSALM\Deniz)**. All user passwords are **P2ssw0rd.**
 
@@ -46,11 +42,9 @@ In practical terms, white box unit test development includes an iterative workfl
 
 1. **Right-click** somewhere within the **Handle** method and then select **IntelliTest | Run IntelliTest**.
 
-<a name="![](images/002.png)"></a>
-### ![](images/002.png) ###
+   ![](images/002.png)
 
-<a name="Ex1Task2"></a>
-### Task 2: Understanding IntelliTest Warnings ###
+### Task 2: Understanding IntelliTest Warnings
 
 1. After IntelliTest runs, only two tests are generated and there is low coverage of the code (6/42 blocks). In addition, there are 5 warnings reported.
 
@@ -92,8 +86,7 @@ In practical terms, white box unit test development includes an iterative workfl
 
 1. When the number of branches in the code path that IntelliTest is exploring is large, it can trip an internal boundary that has been configured for fast interactive performance. Hence, it raises a warning and stops the exploration.
 
-<a name="Ex1Task3"></a>
-### Task 3: Providing mock implementations ###
+### Task 3: Providing mock implementations
 
 1. To proceed further, we need to answer that first question: _is that the type you want to use?_ To unit test the method, we need to provide a _mock_implementation of **IQueryDataStore**. Browsing through the solution, we can discover a **FakeQueryDataStore**. Let's tell IntelliTest to use that (instead of the **QueryDataStore** that it discovered).
 
@@ -138,8 +131,7 @@ In practical terms, white box unit test development includes an iterative workfl
 
 1. Once the IntelliTest run completes, note that the bounds exceeded warning is gone.
 
-<a name="![](images/018.png)"></a>
-### ![](images/018.png) ###
+   ![](images/018.png)
 
 <a name="Ex1Task4"></a>
 ### Task 4: Focusing on "Just my Code" ###
@@ -162,8 +154,7 @@ In practical terms, white box unit test development includes an iterative workfl
 
 1. **Run** IntelliTest once again and verify that only the object creation warning remains.
 
-<a name="Ex1Task5"></a>
-### Task 5: Modifying the Parameterized Unit Test to increase code coverage ###
+### Task 5: Modifying the Parameterized Unit Test to increase code coverage
 
 In order to exercise the code-under-test further, we need to modify the parameterized unit test method in order to return data from calls to the **GetData** method. In the PUT, the "target" is the object that contains data to be returned by calls to **GetData<T>**. More specifically, T is either a **LookupGamePlayersDto** array or a **GetPlayerStatisticsDto** array. Our task now is to fill up **FakeQueryDataStore** with concrete instances of these types.
 
@@ -254,5 +245,4 @@ In order to exercise the code-under-test further, we need to modify the paramete
 
 1. This shows that IntelliTest has generated tests that uncovered previously unknown errors in the code. If we were to add additional assertions about the expected behavior of the code-under-test, then it would generate tests for validating that as well.
 
-    > Note: For additional reading on IntelliTest including capabilities, limitations, please see the [IntelliTest Reference Manual](https://marketing.visualstudio.com/DefaultCollection/DTMS/ALM/_backlogs/taskboard/OneVS/Sprint 97?_a=requirements)
-
+    > Note: For additional reading on IntelliTest including capabilities, limitations, please see the <a href="https://marketing.visualstudio.com/DefaultCollection/DTMS/ALM/_backlogs/taskboard/OneVS/Sprint 97?_a=requirements">IntelliTest Reference Manual</a>
