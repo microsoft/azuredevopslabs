@@ -10,21 +10,17 @@ Lab version:15.4
 
 Last updated:12/5/2017
 
-<a name="Overview"></a>
-## Overview ##
+# Overview
 
 In this lab, you'll learn about some of the features in Visual Studio 2017 and Team Foundation Server 2018 that enable collaboration experiences for development teams including Lightweight Code Comments and CodeLens. In addition, each project in Team Foundation Server (TFS) now supports its own Wiki. This enables you to conveniently write pages that help your team members and other users understand, use, and contribute to your project.
 
-<a name="Prerequisites"></a>
-### Prerequisites ###
+# Prerequisites
 
 In order to complete this lab you will need the Visual Studio 2017 virtual machine provided by Microsoft. For more information on acquiring and using this virtual machine, please see [this blog post](http://aka.ms/almvm).
 
-<a name="Exercise1"></a>
-## Exercise 1: Wiki collaboration with Team Foundation Server 2018 ##
+## Exercise 1: Wiki collaboration with Team Foundation Server 2018
 
-<a name="Ex1Task1"></a>
-### Task 1: Creating and editing a project wiki ###
+### Task 1: Creating and editing a project wiki
 
 1. Launch a new instance of **Internet Explorer** from the taskbar.
 
@@ -116,8 +112,7 @@ In order to complete this lab you will need the Visual Studio 2017 virtual machi
 
     ![](images/021.png)
 
-<a name="Ex1Task2"></a>
-### Task 2: Working with the Wiki offline ###
+### Task 2: Working with the Wiki offline
 
 1. Sometimes you may want to work against the wiki without being connected via browser. Fortunately, your TFS Wiki is backed by a Git repo, so you could clone it and edit it just like any other Git project whether you're online or not.
 
@@ -185,11 +180,9 @@ In order to complete this lab you will need the Visual Studio 2017 virtual machi
 
     ![](images/036.png)
 
-<a name="Exercise2"></a>
-## Exercise 2: Working with CodeLens and Lightweight Code Comments ##
+## Exercise 2: Working with CodeLens and Lightweight Code Comments
 
-<a name="Ex2Task1"></a>
-### Task 1: Working with CodeLens ###
+### Task 1: Working with CodeLens
 
 1. Launch **Visual Studio 2017** from the taskbar.
 
@@ -281,8 +274,7 @@ In order to complete this lab you will need the Visual Studio 2017 virtual machi
 
 1. As a final note, CodeLens also supports a number of indicators for Git repositories also. This provides author, change and work item indicators that work very similarly to their Team Foundation Version Control counterparts. Unlike the CodeLens support for TFVC, CodeLens for Git is computed solely on the client side. This means that you can use the feature for any Git repository whether it is local, cloned from TFS Git, cloned from GitHub or another Git source.
 
-<a name="Ex2Task2"></a>
-### Task 2: Working With Lightweight Code Comments ###
+### Task 2: Working With Lightweight Code Comments
 
 1. Log in as **Sachin Raj (VSALM\Sachin)**. All user passwords are **P2ssw0rd**.
 
@@ -335,4 +327,3 @@ In order to complete this lab you will need the Visual Studio 2017 virtual machi
 1. Navigate back to changeset 75 to see the comment reply.
 
     ![](images/065.png)
-
