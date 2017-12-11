@@ -10,8 +10,7 @@ Lab version:15.5
 
 Last updated:12/7/2017
 
-<a name="Overview"></a>
-## Overview ##
+# Overview
 
 Many developers still rely on traditional or live debugging techniques which shows only your applications current state with limited data about past events. You either have to guess what happened based on your current state, or you have to recreate these events by rerunning your app. Developers rely on breakpoints to try capturing some of the errors that might appear because of unknown events, sometimes even a breakpoint won't be able to reach the issue - after all, maybe the breakpoint won't be hit at all.
 
@@ -25,18 +24,15 @@ Diagnosing issues in the cloud is especially time consuming for a few reasons:
 
 Snapshot Debugger expands this traditional debugging experience by recording specific events and data at these points in time. This lets you see what happened in your application when the exception was thrown with call stack information and variables. Snapshot Debugger enables to you drill down into an application's code at the exact moment that the exception occurred to help pinpoint causes of issues without having to negatively impact the performance of the app while it's in production. Snapshot Debugger will help you find any problem, no matter how hard, especially when logs leave you hanging.
 
-<a name="Prerequisites"></a>
-### Prerequisites ###
+# Prerequisites
 
 In order to complete this lab you will need the Visual Studio 2017 virtual machine provided by Microsoft. For more information on acquiring and using this virtual machine, please see [this blog post](http://aka.ms/almvm).
 
 You also need an [Azure account](https://azure.microsoft.com/) ([Get a $25 monthly Azure credit by joining Visual Studio Dev Essentials](https://www.visualstudio.com/dev-essentials/)).
 
-<a name="Exercise1"></a>
-## Exercise 1: Debugging with Snapshot Debugger ##
+## Exercise 1: Debugging with Snapshot Debugger
 
-<a name="Ex1Task1"></a>
-### Task 1: Configuring Application Insights for Snapshot Debugging ###
+### Task 1: Configuring Application Insights for Snapshot Debugging
 
 1. Log in as **Sachin Raj (VSALM\Sachin)**. All user passwords are **P2ssw0rd**.
 
@@ -86,7 +82,7 @@ You also need an [Azure account](https://azure.microsoft.com/) ([Get a $25 month
 
 1. Locate the section describing the **Release|AnyCPU** platform configuration and add the element below. Save and close the file.
 
-    ```
+    ```cmd
     <DebugSymbols>true</DebugSymbols>
     ```
     ![](images/011.png)
@@ -95,8 +91,7 @@ You also need an [Azure account](https://azure.microsoft.com/) ([Get a $25 month
 
     ![](images/012.png)
 
-<a name="Ex1Task2"></a>
-### Task 2: Publishing the application to Azure ###
+### Task 2: Publishing the application to Azure
 
 1. In **Solution Explorer**, right-click the project node and select **Publish**.
 
@@ -144,8 +139,7 @@ You also need an [Azure account](https://azure.microsoft.com/) ([Get a $25 month
 
 1. Once it completes, your application will be published and a browser will be opened to it in Visual Studio.
 
-<a name="Ex1Task3"></a>
-### Task 3: Generating and tracing some failures ###
+### Task 3: Generating and tracing some failures
 
 1. Use the Parts Unlimited site to search for **"jumper lead"**.
 
@@ -231,8 +225,7 @@ You also need an [Azure account](https://azure.microsoft.com/) ([Get a $25 month
 
 1. Select **Debug | Stop Debugging** to end the session.
 
-<a name="Ex1Task4"></a>
-### Task 4: Working with Snappoints and Logpoints ###
+### Task 4: Working with Snappoints and Logpoints
 
 1. In addition to automatic snapshots, Application Insights enables two additional features that make it easy to debug production apps: **Snappoints** and **Logpoints**. Snappoints are like breakpoints in that they allow you to take snapshots of a system when a given line is executed, but without actually noticeably pausing the execution of the application. Logpoints work in the same way, except that they allow you to inject custom logging into production apps on the fly.
 
@@ -303,4 +296,3 @@ You also need an [Azure account](https://azure.microsoft.com/) ([Get a $25 month
     ![](images/058.png)
 
 1. Select **Debug | Stop Debugging** to end the session.
-
