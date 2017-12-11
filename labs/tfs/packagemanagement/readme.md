@@ -10,21 +10,17 @@ Lab version:15.4
 
 Last updated:11/7/2017
 
-<a name="Overview"></a>
-## Overview ##
+# Overview
 
 Package Management is an extension that makes it easy to discover, install, and publish NuGet, npm, and Maven packages in Team Foundation Server. It's deeply integrated with other hubs like Build so that package management can become a seamless part of your existing workflows.
 
-<a name="Prerequisites"></a>
-### Prerequisites ###
+# Prerequisites
 
 In order to complete this lab you will need the Visual Studio 2017 virtual machine provided by Microsoft. For more information on acquiring and using this virtual machine, please see [this blog post](http://aka.ms/almvm).
 
-<a name="Exercise1"></a>
-## Exercise 1: Working with the package management service ##
+## Exercise 1: Working with the package management service
 
-<a name="Ex1Task1"></a>
-### Task 1: Configuring the service ###
+### Task 1: Configuring the service
 
 1. Log in as **Sachin Raj (VSALM\Sachin)**. All user passwords are **P2ssw0rd**.
 
@@ -60,8 +56,7 @@ In order to complete this lab you will need the Visual Studio 2017 virtual machi
 
 1. There are no feeds by default.
 
-<a name="Ex1Task2"></a>
-### Task 2: Creating and connecting to a feed ###
+### Task 2: Creating and connecting to a feed
 
 1. Click **New feed**. This feed will be a collection of NuGet packages available to users within the organization and will sit alongside the public NuGet feed as a peer. The scenario in this lab will focus on the workflow for using with the package management service, so the actual architectural and development decisions are purely illustrative.
 
@@ -91,8 +86,7 @@ In order to complete this lab you will need the Visual Studio 2017 virtual machi
 
     ![](images/012.png)
 
-<a name="Ex1Task3"></a>
-### Task 3: Creating and publishing a NuGet package ###
+### Task 3: Creating and publishing a NuGet package
 
 1. From the main menu of **Visual Studio**, select **File | New | Project**. We will now create a shared assembly that will be published as a NuGet package so that other teams can integrate it and stay up to date without having to work directly with the project source.
 
@@ -132,7 +126,7 @@ In order to complete this lab you will need the Visual Studio 2017 virtual machi
 
 1. Execute the line below to create a **.nupkg** file from the project. Note that this is a quick shortcut to package the NuGet bits together for deployment. NuGet is very customizable and offers a lot of great flexibility for providing detailed information for consumers. You can learn more over on the [NuGet package creation page](https://docs.microsoft.com/en-us/nuget/create-packages/overview-and-workflowhttps:/docs.microsoft.com/en-us/nuget/create-packages/overview-and-workflow).
 
-    ```
+    ```cmd
     nuget.exe pack PartsUnlimited.Shared.csproj
     ```
 1. NuGet builds a minimal package based on the information it is able to pull from the project. For example, note that the name is **PartsUnlimited.Shared.1.0.0.nupkg**. That version number was pulled from the assembly.
@@ -149,7 +143,7 @@ In order to complete this lab you will need the Visual Studio 2017 virtual machi
 
 1. Return to the **command prompt** and execute the following command (it should be on one line). Note that you need to provide an "API Key", which can be any non-empty string. We're using **"VSTS"** here.
 
-    ```
+    ```cmd
     nuget.exe push -source "PartsUnlimitedShared" -ApiKey VSTS PartsUnlimited.Shared.1.0.0.nupkg
     ```
 1. The command should succeed after a few seconds.
@@ -164,8 +158,7 @@ In order to complete this lab you will need the Visual Studio 2017 virtual machi
 
     ![](images/026.png)
 
-<a name="Ex1Task4"></a>
-### Task 4: Importing a NuGet package ###
+### Task 4: Importing a NuGet package
 
 1. Open a new instance of **Visual Studio** from the taskbar. We will now add a reference to the **PartsUnlimited.Shared** NuGet package to an existing project.
 
@@ -187,8 +180,7 @@ In order to complete this lab you will need the Visual Studio 2017 virtual machi
 
 1. Press **Ctrl+Shift+B** to build the project. It should succeed. The NuGet package doesn't add any value yet, but at least we know it's there.
 
-<a name="Ex1Task5"></a>
-### Task 5: Updating a NuGet package ###
+### Task 5: Updating a NuGet package
 
 1. Switch to the instance of **Visual Studio** that has the **PartsUnlimited.Shared** project open (the NuGet source project).
 
@@ -222,12 +214,12 @@ In order to complete this lab you will need the Visual Studio 2017 virtual machi
 
 1. Return to the **command prompt** and execute the following line to repackage the NuGet package. Note that the new package will have the updated version number.
 
-    ```
+    ```cmd
     nuget.exe pack PartsUnlimited.Shared.csproj
     ```
 1. Execute the following line to publish the updated package. Note that the version number has changed to reflect the new package.
 
-    ```
+    ```cmd
     nuget.exe push -source "PartsUnlimitedShared" -ApiKey VSTS PartsUnlimited.Shared.1.1.0.nupkg
     ```
 1. Return to the browser window open to **TFS** and refresh the page. You will still be looking at the 1.0.0 version of the package, but you can change that by selecting the **1.1.0** version from the dropdown.
@@ -255,4 +247,3 @@ In order to complete this lab you will need the Visual Studio 2017 virtual machi
 1. Click **OK** to approve the update.
 
 1. **Press** **F5** to build and run the site. It should work as expected.
-
