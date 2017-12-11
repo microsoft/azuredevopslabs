@@ -10,13 +10,11 @@ Lab version:15.4
 
 Last updated:12/5/2017
 
-<a name="Overview"></a>
-## Overview ##
+# Overview
 
 In this lab, you will learn about the agile planning and portfolio management tools and processes provided by Team Foundation Server 2018 and how they can help you quickly plan, manage, and track work across your entire team. You will explore the product backlog, sprint backlog, and task boards which can be used to track the flow of work during the course of an iteration. We will also take a look at how the tools have been enhanced in this release to scale for larger teams and organizations.
 
-<a name="Prerequisites"></a>
-### Prerequisites ###
+# Prerequisites
 
 In order to complete this lab you will need the Visual Studio 2017 virtual machine provided by Microsoft. For more information on acquiring and using this virtual machine, please see [this blog post](http://aka.ms/almvm).
 
@@ -24,22 +22,19 @@ In order to complete this lab you will need the Visual Studio 2017 virtual machi
 
 This lab requires you to use the default state of the virtual machine, before any modifications are made to work items or source in TFS. If you followed the "Working with the Visual Studio 2017 ALM Virtual Machine.docx" instructions you should already have a snapshot/checkpoint of the virtual machine before working with it for the first time. Apply this snapshot/checkpoint before starting this lab.
 
-<a name="About the Fabrikam Fiber Scenario"></a>
-### About the Fabrikam Fiber Scenario ###
+# About the Fabrikam Fiber Scenario
 
 This set of hands-on-labs uses a fictional company, Fabrikam Fiber, as a backdrop to the scenarios you are learning about. Fabrikam Fiber provides cable television and related services to the United States. They are growing rapidly and have embraced Windows Azure to scale their customer-facing web site directly to end-users to allow them to self-service tickets and track technicians. They also use an on-premises ASP.NET MVC application for their customer service representatives to administer customer orders.
 
 In this set of hands-on labs, you will take part in a number of scenarios that involve the development and testing team at Fabrikam Fiber. The team, which consists of 8-10 people has decided to use Visual Studio application lifecycle management tools to manage their source code, run their builds, test their web sites, and plan and track the project.
 
-<a name="Exercise1"></a>
-## Exercise 1: Agile Project Management ##
+## Exercise 1: Agile Project Management
 
 In this exercise, you will learn how to use Team Foundation Server 2018 to manage your product backlog, create work items, break work items into tasks, assign tasks to team members, and track progress using the task board. This overview will demonstrate the basic project management tools that small- to medium-sized development teams can utilize for product development.
 
 > **Note:** The team project used in this lab uses a Scrum process template, but the core features demonstrated apply to all process templates.
 
-<a name="Ex1Task1"></a>
-### Task 1: Team Foundation Server Web Portal ###
+### Task 1: Team Foundation Server Web Portal
 
 1. Log in as **Sachin Raj (VSALM\Sachin)**. All user passwords are **P2ssw0rd**.
 
@@ -73,8 +68,7 @@ In this exercise, you will learn how to use Team Foundation Server 2018 to manag
 
 1. As you can see under the **Team Members** section, there are several members listed in this team. Teams are a concept that were originally introduced in Team Foundation Server 2012 to make it easier to manage, assign, and track work.
 
-<a name="Ex1Task2"></a>
-### Task 2: Working with the Backlog ###
+### Task 2: Working with the Backlog
 
 1. Navigate to the backlog by clicking **Backlogs** under the **Work** section.
 
@@ -186,8 +180,7 @@ In this exercise, you will learn how to use Team Foundation Server 2018 to manag
 
 1. Press the **Esc** key to close the burn down graph.
 
-<a name="Ex1Task3"></a>
-### Task 3: Team Capacity Planning ###
+### Task 3: Team Capacity Planning
 
 1. Locate the overall **Work** bar that shows how close to capacity we are for the current iteration based on the total of the Remaining Work for the tasks in this iteration and based on the total capacity for the team. It looks like we are okay now, but we still haven't broken the new user story into tasks for the team yet.
 
@@ -233,8 +226,7 @@ In this exercise, you will learn how to use Team Foundation Server 2018 to manag
 
     ![](images/038.png)
 
-<a name="Ex1Task4"></a>
-### Task 4: Working with the Task Board ###
+### Task 4: Working with the Task Board
 
 1. Now that we have finished breaking down the work and assigning it to team members, let's take a look at the task board that will be used in the next stand-up team meeting to report and record progress. Select the **Board** tab from Iteration 3.
 
@@ -276,8 +268,7 @@ In this exercise, you will learn how to use Team Foundation Server 2018 to manag
 
     ![](images/047.png)
 
-<a name="Ex1Task5"></a>
-### Task 5: Using work item search ###
+### Task 5: Using work item search
 
 1. With work item search, you can quickly and easily find relevant work items across all projects in an account. Click the search box at the top of the page to expand the search help. Note that you can specify filters for properties like state and type inline.
 
@@ -309,13 +300,11 @@ In this exercise, you will learn how to use Team Foundation Server 2018 to manag
 
 1. In addition to searching through work items, you can also search code using the same process in the **Code** hub.
 
-<a name="Exercise2"></a>
-## Exercise 2: Agile Portfolio Management ##
+## Exercise 2: Agile Portfolio Management
 
 In this exercise, you will learn about some of the agile portfolio management capabilities provided by Team Foundation Server. These capabilities allow larger organizations to understand the scope of work across several teams and see how that work rolls up into broader initiatives. In this exercise, you will explore how multiple teams at Fabrikam Fiber can collaborate together to work on features.
 
-<a name="Ex2Task1"></a>
-### Task 1: Configuring Team Hierarchy and Area Paths ###
+### Task 1: Configuring Team Hierarchy and Area Paths
 
 1. Let's start out by taking a look at the Fabrikam Fiber project from the top-down, in a manner that would typically be associated with a management role.
 
@@ -355,8 +344,7 @@ In this exercise, you will learn about some of the agile portfolio management ca
 
     ![](images/063.png)
 
-<a name="Ex2Task2"></a>
-### Task 2: Portfolio Management ###
+### Task 2: Portfolio Management
 
 1. The leadership team can see backlog items across all teams, including status and scheduled iteration.
 
@@ -433,4 +421,3 @@ In this exercise, you will learn about some of the agile portfolio management ca
     ![](images/080.png)
 
     **Note**: After completing this lab, the virtual machine will continue to run with the date & time that was set for demonstration purposes at the beginning of this lab. Don't forget to reset the virtual machine to its original snapshot/checkpoint after you complete this lab, unless you are moving on to a follow-up lab based on this lab's endpoint.
-
