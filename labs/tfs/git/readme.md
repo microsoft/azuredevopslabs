@@ -10,30 +10,25 @@ Lab version:15.4
 
 Last updated:11/15/2017
 
-<a name="Overview"></a>
-## Overview ##
+# Overview
 
 In this lab, you'll learn about Git support in Team Foundation Server 2018 and Visual Studio 2017. Git is a distributed version control system with repositories that live both locally (such as on a developer's machine) and hosted on Team Foundation Server. And if you have any doubt about the scalability of Git, rest assured that TFS support for Git Virtual File System ([GVFS](http://www.gvfs.io/)) empowers you to virtually unlimited scale. Just ask the Windows team-they use it to manage over 300GB across 3.5 million files.
 
-<a name="Prerequisites"></a>
-### Prerequisites ###
+# Prerequisites
 
 In order to complete this lab you will need the Visual Studio 2017 virtual machine provided by Microsoft. For more information on acquiring and using this virtual machine, please see [this blog post](http://aka.ms/almvm).
 
-<a name="About the Fabrikam Fiber Scenario"></a>
-### About the Fabrikam Fiber Scenario ###
+# About the Fabrikam Fiber Scenario
 
 This set of hands-on-labs uses a fictional company, Fabrikam Fiber, as a backdrop to the scenarios you are learning about. Fabrikam Fiber provides cable television and related services to the United States. They are growing rapidly and have embraced Windows Azure to scale their customer-facing web site directly to end-users to allow them to self-service tickets and track technicians. They also use an on-premises ASP.NET MVC application for their customer service representatives to administer customer orders.
 
 In this set of hands-on labs, you will take part in a number of scenarios that involve the development and testing team at Fabrikam Fiber. The team, which consists of 8-10 people has decided to use Visual Studio application lifecycle management tools to manage their source code, run their builds, test their web sites, and plan and track the project.
 
-<a name="Exercise1"></a>
-## Exercise 1: Getting started with Git ##
+## Exercise 1: Getting started with Git
 
 In this exercise, you will learn how to create, clone, and push commits to a Git repository in Team Foundation Server.
 
-<a name="Ex1Task1"></a>
-### Task 1: Creating a Git repository ###
+### Task 1: Creating a Git repository
 
 1. Log in as **Sachin Raj (VSALM\Sachin)**. All user passwords are **P2ssw0rd**.
 
@@ -61,8 +56,7 @@ In this exercise, you will learn how to create, clone, and push commits to a Git
 
 1. After the new Git team project has been created, click **Close** to return to Visual Studio.
 
-<a name="Ex1Task2"></a>
-### Task 2: Cloning a Git repository ###
+### Task 2: Cloning a Git repository
 
 1. In **Team Explorer**, click **Clone this repository**.
 
@@ -76,8 +70,7 @@ In this exercise, you will learn how to create, clone, and push commits to a Git
 
     ![](images/007.png)
 
-<a name="Ex1Task3"></a>
-### Task 3: Committing code and linking to work items ###
+### Task 3: Committing code and linking to work items
 
 1. In **Team Explorer**, click the **Home** button, followed by **Settings**.
 
@@ -145,8 +138,7 @@ In this exercise, you will learn how to create, clone, and push commits to a Git
 
     ![](images/023.png)
 
-<a name="Ex1Task4"></a>
-### Task 4: Synchronizing commits with the server ###
+### Task 4: Synchronizing commits with the server
 
 1. Navigate to the commits view by clicking **Sync**.
 
@@ -184,8 +176,7 @@ In this exercise, you will learn how to create, clone, and push commits to a Git
 
     ![](images/032.png)
 
-<a name="Ex1Task5"></a>
-### Task 5: Tagging a release ###
+### Task 5: Tagging a release
 
 1. While it may not seem like much, the product team has decided that this version of the site is exactly what's needed for v1.0. In order to mark it as such, navigate to the **Tags** tab and click **Create Tag**.
 
@@ -199,13 +190,11 @@ In this exercise, you will learn how to create, clone, and push commits to a Git
 
     ![](images/035.png)
 
-<a name="Exercise2"></a>
-## Exercise 2: Git forking, branching, and merging ##
+## Exercise 2: Git forking, branching, and merging
 
 In this exercise, you will learn about Git forking, branching, and merging support in Visual Studio. In general, forking and branching are often used to help switch development contexts and to isolate risk. For example, a core project team might use Git forks to allow people from outside the team to contribute to the project without allowing them direct commit access. Since a Git fork is a server-side copy of the project, the experience is the same, except that it provides a layer of manageability for the owner. Git branching is a similar concept that allows someone to work within a project without committing to the master branch. For teams of 2-5, it is recommended that you use only branches (and not forks) for most scenarios. Creating a Git branch is a lightweight (and therefore fast) operation, as you are simply creating a new reference to an existing commit. This is very different from a Git fork or Team Foundation Version Control (TFVC) branching where the entire source tree needs to be duplicated server-side. We will also take a quick look at the merging support for Git projects.
 
-<a name="Ex2Task1"></a>
-### Task 1: Forking a repository ###
+### Task 1: Forking a repository
 
 1. From the navigation bar, click **Fork**. This fork will be intended for people outside the team to contribute changes to the project. For example, if someone wants to offer a bug fix, they would push it to a branch on this fork and request a pull. Someone from the team (Sachin, in this case) will monitor the pull requests and manage changes back through merges until they get to the primary project.
 
@@ -231,8 +220,7 @@ In this exercise, you will learn about Git forking, branching, and merging suppo
 
     ![](images/041.png)
 
-<a name="Ex2Task2"></a>
-### Task 2: Branching code ###
+### Task 2: Branching code
 
 1. In **Team Explorer**, click **Branches**.
 
@@ -330,8 +318,7 @@ In this exercise, you will learn about Git forking, branching, and merging suppo
 
 1. Switch users back to **Sachin** by minimizing the remote desktop session.
 
-<a name="Ex2Task3"></a>
-### Task 3: Merging changes in a repository ###
+### Task 3: Merging changes in a repository
 
 1. From Sachin's perspective, he has so far created a local branch based off the master, made a change to a file, and then published that branch. He would then like to go ahead and merge his **about** branch back into the **master** branch.
 
@@ -409,8 +396,7 @@ In this exercise, you will learn about Git forking, branching, and merging suppo
 
     ![](images/082.png)
 
-<a name="Ex2Task4"></a>
-### Task 4: Managing repo security and permissions ###
+### Task 4: Managing repo security and permissions
 
 1. Now let's take a quick peek at managing security and permissions for Git repositories hosted in Team Foundation Server. From the **Repositories** dropdown select **Manage Repositories**.
 
@@ -428,8 +414,7 @@ In this exercise, you will learn about Git forking, branching, and merging suppo
 
     ![](images/086.png)
 
-<a name="Ex2Task5"></a>
-### Task 5: Managing branch policies ###
+### Task 5: Managing branch policies
 
 1. When you want people on your team to review code in a Git team project, you can use a pull request to review and merge the code. Pull requests enable developers working in topic branches to get feedback on their changes from other developers prior to submitting the code into the master branch. Any developer participating in the review can see the code changes, leave comments in the code, and give a "thumbs up" approval if they're satisfied with those changes.
 
@@ -467,8 +452,7 @@ In this exercise, you will learn about Git forking, branching, and merging suppo
 
     ![](images/094.png)
 
-<a name="Ex2Task6"></a>
-### Task 6: Reviewing code and merging using pull requests ###
+### Task 6: Reviewing code and merging using pull requests
 
 1. Switch back to the **Clemri** RDP session.
 
@@ -579,4 +563,3 @@ In this exercise, you will learn about Git forking, branching, and merging suppo
 1. Thanks to live updates, the pull request should already show the comment and that it was approved.
 
     ![](images/119.png)
-
