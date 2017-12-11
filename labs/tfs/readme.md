@@ -62,7 +62,7 @@ Here are the 2017 hands-on-labs for Team Foundation Server. If you want to acces
 Lab Name</b>
 </td>
 </thead>
-<tr><td><a href="started/">Working with the Visual Studio 2017 ALM Virtual Machine</a></td></tr>
+<tr><td><a href="started/">Working with the Visual Studio 2018 ALM Virtual Machine</a></td></tr>
 <tr><td><a href="agile/">Agile Planning and Portfolio Management with Team Foundation Server 2018</a></td></tr>
 <tr><td><a href="agileworkitems/">Agile Work Item Management with Team Foundation Server 2018</a></td></tr>
 <tr><td><a href="armtemplates/">Authoring ARM Templates with Visual Studio     <span class="label label-success">New</span></a></td></tr>

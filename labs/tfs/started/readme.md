@@ -1,5 +1,5 @@
 ---
-title: Working with the Visual Studio 2017 ALM Virtual Machine
+title: Working with the Visual Studio 2018 ALM Virtual Machine
 layout: page
 sidebar: tfs
 permalink: /labs/tfs/started/
