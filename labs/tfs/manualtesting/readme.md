@@ -10,30 +10,25 @@ Lab version:15.4
 
 Last updated:11/13/2017
 
-<a name="Overview"></a>
-## Overview ##
+# Overview
 
 In this lab, you will learn how to use Microsoft Team Foundation Server 2018 to manage your project's testing lifecycle. This project will guide you through creating test plans designed efficiently validate your software milestones. You will also create and execute manual tests that can be consistently reproduced over the course of each release.
 
-<a name="Prerequisites"></a>
-### Prerequisites ###
+# Prerequisites
 
 In order to complete this lab you will need the Visual Studio 2017 virtual machine provided by Microsoft. For more information on acquiring and using this virtual machine, please see [this blog post](http://aka.ms/almvm).
 
-<a name="About the Parts Unlimited Scenario"></a>
-### About the Parts Unlimited Scenario ###
+# About the Parts Unlimited Scenario
 
 This set of hands-on-labs uses a fictional company, Parts Unlimited, as a backdrop to the scenarios you are learning about. Parts Unlimited sells automotive products. They are growing rapidly and have embraced Windows Azure to scale their customer-facing web site directly to end-users to allow them to manage their catalog and inventory.
 
 In this set of hands-on labs, you will take part in a number of scenarios that involve the development and testing team at Parts Unlimited. The team, which consists of 8-10 people has decided to use Visual Studio application lifecycle management tools to manage their source code, run their builds, test their web sites, and plan and track the project.
 
-<a name="Exercise1"></a>
-## Exercise 1: Managing Test Plans, Suites, and Cases ##
+## Exercise 1: Managing Test Plans, Suites, and Cases
 
 In this exercise, you will learn how to create and manage test plans, test suites, and test cases.
 
-<a name="Ex1Task1"></a>
-### Task 1: Understanding Test Plans, Suites, and Cases ###
+### Task 1: Understanding Test Plans, Suites, and Cases
 
 1. Log in as **Sachin Raj (VSALM\Sachin)**. All user passwords are **P2ssw0rd**.
 
@@ -75,8 +70,7 @@ In this exercise, you will learn how to create and manage test plans, test suite
 
     ![](images/008.png)
 
-<a name="Ex1Task2"></a>
-### Task 2: Managing Tests ###
+### Task 2: Managing Tests
 
 1. Sometimes a set of test cases should be run in a specific order to maximize efficiency. Click **Order tests** to specify the order these test cases should be run.
 
@@ -130,8 +124,7 @@ In this exercise, you will learn how to create and manage test plans, test suite
 
     ![](images/021.png)
 
-<a name="Ex1Task3"></a>
-### Task 3: Authoring Tests ###
+### Task 3: Authoring Tests
 
 1. Expand the dropdown next to the **v2.1** test plan and select **New static suite.** A **static suite** of test cases is a suite where the cases have been manually assigned. You can also create suites based on common requirements (**requirement-based suite**) or a query of test cases and/or work items (**query-based suite**).
 
@@ -179,13 +172,11 @@ In this exercise, you will learn how to create and manage test plans, test suite
 
 1. Press **Esc** to close the dialog.
 
-<a name="Exercise2"></a>
-## Exercise 2: Authoring, Running, and Analyzing Manual Tests ##
+## Exercise 2: Authoring, Running, and Analyzing Manual Tests
 
 In this exercise, you will learn how to create a manual test plan and populate it with steps. The plan can later be run to confirm the expected behavior of your software. In this lab, we're going to focus on creating a new manual test case and running it.
 
-<a name="Ex2Task1"></a>
-### Task 1: Installing the Test & Feedback Extension ###
+### Task 1: Installing the Test & Feedback Extension
 
 1. Install **Google Chrome** from [http://google.com/chrome](http://google.com/chrome). The rest of this exercise will use Chrome as its browser.
 
@@ -221,8 +212,7 @@ In this exercise, you will learn how to create a manual test plan and populate i
 
     ![](images/039.png)
 
-<a name="Ex2Task2"></a>
-### Task 2: Authoring a Manual Test Plan ###
+### Task 2: Authoring a Manual Test Plan
 
 1. In Chrome, navigate to [http://vsalm:8080/tfs](http://vsalm:8080/tfs).
 
@@ -252,22 +242,20 @@ In this exercise, you will learn how to create a manual test plan and populate i
 
 1. At this point, we're ready to add steps to this manual test. Each step includes an **Action**, which describes the action the tester needs to perform. Optionally, a step can include an **Expected Result**, which describes the expected result of the given action. In the **Steps** panel, create a step for each of the following **Actions**, only one of which has an **Expected Result**.
 
-
-|Action|Expected Result|
---- | ---
-|Open http://www.partsunlimited.com||
-|Click Brakes||
-|Click Disk and Pad Combo||
-|Click Add to Cart||
-|Click Checkout||
-|Enter @Email, @Password||
-|Enter @Name, @Phone, @Email, @Address, @City, @State, @PostalCode, @Country, @Promo||
-|Click Submit Order||
-|Confirm order page has order #|Order # should appear on order confirmation page|
-|Log out||
-|Close browser||
-**Note:** If you end up with an extra empty step, delete it.
-
+   |Action|Expected Result|
+    --- | ---
+   |Open http://www.partsunlimited.com||
+   |Click Brakes||
+   |Click Disk and Pad Combo||
+   |Click Add to Cart||
+   |Click Checkout||
+   |Enter @Email, @Password||
+   |Enter @Name, @Phone, @Email, @Address, @City, @State, @PostalCode, @Country, @Promo||
+   |Click Submit Order||
+   |Confirm order page has order #|Order # should appear on order confirmation page|
+   |Log out||
+   |Close browser||
+   **Note:** If you end up with an extra empty step, delete it.
 
 1. At this point, the **Steps** panel should look similar to the following:
 
@@ -279,20 +267,18 @@ In this exercise, you will learn how to create a manual test plan and populate i
 
 1. Use the following table to set up values for two iterations.
 
-
-|Fields|Iteration 1|Iteration 2|
---- | --- | ---
-|Email|admin@test.com|sachin@test.com|
-|Password|P@ssw0rd|P@ssw0rd|
-|Name|Admin User|Sachin Raj|
-|Phone|425-555-1234|555-555-5555|
-|Address|One Microsoft Way|Two Tailspin Trail|
-|City|Redmond|Springfield|
-|State|WA|IL|
-|PostalCode|98052|11135|
-|Country|USA|USA|
-|Promo|FREE|FREE|
-
+   |Fields|Iteration 1|Iteration 2|
+   --- | --- | ---
+   |Email|admin@test.com|sachin@test.com|
+   |Password|P@ssw0rd|P@ssw0rd|
+   |Name|Admin User|Sachin Raj|
+   |Phone|425-555-1234|555-555-5555|
+   |Address|One Microsoft Way|Two Tailspin Trail|
+   |City|Redmond|Springfield|
+   |State|WA|IL|
+   |PostalCode|98052|11135|
+   |Country|USA|USA|
+   |Promo|FREE|FREE|
 
 1. The **Parameter Values** section should now look like this. Note that you can enter as many iterations as you need to fully test the breadth of the scenario.
 
@@ -302,8 +288,7 @@ In this exercise, you will learn how to create a manual test plan and populate i
 
     ![](images/049.png)
 
-<a name="Ex2Task3"></a>
-### Task 3: Running a Manual Test Plan ###
+### Task 3: Running a Manual Test Plan
 
 1. In this task, you will learn how to run the manual test plan that we created earlier. Note that the process for triggering an automated test run follows a similar workflow. You can learn more about that in the [documentation](https://docs.microsoft.com/en-us/vsts/build-release/test/run-automated-tests-from-test-hub).
 
@@ -413,8 +398,7 @@ In this exercise, you will learn how to create a manual test plan and populate i
 
 1. Close the test browser windows.
 
-<a name="Ex2Task4"></a>
-### Task 4: Analyzing Manual Test Results ###
+### Task 4: Analyzing Manual Test Results
 
 1. In this task, you will learn how to review the results of a manual test run.
 
@@ -442,8 +426,7 @@ In this exercise, you will learn how to create a manual test plan and populate i
 
     ![](images/080.png)
 
-<a name="Ex2Task5"></a>
-### Task 5: Creating Shared Steps ###
+### Task 5: Creating Shared Steps
 
 1. In this task, you will learn how to create shared steps. A shared step combines multiple steps that are commonly performed in sequence into a single logical step, which can be shared across tests. If the process defined by the shared steps ever changes in the future, you can update the shared step in one place and it will be reflected in all tests that reference it.
 
@@ -476,4 +459,3 @@ In this exercise, you will learn how to create a manual test plan and populate i
 1. Click **Save & Close** to save the test case.
 
     ![](images/087.png)
-
