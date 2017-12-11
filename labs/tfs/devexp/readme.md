@@ -10,8 +10,7 @@ Lab version:15.4
 
 Last updated:11/5/2017
 
-<a name="Overview"></a>
-## Overview ##
+# Overview
 
 Visual Studio 2017 introduces a wealth of features and enhancements designed to significantly improve the productivity of developers. Many of these improvements focus on saving time and effort on everyday tasks, such as code navigation, IntelliSense, refactoring, code fixes, and debugging. In this lab, we'll take a quick tour of some of the many benefits.
 
@@ -19,18 +18,13 @@ There are also a wealth of new features and enhancements in Visual Studio 2017 c
 
 For a more exhaustive list of what's new in Visual Studio 2017, please check out the [release notes](https://www.visualstudio.com/en-us/news/releasenotes/vs2017-relnotes).
 
-<a name="Prerequisites"></a>
-### Prerequisites ###
+# Prerequisites
 
 In order to complete this lab you will need the Visual Studio 2017 virtual machine provided by Microsoft. For more information on acquiring and using this virtual machine, please see [this blog post](http://aka.ms/almvm).
 
-<a name="Exercise1"></a>
+## Exercise 1: Developer experience enhancements in Visual Studio 2017
 
-## Exercise 1: Developer experience enhancements in Visual Studio 2017 ##
-
-<a name="Ex1Task1"></a>
-
-### Task 1: Working with the new modular installer ###
+### Task 1: Working with the new modular installer
 
 1. Log in as **Sachin Raj (VSALM\Sachin)**. All user passwords are **P2ssw0rd**.
 
@@ -66,9 +60,7 @@ In order to complete this lab you will need the Visual Studio 2017 virtual machi
 
 1. Close all installer windows.
 
-<a name="Ex1Task2"></a>
-
-### Task 2: Boosting your productivity ###
+### Task 2: Boosting your productivity
 
 1. Launch **Visual Studio** from the taskbar.
 
@@ -138,9 +130,7 @@ In order to complete this lab you will need the Visual Studio 2017 virtual machi
 
     ![](images/022.png)
 
-<a name="Ex1Task3"></a>
-
-### Task 3: Using the new Exception Helper ###
+### Task 3: Using the new Exception Helper
 
 1. Press **Alt+Ctrl+E** to bring up the **Exception Settings** panel.
 
