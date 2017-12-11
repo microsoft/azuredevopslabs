@@ -74,7 +74,7 @@ management capabilities of Visual Studio 2017, as well as application
 lifecycle management features which have been introduced since Visual
 Studio 2010.
 
-## Recommend System Configuration
+## Recommended System Configuration
 
 You will want to provide as much RAM as possible to this virtual
 machine. A minimum of 8GB is suggested. But you should not allocate all
