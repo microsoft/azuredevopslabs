@@ -10,26 +10,21 @@ Lab version:15.4
 
 Last updated:11/7/2017
 
-<a name="Overview"></a>
-## Overview ##
+# Overview
 
 Visual Studio 2017 enables teams to validate architectural dependencies in their solutions using the [Layer Designer](https://msdn.microsoft.com/en-us/library/dd465141.aspx), which first shipped in Visual Studio 2010. This feature helps ensure that developers respect the architectural constraints of the application as they edit their code. It has been re-written in Visual Studio 2017 to use Roslyn analyzers for a more robust, reliable experience. Developers now get real-time design feedback in the editor so they can immediately stop introducing architectural flaws. "Layer" diagrams have also been renamed "dependency validation" diagrams to make it clearer what they are for.
 
-<a name="Related Resources"></a>
-### Related Resources ###
+# Related Resources
 
 See this [blog post](https://blogs.msdn.microsoft.com/visualstudioalm/2016/11/30/live-dependency-validation-in-visual-studio-2017/) for a detailed discussion comparing the live dependency validation experience with the past.
 
-<a name="Prerequisites"></a>
-### Prerequisites ###
+# Prerequisites
 
 In order to complete this lab you will need the Visual Studio 2017 virtual machine provided by Microsoft. For more information on acquiring and using this virtual machine, please see [this blog post](http://aka.ms/almvm).
 
-<a name="Exercise1"></a>
-## Exercise 1: Real Time Dependency Validation in Visual Studio 2017 ##
+## Exercise 1: Real Time Dependency Validation in Visual Studio 2017
 
-<a name="Ex1Task1"></a>
-### Task 1: Creating a dependency diagram ###
+### Task 1: Creating a dependency diagram
 
 1. Log in as **Sachin Raj (VSALM\Sachin)**. All user passwords are **P2ssw0rd**.
 
@@ -79,8 +74,7 @@ In order to complete this lab you will need the Visual Studio 2017 virtual machi
 
 1. Press **Ctrl+S** to save the diagram.
 
-<a name="Ex1Task2"></a>
-### Task 2: Live dependency validation ###
+### Task 2: Live dependency validation
 
 1. Now it's time to break some rules. Press **Ctrl+Shift+B** to rebuild the solution. It should build as expected because we haven't violated any policy...yet.
 
@@ -111,4 +105,3 @@ In order to complete this lab you will need the Visual Studio 2017 virtual machi
 1. Expand the **Microsoft.DependencyValidation.Analyzers** rule set and note how you could change the violation behavior from an **Error** to a **Warning** (or whatever you prefer). There is great flexibility in managing dependency validation.
 
     ![](images/015.png)
-
