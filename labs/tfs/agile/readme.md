@@ -20,7 +20,7 @@ In order to complete this lab you will need the Visual Studio 2017 virtual machi
 
 **Important note**:
 
-This lab requires you to use the default state of the virtual machine, before any modifications are made to work items or source in TFS. If you followed the "Working with the Visual Studio 2017 ALM Virtual Machine.docx" instructions you should already have a snapshot/checkpoint of the virtual machine before working with it for the first time. Apply this snapshot/checkpoint before starting this lab.
+This lab requires you to use the default state of the virtual machine, before any modifications are made to work items or source in TFS. If you followed the **Working with the Visual Studio 2017 ALM Virtual Machine.docx** instructions you should already have a snapshot/checkpoint of the virtual machine before working with it for the first time. Apply this snapshot/checkpoint before starting this lab.
 
 # About the Fabrikam Fiber Scenario
 
@@ -40,7 +40,7 @@ In this exercise, you will learn how to use Team Foundation Server 2018 to manag
 
     > **Note:** In order to fully demonstrate the ALM features in this lab, we will first set the virtual machine to a specific date that lines up with a pre-configured, in-flight iteration. This lab needs to be walked through using the original virtual machine state (without any modifications made to source or work items), otherwise you will see errors.
 
-1. **Right-click** the **ConfigureALMDemo.bat** file on the Desktop and then select "**Run as administrator**". This will set the date and time in the virtual machine to be a specific date that lines up with the demonstration data.
+1. **Right-click** the **ConfigureALMDemo.bat** file on the Desktop and then select **Run as administrator**. This will set the date and time in the virtual machine to be a specific date that lines up with the demonstration data.
 
 1. Launch **Internet Explorer** from the taskbar and click **TFS FF Portal** from the favorites bar at the top.
 
@@ -82,7 +82,7 @@ In this exercise, you will learn how to use Team Foundation Server 2018 to manag
 
 1. Imagine that the VP of Fabrikam Fiber has requested that a new user story be implemented for the customer-facing service portal. This new user story will enable customers to see weather-related service outages. This user story is being designated as high-priority because many customers requested it and customer service indicated that it would greatly reduce phone support during outages.
 
-1. Select the last row of the product backlog and then create a new **Product Backlog Item** with the title "**Customer should see weather-related outages on portal."**
+1. Select the last row of the product backlog and then create a new **Product Backlog Item** with the title **Customer should see weather-related outages on portal.**
 
     ![](images/007.png)
 
@@ -238,7 +238,7 @@ In this exercise, you will learn how to use Team Foundation Server 2018 to manag
 
     > **Note:** The task board is touch enabled as well. This will not work within this virtual machine, but you might want to put in your request now for that nice wall-mounted touch-screen monitor you have been desiring for your team.
 
-1. **Single-click** the '**8**' value shown on the "**Consume OData feed for weather alerts**" task and change the Remaining Work to **5** to simulate Brian working on the task during the day.
+1. **Single-click** the '**8**' value shown on the **Consume OData feed for weather alerts** task and change the Remaining Work to **5** to simulate Brian working on the task during the day.
 
     ![](images/041.png)
 
@@ -246,7 +246,7 @@ In this exercise, you will learn how to use Team Foundation Server 2018 to manag
 
     ![](images/042.png)
 
-1. Drag and drop the task titled "**Create database for branch office location lookup**" to the **Done** column to record that work as completed. Note that the remaining work is automatically reduced to **0**.
+1. Drag and drop the task titled **Create database for branch office location lookup** to the **Done** column to record that work as completed. Note that the remaining work is automatically reduced to **0**.
 
     ![](images/043.png)
 
@@ -274,7 +274,7 @@ In this exercise, you will learn how to use Team Foundation Server 2018 to manag
 
     ![](images/048.png)
 
-1. Search for **"customer"**.
+1. Search for **customer**.
 
     ![](images/049.png)
 
