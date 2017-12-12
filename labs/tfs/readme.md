@@ -110,7 +110,7 @@ Here are the 2018 hands-on-labs for Team Foundation Server. If you want to acces
       <td><a href="intellitest/">Generate Unit Tests with IntelliTest using Visual Studio Enterprise 2017</a></td>
    </tr>
    <tr>
-      <td><a href="smartword4tfs/">Introduction to the Modern Requirements Suite4TFS & Team Foundation Server 2018</a></td>
+      <td><a href="smartword4tfs/">Introduction to the Modern Requirements Suite4TFS & Team Foundation Server 2017</a></td>
    </tr>
    <tr>
       <td><a href="livedependencyvalidation/">Live Dependency Validation with Visual Studio 2017</a>    <span class="label label-success">New</span></td>
