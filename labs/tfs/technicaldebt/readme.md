@@ -21,7 +21,7 @@ Technical debt is the set of problems in a development effort that make forward 
 
 3- You will need to download and install SonarQube VSTS extension from [VSTS marketplace](https://marketplace.visualstudio.com/items?itemName=SonarSource.sonarqube)
 
-4- Complete Lab [Team Foundation Build 2017](https://github.com/hkamel/almvm-1/blob/master/labs/tfs/build)
+4- Complete Lab [Team Foundation Build 2018](https://github.com/hkamel/almvm-1/blob/master/labs/tfs/build)
 
 ## Exercise 1: Install and Configure SonarQube Server and Extensions
 
@@ -142,7 +142,7 @@ In this exercise, you will learn about the main configuration points that are ne
 5. Click on the **SonarQube Scanner for MSBuild - End Analysis (new)** step to configure it:
 
    * Add a new **SonarQube Endpoint** by click **Manage**
-    
+   
      <img src="./media/techdebt_img15.png" />
 
    * In **Services** page click **New Service Endpoint** and select **SonarQube**
