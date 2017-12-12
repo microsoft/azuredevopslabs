@@ -9,38 +9,45 @@ folder: /labs/tfs/
 
 ## Overview
 
-The Microsoft Visual Studio ALM VM and the accompanying hands-on-labs are now updated to Visual Studio and Team Foundation Server 2018. 
+The Microsoft Visual Studio ALM VM and the accompanying hands-on-labs are now updated to Visual Studio 2017 (15.5) and Team Foundation Server 2018. 
 
 The virtual machine contains the following pre-configured software:
 
-1.  Microsoft Windows Server 2016 Standard Evaluation
+1.Microsoft Windows Server 2016 Standard Evaluation
 
-2.  Microsoft Visual Studio Enterprise 2017 (build number 15.5)
+2.Microsoft Visual Studio Enterprise 2017 (build number 15.5)
 
-3.  Microsoft Visual Studio Team Foundation Server 2018
+3.Microsoft Visual Studio Team Foundation Server 2018
 
-4.  Microsoft Office Professional Plus 2016 (Word, PowerPoint,
+4.Microsoft Office Professional Plus 2016 (Word, PowerPoint,
     Excel, Outlook)
 
-5.  Microsoft SQL Server Standard 2016
+5.Microsoft SQL Server Standard 2016
 
-6.  Sample users and data required to support hands-on-lab scripts which
-    accompany this download.      
+6.Sample users and data required to support hands-on-lab scripts which accompany this download.
 
 ## Accessing the Virtual Machine
 
 You can get access to the virtual machine the following ways:
 
 - **Download the Virtual Machine** - You can download the virtual machine, if you prefer to use it offline. Please see below for instructions to download the VM.
-- **Try it on Technet Virtual Labs** - You can also access the virtual machine online on [**TechNet Virtual Labs**](technet/)  - no downloads or complex setup required. You can experience it right from within your browser.
-- **Run it on Azure** - If you prefer to run the VM on Azure, you can simply upload the VHD to your Azure storage and create a VM from the VHD. If you are setting up the labs for a training, you  might want to consider the [Azure DevTest Labs](https://docs.microsoft.com/en-us/azure/devtest-lab/devtest-lab-training-lab) for training.
+- **Try it on Technet Virtual Labs** - **Coming soon** We will be publishing the labs to TechNet so that you can try them online from the convenience of your browser. No downloads, No Setup required!
 
-## Downloading and extracting the VM   
-The size of the download is about 18 GB. It is recommended that you use a utility like [**Free download manager**](http://www.freedownloadmanager.org/).  This utility provides:   
-    - Auto-resume support for interrupted downloads.
-    - Multiple simultaneous download streams for (usually) a much faster download experience.
-    - As the name implies, it’s completely free.    
+- **Run it on Azure** - If you prefer to run the VM on Azure, you can simply upload the VHD to your Azure storage and create a VM from the VHD. Please see this article [Create a Windows VM from a specialized disk](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/create-vm-specialized). 
 
+    If you are setting up the labs for a training, you  might want to consider [Azure DevTest Labs](https://docs.microsoft.com/en-us/azure/devtest-lab/devtest-lab-training-lab) for training.
+
+## Downloading and extracting the VM
+
+The size of the download is about 18 GB. It is recommended that you use a download manager  like [**Free download manager**](http://www.freedownloadmanager.org/) or [**Download Accelerator Plus**](http://www.speedbit.com/dap/).  
+
+These utility provide:
+
+* Multiple simultaneous download streams for (usually) a much faster download experience.
+
+* Auto-resume support for interrupted downloads
+
+Using **Free download manager**
 - Download and install Free download manager if you currently do not have one installed 
 - Open and select all the <a href="media/almvm2017url.txt">download URLs</a> from the text file. Press ***CTRL+C*** to copy the selected URLs to clipboard.
 - Select Menu - ***Paste URLs from clipboard***      
@@ -50,7 +57,7 @@ The size of the download is about 18 GB. It is recommended that you use a utilit
 <img src="media/fdm.png" />
 
 
->There are quite a number of important instructions on how to use the VM including activating the VM, taking snapshots/check points, etc, documented. We highly recommend that you read through the [Working with the Visual Studio 2017 ALM Virtual Machine]() document prior to using the VM, even if you may have used the earlier version of the VM. 
+>There are quite a number of important instructions on how to use the VM including activating the VM, taking snapshots/check points, etc., documented. We highly recommend that you read through the [Working with the Visual Studio 2017 ALM Virtual Machine]() document prior to using the VM, even if you may have used the earlier version of the VM. 
 
 >Note that The VM has about 15 GB of free hard disk space. Should you want to increase the size of the disk, you will need to do so before creating snapshots/check points. You can refer this article on [TechNet]() for instructions on expanding the virtual hard disk.
 
@@ -65,7 +72,7 @@ Here are the 2018 hands-on-labs for Team Foundation Server. If you want to acces
       </td>
    </thead>
    <tr>
-      <td><a href="started/">Working with the Visual Studio 2017 ALM Virtual Machine</a></td>
+      <td><a href="started/">Working with the Visual Studio 2017 Winter Update ALM Virtual Machine</a></td>
    </tr>
    <tr>
       <td><a href="agile/">Agile Planning and Portfolio Management with Team Foundation Server 2018</a></td>
