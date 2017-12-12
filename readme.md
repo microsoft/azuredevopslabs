@@ -12,7 +12,7 @@ summary:
 
 <br>
 <span class="introText">
-The Microsoft ALM/DevOps Hands-On-Labs is a set of self-placed labs that will give you experience and help you get started with all the ALM/DevOps Capabilities that Microsoft Visual Studio Team Foundation Server/Visual Studio Team Services provides. 
+The Microsoft ALM/DevOps Hands-On-Labs is a set of self-placed labs that will give you experience and help you get started with all the ALM/DevOps Capabilities that Microsoft Visual Studio Team Foundation Server/Visual Studio Team Services provides.
 </span>
 <br />
 <br />
@@ -42,12 +42,12 @@ The Microsoft ALM/DevOps Hands-On-Labs is a set of self-placed labs that will gi
 
 <br />
 
-<h2> Recent News </h2>
+<h2> Recent News and Announcements </h2>
  {% for post in site.posts limit:10 %}
 <div class="headline">
 
 <span class="headnews">
-<a href="{{ post.pageurl | prepend: site.baseurl| prepend: site.url }}">{{ post.title | xml_escape }}</a>
+<a href="{{ post.pageurl | prepend: site.baseurl| prepend: site.url }}" class="postitem">{{ post.title | xml_escape }}</a>
 </span> 
 <p>
 {{ post.content }}

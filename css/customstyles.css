@@ -1376,7 +1376,7 @@ i.glyphicon.glyphicon-search {
 
 .mainTable {
     border: none;
-    background-color: #fcfcfc;
+    background-color: #ffffff;
 }
 
 span.introText {
@@ -1410,12 +1410,12 @@ td.text_center {
 div.headline {
     /* border: 1px;*/
     border-width: 1px;
-    /* border-style: solid; */
+    border-style: solid; 
     /*border: double #248ec2;*/
-    border-color: #248ec2;
+    border-color: #eff2f4;
     padding: 5px;
-    margin: 25px;
-    background-color: #fbfbfb;
+    margin: 5px;
+    background-color: #ffffff;
 }
 
 span.headnews {
@@ -1424,6 +1424,8 @@ span.headnews {
     font-size: 20px;
     font-weight: bold;
     color: black;
+    line-height: 1.5;
+    font-family: 'Segoe UI Condensed','Segoe UI','Segoe WP',Tahoma,Arial,sans-serif';
 }
 
 div.newsitem {
@@ -1524,3 +1526,9 @@ button.custom-btn {
 a.labmain:link {color:#000000;text-decoration:none;    padding-top: 20px;     padding-bottom: 5px;     font-size: 20px;     font-weight: bold; }
 a.labmain:visited {color:#000000; padding-top: 20px;     padding-bottom: 5px;     font-size: 20px;     font-weight: bold; }
 a.labmain:hover {color:#11b2E8; padding-top: 20px;     padding-bottom: 5px;     font-size: 20px;     font-weight: bold; }
+
+a.postitem:link, a.postitem:visited{
+    color: #4e8fe5;
+    text-decoration: none;
+   
+}
