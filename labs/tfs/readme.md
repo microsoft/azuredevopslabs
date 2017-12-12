@@ -50,13 +50,13 @@ The size of the download is about 18 GB. It is recommended that you use a utilit
 <img src="media/fdm.png" />
 
 
->There are quite a number of important instructions on how to use the VM including activating the VM, taking snapshots/check points, etc, documented. We highly recommend that you read through the [Working with the Visual Studio 2018 ALM Virtual Machine]() document prior to using the VM, even if you may have used the earlier version of the VM. 
+>There are quite a number of important instructions on how to use the VM including activating the VM, taking snapshots/check points, etc, documented. We highly recommend that you read through the [Working with the Visual Studio 2017 ALM Virtual Machine]() document prior to using the VM, even if you may have used the earlier version of the VM. 
 
 >Note that The VM has about 15 GB of free hard disk space. Should you want to increase the size of the disk, you will need to do so before creating snapshots/check points. You can refer this article on [TechNet]() for instructions on expanding the virtual hard disk.
 
 ## Hands-On-Labs
 
-Here are the 2017 hands-on-labs for Team Foundation Server. If you want to access the labs offline, you can download them as MS Word documents from <a href="https://almvm2017.blob.core.windows.net/vm2017/VisualStudio ALMVM 2017 Labs.zip">here</a>
+Here are the 2018 hands-on-labs for Team Foundation Server. If you want to access the labs offline, you can download them as MS Word documents from <a href="https://almvm2017.blob.core.windows.net/vm2017/VisualStudio ALMVM 2017 Labs.zip">here</a>
 
 <table width="100%">
    <thead>
@@ -65,7 +65,7 @@ Here are the 2017 hands-on-labs for Team Foundation Server. If you want to acces
       </td>
    </thead>
    <tr>
-      <td><a href="started/">Working with the Visual Studio 2018 ALM Virtual Machine</a></td>
+      <td><a href="started/">Working with the Visual Studio 2017 ALM Virtual Machine</a></td>
    </tr>
    <tr>
       <td><a href="agile/">Agile Planning and Portfolio Management with Team Foundation Server 2018</a></td>

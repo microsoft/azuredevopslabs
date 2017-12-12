@@ -28,7 +28,7 @@ entries:
       url: labs/tfs/
       output: web, pdf
 
-    - title: Working with the Visual Studio 2018 ALM VM
+    - title: Working with the Visual Studio 2017 ALM VM
       url: labs/tfs/started
       output: web, pdf
 
