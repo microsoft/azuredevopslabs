@@ -23,6 +23,12 @@ Power BI is a suite of business analytics tools that deliver insights throughout
 
 **You can start a free trial if you don't have Office365 account from <a href="https://teams.microsoft.com/start">here</a>**
 
+## Important Note
+
+We are deprecating the PowerBI.com Visual Studio Team Services (VSTS) Content Pack on November 15, 2017 primarily due to the negative impact it has had on VSTS accounts, including throttling end users access. Support will continue for all existing PowerBI.com data sets based on the Content Pack. However, you won’t be able to create any new data sets.
+
+The [Analytics Marketplace extension](https://marketplace.visualstudio.com/items?itemName=ms.vss-analytics) and upcoming updates to the [Power BI Desktop connector](https://docs.microsoft.com/en-us/vsts/report/powerbi/data-connector-connect) for VSTS are intended to replace and improve on the capabilities of the Content Pack. While the Analytics Marketplace extension currently supports Work Item Tracking data, we will update it to support additional data types including Tests, Build, Release and Version Control. In the interim, you can use [VSTS REST APIs](https://www.visualstudio.com/en-us/docs/integrate/api/overview) as an alternative to the Content Pack to report on these additional data types.
+
 ## Authorize Power BI to access your account data
 
 Your first step requires you to authorize Power BI to access your Team Services account. Choose between one of these two connection scenarios when connecting to Power BI:
