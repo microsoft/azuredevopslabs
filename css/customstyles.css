@@ -1,9 +1,9 @@
 body {
-    font-size: 15px;
-    font-family: "Segoe UI";
+    font-size: 17px;
+    font-family: "'Lora', Georgia, serif";
     margin: 0px;
     padding: 0px;
-    line-height: 23px;
+    line-height: 27px;
     /*background-color: #248ec2;*/
 }
 
@@ -514,7 +514,7 @@ ul#mysidebar {
 }
 
 span.projectTitle {
-    font-family: Helvetica;
+    font-family:    ;
     font-weight: bold;
     color: #000000;
     padding-left: 10px;
@@ -994,7 +994,7 @@ a.accordion-toggle {
 
 span.red {
     color: red;
-    font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
+    font-family: 'Lora', Georgia, serif;
 }
 
 h3.codeExplanation {
@@ -1421,11 +1421,11 @@ div.headline {
 span.headnews {
     padding-top: 20px;
     padding-bottom: 5px;
-    font-size: 20px;
+    font-size: 17px;
     font-weight: bold;
     color: black;
     line-height: 1.5;
-    font-family: 'Segoe UI Condensed','Segoe UI','Segoe WP',Tahoma,Arial,sans-serif';
+    font-family: 'Lora', Georgia, serif;
 }
 
 div.newsitem {
@@ -1528,7 +1528,8 @@ a.labmain:visited {color:#000000; padding-top: 20px;     padding-bottom: 5px;   
 a.labmain:hover {color:#11b2E8; padding-top: 20px;     padding-bottom: 5px;     font-size: 20px;     font-weight: bold; }
 
 a.postitem:link, a.postitem:visited{
-    color: #4e8fe5;
+    /*color: #4e8fe5;*/
+    color: #000000;
     text-decoration: none;
    
 }

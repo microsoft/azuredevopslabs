@@ -15,7 +15,7 @@ The virtual machine contains the following pre-configured software:
 
 1.Microsoft Windows Server 2016 Standard Evaluation
 
-2.Microsoft Visual Studio Enterprise 2017 (build number 15.5)
+2.Microsoft Visual Studio Enterprise 2017 (15.5)
 
 3.Microsoft Visual Studio Team Foundation Server 2018
 
@@ -31,7 +31,7 @@ The virtual machine contains the following pre-configured software:
 You can get access to the virtual machine the following ways:
 
 - **Download the Virtual Machine** - You can download the virtual machine, if you prefer to use it offline. Please see below for instructions to download the VM.
-- **Try it on Technet Virtual Labs** - **Coming soon** We will be publishing the labs to TechNet so that you can try them online from the convenience of your browser. No downloads, No Setup required!
+- **Try it on Technet Virtual Labs** - **Coming soon** We will be publishing the labs to TechNet so that you can try them online from the convenience of your browser. No downloads, No setup required!
 
 - **Run it on Azure** - If you prefer to run the VM on Azure, you can simply upload the VHD to your Azure storage and create a VM from the VHD. Please see this article [Create a Windows VM from a specialized disk](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/create-vm-specialized). 
 
@@ -39,7 +39,7 @@ You can get access to the virtual machine the following ways:
 
 ## Downloading and extracting the VM
 
-The size of the download is about 18 GB. It is recommended that you use a download manager  like [**Free download manager**](http://www.freedownloadmanager.org/) or [**Download Accelerator Plus**](http://www.speedbit.com/dap/).  
+The size of the download is about 18 GB. It is recommended that you use a download manager  like [**Free download manager**](http://www.freedownloadmanager.org/) or [**Download Accelerator Plus**](http://www.speedbit.com/dap/).
 
 These utility provide:
 
