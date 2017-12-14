@@ -42,7 +42,7 @@ The Microsoft ALM/DevOps Hands-On-Labs is a set of self-placed labs that will gi
 
 <br />
 
-<h2> Recent News and Announcements </h2>
+<h2>Announcements </h2>
  {% for post in site.posts limit:10 %}
 <div class="headline">
 

@@ -1,9 +1,9 @@
 body {
-    font-size: 17px;
-    font-family: "'Lora', Georgia, serif";
+    font-size: 14px;
+    font-family: arial,sans-serif;
     margin: 0px;
     padding: 0px;
-    line-height: 27px;
+    line-height: 25px;
     /*background-color: #248ec2;*/
 }
 
@@ -1376,7 +1376,7 @@ i.glyphicon.glyphicon-search {
 
 .mainTable {
     border: none;
-    background-color: #ffffff;
+    background-color: #f7f8f9;
 }
 
 span.introText {
@@ -1412,10 +1412,11 @@ div.headline {
     border-width: 1px;
     border-style: solid; 
     /*border: double #248ec2;*/
-    border-color: #eff2f4;
+    border-color: #adb1b5;
     padding: 5px;
     margin: 5px;
-    background-color: #ffffff;
+    background-color: #f7f8f9;
+    margin-bottom: 22px;
 }
 
 span.headnews {
@@ -1528,8 +1529,9 @@ a.labmain:visited {color:#000000; padding-top: 20px;     padding-bottom: 5px;   
 a.labmain:hover {color:#11b2E8; padding-top: 20px;     padding-bottom: 5px;     font-size: 20px;     font-weight: bold; }
 
 a.postitem:link, a.postitem:visited{
-    /*color: #4e8fe5;*/
     color: #000000;
-    text-decoration: none;
-   
+       text-decoration: none;   
+}
+a.postitem:hover{
+    color: #4e8fe5;       text-decoration: none;  
 }

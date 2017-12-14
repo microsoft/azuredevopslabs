@@ -1,5 +1,5 @@
 ---
-title: Working with the Visual Studio 2017 ALM Virtual Machine
+title: Working with the Visual Studio 2017 (Winter Update) ALM Virtual Machine
 layout: page
 sidebar: tfs
 permalink: /labs/tfs/started/
@@ -7,7 +7,7 @@ folder: /labs/tfs/started/
 ---
 # Overview
 
-The Microsoft® Visual Studio® 2017 Application Lifecycle Management
+The Microsoft® Visual Studio® Application Lifecycle Management
 Virtual Machine is a single virtual machine image that contains fully
 installed and configured copies of the software listed below. This
 virtual machine requires Hyper-V, and can be used with Windows Server
@@ -17,7 +17,7 @@ Windows 10. The detailed instructions in this document assume that you
 are using Windows 10, although the instructions are similar for other
 operating systems.
 
-The virtual machine contains the following pre-configured software:
+The 2017 (Winter Update) virtual machine contains the following pre-configured software:
 
 1.  Microsoft Windows Server 2016 Standard Evaluation
 

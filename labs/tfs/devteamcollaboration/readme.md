@@ -1,5 +1,5 @@
 ---
-title: Collaboration Experiences for Development Teams using Team Foundation Server 2018
+title: Collaboration Experiences for Development Teams with Wiki
 layout: page    
 sidebar: tfs
 permalink: /labs/tfs/devteamcollaboration/
@@ -48,7 +48,7 @@ In order to complete this lab you will need the Visual Studio 2017 virtual machi
 
     ![](images/005.png)
 
-1. By default, all members of the **Contributors** group can edit README files and Wiki pages. **Stakeholders** can read files and revisions, but cannot edit anything. Select **More | Wiki security** to review permissions.
+1. By default, all members of the **Contributors** group can edit README files and Wiki pages. **Stakeholders** can read files and revisions, but cannot edit anything. Select **More \| Wiki security** to review permissions.
 
     ![](images/006.png)
 

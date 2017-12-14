@@ -1,5 +1,5 @@
 ---
-title: ALM VM 2017 - Hands-on-Labs 
+title: ALM VM 2018 - Hands-on-Labs 
 layout: page    
 sidebar: tfs
 permalink: /labs/tfs/
@@ -58,7 +58,7 @@ Using **Free download manager**
   <img src="media/fdm.png" />
 
 
-   >There are quite a number of important instructions on how to use the VM including activating the VM, taking snapshots/check points, etc., documented. We highly recommend that you read through the [Working with the Visual Studio 2017 ALM Virtual Machine]() document prior to using the VM, even if you may have used the earlier version of the VM.
+   >There are quite a number of important instructions on how to use the VM including activating the VM, taking snapshots/check points, etc., documented. We highly recommend that you read through the [Working with the Visual Studio 2017 (Winter Update) ALM Virtual Machine]() document prior to using the VM, even if you may have used the earlier version of the VM.
 
    >Note that The VM has about 15 GB of free hard disk space. Should you want to increase the size of the disk, you will need to do so before creating snapshots/check points. You can refer this article on [TechNet]() for instructions on expanding the virtual hard disk.
 
@@ -73,7 +73,7 @@ Here are the 2018 hands-on-labs for Team Foundation Server. If you want to acces
       </td>
    </thead>
    <tr>
-      <td><a href="started/">Working with the Visual Studio 2017 Winter Update ALM Virtual Machine</a></td>
+      <td><a href="started/">Working with the Visual Studio 2017 (Winter Update) ALM Virtual Machine</a></td>
    </tr>
    <tr>
       <td><a href="agile/">Agile Planning and Portfolio Management with Team Foundation Server 2018</a></td>
@@ -88,7 +88,7 @@ Here are the 2018 hands-on-labs for Team Foundation Server. If you want to acces
       <td><a href="aspnetazure/">Building ASP.NET apps in Azure with SQL Database</a>     <span class="label label-success">New</span></td>
    </tr>
    <tr>
-      <td><a href="devteamcollaboration/">Collaboration Experiences for Development Teams using Team Foundation Server 2018</a></td>
+      <td><a href="devteamcollaboration/">Collaboration Experiences for Development Teams with Wiki</a><span class="label label-success">New</span></td>
    </tr>
    <tr>
       <td><a href="snapshotdebugger/">Debugging with Snapshot Debugger</a>     <span class="label label-success">New</span></td>
@@ -163,3 +163,7 @@ Here are the 2018 hands-on-labs for Team Foundation Server. If you want to acces
       <td><a href="editorconfig/">Working with EditorConfig in Visual Studio 2017</a></td>
    </tr>
 </table>
+
+## Previous Version
+
+If you wish to download the previous version of the Visual Studio ALM VM - version 2017, you can download it using the links [here](media/almvm2017url.txt)
