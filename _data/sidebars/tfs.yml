@@ -120,7 +120,7 @@ entries:
       url: labs/tfs/packagemanagement/
       output: web, pdf
 
-    - title: Team Foundation Build 2018
+    - title: Enabling Continuous Delivery with Team Foundation Build 2018
       url: labs/tfs/build/
       output: web, pdf
     
@@ -160,7 +160,7 @@ entries:
     output: web, pdf
 
     folderitems:
-    - title: Embracing Continuous Delivery with Release Management for Visual Studio 2017
+    - title: Embracing Continuous Delivery with Release Management for Team Foundation Server 2017
       url: labs/tfs/releasemanagement/
       output: web, pdf
 

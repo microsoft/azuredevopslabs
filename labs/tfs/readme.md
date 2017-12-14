@@ -13,18 +13,18 @@ The Microsoft Visual Studio ALM VM and the accompanying hands-on-labs are now up
 
 The virtual machine contains the following pre-configured software:
 
-1.Microsoft Windows Server 2016 Standard Evaluation
+1. Microsoft Windows Server 2016 Standard Evaluation
 
-2.Microsoft Visual Studio Enterprise 2017 (15.5)
+2. Microsoft Visual Studio Enterprise 2017 (15.5)
 
-3.Microsoft Visual Studio Team Foundation Server 2018
+3. Microsoft Visual Studio Team Foundation Server 2018
 
-4.Microsoft Office Professional Plus 2016 (Word, PowerPoint,
+4. Microsoft Office Professional Plus 2016 (Word, PowerPoint,
     Excel, Outlook)
 
-5.Microsoft SQL Server Standard 2016
+5. Microsoft SQL Server Standard 2016
 
-6.Sample users and data required to support hands-on-lab scripts which accompany this download.
+6. Sample users and data required to support hands-on-lab scripts which accompany this download.
 
 ## Accessing the Virtual Machine
 
@@ -48,18 +48,19 @@ These utility provide:
 * Auto-resume support for interrupted downloads
 
 Using **Free download manager**
+
 - Download and install Free download manager if you currently do not have one installed 
 - Open and select all the <a href="media/almvm2017wu2links.txt">download URLs</a> from the text file. Press ***CTRL+C*** to copy the selected URLs to clipboard.
 - Select Menu - ***Paste URLs from clipboard***      
 - When the download is complete, double-click the .exe file to self-extract the RAR files to a folder       
-- Read the “ Working with the …” document to start using the VM     
+- Read the “ Working with the …” document to start using the VM
 
-<img src="media/fdm.png" />
+  <img src="media/fdm.png" />
 
 
->There are quite a number of important instructions on how to use the VM including activating the VM, taking snapshots/check points, etc., documented. We highly recommend that you read through the [Working with the Visual Studio 2017 ALM Virtual Machine]() document prior to using the VM, even if you may have used the earlier version of the VM. 
+   >There are quite a number of important instructions on how to use the VM including activating the VM, taking snapshots/check points, etc., documented. We highly recommend that you read through the [Working with the Visual Studio 2017 ALM Virtual Machine]() document prior to using the VM, even if you may have used the earlier version of the VM.
 
->Note that The VM has about 15 GB of free hard disk space. Should you want to increase the size of the disk, you will need to do so before creating snapshots/check points. You can refer this article on [TechNet]() for instructions on expanding the virtual hard disk.
+   >Note that The VM has about 15 GB of free hard disk space. Should you want to increase the size of the disk, you will need to do so before creating snapshots/check points. You can refer this article on [TechNet]() for instructions on expanding the virtual hard disk.
 
 ## Hands-On-Labs
 
@@ -102,7 +103,7 @@ Here are the 2018 hands-on-labs for Team Foundation Server. If you want to acces
       <td><a href="intellitrace/">Diagnosing Issues in Production with IntelliTrace and Visual Studio 2017</a></td>
    </tr>
    <tr>
-      <td><a href="releasemanagement/">Embracing Continuous Delivery with Release Management for Visual Studio 2017</a></td>
+      <td><a href="releasemanagement/">Embracing Continuous Delivery with Release Management for Team Foundation Server 2018</a></td>
    </tr>
    <tr>
       <td><a href="exploratorytesting/">Exploratory Testing and Feedback Management with Team Foundation Server 2018</a></td>
@@ -120,10 +121,10 @@ Here are the 2018 hands-on-labs for Team Foundation Server. If you want to acces
       <td><a href="smartword4tfs/">Introduction to the Modern Requirements Suite4TFS & Team Foundation Server 2017</a></td>
    </tr>
    <tr>
-      <td><a href="livedependencyvalidation/">Live Dependency Validation with Visual Studio 2017</a>    <span class="label label-success">New</span></td>
+      <td><a href="livedependencyvalidation/">Live Dependency Validation with Visual Studio 2017</a></td>
    </tr>
    <tr>
-      <td><a href="liveunittesting/">Live Unit Testing, Code Coverage and Code Clone Analysis with Visual Studio 2017</a>    <span class="label label-success">New</span></td>
+      <td><a href="liveunittesting/">Live Unit Testing, Code Coverage and Code Clone Analysis with Visual Studio 2017</a></td>
    </tr>
    <tr>
       <td><a href="vsproductivity/">Making Developers More Productive with Visual Studio Team Foundation Server 2018</a></td>
@@ -135,16 +136,16 @@ Here are the 2018 hands-on-labs for Team Foundation Server. If you want to acces
       <td><a href="technicaldebt/">Managing Technical Debt with Team Foundation Server 2018 and SonarQube</a></td>
    </tr>
    <tr>
-      <td><a href="packagemanagement/">Package Management in Team Foundation Server 2018</a>    <span class="label label-success">New</span></td>
+      <td><a href="packagemanagement/">Package Management in Team Foundation Server 2018</a></td>
    </tr>
    <tr>
-      <td><a href="readyroll/">ReadyRoll- Develop and deploy databases in Visual Studio Enterprise 2017</a>    <span class="label label-success">New</span></td>
+      <td><a href="readyroll/">ReadyRoll- Develop and deploy databases in Visual Studio Enterprise 2017</a></td>
    </tr>
    <tr>
-      <td><a href="sqlprompt/">SQL Prompt for Visual Studio Enterprise 2017</a>    <span class="label label-success">New</span></td>
+      <td><a href="sqlprompt/">SQL Prompt for Visual Studio Enterprise 2017</a></td>
    </tr>
    <tr>
-      <td><a href="build/">Team Foundation Build 2018</a></td>
+      <td><a href="build/">Enabling Continuous Delivery with Team Foundation Build 2018</a></td>
    </tr>
    <tr>
       <td><a hrf="manualtesting/">Test Planning and Management with Team Foundation Server 2018</a></td>
@@ -159,6 +160,6 @@ Here are the 2018 hands-on-labs for Team Foundation Server. If you want to acces
       <td><a href="load/">Web Application Load and Performance Testing with Visual Studio 2017</a></td>
    </tr>
    <tr>
-      <td><a href="editorconfig/">Working with EditorConfig in Visual Studio 2017</a>    <span class="label label-success">New</span></td>
+      <td><a href="editorconfig/">Working with EditorConfig in Visual Studio 2017</a></td>
    </tr>
 </table>

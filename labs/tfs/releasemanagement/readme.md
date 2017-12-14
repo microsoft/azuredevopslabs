@@ -1,5 +1,5 @@
 ---
-title: Embracing Continuous Delivery with Release Management for Visual Studio 2018
+title: Embracing Continuous Delivery with Release Management for Team Foundation Server 2018
 layout: page    
 sidebar: tfs
 permalink: /labs/tfs/releasemanagement/

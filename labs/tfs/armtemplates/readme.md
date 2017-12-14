@@ -22,7 +22,7 @@ In this lab, you will deploy a web app and SQL database. However, the steps are 
 
 In order to complete this lab you will need the Visual Studio 2017 virtual machine provided by Microsoft. For more information on acquiring and using this virtual machine, please see [this blog post](http://aka.ms/almvm).
 
-You also need an [Azure account](https://azure.microsoft.com/) ([Get a $25 monthly Azure credit by joining Visual Studio Dev Essentials](https://www.visualstudio.com/dev-essentials/)).
+You also need an [Azure account](https://azure.microsoft.com/) ([Get 1 yr of free services, $200 for 1st month by joining Visual Studio Dev Essentials](https://www.visualstudio.com/dev-essentials/)).
 
 ## Exercise 1: Authoring ARM Templates with Visual Studio
 

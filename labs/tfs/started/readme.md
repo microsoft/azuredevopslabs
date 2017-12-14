@@ -1,5 +1,5 @@
 ---
-title: Working with the Visual Studio 2018 ALM Virtual Machine
+title: Working with the Visual Studio 2017 ALM Virtual Machine
 layout: page
 sidebar: tfs
 permalink: /labs/tfs/started/
@@ -7,7 +7,7 @@ folder: /labs/tfs/started/
 ---
 # Overview
 
-The Microsoft® Visual Studio® 2018 Application Lifecycle Management
+The Microsoft® Visual Studio® 2017 Application Lifecycle Management
 Virtual Machine is a single virtual machine image that contains fully
 installed and configured copies of the software listed below. This
 virtual machine requires Hyper-V, and can be used with Windows Server
@@ -21,7 +21,7 @@ The virtual machine contains the following pre-configured software:
 
 1.  Microsoft Windows Server 2016 Standard Evaluation
 
-2.  Microsoft Visual Studio Enterprise 2017 (build number 15.5)
+2.  Microsoft Visual Studio Enterprise 2017 (15.5)
 
 3.  Microsoft Visual Studio Team Foundation Server 2018
 
