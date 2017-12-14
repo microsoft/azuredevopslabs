@@ -1,5 +1,5 @@
 ---
-title: ALM VM 2017 - Hands-on-Labs 
+title: ALM VM 2018 - Hands-on-Labs 
 layout: page    
 sidebar: tfs
 permalink: /labs/tfs/
