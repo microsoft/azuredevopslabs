@@ -28,8 +28,25 @@
 
 <body>
     {% include topnav.html %}
-    <!-- Page Content -->
-    <img src="images/banner31.jpg" width="100%" style="margin-top: 73px;" />
+    <!-- Page Content 
+    <img src="images/banner31.jpg" width="100%" style="margin-top: 73px;" />-->
+    <div class="row" width="100%" style="margin-top: 73px; background-color: skyblue; background-image: url(./images/almvm-hero-centered-transparent-md.png)">
+        <!--table><tr>
+            <td align="left">
+                The Microsoft ALM/DevOps Hands-On-Labs is a set of self-paced labs based on Visual Studio Team Foundation Server and Visual Studio Team Services.
+            </td>
+            <td align="right">
+                <img src="images/almvm-hero-centered-transparent-md.png">
+            </td>
+        </tr>
+        </table-->
+
+        <div class="columnMain">
+            The Microsoft ALM/DevOps Hands-On-Labs is a set of self-paced labs based on Visual Studio Team Foundation Server and Visual Studio Team Services.
+        
+            <!--img src="images/almvm-hero-centered-transparent-md.png"-->
+        </div>
+    </div>
     <div class="container">
         {{content}}
         <div class="column">
