@@ -166,7 +166,7 @@ In this exercise, you will learn about managing the feedback lifecycle in TFS. D
 
     ![](images/028.png)
 
-1. Select **Work | Backlogs** from the navigation menu.
+1. Select **Work \| Backlogs** from the navigation menu.
 
     ![](images/029.png)
 
@@ -256,7 +256,7 @@ In this exercise, you will learn about managing the feedback lifecycle in TFS. D
 
 1. Return to the **Deniz** account by minimizing the RDP window.
 
-1. Select **Dashboards | Overview** from the navigation menu.
+1. Select **Dashboards \| Overview** from the navigation menu.
 
     ![](images/047.png)
 
@@ -276,7 +276,7 @@ In this exercise, you will learn about managing the feedback lifecycle in TFS. D
 
     ![](images/051.png)
 
-1. Based on the feedback received, the team can then create additional work items as necessary in order to act upon the feedback. Select **Add link | New item**.
+1. Based on the feedback received, the team can then create additional work items as necessary in order to act upon the feedback. Select **Add link \| New item**.
 
     ![](images/052.png)
 

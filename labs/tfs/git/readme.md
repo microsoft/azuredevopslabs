@@ -38,7 +38,7 @@ In this exercise, you will learn how to create, clone, and push commits to a Git
 
 1. There are a few reasons why Fabrikam Fiber might want to use Git as their source control option within Team Foundation Server. One reason could be that they are collaborating with developers using a tool such as Xcode, which supports the Git protocol natively. Another reason could be that they have developers working offline (such as during a commute) who want to commit code locally when they are offline and check this code into Team Foundation Server when they get into the office. Microsoft now offers teams the ability to utilize Git without sacrificing the integrated application lifecycle management capabilities offered by Team Foundation Server. Visual Studio 2017 also provides developers with a great experience for working with any Git repository - whether it's hosted by Team Foundation Server, a local repository, or another Git provider.
 
-1. From the **Home** dropdown menu, select **Projects and My Teams | New Team Project**.
+1. From the **Home** dropdown menu, select **Projects and My Teams \| New Team Project**.
 
     ![](images/001.png)
 
@@ -88,7 +88,7 @@ In this exercise, you will learn how to create, clone, and push commits to a Git
 
     ![](images/011.png)
 
-1. Create a new work item for the product backlog by selecting **Team | New Work Item | Product Backlog Item** from the main menu. This will launch the **New Product Backlog Item** form in TFS via your browser.
+1. Create a new work item for the product backlog by selecting **Team \| New Work Item \| Product Backlog Item** from the main menu. This will launch the **New Product Backlog Item** form in TFS via your browser.
 
 1. Enter a title of **"Create new web site"** and then click the **Save** button. Take note of the **ID** once the work item is saved.
 
@@ -98,7 +98,7 @@ In this exercise, you will learn how to create, clone, and push commits to a Git
 
     ![](images/013.png)
 
-1. In the **New Project** window, select the **Visual C# | Web | ASP.NET Web Application** template and click **OK**.
+1. In the **New Project** window, select the **Visual C# \| Web \| ASP.NET Web Application** template and click **OK**.
 
     ![](images/014.png)
 
@@ -246,7 +246,7 @@ In this exercise, you will learn about Git forking, branching, and merging suppo
 
     ![](images/047.png)
 
-1. Right-click somewhere in the whitespace of the editor and select **Source Control | Commit**.
+1. Right-click somewhere in the whitespace of the editor and select **Source Control \| Commit**.
 
     ![](images/048.png)
 
@@ -302,7 +302,7 @@ In this exercise, you will learn about Git forking, branching, and merging suppo
 
     ![](images/061.png)
 
-1. As before, right-click within the whitespace of the code editor and select **Source Control | Commit**.
+1. As before, right-click within the whitespace of the code editor and select **Source Control \| Commit**.
 
 1. In **Team Explorer**, enter a commit message of "**Clemri version**" and then click **Commit All**. Save changes when prompted. Note that Clemri has committed changes to the master branch.
 
@@ -384,7 +384,7 @@ In this exercise, you will learn about Git forking, branching, and merging suppo
 
     ![](images/079.png)
 
-1. Select the **Code | Commits** from the navigation.
+1. Select the **Code \| Commits** from the navigation.
 
     ![](images/080.png)
 
@@ -500,7 +500,7 @@ In this exercise, you will learn about Git forking, branching, and merging suppo
 
     ![](images/105.png)
 
-1. To demonstrate the branch policy in action, let's say Clemri attempts to complete the pull request by himself. Select **Set auto-complete | Complete**.
+1. To demonstrate the branch policy in action, let's say Clemri attempts to complete the pull request by himself. Select **Set auto-complete \| Complete**.
 
     ![](images/106.png)
 
@@ -524,7 +524,7 @@ In this exercise, you will learn about Git forking, branching, and merging suppo
 
 1. Switch users back to **Sachin** by minimizing the RDP window.
 
-1. In the web portal, navigate to **Code | Pull Requests**.
+1. In the web portal, navigate to **Code \| Pull Requests**.
 
     ![](images/111.png)
 
@@ -550,7 +550,7 @@ In this exercise, you will learn about Git forking, branching, and merging suppo
 
     ![](images/116.png)
 
-1. Select **Approve | Approve**.
+1. Select **Approve \| Approve**.
 
     ![](images/117.png)
 

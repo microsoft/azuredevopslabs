@@ -172,13 +172,13 @@ In this exercise, you will see a high-level view of the changes made to Team Exp
 
     ![](images/028.png)
 
-1. Add a new file into the Content folder by right-clicking in a blank area of the view and selecting **New | Text Document** from the context menu. Accept the default name.
+1. Add a new file into the Content folder by right-clicking in a blank area of the view and selecting **New \| Text Document** from the context menu. Accept the default name.
 
     > **Note:** We will use this file in a demonstration a little later - the contents are not important and can be left blank.
 
     ![](images/029.png)
 
-1. In the **Explorer** window, right-click **Site.css** and select **Open With | Notepad** from the context menu.
+1. In the **Explorer** window, right-click **Site.css** and select **Open With \| Notepad** from the context menu.
 
 1. In Notepad, change the "**body**" style color to "**red**".
 
@@ -238,7 +238,7 @@ In this exercise, you will see a high-level view of the changes made to Team Exp
 
     ![](images/041.png)
 
-1. Open the **Immediate** window from **Debug | Windows | Immediate**.
+1. Open the **Immediate** window from **Debug \| Windows \| Immediate**.
 
 1. Now imagine that your boss asks you to stop working on the current task, and work on a high-priority bug instead. We currently have a lot of time invested in getting Visual Studio debugging tools in place, and we would like to be able to return to this current context after the bug fix is complete.
 
@@ -252,9 +252,9 @@ In this exercise, you will see a high-level view of the changes made to Team Exp
 
     ![](images/043.png)
 
-1. Close all document windows by selecting **Window | Close All Documents** from the main menu.
+1. Close all document windows by selecting **Window \| Close All Documents** from the main menu.
 
-1. Reset to the default window layout by selecting **Window | Reset Window Layout** from the main menu. Click **Yes** when asked to confirm the action.
+1. Reset to the default window layout by selecting **Window \| Reset Window Layout** from the main menu. Click **Yes** when asked to confirm the action.
 
     ![](images/044.png)
 
@@ -278,7 +278,7 @@ In this exercise, you will see a high-level view of the changes made to Team Exp
 
     ![](images/049.png)
 
-1. Imagine that other team members are tackling these child tasks already, but that we know of another problem related to the parent bug that also needs to be fixed. Select **Add link | New item** to add a new task.
+1. Imagine that other team members are tackling these child tasks already, but that we know of another problem related to the parent bug that also needs to be fixed. Select **Add link \| New item** to add a new task.
 
     ![](images/050.png)
 
@@ -352,7 +352,7 @@ In this exercise, you will see a high-level view of the changes made to Team Exp
 
 1. In the Compare Files toolbar, select the **compare mode** drop down button to view the various display modes that the diff viewer can use. Try out a few of the different modes.
 
-    > **Note:** If the Compare Files toolbar is not open, open it from **View | Toolbars | Compare Files** from the main menu in Visual Studio.
+    > **Note:** If the Compare Files toolbar is not open, open it from **View \| Toolbars \| Compare Files** from the main menu in Visual Studio.
 
     ![](images/066.png)
 
@@ -394,7 +394,7 @@ In this exercise, you will see a high-level view of the changes made to Team Exp
 
     ![](images/075.png)
 
-1. For this scenario, let's say that we are done with the code review process. Select **Close Review | Complete**.
+1. For this scenario, let's say that we are done with the code review process. Select **Close Review \| Complete**.
 
     ![](images/076.png)
 
@@ -488,7 +488,7 @@ In this exercise, you will see a high-level view of the changes made to Team Exp
 
     ![](images/093.png)
 
-1. Expand the **Releases** node and right-click **Release1** to select **Advanced | Properties** from the context menu.
+1. Expand the **Releases** node and right-click **Release1** to select **Advanced \| Properties** from the context menu.
 
     ![](images/094.png)
 
@@ -608,7 +608,7 @@ In this task, you will learn how to visualize and track changesets while merging
 
     ![](images/118.png)
 
-1. In **Solution Explorer**, navigate to and right-click **_Profile.cshtml** to select **Source Control | Annotate** from the context menu.
+1. In **Solution Explorer**, navigate to and right-click **_Profile.cshtml** to select **Source Control \| Annotate** from the context menu.
 
 1. Scroll to the bottom of the annotated **_Profile.cshtml** file and locate the HTML that you previously commented out.
 

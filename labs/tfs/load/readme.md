@@ -30,11 +30,11 @@ In order to complete this lab you will need the Visual Studio 2017 virtual machi
 
     ![](images/000.png)
 
-1. In **Solution Explorer**, right-click the solution node and select **Add | New Project**.
+1. In **Solution Explorer**, right-click the solution node and select **Add \| New Project**.
 
     ![](images/001.png)
 
-1. Select the **Visual C# | Test** category and the **Web Performance and Load Test Project** template. Enter a **Name** of **"PULWebTest"** and click **OK**.
+1. Select the **Visual C# \| Test** category and the **Web Performance and Load Test Project** template. Enter a **Name** of **"PULWebTest"** and click **OK**.
 
     ![](images/002.png)
 
@@ -96,7 +96,7 @@ In order to complete this lab you will need the Visual Studio 2017 virtual machi
 
 ### Task 3: Recording sophisticated tests
 
-1. Now let's add a more sophisticated test that involves completing a purchase. In **Solution Explorer**, right-click the **PULWebTest** project and select **Add | Web Performance Test**.
+1. Now let's add a more sophisticated test that involves completing a purchase. In **Solution Explorer**, right-click the **PULWebTest** project and select **Add \| Web Performance Test**.
 
     ![](images/016.png)
 
@@ -184,7 +184,7 @@ In order to complete this lab you will need the Visual Studio 2017 virtual machi
 
 ### Task 5: Adding a load test
 
-1. Now that we have two tests that cover common scenarios, let's use them as part of a load test to see how the system might perform with a variety of simultaneous users. In **Solution Explorer**, right-click the **PULWebTest** project and select **Add | Load Test**.
+1. Now that we have two tests that cover common scenarios, let's use them as part of a load test to see how the system might perform with a variety of simultaneous users. In **Solution Explorer**, right-click the **PULWebTest** project and select **Add \| Load Test**.
 
     ![](images/037.png)
 

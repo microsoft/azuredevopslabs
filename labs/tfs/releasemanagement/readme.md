@@ -93,7 +93,7 @@ In this exercise, you will use the release management features of Team Foundatio
 
     ![](images/011.png)
 
-1. Select  **Save & queue | Save**. Accept the defaults in the save dialog.
+1. Select  **Save & queue \| Save**. Accept the defaults in the save dialog.
 
     ![](images/012.png)
 
@@ -405,7 +405,7 @@ The release management tools are incredibly flexible. Not only can you automate 
 
     ![](images/075.png)
 
-1. Right-click the **FabrikamFiber-Express** database and select **Tasks | Deploy Database to Microsoft Azure SQL Database**.
+1. Right-click the **FabrikamFiber-Express** database and select **Tasks \| Deploy Database to Microsoft Azure SQL Database**.
 
     ![](images/076.png)
 
@@ -452,7 +452,7 @@ The release management tools are incredibly flexible. Not only can you automate 
 
     ![](images/083.png)
 
-1. Select **Add | New environment**.
+1. Select **Add \| New environment**.
 
     ![](images/084.png)
 
@@ -488,7 +488,7 @@ The release management tools are incredibly flexible. Not only can you automate 
 
     ![](images/092.png)
 
-1. Since we started with an empty template, we'll need to add a task that handles deploying the build to Azure. Select **Tasks | Prod-Azure**.
+1. Since we started with an empty template, we'll need to add a task that handles deploying the build to Azure. Select **Tasks \| Prod-Azure**.
 
     ![](images/093.png)
 
@@ -508,7 +508,7 @@ The release management tools are incredibly flexible. Not only can you automate 
 
     ![](images/097.png)
 
-1. Select **New Service Endpoint | Azure Classic**.
+1. Select **New Service Endpoint \| Azure Classic**.
 
     ![](images/098.png)
 

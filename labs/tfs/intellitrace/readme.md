@@ -156,9 +156,9 @@ In this exercise, you will see how we can use the IntelliTrace file that was gen
 
     ![](images/014.png)
 
-1. Since this IntelliTrace session isn't associated with an active solution, you'll need to temporarily disable the **Just My Code** feature to get the full experience. From the main menu select **Tools | Options**.
+1. Since this IntelliTrace session isn't associated with an active solution, you'll need to temporarily disable the **Just My Code** feature to get the full experience. From the main menu select **Tools \| Options**.
 
-1. In the left tree view, locate **Debugging | General** and uncheck the **Enable Just My Code** option in the right panel. Click **OK** to apply.
+1. In the left tree view, locate **Debugging \| General** and uncheck the **Enable Just My Code** option in the right panel. Click **OK** to apply.
 
     ![](images/015.png)
 

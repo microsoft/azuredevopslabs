@@ -76,7 +76,7 @@ In order to complete this lab you will need the Visual Studio 2017 virtual machi
 
 1. Launch **Visual Studio** from the taskbar.
 
-1. Select **Tools | NuGet Package Manager | Package Manager Settings**.
+1. Select **Tools \| NuGet Package Manager \| Package Manager Settings**.
 
 1. Locate the **Package Sources** section and click the **Add** button to add a new package source.
 
@@ -88,7 +88,7 @@ In order to complete this lab you will need the Visual Studio 2017 virtual machi
 
 ### Task 3: Creating and publishing a NuGet package
 
-1. From the main menu of **Visual Studio**, select **File | New | Project**. We will now create a shared assembly that will be published as a NuGet package so that other teams can integrate it and stay up to date without having to work directly with the project source.
+1. From the main menu of **Visual Studio**, select **File \| New \| Project**. We will now create a shared assembly that will be published as a NuGet package so that other teams can integrate it and stay up to date without having to work directly with the project source.
 
 1. From the **Visual C#** section, select the **Class Library** template and set the **Name** to **"PartsUnlimited.Shared"**. Click **OK** to create the project.
 
@@ -120,7 +120,7 @@ In order to complete this lab you will need the Visual Studio 2017 virtual machi
 
     ![](images/019.png)
 
-1. In the same **Windows Explorer** window, select **File | Open command prompt**.
+1. In the same **Windows Explorer** window, select **File \| Open command prompt**.
 
     ![](images/020.png)
 
@@ -184,7 +184,7 @@ In order to complete this lab you will need the Visual Studio 2017 virtual machi
 
 1. Switch to the instance of **Visual Studio** that has the **PartsUnlimited.Shared** project open (the NuGet source project).
 
-1. In **Solution Explorer**, right-click the **PartsUnlimited.Shared** project node and select **Add | New Item**.
+1. In **Solution Explorer**, right-click the **PartsUnlimited.Shared** project node and select **Add \| New Item**.
 
     ![](images/031.png)
 

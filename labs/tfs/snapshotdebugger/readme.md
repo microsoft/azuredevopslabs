@@ -50,7 +50,7 @@ You also need an [Azure account](https://azure.microsoft.com/) ([Get a $25 month
 
     ![](images/002.png)
 
-1. Right-click the project node once again in **Solution Explorer** and select **Application Insights | Configure Application Insights**.
+1. Right-click the project node once again in **Solution Explorer** and select **Application Insights \| Configure Application Insights**.
 
     ![](images/003.png)
 
@@ -80,7 +80,7 @@ You also need an [Azure account](https://azure.microsoft.com/) ([Get a $25 month
 
     ![](images/010.png)
 
-1. Locate the section describing the **Release|AnyCPU** platform configuration and add the element below. Save and close the file.
+1. Locate the section describing the **Release \| AnyCPU** platform configuration and add the element below. Save and close the file.
 
     ```cmd
     <DebugSymbols>true</DebugSymbols>
@@ -193,7 +193,7 @@ You also need an [Azure account](https://azure.microsoft.com/) ([Get a $25 month
 
 1. Return to **Visual Studio**.
 
-1. Select **File | Open | File** and open the diagnostic session file downloaded earlier. Approve any warnings about the trustworthiness of the file.
+1. Select **File \| Open \| File** and open the diagnostic session file downloaded earlier. Approve any warnings about the trustworthiness of the file.
 
 1. This minidump provides a ton of valuable information about the state of the machine and its memory at the time of the exception. However, we're specifically interested in the state of the application. Click **Debug with Managed Only**.
 
@@ -211,7 +211,7 @@ You also need an [Azure account](https://azure.microsoft.com/) ([Get a $25 month
 
     ![](images/039.png)
 
-1. Now that we know what the error is and why it wasn't getting surfaced, we can generate a code map of this path to see if it might be an unknown problem in other parts of the application. Right-click the reference to **Depluralize** and select **Code Map | Find All References on Code Map**.
+1. Now that we know what the error is and why it wasn't getting surfaced, we can generate a code map of this path to see if it might be an unknown problem in other parts of the application. Right-click the reference to **Depluralize** and select **Code Map \| Find All References on Code Map**.
 
     ![](images/040.png)
 
@@ -223,13 +223,13 @@ You also need an [Azure account](https://azure.microsoft.com/) ([Get a $25 month
 
     ![](images/042.png)
 
-1. Select **Debug | Stop Debugging** to end the session.
+1. Select **Debug \| Stop Debugging** to end the session.
 
 ### Task 4: Working with Snappoints and Logpoints
 
 1. In addition to automatic snapshots, Application Insights enables two additional features that make it easy to debug production apps: **Snappoints** and **Logpoints**. Snappoints are like breakpoints in that they allow you to take snapshots of a system when a given line is executed, but without actually noticeably pausing the execution of the application. Logpoints work in the same way, except that they allow you to inject custom logging into production apps on the fly.
 
-1. Select **View | Cloud Explorer**.
+1. Select **View \| Cloud Explorer**.
 
 1. Click the **Account** button.
 
@@ -295,4 +295,4 @@ You also need an [Azure account](https://azure.microsoft.com/) ([Get a $25 month
 
     ![](images/058.png)
 
-1. Select **Debug | Stop Debugging** to end the session.
+1. Select **Debug \| Stop Debugging** to end the session.
