@@ -1,6 +1,7 @@
 body {
-    font-size: 14px;
-    font-family: arial,sans-serif;
+    font-size: 15px;
+    /*font-family: arial,sans-serif;*/
+    font-family:  "Lato","Geneva CY","Lucida Grande","Arial Unicode MS","Helvetica Neue","Helvetica","Arial",sans-serif;
     margin: 0px;
     padding: 0px;
     line-height: 25px;
@@ -1458,17 +1459,26 @@ div.lab-item-none {
 }
 
 div.lab-item {
-    /*width: 350px;*/
+    width: 350px;
     border-width: 1px;
-    /**border-style: solid;*/
+    border-style: solid;
     border-color: #248ec2;
-    padding: 15px;
-    margin-bottom: 25px;
+    /*padding: 15px;*/
+    margin-bottom: 15px;
     margin-top: 25px;
     /* margin-left: 35px;
     margin-right: 35px; */
+    padding-bottom: 15px;
     background-color: #FFFFFF;
+    height: 270px;
+    margin-top: 10px;
+    margin-left: 10px;
     font-weight: 80%;
+    padding-top: 10px;
+}
+div.lab-itemL:hover{
+    border-style: solid;
+    border-color: #2361c4;
 }
 
 div.clear {
@@ -1534,4 +1544,8 @@ a.postitem:link, a.postitem:visited{
 }
 a.postitem:hover{
     color: #4e8fe5;       text-decoration: none;  
+}
+
+div.labcols{
+    margin-left: 20px;
 }
