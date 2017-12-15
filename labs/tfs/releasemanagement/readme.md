@@ -18,7 +18,7 @@ In this lab, you will learn about the release management features available in V
 
 In order to complete this lab you will need the Visual Studio 2017 virtual machine provided by Microsoft. For more information on acquiring and using this virtual machine, please see [this blog post](http://aka.ms/almvm).
 
-This lab also requires the latest version of **SQL Server Management Studio (SSMS)** in order to ensure compatibility with Azure. You can check for updates by launching SSMS and selecting **Tools | Check for Updates**.
+This lab also requires the latest version of **SQL Server Management Studio (SSMS)** in order to ensure compatibility with Azure. You can check for updates by launching SSMS and selecting **Tools \| Check for Updates**.
 
 ## About the Fabrikam Fiber Scenario
 
