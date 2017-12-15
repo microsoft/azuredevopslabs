@@ -116,7 +116,7 @@ In order to complete this lab you will need the Visual Studio 2017 virtual machi
 
 1. Sometimes you may want to work against the wiki without being connected via browser. Fortunately, your TFS Wiki is backed by a Git repo, so you could clone it and edit it just like any other Git project whether you're online or not.
 
-1. Select **More | Clone wiki** to view the clone URL.
+1. Select **More \| Clone wiki** to view the clone URL.
 
     ![](images/022.png)
 
@@ -134,7 +134,7 @@ In order to complete this lab you will need the Visual Studio 2017 virtual machi
 
     ![](images/025.png)
 
-1. Select **File | Open | Folder** and open the path the repo was cloned to (should be **C:\Users\Julia\Source\Repos\PartsUnlimited.wiki**). You could alternatively do your editing in any other environment or even Notepad. It's all Markdown and Git at this point.
+1. Select **File \| Open \| Folder** and open the path the repo was cloned to (should be **C:\Users\Julia\Source\Repos\PartsUnlimited.wiki**). You could alternatively do your editing in any other environment or even Notepad. It's all Markdown and Git at this point.
 
 1. The Wiki file structure is pretty straightforward. Markdown files (.md) contain content for each page at that path. If you want sub-pages, then create a folder with the same name of that file (without the .md), such as **Getting-started** as shown in the screenshot below. Every folder also requires a **.order** file to specify the order of the pages. If you have any attachments for your wiki, they are stored in a **.attachments** folder in the root directory.
 
@@ -172,7 +172,7 @@ In order to complete this lab you will need the Visual Studio 2017 virtual machi
 
     ![](images/034.png)
 
-1. Set a message of "**Added team bios"** and select **Commit All | Commit All and Sync**. Choose to save all files when prompted.
+1. Set a message of "**Added team bios"** and select **Commit All \| Commit All and Sync**. Choose to save all files when prompted.
 
     ![](images/035.png)
 
@@ -194,7 +194,7 @@ In order to complete this lab you will need the Visual Studio 2017 virtual machi
 
     ![](images/038.png)
 
-1. Select **Build | Rebuild Solution**.
+1. Select **Build \| Rebuild Solution**.
 
 1. After loading **CustomersController.cs** in the code editor, note that both the class and its methods show a single line of indicators. These indicators are meant to provide developers a heads-up-display of sorts - with information about how the code is being used, tested, and changed.
 
@@ -268,7 +268,7 @@ In order to complete this lab you will need the Visual Studio 2017 virtual machi
 
     ![](images/053.png)
 
-    > **Note:** With all tests passing, nothing stands out visually in the CodeLens indicator line. This demonstrates one of the goals of CodeLens - to provide useful information without getting in the way or being distracting. Nevertheless the feature can be customized or even turned off in **Tools | Options** if desired.
+    > **Note:** With all tests passing, nothing stands out visually in the CodeLens indicator line. This demonstrates one of the goals of CodeLens - to provide useful information without getting in the way or being distracting. Nevertheless the feature can be customized or even turned off in **Tools \| Options** if desired.
 
     ![](images/054.png)
 
@@ -282,7 +282,7 @@ In order to complete this lab you will need the Visual Studio 2017 virtual machi
 
     ![](images/055.png)
 
-1. Select **Code | Changesets**.
+1. Select **Code \| Changesets**.
 
     ![](images/056.png)
 

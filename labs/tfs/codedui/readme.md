@@ -34,9 +34,9 @@ In this exercise, you will learn how to use the Coded UI Test Builder to generat
 
 1. Launch **Visual Studio** from the taskbar.
 
-1. Select **File | New | Project** to create a new testing project.
+1. Select **File \| New \| Project** to create a new testing project.
 
-1. In the **New Project** window, select the **Coded UI Test Project** template from **Visual C# | Test**, then click **OK** to create the test project.
+1. In the **New Project** window, select the **Coded UI Test Project** template from **Visual C# \| Test**, then click **OK** to create the test project.
 
     ![](images/000.png)
 
@@ -100,9 +100,9 @@ In this exercise, you will learn how to use the Coded UI Test Builder to generat
 
     ![](images/011.png)
 
-1. Select **Build | Build Solution**.
+1. Select **Build \| Build Solution**.
 
-1. Expand the **Test Explorer**. If it's not visible, you can open it from **Test | Windows | Test Explorer**. Click **Run All** to run the test.
+1. Expand the **Test Explorer**. If it's not visible, you can open it from **Test \| Windows \| Test Explorer**. Click **Run All** to run the test.
 
     ![](images/012.png)
 

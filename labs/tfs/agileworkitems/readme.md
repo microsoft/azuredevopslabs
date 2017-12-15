@@ -302,7 +302,7 @@ In this exercise, we will demonstrate the work item charting capability of Team 
 
 ### Task 1: Creating and Sharing Work Item Charts
 
-1. Let's say that the Fabrikam Fiber management team would like to better understand how tasks are broken down by user. Navigate to the work item queries section of the web portal. Select **Work | Queries**.
+1. Let's say that the Fabrikam Fiber management team would like to better understand how tasks are broken down by user. Navigate to the work item queries section of the web portal. Select **Work \| Queries**.
 
     ![](images/058.png)
 
@@ -372,7 +372,7 @@ In this exercise, we will demonstrate the work item charting capability of Team 
 
     ![](images/074.png)
 
-1. These lightweight charts can also be pinned to a dashboard. Click the **Tasks by Team** chart's ellipses button and select **Add to dashboard | Overview**. This dashboard is used on the project's home page.
+1. These lightweight charts can also be pinned to a dashboard. Click the **Tasks by Team** chart's ellipses button and select **Add to dashboard \| Overview**. This dashboard is used on the project's home page.
 
     ![](images/075.png)
 

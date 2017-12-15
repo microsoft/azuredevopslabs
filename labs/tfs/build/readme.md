@@ -162,7 +162,7 @@ In this exercise, you will learn how to create a basic build definition from one
 
     ![](images/019.png)
 
-1. From the navigation, select the **Build and Release | Builds**.
+1. From the navigation, select the **Build and Release \| Builds**.
 
     ![](images/020.png)
 
@@ -290,7 +290,7 @@ In this exercise, you will learn how to create a basic build definition from one
 
     ![](images/049.png)
 
-1. Click **Save & queue | Save**. Click **Save** in the dialog to accept the defaults.
+1. Click **Save & queue \| Save**. Click **Save** in the dialog to accept the defaults.
 
     ![](images/050.png)
 
@@ -391,7 +391,7 @@ In this exercise, you will learn how to modify a build to support continuous int
 
 1. There is also an option here to trigger the build on a gated check-in or set schedule. For example, we could set this build up to run every evening if desired.
 
-1. Click **Save & queue | Save**. Click **Save** in the dialog to accept the defaults.
+1. Click **Save & queue \| Save**. Click **Save** in the dialog to accept the defaults.
 
     ![](images/069.png)
 

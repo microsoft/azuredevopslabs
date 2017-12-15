@@ -336,7 +336,7 @@ In this exercise, you will learn about some of the agile portfolio management ca
 
     ![](images/061.png)
 
-1. Select **Work | Backlogs** to return to the backlog visible to the leadership team.
+1. Select **Work \| Backlogs** to return to the backlog visible to the leadership team.
 
     ![](images/062.png)
 

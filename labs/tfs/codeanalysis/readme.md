@@ -40,7 +40,7 @@ In this exercise, you will learn about the code analysis features in Visual Stud
 
     ![](images/000.png)
 
-1. Select **Build | Rebuild Solution** from the main menu to build the solution.
+1. Select **Build \| Rebuild Solution** from the main menu to build the solution.
 
 1. In **Solution Explorer**, right-click the **FabrikamFiber.Web** project node and select **Properties**.
 
@@ -58,7 +58,7 @@ In this exercise, you will learn about the code analysis features in Visual Stud
 
     > **Note:** If you are interested in learning how to create custom rule sets, please see [this](http://msdn.microsoft.com/en-us/library/dd264974.aspx) MSDN documentation.
 
-1. In **Solution Explorer**, right-click the **FabrikamFiber.Web** project node and select **Analyze** | **Run Code Analysis**.
+1. In **Solution Explorer**, right-click the **FabrikamFiber.Web** project node and select **Analyze** \| **Run Code Analysis**.
 
     ![](images/004.png)
 
@@ -96,7 +96,7 @@ In this exercise, you will learn about the code analysis features in Visual Stud
 
 1. In the **Error List** window, select the first three warnings by clicking the first, holding the **Shift** key, and clicking the third. Imagine that we do not want to address the selected issues and no longer want them to appear when Code Analysis executes.
 
-1. **Right-click** the selected warnings and select **Suppress | In Suppression File** from the context menu. This will add assembly level metadata to a project level **GlobalSuppressions.cs** file.
+1. **Right-click** the selected warnings and select **Suppress \| In Suppression File** from the context menu. This will add assembly level metadata to a project level **GlobalSuppressions.cs** file.
 
     ![](images/010.png)
 
@@ -116,7 +116,7 @@ In this exercise, you will learn about the code analysis features in Visual Stud
 
     ![](images/014.png)
 
-1. In the **Error List**, double-click the **CA1704** warning for **Edit** to view the source. Suppose that we want to suppress this specific rule, but this time we only want it applied to the associated source file. **Right-click** the warning in the **Error List** and select **Suppress | In Source**.
+1. In the **Error List**, double-click the **CA1704** warning for **Edit** to view the source. Suppose that we want to suppress this specific rule, but this time we only want it applied to the associated source file. **Right-click** the warning in the **Error List** and select **Suppress \| In Source**.
 
     ![](images/015.png)
 

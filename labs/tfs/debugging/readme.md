@@ -77,9 +77,9 @@ In this scenario the business owner has asked us to determine why we are seeing 
 
     ![](images/003.png)
 
-1. Since this IntelliTrace session isn't associated with an active solution, you'll need to temporarily disable the **Just My Code** feature to get the full experience. From the main menu select **Tools | Options**.
+1. Since this IntelliTrace session isn't associated with an active solution, you'll need to temporarily disable the **Just My Code** feature to get the full experience. From the main menu select **Tools \| Options**.
 
-1. In the left tree view, locate **Debugging | General** and uncheck the **Enable Just My Code** option in the right panel. Click **OK** to apply.
+1. In the left tree view, locate **Debugging \| General** and uncheck the **Enable Just My Code** option in the right panel. Click **OK** to apply.
 
     ![](images/004.png)
 
@@ -103,7 +103,7 @@ In this scenario the business owner has asked us to determine why we are seeing 
 
     ![](images/009.png)
 
-1. In order to better visualize the path that led to this exception, right-click the line of code and select **Code Map | Show Call Stack on Code Map**.
+1. In order to better visualize the path that led to this exception, right-click the line of code and select **Code Map \| Show Call Stack on Code Map**.
 
     ![](images/010.png)
 
@@ -113,13 +113,13 @@ In this scenario the business owner has asked us to determine why we are seeing 
 
 1. We can now tell that the issue here is that we're indexing past the end of the query in our call to **Substring**. This could have been a lot harder to find without IntelliSense.
 
-1. Select **Debugging | Stop Debugging** to end the debug session.
+1. Select **Debugging \| Stop Debugging** to end the debug session.
 
-1. Select **File | Close Solution** to close all files. Do not save any.
+1. Select **File \| Close Solution** to close all files. Do not save any.
 
 ### Task 3: IntelliTrace inside Visual Studio 2017 ("F5" IntelliTrace)
 
-1. Select **File | Start Page** to open the **Visual Studio Start Page**.
+1. Select **File \| Start Page** to open the **Visual Studio Start Page**.
 
 1. Open the **PartsUnlimited** project.
 
@@ -145,11 +145,11 @@ In this scenario the business owner has asked us to determine why we are seeing 
 
     ![](images/016.png)
 
-1. If so, it will bring us to the same line. At this point you could optionally export an **iTrace** file for this session that you could share with others via **Debug | IntelliTrace | Save IntelliTrace Session**. This makes it very easy to share the exact circumstances under which an issue occurred so that the developer can easily track it down.
+1. If so, it will bring us to the same line. At this point you could optionally export an **iTrace** file for this session that you could share with others via **Debug \| IntelliTrace \| Save IntelliTrace Session**. This makes it very easy to share the exact circumstances under which an issue occurred so that the developer can easily track it down.
 
     ![](images/017.png)
 
-1. Select **Debug | Stop Debugging** to end the debug session.
+1. Select **Debug \| Stop Debugging** to end the debug session.
 
 1. Update the offending line of code by adding **"- 1"** to the end of **query.Length.**
 
@@ -198,4 +198,4 @@ In this scenario the business owner has asked us to determine why we are seeing 
 
 1. Press **F5** to return to live debugging.
 
-1. Select **Debug | Stop Debugging** to end the session.
+1. Select **Debug \| Stop Debugging** to end the session.

@@ -32,9 +32,9 @@ You also need an [Azure account](https://azure.microsoft.com/) ([Get 1 yr of fre
 
 1. Launch **Visual Studio** from the taskbar.
 
-1. Select **File | New | Project**.
+1. Select **File \| New \| Project**.
 
-1. Select the **Visual C# | Cloud** category and the **Azure Resource Group** template. Leave the other defaults and click **OK**.
+1. Select the **Visual C# \| Cloud** category and the **Azure Resource Group** template. Leave the other defaults and click **OK**.
 
     ![](images/000.png)
 
@@ -64,7 +64,7 @@ You also need an [Azure account](https://azure.microsoft.com/) ([Get 1 yr of fre
 
     ![](images/004.png)
 
-1. Select the **resources | Website** node and note how the associated JSON is highlighted in the editor.
+1. Select the **resources \| Website** node and note how the associated JSON is highlighted in the editor.
 
     ![](images/005.png)
 
@@ -94,7 +94,7 @@ You also need an [Azure account](https://azure.microsoft.com/) ([Get 1 yr of fre
 
 ### Task 3: Deploying the Resource Group project to Azure
 
-1. From **Solution Explorer**, right-click the **AzureResourceGroup1** project nod and select **Deploy | New**. When you deploy an Azure Resource Group project, you deploy it to an Azure resource group. The resource group is a logical grouping of resources that share a common lifecycle.
+1. From **Solution Explorer**, right-click the **AzureResourceGroup1** project nod and select **Deploy \| New**. When you deploy an Azure Resource Group project, you deploy it to an Azure resource group. The resource group is a logical grouping of resources that share a common lifecycle.
 
 1. Select **Add an account** and log in using the Microsoft account associated with your Azure subscription.
 
@@ -152,11 +152,11 @@ You also need an [Azure account](https://azure.microsoft.com/) ([Get 1 yr of fre
 
 1. At this point, you have deployed the infrastructure for your app, but there is no actual code deployed with the project. This task walks through the process of deploying a web app and SQL database tables. Note that if you were deploying a virtual machine instead of a web app, you would instead want to run some code on the machine as part of deployment. The processes for deploying code for a web app or for setting up a virtual machine are very similar.
 
-1. In **Solution Explorer**, right-click the solution node and select **Add | New Project**.
+1. In **Solution Explorer**, right-click the solution node and select **Add \| New Project**.
 
     ![](images/024.png)
 
-1. From the **Visual C$ | Web** category, select the **ASP.NET Web Application (.NET Framework)** template. Accept the defaults and click **OK**.
+1. From the **Visual C$ \| Web** category, select the **ASP.NET Web Application (.NET Framework)** template. Accept the defaults and click **OK**.
 
     ![](images/025.png)
 
@@ -188,7 +188,7 @@ You also need an [Azure account](https://azure.microsoft.com/) ([Get 1 yr of fre
 
     ![](images/031.png)
 
-1. Now you can deploy the full app. In **Solution Explorer**, right-click the resource group project node and select **Deploy | AzureResourceGroup1**.
+1. Now you can deploy the full app. In **Solution Explorer**, right-click the resource group project node and select **Deploy \| AzureResourceGroup1**.
 
     ![](images/032.png)
 

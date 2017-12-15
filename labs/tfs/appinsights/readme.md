@@ -30,9 +30,9 @@ You will also need an Azure account, which you can set up at [http://azure.com](
 
 1. Launch **Visual Studio** from the taskbar.
 
-1. Select **File | New | Project** from the main menu.
+1. Select **File \| New \| Project** from the main menu.
 
-1. From the **Visual C# | Web** section, select the **ASP.NET Web Application (.NET Framework)** template and enter a **Name** of **"AppInsightsLab"**. Click **OK** to continue.
+1. From the **Visual C# \| Web** section, select the **ASP.NET Web Application (.NET Framework)** template and enter a **Name** of **"AppInsightsLab"**. Click **OK** to continue.
 
     ![](images/000.png)
 
@@ -42,7 +42,7 @@ You will also need an Azure account, which you can set up at [http://azure.com](
 
 1. Press **F5** to build and run the app. As you can see, there's nothing special here yet. Close the browser to end the debugging session.
 
-1. In **Solution Explorer**, right-click the **AppInsightsLab** project node and select **Application Insights | Configure Application Insights**.
+1. In **Solution Explorer**, right-click the **AppInsightsLab** project node and select **Application Insights \| Configure Application Insights**.
 
     ![](images/002.png)
 

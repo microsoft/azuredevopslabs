@@ -46,7 +46,7 @@ In order to complete this lab you will need the Visual Studio 2017 virtual machi
 
     ![](images/003.png)
 
-1. The new lightweight and componentized installer breaks down Visual Studio into independent workloads that lets you install just what you need, helping you get going much faster. Some workloads have already been installed on the VM, such as **.NET desktop development** and **Web development**. Selecting these workloads ensured that the installer would set up everything needed to perform the task associated with those types of development, which you can view in the **Summary | Individual components** section on the right side.
+1. The new lightweight and componentized installer breaks down Visual Studio into independent workloads that lets you install just what you need, helping you get going much faster. Some workloads have already been installed on the VM, such as **.NET desktop development** and **Web development**. Selecting these workloads ensured that the installer would set up everything needed to perform the task associated with those types of development, which you can view in the **Summary \| Individual components** section on the right side.
 
     ![](images/004.png)
 
@@ -68,7 +68,7 @@ In order to complete this lab you will need the Visual Studio 2017 virtual machi
 
     ![](images/007.png)
 
-1. **Navigate To** has been completely overhauled and renamed **Go To All**. From the main menu, select **Edit | Go To** and select **Go To All**.
+1. **Navigate To** has been completely overhauled and renamed **Go To All**. From the main menu, select **Edit \| Go To** and select **Go To All**.
 
     ![](images/008.png)
 
@@ -148,4 +148,4 @@ In order to complete this lab you will need the Visual Studio 2017 virtual machi
 
     ![](images/025.png)
 
-1. Select **Debug | Stop Debugging** from the main menu to end the debug session.
+1. Select **Debug \| Stop Debugging** from the main menu to end the debug session.
