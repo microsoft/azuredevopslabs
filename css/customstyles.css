@@ -4,7 +4,7 @@ body {
     font-family:  "Lato","Geneva CY","Lucida Grande","Arial Unicode MS","Helvetica Neue","Helvetica","Arial",sans-serif;
     margin: 0px;
     padding: 0px;
-    line-height: 25px;
+    line-height: 1.6;
     /*background-color: #248ec2;*/
 }
 
@@ -1378,6 +1378,8 @@ i.glyphicon.glyphicon-search {
 .mainTable {
     border: none;
     background-color: #f7f8f9;
+    padding: 2px;
+    line-height: 1.6;
 }
 
 span.introText {
@@ -1427,7 +1429,8 @@ span.headnews {
     font-weight: bold;
     color: black;
     line-height: 1.5;
-    font-family: 'Lora', Georgia, serif;
+    /*font-family: 'Lora', Georgia, serif;*/
+    font-family:  "Lato","Geneva CY","Lucida Grande","Arial Unicode MS","Helvetica Neue","Helvetica","Arial",sans-serif;
 }
 
 div.newsitem {
@@ -1476,9 +1479,10 @@ div.lab-item {
     font-weight: 80%;
     padding-top: 10px;
 }
-div.lab-itemL:hover{
+div.lab-item:hover{
     border-style: solid;
-    border-color: #2361c4;
+    background-color: #efefef
+    /*border-color: #2361c4;*/
 }
 
 div.clear {

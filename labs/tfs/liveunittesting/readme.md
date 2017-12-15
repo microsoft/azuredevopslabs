@@ -10,15 +10,15 @@ Lab version:15.4
 
 Last updated:11/13/2017
 
-# Overview
+## Overview
 
 In this lab, you will learn about how the unit testing engine in Visual Studio is extensible and opens the door for 3rd party unit testing adapters such as NUnit and xUnit.net. In addition, you will see some of the improvements made to code coverage support. You will also learn about how the code clone capability goes hand-in-hand with delivering high quality software by helping you identify blocks of semantically similar code which may be candidates for common bug fixes or refactoring.
 
-# Prerequisites
+## Prerequisites
 
 In order to complete this lab you will need the Visual Studio 2017 virtual machine provided by Microsoft. For more information on acquiring and using this virtual machine, please see [this blog post](http://aka.ms/almvm).
 
-# About the Fabrikam Fiber Scenario
+## About the Fabrikam Fiber Scenario
 
 This set of hands-on-labs uses a fictional company, Fabrikam Fiber, as a backdrop to the scenarios you are learning about. Fabrikam Fiber provides cable television and related services to the United States. They are growing rapidly and have embraced Windows Azure to scale their customer-facing web site directly to end-users to allow them to self-service tickets and track technicians. They also use an on-premises ASP.NET MVC application for their customer service representatives to administer customer orders.
 

@@ -10,17 +10,17 @@ Lab version:15.4
 
 Last updated:11/10/2017
 
-# Overview
+## Overview
 
 In this lab, you will learn about the release management features available in Visual Studio 2017 and its suite of release and deployment tools that automate the deployment of applications across the desktop, server, and the cloud. The release management features of Visual Studio 2017 help development and operations teams integrate with Team Foundation Server to configure and automate complex deployments of their automated builds to target environments more easily. Development teams can also model their release processes and track approvals, sign-offs, and visualize their release status.
 
-# Prerequisites
+## Prerequisites
 
 In order to complete this lab you will need the Visual Studio 2017 virtual machine provided by Microsoft. For more information on acquiring and using this virtual machine, please see [this blog post](http://aka.ms/almvm).
 
 This lab also requires the latest version of **SQL Server Management Studio (SSMS)** in order to ensure compatibility with Azure. You can check for updates by launching SSMS and selecting **Tools | Check for Updates**.
 
-# About the Fabrikam Fiber Scenario
+## About the Fabrikam Fiber Scenario
 
 This set of hands-on-labs uses a fictional company, Fabrikam Fiber, as a backdrop to the scenarios you are learning about. Fabrikam Fiber provides cable television and related services to the United States. They are growing rapidly and have embraced Windows Azure to scale their customer-facing web site directly to end-users to allow them to self-service tickets and track technicians. They also use an on-premises ASP.NET MVC application for their customer service representatives to administer customer orders.
 
@@ -50,7 +50,7 @@ In this exercise, you will use the release management features of Team Foundatio
 
 1. You can easily edit files on the server and check them in from the browser, which is great for scenarios where you only need to make minor tweaks. You'll come back to this tab in future steps, so leave it open as you move forward.
 
-1. Right-click the **Build and Release | Builds** tab and select **Open in new tab** to view builds. You're going to move back and forth between parts of TFS, so keeping these separate tabs open will make things easier as you go along. After the tab opens, switch to it.
+1. Right-click the **Build and Release \| Builds** tab and select **Open in new tab** to view builds. You're going to move back and forth between parts of TFS, so keeping these separate tabs open will make things easier as you go along. After the tab opens, switch to it.
 
     ![](images/002.png)
 
