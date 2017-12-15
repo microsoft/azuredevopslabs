@@ -10,7 +10,7 @@ Lab version:15.5
 
 Last updated:12/7/2017
 
-# Overview
+## Overview
 
 Many developers still rely on traditional or live debugging techniques which shows only your applications current state with limited data about past events. You either have to guess what happened based on your current state, or you have to recreate these events by rerunning your app. Developers rely on breakpoints to try capturing some of the errors that might appear because of unknown events, sometimes even a breakpoint won't be able to reach the issue - after all, maybe the breakpoint won't be hit at all.
 

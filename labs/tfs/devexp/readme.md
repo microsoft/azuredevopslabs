@@ -10,7 +10,7 @@ Lab version:15.4
 
 Last updated:11/5/2017
 
-# Overview
+## Overview
 
 Visual Studio 2017 introduces a wealth of features and enhancements designed to significantly improve the productivity of developers. Many of these improvements focus on saving time and effort on everyday tasks, such as code navigation, IntelliSense, refactoring, code fixes, and debugging. In this lab, we'll take a quick tour of some of the many benefits.
 
@@ -18,7 +18,7 @@ There are also a wealth of new features and enhancements in Visual Studio 2017 c
 
 For a more exhaustive list of what's new in Visual Studio 2017, please check out the [release notes](https://www.visualstudio.com/en-us/news/releasenotes/vs2017-relnotes).
 
-# Prerequisites
+## Prerequisites
 
 In order to complete this lab you will need the Visual Studio 2017 virtual machine provided by Microsoft. For more information on acquiring and using this virtual machine, please see [this blog post](http://aka.ms/almvm).
 

@@ -5,7 +5,7 @@ sidebar: tfs
 permalink: /labs/tfs/started/
 folder: /labs/tfs/started/
 ---
-# Overview
+## Overview
 
 The Microsoft® Visual Studio® Application Lifecycle Management
 Virtual Machine is a single virtual machine image that contains fully

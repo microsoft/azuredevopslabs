@@ -10,11 +10,11 @@ Lab version:15.4
 
 Last updated:11/2/2017
 
-# Overview
+## Overview
 
 [EditorConfig](http://editorconfig.org/) is an open source file format that helps developers configure and enforce formatting and code style conventions to achieve consistent, more readable codebases. EditorConfig files are easily checked into source control and are applied at repository and project levels. EditorConfig conventions override their equivalents in your personal settings, such that the conventions of the codebase take precedence over the individual developer. The simplicity and universality of EditorConfig make it an attractive choice for team-based code style settings in Visual Studio 2017.
 
-# Prerequisites
+## Prerequisites
 
 In order to complete this lab you will need the Visual Studio 2017 virtual machine provided by Microsoft. For more information on acquiring and using this virtual machine, please see [this blog post](http://aka.ms/almvm).
 

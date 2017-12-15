@@ -10,7 +10,7 @@ Lab version:15.4.1
 
 Last updated:10/26/2017
 
-# Overview
+## Overview
 
 With Visual Studio and the [Azure SDK](https://azure.microsoft.com/downloads/), you can create a project that deploys your infrastructure and code to Azure. For example, you can define the web host, web site, and database for your app, and then deploy that infrastructure along with the code. Or, you can define a virtual machine, virtual network, and storage account to be deployed along with a script to execute on the new virtual machine. The **Azure Resource Group** deployment project enables you to deploy all the needed resources in a single, repeatable operation. For more information about deploying and managing your resources, see [Azure Resource Manager overview](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-overview).
 
@@ -18,7 +18,7 @@ Azure Resource Group projects contain Azure Resource Manager JSON templates, whi
 
 In this lab, you will deploy a web app and SQL database. However, the steps are almost the same for any type resource. You can as easily deploy a virtual machine and its related resources. Visual Studio provides many different starter templates for deploying common scenarios.
 
-# Prerequisites
+## Prerequisites
 
 In order to complete this lab you will need the Visual Studio 2017 virtual machine provided by Microsoft. For more information on acquiring and using this virtual machine, please see [this blog post](http://aka.ms/almvm).
 

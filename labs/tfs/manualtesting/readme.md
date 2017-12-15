@@ -10,15 +10,15 @@ Lab version:15.4
 
 Last updated:11/13/2017
 
-# Overview
+## Overview
 
 In this lab, you will learn how to use Microsoft Team Foundation Server 2018 to manage your project's testing lifecycle. This project will guide you through creating test plans designed efficiently validate your software milestones. You will also create and execute manual tests that can be consistently reproduced over the course of each release.
 
-# Prerequisites
+## Prerequisites
 
 In order to complete this lab you will need the Visual Studio 2017 virtual machine provided by Microsoft. For more information on acquiring and using this virtual machine, please see [this blog post](http://aka.ms/almvm).
 
-# About the Parts Unlimited Scenario
+## About the Parts Unlimited Scenario
 
 This set of hands-on-labs uses a fictional company, Parts Unlimited, as a backdrop to the scenarios you are learning about. Parts Unlimited sells automotive products. They are growing rapidly and have embraced Windows Azure to scale their customer-facing web site directly to end-users to allow them to manage their catalog and inventory.
 

@@ -25,7 +25,7 @@ The Microsoft ALM/DevOps Hands-On-Labs is a set of self-paced labs based on Visu
            <a href="labs/tfs" class="c-glyph"><span class="lab-details">View Details</span></a>
     </div>
     <div class="lab-item col-md-4" align="center">
-         <span class="headnews"> <b><a href="labs/vsts" class="labmain"> Visual Studio Team Services Labs</a></b></span><br />
+         <span class="headnews"> <b><a href="labs/vsts" class="labmain"> Visual Studio Team <br />Services Labs</a></b></span><br />
         <a href="labs/vsts"><img style="margin: 10px;" src="images/vstslogo.png"/></a><br />
        <!--span class="mainPageText"> Follow the Visual Studio Team Services Hands-on-Labs</span><br /><br /-->
        <a href="labs/vsts" class="c-glyph"><span class="lab-details">View Details</span></a>

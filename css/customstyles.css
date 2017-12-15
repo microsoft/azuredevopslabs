@@ -1481,8 +1481,11 @@ div.lab-item {
 }
 div.lab-item:hover{
     border-style: solid;
-    background-color: #efefef
-    /*border-color: #2361c4;*/
+    /*background-color: #efefef
+    border-color: #2361c4;
+    box-shadow: 0 0 0 2px;*/
+    box-shadow: 2px 5px #888888;
+    transition: .5s ease
 }
 
 div.clear {

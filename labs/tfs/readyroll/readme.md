@@ -10,7 +10,7 @@ Lab version: 15.0.26020.1
 
 Last updated: 4/11/2017
 
-# Overview
+## Overview
 
 Development teams adopting DevOps often struggle to apply DevOps processes to their SQL Server databases.  ReadyRoll is a tool designed to make this easy, so teams can safely automate their database deployments.
 Development teams use ReadyRoll to develop, source control, build, validate, test, package, review and release database changes alongside application changes with precision and control.

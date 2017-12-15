@@ -10,13 +10,13 @@ Lab version:15.4
 
 Last updated:11/13/2017
 
-# Overview
+## Overview
 
 [Visual Studio Application Insights](https://azure.microsoft.com/services/application-insights) is an extensible analytics service that helps you understand the performance and usage of your live web application. It's designed for developers, to help you continuously improve the performance and usability of your app. It works with web apps on .NET or J2EE, hosted on-premises or in the cloud. You can also apply it to Windows background services and desktop apps.
 
 In this lab we will start with a fresh ASP.NET application and explore how you can instrument it with Application Insights. This will make it easier to track site usage and patterns, as well as to detect, diagnose, and triage issues related to performance and more.
 
-# Prerequisites
+## Prerequisites
 
 In order to complete this lab you will need the Visual Studio 2017 virtual machine provided by Microsoft. For more information on acquiring and using this virtual machine, please see [this blog post](http://aka.ms/almvm).
 

@@ -10,15 +10,15 @@ Lab version:15.4
 
 Last updated:11/2/2017
 
-# Overview
+## Overview
 
 Coded UI tests provide a way to create fully automated tests to validate the functionality and behavior of your application's user interface. In this lab, you will gain a basic understanding of coded UI tests by creating a new test and adding validation logic to it.
 
-# Prerequisites
+## Prerequisites
 
 In order to complete this lab you will need the Visual Studio 2017 virtual machine provided by Microsoft. For more information on acquiring and using this virtual machine, please see [this blog post](http://aka.ms/almvm).
 
-# About the Fabrikam Fiber Scenario
+## About the Fabrikam Fiber Scenario
 
 This set of hands-on-labs uses a fictional company, Fabrikam Fiber, as a backdrop to the scenarios you are learning about. Fabrikam Fiber provides cable television and related services to the United States. They are growing rapidly and have embraced Windows Azure to scale their customer-facing web site directly to end-users to allow them to self-service tickets and track technicians. They also use an on-premises ASP.NET MVC application for their customer service representatives to administer customer orders.
 

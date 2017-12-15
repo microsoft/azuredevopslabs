@@ -5,7 +5,7 @@ sidebar: tfs
 permalink: /labs/tfs/technicaldebt/
 folder: /labs/tfs/technicaldebt/
 ---
-# Overview
+## Overview
 
 In this lab, you will be introduced to Technical debt, how to configure your Team Build Definitions to use SonarQube, how to understand the analysis results and finally how to configure quality profile to control the rule set used by SonarQube for analyzing your project.
 
