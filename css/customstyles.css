@@ -1554,7 +1554,7 @@ a.postitem:hover{
 }
 
 div.labcols{
-    margin-left: 20px;
+    margin-left: 60px;
 }
 
 div.rowMain{
@@ -1571,6 +1571,6 @@ div.columnMain{
         width: 35%;
         padding-top: 70px;
         font-size: 32px;
-        margin-left: 240px;
+        margin-left: 200px;
         
 }
