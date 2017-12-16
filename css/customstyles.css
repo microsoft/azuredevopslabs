@@ -1556,3 +1556,21 @@ a.postitem:hover{
 div.labcols{
     margin-left: 20px;
 }
+
+div.rowMain{
+    background-image: url("almvm-hero-right-blue.png");
+    display: block;
+    background-color: skyblue;
+    margin-top: 73px;
+    height: 370px;
+
+}
+
+div.columnMain{
+        float: left;
+        width: 35%;
+        padding-top: 70px;
+        font-size: 32px;
+        margin-left: 240px;
+        
+}
