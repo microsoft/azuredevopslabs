@@ -1558,7 +1558,7 @@ div.labcols{
 }
 
 div.rowMain{
-    background-image: url("almvm-hero-right-blue.png");
+    background-image: url("../images/almvm-hero-right-blue.png");
     display: block;
     background-color: skyblue;
     margin-top: 73px;
@@ -1569,8 +1569,9 @@ div.rowMain{
 div.columnMain{
         float: left;
         width: 35%;
-        padding-top: 70px;
+        padding-top: 100px;
         font-size: 32px;
-        margin-left: 200px;
+        margin-left: 150px;
+
         
 }
