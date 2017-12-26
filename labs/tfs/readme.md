@@ -64,7 +64,7 @@ Using **Free download manager**
 
 ## Hands-On-Labs
 
-Here are the 2018 hands-on-labs for Team Foundation Server. If you want to access the labs offline, you can download them as MS Word documents from [here] (https://almvm2017wu.blob.core.windows.net:443/2017wulabs)
+Here are the 2018 hands-on-labs for Team Foundation Server. If you want to access the labs offline, you can download them as MS Word documents from [here](https://almvm2017wu.blob.core.windows.net/labs/ALMVM2017WULabs.zip)
 
 <table width="100%">
    <thead>

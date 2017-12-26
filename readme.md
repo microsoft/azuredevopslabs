@@ -1,6 +1,6 @@
 ---
 layout: homepage
-title: Microsoft ALM VM
+title: Home
 keywords: ALM VM homepage
 tags: [overview]
 permalink: default.html

@@ -519,6 +519,7 @@ span.projectTitle {
     font-weight: bold;
     color: #000000;
     padding-left: 10px;
+    word-wrap: break-word;
 }
 
 span.rellinkstitle {
@@ -1561,7 +1562,7 @@ div.rowMain{
     background-image: url("../images/almvm-hero-right-blue.png");
     display: block;
     background-color: skyblue;
-    margin-top: 73px;
+    margin-top: 43px;
     height: 370px;
 
 }
@@ -1574,4 +1575,9 @@ div.columnMain{
         margin-left: 150px;
 
         
+}
+
+span.labdesc{
+font-size: 24px;
+font-style: italic;
 }
