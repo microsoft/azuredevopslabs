@@ -34,25 +34,25 @@ project page in your browser.
 
 1. Right click on the **PartsUnlimited** Solution and choose **Add** |\ **New Project**
 
-   ![](images\1.JPG)
+   ![](images\1.jpg)
 
 1. Choose **ReadyRoll SQL Server Database Project** from the available SQL Server project types, adding the name **PartsUnlimitedDatabase** or similar.
 
-   ![](images\2.JPG)
+   ![](images\2.jpg)
 
 1. In the ReadyRoll window, click the **Connect to Database** button and use the **Connect** window to choose the **PartsUnlimitedWebsite-Prod** database from the local **VSALM\\SQLEXPRESS** server instance.
 
-   ![](images\3.JPG)
+   ![](images\3.jpg)
 
-   ![](images\4.JPG)
+   ![](images\4.jpg)
 
 1. In the solution Explorer, right click on the **Migrations** folder and choose to add a new folder called **1.0.0**.
 
-    ![](images\5.JPG)
+    ![](images\5.jpg)
 
 2. Right click on the **PartsUnlimitedDatabase** project in the Solution Explorer and choose **Properties**.
 
-   ![](images\6.JPG)
+   ![](images\6.jpg)
 
 3. In the resulting window check both of the boxes in the section headed **Semantic Versioning**.
 
@@ -60,15 +60,15 @@ project page in your browser.
 
 5. In the ReadyRoll window click the ‘Import Database’ button and wait for the process to complete.
 
-   ![](images\7.JPG)
+   ![](images\7.jpg)
 
-   ![](images\8.JPG)
+   ![](images\8.jpg)
 
-   ![](images\9.JPG)
+   ![](images\9.jpg)
 
 1. Once completed, click the ‘Refresh (Verify Script)’ button within the ReadyRoll window and wait for it to complete the process, repeat the refresh task again if the verification encounters any initial problems.
 
-   ![](images\10.JPG)
+   ![](images\10.jpg)
 
    ![](images\11.jpg)
 
@@ -76,51 +76,51 @@ project page in your browser.
 
 2. Return to the solution explorer and repeat step 4 but this time add a folder called **1.0.1**.
 
-   ![](images\12.JPG)
+   ![](images\12.jpg)
 
 1. Save All.
 
 2. Finally, we want to provide a development environment for ReadyRoll to work in, so we need to disconnect the project from the production database and specify localdb for development use, in the ReadyRoll window, click the **configure connection** button from the toolbar (as highlighted) and use the **Connect** window to select MSSQLLocalDB (under **Local**) as the server instance.
 
-   ![](images\13.JPG)
+   ![](images\13.jpg)
 
 1. ReadyRoll will now detect that a development database does not exist and will ask if you would like to create it, choose to **Create Database** and wait for ReadyRoll to complete its re-build and deploy the dev database onto LocalDB.
 
-   ![](images\14.JPG)
+   ![](images\14.jpg)
 
-   ![](images\15.JPG)
+   ![](images\15.jpg)
 
 1. You have now completed the setup of the ReadyRoll project ready for further development and can now use Team Explorer to commit to source control.
 
-   ![](images\16.JPG)
+   ![](images\16.jpg)
 
 ## Task 2: Setting up Builds
 
 1. Navigate to **Build** from the **Build and Release** tab on the TFS project webpage then select **+ New** to create a new build definition.
 
-   ![](images\17.JPG)
+   ![](images\17.jpg)
 
 1. Choose **ReadyRoll** from the available build templates to populate your definition with the core tasks.
 
-   ![](images\18.JPG)
+   ![](images\18.jpg)
 
 1. We now need to adjust some settings within these core tasks, firstly choose **default** for the Agent queue.
 
-   ![](images\19.JPG)
+   ![](images\19.jpg)
 
 1. Next, select the ‘Set Target Database’ task to configure our ultimate deployment target, in this case the **PartsUnlimitedWebsite-Prod** database on the **VSALM\\SQLEXPRESS** local SQL Server instance.
 
    >**Note**: If we were deploying to Azure we could change the **Target type** and select an appropriate existing SQL Database running in Azure
 
-   ![](images\20.JPG)
+   ![](images\20.jpg)
 
 1. If our solution only consisted of the ReadyRoll database project then that would complete our build definition setup but, as there were existing projects related to the website and tests we need to ensure that their dependencies are taken care of by adding a Nuget package restore task for the solution, click on **+ Add Task** selecting the Nuget task and setting the options as shown below.
 
-   ![](images\21.JPG)
+   ![](images\21.jpg)
 
 1. Optionally – If we want to automatically trigger a build after a commit to source control then we need to set a trigger. Click on the **Triggers** tab within the definition and set **Continuous Integration** to **Enabled**.
 
-   ![](images\22.JPG)
+   ![](images\22.jpg)
 
 1. This completes the setup for automated builds, on the toolbar choose **Save & Queue** to save your settings and trigger a build.
 
@@ -146,7 +146,7 @@ project page in your browser.
 
 1. We now need to configure some settings within the task, firstly select the DeployPackage.PS1 file from the browsing dialog for the **Package to deploy**.
 
-   ![](images\28.JPG)
+   ![](images\28.jpg)
 
 1. Next specify the Target database again selecting the **PartsUnlimitedWebsite-Prod** we referenced earlier in step 19.
 
