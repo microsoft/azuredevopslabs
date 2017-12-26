@@ -97,7 +97,7 @@ Here are the 2018 hands-on-labs for Team Foundation Server. If you want to acces
       <td><a href="debugging/">Debugging with IntelliTrace using Visual Studio Enterprise 2017</a></td>
    </tr>
    <tr>
-      <td><a href="devexp/">Developer experience enhancements in Visual Studio 2017</a>     <span class="label label-success">New</span></td>
+      <td><a href="devexp/">Developer experience enhancements in Visual Studio 2017</a></td>
    </tr>
    <tr>
       <td><a href="intellitrace/">Diagnosing Issues in Production with IntelliTrace and Visual Studio 2017</a></td>
