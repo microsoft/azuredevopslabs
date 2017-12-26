@@ -1,5 +1,5 @@
 ---
-title: Introduction to the Modern Requirements Suite4TFS & Team Foundation Server 2017
+title: Introduction to the Modern Requirements Suite4TFS & Team Foundation Server 2018
 layout: page    
 sidebar: tfs
 permalink: /labs/tfs/smartword4tfs/
@@ -8,1025 +8,1150 @@ folder: /labs/tfs/smartword4tfs/
 
 Lab version: 14.0.25123
 
-Last updated: 2/23/2017
+Last updated: 12/7/2017
 
-##  Overview
+## Overview
 
-The Modern Requirements Suite4TFS provides a collaborative platform
-    based on ‘a single source of truth’, while automating each phase of
-    your requirements lifecycle. The user interface is Microsoft Office
-    or, SmartOffice4TFS, ensuring that you, and your new recruits, can
-    start enjoying the benefits quickly. You can also use the browser
-    based interface, inteGREAT4TFS. Microsoft’s industry leading TFS /
-    VSTS is the requirements database, with optional extensions
-    supporting your end to end ALM process. Whether you deploy it on
-    premises or in the Azure cloud, it provides the security,
-    scalability and workflow management clients’ demand; while
-    supporting Agile, Waterfall or Hybrid methodologies.
+Modern Requirements Suite4TFS provides a collaborative platform based on “a single source of truth,” while automating each phase of your requirements lifecycle. The user interface is Microsoft Office or Smart Office4TFS, ensuring that you, and your new recruits, can start enjoying the benefits quickly. You can also use the browser-based interface, Modern Requirements4TFS. Microsoft’s industry leading TFS/VSTS is the requirements database, with optional extensions supporting your end-to-end ALM process. Whether you deploy it on premises or in the Azure cloud, it provides the security, scalability and workflow enterprises demand; all while supporting Agile, Waterfall or Hybrid methodologies.
 
-In this lab, you will learn about scrum management using the Modern
-    Requirements Suite4TFS modules and augmented by Team Foundation
-    Server 2017 and how these tools can help you to quickly track work
-    across your entire team.
+In this lab, you will learn about scrum management using the Modern Requirements Suite4TFS modules, augmented by Team Foundation Server 2018. You will also learn how these tools can help you quickly track work across your entire team.
 
-## Pre-requisites
+## Prerequisites
 
-In order to complete this lab, you will need SmartWord4TFS,
-    inteGREAT4TFS and the Visual Studio ALM Virtual Machine 2017  provided
-    by Microsoft. For more information about the Modern Requirements
-    Suite4TFS products, please visit [this
-    URL](http://www.modernrequirements.com/). The information about
-    acquiring and using the Visual Studio 2017 virtual machine is
-    available [here](http://aka.ms/VS15ALMVM).
+In order to complete this lab, you will need Smart Word4TFS, Modern Requirements4TFS and the Visual Studio 2017 virtual machine provided by Microsoft. For more information about Modern Requirements Suite4TFS products, please visit [this URL](http://www.modernrequirements.com/). The information about acquiring and using the Visual Studio 2017 virtual machine is available [here](https://almvm2017.blob.core.windows.net/2017winterupdatepreview/171116.ALMVM.zip).
 
-> **Important note:** This lab requires you to use the default state of the virtual
-    machine, before any modifications are made to work items or source
-    in TFS. If you followed the “Working With…” instructions, you should
-    have a snapshot/checkpoint of the virtual machine before working
-    with it for the first time. Apply the snapshots/checkpoints before
-    starting this lab.
+The following prerequisites are required to successfully install Smart Office4TFS products:
 
-## Installing SmartWord4TFS
+- Microsoft VM environment for Visual Studio 2017
 
-1.  Go to the following link :
-    <http://www.modernrequirements.com/application-lifecycle-management-virtual-machine/>
+- Internet should be working within the VM. Refer to **Working with the Visual Studio 2017** ALM Virtual Machine.docx”
 
-2.  Please submit the online registration form and click submit to
-    download button (refer to the screen shot).
+>**Important note:** This lab requires you to use the default state of the virtual machine before any modifications are made to work items or source in TFS. If you followed the “Working With…” instructions, you should have a snapshot/checkpoint of the virtual machine before working with it for the first time. Apply the snapshots/checkpoints before starting this lab.
 
-    <img src="media/130.png" width="538" height="358" />
+## About the Fabrikam Fiber Scenario
 
-3.  You will be navigated to the download page.
+This set of hands-on labs uses a fictional company, Fabrikam Fiber, as a backdrop to the scenarios you are learning about. Fabrikam Fiber provides cable television and related services to the United States. The company is growing rapidly and has embraced Windows Azure to scale its customer-facing website directly to end-users to enable them to manage tickets and track technicians. It also uses an on-premises ASP.NET MVC application for its customer service representatives to administer customer orders.
 
-4.  Click on **SmartWord4TFS web installer (590 KB)**.
+In this set of hands-on labs, you will take part in a number of scenarios that involve the development and testing team at Fabrikam Fiber. The team, which consists of 8-10 people, has decided to use Visual Studio application lifecycle management tools in conjunction with Smart Excel4TFS.
 
-    <img src="media/131.png" width="610" height="494" />
+## Installing Smart Word4TFS
 
-    > For system requirements [inteGREAT4TFS installation
-    guide](file:///C:\Users\bsavelson\AppData\Local\Microsoft\Windows\INetCache\Content.Outlook\VG0J8XD1\inteGREAT4TFS%20installation%20guide)
-    & [SmartWord4TFS installation
-    guide](file:///C:\Users\bsavelson\AppData\Local\Microsoft\Windows\INetCache\Content.Outlook\VG0J8XD1\SmartWord4TFS%20installation%20guide)
+This installation guide demonstrates the installation of Smart Word4TFS using the web installer.
 
-5.  Once the installer is downloaded click the installer to start the
-    installation process.
+## Installation guidelines
 
-**Installation Process**
+1. Go to [http://www.modernrequirements.com](http://www.modernrequirements.com/) and click the **Download** link at top of the page.
 
-The following screenshot shows the online installer.
+2. Scroll down and click the **Download SmartWord4TFS** link.
 
-1.  Run the **SmartWord4TFS.exe** file
+   ![](images/1.png)
 
-    <img src="media/132.png" width="462" height="289" />
+   **Figure 1** Products download page
 
-2.  Click the **Next** Button to start the installation process.
+   The user is taken to the online registration page.
 
-    <img src="media/133.png" width="432" height="354" />
+   ![](images/2.png)
 
-3.  Read the License Agreement, select **I Agree** option and click the
-    **Next** Button.
+   **Figure 2** Registration page
 
-    <img src="media/134.png" width="434" height="356" />
+   Filling out the registration form for downloading Smart Word4TFS:
 
-4.  Set the desired installation location and the relevant user accounts
-    then click the **Next** Button.
+1. Fill out the online registration form and click the **Submit to Download** button. The user is taken to the download page.
 
-    <img src="media/135.png" width="433" height="354" />
+2. Click the **Try it for free** button under **Smart Word4TFS**.
 
-5.  Select the desired mode (**Author** or **Reviewer**) and click the
-    **Next** Button.
+   ![](images/3.png)
 
-    <img src="media/136.png" width="430" height="352" />
+   **Figure 3** Download Applications
 
-6.  Select if the templates are to be installed and then click
-    **Next** Button.
+   Applications download page:
 
-    <img src="media/137.png" width="432" height="354" />
+   For system requirements refer to the Modern Requirements4TFS Installation Guide & the Smart Word4TFS Installation Guide
+[here](http://modernrec.staging.wpengine.com/download-applications/).
 
-7.  Click the **Next** Button to begin copying the files onto
-    your system.
+1. Once the installer is downloaded run it to start the installation process.
 
-    <img src="media/138.png" width="430" height="352" />
+   ![](images/4.png)
 
-8.  The actual installation starts based on selections done in
-    previous steps.
+   **Figure 4** Running the Smart Word4TFS installer
 
-    <img src="media/139.png" width="425" height="349" />
+## The installation process
 
-9.  Click on the **Close** Button to complete the installation process.
+1. If the installer was downloaded, but didn’t start imimagestely afterwards, open the relevant folder and run the **SmartWord4TFS\_Online.exe** file. Skip this step if the installer ran imimagestely after downloading.
 
-    <img src="media/140.png" width="430" height="352" />
+   ![](images/5.png)
 
-10. The **SmartWord4TFS** Tab (or **SmartWord4TFS Review** Tab if you
-    chose to install the **Reviewer Mode**) can now be accessed in
-    Microsoft Word.
+   **Figure 5** Invoking the Smart Word4TFS installer
 
-    <img src="media/141.png" width="625" height="60" />
+1. Accept the license agreement for the Microsoft components to proceed.
 
-    >The downloaded version provides 30 days trial period for users to
-    evaluate the application.
+   ![](images/6.png)
 
-11. Click the **About** option in Ribbon Bar **Activate** Button (in the
-    **About** window)
+   **Figure 6** Accepting EULA
 
-    <img src="media/142.png" width="623" height="245" />
+   The prerequisite software is installed if required.
 
-    >After submitting the online registration form you will receive the
-    License key for 6 month duration to the provided email address.
-    This software key is provided for non-production use only.  
+   ![](images/7.png)
 
-12. Enter the provided Activation key and click **Activate** button.
+   **Figure 7** Installing the prerequisite components
 
-    <img src="media/143.png" width="493" height="309" />
+1. Click **Next**.
 
-13. Entering a valid Activation Key activates SmartWord4TFS.
+   ![](images/8.png)
 
-    <img src="media/144.png" width="466" height="296" />
+   **Figure 8** Installation Step 1
 
-**Installation Process for inteGREAT4TFS**
+1. Read the License Agreement, select the **I Agree** option and click **Next**.
 
-Download the inteGREAT4TFS installer using the same process described above for SmartWord4TFS.
+   ![](images/9.png)
 
-1. Double click the **inteGREAT4TFS 2017.exe** file.
+   **Figure 9** Installation Step 2
 
-   <img src="media/145.png" width="643" height="350" />
+1. Set the desired installation location and the relevant user accounts, then click **Next**.
 
-2. Select the terms and conditions agreement check box and then click
-    the **Next** Button.
+   ![](images/10.png)
 
-   <img src="media/146.png" width="431" height="534" />
+   **Figure 10** Select Installation Folder Installation Step 3
 
-3. Enter the following Windows credentials and then click the **Next** Button.:
+1. Select the desired mode (**author** or **reviewer**) and click **Next**.
 
-   > Username = **Administrator**  
-   > Password = **P2ssw0rd**
-   
-   <img src="media/147.png" width="433" height="536" />
+   ![](images/11.png)
 
-   > Application would be installed, even if incorrect windows
-    credentials entered during the installation, however user will not be
-    able to login into the application.
+   **Figure 11** Installation Step 4
 
-4. Configure **Redis Installation** options\* and click the
-    **Install** Button.
+1. Select if the templates will be installed and then click **Next**.
 
-   <img src="media/148.png" width="463" height="574" />
+   ![](images/12.png)
 
-   > **Auto Install Redis** option is the recommended option if Redis is
-      not already installed on the VM.
-      The relevant files are installed.
+   **Figure 12** Installation Step 5
 
-   <img src="media/149.png" width="431" height="535" />
+1. Tick the box if you want to be part of the Customer Experience
+program and then click **Next**.
 
-5. Complete the Installation of **inteGREAT4TFS** by clicking the
-    **Finish** Button.
+   ![](images/13.png)
 
-    <img src="media/150.png" width="432" height="535" />
+   **Figure 13** Installation Step 6
 
+1. Click **Next** to begin copying the files into your system.
 
--   Please note down the Service URL (highlighted in the above images).
-    This would be helpful later on.
+   ![](images/14.png)
 
--   This completes the installation process of inteGREAT4TFS. After
-    installing all SmartOffice4TFS and inteGREAT4TFS modules we can
-    proceed to the following exercises.
+   **Figure 14** Installation Step 7
 
-## Exercise 1: SmartWord4TFS
+   The actual installation starts based on the selections made in previous steps.
 
-The templates created in SmartWord4TFS can be distributed to all
-stakeholders enabling them to create and manage Work Items from MS-Word
-in relevant Team Projects on the Team Foundation Server.
+   ![](images/15.png)
 
-In this exercise we would use an MS-Word template\* to create new Work
-Items and publish these Work Items on the Fabrikam Fiber Team Project.
+   **Figure 15** Installation Step 7
 
->Refer to **Appendix A** at the end of this file for instructions to
-create the template being used in this exercise.
+1. Click **Close** to complete the installation process.
+
+   ![](images/16.png)
+
+   **Figure 16** Installation Step 8
+
+   The **Smart Word4TFS** tab (or **Smart Word4TFS Review** tab if you chose to install the **Reviewer Mode**) can now be accessed in Microsoft Word.
+
+   ![](images/17.png)
+
+   **Figure 17** Smart Word4TFS tab in MS-Word
+
+   The downloaded version provides a 30-day trial period for users to evaluate the application. MS Word may show the following dialogue box when it’s invoked for the first time after the Smart Word4TFS installation.
+
+11. Click **Install** to continue.
+
+    ![](images/18.png)
+
+    **Figure 18**Smart Word4TFS tab in MS-Word
+
+12. Click the **About** option in Ribbon Bar.
+
+    ![](images/19.png)
+
+    **Figure 19** The **About** text box showing the **Activate** button
+
+    After submitting the online registration form, you will receive the License key for the duration of six months in the email address provided. **This software key is provided for non-production use only.**
+
+12. Click **Activate** in the **About** window.
+
+    ![](images/20.png)
+
+    **Figure 20** The **Activate** button in the **About** window
+
+12. Enter the provided Activation key and click **Activate**.
+
+    ![](images/21.png)
+
+    **Figure 21** The Activation window
+
+    Entering a valid activation key activates Smart Word4TFS.
+
+    The product is activated.
+
+    ![](images/22.png)
+
+    **Figure 22** Successful activation message
+
+## The installation process for Modern Requirements4TFS
+
+Download the Modern Requirements4TFS installer using the same process described above for Smart Word4TFS. The process may include extracting
+files from an archive.
+
+1. Double click the **Modern Requirements4TFS 2018.exe** file.
+
+   ![](images/23.png)
+
+   **Figure 23** Invoking the Modern Requirements4TFS installer
+
+1. Tick the terms and conditions agreement check box and click **Next**.
+
+   ![](images/24.png)
+
+   **Figure 24** Step 1 Modern Requirements4TFS installation
+
+   Select the desired build type and click **Next**. The **Embedded** type is the recommended build. The HOLs here also refer to the embedded type build.
+
+   ![](images/25.png)
+
+   **Figure 25** Step 2 Modern Requirements4TFS installation
+
+1. Enter the following Windows credentials:
+
+   >**Username** = Administrator
+    **Password** = P2ssw0rd
+
+   Then click **Next**.
+
+   ![](images/26.png)
+
+    **Figure 26** Step 3 of installation
+
+    >The application will be installed even if incorrect Windows credentials are entered during the installation, but the user won’t be able to log into the application.
+
+1. Configure the **MongoDb Installation** options and click **Install**.
+
+   ![](images/27.png)
+
+   **Figure 27** Step 4 of installation
+
+   >The **Auto Install MongoDb** option is recommended if MongoDb isn’t already installed on the VM.
+
+1. Similarly configure the **Redis Installation** options and click **Install**.
+
+   ![](images/28.png)
+
+   **Figure 28** Step 5 of installation
+
+   >The **Auto Install Redis** option is recommended if Redis isn’t already installed on the VM.
+
+   The relevant files are installed.
+
+   ![](images/29.png)
+
+   **Figure 29** Step 6 of installation
+
+1. Complete the installation of **Modern Requirements4TFS** by clicking **Finish**.
+
+   ![](images/30.png)
+
+   **Figure 30** Final step of installation
+
+   - Please make a note of the Service URL (highlighted in the images above). This will be helpful later on.
+
+   - This completes the installation process of the Modern
+    Requirements4TFS step for the Standalone version. Additional steps for the Embedded version are described below.
+
+    For the Embedded version, the TFS Deployment instruction page is shown in the default browser window. Follow the steps described in the page to retrieve the VSIX file.
+
+    ![](images/31.png)
+
+    **Figure 31** Deployment instructions in a browser window
+
+8. Follow the instructions shown to complete the deployment of the TFS Extension and complete the installation process.
+
+    Select FabrikamFibreCollection whenever a collection option appears during the deployment process, as shown in the following image.
+
+    ![](images/32.png)
+
+    **Figure 32** Selecting the desired collection for the TFS Extension deployment
+
+    After installing all Smart Office4TFS and Modern Requirements4TFS modules you can proceed to the following exercises.
+
+## Exercise 1: Smart Word4TFS
+
+The templates created in Smart Word4TFS can be distributed to all
+stakeholders. This enables them to create and manage work items from MS-Word in relevant team projects on the Team Foundation Server.
+
+In this exercise we will use an MS-Word template\* to create new work items and publish them on the Fabrikam Fiber Team Project.
+
+>Refer to **Appendix A** at the end of this file for instructions to create the template used in this exercise.
 
 ### Task 1: Document Authoring in SmartWord4TFS
 
-1. Open the Word Template (created using **Appendix A**) by
-    double-clicking on it.
+1. Open the Word template (created using **Appendix A**) by double-clicking it.
 
-   <img src="media/129.png" width="643" height="469" />
+   ![](images/33.png)
 
-2. The template with empty Work Item Smart Parts is opened. The
-    controls that are used to set Individual properties of any work item
-    are called **Smart Parts**. These are used to create new Work Items
-    so these can be published on the Team Project.
+   **Figure 1** Opening the template
 
-   <img src="media/128.png" width="497" height="341" />
+    The template with empty work item smart parts is opened. The
+    controls that are used to set individual properties of any work item are called **Smart Parts**. They are used to create new work items so the items can be published on the Team Project.
 
-3. Click the SMARTWORD4TFS Tab.
+    ![](images/34.png)
 
-   <img src="media/127.png" width="643" height="78" />
+    **Figure 2** Word Template with empty Work Item Smart Parts
 
-4. Click the **Choose Team Project** option.
+1. Open the SMARTWORD4TFS tab.
 
-   <img src="media/126.png" width="325" height="144" />
+   ![](images/35.png)
 
-5. Choose **FabrikamFibreCollection** **Fabrikam Fiber** (Team Project)
-    click the **Connect** Button.
+   **Figure 3** Accessing the Smart Word4TFS tab
 
-   <img src="media/125.png" width="542" height="396" />
+1. Select the **Choose Team Project** option.
 
-6. Click inside the **Feature Title** smart part.
+   ![](images/36.png)
 
-   <img src="media/124.png" width="403" height="272" />
+   **Figure 4** Initiating the connection process
 
-7. Enter a suitable name for the Feature Work Item.
+1. Choose **FabrikamFibreCollection** **Fabrikam Fiber** (Team Project) then click **Connect**.
 
-   <img src="media/123.png" width="602" height="204" />
+   ![](images/37.png)
 
-   >The ID of a Work Item is automatically given by the connected Team
-    Project, when that Work Item is first published on the Team Project
-    therefore we would leave that field for the time being as it would
-    be populated after the Work Item is published.
+   **Figure 5** Selecting the Team Project
 
-8. Similarly, enter values in all Smart Parts of the Work Items.
+1. Click inside the **Feature Title** smart part.
 
-   <img src="media/122.png" width="559" height="411" />
+   ![](images/38.png)
 
-9. Click the **Publish** option in the Ribbon Bar.
+   **Figure 6** Entering values in document
 
-   <img src="media/121.png" width="426" height="144" />
+1. Enter a suitable name for the Feature Work Item.
 
-   - There is a subtle difference between **Publish** (shown here) and
-    **Publish Selected** (accessed through drop down).
+   ![](images/39.png)
 
-   - **Publish** option publishes all Work Items while **Publish
-    Selected** only publishes the Work Item whose smart parts are
-    selected by the user.
+   **Figure 7** Entering values in document
 
-10. Provide any comments (if desired) and click the **Yes** Button.
+   >The ID of a work item is automatically given by the connected Team Project, when that item is first published on the Team Project. As a result, we will leave that field for the time being as it will be populated after the work item is published.
 
-    <img src="media/120.png" width="427" height="175" />
+1. Similarly, enter values in all smart parts of the work items.
 
-11. The Work Items are published on the Fabrikam Fiber Team Project.
+   ![](images/40.png)
 
-    <img src="media/119.png" width="603" height="443" />
+   **Figure 8** Entering values in all smart parts
 
-12. Now add values in the Smart Part of the Bug Work Item.
+1. Select the **Publish** option in the ribbon bar.
 
-    <img src="media/118.png" width="579" height="186" />
+   ![](images/41.png)
 
-    - At this moment we have run out of Smart Parts. So far we have been
-    using the Smart Parts that came with the template. What if we need
-    to add more Work Items? To do this we need to **Insert Smart Part.**  
-    
+   **Figure 9** Publishing the work item on the Team Project
 
-13. Click **Document Authoring** **Insert Smart Part** **Product Backlog
-    Item** **Bug**
+   - There is a subtle difference between **Publish** (shown here) and **Publish Selected** (accessed through drop down).
 
-    <img src="media/117.png" width="545" height="174" />
+   - The **Publish** option publishes all work items while the **Publish Selected** option publishes only the work item whose smart parts have been selected by the user.
 
-14. Add values to the new Bug Smart Parts.
+1. Provide any comments if desired and click **Yes**.
 
-    - We now have two Bug Work Items ready to be published. However, in
-    order to elaborate the Publish Selected functionality, we would
-    publish only one. This is done by first selecting the Smart Parts of
-    the desired Bug Work Item.
+   ![](images/42.png)
 
-    - To select the Smart Parts of the desired Work Item, a user may
-    select all of the relevant Smart Parts, partially selecting any one
-    Smart Part, or even just placing the cursor in any of the Smart
-    Parts of that Work Item would also suffice.
+   **Figure 10** Confirming publish
 
-15. Place the cursor inside any of the Smart Parts of the Bug that we
-    created in Step 6.
+    The work items are published on the Fabrikam Fiber Team Project.
 
-    <img src="media/116.png" width="603" height="215" />
+    ![](images/43.png)
 
-16. Click **Publish** **Publish Selected** option in the Ribbon Bar.
+    **Figure 11** Document after publishing work items
 
-    <img src="media/115.png" width="425" height="156" />
+1. Now add values in the smart part of the bug work item.
 
-17. The desired Bug is published on the Fabrikam Fiber Team Project.
+   ![](images/44.png)
+   
+   **Figure 12** Entering values in Bug’s Smart Part
 
-    <img src="media/114.png" width="567" height="331" />
+    At this moment we have run out of smart parts. So far we have been using the smart parts that came with the template. What if we need to add more work items? To do this we need to **Insert Smart Part.
 
-    - The last step is to check the published Work Items on the
-    Team Project.
+1. Click **Document Authoring** **Insert Smart Part** **Product Backlog Item** **Bug**
 
-18. Run **Visual Studio 2017**.
+   ![](images/45.png)
 
-19. Run the **All Bugs** query.
+   **Figure 13** Inserting smart parts for creating a new bug work item
 
-    <img src="media/113.png" width="602" height="437" />
+1. Add values to the new bug smart parts.
 
-    - The Bug Work Item can be seen in the Team Project. Similarly we can
-    run relevant queries, to check other Work Items on the Team Project
-    that we published before the Bug Work Item.
+   - We now have two bug work items ready to be published. However, in order to demonstrate the Publish Selected functionality, we will publish only one. This is done first by selecting the smart parts of the desired bug work item.
 
-    <img src="media/112.png" width="591" height="211" />
+   - To select the smart parts of the desired work item, the user may select all of the relevant smart parts; partially selecting any one smart part; even placing the cursor in any of the smart parts of that work item would also suffice.
 
-    <img src="media/111.png" width="595" height="450" />
+1. Place the cursor inside any of the smart parts of the bug that we created in Step 6.
 
-    <img src="media/110.png" width="536" height="564" />
+   ![](images/46.png)
 
-    - The image depicts SmartWord4TFS’ support of Rich Content Data to be
-    published on the Team Project.
+   **Figure 14** Selecting the desired smart part before publishing
 
-### Task 2: Instant Document Reporting with SmartWord4TFS using a Template
+1. Click **Publish** **Publish Selected** option in the ribbon bar.
 
-You will learn how to update Work Items on the Team Project while staying in Word.
+   ![](images/47.png)
 
-1. Log in as **Julia Ilyiana** (VSALM\\Julia). All user passwords are
-    **P2ssw0rd**.
+   **Figure 15** Publishing the desired bug between the two that are available
 
-2. Start MS-Word and open the **Product Backlog Item List.dotx** from
-    the **Documents** folder.
+    The desired bug is published on the Fabrikam Fiber Team Project.
 
-3. All necessary work to populate the file with Product Backlog Items
-    is already in place in the document. The report is generated by a
-    single click, as shown in the document.
+    ![](images/48.png)
 
-   <img src="media/109.png" width="576" height="299" />
+    **Figure 16** Document after publishing the bug work item
 
-4. Click the SMARTWORD4TFS Tab.
+    The last step is to check the published work items on the Team Project.
 
-   <img src="media/108.png" width="643" height="78" />
+1. Run **Visual Studio 2017**.
 
-5. Click the **Refresh** option.
+2. Run the **All Bugs** query.
 
-   <img src="media/107.png" width="401" height="100" />
+   ![](images/49.png)
 
-6. Refreshing the document populates it by fetching all the PBIs from
-    Fabrikam Fiber Team Project. Similar documents can be created to
-    generate reports about desired Work Items. For more details contact
-    [Modern Requirements](http://www.modernrequirements.com/contact/).
+   **Figure 17** Running the All Bugs query in Visual Studio
 
-   <img src="media/106.png" width="538" height="520" />
+    The bug work item can be seen in the Team Project. Similarly, we can run relevant queries to check other work items on the Team Project that we published before the bug work item.
 
-   - Now we will update one of our PBIs and publish the updated Work Item
-    on the Team Project.
+   ![](images/50.png)
 
-7. Click inside the last Product Backlog Item and update its
-    description as shown in the image.
+   **Figure 18** Published bug work item as seen in Visual Studio 2017
 
-   <img src="media/105.png" width="491" height="247" />
+   Here is the query view to validate published work items.
+   ![](images/51.png)
 
-8. Click the **Publish Publish Selected** option.
+   **Figure 19** Published feature work item as seen in Visual Studio 2017
 
-   <img src="media/104.png" width="523" height="137" />
+   Work Item detail window show content of the published work item.
 
-   - This option publishes the updates on our Fabrikam Fiber
-    Team Project.
+   ![](images/52.png)
 
-9. Run **Visual Studio 2017**.
+   **Figure 20** Details of the published feature work item
 
-10. Run the relevant query and open the PBI that we updated in Word.
-    We can see that our PBI has been updated on the Team Project.
+The image depicts Smart Word4TFS’ support of rich content data to be published on the Team Project. This brings us to the end of this exercise.
 
-    <img src="media/103.png" width="581" height="438" />
+### Task 2: Instant Document reporting with SmartWord4TFS using a template
 
-### Task 3: Document Reporting using Queries
+In this exercise, you will learn how to create an instant report about Project PBIs using a Smart Word4TFS template. You will also learn how to update work items on the Team Project while staying in Word.
 
-In the previous exercise we used a ready-made template to create an
-instant report. This exercise explores the query option to create a
-report with more freedom in what to include in the report
+>Reference document that will be referenced below for use
 
-1. Log in as **Julia Ilyiana** (VSALM\\Julia). All user passwords are
-    **P2ssw0rd**.
+1. Log in as **Administrator**. All user passwords are **P2ssw0rd**.
+
+2. Start MS-Word and open the **Product Backlog Item List.dotx** from the **Documents** folder.
+
+   All the necessary work required to populate the file with Product Backlog Items is already in place in the document. The report is generated by a single click, as shown in the document.
+
+   ![](images/53.png)
+
+   **Figure 21** Document in original state
+
+1. Open the SMARTWORD4TFS tab.
+
+   ![](images/54.png)
+
+   **Figure 22** Opening the Smart Word4TFS tab
+
+1. Click **Refresh**.
+
+   ![](images/55.png)
+
+   **Figure 23** Refreshing the document to generate instant report
+
+    Refreshing the document populates it by fetching all the PBIs from the Fabrikam Fiber Team Project. Similar documents can be created to generate reports about desired work items. For more details contact [Modern Requirements](http://www.modernrequirements.com/contact/).
+
+    ![](images/56.png)
+
+    **Figure 24** Document displaying all PBIs after the Refresh option has been selected
+
+    Now we will update one of our PBIs and publish the updated work item on the Team Project.
+
+5. Click inside the last product backlog item and update its description as shown in the image.
+
+   ![](images/57.png)
+   
+   **Figure 25** Updating a PBI
+
+5. Click the **Publish Publish Selected** option.
+
+   ![](images/58.png)
+
+   **Figure 26** Publishing updated PBI on the Team Project
+
+   This option publishes the updates on our Fabrikam Fiber Team Project.
+
+5. Run **Visual Studio 2017**.
+
+6. Run the relevant query and open the PBI that we updated in Word. We can see that our PBI has been updated on the Team Project.
+
+   ![](images/59.png)
+
+   **Figure 27** Updated PBI in Team Project
+
+    This brings us to the end of this exercise.
+
+### Task 3: Document reporting using queries
+
+In the previous exercise we used a ready-made template to create an instant report. This exercise explores the query option to create a report with more freedom to choose what to include in the report.
+
+1. Log in as **Administrator**. All user passwords are **P2ssw0rd**.
 
 2. Start MS-Word and create a new document.
 
-3. Format the document as required including header/footer, title page,
-    document control information etc.
+3. Format the document as required including header/footer, title page, document control information, etc.
 
-   <img src="media/102.png" width="515" height="374" />
+   ![](images/60.png)
 
-4. Click the **SMARTWORD4TFS** Tab.
+   **Figure 28** Formatting the document
 
-   <img src="media/101.png" width="643" height="78" />
+1. Open the **SMARTWORD4TFS** tab.
 
-5. Click the **Choose Team Project** **Team Project** option.
+   ![](images/61.png)
 
-   <img src="media/100.png" width="250" height="148" />
+   **Figure 29** Accessing the Smart Word4TFS tab
 
-6. Choose **FabrikamFibreCollection** **Fabrikam Fiber** (Team Project)
-    click the **Connect** Button.
+5. Select the **Choose Team Project** **Team Project** option.
 
-   <img src="media/99.png" width="542" height="396" />
+   ![](images/62.png)
 
-7. Click the **Queries** option and select the desired query from the
-    drop-down menu.
+   **Figure 30** Initiating the connection process
 
-   <img src="media/98.png" width="468" height="212" />
+5. Choose **FabrikamFibreCollection** **Fabrikam Fiber** (Team Project) click **Connect**.
 
-8. The Query Dialogue Box appears with the following information and
-    options:
+   ![](images/63.png)
 
-   -  **Query Name** (i.e. the selected Query)
+   **Figure 31** Selecting the team project
 
-   -  **Query Type** (i.e. Is the query a simple list or a tree)
+7. Select the **Queries** option and select the desired query from the drop-down menu.
 
-   -  Work Item Count
+   ![](images/64.png)
 
-   -  **Without smart content** Check Box: If selected the query would be
-    inserted as tables with plane text. The values in the table would
-    not be smart content.
+   **Figure 32** Selecting the desired query
 
-   -  **Insert at cursor position** Check Box: If selected the query would
-    be inserted at the current cursor location, otherwise at the end of
-    the document.
+   The Query Dialogue Box appears with the following information and options:
 
-   -  **Insert query block only** Check Box: If selected; an empty query
-    control is added in the document without any Work Items (refer to
-    the image at the bottom of the page). The query control can be
-    refreshed later, to be filled with the relevant Work Items. *The
-    Template we used in Exercise 2 was created by using this option.  
+   - **Query Name** (i.e. the selected Query)
 
-    <img src="media/97.png" width="332" height="202" />
+   - **Query Type** (i.e. Is the query a simple list or a tree?)
 
-9. Enable only the middle check box while leaving the other two
-    checkboxes un-selected. Then click the **OK** Button.
+   - Work item count
 
-   <img src="media/96.png" width="341" height="207" />
+   - **Without smart content** checkbox: If selected, the query would be inserted as tables with static content, and the values in the table will not be connected with TFS.
 
-10. The result of the query is added in the document.
+   - **Insert at cursor position** checkbox: If selected, the query would be inserted at the current cursor location. If not, it will be inserted at the end of the document.
 
-    <img src="media/95.png" width="561" height="288" />
+   - **Insert query block only** checkbox: If selected, an empty query control will be added in the document without any work items (refer to the image at the bottom of the page). The query control can be refreshed later and filled with the relevant work items. **The template we used in Exercise 2 was created by using this option.**
 
+   ![](images/65.png)
 
-## Appendix A: Designing a SmartWord4TFS Template using Wizard
+   **Figure 33** Query options
 
-In this appendix you will learn how to create a new SmartWord4TFS
-template from scratch using the Wizard.
+7. Enable only the middle checkbox while leaving the other two checkboxes un-selected. Then click **OK**.
 
-- The Wizard makes the template designing process quite easy even for
-    novice users. Another way is to create the template using individual
-    controls but that is for advanced users and hence not discussed in
-    this exercise.
+   ![](images/66.png)
 
-1. Log in as **Julia Ilyiana** (VSALM\\Julia). All user passwords are
-    **P2ssw0rd**.
+   **Figure 34** Finalizing Query options
+
+   The result of the query is added in the document.
+
+   ![](images/67.png)
+
+   **Figure 35** Document after running the query
+
+This brings us to the end of the exercise.
+
+### Appendix A: Designing a Smart Word4TFS template using wizard
+
+In this appendix you will learn how to create a new Smart Word4TFS template from scratch using a wizard.
+
+Wizard makes the template designing process easy even for novice users. Another way is to create the template using individual controls, but that approach is better fitted for advanced users and, therefore, won’t be discussed in this exercise.
+
+1. Log in as **Administrator**. All user passwords are **P2ssw0rd**.
 
 2. Start MS-Word and create a new document.
 
-3. Format the document as required including header/footer, title page,
-    document control information etc.
+3. Format the document as required including header/footer, title page, document control information, etc.
 
-    <img src="media/1.png" width="552" height="410" />
+   ![](images/68.png)
 
-4. Click the **SMARTWORD4TFS** Tab.
+   **Figure 36** Formatting the document
 
-    <img src="media/2.png" width="643" height="78" />
+1. Open the **SMARTWORD4TFS** tab.
 
-5. Click the **Choose Team Project** **Team Project** option.
+   ![](images/69.png)
 
-    <img src="media/3.png" width="250" height="148" />
+   **Figure 37** Accessing the Smart Word4TFS tab
 
-6. Choose **FabrikamFibreCollection** **Fabrikam Fiber** (Team Project)
-    click the **Connect** Button.
+5. Open **Choose Team Project** **Team Project** option.
 
-    <img src="media/4.png" width="542" height="396" />
+   ![](images/70.png)
 
-7. Click the **Wizard** option.
+   **Figure 38** Initiating the connection process
 
-    <img src="media/5.png" width="358" height="110" />
+5. Choose **FabrikamFibreCollection** **Fabrikam Fiber** (Team Project) click **Connect**.
 
-8. Click the **Create section** Button (at top left of the window).
+   ![](images/71.png)
 
-    <img src="media/6.png" width="414" height="135" />
+   **Figure 39** Selecting the Team Project
 
-9. Enter a suitable name for the section.
+5. Select the **Wizard** option.
 
-    <img src="media/7.png" width="217" height="114" />
+   ![](images/72.png)
 
-   - This section would serve as a root node and would be used to show a
-    certain type of Work Item. We could have sub-section(s) to display
-    the Work Items in the desired hierarchy.
+   **Figure 40** Initiating the wizard
 
-10. Select the desired Work Item Type.
+5. Click the **Create section** button (at the window’s top left
+    corner).
 
-    <img src="media/8.png" width="414" height="125" />
+   ![](images/73.png)
 
-11. Select the desired Section Type, to determine how the Work Item
-    would be displayed in the template/document.
+   **Figure 41** Section creation in Wizard (Step1)
 
-    <img src="media/9.png" width="405" height="115" />
+5. Enter a suitable name for the section.
 
-12. Select the desired field from the available list and include it in
-    the Smart Part using the arrow button.
+   ![](images/74.png)
 
-    - Users can select multiple fields by holding down the **Ctrl** key
-    and clicking all the desired fields from the list.
+   **Figure 42** Section creation in Wizard (Step2)
 
-    <img src="media/10.png" width="479" height="361" />
+    This section will serve as a root node and will be used to show a certain type of work item. We can also have subsection(s) to display the work items in the desired hierarchy.
 
-13. Arrange the selected fields in the desired order (using
-    arrow buttons) and customize them (if desired).
+5. Select the desired work item type.
 
-    <img src="media/11.png" width="609" height="355" />
+   ![](images/75.png)
 
-14. Users can make a selected field to be hidden, using the
-    relevant checkbox. For the Hidden fields, users have to provide
-    corresponding default values. Hidden field do not appear in the Word
-    document, however their default values are published automatically
-    on TFS (along with other normal fields) when users perform a
-    **Publish** command.
+   **Figure 43** Selecting the relevant work item
 
-    <img src="media/12.png" width="333" height="143" />
+5. Select the desired Section Type to determine how the work item will be displayed in the template/document.
 
-    >**Note** that not every field can be a hidden field. For such fields,
-    the relevant check boxes remain disabled as evident from the **ID**
-    and **Title** check boxes shown in the above image.
+   ![](images/76.png)
 
-15. Give a heading for the selected fields as you want it to appear in
-    the template/document. The Heading could be given using Section
-    Heading or selected from the drop down control.
+   **Figure 44** Selecting the relevant section type
 
-    <img src="media/13.png" width="643" />
+    Select the desired field from the available list and include it in the smart part using the arrow button. Users can select multiple fields by holding down the **Ctrl** key, and simultaneously clicking all the desired fields from the list.
 
-    - This completes the formatting of a Work Item node that started with step 9
+    ![](images/77.png)
 
-16. Now click the **Create Sub Section** Button (at top left of
-    the window).
+    **Figure 45** Selecting the desired fields
 
-    <img src="media/14.png" width="173" height="111" />
+5. Arrange the selected fields in the desired order (using arrow buttons) and customize them if desired.
 
-17. Enter a suitable name (e.g. PBI) for the sub section, as we did for
-    the section in step 9.
+   ![](images/78.png)
 
-18. Repeat Step 9 to 14 with the sub section, this time formatting the
-    node for **Product Backlog Item**.
+   **Figure 46** Arranging the fields
 
-    - During the course of creating this guide we have designed the
-    template with the following section hierarchy:
+   Users can make a selected field hidden, using the relevant checkbox. For the hidden fields, users have to provide corresponding default values. Hidden fields don’t appear in the Word document however; their default values are published automatically on TFS (along with other normal fields) when users perform a **Publish** command.
 
-    <img src="media/15.png" width="187" />
+   ![](images/79.png)
 
-19. Click the **Apply** Button to save the changes and complete the
-    template creation process.
+   **Figure 47** Hidden field checkboxes
 
-    <img src="media/16.png" width="583"/>
+   Note that not every field can be a hidden field. For such fields,the relevant checkboxes remain disabled as evident from the **ID** and **Title** checkboxes shown in the image displayed above.
 
-    - This completes the template creation process. The hierarchy of nodes
-    becomes visible in the document as shown in the following image. Now
-    we only need to save the template.
+5. Give a heading for the selected fields as you want it to appear in the template/document. The heading could be given using the Section Heading or selected from the drop-down control.
 
-    <img src="media/17.png" width="548" height="411" />
+   ![](images/80.png)
 
-20. Save the document as a template (with .dotx extension) to complete
-    the template creation process.
+   **Figure 48** Choosing headings for the fields
 
+    This completes the formatting of a work item node that started with Step 9.
 
-## Exercise 2: Traceability Management with inteGREAT4TFS
+5. Click the **Create Sub Section** button.
+
+   ![](images/81.png)
+
+   **Figure 49** Sub section creation in Wizard (Step1)
+
+5. Enter a suitable name (e.g. PBI) for the subsection, as we did for the section in Step 9.
+
+6. Repeat steps 9 to 14 with the subsection, this time formatting the node for **Product Backlog Item**.
+
+   >During the course of creating this guide we have designed a template with the following section hierarchy:
+
+   ![](images/82.png)
+
+    **Figure 50** Section hierarchy
+
+5. Click **Apply** to save the changes and complete the template creation process.
+
+   ![](images/83.png)
+
+   **Figure 51** Finishing the wizard
+
+    This completes the template creation process. The hierarchy of nodes becomes visible in the document as shown in the following image. Now we only need to save the template.
+
+    ![](images/84.png)
+
+    **Figure 52** Document after completing the wizard
+
+19. Save the document as a template (with .dotx extension) to complete the template creation process.
+
+## Exercise 2: Traceability Management with Modern Requirements4TFS
 
 In this exercise you will learn how to create an Intersection Matrix
-using the Trace Analysis module of inteGREAT4TFS.
+using the Trace Analysis module of Modern Requirements4TFS.
 
-inteGREAT4TFS is an online application that complements
-    SmartOffice4TFS in managing Team Projects. inteGREAT4TFS consists of
-    many distinct modules such as: **Trace Analysis**, **SmartOffice
-    Library**, **Simulation, Diagram, Use Case,** **Review** and
-    **Baselining**. In this HOL, we would be using the **Trace
-    Analysis** module only.
+-   Modern Requirements4TFS is an online application that complements
+    Smart Office4TFS in managing team projects. Modern Requirements4TFS
+    consists of many distinct modules such as: Trace Analysis,
+    SmartOffice Library, Simulation, Diagram, Use Case, Review and
+    Baselining. In this HOL, we will be using the Trace Analysis module
+    only.
 
-### Task 1: Accessing inteGREAT4TFS and Creating an Intersection Matrix
+-   The prime objective of generating a Traceability Matrix is to check
+    the relationships that exist between different types of work items.
+    If there is no relationship between row and column work items, the
+    intersection cells remain empty. Users can create relationships
+    directly using TFS by editing properties of work items in use. They
+    can also create relationships after the matrix is generated, using
+    the Trace Analysis module.
+
+### Task 1: Accessing Modern Requirements 4TFS and creating an Intersection Matrix
 
 1. Log in as **Administrator** with the password **P2ssw0rd**.
 
 2. Start Internet Explorer.
 
-3. Access the following URL: **VSALM:8080**
-   
-   <img src="media/18.png" width="542" height="385" />
+3. Access the following URL: **VSALM:8028**
 
-4. The Login Page for inteGREAT4TFS is displayed in the browser.
+   ![](images/85.png)
 
-   <img src="media/19.png" width="611" height="434" />
+   **Figure 1** Accessing the Modern Requirements4TFS tab
 
-   - Following login details are to be used:
+   The Modern Requirements4TFS welcome page is displayed in the browser.
 
-   - TFS Server URL: [**http://VSALM:8080/tfs**](http://VSALM:8080/tfs)
+   ![](images/86.png)
 
-   - User ID: **Administrator**  
-      Password: **P2ssw0rd**
+   **Figure 2** The Modern Requirements4TFS welcome page
 
-5. Enter the login details and click the **Sign In** Button.
+1. Select **FabrikamFiberCollection**.
 
-   <img src="media/20.png" width="428" height="390" />
+   ![](images/87.png)
 
-6. Enter a valid key (if provided) to activate OR use the
-    **Trial** option.
+   **Figure 3**[]{#OLE_LINK4 .anchor} Selecting the desired collection
 
-   <img src="media/21.png" width="643" height="457" />
+1. Select the **FabrikamFiber** project.
 
-   - Home page is displayed.
+   ![](images/88.png)
 
-7. Click the **Browse** link.
+   **Figure 4** Selecting the desired project
 
-   <img src="media/22.png" width="306" height="217" />
+1. Open the **Work** folder in the toolbar and then select **Trace Analysis** from the drop-down menu.
 
-8. Expand **FabrikamFibreCollection** node select **Fabrikam Fiber**
-    (Team Project) click the **Navigate** Button.
+   ![](images/89.png)
 
-   <img src="media/23.png" width="536" height="383" />
+   **Figure 5** Invoking the Trace Analysis module
 
-9. Upon successful connection, the Dashboard of the selected Team
-    Project (**Fabrikam Fiber**) is displayed.
+   The login screen is displayed below.
 
-   <img src="media/24.png" width="598" height="425" />
+   ![](images/90.png)
 
-   **Dashboard in inteGREAT4TFS**
+   **Figure 6** The login screen is used to authenticate the user
 
-   **Dashboard** is the place where the user gets useful information
-    about the team project. It also leads the users to the desired
-    module in inteGREAT4TFS. Users can select their desired module in a
-    number of ways. Since we would be using the **Trace Analysis**
-    module in this exercise, we would select it.
+1. Enter the login details and click **Sign In**. The following login details are to be used whenever required:
 
-10. Select the **Trace Analysis** link from the highlighted links shown
-    in the following image.
+   >**User ID**: Administrator
+    **Password**: P2ssw0rd
 
-    <img src="media/25.png" width="581" height="277" />
+   The Trace Analysis home page is displayed below.
 
-    - The landing page of the Trace Analysis module is displayed.
-    Originally it would be empty since we have not created any
-    traceability as of yet.
+   ![](images/91.png)
 
-11. Click **New** and then **Traceability** options from the drop down.
+   **Figure 7** The Trace Analysis home page
 
-    <img src="media/26.png" width="281" height="378" />
+5. Select the **New** option in the Folder Explorer panel (at left hand side) and then select the **Traceability** option.
 
-12. Enter a suitable name for the Intersection Matrix and click the
-    **OK** Button.
+   ![](images/92.png)
 
-    <img src="media/27.png" width="397" height="106" />
+   **Figure 8** Creating the new traceability matrix
 
-13. Clicking the **Next** button takes us to the Editor page where we
-    configure the settings to create the Intersection (and also
-    the Horizontal) Matrix.
+5. Enter a suitable name for the Intersection Matrix and click **OK**.
 
-14. The Intersection Matrix can be created as **Work Item Type** or
-    **Saved-Query Type**. In this lab we will create the matrix as Work
-    Item Type.
+   ![](images/93.png)
 
-15. The Work Item Type gives more control to user enabling him to choose
-    the desired Work Item instead of pre-saved queries. In the
-    Saved-Query type, users can only select those Work Items for which a
-    relevant query exists in the selected Team Project.
+   **Figure 9** Naming the Intersection Matrix
 
-16. Set the Area and Iteration Path as **Fabrikam Fiber** (if not
-    already selected).
+   - Clicking **OK** takes us to the Editor page where we can configure the settings to create the Intersection Matrix, including the Horizontal Matrix.
 
-    <img src="media/28.png" width="574" height="326" />
+   - The Intersection Matrix can be created as a work item type or saved-query type. In this lab we will create the matrix as a work item type.
 
-17. Select the desired Link Type.
+   - The work item type gives more control to users by enabling them to choose the desired work item instead of pre-saved queries. In the saved-query type, users can select only those work items for which a relevant query exists in the selected Team Project.
 
-    <img src="media/29.png" width="518" height="324" />
+5. Set the Area and Iteration Path as **Fabrikam Fiber** (if not already selected).
 
-18. Select the desired Row Work Item Type.
+   ![](images/94.png)
 
-    <img src="media/30.png" width="517" height="323" />
+   **Figure 10** Configuring the Area and Iteration Paths for the work item type Interaction Matrix
 
-19. Similarly, select the desired Column Work Item Type.
+5. Select the desired Link Type.
 
-    <img src="media/31.png" width="513" height="320" />
+   ![](images/95.png)
 
-20. Now click the **Run Query** option in the Toolbar.
+   **Figure 11** Configuring the link type
 
-    <img src="media/32.png" width="527" height="235" />
+5. Select the desired Row Work Item Type.
 
-21. The Intersection Matrix is generated.
+   ![](images/96.png)
 
-    <img src="media/33.png" width="583" height="414" />
+   **Figure 12** Configuring the row work item
 
-22. To view the matrix in full screen mode, click the **Full Screen**
-    Button at the top-right side of the matrix.
+5. Select the desired Column Work Item Type.
 
-    <img src="media/34.png" width="382" height="281" />
+   ![](images/97.png)
 
-23. The Matrix is displayed in Full Screen Mode. You can also adjust the
-    Zoom Ratio to view more information simultaneously.
+   **Figure 13** Configuring the Column Work Item
 
-    <img src="media/35.png" width="643" height="457" />
+5. Now select the **Run Query** option in the toolbar.
 
-24. To exit from the Full Screen Mode click the same button once again.
+   ![](images/98.png)
 
-    <img src="media/36.png" width="193" height="148" />
+   **Figure 14** Running the query based on the configuration selections made in previous steps
 
-### Task 2: Adding/deleting relationships in Intersection Matrix
+   The Intersection Matrix is generated, as seen in the image below.
 
-In this exercise you will learn how to add or remove relationships in
-the Intersection Matrix.
+   ![](images/99.png)
 
-1. The arrows in the intersection cell of the matrix denote that a relation exists between corresponding Work Items of the row
-   and column.
+   **Figure 15** The Intersection Matrix just after its creation
 
-   <img src="media/image1.png" width="289" height="146" />
+5. To view the matrix in full screen mode, click the **Full Screen** button at the top-right side of the matrix.
 
-2. All types of relationships are grouped into three link types. The
-    following table sums up the legends used.
+   ![](images/100.png)
 
-   <img src="media/image2.png" width="23" height="23" />
+   **Figure 16** Invoking the full screen mode
 
-   <img src="media/image3.png" width="23" height="22" />
+   The matrix is displayed in full screen mode. You can also adjust the zoom ratio to view more information simultaneously.
 
-   <img src="media/image4.png" width="23" height="22" />
+   ![](images/101.png)
 
+   **Figure 17** Intersection Matrix in full screen mode
 
-**Adding a Relationship**
+   To exit from full screen mode click the same button once again.
 
-1. Invoke **Trace Analysis** module from Dashboard.
+   ![](images/102.png)
 
-2. Create / open an Intersection Matrix.
+   **Figure 18** Invoking regular mode
 
-3. Determine the intersection cell for creating a relationship between
-    corresponding Work Items.
+###  Task 2: Adding/deleting relationships in Intersection Matrix
 
-   <img src="media/image5.png" width="553" height="393" />
+In this exercise you will learn how to add or remove relationships in the Intersection Matrix.
 
-4. Place the mouse over the intersection cell.
+The arrows in the intersection cell of the matrix indicate that a
+relation exists between corresponding work items of the row and column.
 
-   - The cell would show a + sign.
+![](images/103.png)
 
-   <img src="media/image6.png" width="483" height="278" />
+**Figure 19** Arrows in the Intersection Matrix
 
-5. Click the + sign.
+All types of relationships are grouped into three link types. The
+following table sums up the legends used.
 
-6. Select the desired type of relationship.
+<table width="50%">
+   <thead>
+      <tr>
+         <th><b>Icon</b></th>
+         <th><b>Relationship Link Type</b></th>
+      </tr>
+   </thead>
+   <tr>
+      <td><img src="images/01.png"></td>
+      <td>Network</td>
+   </tr>
+   <tr>
+      <td><img src="images/02.png"></td>
+      <td>Dependent</td>
+   </tr>
+   <tr>
+      <td><img src="images/03.png"></td>
+      <td>Tree</td>
+   </tr>
+</table>
 
-   <img src="media/image7.png" width="316" height="342" />
+### Adding a relationship
 
-7. Click the **OK** Button.
+1. Invoke the **Trace Analysis** module from Dashboard.
 
-   <img src="media/image8.png" width="316" height="342" />
+2. Create/open an Intersection Matrix.
 
-8. The relationship is created in the target cell of the
-    Intersection Matrix.
+3. Determine the intersection cell for creating a relationship between corresponding work items.
 
-   <img src="media/image9.png" width="583" height="414" />
+   ![](images/104.png)
 
-The relationship does not only show-up in the matrix. It can also be
-seen using Web Access or Visual Studio
+   **Figure 20** The target intersection cell used to create a relationship
 
-**Deleting a relationship**
+1. Place the mouse over the intersection cell, which will show a + sign.
 
-Deleting the relationship is very similar to how we created the relationship.
+   ![](images/105.png)
 
-1. Determine the intersection cell for deleting relationship between
-    corresponding Work Items.
+   **Figure 21** The + sign in the cell
 
-2. Place the mouse over the intersection cell.
+1. Click the + sign.
 
-   - The cell would show a - sign.
+2. Select the desired link type.
 
-    <img src="media/image10.png" width="546" height="314" />
+   ![](images/106.png)
 
-3. Click the - sign.
+   **Figure 22** Selecting the desired link type
 
-4. Click the **OK** Button.
+1. Click **OK**.
 
-    <img src="media/image11.png" width="372" height="245" />
+   ![](images/107.png)
 
-5. The relationship is deleted.
+   **Figure 23** Completing the relationship creation process
 
-    <img src="media/image12.png" width="583" height="415" />
+   The relationship is created in the target cell of the Intersection Matrix.
 
+   ![](images/108.png)
 
-### Task 3: Editing Work Items
+   **Figure 24** The newly created relationship as depicted in the intersection cell of the matrix
 
-In this exercise you will learn how to edit Work Item properties (apart
-from link/relationship property that we have already discussed in
-previous exercise).
+   The relationship is not only displayed in the matrix, it can also be seen using Web Access or Visual Studio.
 
-1. Invoke **Trace Analysis** module from Dashboard.
+### Deleting a relationship
 
-2. Create / open an Intersection Matrix.
+Deleting a relationship is very similar to the way we created it.
 
-3. Now place the mouse over the desired Work Item.
+1. Determine the intersection cell for deleting the relationship
+    between corresponding work items.
 
-   <img src="media/image13.png" width="581" height="413" />
+2. Place the mouse over the intersection cell, which will show a - sign.
 
-4. Click the **Edit** icon in the popup window.
+   ![](images/109.png)
 
-   <img src="media/image14.png" width="367" height="148" />
+   **Figure 25** The - sign in the cell
 
-5. Edit the desired properties of the Work Item and click the
-    **Save** Button.
+1. Click the - sign.
 
-   <img src="media/image15.png" width="553" height="275" />
+2. Click **OK**.
 
-6. Close the popup window.
+   ![](images/110.png)
 
-   <img src="media/image16.png" width="550" height="273" />
+   **Figure 26** Completing the relationship deletion process
 
-7. The changes to the Work Item are saved.
+   The relationship is deleted.
 
+   ![](images/111.png)
+
+   **Figure 27** The intersection cell after deleting the relationship
+
+   This brings us to the end of this exercise.
+
+### Task 3: Editing work items
+
+In this exercise you will learn how to edit work item properties (apart from the link/relationship property that we have already discussed in the previous exercise).
+
+1. Invoke the **Trace Analysis** module from Dashboard.
+
+2. Create/open an Intersection Matrix.
+
+3. Now place the mouse over the desired work item.
+
+   ![](images/112.png)
+
+   **Figure 28** Invoking the mouse over event for the desired work item
+
+1. Click the **Edit** icon in the popup window.
+
+   ![](images/113.png)
+
+   **Figure 29** Clicking the Edit icon in the popup
+
+1. Edit the desired properties of the work item and click **Save**.
+
+   ![](images/114.png)
+
+   **Figure 30** The Web Access window where the properties of the selected work item can be edited and saved
+
+1. Close the popup window.
+
+   ![](images/115.png)
+
+   **Figure 31** Completing the work item editing process
+
+The changes to the work item are saved, which brings us to the end of the exercise.
 
 ### Task 4: Creating a Horizontal Matrix
 
-In this exercise you will learn how to create a Horizontal Matrix. 
+In this exercise you will learn how to create a Horizontal Matrix.
 
-The Horizontal Matrix shows what are the relations of a particular type of Work Item, and what are the relations of those relations,
-and so on (up-till level 3).
+The Horizontal Matrix illustrates the relations of a particular work
+item type, including the relations of those relations, and so on (up to level 3)
 
-1. Invoke **Trace Analysis** module from Dashboard.
+1. Invoke the **Trace Analysis** module from Dashboard.
 
-2. Click **New** and then **Traceability** options from the drop down.
+2. Click **New** followed by selecting the **Traceability** option from the drop-down menu.
 
-   <img src="media/image17.png" width="281" height="378" />
+   ![](images/116.png)
 
-3. Enter a suitable name for the Horizontal Matrix and click the **OK** Button.
+   **Figure 32** Initiating the matrix creation process
 
-   <img src="media/image18.png" width="444" height="120" />
+3. Enter a suitable name for the Horizontal Matrix and click **OK**.
 
-   - Clicking the **Next** button takes us to the Editor page where we configure the settings to create the Horizontal (and also the Intersection) Matrix.
+   ![](images/117.png)
 
-4. Click the **Custom** option.
+   **Figure 33** Naming the Horizontal Matrix
 
-   <img src="media/image19.png" width="506" height="190" />
+   Clicking **Next** takes us to the Editor page where we configure the settings to create the Horizontal Matrix as well as the Intersection Matrix.
 
-5. Select the desired **Area** and **Iteration Path**.
+1. Open the **Custom** option.
 
-   <img src="media/image20.png" width="506" height="187" />
+   ![](images/118.png)
 
-6. Select the relevant Work Item for Column 1.
+   **Figure 34** Clicking the Custom option to invoke the settings for creating the Horizontal Matrix
 
-   <img src="media/image21.png" width="542" height="338" />
+1. Select the desired **Area** and **Iteration Path**.
 
-   The Column 1 Work Item tells inteGREAT4TFS to show the list of all the Work Items of the selected type.
+   ![](images/119.png)
 
-   - The Column 2 Work Item tells inteGREAT4TFS to show the list of
-    selected type of Work Items that are linked with the Column 1
-    Work Items. Similar principle is followed for Colum 3 & 4 Work Items
+   **Figure 35** Configuring the Area and Iteration Paths
 
-   - If a Column 1 Work Item has no relation with Column 2 Work Items but
-    has a link with Column 3 or 4 Work Item(s) then it is also shown
-    bypassing Column 2 Work Item.
+1. Select the relevant work item for Column 1.
 
-   - Selecting Column 1 Work Item is mandatory while all other columns
-    are optional.
+   ![](images/120.png)
 
-7. Similarly select the relevant Work Item(s) for additional Columns
-    (if desired).
+   **Figure 36** Selecting the Column 1 work item
 
-   <img src="media/image22.png" width="536" height="140" />
+1. The Column 1 work item tells Modern Requirements4TFS to show the list of all work items of the selected type
 
-8. Click the **Run** Button in the Toolbar.
+2. The Column 2 work item tells Modern Requirements4TFS to show the list of work items of the selected type that are linked with the Column 1 work items. A similar principle is followed for the columns 3 & 4 work items.
 
-   <img src="media/image23.png" width="551" height="339" />
+3. If a Column 1 work item has no relation with the Column 2 work items but has a link with the Column 3 or 4 work item(s), then it’s also shown bypassing the Column 2 work item.
 
-9. The Horizontal Matrix is generated and displayed.
+4. Selecting the Column 1 work item is mandatory while all other
+columns are optional.
 
-   <img src="media/image24.png" width="576" height="409" />
+1. Similarly, select the relevant work item(s) for additional columns if desired.
+
+   ![](images/121.png)
+
+   **Figure 37** Selecting the columns 2 and 3 work items
+
+1. Click the **Run** button in the toolbar.
+
+   ![](images/122.png)
+
+   **Figure 38** Completing the Horizontal Matrix creation process
+
+   The Horizontal Matrix is generated and displayed.
+
+   ![](images/123.png)
+
+   **Figure 39** The Horizontal Matrix after generation
+
+This brings us to the end of this exercise.
 
 ### Task 5: Export to Excel
 
-In this exercise you would learn how to export the desired type of matrix (Intersection or horizontal) to MS-Excel.
+In this exercise you will learn how to export the desired type of matrix (intersection or horizontal) to MS-Excel.
 
-1. Invoke **Trace Analysis** module from Dashboard.
+1. Invoke the **Trace Analysis** module from Dashboard.
 
-2. Create / open the desired type of matrix.
+2. Create/open the desired type of matrix.
 
-3. Click the **Export To Excel** option in the Mini Toolbar.
+3. Select the **Export To Excel** option in the mini toolbar.
 
-   <img src="media/image25.png" width="310" height="224" />
+   ![](images/124.png)
 
-4. The Excel file is created.
+   **Figure 40** Clicking the Export to Excel option
 
-   <img src="media/image26.png" width="570" height="66" />
+   The Excel file is created.
 
-5. The file can now be opened in MS-Excel using **Open** or **Save**
-    option as desired.
+   ![](images/125.png)
 
-   <img src="media/image27.png" width="584" height="415" />
+   **Figure 41** The notification of the recently created Excel file
+   
+   The file can now be opened in MS-Excel using the **Open** or **Save** options as desired.
 
+   ![](images/126.png)
 
-## Exercise 3: Baseline Management with inteGREAT4TFS
+   **Figure 41** The exported file as it appears in MS-Excel
 
-In this exercise you will learn how to access inteGREAT4TFS and create a baseline using it.
+This brings us to the end of this exercise.
 
-inteGREAT4TFS is an online application that complements
-    SmartOffice4TFS in managing Team Projects. inteGREAT4TFS consists of
-    many distinct modules such as: **Trace Analysis**, **SmartOffice
-    Library**, **Simulation, Diagram, Use Case,** **Review** and
-    **Baselining**. In this hands on lab, we would be using the
-    **Baselining** module only.
+## Exercise 3: Baseline Management with Modern Requirements4TFS
 
-### Task 1: Accessing inteGREAT4TFS and creating a baseline
+### Task 1: Accessing Modern Requirements 4TFS and creating a baseline
 
-1. Log in as **Brian Harry** (VSALM\\Brian). All user passwords are
-    **P2ssw0rd**.
+In this exercise, you will learn how to access Modern Requirements4TFS and create a baseline.
+
+Modern Requirements4TFS is an online application that complements Smart Office4TFS in managing team projects. Modern Requirements4TFS consists of many distinct modules including: **Trace Analysis**, **SmartOffice Library**, **Simulation, Diagram, Use Case,** **Review** and **Baselining**. In this hands-on lab, we will be using the **Baselining** module only.
+
+1. Log in as **Administrator** with the password **P2ssw0rd**.
 
 2. Start Internet Explorer.
 
 3. Access the following URL: **VSALM:8028**
 
-   <img src="media/37.png" width="592" height="421" />
+   ![](images/127.png)
 
-4. The Login Page for inteGREAT4TFS is displayed in the browser.
+   **Figure 1** Accessing Modern Requirements4TFS tab
 
-   <img src="media/38.png" width="612" height="435" />
+    The Modern Requirements4TFS welcome page is displayed in the
+    browser.
 
-   Following login details are to be used:
+    ![](images/128.png)
 
-   - TFS Server URL: [**http://VSALM:8080/tfs**](http://VSALM:8080/tfs)
+    **Figure 2** The Modern Requirements4TFS welcome page
 
-   - User ID: **Administrator**  
-     Password: **P2ssw0rd**
+1. Select the **FabrikamFiberCollection**.
 
-5. Enter the login details and click the **Sign In** Button.
+   ![](images/129.png)
 
-   <img src="media/39.png" width="349" height="317" />
+   **Figure 3** Selecting the desired collection
 
-   - Home page is displayed.
+1. Select the **FabrikamFiber** project.
 
-6. Click the **Browse** link.
+   ![](images/130.png)
 
-   <img src="media/40.png" width="306" height="217" />
+   **Figure 4** Selecting the desired project
 
-7. Expand **FabrikamFibreCollection** node select **Fabrikam Fiber**
-    (Team Project) click the **Navigate** Button.
+1. Select the **Work** option in the toolbar followed by selecting the **Baseline** option from the drop-down menu.
 
-   <img src="media/41.png" width="529" height="378" />
+   ![](images/131.png)
 
-8. Upon successful connection, the Dashboard of the selected Team
-    Project (**Fabrikam Fiber**) is displayed.
+   **Figure 5** Invoking the baseline module
 
-   <img src="media/42.png" width="610" height="433" />
+   The landing page of the baselining module is displayed. Initially, the module will be empty since we haven’t created any baselines yet.
 
-   **Dashboard in inteGREAT4TFS**
+5. Select the **New** option followed by the **Baseline** option from the drop-down menu.
 
-   **Dashboard** is the place where **the** user gets useful
-    information about the team project. It also leads the users to the
-    desired module in inteGREAT4TFS. Users can select their desired
-    module in a number of ways. Since we would be using the
-    **Baselining** module in this exercise, we would select it.
+    ![](images/132.png)
 
-9. Select the **Baselining** link from the highlighted links shown in
-    the following image.
- 
-   <img src="media/43.png" width="603" />
+    **Figure 6** Invoking the baseline creation option
 
-10. In case **Manage** hub is used to invoke the module, user has to
-    additionally select the Baseline option afterwards.
+6. Enter a suitable name for the baseline; provide a description and click **Next**.
 
-    <img src="media/44.png" width="347" height="112" />
+   ![](images/133.png)
 
-11. The landing page of Baselining module is displayed. Originally it
-    would be empty since we have not created any baseline as of yet.
+   **Figure 7** Entering the required information for the baseline
 
-12. Click **New** and then **Baseline** options from the drop down.
+   Clicking the **Next** button takes us to the query window where we have to search for the work items that we want to include in the baseline. We can search based on the saved queries, IDs, full names or parts of the names.
 
-    <img src="media/45.png" width="271" height="359" />
+5. Select the desired query and click **Find**.
 
-13. Enter a suitable name for the baseline; provide a description and
-    click the **Next** Button.
+   ![](images/134.png)
 
-    <img src="media/46.png" width="460" height="351" />
+   **Figure 8** Finding the required work items
 
-14. Clicking the **Next** button takes us to the query window where we
-    have to search for the Work Items that we want to include in
-    the baseline. We can search based on saved queries, IDs, full or
-    part of the name.
+5. Select the desired work items from the query result and click OK to add the work items.
 
-15. Select the desired query and click the **Find** Button.
+   ![](images/135.png)
+   
+   **Figure 9** Adding the desired work items in the baseline
 
-    <img src="media/47.png" width="557" height="440" />
+   The work items window is closed and the added work items are listed in a new page. At this moment, we have created a list of work items that are ready to be included in our baseline. However, the baseline itself has not yet been created. This extra step helps users to include additional work items, remove unwanted ones or edit them before finalizing the baseline.
 
-16. Select the desired Work Items from the query result and click the
-    Add Work Items Button.
+5. Click Save.
 
-    <img src="media/48.png" width="479" height="378" />
+   ![](images/136.png)
 
-17. The Work Items window is closed and the added Work Items are listed
-    in a new page. At this moment we have created a list of Work Items
-    that are ready to be included in our baseline. However the baseline
-    itself has not yet been created. This extra step helps users to
-    include additional Work Items, remove unwanted ones, or edit them
-    before finalizing the baseline.
+   **Figure 10** Completing the baseline creation process
 
-18. Click the Save Button.
+   The baseline is created.
 
-    <img src="media/49.png" width="467" height="259" />
+   ![](images/137.png)
 
-19. The baseline is created
+   **Figure 11** Baseline as it appears just after creation.
 
-    <img src="media/50.png" width="568" height="404" />
+This brings us to the end of this exercise.
 
-### Task 2: Generating Baseline Reporting
-
-A Baseline Report is created for a particular baseline. It contains details about the Work Item it contains.
-
-1. Invoke the **Baselining** module from Dashboard.
-
-2. Click the desired baseline in the Baseline Explorer Panel under
-    Project Baselines.
-
-   <img src="media/51.png" width="494" height="301" />
-
-3. Click the **Generate Report** option in the toolbar.
-
-   <img src="media/52.png" width="474" height="273" />
-
-4. The report is generated and can be opened in Microsoft Word.
-
-   <img src="media/53.png" width="600" height="427" />
-
-### Task 3: Comparing Baselines
+###  Task 2: Comparing baselines
 
 In this exercise you will learn how to compare two baselines and create a difference report.
 
@@ -1034,268 +1159,316 @@ In this exercise you will learn how to compare two baselines and create a differ
 
 2. Open the desired baseline using the Baseline Explorer Panel.
 
-3. Now click the **Compare** Tab (below the baseline’s name in the Main Panel)
+3. Now open the **Compare** tab (below the baseline’s name in the main panel).
 
-   <img src="media/54.png" width="426" height="241" />
+   ![](images/138.png)
 
-4. Click on the downward arrow in the Main Toolbar.
+   **Figure 12** Invoking the Compare tab
 
-   <img src="media/55.png" width="506" height="202" />
+1. Click the downward arrow in the main toolbar.
 
-5. Select the desired baseline to compare with the current baseline
+   ![](images/139.png)
 
-   <img src="media/56.png" width="517" height="308" />
+   **Figure 13** Invoking the comparison drop-down
 
-6. The comparison between two baselines is shown in the Grid. The Work
-    Items that were updated are mentioned as Changed in the “**Comp.
-    Status”** column (highlighted in the image).
+1. Select the desired baseline to compare with the current baseline.
 
-   <img src="media/57.png" width="523" height="372" />
+   ![](images/140.png)
 
-7. The actual updates in the selected Work Items are shown in the
-    **Work Item Details Panel** (at the right hand side of the window).
-    If the difference is not evident, then click the **Summary** Button
-    at the top right of the Work Items Details Pane. This would show
-    only the differential values in the pane.
+   **Figure 14** Selecting the baseline for comparison
 
-8. To switch to the **Summary Mode** (for easy viewing of updates),
-    click the **Summary** option in the **Work Item Details Panel**.
+   The comparison between two baselines is shown in the grid. The work items that have been updated have a “Changed” status in the “Comp. Status” column.
 
-   <img src="media/58.png" width="544" height="240" />
+   ![](images/141.png)
 
-9. The **Work Item Details Panel** now shows only the values that
-    were updated.
+   **Figure 15** Baseline comparison
 
-   <img src="media/59.png" width="588" height="418" />
+   The updates in the selected work items are shown in the **Work Item Details Pane** (at the right hand side of the window). If the difference isn’t evident, click **Summary** at the top right of the Work Items Details Pane. The pane will show only the differential values.
 
-10. Click the **Difference Report** option in the Main Toolbar.
+1. To switch to Summary mode (for easy viewing of the updates), click **Summary** in the **Work Item Details Pane**. The pane will show only the values that have been updated.
 
-    <img src="media/60.png" width="508" height="284" />
+   ![](images/142.png)
 
-11. Enter required information and click the **Generate** Button.
+   **Figure 16** Switching to Summary mode
 
-    <img src="media/61.png" width="376" height="133" />
+1. Select the **Difference report** option in the main toolbar.
 
-12. The Difference Report is created in MS-Word format. Save or Open the file to complete the process.
+   ![](images/143.png)
 
-    <img src="media/62.png" width="578" height="66" />
+   **Figure 17** Creating the Difference report (Step1)
 
-    <img src="media/63.png" width="512" height="364" />
+1. Enter the required information and click **Generate**.
 
-### Task 4: Copying Baselines
+   ![](images/144.png)
 
-In this exercise you will learn how to copy a baseline (or its Work
-Items) to create a new baseline. The copied baseline can be pasted into
-the same team project or into another project. In both cases the process
-is same, with only change in the target team project option.
+   **Figure 18** Creating the Difference report (Step2)
+
+   The Difference report is created in the MS-Word format.
+
+1. Save or Open the file to complete the process.
+
+   ![](images/145.png)
+
+   **Figure 19** Message shown after the creation of the Difference report
+
+   ![](images/146.png)
+
+   **Figure 21** The Difference report opened in Microsoft Word
+
+### Task 3: Copying Baselines
+
+In this exercise you will learn how to copy a baseline (or its work items) to create a new baseline. The copied baseline can be pasted into the same team project or into another project. In both cases the process is the same, the only difference being in the target team project option.
 
 1. Open the desired baseline.
 
-2. Click the **Copy Work Items** option in the Main Toolbar.
+2. Select the **Copy Work Items** option in the main toolbar.
 
-   <img src="media/64.png" width="343" height="234" />
+   ![](images/147.png)
 
-3. The Copy Work Item Window appears. Its options are divided under three sections as marked in the image.
+   **Figure 22** Initiating the Copy baseline process
 
-   <img src="media/65.png" width="419" height="281" />
+   The Copy Work Item window appears. Its options are divided into three sections as marked in the image.
 
-4. The Team Project option (in the Target Team Project section) tells where the baseline will be copied. Into the same team project or
-   into another one, for example a re-use library project?
+   ![](images/148.png)
 
-   <img src="media/66.png" width="586" height="393" />
+   **Figure 23** The Copy Work Item window
 
-5. Set the options in the **Team Project** section and then click the
-    **Work Items** Tab in the window.
+   The **Team Project** option (in the Target Team Project section) tells us where the baseline will be copied to. This may be in the same team project, another project or a re-use library project?
 
-   <img src="media/67.png" width="394" height="154" />
+   ![](images/149.png)
 
-6. Here All Work Items are shown that are in the selected baseline.
-    Users can select all Work Items (using **Select All** Button) or
-    individually select the desired Work Items (using **Ctrl + click)**.
+   **Figure 24** The Target Team Project option
 
-   <img src="media/68.png" width="601" height="403" />
+3. Set the options in the **Team Project** section and then open the **Work Items** tab in the window.
 
-7. Select the desired Work Items and then click the **Options** Tab.
+   ![](images/150.png)
 
-   <img src="media/69.png" width="318" height="154" />
+   **Figure 25** Moving towards the Work Items tab
 
-8. If we enable the **Create Baseline of copy work item(s)** checkbox
-    (marked in the image below) then the baseline is copied as well,
-    otherwise only the selected work items are copied.
+   All work items that are in the selected baseline are shown below. Users can select all work items (using the **Select All** button) or select the desired work items one by one (using **Ctrl + click)**.
 
-9. Set desired options and click the **Copy** Button.
+   ![](images/151.png)
 
-   <img src="media/70.png" width="598" height="401" />
+   **Figure 26** Work item options
 
-10. A copy of the baseline is created and a message is displayed.
+3. Select the desired work items and then open the **Options** tab.
 
-    <img src="media/71.png" width="325" height="199" />
+   ![](images/152.png)
 
-11. The newly created baseline is now accessible through the Baseline
-    Explorer Panel.
+   **Figure 27** Moving towards different options in the Options tab
 
-    <img src="media/72.png" width="595" height="423" />
+   If we tick the **Create Baseline of copy work item(s)** checkbox (marked in the image below) then the baseline is copied as well, otherwise only the selected work items are copied.
 
-## Exercise 4: Review Management with inteGREAT4TFS
+3. Set the desired options and click **Copy**.
 
-### Task 1: Creating a Review Request
+   ![](images/153.png)
 
-In this exercise you will learn about how to create a Review Request
-using the Review Management module of inteGREAT4TFS.
+   **Figure 28** Completing the baseline copying process
 
-inteGREAT4TFS is an online application that complements
-    SmartOffice4TFS in managing Team Projects. inteGREAT4TFS consists of
-    many distinct modules such as: **Trace Analysis**, **SmartOffice
-    Library**, **Simulation, Diagram, Use Case,** **Review** and
-    **Baselining**. In this HOL, we will be using the **Review**
-    module only.
+   A copy of the baseline is created and a message is displayed.
 
-1. Using the method described in baseline/traceability HOL, log in as
-    **Administrator.**
+   ![](images/154.png)
 
-2. Navigate to the inteGREAT4TFS Dashboard.
+   **Figure 29** Baseline creation message
 
-   <img src="media/73.png" width="562" height="399" />
+   The newly created baseline is now accessible through the Baseline Explorer Panel.
 
-   **Dashboard in inteGREAT4TFS**
+   ![](images/155.png)
 
-   **Dashboard** is the place where the user gets useful information
-    about the team project. It also leads the users to the desired
-    module in inteGREAT4TFS. Users can select their desired module in a
-    number of ways. Since we will be using the **Review** module in this
-    exercise, we will select the Review link that leads to our
-    desired module.
+   **Figure 30** A newly created baseline
 
-3. Select the **Review Management** link from the highlighted links shown in the following image.
+This brings us to the end of this exercise.
 
-   <img src="media/74.png" width="598" height="285" />
+## Exercise 4: Review Management with Modern Requirements4TFS
 
-4. The landing page of the Review Management is displayed. The landing
-    page would be empty since neither we have generated any Review
-    Requests nor any requests have been assigned to us as of yet.
+In this exercise you will learn how to create a review request using the Review Management module of Modern Requirements4TFS.
 
-5. Click **New** and then **Review Request** option from the drop down.
+Modern Requirements4TFS is an online application that complements Smart
+Office4TFS in managing team projects. Modern Requirements4TFS consists of many distinct modules such as: **Trace Analysis**, **SmartOffice Library**, **Simulation, Diagram, Use Case,** **Review** and **Baselining**. In this HOL, we will be using the **Review** module only.
 
-   <img src="media/75.png" width="240" height="328" />
+1. Log in as Administrator with the password **P2ssw0rd**.
 
-6. The Review Request Popup is displayed. This popup is used to configure all the settings for the Review Requests.
+2. Start Internet Explorer.
 
-   <img src="media/76.png" width="570" height="329" />
+3. Access the following URL: **VSALM:8028**
 
-7. Select the Reviewers from the drop-down list.
+   ![](images/156.png)
 
-   <img src="media/77.png" width="296" height="236" />
+   **Figure 1** Accessing the Modern Requirements4TFS tab
 
-   > You can select more than one reviewer
+   The Modern Requirements4TFS welcome page is displayed in the browser.
 
-8. Similarly, select the desired Approvers.
+   ![](images/157.png)
 
-   <img src="media/78.png" width="391" height="299" />
+   **Figure 2** The Modern Requirements4TFS welcome page.
 
-   > **Reviewers** only provide comments while **Approvers** can
-    also approve/reject. A particular person can be either selected as a
-    reviewer or an approver.
+1. Select the **FabrikamFiberCollection**.
 
-9. Enter appropriate subject for the review request.
+   ![](images/158.png)
 
-   <img src="media/79.png" width="403" height="310" />
+   **Figure 3** Selecting the desired collection
 
-   >The subject of the Review Request becomes the subject of the email that is sent by inteGREAT4TFS to the selected Approvers/Reviewers.
+1. Select the **FabrikamFiber** project.
 
-10. Scroll down to get to the other steps in the window.
+   ![](images/159.png)
 
-11. Provide a purpose for the review (if desired). Alternatively
-    collapse the section by clicking on the down arrow at far right.
+   **Figure 4** Selecting the desired project
 
-    <img src="media/80.png" width="603" height="245" />
+1. Select the **Work** option in the toolbar and then select **Baseline** from the drop-down menu.
 
-12. Click the Add Work Items button.
+   ![](images/160.png)
 
-    <img src="media/81.png" width="416" height="223" />
+   **Figure 5** Selecting the Review Management link
 
-13. Run the relevant query.
+    The landing page of the Review Management is displayed. The landing page will be empty since we have generated no review requests and no requests have been assigned to us yet.
 
-    <img src="media/82.png" width="518" height="404" />
+1. Click **New** and then select the **Review Request** option from the drop-down menu.
 
-    >A list of Work Item appears depending upon the query we ran. We can now select the desired ones from the list.
+   ![](images/161.png)
+   
+   **Figure 6** Invoking the Review Request option
 
-14. Select the desired Work Items (for which the review is desired) and
-    click the **Add Work Item** button.
+   The Review Request pop-up is displayed. This pop-up is used to configure all the settings for the review requests.
 
-    <img src="media/83.png" width="436" height="344" />
+   ![](images/162.png)
 
-15. Set the Due Date.
+   **Figure 7** The Review Request pop-up window
 
-    <img src="media/84.png" width="561" height="323" />
+1. Select the reviewers from the drop-down menu.
 
-16. To preview the request, click the **Preview** button.
+   ![](images/163.png)
 
-    <img src="media/85.png" width="593" height="342" />
+   **Figure 8** Selecting the reviewers
 
-    >The Preview is displayed. In preview, only the text box area
-    is editable. All other information such as recipients, Due Date etc.
-    are shown in read-only format. If these need to be edited then user
-    has to go back and alter the relevant options.
+   You can select more than one reviewer.
 
-17. Make formatting updates (if desired) and click the Send button.
+1. Similarly, select the desired approvers.
 
-    <img src="media/86.png" width="562" height="324" />
+   ![](images/164.png)
 
-18. The Review Request is created and becomes visible at the module's
-    landing page.
+   **Figure 9** Selecting the approvers
 
-    <img src="media/87.png" width="549" height="391" />
+   **Reviewers** only provide comments while **Approvers** can also approve/reject items. A user can be selected as either a reviewer or an approver.
 
-### Task 2: Responding to the Review Requests
+1. Enter an appropriate subject for the review request.
 
-In this exercise you will learn about how to respond to a Review Request
-using the Review Management module of inteGREAT4TFS.
+   ![](images/165.png)
 
-1. The Review Requests assigned to a user are arranged under **Assigned to Me** heading in the Folder Explorer.
+   **Figure 10** Entering a subject for the review request
 
-   <img src="media/88.png" width="182" height="287" />
+   >The subject of the review request becomes the subject of the email sent by Modern Requirements4TFS to the selected approvers/reviewers
 
-   >The process to respond to the review requests is slightly different
-    for Reviewers and for Approvers. The following steps describe the
-    process for Approvers. The Reviewers can only give their comments.
-    The Accept/Reject options don’t appear in the UI for reviewers.
+1. Scroll down to get to the other steps in the window.
 
-2. Click the relevant Review Request under the **Reviewed** **Assigned
-    To Me** heading in the Folder Explorer.
+2. Provide a purpose for the review if desired. Alternatively collapse the section by clicking the downward arrow at far right.
 
-   <img src="media/89.png" width="228" height="301" />
+   ![](images/166.png)
 
-3. Select the Work Item for which the review is to be given.
+1. Figure 11 The Purpose section in the pop-up window
 
-   <img src="media/90.png" width="535" height="332" />
+1. Click the Add Work Item button.
 
-4. Provide a comment (if desired)
+   ![](images/167.png)
 
-   <img src="media/91.png" width="529" height="198" />
+   **Figure 9** Clicking the Add Work Item button
 
-5. Click **Accept** or **Reject** Button.
+1. Run the relevant query.
 
-   <img src="media/92.png" width="396" height="280" />
+   ![](images/168.png)
 
-6. The response for the selected Work Item is completed.
+   **Figure 10** Running the query to the Add Desired Work Items list
 
-   <img src="media/93.png" width="572" height="367" />
+   A list of work items appears depending on the query we ran. We can now select the desired ones from the list.
 
-7. Repeat the process with all other Work Items of the Review Request.
+1. Select the desired work items (for which the review is desired) and click the **Add Work Item** button.
 
-   >Giving comment is not mandatory for approvers; however, it is mandatory for stakeholders.
+   ![](images/169.png)
 
-   <img src="media/94.png" width="261" height="111" />
+   **Figure 11** Selecting the desired work items
 
-8. If **Accept All** or **Reject All** option is selected instead of
-    simple Accept/Reject then the response is finalized for all Work
-    Items of the Review Request and the user does not have to repeat the
-    whole process for each Work Item as mentioned in last step.
+1. Select the desired Area Path.
 
+   ![](images/170.png)
 
+   **Figure 12** Selecting the area path
 
+1. Set the due date.
 
+   ![](images/171.png)
 
+   **Figure 13** Setting the due date
 
+1. Set the desired rules and click **Preview**.
 
+   ![](images/172.png)
 
+   **Figure 13** Invoking the preview
+
+   The Preview is displayed. In preview, only the text box area is editable. All other information, including recipients, Due Date etc. are shown in the read-only format. If these need to be edited then the user has to go back and alter the relevant options.
+
+1. Make formatting updates (if desired) and click **Send**.
+
+   ![](images/173.png)
+
+   **Figure 14** Completing the review request
+
+   The review request is created and becomes visible at the module's landing page.
+
+   ![](images/174.png)
+
+   **Figure 15** The Review Request as it appears just after creation
+
+This brings us to the end of this exercise.
+
+### Task 2: Responding to Review Requests
+
+In this exercise you will learn how to respond to a review request using the Review Management module of Modern Requirements4TFS.
+
+The review requests assigned to a user are arranged under the **Assigned to Me** heading in the Folder Explorer.
+
+![](images/175.png)
+
+**Figure 16** The Reviews Assigned To Me section in the Folder
+Explorer
+
+The process of responding to the review requests is slightly different
+for reviewers than for approvers. The following steps describe the process for approvers. Reviewers can only give comments. The
+Accept/Reject options doesn’t appear in the UI for reviewers.
+
+1. Click the relevant review request under the **Reviewed** **Assigned To Me** heading in the Folder Explorer.
+
+   ![](images/176.png)
+
+   **Figure 17** Selecting the review request for response
+
+1. Select the work item for which the review is to be given.
+
+   ![](images/177.png)
+
+   **Figure 18** Selecting the work item
+
+1. Provide a comment if desired.
+
+   ![](images/178.png)
+
+   **Figure 19** Providing a comment for the selected work item
+
+1. Click **Accept** or **Reject**.
+
+   ![](images/179.png)
+
+   **Figure 20** Clicking Accept
+
+   The response for the selected work item is completed.
+
+   ![](images/180.png)
+
+   **Figure 21** The response of the selected work item as it appears after process completion
+
+1. Repeat the process with all other work items of the review request. Giving comments is not mandatory for approvers but it’s mandatory for stakeholders.
+
+   ![](images/181.png)
+
+   **Figure 22** The Accept/Reject options available only to approvers
+
+If the **Accept All** or **Reject All** option is selected instead of the simple **Accept/Reject** option, then the response will be finalized for all work items of the review request. This means that the user won’t have to repeat the whole process for each work item as indicated in the last step.

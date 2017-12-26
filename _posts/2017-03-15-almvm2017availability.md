@@ -24,5 +24,3 @@ You can download the VM or simply access it from a browser or run it on Azure by
   <img src="images/devops.png" /-->
   </td></tr>
   </table>
- 
-{% include links.html %}

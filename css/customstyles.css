@@ -1,9 +1,10 @@
 body {
     font-size: 15px;
-    font-family: "Segoe UI";
+    /*font-family: arial,sans-serif;*/
+    font-family:  "Lato","Geneva CY","Lucida Grande","Arial Unicode MS","Helvetica Neue","Helvetica","Arial",sans-serif;
     margin: 0px;
     padding: 0px;
-    line-height: 23px;
+    line-height: 1.6;
     /*background-color: #248ec2;*/
 }
 
@@ -514,7 +515,7 @@ ul#mysidebar {
 }
 
 span.projectTitle {
-    font-family: Helvetica;
+    font-family:    ;
     font-weight: bold;
     color: #000000;
     padding-left: 10px;
@@ -994,7 +995,7 @@ a.accordion-toggle {
 
 span.red {
     color: red;
-    font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
+    font-family: 'Lora', Georgia, serif;
 }
 
 h3.codeExplanation {
@@ -1376,7 +1377,9 @@ i.glyphicon.glyphicon-search {
 
 .mainTable {
     border: none;
-    background-color: #fcfcfc;
+    background-color: #f7f8f9;
+    padding: 2px;
+    line-height: 1.6;
 }
 
 span.introText {
@@ -1410,20 +1413,24 @@ td.text_center {
 div.headline {
     /* border: 1px;*/
     border-width: 1px;
-    /* border-style: solid; */
+    border-style: solid; 
     /*border: double #248ec2;*/
-    border-color: #248ec2;
+    border-color: #adb1b5;
     padding: 5px;
-    margin: 25px;
-    background-color: #fbfbfb;
+    margin: 5px;
+    background-color: #f7f8f9;
+    margin-bottom: 22px;
 }
 
 span.headnews {
     padding-top: 20px;
     padding-bottom: 5px;
-    font-size: 20px;
+    font-size: 17px;
     font-weight: bold;
     color: black;
+    line-height: 1.5;
+    /*font-family: 'Lora', Georgia, serif;*/
+    font-family:  "Lato","Geneva CY","Lucida Grande","Arial Unicode MS","Helvetica Neue","Helvetica","Arial",sans-serif;
 }
 
 div.newsitem {
@@ -1455,17 +1462,30 @@ div.lab-item-none {
 }
 
 div.lab-item {
-    /*width: 350px;*/
+    width: 350px;
     border-width: 1px;
-    /**border-style: solid;*/
+    border-style: solid;
     border-color: #248ec2;
-    padding: 15px;
-    margin-bottom: 25px;
+    /*padding: 15px;*/
+    margin-bottom: 15px;
     margin-top: 25px;
     /* margin-left: 35px;
     margin-right: 35px; */
+    padding-bottom: 15px;
     background-color: #FFFFFF;
+    height: 270px;
+    margin-top: 10px;
+    margin-left: 10px;
     font-weight: 80%;
+    padding-top: 10px;
+}
+div.lab-item:hover{
+    border-style: solid;
+    /*background-color: #efefef
+    border-color: #2361c4;
+    box-shadow: 0 0 0 2px;*/
+    box-shadow: 2px 5px #888888;
+    transition: .5s ease
 }
 
 div.clear {
@@ -1524,3 +1544,34 @@ button.custom-btn {
 a.labmain:link {color:#000000;text-decoration:none;    padding-top: 20px;     padding-bottom: 5px;     font-size: 20px;     font-weight: bold; }
 a.labmain:visited {color:#000000; padding-top: 20px;     padding-bottom: 5px;     font-size: 20px;     font-weight: bold; }
 a.labmain:hover {color:#11b2E8; padding-top: 20px;     padding-bottom: 5px;     font-size: 20px;     font-weight: bold; }
+
+a.postitem:link, a.postitem:visited{
+    color: #000000;
+       text-decoration: none;   
+}
+a.postitem:hover{
+    color: #4e8fe5;       text-decoration: none;  
+}
+
+div.labcols{
+    margin-left: 60px;
+}
+
+div.rowMain{
+    background-image: url("../images/almvm-hero-right-blue.png");
+    display: block;
+    background-color: skyblue;
+    margin-top: 73px;
+    height: 370px;
+
+}
+
+div.columnMain{
+        float: left;
+        width: 35%;
+        padding-top: 100px;
+        font-size: 32px;
+        margin-left: 150px;
+
+        
+}

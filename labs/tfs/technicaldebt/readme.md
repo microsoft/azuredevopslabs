@@ -5,7 +5,6 @@ sidebar: tfs
 permalink: /labs/tfs/technicaldebt/
 folder: /labs/tfs/technicaldebt/
 ---
-
 ## Overview
 
 In this lab, you will be introduced to Technical debt, how to configure your Team Build Definitions to use SonarQube, how to understand the analysis results and finally how to configure quality profile to control the rule set used by SonarQube for analyzing your project.
@@ -22,7 +21,7 @@ Technical debt is the set of problems in a development effort that make forward 
 
 3- You will need to download and install SonarQube VSTS extension from [VSTS marketplace](https://marketplace.visualstudio.com/items?itemName=SonarSource.sonarqube)
 
-4- Complete Lab [Team Foundation Build 2017](https://github.com/hkamel/almvm-1/blob/master/labs/tfs/build)
+4- Complete Lab [Team Foundation Build 2018](https://github.com/hkamel/almvm-1/blob/master/labs/tfs/build)
 
 ## Exercise 1: Install and Configure SonarQube Server and Extensions
 
@@ -55,9 +54,9 @@ In this exercise, you will learn about the main installation and configuration p
 
 8. Right-click on sonarqube-x.x.x.zip, select Properties and then click on the Unblock button
 
-9. Unzip SonarQube-x.x.zip on to a folder, for example use C:\SonarQube\SonarQube-x.x.x. 
+9. Unzip SonarQube-x.x.zip on to a folder, for example use C:\SonarQube\SonarQube-x.x.x.
 
-10.	In the extracted folder navigate to **Conf** folder, edit **sonar.properties** file to change the default web port for example **9090**. 
+10.	In the extracted folder navigate to **Conf** folder, edit **sonar.properties** file to change the default web port for example **9090**.
 
     `By default, SonarQube uses port **9000** which is currently being used in the virtual machine for FabrikamFiber QA web site (FF QA). For the purpose of this lab you can provide port 9090.`
 
@@ -96,12 +95,13 @@ In this exercise, you will learn about the main installation and configuration p
    <img src="./media/techdebt_img11.png" />
 
 ## Exercise 2: Analyzing Projects with SonarQube Extension for VSTS/TFS
+
 In this exercise, you will learn about the main configuration points that are needed to integrate Team Foundation Server build with SonarQube, performing code analysis on a sample project, and access the analysis result from build summary and SonarQube project dashboard.
 
 ### Task 1: Cloning a Build Definition
 
 1. Log in as **Deniz Ercoskun** (VSALM\\Deniz). All user passwords are
-    **P2ssw0rd**. 
+    **P2ssw0rd**.
 
 2. Now let’s create a similar build definition, but this time include a step to perform code analysis. Imagine that this build definition will be part of a continuous integration scenario.
 
@@ -142,7 +142,7 @@ In this exercise, you will learn about the main configuration points that are ne
 5. Click on the **SonarQube Scanner for MSBuild - End Analysis (new)** step to configure it:
 
    * Add a new **SonarQube Endpoint** by click **Manage**
-    
+   
      <img src="./media/techdebt_img15.png" />
 
    * In **Services** page click **New Service Endpoint** and select **SonarQube**

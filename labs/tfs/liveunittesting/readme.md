@@ -1,275 +1,315 @@
 ---
-title: Live Unit Testing and Live Dependency Validation in Visual Studio 2017
-layout: page
+title: Live Unit Testing, Code Coverage, and Code Clone Analysis with Visual Studio 2017
+layout: page    
 sidebar: tfs
 permalink: /labs/tfs/liveunittesting/
 folder: /labs/tfs/liveunittesting/
 ---
 
-Lab version: 15.0.26228.0
+Lab version:15.4
 
-Last updated: 3/6/2017
+Last updated:11/13/2017
 
 ## Overview
 
+In this lab, you will learn about how the unit testing engine in Visual Studio is extensible and opens the door for 3rd party unit testing adapters such as NUnit and xUnit.net. In addition, you will see some of the improvements made to code coverage support. You will also learn about how the code clone capability goes hand-in-hand with delivering high quality software by helping you identify blocks of semantically similar code which may be candidates for common bug fixes or refactoring.
 
-Live Unit Testing is a new feature introduced in Visual Studio 2017. It
-visualizes unit test results and code coverage live in the editor
-alongside your code and updates while you are coding. It works with C\#
-and VB projects for the .NET framework and supports three test
-frameworks: MSTest, xUnit, and NUnit. Live Unit Testing makes it easy to
-maintain quality and test coverage during rapid development and takes
-your productivity to a whole new level. Imagine fixing a bug in a code
-base in which you may not be completely familiar with. With Live Unit
-Testing, you can know right away—as you are making edits to fix the
-bug—that you did not break another part of the system. Getting this
-feedback as you type will help you feel confident that your effort is
-delivering the results you expect.
+## Prerequisites
 
-Visual Studio also enables teams to validate architectural dependencies
-in their solutions using the [Layer
-Designer](https://msdn.microsoft.com/en-us/library/dd465141.aspx), which
-first shipped in Visual Studio 2010. This feature helps ensure that
-developers respect the architectural constraints of the application as
-they edit their code. It has been re-written in Visual Studio 2017 to
-use Roslyn analyzers for a more robust, reliable experience. Developers
-now get real-time design feedback in the editor so they can immediately
-stop introducing architectural flaws. “Layer” diagrams have also been
-renamed “dependency validation” diagrams to make it clearer what they
-are for.
+In order to complete this lab you will need the Visual Studio 2017 virtual machine provided by Microsoft. For more information on acquiring and using this virtual machine, please see [this blog post](http://aka.ms/almvm).
 
-## Related Resources
+## About the Fabrikam Fiber Scenario
 
-See this [blog
-post](https://blogs.msdn.microsoft.com/visualstudio/2017/03/09/live-unit-testing-in-visual-studio-2017-enterprise/)
-for more information on live unit testing.
+This set of hands-on-labs uses a fictional company, Fabrikam Fiber, as a backdrop to the scenarios you are learning about. Fabrikam Fiber provides cable television and related services to the United States. They are growing rapidly and have embraced Windows Azure to scale their customer-facing web site directly to end-users to allow them to self-service tickets and track technicians. They also use an on-premises ASP.NET MVC application for their customer service representatives to administer customer orders.
 
-See this [blog
-post](https://blogs.msdn.microsoft.com/visualstudioalm/2016/11/30/live-dependency-validation-in-visual-studio-2017/)
-for a detailed discussion comparing the new live dependency validation
-experience with the past.
+In this set of hands-on labs, you will take part in a number of scenarios that involve the development and testing team at Fabrikam Fiber. The team, which consists of 8-10 people has decided to use Visual Studio application lifecycle management tools to manage their source code, run their builds, test their web sites, and plan and track the project.
 
-## Pre-requisites
+## Exercise 1: Code Quality Tools
 
-In order to complete this lab you will need the Visual Studio 2017
-virtual machine provided by Microsoft. For more information on acquiring
-and using this virtual machine, please see [this blog
-post](http://aka.ms/almvm).
+### Task 1: Unit Testing
 
-## Exercise 1: Live Unit Testing in Visual Studio 2017
+In this task, you will learn about the unit testing story in Visual Studio 2017.
 
-Live Unit Testing is a service that watches your codebase for changes.
-As you edit files, it automatically detects which tests are impacted and
-runs those tests in the background. The results are provided immediately
-so that you can get feedback on how your changes affect the overall
-codebase quality. It also indicates which lines of code have no test
-coverage so that you can think about testability as you develop.
+1. Log in as **Sachin Raj (VSALM\Sachin)**. All user passwords are **P2ssw0rd**.
 
-### Task 1: Live unit testing
+1. Launch **Visual Studio 2017** from the taskbar and open **FabrikamFiber.CallCenter.sln** from the **Start Page**.
 
-1.  Log in as **Sachin Raj (VSALM\\Sachin)**. All user passwords are
-    **P2ssw0rd**.
+    ![](images/000.png)
 
-2.  Launch **Visual Studio 2017** from the taskbar.
+1. Select **Build \| Build Solution**.
 
-3.  Open the **PartsUnlimited** solution from the **Start Page**.
+1. Open the **Test Explorer** window from **Test \| Windows \| Test Explorer**. Note that discovered tests are initially set to the **Not Run** state.
 
-    <img src="media/image1.png" width="380" height="223" />
+    ![](images/001.png)
 
-4.  In **Solution Explorer**, search for **“string”** and double click
-    **StringContainsProductSearch.cs** to open it.
+1. Click **Run All** to execute all discovered unit tests.
 
-    <img src="media/image2.png" width="346" height="208" />
+    ![](images/002.png)
 
-5.  This class already has some tests written and is currently in pretty
-    good shape. However, suppose you were planning to make some changes
-    and wanted to get an understanding of the quality of the code before
-    you begin. Rather than running all tests, you can now simply enable
-    live unit testing and let it illustrate the coverage.
+    > **Note:** Visual Studio also provides **Continuous Test Runner** functionality that can be enabled with the **Test \| Test Settings \| Run Tests After Build** option. With this option selected, tests will always run after builds.
 
-1. We will need to update the MS Test adapter and framework versions in our solution. Right-click the solution node at the top of the **Solution Explorer** and click  **Manage NuGet Packages**  for Solution.
+1. Expand the **Passed Tests** group (if necessary) and **double-click** the test with the name **CreateInsertsCustomerAndSaves** to open the source code.
 
-1. Select the **Update** tab and select the **MSTest.TestAdapter** and **MSTest.TestFramework** from the packages list.
+    ![](images/003.png)
 
-1. The minmium version of MSTest adapter and framework required for Live Unit Testing to work is 1.1.4-preview. Select a minmium or higer version of the packages and click **Install**
+1. In the **CustomersControllerTest.cs** file that opens, note that the test method uses the expected **TestMethod** attribute used by **MSTest** to mark unit tests.
 
+    ![](images/004.png)
 
-    <img src="media/nuget-update.png" width="346" height="208" />
+    > **Note:** The test status indicator just above the method definition is a CodeLens indicator. It tells us that the last run was a success. You can learn more about the CodeLens feature in the "Collaboration Experiences for Development Teams using Team Foundation Server" lab.
 
+1. In the **Search** box at the top of the **Test Explorer** window, type "**index**" and note the available search filters.
 
-6.  Select **Test \| Live Unit Testing \| Start** to start live
-    unit testing. After a moment you will see glyphs appear in the left
-    margin of the editor. There are three types of glyphs that indicate
-    that all tests for a line pass (a green check), at least one test
-    fails (a red X), or that the line is not tested (a blue line). In
-    this case, you can see that the code in the constructor and
-    beginning of **Search** pass their tests.
+    ![](images/005.png)
 
-    <img src="media/image3.png" width="581" height="330" />
+1. In the search results, **double-click** the only test listed with the name **IndexReturnsNonNullView** to open the source code.
 
-7.  Looking further down, it’s clear that the exception case for this
-    method is not tested, which is something you should think about
-    adding later on.
+    ![](images/006.png)
 
-    <img src="media/image4.png" width="336" height="77" />
+1. In the **HomeControllerTest.cs** file that opens, you can see that the **IndexReturnsNonNullView** test actually uses the **XUnit** testing framework. Both the xUnit framework and the test runner that integrates with **Test Explorer** can be added to a project via NuGet.
 
-8.  Now let’s experiment with a change to the code. Delete the
-    .**ToLower()** call in **Search**.
+    ![](images/007.png)
 
-    <img src="media/image5.png" width="473" height="167" />
+1. Click the **X** button to clear the current search box in Test Explorer.
 
-9.  The live unit testing service will immediately detect the change in
-    code and re-run the tests (note the clock element is added to
-    the glyphs). You don’t even need to save the file.
+    ![](images/008.png)
 
-    <img src="media/image6.png" width="539" height="156" />
+1. Note that results are grouped by test outcome by default, with execution times listed.
 
-10. Since the change above broke some tests, the glyphs are changed to
-    reflect which lines of code are now part of failing tests. It’s
-    important to note that these glyphs don’t indicate that the error
-    occurred on their respective lines, but rather that those lines are
-    executed by tests that ultimately fail.
+    ![](images/009.png)
 
-    <img src="media/image7.png" width="553" height="321" />
+1. Test execution performance has been given some additional attention in recent versions. Take note of the execution times and then select the **Run...** button followed by the **Repeat Last Run** option. Note the difference in execution time.
 
-11. Pres **Ctrl+Z** to undo the changes made earlier. You may need to
-    press it multiple times to restore the **.ToLower()** from above.
-    The glyphs should all return to passing.
+    ![](images/010.png)
 
-## Exercise 2: Real Time Dependency Validation in Visual Studio 2017
+    > **Note:** The execution times that you see will be different from those shown in the screenshots. The first time you run unit tests they will execute more slowly than on subsequent runs as the tests and testing engine are being loaded for the first time.
 
-### Task 1: Creating a dependency diagram
+    ![](images/011.png)
 
-1.  Press **Ctrl+Shift+B** to rebuild the solution.
+1. **Single-click** the failed test named "**ScheduleActionCorrectlyUpdatesRepositories**" to view a summary of test results.
 
-2.  Select **Architecture \| New Dependency Validation Diagram** from the
-    main menu.
+    ![](images/012.png)
 
-3.  Enter a **Name** of **“PartsUnlimited.Dependencies”** and click
-    **OK**.
+    > **Note:** You can also right-click on test results and use the **Copy** command to copy details to the clipboard. This would be useful when sending an email, for example.
 
-    <img src="media/image8.png" width="624" height="350" />
+1. The summary view of the failed test run shows that an **ArgumentNullException** exception occurred during the test run and even provides the stack track at the time of the exception. Note that we can follow links to go directly to the source code for the test or to points within the stack trace. **Click** the **source link** to go to the source code for the test method.
 
-4.  If asked to update projects to support dependency validation, click
-    **Update**.
+    ![](images/013.png)
 
-    <img src="media/image9.png" width="349" height="136" />
+    ![](images/014.png)
 
-5.  Note that the new project has been added to the solution.
-    Double-click **DependencyValidation1.layerdiagram** to open it.
+1. Find the line of code that is commented out and un-comment it. Assume that this is the root cause for the failed test.
 
-    <img src="media/image10.png" width="347" height="205" />
+    ![](images/015.png)
 
-6.  There are a lot of ways to add layers to the diagram, including from
-    the **Solution Explorer**, **Class View**, and **Object Browser**.
+1. Press **Ctrl+S** to save your changes.
 
-    <img src="media/image11.png" width="624" height="55" />
+1. **Right-click** the failed test in **Test Explorer** and select **Run Selected Tests** to make sure that the problem is fixed.
 
-7.  In this case, we’re going to automatically generate a code map and
-    then use that to codify our architecture via the diagram. Select
-    **Architecture | Generate Code Map for Solution**. This code map
-    will pull in everything it can about the project and represent it in
-    a diagram so we can easily walk through the de facto dependencies
-    and relationships each component (class, etc) has.
+    ![](images/016.png)
 
-8.  Expand the **PartsUnlimited.dll** component to see the namespaces
-    it contains.
+1. Up until now, we've walked through the process of manually running tests to find bugs. While this approach does work, there's an even better option that will save you a ton of time: **Live Unit Testing**. Live unit testing continually runs your unit tests in the background as you edit code, providing real-time feedback on how changes impact the quality of the overall codebase.
 
-    <img src="media/image12.png" width="399" height="336" />
+1. Select **Test \| Live Unit Testing \| Start** to enable it. After it builds and runs the tests in the background, you'll see some new glyphs alongside the code.
 
-9.  It gets a little messy at this point because we have lots of
-    relationships and dependencies mapped across and within the project
-    and its tests. Use **Ctrl+Click** to select
-    **PartsUnlimited.Controllers**, **PartsUnlimited.ViewModels**, and
-    **PartsUnlimited.ProductSearch**. Press **Ctrl+C** to copy them.
+    ![](images/017.png)
 
-    <img src="media/image13.png" width="624" height="236" />
+1. There are three glyphs. A green check indicates that the code is covered by at least one test, and that all tests covering it currently pass. A red X indicates that the line of code is covered by at least one failing test. A blue line indicates that the code is not tested.
 
-10. Switch back to the layer diagram and press **Ctrl+V** to paste the
-    three components from the last step. You may want to rearrange them
-    as shown below to make their relationships easier to understand. Put
-    simply, the controllers namespace depends on the product search and
-    viewmodel namespaces. While these relationships existed before and
-    may have been unofficial while the project was being developed,
-    putting them into the layer diagram makes them official
-    architectural law moving forward.
+1. Re-comment the line of code with "get_All" that you uncommented earlier to fix the bug. The live unit testing will silently run its tests and indicate that your code now fails at least one of its tests. Note that you don't need to do anything-not even save the file-for the tests to run and update the indicators. If you look further down in the test you can even see that the test fails at the **AssignSchedule** call and stops running, so the final three lines aren't even tested anymore.
 
-    <img src="media/image14.png" width="443" height="213" />
+    ![](images/018.png)
 
-11. It’s important to understand that the rules only exist for layers
-    that exist on the diagram. For example, the **Controllers**
-    namespace can reference the **ProductSearch** or **ViewModels**
-    namespaces because their relationships are explicitly defined. At
-    the same time, those two namespaces may not reference anything from
-    the **Controllers** namespace because the dependency is directional
-    (there are bidirectional dependencies available if two-way
-    references are desired). **ProductSearch** and **ViewModels** may
-    also not reference each other because they do not have an explicit
-    dependency in the diagram. However, a namespace like
-    **PartsUnlimited.Utils** is not used in the layer diagram and
-    therefore is not enforced by the dependency validation engine. It
-    may reference anything and anything may reference it. However, if it
-    were added to the diagram, then all of its dependencies with every
-    other layer in the diagram would be enforced.
+1. Uncomment the line once again to fix the bug.
 
-12. In addition to the methods discussed earlier, you can also easily
-    add new layers and dependencies by right-clicking the diagram or
-    layers and selecting them. The layers can be at any level, whether
-    it’s a namespace, class, or even a
-    method.<img src="media/image15.png" width="563" height="170" />
+### Task 2: Unit Test Organization
 
-13. Press **Ctrl+S** to save the diagram.
+1. So far, we have seen how to run all discovered tests, search for specific tests, and view tests by their outcome. Now let's take a look at a few other ways that you can organize and navigate them to make unit testing easier. To start with, there are a number of useful grouping options. **Right-click** somewhere within the **Test Explorer** window and select **Group By \| Class**.
 
-### Task 2: Live dependency validation
+    ![](images/019.png)
 
-1.  Now it’s time to break some rules. Press **Ctrl+Shift+B** to rebuild
-    the solution. It should build as expected because we haven’t
-    violated any policy…yet.
+1. Assuming that tests are well organized within descriptive class names, this can make it much easier to select and run tests. For example, you could select just the tests from the **CustomersControllerTest** class and run them.
 
-2.  In **Solution Explorer**, search for **“string”** and open
-    **StringContainsProductSearch**. This class is a member of the
-    **PartsUnlimited.ProductSearch** namespace, and therefore is not
-    allowed to reference anything from **PartsUnlimited.ViewModels**.
+    ![](images/020.png)
 
-    <img src="media/image16.png" width="346" height="217" />
+1. **Right-click** somewhere within the Test Explorer window and select **Group By \| Project**.
 
-3.  Locate the **Search** method. It currently returns a
-    **Task&lt;IEnumerable&lt;Product&gt;&gt;**. Change it to return a
-    **Task&lt;IEnumerable&lt;ViewModels.ProductViewModel&gt;&gt;**.
+    ![](images/021.png)
 
-    <img src="media/image17.png" width="430" height="42" />
+1. Grouping tests by project would obviously be useful for navigating and running tests at the project level.
 
-4.  While this change introduces other errors as well, the key thing to
-    focus on here is that the editor immediately provides a red squiggle
-    indicating that this reference is not allowed based on its
-    defined relationships. This live dependency validation provides
-    immediate feedback to enforce architectural practices so that
-    developers can feel confident that they’re following the
-    project rules.
+    ![](images/022.png)
 
-    <img src="media/image18.png" width="624" height="51" />
+1. You can also use traits in your test code to provide custom grouping. Let's say that we want to group all coded UI tests together. Open **CodedUITest1.cs** from the **FabrikamFiber.Web.UITests** project.
 
-5.  And even if the developer were to ignore the red squiggle, they
-    would still be unable to build the solution due to error-level
-    enforcement of the policy.
+    ![](images/023.png)
 
-    <img src="media/image19.png" width="624" height="28" />
+1. Un-comment the **CodedUITest** attribute from the top of the CodedUITest1 class definition.
 
-6.  However, you can customize exactly how dependency rule violations
-    are treated. In **Solution Explorer**, clear the search box.
+    ![](images/024.png)
 
-    <img src="media/image20.png" width="355" height="184" />
+1. Add the **TestCategory** attribute to the CodedUITestMethod1 method with a category of "**UI**".
 
-7.  Under **References**, right-click **Analyzers** and select **Open
-    Active Rule Set**.
+    ![](images/025.png)
 
-    <img src="media/image21.png" width="353" height="273" />
+1. Build the solution by pressing **Ctrl+Shift+B**.
 
-8.  Expand the **Microsoft.DependencyValidation.Analyzers** rule set and
-    note how you could change the violation behavior from an **Error**
-    to a **Warning** (or whatever you prefer). There is great
-    flexibility in managing dependency validation.
+1. **Right-click** within **Test Explorer** and select **Group By | Traits**.
 
-    <img src="media/image22.png" width="624" height="248" />
+1. With the coded UI tests categorized appropriately, it is now easy to select and run just the UI tests if desired.
 
+    ![](images/026.png)
 
+1. You can also create sets of tests called **playlists**. This provides custom grouping without the need to modify your unit testing code. **Right-click** the _**CodedUITestMethod1**_ test and select **Add to Playlist \| New Playlist**.
+
+    ![](images/027.png)
+
+1. Enter "**UI Tests**" for the playlist file name and then click **Save**.
+
+    ![](images/028.png)
+
+1. Select the **Playlist** drop-down and then select the "**UI Tests**" playlist.
+
+    ![](images/029.png)
+
+1. With just the "UI Tests" playlist selected, you will only see those specific tests shown in Test Explorer, making it much easier to focus on a particular selection of tests.
+
+    ![](images/030.png)
+
+1. Test playlists are simple XML files that define the individual tests to include. For example, here is what the "UI Tests" XML looks like (loaded in Visual Studio editor).
+
+    ![](images/031.png)
+
+1. Playlists can be shared with team members via a team website, emailed, and even added to source control if desired. To load a playlist file, you would select the **Playlist** drop-down and then select the **Open Playlist File** option. You do not need to do this for this lab.
+
+    ![](images/032.png)
+
+### Task 3: Code Coverage
+
+In this task, you will learn about code coverage features that make it easier to use and integrate into the development cycle.
+
+1. Return to **CodedUITest1.cs** and comment out the **CodedUITest** attribute on the class. We won't be using that test for this part of the lab.
+
+    ![](images/033.png)
+
+1. In **Test Explorer**, Return to the default playlist that includes all tests by selecting the **Playlist** drop-down and then selecting the **All Tests** option.
+
+    ![](images/034.png)
+
+1. To analyze code coverage for all tests, select the **Run** drop-down and then select the **Analyze Code Coverage for All Tests** option. This will initiate the process of building, testing, and gathering code coverage results.
+
+    ![](images/035.png)
+
+1. You can view the results in the **Code Coverage Results** windows to get an idea of the Covered/Not Covered statistics for all of the tests. In the screenshot below, note that coverage is measured in blocks of code by default, where a block is code with exactly one entry and exit point. There will be two sets of code coverage results produced from the last run. If the **Not Covered** is 100%, use the dropdown to select the other code coverage results.
+
+    ![](images/036.png)
+
+    **Note**: If you would like to see the results in terms of lines, you can do that by right-clicking in the Code Coverage Results window and selecting the Add/Remove Columns option.
+
+1. Expand the root node of the code coverage result to view the coverage broken down by assembly. By default, we see all assemblies that are loaded during the test run (and for which a .pdb file is available).
+
+    ![](images/037.png)
+
+    > **Note:** You can customize control over which assemblies are selected for code coverage analysis by writing a .runsettings file. For more information, see the MSDN article [Customizing Code Coverage Analysis](http://msdn.microsoft.com/en-us/library/jj159530.aspx).
+
+1. Expand the **fabrikamfiber.web.dll** node to view the coverage broken down by namespace. This allows us to see that, although we do have some test coverage of the controller classes, the test team has a lot of work to do in order to provide coverage to the other namespaces.
+
+    ![](images/038.png)
+
+1. Expand the **FabrikamFiber.Web.Controllers** namespace node to view the coverage broken down by class. This shows that the **HomeController** class is covered well and that the **EmployeesController** currently has no coverage.
+
+    ![](images/039.png)
+
+1. Finally, let's drill down into the class nodes to see coverage down to the method level by expanding the **CustomersController** class node.
+
+    ![](images/040.png)
+
+1. **Double-click** the **Create(FabrikamFiber.DAL.Models.Customer)** constructor to navigate to the source code to visualize the block coverage.
+
+    ![](images/041.png)
+
+1. In the editor window for **SourceController.cs**, you can see that the code highlighted blue represents the block that was covered by tests whereas the red represents the block that was not covered.
+
+    ![](images/042.png)
+
+1. It is also possible to get code coverage for a specific selection of tests. In **Test Explorer**, right-click **CreateInsertsCustomerAndSaves** and select **Analyze Code Coverage for Selected Tests**.
+
+    ![](images/043.png)
+
+1. Once test execution completes for the selected test, expand the code coverage node and note that only the assemblies loaded during test execution are shown with statistics.
+
+    ![](images/044.png)
+
+1. It is also easy to navigate between different code coverage results by using the drop-down in the **Code Coverage Results** window. Go ahead and select the first code coverage results file.
+
+    ![](images/045.png)
+
+1. Let's say that we want to use these code coverage results in a report or simply share them externally. To do that, click on the **Export Results** button.
+
+    ![](images/046.png)
+
+1. In the **Save Coverage Data as XML** window, you could save the code coverage data to an XML file, but for the purposes of this lab, go ahead and simply **Cancel** out of the dialog and continue on to the next exercise.
+
+    ![](images/047.png)
+
+### Task 4: Code Clone Analysis
+
+In this exercise, you will learn about the Code Clone analysis feature that looks for semantically similar code using a heuristic search technique, rather than simply searching for exact matches.
+
+1. Select **Analyze \| Analyze Solution for Code Clones** from the main menu in Visual Studio.
+
+1. Once the analysis is complete, the **Code Clone Analysis Results** window will show clone candidates grouped by match strength. Expand the **Strong Match** group to expose the two files that had a strong match.
+
+    ![](images/048.png)
+
+1. Each line shows the class and method, specific file, and lines that were determined to be strong matches. If you **mouse over** each match, a snippet of code gives you quick glance at some of the matching code.
+
+    ![](images/049.png)
+
+1. **Double-click** on each match to open them in code editor windows, and then **right-click** on the title tab for one of them and select **New Horizontal Tab Group** from the context menu.
+
+    ![](images/050.png)
+
+1. Scroll through the code to locate the **AssignSchedule** method for each file and note that it is identical except for the last line that calls the **RedirectToAction** method. This indicates that this method is a good candidate for refactoring. This kind of broad search is particularly useful when looking for code that can be refactored for easier maintenance in the future.
+
+    ![](images/051.png)
+
+1. Select **Window \| Close All Documents** from the main menu to clear up some screen real estate space.
+
+1. You can also narrow the focus of the search for code clones if desired. In **Solution Explorer**, navigate to **Controllers** folder of the **FabrikamFiber.Web** project and open **CustomersController.cs** in the code editor.
+
+    ![](images/052.png)
+
+1. Scroll down to the **Create** method that takes a **Customer** parameter and select the three lines of code within the first "if" statement. **Right-click** the selected lines of code and then select the **Find Matching Clones in Solution** option from the context menu.
+
+    ![](images/053.png)
+
+1. After the search is complete, the **Code Clone Search Results** window shows snippet matches of varying strength.
+
+    ![](images/054.png)
+
+1. **Expand** all of the clone groups to expose the discovered matches, including the original clone group. You may want to increase the size of the Code Clone Search Results window so that you can see all matches at a glance.
+
+    ![](images/055.png)
+
+1. Hold the mouse cursor over the original code snippet to remind ourselves what the code clones are being compared to.
+
+    ![](images/056.png)
+
+1. Hold the mouse cursor over the **Exact Match** result and note that the Edit method uses exactly the same code as the code from the Create method.
+
+1. Hold the mouse cursor over the **Strong Match** result and note that the only difference is that the first line is a call to a Delete method.
+
+    ![](images/057.png)
+
+1. Hold the mouse cursor over the first **Medium** **Match** result and note that the snippet is similar to the original, but now we are working with an entirely different object (now **employeeRepository**).
+
+    ![](images/058.png)
+
+1. In summary, there are three main scenarios where the identification of code clones may be useful to developers:
+
+1. Identification of candidates for code refactoring
+
+1. Bug fixes or enhancements are made in code and the developer wants to see if there are other similar locations that should be updated
+
+1. As a learning tool for a new developer starting work on a new team project, e.g. the developer adds code to update a customer record and wants to see if there are practices used by the rest of the codebase such as using a Try... Catch block
