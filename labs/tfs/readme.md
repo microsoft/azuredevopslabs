@@ -164,6 +164,8 @@ Here are the 2018 hands-on-labs for Team Foundation Server. If you want to acces
    </tr>
 </table>
 
-## Previous Version
+## Previous Versions
 
-If you wish to download the previous version of the Visual Studio ALM VM - version 2017, you can download the VM using the links [here](media/almvm2017url.txt) and the [lab documents](https://almvm2017.blob.core.windows.net/vm2017/VisualStudio ALMVM 2017 Labs.zip)
+If you wish to download the previous versions of the Visual Studio ALM VM - here are the links:
+* Version 2017 -  [VM](media/almvm2017url.txt) \|  [Lab documents](https://almvm2017.blob.core.windows.net/vm2017/VisualStudio ALMVM 2017 Labs.zip)
+* Version 2015 Update 2: [VM](https://msdnshared.blob.core.windows.net/media/2016/06/ALMVM-2015-Update-2-Downloads.txt) \| [Lab documents](http://vsalmvm.azurewebsites.net/visual-studio-2015-update-2-alm-virtual-machine-and-hands-on-labs-demo-scripts/)

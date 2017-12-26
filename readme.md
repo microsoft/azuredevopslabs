@@ -43,7 +43,7 @@ The Microsoft ALM/DevOps Hands-On-Labs is a set of self-paced labs based on Visu
 <br />
 
 <h2>Announcements </h2>
- {% for post in site.posts limit:12 %}
+ {% for post in site.posts limit:   10 %}
 <div class="headline">
 
 <span class="headnews">
