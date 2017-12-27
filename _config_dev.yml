@@ -3,7 +3,7 @@ repository: Microsoft/ALMVM
 output: web
 # this property is useful for conditional filtering of content that is separate from the PDF.
 
-topnav_title:  Microsoft Visual Studio DevOps Hands-on-Labs
+topnav_title:  Microsoft Visual Studio 
 # this appears on the top navigation bar next to the home button
 
 site_title: Microsoft Visual Studio DevOps Hands-on-Labs
