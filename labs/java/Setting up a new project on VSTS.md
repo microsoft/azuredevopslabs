@@ -32,12 +32,12 @@ Creating your Visual Studio Team Services account
 2.  Start the Firefox web browser.
 
 3.  If you don’t have an existing Microsoft account that you want to
-    use, visit <http://www.outlook.com> to create a Microsoft Account
+    use, visit <https://outlook.live.com/owa/> to create a Microsoft Account
     and optionally get yourself a free personal e-mail address. If you
     have a Microsoft account you want to use, just continue to the
     next step.
 
-4.  Navigate to <http://www.visualstudio.com>.
+4.  Navigate to <https://www.visualstudio.com>.
 
 5.  In the upper right-hand corner, click the **Sign In** link.
 
@@ -70,7 +70,7 @@ Creating your Visual Studio Team Services account
     However, from time to time, we experiment with different ways to onboard new customers. It is possible 
     what you see will vary. In general, the following data is required.</pre>
 
-    The first piece of data is the **Account URL**. Currently, all Visual  Studio Team Services accounts live within the top-level
+    The first piece of data is the **Account URL**. Currently, all Visual Studio Team Services accounts live within the top-level
     **visualstudio.com** domain. The account name you choose could be something personal, like your name, or something more work-related, like
     your company name. If you do intend to set up your account to share with others at your organization, you might want to coordinate this with
     those in your organization that manage your servers and infrastructure. 
@@ -169,7 +169,7 @@ Importing a Github Repo into VSTS
 In this task you will import code from a Github repo into VSTS.
 
 1. Connect to the virtual machine with the user credentials which you specified when creating the VM in Azure.
-1. Open Chrome and browse to `http://<youraccount>.visualstudio.com` (where `youraccount` is the account you created in VSTS).
+1. Open Chrome and browse to `https://<youraccount>.visualstudio.com` (where `youraccount` is the account you created in VSTS).
 1. Click on the `jdev` team project to navigate to it. Click on Code in the blue toolbar at the top to open the Code Hub.
 1. Click on the repo drop-down in the upper left (in the grey toolbar) and select "Import repository"
 
@@ -201,4 +201,4 @@ In this task you will import the MyShuttleCalc code from Github into VSTS. If yo
 
 Now you’re going to manage your backlog with Visual Studio Team
 Services. You can read more about account creation and more at
-[https://www.visualstudio.com/en-us/docs/setup-admin/team-services/connect-to-visual-studio-team-services](https://www.visualstudio.com/en-us/docs/setup-admin/team-services/connect-to-visual-studio-team-services)
+[https://docs.microsoft.com/en-us/vsts/user-guide/connect-team-projects](https://docs.microsoft.com/en-us/vsts/user-guide/connect-team-projects)
