@@ -33,10 +33,11 @@ You can get access to the virtual machine the following ways:
 - **Download the Virtual Machine** - You can download the virtual machine, if you prefer to use it offline. Please see below for instructions to download the VM.
 - **Try it on Technet Virtual Labs** - **Coming soon** We will be publishing the labs to TechNet so that you can try them online from the convenience of your browser. No downloads, No setup required!
 
-- **Run it on Azure** - If you prefer to run the VM on Azure, you can simply upload the VHD to your Azure storage and create a VM from the VHD. Please see this article [Create a Windows VM from a specialized disk](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/create-vm-specialized). 
+- **Run it on Azure** - If you prefer to run the VM on Azure, you can simply upload the VHD to your Azure storage and create a VM from the VHD. Thanks to **Pieter Gheysens** who has written a PowerShell script to create VM instances based on the ALM VM. His [blog](https://intovsts.net/2018/01/03/generating-azure-vms-from-a-specialized-vhd-file/) has more details. 
 
-    If you are setting up the labs for a training, you  might want to consider [Azure DevTest Labs](https://docs.microsoft.com/en-us/azure/devtest-lab/devtest-lab-training-lab) for training.
+  If you want to and customize and upload the VHD yourself, please see this article for step-by-step instructions - [Create a Windows VM from a specialized disk](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/create-vm-specialized). 
 
+ 
 ## Downloading and extracting the VM
 
 The size of the download is about 18 GB. It is recommended that you use a download manager  like [**Free download manager**](http://www.freedownloadmanager.org/) or [**Download Accelerator Plus**](http://www.speedbit.com/dap/).
