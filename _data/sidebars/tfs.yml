@@ -192,7 +192,7 @@ entries:
       url: labs/tfs/armtemplates/
       output: web, pdf
 
-    - title: Deploying a SQL Database backed ASP.NET app with Visual Studio
+    - title: Deploying a SQL Database backed ASP.NET app to Azure with Visual Studio
       url: labs/tfs/aspnetazure/
       output: web, pdf
 
