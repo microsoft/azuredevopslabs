@@ -3,7 +3,7 @@ title:  "ALM VM 2017 Available Now!"
 permalink: /almvm2017available.html
 pubdate: March 15, 2017
 Author: Sachin Hridayraj
-pageurl: /labs/tfs/
+pageurl: labs/tfs/
 ---
 
 <table class="mainTable" width="100%" border="0">

@@ -3,7 +3,7 @@ title:  "Visual Studio Team Services Labs Available Now!"
 permalink: /vstslabsavailable.html
 pubdate: March 15, 2017
 Author: Sachin Hridayraj
-pageurl: /labs/vsts/
+pageurl: labs/vsts/
 ---
 
 <table class="mainTable" width="100%" border="0">
