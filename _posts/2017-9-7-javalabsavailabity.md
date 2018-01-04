@@ -3,7 +3,7 @@ title:  "DevOps for Java with VSTS"
 permalink: /javalabs.html
 pubdate: September 7, 2017
 Author: Sachin Hridayraj
-pageurl: /labs/java/
+pageurl: labs/java/
 ---
 
 <table class="mainTable" width="100%" border="0">

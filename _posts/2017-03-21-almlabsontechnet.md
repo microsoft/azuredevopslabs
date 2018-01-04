@@ -3,7 +3,7 @@ title:  "2017 Labs Now Available on TechNet Virtual Labs"
 permalink: /almvm2017ontechnet.html
 pubdate: March 21, 2017
 Author: Sachin Hridayraj
-pageurl: /labs/tfs/technet/
+pageurl: labs/tfs/technet/
 ---
 
 <table class="mainTable" width="100%" border="0">

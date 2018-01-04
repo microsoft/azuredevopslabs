@@ -3,7 +3,7 @@ title:  "DevOps for Node.js with Visual Studio Team Services and Azure"
 permalink: /nodejs.html
 pubdate: September 14, 2017
 Author: Sachin Hridayraj
-pageurl: /labs/vsts/
+pageurl: labs/vsts/
 ---
 
 <table class="mainTable" width="100%" border="0">

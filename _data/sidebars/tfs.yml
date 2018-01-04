@@ -52,6 +52,10 @@ entries:
       url: labs/tfs/smartword4tfs/
       output: web, pdf
 
+    - title: Managing Delivery Plans with Team Foundation Server 2018
+      url: labs/tfs/deliveryplans/
+      output: web, pdf
+
   - title: Develop
     output: web, pdf
     folderitems:
@@ -178,4 +182,20 @@ entries:
     folderitems:
     - title: Instrumenting ASP.NET with Application Insights in Visual Studio 2017
       url: labs/tfs/appinsights/
+      output: web, pdf
+
+  - title: Azure
+    output: web, pdf
+
+    folderitems:
+    - title: Authoring ARM Templates with Visual Studio
+      url: labs/tfs/armtemplates/
+      output: web, pdf
+
+    - title: Deploying a SQL Database backed ASP.NET app to Azure with Visual Studio
+      url: labs/tfs/aspnetazure/
+      output: web, pdf
+
+    - title: Deploying to Azure with Team Foundation Server Release Management
+      url: labs/tfs/releasemanagement/
       output: web, pdf

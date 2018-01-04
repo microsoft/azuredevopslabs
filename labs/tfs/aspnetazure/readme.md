@@ -1,5 +1,5 @@
 ---
-title: Building ASP.NET apps in Azure with SQL Database 
+title: Deploying a SQL Database backed ASP.NET apps to Azure with Visual Studio 
 layout: page
 sidebar: tfs
 permalink: /labs/tfs/aspnetazure/
