@@ -195,3 +195,7 @@ entries:
     - title: Building ASP.NET apps in Azure with SQL Database
       url: labs/tfs/aspnetazure/
       output: web, pdf
+
+    - title: Embracing Continuous Delivery with Release Management for Team Foundation Server 2017
+      url: labs/tfs/releasemanagement/
+      output: web, pdf
