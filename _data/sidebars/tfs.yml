@@ -192,10 +192,10 @@ entries:
       url: labs/tfs/armtemplates/
       output: web, pdf
 
-    - title: Building ASP.NET apps in Azure with SQL Database
+    - title: Deploying a SQL Database backed ASP.NET app with Visual Studio
       url: labs/tfs/aspnetazure/
       output: web, pdf
 
-    - title: Embracing Continuous Delivery with Release Management for Team Foundation Server 2017
+    - title: Deploying to Azure with Team Foundation Server Release Management
       url: labs/tfs/releasemanagement/
       output: web, pdf
