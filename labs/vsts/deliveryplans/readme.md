@@ -2,13 +2,15 @@
 
 ## Overview
 
+It takes several teams to develop large software projects. Very large projects require multiple autonomous teams that can manage their own backlog and priority while contributing to a unified direction for that project. Regular reviews of the project schedule with these teams help ensure that the teams are working toward common goals. Delivery Plans provide the needed multi-team view of your project schedule.
+
 Delivery Plans provides an easier way to see work across teams and projects. Available as an extension, Delivery plan makes it easy for you to review the schedule of stories or features your teams plan to deliver . You can see scheduled work items by sprint (iteration path) of selected teams against a calendar view.
 
 ## Pre-requisite
 
 - You will need to install the Delivery Plan extension to your VSTS account in order to continue this lab
 
-## Adding Delivery Plan Extension to the VSTS account
+## Installing delivery plans extension
 
 1. Go to <a href="https://marketplace.visualstudio.com">Visual Studio MarketPlace</a>
 
@@ -20,11 +22,11 @@ Delivery Plans provides an easier way to see work across teams and projects. Ava
 
    <img src="images/17.png"/>
 
-3. Select the account to which you want to install the extension and select **Continue** to proceed with the installation.
+3. Select the account to which you want to install the extension and click **Install** to proceed with the installation.
 
    <img src="images/18.png"/>
 
-## Add a Plan
+## Creating a Delivery Plan
 
 1. From your VSTS account, go to **Plans** page that appears under **Work** hub.
 
@@ -44,7 +46,7 @@ Delivery Plans provides an easier way to see work across teams and projects. Ava
 
    <img src="images/4.png" />
 
-## Edit a plan, add field criteria, customize cards, and add markers
+## Customizing the plan
 
 Once you've defined a plan, you can further customize it. 
 
@@ -58,7 +60,7 @@ Once you've defined a plan, you can further customize it.
 
    <img src="images/6.png" />
 
-   Now you can see all backlog items with effort greater than 5.
+   Now you will see all backlog items with effort greater than 5.
 
    <img src="images/20.png" />
 
@@ -66,7 +68,7 @@ Once you've defined a plan, you can further customize it.
 
    <img src="images/21.png" />
 
-   You should see multiple teams in your plan now.
+   You will see multiple teams in your plan now.
 
    <img src="images/22.png" />
 
