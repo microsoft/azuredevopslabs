@@ -14,6 +14,11 @@ You can gain insight and analyze the progress and quality of your project by con
 
 Power BI is a suite of business analytics tools that deliver insights throughout your organization. Connect to hundreds of data sources, simplify data prep, and drive ad hoc analysis. Produce beautiful reports, then publish them for your organization to consume on the web and across mobile devices. Everyone can create personalized dashboards with a unique, 360-degree view of their business. And scale across the enterprise, with governance and security built-in.
 
+>**Important Note**:
+The Visual Studio Team Services (VSTS) Content Pack for Power BI has been deprecated on November 15, 2017 primarily due to the negative impact it has had on VSTS accounts, including throttling end users access. Support will continue for all existing PowerBI.com data sets based on the Content Pack. However, you won’t be able to create any new data sets.
+
+>The [Analytics Marketplace extension](https://marketplace.visualstudio.com/items?itemName=ms.vss-analytics) and upcoming updates to the [Power BI Desktop connector](https://docs.microsoft.com/en-us/vsts/report/powerbi/data-connector-connect) for VSTS are intended to replace and improve on the capabilities of the Content Pack. While the Analytics Marketplace extension currently supports Work Item Tracking data, we will update it to support additional data types including Tests, Build, Release and Version Control. In the interim, you can use [VSTS REST APIs](https://www.visualstudio.com/en-us/docs/integrate/api/overview) as an alternative to the Content Pack to report on these additional data types.
+
 ## Pre-requisites
 
 1. You should have Office365 account in order to integrate Visual Studio Team Services with Power BI
