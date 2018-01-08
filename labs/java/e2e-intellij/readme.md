@@ -43,7 +43,7 @@ In this task you will enforce quality on the master branch by creating branch po
 
 1. In the tree, expand the MyShuttle2 repo and click on the master branch. Click the Branch Policies tab.
 
-    ![Open branch policies](images/branch-policies.png")
+    ![Open branch policies](images/branch-policies.png)
 
 1. Check the Protect this branch checkbox.
 
