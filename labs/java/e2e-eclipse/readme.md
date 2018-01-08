@@ -108,7 +108,7 @@ In this task you will start a test session, discover a bug in the MyShuttle app 
 
 In this task you will create a branch of the code to fix the Bug. You will then checkout the branch, fix the bug and commit the code. You will then create a Pull Request to merge the fix into master and see that this triggers the CI/CD pipeline to automatically deploy the fix to the dev environment.
 
->Note: Use the personal access token (PAT) generated from the "Set up a Docker Build" lab that should be located at: `home/vmadmin/pat.txt`. Otherwise, follow the instructions from that lab again to generate a new PAT. 
+>Note: Use the personal access token (PAT) generated from the "Set up a Docker Build" lab that should be located at: `home/vmadmin/pat.txt`. Otherwise, follow the instructions from that lab again to generate a new PAT.
 
 1. Open Eclipse if it is not already open. Open the MyShuttle2 project.
 
@@ -116,21 +116,21 @@ In this task you will create a branch of the code to fix the Bug. You will then 
 
 1. If there are no queries saved in VSTS, a query can be created in Eclipse (but not saved at this time). Right-click on the My Queries folder and select "New Query."
 
-    ![New query](images/e2e-eclipse/newquery.png)
+    ![New query](images/newquery.png)
 
 1. Run an existing query by double clicking it to find the bug. Or, right click in the New Query panel and select "Run Query." The output of the query will show the bug. Note the ID value of the bug.
 
-    ![Confirm the bug is correctly assigned and in VSTS](images/e2e-eclipse/findbug.png")
+    ![Confirm the bug is correctly assigned and in VSTS](images/findbug.png)
 
     > **Note**: If you do not see the bug, ensure that it is assigned to you, since by default only work items assigned to you will appear in the work item list.
 
 1. Create a new branch
 
-    ![New branch](images/e2e-eclipse/createbranch.png)
+    ![New branch](images/createbranch.png)
 
 1. In the dialog, change the branch name to "totalsBug" and click Create.
 
-    ![New branch](images/e2e-eclipse/createbranch2.png)
+    ![New branch](images/createbranch2.png)
 
 1. In the project view of Eclipse, browse to `src/main/java/com.microsoft.example.servlet` and open the LoginServlet class.
 
@@ -147,7 +147,7 @@ In this task you will create a branch of the code to fix the Bug. You will then 
 
 1. Commit your changes by right clicking the file and selecting Team->Commit. Enter "Fixing totals bug #{ID of bug}" as the commit message. By putting the # symbol followed by an ID of a work item in a commit message, VSTS will automatically associate the work item with the commit when it's pushed to VSTS. In the example of the screenshot, the ID is #698. Click "Commit and Push" to push the changes to VSTS.
 
-    ![Commit and Push](images/e2e-eclipse/eclipse-newcommit.png)
+    ![Commit and Push](images/eclipse-newcommit.png)
 
 1. If a window pops up that prompts for credentials, use the following values:
 
@@ -162,15 +162,15 @@ In this task you will create a branch of the code to fix the Bug. You will then 
 
 1. Now that the fix has been pushed to VSTS on a branch, you can create a Pull Request. This will be done in VSTS following the standard process for pull requests. Under the Code hub, click on Files in the MyShuttle2 repo and there should be a notification that you updated the `totalsBug` branch. Click the link next to it, "Create a pull request."
 
-    ![Create Pull Request](images/e2e-eclipse/pullrequest.png)
+    ![Create Pull Request](images/pullrequest.png)
 
 1. Then, in the pull request panel, click "Create" to create the pull request. Note that the bug is associated with the commit.
 
-    ![Create Pull Request](images/e2e-eclipse/pullrequest2.png)
+    ![Create Pull Request](images/pullrequest2.png)
 
 1. Once the PR has been created, right-click it in the PR list and click Open in Browser. You should see that the build is running (this is the build mandated by the Branch Policy you set up earlier).
 
-    ![Build is running to validate the PR](images/e2e-eclipse/pr-overview.png)
+    ![Build is running to validate the PR](images/pr-overview.png)
 
     > **Note**: If there was a merge conflict, VSTS would warn you on the overview page. If there is no warning to this effect, then Git will be able to auto-merge the PR into the target branch.
 
