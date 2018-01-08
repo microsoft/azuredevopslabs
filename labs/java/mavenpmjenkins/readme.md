@@ -3,7 +3,7 @@ title: Maven Package Management with VSTS and Jenkins
 layout: page
 sidebar: java
 permalink: /labs/java/mavenpmjenkins
-folder: /labs/java/
+folder: /labs/java/mavenpmjenkins
 comments: true
 ---
 
