@@ -2,8 +2,8 @@
 title: End to End workflow with IntelliJ 
 layout: page
 sidebar: java
-permalink: /labs/java/intellij.html
-folder: /labs/java/
+permalink: /labs/java/e2eintellij
+folder: /labs/java/e2eintellij
 comments: true
 ---
 

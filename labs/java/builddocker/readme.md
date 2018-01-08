@@ -2,8 +2,8 @@
 title: Build and publishing Docker images
 layout: page
 sidebar: java
-permalink: /labs/java/builddocker.html
-folder: /labs/java/
+permalink: /labs/java/builddocker
+folder: /labs/java/builddocker
 comments: true
 ---
 

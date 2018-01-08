@@ -2,8 +2,8 @@
 title: Working with IntelliJ 
 layout: page
 sidebar: java
-permalink: /labs/java/intellij-git
-folder: /labs/java/
+permalink: /labs/java/intellijgit
+folder: /labs/java/intellijgit
 comments: true
 ---
 
@@ -12,7 +12,7 @@ This exercise assumes you have completed Exercise 1, have created a Team Project
 
 ## Connect to VSTS from IntelliJ
 
-1. Click on the IntelliJ icon in the toolbar to open IntellJ IDEA.
+1. Click on the IntelliJ icon in the toolbar to open IntelliJ IDEA.
 
     ![Click IntelliJ in the Toolbar](images/click-intellij.png)
 

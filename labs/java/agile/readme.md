@@ -2,7 +2,7 @@
 title:  Managing your team project backlog
 layout: page
 sidebar: java
-permalink: /labs/java/agile.html
+permalink: /labs/java/agile
 folder: /labs/java/agile/
 ---
 
