@@ -156,7 +156,7 @@ In this task you will create a branch of the code to fix the Bug. You will then 
     | User | `_VSTS_Code_Access_Token` |
     | Password | `{PAT that you copied earlier}` |
 
-    ![Login to Eclipse](images/packagemanagement/eclipse-login.png)
+    ![Login to Eclipse](images/eclipse-login.png)
 
     In the Push commits dialog click the Push button.
 
