@@ -2,7 +2,7 @@
 title: Working with IntelliJ 
 layout: page
 sidebar: java
-permalink: /labs/java/intellij-vsts.html
+permalink: /labs/java/intellij-git
 folder: /labs/java/
 comments: true
 ---
