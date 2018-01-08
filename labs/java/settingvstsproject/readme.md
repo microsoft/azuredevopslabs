@@ -2,8 +2,8 @@
 title: Creating your Visual Studio Team Services account and Team project 
 layout: page
 sidebar: java
-permalink: /labs/java/creatingvstsaccount.html
-folder: /labs/java/
+permalink: /labs/java/settingvstsproject
+folder: /labs/java/settingvstsproject
 comments: true
 ---
 ## Creating your Visual Studio Team Services account and Team project
