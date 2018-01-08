@@ -56,7 +56,7 @@ entries:
     output: web, pdf
     folderitems:
     
-    - title: Collaboration Experiences for Development Teams using Team Foundation Server 2018
+    - title: Collaboration Experiences for Development Teams with Wiki
       url: labs/tfs/devteamcollaboration/
       output: web, pdf
 
