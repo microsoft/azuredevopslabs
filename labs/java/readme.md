@@ -40,16 +40,43 @@ You can use [Visual Studio Team Services Demo Generator](https://vstsdemogenerat
 
 The labs should be followed in the following order, though there are some equivalent labs that allow you a "choose your adventure" experience:
 
-| Labs |
-|------|
-| [Setting up a new project on VSTS](settingvstsproject)|
-|[Set up a Docker build agent](dockerbuildagent)|
-|[Cloning a VSTS Repo - IntelliJ](intellijgit)|
-|[Cloning a VSTS Repo - Eclipse](eclipsegit)|
-|[Maven Package Management with VSTS and Jenkins](mavenpmjenkins)|
-|[Maven Package Management with VSTS Team Build](mavenpmvsts)|
-|[Build Docker containers with VSTS](builddocker)|
-|[Managing Technical Debt with SonarQube and VSTS Team Build](sonarqube)|
-|[Release Management with VSTS](releasemanagement)|
-|[End to End Workflow - IntelliJ](e2eintellij)|
-|[End to End Workflow - Eclipse](e2eeclipse)|
+<table width="70%">
+   <thead>
+      <tr>
+         <th width="75%"><b>Lab Name</b></th>
+      </tr>
+   </thead>
+   <tr>
+      <td><a href="settingvstsproject/">Setting up a new project on VSTS</a></td>
+   </tr>
+   <tr>
+      <td><a href="dockerbuildagent/">Set up a Docker build agent</a></td>
+   </tr>
+   <tr>
+      <td><a href="intellijgit/">Cloning a VSTS Repo - IntelliJ</a></td>
+   </tr>
+   <tr>
+      <td><a href="eclipsegit/">Cloning a VSTS Repo - Eclipse</a></td>
+   </tr>
+   <tr>
+      <td><a href="mavenpmjenkins/">Maven Package Management with VSTS and Jenkins</a></td>
+   </tr>
+   <tr>
+      <td><a href="mavenpmvsts/">Maven Package Management with VSTS Team Build</a></td>
+   </tr>
+   <tr>
+      <td><a href="builddocker/">Build Docker containers with VSTS</a></td>
+   </tr>
+   <tr>
+      <td><a href="sonarqube/">Managing Technical Debt with SonarQube and VSTS Team Build</a></td>
+   </tr>
+   <tr>
+      <td><a href="releasemanagement/">Release Management with VSTS</a></td>
+   </tr>
+   <tr>
+      <td><a href="e2eintellij/">End to End Workflow - IntelliJ</a></td>
+   </tr>
+   <tr>
+      <td><a href="e2eeclipse/">End to End Workflow - Eclipse</a></td>
+   </tr>
+</table>

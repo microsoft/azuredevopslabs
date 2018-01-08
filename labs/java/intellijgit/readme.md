@@ -2,8 +2,8 @@
 title: Working with IntelliJ 
 layout: page
 sidebar: java
-permalink: /labs/java/intellijgit
-folder: /labs/java/intellijgit
+permalink: /labs/java/intellijgit/
+folder: /labs/java/intellijgit/
 comments: true
 ---
 

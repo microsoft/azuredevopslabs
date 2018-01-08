@@ -2,8 +2,8 @@
 title: Deploying to Azure
 layout: page
 sidebar: java
-permalink: /labs/java/releasemanagement
-folder: /labs/java/releasemanagement
+permalink: /labs/java/releasemanagement/
+folder: /labs/java/releasemanagement/
 comments: true
 ---
 

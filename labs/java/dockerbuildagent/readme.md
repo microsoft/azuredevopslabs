@@ -2,8 +2,8 @@
 title: Setting up a Private VSTS Build Agent (Docker)
 layout: page
 sidebar: java
-permalink: /labs/java/dockerbuildagent
-folder: /labs/java/dockerbuildagent
+permalink: /labs/java/dockerbuildagent/
+folder: /labs/java/dockerbuildagent/
 comments: true
 ---
 

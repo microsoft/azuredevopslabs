@@ -2,8 +2,8 @@
 title: End to End workflow with Eclipse 
 layout: page
 sidebar: java
-permalink: /labs/java/e2eeclipse
-folder: /labs/java/e2eeclipse
+permalink: /labs/java/e2eeclipse/
+folder: /labs/java/e2eeclipse/
 comments: true
 ---
 

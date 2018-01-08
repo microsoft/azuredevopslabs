@@ -2,8 +2,8 @@
 title: Cloning a VSTS code repository in Eclipse 
 layout: page
 sidebar: java
-permalink: /labs/java/eclipsegit
-folder: /labs/java/eclipsegit
+permalink: /labs/java/eclipsegit/
+folder: /labs/java/eclipsegit/
 comments: true
 ---
 

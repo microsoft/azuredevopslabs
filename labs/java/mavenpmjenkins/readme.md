@@ -2,8 +2,8 @@
 title: Maven Package Management with VSTS and Jenkins
 layout: page
 sidebar: java
-permalink: /labs/java/mavenpmjenkins
-folder: /labs/java/mavenpmjenkins
+permalink: /labs/java/mavenpmjenkins/
+folder: /labs/java/mavenpmjenkins/
 comments: true
 ---
 
@@ -24,7 +24,7 @@ Before getting to the build, you will need to create the Maven Package Feed and 
 - Create a Maven Package Feed
 - Create a Maven Settings File with the Feed Credentials
 
-### Create an SSH Key for Git authentication
+## Create an SSH Key for Git authentication
 
 In this task you will create an SSH key to authenticate to the VSTS repo. You need to create an SSH key if you do not already have one, then upload the public key to VSTS. The Jenkins job will use the key to authenticate to the repo.
 
