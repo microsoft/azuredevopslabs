@@ -3,7 +3,7 @@ title: Maven Package Management with Visual Studio Team Services
 layout: page
 sidebar: java
 permalink: /labs/java/mavenpmvsts
-folder: /labs/java/
+folder: /labs/java/mavenpmvsts
 comments: true
 ---
 In this exercise, you are going to set up package management with Maven in VSTS. This repo contains a class library (MyShuttleCalc) that is used by the MyShuttle2 application. You will configure a VSTS build to publish the MyShuttleCalc package to a VSTS Maven Package feed so that it can be consumed by MyShuttle2 and any other applications that require the calculation code.
