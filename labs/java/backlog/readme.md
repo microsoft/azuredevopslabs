@@ -150,7 +150,7 @@ through the MyShuttle scenario.
 
      ![](images/image18.png)
 
-1. In the Committed column, on the only card, click the 
+1. In the Committed column, on the only card, click the
     ![](images/image19.png) item.
 
     ![](images/image20.png)
