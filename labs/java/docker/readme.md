@@ -91,7 +91,7 @@ In this task you will update the pom.xml file for the MyShuttle2 application so 
 
     >Note: Ensure that you have already copied the settings.xml file from MyShuttleCalc to the .m2 folder before you run this. Otherwise, you can specify the settings.xml file in MyShuttle2 by clicking on the "File System..." button to the right of the User settings field in the configuration window to reference a settings file other than in the default .m2 folder.
 
-1. Commit and push your changes through Team Explorer Everywhere. 
+1. Commit and push your changes through Team Explorer Everywhere.
 
 ## Create a VSTS Build to Build Docker Images
 
