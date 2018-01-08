@@ -51,21 +51,21 @@ This exercise assumes you have completed Exercise 1, have created a Team Project
 
     ![Sign in to VSTS](images/eclipse-vsts-signin.png)
 
-    Choose the radio button next to "Connect to a Team Foundation Server or Team Services account" then press the "Servers..." button. In the "Add/Remove Team Foundation Server" panel, click "Add..." and type in the name of the VSTS account (`https://{your-account-name}.visualstudio.com`) in the "Add Team Foundation Server" panel. Then press the OK button.
+1. Choose the radio button next to "Connect to a Team Foundation Server or Team Services account" then press the "Servers..." button. In the "Add/Remove Team Foundation Server" panel, click "Add..." and type in the name of the VSTS account (`https://{your-account-name}.visualstudio.com`) in the "Add Team Foundation Server" panel. Then press the OK button.
 
     ![Sign in to VSTS](images/browsevsts.png)
 
-    The "Follow the instructions to complete sign-in" window will pop up. Click on the hyperlink to be redirected to the Device Login page in a browser on the VM (may have a black background for security purposes).
+1. The "Follow the instructions to complete sign-in" window will pop up. Click on the hyperlink to be redirected to the Device Login page in a browser on the VM (may have a black background for security purposes).
 
     ![Sign in to VSTS](images/eclipse-signin.png)
 
-    Copy the code in the text field in Eclipse and paste it into the browser page, then press the "Continue" button. Then sign in with your credentials used to access VSTS. If you get the credentials wrong you can try again by closing Eclipse, deleting ~/.microsoft/Team Explorer/4.0/*, and restarting Eclipse.
+1. Copy the code in the text field in Eclipse and paste it into the browser page, then press the "Continue" button. Then sign in with your credentials used to access VSTS. If you get the credentials wrong you can try again by closing Eclipse, deleting ~/.microsoft/Team Explorer/4.0/*, and restarting Eclipse.
 
     ![Device login](images/browser-devicelogin.png)
 
     ![Device login](images/browser-deviceloggedin.png)
 
-    Back in Eclipse, press the OK button in the device login window. The VSTS account should now show up in the list of servers to connect to. Press the "Close" button to close the current window.
+1. Back in Eclipse, press the OK button in the device login window. The VSTS account should now show up in the list of servers to connect to. Press the "Close" button to close the current window.
 
     ![Sign in to VSTS](images/eclipse-tfslist.png "Sign in to VSTS")
 
@@ -77,17 +77,17 @@ This exercise assumes you have completed Exercise 1, have created a Team Project
 
     Select the appropriate team project in Eclipse, then press the "Finish" button.
 
-    In the Team Explorer Everywhere panel, choose the "Git Repositories" panel, then select the MyShuttle2 repo in the team project and right-click the repo and select "Import Repository."
+1. In the Team Explorer Everywhere panel, choose the "Git Repositories" panel, then select the MyShuttle2 repo in the team project and right-click the repo and select "Import Repository."
 
     ![Select the VSTS repo](images/eclipse-select-repo.png)
 
     ![Select the VSTS repo](images/eclipse-select-repo2.png)
 
-    Leave the defaults for the parent directory and repo folder name, then press the next button. This will clone the repo onto the VM.
+1. Leave the defaults for the parent directory and repo folder name, then press the next button. This will clone the repo onto the VM.
 
     ![Select the VSTS repo](images/eclipse-select-repo3.png)
 
-    In the "Import Projects from Team Foundation Server" window, click the cancel button. We will instead import the project as a Maven project instead of Eclipse project.
+1. In the "Import Projects from Team Foundation Server" window, click the cancel button. We will instead import the project as a Maven project instead of Eclipse project.
 
     ![Select the VSTS repo](images/eclipse-importprojects.png)
 
@@ -95,11 +95,11 @@ This exercise assumes you have completed Exercise 1, have created a Team Project
 
     ![Import the Maven project](images/eclipse-import.png "Import the Maven project")
 
-    In the Import window, expand the Maven folder and choose "Existing Maven projects." Then press the Next button.
+1. In the Import window, expand the Maven folder and choose "Existing Maven projects." Then press the Next button.
 
     ![Import the Maven project](images/eclipse-import-existingmavenprojects.png)
 
-    For the root directory, click on the Browse button or type in the root directory path of /home/vmadmin/MyShuttle2. The pom.xml file should appear under projects to indicate the Maven project. Additionally, click the checkbox next to "Add project(s) to working set" to add myshuttle to the working set to access in the Package Explorer window as a separate project. Then click the Finish button.
+1. For the root directory, click on the Browse button or type in the root directory path of /home/vmadmin/MyShuttle2. The pom.xml file should appear under projects to indicate the Maven project. Additionally, click the checkbox next to "Add project(s) to working set" to add myshuttle to the working set to access in the Package Explorer window as a separate project. Then click the Finish button.
 
     ![Import the Maven project](images/eclipse-select-mavenproject.png)
 
@@ -119,11 +119,11 @@ This exercise assumes you have completed Exercise 1, have created a Team Project
 
     ![Select the VSTS repo](images/eclipse-import-myshuttlecalc.png)
 
-    Leave the defaults for the parent directory and repo folder name, then press the next button. This will clone the repo onto the VM.
+1. Leave the defaults for the parent directory and repo folder name, then press the next button. This will clone the repo onto the VM.
 
     ![Select the VSTS repo](images/eclipse-select-myshuttlecalc.png)
 
-    In the "Import Projects from Team Foundation Server" window, click the cancel button. We will instead import the project as a Maven project instead of Eclipse project.
+1. In the "Import Projects from Team Foundation Server" window, click the cancel button. We will instead import the project as a Maven project instead of Eclipse project.
 
     ![Select the VSTS repo](images/eclipse-importprojects2.png)
 
@@ -135,10 +135,10 @@ This exercise assumes you have completed Exercise 1, have created a Team Project
 
     ![Import the Maven project](images/eclipse-import-existingmavenprojects.png)
 
-    For the root directory, click on the Browse button or type in the root directory path of /home/vmadmin/MyShuttleCalc. The pom.xml file should appear under projects to indicate the Maven project. Additionally, click the checkbox next to "Add project(s) to working set" to add myshuttle to the working set to access in the Package Explorer window as a separate project. Then click the Finish button.
+1. For the root directory, click on the Browse button or type in the root directory path of /home/vmadmin/MyShuttleCalc. The pom.xml file should appear under projects to indicate the Maven project. Additionally, click the checkbox next to "Add project(s) to working set" to add myshuttle to the working set to access in the Package Explorer window as a separate project. Then click the Finish button.
 
     ![Import the Maven project](images/eclipse-select-mavenproject2.png)
 
-    1. Click on Window -> Show View -> Package Explorer in the toolbar at the top of Eclipse to view the myshuttle project in Eclipse in Package Explorer. You may have to minimize other windows to view the Package Explorer view cleanly.
+1. Click on Window -> Show View -> Package Explorer in the toolbar at the top of Eclipse to view the myshuttle project in Eclipse in Package Explorer. You may have to minimize other windows to view the Package Explorer view cleanly.
 
     ![MyShuttleCalc project](images/eclipse-myshuttlecalc.png)
