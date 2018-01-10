@@ -89,7 +89,7 @@ Here are the 2018 hands-on-labs for Team Foundation Server. If you want to acces
       <td><a href="aspnetazure/">Building ASP.NET apps in Azure with SQL Database</a>     <span class="label label-success">New</span></td>
    </tr>
    <tr>
-      <td><a href="devteamcollaboration/">Collaboration Experiences for Development Teams with Wiki</a><span class="label label-success">New</span></td>
+      <td><a href="devteamcollaboration/">Collaboration Experiences for Development Teams with Wiki</a> <span class="label label-success">New</span></td>
    </tr>
    <tr>
       <td><a href="snapshotdebugger/">Debugging with Snapshot Debugger</a>     <span class="label label-success">New</span></td>
