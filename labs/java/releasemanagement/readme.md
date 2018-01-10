@@ -168,7 +168,7 @@ In this task you will create a Release Definition with a single environment call
 
 1. When the release completes, click on the Tests tab and then change the filter to see that the tests all succeeded.
 
-    ![View test results](images/test-results.png")
+    ![View test results](images/test-results.png)
 
 1. In Chrome, browse to `http://localhost:8081/myshuttledev/` to see the site running.
 
