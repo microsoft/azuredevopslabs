@@ -11,7 +11,7 @@ folder: /labs/tfs/technet/
 
 The ALM VM 2017 (Winter Update) and the corresponding labs are now available on TechNet Virtual Labs which means you can try them from a browser or a windows client without having to worry about downloading the entire virtual machine.
 
-***Note: TechNet infrastructure is not designed for classroom trainings. There is a concurrency limit for the labs. Should you want to use them in a classroom, please contact the [Learning On-Demand](mailto:lodslabs@microsoft.com?Subject=TechNet%20labs%20for%20classroom%20usage) team
+**Note**: TechNet infrastructure is not designed for classroom trainings. There is a concurrency limit for the labs. Should you want to use them in a classroom, please contact the [Learning On-Demand](mailto:lodslabs@microsoft.com?Subject=TechNet%20labs%20for%20classroom%20usage) team
 
 Here are the links to the labs on TechNet Virtual Labs:
 
