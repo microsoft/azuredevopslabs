@@ -1,5 +1,5 @@
 ---
-title: Accessing the VS ALM VM 2017 on Microsoft TechNet Virtual Center
+title: Accessing the VS ALM VM 2017 (Winter Update) on Microsoft TechNet Virtual Labs
 layout: page    
 sidebar: tfs
 permalink: /labs/tfs/technet/
@@ -9,7 +9,7 @@ folder: /labs/tfs/technet/
 
 [Microsoft TechNet Virtual Labs](https://technet.microsoft.com/en-us/virtuallabs) provides a quick and easy way to evaluate and test Microsoft’s newest products and technologies through virtual environments that do not require any complex setup or installation. You can use virtual labs online immediately for free :)
 
-The ALM VM 2017 and the corresponding labs are now available on TechNet Virtual Labs which means you can try them from a browser or a windows client without having to worry about downloading the entire virtual machine. 
+The ALM VM 2017 (Winter Update) and the corresponding labs are now available on TechNet Virtual Labs which means you can try them from a browser or a windows client without having to worry about downloading the entire virtual machine. 
 
 ***Note: TechNet infrastructure is not designed for classroom trainings. There is a concurrency limit for the labs. Should you want to use them in a classroom, please contact the <a href="mailto:lodslabs@microsoft.com?Subject=TechNet%20labs%20for%20classroom%20usage"> Learning On-Demand</a> team***
 
@@ -21,8 +21,8 @@ Here are the links to the labs on TechNet Virtual Labs:
     <th width="20%">URL</th>
   </tr>
   <tr>
-    <td >Collaboration Experiences for Development Teams using Team Foundation Server 2017</td>
-    <td ><a href="https://vlabs.holsystems.com/vlabs/technet?eng=VLabs&amp;auth=none&amp;src=vlabs&amp;altadd=true&amp;labid=32155&amp;lod=true">Start Virtual Labs</a></td>
+    <td >Collaboration Experiences for Development Teams using Team Foundation Server 2018</td>
+    <td ><a href="https://www.microsoft.com/handsonlabs/SelfPacedLabs?storyId=external://content-private/content/external/Microsoft-Virtual-Labs/DT00156">Start Virtual Labs</a></td>
   </tr>
   <tr>
     <td >Debugging with IntelliTrace in Visual Studio Enterprise 2017</td>
