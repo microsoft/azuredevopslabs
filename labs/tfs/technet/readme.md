@@ -35,10 +35,10 @@ Here are the links to the labs on TechNet Virtual Labs:
 |Live Unit Testing, Code Coverage, and Code Clone Analysis with Visual Studio 2017| [Start Virtual Labs](https://www.microsoft.com/handsonlabs/SelfPacedLabs/?storyId=external://content-private/content/external/Microsoft-Virtual-Labs/DT00169)|
 |Making Developers More Productive with Visual Studio Team Foundation Server 2018| [Start Virtual Labs](https://www.microsoft.com/handsonlabs/SelfPacedLabs/?storyId=external://content-private/content/external/Microsoft-Virtual-Labs/DT00170)|
 |Managing Delivery Plans with Team Foundation Server 2018| [Start Virtual Labs](https://www.microsoft.com/handsonlabs/SelfPacedLabs/?storyId=external://content-private/content/external/Microsoft-Virtual-Labs/DT00171)|
-|Managing Technical Debt with Team Foundation Server 2017 and SonarQube| [Start Virtual Labs]()|
+|Managing Technical Debt with Team Foundation Server 2017 and SonarQube| [TBA]()|
 |Package Management in Team Foundation Server 2018| [Start Virtual Labs](https://www.microsoft.com/handsonlabs/SelfPacedLabs/?storyId=external://content-private/content/external/Microsoft-Virtual-Labs/DT00173)|
 |ReadyRoll- Develop and deploy databases in Visual Studio Enterprise 2017| [Start Virtual Labs](https://www.microsoft.com/handsonlabs/SelfPacedLabs/?storyId=external://content-private/content/external/Microsoft-Virtual-Labs/DT00174)|
-|SQL Prompt for Visual Studio Enterprise 2017| [Start Virtual Labs]()|
+|SQL Prompt for Visual Studio Enterprise 2017| [TBA]()|
 |Team Foundation Build 2018| [Start Virtual Labs](https://www.microsoft.com/handsonlabs/SelfPacedLabs/?storyId=external://content-private/content/external/Microsoft-Virtual-Labs/DT00167)|
 |Test Planning and Management with Team Foundation Server 2018| [Start Virtual Labs](https://www.microsoft.com/handsonlabs/SelfPacedLabs/?storyId=external://content-private/content/external/Microsoft-Virtual-Labs/DT00175)|
 |UI Automation using Coded UI Tests with Visual Studio Enterprise 2017| [Start Virtual Labs](https://www.microsoft.com/handsonlabs/SelfPacedLabs/?storyId=external://content-private/content/external/Microsoft-Virtual-Labs/DT00165)|
