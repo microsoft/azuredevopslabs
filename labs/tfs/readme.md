@@ -1,11 +1,11 @@
 ---
 title: ALM VM 2018 - Hands-on-Labs 
-layout: homepage    
-sidebar: tfs
+layout: homepage
 permalink: /labs/tfs/
 comments: true
 folder: /labs/tfs/
 ---
+
 
 <br />
 <div class="tfsMain">
