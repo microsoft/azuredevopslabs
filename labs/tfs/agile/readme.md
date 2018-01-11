@@ -1,5 +1,5 @@
 ---
-title: Agile Planning & Portfolio Management with Team Foundation Server 2018
+title: Agile Planning & Portfolio Management with Team Foundation Server
 layout: page
 sidebar: tfs
 permalink: /labs/tfs/agile/
@@ -16,7 +16,7 @@ In this lab, you will learn about the agile planning and portfolio management to
 
 ## Prerequisites
 
-In order to complete this lab you will need the Visual Studio 2017 virtual machine provided by Microsoft. Click the button below to launch the virtual machine on the Microsoft Hands-on-Labs portal. 
+In order to complete this lab you will need the Visual Studio 2017 virtual machine provided by Microsoft. Click the button below to launch the virtual machine on the Microsoft Hands-on-Labs portal.
 
 <a href="https://www.microsoft.com/handsonlabs/SelfPacedLabs?storyId=external%3A%2F%2Fcontent-private%2Fcontent%2Fexternal%2FMicrosoft-Virtual-Labs%2FDT00152" class="launch-hol" role="button" target="_blank"><span class="lab-details">Launch the virtual machine</span></a>
 

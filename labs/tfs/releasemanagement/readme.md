@@ -1,5 +1,5 @@
 ---
-title: Embracing Continuous Delivery with Release Management for Team Foundation Server 2018
+title: Embracing Continuous Delivery with Release Management for Team Foundation Server
 layout: page    
 sidebar: tfs
 permalink: /labs/tfs/releasemanagement/
@@ -16,7 +16,11 @@ In this lab, you will learn about the release management features available in V
 
 ## Prerequisites
 
-In order to complete this lab you will need the Visual Studio 2017 virtual machine provided by Microsoft. For more information on acquiring and using this virtual machine, please see [this blog post](http://aka.ms/almvm).
+In order to complete this lab you will need the Visual Studio 2017 virtual machine provided by Microsoft. Click the button below to launch the virtual machine on the Microsoft Hands-on-Labs portal.
+
+<a href="https://www.microsoft.com/handsonlabs/SelfPacedLabs?storyId=external%3A%2F%2Fcontent-private%2Fcontent%2Fexternal%2FMicrosoft-Virtual-Labs%2FDT00161" class="launch-hol" role="button" target="_blank"><span class="lab-details">Launch the virtual machine</span></a>
+
+Alternatively, you can download the virtual machine from [here](../almvmdownload/)
 
 This lab also requires the latest version of **SQL Server Management Studio (SSMS)** in order to ensure compatibility with Azure. You can check for updates by launching SSMS and selecting **Tools \| Check for Updates**.
 

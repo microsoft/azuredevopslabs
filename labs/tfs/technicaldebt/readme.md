@@ -1,5 +1,5 @@
 ---
-title: Managing Technical Debt with Team Foundation Server 2017 and SonarQube
+title: Managing Technical Debt with Team Foundation Server and SonarQube
 layout: page    
 sidebar: tfs
 permalink: /labs/tfs/technicaldebt/

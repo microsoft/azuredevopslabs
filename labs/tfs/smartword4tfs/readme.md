@@ -1,5 +1,5 @@
 ---
-title: Introduction to the Modern Requirements Suite4TFS & Team Foundation Server 2018
+title: Introduction to the Modern Requirements Suite4TFS & Team Foundation Server
 layout: page    
 sidebar: tfs
 permalink: /labs/tfs/smartword4tfs/

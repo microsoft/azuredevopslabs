@@ -1,5 +1,5 @@
 ---
-title: Managing Delivery Plans with Team Foundation Server 2018
+title: Managing Delivery Plans with Team Foundation Server
 layout: page
 sidebar: tfs
 permalink: /labs/tfs/deliveryplans/
