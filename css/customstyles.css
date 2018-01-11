@@ -1599,6 +1599,13 @@ div.tfsMain{
     background-color: skyblue;
 }
 
+div.vstsMain{
+    background-image: url("../images/vsts.png");
+    display: block;
+    height: 325px;
+    background-color: skyblue;
+}
+
 div.lablist {
     -webkit-column-count: 3; /* Chrome, Safari, Opera */
     -moz-column-count: 3; /* Firefox */
