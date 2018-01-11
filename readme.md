@@ -32,10 +32,10 @@ The Microsoft ALM/DevOps Hands-On-Labs is a set of self-paced labs based on Visu
        <a href="labs/vsts" class="c-glyph"><span class="lab-details">View Details</span></a>
     </div>
      <div class="lab-item col-md-4" align="center">
-         <span class="headnews"> <b><a href="labs/java" class="labmain"> DevOps with Visual Studio Team Services for Java</a></b></span><br />
-        <a href="labs/java"><img style="margin: 10px;" src="images/java.png"/></a><br />
+         <span class="headnews"> <b><a href="labs/vstsextend" class="labmain"> DevOps with Visual Studio Team Services for Java</a></b></span><br />
+        <a href="labs/java"><img style="margin: 10px;" src="images/vsts-oss.png"/></a><br />
        <!--span class="mainPageText"> DevOps with Visual Studio Team Services for Java</span><br /><br /-->
-       <a href="labs/java" class="c-glyph"><span class="lab-details">View Details</span></a>
+       <a href="labs/vstsextend" class="c-glyph"><span class="lab-details">View Details</span></a>
     </div>        
 </div>
 </div>
