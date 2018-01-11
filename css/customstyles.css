@@ -1572,7 +1572,7 @@ div.columnMain{
         width: 33%;
         padding-top: 100px;
         font-size: 32px;
-        margin-left: 150px;
+        margin-left: 50px;
 
         
 }
@@ -1589,5 +1589,35 @@ font-size: 24px;
 font-style: italic;
 line-height: 1.6;
 width: 420px;
+}
+
+
+div.tfsMain{
+    background-image: url("../images/tfs.png");
+    display: block;
+    height: 410px;
+    background-color: skyblue;
+}
+
+div.lablist {
+    -webkit-column-count: 3; /* Chrome, Safari, Opera */
+    -moz-column-count: 3; /* Firefox */
+    column-count: 3;
+    -webkit-column-gap: 40px; /* Chrome, Safari, Opera */
+    -moz-column-gap: 40px; /* Firefox */
+    column-gap: 40px;
+    -webkit-column-rule-style: solid; /* Chrome, Safari, Opera */
+    -moz-column-rule-style: solid; /* Firefox */
+    column-rule-style: solid;
+    -webkit-column-rule-width: 1px; /* Chrome, Safari, Opera */
+    -moz-column-rule-width: 1px; /* Firefox */
+    column-rule-width: 1px;
+    -webkit-column-rule-color: lightblue; /* Chrome, Safari, Opera */
+    -moz-column-rule-color: lightblue; /* Firefox */
+    column-rule-color: lightblue;
+}
+
+span.herotext2{
+    font-size: 18px;
 }
 

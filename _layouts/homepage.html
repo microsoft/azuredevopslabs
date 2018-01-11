@@ -30,7 +30,7 @@
     {% include topnav.html %}
     <!-- Page Content 
     <img src="images/banner31.jpg" width="100%" style="margin-top: 73px;" />-->
-    
+    {% if page.landingpage == true %}
         <div class="rowMain">
             <div class="columnMain">
             <div class="pageheader"> Microsoft Visual Studio DevOps Hands-On-Labs </div>
@@ -40,7 +40,7 @@
         </div>
             <!--img src="images/almvm-hero-centered-transparent-md.png"-->
         </div>
-
+        {% endif %}
     <div class="container">
         {{content}}
         <div class="column">
