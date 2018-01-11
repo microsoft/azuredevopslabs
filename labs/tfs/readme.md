@@ -8,11 +8,11 @@ folder: /labs/tfs/
 ---
 
 <br />
-<div align="center" class="tfsMain">
-<div class="columnMain">
+<div class="tfsMain">
+<div class="productcolmain">
   <div class="pageheader">
-             <b>DevOps with Visual Studio Team Foundation Server</b> </div>
-     <div class="pagedesc">       
+             <b>DevOps with Team Foundation Server</b> </div>
+     <div class="herotext2">       
              Learn how you can remove barriers between teams, encourage collaboration, and improve the flow of value to your customers with Visual Studio and Team Foundation Server
   </div>
 </div>
@@ -21,34 +21,32 @@ folder: /labs/tfs/
 <hr align="center" width="600px"><br />
  <div class="clear"></div>
 
-Learn how you can implement modern DevOps practices with Visual Studio and Team Foundation Server using the Microsoft Visual Studio DevOps virtual machine  pre-installed with Visual Studio 2017 and Team Foundation Server 2018, and pre-configured with Sample projects, users, data and a set of self-paced labs. 
-
 ## Explore the labs
 
 <div class="lablist">
-    <div class="header2"> Plan </div>
+    <div class="herotext2"> Plan </div>
           <ul>
           <li> <a href="agile/">Agile Planning and Portfolio Management </a>    </li>
-          <li> <a class="postitem" href="agile/">Agile Work Item Management </a>    </li>
-          <li> <a class="postitem" href="smartword4tfs/">Introduction to the Modern Requirements Suite4TFS</a> </li>
+          <li> <a href="agile/">Agile Work Item Management </a>    </li>
+          <li> <a href="smartword4tfs/">Introduction to the Modern Requirements Suite4TFS</a> </li>
           <li> Managing Delivery Plans</li>
         </ul>
-  <div class="header2"> Develop </div>
+  <div class="herotext2"> Develop </div>
            <ul>
-          <li> <a class="postitem" href="agile/">Collaboration Experiences for Development Teams with Wiki</a> </li>
-          <li> <a class="postitem" href="agile/">Debugging with IntelliTrace </a>    </li>
-          <li> <a class="postitem" href="smartword4tfs/">Debugging with Snapshot Debugger</a> </li>
-          <li> <a class="postitem" href="smartword4tfs/">Diagnosing Issues in Production with IntelliTrace</a> </li>
-          <li> <a class="postitem" href="intellitest/">Generate Unit Tests with IntelliTest</a> </li>
-          <li> <a class="postitem" href="intellitest/">Live Dependency Validation</a> </li>
-          <li> <a class="postitem" href="intellitest/">Live Unit Testing, Code Coverage, and Code Clone Analysis</a> </li>
-          <li> <a class="postitem" href="intellitest/"> Making Developers More Productive</a> </li>
-          <li> <a class="postitem" href="intellitest/"> SQL Prompt</a> </li>
-          <li> <a class="postitem" href="intellitest/"> Using Code Analysis to Improve Code Quality</a> </li>
-          <li> <a class="postitem" href="intellitest/"> Version Controlling with Git </a> </li>
-          <li> <a class="postitem" href="intellitest/"> Working with EditorConfig</a> </li>
+          <li> <a href="agile/">Collaboration Experiences for Development Teams with Wiki</a> </li>
+          <li> <a href="agile/">Debugging with IntelliTrace </a>    </li>
+          <li> <a href="smartword4tfs/">Debugging with Snapshot Debugger</a> </li>
+          <li> <a href="smartword4tfs/">Diagnosing Issues in Production with IntelliTrace</a> </li>
+          <li> <a href="intellitest/">Generate Unit Tests with IntelliTest</a> </li>
+          <li> <a href="intellitest/">Live Dependency Validation</a> </li>
+          <li> <a href="intellitest/">Live Unit Testing, Code Coverage, and Code Clone Analysis</a> </li>
+          <li> <a href="intellitest/"> Making Developers More Productive</a> </li>
+          <li> <a href="intellitest/"> SQL Prompt</a> </li>
+          <li> <a href="intellitest/"> Using Code Analysis to Improve Code Quality</a> </li>
+          <li> <a href="intellitest/"> Version Controlling with Git </a> </li>
+          <li> <a href="intellitest/"> Working with EditorConfig</a> </li>
         </ul>
-    <div class="header2"> Build </div>
+    <div class="herotext2"> Build </div>
            <ul>
           <li> <a href="agile/">Managing Technical Debt with SonarQube </a>    </li>
           <li> <a href="agile/">Package Management  </a>    </li>
@@ -80,7 +78,9 @@ Learn how you can implement modern DevOps practices with Visual Studio and Team 
 </div>
  <div class="clear"></div>
 
-## Accessing the Virtual Machine
+## Get the accompanying VM
+
+To make it easy for you to follow the labs, we offer a virtual machine pre-installed with Visual Studio Enterprise 2017 (15.5),  Visual Studio Team Foundation Server 2018, Office and pre-configured with sample projects, users and data. 
 
 You can get access to the virtual machine the following ways:
 
@@ -91,3 +91,5 @@ You can get access to the virtual machine the following ways:
 - **Run it on Azure** - Though the VM is currently not supported to run on Azure, you can simply upload the VHD to Azure as a specialized VHD and create a VM from it. Thanks to **Pieter Gheysens** who has written a PowerShell script to create VM instances based on the ALM VM. His [blog](https://intovsts.net/2018/01/03/generating-azure-vms-from-a-specialized-vhd-file/) has more details. 
 
   If you want to and customize and upload the VHD yourself, please see this article for step-by-step instructions - [Create a Windows VM from a specialized disk](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/create-vm-specialized). 
+
+Learn how you can implement modern DevOps practices with Visual Studio and Team Foundation Server using the Microsoft Visual Studio DevOps virtual machine (formerly called the ALM or BrianKeller Virtual Machine). The virtual machine comes pre-installed with Visual Studio Enterprise 2017 (15.5),  Visual Studio Team Foundation Server 2018, Office and pre-configured with Sample projects, users and data to follow the hands-on-labs listed below.

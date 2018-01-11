@@ -1572,7 +1572,7 @@ div.columnMain{
         width: 33%;
         padding-top: 100px;
         font-size: 32px;
-        margin-left: 50px;
+        margin-left: 150px;
 
         
 }
@@ -1595,7 +1595,7 @@ width: 420px;
 div.tfsMain{
     background-image: url("../images/tfs.png");
     display: block;
-    height: 410px;
+    height: 325px;
     background-color: skyblue;
 }
 
@@ -1617,7 +1617,16 @@ div.lablist {
     column-rule-color: lightblue;
 }
 
-span.herotext2{
-    font-size: 18px;
+div.herotext2{
+    font-size: 20px;
+    font-style: italic;
+    line-height: 1.6;
+    width: 420px;
+}
+
+div.productcolmain {
+    float: left;
+    padding-top: 100px;
+    margin-left: 50px;
 }
 

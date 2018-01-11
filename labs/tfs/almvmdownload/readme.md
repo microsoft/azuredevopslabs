@@ -1,10 +1,9 @@
 ---
-title: Downloading the VM 
+title: Downloading the DevOps Virtual Machine
 layout: page    
 sidebar: tfs
-permalink: /labs/almvmdownload/
-comments: true
-folder: /labs/almvmdownload/
+permalink: /labs/tfs/almvmdownload/
+folder: /labs/tfs/almvmdownload/
 ---
 
 We highly recommend Microsoft Hands-on-Labs center if you want to try these labs - You do not require a high configuration machine or have to download and setup the machine. Simply access them from a browser of your choice. Please see [here](technet/) for more details.
