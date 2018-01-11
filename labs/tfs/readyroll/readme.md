@@ -32,7 +32,7 @@ project page in your browser.
 
 ## Task 1: Adding A ReadyRoll Project to the PartsUnlimited Solution
 
-1. Right click on the **PartsUnlimited** Solution and choose **Add** |\ **New Project**
+1. Right click on the **PartsUnlimited** Solution and choose **Add** \| **New Project**
 
    ![](images/1.jpg)
 

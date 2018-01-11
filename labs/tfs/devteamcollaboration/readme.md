@@ -22,8 +22,6 @@ In order to complete this lab you will need the Visual Studio 2017 virtual machi
 
 Alternatively, you can download the virtual machine from [here](../almvmdownload/)
 
-Alternatively, you can download the virtual machine from [here](../almvmdownload/)
-
 ## Exercise 1: Wiki collaboration with Team Foundation Server 2018
 
 ### Task 1: Creating and editing a project wiki
