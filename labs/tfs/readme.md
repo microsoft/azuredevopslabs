@@ -31,7 +31,8 @@ The virtual machine contains the following pre-configured software:
 You can get access to the virtual machine the following ways:
 
 - **Download the Virtual Machine** - You can download the virtual machine, if you prefer to use it offline. Please see below for instructions to download the VM.
-- **Try it on Technet Virtual Labs** - **Coming soon** We will be publishing the labs to TechNet so that you can try them online from the convenience of your browser. No downloads, No setup required!
+
+- **Try it on Technet Virtual Labs** - All the Hands-on-Labs are now available on Microsoft Hands-on-Labs. You can access and try these labs online from the convenience of your browser. No downloads, No setup required!. Please see this [page](technet/) for links to the individual labs.
 
 - **Run it on Azure** - If you prefer to run the VM on Azure, you can simply upload the VHD to your Azure storage and create a VM from the VHD. Thanks to **Pieter Gheysens** who has written a PowerShell script to create VM instances based on the ALM VM. His [blog](https://intovsts.net/2018/01/03/generating-azure-vms-from-a-specialized-vhd-file/) has more details. 
 

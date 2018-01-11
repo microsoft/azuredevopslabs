@@ -28,7 +28,7 @@ If you are not using the VSTS Demo Data Generator, you can clone the code from t
 
 ## Working with VSTS DemoGenerator
 
-Follow the link <a href="/labs/vsts/VSTSDemoGenerator">here</a> to know more
+Visual Studio Team Services Demo Generator helps you create projects on your Visual Studio Team Services account with preset sample content which includes source code, work items, service endpoints, build and release definitions based on a template you choose. The purpose of this system is to help follow hands-on-labs, demos and other education material provided by Microsoft. For step-by-step instructions on using the demo generator to provision your project, please see this [document](/labs/vsts/VSTSDemoGenerator)
 
 ## Hands-On-Labs
 

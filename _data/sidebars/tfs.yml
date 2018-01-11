@@ -133,7 +133,7 @@ entries:
 
     folderitems:
     - title: Unit Testing, Code Coverage, and Code Clone Analysis with Visual Studio 2017
-      url: labs/tfs/unittesting/
+      url: labs/tfs/liveunittesting/
       output: web, pdf
 
     - title: Generate Unit Tests with IntelliTest using Visual Studio Enterprise 2017

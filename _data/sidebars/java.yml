@@ -29,43 +29,43 @@ entries:
       output: web, pdf
 
     - title: Setting up a new project on VSTS
-      url: labs/java/creatingvstsaccount.html
+      url: labs/java/settingvstsproject/
       output: web, pdf
 
     - title: Setting up a Docker build agent
-      url: labs/java/vstsbuildagent.html
+      url: labs/java/dockerbuildagent/
       output: web, pdf
 
     - title: Cloning a VSTS Repo - IntelliJ
-      url: labs/java/intellij-vsts.html
+      url: labs/java/intellijgit/
       output: web, pdf
 
     - title: Cloning a VSTS Repo - Eclipse
-      url: labs/java/eclipse-vsts.html
+      url: labs/java/eclipsegit/
       output: web, pdf
 
     - title: Maven Package Management with VSTS and Jenkins
-      url: labs/java/maven-jenkins.html
+      url: labs/java/mavenpmjenkins/
       output: web, pdf
 
     - title: Maven Package Management with VSTS Team Build
-      url: labs/java/maven-vsts.html
+      url: labs/java/mavenpmvsts/
       output: web, pdf
 
     - title: Build Docker containers with VSTS
-      url: labs/java/builddocker.html
+      url: labs/java/builddocker/
       output: web, pdf
 
     - title: Release Management with VSTS
-      url: labs/java/deploy.html
+      url: labs/java/releasemanagement/
       output: web, pdf 
 
     - title: End to End Workflow - IntelliJ
-      url: labs/java/intellij.html
+      url: labs/java/e2eintellij/
       output: web, pdf
 
     - title: End to End Workflow - Eclipse
-      url: labs/java/eclipsee2e.html
+      url: labs/java/e2eeclipse/
       output: web, pdf
 
 
