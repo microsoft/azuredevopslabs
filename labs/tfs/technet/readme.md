@@ -15,8 +15,8 @@ The ALM VM 2017 (Winter Update) and the corresponding labs are now available on 
 
 Here are the links to the labs on TechNet Virtual Labs:
 
-|Lab Name| URL|
-|--------|----|
+|Lab Name                                                                                          |                         URL|
+|--------------------------------------------------------------------------------------------------|----------------------------|
 |Agile Planning and Portfolio Management with Team Foundation Server 2018| [Start Virtual Labs](https://www.microsoft.com/handsonlabs/SelfPacedLabs?storyId=external%3A%2F%2Fcontent-private%2Fcontent%2Fexternal%2FMicrosoft-Virtual-Labs%2FDT00152)|
 |Agile Work Item Management with Team Foundation Server 2018| [Start Virtual Labs](https://www.microsoft.com/handsonlabs/SelfPacedLabs/?storyId=external://content-private/content/external/Microsoft-Virtual-Labs/DT00153)|
 |Authoring ARM Templates with Visual Studio| [Start Virtual Labs](https://www.microsoft.com/handsonlabs/SelfPacedLabs/?storyId=external://content-private/content/external/Microsoft-Virtual-Labs/DT00154)|

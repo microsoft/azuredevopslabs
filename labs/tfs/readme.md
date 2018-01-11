@@ -24,14 +24,14 @@ folder: /labs/tfs/
 ## Explore the labs
 
 <div class="lablist">
-    <div class="herotext2"> Plan </div>
+    <div class="header2"> <b>Plan </b></div>
           <ul>
           <li> <a href="agile/">Agile Planning and Portfolio Management </a>    </li>
-          <li> <a href="agile/">Agile Work Item Management </a>    </li>
+          <li> <a href="agileworkitems/">Agile Work Item Management </a>    </li>
           <li> <a href="smartword4tfs/">Introduction to the Modern Requirements Suite4TFS</a> </li>
-          <li> Managing Delivery Plans</li>
+          <li> <a href="deliveryplans/">Managing Delivery Plans</a></li>
         </ul>
-  <div class="herotext2"> Develop </div>
+  <div class="header2"> Develop </div>
            <ul>
           <li> <a href="agile/">Collaboration Experiences for Development Teams with Wiki</a> </li>
           <li> <a href="agile/">Debugging with IntelliTrace </a>    </li>
@@ -46,7 +46,7 @@ folder: /labs/tfs/
           <li> <a href="intellitest/"> Version Controlling with Git </a> </li>
           <li> <a href="intellitest/"> Working with EditorConfig</a> </li>
         </ul>
-    <div class="herotext2"> Build </div>
+    <div class="header2"> Build </div>
            <ul>
           <li> <a href="agile/">Managing Technical Debt with SonarQube </a>    </li>
           <li> <a href="agile/">Package Management  </a>    </li>
@@ -86,10 +86,8 @@ You can get access to the virtual machine the following ways:
 
 - **Download the Virtual Machine** - You can download the virtual machine, if you prefer to use it offline. The size of the download is about 18 GB and we highly recommend that you use a download manager to download the VHD file. The **[Accessing the VM](almvmdownload\)** page has detailed instructions on downloading the VM, including links to both current and the previous versions of TFS labs.   
 
-- **Try it on Technet Virtual Labs** - If you are evaluating or want to try the labs without the hassle of downloading or setting up the virtual machine. You can access them from the Microsoft Hands-on-Labs center. You only need a browser. There is absolutely no download or setup required!. Please see this [page](technet/) for links to the individual labs.
+- **Try it on Technet Virtual Labs** - If you are evaluating or want to try the labs without the hassle of downloading or setting up the virtual machine,You can access them from the Microsoft Hands-on-Labs center. You only need a browser. There is absolutely no download or setup required!. Please see this [page](technet/) for links to the individual labs.
 
 - **Run it on Azure** - Though the VM is currently not supported to run on Azure, you can simply upload the VHD to Azure as a specialized VHD and create a VM from it. Thanks to **Pieter Gheysens** who has written a PowerShell script to create VM instances based on the ALM VM. His [blog](https://intovsts.net/2018/01/03/generating-azure-vms-from-a-specialized-vhd-file/) has more details. 
 
   If you want to and customize and upload the VHD yourself, please see this article for step-by-step instructions - [Create a Windows VM from a specialized disk](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/create-vm-specialized). 
-
-Learn how you can implement modern DevOps practices with Visual Studio and Team Foundation Server using the Microsoft Visual Studio DevOps virtual machine (formerly called the ALM or BrianKeller Virtual Machine). The virtual machine comes pre-installed with Visual Studio Enterprise 2017 (15.5),  Visual Studio Team Foundation Server 2018, Office and pre-configured with Sample projects, users and data to follow the hands-on-labs listed below.

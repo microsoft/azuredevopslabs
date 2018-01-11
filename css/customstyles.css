@@ -326,9 +326,9 @@ div#toc ul li {
 
 div#toc ul {
     background-color: whitesmoke;
-    padding: 5px;
+    /*padding: 5px;*/
     border-radius: 5px;
-    max-width: 300px;
+    max-width:  450px;
     color: gray;
 }
 
@@ -1630,3 +1630,17 @@ div.productcolmain {
     margin-left: 50px;
 }
 
+a.launch-hol {
+    width: 180 px;
+    font-size: 18px;
+    border-color: #000000;
+    padding: 7px;
+    margin: 5px;
+    background-color: skyblue;
+    text-decoration: none;
+    color: black;
+}
+
+a.launch-hol {
+    box-shadow: 2px 2px 1px #797979;
+}
