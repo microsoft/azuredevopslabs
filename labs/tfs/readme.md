@@ -26,26 +26,26 @@ folder: /labs/tfs/
 <div class="lablist">
     <div class="header2"> <b>Plan</b></div>
           <ul>
-          <li> <a href="agile/">Agile Planning and Portfolio Management </a>    </li>
-          <li> <a href="agileworkitems/">Agile Work Item Management </a>    </li>
-          <li> <a href="smartword4tfs/">Introduction to the Modern Requirements Suite4TFS</a> </li>
-          <li> <a href="deliveryplans/">Managing Delivery Plans</a></li>
+          <li><a href="agile/">Agile Planning and Portfolio Management </a>    </li>
+          <li><a href="agileworkitems/">Agile Work Item Management </a>    </li>
+          <li><a href="smartword4tfs/">Introduction to the Modern Requirements Suite4TFS</a> </li>
+          <li><a href="deliveryplans/">Managing Delivery Plans</a></li>
         </ul>
   <div class="header2"> <b>Develop</b></div>
            <ul>
-          <li> <a href="devteamcollaboration/">Collaboration Experiences for Development Teams with Wiki</a> </li>
-          <li> <a href="debugging/">Debugging with IntelliTrace </a>    </li>
-          <li> <a href="snapshotdebugger/">Debugging with Snapshot Debugger</a> </li>
-          <li> <a href="intellitrace/">Diagnosing Issues in Production with IntelliTrace</a> </li>
-          <li> <a href="devexp/">Developer experience enhancements</a> </li>
-          <li> <a href="intellitest/">Generate Unit Tests with IntelliTest</a> </li>
-          <li> <a href="livedependencyvalidation/">Live Dependency Validation</a> </li>
-          <li> <a href="liveunittesting/">Live Unit Testing, Code Coverage, and Code Clone Analysis</a> </li>
-          <li> <a href="vsproductivity/"> Making Developers More Productive</a> </li>
-          <li> <a href="sqlprompt/"> SQL Prompt</a> </li>
-          <li> <a href="codeanalysis/"> Using Code Analysis to Improve Code Quality</a> </li>
-          <li> <a href="git/"> Version Controlling with Git </a> </li>
-          <li> <a href="editorconfig/"> Working with EditorConfig</a> </li>
+          <li><a href="devteamcollaboration/">Collaboration Experiences for Development Teams with Wiki</a> </li>
+          <li><a href="debugging/">Debugging with IntelliTrace </a>    </li>
+          <li><a href="snapshotdebugger/">Debugging with Snapshot Debugger</a> </li>
+          <li><a href="intellitrace/">Diagnosing Issues in Production with IntelliTrace</a> </li>
+          <li><a href="devexp/">Developer experience enhancements</a> </li>
+          <li><a href="intellitest/">Generate Unit Tests with IntelliTest</a> </li>
+          <li><a href="livedependencyvalidation/">Live Dependency Validation</a> </li>
+          <li><a href="liveunittesting/">Live Unit Testing, Code Coverage, and Code Clone Analysis</a> </li>
+          <li><a href="vsproductivity/"> Making Developers More Productive</a> </li>
+          <li><a href="sqlprompt/"> SQL Prompt</a> </li>
+          <li><a href="codeanalysis/"> Using Code Analysis to Improve Code Quality</a> </li>
+          <li><a href="git/"> Version Controlling with Git </a> </li>
+          <li><a href="editorconfig/"> Working with EditorConfig</a> </li>
         </ul>
     <div class="header2"> <b>Build</b></div>
            <ul>

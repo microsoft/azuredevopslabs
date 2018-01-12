@@ -1562,15 +1562,15 @@ div.rowMain{
     background-image: url("../images/almvm-hero-right-blue.png");
     display: block;
     background-color: skyblue;
-    margin-top: 43px;
-    height: 370px;
+    margin-top: 10px;
+    height: 325px;
 
 }
 
 div.columnMain{
         float: left;
         width: 33%;
-        padding-top: 100px;
+        padding-top: 75px;
         font-size: 32px;
         margin-left: 150px;
 
@@ -1581,7 +1581,8 @@ div.pageheader{
     font-size: 32px;
     font-weight: bold;
     line-height: 1.5;
-    margin-bottom: 4px;
+    margin-bottom: 15px;
+    width: 500px
     }
 
 div.pagedesc{
@@ -1633,7 +1634,7 @@ div.herotext2{
 
 div.productcolmain {
     float: left;
-    padding-top: 100px;
+    padding-top:65px;
     margin-left: 50px;
 }
 
