@@ -20,24 +20,22 @@ folder: /labs/vsts/
 ## Step-by-Step Tutotrials
 
 <div class="lablist">
-    <div class="header2"> <b>DevOps</b></div>
-          <ul>
-          <li> <a href="agile/">Agile Planning and Portfolio Management </a>    </li>
-          <li> <a href="git/">Version Controlling with Git  </a>    </li>
-          <li> <a href="packagemanagement/">Package Management</a> </li>
-          <li> <a href="continuousintegration/">Setting up a Continuous Integration</a></li>
-          <li> <a href="continuousdeployment/">Enabling a Continuous Delivery</a></li>
-        <li><a href="azurecd/">Setting up Continuous Delivery workflow from the Azure Portal</a></li>
-         <li><a href="testmanagement/">Test Planning and Management with Visual Studio Team Services</a></li>
-        <li><a href="exploratorytesting/">Exploratory Testing and Feedback Management using Visual Studio Team Services</a></li>
-      <li><a href="selenium/">UI Automation using Selenium Tests</a></li>
+    <div class="header2"> <b>Getting Started</b></div>
+     <ul>
+       <li> <a href="agile/">Agile Planning and Portfolio Management </a>    </li>
+       <li> <a href="git/">Version Controlling with Git  </a>    </li>
+       <li> <a href="packagemanagement/">Package Management</a> </li>
+       <li> <a href="continuousintegration/">Setting up a Continuous Integration</a></li>
+       <li> <a href="continuousdeployment/">Enabling a Continuous Delivery</a></li>
+       <li><a href="azurecd/">Setting up Continuous Delivery workflow from the Azure Portal</a></li>
+       <li><a href="testmanagement/">Test Planning and Management with Visual Studio Team Services</a></li>
+       <li><a href="exploratorytesting/">Exploratory Testing and Feedback Management using Visual Studio Team Services</a></li>
+       <li><a href="selenium/">UI Automation using Selenium Tests</a></li>
       <li><a href="load/">Load Testing using Visual Studio Team Services</a></li>
       <li><a href="monitor/">Monitoring Applications using Application Insights</a></li>
-      <li><a href="appservice/">Deploy an ASP.NET Web App in Azure App Service from Visual Studio</a></li>
-      <li><a href="azureresource/">Deploy and Manage Azure Resources from Visual Studio</a></li>
-      <li><a href="teams/">Microsoft Teams Integration (Collaborate, Communicate and Celebrate)</a></li>
+      <li><a href="teams/">Increase team collaboration and Communication with Microsoft Teams</a></li>
       <li><a href="powerbi/">Connect to Visual Studio Team Services with Power BI</a></li>
-      <li><a href="nodejs/">DevOps for Node.js with Visual Studio Team Services and Azure</a></li>
+
         </ul>
 </div>
 
@@ -61,4 +59,4 @@ In order to complete these labs you will need
 
 Visual Studio Team Services Demo Generator helps you create projects on your Visual Studio Team Services account with preset sample content which includes source code, work items, service endpoints, build and release definitions based on a template you choose. The purpose of this system is to help follow hands-on-labs, demos and other education material provided by Microsoft. For step-by-step instructions on using the demo generator to provision your project, please see this [document](/labs/vsts/VSTSDemoGenerator)
 
-If you are not using the VSTS Demo Data Generator, you can clone the source code required to run the application referenced in teh labs, from this [GitHub repository](https://github.com/Microsoft/myhealthclinic2017)
+If you are not using the VSTS Demo Data Generator, you can clone the source code required to run the application referenced in the labs, from this [GitHub repository](https://github.com/Microsoft/myhealthclinic2017)

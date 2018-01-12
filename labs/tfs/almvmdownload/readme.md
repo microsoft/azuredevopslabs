@@ -50,7 +50,7 @@ Using **Free download manager**
 
    >There are quite a number of important instructions on how to use the VM including activating the VM, taking snapshots/check points, etc., documented. We highly recommend that you read through the [Working with the Visual Studio 2017 (Winter Update) ALM Virtual Machine]() document prior to using the VM, even if you may have used the earlier version of the VM.
 
-   >Note that The VM has about 15 GB of free hard disk space. Should you want to increase the size of the disk, you will need to do so before creating snapshots/check points. You can refer this article on [TechNet]() for instructions on expanding the virtual hard disk.
+   >Note that The VM has about 15 GB of free hard disk space. Should you want to increase the size of the disk, you will need to do so before creating snapshots/check points. You can refer this article on [TechNet](https://technet.microsoft.com/en-us/library/dn282284(v=ws.11).aspx) for instructions on expanding the virtual hard disk.
 
 ## Previous Versions
 
