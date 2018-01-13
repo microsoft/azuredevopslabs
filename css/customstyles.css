@@ -1653,3 +1653,7 @@ a.launch-hol {
 a.launch-hol {
     box-shadow: 2px 2px 1px #797979;
 }
+
+li.labslist{
+    margin-bottom: 10px;
+}
