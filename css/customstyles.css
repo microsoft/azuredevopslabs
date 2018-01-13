@@ -1653,17 +1653,3 @@ a.launch-hol {
 a.launch-hol {
     box-shadow: 2px 2px 1px #797979;
 }
-
-
-li.labslist {
-    margin: 1em;
-    margin-left: 3em;
-  }
-  
-  li.labslist:before {
-    content: '\f109';
-    font-family: 'FontAwesome';
-    float: left;
-    margin-left: -1.5em;
-    color: #0074D9;
-  }
