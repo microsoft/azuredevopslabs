@@ -1,7 +1,8 @@
 body {
     font-size: 15px;
     /*font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" ; */
-    font-family:  "Lato","Geneva CY","Lucida Grande","Arial Unicode MS","Helvetica Neue","Helvetica","Arial",sans-serif; 
+    /*font-family:  "Lato","Geneva CY","Lucida Grande","Arial Unicode MS","Helvetica Neue","Helvetica","Arial",sans-serif; */
+    font-family: segoe-ui_normal,Segoe UI,Segoe,Segoe WP,Helvetica Neue,Helvetica,sans-serif;
     margin: 0px;
     padding: 0px;
     line-height: 1.6;
@@ -515,7 +516,7 @@ ul#mysidebar {
 }
 
 span.projectTitle {
-    font-family:-"Lato","Geneva CY","Lucida Grande","Arial Unicode MS","Helvetica Neue","Helvetica","Arial",sans-serif;
+    /*font-family:-"Lato","Geneva CY","Lucida Grande","Arial Unicode MS","Helvetica Neue","Helvetica","Arial",sans-serif;*/
     font-weight: bold;
     color: #000000;
     padding-left: 10px;
@@ -865,12 +866,12 @@ ol.series li {
 
 .navbar-inverse .navbar-collapse,
 .navbar-inverse .navbar-form {
-    font-family: "Lato","Geneva CY","Lucida Grande","Arial Unicode MS","Helvetica Neue","Helvetica","Arial",sans-serif;
+   /* font-family: "Lato","Geneva CY","Lucida Grande","Arial Unicode MS","Helvetica Neue","Helvetica","Arial",sans-serif;*/
     border-color: #248ec2 !important;
 }
 
 .navbar-hdrimage {
-    font-family: "Lato","Geneva CY","Lucida Grande","Arial Unicode MS","Helvetica Neue","Helvetica","Arial",sans-serif;
+   /*  font-family: "Lato","Geneva CY","Lucida Grande","Arial Unicode MS","Helvetica Neue","Helvetica","Arial",sans-serif; */
     border-color: #ffffff !important;
     margin-top: 0px;
 }
@@ -1243,7 +1244,7 @@ table thead th code.highlighter-rouge {
     width: 100px;
     height: 80px;
     background-color: #f5f5f5;
-    font-family: "Lato","Geneva CY","Lucida Grande","Arial Unicode MS","Helvetica Neue","Helvetica","Arial",sans-serif;
+   /* font-family: "Lato","Geneva CY","Lucida Grande","Arial Unicode MS","Helvetica Neue","Helvetica","Arial",sans-serif;*/
     font-size: 12px;
     hyphens: auto;
     float: left;
@@ -1268,7 +1269,7 @@ table thead th code.highlighter-rouge {
 }
 
 h2.userMapTitle {
-    font-family: "Lato","Geneva CY","Lucida Grande","Arial Unicode MS","Helvetica Neue","Helvetica","Arial",sans-serif;
+   /* font-family: "Lato","Geneva CY","Lucida Grande","Arial Unicode MS","Helvetica Neue","Helvetica","Arial",sans-serif;*/
 }
 
 #userMap a:hover {
@@ -1431,7 +1432,7 @@ span.headnews {
     color: black;
     line-height: 1.5;
     /*font-family: 'Lora', Georgia, serif;*/
-    font-family:  "Lato","Geneva CY","Lucida Grande","Arial Unicode MS","Helvetica Neue","Helvetica","Arial",sans-serif;
+    /* font-family:  "Lato","Geneva CY","Lucida Grande","Arial Unicode MS","Helvetica Neue","Helvetica","Arial",sans-serif;*/
 }
 
 div.newsitem {
@@ -1652,3 +1653,17 @@ a.launch-hol {
 a.launch-hol {
     box-shadow: 2px 2px 1px #797979;
 }
+
+
+li.labslist {
+    margin: 1em;
+    margin-left: 3em;
+  }
+  
+  li.labslist:before {
+    content: '\f109';
+    font-family: 'FontAwesome';
+    float: left;
+    margin-left: -1.5em;
+    color: #0074D9;
+  }
