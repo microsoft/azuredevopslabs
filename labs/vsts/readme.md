@@ -8,9 +8,9 @@ folder: /labs/vsts/
 
 ## Overview
 
-We are working on providing hands-on-labs for Visual Studio Team Services. Here are a few labs, for a start. 
+We are working on providing hands-on-labs for Visual Studio Team Services. Here are a few labs, for a start.
 
-In order to complete these labs you will need 
+In order to complete these labs you will need
 
 - **Visual Studio Team Services account**: If you don't have one, you can sign up for one, from <a href="https://www.visualstudio.com/">here</a>
 
@@ -20,7 +20,7 @@ In order to complete these labs you will need
 
     - If you are not a Visual Studio Subscriber, you can sign up for the FREE [Visual Studio Dev Essentials](https://www.visualstudio.com/dev-essentials/) program to create **Azure free account** (includes 1 yr of free services, $200 for 1st month).
 
-- **Visual Studio 2017** or higher version - You will need Visual Studio for some of the labs. You can use your own machine with VS 2017 installed, or download and use the latest [ALM VM](../tfs/),  or spin up a VM pre-installed with Visual Studio on [Azure](https://portal.azure.com). 
+- **Visual Studio 2017** or higher version - You will need Visual Studio for some of the labs. You can use your own machine with VS 2017 installed, or download and use the latest [ALM VM](../tfs/),  or spin up a VM pre-installed with Visual Studio on [Azure](https://portal.azure.com).
 
 - You can use the **[Visual Studio Team Services Demo Data generator](https://vstsdemogenerator.azurewebsites.net)** to provision a project with pre-defined data on to your Visual Studio Team Services account. Please use the ***My Health Clinic*** template to follow the hands-on-labs.
 
@@ -30,7 +30,7 @@ If you are not using the VSTS Demo Data Generator, you can clone the code from t
 
 Visual Studio Team Services Demo Generator helps you create projects on your Visual Studio Team Services account with preset sample content which includes source code, work items, service endpoints, build and release definitions based on a template you choose. The purpose of this system is to help follow hands-on-labs, demos and other education material provided by Microsoft. For step-by-step instructions on using the demo generator to provision your project, please see this [document](/labs/vsts/VSTSDemoGenerator)
 
-## Hands-On-Labs     
+## Hands-On-Labs
 
 <table width="100%">
    <thead>
@@ -104,4 +104,3 @@ Visual Studio Team Services Demo Generator helps you create projects on your Vis
       <td>September 14, 2017</td>
    </tr>
 </table>
-
