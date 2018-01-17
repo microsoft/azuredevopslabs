@@ -21,20 +21,20 @@ folder: /labs/vsts/
 
 <div class="lablist">
     <div class="header2"> <b>Getting Started</b></div>
-     <ul>
-       <li> <a href="agile/">Agile Planning and Portfolio Management </a>    </li>
-       <li> <a href="git/">Version Controlling with Git  </a>    </li>
-       <li> <a href="packagemanagement/">Package Management</a> </li>
-       <li> <a href="continuousintegration/">Setting up a Continuous Integration</a></li>
-       <li> <a href="continuousdeployment/">Enabling a Continuous Delivery</a></li>
-       <li><a href="azurecd/">Setting up Continuous Delivery workflow from the Azure Portal</a></li>
-       <li><a href="testmanagement/">Test Planning and Management with Visual Studio Team Services</a></li>
-       <li><a href="exploratorytesting/">Exploratory Testing and Feedback Management using Visual Studio Team Services</a></li>
-       <li><a href="selenium/">UI Automation using Selenium Tests</a></li>
-      <li><a href="load/">Load Testing using Visual Studio Team Services</a></li>
-      <li><a href="monitor/">Monitoring Applications using Application Insights</a></li>
-      <li><a href="teams/">Increase team collaboration and Communication with Microsoft Teams</a></li>
-      <li><a href="powerbi/">Connect to Visual Studio Team Services with Power BI</a></li>
+     <ul class="labslist">
+       <li> <a href="agile/">Agile Planning and Portfolio Management </a>    </li><br />
+       <li> <a href="git/">Version Controlling with Git  </a>    </li><br />
+       <li> <a href="packagemanagement/">Package Management</a> </li><br />
+       <li> <a href="continuousintegration/">Setting up a Continuous Integration</a> </li><br />
+       <li> <a href="continuousdeployment/">Enabling a Continuous Delivery</a> </li><br />
+       <li><a href="azurecd/">Setting up Continuous Delivery workflow from the Azure Portal</a> </li><br />
+       <li><a href="testmanagement/">Test Planning and Management with Visual Studio Team Services</a> </li><br />
+       <li><a href="exploratorytesting/">Exploratory Testing and Feedback Management using Visual Studio Team Services</a> </li><br />
+       <li><a href="selenium/">UI Automation using Selenium Tests</a> </li><br />
+      <li><a href="load/">Load Testing using Visual Studio Team Services</a> </li><br />
+      <li><a href="monitor/">Monitoring Applications using Application Insights</a> </li><br />
+      <li><a href="teams/">Increase team collaboration and Communication with Microsoft Teams</a> </li><br />
+      <li><a href="powerbi/">Connect to Visual Studio Team Services with Power BI</a> </li><br />
 
         </ul>
 </div>

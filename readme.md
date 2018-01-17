@@ -39,8 +39,8 @@ The Microsoft ALM/DevOps Hands-On-Labs is a set of self-paced labs based on Visu
        <a href="labs/vsts" class="c-glyph"><span class="lab-details">View Details</span></a>
     </div>
      <div class="lab-item col-md-4" align="center">
-         <span class="headnews"> <b><a href="labs/vstsextend" class="labmain"> DevOps with Visual Studio Team Services for Java</a></b></span><br />
-        <a href="labs/java"><img style="margin: 10px;" src="images/vsts-oss.png"/></a><br />
+         <span class="headnews"> <b><a href="labs/vstsextend" class="labmain"> Extend and Integrate with Visual Studio Team Services</a></b></span><br />
+        <a href="labs/java"><img style="margin: 10px;" src="images/tile-integrate-with-cloud-services.png" width="120" height="120"/></a><br />
        <!--span class="mainPageText"> DevOps with Visual Studio Team Services for Java</span><br /><br /-->
        <a href="labs/vstsextend" class="c-glyph"><span class="lab-details">View Details</span></a>
     </div>        
@@ -49,22 +49,3 @@ The Microsoft ALM/DevOps Hands-On-Labs is a set of self-paced labs based on Visu
  <div class="clear"></div>
 
 <br />
-
-h2 >>Announcements </h2>
- {% for post in site.posts limit:   5 %}
-<div class="headline">
-
-<span class="headnews">
-<a href="{{ post.pageurl | prepend: site.baseurl| prepend: site.url }}" class="postitem">{{ post.title | xml_escape }}</a>
-</span> 
-<p>
-{{ post.content }}
-</p>
-<div class="newsitem">
-<span class="newsfooter">
-<span class="glyphicon glyphicon-time"></span> &nbsp;{{ post.pubdate }}  &nbsp;&nbsp;&nbsp; <span class="glyphicon glyphicon-user"></span> &nbsp; {{ post.Author }}   &nbsp;&nbsp;&nbsp; <span class="glyphicon glyphicon-link"></span>&nbsp;<a href="{{ post.pageurl | prepend: site.baseurl| prepend: site.url }}">   Link</a>
-</span>
-</div>
-</div>
-
-{% endfor %} 

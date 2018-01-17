@@ -21,7 +21,7 @@ folder: /labs/vstsextend/
 
 <div class="lablist">
     <div class="header2"> <b>DevOps</b></div>
-        <ul class="labslist">
+        <ul>
           <li> <img src="images/jenkins.png" height="42" width="42"/> <a href="jenkins/">Integrating with Jenkins</a>    </li><br />
           <li> <img src="images/tomcat.png" height="42" width="42"/><a href="tomcat/">Deploying a Java application on Tomcat  </a>    </li><br />
           <li> <img src="images/sonarqube.png" height="42" width="42"/><a href="sonarqube/">Technical Debt Management with SonarQube</a> </li><br />

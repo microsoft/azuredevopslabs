@@ -1663,12 +1663,16 @@ a.launch-hol {
 
 
 ul.labslist{
-    line-height: 1.6;
+    list-style-image: url('../images/lab-icon.png');
 }
 
-
-a.labname {font-size: 17px;}
-=======
-li.labslist{
+li.labslistitems{
     margin-bottom: 10px;
+}
+
+div.header2{
+    font-size: 17px;
+    font-weight: bold;
+    margin: 10px 0px 20px;
+    border-bottom: 1.5px solid #888888;
 }
