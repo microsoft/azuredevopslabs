@@ -1608,6 +1608,13 @@ div.vstsMain{
     background-color: skyblue;
 }
 
+div.vstsextendMain{
+    background-image: url("../images/vstsextend.png");
+    display: block;
+    height: 325px;
+    background-color: skyblue;
+}
+
 div.lablist {
     -webkit-column-count: 3; /* Chrome, Safari, Opera */
     -moz-column-count: 3; /* Firefox */
@@ -1654,6 +1661,14 @@ a.launch-hol {
     box-shadow: 2px 2px 1px #797979;
 }
 
+
+ul.labslist{
+    line-height: 1.6;
+}
+
+
+a.labname {font-size: 17px;}
+=======
 li.labslist{
     margin-bottom: 10px;
 }
