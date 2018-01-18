@@ -70,7 +70,7 @@
 </head>
 
 <body border="1" border-color="#000000">
-    {% include topnav.html %}
+
     <!-- div style="color:#F87431;height:7px;">-------------------</div-->
     <!-- Page Content -->
     <br /><br />
@@ -83,11 +83,16 @@
 
                 {% include sidebar.html %}
                 <!-- Content Column -->
-                <div class="col-md-9">
+                <div class="col-md-6">
                     {{content}}
                 </div>
 
+            <div class="col-md-3">
+                {% unless page.toc == false %}
+                    {% include toc.html %}
+                {% endunless %}
 
+            </div>
                 <!-- /.row -->
             </div>
             <!-- /.container -->
