@@ -322,7 +322,7 @@ ul#results-container a:hover {
 div#toc ul li {
     margin: 8px 0px 8px 22px;
     font-size: 100%;
-    /* list-style: square; */
+    list-style: none;
 }
 
 div#toc ul {
