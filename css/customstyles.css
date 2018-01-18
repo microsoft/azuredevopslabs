@@ -322,12 +322,12 @@ ul#results-container a:hover {
 div#toc ul li {
     margin: 8px 0px 8px 22px;
     font-size: 100%;
-    list-style: square;
+    /* list-style: square; */
 }
 
 div#toc ul {
     background-color: whitesmoke;
-    /*padding: 5px;*/
+    padding: 5px;
     border-radius: 5px;
     max-width:  450px;
     color: gray;
@@ -342,7 +342,7 @@ div#toc ul li ul li::before {
 }
 
 div#toc>ul::before {
-    content: "Table of Contents";
+    content: "In this lab";
     font-weight: 500;
     color: #555;
     text-align: center;

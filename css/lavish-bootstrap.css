@@ -510,7 +510,7 @@ h6,
 .h4,
 .h5,
 .h6 {
-    font-family: 'Lora', Georgia, serif;
+    font-family: segoe-ui_normal,Segoe UI,Segoe,Segoe WP,Helvetica Neue,Helvetica,sans-serif;
     font-weight: 500;
     line-height: 1.1;
 }
