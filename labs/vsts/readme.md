@@ -101,6 +101,6 @@ Visual Studio Team Services Demo Generator helps you create projects on your Vis
    </tr>
    <tr>
       <td><a href="nodejs/">DevOps for Node.js with Visual Studio Team Services and Azure</a></td>
-      <td>September 14, 2017</td>
+      <td>January 20, 2017</td>
    </tr>
 </table>
