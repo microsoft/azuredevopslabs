@@ -122,7 +122,9 @@ project page in your browser.
 
    ![](images/22.jpg)
 
-1. This completes the setup for automated builds, on the toolbar choose **Save & Queue** to save your settings and trigger a build.
+1. This completes the setup for automated builds, on the toolbar choose **Save & Queue** to save your settings and trigger a build. This initial build will fail as it configures the necessary components for future builds.
+
+1. Optionally – If you’d like to check everything is working as expected up to this point you can manually trigger a second build.
 
    ![](images/23.jpg)
 
@@ -148,7 +150,7 @@ project page in your browser.
 
    ![](images/28.jpg)
 
-1. Next specify the Target database again selecting the **PartsUnlimitedWebsite-Prod** we referenced earlier in step 19.
+1. Next specify the Target database again selecting the **PartsUnlimitedWebsite-Prod** we referenced earlier in Task 2, step 4.
 
    >**Note**: If we were deploying to Azure we could change the ‘Target type’ and select an appropriate existing SQL Database running in Azure
 
