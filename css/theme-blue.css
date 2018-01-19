@@ -21,7 +21,7 @@ h4 {color: #808080; }
 }
 
 .nav > li > a:hover {
-    background-color: #248ec2;
+    background-color: #0078d7;
 }
 
 div.navbar-collapse .dropdown-menu > li > a:hover {
@@ -105,7 +105,7 @@ li.sidebarTitle {
     color: #052456; 
     margin-bottom:10px;
     margin-left: 0px;
-    background-color: lightskyblue;
+    background-color: black;
     font-size: 13px;
 }
 

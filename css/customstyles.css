@@ -330,10 +330,11 @@ div#toc ul li {
 }
 
 div#toc ul {
-    background-color: whitesmoke;
+    background-color: rgba(0, 0, 0, 0.03);
     padding: 5px 0px;
     border-radius: 5px;
     max-width:  450px;
+    margin-right: 10px;
   /*  color: gray;*/
 
 }
@@ -497,7 +498,7 @@ ul#mysidebar {
 }
 
 .nav li a:hover {
-    background-color: #8D8D8D;
+    background-color: black;
 }
 
 .nav ul li a {
@@ -1056,7 +1057,7 @@ span.soft {
 @media (min-width: 1000px) {
     ul#mysidebar {
         width: 235px;
-        background-color: whitesmoke;
+        background-color: rgba(0, 0, 0, 0.03);
     }
 }
 
