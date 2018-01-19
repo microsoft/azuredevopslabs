@@ -1693,3 +1693,8 @@ a.sidebarheadings{
     font-weight: bold;
     margin: 10px 0px;
 }
+
+ul#mysidebar {
+    overflow-y: auto;
+    max-height: 500px;
+}
