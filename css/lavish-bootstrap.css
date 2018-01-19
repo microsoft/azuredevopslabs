@@ -1153,7 +1153,7 @@ pre code {
         width: 16.666666666666664%;
     }
     .col-md-3 {
-        width: 25%;
+        width: 20%;
     }
     .col-md-4 {
         width: 33.33333333333333%;
@@ -1162,7 +1162,7 @@ pre code {
         width: 41.66666666666667%;
     }
     .col-md-6 {
-        width: 50%;
+        width: 60%;
     }
     .col-md-7 {
         width: 58.333333333333336%;
@@ -1298,7 +1298,7 @@ pre code {
 
 @media (min-width: 1200px) {
     .container {
-        max-width: 1170px;
+        max-width: 1500px;
     }
     .col-lg-1,
     .col-lg-2,

@@ -79,15 +79,15 @@
         <!-- Content Row -->
         <div class="row">
             <!-- Sidebar Column -->
-            <div class="col-md-3">
+            <div class="col-md-2">
 
                 {% include sidebar.html %}
                 <!-- Content Column -->
-                <div class="col-md-6">
+                <div class="col-md-8">
                     {{content}}
                 </div>
             
-            <div class="col-md-3">
+            <div class="col-md-2">
                 {% unless page.toc == false %}
                     {% include toc.html %}
                 {% endunless %}
