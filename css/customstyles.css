@@ -330,7 +330,7 @@ div#toc ul li {
 }
 
 div#toc ul {
-    background-color: rgba(0, 0, 0, 0.03);
+    background-color:whitesmoke;
     padding: 5px 0px;
     border-radius: 5px;
     max-width:  450px;
@@ -1697,4 +1697,9 @@ a.sidebarheadings{
 ul#mysidebar {
     overflow-y: auto;
     max-height: 500px;
+}
+
+span.topnavbreadcrump
+{
+    font-size:14px;
 }
