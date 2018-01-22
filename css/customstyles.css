@@ -401,7 +401,10 @@ a.accordion-collapsed {
 .nav ul,
 .nav li {
     list-style: none;
+
 }
+
+
 
 .nav ul {
     padding: 0;
@@ -1694,9 +1697,10 @@ a.sidebarheadings{
     margin: 10px 0px;
 }
 
-ul#mysidebar {
+ul.sidebarlisting {
     overflow-y: auto;
     max-height: 500px;
+
 }
 
 span.topnavbreadcrump

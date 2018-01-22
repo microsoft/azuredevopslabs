@@ -10,6 +10,9 @@ summary:
 ---
 
 <br />
+<div class="col-lg-1"></div>
+
+<div class="col-lg-10">
 <div class="rowMain">
 <div class="productcolmain">
   <div class="pageheader">
@@ -46,6 +49,9 @@ The Microsoft ALM/DevOps Hands-On-Labs is a set of self-paced labs based on Visu
     </div>        
 </div>
 </div>
+
+</div>
+<div class="col-lg-1"></div>
  <div class="clear"></div>
 
 <br />
