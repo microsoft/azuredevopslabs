@@ -30,10 +30,10 @@ The Microsoft ALM/DevOps Hands-On-Labs is a set of self-paced labs based on Visu
 <br />
 <br />
  <div align="center" class="labcols">
-<div class="row" style="margin-left: 50px;">
+<div class="row" style="margin-left: 0px;">
     <div class="lab-item col-md-4" align="center">
           <span class="headnews"> <b> <a href="labs/tfs" class="labmain">Getting started with Visual Studio Team Foundation Server</a></b></span><br />
-             <a href="labs/tfs"><img style="margin: 10px;" src="images/tile-self-hosted-server.png" width="120" height="120"/></a><br />         
+             <a href="labs/tfs"><img style="margin: 10px;" src="images/tile-self-hosted-server.png" width="120" height="120"/></a><br />
            <a href="labs/tfs" class="c-glyph"><span class="lab-details">View Details</span></a>
     </div>
     <div class="lab-item col-md-4" align="center">
@@ -46,7 +46,7 @@ The Microsoft ALM/DevOps Hands-On-Labs is a set of self-paced labs based on Visu
         <a href="labs/java"><img style="margin: 10px;" src="images/tile-integrate-with-cloud-services.png" width="120" height="120"/></a><br />
        <!--span class="mainPageText"> DevOps with Visual Studio Team Services for Java</span><br /><br /-->
        <a href="labs/vstsextend" class="c-glyph"><span class="lab-details">View Details</span></a>
-    </div>        
+    </div>
 </div>
 </div>
 
@@ -54,4 +54,4 @@ The Microsoft ALM/DevOps Hands-On-Labs is a set of self-paced labs based on Visu
 <div class="col-lg-1"></div>
  <div class="clear"></div>
 
-<br />
+<br/>

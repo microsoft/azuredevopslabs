@@ -1474,7 +1474,7 @@ div.lab-item-none {
 }
 
 div.lab-item {
-    width: 350px;
+    width: 340px;
     border-width: 1px;
     border-style: solid;
     border-color: #248ec2;
@@ -1566,7 +1566,7 @@ a.postitem:hover{
 }
 
 div.labcols{
-    margin-left: 60px;
+    margin-left: 0px;
 }
 
 div.rowMain{

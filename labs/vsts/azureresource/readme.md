@@ -6,6 +6,8 @@ permalink: /labs/vsts/azureresource/
 folder: /labs/vsts/azureresource/
 ---
 
+Last updated:3/2/2017
+
 ## Overview
 
 Azure Resource Manager enables you to work with the resources in your solution as a

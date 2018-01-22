@@ -6,6 +6,8 @@ permalink: /labs/vsts/appservice/
 folder: /labs/vsts/appservice/
 ---
 
+Last updated:8/3/2017
+
 ## Overview
 
 [App
