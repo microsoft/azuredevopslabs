@@ -319,18 +319,24 @@ ul#results-container a:hover {
     margin: 3px;
 }
 
+div#toc{
+    position: fixed;
+}
+
 div#toc ul li {
     margin: 8px 0px 8px 22px;
     font-size: 100%;
-    list-style: square;
+    list-style: none;
 }
 
 div#toc ul {
-    background-color: whitesmoke;
-    /*padding: 5px;*/
+    background-color:whitesmoke;
+    padding: 5px 0px;
     border-radius: 5px;
     max-width:  450px;
-    color: gray;
+    margin-right: 10px;
+  /*  color: gray;*/
+
 }
 
 div#toc ul li ul {
@@ -342,7 +348,7 @@ div#toc ul li ul li::before {
 }
 
 div#toc>ul::before {
-    content: "Table of Contents";
+    content: "In this lab";
     font-weight: 500;
     color: #555;
     text-align: center;
@@ -395,7 +401,10 @@ a.accordion-collapsed {
 .nav ul,
 .nav li {
     list-style: none;
+
 }
+
+
 
 .nav ul {
     padding: 0;
@@ -417,7 +426,7 @@ a.accordion-collapsed {
 }
 
 .nav>li li {
-    margin: 2px 0;
+    margin: 6px 0;
 }
 
 .nav a {
@@ -446,7 +455,7 @@ a.accordion-collapsed {
 
 .nav a:hover,
 .nav li.active>a {
-    background-color: #8D8D8D;
+    background-color: #8D8D8D; 
     color: #f5f5f5;
 }
 
@@ -455,10 +464,10 @@ a.accordion-collapsed {
 }
 
 .nav li a {
-    font-size: 12px;
+ /*   font-size: 12px;
     line-height: 18px;
     padding: 2px 10px;
-    background-color: #f1f1f1;
+  background-color: #f1f1f1;
 }
 
 .nav>li>a {
@@ -484,7 +493,7 @@ ul#mysidebar {
 }
 
 .nav ul li a {
-    background-color: #FAFAFA;
+ /*   background-color: #FAFAFA; */
 }
 
 .nav li a {
@@ -492,7 +501,7 @@ ul#mysidebar {
 }
 
 .nav li a:hover {
-    background-color: #8D8D8D;
+    background-color: black;
 }
 
 .nav ul li a {
@@ -1050,7 +1059,8 @@ span.soft {
 
 @media (min-width: 1000px) {
     ul#mysidebar {
-        width: 225px;
+        width: 235px;
+        background-color: rgba(0, 0, 0, 0.03);
     }
 }
 
@@ -1464,7 +1474,7 @@ div.lab-item-none {
 }
 
 div.lab-item {
-    width: 350px;
+    width: 340px;
     border-width: 1px;
     border-style: solid;
     border-color: #248ec2;
@@ -1556,7 +1566,7 @@ a.postitem:hover{
 }
 
 div.labcols{
-    margin-left: 60px;
+    margin-left: 0px;
 }
 
 div.rowMain{
@@ -1652,7 +1662,7 @@ a.launch-hol {
     border-color: #000000;
     padding: 7px;
     margin: 5px;
-    background-color: #248ec2;
+    background-color: #0078d7;
     text-decoration: none;
     color: black;
 }
@@ -1675,4 +1685,25 @@ div.header2{
     font-weight: bold;
     margin: 10px 0px 20px;
     border-bottom: 1.5px solid #888888;
+}
+
+a.sidebaritems{
+    font-size: 14px;
+}
+
+a.sidebarheadings{
+    font-size: 14px;
+    font-weight: bold;
+    margin: 10px 0px;
+}
+
+ul.sidebarlisting {
+    overflow-y: auto;
+    max-height: 500px;
+
+}
+
+span.topnavbreadcrump
+{
+    font-size:14px;
 }

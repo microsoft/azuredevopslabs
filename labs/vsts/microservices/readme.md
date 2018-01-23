@@ -6,8 +6,6 @@ permalink: /labs/vsts/microservices/
 folder: /labs/vsts/microservices/
 ---
 
-Lab version:15.0.26228.0
-
 Last updated:3/17/2017
 
 ## Overview
@@ -15,7 +13,6 @@ Last updated:3/17/2017
 [Microservices](https://docs.microsoft.com/en-us/azure/service-fabric/service-fabric-overview-microservices) have become popular approach to designing sophisticated applications. By adopting a microservices architecture, teams can easily scale different parts of their applications depending on the needs of their customers. They can also be more agile as they roll out changes and thus provide features to customers faster and more frequently.
 
 In this lab you will develop microservices using ASP.NET Core, and then you will deploy and debug them in local Docker containers. You will then use the ASP.NET publishing experience to deploy those containers to the Azure App Service, as well as configure continuous delivery for Visual Studio Team Services to enable an automated build and deploy workflow to Azure Container Service.
-
 
 ## Prerequisites
 
@@ -30,7 +27,6 @@ This lab requires the following to be installed on your machine:
 1. [PuTTY](http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html)
 
     You also need [Visual Studio Team Services (VSTS) account](https://www.visualstudio.com/team-services/) and an [Azure account](https://azure.microsoft.com/) ([Get a $25 monthly Azure credit by joining Visual Studio Dev Essentials](https://www.visualstudio.com/dev-essentials/)).
-
 
 ## Exercise 1: Creating Microservices with ASP.NET Core
 
@@ -78,7 +74,7 @@ This lab requires the following to be installed on your machine:
 
 1. Open a new instance of **PowerShell** and enter the following command to view the details of what's currently running in Docker.
 
-    ```
+    ```docker
     docker ps
     ```
 1. There's a lot of useful information here, including the confirmation that the port from the test URL is being mapped to port 80 of the container as specified in the project **dockerfile**.
@@ -98,7 +94,6 @@ This lab requires the following to be installed on your machine:
    ![](images/012.png)
 
 1. Return to **Visual Studio** and select **Debug \| Stop Debugging**.
-
 
 ### Task 2: Adding and debugging an API microservice project
 
@@ -180,7 +175,6 @@ This lab requires the following to be installed on your machine:
 1. Close the browser window.
 
 1. In **Visual Studio**, select **Debug \| Stop Debugging**.
-
 
 ### Task 3: Creating an Azure Container Service
 
@@ -393,4 +387,3 @@ This lab requires the following to be installed on your machine:
     ![](images/075.png)
 
     ![](images/076.png)
-

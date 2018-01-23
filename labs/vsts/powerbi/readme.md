@@ -23,10 +23,9 @@ The Visual Studio Team Services (VSTS) Content Pack for Power BI has been deprec
 
 1. You should have Office365 account in order to integrate Visual Studio Team Services with Power BI
 
-2. Visual Studio Team Services account. If you don't have one, you can create from <a href="https://www.visualstudio.com/">here</a>
+1. Visual Studio Team Services account. If you don't have one, you can create from [here](https://www.visualstudio.com/)
 
-
-**You can start a free trial if you don't have Office365 account from <a href="https://teams.microsoft.com/start">here</a>**
+**You can start a free trial if you don't have Office365 account from [here](https://teams.microsoft.com/start)
 
 ## Authorize Power BI to access your account data
 
@@ -38,15 +37,15 @@ Your first step requires you to authorize Power BI to access your Team Services 
 
 ## Log in to Power BI
 
-1. Go to <a href="http://powerbi.com">Power BI</a> site
+1. Go to [Power BI](http://powerbi.com) site
 
-   <img src="images/1.png" />
+   ![](images/1.png)
 
-2. Click **Sign In** in the upper right corner to log in to Power BI.
+1. Click **Sign In** in the upper right corner to log in to Power BI.
 
-   <img src="images/2.png" />
+   ![](images/2.png)
 
-3. You can use either AAD or MSA account to log in.
+1. You can use either AAD or MSA account to log in.
 
    >Note: If you don't have a Power BI account you can create one by entering your email address and click Use it free.
 
@@ -56,15 +55,15 @@ Workspaces in Power BI allows you to have isolated area to monitor your teams wo
 
 1. Go to **Workspaces** and click on **Create app workspace**.
 
-   <img src="images/11.png" />
+   ![](images/11.png)
 
-2. Give a name for the workspace and set the desired permissions. For this lab let's keep it default and create one.
+1. Give a name for the workspace and set the desired permissions. For this lab let's keep it default and create one.
 
-   <img src="images/12.png" />
+   ![](images/12.png)
 
-3. A new workspace is created now.
+1. A new workspace is created now.
 
-   <img src="images/13.png" />
+   ![](images/13.png)
 
 ## Connect to services with content packs for Power BI
 
@@ -72,39 +71,39 @@ You can connect to content packs for a number of services you use to run your bu
 
 1. Click **Get Data** on the left bottom corner to select .
 
-   <img src="images/3.png" />
+   ![](images/3.png)
 
-2. You can pull out the data either from one of the sources. Since we are integrating with VSTS, select **Services** and click on **Get**. 
+1. You can pull out the data either from one of the sources. Since we are integrating with VSTS, select **Services** and click on **Get**.
 
-   <img src="images/4.png" />
+   ![](images/4.png)
 
-3. Browse the content packs, or tap in the search box and type keywords:
+1. Browse the content packs, or tap in the search box and type keywords:
 
-   <img src="images/29.png" />
+   ![](images/29.png)
 
-4. In the search box, type **Visual Studio** and click on **Get it now**.
+1. In the search box, type **Visual Studio** and click on **Get it now**.
 
-   <img src="images/5.png" />
+   ![](images/5.png)
 
-5. Enter **YOUR ACCOUNT NAME**, if your Team Services URl is **YOURACCOUNTNAME.visualstudio.com**. Also enter the Project name that you want to track and click on **Next**
+1. Enter **YOUR ACCOUNT NAME**, if your Team Services URl is **YOURACCOUNTNAME.visualstudio.com**. Also enter the Project name that you want to track and click on **Next**
 
-   <img src="images/6.png" />
+   ![](images/6.png)
 
-6. A window would appear to allow the access to your VSTS account. Click **Sign in**.
+1. A window would appear to allow the access to your VSTS account. Click **Sign in**.
 
-   <img src="images/8.png" />
+   ![](images/8.png)
 
-7. A window would pop up to allow the permission to read the data from the VSTS account. Click on **Accept**.
+1. A window would pop up to allow the permission to read the data from the VSTS account. Click on **Accept**.
 
-   <img src="images/9.png" />
+   ![](images/9.png)
 
-8. Now the data is being imported and you will see the notification on the right corner top.
+1. Now the data is being imported and you will see the notification on the right corner top.
 
-   <img src="images/7.png" />
+   ![](images/7.png)
 
-9. Once the data is imported, you will see the dashboard with the data.
+1. Once the data is imported, you will see the dashboard with the data.
 
-   <img src="images/10.png" />
+   ![](images/10.png)
 
 ## Reports in Power BI
 
@@ -112,28 +111,27 @@ A Power BI report is a multi-perspective view into a dataset, with visualization
 
 1. Click on **Reports** and select **Visual Studio Team Services**. By default when the data is imported, a report would have generated automatically.
 
-   <img src="images/14.png" />
+   ![](images/14.png)
 
-2. The report along with the data is shown. Modify the report to show the desired data. To do so, click on **Edit report** on the top.
+1. The report along with the data is shown. Modify the report to show the desired data. To do so, click on **Edit report** on the top.
 
-   <img src="images/15.png" />
+   ![](images/15.png)
 
-3. Visualizations and additional data can be added from the filter sets and the visualizations table from the right side.
+1. Visualizations and additional data can be added from the filter sets and the visualizations table from the right side.
 
-   <img src="images/16.png" />
+   ![](images/16.png)
 
-4. Different reports can be obtained. Agile Status report, Sprint Status report, Git report etc.
+1. Different reports can be obtained. Agile Status report, Sprint Status report, Git report etc.
 
-   <img src="images/17.png" />
+   ![](images/17.png)
 
-   <img src="images/18.png" />
+   ![](images/18.png)
 
-   <img src="images/19.png" />
+   ![](images/19.png)
 
-5. Add new pages to the report with the desired data. Click on + at the bottom of the report to add new and select the visualizations and data to appear in the page.
+1. Add new pages to the report with the desired data. Click on + at the bottom of the report to add new and select the visualizations and data to appear in the page.
 
-   <img src="images/20.png" />
-
+   ![](images/20.png)
 
 ## Q&A in Power BI
 
@@ -143,65 +141,42 @@ Asking the question is just the beginning. Have fun traveling through your data 
 
 The experience is truly interactive…and fast! Powered by an in-memory storage, response is almost instantaneous.
 
-
 1. From your workspace, go to Dashboard and click on **Ask a question about your data**
 
-   <img src="images/21.png" />
+   ![](images/21.png)
 
-2. Place your cursor in the question box. Even before you start typing, Q&A displays a new screen with suggestions to help you form your question.
+1. Place your cursor in the question box. Even before you start typing, Q&A displays a new screen with suggestions to help you form your question.
 
-   <img src="images/23.png" />
+   ![](images/23.png)
 
    This list contains:
-    
-    a. the questions used to create tiles that are already pinned to the dashboard, and
 
-    b. the name of tables in the underlying dataset(s).
+    a. The questions used to create tiles that are already pinned to the dashboard, and
+
+    b. The name of tables in the underlying dataset(s).
 
     You can always choose one of these questions as a starting point and continue to refine the question to find the specific answer you are looking for. Or, use a table name to help you word a new question.
 
-3. Select from the dropdown or begin typing your own question.
+1. Select from the dropdown or begin typing your own question.
 
-   <img src="images/24.png" />
+   ![](images/24.png)
 
-4. As you type a question, Power BI Q&A picks the best visualization to display your answer; and the visualization changes dynamically as you modify the question. Q&A also helps you formulate your question with auto-completion, by restating your question, and with other textual and visual aids.
+1. As you type a question, Power BI Q&A picks the best visualization to display your answer; and the visualization changes dynamically as you modify the question. Q&A also helps you formulate your question with auto-completion, by restating your question, and with other textual and visual aids.
 
-   <img src="images/25.png" />
+   ![](images/25.png)
 
-5. When you type a query, Power BI looks for an answer in any dataset that has a tile on that dashboard.  If all the tiles are from datasetA, then your answer will come from datasetA.  If there are tiles from datasetA and datasetB, then Q&A will search for the best answer from those 2 datasets.
+1. When you type a query, Power BI looks for an answer in any dataset that has a tile on that dashboard.  If all the tiles are from datasetA, then your answer will come from datasetA.  If there are tiles from datasetA and datasetB, then Q&A will search for the best answer from those 2 datasets.
 
    > If you only have one tile from datasetA and you remove it from your dashboard, Q&A will no longer have access to datasetA.
 
-6. When you're happy with the result, pin the visualization to a dashboard by selecting the pin icon in the top right corner.
+1. When you're happy with the result, pin the visualization to a dashboard by selecting the pin icon in the top right corner.
 
-   <img src="images/26.png" />
+   ![](images/26.png)
 
-7. You can pin this to an **Existing dashboard** or to a **New dashboard**. Select **Existing dashboard.**
+1. You can pin this to an **Existing dashboard** or to a **New dashboard**. Select **Existing dashboard.**
 
-   <img src="images/27.png" />
+   ![](images/27.png)
 
-8. Go back to dashboard, you should see the pinned item now.
+1. Go back to dashboard, you should see the pinned item now.
 
-   <img src="images/28.png" />
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
-
-   
-
-
-
-   
-
-
+   ![](images/28.png)
