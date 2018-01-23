@@ -34,7 +34,7 @@ The image and the accompanying hand-on-labs is for technical audience. As such, 
 
 ## Provisioning the Project using VSTSDemoGenerator
 
-You can use [Visual Studio Team Services Demo Generator](https://vstsdemogenerator.azurewebsites.net/?Name=MyShuttle-Java) to provision a project with pre-defined data on to your VSTS account to follow the hands-on-labs.
+You can use [Visual Studio Team Services Demo Generator](https://vstsdemogenerator.azurewebsites.net) to provision a project with pre-defined data on to your VSTS account to follow the hands-on-labs. Choose **MyShuttle2** template from the dropdown.
 
 ## Hands on Labs
 
