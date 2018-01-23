@@ -30,7 +30,7 @@ The Microsoft ALM/DevOps Hands-On-Labs is a set of self-paced labs based on Visu
 <br />
 <br />
  <div align="center" class="labcols">
-<div class="row" style="margin-left: 0px;">
+<div class="row" style="margin-left: 70px;">
     <div class="lab-item col-md-4" align="center">
           <span class="headnews"> <b> <a href="labs/tfs" class="labmain">Getting started with Visual Studio Team Foundation Server</a></b></span><br />
              <a href="labs/tfs"><img style="margin: 10px;" src="images/tile-self-hosted-server.png" width="120" height="120"/></a><br />
