@@ -60,69 +60,69 @@ In order to complete this lab you will need-
 
     <img src="images/8.png" />
 
-3. In the Create new release definition dialog, select the **Azure App Service Deployment** template and choose **Next.**
+3. In the Create new release definition dialog, select the **Azure App Service Deployment** template and choose **Apply.**
 
     <img src="images/9.png" />
 
-4. In the next page, select the **build definition** you created earlier and choose **Create.** 
+4. In the next page, an environment will be created. Rename the Environment to **Dev** and close the envirnment page.
 
-    <img src="images/10.png" />
+    <img src="images/10.png" width="624"/>
 
-5. This creates a new release definition with one default environment. Rename the Environment to **Dev**.
+5. In the Pipeline view, select **Artifacts | Add** you created earlier and set the **Source (Build definition)** to the correct build (e.g. the CI build created in the CI lab) and click **Add**. 
 
-    <img src="images/11.png" width="624"/>
+    <img src="images/10-1.png" />
 
-6. In the **Azure Subscription**, map the endpoint which we created in **Exercise 1**.
+6. In the Pipeline view, select the **Dev** environment and click on **1 phase, 1 task**.
 
-    <img src="images/12.png" width="624"/>
+7. In the **Tasks** tab, click **Dev Deployment Process** and choose the **Azure Subscription** mapped to the endpoint which we created in **Exercise 1**. If you have already created an Azure Web App then select the Web App name in **App Service Name**.
 
-7. If you would have hosted the WebApp on Azure, you will get an App Service which has to be mapped in your release definition. If you haven't published on Azure, you can follow this <a href="https://almvm.azurewebsites.net/labs/vsts/appservice/"/>post</a> to host.
+    <img src="images/10-2.png" width="624"/>
 
-    <img src="images/13.png" width="624"/>
+8. If you have not created an Azure Web App then you can follow this <a href="https://almvm.azurewebsites.net/labs/vsts/appservice/">lab</a> for step-by-step instructions.
 
-8. Select the **MyHealth.Web.zip** file to deploy.
+8. Select the **Deploy Azure App Service** task and set the **MyHealth.Web.zip** file to deploy.
 
-    <img src="images/14.png" width="624"/>
+    <img src="images/10-3.png" width="624"/>
 
-9. We will replace the database connection string in the **appsettings.json** to point to a database server on Azure.
+9. Expand the **File Transforms & Variable Substition Options** and add **appsettings.json** to the **JSON variable substituion** field and then **Save**. We will replace the database connection string in the **appsettings.json** to point to a database server on Azure.
 
-   <img src="images/48.png" />
+   <img src="images/10-4.png" />
 
 10. Go to **Variables** tab and create a variable with the below name and value.
 
-    >Note:  You will need to create a SQL database server on Azure prior to this step. If you have an existing SQL Server on Azure, you can use it, Otherwise follow this <a href="http://bit.ly/2o2IDTy" >blog post</a>for step-by-step intsructions.
+    >Note:  You will need to create a SQL database server on Azure prior to this step. If you have an existing SQL Server on Azure, you can use it, Otherwise follow this <a href="http://bit.ly/2o2IDTy" >blog post</a> for step-by-step intsructions.
 
     >Name: ConnectionStrings.DefaultConnection
 
     >Value: Server=tcp:{yourdbserver},1433;Database=myhealthclinic;User ID={dbuserid};Password={dbpassword};Trusted_Connection=False;Encrypt=True;
 
-9. Give a name for the new release definition and Save the release definition.
+11. Give a name for the new release definition and Save the release definition.
 
-10. Create a **new release** and select the **latest** build to deploy it to the single environment in the definition.
+12. Create a **new release** and select the **latest** build to deploy it to the single environment in the definition.
 
-    <img src="images/15.png" width="624"/>
+    <img src="images/10-7.png" width="624"/>
 
-    <img src="images/16.png" width="624"/>
+    <img src="images/10-8.png" width="624"/>
 
-11. Go to the release definition log to view the process.
+13. Go to the release definition log to view the process.
 
     <img src="images/17.png" />
 
     <img src="images/18.png" />
 
-12. You can go to the Azure Portal and get the existing Web App Service URI.
+14. You can go to the Azure Portal and get the existing Web App Service URI.
 
     <img src="images/19.png" width="624"/>
 
-13. Click on **Private area** to login.
+15. Click on **Private area** to login.
     - Username: User
     - Password: P2ssw0rd@1
 
-    <img src="images/20.png" width="624"/>
+    <img src="images/10-9.png" width="624"/>
 
     <img src="images/21.png" />
 
-14. Once logged in, you should see this dashboard.
+16. Once logged in, you should see this dashboard.
 
     <img src="images/22.png" width="624"/>
 
@@ -130,10 +130,17 @@ In order to complete this lab you will need-
 
 ### Task 1: Triggers
 
-1. A Release definition can be configured to automatically create a new release when it detects new artifacts are available.
-   Typically as a result of a new build of the application. Click on **Triggers** from your release definition as shown.
+1. Return to the **Pipeline** view of the release by selecting Releases, then your Release definition, then Edit.
 
-   <img src="images/23.png" width="624"/>
+<img src="images/23-1.png" width="624">
+
+A Release definition can be configured to automatically create a new release when it detects new artifacts are available, typically as a result of a new build of the application. Click on **Continuous Deployment Trigger** in Artifacts as shown.
+
+   <img src="images/23-2.png" width="624"/>
+
+Set the **Continuous deployment trigger** to **Enabled** and **Save**.
+
+<img src="images/23-3.png" width="624"/>
 
    > - **Manual:** No releases are initiated automatically when a new build of the source artifacts occurs. All releases for this release definition must be created manually by choosing the Release icon in a release definition or from a build summary. 
 
@@ -141,17 +148,15 @@ In order to complete this lab you will need-
 
    > - **Scheduled:** A new release is created based on a schedule you specify. When you select this option, a set of controls enables you to select the days of the week and the time of day that Release Management will automatically create a new release.
 
-   > **NOTE:** However, even though a release is automatically created, it might not be deployed automatically to an environment. To enable automatic deployment, you must also configure environment deployment triggers in each environment for which you want automated deployments to occur. The lower section of the Triggers tab lists the environments configured for this release definition.
+   > **NOTE:** However, even though a release is automatically created, it might not be deployed automatically to an environment. To enable automatic deployment, you must also configure environment deployment triggers in each environment for which you want automated deployments to occur.
 
-2. Click on **Continuous Deployment** to create a new release automatically.
+2. In the **Pipeline** tab, select the icon of a person at either end of the environment for pre and post deployment conditions.
 
-   <img src="images/24.png" width="624"/>
-
-3. Click on the **...** button on the environment and select **Deployment Conditions**.
-
-    > The deployment conditions dialog for the environment shows the currently configured environment deployment triggers and deployment queuing policies. Users with permission to edit release definitions can edit the deployment conditions here, including environment deployment triggers and deployment queuing policies.
-
-   <img src="images/25.png" width="624"/>
+    > The deployment conditions for the environment shows the currently configured environment deployment triggers and deployment queuing policies. Users with permission to edit release definitions can edit the deployment conditions here.
+    Read more in the <a href=https://docs.microsoft.com/en-us/vsts/build-release/concepts/definitions/release/triggers >Deployment Trigger documentation<a/>.
+    
+    <img src="images/23-4.png" width="624"/>
+    <img src="images/23-5.png" width="400"/>
 
 ### Task 2: Artifacts
 
