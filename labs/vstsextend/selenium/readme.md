@@ -37,7 +37,7 @@ If you are not familiar with creating Selenium UI tests in Visual Studio, you ma
 
     ![](images/VSTSDemogenerator.png)
 
-    > **Note:** This URL will automatically select **Selenium** template in the demo generator. If you want to try other projects, use this URL instead -https://vstsdemogenerator.azurewebsites.net/
+    {% include note.html content= "This URL will automatically select **Selenium** template in the demo generator. If you want to try other projects, use this URL instead -[https://vstsdemogenerator.azurewebsites.net/](https://vstsdemogenerator.azurewebsites.net/)" %}
 
 1. Once the project is provisioned, click the URL to navigate to the project.
 
@@ -170,7 +170,7 @@ In this exercise, we will trigger the **VSTS build** to compile the Selenium C# 
 
 1. When **Selenium test execution** phase starts, connect back to the VM provisioned earlier to see UI tests execution.
 
-   >Note : It takes approximately 8 minutes to deploy the test agent for the first time on the VM. Once this task is complete, you can connect to the VM to see the actual test execution.
+   {% include note.html content= "It takes approximately 8 minutes to deploy the test agent for the first time on the VM. Once this task is complete, you can connect to the VM to see the actual test execution." %}
 
    ![](images/Releaseprogress.png)
 

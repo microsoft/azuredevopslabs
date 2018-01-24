@@ -948,6 +948,7 @@ table code {
 
 pre {
     margin: 25px 0px;
+    margin-left: 10px;
 }
 
 #json-box-container pre {
@@ -999,6 +1000,7 @@ h4 code {
 .alert {
     margin-bottom: 10px;
     margin-top: 10px;
+    margin-left: 10px;
 }
 
 a.accordion-toggle {

@@ -57,7 +57,7 @@ In this lab, you will learn how to setup SonarQube on Azure and to integrate Vis
 
    ![](images/CustomDeployAzure3.png)
 
-   >The deployment in Azure can take up to 30 minutes. At the end of the deployment, SonarQube will be configured to run as a Windows Service on the SonarQube VM. When the SonarQube service starts for the first time, it will configure its database. This can take an additional 15 minutes  to complete during which time the Azure deployment shows as completed but you still won't be able to reach the SonarQube home page. Please give SonarQube some time to update. Click [here](https://blogs.msdn.microsoft.com/visualstudioalmrangers/2016/10/06/easily-deploy-sonarqube-server-in-azure/) for more information.
+   {% include important.html content= "The deployment in Azure can take up to 30 minutes. At the end of the deployment, SonarQube will be configured to run as a Windows Service on the SonarQube VM. When the SonarQube service starts for the first time, it will configure its database. This can take an additional 15 minutes  to complete during which time the Azure deployment shows as completed but you still won't be able to reach the SonarQube home page. Please give SonarQube some time to update. Click [here](https://blogs.msdn.microsoft.com/visualstudioalmrangers/2016/10/06/easily-deploy-sonarqube-server-in-azure/) for more information." %}
 
 1. Once the deployment is successful, you will see the resources in Azure Portal.
 
@@ -67,7 +67,7 @@ In this lab, you will learn how to setup SonarQube on Azure and to integrate Vis
 
 1. Access the **SonarQube** portal providing the DNS name suffixed by the port number.
 
-   >The default port for SonarQube is 9000. Copy the DNS name from the created Virtual Machine in Azure Portal as shown and append :9000 at the end. The final **SonarQube** URL will be **http://YOUR_DNS_NAME:9000**
+   {% include important.html content= "The default port for SonarQube is 9000. Copy the DNS name from the created Virtual Machine in Azure Portal as shown and append :9000 at the end. The final **SonarQube** URL will be **http://YOUR_DNS_NAME:9000**" %}
 
    ![](images/dns_name.png)
 
@@ -109,7 +109,7 @@ In this lab, you will learn how to setup SonarQube on Azure and to integrate Vis
 
 1. Change the **Operator** value to **is greater than** and the **ERROR** threshold value to **0** (zero) and click on the **Add** button.
 
-   > This condition means that if the number of bugs in Sonar Analysis is greater than 0 (zero), then the quality gate will fail and this fails the VSTS build.
+   {% include note.html content= "This condition means that if the number of bugs in Sonar Analysis is greater than 0 (zero), then the quality gate will fail and this fails the VSTS build." %}
 
    ![](images/qgbug-add.png)
 

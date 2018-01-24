@@ -16,7 +16,7 @@ This lab will show how you can
 - Create a new MySQL database
 - Use Azure App Service Task to deploy a WAR file
 
-## Pre-requisites
+## Prerequisites
 
 1. **Microsoft Azure Account:** You will need a valid and active azure account for the labs.
 
@@ -32,7 +32,7 @@ If you are following this lab from "Working with Jenkins, VSTS and Azure, you ca
 
 1. Use  **MyShuttle** for the template. Provide the Project Name and select **Create Project**. After the project is provisioned, click the URL to navigate to the project.
 
-    >**Note:** This URL will automatically select the MyShuttle template in the demo generator. If you want to try other projects, use this URL instead - https://vstsdemogenerator.azurewebsites.net/
+    {% include note.html content= "This URL will automatically select the MyShuttle template in the demo generator. If you want to try other projects, use this URL instead - [https://vstsdemogenerator.azurewebsites.net/](https://vstsdemogenerator.azurewebsites.net/)" %}
 
 ## Exercise 2: Creating Azure Web App and MySQL database
 
@@ -56,11 +56,11 @@ If you are following this lab from "Working with Jenkins, VSTS and Azure, you ca
 
    ![Resource Group](images/resourcegroup.png)
 
-1. Select **Properties**. Note down **SERVER NAME** and **SERVER ADMIN LOGIN NAME**
+1. Select **Properties**. Note down **SERVER NAME** and **SERVER ADMIN LOGIN NAME**.
 
     ![Database properties](images/dbproperties.png)
 
-    In this example, the server name is *myshuttle-1-mysqldbserver.mysql.database.azure.com* and the admin user name is *mysqldbuser@myshuttle-1-mysqldbserver*
+    In this example, the server name is *myshuttle-1-mysqldbserver.mysql.database.azure.com* and the admin user name is *mysqldbuser@myshuttle-1-mysqldbserver*.
 
 1. We will use the MySQL command-line tool to establish a connection to the Azure Database for MySQL server. We will run the MySQL command-line tool from the Azure Cloud Shell in the browser.To launch the Azure Cloud Shell, click the `>_` icon in the top right toolbar.
 
@@ -71,9 +71,10 @@ If you are following this lab from "Working with Jenkins, VSTS and Azure, you ca
     ```HTML
     wget https://raw.githubusercontent.com/hsachinraj/azure-arm-templates/master/vstsazurejl_arm/mydbscript.script
     ```
-    This should download the file that we want to execute on the server
+    This should download the file that we want to execute on the server.
 
 1. Next, we will execute the SQL from the downloaded file on the database server. Enter the following command
+
     ````SQL
     mysql -h myshuttle-1-mysqldbserver.mysql.database.azure.com -u mysqldbuser@myshuttle-1-mysqldbserver -p < mydbscript.script
     ````
@@ -81,29 +82,32 @@ If you are following this lab from "Working with Jenkins, VSTS and Azure, you ca
 
     ![Creating DB](images/createdatabase.png)
 
->This should create the database, tables and populate records for us.
+    {% include note.html content= "This should create the database, tables and populate records for us." %}
 
 ## Exercise 4: Updating the App Settings for the Web App
 
 Next, navigate to the Web app that you have created. As we are deploying a Java application, we need to change the web app's web container to Apache Tomcat.
 
-1. Click **Application Settings**. To change it to Tomcat, we will first need to install Java. Select a **Java Version** to install and then change **Web container** to use Apache Tomcat. For this purpose of the lab, we will choose ***Java 8*** and ***Apache Tomcat 9.0*** though the version number would not matter much for the simple app that we are deploying
+1. Click **Application Settings**. To change it to Tomcat, we will first need to install Java. Select a **Java Version** to install and then change **Web container** to use Apache Tomcat. For this purpose of the lab, we will choose ***Java 8*** and ***Apache Tomcat 9.0*** though the version number would not matter much for the simple app that we are deploying.
 
     ![Setting Web container to Tomcat](images/webcontainer.png)
 
-1. Click **Save** and wait for the update to be applied. Then navigate to the web app URL again and now you should see a different page
+1. Click **Save** and wait for the update to be applied. Then navigate to the web app URL again and now you should see a different page.
 
     ![Default Java App](images/defaultappjava.png)
 
     Next, we need to update the connection strings for the web app to connect to the database correctly. There are multiple ways you can do this - but for the purpose of this lab, we will take a simple approach. We will update it directly on the Azure portal.
 
-1. From the Azure portal, Select the Web app you provisioned. Select **Application Settings**. Scroll down to the **Connection Strings** section
+1. From the Azure portal, Select the Web app you provisioned. Select **Application Settings**. Scroll down to the **Connection Strings** section.
 
-1. Add a new MySQL connection string with **MyShuttleDb** as the name and the following string for the value - `jdbc:mysql://{MySQL Server Name}:3306/alm?useSSL=true&requireSSL=false&autoReconnect=true&user={your user name}&password={your password}`
+1. Add a new MySQL connection string with **MyShuttleDb** as the name and the following string for the value -
 
-1. Click **Save** to save the connection string
+   `jdbc:mysql://{MySQL Server Name}:3306/alm?useSSL=true&requireSSL=false&autoReconnect=true&user={your user name}&password={your password}`
 
-   >**Note** - Connection Strings configured here will be available as environment variables, prefixed with connection type for Java apps (also for PHP, Python and Node apps). In the `DataAccess.java`file under `src/main/java/com/microsoft/example` folder, we retrieve the connection string using the following code
+1. Click **Save** to save the connection string.
+
+    {% include note.html content= "Connection Strings configured here will be available as environment variables, prefixed with connection type for Java apps (also for PHP, Python and Node apps). In the **DataAccess.java** file under **src/main/java/com/microsoft/example** folder, we retrieve the connection string using the following code" %}
+
     ````Java
     String conStr = System.getenv("MYSQLCONNSTR_MyShuttleDb");
     ````
@@ -112,11 +116,11 @@ You have now setup and configured all the resources that is needed to deploy and
 
 ## Exercise 5: Deploying to App Service from VSTS
 
-1. Navigate to the VSTS project that you provisioned
+1. Navigate to the VSTS project that you provisioned.
 
-1. Select **Build and Release** and then **Releases**
+1. Select **Build and Release** and then **Releases**.
 
-1. Select **MyShuttle Release** and click **Edit** to open the release definition
+1. Select **MyShuttle Release** and click **Edit** to open the release definition.
 
    ![Edit MyShuttle Release Definition ](images/editrelease.png)
 
@@ -124,7 +128,7 @@ You have now setup and configured all the resources that is needed to deploy and
 
    ![Team Build Artifact](images/addartifacts.png)
 
-1. Select the **Azure Dev** deployment process and make sure that **Azure Subscription** and **App Service Name** fields have the right values
+1. Select the **Azure Dev** deployment process and make sure that **Azure Subscription** and **App Service Name** fields have the right values.
 
    ![MyShuttle Release Definition](images/vstsreleasedef.png)
 
@@ -132,9 +136,9 @@ You have now setup and configured all the resources that is needed to deploy and
 
 1. Select the **Deploy Azure App Service** and ensure that the subscription and the app service name are reflected correctly.
 
-   >We are using the **Deploy Azure App Service** task. This task is used to update Azure App Service to deploy Web Apps and WebJobs to Azure.  The task works on cross platform agents running Windows, Linux or Mac and uses the underlying deployment technologies of Web Deploy and Kudu. The task works for ASP.NET, ASP.NET Core 1 and Node.js based web applications. Note that this task works with  Azure Resource Manager APIs only.
+   {% include note.html content= "We are using the **Deploy Azure App Service** task. This task is used to update Azure App Service to deploy Web Apps and WebJobs to Azure.  The task works on cross platform agents running Windows, Linux or Mac and uses the underlying deployment technologies of Web Deploy and Kudu. The task works for ASP.NET, ASP.NET Core 1 and Node.js based web applications. Note that this task works with  Azure Resource Manager APIs only." %}
 
-1. Click **Save** and then **+Release | Create Release** to start a new release
+1. Click **Save** and then **+Release \| Create Release** to start a new release
 
    ![MyShuttle Release Definition](images/createrelease.png)
 
@@ -142,12 +146,12 @@ You have now setup and configured all the resources that is needed to deploy and
 
 1. Select **Login** and try logging in to the site with anyone of the following credentials.
 
-    |Username|Password|
-    |--|--|
-    |barney|barneypassword
-    |fred|fredpassword
+   |Username|Password|
+   |--|--|
+   |barney|barneypassword|
+   |fred|fredpassword|
 
-1. If your database was setup correctly and the connection parameters are valid, you should be able to login to the portal
+1. If your database was setup correctly and the connection parameters are valid, you should be able to login to the portal.
 
     {% include note.html content="If you encounter an error with ***The specified CGI application encountered an error and the server terminated the process*** message, check whether you have entered the app settings variables and values (for the database connection) correctly" %}
 
