@@ -149,6 +149,6 @@ You have now setup and configured all the resources that is needed to deploy and
 
 1. If your database was setup correctly and the connection parameters are valid, you should be able to login to the portal
 
-    >**Note:** If you encounter an error - "The specified CGI application encountered an error and the server terminated the process", check whether you have entered the app settings variables and values (for the database connection) correctly.
+    {% include note.html content="If you encounter an error with ***The specified CGI application encountered an error and the server terminated the process*** message, check whether you have entered the app settings variables and values (for the database connection) correctly" %}
 
     ![MyShuttle page after login](images/myshuttle-afterlogin.png)

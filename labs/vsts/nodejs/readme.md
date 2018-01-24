@@ -1,7 +1,7 @@
 ---
 title: DevOps for Node.js with Visual Studio Team Services and Azure
 layout: page
-sidebar: vsts
+sidebar: vsts2
 permalink: /labs/vsts/nodejs/
 folder: /labs/vsts/nodejs/
 ---

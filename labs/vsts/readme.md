@@ -5,8 +5,6 @@ sidebar: vsts
 permalink: /labs/vsts/
 folder: /labs/vsts/
 ---
-
-<br />
 <div class="vstsMain">
 <div class="productcolmain">
   <div class="pageheader">

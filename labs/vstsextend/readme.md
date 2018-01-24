@@ -5,7 +5,6 @@ permalink: /labs/vstsextend/
 folder: /labs/vstsextend/
 ---
 
-<br />
 <div class="vstsextendMain">
 <div class="productcolmain">
   <div class="pageheader">
@@ -36,8 +35,8 @@ folder: /labs/vstsextend/
           <li> <img src="images/azure.png" /><a href="deploymentgroups/"> Working with Deployment Groups</a></li><br />
           <li>  <img src="images/intellij.png" height="42" width="42"/><a href="intelliJ/"> Deploying to IntelliJ</a></li><br />
           <li><img src="images/azure.png" /><a href="azurefunctions/"> Deploying to Azure Functions from VSTS</a></li><br />
-          <li> <img src="images/logo_java.svg" height="42" width="42"/> <a href="java/"> DevOps with VSTS and Azure for Java projects  </a>    </li><br />
-          <li> <img src="images/logo_nodejs.svg" height="42" width="42"/><a href="nodejs/">DevOps for Node.js with VSTS and Azure   </a>    </li><br />
+          <li> <img src="images/logo_java.svg" height="42" width="42"/> <a href="../java/"> DevOps with VSTS and Azure for Java projects  </a>    </li><br />
+          <li> <img src="images/logo_nodejs.svg" height="42" width="42"/><a href="../vsts/nodejs/">DevOps for Node.js with VSTS and Azure   </a>    </li><br />
         </ul>
 </div>
 

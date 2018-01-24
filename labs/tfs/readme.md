@@ -4,9 +4,8 @@ layout: homepage
 permalink: /labs/tfs/
 comments: true
 folder: /labs/tfs/
+landing-page: false
 ---
-
-<br />
 <div class="tfsMain">
 <div class="productcolmain">
   <div class="pageheader">

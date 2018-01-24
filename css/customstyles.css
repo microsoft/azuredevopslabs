@@ -525,11 +525,12 @@ ul#mysidebar {
 }
 
 span.projectTitle {
-    /*font-family:-"Lato","Geneva CY","Lucida Grande","Arial Unicode MS","Helvetica Neue","Helvetica","Arial",sans-serif;*/
+    font-family:-segoe-ui_normal,Segoe UI,Segoe,Segoe WP,Helvetica Neue,Helvetica,sans-serif;
     font-weight: bold;
     color: #000000;
     padding-left: 10px;
     word-wrap: break-word;
+    font-size: 20px;
 }
 
 span.rellinkstitle {
