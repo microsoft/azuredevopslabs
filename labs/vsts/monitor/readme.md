@@ -6,7 +6,7 @@ permalink: /labs/vsts/monitor/
 folder: /labs/vsts/monitor/
 ---
 
-Last updated:11/7/2017
+Last updated : {{ "now" | date: "%b %d,%Y" }}.
 
 ## Overview
 

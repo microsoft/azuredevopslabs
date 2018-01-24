@@ -6,7 +6,7 @@ permalink: /labs/vsts/azureresource/
 folder: /labs/vsts/azureresource/
 ---
 
-Last updated:3/2/2017
+Last updated : {{ "now" | date: "%b %d,%Y" }}.
 
 ## Overview
 

@@ -6,7 +6,7 @@ permalink: /labs/vsts/powerbi/
 folder: /labs/vsts/powerbi/
 ---
 
-Last updated:6/28/2017
+Last updated : {{ "now" | date: "%b %d,%Y" }}.
 
 ## Overview
 

@@ -6,7 +6,7 @@ permalink: /labs/vsts/teams/
 folder: /labs/vsts/teams/
 ---
 
-Last updated:6/26/2017
+Last updated : {{ "now" | date: "%b %d,%Y" }}.
 
 ## Overview
 
