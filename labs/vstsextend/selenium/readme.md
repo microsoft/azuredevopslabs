@@ -57,11 +57,9 @@ We will also deploy the SQL database in the VM using Deployment Groups.
 
    ![](images/create_deploymentgroup.png)
 
-1. This will generate a PowerShell script to associate the VM to this deployment group.
+   This will generate a PowerShell script to associate the VM to this deployment group.
 
-Select the **Use a personal access token in the script for authentication** check box so that we will not have to provide password every time the script is executed
-
-Click on **Copy script to clipboard** to copy the script which will be used in the next exercise to associate the VM to  deployment group.
+1. Select the **Use a personal access token in the script for authentication** check box so that we will not have to provide password every time the script is executed. Click on **Copy script to clipboard** to copy the script which will be used in the next exercise to associate the VM to  deployment group.
 
    ![](images/create_deploymentgroup2.png)
 
@@ -184,9 +182,9 @@ In this exercise, we will trigger the **VSTS build** to compile the Selenium C# 
 
    ![](images/seleniumtestfirefox.png)
 
-1. Once the release succeeds, click the **Tests** tab to analyze the test results. Select **All** in the **Outcome** section to view all the tests and their status.
+Once the release succeeds, click the **Tests** tab to analyze the test results. Select **All** in the **Outcome** section to view all the tests and their status.
 
-    ![](images/analyzetests.png)
+![](images/analyzetests.png)
 
 ## Feedback
 
