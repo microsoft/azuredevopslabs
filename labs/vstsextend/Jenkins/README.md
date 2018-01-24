@@ -278,49 +278,46 @@ Next, we will configure Visual Studio VSTS Release Management to fetch and deplo
 
 1. Select **Jenkins** for the *Source type*. Select the Jenkins endpoint you created above and enter **MyShuttle** for the *Source(Job)* - Note this should map to the project name that you have configured in Jenkins
 
-1. If you have configured Jenkins server and the source correctly, you will get a message showing the output of the build, in this case it should be ***myshuttledev.war***
+1. If the Jenkins server and the source location is configured correctly, once the publishing of the artifacts is completed, a message with the output file name **myshuttledev.war** will be displayed
 
    ![Add Jenkins artifact](images/rm_addjenkinsartifact.png)
 
 1. You are now ready to deploy!
 
-1. You can refer to the [Deploying Tomcat+MySQL application to Azure with VSTS](../tomcat/) if you want to continue with the deployment.
+1. The output .war file can now be deployed on Azure. For details on the deployment, refer to the [Deploying a MySQL database backed Java app to Tomcat on Azure with VSTS](../tomcat/)
 
 ## Additional Sections
 
 ### Logging into Jenkins with the default credentials
 
-1. To log in to Jenkins when you did not get a chance to configure the initial admin, you can use the default user name **admin**
+1.  In case the initial admin was not configured for Jenkins during the setup, the default user **admin** can be used to login to Jenkins. The admin password will be the content from the password file created automatically by Jenkins stored in the path `\var\lib\jenkins\secrets\initialAdminPassword`
 
-1. Copy and paste the password text from `\var\lib\jenkins\secrets\initialAdminPassword`
+1.  To change password, click on the user name on the top-right corner. Click the **Configure** option, scroll down to the **password** section to specify a new password and then click the **Save** button.
+  
 
-1. To change password, click on the user name on the top-right
+### Installing the Git Plugin
 
-1. Select **Configure**. Scroll down to the **password** section. Specify a new password and click **Save**
-
-### Installing Git Plugin
-
-1. From the main page of the Jenkins portal, select **Manage Jenkins** and then select **Manage Plugins**
+1. Navigate to the home page of the Jenkins portal, click on the **Manage Jenkins** option and then click on the **Manage Plugins** option
 
     ![Manage Jenkins](images/manage-jenkins2.png)
 
 1. Select the **Available** tab.
 
-1. Enter **Git plugin** in the filter textbox
+1. Type **Git plugin** in the filter textbox
 
 1. Select **Git plugin** in the search list and select **Install without Restart**
 
 ### Installing VSTS Private agent
 
-1. From VSTS, select **Admin**\|**Agent Queue**
+1. Navigate to the home page of VSTS team project and select the **Admin**|**Agent Queues** option
 
-1. Select **Download agent**
+1. In the Agents for pool Default section, click on the **Download agent** button.
 
     ![Agent Queue](images/vsts-agentqueue.png)
 
-1. If you are accessing this page from the VM, it should default to **Linux**. Otherwise, select the tab.
+1. If the page is being accessed from the VM, the selected tab will default to **Linux**. Otherwise, select the **Linux** tab.
 
-1. Click **Download** to start downloading the agent. This is typically saved in the *Downloads* folder
+1. Click on the **Download** button to initiate the agent download. The downloaded file gets typically saved in the *Downloads* folder
 
     ![Download VSTS agent](images/downloadvstsagent.png)
 
@@ -331,6 +328,6 @@ Next, we will configure Visual Studio VSTS Release Management to fetch and deplo
     cd vstsagent
     tar -zxvf ../Downloads/vsts-agent-linux-x64-2.126.0.tar.gz
     ````
-1. Once the files are extracted, run `./config.sh` to configure the agent. You will need to enter the VSTS URL and provide your PAT
+1. Once the files are extracted, run `./config.sh` to configure the agent. The VSTS URL and the PAT will need to be provided during the configuration.
 
-1. After you have configured, start the agent by running the following command `./run.sh`
+1. After the configuration is completed, start the agent by running the following command `./run.sh`
