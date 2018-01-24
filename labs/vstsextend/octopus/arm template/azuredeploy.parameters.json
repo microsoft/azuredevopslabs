@@ -1,0 +1,39 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "octopusDnsName": {
+            "value": "domaninini"
+        },
+        "vmAdminUsername": {
+            "value": "octoadmin"
+        },
+        "vmAdminPassword": {
+            "value": null
+        },
+        "vmSize": {
+            "value": "Standard_D2_v2"
+        },
+        "sqlAdminUsername": {
+            "value": "sqladmin"
+        },
+        "sqlAdminPassword": {
+            "value": null
+        },
+        "licenseFullName": {
+            "value": "sa"
+        },
+        "licenseOrganisationName": {
+            "value": "sa"
+        },
+        "licenseEmailAddress": {
+            "value": "sa@ti.com"
+        },
+        "octopusAdminUsername": {
+            "value": "admin"
+        },
+        "octopusAdminPassword": {
+            "value": null
+        }
+    }
+}

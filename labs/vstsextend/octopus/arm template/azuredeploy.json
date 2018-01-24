@@ -1,0 +1,478 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "octopusDnsName": {
+            "type": "string",
+            "metadata": {
+                "description": "Unique DNS Name used to address Octopus Deploy."
+            }
+        },
+       
+        "vmSize": {
+            "type": "string",
+            "defaultValue": "Standard_D2_v2",
+            "metadata": {
+                "description": "VM Size for Octopus Deploy Virtual Machine."
+            }
+        }   
+        
+    },
+    "variables": {
+        "serverFarmName":"[concat('Octopus','-plan-',uniqueString(resourceGroup().id))]",
+        "namespace": "octopus",
+        "location": "[resourceGroup().location]",
+        "tags": {
+            "vendor": "Octopus Deploy"
+        },
+        "diagnosticsPerformanceCounters": "<PerformanceCounters scheduledTransferPeriod=\"PT0S\"><PerformanceCounterConfiguration counterSpecifier=\"\\Processor(_Total)\\% Processor Time\" sampleRate=\"PT15S\" unit=\"Percent\"><annotation displayName=\"CPU percentage guest OS\" locale=\"en-us\"/></PerformanceCounterConfiguration><PerformanceCounterConfiguration counterSpecifier=\"\\Processor(_Total)\\% Interrupt Time\" sampleRate=\"PT15S\" unit=\"Percent\"><annotation displayName=\"CPU interrupt time\" locale=\"en-us\"/></PerformanceCounterConfiguration><PerformanceCounterConfiguration counterSpecifier=\"\\Processor(_Total)\\% Privileged Time\" sampleRate=\"PT15S\" unit=\"Percent\"><annotation displayName=\"CPU privileged time\" locale=\"en-us\"/></PerformanceCounterConfiguration><PerformanceCounterConfiguration counterSpecifier=\"\\Processor Information(_Total)\\Parking Status\" sampleRate=\"PT15S\" unit=\"Count\"><annotation displayName=\"CPU parking status\" locale=\"en-us\"/></PerformanceCounterConfiguration><PerformanceCounterConfiguration counterSpecifier=\"\\Processor(_Total)\\% User Time\" sampleRate=\"PT15S\" unit=\"Percent\"><annotation displayName=\"CPU user time\" locale=\"en-us\"/></PerformanceCounterConfiguration><PerformanceCounterConfiguration counterSpecifier=\"\\Processor Information(_Total)\\% Processor Performance\" sampleRate=\"PT15S\" unit=\"Count\"><annotation displayName=\"Processor percent perf.\" locale=\"en-us\"/></PerformanceCounterConfiguration><PerformanceCounterConfiguration counterSpecifier=\"\\Processor Information(_Total)\\Processor Frequency\" sampleRate=\"PT15S\" unit=\"Count\"><annotation displayName=\"Processor frequency\" locale=\"en-us\"/></PerformanceCounterConfiguration><PerformanceCounterConfiguration counterSpecifier=\"\\System\\Threads\" sampleRate=\"PT15S\" unit=\"Count\"><annotation displayName=\"Threads\" locale=\"en-us\"/></PerformanceCounterConfiguration><PerformanceCounterConfiguration counterSpecifier=\"\\System\\Processes\" sampleRate=\"PT15S\" unit=\"Count\"><annotation displayName=\"Processes\" locale=\"en-us\"/></PerformanceCounterConfiguration><PerformanceCounterConfiguration counterSpecifier=\"\\Thread(_Total)\\Context Switches/sec\" sampleRate=\"PT15S\" unit=\"CountPerSecond\"><annotation displayName=\"Context switches\" locale=\"en-us\"/></PerformanceCounterConfiguration><PerformanceCounterConfiguration counterSpecifier=\"\\Memory\\Committed Bytes\" sampleRate=\"PT15S\" unit=\"Bytes\"><annotation displayName=\"Memory committed\" locale=\"en-us\"/></PerformanceCounterConfiguration><PerformanceCounterConfiguration counterSpecifier=\"\\Memory\\Available Bytes\" sampleRate=\"PT15S\" unit=\"Bytes\"><annotation displayName=\"Memory available\" locale=\"en-us\"/></PerformanceCounterConfiguration><PerformanceCounterConfiguration counterSpecifier=\"\\Memory\\% Committed Bytes In Use\" sampleRate=\"PT15S\" unit=\"Percent\"><annotation displayName=\"Memory percentage\" locale=\"en-us\"/></PerformanceCounterConfiguration><PerformanceCounterConfiguration counterSpecifier=\"\\Memory\\Cache Faults/sec\" sampleRate=\"PT15S\" unit=\"CountPerSecond\"><annotation displayName=\"Cache faults\" locale=\"en-us\"/></PerformanceCounterConfiguration><PerformanceCounterConfiguration counterSpecifier=\"\\Memory\\Page Faults/sec\" sampleRate=\"PT15S\" unit=\"CountPerSecond\"><annotation displayName=\"Page faults\" locale=\"en-us\"/></PerformanceCounterConfiguration><PerformanceCounterConfiguration counterSpecifier=\"\\Memory\\Page Reads/sec\" sampleRate=\"PT15S\" unit=\"CountPerSecond\"><annotation displayName=\"Page reads\" locale=\"en-us\"/></PerformanceCounterConfiguration><PerformanceCounterConfiguration counterSpecifier=\"\\Memory\\Pages/sec\" sampleRate=\"PT15S\" unit=\"CountPerSecond\"><annotation displayName=\"Memory pages\" locale=\"en-us\"/></PerformanceCounterConfiguration><PerformanceCounterConfiguration counterSpecifier=\"\\Memory\\Transition Faults/sec\" sampleRate=\"PT15S\" unit=\"CountPerSecond\"><annotation displayName=\"Transition faults\" locale=\"en-us\"/></PerformanceCounterConfiguration><PerformanceCounterConfiguration counterSpecifier=\"\\Memory\\Pool Paged Bytes\" sampleRate=\"PT15S\" unit=\"Bytes\"><annotation displayName=\"Paged pool\" locale=\"en-us\"/></PerformanceCounterConfiguration><PerformanceCounterConfiguration counterSpecifier=\"\\Memory\\Pool Nonpaged Bytes\" sampleRate=\"PT15S\" unit=\"Bytes\"><annotation displayName=\"Non-paged pool\" locale=\"en-us\"/></PerformanceCounterConfiguration><PerformanceCounterConfiguration counterSpecifier=\"\\Process(_Total)\\% Processor Time\" sampleRate=\"PT15S\" unit=\"Percent\"><annotation displayName=\"Process total time\" locale=\"en-us\"/></PerformanceCounterConfiguration><PerformanceCounterConfiguration counterSpecifier=\"\\Process(_Total)\\Page Faults/sec\" sampleRate=\"PT15S\" unit=\"CountPerSecond\"><annotation displayName=\"Process page faults\" locale=\"en-us\"/></PerformanceCounterConfiguration><PerformanceCounterConfiguration counterSpecifier=\"\\Process(_Total)\\Thread Count\" sampleRate=\"PT15S\" unit=\"Count\"><annotation displayName=\"Process total threads\" locale=\"en-us\"/></PerformanceCounterConfiguration><PerformanceCounterConfiguration counterSpecifier=\"\\Process(_Total)\\Handle Count\" sampleRate=\"PT15S\" unit=\"Count\"><annotation displayName=\"Process total handles\" locale=\"en-us\"/></PerformanceCounterConfiguration><PerformanceCounterConfiguration counterSpecifier=\"\\Process(_Total)\\Private Bytes\" sampleRate=\"PT15S\" unit=\"Bytes\"><annotation displayName=\"Process function bytes\" locale=\"en-us\"/></PerformanceCounterConfiguration><PerformanceCounterConfiguration counterSpecifier=\"\\Process(_Total)\\Working Set\" sampleRate=\"PT15S\" unit=\"Bytes\"><annotation displayName=\"Process working set\" locale=\"en-us\"/></PerformanceCounterConfiguration><PerformanceCounterConfiguration counterSpecifier=\"\\Process(_Total)\\Working Set - Private\" sampleRate=\"PT15S\" unit=\"Bytes\"><annotation displayName=\"Process function working set\" locale=\"en-us\"/></PerformanceCounterConfiguration><PerformanceCounterConfiguration counterSpecifier=\"\\PhysicalDisk(_Total)\\Disk Read Bytes/sec\" sampleRate=\"PT15S\" unit=\"BytesPerSecond\"><annotation displayName=\"Disk read guest OS\" locale=\"en-us\"/></PerformanceCounterConfiguration><PerformanceCounterConfiguration counterSpecifier=\"\\PhysicalDisk(_Total)\\Disk Write Bytes/sec\" sampleRate=\"PT15S\" unit=\"BytesPerSecond\"><annotation displayName=\"Disk write guest OS\" locale=\"en-us\"/></PerformanceCounterConfiguration><PerformanceCounterConfiguration counterSpecifier=\"\\Web Service(_Total)\\Bytes Total/Sec\" sampleRate=\"PT15S\" unit=\"BytesPerSecond\"><annotation displayName=\"Web service bytes\" locale=\"en-us\"/></PerformanceCounterConfiguration><PerformanceCounterConfiguration counterSpecifier=\"\\Web Service(_Total)\\ISAPI Extension Requests/sec\" sampleRate=\"PT15S\" unit=\"CountPerSecond\"><annotation displayName=\"ISAPI extension requests\" locale=\"en-us\"/></PerformanceCounterConfiguration><PerformanceCounterConfiguration counterSpecifier=\"\\Web Service(_Total)\\Connection Attempts/sec\" sampleRate=\"PT15S\" unit=\"CountPerSecond\"><annotation displayName=\"Web connection attempts\" locale=\"en-us\"/></PerformanceCounterConfiguration><PerformanceCounterConfiguration counterSpecifier=\"\\Web Service(_Total)\\Current Connections\" sampleRate=\"PT15S\" unit=\"Count\"><annotation displayName=\"Web current connections\" locale=\"en-us\"/></PerformanceCounterConfiguration><PerformanceCounterConfiguration counterSpecifier=\"\\Web Service(_Total)\\Get Requests/sec\" sampleRate=\"PT15S\" unit=\"CountPerSecond\"><annotation displayName=\"Web get requests\" locale=\"en-us\"/></PerformanceCounterConfiguration><PerformanceCounterConfiguration counterSpecifier=\"\\Web Service(_Total)\\Post Requests/sec\" sampleRate=\"PT15S\" unit=\"CountPerSecond\"><annotation displayName=\"Web post requests\" locale=\"en-us\"/></PerformanceCounterConfiguration><PerformanceCounterConfiguration counterSpecifier=\"\\TCPv4\\Connections Established\" sampleRate=\"PT15S\" unit=\"Count\"><annotation displayName=\"TCP connections established\" locale=\"en-us\"/></PerformanceCounterConfiguration><PerformanceCounterConfiguration counterSpecifier=\"\\TCPv4\\Connection Failures\" sampleRate=\"PT15S\" unit=\"Count\"><annotation displayName=\"TCP connections failed\" locale=\"en-us\"/></PerformanceCounterConfiguration><PerformanceCounterConfiguration counterSpecifier=\"\\TCPv4\\Connections Reset\" sampleRate=\"PT15S\" unit=\"Count\"><annotation displayName=\"TCP connections reset\" locale=\"en-us\"/></PerformanceCounterConfiguration><PerformanceCounterConfiguration counterSpecifier=\"\\TCPv4\\Segments Sent/sec\" sampleRate=\"PT15S\" unit=\"CountPerSecond\"><annotation displayName=\"TCP segments sent\" locale=\"en-us\"/></PerformanceCounterConfiguration><PerformanceCounterConfiguration counterSpecifier=\"\\TCPv4\\Segments Received/sec\" sampleRate=\"PT15S\" unit=\"CountPerSecond\"><annotation displayName=\"TCP segments received\" locale=\"en-us\"/></PerformanceCounterConfiguration><PerformanceCounterConfiguration counterSpecifier=\"\\TCPv4\\Segments Retransmitted/sec\" sampleRate=\"PT15S\" unit=\"CountPerSecond\"><annotation displayName=\"TCP seg. restransmitted\" locale=\"en-us\"/></PerformanceCounterConfiguration></PerformanceCounters>",
+        "diagnosticsWindowsEventLog": "<WindowsEventLog scheduledTransferPeriod=\"PT1M\"><DataSource name=\"System!*[System[(Level = 1) or (Level = 2)]]\"/><DataSource name=\"System!*[System[Provider[@Name='Microsoft Antimalware']]]\"/><DataSource name=\"Security!*[System[(Level = 1) or (Level = 2)]]\"/><DataSource name=\"Application!*[System[(Level = 1) or (Level = 2)]]\"/></WindowsEventLog>",
+        "diagnosticsMetrics": "[concat('<Metrics resourceId=\"/subscriptions/', subscription().subscriptionId, '/resourceGroups/', resourceGroup().name, '/providers/Microsoft.Compute/virtualMachines/', variables('namespace'), '-vm\"><MetricAggregation scheduledTransferPeriod=\"PT1H\"/><MetricAggregation scheduledTransferPeriod=\"PT1M\"/></Metrics>')]",
+        "vm": {
+            "name": "[concat(variables('namespace'), '-vm')]",
+            "credentials": {
+                "admin": {
+                    "username": "vmadmin",
+                    "password": "P2ssw0rd@123"
+                }
+            },
+            "size": "[parameters('vmSize')]",
+            "image": {
+                "publisher": "MicrosoftWindowsServer",
+                "offer": "WindowsServer",
+                "sku": "2012-R2-Datacenter",
+                "version": "latest"
+            },
+            "osdisk": {
+                "name": "[concat(variables('namespace'), '-osdisk')]",
+                "storageAccount": {
+                    "name": "[concat(variables('namespace'), '01', uniqueString(resourceGroup().id))]",
+                    "type": "Standard_LRS"
+                }
+            },
+            "datadisk": {
+                "name": "[concat(variables('namespace'), '-datadisk')]",
+                "diskSizeGB": "1023",
+                "storageAccount": {
+                    "name": "[concat(variables('namespace'), '02', uniqueString(resourceGroup().id))]",
+                    "type": "Standard_GRS"
+                }
+            },
+            "nic": {
+                "name": "[concat(variables('namespace'), '-nic')]",
+                "ipConfigName": "[concat(variables('namespace'), '-ipconfig')]"
+            },
+            "extensions": {
+                "installer": {
+                    "name": "[concat(variables('namespace'), '-vm/octopusDeployInstaller')]",
+                    "fileUris": [
+                        "https://raw.githubusercontent.com/Microsoft/VSTS-DevOps-Labs/master/octopus/arm%20template/Install-OctopusDeploy.ps1"
+                    ],
+                    "commandToExecute": "[concat('powershell.exe -File Install-OctopusDeploy.ps1 ', base64(variables('azureSql').database.connectionString), ' ', base64(variables('octopus').license.fullName), ' ', base64(variables('octopus').license.organisationName), ' ', base64(variables('octopus').license.emailAddress), ' ', base64(variables('octopus').credentials.admin.username), ' ', base64(variables('octopus').credentials.admin.password), ' 2>&1 > D:\\Install-OctopusDeploy.ps1.log ')]"
+                },
+                "diagnostics": {
+                    "name": "[concat(variables('namespace'), '-vm/Microsoft.Insights.VMDiagnosticsSettings')]",
+                    "wadcfgx": "[concat('<WadCfg><DiagnosticMonitorConfiguration overallQuotaInMB=\"4096\"><DiagnosticInfrastructureLogs scheduledTransferLogLevelFilter=\"Warning\" scheduledTransferPeriod=\"PT1M\"/>', variables('diagnosticsPerformanceCounters'), variables('diagnosticsWindowsEventLog'), variables('diagnosticsMetrics'), '</DiagnosticMonitorConfiguration></WadCfg>')]"
+                }
+            }
+        },
+        "network": {
+            "domainName": "[parameters('octopusDnsName')]",
+            "publicIP": {
+                "name": "[concat(variables('namespace'), '-publicip')]",
+                "type": "Static"
+            },
+            "vnet": {
+                "name": "[concat(variables('namespace'), '-vnet')]",
+                "addressPrefix": "10.0.0.0/16",
+                "subnet": {
+                    "name": "[concat(variables('namespace'), '-subnet')]",
+                    "addressPrefix": "10.0.0.0/24"
+                }
+            },
+            "networkSecurityGroup": {
+                "name": "[concat(variables('namespace'), '-nsg')]"
+            }
+        },
+        "sqlServerName": "[concat(variables('namespace'), uniqueString(resourceGroup().id))]",
+        "azureSql": {
+            "server": {
+                "name": "[variables('sqlServerName')]",
+                "credentials": {
+                    "admin": {
+                        "username": "sqladmin",
+                        "password": "P2ssw0rd@123"
+                    }
+                }
+            },
+            "database": {
+                "name": "OctopusDeploy",
+                "edition": "Standard",
+                "serviceTier": "S1",
+                "collation": "SQL_Latin1_General_CP1_CI_AS",
+                "maxSizeBytes": "268435456000",
+                "connectionString": "[concat('Server=tcp:', variables('sqlServerName'), '.database.windows.net,1433;Database=OctopusDeploy', ';User Id=', 'sqladmin', '@', variables('sqlServerName'), ';Password=', 'P2ssw0rd@123', ';Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;')]"
+            }
+        },
+        "octopus": {
+            "credentials": {
+                "admin": {
+                    "username": "admin",
+                    "password": "P2ssw0rd@123"
+                }
+            },
+            "license": {
+                "fullName": "VSTS Lab",
+                "organisationName": "VSTS Lab",
+                "emailAddress": "lab@123.com"
+            }
+        }
+    },
+    "resources": [
+        {
+            "apiVersion": "2015-06-15",
+            "type": "Microsoft.Storage/storageAccounts",
+            "name": "[variables('vm').datadisk.storageAccount.name]",
+            "location": "[variables('location')]",
+            "tags": {
+                "vendor": "[variables('tags').vendor]"
+            },
+            "properties": {
+                "accountType": "[variables('vm').datadisk.storageAccount.type]"
+            }
+        },
+        {
+            "apiVersion": "2015-06-15",
+            "type": "Microsoft.Storage/storageAccounts",
+            "name": "[variables('vm').osdisk.storageAccount.name]",
+            "location": "[variables('location')]",
+            "tags": {
+                "vendor": "[variables('tags').vendor]"
+            },
+            "properties": {
+                "accountType": "[variables('vm').osdisk.storageAccount.type]"
+            }
+        },
+        {
+            "apiVersion": "2015-06-15",
+            "type": "Microsoft.Network/publicIPAddresses",
+            "name": "[variables('network').publicIP.name]",
+            "location": "[variables('location')]",
+            "tags": {
+                "vendor": "[variables('tags').vendor]"
+            },
+            "properties": {
+                "publicIPAllocationMethod": "[variables('network').publicIP.type]",
+                "dnsSettings": {
+                    "domainNameLabel": "[variables('network').domainName]"
+                }
+            }
+        },
+        {
+            "apiVersion": "2015-06-15",
+            "type": "Microsoft.Network/virtualNetworks",
+            "name": "[variables('network').vnet.name]",
+            "location": "[variables('location')]",
+            "tags": {
+                "vendor": "[variables('tags').vendor]"
+            },
+            "properties": {
+                "addressSpace": {
+                    "addressPrefixes": [
+                        "[variables('network').vnet.addressPrefix]"
+                    ]
+                },
+                "subnets": [
+                    {
+                        "name": "[variables('network').vnet.subnet.name]",
+                        "properties": {
+                            "addressPrefix": "[variables('network').vnet.subnet.addressPrefix]"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "apiVersion": "2015-06-15",
+            "type": "Microsoft.Network/networkSecurityGroups",
+            "name": "[variables('network').networkSecurityGroup.name]",
+            "location": "[variables('location')]",
+            "tags": {
+                "vendor": "[variables('tags').vendor]"
+            },
+            "properties": {
+                "securityRules": [
+                    {
+                        "name": "allow_web",
+                        "properties": {
+                            "description": "Allow web",
+                            "protocol": "Tcp",
+                            "sourcePortRange": "*",
+                            "destinationPortRange": "80",
+                            "sourceAddressPrefix": "Internet",
+                            "destinationAddressPrefix": "*",
+                            "access": "Allow",
+                            "priority": 100,
+                            "direction": "Inbound"
+                        }
+                    },
+                    {
+                        "name": "allow_rdp",
+                        "properties": {
+                            "description": "Allow RDP",
+                            "protocol": "Tcp",
+                            "sourcePortRange": "*",
+                            "destinationPortRange": "3389",
+                            "sourceAddressPrefix": "Internet",
+                            "destinationAddressPrefix": "*",
+                            "access": "Allow",
+                            "priority": 101,
+                            "direction": "Inbound"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "apiVersion": "2015-06-15",
+            "type": "Microsoft.Network/networkInterfaces",
+            "name": "[variables('vm').nic.name]",
+            "location": "[variables('location')]",
+            "tags": {
+                "vendor": "[variables('tags').vendor]"
+            },
+            "dependsOn": [
+                "[concat('Microsoft.Network/networkSecurityGroups/', variables('network').networkSecurityGroup.name)]",
+                "[concat('Microsoft.Network/publicIPAddresses/', variables('network').publicIP.name)]",
+                "[concat('Microsoft.Network/virtualNetworks/', variables('network').vnet.name)]"
+            ],
+            "properties": {
+                "ipConfigurations": [
+                    {
+                        "name": "[variables('vm').nic.ipConfigName]",
+                        "properties": {
+                            "privateIPAllocationMethod": "Dynamic",
+                            "publicIPAddress": {
+                                "id": "[resourceId('Microsoft.Network/publicIPAddresses', variables('network').publicIP.name)]"
+                            },
+                            "subnet": {
+                                "id": "[concat(resourceId('Microsoft.Network/virtualNetworks', variables('network').vnet.name), '/subnets/', variables('network').vnet.subnet.name)]"
+                            }
+                        }
+                    }
+                ],
+                "networkSecurityGroup": {
+                    "id": "[resourceId('Microsoft.Network/networkSecurityGroups/', variables('network').networkSecurityGroup.name)]"
+                }
+            }
+        },
+        {
+            "apiVersion": "2015-06-15",
+            "type": "Microsoft.Compute/virtualMachines",
+            "name": "[variables('vm').name]",
+            "location": "[variables('location')]",
+            "tags": {
+                "vendor": "[variables('tags').vendor]"
+            },
+            "dependsOn": [
+                "[concat('Microsoft.Storage/storageAccounts/', variables('vm').osdisk.storageAccount.name)]",
+                "[concat('Microsoft.Storage/storageAccounts/', variables('vm').datadisk.storageAccount.name)]",
+                "[concat('Microsoft.Network/networkInterfaces/', variables('vm').nic.name)]"
+            ],
+            "properties": {
+                "hardwareProfile": {
+                    "vmSize": "[variables('vm').size]"
+                },
+                "osProfile": {
+                    "computerName": "[variables('vm').name]",
+                    "adminUsername": "[variables('vm').credentials.admin.username]",
+                    "adminPassword": "[variables('vm').credentials.admin.password]"
+                },
+                "storageProfile": {
+                    "imageReference": {
+                        "publisher": "[variables('vm').image.publisher]",
+                        "offer": "[variables('vm').image.offer]",
+                        "sku": "[variables('vm').image.sku]",
+                        "version": "[variables('vm').image.version]"
+                    },
+                    "osDisk": {
+                        "name": "osdisk",
+                        "vhd": {
+                            "uri": "[concat('http://', variables('vm').osdisk.storageAccount.name, '.blob.core.windows.net/vhds/', variables('vm').osdisk.name, '.vhd')]"
+                        },
+                        "caching": "ReadWrite",
+                        "createOption": "FromImage"
+                    },
+                    "dataDisks": [
+                        {
+                            "name": "[variables('vm').datadisk.name]",
+                            "diskSizeGB": "[variables('vm').datadisk.diskSizeGB]",
+                            "lun": 0,
+                            "vhd": {
+                                "uri": "[concat('http://', variables('vm').datadisk.storageAccount.name, '.blob.core.windows.net/vhds/', variables('vm').datadisk.name, '.vhd')]"
+                            },
+                            "caching": "None",
+                            "createOption": "Empty"
+                        }
+                    ]
+                },
+                "networkProfile": {
+                    "networkInterfaces": [
+                        {
+                            "id": "[resourceId('Microsoft.Network/networkInterfaces', variables('vm').nic.name)]"
+                        }
+                    ]
+                },
+                "diagnosticsProfile": {
+                    "bootDiagnostics": {
+                        "enabled": "true",
+                        "storageUri": "[concat('http://', variables('vm').datadisk.storageAccount.name, '.blob.core.windows.net')]"
+                    }
+                }
+            }
+        },
+        {
+            "apiVersion": "2015-06-15",
+            "type": "Microsoft.Compute/virtualMachines/extensions",
+            "name": "[variables('vm').extensions.installer.name]",
+            "location": "[variables('location')]",
+            "tags": {
+                "vendor": "[variables('tags').vendor]",
+                "displayName": "Octopus Deploy Installer"
+            },
+            "dependsOn": [
+                "[concat('Microsoft.Compute/virtualMachines/', variables('vm').name)]",
+                "[concat('Microsoft.Sql/servers/', variables('azureSql').server.name, '/databases/', variables('azureSql').database.name)]"
+            ],
+            "properties": {
+                "publisher": "Microsoft.Compute",
+                "type": "CustomScriptExtension",
+                "typeHandlerVersion": "1.7",
+                "autoUpgradeMinorVersion": true,
+                "settings": {
+                    "fileUris": "[variables('vm').extensions.installer.fileUris]"
+                },
+                "protectedSettings": {
+                    "commandToExecute": "[variables('vm').extensions.installer.commandToExecute]"
+                }
+            }
+        },
+        {
+            "apiVersion": "2015-06-15",
+            "type": "Microsoft.Compute/virtualMachines/extensions",
+            "name": "[variables('vm').extensions.diagnostics.name]",
+            "location": "[variables('location')]",
+            "tags": {
+                "vendor": "[variables('tags').vendor]",
+                "displayName": "Azure VM Diagnostics"
+            },
+            "dependsOn": [
+                "[concat('Microsoft.Compute/virtualMachines/', variables('vm').name)]",
+                "[concat('Microsoft.Storage/storageAccounts/', variables('vm').datadisk.storageAccount.name)]"
+            ],
+            "properties": {
+                "publisher": "Microsoft.Azure.Diagnostics",
+                "type": "IaaSDiagnostics",
+                "typeHandlerVersion": "1.5",
+                "autoUpgradeMinorVersion": true,
+                "settings": {
+                    "xmlCfg": "[base64(concat(variables('vm').extensions.diagnostics.wadcfgx))]",
+                    "storageAccount": "[variables('vm').datadisk.storageAccount.name]"
+                },
+                "protectedSettings": {
+                    "storageAccountName": "[variables('vm').datadisk.storageAccount.name]",
+                    "storageAccountKey": "[listkeys(resourceId('Microsoft.Storage/storageAccounts', variables('vm').datadisk.storageAccount.name), '2015-06-15').key1]",
+                    "storageAccountEndPoint": "https://core.windows.net"
+                }
+            }
+        },
+        {
+            "apiVersion": "2014-04-01",
+            "type": "Microsoft.Sql/servers",
+            "name": "[variables('azureSql').server.name]",
+            "location": "[variables('location')]",
+            "tags": {
+                "vendor": "[variables('tags').vendor]"
+            },
+            "properties": {
+                "version": "12.0",
+                "administratorLogin": "[variables('azureSql').server.credentials.admin.username]",
+                "administratorLoginPassword": "[variables('azureSql').server.credentials.admin.password]"
+            },
+            "resources": [
+                {
+                    "apiVersion": "2014-04-01",
+                    "type": "databases",
+                    "name": "[variables('azureSql').database.name]",
+                    "location": "[variables('location')]",
+                    "tags": {
+                        "vendor": "[variables('tags').vendor]"
+                    },
+                    "dependsOn": [
+                        "[concat('Microsoft.Sql/servers/', variables('azureSql').server.name)]"
+                    ],
+                    "properties": {
+                        "edition": "[variables('azureSql').database.edition]",
+                        "collation": "[variables('azureSql').database.collation]",
+                        "maxSizeBytes": "[variables('azureSql').database.maxSizeBytes]",
+                        "requestedServiceObjectiveName": "[variables('azureSql').database.serviceTier]"
+                    }
+                },
+                {
+                    "type": "firewallrules",
+                    "apiVersion": "2014-04-01",
+                    "dependsOn": [
+                        "[concat('Microsoft.Sql/servers/', variables('azureSql').server.name)]",
+                        "[concat('Microsoft.Network/publicIPAddresses/', variables('network').publicIP.name)]"
+                    ],
+                    "location": "[variables('location')]",
+                    "name": "AllowAccessToOctopusServerPublicIP",
+                    "properties": {
+                        "startIpAddress": "[reference(variables('network').publicIP.name).ipAddress]",
+                        "endIpAddress": "[reference(variables('network').publicIP.name).ipAddress]"
+                    }
+                }
+            ]
+        },
+        {
+            "type": "Microsoft.Web/serverfarms",
+            "sku": {
+                "name": "F1"
+            },
+            "name": "[variables('serverFarmName')]",
+            "apiVersion": "2015-08-01",
+            "location": "[resourceGroup().location]",
+            "properties": {
+                "name": "[variables('serverFarmName')]"
+            }
+        },
+        {
+            "type": "Microsoft.Web/sites",
+            "name": "[concat('Octopus','-web-',uniqueString(resourceGroup().id))]",
+            "apiVersion": "2015-08-01",
+            "location": "[resourceGroup().location]",
+            "properties": {
+                "serverFarmId": "[variables('serverFarmName')]"
+            },
+            
+            "dependsOn": [
+                "[resourceId('Microsoft.Web/serverfarms', variables('serverFarmName'))]"
+            ]
+        }
+
+    ],
+    "outputs": {
+        "octopusDomainLabel": {
+            "type": "string",
+            "value": "[reference(variables('network').publicIP.name).dnsSettings.fqdn]"
+        },
+        "octopusPublicIP": {
+            "type": "string",
+            "value": "[reference(variables('network').publicIP.name).ipAddress]"
+        },
+        "sqlServerDomainLabel": {
+            "type": "string",
+            "value": "[reference(concat('Microsoft.Sql/servers/', variables('azureSql').server.name)).fullyQualifiedDomainName]"
+        }
+    }
+}
