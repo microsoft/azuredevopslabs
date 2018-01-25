@@ -1,5 +1,10 @@
-# Deploy PHP application to Azure App Service using VSTS
-
+---
+title: Deploy PHP application to Azure App Service using VSTS
+layout: page
+sidebar: vsts2
+permalink: /labs/vstsextend/php/
+folder: /labs/vstsextend/php/
+---
 ## Overview
 
 **PHP** is a server-side scripting language, and a powerful tool for making dynamic and interactive Web pages.
@@ -32,13 +37,13 @@ In VSTS, navigate to **Services** by clicking the gear icon ![](images/gear.png)
 
 You will be prompted to authorize this connection with Azure credentials.
 
-**Note**: Disable pop-up blocker in your browser if you see a blank screen after clicking OK, and retry the step.
+{% include note.html content= "Disable pop-up blocker in your browser if you see a blank screen after clicking OK, and retry the step." %}
 
 ## Exercise 2: Configure Release Definition
 
 We will use ARM template as **Infrastructure as a Code**  in the release definition to provisions a Web App and a Web App Service Plan under the specified resource group.
 
-  >**Note** : You will encounter an error - **TFS.WebApi.Exception: Page not found** for Azure tasks in the steps **3** & **4** of this exercise. This is due to a recent change in the VSTS Release Management API. While we are working on updating VSTS Demo Generator to resolve this issue, you can fix this by typing a random text in the **Azure Subscription** field and click the **Refresh** icon next to it. Once the field is refreshed, you can select the endpoint from the drop down.
+  {% include note.html content= "You will encounter an error - **TFS.WebApi.Exception: Page not found** for Azure tasks in the steps **3** & **4** of this exercise. This is due to a recent change in the VSTS Release Management API. While we are working on updating VSTS Demo Generator to resolve this issue, you can fix this by typing a random text in the **Azure Subscription** field and click the **Refresh** icon next to it. Once the field is refreshed, you can select the endpoint from the drop down." %}
 
 1. Go to **Releases** under **Build and Release** tab, Select release definition **PHP** and click **Edit**
 
@@ -102,7 +107,3 @@ Let's make a code change to trigger a CI-CD pipeline to build and deploy the app
 1. Select the **App Service** and from the **Overview** tab,  click **Browse** to see the application deployed.
 
    ![](images/website_php.png)
-
-## Feedback
-
-Please let [us](mailto:devopsdemos@microsoft.com) know if you have any feedback on this lab.

@@ -105,7 +105,3 @@ WhiteSource Bolt also tracks outdated libraries in the project getting all the d
 ## Summary
 
 With VSTS and WhiteSource Bolt integration you can *shift-left* your open source management. The integration allows you to have alert in real time on vulnerabilities and other issues to help you take immediate action.
-
-## Feedback
-
-Please let [us](mailto:devopsdemos@microsoft.com) know if you have any feedback on this lab.

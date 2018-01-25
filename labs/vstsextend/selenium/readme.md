@@ -185,7 +185,3 @@ In this exercise, we will trigger the **VSTS build** to compile the Selenium C# 
 Once the release succeeds, click the **Tests** tab to analyze the test results. Select **All** in the **Outcome** section to view all the tests and their status.
 
 ![](images/analyzetests.png)
-
-## Feedback
-
-Please let [us](mailto:devopsdemos@microsoft.com) know if you have any feedback on this lab.

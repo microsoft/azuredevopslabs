@@ -140,7 +140,7 @@ Now that the SonarQube server is running, we will modify VSTS build definition t
    |**SonarQube Project Name**|MyShuttle|The name of the project in SonarQube|
    |**SonarQube Project Key**|MyShuttle|The unique key of the project in SonarQube|
 
-   >Note: Here, the SonarQube Project Name and SonarQube Project Key values are based on the values you provide in Exercise 1: Step 3.
+   {% include note.html content= "Here, the SonarQube Project Name and SonarQube Project Key values are based on the values you provide in Exercise 1: Step 3." %}
 
    ![](images/build_configure.png)
 
@@ -173,7 +173,7 @@ The link will open the **MyShuttle** project in the SonarQube Dashboard.  Under 
    |**Duplications**|The duplications decoration shows which parts of the source code are duplicated|
    |**Size**|Provides the count of lines of code within the project including the number of statements, Functions, Classes, Files and Directories|
 
-  > In this example, along with the bug count, a character **D** is displayed which is known as **Reliability Rating**. **D** indicates that there is **atleast 1 critical bug** in this code. For more information on Reliability Rating, click [here](https://docs.sonarqube.org/display/SONAR/Metric+Definitions#MetricDefinitions-Reliability)
+  {% include important.html content= "In this example, along with the bug count, a character **D** is displayed which is known as **Reliability Rating**. **D** indicates that there is **atleast 1 critical bug** in this code. For more information on Reliability Rating, click [here](https://docs.sonarqube.org/display/SONAR/Metric+Definitions#MetricDefinitions-Reliability)" %}
 
 1. Click on the **Bugs** count to see the details of the bug.
 
@@ -218,7 +218,3 @@ The link will open the **MyShuttle** project in the SonarQube Dashboard.  Under 
 ## Summary
 
 With  the **SonarQube** extension for **Visual Studio Team Services**, you can embed automated testing in your CI/CD pipleine to automate the measurement of your technical debt including code semantics, testing coverage, vulnerabilities. etc.
-
-## Feedback
-
-Please let [us](mailto:devopsdemos@microsoft.com) know if you have any feedback on this lab.
