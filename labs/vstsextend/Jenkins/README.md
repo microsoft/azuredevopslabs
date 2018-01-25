@@ -5,6 +5,7 @@ sidebar: vsts2
 permalink: /labs/vstsextend/jenkins/
 folder: /labs/vstsextend/jenkins/
 ---
+
 [Jenkins](https://jenkins.io/) is a very popular Java-based open source continuous integration (CI) server that allows teams to continuously build applications across platforms.
 
 Visual Studio Team Services (VSTS) includes Team Build, a native CI build server that allows compilation of applications on Windows, Linux and Mac platforms. However, it also integrates well with Jenkins for teams who already use or prefer to use Jenkins for CI.
@@ -13,7 +14,7 @@ There are two ways to integrate VSTS with Jenkins
 
 * One way is to completely replace the VSTS Build with Jenkins. This involves the configuration of a CI pipeline in Jenkins and a web hook in VSTS that invokes the CI process when source code is pushed by any member to a repository or a branch. The VSTS Release Management will be configured to connect to the Jenkins server through the configured Service Endpoint to fetch the compiled artifacts for the deployment.
 
-* The alternate way is to use Jenkins and Team Build together. In this approach, a Jenkins build will be nested within the VSTS build. A build definition will be configured in the VSTS with a **Jenkins** task to queue a job in Jenkins and download the artifacts produced by the job and publish it to the VSTS or any shared folder from where it can be picked by the Release Management. This approach has multiple benefits -
+* The alternate way is to use Jenkins and Team Build together. In this approach, a Jenkins build will be nested within the VSTS build. A build definition will be configured in the VSTS with a **Jenkins** task to queue a job in Jenkins that downloads the artifacts produced by the job and publish it to the VSTS or any shared folder from where it can be picked by the Release Management. This approach has multiple benefits:
 
     1. End-to-end traceability from work item to source code to build and release
     1. Triggering of a Continuous Deployment (CD) when the build is completed successfully
@@ -25,24 +26,21 @@ This lab covers both the approaches and the following tasks will be performed
 * Configure Jenkins to work with Maven and VSTS
 * Create a build definition in Jenkins
 * Configure VSTS to integrate with Jenkins
-* Setup Release Management in VSTS to deploy artifacts from Jenkins
+* Setup Release Management in VSTS to deploy build artifacts from Jenkins
 
 ## Pre-requisites
 
-1. Microsoft Azure Account: You will need a valid and active azure account for the lab.
-
-1. You need a **VSTS** account and a [Personal Access Token (PAT)](https://docs.microsoft.com/en-us/vsts/accounts/use-personal-access-tokens-to-authenticate)
-
-1. You will need [Putty](http://www.putty.org/), a free SSH and Telnet client
-
-1. You will need the **Docker Integration** extension installed and enabled for your VSTS account. You can perform this step later while using the VSTS Demo Generator.
+1. Active Microsoft Azure account
+1. Active **VSTS** account
+1. [Personal Access Token (PAT)](https://docs.microsoft.com/en-us/vsts/accounts/use-personal-access-tokens-to-authenticate)
+1. [Putty](http://www.putty.org/), a free SSH and Telnet client
+1. **Docker Integration** extension installed and enabled for the VSTS account. This step can be performed later while using the VSTS Demo Generator.
 
 ## Setting up the VSTS project
 
-1. Use <a target="_blank" href="https://vstsdemogenerator.azurewebsites.net/?name=MyShuttleDocker&templateid=77373">VSTS Demo Generator</a> to provision a team project on the VSTS account
+1. Use the [![VSTS Demo Generator]](https://vstsdemogenerator.azurewebsites.net/?name=MyShuttleDocker&templateid=77373) to provision a team project on the VSTS account
 
     ![VSTS Demo Gen](images/vstsdemogen-1.png)
-
 1. Select **MyShuttleDocker** for the template
 
     ![VSTS Demo Gen](images/vstsdemogen-2.png)
@@ -53,9 +51,7 @@ This lab covers both the approaches and the following tasks will be performed
 
 1. To configure Jenkins, the Jenkins VM image available on the Azure MarketPlace will be used. This will install the latest stable Jenkins version on a Ubuntu Linux VM along with the tools and plugins configured to work with Azure.
 
-    <a href="https://portal.azure.com/#create/azure-oss.jenkinsjenkins" target="_blank">
-    <img src="http://azuredeploy.net/deploybutton.png"/>
-    </a>
+[![Jenkins Configuration](http://azuredeploy.net/deploybutton.png)](https://portal.azure.com/#create/azure-oss.jenkinsjenkins)
 
 1. Once the Jenkins VM is provisioned, click on the **Connect** button and make a note of the \<username> and the \<ip address>. This information will be required toconnect to the Jenkins VM from ***Putty***
 
@@ -135,7 +131,7 @@ This lab covers both the approaches and the following tasks will be performed
 
 1. From Jenkins home page, click on the **New Item** option. Provide a name for the build definition, and select the **Maven project** and click **OK** to save
 
-   ![](images/newbuilddef.png)
+   ![New Build Definition](images/newbuilddef.png)
 
 1. Now scroll down to the **Source code Management** section. Select the **Git** option and provide the clone URL of the VSTS Git repo. It would be typically in the format **http://\<your account name>.visualstudio.com/
  \<your project name>/_git/MyShuttle**
