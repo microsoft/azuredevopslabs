@@ -235,7 +235,3 @@ In this exercise, we will update the code to trigger CI-CD.
 ## Summary
 
 With **Visual Studio Team Services** and **Azure**, we can build DevOps for dockerized applications by leveraging docker capabilities enabled on VSTS Hosted Agents.
-
-## Feedback
-
-Please let [us](mailto:devopsdemos@microsoft.com) know if you have any feedback on this lab.

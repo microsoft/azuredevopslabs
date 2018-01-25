@@ -347,11 +347,6 @@ To see the generated images in Azure Portal, go to the **Azure Container Registr
 
     ![](images/aksdashboard.png)
 
-
 ## Summary
 
 AKS reduces the complexity and operational overhead of managing a Kubernetes cluster by offloading much of that responsibility to Azure. With **Visual Studio Team Services** and **Azure Container Services (AKS)**, we can build DevOps for dockerized applications by leveraging docker capabilities enabled on VSTS Hosted Agents.
-
-## Feedback
-
-Please write to [us](mailto:devopsdemos@microsoft.com) know if you have any feedback on this lab.

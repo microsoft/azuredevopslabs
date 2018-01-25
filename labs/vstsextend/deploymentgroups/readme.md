@@ -200,7 +200,3 @@ A [Phase](https://docs.microsoft.com/en-us/vsts/build-release/concepts/process/p
 ## Summary
 
 With Visual Studio Team Services and Azure, we can build and release dotnet applications to multiple target servers using Deployment Groups.
-
-## Feedback
-
-Please email [us](mailto:devopsdemos@microsoft.com) if you have any feedback on this lab.
