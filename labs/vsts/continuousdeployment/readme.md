@@ -6,7 +6,7 @@ permalink: /labs/vsts/continuousdeployment/
 folder: /labs/vsts/continuousdeployment/
 ---
 
-Last updated : {{ "now" | date: "%b %d,%Y" }}.
+Last updated : {{ "now" | date: "%b %d, %Y" }}.
 
 ## Overview
 

@@ -6,7 +6,7 @@ permalink: /labs/vsts/selenium/
 folder: /labs/vsts/selenium/
 ---
 
-Last updated : {{ "now" | date: "%b %d,%Y" }}.
+Last updated : {{ "now" | date: "%b %d, %Y" }}.
 
 ## Overview
 
