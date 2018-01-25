@@ -61,7 +61,9 @@ This lab covers both the approaches and the following tasks will be performed
 
 1. To initiate a SSH tunnel, the following command needs to be run from a Command Prompt.
 
-   `putty.exe -ssh -L 8080:localhost:8080 <username>@<ip address>`
+   ```cmd
+   putty.exe -ssh -L 8080:localhost:8080 <username>@<ip address>
+   ```
 
     ![Connecting from Putty](images/ssh2.png)
 
