@@ -34,7 +34,7 @@ This lab covers both the approaches and the following tasks will be performed
 1. An active **VSTS** account
 1. A [Personal Access Token (PAT)](https://docs.microsoft.com/en-us/vsts/accounts/use-personal-access-tokens-to-authenticate)
 1. [Putty](http://www.putty.org/), a free SSH and Telnet client
-1. **Docker Integration** extension installed and configured for the VSTS account. *This step can be performed later while using the VSTS Demo Generator*
+1. **Docker Integration** extension installed and configured for the VSTS account. *This step can be performed later while using the VSTS Demo Generator*.
 
 ## Setting up the VSTS project
 
@@ -330,6 +330,14 @@ The next step is to configure the VSTS Release Management to fetch and deploy th
     cd vstsagent
     tar -zxvf ../Downloads/vsts-agent-linux-x64-2.126.0.tar.gz
     ````
-1. Once the files are extracted, run `./config.sh` to configure the agent. The VSTS URL and the PAT will need to be provided during the configuration.
+1. Once the files are extracted, run the following command to configure the agent.
+   > The VSTS URL and the PAT will be required during the configuration.
 
-1. After the configuration is completed, start the agent by running the following command `./run.sh`
+   ```cmd
+   ./config.sh
+   ```
+1. After the configuration is completed, start the agent by running the command
+
+   ```cmd
+   ./run.sh
+   ```
