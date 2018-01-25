@@ -8,6 +8,8 @@ folder: /labs/vstsextend/jenkins/
 
 Last updated : {{ "now" | date: "%b %d, %Y" }}.
 
+## Overview
+
 [Jenkins](https://jenkins.io/) is a very popular Java-based open source continuous integration (CI) server that allows teams to continuously build applications across platforms.
 
 Visual Studio Team Services (VSTS) includes Team Build, a native CI build server that allows compilation of applications on Windows, Linux and Mac platforms. However, it also integrates well with Jenkins for teams who already use or prefer to use Jenkins for CI.

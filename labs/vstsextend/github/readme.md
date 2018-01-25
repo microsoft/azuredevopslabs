@@ -1,5 +1,12 @@
-# CI-CD using GitHub and Visual Studio Team Services
+---
+title: CI-CD using GitHub and Visual Studio Team Services
+layout: page
+sidebar: vsts2
+permalink: /labs/vstsextend/github/
+folder: /labs/vstsextend/github/
+---
 
+Last updated : {{ "now" | date: "%b %d, %Y" }}.
 ## Overview
 
 **GitHub** is a web based **Git** version control repository hosting service which offers distributed version control and source code management functionality of Git.
