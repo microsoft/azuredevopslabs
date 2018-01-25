@@ -80,11 +80,11 @@ This lab covers both the approaches and the following tasks will be performed
 
    > At the time of writing this lab, an open issue in Jenkins was noted where the setup wizard would not resume after restart, skipping some of the steps listed below. If you do not see the screen above, steps 5 to 7 will not work. The workaround is to use the default user name *admin* with the initial admin password (explained in **step #7** below).
 
-1. Return to the **Putty** terminal and type the following command to open the log file that contains the password and copy the password.
+1. Return to the **Putty** terminal and type the following command to open the log file that contains the password and copy the password. Press the **ESC** button and then type **:q!** at the prompt to exit the vi editor without saving the file after copying.
 
     `sudo vi /var/lib/jenkins/secrets/initialAdminPassword`
 
-    > You can double click on the line and use **CTRL+C** to copy the text and place it in the clipboard. Press **ESC and then :q!** to exit the vi editor without saving the file
+    > You can double click on the line and use **CTRL+C** to copy the text and place it in the clipboard. 
 
 1. Return to the browser, paste the copied text and click the **Continue** button.
 
