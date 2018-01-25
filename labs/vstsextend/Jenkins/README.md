@@ -38,7 +38,7 @@ This lab covers both the approaches and the following tasks will be performed
 
 ## Setting up the VSTS project
 
-1. Use the ![VSTS Demo Generator](https://vstsdemogenerator.azurewebsites.net/?name=MyShuttleDocker&templateid=77373) to provision a team project on the VSTS account
+1. Use the [VSTS Demo Generator](https://vstsdemogenerator.azurewebsites.net/?name=MyShuttleDocker&templateid=77373) to provision a team project on the VSTS account
 
     ![VSTS Demo Gen](images/vstsdemogen-1.png)
 1. Select **MyShuttleDocker** for the template
