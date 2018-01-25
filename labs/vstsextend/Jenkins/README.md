@@ -59,7 +59,7 @@ This lab covers both the approaches and the following tasks will be performed
 
     ![SSH Connection Info](images/vmconnect_ssh1.png)
 
-   > Jenkins, by default, listens on port 8080 using HTTP. To configure a secure HTTPS connection, an SSL certificate will be required. If HTTPS communication is not being configured, the best way to ensure the sign-in credentials are not leaked due to a "Man-in-the-middle" attack is by logging-in using the SSH tunneling. An SSH tunnel is an encrypted tunnel created through a SSH protocol connection, that can be used to transfer unencrypted traffic over an unsecured network. 
+   > Jenkins, by default, listens on port 8080 using HTTP. To configure a secure HTTPS connection, an SSL certificate will be required. If HTTPS communication is not being configured, the best way to ensure the sign-in credentials are not leaked due to a "Man-in-the-middle" attack is by logging-in using the SSH tunneling. An SSH tunnel is an encrypted tunnel created through a SSH protocol connection, that can be used to transfer unencrypted traffic over an unsecured network.
 
 1. To initiate a SSH tunnel, the following command needs to be run from a Command Prompt.
 
@@ -80,11 +80,11 @@ This lab covers both the approaches and the following tasks will be performed
 
    > At the time of writing this lab, an open issue in Jenkins was noted where the setup wizard would not resume after restart, skipping some of the steps listed below. If you do not see the screen above, steps 5 to 7 will not work. The workaround is to use the default user name *admin* with the initial admin password (explained in **step #7** below).
 
-1. Return to the **Putty** terminal and type the following command to open the log file that contains the password and copy the password. Press the **ESC** button and then type **:q!** at the prompt to exit the vi editor without saving the file after copying.
+1. Return to the **Putty** terminal and type the following command to open the password file and copy the password. Press the **Esc** button and then type **:q!** at the prompt to exit the vi editor without saving the file.
 
     `sudo vi /var/lib/jenkins/secrets/initialAdminPassword`
 
-    > You can double click on the line and use **CTRL+C** to copy the text and place it in the clipboard. 
+    > You can double click on the line and use **CTRL+C** to copy the text and place it in the clipboard.
 
 1. Return to the browser, paste the copied text and click the **Continue** button.
 
