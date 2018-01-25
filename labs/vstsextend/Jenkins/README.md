@@ -210,7 +210,7 @@ In this section, the Jenkins will be configured to run separately. A service hoo
 1. Provide the following details in the **Select and configure the action to perform** screen
    1. In the **Perform this action** field, select the **Trigger generic build** option
 
-   1. In the **Jenkins base URL** field, Provide the URL of the Jenkins server in the *http://{ip address or the host name}* format
+   1. In the **Jenkins base URL** field, Provide the URL of the Jenkins server in the  format `http://{ip address or the host name}`
 
    1. In the **User name** and **User API token (or password)** fields, provide the user name and password already configured for Jenkins
 
@@ -228,7 +228,7 @@ To begin, an endpoint to the Jenkins Server for communication with VSTS will be 
 
 1. In the **Admin | Services** section, click on the **New Service Endpoint | Jenkins** option to create a new endpoint.
 
-1. In the **Add new Jenkins Connection** screen, provide a connection name, Jenkins server URL in the  *http://[server IP address or DNS name]* format, Jenkins user name and password. Click on the **Verify Connection** button to validate the configuration and then click on the **Ok** button.
+1. In the **Add new Jenkins Connection** screen, provide a connection name, Jenkins server URL in the format `http://[server IP address or DNS name]`, Jenkins user name and password. Click on the **Verify Connection** button to validate the configuration and then click on the **Ok** button.
 
    ![Jenkins Endpoint](images/jenkinsendpoint.png)
 
