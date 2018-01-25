@@ -10,6 +10,9 @@
 {% elsif page.sidebar == "java" %}
 {% assign sidebar = site.data.sidebars.java.entries %}
 
+{% elsif page.sidebar == "vsts2" %}
+{% assign sidebar = site.data.sidebars.vsts2.entries %}
+
 {% else %}
 {% assign sidebar = site.data.sidebars.home_sidebar.entries %}
 {% endif %}
@@ -30,4 +33,8 @@ sidebar configuration for print files
 
 {% if site.product == "vsts" %}
 {% assign sidebar_pdf = site.data.sidebars.vsts.entries %}
+{% endif %}
+
+{% if page.sidebar == "vsts2" %}
+{% assign sidebar = site.data.sidebars.vsts2.entries %}
 {% endif %}

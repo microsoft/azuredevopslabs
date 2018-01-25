@@ -1299,6 +1299,7 @@ pre code {
 @media (min-width: 1200px) {
     .container {
         max-width: 1500px;
+        margin-top: 50px;
     }
     .col-lg-1,
     .col-lg-2,
@@ -5150,7 +5151,7 @@ a.thumbnail:focus {
 }
 
 .alert-warning {
-    background-color: #fcf8e3;
+    background-color: #fea;
     border-color: #fbeed5;
     color: #c09853;
 }

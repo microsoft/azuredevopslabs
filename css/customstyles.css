@@ -525,11 +525,12 @@ ul#mysidebar {
 }
 
 span.projectTitle {
-    /*font-family:-"Lato","Geneva CY","Lucida Grande","Arial Unicode MS","Helvetica Neue","Helvetica","Arial",sans-serif;*/
+    font-family:-segoe-ui_normal,Segoe UI,Segoe,Segoe WP,Helvetica Neue,Helvetica,sans-serif;
     font-weight: bold;
     color: #000000;
     padding-left: 10px;
     word-wrap: break-word;
+    font-size: 20px;
 }
 
 span.rellinkstitle {
@@ -947,6 +948,7 @@ table code {
 
 pre {
     margin: 25px 0px;
+    margin-left: 10px;
 }
 
 #json-box-container pre {
@@ -998,6 +1000,7 @@ h4 code {
 .alert {
     margin-bottom: 10px;
     margin-top: 10px;
+    margin-left: 10px;
 }
 
 a.accordion-toggle {
@@ -1677,7 +1680,7 @@ ul.labslist{
 }
 
 li.labslistitems{
-    margin-bottom: 10px;
+    margin: 20px 0px 20px 0px;
 }
 
 div.header2{

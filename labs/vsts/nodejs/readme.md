@@ -1,10 +1,12 @@
 ---
 title: DevOps for Node.js with Visual Studio Team Services and Azure
 layout: page
-sidebar: vsts
+sidebar: vsts2
 permalink: /labs/vsts/nodejs/
 folder: /labs/vsts/nodejs/
 ---
+
+Last updated : {{ "now" | date: "%b %d,%Y" }}.
 
 In this session, we will present a scenario where Visual Studio Team Services (VSTS) can enable Node.js developers with continuous integration and deployment features. The scenario demonstrates how a Node.js developer using [Visual Studio Code](http://code.visualstudio.com) and various Azure-related VS Code extensions to create a new Azure App Service and use Git-based deployment. You'll learn how a Node.js developer using the popular server-side MVC framework known as Express can use VSTS to ensure that their code is deployed automatically to an Azure App Service when code is committed to a VSTS Git repository. 
 

@@ -6,7 +6,7 @@ permalink: /labs/vsts/azurecd/
 folder: /labs/vsts/azurecd/
 ---
 
-Last updated:7/20/2017
+Last updated : {{ "now" | date: "%b %d,%Y" }}.
 
 ## Overview
 

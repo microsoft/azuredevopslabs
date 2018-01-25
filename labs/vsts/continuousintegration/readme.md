@@ -6,7 +6,7 @@ permalink: /labs/vsts/continuousintegration/
 folder: /labs/vsts/continuousintegration/
 ---
 
-Last updated:1/16/2018
+Last updated : {{ "now" | date: "%b %d,%Y" }}.
 
 ## Overview
 

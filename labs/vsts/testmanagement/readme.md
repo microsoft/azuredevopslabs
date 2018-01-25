@@ -6,7 +6,7 @@ permalink: /labs/vsts/testmanagement/
 folder: /labs/vsts/testmanagement/
 ---
 
-Last updated: 4/25/2017
+Last updated : {{ "now" | date: "%b %d,%Y" }}.
 
 ## Overview
 

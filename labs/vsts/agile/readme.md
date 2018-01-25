@@ -6,15 +6,15 @@ permalink: /labs/vsts/agile/
 folder: /labs/vsts/agile/
 ---
 
-Last updated:19/4/2017
+Last updated : {{ "now" | date: "%b %d,%Y" }}.
 
-## Overview     
+## Overview
 
 In this lab, you will learn about the agile planning and portfolio management tools and processes provided by Visual Studio Team Services and how they can help you quickly plan, manage, and track work across your entire team. You will explore the product backlog, sprint backlog, and task boards which can be used to track the flow of work during an iteration. We will also look at how the tools have been enhanced in this release to scale for larger teams and organizations.
 
 ## Pre-requisites
 
-To complete this lab, you will need: 
+To complete this lab, you will need:
 
 - **Visual Studio Team Services account**. If you don't have one, you can create from <a href="https://www.visualstudio.com/">here</a>
 

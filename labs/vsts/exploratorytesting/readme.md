@@ -6,6 +6,8 @@ permalink: /labs/vsts/exploratorytesting/
 folder: /labs/vsts/exploratorytesting/
 ---
 
+Last updated : {{ "now" | date: "%b %d,%Y" }}.
+
 ## Overview
 
 The Test & Feedback extension helps teams perform exploratory testing and provide feedback. Everyone in the team, such as developers, product owners, managers, UX or UI engineers, marketing teams, early adopters, and other stakeholders can use the extension to submit bugs or provide feedback and contribute to the quality of your product.
