@@ -30,15 +30,15 @@ This lab covers both the approaches and the following tasks will be performed
 
 ## Pre-requisites
 
-1. Active Microsoft Azure account
-1. Active **VSTS** account
-1. [Personal Access Token (PAT)](https://docs.microsoft.com/en-us/vsts/accounts/use-personal-access-tokens-to-authenticate)
+1. An active Microsoft Azure account
+1. An active **VSTS** account
+1. A [Personal Access Token (PAT)](https://docs.microsoft.com/en-us/vsts/accounts/use-personal-access-tokens-to-authenticate)
 1. [Putty](http://www.putty.org/), a free SSH and Telnet client
 1. **Docker Integration** extension installed and enabled for the VSTS account. This step can be performed later while using the VSTS Demo Generator.
 
 ## Setting up the VSTS project
 
-1. Use the [![VSTS Demo Generator]](https://vstsdemogenerator.azurewebsites.net/?name=MyShuttleDocker&templateid=77373) to provision a team project on the VSTS account
+1. Use the ![VSTS Demo Generator](https://vstsdemogenerator.azurewebsites.net/?name=MyShuttleDocker&templateid=77373) to provision a team project on the VSTS account
 
     ![VSTS Demo Gen](images/vstsdemogen-1.png)
 1. Select **MyShuttleDocker** for the template
@@ -286,10 +286,9 @@ Next, we will configure Visual Studio VSTS Release Management to fetch and deplo
 
 ### Logging into Jenkins with the default credentials
 
-1.  In case the initial admin was not configured for Jenkins during the setup, the default user **admin** can be used to login to Jenkins. The admin password will be the content from the password file created automatically by Jenkins stored in the path `\var\lib\jenkins\secrets\initialAdminPassword`
+1. In case the initial admin was not configured for Jenkins during the setup, the default user **admin** can be used to login to Jenkins. The admin password will be the content from the password file created automatically by Jenkins stored in the path `\var\lib\jenkins\secrets\initialAdminPassword`
 
-1.  To change password, click on the user name on the top-right corner. Click the **Configure** option, scroll down to the **password** section to specify a new password and then click the **Save** button.
-  
+1. To change password, click on the user name on the top-right corner. Click the **Configure** option, scroll down to the **password** section to specify a new password and then click the **Save** button.
 
 ### Installing the Git Plugin
 
