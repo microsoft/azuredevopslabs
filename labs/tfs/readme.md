@@ -23,56 +23,56 @@ landing-page: false
 
 <div class="lablist">
     <div class="header2">Agile Planning</div>
-          <ul class="labslist">
-          <li class="labslistitems"><a href="agile/">Agile Planning and Portfolio Management </a>    </li>
-          <li class="labslistitems"><a href="agileworkitems/">Agile Work Item Management </a>    </li>
-          <li class="labslistitems"><a href="smartword4tfs/">Introduction to the Modern Requirements Suite4TFS</a> </li>
-          <li class="labslistitems"><a href="deliveryplans/">Managing Delivery Plans</a></li>
+          <ul class="fa-ul">
+          <li class="labslistitems"><i class="fa-li fa fa-book" style="color:  #002868;"></i><a href="agile/" >Agile Planning and Portfolio Management </a>    </li>
+          <li class="labslistitems"><i class="fa-li fa fa-book" style="color:  #002868;"></i><a href="agileworkitems/" >Agile Work Item Management </a>    </li>
+          <li class="labslistitems"><i class="fa-li fa fa-book" style="color:  #002868;"></i><a href="smartword4tfs/" >Introduction to the Modern Requirements Suite4TFS</a> </li>
+          <li class="labslistitems"><i class="fa-li fa fa-book" style="color:  #002868;"></i><a href="deliveryplans/" >Managing Delivery Plans</a></li>
         </ul>
   <div class="header2">Develop</div>
-           <ul class="labslist">
-          <li class="labslistitems"><a href="devteamcollaboration/">Collaboration Experiences for Development Teams with Wiki</a> </li>
-          <li class="labslistitems"><a href="debugging/">Debugging with IntelliTrace </a>    </li>
-          <li class="labslistitems"><a href="snapshotdebugger/">Debugging with Snapshot Debugger</a> </li>
-          <li class="labslistitems"><a href="intellitrace/">Diagnosing Issues in Production with IntelliTrace</a> </li>
-          <li class="labslistitems"><a href="devexp/">Developer experience enhancements</a> </li>
-          <li class="labslistitems"><a href="intellitest/">Generate Unit Tests with IntelliTest</a> </li>
-          <li class="labslistitems"><a href="livedependencyvalidation/">Live Dependency Validation</a> </li>
-          <li class="labslistitems"><a href="liveunittesting/">Live Unit Testing, Code Coverage, and Code Clone Analysis</a> </li>
-          <li class="labslistitems"><a href="vsproductivity/"> Making Developers More Productive</a> </li>
-          <li class="labslistitems"><a href="sqlprompt/"> SQL Prompt</a> </li>
-          <li class="labslistitems"><a href="codeanalysis/"> Using Code Analysis to Improve Code Quality</a> </li>
-          <li class="labslistitems"><a href="git/"> Version Controlling with Git </a> </li>
-          <li class="labslistitems"><a href="editorconfig/"> Working with EditorConfig</a> </li>
+           <ul class="fa-ul">
+          <li class="labslistitems"><i class="fa-li fa fa-book" style="color:  #002868;"></i><a href="devteamcollaboration/" >Collaboration Experiences for Development Teams with Wiki</a> </li>
+          <li class="labslistitems"><i class="fa-li fa fa-book" style="color:  #002868;"></i><a href="debugging/" >Debugging with IntelliTrace </a>    </li>
+          <li class="labslistitems"><i class="fa-li fa fa-book" style="color:  #002868;"></i><a href="snapshotdebugger/" >Debugging with Snapshot Debugger</a> </li>
+          <li class="labslistitems"><i class="fa-li fa fa-book" style="color:  #002868;"></i><a href="intellitrace/" >Diagnosing Issues in Production with IntelliTrace</a> </li>
+          <li class="labslistitems"><i class="fa-li fa fa-book" style="color:  #002868;"></i><a href="devexp/" >Developer experience enhancements</a> </li>
+          <li class="labslistitems"><i class="fa-li fa fa-book" style="color:  #002868;"></i><a href="intellitest/" >Generate Unit Tests with IntelliTest</a> </li>
+          <li class="labslistitems"><i class="fa-li fa fa-book" style="color:  #002868;"></i><a href="livedependencyvalidation/" >Live Dependency Validation</a> </li>
+          <li class="labslistitems"><i class="fa-li fa fa-book" style="color:  #002868;"></i><a href="liveunittesting/" >Live Unit Testing, Code Coverage, and Code Clone Analysis</a> </li>
+          <li class="labslistitems"><i class="fa-li fa fa-book" style="color:  #002868;"></i><a href="vsproductivity/" > Making Developers More Productive</a> </li>
+          <li class="labslistitems"><i class="fa-li fa fa-book" style="color:  #002868;"></i><a href="sqlprompt/" > SQL Prompt</a> </li>
+          <li class="labslistitems"><i class="fa-li fa fa-book" style="color:  #002868;"></i><a href="codeanalysis/" > Using Code Analysis to Improve Code Quality</a> </li>
+          <li class="labslistitems"><i class="fa-li fa fa-book" style="color:  #002868;"></i><a href="git/" > Version Controlling with Git </a> </li>
+          <li class="labslistitems"><i class="fa-li fa fa-book" style="color:  #002868;"></i><a href="editorconfig/" > Working with EditorConfig</a> </li>
         </ul>
     <div class="header2">Continuous Integration</div>
-           <ul class="labslist">
-          <li class="labslistitems"> <a href="technicaldebt/">Managing Technical Debt with SonarQube </a>    </li>
-          <li class="labslistitems"> <a href="packagemanagement/">Package Management  </a>    </li>
-          <li class="labslistitems"> <a href="build/">Enabling Continuous Delivery </a> </li>
+           <ul class="fa-ul">
+          <li class="labslistitems"><i class="fa-li fa fa-book" style="color:  #002868;"></i> <a href="technicaldebt/" >Managing Technical Debt with SonarQube </a>    </li>
+          <li class="labslistitems"><i class="fa-li fa fa-book" style="color:  #002868;"></i> <a href="packagemanagement/" >Package Management  </a>    </li>
+          <li class="labslistitems"><i class="fa-li fa fa-book" style="color:  #002868;"></i> <a href="build/" >Enabling Continuous Delivery </a> </li>
         </ul>
     <div class="header2">Test Management and Execution</div>
-           <ul class="labslist">
-          <li class="labslistitems"> <a href="liveunittesting/">Unit Testing, Code Coverage, and Code Clone Analysis </a>    </li>
-          <li class="labslistitems"> <a href="intellitest/">Generate Unit Tests with IntelliTest</a>    </li>
-          <li class="labslistitems"> <a href="manualtesting/">Test Planning and Management </a> </li>
-          <li class="labslistitems"> <a href="exploratorytesting/">Exploratory Testing and Feedback Management  </a>    </li>
-          <li class="labslistitems"> <a href="codedui/">UI Automation using Coded UI Tests</a>    </li>
-          <li class="labslistitems"> <a href="load/">Web Application Load and Performance Testing  </a> </li>
+           <ul class="fa-ul">
+          <li class="labslistitems"><i class="fa-li fa fa-book" style="color:  #002868;"></i> <a href="liveunittesting/" >Unit Testing, Code Coverage, and Code Clone Analysis </a>    </li>
+          <li class="labslistitems"><i class="fa-li fa fa-book" style="color:  #002868;"></i> <a href="intellitest/" >Generate Unit Tests with IntelliTest</a>    </li>
+          <li class="labslistitems"><i class="fa-li fa fa-book" style="color:  #002868;"></i> <a href="manualtesting/" >Test Planning and Management </a> </li>
+          <li class="labslistitems"><i class="fa-li fa fa-book" style="color:  #002868;"></i> <a href="exploratorytesting/" >Exploratory Testing and Feedback Management  </a>    </li>
+          <li class="labslistitems"><i class="fa-li fa fa-book" style="color:  #002868;"></i> <a href="codedui/" >UI Automation using Coded UI Tests</a>    </li>
+          <li class="labslistitems"><i class="fa-li fa fa-book" style="color:  #002868;"></i> <a href="load/" >Web Application Load and Performance Testing  </a> </li>
         </ul>
       <div class="header2">Continuous Delivery</div>
-          <ul class="labslist">
-            <li class="labslistitems"> <a href="releasemanagement/">Embracing Continuous Delivery with Release Management </a>    </li>
-            <li class="labslistitems"> <a href="readyroll/">Develop and deploy databases with ReadyRoll</a>    </li>
+          <ul class="fa-ul">
+            <li class="labslistitems"><i class="fa-li fa fa-book" style="color:  #002868;"></i> <a href="releasemanagement/" >Embracing Continuous Delivery with Release Management </a>    </li>
+            <li class="labslistitems"><i class="fa-li fa fa-book" style="color:  #002868;"></i> <a href="readyroll/" >Develop and deploy databases with ReadyRoll</a>    </li>
             </ul>
       <div class="header2">Application Monitoring</div>
-          <ul class="labslist">
-            <li class="labslistitems"> <a href="appinsights/">Instrumenting ASP.NET with Application Insights </a>    </li>
+          <ul class="fa-ul">
+            <li class="labslistitems"><i class="fa-li fa fa-book" style="color:  #002868;"></i> <a href="appinsights/" >Instrumenting ASP.NET with Application Insights </a>    </li>
           </ul>
       <div class="header2">Azure</div>
-          <ul class="labslist">
-            <li class="labslistitems"> <a href="armtemplates/">Authoring ARM Templates with Visual Studio </a>    </li>
-            <li class="labslistitems"> <a href="aspnetazure/">Deploying a SQL Database backed ASP.NET app to Azure </a>    </li>
+          <ul class="fa-ul">
+            <li class="labslistitems"><i class="fa-li fa fa-book" style="color:  #002868;"></i> <a href="armtemplates/" >Authoring ARM Templates with Visual Studio </a>    </li>
+            <li class="labslistitems"><i class="fa-li fa fa-book" style="color:  #002868;"></i> <a href="aspnetazure/" >Deploying a SQL Database backed ASP.NET app to Azure </a>    </li>
           </ul>
 </div>
  <div class="clear"></div>
