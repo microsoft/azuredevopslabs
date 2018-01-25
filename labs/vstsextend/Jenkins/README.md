@@ -68,9 +68,9 @@ This lab covers both the approaches and the following tasks will be performed
     ````
     ![Connecting from Putty](images/ssh2.png)
 
-    {% include note.html content= "To initiate the above command, the Putty.exe needs to be placed in the path selected in the Command Prompt or the absolute path of the Putty.exe need to be provided in the command." %}
+    > To initiate the above command, the Putty.exe needs to be placed in the path selected in the Command Prompt or the absolute path of the Putty.exe need to be provided in the command.
 
-1. Login with the user name and password that was provided during the provisioning of the VM.
+1. Login with the user name and password that was provided during the provisioning of the Jenkins VM.
 
 1. Once the connection is successful, open a browser on the host machine and navigate to the URL [http://localhost:8080](http://localhost:8080). The **Getting Started** page for Jenkins will be displayed.
 
@@ -78,18 +78,19 @@ This lab covers both the approaches and the following tasks will be performed
 
    ![Jenkins Initial Password](images/jenkinsinitialemptypwd.png)
 
-   {% include note.html content= "At the time of writing this lab, an open issue in Jenkins was noted where the setup wizard would not resume after restart, skipping some of the steps listed below. If you do not see the screen above, steps 5 to 7 will not work. The workaround is to use the default user name *admin* with the initial admin password (explained in **step #7** below)." %}
+   > At the time of writing this lab, an open issue in Jenkins was noted where the setup wizard would not resume after restart, skipping some of the steps listed below. If you do not see the screen above, steps 5 to 7 will not work. The workaround is to use the default user name *admin* with the initial admin password (explained in **step #7** below).
 
-1. Return to the **Putty** terminal and type the following command to open the log file that contains the password. Copy the password.
-    >sudo vi /var/lib/jenkins/secrets/initialAdminPassword
+1. Return to the **Putty** terminal and type the following command to open the log file that contains the password and copy the password.
 
-    *You can double click on the line and use **CTRL+C** to copy the text and place it in the clipboard. Press **ESC and then :q!** to exit the vi editor without saving the file*
+    `sudo vi /var/lib/jenkins/secrets/initialAdminPassword`
+
+    > You can double click on the line and use **CTRL+C** to copy the text and place it in the clipboard. Press **ESC and then :q!** to exit the vi editor without saving the file
 
 1. Return to the browser, paste the copied text and click the **Continue** button.
 
     ![Unlock Jenkins - First Time](images/jenkinsinitialpwd.png)
 
-    Jenkins has a vast ecosystem with a strong and active open source community users contributing hundreds of useful plugins. While configuring Jenkins, you can either install the most commonly used plugins or pick the plugins that you want.
+    > Jenkins has a vast ecosystem with a strong and active open source community users contributing hundreds of useful plugins. While configuring Jenkins, you can either install the most commonly used plugins or pick the plugins that you want.
 
 1. The Maven plugin is also required but will be installed later. For now, we will go with the suggested plugins. Click on the **Install suggested plugins** to initiate the configuration.
 
