@@ -145,7 +145,7 @@ In this lab, we are using Azure App Service as the deployment target.
 
     ![](images/O12.png)
 
-1. Once the certificate is uploaded successfully, go back to Octopus portal and click **Save and Test**. Once the verification is successful, we should be able to configure Octopus to deploy application packages to Azure.
+1. Once the certificate is uploaded successfully, go back to Octopus portal and click **Save and Test**. If the test succeeds,  we should be able to configure Octopus to deploy application packages to Azure.
 
     ![](images/VerificationSuccess.png)
 
@@ -163,7 +163,7 @@ Let us create a Project in Octopus to deploy the package to **Azure App Service*
 
    ![](images/PUProject.png)
 
-1. Once the project is created, click **Define your deployment process**. The [deployment process](https://octopus.com/docs/deploying-applications/deployment-process) is like a recipe for deploying your software. You define the recipe by adding steps and variables to a Project. Each step contains a specific action (or set of actions) that is executed as part of the deployment process each time your software is deployed.
+1. Once the project is created, click **Define your deployment process**. The [deployment process](https://octopus.com/docs/deploying-applications/deployment-process) is like a recipe for deploying your software.
 
    ![](images/DefineProcess.png)
 
@@ -209,7 +209,7 @@ In this exercise, we will package PHP application and push the package to Octopu
 
 1. In **Push Packages to Octopus** task, update **Octopus Deploy Server** field with the created endpoint value.
 
-   > **Note** : You will encounter an error - **TFS.WebApi.Exception: Page not found** for Azure tasks in the release definition. This is due to a recent change in the VSTS Release Management API. While we are working on updating VSTS Demo Generator to resolve this issue, you can fix this by typing a random text in the **Azure Subscription** field and click the **Refresh** icon next to it. Once the field is refreshed, you can select the endpoint from the drop down.
+   > **Note** : We will encounter an error - **TFS.WebApi.Exception: Page not found** for Azure tasks in the release definition. This is due to a recent change in the VSTS Release Management API. While we are working on updating VSTS Demo Generator to resolve this issue, we can fix this by typing a random text in the **Azure Subscription** field and click the **Refresh** icon next to it. Once the field is refreshed, we can select the endpoint from the drop down.
 
    ![](images/QBuild.png)
 
@@ -237,7 +237,7 @@ In this exercise, we will package PHP application and push the package to Octopu
 
     ![](images/BuildProgress.png)
 
-1. Once the build completes, go to Octopus portal project dashboard. You will see the release completion in Octopus.
+1. Once the build completes, go to Octopus portal project dashboard. We will see the release completion in Octopus.
 
     ![](images/CD-Octopus.png)
 
@@ -251,7 +251,7 @@ In this exercise, we will package PHP application and push the package to Octopu
 
 ## Summary
 
-We can integrate Octopus with VSTS for delpoying applications to Azure.
+We can integrate Octopus with VSTS for deploying applications to Azure.
 
 ## Feedback
 
