@@ -63,12 +63,11 @@ This lab covers both the approaches and the following tasks will be performed
 
 1. To initiate a SSH tunnel, the following command needs to be run from a Command Prompt.
 
-    ````cmd
-    putty.exe -ssh -L 8080:localhost:8080 <username>@<ip address>
-    ````
+   `putty.exe -ssh -L 8080:localhost:8080 <username>@<ip address>`
+
     ![Connecting from Putty](images/ssh2.png)
 
-    > To initiate the above command, the Putty.exe needs to be placed in the path selected in the Command Prompt or the absolute path of the Putty.exe need to be provided in the command.
+    > To running the above command, either the Putty.exe needs to be placed in the path selected in the Command Prompt or the full path of the Putty.exe need to be provided in the command.
 
 1. Login with the user name and password that was provided during the provisioning of the Jenkins VM.
 
@@ -144,7 +143,7 @@ This lab covers both the approaches and the following tasks will be performed
 
    ![Configuring VSTS Git URL](images/jenkins-vstsrepo.png)
 
-   > The VSTS Git repos are private and requires user credentials to be provided to access the repository. If the Git credentials is not set already, it can be done from the VSTS. 
+   > The VSTS Git repos are private and requires user credentials to be provided to access the repository. If the Git credentials is not set already, it can be done from the VSTS.
 
 1. Select the **Clone** option, provide the `User name` and `Password` and then click on the **Ok** button.
 
@@ -166,7 +165,7 @@ This lab covers both the approaches and the following tasks will be performed
 
    ![Build Settings in Jenkins](images/jenkins-buildsettings.png)
 
-1. To configure the Post build actions, in the **Post-Build Actions**  section, click on the **Add post-build action** and choose the **Archive the artifacts** option.
+1. To configure the Post build actions, in the **Post-Build Actions** section, click on the **Add post-build action** and choose the **Archive the artifacts** option.
 
    ![Post Build Action](images/jenkinspostbuildaction.png)
 
@@ -210,11 +209,7 @@ In this section, we will cover the first approach. We will run Jenkins separatel
 
 1. In the next page, select **Trigger generic build** for the perform action field
 
-1. Enter the URL of the Jenkins server in the format
-
-   ```cmd
-   http://{ip address or the host name}
-   ```
+1. Enter the URL of the Jenkins server in the format `http://{ip address or the host name}`
 
 1. Enter the **User name** and **Password** that you have setup for Jenkins
 
