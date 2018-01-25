@@ -208,7 +208,9 @@ In this section, we will cover the first approach. We will run Jenkins separatel
 
 1. Enter the URL of the Jenkins server in the format
 
-   `http://{ip address or the host name}`
+   ```cmd
+   http://{ip address or the host name}
+   ```
 
 1. Enter the **User name** and **Password** that you have setup for Jenkins
 
@@ -228,7 +230,9 @@ First, we will need to create an endpoint to the Jenkins server
 
 1. Provide the server URL and the user name and password to connect to the server. The server URL will be in following format:
 
-   `http://[server IP address or DNS name]`
+   ```cmd
+   http://[server IP address or DNS name]
+   ```
 
    Click **Verify Connection** to validate the entries and to confirm that VSTS is able to reach the Jenkins server
 
