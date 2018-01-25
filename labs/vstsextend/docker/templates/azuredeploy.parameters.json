@@ -1,0 +1,18 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "acrName": {
+      "value": "acrtest123"
+    },
+    "acrStorageType": {
+      "value": "Standard_LRS"
+    },
+    "siteName": {
+      "value": "mhcweb1223"
+    },
+    "DBServerName": {
+      "value": null
+    }
+  }
+}
