@@ -34,9 +34,7 @@ This lab covers both the approaches and the following tasks will be performed
 1. An active **VSTS** account
 1. A [Personal Access Token (PAT)](https://docs.microsoft.com/en-us/vsts/accounts/use-personal-access-tokens-to-authenticate)
 1. [Putty](http://www.putty.org/), a free SSH and Telnet client
-1. **Docker Integration** extension installed and configured for the VSTS account.
-
-   > This step can be performed later while using the VSTS Demo Generator
+1. **Docker Integration** extension installed and configured for the VSTS account. *This step can be performed later while using the VSTS Demo Generator*
 
 ## Setting up the VSTS project
 
