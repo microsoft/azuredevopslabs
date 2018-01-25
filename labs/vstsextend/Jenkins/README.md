@@ -50,6 +50,7 @@ This lab covers both the approaches and the following tasks will be performed
 ## Setting up the Jenkins VM
 
 1. To configure Jenkins, the Jenkins VM image available on the Azure MarketPlace will be used. This will install the latest stable Jenkins version on a Ubuntu Linux VM along with the tools and plugins configured to work with Azure.
+
 [![Jenkins Configuration](http://azuredeploy.net/deploybutton.png)](https://portal.azure.com/#create/azure-oss.jenkinsjenkins)
 
 1. Once the Jenkins VM is provisioned, click on the **Connect** button and make a note of the \<username> and the \<ip address>. This information will be required toconnect to the Jenkins VM from ***Putty***
@@ -132,8 +133,10 @@ This lab covers both the approaches and the following tasks will be performed
 
    ![New Build Definition](images/newbuilddef.png)
 
-1. Now scroll down to the **Source code Management** section. Select the **Git** option and provide the clone URL of the VSTS Git repo. It would be typically in the format **http://\<your account name>.visualstudio.com/
- \<your project name>/_git/MyShuttle**
+1. Now scroll down to the **Source code Management** section. Select the **Git** option and provide the clone URL of the VSTS Git repo. It would be typically in the format
+
+   `http://\<your account name>.visualstudio.com/
+ \<your project name>/_git/MyShuttle`
 
    ![Configuring VSTS Git URL](images/jenkins-vstsrepo.png)
 
@@ -203,7 +206,9 @@ In this section, we will cover the first approach. We will run Jenkins separatel
 
 1. In the next page, select **Trigger generic build** for the perform action field
 
-1. Enter the URL of the Jenkins server in **http://{ip address or the host name}**  format
+1. Enter the URL of the Jenkins server in the format
+
+   `http://{ip address or the host name}`
 
 1. Enter the **User name** and **Password** that you have setup for Jenkins
 
@@ -221,7 +226,11 @@ First, we will need to create an endpoint to the Jenkins server
 
 1. From the **Admin \| Services** tab, select the **New Service Endpoint \| Jenkins** button to create a new endpoint
 
-1. Provide the server URL and the user name and password to connect to the server. The server URL is in http://[server IP address or DNS name] format. Click **Verify Connection** to validate the entries and to confirm that VSTS is able to reach the Jenkins server
+1. Provide the server URL and the user name and password to connect to the server. The server URL will be in following format:
+
+   `http://[server IP address or DNS name]`
+
+   Click **Verify Connection** to validate the entries and to confirm that VSTS is able to reach the Jenkins server
 
    ![Jenkins Endpoint](images/jenkinsendpoint.png)
 
