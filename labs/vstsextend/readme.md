@@ -27,7 +27,7 @@ folder: /labs/vstsextend/
           <li> <img src="images/octopus.png" height="42" width="42"/><a href="Octopus/"> Integrating Octopus Deploy</a></li><br />
           <li> <img src="images/selenium.png" height="42" width="42"/><a href="Selenium/"> Driving continuous testing with Selenium</a></li><br />
            <li> <img src="images/eclipse.png" height="42" width="42"/><a href="eclipse/"> Integrating with Eclipse for Java projects</a></li><br />
-          <li> <img src="images/azure.png" /><a href="aks/"> Deploying to Azure Container Service (AKS)</a></li><br />
+          <li> <img src="images/azure.png" /><a href="kubernetes/"> Deploying to Azure Container Service (AKS)</a></li><br />
           <li> <img src="images/azure.png" /><a href="deploymentgroups/"> Working with Deployment Groups</a></li><br />
           <li> <img src="images/logo_java.svg" height="42" width="42"/> <a href="../java/"> DevOps with VSTS and Azure for Java projects  </a>    </li><br />
           <li> <img src="images/logo_nodejs.svg" height="42" width="42"/><a href="../vsts/nodejs/">DevOps for Node.js with VSTS and Azure   </a>    </li><br />

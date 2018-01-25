@@ -1,0 +1,294 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "acrName": {
+            "minLength": 5,
+            "maxLength": 50,
+            "type": "string",
+            "metadata": {
+                "description": "Name of your Azure Container Registry"
+            }
+        },
+        "acrStorageType": {
+            "defaultValue": "Standard_LRS",
+            "allowedValues": [
+                "Standard_LRS",
+                "Standard_ZRS",
+                "Standard_GRS"
+            ],
+            "type": "string",
+            "metadata": {
+                "description": "Type of the storage account that will store container registry data."
+            }
+        },
+        "DBServerName": {
+            "type": "string",
+            "metadata": {
+                "description": "SQL server name will be appended to .database.windows.net"
+            }
+        },
+        "aksName": {
+            "type": "string",
+            "metadata": {
+                "description": "The name of the Managed Cluster resource."
+            }
+        },
+        "dnsPrefix": {
+            "type": "string",
+            "metadata": {
+                "description": "Optional DNS prefix to use with hosted Kubernetes API server FQDN."
+            }
+        },
+         "osDiskSizeGB": {
+            "type": "int",
+             "defaultValue": 0,
+            "metadata": {
+                "description": "Disk size (in GB) to provision for each of the agent pool nodes. This value ranges from 0 to 1023. Specifying 0 will apply the default disk size for that agentVMSize."
+            },
+            "minValue": 0,
+            "maxValue": 1023
+        },
+         "agentCount": {
+            "type": "int",
+            "defaultValue": 1,
+            "metadata": {
+                "description": "The number of nodes for the cluster."
+            },
+            "minValue": 1,
+            "maxValue": 50
+        },
+        "agentVMSize": {
+            "type": "string",
+            "defaultValue": "Standard_D2_v2",
+            "allowedValues": [
+                "Standard_A10",
+                "Standard_A11",
+                "Standard_A2",
+                "Standard_A2_v2",
+                "Standard_A2m_v2",
+                "Standard_A3",
+                "Standard_A4",
+                "Standard_A4_v2",
+                "Standard_A4m_v2",
+                "Standard_A5",
+                "Standard_A6",
+                "Standard_A7",
+                "Standard_A8",
+                "Standard_A8_v2",
+                "Standard_A8m_v2",
+                "Standard_A9",
+                "Standard_D11",
+                "Standard_D11_v2",
+                "Standard_D12",
+                "Standard_D12_v2",
+                "Standard_D13",
+                "Standard_D13_v2",
+                "Standard_D14",
+                "Standard_D14_v2",
+                "Standard_D15_v2",
+                "Standard_D2",
+                "Standard_D2_v2",
+                "Standard_D3",
+                "Standard_D3_v2",
+                "Standard_D4",
+                "Standard_D4_v2",
+                "Standard_D5_v2",
+                "Standard_F16",
+                "Standard_F16s",
+                "Standard_F2",
+                "Standard_F2s",
+                "Standard_F4",
+                "Standard_F4s",
+                "Standard_F8",
+                "Standard_F8s",
+                "Standard_G1",
+                "Standard_G2"
+            ],
+            "metadata": {
+                "description": "The size of the Virtual Machine."
+            }
+        },
+        "linuxAdminUsername": {
+            "type": "string",
+            "defaultValue": "azureuser",
+            "metadata": {
+                "description": "User name for the Linux Virtual Machines."
+            }
+        },
+        "sshRSAPublicKey": {
+            "type": "string",
+            "metadata": {
+                "description": "Configure all linux machines with the SSH RSA public key string. Your key should include three parts, for example 'ssh-rsa AAAAB...snip...UcyupgH azureuser@linuxvm'"
+            }
+        },
+        "servicePrincipalClientId": {
+            "metadata": {
+                "description": "Client ID (used by cloudprovider)"
+            },
+            "type": "securestring"
+        },
+        "servicePrincipalClientSecret": {
+            "metadata": {
+                "description": "The Service Principal Client Secret."
+            },
+            "type": "securestring"
+        },
+        "osType": {
+            "type": "string",
+            "defaultValue": "Linux",
+            "allowedValues": [
+                "Linux"
+            ],
+            "metadata": {
+                "description": "The type of operating system."
+            }
+        },
+        "kubernetesVersion": {
+            "type": "string",
+            "defaultValue": "1.8.1",
+            "allowedValues": [
+                "1.8.1"
+            ],
+            "metadata": {
+                "description": "The version of Kubernetes."
+            }
+        }
+    },
+    "variables": {
+        "acrStorageName": "[concat('acr', uniqueString(resourceGroup().id))]",
+        "acrStorageId": "[resourceId('Microsoft.Storage/storageAccounts', variables('acrStorageName'))]",
+        "location": "[resourceGroup().location]",
+        "aksName": "[parameters('aksName')]",
+        "adminUsername": "[parameters('linuxAdminUsername')]",
+        "osDiskSizeGB": "[parameters('osDiskSizeGB')]",
+        "agentCount": "[parameters('agentCount')]",
+        "agentVMSize": "[parameters('agentVMSize')]",
+        "dnsPrefix": "[parameters('dnsPrefix')]",
+        "sshRSAPublicKey": "[parameters('sshRSAPublicKey')]",
+        "servicePrincipalClientId": "[parameters('servicePrincipalClientId')]",
+        "servicePrincipalClientSecret": "[parameters('servicePrincipalClientSecret')]",
+        "osType": "[parameters('osType')]",
+        "kubernetesVersion": "[parameters('kubernetesVersion')]"
+    },
+    "resources": [
+        {
+            "type": "Microsoft.Storage/storageAccounts",
+            "name": "[variables('acrStorageName')]",
+            "apiVersion": "2015-06-15",
+            "location": "[resourceGroup().location]",
+            "tags": {
+                "displayName": "ACR Image's storage",
+                "container.registry": "[parameters('acrName')]"
+            },
+            "properties": {
+                "accountType": "[parameters('acrStorageType')]"
+            },
+            "dependsOn": []
+        },
+        {
+            "type": "Microsoft.ContainerRegistry/registries",
+            "name": "[parameters('acrName')]",
+            "apiVersion": "2016-06-27-preview",
+            "location": "[resourceGroup().location]",
+            "tags": {
+                "displayName": "Container Registry",
+                "container.registry": "[parameters('acrName')]"
+            },
+            "properties": {
+                "adminUserEnabled": "true",
+                "storageAccount": {
+                    "accessKey": "[listKeys(variables('acrStorageId'),'2015-06-15').key1]",
+                    "name": "[variables('acrStorageName')]"
+                }
+            },
+            "dependsOn": [
+                "[variables('acrStorageId')]"
+            ]
+        },
+        {
+            "type": "Microsoft.Sql/servers",
+            "name": "[parameters('DBServerName')]",
+            "apiVersion": "2015-05-01-preview",
+            "location": "[variables('location')]",
+            "properties": {
+                "administratorLogin": "sqladmin",
+                "administratorLoginPassword": "P2ssw0rd1234",
+                "version": "12.0"
+            },
+            "resources": [
+                {
+                    "type": "databases",
+                    "name": "mhcdb",
+                    "apiVersion": "2014-04-01-preview",
+                    "location": "[variables('location')]",
+                    "properties": {
+                        "collation": "SQL_Latin1_General_CP1_CI_AS",
+                        "edition": "Basic",
+                        "maxSizeBytes": "1073741824"
+                    },
+                    "dependsOn": [
+                        "[concat('Microsoft.Sql/servers/', parameters('DBServerName'))]"
+                    ]
+                },
+                {
+                    "type": "firewallrules",
+                    "name": "AllowAllWindowsAzureIps",
+                    "apiVersion": "2014-04-01-preview",
+                    "location": "[variables('location')]",
+                    "properties": {
+                        "endIpAddress": "0.0.0.0",
+                        "startIpAddress": "0.0.0.0"
+                    },
+                    "dependsOn": [
+                        "[concat('Microsoft.Sql/servers/', parameters('DBServerName'))]"
+                    ]
+                }
+            ]
+        },
+        {
+            "apiVersion": "2017-08-31",
+            "type": "Microsoft.ContainerService/managedClusters",
+            "location": "[resourceGroup().location]",
+            "name": "[variables('aksName')]",
+            "properties": {
+                "kubernetesVersion": "[variables('kubernetesVersion')]",
+                "dnsPrefix": "[variables('dnsPrefix')]",
+                "agentPoolProfiles": [
+                    {
+                        "name": "agentpool",
+                        "osDiskSizeGB": "[variables('osDiskSizeGB')]",
+                        "count": "[variables('agentCount')]",
+                        "vmSize": "[variables('agentVMSize')]",
+                        "osType": "[variables('osType')]",
+                        "storageProfile": "ManagedDisks"
+                    }
+                ],
+                "linuxProfile": {
+                    "adminUsername": "[variables('adminUsername')]",
+                    "ssh": {
+                        "publicKeys": [
+                            {
+                                "keyData": "[variables('sshRSAPublicKey')]"
+                            }
+                        ]
+                    }
+                },
+                "servicePrincipalProfile": {
+                    "ClientId": "[parameters('servicePrincipalClientId')]",
+                    "Secret": "[parameters('servicePrincipalClientSecret')]"
+                }
+            }
+        }
+    ],
+    "outputs": {
+        "acrLoginServer": {
+            "type": "String",
+            "value": "[reference(resourceId('Microsoft.ContainerRegistry/registries',parameters('acrName')),'2016-06-27-preview').loginServer]"
+        },
+        "controlPlaneFQDN": {
+            "type": "string",
+            "value": "[reference(concat('Microsoft.ContainerService/managedClusters/', variables('aksName'))).fqdn]"
+        }
+    }
+}
