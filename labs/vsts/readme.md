@@ -52,7 +52,7 @@ In order to complete these labs you will need
 
 - **Visual Studio 2017** or higher version - You will need Visual Studio for some of the labs. You can use your own machine with VS 2017 installed, or download and use the latest [ALM VM](../tfs/),  or spin up a VM pre-installed with Visual Studio on [Azure](https://portal.azure.com).
 
-- You can use the **[Visual Studio Team Services Demo Data generator](https://vstsdemogenerator.azurewebsites.net)** to provision a project with pre-defined data on to your Visual Studio Team Services account. Please use the ***My Health Clinic*** template to follow the hands-on-labs.
+- You can use the **[Visual Studio Team Services Demo Data generator](https://vstsdemogenerator.azurewebsites.net)** to provision a project with pre-defined data on to your Visual Studio Team Services account.
 
 ## Working with VSTS DemoGenerator
 

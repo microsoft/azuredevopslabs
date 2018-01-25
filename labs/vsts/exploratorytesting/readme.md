@@ -93,11 +93,11 @@ For using the Test & Feedback extension you will need Chrome, as it is the only 
 
 1. Click on take snapshot. You will be able to select the region of the screen you want to capture. Once selected the region, you will be able to include shapes and other information to the capture.
 
-   ![](images/14.jpg" width="624)
+   ![](images/14.jpg)
 
-    > Click on the *tick* when done to finish the capture.
+   > Click on the *tick* when done to finish the capture.
 
-    ![](images/15.jpg)
+   ![](images/15.jpg)
 
 1. Click on add note and add a descriptive note and click on **Save** when done.
 
@@ -144,6 +144,6 @@ For using the Test & Feedback extension you will need Chrome, as it is the only 
 
 1. You should see the created bug in the backlog, if you double click on it, as with the Test Case, you will be able to see all the captured information, which is relevant to the bug, and will help developers to be able to reproduce and solve it.
 
-    ![](images/24.jpg" width="624)
+    ![](images/24.jpg)
 
-    > It is very important to provide all the information you can within the bugs to developers. This will ease all the process of reproducing and solving bugs during development cycles.
+    >It is very important to provide all the information you can within the bugs to developers. This will ease all the process of reproducing and solving bugs during development cycles.
