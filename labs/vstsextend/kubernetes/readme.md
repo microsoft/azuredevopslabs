@@ -271,7 +271,7 @@ We will update the database connection string for the .NET Core application and 
 
    Scroll down to line number **9** and provide the database server name as given in the step 6 of the previous exercise and manually update the **User ID** to ***sqladmin*** and **Password** to ***P2ssw0rd1234***. Click **Commit**.
 
-   {% include important.html content= "DefaultConnection: "Server=YOUR_SQLSERVER_NAME.database.windows.net,1433;Database=mhcdb;Persist Security Info=False;User ID=sqladmin;Password=P2ssw0rd1234" %}
+   {% include important.html content= "DefaultConnection: Server=YOUR_SQLSERVER_NAME.database.windows.net,1433;Database=mhcdb;Persist Security Info=False;User ID=sqladmin;Password=P2ssw0rd1234" %}
 
    ![pasteconnectionstring](images/pasteconnectionstring.png)
 
