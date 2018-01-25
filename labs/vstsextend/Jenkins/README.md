@@ -78,25 +78,25 @@ This lab covers both the approaches and the following tasks will be performed
 
    ![Jenkins Initial Password](images/jenkinsinitialemptypwd.png)
 
-   > At the time of writing this lab, an open issue in Jenkins was noted where the setup wizard would not resume after restart, skipping some of the steps listed below. If you do not see the screen above, steps 5 to 7 will not work. The workaround is to use the default user name *admin* with the initial admin password (explained in **step #7** below).
+   > At the time of writing this lab, an open issue in Jenkins was noted where the setup wizard would not resume after restart, skipping some of the steps listed below. If you do not see the screen above, steps 5 to 7 will not work. The workaround is to use the default user name `admin` with the initial admin password to login as explained in the next step.
 
 1. Return to the **Putty** terminal and type the following command to open the password file and copy the password. Press the **Esc** button and then type **:q!** at the prompt to exit the vi editor without saving the file.
 
     `sudo vi /var/lib/jenkins/secrets/initialAdminPassword`
 
-    > You can double click on the line and use **CTRL+C** to copy the text and place it in the clipboard.
+    > You can double click on the password text and use **CTRL+C** to copy the text and place it in the clipboard
 
 1. Return to the browser, paste the copied text and click the **Continue** button.
 
     ![Unlock Jenkins - First Time](images/jenkinsinitialpwd.png)
 
-    > Jenkins has a vast ecosystem with a strong and active open source community users contributing hundreds of useful plugins. While configuring Jenkins, you can either install the most commonly used plugins or pick the plugins that you want.
+    > Jenkins has a vast ecosystem with a strong and active open source community users contributing hundreds of useful plugins. While configuring Jenkins, choose between installing the most commonly used plugins or selected plugins.
 
-1. The Maven plugin is also required but will be installed later. For now, we will go with the suggested plugins. Click on the **Install suggested plugins** to initiate the configuration.
+1. The Maven plugin is also required for the lab but will be installed later. Click on the **Install suggested plugins** option to initiate the configuration.
 
     ![Customize Jenkins Plugins](images/customizejenkins-plugins.png)
 
-1. You will need to create a new *Admin* user for Jenkins. Provide a user name and password and click on the **Continue** button.
+1. To work with Jenkins, a new `Admin` user needs to be created. Provide the *User name*, *Password*, *Full name* and *Email address* and then click on the **Save and Finish** button.
 
     ![Create Admin User for Jenkins](images/firstadminuser.png)
 
@@ -106,50 +106,51 @@ This lab covers both the approaches and the following tasks will be performed
 
 ## Installing and Configuring Maven
 
- Starting with Jenkins version 2, Maven plugin is not installed by default. You will need to install this manually
+ >Starting with Jenkins version 2, Maven plugin is not installed by default. The plugin needs to be manually installed
 
-1. Select the **Manage Jenkins** option on the main page of the Jenkins portal. This will take you to the Manage Jenkins page, the centralized one-stop-shop for all the Jenkins configuration. From this screen, you can configure the Jenkins server, install and upgrade plugins, keep track of system load, manage distributed build servers, and more!
+1. Click the **Manage Jenkins** option on the Jenkins home page to navigate to the **Manage Jenkins** screen, the centralized one-stop-shop for all the Jenkins configuration. From this screen, configuration of the Jenkins server, installation and upgrades of plugins, keeping track of system load, managing distributed build servers can be managed.
 
-1. Select the **Manage Plugins** option
+1. Click on the **Manage Plugins** option, select the **Available** tab and search for `maven-plugin` in the filter box.
 
     ![Manage Jenkins](images/manage-jenkins1.png)
 
-1. Select the **Available** tab and search for **maven-plugin** in the filter box
-
-1. Select the **Maven Integration Plugin** option and click on the **Install without restart** button to install the plugin.
+1. Select the **Maven Integration Plugin** and click on the **Install without restart** button to install the plugin.
 
     ![Install Maven](images/installmavenplugin.png)
 
-1. Once the plugin is installed, select the **Manage Jenkins** option and then select **Global Tool Configuration** option.
+1. Once the plugin is installed, click on the **Global Tool Configuration** option.
 
     ![Global Tool Configuration](images/manage-tools-config.png)
 
-1. Jenkins provides great out-of-the-box support for Maven. Since the Maven is not yet installed, it can be manually installed by extracting the ***tar*** file located in a shared folder. Alternatively, you can let Jenkins do all the hard work and download Maven for you. When the **Install automatically** option is selected, Jenkins will download and install Maven from the Apache website when a build job requires it, first time.
+   > Jenkins provides great out-of-the-box support for Maven. Since the Maven is not yet installed, it can be manually installed by extracting the `tar` file located in a shared folder. Alternatively, when the **Install automatically** option is selected, Jenkins will download and install Maven from the Apache website when a build job requires it.
 
-    We will install Maven version 3.5, the latest version at the time the lab is written
+1. To install Maven, select the **Install automatically** option and click on the **Apply** button.
+
+   > The latest version of Maven at the time of writing the lab was 3.5
 
     ![Maven Installer](images/maveninstallerconfig.png)
 
-1. Click on the **Apply** button and then click the **Back to Dashboard** option to return to the home page.
+1. Click on the **Back to Dashboard** button to return to the home page.
 
-## Creating a new build job
+## Creating a new build job in Jenkins
 
-1. From Jenkins home page, click on the **New Item** option. Provide a name for the build definition, and select the **Maven project** and click **OK** to save
+1. From the Jenkins home page, click on the **New Item** option. Provide a name for the build definition, select the **Maven project** and click on the **Ok** button.
 
    ![New Build Definition](images/newbuilddef.png)
 
-1. Now scroll down to the **Source code Management** section. Select the **Git** option and provide the clone URL of the VSTS Git repo. It would be typically in the format
+1. Now scroll down to the **Source code Management** section. Select the **Git** option and provide the clone URL of the VSTS Git repo in the format
 
-   `http://\<your account name>.visualstudio.com/
- \<your project name>/_git/MyShuttle`
+   `http://{your account name}.visualstudio.com/{team project name}/_git/MyShuttle`
 
    ![Configuring VSTS Git URL](images/jenkins-vstsrepo.png)
 
-   {% include note.html content= "The VSTS Git repos are private. So you will need to provide the user credentials to access the repository. If you have not set the Git credentials, you can so from the VSTS. Select the **Clone** link, provide the user name and password and then click on the **OK** button." %}
+   > The VSTS Git repos are private and requires user credentials to be provided to access the repository. If the Git credentials is not set already, it can be done from the VSTS. 
+
+1. Select the **Clone** option, provide the `User name` and `Password` and then click on the **Ok** button.
 
    ![Generating Git Credentials](images/vsts-generategitcreds.png)
 
-1. Select **Add \| Jenkins** to add a new credential. Enter the user name and password created in the previous step and click **Add** to close the wizard
+1. Click on the **Add \| Jenkins** option to add a new credential. Provide the `User name` and `Password` created earlier and click the **Add** button to close the wizard
 
     ![Adding Credentials to Jenkins](images/jenkinscredentials.png)
 
@@ -157,37 +158,35 @@ This lab covers both the approaches and the following tasks will be performed
 
    ![VSTS Git config in Jenkins](images/jenksaddvstsgit.png)
 
-1. The source code for this application has both unit tests and UI tests. We will include the unit tests but skip the UI tests from running now.
+   >The source code for this application has both unit tests and UI tests. Only the unit tests will be included in this lab.
 
-1. Scroll down to the **Build** section. Enter the following text in the **Goals and Options** field
+1. Scroll down to the **Build** section and provide the text `package -Dtest=FaresTest,SimpleTest` in the **Goals and Options** field
 
-   >package -Dtest=FaresTest,SimpleTest
-
-1. Click **Save** to navigate to the main page of the project you just created
+1. Click the **Save** button to navigate to the home page of the project just created
 
    ![Build Settings in Jenkins](images/jenkins-buildsettings.png)
 
-1. The last configuration that we will do for this lab is to add a *Post-build* action to publish the artifacts. Scroll down to **Post-Build Actions**  section, click **Add post-build action** and select **Archive the artifacts**
+1. To configure the Post build actions, in the **Post-Build Actions**  section, click on the **Add post-build action** and choose the **Archive the artifacts** option.
 
    ![Post Build Action](images/jenkinspostbuildaction.png)
 
-1. Enter  **target/*.war** in the text box. Click **Save** to save the settings and return to the project page
+1. Enter  **target/*.war** in the text box. Click **Save** to save the settings and return to the project page.
 
    ![Archive War](images/jenkinsarchiveartifacts.png)
 
-1. We have completed all the necessary configuration and Select **Build Now** to start an Ad-hoc build
+1. Since the configuration is now completed, click on the **Build Now** option to start an Ad-hoc build.
 
-1. You will notice the build progress just below the left side navigation menu
+   > The build progress will be displayed on the left pane in the **Build History** section
 
    ![Running Ad-hoc Build](images/adhocbuild.png)
 
-1. You can select the build number to get into the details of the build including the build artifacts, in this case, the WAR file for the project.
+1. To view the build details and the list of build artifacts, click on the build number displayed in the **Module Builds** section.
 
    ![Build Details](images/builddetails.png)
 
    ![Build Artifacts](images/buildmodules.png)
 
-1. Select the **Test Results** links if you want to see the results of the unit tests that were included in the build definition.
+1. The test results for the unit tests included in the build definition can be viewed by clicking on the **Test Results** link.
 
 ## Approach 1: Running Jenkins without VSTS Build
 
