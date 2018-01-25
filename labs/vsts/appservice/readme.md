@@ -6,7 +6,7 @@ permalink: /labs/vsts/appservice/
 folder: /labs/vsts/appservice/
 ---
 
-Last updated : {{ "now" | date: "%b %d,%Y" }}.
+Last updated : {{ "now" | date: "%b %d, %Y" }}.
 
 ## Overview
 

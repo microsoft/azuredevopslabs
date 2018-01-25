@@ -6,6 +6,10 @@ permalink: /labs/vstsextend/tomcat/
 folder: /labs/vstsextend/tomcat/
 ---
 
+Last updated : {{ "now" | date: "%b %d, %Y" }}.
+
+## Overview
+
 In this lab, you will learn how you can use Release Management(RM) in Visual Studio Team Services (VSTS) to deploy a Java web application to [Apache Tomcat](http://tomcat.apache.org/) with a MySQL database on Azure. Apache Tomcat is an open-source Java Servlet Container developed by the Apache Software Foundation (ASF). MySQL is a popular open-source relational database management system.
 
 For this purpose of the lab, we will use Azure App Service and Azure Database for MySQL, a relational database service based on the open source MySQL Server engine. It is a fully managed database as a service offering capable of handing mission-critical workload with predictable performance and dynamic scalability.

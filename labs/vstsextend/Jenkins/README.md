@@ -5,6 +5,9 @@ sidebar: vsts2
 permalink: /labs/vstsextend/jenkins/
 folder: /labs/vstsextend/jenkins/
 ---
+
+Last updated : {{ "now" | date: "%b %d, %Y" }}.
+
 [Jenkins](https://jenkins.io/) is a very popular Java-based open source continuous integration (CI) server that allows teams to continuously build applications across platforms.
 
 Visual Studio Team Services (VSTS) includes Team Build, a native CI build server that allows compilation of applications on Windows, Linux and Mac platforms. However, it also integrates well with Jenkins for teams who already use or prefer to use Jenkins for CI.
@@ -290,10 +293,9 @@ Next, we will configure Visual Studio VSTS Release Management to fetch and deplo
 
 ### Logging into Jenkins with the default credentials
 
-1.  In case the initial admin was not configured for Jenkins during the setup, the default user **admin** can be used to login to Jenkins. The admin password will be the content from the password file created automatically by Jenkins stored in the path `\var\lib\jenkins\secrets\initialAdminPassword`
+1. In case the initial admin was not configured for Jenkins during the setup, the default user **admin** can be used to login to Jenkins. The admin password will be the content from the password file created automatically by Jenkins stored in the path `\var\lib\jenkins\secrets\initialAdminPassword`
 
-1.  To change password, click on the user name on the top-right corner. Click the **Configure** option, scroll down to the **password** section to specify a new password and then click the **Save** button.
-  
+1. To change password, click on the user name on the top-right corner. Click the **Configure** option, scroll down to the **password** section to specify a new password and then click the **Save** button.
 
 ### Installing the Git Plugin
 
