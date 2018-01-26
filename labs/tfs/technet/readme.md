@@ -93,7 +93,7 @@ Here are the links to the labs on Microsoft Hands-On Labs:
   </tr>
   <tr>
     <td >Managing Technical Debt with Team Foundation Server 2017 and SonarQube</td>
-    <td >[TBA](" target="_blank">Launch Lab</a></td>
+    <td >TBA</td>
   </tr>
   <tr>
     <td >Package Management in Team Foundation Server 2018</td>
@@ -105,7 +105,7 @@ Here are the links to the labs on Microsoft Hands-On Labs:
   </tr>
   <tr>
     <td >SQL Prompt for Visual Studio Enterprise 2017</td>
-    <td >[TBA](" target="_blank">Launch Lab</a></td>
+    <td >TBA</td>
   </tr>
   <tr>
     <td >Team Foundation Build 2018</td>
