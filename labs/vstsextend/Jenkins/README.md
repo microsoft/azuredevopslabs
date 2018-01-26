@@ -12,13 +12,15 @@ Visual Studio Team Services (VSTS) includes Team Build, a native CI build server
 
 There are two ways to integrate VSTS with Jenkins
 
-* One way is to completely replace the VSTS Build with Jenkins. This involves the configuration of a CI pipeline in Jenkins and a web hook in VSTS that invokes the CI process when source code is pushed by any member to a repository or a branch. The VSTS Release Management will be configured to connect to the Jenkins server through the configured Service Endpoint to fetch the compiled artifacts for the deployment.
+* One way is to completely **replace the VSTS Build with Jenkins**. This involves the configuration of a CI pipeline in Jenkins and a web hook in VSTS that invokes the CI process when source code is pushed by any member to a repository or a branch. The VSTS Release Management will be configured to connect to the Jenkins server through the configured Service Endpoint to fetch the compiled artifacts for the deployment.
 
-* The alternate way is to use Jenkins and Team Build together. In this approach, a Jenkins build will be nested within the VSTS build. A build definition will be configured in the VSTS with a **Jenkins** task to queue a job in Jenkins that downloads the artifacts produced by the job and publish it to the VSTS or any shared folder. The VSTS Release Management will pick these build artifacts for deployment. This approach has multiple benefits:
+* The alternate way is to **use Jenkins and Team Build together**. In this approach, a Jenkins build will be nested within the VSTS build. A build definition will be configured in the VSTS with a **Jenkins** task to queue a job in Jenkins that downloads the artifacts produced by the job and publish it to the VSTS or any shared folder. The VSTS Release Management will pick these build artifacts for deployment. 
 
-    1. End-to-end traceability from work item to source code to build and release
-    1. Triggering of a Continuous Deployment (CD) when the build is completed successfully
-    1. Execution of the build as part of the branching strategy
+While the first approach may look simple, the later approach has multiple benefits:
+
+ 1. End-to-end traceability from work item to source code to build and release
+ 1. Triggering of a Continuous Deployment (CD) when the build is completed successfully
+ 1. Execution of the build as part of the branching strategy
 
 This lab covers both the approaches and the following tasks will be performed
 
@@ -27,6 +29,12 @@ This lab covers both the approaches and the following tasks will be performed
 * Create a build definition in Jenkins
 * Configure VSTS to integrate with Jenkins
 * Configure Release Management in VSTS to deploy the build artifacts from Jenkins
+
+## Reference Architecture
+
+![Jenkins Reference Architecture](https://docs.microsoft.com/en-us/azure/architecture/reference-architectures/jenkins/images/jenkins-server.png)
+
+Read the complete spec at [https://docs.microsoft.com/en-us/azure/architecture/reference-architectures/jenkins/images/jenkins-server.png](https://docs.microsoft.com/en-us/azure/architecture/reference-architectures/jenkins/images/jenkins-server.png)
 
 ## Pre-requisites
 
@@ -298,9 +306,9 @@ The next step is to configure the VSTS Release Management to fetch and deploy th
 
 1. To change password, click on the user name on the top-right corner. Click the **Configure** option, scroll down to the **password** section to specify a new password and then click the **Save** button.
 
-# Appendix
+## Additional Tasks
 
-## Installing the Git Plugin
+### Installing the Git Plugin
 
 1. Navigate to the home page of the Jenkins portal, click on the **Manage Jenkins** option and then click on the **Manage Plugins** option
 
@@ -312,7 +320,7 @@ The next step is to configure the VSTS Release Management to fetch and deploy th
 
 1. Select the **Git plugin** in the search list and click on the **Install without Restart** button
 
-## Installing VSTS Private agent
+### Installing VSTS Private agent
 
 1. Navigate to the home page of VSTS team project and select the **Admin**|**Agent Queues** option
 
