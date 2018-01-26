@@ -16,7 +16,7 @@ There are two ways to integrate VSTS with Jenkins
 
 * The alternate way is to **use Jenkins and Team Build together**. In this approach, a Jenkins build will be nested within the VSTS build. A build definition will be configured in the VSTS with a **Jenkins** task to queue a job in Jenkins that downloads the artifacts produced by the job and publish it to the VSTS or any shared folder. The VSTS Release Management will pick these build artifacts for deployment. 
 
-While the first approach may look simple, the later approach has multiple benefits:
+While there are pros and cons with both approaches, the later approach has multiple benefits:
 
  1. End-to-end traceability from work item to source code to build and release
  1. Triggering of a Continuous Deployment (CD) when the build is completed successfully
