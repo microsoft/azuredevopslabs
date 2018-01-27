@@ -5,6 +5,9 @@ sidebar: vsts2
 permalink: /labs/vstsextend/octopus/
 folder: /labs/vstsextend/octopus/
 ---
+Last updated : {{ "now" | date: "%b %d,%Y" }}
+
+## Overview
 
 [Octopus Deploy](https://Octopus.com) is an automated deployment server that makes it easy to automate deployment of ASP.NET web applications, Java applications, NodeJS application and custom scripts to multiple environments.
 
@@ -12,7 +15,7 @@ Visual Studio Team Services includes a first-class, powerful release management 
 
 This lab shows how  we  can integrate VSTS/TFS Team Build and Octopus to automate build and deployment application using a sample PHP application that will be deployed to an Azure App Service.
 
-## Pre-requisites
+### Pre-requisites
 
 1. Valid and active **Microsoft Azure Account:** 
 
@@ -248,11 +251,3 @@ In this exercise, we will package PHP application and push the package to Octopu
 1. You will see the PHP application up and running.
 
    ![](images/Changes.png)
-
-## Summary
-
-We can integrate Octopus with VSTS for deploying applications to Azure.
-
-## Feedback
-
-Please email [us](mailto:devopsdemos@microsoft.com) if you have any feedback on this lab.

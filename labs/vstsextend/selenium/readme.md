@@ -6,6 +6,8 @@ permalink: /labs/vstsextend/selenium/
 folder: /labs/vstsextend/selenium/
 ---
 
+Last updated : {{ "now" | date: "%b %d,%Y" }}
+
 ## Overview
 
 [Selenium](http://www.seleniumhq.org/) is a portable open source software-testing framework for web applications. It has the capability to operate on almost every operating system. It supports all modern browsers and multiple languages including .NET (C#), Java.
@@ -186,6 +188,3 @@ Once the release succeeds, click the **Tests** tab to analyze the test results. 
 
 ![](images/analyzetests.png)
 
-## Feedback
-
-Please let [us](mailto:devopsdemos@microsoft.com) know if you have any feedback on this lab.

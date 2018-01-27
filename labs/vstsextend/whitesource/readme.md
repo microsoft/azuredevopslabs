@@ -5,6 +5,8 @@ sidebar: vsts2
 permalink: /labs/vstsextend/whitesource/
 folder: /labs/vstsextend/whitesource/
 ---
+Last updated : {{ "now" | date: "%b %d,%Y" }}
+
 ## Overview
 
 [WhiteSource](https://www.whitesourcesoftware.com/) is the leader in continuous open source software security and compliance management. WhiteSource integrates into your build process, no matter your programming languages, build tools, or development environments. It works automatically, continuously, and silently in the background, checking the security, licensing, and quality of your open source components against WhiteSource constantly-updated deﬁnitive database of open source repositories
@@ -20,7 +22,7 @@ Team Services integration with WhiteSource Bolt will enable you to:
 1. Enforce open source license compliance, including dependencies’ licenses.
 1. Identify outdated open source libraries with recommendations to update.
 
-## Pre-requisites
+### Pre-requisites
 
 1. You need a Visual Studio Team Services Account and [Personal Access Token](https://docs.microsoft.com/en-us/vsts/accounts/use-personal-access-tokens-to-authenticate)
 
@@ -105,7 +107,3 @@ WhiteSource Bolt also tracks outdated libraries in the project getting all the d
 ## Summary
 
 With VSTS and WhiteSource Bolt integration you can *shift-left* your open source management. The integration allows you to have alert in real time on vulnerabilities and other issues to help you take immediate action.
-
-## Feedback
-
-Please let [us](mailto:devopsdemos@microsoft.com) know if you have any feedback on this lab.

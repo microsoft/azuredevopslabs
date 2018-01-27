@@ -5,6 +5,9 @@ sidebar: vsts2
 permalink: /labs/vstsextend/sonarqube/
 folder: /labs/vstsextend/sonarqube/
 ---
+
+Last updated : {{ "now" | date: "%b %d,%Y" }}
+
 ## Overview
 
 Technical debt is the set of problems in a development effort that make forward progress on customer value inefficient. Technical debt saps productivity by making code hard to understand, fragile, time-consuming to change, difficult to validate, and creates unplanned work that blocks progress. Unless they are managed, technical debt can accumulate and hurt the overall quality of the software and the productivity of the development team in the long term
@@ -16,6 +19,8 @@ Technical debt is the set of problems in a development effort that make forward 
 - Security Vulnerabilities
 - Centralize Quality
 
+### What's covered in this lab?
+
 In this lab, you will learn how to setup SonarQube on Azure and to integrate Visual Studio Team Services
 
 - Provision SonarQube server from an Azure template
@@ -23,7 +28,7 @@ In this lab, you will learn how to setup SonarQube on Azure and to integrate Vis
 - Setup a VSTS project and CI build to integrate with SonarQube
 - Analyze SonarQube reports
 
-## Pre-requisites
+### Pre-requisites
 
 1. **Microsoft Azure Account:** You need a valid and active azure account for the labs
 
@@ -218,7 +223,3 @@ The link will open the **MyShuttle** project in the SonarQube Dashboard.  Under 
 ## Summary
 
 With  the **SonarQube** extension for **Visual Studio Team Services**, you can embed automated testing in your CI/CD pipleine to automate the measurement of your technical debt including code semantics, testing coverage, vulnerabilities. etc.
-
-## Feedback
-
-Please let [us](mailto:devopsdemos@microsoft.com) know if you have any feedback on this lab.

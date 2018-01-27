@@ -6,11 +6,16 @@ permalink: /labs/vstsextend/eclipse/
 folder: /labs/vstsextend/eclipse/
 ---
 
+Last updated : {{ "now" | date: "%b %d,%Y" }}
+
+## Overview
 Visual Studio Team Services (VSTS) helps teams modernize their application development lifecycle and go from idea to deployment with continuous integration, testing, and deployment for any app targeting any platform. 
 
 VSTS works with (m)any development tool including Visual Studio, Eclipse, IntelliJ, Android Studio, XCode, etc., to make it easy for developers to use VSTS.
 
 This lab will walk you through a typical end-to-end workflow for a Java developer using VSTS and working with Eclipse. We will use a hypothetical customer called MyShuttle that provides a portal for its drivers to access travel history and see fares collected. This is a  Java application built on JSP/Servlet technology running on Apache Tomcat and using MySQL as the database. We will develop this on a Ubuntu desktop station and we will deploy the app on Azure.
+
+### What's covered in this lab?
 
 In this lab, you will
 
@@ -23,7 +28,7 @@ In this lab, you will
 
 **Estimated time to complete the lab:**  1 hour
 
-## Pre-requisites
+### Pre-requisites
 
 1. **Microsoft Azure Account**: You need a valid and active azure account for the labs.
 
@@ -224,7 +229,7 @@ In this exercise, we will setup a CD pipeline to deploy the web application to a
 
     ![Build Tags](images/vsts-buildtag.png)
 
-1. Select **Save** and then click **+ Release | Create Release** to start a new release
+1. Select **Save** and then click **+ Release** \| **Create Release** to start a new release
 
 1. Check the artifact version you want to use and then select **Create**
 
