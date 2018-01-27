@@ -6,19 +6,26 @@ permalink: /labs/vstsextend/jenkins/
 folder: /labs/vstsextend/jenkins/
 ---
 
+Last updated : {{ "now" | date: "%b %d,%Y" }}
+
+## Overview
 [Jenkins](https://jenkins.io/) is a very popular Java-based open source continuous integration (CI) server that allows teams to continuously build applications across platforms.
 
 Visual Studio Team Services (VSTS) includes Team Build, a native CI build server that allows compilation of applications on Windows, Linux and Mac platforms. However, it also integrates well with Jenkins for teams who already use or prefer to use Jenkins for CI.
 
 There are two ways to integrate VSTS with Jenkins
 
-* One way is to completely replace the VSTS Build with Jenkins. This involves the configuration of a CI pipeline in Jenkins and a web hook in VSTS that invokes the CI process when source code is pushed by any member to a repository or a branch. The VSTS Release Management will be configured to connect to the Jenkins server through the configured Service Endpoint to fetch the compiled artifacts for the deployment.
+* One way is to completely **replace the VSTS Build with Jenkins**. This involves the configuration of a CI pipeline in Jenkins and a web hook in VSTS that invokes the CI process when source code is pushed by any member to a repository or a branch. The VSTS Release Management will be configured to connect to the Jenkins server through the configured Service Endpoint to fetch the compiled artifacts for the deployment.
 
-* The alternate way is to use Jenkins and Team Build together. In this approach, a Jenkins build will be nested within the VSTS build. A build definition will be configured in the VSTS with a **Jenkins** task to queue a job in Jenkins that downloads the artifacts produced by the job and publish it to the VSTS or any shared folder. The VSTS Release Management will pick these build artifacts for deployment. This approach has multiple benefits:
+* The alternate way is to **use Jenkins and Team Build together**. In this approach, a Jenkins build will be nested within the VSTS build. A build definition will be configured in the VSTS with a **Jenkins** task to queue a job in Jenkins that downloads the artifacts produced by the job and publish it to the VSTS or any shared folder. The VSTS Release Management will pick these build artifacts for deployment. 
 
-    1. End-to-end traceability from work item to source code to build and release
-    1. Triggering of a Continuous Deployment (CD) when the build is completed successfully
-    1. Execution of the build as part of the branching strategy
+While there are pros and cons with both approaches, the later approach has multiple benefits:
+
+ 1. End-to-end traceability from work item to source code to build and release
+ 1. Triggering of a Continuous Deployment (CD) when the build is completed successfully
+ 1. Execution of the build as part of the branching strategy
+
+### What's covered in this lab?
 
 This lab covers both the approaches and the following tasks will be performed
 
@@ -28,13 +35,19 @@ This lab covers both the approaches and the following tasks will be performed
 * Configure VSTS to integrate with Jenkins
 * Configure Release Management in VSTS to deploy the build artifacts from Jenkins
 
-## Pre-requisites
+### Pre-requisites
 
 1. An active Microsoft Azure account
 1. An active **VSTS** account
 1. A [Personal Access Token (PAT)](https://docs.microsoft.com/en-us/vsts/accounts/use-personal-access-tokens-to-authenticate)
 1. [Putty](http://www.putty.org/), a free SSH and Telnet client
 1. **Docker Integration** extension installed and configured for the VSTS account. *This step can be performed later while using the VSTS Demo Generator*.
+
+## Reference Architecture
+
+![Jenkins Reference Architecture](https://docs.microsoft.com/en-us/azure/architecture/reference-architectures/jenkins/images/jenkins-server.png)
+
+Read the complete spec at [https://docs.microsoft.com/en-us/azure/architecture/reference-architectures/jenkins/images/jenkins-server.png](https://docs.microsoft.com/en-us/azure/architecture/reference-architectures/jenkins/images/jenkins-server.png)
 
 ## Setting up the VSTS project
 
@@ -288,9 +301,11 @@ The next step is to configure the VSTS Release Management to fetch and deploy th
 
    ![Add Jenkins artifact](images/rm_addjenkinsartifact.png)
 
-1. The output .war file can now be deployed on Azure. For details on the deployment, refer to the [Deploying a MySQL database backed Java app to Tomcat on Azure with VSTS](../tomcat/).
+1. The output .war file can now be deployed on Azure. For details on the deployment, refer to the [Deploying a dockerized Java app on Azure Web App](../dockerjava/)
 
-## Logging into Jenkins with the default credentials
+## Additional Tasks
+
+### Logging into Jenkins with the default credentials
 
 1. In case the initial admin was not configured for Jenkins during the setup, the default user **admin** can be used to login to Jenkins.
 
@@ -298,9 +313,7 @@ The next step is to configure the VSTS Release Management to fetch and deploy th
 
 1. To change password, click on the user name on the top-right corner. Click the **Configure** option, scroll down to the **password** section to specify a new password and then click the **Save** button.
 
-# Appendix
-
-## Installing the Git Plugin
+### Installing the Git Plugin
 
 1. Navigate to the home page of the Jenkins portal, click on the **Manage Jenkins** option and then click on the **Manage Plugins** option
 
@@ -312,9 +325,9 @@ The next step is to configure the VSTS Release Management to fetch and deploy th
 
 1. Select the **Git plugin** in the search list and click on the **Install without Restart** button
 
-## Installing VSTS Private agent
+### Installing VSTS Private agent
 
-1. Navigate to the home page of VSTS team project and select the **Admin**|**Agent Queues** option
+1. Navigate to the home page of VSTS team project and select the **Admin**->**Agent Queues** option
 
 1. In the Agents for pool Default section, click on the **Download agent** button.
 

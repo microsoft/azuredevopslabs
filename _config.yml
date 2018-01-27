@@ -30,7 +30,7 @@ exclude:
   - .gitignore
 # these are the files and directories that jekyll will exclude from the build
 
-feedback_subject_line: ALM VM Feedback
+feedback_subject_line: DevOps Labs Feedback
 
 feedback_email: devopsdemos@microsoft.com
 # used as a contact email for the Feedback link in the top navigation bar

@@ -6,9 +6,17 @@ permalink: /labs/vstsextend/tomcat/
 folder: /labs/vstsextend/tomcat/
 ---
 
+Last updated : {{ "now" | date: "%b %d,%Y" }}
+
+## Overview
+
 In this lab, you will learn how you can use Release Management(RM) in Visual Studio Team Services (VSTS) to deploy a Java web application to [Apache Tomcat](http://tomcat.apache.org/) with a MySQL database on Azure. Apache Tomcat is an open-source Java Servlet Container developed by the Apache Software Foundation (ASF). MySQL is a popular open-source relational database management system.
 
 For this purpose of the lab, we will use Azure App Service and Azure Database for MySQL, a relational database service based on the open source MySQL Server engine. It is a fully managed database as a service offering capable of handing mission-critical workload with predictable performance and dynamic scalability.
+
+{% include note.html content= "This article deploys a Java app to App Service on Windows. To deploy a **Net Core App** container to Azure, please see  [deploying Docker .NET Core container to Azure App Service](../docker). To deploy a Dockerized Java application, see [Deploying a Dockerized Java App to Azure App Service]" %}
+
+### What's covered in this lab?
 
 This lab will show how you can
 
@@ -16,15 +24,13 @@ This lab will show how you can
 - Create a new MySQL database
 - Use Azure App Service Task to deploy a WAR file
 
-## Prerequisites
+### Prerequisites
 
 1. **Microsoft Azure Account:** You will need a valid and active azure account for the labs.
 
 1. You need a **Visual Studio Team Services Account** and [Personal Access Token](https://docs.microsoft.com/en-us/vsts/accounts/use-personal-access-tokens-to-authenticate)
 
 ## Exercise 1: Setting up Visual Studio Team Services
-
-If you are following this lab from "Working with Jenkins, VSTS and Azure, you can skip this exercise. Otherwise,
 
 1. Provision a new VSTS project using the [VSTS Demo Data Generator](https://vstsdemobuildertest.azurewebsites.net/?TemplateId=77371&name=myshuttle)
 
