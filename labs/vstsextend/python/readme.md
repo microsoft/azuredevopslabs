@@ -4,13 +4,13 @@
 
 **Python** is a server-side scripting language and a powerful tool for making dynamic and interactive web pages.
 
-This lab shows how to deploy a **Python** application to **Azure App Service** from  **Visual Studio Team Services**. We will use  with [Django](https://www.djangoproject.com/) framework for deployment. 
+This lab shows how to deploy a **Python** application to **Azure App Service** from  **Visual Studio Team Services**. We will use  with [Django](https://www.djangoproject.com/) framework for deployment.
 
 ## Pre-requisites
 
 1. **Microsoft Azure Account:**  You need a valid and active azure account for the lab
 
- 2. You need a **Visual Studio Team Services Account** and [Personal Access Token](https://docs.microsoft.com/en-us/vsts/accounts/use-personal-access-tokens-to-authenticate)
+1. You need a **Visual Studio Team Services Account** and [Personal Access Token](https://docs.microsoft.com/en-us/vsts/accounts/use-personal-access-tokens-to-authenticate)
 
 ## Setting Up the VSTS Project
 
@@ -18,11 +18,9 @@ This lab shows how to deploy a **Python** application to **Azure App Service** f
 
     <img src="images/vsts_demo.png">
 
-
  2. Once the project is provisioned, click the URL to navigate to the project.
 
     <img src="images/python_template.png">
-
 
 ## Exercise 1: Endpoint Creation
 
@@ -31,7 +29,6 @@ Since the connections are not established during project provisioning, we will m
 In VSTS, navigate to **Services** by clicking the gear icon, and click  **+ New Service Endpoint**. Select **Azure Resource Manager**. Specify connection name, select your subscription from the drop down and click OK. We use this endpoint to connect VSTS with Azure.
 
    <img src ="images/service_endpoint.png">
-
 
 You will be prompted to authorize this connection with Azure credentials.
 
@@ -55,7 +52,7 @@ We will provision the resources on **Azure** using ARM template in the **release
 
    <img src ="images/azure_sub.png">
 
-4. Under **Install Python Extension** task, update **Azure subscription**. 
+4. Under **Install Python Extension** task, update **Azure subscription**.
 
    <img src ="images/python_sub.png">
 
@@ -155,10 +152,9 @@ We will provision the resources on **Azure** using ARM template in the **release
    <img src ="images/pythonapp.png">
 
 ## Summary
-  
+
 This lab shows how to create a continuous integration(CI) and continuous deployment (CD) pipeline for Python code with Visual Studio Team Services (VSTS) on Azure..
 
-## Feedback 
+## Feedback
 
 Please let <a href="mailto:devopsdemos@microsoft.com">us</a> know if you have any feedback on this lab.
- 

@@ -10,11 +10,11 @@ Last updated : {{ "now" | date: "%b %d, %Y" }}.
 
 ## Overview
 
- Earlier with VSTS Release Management, if you had to deploy an application to multiple servers, you had to manually enable Windows PowerShell remoting on each of the server, open the required ports and install the deployment agent. Also, for a roll-out deployment, the pipelines had to be managed manually.
+ Earlier with the VSTS Release Management, if you had to deploy an application to multiple servers, you had to manually enable Windows PowerShell remoting on each of the server, open the required ports and install the deployment agent. Also, for a roll-out deployment, the pipelines had to be managed manually.
 
-With the introduction of [Deployment Groups](https://docs.microsoft.com/en-us/vsts/build-release/concepts/definitions/release/deployment-groups/), the above challenges are overcome.
+With the introduction of the [Deployment Groups](https://docs.microsoft.com/en-us/vsts/build-release/concepts/definitions/release/deployment-groups/), the above challenges will be overcome.
 
-Deployment Group installs a deployment agent on each of the target servers within a group and instructs the Release Management to gradually deploy to all machines belonging to that Deployment Group. Multiple pipelines can be created for roll-out deployments so that the latest version of the application can be provided gradually to multiple user groups for validating the new features.
+The Deployment Group installs a deployment agent on each of the target servers within a group and instructs the Release Management to gradually deploy to all machines belonging to that Deployment Group. Multiple pipelines can be created for roll-out deployments so that the latest version of the application can be provided gradually to multiple user groups for validating the new features.
 
 ## Pre-requisites
 
@@ -24,7 +24,7 @@ Deployment Group installs a deployment agent on each of the target servers withi
 
 ## Setting up the Environment
 
-We will use ARM template to provision the below resources on Azure:
+We will use an ARM template to provision the below resources on Azure:
 
 - Six VMs (web servers) with IIS configured
 
@@ -32,11 +32,9 @@ We will use ARM template to provision the below resources on Azure:
 
 - Azure Network Load Balancer
 
-1. Click on **Deploy to Azure** to provision the resources. It takes approximately 10-15 minutes to complete the deployment.
+1. Click on the **Deploy to Azure** to provision the resources. It takes approximately 10-15 minutes to complete the deployment.
 
-   <a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FMicrosoft%2FVSTS-DevOps-Labs%2Fdeploymentgroups%2Fdeploymentgroups%2Fazurewebsqldeploy.json" target="_blank">
-   <img src="http://azuredeploy.net/deploybutton.png"/>
-   </a>
+   [![Deploy to Azure](http://azuredeploy.net/deploybutton.png)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FMicrosoft%2FVSTS-DevOps-Labs%2Fdeploymentgroups%2Fdeploymentgroups%2Fazurewebsqldeploy.json)
 
    ![](images/azure.png)
 
@@ -54,11 +52,11 @@ We will use ARM template to provision the below resources on Azure:
 
 ## Setting up the VSTS Project
 
-1. Use [VSTS Demo Data Generator](https://vstsdemogenerator.azurewebsites.net/?name=DeploymentGroups&templateid=77368) to provision a project on your VSTS account.
+1. Use the [VSTS Demo Generator](https://vstsdemogenerator.azurewebsites.net/?name=DeploymentGroups&templateid=77368) to provision a project on your VSTS account.
 
    ![](images/vstsdemogen.png)
 
-1. Once the project is provisioned, click the URL to navigate to the project.
+1. Once the project is provisioned, click on the URL to navigate to the project.
 
    ![](images/vsts_demo.png)
 
@@ -66,13 +64,13 @@ We will use ARM template to provision the below resources on Azure:
 
 Since the connections are not established during project provisioning, we will manually create the endpoints.
 
-1. In VSTS, navigate to **Services** by clicking on the gear icon, and click on **+ New Service Endpoint**. Select **Azure Resource Manager**. Specify **Connection name**, select your **Subscription** from the dropdown and click **OK**. We use this endpoint to connect **VSTS** and **Azure**.
+1. In VSTS, navigate to the **Services** by clicking on the gear icon, and click on the **+ New Service Endpoint** button. Select the **Azure Resource Manager** tab. Specify the **Connection name**, select your **Subscription** from the dropdown and click on the **OK** button. We will use this endpoint to connect **VSTS** and **Azure**.
 
    ![](images/service_endpoint.png)
 
    ![](images/connection_name.png)
 
-1. Create an endpoint of type **Team Foundation Server/Team Services**. Select **Token based authentication** and specify the following details-
+1. Create an endpoint of type **Team Foundation Server/Team Services**. Select the **Token based authentication** option and specify the following details-
 
    - **Connection Name**: Give any name
 
@@ -80,7 +78,7 @@ Since the connections are not established during project provisioning, we will m
 
    - **Personal Access Token**: Your VSTS Personal Access Token
 
-   Created endpoint is used in release definition in later exercise. We create this connection because  agent registration with deployment group requires access to your VSTS project.
+   Created endpoint is used in release definition in the later exercise. We create this connection because  agent registration with deployment group requires access to your VSTS project.
 
    ![](images/vsts.png)
 
@@ -100,7 +98,7 @@ Since the connections are not established during project provisioning, we will m
 
 ## Exercise 3: Configure Release
 
-We have target machines available in the deployment group to deploy the application. The release definition uses **Phases** to deploy to target servers.
+We have the target machines available in the deployment group to deploy the application. The release definition uses **Phases** to deploy to target servers.
 
 A [Phase](https://docs.microsoft.com/en-us/vsts/build-release/concepts/process/phases) is a logical grouping of tasks that defines the runtime target on which the tasks will execute. A deployment group phase executes tasks on the machines defined in a deployment group.
 

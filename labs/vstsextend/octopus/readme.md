@@ -17,15 +17,16 @@ This lab shows how  we  can integrate VSTS/TFS Team Build and Octopus to automat
 
 ### Pre-requisites
 
-1. Valid and active **Microsoft Azure Account:** 
+1. Valid and active **Microsoft Azure Account:**
 
 1. **Visual Studio Team Services Account** and [**Personal Access Token**](https://docs.microsoft.com/en-us/vsts/accounts/use-personal-access-tokens-to-authenticate)
 
 ## Setting up the Environment
 
 Octopus Deploy has two components:
-* **Octopus Server** - a centralized web front-end that orchestrates deployments , and 
-* **Tentacle** - agent that needs to be on every target endpoint 
+
+* **Octopus Server** - a centralized web front-end that orchestrates deployments , and
+* **Tentacle** - agent that needs to be on every target endpoint
 
  We will spin up a Octopus server on Azure. Click the **Deploy to Azure** button below to provision a Octopus Server.
 
@@ -39,13 +40,13 @@ Octopus Deploy has two components:
 
     ![](images/Resources.png)
 
-1. Select the **octopus-vm**. In the **Overview** section, note the **DNS name**. We will use this to connect to the VM. Press the copy to clipboard button next to it. 
+1. Select the **octopus-vm**. In the **Overview** section, note the **DNS name**. We will use this to connect to the VM. Press the copy to clipboard button next to it.
 
    ![](images/A3.png)
 
 1. Open a new tab and enter `http://{your_vm_dns_name}` to access the Octopus Deploy server. Enter the following credentials and click **Sign In**
 
-   **Username**: admin   
+   **Username**: admin
    **Password**: P2ssw0rd@123
 
    ![](images/O1.png)
@@ -65,11 +66,9 @@ Octopus Deploy has two components:
 
    ![Generate New API Key](images/Generate_new.png)
 
-1. Copy the API Key to clipboard and save this somewhere as you may use it for future requests. 
+1. Copy the API Key to clipboard and save this somewhere as you may use it for future requests.
 
    ![Generated API Key](images/Key.png)
-
-
 
 ## Setting up Team Services project
 
@@ -77,7 +76,7 @@ Octopus Deploy has two components:
 
    ![VSTS Demo Generator](images/1.png)
 
-1. Provide a name for your project. Paste, the Octopus URL (VM's DNS URL) that was created previously, API Key and click on **Create Project**. 
+1. Provide a name for your project. Paste, the Octopus URL (VM's DNS URL) that was created previously, API Key and click on **Create Project**.
 
 1. Once the project is provisioned, click the URL to navigate to the project.
 
@@ -90,7 +89,6 @@ Octopus Deploy has two components:
 Let us create a deployment environment in Octopus server and link to Azure using Management Certificate. Environments are deployment targets consisting of machines or services used by Octopus Deploy to deploy software. With Octopus Deploy,  we  can deploy software to Windows servers, Linux servers, Microsoft Azure, or even an offline package drop.
 
 Grouping  our deployment targets by environment lets you define your deployment processes and have Octopus deploy the right versions of our software to the right environments at the right time.
-
 
 In this lab, we are using Azure App Service as the deployment target.
 
@@ -106,23 +104,23 @@ In this lab, we are using Azure App Service as the deployment target.
 
    ![](images/DevEnvironment.png)
 
-1.	Octopus Deploy provides first-class support for deploying Azure Cloud Services and Azure Web Applications. To deploy software to Azure,   we must add  our  Azure subscription to Octopus Deploy, and then use the built-in step templates to deploy to the cloud. Once the environment is created, click on **Accounts**.
+1. Octopus Deploy provides first-class support for deploying Azure Cloud Services and Azure Web Applications. To deploy software to Azure,   we must add  our  Azure subscription to Octopus Deploy, and then use the built-in step templates to deploy to the cloud. Once the environment is created, click on **Accounts**.
 
    ![Select Accounts](images/Dev.png)
 
-1. Click on **ADD ACCOUNT** to link your Azure subscription to the created environment. 
+1. Click on **ADD ACCOUNT** to link your Azure subscription to the created environment.
 
    ![Add Account](images/AddAccount.png)
 
-1. Octopus Deploy authenticates with Azure in one of two methods: 
+1. Octopus Deploy authenticates with Azure in one of two methods:
     * To deploy to Azure Resource Manager (ARM), Octopus requires [**Azure Service Principal Account**](https://octopus.com/docs/infrastructure/azure/creating-an-azure-account/creating-an-azure-service-principal-account)
     * [**Azure Management Certificate**](https://octopus.com/docs/infrastructure/azure/creating-an-azure-account/creating-an-azure-management-certificate-account) is used by Octopus to deploy to Cloud Services and Azure Web Apps.
 
     Enter the following details -
 
-    - **Name**: Provide an account name 
-    - **Subscription ID**: Your [Azure Subscription ID](https://blogs.msdn.microsoft.com/mschray/2016/03/18/getting-your-azure-subscription-guid-new-portal/)
-    - **Authentication Method**: Choose **Use Management Certificate**
+    * **Name**: Provide an account name
+    * **Subscription ID**: Your [Azure Subscription ID](https://blogs.msdn.microsoft.com/mschray/2016/03/18/getting-your-azure-subscription-guid-new-portal/)
+    * **Authentication Method**: Choose **Use Management Certificate**
 
    ![Create Account](images/CreateAccount.png)
 
@@ -180,9 +178,9 @@ Let us create a Project in Octopus to deploy the package to **Azure App Service*
 
 1. Populate the step template with required details -
 
-   - **Step Name** : A short, unique name for the template.
-   - **Package ID** : PHP (if you are providing different package ID, update it in **Package PHP** task of the build definition)
-   - **Azure account** & **Web App** : Select from the dropdown
+   * **Step Name** : A short, unique name for the template.
+   * **Package ID** : PHP (if you are providing different package ID, update it in **Package PHP** task of the build definition)
+   * **Azure account** & **Web App** : Select from the dropdown
 
    ![](images/PkgID.png)
 

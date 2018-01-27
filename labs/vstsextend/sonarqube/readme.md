@@ -19,7 +19,7 @@ Technical debt is the set of problems in a development effort that make forward 
 - Security Vulnerabilities
 - Centralize Quality
 
-### What's covered in this lab?
+### What's covered in this lab
 
 In this lab, you will learn how to setup SonarQube on Azure and to integrate Visual Studio Team Services
 
