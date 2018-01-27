@@ -54,11 +54,11 @@ The below diagram details the VSTS DevOps workflow with Azure Container Service 
 
 ## Pre-requisites for the lab
 
-1. An active **Microsoft Azure Account** account
+1. An active **Microsoft Azure** account.
 
-1. An active **Visual Studio Team Services (VSTS)** account. Click [here](https://www.visualstudio.com/team-services/) to create a new VSTS account.
+1. An active **VSTS** account. Create a new account from [here](https://docs.microsoft.com/en-us/vsts/accounts/create-account-msa-or-work-student).
 
-1. A valid [Personal Access Token](https://docs.microsoft.com/en-us/vsts/accounts/use-personal-access-tokens-to-authenticate) for VSTS
+1. A [Personal Access Token](https://docs.microsoft.com/en-us/vsts/accounts/use-personal-access-tokens-to-authenticate) (PAT).
 
 1. **Kubernetes extension** from [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=tsuyoshiushio.k8s-endpoint) installed to the VSTS account
 

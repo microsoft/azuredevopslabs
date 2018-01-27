@@ -10,17 +10,19 @@ Last updated : {{ "now" | date: "%b %d, %Y" }}.
 
 ## Overview
 
- Earlier with the VSTS Release Management, if you had to deploy an application to multiple servers, you had to manually enable Windows PowerShell remoting on each of the server, open the required ports and install the deployment agent. Also, for a roll-out deployment, the pipelines had to be managed manually.
+ Earlier with the VSTS Release Management, if the application needed to be deployed to multiple servers, the Windows PowerShell remoting had to be enabled manually, the required ports opened and the deployment agent installed on each of the servers. The pipelines had to be managed manually in case of a roll-out deployment.
 
-With the introduction of the [Deployment Groups](https://docs.microsoft.com/en-us/vsts/build-release/concepts/definitions/release/deployment-groups/), the above challenges will be overcome.
+All the above challenges have been handled seamlessly with the introduction of the [Deployment Groups](https://docs.microsoft.com/en-us/vsts/build-release/concepts/definitions/release/deployment-groups/).
 
-The Deployment Group installs a deployment agent on each of the target servers within a group and instructs the Release Management to gradually deploy to all machines belonging to that Deployment Group. Multiple pipelines can be created for roll-out deployments so that the latest version of the application can be provided gradually to multiple user groups for validating the new features.
+The Deployment Group installs a deployment agent on each of the target servers within a configured group and instructs the Release Management to gradually deploy the application to all servers that belong to the Deployment Group. Multiple pipelines can be created for roll-out deployments so that the latest version of the application could be provided in a phased mannery to multiple user groups for validating the newly introduced features.
 
-## Pre-requisites
+## Pre-requisites for the lab
 
-1. **Microsoft Azure Account**: You need a valid and active azure account for the labs.
+1. An active **Microsoft Azure** account.
 
-1. You need a **Visual Studio Team Services Account** and [Personal Access Token](https://docs.microsoft.com/en-us/vsts/accounts/use-personal-access-tokens-to-authenticate)
+1. An active **VSTS** account. Create a new account from [here](https://docs.microsoft.com/en-us/vsts/accounts/create-account-msa-or-work-student).
+
+1. A [Personal Access Token](https://docs.microsoft.com/en-us/vsts/accounts/use-personal-access-tokens-to-authenticate) (PAT).
 
 ## Setting up the Environment
 

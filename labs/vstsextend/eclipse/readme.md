@@ -15,7 +15,7 @@ VSTS works with (m)any development tool including Visual Studio, Eclipse, Intell
 
 This lab will walk you through a typical end-to-end workflow for a Java developer using VSTS and working with Eclipse. We will use a hypothetical customer called MyShuttle that provides a portal for its drivers to access travel history and see fares collected. This is a  Java application built on JSP/Servlet technology running on Apache Tomcat and using MySQL as the database. We will develop this on a Ubuntu desktop station and we will deploy the app on Azure.
 
-### What's covered in this lab?
+## What's covered in this lab?
 
 In this lab, you will
 
@@ -28,11 +28,13 @@ In this lab, you will
 
 **Estimated time to complete the lab:**  1 hour
 
-### Pre-requisites
+## Pre-requisites for the lab
 
-1. **Microsoft Azure Account**: You need a valid and active azure account for the labs.
+1. An active **Microsoft Azure** account.
 
-1. You need a **Visual Studio Team Services Account** and [Personal Access Token](https://docs.microsoft.com/en-us/vsts/accounts/use-personal-access-tokens-to-authenticate)
+1. An active **VSTS** account. Create a new account from [here](https://docs.microsoft.com/en-us/vsts/accounts/create-account-msa-or-work-student).
+
+1. A [Personal Access Token](https://docs.microsoft.com/en-us/vsts/accounts/use-personal-access-tokens-to-authenticate) (PAT).
 
 1. You will need the [**Docker Integration**](https://marketplace.visualstudio.com/items?itemName=ms-vscs-rm.docker) extension installed and enabled on your Team Services account.
 
@@ -45,7 +47,6 @@ In this lab, you will
 1. Once the machine is provisioned, you can RDP to it. From the **Overview** tab of the virtual machine, note the **DNS Name** and use *Remote Desktop* program to connect and log in
 
     ![DNS of the VM](images/eclipse-vmname.png)
-
 
 1. Log in with the user name and password provided.
 

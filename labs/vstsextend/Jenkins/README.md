@@ -35,12 +35,16 @@ This lab covers both the approaches and the following tasks will be performed
 * Configure VSTS to integrate with Jenkins
 * Configure Release Management in VSTS to deploy the build artifacts from Jenkins
 
-### Pre-requisites
+### Pre-requisites for the lab
 
-1. An active Microsoft Azure account
-1. An active **VSTS** account
-1. A [Personal Access Token (PAT)](https://docs.microsoft.com/en-us/vsts/accounts/use-personal-access-tokens-to-authenticate)
+1. An active **Microsoft Azure** account.
+
+1. An active **VSTS** account. Create a new account from [here](https://docs.microsoft.com/en-us/vsts/accounts/create-account-msa-or-work-student).
+
+1. A [Personal Access Token](https://docs.microsoft.com/en-us/vsts/accounts/use-personal-access-tokens-to-authenticate) (PAT).
+
 1. [Putty](http://www.putty.org/), a free SSH and Telnet client
+
 1. **Docker Integration** extension installed and configured for the VSTS account. *This step can be performed later while using the VSTS Demo Generator*.
 
 ## Reference Architecture

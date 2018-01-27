@@ -25,13 +25,15 @@ You will learn how to deploy an **ASP.Net** application to Azure App Service usi
 * Configuring build Triggers
 * Executing Build
 
-## Pre-requisites
+## Pre-requisites for the lab
 
-1. **Microsoft Azure Account:** You will need a **Valid and Active  Microsoft Azure Account** for the lab
+1. An active **Microsoft Azure** account.
 
-1. You need a **Visual Studio Team Services Account and [Personal Access Token](https://docs.microsoft.com/en-us/vsts/accounts/use-personal-access-tokens-to-authenticate)**.
+1. An active **VSTS** account. Create a new account from [here](https://docs.microsoft.com/en-us/vsts/accounts/create-account-msa-or-work-student).
 
-1. A **GitHub** account. If you don't have one already, you can setup [GitHub Account](https://github.com/join?source=header-home) for free.
+1. A [Personal Access Token](https://docs.microsoft.com/en-us/vsts/accounts/use-personal-access-tokens-to-authenticate) (PAT).
+
+1. A **GitHub** account. Create a new account from [here](https://github.com/join?source=header-home).
 
 ## Setting up the code repository on GitHub
 

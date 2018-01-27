@@ -22,11 +22,13 @@ Team Services integration with WhiteSource Bolt will enable you to:
 1. Enforce open source license compliance, including dependencies’ licenses.
 1. Identify outdated open source libraries with recommendations to update.
 
-### Pre-requisites
+## Pre-requisites for the lab
 
-1. You need a Visual Studio Team Services Account and [Personal Access Token](https://docs.microsoft.com/en-us/vsts/accounts/use-personal-access-tokens-to-authenticate)
+1. An active **VSTS** account. Create a new account from [here](https://docs.microsoft.com/en-us/vsts/accounts/create-account-msa-or-work-student).
 
-1. You need to install the **WhiteSource Bolt** extension from [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=whitesource.ws-bolt)
+1. A [Personal Access Token](https://docs.microsoft.com/en-us/vsts/accounts/use-personal-access-tokens-to-authenticate) (PAT).
+
+1. The **WhiteSource Bolt** extension from the [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=whitesource.ws-bolt).
 
 ## Setting up the VSTS project
 

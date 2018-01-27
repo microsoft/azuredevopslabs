@@ -9,11 +9,13 @@ This lab shows how to deploy an ASP.NET Core application to Azure App Service wi
 - Deploy to the cloud or on-premises
 - Run on .NET Core or .NET Framework.
 
-## Pre-requisites
+## Pre-requisites for the lab
 
-1. **Microsoft Azure Account:** You need a valid and active azure account for the lab
+1. An active **Microsoft Azure** account.
 
-1. You need a **Visual Studio Team Services Account** and [Personal Access Token](https://docs.microsoft.com/en-us/vsts/accounts/use-personal-access-tokens-to-authenticate)
+1. An active **VSTS** account. Create a new account from [here](https://docs.microsoft.com/en-us/vsts/accounts/create-account-msa-or-work-student).
+
+1. A [Personal Access Token](https://docs.microsoft.com/en-us/vsts/accounts/use-personal-access-tokens-to-authenticate) (PAT).
 
 ## Setting up the VSTS Project
 

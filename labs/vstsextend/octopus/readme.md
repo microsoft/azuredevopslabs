@@ -15,11 +15,13 @@ Visual Studio Team Services includes a first-class, powerful release management 
 
 This lab shows how  we  can integrate VSTS/TFS Team Build and Octopus to automate build and deployment application using a sample PHP application that will be deployed to an Azure App Service.
 
-### Pre-requisites
+### Pre-requisites for the lab
 
-1. Valid and active **Microsoft Azure Account:**
+1. An active **Microsoft Azure** account.
 
-1. **Visual Studio Team Services Account** and [**Personal Access Token**](https://docs.microsoft.com/en-us/vsts/accounts/use-personal-access-tokens-to-authenticate)
+1. An active **VSTS** account. Create a new account from [here](https://docs.microsoft.com/en-us/vsts/accounts/create-account-msa-or-work-student).
+
+1. A [Personal Access Token](https://docs.microsoft.com/en-us/vsts/accounts/use-personal-access-tokens-to-authenticate) (PAT).
 
 ## Setting up the Environment
 

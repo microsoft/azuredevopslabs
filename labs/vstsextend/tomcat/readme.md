@@ -24,11 +24,13 @@ This lab will show how you can
 - Create a new MySQL database
 - Use Azure App Service Task to deploy a WAR file
 
-### Prerequisites
+## Pre-requisites for the lab
 
-1. **Microsoft Azure Account:** You will need a valid and active azure account for the labs.
+1. An active **Microsoft Azure** account.
 
-1. You need a **Visual Studio Team Services Account** and [Personal Access Token](https://docs.microsoft.com/en-us/vsts/accounts/use-personal-access-tokens-to-authenticate)
+1. An active **VSTS** account. Create a new account from [here](https://docs.microsoft.com/en-us/vsts/accounts/create-account-msa-or-work-student).
+
+1. A [Personal Access Token](https://docs.microsoft.com/en-us/vsts/accounts/use-personal-access-tokens-to-authenticate) (PAT).
 
 ## Exercise 1: Setting up Visual Studio Team Services
 
