@@ -10,11 +10,11 @@ Last updated : {{ "now" | date: "%b %d,%Y" }}
 
 ## Overview
 
-In this lab, you will learn how you can use Release Management(RM) in Visual Studio Team Services (VSTS) to deploy a Java web application to [Apache Tomcat](http://tomcat.apache.org/) with a MySQL database on Azure. Apache Tomcat is an open-source Java Servlet Container developed by the Apache Software Foundation (ASF). MySQL is a popular open-source relational database management system.
+With Azure Web App for containers, it is easy to deploy container-based web apps. You can pull container images from Docker Hub or a private Azure Container Registry, and deploy the containerized app with your preferred dependencies to production in seconds. 
 
-For this purpose of the lab, we will use Azure App Service and Azure Database for MySQL, a relational database service based on the open source MySQL Server engine. It is a fully managed database as a service offering capable of handing mission-critical workload with predictable performance and dynamic scalability.
+In this lab, you will learn how you can use Release Management(RM) in Visual Studio Team Services (VSTS) to deploy a container Java web application to an Azure web app for containers. 
 
-## What's covered in this lab?
+### What's covered in this lab?
 
 This lab will show how you can
 
@@ -22,17 +22,21 @@ This lab will show how you can
 - Create a new MySQL database
 - Use Azure App Service Task to deploy a WAR file
 
-## Prerequisites for the lab
+### Prerequisites for the lab
 
 1. An active **Microsoft Azure** account.
 
-1. An active **VSTS** account. Create a new account from [here](https://docs.microsoft.com/en-us/vsts/accounts/create-account-msa-or-work-student).
+1. An active **VSTS** account. Create a new account from [here](https://docs.microsoft.com/en-us/vsts/accounts/create-account-msa-or-work-student){:target="_blank"} .
 
-1. A [Personal Access Token](https://docs.microsoft.com/en-us/vsts/accounts/use-personal-access-tokens-to-authenticate) (PAT).
+1. A [Personal Access Token](https://docs.microsoft.com/en-us/vsts/accounts/use-personal-access-tokens-to-authenticate){:target="_blank"}  (PAT).
 
-1. The [**Docker Integration**](https://marketplace.visualstudio.com/items?itemName=ms-vscs-rm.docker) extension installed and enabled on the VSTS account.
+1. The [Docker Integration](https://marketplace.visualstudio.com/items?itemName=ms-vscs-rm.docker){:target="_blank"} extension installed and enabled on the VSTS account.
 
-If you are following this lab from "Working with Jenkins, VSTS and Azure, you can skip the next two exercises and go to [deploy](#deploying-to-an-azure-web-app-for-containers). 
+If you are following this lab from "Working with Jenkins, VSTS and Azure, you can skip the next two exercises and go to [deploy](#deploying-to-an-azure-web-app-for-containers)
+
+## Reference Architecture
+
+![Running Containers](images/dockerjava.png "Deploying Containers to Azure Web app for Containers")
 
 ## Exercise 1: Setting up Visual Studio Team Services
 
@@ -47,7 +51,7 @@ If you are following this lab from "Working with Jenkins, VSTS and Azure, you ca
 
     {% include note.html content= "This URL will automatically select the MyShuttleDocker template in the demo generator. If you want to try other projects, use this URL instead - [https://vstsdemogenerator.azurewebsites.net/](https://vstsdemogenerator.azurewebsites.net/)" %}
 
-## Exercise 5:  Create a VSTS Build to Build Docker Images
+## Exercise 2:  Create a VSTS Build to Build Docker Images
 
 In this task you will configure the VSTS build definition that will build and push the image to an Azure Container Registry
 
@@ -85,7 +89,7 @@ In this task you will configure the VSTS build definition that will build and pu
 
     ![Explore Container Registry](images/exploreacr.png)
 
-## Deploying to an Azure Web App for containers
+##  Exercise 3: Deploying to an Azure Web App for containers
 
 In this exercise, we will setup a CD pipeline to deploy the web application to an Azure web app. First, let's create the Web App
 
@@ -134,7 +138,7 @@ In this exercise, we will setup a CD pipeline to deploy the web application to a
 
 1. Wait for the release is complete and then navigate to the URL `http://{your web app name}.azurewebsites.net/myshuttledev`. You should be able to see the login page
 
-## Setting up MySQL database
+## Exercise 4: Setting up MySQL database
 
  Next, let's set up the MySQL database for the application
 
@@ -175,12 +179,13 @@ In this exercise, we will setup a CD pipeline to deploy the web application to a
 
 1. Click **Save** to save the connection string
 
-   >**Note** - Connection Strings configured here will be available as environment variables, prefixed with connection type for Java apps (also for PHP, Python and Node apps). In the `DataAccess.java`file under `src/main/java/com/microsoft/example` folder, we retrieve the connection string using the following code
-    ````Java
-    String conStr = System.getenv("MYSQLCONNSTR_MyShuttleDb");
-    ````
+   {% include note.html content="Connection Strings configured here will be available as environment variables, prefixed with connection type for Java apps (also for PHP, Python and Node apps). In the `DataAccess.java` file under `src/main/java/com/microsoft/example` folder, we retrieve the connection string using the following code:
 
-You have now setup and configured the database needed to deploy and run the MyShuttle application.
+    ````Java
+    String conStr = System.getenv('MYSQLCONNSTR_MyShuttleDb');
+    ````   " %}
+
+    You have now setup and configured the database needed to deploy and run the MyShuttle application.
 
 1. You should be able to login to the application now. Return back to the login page and try logging is using any of the username/password combination:
 
