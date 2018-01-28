@@ -10,12 +10,12 @@ Last updated : {{ "now" | date: "%b %d, %Y" }}.
 
 ## Overview
 
-This lab shows how to build custom Docker images of an [**ASP.NET Core**](https://docs.docker.com/engine/examples/dotnetcore/") application, push those images to a private repository in [Azure Container Registry](https://azure.microsoft.com/en-in/services/container-registry/) (ACR). These images will be used to deploy the application to the Docker containers in the **Azure App Service** (Linux) using VSTS.
+This lab outlines the process to build custom Docker images of an [**ASP.NET Core**](https://docs.docker.com/engine/examples/dotnetcore/") application, push those images to a private repository in [Azure Container Registry](https://azure.microsoft.com/en-in/services/container-registry/) (ACR). These images will be used to deploy the application to the Docker containers in the **Azure App Service** (Linux) using VSTS.
 
-Web App for Containers lets you bring your own [Docker](https://www.docker.com/what-docker) formatted container images, easily deploy and run them at scale on Azure. Combination of VSTS and Azure integration with Docker will enable you to:
+The Web App for Containers allows creation of custom [Docker](https://www.docker.com/what-docker) container images, easily deploy and run them at scale on Azure. Combination of VSTS and Azure integration with Docker will enable the following:
 
-1. [Build](https://docs.docker.com/engine/reference/commandline/build/) your own custom Docker images using [VSTS Hosted Linux agent](https://docs.microsoft.com/en-us/vsts/build-release/concepts/agents/hosted)
-1. [Push](https://docs.docker.com/engine/reference/commandline/push/) and store the Docker images in your private repository
+1. [Build](https://docs.docker.com/engine/reference/commandline/build/) custom Docker images using [VSTS Hosted Linux agent](https://docs.microsoft.com/en-us/vsts/build-release/concepts/agents/hosted)
+1. [Push](https://docs.docker.com/engine/reference/commandline/push/) and store the Docker images in a private repository
 1. Deploy and [run](https://docs.docker.com/engine/reference/commandline/run/) the images inside the Docker Containers
 
 The below diagram details the VSTS DevOps workflow with Docker:
@@ -36,24 +36,22 @@ The below diagram details the VSTS DevOps workflow with Docker:
 
 1. Click on the **Deploy to Azure** button to initiate the configuration.
 
-   <a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FMicrosoft%2FVSTS-DevOps-Labs%2Fdocker%2Fdocker%2Ftemplates%2Fazuredeploy.json" target="_blank">
-
-   ![](http://azuredeploy.net/deploybutton.png)</a>
+   [![Deploy to Azure](http://azuredeploy.net/deploybutton.png)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FMicrosoft%2FVSTS-DevOps-Labs%2Fdocker%2Fdocker%2Ftemplates%2Fazuredeploy.json)
 
 1. In the Custom deployment window, select the **Subscription** type, leave the default selection for the resource group and select the **Location**. Provide the **ACR Name, Site Name**, **DB Server Name**, accept the **Terms and Conditions** and click on the **Purchase** button to provision the following resources:
    - Azure Container Registry
    - Azure Web App
    - Azure SQL Server Database
 
-   >**Note**: Use small case letters for ***DB Server Name***.
+   > Use lower case letters for ***DB Server Name***
 
-   ![](images/createazurecomponents.png)
+   ![Create Azure Components](images/createazurecomponents.png)
 
-1. It takes approximately **3 to 4 minutes** to provision the environment. Click on **Go To resource group**.
+1. It takes approximately 3 to 4 minutes to provision the environment. Click on the **Go To resource group** to view the resource group.
 
-   ![](images/deploymentsucceeded.png)
+   ![Environment Provision](images/deploymentsucceeded.png)
 
-1. Below components are created post deployment.
+1. The following components are provisioned post deployment.
 
     <table width="100%">
    <thead>
