@@ -163,4 +163,4 @@ ASP.NET is an open source web framework for building modern web applications and
 
 ## Summary
 
-**VSTS** simplifies the creation of the continuous integration and continuous delivery pipelines for the application to be deployed to the Azure platform.
+The **VSTS** simplifies the creation of the continuous integration and continuous delivery pipelines for the application to be deployed to the Azure platform.
