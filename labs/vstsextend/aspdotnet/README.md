@@ -1,10 +1,10 @@
 # Deploy ASP.NET application to Azure App Service using VSTS
 
-This lab shows how to deploy an [ASP.NET](https://www.asp.net/) application to Azure App Service with Visual Studio Team Services.
+This lab details the deployment of an [ASP.NET](https://www.asp.net/) application to the Azure App Service using Visual Studio Team Services (VSTS).
 
 ## Overview
 
-ASP.NET is an open source web framework for building modern web apps and services. ASP.NET creates websites based on HTML5, CSS, and JavaScript that are simple, fast, and can scale to millions of users.
+ASP.NET is an open source web framework for building modern web applications and services. ASP.NET creates websites based on HTML5, CSS, and JavaScript that are simple, fast, and can scale to millions of users.
 
 ## Pre-requisites for the lab
 
@@ -16,155 +16,151 @@ ASP.NET is an open source web framework for building modern web apps and service
 
 ## Setting up the VSTS Project
 
-1. Use [VSTS Demo Data Generator](https://vstsdemogenerator.azurewebsites.net/?name=PartsUnlimited) to provision the project on your VSTS account.
+1. Use the [VSTS Demo Generator](https://vstsdemogenerator.azurewebsites.net/?name=PartsUnlimited) to provision the team project on the VSTS account.
 
-   ![](images/vstsdemogen.png)
+   ![VSTS Demo Generator](images/vstsdemogen.png)
 
-1. Once the project is provisioned, click the URL to navigate to the project.
+1. Once the team project is provisioned, click on the URL to navigate to the team project.
 
-   ![](images/VSTSDemoGeneratorCreate.png)
+   ![VSTS Demo Generator](images/VSTSDemoGeneratorCreate.png)
 
 ## Exercise 1: Endpoint Creation
 
-Since the connections are not established during project provisioning, we will manually create the endpoints.
+> The connection between the VSTS and the Azure is not automatically established during the team project provisioning, and hence the endpoints need to be created manually. This endpoint will be used to connect **VSTS** with **Azure**. Follow the steps outlined below to create the endpoint.
 
-In VSTS, navigate to **Services** by clicking the gear icon ![](images/gear.png) and click **+ New Service Endpoint**. Select **Azure Resource Manager**. Specify **Connection name**, select your **Subscription** from the dropdown and click **OK**. We use this endpoint to connect **VSTS** with **Azure**.
+1. In the VSTS home page, click on the **Settings** gear icon ![Admin Settings](images/gear.png) and then click on the **Services** option to navigate to the **Services** screen.
 
-   ![](images/endpoint_creation.png)
+1. Click on the **+New Service Endpoint** button and select the **Azure Resource Manager** option. Provide  `Connection name`, select the `Azure Subscription` from the list and the click on the **Ok** button. The Azure credentials will be required to be provided to authorize the connection.
 
-   You will be prompted to authorize this connection with Azure credentials.
+   ![Endpoint Creation](images/endpoint_creation.png)
 
-> **Note**: Disable pop-up blocker in your browser if you see a blank screen after clicking OK, and retry the step.
+   > Disable the pop-up blocker in your browser. If a blank screen is displayed after the **Ok** button is clicked, retry the step.
 
 ## Exercise 2: Configure Release
 
-Now that connections are established, we will manually map the endpoints to release definition.
+1. Once the connection is established, manually map the endpoints to the release definition.
 
->**Note** : You will encounter an error - **TFS.WebApi.Exception: Page not found** for Azure tasks in the release definition. This is due to a recent change in the VSTS Release Management API. While we are working on updating VSTS Demo Generator to resolve this issue, you can fix this by typing a random text in the **Azure Subscription** field and click the **Refresh** icon next to it. Once the field is refreshed, you can select the endpoint from the drop down.
+   > An error `TFS.WebApi.Exception: Page not found` will be encountered for the Azure tasks in the release definition. This is due to a recent change in the VSTS Release Management API. While this is being fixed on the VSTS Demo Generator, the issue can be fixed by typing a random text in the **Azure Subscription** field and then clicking the **Refresh** icon next to it. Once the field is refreshed, the endpoint can be selected from the dropdown.
 
-1. Go to **Releases** under **Build & Release** tab, edit the release definition **PartsUnlimitedE2E**.
+1. Click on the **Build & Release** section and then click on the **Releases**. Select the release definition **PartsUnlimitedE2E** and click on the **Edit** button.
 
-   ![](images/release.png)
+   ![Edit Release Definition](images/release.png)
 
-1. Select **Tasks** and click **Dev**.
+1. Select the **Tasks** tab and click on the **Dev** option.
 
-   ![](images/release_2.png)
+   ![Release Tasks](images/release_2.png)
 
-1. Under **Azure Resource Group Deployment** task, update **Azure subscription** with the endpoint components from the dropdown and select the desired **location**.
+1. Select the **Azure Resource Group Deployment** task, pick the **Azure subscription** having the endpoint configuration from the dropdown list and select the desired **location** for deployment.
 
-   ![](images/task1.png)
+   ![Deployment Location](images/task1.png)
 
-1. Under **Azure App Service Deploy** task, update **Azure subscription** with the endpoint components from the dropdown. Under the **Slot** section enter the slot name as **Dev**.
+1. Select the **Azure App Service Deploy** task and pick **Azure subscription** from the dropdown list. In the **Slot** section, provide the slot name as **Dev**.
 
-   ![](images/task2.png)
+   ![Deployment Slot](images/task2.png)
 
-1. Similarly update **Azure subscription** with the endpoint components for **QA** and **Production** environments. Go to **Tasks** and select **QA**.
+1. Similarly configure the  **Azure subscription** for the **QA** and **Production** environments. Select the **Tasks** tab and click on the **QA** option.
 
-   ![](images/qa.png)
+   ![Tasks](images/qa.png)
 
-1. Under **Azure App Service Deploy** task, update **Azure subscription** with the endpoint components from the dropdown. Under the **Slot** section enter the slot name as **Staging**.
+1. Select the **Azure App Service Deploy** task and pick the **Azure subscription** from the dropdown. Under the **Slot** section enter the slot name as **Staging**.
 
-   ![](images/qa_task.png)
+   ![Staging](images/qa_task.png)
 
-1. Go to **Tasks** and select **Production**.
+1. Navigate to the **Tasks** tab and select the **Production** option.
 
-   ![](images/prod_task.png)
+   ![Production](images/prod_task.png)
 
-1. Under **Azure App Service Deploy** task, update **Azure subscription** with the endpoint components from the dropdown and click **Save** to save the release definition.
+1. Select the **Azure App Service Deploy** task, pick the **Azure subscription** from the dropdown and click on the **Save** button to save the release definition.
 
-   ![](images/prod_task2.png)
+   ![Azure Configuration](images/prod_task2.png)
 
-## Exercise 3: Update Code
+## Exercise 3: Initiate Continuous Integration (CI) and Continuous Deployment (CD)
 
-We will update the code to trigger CI-CD.
+>To automatically initiate the CI-CD, the source code needs to be modified and committed to the source code repository.
 
-1. Go to the **Code** hub.
+1. Navigate to the **Code** hub on the VSTS portal.
 
-   ![](images/code.png)
+   ![Code Hub](images/code.png)
 
-1. We have an **ASP.NET** app code provisioned by the demo generator system. We will deploy this to Azure app service.
+1. The repository contains an **ASP.NET** application source code provisioned by the VSTS Demo Generator. This application will be deployed to the Azure App Service.
 
-1. We have a Continuous Integration (CI) build setup to run upon a code commit. Let's make a simple change to the code to trigger the CI build.
+   > The team project already has a Continuous Integration (CI) build configured that gets automatically initiated when the source code modifications are committed to the repository.
 
-1. Open the file **Index.cshtml** by navigating to the below path-
+1. To edit the source code, open the file **Index.cshtml** by navigating to the below path in the master branch:
 
-   > **PartsUnlimited-aspnet45/src/PartsUnlimitedWebsite/Views/Home/Index.cshtml**
+   `PartsUnlimited/PartsUnlimited-aspnet45/src/PartsUnlimitedWebsite/Views/Home/Index.cshtml`
 
-   ![](images/edit_code_1.png)
+   ![Source code path](images/edit_code_1.png)
 
-1. Edit the code. For this example, let's change **line 28** to increase discount from **50%** to **70%**
+1. Make some small changes to the code. For this example, change the discount percentage of `50%` to `70%` on `line 28` and then click on the **Commit** button to save and commit the changes.
 
-   ![](images/edit_code_2.png)
+   ![Code Edit](images/edit_code_2.png)
 
-1. Select **Commit** to save and commit the changes.
+1. The code commit will trigger the CI build. Navigate to the **Build and Release** tab to view the progress of the  the CI build initiated automatically due to the code changes.
 
-1. The code commit will trigger the CI build. Go to the **Build and Release** tab to see the CI build running in progress.
+   ![CI Status](images/build_overview.png)
 
-   ![](images/build_overview.png)
+   The following tasks are used in the build definition:
 
-   While the build is in progress, let's explore the tasks used in the build definition.
-
-   | Tasks | Usage |
+   | Tasks used in Build | Usage / Purpose |
    |-------|-------|
-   |![](images/nuget.png) **Nuget Installer**| We will use the nuget installer to restore all the package dependencies like **ASP.NET MVC, ASP.NET Web Pages** etc. required to build this project|
-   |![](images/visual-studio-build.png) **Visual Studio Build**| We will use the VisualStudio Build task to invoke MS build to compile and package the output in a zip file. Note that this project is compiled using Visual Studio 2017|
-   |![](images/vstest.png) **Visual Studio Test**| As part of the build process, we will run all the unit tests using the VisualStudio Test task to ensure the code quality. This project contains 16 unit tests|
-   |![](images/copyfiles.png) **Copy Files**| We will copy the zipped file and the ARM template to a staging directory|
-   |![](images/buildartifacts.png) **Publish Build Artifacts**| And finally, we will publish the files in the staging directory which were copied in the previous step|
+   |![Nuget](images/nuget.png) **Nuget Installer**| Nuget installer restores and updates all the package dependencies required to compile the project|
+   |![VS Build](images/visual-studio-build.png) **Visual Studio Build**| The Visual Studio Build task is used to invoke the MS build to compile and package the output as a zip file.|
+   |![VS Test](images/vstest.png) **Visual Studio Test**| As a part of the build process, all the unit tests included in the project will be executed using the VisualStudio Test task to ensure the code quality. This project contains 16 unit tests|
+   |![Copy Files](images/copyfiles.png) **Copy Files**| This task is used to copy the zipped binaries and the ARM template to a staging directory|
+   |![Publish Build Artifacts](images/buildartifacts.png) **Publish Build Artifacts**| This task is used to deploy the binaries in the staging directory that were copied in the previous step|
 
-1. Click on the build number to open the build live console.
+1. To view the live progress of the build, click on the build number to open the build live console.
 
-   ![](images/build_number.png)
+   ![Build number](images/build_number.png)
 
-   ![](images/build_in_progress.png)
+   ![Buidl Progress](images/build_in_progress.png)
 
-1. Once the build is complete, click on the build number to see the build summary including **Test Results, Code Coverage** etc.
+1. Once the build is completed, if not clicked earlier, click on the build number to view the build summary including **Test Results**, **Code Coverage** etc.
 
-   ![](images/build_summary.png)
+   ![Build Summary](images/build_summary.png)
 
 ## Exercise 4: Continuous Delivery
 
- We are using **Infrastructure as a Code** in the release pipeline. We have a release configured to deploy the application which is associated to the build and triggered when the build is successful.
+> The release pipeline is configured as **Infrastructure as a Code** to deploy the application which is associated to the build and is automatically triggered when the build is successfully completed.
 
-1. Go to **Releases** tab under **Build and Release** hub.
+1. To view the release progress, click on the **Build and Release** hub and select the **Release** option.
 
-1. Select the **PartsUnlimitedE2E** definition, you will see the release in-progress.
+1. Click on the **PartsUnlimitedE2E** definition, to view the release progress.
 
-   ![](images/release_in_progress.png)
+   ![Release Progress](images/release_in_progress.png)
 
-1. While the release is in-progress, let's explore the tasks used. Click **edit** to see the release pipeline. We have three environments **Dev**, **QA** and **Production**.
+1. Click on the **Edit** button to view the release pipeline. There are three configured deployment environments namely the **Dev**, **QA** and **Production**.
 
-   ![](images/edit_release.png)
+   ![Edit Release](images/edit_release.png)
 
-   >Go to the **Dev** environment, you will see 2 tasks are used. Let us explore the tasks.
+1. Select the **Dev** environment to view the tasks configured.
 
-   ![](images/tasks.png)
+   ![Release Tasks](images/tasks.png)
 
-   >- **Azure Resource Group Deployment**: The project used in this lab contains frontend (Azure App Service) and backend (Azure SQL DB) services. We will provision these services as [PAAS on Azure](https://azure.microsoft.com/en-in/overview/what-is-paas/) using [ARM](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-manager-create-first-template) templates. This task will create the above services in a resource group **ASPDOTNET**.
-   >- **Azure App Service Deploy**: The task is used to deploy a Web project to the Azure App Service created above.
+   | Tasks used in Build | Usage / Purpose |
+   |-------|-------|
+   | **Azure Resource Group Deployment**|The project used in this lab contains the front-end (Azure App Service) and back-end (Azure SQL DB) services. These will be provisioned as [PAAS on Azure](https://azure.microsoft.com/en-in/overview/what-is-paas/) using [ARM](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-manager-create-first-template) templates. The task will create the above services in a resource group named **ASPDOTNET**|
+   | **Azure App Service Deploy**| The task is used to deploy a Web project to the Azure App Service created in the previous step|
 
-1. Click on **View releases**.
+1. To view the outcome of the release, click on the **View releases** option.
 
-   ![](images/view_releases.png)
+   ![View Releases](images/view_releases.png)
 
-1. Double click on the release to see the release summary.
+1. To view the release summary for the environment, double=click on the environment blocks displayed in the report.
 
-   ![](images/release_summary1.png)
+   ![Release Summary](images/release_summary1.png)
 
-   ![](images/release_summary.png)
+   ![Release Summary](images/release_summary.png)
 
-1. Login to [Azure Portal](https://portal.azure.com) and search a **Resource Group** with the name **ASPDOTNET**.
+1. Login to the [Azure Portal](https://portal.azure.com) and search a **Resource Group** with the name **ASPDOTNET**.
 
-   ![](images/azure_resources.png)
+   ![Azure Resources](images/azure_resources.png)
 
-1. Navigate to either Dev or Staging web app in the resource group and you will see the application deployed successfully with the changes.
+1. Browse to either the Dev or Staging web application from the resource group to validate that the changes have been deployed successfully.
 
-   ![](images/partsunlimited_overview.png)
+   ![Overview](images/partsunlimited_overview.png)
 
 ## Summary
 
-**Visual Studio Team Services** simplifies creation of continuous integration and continuous delivery pipelines for your application to be deployed to Azure
-
-## Feedback
-
-Please email [us](mailto:devopsdemos@microsoft.com) if you have any feedback on this lab.
+**VSTS** simplifies the creation of the continuous integration and continuous delivery pipelines for the application to be deployed to the Azure platform.
