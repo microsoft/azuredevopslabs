@@ -1,4 +1,4 @@
-# Deploy ASP.NET application to Azure App Service using VSTS
+# Deployment of ASP.NET application to the Azure App Service using VSTS
 
 This lab details the deployment of an [ASP.NET](https://www.asp.net/) application to the Azure App Service using Visual Studio Team Services (VSTS).
 
@@ -138,7 +138,7 @@ ASP.NET is an open source web framework for building modern web applications and
 
    ![Release Tasks](images/tasks.png)
 
-   | Tasks used in Build | Usage / Purpose |
+   | Tasks used in Release | Usage / Purpose |
    |-------|-------|
    | **Azure Resource Group Deployment**|The project used in this lab contains the front-end (Azure App Service) and back-end (Azure SQL DB) services. These will be provisioned as [PAAS on Azure](https://azure.microsoft.com/en-in/overview/what-is-paas/) using [ARM](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-manager-create-first-template) templates. The task will create the above services in a resource group named **ASPDOTNET**|
    | **Azure App Service Deploy**| The task is used to deploy a Web project to the Azure App Service created in the previous step|
@@ -153,11 +153,11 @@ ASP.NET is an open source web framework for building modern web applications and
 
    ![Release Summary](images/release_summary.png)
 
-1. Login to the [Azure Portal](https://portal.azure.com) and search a **Resource Group** with the name **ASPDOTNET**.
+1. Login to the [Azure Portal](https://portal.azure.com) and search for a **Resource Group** named **ASPDOTNET**.
 
    ![Azure Resources](images/azure_resources.png)
 
-1. Browse to either the Dev or Staging web application from the resource group to validate that the changes have been deployed successfully.
+1. Browse to either the deployed Dev or Staging web application from the resource group to validate that the changes have been deployed successfully.
 
    ![Overview](images/partsunlimited_overview.png)
 
