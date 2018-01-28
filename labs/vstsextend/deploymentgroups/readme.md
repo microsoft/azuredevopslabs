@@ -10,7 +10,7 @@ Last updated : {{ "now" | date: "%b %d, %Y" }}.
 
 ## Overview
 
- Earlier with the VSTS Release Management, if the application needed to be deployed to multiple servers, the Windows PowerShell remoting had to be enabled manually, the required ports opened and the deployment agent installed on each of the servers. The pipelines had to be managed manually in case of a roll-out deployment.
+In the earlier versions of the VSTS Release Management, if the application needed to be deployed to multiple servers, the Windows PowerShell remoting had to be enabled manually, the required ports opened and the deployment agent installed on each of the servers. The pipelines had to be managed manually in case of a roll-out deployment.
 
 All the above challenges have been handled seamlessly with the introduction of the [Deployment Groups](https://docs.microsoft.com/en-us/vsts/build-release/concepts/definitions/release/deployment-groups/).
 
@@ -26,79 +26,81 @@ The Deployment Group installs a deployment agent on each of the target servers w
 
 ## Setting up the Environment
 
-We will use an ARM template to provision the below resources on Azure:
+The following resources will be provisioned on the Azure using an ARM template:
 
-- Six VMs (web servers) with IIS configured
+- Six Virtual Machines (VM) web servers with IIS configured
 
 - A SQL server VM (db server) and
 
 - Azure Network Load Balancer
 
-1. Click on the **Deploy to Azure** to provision the resources. It takes approximately 10-15 minutes to complete the deployment.
+1. Click on the **Deploy to Azure** button to initiate the resource provisioning. It takes approximately 10-15 minutes to complete the deployment.
 
    [![Deploy to Azure](http://azuredeploy.net/deploybutton.png)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FMicrosoft%2FVSTS-DevOps-Labs%2Fdeploymentgroups%2Fdeploymentgroups%2Fazurewebsqldeploy.json)
 
-   ![](images/azure.png)
+   ![Azure](images/azure.png)
 
-1. Once the deployment is successful, you will see the resources in your Azure Portal.
+1. Once the deployment is successful, the resources will be displayed on the Azure Portal.
 
-   ![](images/resources.png)
+   ![Resources](images/resources.png)
 
-1. Click on **DB server VM**.
+1. Click on the **DB server VM** to view the details.
 
-   ![](images/azure_resource.png)
+   ![DB Server](images/azure_resource.png)
 
-1. Note down the **DNS** name. This value will be used later in an exercise.
+1. Make a note of the `DNS` name. This value will be required later during an exercise.
 
-   ![](images/sql_dns.png)
+   ![SQL DNS](images/sql_dns.png)
 
 ## Setting up the VSTS Project
 
-1. Use the [VSTS Demo Generator](https://vstsdemogenerator.azurewebsites.net/?name=DeploymentGroups&templateid=77368) to provision a project on your VSTS account.
+1. Use the [VSTS Demo Generator](https://vstsdemogenerator.azurewebsites.net/?name=DeploymentGroups&templateid=77368) to provision a team project on the VSTS account.
 
-   ![](images/vstsdemogen.png)
+   ![VSTS Demo Generator](images/vstsdemogen.png)
 
-1. Once the project is provisioned, click on the URL to navigate to the project.
+1. Once the team project is provisioned, click on the URL to navigate to the project.
 
-   ![](images/vsts_demo.png)
+   ![VSTS](images/vsts_demo.png)
 
 ## Exercise 1: Endpoint Creation
 
-Since the connections are not established during project provisioning, we will manually create the endpoints.
+Since the connections are not established during the project provisioning, the endpoints need to be configured manually.
 
-1. In VSTS, navigate to the **Services** by clicking on the gear icon, and click on the **+ New Service Endpoint** button. Select the **Azure Resource Manager** tab. Specify the **Connection name**, select your **Subscription** from the dropdown and click on the **OK** button. We will use this endpoint to connect **VSTS** and **Azure**.
+1. In the VSTS, navigate to the **Services** by clicking on the gear icon, and click on the **+ New Service Endpoint** button. Select the **Azure Resource Manager** tab. Specify the **Connection name**, select the **Subscription** from the dropdown and click on the **Ok** button. This endpoint will be used to connect **VSTS** and **Azure**.
 
-   ![](images/service_endpoint.png)
+   ![Service endpoint](images/service_endpoint.png)
 
-   ![](images/connection_name.png)
+   ![Connection details](images/connection_name.png)
 
 1. Create an endpoint of type **Team Foundation Server/Team Services**. Select the **Token based authentication** option and specify the following details-
 
-   - **Connection Name**: Give any name
+   - **Connection Name**: Provide any name
 
-   - **Connection Url**: Your VSTS account Url
+   - **Connection Url**: The VSTS account Url
 
-   - **Personal Access Token**: Your VSTS Personal Access Token
+   - **Personal Access Token**: The VSTS Personal Access Token
 
-   Created endpoint is used in release definition in the later exercise. We create this connection because  agent registration with deployment group requires access to your VSTS project.
+   The configured endpoint will be used during the agent registration with deployment groups as the access to the VSTS team project is required.
 
-   ![](images/vsts.png)
+   ![Endpoint](images/vsts.png)
 
 ## Exercise 2: Creating Deployment Group
 
-[Deployment Groups](https://docs.microsoft.com/en-us/vsts/build-release/concepts/definitions/release/deployment-groups/) in VSTS makes it easier to organize the servers that you want to use to host your app. A deployment group is a collection of machines with a VSTS deployment agent on each of them. Each machine interacts with VSTS to coordinate deployment of your app.
+[Deployment Groups](https://docs.microsoft.com/en-us/vsts/build-release/concepts/definitions/release/deployment-groups/)
 
-1. Go to **Deployment Groups** under **Build & Release** tab. Click **Add deployment group** .
+> VSTS makes it easier to organize the servers for hosting the applications. A deployment group is a collection of machines with a VSTS deployment agent on each of them. Each machine interacts with VSTS to coordinate deployment of the app.
 
-   ![](images/add_deploymentgroup.png)
+1. Navigate to the **Build & Release** tab and click on the **Deployment Groups** option. Click on the **Add deployment group** button to configure a deployment group.
 
-1. Provide  **Deployment group name**, and click create. You will see the registration script generated.
+   ![Deployment group](images/add_deploymentgroup.png)
 
-   ![](images/name_dg.png)
+1. Provide a `*Deployment group name`, and click on the **Create** button. The registration script generated will be displayed.
 
-   ![](images/script_dg.png)
+   ![Deployment group](images/name_dg.png)
 
-## Exercise 3: Configure Release
+   ![Registration script](images/script_dg.png)
+
+## Exercise 3: Configure Releases
 
 We have the target machines available in the deployment group to deploy the application. The release definition uses **Phases** to deploy to target servers.
 
