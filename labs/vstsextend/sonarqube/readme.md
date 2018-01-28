@@ -18,6 +18,8 @@ Technical debt is the set of problems in a development effort that make forward 
 - Security Vulnerabilities
 - Centralize Quality
 
+### What's covered in this lab
+
 In this lab, you will learn how to setup SonarQube on Azure and to integrate Visual Studio Team Services
 
 - Provision SonarQube server from an Azure template
@@ -25,11 +27,13 @@ In this lab, you will learn how to setup SonarQube on Azure and to integrate Vis
 - Setup a VSTS project and CI build to integrate with SonarQube
 - Analyze SonarQube reports
 
-## Pre-requisites
+### Pre-requisites for the lab
 
-1. **Microsoft Azure Account:** You need a valid and active azure account for the labs
+1. An active **Microsoft Azure** account.
 
-1. You need a **Visual Studio Team Services Account** and [Personal Access Token](https://docs.microsoft.com/en-us/vsts/accounts/use-personal-access-tokens-to-authenticate)
+1. An active **VSTS** account. Create a new account from [here](https://docs.microsoft.com/en-us/vsts/accounts/create-account-msa-or-work-student).
+
+1. A [Personal Access Token](https://docs.microsoft.com/en-us/vsts/accounts/use-personal-access-tokens-to-authenticate) (PAT).
 
 ## Setting up the Environment
 

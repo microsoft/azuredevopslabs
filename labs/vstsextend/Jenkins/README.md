@@ -6,76 +6,87 @@ permalink: /labs/vstsextend/jenkins/
 folder: /labs/vstsextend/jenkins/
 ---
 
-Last updated : {{ "now" | date: "%b %d, %Y" }}.
+Last updated : {{ "now" | date: "%b %d,%Y" }}
 
 ## Overview
-
 [Jenkins](https://jenkins.io/) is a very popular Java-based open source continuous integration (CI) server that allows teams to continuously build applications across platforms.
 
 Visual Studio Team Services (VSTS) includes Team Build, a native CI build server that allows compilation of applications on Windows, Linux and Mac platforms. However, it also integrates well with Jenkins for teams who already use or prefer to use Jenkins for CI.
 
 There are two ways to integrate VSTS with Jenkins
 
-* One way is to completely replace the VSTS Build with Jenkins. This involves the configuration of a CI pipeline in Jenkins and a web hook in VSTS that invokes the CI process when source code is pushed by any member to a repository or a branch. The VSTS Release Management will be configured to connect to the Jenkins server through the configured Service Endpoint to fetch the compiled artifacts for the deployment.
+* One way is to completely **replace the VSTS Build with Jenkins**. This involves the configuration of a CI pipeline in Jenkins and a web hook in VSTS that invokes the CI process when source code is pushed by any member to a repository or a branch. The VSTS Release Management will be configured to connect to the Jenkins server through the configured Service Endpoint to fetch the compiled artifacts for the deployment.
 
-* The alternate way is to use Jenkins and Team Build together. In this approach, a Jenkins build will be nested within the VSTS build. A build definition will be configured in the VSTS with a **Jenkins** task to queue a job in Jenkins and download the artifacts produced by the job and publish it to the VSTS or any shared folder from where it can be picked by the Release Management. This approach has multiple benefits -
+* The alternate way is to **use Jenkins and Team Build together**. In this approach, a Jenkins build will be nested within the VSTS build. A build definition will be configured in the VSTS with a **Jenkins** task to queue a job in Jenkins that downloads the artifacts produced by the job and publish it to the VSTS or any shared folder. The VSTS Release Management will pick these build artifacts for deployment. 
 
-    1. End-to-end traceability from work item to source code to build and release
-    1. Triggering of a Continuous Deployment (CD) when the build is completed successfully
-    1. Execution of the build as part of the branching strategy
+While there are pros and cons with both approaches, the later approach has multiple benefits:
+
+ 1. End-to-end traceability from work item to source code to build and release
+ 1. Triggering of a Continuous Deployment (CD) when the build is completed successfully
+ 1. Execution of the build as part of the branching strategy
+
+### What's covered in this lab?
 
 This lab covers both the approaches and the following tasks will be performed
 
-* Provision Jenkins on Azure VM using an Azure Marketplace Jenkins Template
+* Provision Jenkins on Azure VM using a Jenkins Template availaable on the Azure Marketplace
 * Configure Jenkins to work with Maven and VSTS
 * Create a build definition in Jenkins
 * Configure VSTS to integrate with Jenkins
-* Setup Release Management in VSTS to deploy artifacts from Jenkins
+* Configure Release Management in VSTS to deploy the build artifacts from Jenkins
 
-## Pre-requisites
+### Pre-requisites for the lab
 
-1. Microsoft Azure Account: You will need a valid and active azure account for the lab.
+1. An active **Microsoft Azure** account.
 
-1. You need a **VSTS** account and a [Personal Access Token (PAT)](https://docs.microsoft.com/en-us/vsts/accounts/use-personal-access-tokens-to-authenticate)
+1. An active **VSTS** account. Create a new account from [here](https://docs.microsoft.com/en-us/vsts/accounts/create-account-msa-or-work-student).
 
-1. You will need [Putty](http://www.putty.org/), a free SSH and Telnet client
+1. A [Personal Access Token](https://docs.microsoft.com/en-us/vsts/accounts/use-personal-access-tokens-to-authenticate) (PAT).
 
-1. You will need the **Docker Integration** extension installed and enabled for your VSTS account. You can perform this step later while using the VSTS Demo Generator.
+1. [Putty](http://www.putty.org/), a free SSH and Telnet client
+
+1. **Docker Integration** extension installed and configured for the VSTS account. *This step can be performed later while using the VSTS Demo Generator*.
+
+## Reference Architecture
+
+![Jenkins Reference Architecture](https://docs.microsoft.com/en-us/azure/architecture/reference-architectures/jenkins/images/jenkins-server.png)
+
+Read the complete spec at [https://docs.microsoft.com/en-us/azure/architecture/reference-architectures/jenkins/images/jenkins-server.png](https://docs.microsoft.com/en-us/azure/architecture/reference-architectures/jenkins/images/jenkins-server.png)
 
 ## Setting up the VSTS project
 
-1. Use <a target="_blank" href="https://vstsdemogenerator.azurewebsites.net/?name=MyShuttleDocker&templateid=77373">VSTS Demo Generator</a> to provision a team project on the VSTS account
+1. Use the [VSTS Demo Generator](https://vstsdemogenerator.azurewebsites.net/?name=MyShuttleDocker&templateid=77373) to provision a team project on the VSTS account
 
     ![VSTS Demo Gen](images/vstsdemogen-1.png)
-
 1. Select **MyShuttleDocker** for the template
 
     ![VSTS Demo Gen](images/vstsdemogen-2.png)
 
-    {% include note.html content= "Using the VSTS Demo Generator link will automatically select the MuShuttleDocker template in the demo generator for the team project creation. To use other team project templates, use the alternate link provided below:  [https://vstsdemogenerator.azurewebsites.net/](https://vstsdemogenerator.azurewebsites.net/)" %}
+    > Using the VSTS Demo Generator link will automatically select the MyShuttleDocker template in the demo generator for the team project creation. To work with other team project templates, use the alternate link provided:  [https://vstsdemogenerator.azurewebsites.net/](https://vstsdemogenerator.azurewebsites.net/)
 
 ## Setting up the Jenkins VM
 
-1. To configure Jenkins, the Jenkins VM image available on the Azure MarketPlace will be used. This will install the latest stable Jenkins version on a Ubuntu Linux VM along with the tools and plugins configured to work with Azure.
+1. To configure Jenkins, the Jenkins VM image available on the Azure MarketPlace will be used. This will install the latest stable Jenkins version on a Ubuntu Linux VM along with the tools and plugins configured to work with Azure. Click on the **Deploy to Azure** button below to get started.
 
-    <a href="https://portal.azure.com/#create/azure-oss.jenkinsjenkins" target="_blank">
-    <img src="http://azuredeploy.net/deploybutton.png"/>
-    </a>
+   [![Jenkins Configuration](http://azuredeploy.net/deploybutton.png)](https://portal.azure.com/#create/azure-oss.jenkinsjenkins)
 
-1. Once the Jenkins VM is provisioned, click on the **Connect** button and make a note of the \<username> and the \<ip address>. This information will be required toconnect to the Jenkins VM from ***Putty***
+1. Once the Jenkins VM is provisioned, click on the **Connect** button and make a note of the `username` and the `ip address`. This information will be required to connect to the Jenkins VM from ***Putty***
 
     ![SSH Connection Info](images/vmconnect_ssh1.png)
 
-1. Jenkins, by default, listens on port 8080 using HTTP. To configure a secure HTTPS connection, an SSL certificate will be required. If HTTPS communication is not being configured, the best way to ensure the sign-in credentials are not leaked due to a "Man-in-the-middle" attack is by logging-in using the SSH tunneling. An SSH tunnel is an encrypted tunnel created through a SSH protocol connection, that can be used to transfer unencrypted traffic over an unsecured network. To initiate a SSH tunnel, the following command needs to be run from a Command Prompt.
+   > Jenkins, by default, listens on port 8080 using HTTP. To configure a secure HTTPS connection, an SSL certificate will be required. If HTTPS communication is not being configured, the best way to ensure the sign-in credentials are not leaked due to a "Man-in-the-middle" attack is by logging-in using the SSH tunneling. An SSH tunnel is an encrypted tunnel created through a SSH protocol connection, that can be used to transfer unencrypted traffic over an unsecured network.
 
-    ````cmd
-    putty.exe -ssh -L 8080:localhost:8080 <username>@<ip address>
-    ````
+1. To initiate a SSH tunnel, the following command needs to be run from a Command Prompt.
+
+   ```cmd
+   putty.exe -ssh -L 8080:localhost:8080 <username>@<ip address>
+   ```
+
     ![Connecting from Putty](images/ssh2.png)
 
-    {% include note.html content= "To initiate the above command, the Putty.exe needs to be placed in the path selected in the Command Prompt or the absolute path of the Putty.exe need to be provided in the command." %}
+    > To running the above command, either the Putty.exe needs to be placed in the path selected in the Command Prompt or the full path of the Putty.exe need to be provided in the command.
 
-1. Login with the user name and password that was provided during the provisioning of the VM.
+1. Login with the user name and password that was provided during the provisioning of the Jenkins VM.
 
 1. Once the connection is successful, open a browser on the host machine and navigate to the URL [http://localhost:8080](http://localhost:8080). The **Getting Started** page for Jenkins will be displayed.
 
@@ -83,24 +94,25 @@ This lab covers both the approaches and the following tasks will be performed
 
    ![Jenkins Initial Password](images/jenkinsinitialemptypwd.png)
 
-   {% include note.html content= "At the time of writing this lab, an open issue in Jenkins was noted where the setup wizard would not resume after restart, skipping some of the steps listed below. If you do not see the screen above, steps 5 to 7 will not work. The workaround is to use the default user name *admin* with the initial admin password (explained in **step #7** below)." %}
+   > At the time of writing this lab, an open issue in Jenkins was noted where the setup wizard would not resume after restart, skipping some of the steps listed below. If you do not see the screen above, steps 5 to 7 will not work. The workaround is to use the default user name `admin` with the initial admin password to login as explained in the next step.
 
-1. Return to the **Putty** terminal and type the following command to open the log file that contains the password. Copy the password.
-    >sudo vi /var/lib/jenkins/secrets/initialAdminPassword
+1. Return to the **Putty** terminal and type the following command to open the password file and copy the password. Press the **Esc** button and then type **:q!** at the prompt to exit the vi editor without saving the file.
 
-    *You can double click on the line and use **CTRL+C** to copy the text and place it in the clipboard. Press **ESC and then :q!** to exit the vi editor without saving the file*
+    `sudo vi /var/lib/jenkins/secrets/initialAdminPassword`
+
+    > You can double click on the password text and use **CTRL+C** to copy the text and place it in the clipboard
 
 1. Return to the browser, paste the copied text and click the **Continue** button.
 
     ![Unlock Jenkins - First Time](images/jenkinsinitialpwd.png)
 
-    Jenkins has a vast ecosystem with a strong and active open source community users contributing hundreds of useful plugins. While configuring Jenkins, you can either install the most commonly used plugins or pick the plugins that you want.
+    > Jenkins has a vast ecosystem with a strong and active open source community users contributing hundreds of useful plugins. While configuring Jenkins, choose between installing the most commonly used plugins or selected plugins.
 
-1. The Maven plugin is also required but will be installed later. For now, we will go with the suggested plugins. Click on the **Install suggested plugins** to initiate the configuration.
+1. The Maven plugin is also required for the lab but will be installed later. Click on the **Install suggested plugins** option to initiate the configuration.
 
     ![Customize Jenkins Plugins](images/customizejenkins-plugins.png)
 
-1. You will need to create a new *Admin* user for Jenkins. Provide a user name and password and click on the **Continue** button.
+1. To work with Jenkins, a new `Admin` user needs to be created. Provide the *User name*, *Password*, *Full name* and *Email address* and then click on the **Save and Finish** button.
 
     ![Create Admin User for Jenkins](images/firstadminuser.png)
 
@@ -110,48 +122,51 @@ This lab covers both the approaches and the following tasks will be performed
 
 ## Installing and Configuring Maven
 
- Starting with Jenkins version 2, Maven plugin is not installed by default. You will need to install this manually
+ >Starting with Jenkins version 2, Maven plugin is not installed by default. The plugin needs to be manually installed
 
-1. Select the **Manage Jenkins** option on the main page of the Jenkins portal. This will take you to the Manage Jenkins page, the centralized one-stop-shop for all the Jenkins configuration. From this screen, you can configure the Jenkins server, install and upgrade plugins, keep track of system load, manage distributed build servers, and more!
+1. Click the **Manage Jenkins** option on the Jenkins home page to navigate to the **Manage Jenkins** screen, the centralized one-stop-shop for all the Jenkins configuration. From this screen, configuration of the Jenkins server, installation and upgrades of plugins, keeping track of system load, managing distributed build servers can be managed.
 
-1. Select the **Manage Plugins** option
+1. Click on the **Manage Plugins** option, select the **Available** tab and search for `maven-plugin` in the filter box.
 
     ![Manage Jenkins](images/manage-jenkins1.png)
 
-1. Select the **Available** tab and search for **maven-plugin** in the filter box
-
-1. Select the **Maven Integration Plugin** option and click on the **Install without restart** button to install the plugin.
+1. Select the **Maven Integration Plugin** and click on the **Install without restart** button to install the plugin.
 
     ![Install Maven](images/installmavenplugin.png)
 
-1. Once the plugin is installed, select the **Manage Jenkins** option and then select **Global Tool Configuration** option.
+1. Once the plugin is installed, click on the **Global Tool Configuration** option.
 
     ![Global Tool Configuration](images/manage-tools-config.png)
 
-1. Jenkins provides great out-of-the-box support for Maven. Since the Maven is not yet installed, it can be manually installed by extracting the ***tar*** file located in a shared folder. Alternatively, you can let Jenkins do all the hard work and download Maven for you. When the **Install automatically** option is selected, Jenkins will download and install Maven from the Apache website when a build job requires it, first time.
+   > Jenkins provides great out-of-the-box support for Maven. Since the Maven is not yet installed, it can be manually installed by extracting the `tar` file located in a shared folder. Alternatively, when the **Install automatically** option is selected, Jenkins will download and install Maven from the Apache website when a build job requires it.
 
-    We will install Maven version 3.5, the latest version at the time the lab is written
+1. To install Maven, select the **Install automatically** option and click on the **Apply** button.
+
+   > The latest version of Maven at the time of writing the lab was 3.5
 
     ![Maven Installer](images/maveninstallerconfig.png)
 
-1. Click on the **Apply** button and then click the **Back to Dashboard** option to return to the home page.
+1. Click on the **Back to Dashboard** button to return to the home page.
 
-## Creating a new build job
+## Creating a new build job in Jenkins
 
-1. From Jenkins home page, click on the **New Item** option. Provide a name for the build definition, and select the **Maven project** and click **OK** to save
+1. From the Jenkins home page, click on the **New Item** option. Provide a name for the build definition, select the **Maven project** and click on the **Ok** button.
 
-   ![](images/newbuilddef.png)
+   ![New Build Definition](images/newbuilddef.png)
 
-1. Now scroll down to the **Source code Management** section. Select the **Git** option and provide the clone URL of the VSTS Git repo. It would be typically in the format **http://\<your account name>.visualstudio.com/
- \<your project name>/_git/MyShuttle**
+1. Now scroll down to the **Source code Management** section. Select the **Git** option and provide the clone URL of the VSTS Git repo in the format
+
+   `http://{your account name}.visualstudio.com/{team project name}/_git/MyShuttle`
 
    ![Configuring VSTS Git URL](images/jenkins-vstsrepo.png)
 
-   {% include note.html content= "The VSTS Git repos are private. So you will need to provide the user credentials to access the repository. If you have not set the Git credentials, you can so from the VSTS. Select the **Clone** link, provide the user name and password and then click on the **OK** button." %}
+   > The VSTS Git repos are private and requires user credentials to be provided to access the repository. If the Git credentials is not set already, it can be done from the VSTS.
+
+1. Select the **Clone** option, provide the `User name` and `Password` and then click on the **Ok** button.
 
    ![Generating Git Credentials](images/vsts-generategitcreds.png)
 
-1. Select **Add \| Jenkins** to add a new credential. Enter the user name and password created in the previous step and click **Add** to close the wizard
+1. Click on the **Add \| Jenkins** option to add a new credential. Provide the `User name` and `Password` created earlier and click the **Add** button to close the wizard
 
     ![Adding Credentials to Jenkins](images/jenkinscredentials.png)
 
@@ -159,139 +174,140 @@ This lab covers both the approaches and the following tasks will be performed
 
    ![VSTS Git config in Jenkins](images/jenksaddvstsgit.png)
 
-1. The source code for this application has both unit tests and UI tests. We will include the unit tests but skip the UI tests from running now.
+   >The source code for this application has both unit tests and UI tests. Only the unit tests will be included in this lab.
 
-1. Scroll down to the **Build** section. Enter the following text in the **Goals and Options** field
+1. Scroll down to the **Build** section and provide the text `package -Dtest=FaresTest,SimpleTest` in the **Goals and Options** field
 
-   >package -Dtest=FaresTest,SimpleTest
-
-1. Click **Save** to navigate to the main page of the project you just created
+1. Click the **Save** button to navigate to the home page of the project just created
 
    ![Build Settings in Jenkins](images/jenkins-buildsettings.png)
 
-1. The last configuration that we will do for this lab is to add a *Post-build* action to publish the artifacts. Scroll down to **Post-Build Actions**  section, click **Add post-build action** and select **Archive the artifacts**
+1. To configure the Post build actions, in the **Post-Build Actions** section, click on the **Add post-build action** and choose the **Archive the artifacts** option.
 
    ![Post Build Action](images/jenkinspostbuildaction.png)
 
-1. Enter  **target/*.war** in the text box. Click **Save** to save the settings and return to the project page
+1. Enter  **target/*.war** in the text box. Click **Save** to save the settings and return to the project page.
 
    ![Archive War](images/jenkinsarchiveartifacts.png)
 
-1. We have completed all the necessary configuration and Select **Build Now** to start an Ad-hoc build
+1. Since the configuration is now completed, click on the **Build Now** option to start an Ad-hoc build.
 
-1. You will notice the build progress just below the left side navigation menu
+   > The build progress will be displayed on the left pane in the **Build History** section
 
    ![Running Ad-hoc Build](images/adhocbuild.png)
 
-1. You can select the build number to get into the details of the build including the build artifacts, in this case, the WAR file for the project.
+1. To view the build details and the list of build artifacts, click on the build number displayed in the **Module Builds** section.
 
    ![Build Details](images/builddetails.png)
 
    ![Build Artifacts](images/buildmodules.png)
 
-1. Select the **Test Results** links if you want to see the results of the unit tests that were included in the build definition.
+1. Click on the **Test Results** option to view the results of the unit tests that were included in the build definition.
 
-## Approach 1: Running Jenkins without VSTS Build
+## Approach 1: Using Jenkins without the VSTS Build
 
-In this section, we will cover the first approach. We will run Jenkins separately. We will configure a service hook in VSTS to trigger a Jenkins build whenever a code is pushed to a particular branch.
+In this section, the Jenkins will be configured to run separately. A service hook will be configured in VSTS to trigger a Jenkins build whenever source code changes are pushed to a particular branch.
 
-1. Go to your VSTS project page and navigate to the **Admin** \| **Service Hooks** page
+1. To configure the service hook, navigate to the VSTS team project page, click on the Settings icon and choose the **Service Hooks** option
 
     ![Navigate to service hooks page](images/servicehooks.png)
 
-1. Select **Create subscription** button
+1. On the **Service Hooks** screen, click on the **Create subscription** button
 
-1. In the *New subscriptions dialog* select **Jenkins** and click **Next**
+1. In the *New Service Hook Subscriptions* screen, click on the **Jenkins** option and then click the **Next** button.
 
    ![Create a new subscription](images/vsts-createjenkinsservice.png)
 
-1. Select **Code pushed**  for the **Trigger on this of type event**
+1. Select the **Code pushed** option for the **Trigger on this type of event**
 
-1. Choose the repository and branch and Select **Next**
+1. Select the MyShuttleDocker as the **Repository**, master as **Branch** and then click on the **Next** button.
 
    ![VSTS - Trigger Code Pushed](images/vsts-jenkinssubscription1.png)
 
-1. In the next page, select **Trigger generic build** for the perform action field
+1. Provide the following details in the **Select and configure the action to perform** screen
+   1. In the **Perform this action** field, select the **Trigger generic build** option
 
-1. Enter the URL of the Jenkins server in **http://{ip address or the host name}**  format
+   1. In the **Jenkins base URL** field, Provide the URL of the Jenkins server in the  format `http://{ip address or the host name}`
 
-1. Enter the **User name** and **Password** that you have setup for Jenkins
+   1. In the **User name** and **User API token (or password)** fields, provide the user name and password already configured for Jenkins
 
-1. Select **Test** to check the settings. If the settings are correct, click **Finish** to save and exit
+1. Click on the **Test** button to validate the configuration and then click on the **Finish** button to complete the subscription.
 
    ![VSTS - Jenkins Info](images/vsts-jenkinssubscription2.png)
 
-Now you can try making a change and commit your code. Upon commit,VSTS will notify Jenkins to initiate a new build.
+The VSTS will now automatically notify Jenkins to initiate a new build whenever any source code changes are committed on the repository.
 
-## Approach 2: Wrapping Jenkins Job within VSTS Build
+## Approach 2: Wrapping Jenkins Job within the VSTS Build
 
-We will cover the second approach in this section. We will wrap the Jenkins job within a Team Build. The key benefit taking this approach is the end to end traceability from work item to code to build and release can be maintained
+In this section, Jenkins will be included as a job within a VSTS Team Build. The key benefit of this approach is the end-to-end traceability from the work items to the source code to the build and release provided by the VSTS.
 
-First, we will need to create an endpoint to the Jenkins server
+To begin, an endpoint to the Jenkins Server for communication with VSTS will be configured.
 
-1. From the **Admin \| Services** tab, select the **New Service Endpoint \| Jenkins** button to create a new endpoint
+1. In the **Admin | Services** section, click on the **New Service Endpoint | Jenkins** option to create a new endpoint.
 
-1. Provide the server URL and the user name and password to connect to the server. The server URL is in http://[server IP address or DNS name] format. Click **Verify Connection** to validate the entries and to confirm that VSTS is able to reach the Jenkins server
+1. In the **Add new Jenkins Connection** screen, provide a connection name, Jenkins server URL in the format `http://[server IP address or DNS name]`, Jenkins user name and password. Click on the **Verify Connection** button to validate the configuration and then click on the **Ok** button.
 
    ![Jenkins Endpoint](images/jenkinsendpoint.png)
 
-1. Select **Builds** from the **Build and Release** help and select **+New** to create a new build Definition**
+The next step would be to configure the build definition.
 
-1. You will notice that there is a **Jenkins** template out-of-the-box. Select the template and click **Apply**
+1. Click on the **Build and Release** hub, select the Builds section and click on the **+New** button to create a new build Definition
+
+1. In the **Choose a template** window, select the out-of-the-box **Jenkins** template and click on the **Apply** button
 
     ![Jenkins Template](images/jenkinsbuildtemplate.png)
 
-1. In the *Build process* settings, select the Jenkins service endpoint that you created and enter **MyShuttle** for Jenkins Job Name.
+1. In the *Process* step, provide a name for the definition, select Hosted Linux Preview as the Agent Queue, provide **MyShuttle** as the Job name and then select the Jenkins service endpoint created earlier.
 
     ![Jenkins Settings in Team Build](images/vsts-buildjenkinssettings.png)
 
-1. Next, select the **Get Sources** task. Since, we  are only triggering a Jenkins job from the build, there is no need to download the code to the VSTS build agent. Select **Advanced Options** and check the **Don't sync sources** option
+1. Next, select the **Get Sources** step. Since Jenkins is being used for the build, there is no need to download the source code to the VSTS build agent. Enable the **Advanced settings** option and select the **Don't sync sources** option.
 
     ![Get Sources Settings in Team Build](images/vsts-getsourcessettings.png)
 
-1. Next, select the **Queue Jenkins Job** task. This task queues the job on the Jenkins server. Make sure that the services endpoint and the job name are correct.  You will see the two options checked- leave them as-is.
+1. Next, select the **Queue Jenkins Job** step. This task queues the job on the Jenkins server. Make sure that the services endpoint and the job name are correct. The two options available at this step will be left unchanged.
 
      ![Jenkins Settings in Team Build](images/vsts-buildjenkinssettings1.png)
 
-    {% include important.html content= "The **Capture console output and wait for completion** option when selected, will capture the output of the Jenkins build console when the build runs, and also make the build  wait for the Jenkins Job to complete and return whether the job succeeded or failed. The **Capture pipeline output and wait for pipeline completion** option is very similar but applies to Jenkins pipelines (a build that has more than one job nested together)." %}
+>The **Capture console output and wait for completion** option, when selected, will capture the output of the Jenkins build console when the build runs. The build will wait until the Jenkins Job is completed. The **Capture pipeline output and wait for pipeline completion** option is very similar but applies to Jenkins pipelines (a build that has more than one job nested together).
 
-1. When the build is complete, the **Jenkins Download Artifacts** task will download the build artifacts produced by the Jenkins job to the staging directory
+1. The **Jenkins Download Artifacts** task will download the build artifacts from the Jenkins job to the staging directory
 
     ![Download Jenkins Artifact](images/downloadjenkinsartifact.png)
 
-1. Finally, we will publish the artifacts to VSTS.
+1. The **Publish Artifact drop** will publish to the VSTS.
 
-1. Click **Save & queue** to save the build definition and start a new build.
+1. Click on the **Save & queue** button to complete the build definition configuration and initiate a new build.
 
 ## Deploying Jenkins Artifacts with Release Management
 
-Next, we will configure Visual Studio VSTS Release Management to fetch and deploy the artifacts produced by the build.
+The next step is to configure the VSTS Release Management to fetch and deploy the artifacts produced by the build.
 
-1. As we are deploying to Azure, we will need to create an endpoint to Azure. You should also create an endpoint to Jenkins, if you have not done it before
+1. Since the deployment is being done to Azure, an endpoint to Azure will be configured. An endpoint to Jenkins server will also be configured, if not configured earlier.
 
-1. After you have created the endpoints, select the **Build & Release** hub and select **+ Create a new Release definition** to start creating a new release definition
+1. After the endpoint creation, click on the **Build & Release** hub and then select the **Releases** section. Click on the **+ Create a new Release definition** button to initiate a new release definition
 
-1. We will use the **Azure App Service Deployment** template as we are trying to publish a web application
+1. Since a web application will be published to Azure, the **Azure App Service Deployment** template will be used for the configuration.
 
    ![New Release Definition](images/newreleasedefintion.png)
 
-1. We will name the default environment as **Dev**
+1. The default environment for deployment will be named as **Dev**
 
    ![New Environment](images/rm_environment.png)
 
-1. We will link this release definition to the MyShuttle build on Jenkins. Select **+Add** to add an artifact
+1. To link the release definition with the MyShuttle build on Jenkins, click on the **+Add** button to add an artifact
 
-1. Select **Jenkins** for the *Source type*. Select the Jenkins endpoint you created above and enter **MyShuttle** for the *Source(Job)* - Note this should map to the project name that you have configured in Jenkins
+1. In the **Add artifact** screen, Select **Jenkins** as the *Source type*, select the Jenkins endpoint configured earlier and provide **MyShuttle** for the *Source(Job)*
 
-1. If the Jenkins server and the source location is configured correctly, once the publishing of the artifacts is completed, a message with the output file name **myshuttledev.war** will be displayed
+   >The Source(Job) should map to the project name configured in Jenkins
+
+1. If the Jenkins server and the source location is configured correctly, once the publishing of the artifacts is completed, a message with the output file name **myshuttledev.war** will be displayed.
 
    ![Add Jenkins artifact](images/rm_addjenkinsartifact.png)
 
-1. You are now ready to deploy!
+1. The output .war file can now be deployed on Azure. For details on the deployment, refer to the [Deploying a dockerized Java app on Azure Web App](../dockerjava/)
 
-1. The output .war file can now be deployed on Azure. For details on the deployment, refer to the [Deploying a MySQL database backed Java app to Tomcat on Azure with VSTS](../tomcat/)
-
-## Additional Sections
+## Additional Tasks
 
 ### Logging into Jenkins with the default credentials
 
@@ -307,31 +323,38 @@ Next, we will configure Visual Studio VSTS Release Management to fetch and deplo
 
 1. Select the **Available** tab.
 
-1. Type **Git plugin** in the filter textbox
+1. Enter the words **Git plugin** in the filter textbox
 
-1. Select **Git plugin** in the search list and select **Install without Restart**
+1. Select the **Git plugin** in the search list and click on the **Install without Restart** button
 
 ### Installing VSTS Private agent
 
-1. Navigate to the home page of VSTS team project and select the **Admin**|**Agent Queues** option
+1. Navigate to the home page of VSTS team project and select the **Admin**->**Agent Queues** option
 
 1. In the Agents for pool Default section, click on the **Download agent** button.
 
     ![Agent Queue](images/vsts-agentqueue.png)
 
-1. If the page is being accessed from the VM, the selected tab will default to **Linux**. Otherwise, select the **Linux** tab.
+1. If the page is being accessed from a VM, the selected tab will default to **Linux**. Otherwise, select the **Linux** tab.
 
 1. Click on the **Download** button to initiate the agent download. The downloaded file gets typically saved in the *Downloads* folder
 
     ![Download VSTS agent](images/downloadvstsagent.png)
 
-1. Open a terminal window and enter the following commands one-by-one
-
+1. Launch a terminal window and run the following commands in the sequence.
     ````cmd
     mkdir vstsagent
     cd vstsagent
     tar -zxvf ../Downloads/vsts-agent-linux-x64-2.126.0.tar.gz
     ````
-1. Once the files are extracted, run `./config.sh` to configure the agent. The VSTS URL and the PAT will need to be provided during the configuration.
+1. Once the files are extracted, run the following command to configure the agent.
+   > The VSTS URL and the PAT will be required during the configuration.
 
-1. After the configuration is completed, start the agent by running the following command `./run.sh`
+   ```cmd
+   ./config.sh
+   ```
+1. After the configuration is completed, start the agent by running the command
+
+   ```cmd
+   ./run.sh
+   ```

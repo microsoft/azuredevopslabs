@@ -14,17 +14,21 @@ Last updated : {{ "now" | date: "%b %d, %Y" }}.
 
 This lab shows how to deploy a **Python** application to **Azure App Service** from  **Visual Studio Team Services**. We will use  with [Django](https://www.djangoproject.com/) framework for deployment.
 
-## Pre-requisites
+## Pre-requisites for the lab
 
-1. **Microsoft Azure Account:**  You need a valid and active azure account for the lab
+1. An active **Microsoft Azure** account.
 
-1. You need a **Visual Studio Team Services Account** and [Personal Access Token](https://docs.microsoft.com/en-us/vsts/accounts/use-personal-access-tokens-to-authenticate)
+1. An active **VSTS** account. Create a new account from [here](https://docs.microsoft.com/en-us/vsts/accounts/create-account-msa-or-work-student).
+
+1. A [Personal Access Token](https://docs.microsoft.com/en-us/vsts/accounts/use-personal-access-tokens-to-authenticate) (PAT).
 
 ## Setting Up the VSTS Project
 
-1. Use [VSTS Demo Generator](https://vstsdemogenerator.azurewebsites.net/?name=Python&templateid=77369) to provision a Python project on your VSTS account.
+ 1. Use <a href="https://vstsdemogenerator.azurewebsites.net/?name=Python&templateid=77369" target="_blank">VSTS Demo Generator</a> to provision a Python project on your VSTS account.
 
-    ![](images/vsts_demo.png)
+    <img src="images/vsts_demo.png">
+
+ 2. Once the project is provisioned, click the URL to navigate to the project.
 
 1. Once the project is provisioned, click the URL to navigate to the project.
 

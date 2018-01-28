@@ -32,27 +32,29 @@ You will learn how to deploy an **ASP.Net** application to Azure App Service usi
 * Configuring build Triggers
 * Executing Build
 
-## Pre-requisites
+## Pre-requisites for the lab
 
-1. **Microsoft Azure Account:** You will need a valid and active azure account for the lab
+1. An active **Microsoft Azure** account.
 
-1. You need a **Visual Studio Team Services Account** and [Personal Access Token](https://docs.microsoft.com/en-us/vsts/accounts/use-personal-access-tokens-to-authenticate).
+1. An active **VSTS** account. Create a new account from [here](https://docs.microsoft.com/en-us/vsts/accounts/create-account-msa-or-work-student).
 
-1. A **GitHub** account. If you don't have one already, you can setup [GitHub Account](https://github.com/join?source=header-home) for free.
+1. A [Personal Access Token](https://docs.microsoft.com/en-us/vsts/accounts/use-personal-access-tokens-to-authenticate) (PAT).
+
+1. A **GitHub** account. Create a new account from [here](https://github.com/join?source=header-home).
 
 ## Setting up the code repository on GitHub
 
-There are many ways to add code to a GitHub repository. We can start with a new empty repository and manually add files, commit and push. But for the purpose of this lab, we will ***Fork*** an existing repository. A *Fork* is a copy of a repository.  When you *Fork*, you are creating a personal copy of the repository - any changes that you make will not affect the original code. If you want  to contribute back to the original, you can submit a *Pull Request*
+There are multiple ways to add code to a GitHub repository. We can start with a new empty repository and manually add files, commit and push. But for the purpose of this lab, we will ***Fork*** an existing repository. A *Fork* is nothing but a copy of a repository.  When we *Fork*, we are creating a personal copy of the repository - any changes that we make will not affect the original code. If we want  to contribute back to the original, you can submit a *Pull Request*
 
-1. Go to [**GitHub**](http://www.github.com) and make sure you are logged in with your GitHub user account.
+1. Let us go to [**GitHub**](http://www.github.com) and make sure we are logged in with our GitHub user account.
 
-1. Navigate to the [**PartsUnlimitedE2E**](https://github.com/Microsoft/PartsUnlimitedE2E) repository and select **Fork** to your GitHub account.
+1. Let us navigate to the [**PartsUnlimitedE2E**](https://github.com/Microsoft/PartsUnlimitedE2E) repository and select **Fork** to our GitHub account.
 
    ![](images/8.png)
 
-## Setting up VSTS project
+## Setting up of a VSTS project
 
-1. Use [VSTS Demo Data Generator](https://vstsdemogenerator.azurewebsites.net/?name=GitHub&templateid=77366) to provision a project on your VSTS account.
+1.Let us use [VSTS Demo Data Generator](https://vstsdemogenerator.azurewebsites.net/?name=GitHub&templateid=77366) to provision a project on your VSTS account.
 
    ![](images/1.png)
 
@@ -70,17 +72,17 @@ There are many ways to add code to a GitHub repository. We can start with a new 
 
    ![](images/4.png)
 
-   >You will need to specify what authorization method you want to provide. If you choose **Grant Authorization**, the default option, as the authorization method, the dialog shows an **Authorize** button that opens the GitHub login page. If you select **Personal access token**, you must obtain a suitable token and paste it into the Token textbox. The dialog shows the recommended scopes for the token: ***repo, user, admin:repo_hook***. See [this page](https://help.github.com/articles/creating-an-access-token-for-command-line-use/) on GitHub for information about obtaining an access token.
+   >We will need to specify what authorization method you want to provide. If we choose **Grant Authorization**, the default option, as the authorization method, the dialog shows an **Authorize** button that opens the GitHub login page. If we select **Personal access token**, we must obtain a suitable token and paste it into the Token textbox. The dialog shows the recommended scopes for the token: ***repo, user, admin:repo_hook***. See [this page](https://help.github.com/articles/creating-an-access-token-for-command-line-use/) on GitHub for information about obtaining an access token.
 
 1. Select **Grant Authorization**. Click on the **Authorize** button which opens the **GitHub login page**.
 
-   Follow the steps required by GitHub to authorize access to your account.
+  We will follow the steps required by GitHub to authorize access to our account.
 
    ![](images/21.png)
 
    ![](images/5.png)
 
-   **Note:**  The authorization is in a new pop-up window, you may have to unblock the pop-up window in your browser.
+   **Note:**  The authorization is in a new pop-up window, we may have to unblock the pop-up window in your browser.
 
    ![](images/22.png)
 

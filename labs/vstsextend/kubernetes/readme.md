@@ -164,15 +164,15 @@ We require below azure resources for this lab:
 
 1. Use [VSTS Demo Generator](https://vstsdemogenerator.azurewebsites.net/?TemplateId=77372&name=AKS) to provision the project on your VSTS account. The VSTS Demo Generator creates a Kubernetes project in your VSTS account with preset source code, work items, build and release definitions.
 
-    ![vstsdg](images/vstsdg.png)
+    ![VSTS Demo Generator](images/vstsdg.png)
 
 1. Provide the Project Name, and click on the **Create Project** button.
 
-   ![vstsdemogen2](images/vstsdemogen2.png)
+   ![VSTS Demo Generator](images/vstsdemogen2.png)
 
 1. Once the project is provisioned, click the **URL** to navigate to the project.
 
-   ![vstsdemogen3](images/vstsdemogen3.png)
+   ![VSTS Demo Generator](images/vstsdemogen3.png)
 
 ## Exercise 1: Service Endpoint creation
 
@@ -329,13 +329,13 @@ In this exercise, let us trigger a build manually and upon completion,an automat
 
     >**az aks browse --resource-group yourResourceGroup --name yourAKSname**
 
-    ![aksbrowse](images/aksbrowse.png)
+    ![AKS through browser](images/aksbrowse.png)
 
     </br>
 
     **AKS Dashboard:**
 
-    ![aksdashboard](images/aksdashboard.png)
+    ![AKS Dashboard](images/aksdashboard.png)
 
 ## Summary
 

@@ -6,11 +6,13 @@ This lab shows how to deploy an [ASP.NET](https://www.asp.net/) application to A
 
 ASP.NET is an open source web framework for building modern web apps and services. ASP.NET creates websites based on HTML5, CSS, and JavaScript that are simple, fast, and can scale to millions of users.
 
-## Pre-requisites
+## Pre-requisites for the lab
 
-1. **Microsoft Azure Account:** You will need a valid and an active azure account for this lab.
+1. An active **Microsoft Azure** account.
 
-1. You need a **Visual Studio Team Services Account** and [Personal Access Token](https://docs.microsoft.com/en-us/vsts/accounts/use-personal-access-tokens-to-authenticate)
+1. An active **VSTS** account. Create a new account from [here](https://docs.microsoft.com/en-us/vsts/accounts/create-account-msa-or-work-student).
+
+1. A [Personal Access Token](https://docs.microsoft.com/en-us/vsts/accounts/use-personal-access-tokens-to-authenticate) (PAT).
 
 ## Setting up the VSTS Project
 

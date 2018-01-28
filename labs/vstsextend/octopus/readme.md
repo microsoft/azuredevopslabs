@@ -5,6 +5,9 @@ sidebar: vsts2
 permalink: /labs/vstsextend/octopus/
 folder: /labs/vstsextend/octopus/
 ---
+Last updated : {{ "now" | date: "%b %d,%Y" }}
+
+## Overview
 
 Last updated : {{ "now" | date: "%b %d, %Y" }}.
 
@@ -12,21 +15,33 @@ Last updated : {{ "now" | date: "%b %d, %Y" }}.
 
 Visual Studio Team Services includes a first-class, powerful release management capability that simplifies deployment of any application to any platform. But teams who prefer or already have chosen Octopus deploy, can use the **[Octopus Deploy Integration](https://marketplace.visualstudio.com/items?itemName=octopusdeploy.octopus-deploy-build-release-tasks)** extension available on the Visual Studio Marketplace that provides Build and Release tasks to integrate Octopus Deploy with Team Services and Team Foundation Server.
 
-This lab shows how you can integrate Team Build and Octopus to automate build and deployment application using a sample PHP application that will be deployed to an Azure App Service.
+This lab shows how  we  can integrate VSTS/TFS Team Build and Octopus to automate build and deployment application using a sample PHP application that will be deployed to an Azure App Service.
 
-## Pre-requisites
+### Pre-requisites for the lab
 
-1. **Microsoft Azure Account:** You will need a valid and active azure account for the lab.
+<<<<<<< HEAD
+1. An active **Microsoft Azure** account.
 
+1. An active **VSTS** account. Create a new account from [here](https://docs.microsoft.com/en-us/vsts/accounts/create-account-msa-or-work-student).
+
+1. A [Personal Access Token](https://docs.microsoft.com/en-us/vsts/accounts/use-personal-access-tokens-to-authenticate) (PAT).
+=======
 1. You will need a **Visual Studio Team Services Account**. If you do not have one, you can sign up for free [here](https://www.visualstudio.com/products/visual-studio-team-services-vs)
 
 1. You will need a  **Personal Access Token** to set up your project using the Demo Generator. Please see this [article]((https://docs.microsoft.com/en-us/vsts/accounts/use-personal-access-tokens-to-authenticate)) for instructions to create your token.
 
     {% include note.html content= "You should treat Personal Access Tokens like passwords. It is recommended that you save them somewhere safe so that you can re-use them for future requests." %}
+>>>>>>> sachin/tfslabchange
 
 ## Setting up the Environment
 
 Octopus Deploy has two components:
+<<<<<<< HEAD
+
+* **Octopus Server** - a centralized web front-end that orchestrates deployments , and
+* **Tentacle** - agent that needs to be on every target endpoint
+=======
+>>>>>>> sachin/tfslabchange
 
 * **Octopus Server** - a centralized web front-end that orchestrates deployments , and
 * **Tentacle** - agent that needs to be on every target endpoint.
@@ -76,7 +91,7 @@ We will spin up a Octopus server on Azure. Click the **Deploy to Azure** button 
 
 ## Setting up Team Services project
 
-1. Use [VSTS Demo Data Generator](https://vstsdemogenerator.azurewebsites.net/?TemplateId=77370&name=octopus) to provision the project on your VSTS account.
+1. Use [VSTS Demo Data Generator](https://vstsdemogenerator.azurewebsites.net/?TemplateId=77370&name=octopus) to provision the project on our VSTS account.
 
    ![VSTS Demo Generator](images/1.png)
 
@@ -86,11 +101,17 @@ We will spin up a Octopus server on Azure. Click the **Deploy to Azure** button 
 
    ![VSTS Demo Generator](images/DemoGen.png)
 
+<<<<<<< HEAD
+   >Note: This URL will automatically select Octopus template in the demo generator. If  we  want to try other projects, use this URL instead - https://vstsdemogenerator.azurewebsites.net/
+=======
    {% include note.html content= "This URL will automatically select Octopus template in the demo generator. If you want to try other projects, use this URL instead - [https://vstsdemogenerator.azurewebsites.net/](https://vstsdemogenerator.azurewebsites.net/)" %}
+>>>>>>> sachin/tfslabchange
 
 ## Exercise 1: Configure Deployment Target in Octopus Server
 
-Next, let us define *environments*. In Octopus, an environment is a group of machines that you will deploy to at the same time; say *Dev*, *Test*, *Production* . Grouping your deployment targets by environment lets you define your deployment processes and have Octopus deploy the right versions of your software to the right environments at the right time.
+Let us create a deployment environment in Octopus server and link to Azure using Management Certificate. Environments are deployment targets consisting of machines or services used by Octopus Deploy to deploy software. With Octopus Deploy,  we  can deploy software to Windows servers, Linux servers, Microsoft Azure, or even an offline package drop.
+
+Grouping  our deployment targets by environment lets you define your deployment processes and have Octopus deploy the right versions of our software to the right environments at the right time.
 
 In this lab, we are using Azure App Service as the deployment target.
 
@@ -102,20 +123,27 @@ In this lab, we are using Azure App Service as the deployment target.
 
    ![](images/AddEnvironment.png)
 
-1. Let's call the environment *Dev*. Enter the name and click **Save**.
+1. Provide the environment name and click **Save**.
 
    ![](images/DevEnvironment.png)
 
-1. Next, we will need to add deployment targets. Since we are deploying to Azure, we will need to link Azure subscription to Octopus Deploy. Select **Accounts**.
+1. Octopus Deploy provides first-class support for deploying Azure Cloud Services and Azure Web Applications. To deploy software to Azure,   we must add  our  Azure subscription to Octopus Deploy, and then use the built-in step templates to deploy to the cloud. Once the environment is created, click on **Accounts**.
 
    ![Select Accounts](images/Dev.png)
 
+<<<<<<< HEAD
+1. Click on **ADD ACCOUNT** to link your Azure subscription to the created environment.
+=======
 1. Select **ADD ACCOUNT**.
+>>>>>>> sachin/tfslabchange
 
    ![Add Account](images/AddAccount.png)
 
 1. Octopus Deploy authenticates with Azure in one of two methods:
+<<<<<<< HEAD
+=======
 
+>>>>>>> sachin/tfslabchange
     * To deploy to Azure Resource Manager (ARM), Octopus requires [**Azure Service Principal Account**](https://octopus.com/docs/infrastructure/azure/creating-an-azure-account/creating-an-azure-service-principal-account)
     * [**Azure Management Certificate**](https://octopus.com/docs/infrastructure/azure/creating-an-azure-account/creating-an-azure-management-certificate-account) is used by Octopus to deploy to Cloud Services and Azure Web Apps.
 
@@ -135,7 +163,7 @@ In this lab, we are using Azure App Service as the deployment target.
 
    ![](images/O8.png)
 
-1. Click on your Subscription.
+1. Click on the Subscription.
 
    ![](images/O9.png)
 
@@ -143,13 +171,13 @@ In this lab, we are using Azure App Service as the deployment target.
 
     ![](images/O10.png)
 
-1. Click **Upload** to upload the certificate which you downloaded in the **step 7**.
+1. Click **Upload** to upload the certificate which was downloaded in the **step 7**.
 
     ![](images/O11.png)
 
     ![](images/O12.png)
 
-1. Once the certificate is uploaded successfully, go back to Octopus portal and click **Save and Test**. Once the verification is successful, we should be able to configure Octopus to deploy application packages to Azure.
+1. Once the certificate is uploaded successfully, go back to Octopus portal and click **Save and Test**. If the test succeeds,  we should be able to configure Octopus to deploy application packages to Azure.
 
     ![](images/VerificationSuccess.png)
 
@@ -167,7 +195,7 @@ Let us create a Project in Octopus to deploy the package to **Azure App Service*
 
    ![](images/PUProject.png)
 
-1. Once the project is created, click **Define your deployment process**. The [deployment process](https://octopus.com/docs/deploying-applications/deployment-process) is like a recipe for deploying your software. You define the recipe by adding steps and variables to a Project. Each step contains a specific action (or set of actions) that is executed as part of the deployment process each time your software is deployed.
+1. Once the project is created, click **Define your deployment process**. The [deployment process](https://octopus.com/docs/deploying-applications/deployment-process) is like a recipe for deploying your software.
 
    ![](images/DefineProcess.png)
 
@@ -241,7 +269,7 @@ In this exercise, we will package PHP application and push the package to Octopu
 
     ![](images/BuildProgress.png)
 
-1. Once the build completes, go to Octopus portal project dashboard. You will see the release completion in Octopus.
+1. Once the build completes, go to Octopus portal project dashboard. We will see the release completion in Octopus.
 
     ![](images/CD-Octopus.png)
 
@@ -252,7 +280,3 @@ In this exercise, we will package PHP application and push the package to Octopu
 1. You will see the PHP application up and running.
 
    ![](images/Changes.png)
-
-## Summary
-
-We can integrate Octopus with VSTS for delpoying applications to Azure.

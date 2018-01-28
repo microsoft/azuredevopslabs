@@ -22,13 +22,13 @@ The below diagram details the VSTS DevOps workflow with Docker:
 
 ## Image to be added here
 
-## Prerequisites
+## Pre-requisites for the lab
 
-1. Valid and active **Microsoft Azure** account.
+1. An active **Microsoft Azure** account.
 
-1. Valid **VSTS** account. Create a new account from [here.](https://docs.microsoft.com/en-us/vsts/accounts/create-account-msa-or-work-student)
+1. An active **VSTS** account. Create a new account from [here](https://docs.microsoft.com/en-us/vsts/accounts/create-account-msa-or-work-student).
 
-1. [Personal Access Token](https://docs.microsoft.com/en-us/vsts/accounts/use-personal-access-tokens-to-authenticate) (PAT)
+1. A [Personal Access Token](https://docs.microsoft.com/en-us/vsts/accounts/use-personal-access-tokens-to-authenticate) (PAT).
 
 1. Installation of the **Docker Integration** extension from [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=ms-vscs-rm.docker)
 
