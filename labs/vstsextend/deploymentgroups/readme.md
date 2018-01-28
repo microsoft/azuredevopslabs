@@ -84,17 +84,15 @@ Since the connections are not established during the project provisioning, the e
 
    ![Endpoint](images/vsts.png)
 
-## Exercise 2: Creating Deployment Group
-
-[Deployment Groups](https://docs.microsoft.com/en-us/vsts/build-release/concepts/definitions/release/deployment-groups/)
+## Exercise 2: Creating Deployment Groups
 
 > VSTS makes it easier to organize the servers for hosting the applications. A deployment group is a collection of machines with a VSTS deployment agent on each of them. Each machine interacts with VSTS to coordinate deployment of the app.
 
-1. Navigate to the **Build & Release** tab and click on the **Deployment Groups** option. Click on the **Add deployment group** button to configure a deployment group.
+1. Navigate to the **Build & Release** tab and click on the [**Deployment Groups**](https://docs.microsoft.com/en-us/vsts/build-release/concepts/definitions/release/deployment-groups/) option. Click on the **Add deployment group** button to configure a Deployment Group.
 
    ![Deployment group](images/add_deploymentgroup.png)
 
-1. Provide a `*Deployment group name`, and click on the **Create** button. The registration script generated will be displayed.
+1. Provide a `Deployment group name`, and click on the **Create** button. The registration script generated will be displayed.
 
    ![Deployment group](images/name_dg.png)
 
@@ -102,54 +100,52 @@ Since the connections are not established during the project provisioning, the e
 
 ## Exercise 3: Configure Releases
 
-We have the target machines available in the deployment group to deploy the application. The release definition uses **Phases** to deploy to target servers.
+The target servers are available in the deployment group for deploying the application. The release definition uses **Phases** to deploy the application to the target servers.
 
-A [Phase](https://docs.microsoft.com/en-us/vsts/build-release/concepts/process/phases) is a logical grouping of tasks that defines the runtime target on which the tasks will execute. A deployment group phase executes tasks on the machines defined in a deployment group.
+> A [Phase](https://docs.microsoft.com/en-us/vsts/build-release/concepts/process/phases) is a logical grouping of the tasks that defines the runtime target on which the tasks will execute. A deployment group phase executes tasks on the machines defined in a deployment group.
 
-1. Go to Release under **Build & Release** tab. Edit the release definition **Deployment Groups** and select **Tasks**.
+1. Click on the **Build & Release** tab and select the **Release** option. Select the release definition **Deployment Groups** and then select the **Tasks** tab
 
-    ![](images/release_tab.png)
+    ![Release](images/release_tab.png)
 
-    ![](images/task.png)
+    ![Tasks](images/task.png)
 
-1. You will see tasks grouped under **Agent phase**, **Database deploy phase** and **IIS Deployment phase**.
+1. The tasks will be grouped under the **Agent phase**, **Database deploy phase** and **IIS Deployment phase**.
 
-   ![](images/phases.png)
+   ![Phases](images/phases.png)
 
-   - **Agent Phase**: In this phase , we will associate the target servers to the deployment group. The below task is used-
+   - **Agent Phase**: In this phase, the target servers will be associated to the deployment group using the Azure Resource Group Deployment task.
 
      - **Azure Resource Group Deployment**: This task will automate the configuration of the deployment group agents to the web and db servers.
 
-       ![](images/agent_phase.png)
+       ![Agent Phase](images/agent_phase.png)
 
-   - **Database deploy phase**: This deployment group phase executes tasks on the machines defined in the deployment group. This phase is linked to **db** tag.
+   - **Database deploy phase**: This deployment group phase executes tasks on the machines defined in the deployment group. This phase is linked to the **db** tag.
 
      - **Deploy Dacpac**: This task is used to deploy dacpac file to the DB server.
 
-       ![](images/db_tag.png)
+       ![tag](images/db_tag.png)
 
-        </br>
+       ![dacpac](images/dacpac.png)
 
-       ![](images/dacpac.png)
+   - **IIS Deployment phase**: In this phase, the application will be deployed to the web servers using the below tasks. This phase is linked to **web** tag.
 
-   - **IIS Deployment phase**: In this phase, we deploy application to the web servers.This phase is linked to **web** tag. We use following tasks-
-
-      - **Azure Network Load Balancer**: As the target machines are connected to NLB, this task will disconnect machines from NLB before the deployment and re-connects to NLB after the deployment.
+      - **Azure Network Load Balancer**: As the target machines are connected to NLB, this task will disconnect machines from the NLB prior to the deployment and reconnect to the NLB after the deployment.
 
       - **IIS Web App Manage**: The task runs on the deployment target machine(s) registered with the Deployment Group configured for the task/phase. It creates a webapp and application pool locally with the name **PartsUnlimited** running under the port
       **80**
 
       - **IIS Web App Deploy**: The task runs on the deployment target machine(s) registered with the Deployment Group configured for the task/phase. It deploys the application to the IIS server using **Web Deploy**.
 
-        ![](images/iis.png)
+        ![IIS](images/iis.png)
 
-1. We can control the number of concurrent deployments by setting the **Maximum number of targets in parallel**. For example, in this lab we have 6 web servers, setting the target servers to **50%** will deploy the build artifact to 3 web servers parallely and then to the remaining 3 servers.
+1. The number of concurrent deployments can be controlled by setting the value in the **Maximum number of targets in parallel** field. For example, in this lab, since there are 6 web servers, setting the target servers to **50%** will deploy the build artifacts to 3 web servers in parallel at a time.
 
-   ![](images/targets.png)
+   ![Targets](images/targets.png)
 
-1. Go to **Disconnect Azure Network Load Balancer** task and update the following details-
+1. Select the **Disconnect Azure Network Load Balancer** task and provide the following details:
 
-   - **Azure Subscription**: ARM Endpoint created in **Exercise 1**
+   - **Azure Subscription**: An ARM Endpoint created in the **Exercise 1**
 
    - **Resource Group**: Name of the Resource Group which was created while provisioning the environment
 
@@ -157,11 +153,11 @@ A [Phase](https://docs.microsoft.com/en-us/vsts/build-release/concepts/process/p
 
    - **Action**: Set the action to **Disconnect Primary Network Interface**
 
-   ![](images/disconnect_lb.png)
+   ![Disconnect load balancer](images/disconnect_lb.png)
 
-1. Go to **Connect Azure Network Load Balancer** and update the following details-
+1. Select the **Connect Azure Network Load Balancer** task and provide the following details:
 
-    - **Azure Subscription**: ARM Endpoint created in **Exercise 1**
+    - **Azure Subscription**: An ARM Endpoint created in the **Exercise 1**
 
     - **Resource Group**: Name of the Resource Group which was created while provisioning the environment
 
@@ -169,36 +165,36 @@ A [Phase](https://docs.microsoft.com/en-us/vsts/build-release/concepts/process/p
 
     - **Action**: Set the action to **Connect Primary Network Interface**
 
-    ![](images/connect_lb.png)
+    ![Connect load balancer](images/connect_lb.png)
 
-1. Go to **Variables** tab and click on edit  to update the **DefaultConnectionString** value with **Your SQL_DNS name**.
+1. Click on the **Variables** tab and select the **Process Variables** option. Replace the value of the **DefaultConnectionString** variable with the `SQL DNS` value noted earlier.
 
-   ![](images/release_variable.png)
+   ![Release variable](images/release_variable.png)
 
-1. Click **Save** and **Create release**.
+1. Click on the **Save** button and then click on the **Create release** option.
 
-   ![](images/save.png)
+   ![Save](images/save.png)
 
-   ![](images/create_release.png)
+   ![Create Release](images/create_release.png)
 
-   ![](images/release.png)
+   ![New Release](images/release.png)
 
-1. Once the release is complete, you will see the deployments are done to DB and Web Servers. Go to Logs to see the summary.
+1. Once the release is completed, the deployments will be done to the DB and Web servers. Click on the logs to view the release summary.
 
-    ![](images/release_summary.png)
+    ![Release Summary](images/release_summary.png)
 
-1. In one of your web servers, go to **DNS** to access the application.
+1. In the Azure Portal, click on the **DNS** of any application instance, to access the application.
 
-   > [**Azure Load Balancer**](https://docs.microsoft.com/en-us/azure/load-balancer/load-balancer-overview) is being used here which  distributes incoming traffic among healthy instances of services defined in a load-balanced set. So, **DNS** of all web servers are the same.
+   > The [**Azure Load Balancer**](https://docs.microsoft.com/en-us/azure/load-balancer/load-balancer-overview) will distribute incoming traffic among healthy instances of servers defined in a load-balanced set. Hence the **DNS** of all web server instances will be the same.
 
-    ![](images/web_server.png)
+    ![Web Server](images/web_server.png)
 
-    ![](images/web_dns.png)
+    ![Web DNS](images/web_dns.png)
 
 1. The deployed web application is displayed.
 
-    ![](images/application.png)
+    ![Web application](images/application.png)
 
 ## Summary
 
-With Visual Studio Team Services and Azure, we can build and release dotnet applications to multiple target servers using Deployment Groups.
+Using VSTS and Azure, web applications can be easily compiled and deployed to multiple target servers using Deployment Groups.
