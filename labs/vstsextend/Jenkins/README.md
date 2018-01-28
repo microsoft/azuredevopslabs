@@ -100,7 +100,7 @@ Read the complete spec at [https://docs.microsoft.com/en-us/azure/architecture/r
 
     `sudo vi /var/lib/jenkins/secrets/initialAdminPassword`
 
-    > You can double click on the password text and use **CTRL+C** to copy the text and place it in the clipboard
+    {% include tip.html content="You can double click on the password text and use **CTRL+C** to copy the text and place it in the clipboard" %}
 
 1. Return to the browser, paste the copied text and click the **Continue** button.
 

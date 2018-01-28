@@ -6,7 +6,8 @@ permalink: /labs/vstsextend/github/
 folder: /labs/vstsextend/github/
 ---
 
-Last updated : {{ "now" | date: "%b %d, %Y" }}.
+Last updated : {{ "now" | date: "%b %d, %Y" }}
+
 ## Overview
 
 **GitHub** is a web based **Git** version control repository hosting service which offers distributed version control and source code management functionality of Git.
@@ -23,8 +24,9 @@ The primary difference between the two is that VSTS is focused on closed source 
 
 Teams can overcome this shortfall by using Visual Studio Team Services (VSTS) as a continuous integration platform for GitHub.
 
-In this hands-on lab, we will introduce you to open source DevOps using **GitHub, Visual Studio Team Services** and **Azure**.
-You will learn how to deploy an **ASP.Net** application to Azure App Service using CI/CD pipeline in Visual Studio Team Services with code repository in GitHub.We will cover the following steps:
+### What's covered in this lab
+
+In this hands-on lab, we will introduce you to open source DevOps using **GitHub, Visual Studio Team Services** and **Azure**. You will learn how to deploy an **ASP.Net** application to Azure App Service using CI/CD pipeline in Visual Studio Team Services with code repository in GitHub.We will cover the following steps:
 
 * Forking project repository to your GitHub account
 * Linking GitHub account to VSTS
@@ -32,7 +34,7 @@ You will learn how to deploy an **ASP.Net** application to Azure App Service usi
 * Configuring build Triggers
 * Executing Build
 
-## Pre-requisites for the lab
+### Pre-requisites for the lab
 
 1. An active **Microsoft Azure** account.
 

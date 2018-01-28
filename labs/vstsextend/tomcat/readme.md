@@ -14,7 +14,7 @@ In this lab, you will learn how you can use Release Management(RM) in Visual Stu
 
 For this purpose of the lab, we will use Azure App Service and Azure Database for MySQL, a relational database service based on the open source MySQL Server engine. It is a fully managed database as a service offering capable of handing mission-critical workload with predictable performance and dynamic scalability.
 
-{% include note.html content= "This article deploys a Java app to App Service on Windows. To deploy a **Net Core App** container to Azure, please see  [deploying Docker .NET Core container to Azure App Service](../docker). To deploy a Dockerized Java application, see [Deploying a Dockerized Java App to Azure App Service]" %}
+{% include note.html content= "This article deploys a Java app to App Service on Windows. To deploy a **Net Core App** container to Azure, please see  [deploying Docker .NET Core container to Azure App Service](../docker). To deploy a Dockerized Java application, see [Deploying a Dockerized Java App to Azure App Service](../dockerjava/)" %}
 
 ### What's covered in this lab
 
@@ -24,7 +24,7 @@ This lab will show how you can
 - Create a new MySQL database
 - Use Azure App Service Task to deploy a WAR file
 
-## Pre-requisites for the lab
+### Pre-requisites for the lab
 
 1. An active **Microsoft Azure** account.
 
@@ -161,6 +161,6 @@ You have now setup and configured all the resources that is needed to deploy and
 
 1. If your database was setup correctly and the connection parameters are valid, you should be able to login to the portal.
 
-    {% include note.html content="If you encounter an error with ***The specified CGI application encountered an error and the server terminated the process*** message, check whether you have entered the app settings variables and values (for the database connection) correctly" %}
+    {% include warning.html content="If you encounter an error with ***The specified CGI application encountered an error and the server terminated the process*** message, check whether you have entered the app settings variables and values (for the database connection) correctly" %}
 
     ![MyShuttle page after login](images/myshuttle-afterlogin.png)

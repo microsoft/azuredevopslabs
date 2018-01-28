@@ -16,7 +16,7 @@ All the above challenges have been handled seamlessly with the introduction of t
 
 The Deployment Group installs a deployment agent on each of the target servers within a configured group and instructs the Release Management to gradually deploy the application to all servers that belong to the Deployment Group. Multiple pipelines can be created for roll-out deployments so that the latest version of the application could be provided in a phased mannery to multiple user groups for validating the newly introduced features.
 
-## Pre-requisites for the lab
+### Pre-requisites for the lab
 
 1. An active **Microsoft Azure** account.
 
@@ -24,7 +24,7 @@ The Deployment Group installs a deployment agent on each of the target servers w
 
 1. A [Personal Access Token](https://docs.microsoft.com/en-us/vsts/accounts/use-personal-access-tokens-to-authenticate) (PAT).
 
-## Setting up the Environment
+### Setting up the Environment
 
 We will use an ARM template to provision the below resources on Azure:
 

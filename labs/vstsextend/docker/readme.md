@@ -20,9 +20,9 @@ Web App for Containers lets you bring your own [Docker](https://www.docker.com/w
 
 The below diagram details the VSTS DevOps workflow with Docker:
 
-## Image to be added here
+### Image to be added here
 
-## Pre-requisites for the lab
+### Pre-requisites for the lab
 
 1. An active **Microsoft Azure** account.
 
