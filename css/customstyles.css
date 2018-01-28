@@ -1494,14 +1494,7 @@ div.lab-item {
     font-weight: 80%;
     padding-top: 10px;
 }
-div.lab-item:hover{
-    border-style: solid;
-    /*background-color: #efefef
-    border-color: #2361c4;
-    box-shadow: 0 0 0 2px;*/
-    box-shadow: 2px 5px #888888;
-    transition: .5s ease
-}
+
 
 div.clear {
     clear: both;
@@ -1647,8 +1640,7 @@ div.lablist {
 }
 
 div.herotext2{
-    font-size: 20px;
-    font-style: italic;
+    font-size: 18px;
     line-height: 1.6;
     width: 420px;
 }
@@ -1672,11 +1664,6 @@ a.launch-hol {
 
 a.launch-hol {
     box-shadow: 2px 2px 1px #797979;
-}
-
-
-ul.labslist{
-    list-style-image: url('../images/lab-icon.png');
 }
 
 li.labslistitems{

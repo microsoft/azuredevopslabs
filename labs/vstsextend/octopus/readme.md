@@ -9,11 +9,14 @@ Last updated : {{ "now" | date: "%b %d,%Y" }}
 
 ## Overview
 
+Last updated : {{ "now" | date: "%b %d, %Y" }}.
+
 [Octopus Deploy](https://Octopus.com) is an automated deployment server that makes it easy to automate deployment of ASP.NET web applications, Java applications, NodeJS application and custom scripts to multiple environments.
 
 Visual Studio Team Services includes a first-class, powerful release management capability that simplifies deployment of any application to any platform. But teams who prefer or already have chosen Octopus deploy, can use the **[Octopus Deploy Integration](https://marketplace.visualstudio.com/items?itemName=octopusdeploy.octopus-deploy-build-release-tasks)** extension available on the Visual Studio Marketplace that provides Build and Release tasks to integrate Octopus Deploy with Team Services and Team Foundation Server.
 
 This lab shows how  we  can integrate VSTS/TFS Team Build and Octopus to automate build and deployment application using a sample PHP application that will be deployed to an Azure App Service.
+<<<<<<< HEAD
 
 ### Pre-requisites for the lab
 
@@ -22,15 +25,45 @@ This lab shows how  we  can integrate VSTS/TFS Team Build and Octopus to automat
 1. An active **VSTS** account. Create a new account from [here](https://docs.microsoft.com/en-us/vsts/accounts/create-account-msa-or-work-student).
 
 1. A [Personal Access Token](https://docs.microsoft.com/en-us/vsts/accounts/use-personal-access-tokens-to-authenticate) (PAT).
+=======
+
+### Pre-requisites for the lab
+
+<<<<<<< HEAD
+1. An active **Microsoft Azure** account.
+
+1. An active **VSTS** account. Create a new account from [here](https://docs.microsoft.com/en-us/vsts/accounts/create-account-msa-or-work-student).
+
+1. A [Personal Access Token](https://docs.microsoft.com/en-us/vsts/accounts/use-personal-access-tokens-to-authenticate) (PAT).
+=======
+1. You will need a **Visual Studio Team Services Account**. If you do not have one, you can sign up for free [here](https://www.visualstudio.com/products/visual-studio-team-services-vs)
+
+1. You will need a  **Personal Access Token** to set up your project using the Demo Generator. Please see this [article]((https://docs.microsoft.com/en-us/vsts/accounts/use-personal-access-tokens-to-authenticate)) for instructions to create your token.
+
+    {% include note.html content= "You should treat Personal Access Tokens like passwords. It is recommended that you save them somewhere safe so that you can re-use them for future requests." %}
+>>>>>>> sachin/tfslabchange
+>>>>>>> 12aa420cd8c4e3aff475ee6040f154cd9093f105
 
 ## Setting up the Environment
 
 Octopus Deploy has two components:
+<<<<<<< HEAD
 
 * **Octopus Server** - a centralized web front-end that orchestrates deployments , and
 * **Tentacle** - agent that needs to be on every target endpoint
+=======
+<<<<<<< HEAD
 
- We will spin up a Octopus server on Azure. Click the **Deploy to Azure** button below to provision a Octopus Server.
+* **Octopus Server** - a centralized web front-end that orchestrates deployments , and
+* **Tentacle** - agent that needs to be on every target endpoint
+=======
+>>>>>>> sachin/tfslabchange
+>>>>>>> 12aa420cd8c4e3aff475ee6040f154cd9093f105
+
+* **Octopus Server** - a centralized web front-end that orchestrates deployments , and
+* **Tentacle** - agent that needs to be on every target endpoint.
+
+We will spin up a Octopus server on Azure. Click the **Deploy to Azure** button below to provision a Octopus Server.
 
    <a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FMicrosoft%2FVSTS-DevOps-Labs%2Fmaster%2Foctopus%2Farm%2520template%2Fazuredeploy.json" target="_blank">![](http://azuredeploy.net/deploybutton.png)</a>
 
@@ -53,8 +86,9 @@ Octopus Deploy has two components:
 
    ![](images/O1.png)
 
- You will see the Octopus deploy web portal.
-    ![Octopus Dashboard](images/octopusportal.png)
+1. You will see the Octopus deploy web portal.
+
+   ![Octopus Dashboard](images/octopusportal.png)
 
 1. From the Octopus Deploy portal, select **Profile** under *User* menu.
 
@@ -84,7 +118,15 @@ Octopus Deploy has two components:
 
    ![VSTS Demo Generator](images/DemoGen.png)
 
+<<<<<<< HEAD
    >Note: This URL will automatically select Octopus template in the demo generator. If  we  want to try other projects, use this URL instead - https://vstsdemogenerator.azurewebsites.net/
+=======
+<<<<<<< HEAD
+   >Note: This URL will automatically select Octopus template in the demo generator. If  we  want to try other projects, use this URL instead - https://vstsdemogenerator.azurewebsites.net/
+=======
+   {% include note.html content= "This URL will automatically select Octopus template in the demo generator. If you want to try other projects, use this URL instead - [https://vstsdemogenerator.azurewebsites.net/](https://vstsdemogenerator.azurewebsites.net/)" %}
+>>>>>>> sachin/tfslabchange
+>>>>>>> 12aa420cd8c4e3aff475ee6040f154cd9093f105
 
 ## Exercise 1: Configure Deployment Target in Octopus Server
 
@@ -110,11 +152,26 @@ In this lab, we are using Azure App Service as the deployment target.
 
    ![Select Accounts](images/Dev.png)
 
+<<<<<<< HEAD
 1. Click on **ADD ACCOUNT** to link your Azure subscription to the created environment.
+=======
+<<<<<<< HEAD
+1. Click on **ADD ACCOUNT** to link your Azure subscription to the created environment.
+=======
+1. Select **ADD ACCOUNT**.
+>>>>>>> sachin/tfslabchange
+>>>>>>> 12aa420cd8c4e3aff475ee6040f154cd9093f105
 
    ![Add Account](images/AddAccount.png)
 
 1. Octopus Deploy authenticates with Azure in one of two methods:
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> sachin/tfslabchange
+>>>>>>> 12aa420cd8c4e3aff475ee6040f154cd9093f105
     * To deploy to Azure Resource Manager (ARM), Octopus requires [**Azure Service Principal Account**](https://octopus.com/docs/infrastructure/azure/creating-an-azure-account/creating-an-azure-service-principal-account)
     * [**Azure Management Certificate**](https://octopus.com/docs/infrastructure/azure/creating-an-azure-account/creating-an-azure-management-certificate-account) is used by Octopus to deploy to Cloud Services and Azure Web Apps.
 
@@ -212,7 +269,11 @@ In this exercise, we will package PHP application and push the package to Octopu
 
 1. In **Push Packages to Octopus** task, update **Octopus Deploy Server** field with the created endpoint value.
 
+<<<<<<< HEAD
    > **Note** : We will encounter an error - **TFS.WebApi.Exception: Page not found** for Azure tasks in the release definition. This is due to a recent change in the VSTS Release Management API. While we are working on updating VSTS Demo Generator to resolve this issue, we can fix this by typing a random text in the **Azure Subscription** field and click the **Refresh** icon next to it. Once the field is refreshed, we can select the endpoint from the drop down.
+=======
+   {% include note.html content= "You will encounter an error - **TFS.WebApi.Exception: Page not found** for Azure tasks in the release definition. This is due to a recent change in the VSTS Release Management API. While we are working on updating VSTS Demo Generator to resolve this issue, you can fix this by typing a random text in the **Azure Subscription** field and click the **Refresh** icon next to it. Once the field is refreshed, you can select the endpoint from the drop down." %}
+>>>>>>> 12aa420cd8c4e3aff475ee6040f154cd9093f105
 
    ![](images/QBuild.png)
 
@@ -250,4 +311,8 @@ In this exercise, we will package PHP application and push the package to Octopu
 
 1. You will see the PHP application up and running.
 
+<<<<<<< HEAD
    ![](images/Changes.png)
+=======
+   ![](images/Changes.png)
+>>>>>>> 12aa420cd8c4e3aff475ee6040f154cd9093f105

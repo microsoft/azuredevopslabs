@@ -6,7 +6,7 @@ permalink: /labs/vsts/selenium/
 folder: /labs/vsts/selenium/
 ---
 
-Last updated : {{ "now" | date: "%b %d,%Y" }}.
+Last updated : {{ "now" | date: "%b %d, %Y" }}.
 
 ## Overview
 
@@ -116,8 +116,7 @@ As there is no template for Selenium testing, the easiest way to get started is 
                 }
             }
         }
-
-    ````csharp
+        ````
 
 1. Switch to the Azure Portal.
 
@@ -162,20 +161,20 @@ As there is no template for Selenium testing, the easiest way to get started is 
     - Test Assembly: Update the wildcards to be sure that the task will find your test assembly.
     - Override TestRun Parameters:  URL=http://{your_webapp}.azurewebsites.net/;Browser=PhantomJS
 
-    > **NOTE:** The URL and Browser are passed in as Test Run Parameters.  If you look at the Unit Test class above you will see these parameters are used if they exist.
+    {% include note.html content= "The URL and Browser are passed in as Test Run Parameters.  If you look at the Unit Test class above you will see these parameters are used if they exist." %}
 
    ![](images/8.png)
 
 1. Save the build definition and queue a new build. Notice that you can set the URL and Browser Properties in the Queue build dialog, because the code you used for the UnitTest1.cs class set the Allow at Queue Time variable.
 
-    > **NOTE:** While you could run the Tests using the PhantomJS driver on the hosted build agent the other drivers will require to be run interactively –therefore will fail on the hosted build agent. The best solution is probably running your build agent or using Selenium Grid to remote those calls.
+    {% include note.html content= "While you could run the Tests using the PhantomJS driver on the hosted build agent the other drivers will require to be run interactively –therefore will fail on the hosted build agent. The best solution is probably running your build agent or using Selenium Grid to remote those calls.
 
-    > The setting for the build controller is in the General tab of the build definition. For information about running your own build agent, see [Deploy a Windows build agent](https://www.visualstudio.com/en-us/docs/build/admin/agents/v2-windows)
+    The setting for the build controller is in the General tab of the build definition. For information about running your own build agent, see [Deploy a Windows build agent](https://www.visualstudio.com/en-us/docs/build/admin/agents/v2-windows)" %}
 
 1. To validate the test results from a build, open the build summary from the Explorer tab.
 
     ![](images/9.png)
 
-    > The build summary includes a snapshot of the test results. There is also a Tests results page that highlights the build-on-build changes, including errors, stack traces, and the ability to easily create a bug that contains this information.
+    >The build summary includes a snapshot of the test results. There is also a Tests results page that highlights the build-on-build changes, including errors, stack traces, and the ability to easily create a bug that contains this information.
 
     ![](images/10.png)

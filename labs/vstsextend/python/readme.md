@@ -1,4 +1,12 @@
-# Deploy Python application to Azure App Service using VSTS
+---
+title: Deploy Python application to Azure App Service using VSTS
+layout: page
+sidebar: vsts2
+permalink: /labs/vstsextend/python/
+folder: /labs/vstsextend/python/
+---
+
+Last updated : {{ "now" | date: "%b %d, %Y" }}.
 
 ## Overview
 
@@ -22,7 +30,9 @@ This lab shows how to deploy a **Python** application to **Azure App Service** f
 
  2. Once the project is provisioned, click the URL to navigate to the project.
 
-    <img src="images/python_template.png">
+1. Once the project is provisioned, click the URL to navigate to the project.
+
+    ![](images/python_template.png)
 
 ## Exercise 1: Endpoint Creation
 
@@ -30,7 +40,7 @@ Since the connections are not established during project provisioning, we will m
 
 In VSTS, navigate to **Services** by clicking the gear icon, and click  **+ New Service Endpoint**. Select **Azure Resource Manager**. Specify connection name, select your subscription from the drop down and click OK. We use this endpoint to connect VSTS with Azure.
 
-   <img src ="images/service_endpoint.png">
+   ![](images/service_endpoint.png)
 
 You will be prompted to authorize this connection with Azure credentials.
 
@@ -40,27 +50,27 @@ You will be prompted to authorize this connection with Azure credentials.
 
 We will provision the resources on **Azure** using ARM template in the **release definition**.
 
-> **Note**: You will encounter an error - **TFS.WebApi.Exception: Page not found** for Azure tasks in the release definition. This is due to a recent change in the VSTS Release Management API. While we are working on updating VSTS Demo Generator to resolve this issue, you can fix this by typing a random text in the **Azure Subscription** field and click the **Refresh** icon next to it. Once the field is refreshed, you can select the endpoint from the drop down.
+{% include note.html content= "You will encounter an error - **TFS.WebApi.Exception: Page not found** for Azure tasks in the release definition. This is due to a recent change in the VSTS Release Management API. While we are working on updating VSTS Demo Generator to resolve this issue, you can fix this by typing a random text in the **Azure Subscription** field and click the **Refresh** icon next to it. Once the field is refreshed, you can select the endpoint from the drop down." %}
 
 1. Go to **Releases** under **Build and Release** tab, Select release definition **Python** and click **Edit**
 
-   <img src ="images/releaseedit.png">
+   ![](images/releaseedit.png)
 
-2. Go to **Tasks** and select **Dev** environment.
+1. Go to **Tasks** and select **Dev** environment.
 
-   <img src ="images/environment.png">
+   ![](images/environment.png)
 
-3. Under **Azure Resource Group Deployment** task, update **Azure subscription** and **Location**.
+1. Under **Azure Resource Group Deployment** task, update **Azure subscription** and **Location**.
 
-   <img src ="images/azure_sub.png">
+   ![](images/azure_sub.png)
 
 4. Under **Install Python Extension** task, update **Azure subscription**.
 
-   <img src ="images/python_sub.png">
+   ![](images/python_sub.png)
 
-5. Under **Azure App Service Deploy** task, update **Azure subscription** and click **Save**.
+1. Under **Azure App Service Deploy** task, update **Azure subscription** and click **Save**.
 
-   <img src ="images/deploy_app.png">
+   ![](images/deploy_app.png">
 
     <table width="75%">
     <thead>
@@ -90,21 +100,19 @@ We will provision the resources on **Azure** using ARM template in the **release
 
 1. Go to **Code** tab and navigate to the below path to edit the file.
 
-   >python/app/templates/app/index.html
+   {% include tip.html content= "python/app/templates/app/index.html" %}
 
-   <img src ="images/code_tab.png">
+   ![](images/code_tab.png)
 
-2. Go to line number **32**, modify **Continuous Delivery** to **Continuous Delivery for Python** and commit the code.
+1. Go to line number **32**, modify **Continuous Delivery** to **Continuous Delivery for Python** and commit the code.
 
-   <img src ="images/commit_code.png">
+   ![](images/commit_code.png)
 
-3. Go to **Builds** tab under **Build and Release** tab to see the build in progress.
+1. Go to **Builds** tab under **Build and Release** tab to see the build in progress.
 
-   <img src="images/build.png">
+   ![](images/build.png)
 
-   <br/>
-
-   <img src="images/in_progress_build.png">
+   ![](images/in_progress_build.png)
 
    Let's explore the build definition while the build is in-progress. The tasks used are listed as shown.
 
@@ -131,32 +139,24 @@ We will provision the resources on **Azure** using ARM template in the **release
 
    <br/>
 
-4. The build generates artifact which is used for deployment to Azure.
+1. The build generates artifact which is used for deployment to Azure.
 
-   <img src ="images/build_result.png">
+   ![](images/build_result.png)
 
-5. Once the build is complete, it triggers the CD pipeline. You can notice the linked release is in progress by navigating to Releases under Build and Release. The release will provision the Azure Web app and deploy the zip file generated by the associated build.
+1. Once the build is complete, it triggers the CD pipeline. You can notice the linked release is in progress by navigating to Releases under Build and Release. The release will provision the Azure Web app and deploy the zip file generated by the associated build.
 
-   <img src ="images/release_in_progress.png">
+   ![](images/release_in_progress.png)
 
-   <br/>
+   ![](images/release_succesful.png)
 
-   <img src ="images/release_succesful.png">
+1. Login to [Azure Portal](https://portal.azure.com) and go to  the **Resource Group** with the name **Python**. You will see the resources **App Service** and **App Service Plan**.
 
-   <br/>
+   ![](images/azure_portal.png)
 
-6. Login to [Azure Portal](https://portal.azure.com) and go to  the **Resource Group** with the name **Python**. You will see the resources **App Service** and **App Service Plan**.
+1. Select the **App Service** and from the Overview tab, click Browse to see the application deployed.
 
-   <img src ="images/azure_portal.png">
-
-7. Select the **App Service** and from the Overview tab, click Browse to see the application deployed.
-
-   <img src ="images/pythonapp.png">
+   ![](images/pythonapp.png)
 
 ## Summary
 
-This lab shows how to create a continuous integration(CI) and continuous deployment (CD) pipeline for Python code with Visual Studio Team Services (VSTS) on Azure..
-
-## Feedback
-
-Please let <a href="mailto:devopsdemos@microsoft.com">us</a> know if you have any feedback on this lab.
+This lab shows how to create a continuous integration(CI) and continuous deployment (CD) pipeline for Python code with Visual Studio Team Services (VSTS) on Azure.

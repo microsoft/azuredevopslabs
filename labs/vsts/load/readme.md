@@ -6,7 +6,7 @@ permalink: /labs/vsts/load/
 folder: /labs/vsts/load/
 ---
 
-Last updated : {{ "now" | date: "%b %d,%Y" }}.
+Last updated : {{ "now" | date: "%b %d, %Y" }}.
 
 ## Overview
 

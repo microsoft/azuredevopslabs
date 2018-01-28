@@ -1,4 +1,12 @@
-# CI-CD using GitHub and Visual Studio Team Services
+---
+title: CI-CD using GitHub and Visual Studio Team Services
+layout: page
+sidebar: vsts2
+permalink: /labs/vstsextend/github/
+folder: /labs/vstsextend/github/
+---
+
+Last updated : {{ "now" | date: "%b %d, %Y" }}
 
 ## Overview
 
@@ -16,8 +24,9 @@ The primary difference between the two is that VSTS is focused on closed source 
 
 Teams can overcome this shortfall by using Visual Studio Team Services (VSTS) as a continuous integration platform for GitHub.
 
-In this hands-on lab, we will introduce you to open source DevOps using **GitHub, Visual Studio Team Services** and **Azure**.
-You will learn how to deploy an **ASP.Net** application to Azure App Service using CI/CD pipeline in Visual Studio Team Services with code repository in GitHub.We will cover the following steps:
+### What's covered in this lab
+
+In this hands-on lab, we will introduce you to open source DevOps using **GitHub, Visual Studio Team Services** and **Azure**. You will learn how to deploy an **ASP.Net** application to Azure App Service using CI/CD pipeline in Visual Studio Team Services with code repository in GitHub.We will cover the following steps:
 
 * Forking project repository to your GitHub account
 * Linking GitHub account to VSTS
@@ -186,7 +195,3 @@ Navigate to your forked GitHub repository. Let's make a simple change in the cod
 ## Summary
 
 Whether your code lives in **Visual Studio Team Services** or **GitHub** (or both), manage build, test, and deploy in one place. Create and manage a Continuous Integration process that connects to GitHub, gets the source files, compiles and deploys the binaries to any environment with Continuous Deployment feature.
-
-## Feedback
-
-Please let [us](mailto:devopsdemos@microsoft.com) know if you have any feedback on this lab.

@@ -25,7 +25,7 @@ While there are pros and cons with both approaches, the later approach has multi
  1. Triggering of a Continuous Deployment (CD) when the build is completed successfully
  1. Execution of the build as part of the branching strategy
 
-### What's covered in this lab?
+## What's covered in this lab?
 
 This lab covers both the approaches and the following tasks will be performed
 

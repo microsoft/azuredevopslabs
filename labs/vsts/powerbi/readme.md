@@ -6,7 +6,7 @@ permalink: /labs/vsts/powerbi/
 folder: /labs/vsts/powerbi/
 ---
 
-Last updated : {{ "now" | date: "%b %d,%Y" }}.
+Last updated : {{ "now" | date: "%b %d, %Y" }}.
 
 ## Overview
 
@@ -14,10 +14,9 @@ You can gain insight and analyze the progress and quality of your project by con
 
 Power BI is a suite of business analytics tools that deliver insights throughout your organization. Connect to hundreds of data sources, simplify data prep, and drive ad hoc analysis. Produce beautiful reports, then publish them for your organization to consume on the web and across mobile devices. Everyone can create personalized dashboards with a unique, 360-degree view of their business. And scale across the enterprise, with governance and security built-in.
 
->**Important Note**:
-The Visual Studio Team Services (VSTS) Content Pack for Power BI has been deprecated on November 15, 2017 primarily due to the negative impact it has had on VSTS accounts, including throttling end users access. Support will continue for all existing PowerBI.com data sets based on the Content Pack. However, you won’t be able to create any new data sets.
+{% include important.html content= "The Visual Studio Team Services (VSTS) Content Pack for Power BI has been deprecated on November 15, 2017 primarily due to the negative impact it has had on VSTS accounts, including throttling end users access. Support will continue for all existing PowerBI.com data sets based on the Content Pack. However, you won’t be able to create any new data sets.
 
->The [Analytics Marketplace extension](https://marketplace.visualstudio.com/items?itemName=ms.vss-analytics) and upcoming updates to the [Power BI Desktop connector](https://docs.microsoft.com/en-us/vsts/report/powerbi/data-connector-connect) for VSTS are intended to replace and improve on the capabilities of the Content Pack. While the Analytics Marketplace extension currently supports Work Item Tracking data, we will update it to support additional data types including Tests, Build, Release and Version Control. In the interim, you can use [VSTS REST APIs](https://www.visualstudio.com/en-us/docs/integrate/api/overview) as an alternative to the Content Pack to report on these additional data types.
+The [Analytics Marketplace extension](https://marketplace.visualstudio.com/items?itemName=ms.vss-analytics) and upcoming updates to the [Power BI Desktop connector](https://docs.microsoft.com/en-us/vsts/report/powerbi/data-connector-connect) for VSTS are intended to replace and improve on the capabilities of the Content Pack. While the Analytics Marketplace extension currently supports Work Item Tracking data, we will update it to support additional data types including Tests, Build, Release and Version Control. In the interim, you can use [VSTS REST APIs](https://www.visualstudio.com/en-us/docs/integrate/api/overview) as an alternative to the Content Pack to report on these additional data types." %}
 
 ## Pre-requisites
 
@@ -25,7 +24,7 @@ The Visual Studio Team Services (VSTS) Content Pack for Power BI has been deprec
 
 1. Visual Studio Team Services account. If you don't have one, you can create from [here](https://www.visualstudio.com/)
 
-**You can start a free trial if you don't have Office365 account from [here](https://teams.microsoft.com/start)
+**You can start a free trial if you don't have Office365 account from [here](https://teams.microsoft.com/start)**
 
 ## Authorize Power BI to access your account data
 
@@ -47,7 +46,7 @@ Your first step requires you to authorize Power BI to access your Team Services 
 
 1. You can use either AAD or MSA account to log in.
 
-   >Note: If you don't have a Power BI account you can create one by entering your email address and click Use it free.
+   {% include note.html content= "If you don't have a Power BI account you can create one by entering your email address and click Use it free." %}
 
 ## Managing Workspaces
 
@@ -167,7 +166,7 @@ The experience is truly interactive…and fast! Powered by an in-memory storage,
 
 1. When you type a query, Power BI looks for an answer in any dataset that has a tile on that dashboard.  If all the tiles are from datasetA, then your answer will come from datasetA.  If there are tiles from datasetA and datasetB, then Q&A will search for the best answer from those 2 datasets.
 
-   > If you only have one tile from datasetA and you remove it from your dashboard, Q&A will no longer have access to datasetA.
+   {% include important.html content= "If you only have one tile from datasetA and you remove it from your dashboard, Q&A will no longer have access to datasetA." %}
 
 1. When you're happy with the result, pin the visualization to a dashboard by selecting the pin icon in the top right corner.
 

@@ -6,7 +6,7 @@ permalink: /labs/tfs/almvmdownload/
 folder: /labs/tfs/almvmdownload/
 ---
 
-We highly recommend Microsoft Hands-on-Labs center if you want to try these labs - You do not require a high configuration machine or have to download and setup the machine. Simply access them from a browser of your choice. Please see [here](technet/) for more details.
+We highly recommend that you use the [**Microsoft Hands-on-Labs**](technet/) center to run the VM - You do not require a high configuration machine or have to download and setup the machine. Simply access them from a browser of your choice. 
 
 If you prefer to download the VM instead, please see the instructions below.
 
@@ -29,7 +29,7 @@ The 2017 (Winter Update) includes  Microsoft Visual Studio ALM VM and the accomp
 
 ## Downloading the VM
 
-The size of the download is about 18 GB. It is recommended that you use a download manager  like [**Free download manager**](http://www.freedownloadmanager.org/) or [**Download Accelerator Plus**](http://www.speedbit.com/dap/).
+The size of the download is about 18 GB. It is recommended that you use a download manager  like [**Free download manager**](http://www.freedownloadmanager.org/){:target="_blank"} or [**Download Accelerator Plus**](http://www.speedbit.com/dap/){:target="_blank"}.
 
 These utility provide:
 

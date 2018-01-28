@@ -10,6 +10,7 @@ Last updated : {{ "now" | date: "%b %d, %Y" }}.
 
 ## Overview
 
+<<<<<<< HEAD
 This lab shows how to compile a Docker-based ASP.NET Core web application and deploy it to a **Kubernetes** cluster running on **Azure Container Service (AKS)** using the **Visual Studio Team Services (VSTS)**.
 
 [**Azure Container Service (AKS)**](https://azure.microsoft.com/en-us/services/container-service/) is the quickest way to use Kubernetes on Azure. AKS allows to deploy and manage Docker containers using Kubernetes, Docker Swarm and Mesosphere DC/OS orchestrators. With AKS, customers get the benefits of the open source Kubernetes without the complexity and the operational overhead. VSTS helps in creating the application container Docker images for faster deployments reliably using the continuous build option.
@@ -17,6 +18,15 @@ This lab shows how to compile a Docker-based ASP.NET Core web application and de
 Below are the description for the terminolgy used in the lab document to help you get started:
 
 [**Docker**](https://www.docker.com/): Docker is a software technology that provides operating-system-level virtualization to easily deploy applications in a sandbox (called containers) to run on Linux.
+=======
+This lab shows how to build a Docker based ASP.NET Core web application and deploy to a **Kubernetes** cluster running in **Azure Container Service (AKS)** by using **Visual Studio Team Services (VSTS)**.
+
+[**Azure Container Service (AKS)**](https://azure.microsoft.com/en-us/services/container-service/) is the quickest way to use Kubernetes on Azure. AKS allows to deploy and manage containers using Kubernetes, Docker Swarm, Mesosphere DC/OS orchestrators. With AKS, customers get the benefits of open source Kubernetes without the complexity and operational overhead. Using VSTS helps create your application container images for faster deployments reliably by setting up a continuous build.
+
+Below are the description for the terminologies used in the lab document to help you get started:
+
+[**Docker**](https://www.docker.com/): Docker is a tool that allows to easily deploy applications in a sandbox (called containers) to run on Linux.
+>>>>>>> 12aa420cd8c4e3aff475ee6040f154cd9093f105
 
 [**Images**](https://docs.docker.com/engine/docker-overview/#docker-objects): An image is a read-only template with instructions needed to make the application run.
 
@@ -305,11 +315,11 @@ In this exercise, let us trigger a build manually and upon completion,an automat
 
     >**kubectl get service mhc-front --watch**
 
-    ![](images/watchfront.png)
+    ![watchfront](images/watchfront.png)
 
 1. Copy **External-IP** and paste in your browser and hit Enter to see the application.
 
-    ![](images/finalresult.png)
+    ![finalresult](images/finalresult.png)
 
     **To access AKS through browser:**
 
