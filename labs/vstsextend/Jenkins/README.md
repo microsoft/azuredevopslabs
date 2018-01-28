@@ -311,9 +311,7 @@ The next step is to configure the VSTS Release Management to fetch and deploy th
 
 ### Logging into Jenkins with the default credentials
 
-1. In case the initial admin was not configured for Jenkins during the setup, the default user **admin** can be used to login to Jenkins.
-
-1. The admin password will be the content from the password file created automatically by Jenkins stored in the path `\var\lib\jenkins\secrets\initialAdminPassword`
+1. In case the initial admin was not configured for Jenkins during the setup, the default user **admin** can be used to login to Jenkins. The admin password will be the content from the password file created automatically by Jenkins stored in the path `\var\lib\jenkins\secrets\initialAdminPassword`
 
 1. To change password, click on the user name on the top-right corner. Click the **Configure** option, scroll down to the **password** section to specify a new password and then click the **Save** button.
 

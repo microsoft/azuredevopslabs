@@ -6,7 +6,7 @@ permalink: /labs/vsts/testmanagement/
 folder: /labs/vsts/testmanagement/
 ---
 
-Last updated : {{ "now" | date: "%b %d,%Y" }}.
+Last updated : {{ "now" | date: "%b %d, %Y" }}.
 
 ## Overview
 
@@ -30,9 +30,9 @@ Visual Studio Team Services (VSTS) allows teams to organize test cases into a hi
 
 1. Add a **Test Suite** now to group test cases further. You can create three types of test suites:
 
-* Static test suites are like folders. A static test suite can contain both test cases and other suites.
-* Requirements-based suites are derived from Product Backlog Items, User Stories, or other requirements. The suite contains all the test cases that are linked to its requirement. This type helps you track how well each requirement has been tested.
-* Query-based suites show the results of a query that you define. For example, you could select all the test cases that have Priority = 1.
+   * Static test suites are like folders. A static test suite can contain both test cases and other suites.
+   * Requirements-based suites are derived from Product Backlog Items, User Stories, or other requirements. The suite contains all the test cases that are linked to its requirement. This type helps you track how well each requirement has been tested.
+   * Query-based suites show the results of a query that you define. For example, you could select all the test cases that have Priority = 1.
 
 1. Expand the dropdown next to the newly created suite and select **New requirement-based suite.**
 

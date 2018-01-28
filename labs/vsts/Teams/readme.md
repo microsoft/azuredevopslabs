@@ -6,14 +6,14 @@ permalink: /labs/vsts/teams/
 folder: /labs/vsts/teams/
 ---
 
-Last updated : {{ "now" | date: "%b %d,%Y" }}.
+Last updated : {{ "now" | date: "%b %d, %Y" }}.
 
 ## Overview
 
 **[Microsoft Teams](https://teams.microsoft.com/start)** is your chat-centered workspace in Office 365. Software development teams get instant access to everything they need in a dedicated
 hub for teamwork, that brings your teams, conversations, content and tools from across Office 365 and Visual Studio Team Services together into one place.
 
-> Note: This integration is currently available for Visual Studio Team Services (not Team Foundation Server).
+{% include note.html content= "This integration is currently available for Visual Studio Team Services (not Team Foundation Server)." %}
 
 ## Prerequisites
 
@@ -101,7 +101,7 @@ The Kanban board can be added using Tabs. **Tabs** allow team members to access 
 
    ![](images/15.png)
 
-   >Note: Only VSTS accounts in the same organization (AAD tenant) can be used to integrate with your Microsoft Teams account.
+   {% include note.html content= "Only VSTS accounts in the same organization (AAD tenant) can be used to integrate with your Microsoft Teams account." %}
 
 1. Select the desired account from the list and click on **continue**
 

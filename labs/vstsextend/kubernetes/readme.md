@@ -10,13 +10,13 @@ Last updated : {{ "now" | date: "%b %d, %Y" }}.
 
 ## Overview
 
-This lab shows how to compile a Docker-based ASP.NET Core web application and deploy it to a **Kubernetes** cluster running on **Azure Container Service (AKS)** using the **Visual Studio Team Services (VSTS)**.
+This lab shows how to build a Docker based ASP.NET Core web application and deploy to a **Kubernetes** cluster running in **Azure Container Service (AKS)** by using **Visual Studio Team Services (VSTS)**.
 
-[**Azure Container Service (AKS)**](https://azure.microsoft.com/en-us/services/container-service/) is the quickest way to use Kubernetes on Azure. AKS allows to deploy and manage Docker containers using Kubernetes, Docker Swarm and Mesosphere DC/OS orchestrators. With AKS, customers get the benefits of the open source Kubernetes without the complexity and the operational overhead. VSTS helps in creating the application container Docker images for faster deployments reliably using the continuous build option.
+[**Azure Container Service (AKS)**](https://azure.microsoft.com/en-us/services/container-service/) is the quickest way to use Kubernetes on Azure. AKS allows to deploy and manage containers using Kubernetes, Docker Swarm, Mesosphere DC/OS orchestrators. With AKS, customers get the benefits of open source Kubernetes without the complexity and operational overhead. Using VSTS helps create your application container images for faster deployments reliably by setting up a continuous build.
 
-Below are the description for the terminolgy used in the lab document to help you get started:
+Below are the description for the terminologies used in the lab document to help you get started:
 
-[**Docker**](https://www.docker.com/): Docker is a software technology that provides operating-system-level virtualization to easily deploy applications in a sandbox (called containers) to run on Linux.
+[**Docker**](https://www.docker.com/): Docker is a tool that allows to easily deploy applications in a sandbox (called containers) to run on Linux.
 
 [**Images**](https://docs.docker.com/engine/docker-overview/#docker-objects): An image is a read-only template with instructions needed to make the application run.
 
@@ -32,61 +32,58 @@ Below are the description for the terminolgy used in the lab document to help yo
 
 [**Kubernetes Manifest file**](https://kubernetes.io/docs/reference/kubectl/cheatsheet/): Kubernetes manifests with deployments, services and pods can be defined in json or yaml. The file extensions .yaml, .yml, and .json can be used.
 
-In this lab, the following tasks will be performed:
+In this lab, you will perform the following:
 
-* Create an Azure Container Registry (ACR), AKS and Azure SQL server
-* Provision VSTS Team Project with .NET Core application using the [VSTS Demo Generator](https://vstsdemogenerator.azurewebsites.net/) tool
-* Configure endpoints (properties) in VSTS to access Azure and AKS
-* Configure application database deployment and configure Continuous Deployment (CD) in VSTS
-* Modify database connection string & ACR configuration in the source code
-* Initiate the build to automatically deploy the application
+- Create an Azure Container Registry (ACR), AKS and Azure SQL server
+- Provision VSTS Team Project with .NET Core application using [VSTS Demo Generator](https://vstsdemogenerator.azurewebsites.net/) tool
+- Configure endpoints(properties) in VSTS to access Azure and AKS
+- Application database deployment and configure Continuous Deployment (CD) in VSTS
+- Modify database connection string & ACR configuration in the source code
+- Initiate the build to automatically deploy the application
 
 The below diagram details the VSTS DevOps workflow with Azure Container Service with AKS:
 
-[![VSTS DevOps workflow with Azure Container Service with AKS](images/vstsaksdevops.png)](https://azure.microsoft.com/en-in/solutions/architecture/continuous-integration-deployment-containers/)
+<a href="https://azure.microsoft.com/en-in/solutions/architecture/continuous-integration-deployment-containers/" target="_blank">
 
-* Firstly, the source code changes are committed to the VSTS git repository
-* VSTS will create the custom Docker image **myhealth.web** and push the image tagged with the build ID to the ACR. Subsequently it will publish the [Kubernetes deployment YAML file](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/) as a build artifact.
-* VSTS will deploy **mhc-front** and **mhc-back** services into the Kubernetes cluster using the YAML file.
-  >**mhc-front** is the application hosted on a load balancer whereas **mhc-back** is the [Redis](https://redis.io/) Cache
-* The Kubernetes cluster will then pull the **myhealth.web** image from the ACR into the [Pods](https://kubernetes.io/docs/concepts/workloads/pods/pod/) and complete the deployment file instructions
-* The myhealth.web application will be accessible through a browser, once the deployment is successfully completed
+![vstsaksdevops](images/vstsaksdevops.png) </a>
 
-## Pre-requisites for the lab
+- Firstly, the source code changes are committed to the VSTS git repository
+- VSTS will build the custom Docker image **myhealth.web** and push the image tagged with the build ID to the ACR. Subsequently it will publish the [Kubernetes deployment YAML file](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/) as a build artifact
+- VSTS will deploy **mhc-front** and **mhc-back** services into  the Kubernetes cluster using the YAML file. **mhc-front** is the application hosted on a load balancer whereas **mhc-back** is the [Redis](https://redis.io/) cache
+- The Kubernetes cluster will then pull the **myhealth.web** image from the ACR into the [Pods](https://kubernetes.io/docs/concepts/workloads/pods/pod/) and complete the rest of the deployment file instructions
+- The myhealth.web application will be accessible through a browser once the deployment is successfully completed
 
-1. An active **Microsoft Azure** account.
+## Prerequisites
 
-1. An active **VSTS** account. Create a new account from [here](https://docs.microsoft.com/en-us/vsts/accounts/create-account-msa-or-work-student).
+1. **Microsoft Azure Account**: You need a valid and active azure account for the lab
 
-1. A [Personal Access Token](https://docs.microsoft.com/en-us/vsts/accounts/use-personal-access-tokens-to-authenticate) (PAT).
+1. **Visual Studio Team Services Account**: If you don’t have one, you can create from [here](https://docs.microsoft.com/en-us/vsts/accounts/use-personal-access-tokens-to-authenticate)
 
-1. **Kubernetes extension** from [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=tsuyoshiushio.k8s-endpoint) installed to the VSTS account
+1. You will need [Personal Access Token](https://docs.microsoft.com/en-us/vsts/accounts/use-personal-access-tokens-to-authenticate) for VSTS
 
-## Preparing the user machine
+1. You need to install **Kubernetes extension** from [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=tsuyoshiushio.k8s-endpoint)  to your VSTS account
 
-This lab requires all the pre-requisite executables to be installed and configured in an **Administrator** mode on the user machine. If the administrative privileges are not available on the user machine, it is suggested to create a Windows Virtual Machine (VM) on Azure and follow the exercises in the VM.
+## Preparing user machine
+
+This lab requires executables to be installed and configured in **Administrator** mode on your machine. If you do not have administrative privileges on your machine, create a Windows VM on Azure and follow the exercises within the VM.
 
 1. Spin up a [Windows virtual machine on Azure](https://portal.azure.com/#create/Microsoft.WindowsServer2016Datacenter-ARM).
 
-1. Disable the [Internet Explorer Enhanced Configuration](https://support.microsoft.com/en-in/help/815141/internet-explorer-enhanced-security-configuration-changes-the-browsing) to allow download of the rest of the pre-requisite tools.
+1. Disable [Internet Explorer Enhanced Configuration](https://support.microsoft.com/en-in/help/815141/internet-explorer-enhanced-security-configuration-changes-the-browsing) to allow download of the below tools.
 
-1. Enable the [JavaScript](https://support.microsoft.com/en-in/help/3135465/how-to-enable-javascript-in-windows) to allow lab required specific features on the webpage.
+1. Enable [JavaScript](https://support.microsoft.com/en-in/help/3135465/how-to-enable-javascript-in-windows) to allow lab required specific features on the webpage.
 
-1. Download and install the [Git Bash](https://git-scm.com/downloads) in the Azure VM.
+1. Download and install  [Git Bash](https://git-scm.com/downloads) in the Azure VM.
 
-1. Install the [Azure CLI version 2.0.23](https://azurecliprod.blob.core.windows.net/msi/azure-cli-2.0.23.msi) on the Azure VM.
+1. Install [Azure CLI version 2.0.23](https://azurecliprod.blob.core.windows.net/msi/azure-cli-2.0.23.msi) on the Azure VM. This is the **Azure Command Line Interface** tool required to authenticate to your Azure subscription and fetch the Azure resource group details required later in Exercise 2.
 
-   > This is the **Azure Command Line Interface** tool required to authenticate to the Azure subscription and fetch the Azure resource group details required in the Exercise 2.
+1. Download [KubeCtl](https://storage.googleapis.com/kubernetes-release/release/v1.9.0/bin/windows/amd64/kubectl.exe), and make sure the path of **kubectl.exe** is added to [PATH Environment Variable](https://msdn.microsoft.com/en-us/library/office/ee537574(v=office.14).aspx). Kubectl is a command line interface for running commands against Kubernetes clusters. In this lab, Kubectl is used to check the status of pods.
 
-1. Download the [KubeCtl](https://storage.googleapis.com/kubernetes-release/release/v1.9.0/bin/windows/amd64/kubectl.exe), and make sure the path of **kubectl.exe** is included in the [PATH Environment Variable](https://msdn.microsoft.com/en-us/library/office/ee537574(v=office.14).aspx) of the lab machine.
-
-   > Kubectl is a command line interface for running commands against Kubernetes clusters. In this lab, Kubectl is used to check the status of pods.
-
-1. Follow the below instructions to create a pair of SSH RSA public & private keys which will be used in the next exercise.
-    1. Open the **Git Bash**, type the command `ssh-keygen -t rsa` and press the **Enter** button.
-    2. Provide the following values:
-        * **File path** : Path to which the generated key file should be saved. Leave it blank to save the file to default path.
-        * **Passphrase** : Provide a passphrase or leave it blank for an empty passphrase.
+1. Create a pair of SSH RSA public & private keys which will be used in the next exercise -
+    1. Open **Git Bash**, type **ssh-keygen -t rsa** and hit enter.
+    2. Provide the following values -
+        - **File path** : Path to which the generated key file should be saved. Leave it blank to save the file to default path.
+        - **Passphrase** : Provide a passphrase or leave it blank for an empty passphrase.
     3. Access the path where the keys are generated. The contents of the public key **id_rsa.pub** is required for setting up environment which are of format
 
 1. You need [Azure Service Principal Client ID and Client Secret](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-create-service-principal-portal) for the next exercise.
@@ -95,54 +92,71 @@ This lab requires all the pre-requisite executables to be installed and configur
 
 We require below azure resources for this lab:
 
-Azure resources | Description
-----------------|------------
-![Azure Container Registry](images/container_registry.png) Azure Container Registry | Used to store images privately
-![AKS](images/aks.png) AKS | Docker images are deployed to Pods running inside AKS
-![SQL Server](images/sqlserver.png) SQL Server | SQL Server to host database
+  <table width="100%">
+    <thead>
+      <tr>
+         <th width="50%"><b>Azure resources</b></th>
+         <th><b>Description</b></th>
+      </tr>
+    </thead>
+    <tr>
+      <td><img src="images/container_registry.png" width="30px"><b>Azure Container Registry</b></td>
+      <td>Used to store images privately</td>
+    </tr>
+    <tr>
+      <td><img src="images/aks.png" width="30px"> <b>AKS</b></td>
+      <td>Docker images are deployed to Pods running inside AKS.</td>
+    </tr>
+    <tr>
+      <td><img src="images/sqlserver.png" width="30px"> <b>SQL Server</b> </td>
+      <td>SQL Server to host database</td>
+    </tr>
+    </table>
 
 1. Click on **Deploy to Azure** (or right click and select ***Open in new tab***) to spin up **Azure Container Registry**, **Azure Container Service (AKS)** and **Azure SQL Server**. Enter required details for the below fields and agree to ***Terms and Conditions***, and click **Purchase**.
 
-   > Since the Azure SQL Server name does not support **UPPER** / **Camel** casing for its naming convention, use lower case for ***DB Server Name*** field value.
+    - Subscription
+    - Resource Group
+    - Location
+    - Acr Name
+    - DB Server Name
+    - Aks Name
+    - DNS Prefix
+    - SSH RSA Public Key
+    - Service Principal Client Id
+    - Service Principal Client Secret
 
-    * Subscription
-    * Resource Group
-    * Location
-    * Acr Name
-    * DB Server Name
-    * AKS Name
-    * DNS Prefix
-    * SSH RSA Public Key
-    * Service Principal Client
-    * Service Principal Client Secret
+   <a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FMicrosoft%2FVSTS-DevOps-Labs%2Fkubernetes%2Fkubernetes%2Ftemplates%2Fazuredeploy.json" target="_blank">
+   <img src="http://azuredeploy.net/deploybutton.png">
+   </a>
 
-   [![Deploy to Azure](http://azuredeploy.net/deploybutton.png)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FMicrosoft%2FVSTS-DevOps-Labs%2Fkubernetes%2Fkubernetes%2Ftemplates%2Fazuredeploy.json)
+   {% include note.html content= "Since the Azure SQL Server name does not support **UPPER** / **Camel** casing for its naming convention, use lower case for ***DB Server Name*** field value.
 
-   > At the time of writing this lab, regions **East US**, **Central US**, **West Europe**, **Canada Central** and **Canada East** are supported locations. For more information, refer [AKS Azure Regions](https://docs.microsoft.com/en-in/azure/aks/container-service-quotas).
+   At the time of writing this lab, regions **East US**, **Central US**, **West Europe**, **Canada Central** and **Canada East** are supported locations. For more information, refer [AKS Azure Regions](https://docs.microsoft.com/en-in/azure/aks/container-service-quotas)." %}
 
-![Deploy to Azure](images/customtemplate1.png)
+   ![customtemplate1](images/customtemplate1.png)
 
-![Deploy to Azure](images/customtemplate2.png)
+   ![customtemplate2](images/customtemplate2.png)
 
 1. It takes approximately 5 minutes to provision the environment. Once the deployment succeeds, a notification is displayed in the Azure portal. Click on the **Go to resource group** button.
 
-   ![Deploy to Azure](images/deploymentsucceeded.png)
+   ![deploymentsucceeded](images/deploymentsucceeded.png)
 
 1. The components - a **Storage account**, a **Container Registry**, a **Container Service**, a **SQL Server** along with a **SQL Database**. Let us access each of these components and gather their details which are required in Exercise 2.
 
-   ![Deploy to Azure](images/azurecomponents.png)
+   ![azurecomponents](images/azurecomponents.png)
 
 1. Click on **mhcdb** SQL database and note down the **Server name** .
 
-   ![Deploy to Azure](images/getdbserverurl.png)
+   ![getdbserverurl](images/getdbserverurl.png)
 
 1. Go back to the resource group, click on the created container registry and note down the **Login server** name.
 
-    ![Deploy to Azure](images/getacrserver.png)
+    ![getacrserver](images/getacrserver.png)
 
 1. Switch back to the resource group. Click on your container service and note down the **API server address**.
 
-   ![Deploy to Azure](images/getaksserver.png)
+   ![getaksserver](images/getaksserver.png)
 
    Now that required the azure components are created, let us create a VSTS project.
 
@@ -168,98 +182,98 @@ Since the connections are not established during project provisioning, let us ma
 
 **Azure Resource Manager Service Endpoint** : Defines and secures a connection to a Microsoft Azure subscription using Service Principal Authentication (SPA).
 
-1. In VSTS, navigate to the **Services** by clicking on the gear icon ![](images/gear.png), and click on the **+ New Service Endpoint**. Select **Azure Resource Manager**. Specify the **Connection name**, select your **Subscription** from the dropdown and click **OK**. We use this endpoint to connect **VSTS** and **Azure**.
+1. In VSTS, navigate to the **Services** by clicking on the gear icon ![gear](images/gear.png), and click on the **+ New Service Endpoint**. Select **Azure Resource Manager**. Specify the **Connection name**, select your **Subscription** from the dropdown and click **OK**. We use this endpoint to connect **VSTS** and **Azure**.
 
     You will be prompted to authorize this connection with Azure credentials. Disable pop-up blocker in your browser if you see a blank screen after clicking OK, and retry the step.
 
-   > If your subscription is not listed or to specify an existing service principal, click the link in the dialog which will switch to manual configuration mode and follow the [Service Principal creation](https://blogs.msdn.microsoft.com/devops/2015/10/04/automating-azure-resource-group-deployment-using-a-service-principal-in-visual-studio-online-buildrelease-management/) link.
+   {% include important.html content= "If your subscription is not listed or to specify an existing service principal, click the link in the dialog which will switch to manual configuration mode and follow the  [Service Principal creation](https://blogs.msdn.microsoft.com/devops/2015/10/04/automating-azure-resource-group-deployment-using-a-service-principal-in-visual-studio-online-buildrelease-management/) link." %}
 
-   ![](images/azureendpoint.png)
+   ![azureendpoint](images/azureendpoint.png)
 
-## Kubernetes Service Endpoint
+### Kubernetes Service Endpoint
 
 1. Click **+ New Service Endpoint**, and select **Kubernetes** from the list. We use this endpoint to connect **VSTS** and **Azure Container Service (AKS)**.
 
-    * **Connection Name** : Provide the connection name.
+    - **Connection Name** : Provide the connection name.
 
-    * **Server URL** : Provide the container service address in the format `http://{API server address}`
+    - **Server URL** : Enter your container service **API server address** pre-fixed with **http://**
 
-    * **Kubeconfig** : To get the Kubeconfig value, run the following Azure commands in a command prompt logged in with Administrator privilege.
+    - **Kubeconfig** : To get the Kubeconfig value, run the following Azure commands in a command prompt logged in with Administrator privilege.
 
       1. Type **az login** and hit Enter. Authorize your login by accessing the url given in the prompt and enter the provided unique code to complete the authentication.
 
-         ![Kubernetes Service Endpoint](images/azlogin.png)
+      ![azlogin](images/azlogin.png)
 
       1. **az aks get-credentials --resource-group yourResourceGroup --name yourAKSname** : Get access credentials for the Kubernetes cluster.
 
-      ![Kubernetes Service Endpoint](images/getkubeconfig.png)
+         ![getkubeconfig](images/getkubeconfig.png)
 
-    * Navigate to the **.kube** folder under your home directory (eg: C:\Users\YOUR_HOMEDIR\ .kube)
+         - Navigate to the **.kube** folder under your home directory (eg: C:\Users\YOUR_HOMEDIR\ .kube)
 
-    * Copy contents of the **config** file and paste it in the Kubernetes Connection window. Click **OK**.
+         - Copy contents of the **config** file and paste it in the Kubernetes Connection window. Click **OK**.
 
-      ![Kubernetes Service Endpoint](images/aksendpoint.png)
+         ![aksendpoint](images/aksendpoint.png)
 
 ## Exercise 2: Configure Build and Release definitions
 
-  Now that the connections are established, we will manually map the created Azure endpoint, AKS and Azure Container Registry to build and release definitions.
+Now that the connections are established, we will manually map the created Azure endpoint, AKS and Azure Container Registry to build and release definitions.
 
- >Note : If you encounter an error - ***TFS.WebApi.Exception: Page not found*** for Azure tasks in the build/ release definition, you can fix this by typing a random text in the Azure Subscription field and click the **Refresh** icon next to it. Once the field is refreshed, you can select the endpoint from the drop down. This is due to a recent change in the VSTS Release Management API. We are working on updating VSTS Demo Generator to resolve this issue.
+{% include note.html content= " If you encounter an error - ***TFS.WebApi.Exception: Page not found*** for Azure tasks in the build/ release definition, you can fix this by typing a random text in the Azure Subscription field and click the **Refresh** icon next to it. Once the field is refreshed, you can select the endpoint from the drop down. This is due to a recent change in the VSTS Release Management API. We are working on updating VSTS Demo Generator to resolve this issue." %}
 
 1. Go to the **Builds** section under the **Build and Release** hub and **Edit** the build definition **MyHealth.AKS.Build**.
 
-   ![](images/build.png)
+   ![build](images/build.png)
 
 1. In the **Process** section under **Tasks**, select the previously created endpoints from the dropdown for parameters - **Azure subscription** and **Azure Container Registry** as shown. Click the **Save** option under **Save & queue**.
 
-    ![](images/updateprocessbd.png)
+    ![updateprocessbd](images/updateprocessbd.png)
 
     |Tasks|Usage|
     |-----|-----|
-    |![](images/icon.png) **Run services**| prepares suitable environment by restoring required packages|
-    |![](images/icon.png) **Build services**| builds images specified in a **docker-compose.yml** file with registry-qualified names and additional tags such as **$(Build.BuildId)**|
-    |![](images/icon.png) **Push services**| pushes images specified in a **docker-compose.yml** file, to container registry|
-    |![](images/publish-build-artifacts.png) **Publish Build Artifacts**| publishes the **myhealth.dacpac** file to VSTS|
+    |![icon](images/icon.png) **Run services**| prepares suitable environment by restoring required packages|
+    |![icon](images/icon.png) **Build services**| builds images specified in a **docker-compose.yml** file with registry-qualified names and additional tags such as **$(Build.BuildId)**|
+    |![icon](images/icon.png) **Push services**| pushes images specified in a **docker-compose.yml** file, to container registry|
+    |![publish-build-artifacts](images/publish-build-artifacts.png) **Publish Build Artifacts**| publishes the **myhealth.dacpac** file to VSTS|
 
 1. Navigate to the **Releases** section under the **Build & Release** menu, **Edit** the release definition **MyHealth.AKS.Release** and select **Tasks**.
 
-   ![](images/release.png)
+   ![release](images/release.png)
 
-   ![](images/releasetasks.png)
+   ![releasetasks](images/releasetasks.png)
 
 1. In the **Dev** environment, under the **DB deployment** phase, update the **Azure Subscription** value from the dropdown for **Execute Azure SQL: DacpacTask** task.
 
-    ![](images/update_CD3.png)
+    ![update_CD3](images/update_CD3.png)
 
 1. In the **AKS deployment** phase, Under the **Create Deployments & Services in AKS** task, update the **Kubernetes Service Connection** value from the dropdown. Expand the **Container Registry Details** section and update the parameters - **Azure subscription** and  **Azure Container Registry** with the endpoint components from the dropdown.
 
 1. Repeat similar steps for **Update image in AKS** task.
 
-    ![](images/update_rd1.png)
+    ![update_rd1](images/update_rd1.png)
 
-    * **Create Deployments & Services in AKS** will create the deployments and services in AKS as per the configuration specified in **mhc-aks.yaml** file. The Pod, for the first time will pull the latest image.
+    - **Create Deployments & Services in AKS** will create the deployments and services in AKS as per the configuration specified in **mhc-aks.yaml** file. The Pod, for the first time will pull the latest image.
 
-    * **Update image in AKS** will pull the appropriate image corresponding to the BuildID from the repository specified, and deploys the image to the **mhc-front pod** running in AKS.
+    - **Update image in AKS** will pull the appropriate image corresponding to the BuildID from the repository specified, and deploys the image to the **mhc-front pod** running in AKS.
 
 1. Click on the **Variables** section under the release definition, update **ACR** and **SQL server** values for **Process Variables** with the details noted earlier while setting up the environment. Click the **Save** button.
 
-   >Note: The **Database Name** is set to **mhcdb**, **Server Admin Login** is **sqladmin** and **Password** is **P2ssw0rd1234**.
+   {% include note.html conetnt= "The **Database Name** is set to **mhcdb**, **Server Admin Login** is **sqladmin** and **Password** is **P2ssw0rd1234**." %}
 
-   ![](images/releasevariables.png)
+   ![releasevariables](images/releasevariables.png)
 
 ## Exercise 3: Update Connection String & ACR URL in the manifest file
 
 We will update the database connection string for the .NET Core application and ACR URL in the manifest YAML file.
 
-1. Go to the **Code** tab, and navigate to the below path to **edit** the file **appsettings.json**
+1. Go to the **Code** tab, and navigate to the below path to **edit** the file **appsettings.json**.
 
    >AKS/src/MyHealth.Web/**appsettings.json**
 
-    Scroll down to line number **9** and provide the database server name as given in the step 6 of the previous exercise and manually update the **User ID** to ***sqladmin*** and **Password** to ***P2ssw0rd1234***. Click **Commit**.
+   Scroll down to line number **9** and provide the database server name as given in the step 6 of the previous exercise and manually update the **User ID** to ***sqladmin*** and **Password** to ***P2ssw0rd1234***. Click **Commit**.
 
-    > "DefaultConnection": "Server=YOUR_SQLSERVER_NAME.database.windows.net,1433;Database=mhcdb;Persist Security Info=False;User ID=sqladmin;Password=P2ssw0rd1234"
+   {% include important.html content= "DefaultConnection: Server=YOUR_SQLSERVER_NAME.database.windows.net,1433;Database=mhcdb;Persist Security Info=False;User ID=sqladmin;Password=P2ssw0rd1234" %}
 
-   ![](images/pasteconnectionstring.png)
+   ![pasteconnectionstring](images/pasteconnectionstring.png)
 
 1. Navigate to the below path to **edit** the file **mhc-aks.yaml**. This YAML manifest file contains configuration details of **deployments**, **services** and **pods** which will be deployed in Kubernetes.
 
@@ -267,7 +281,7 @@ We will update the database connection string for the .NET Core application and 
 
     Scroll to line number **93**. Update **YOUR_ACR** with your **ACR Login server** which was noted earlier while setting up the environment. Click **Commit** button.
 
-![](images/editmhcaks.png)
+    ![editmhcaks](images/editmhcaks.png)
 
 ## Exercise 4: Trigger a Build and deploy application
 
@@ -275,29 +289,29 @@ In this exercise, let us trigger a build manually and upon completion,an automat
 
 1. Go to the **Builds** section under the **Build and Release** menu, click the build definition **MyHealth.AKS.Build** and then click **Queue new build...**.
 
-    ![](images/manualbuild.png)
+    ![manualbuild](images/manualbuild.png)
 
 1. Once the build process starts, navigate to the **Builds** tab. Click on the build number to see the build in progress.
 
-    ![](images/clickbuild.png)
+    ![clickbuild](images/clickbuild.png)
 
-    ![](images/buildinprog1.png)
+    ![buildinprog1](images/buildinprog1.png)
 
 1. The build will generate and push the image to ACR. After build completes, you will see the build summary. To see the generated images in Azure Portal, go to the **Azure Container Registry** and navigate to **Repositories**.
 
-    ![](images/imagesinrepo.png)
+    ![imagesinrepo](images/imagesinrepo.png)
 
 1. Switch back to the VSTS portal. Go to the **Releases** tab, and double click on the latest release. Click the **Logs** section to see the release summary.
 
-    ![](images/releaseinprog.png)
+    ![releaseinprog](images/releaseinprog.png)
 
-    ![](images/release_summary1.png)
+    ![release_summary1](images/release_summary1.png)
 
 1. Once the release is complete, open command prompt and run the below command to see the pods running in AKS:
 
     >**kubectl get pods**
 
-    ![](images/getpods.png)
+    ![getpods](images/getpods.png)
 
     The deployed web application is running in these pods.
 
@@ -305,11 +319,11 @@ In this exercise, let us trigger a build manually and upon completion,an automat
 
     >**kubectl get service mhc-front --watch**
 
-    ![](images/watchfront.png)
+    ![watchfront](images/watchfront.png)
 
 1. Copy **External-IP** and paste in your browser and hit Enter to see the application.
 
-    ![](images/finalresult.png)
+    ![finalresult](images/finalresult.png)
 
     **To access AKS through browser:**
 

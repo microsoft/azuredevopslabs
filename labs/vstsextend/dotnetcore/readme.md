@@ -169,7 +169,3 @@ We are using **Infrastructure as a Code** in the release pipeline. We have a rel
 ## Summary
 
 **Visual Studio Team Services** simplifies creation of continuous integration and continuous delivery pipelines for your application to be deployed to Azure.
-
-## Feedback
-
-Please let [us](mailto:devopsdemos@microsoft.com) know if you have any feedback on this lab.

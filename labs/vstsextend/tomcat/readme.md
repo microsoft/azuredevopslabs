@@ -6,7 +6,7 @@ permalink: /labs/vstsextend/tomcat/
 folder: /labs/vstsextend/tomcat/
 ---
 
-Last updated : {{ "now" | date: "%b %d,%Y" }}
+Last updated : {{ "now" | date: "%b %d, %Y" }}.
 
 ## Overview
 

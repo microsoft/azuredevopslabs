@@ -6,7 +6,7 @@ permalink: /labs/vsts/git/
 folder: /labs/vsts/git/
 ---
 
-Last updated : {{ "now" | date: "%b %d,%Y" }}.
+Last updated : {{ "now" | date: "%b %d, %Y" }}.
 
 ## Overview
 
@@ -227,7 +227,7 @@ Branches let you work with multiple versions of the source code in the same loca
 
 ### Task 3: Deleting branches locally and remotely
 
-> **NOTE:** Deleting a branch in your local repo doesn't remove the branch on the remote.
+{% include note.html content= "Deleting a branch in your local repo doesn't remove the branch on the remote." %}
 
 1. Open **Team Explorer** from Visual Studio and go to the **Branches** view. Locate the branch you want to delete.
    Make sure that you aren't checked out to that branch. You can't delete the branch you are currently working in.
@@ -434,7 +434,7 @@ Manage your pull requests you own or are assigned to with the Pull Requests tab 
 1. Enter the message used for the merge commit and update the pull request description as needed in the dialog that follows.
     You can choose to squash merge your pull request and delete the source branch once the merge is complete.
 
-    >**Squash merging** is a merge option that allows you to condense the Git history of topic branches when you complete a pull request. Instead of each commit on the topic branch being added to the history of the default branch, a squash merge takes all the file changes and adds them to a single new commit on the default branch. Squash merging keeps your default branch histories clean and easy to follow without demanding any workflow changes on your team.
+    {% include note.html content= "**Squash merging** is a merge option that allows you to condense the Git history of topic branches when you complete a pull request. Instead of each commit on the topic branch being added to the history of the default branch, a squash merge takes all the file changes and adds them to a single new commit on the default branch. Squash merging keeps your default branch histories clean and easy to follow without demanding any workflow changes on your team." %}
 
     ![](images/74.png)
 

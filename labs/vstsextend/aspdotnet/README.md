@@ -165,6 +165,3 @@ We will update the code to trigger CI-CD.
 
 **Visual Studio Team Services** simplifies creation of continuous integration and continuous delivery pipelines for your application to be deployed to Azure
 
-## Feedback
-
-Please email [us](mailto:devopsdemos@microsoft.com) if you have any feedback on this lab.

@@ -1,5 +1,12 @@
-# CI-CD using GitHub and Visual Studio Team Services
+---
+title: CI-CD using GitHub and Visual Studio Team Services
+layout: page
+sidebar: vsts2
+permalink: /labs/vstsextend/github/
+folder: /labs/vstsextend/github/
+---
 
+Last updated : {{ "now" | date: "%b %d, %Y" }}.
 ## Overview
 
 **GitHub** is a web based **Git** version control repository hosting service which offers distributed version control and source code management functionality of Git.
@@ -186,7 +193,3 @@ Navigate to your forked GitHub repository. Let's make a simple change in the cod
 ## Summary
 
 Whether your code lives in **Visual Studio Team Services** or **GitHub** (or both), manage build, test, and deploy in one place. Create and manage a Continuous Integration process that connects to GitHub, gets the source files, compiles and deploys the binaries to any environment with Continuous Deployment feature.
-
-## Feedback
-
-Please let [us](mailto:devopsdemos@microsoft.com) know if you have any feedback on this lab.
