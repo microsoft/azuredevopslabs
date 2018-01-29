@@ -95,11 +95,11 @@ This lab requires all the pre-requisite executables to be installed and configur
         * **Passphrase** : Provide a passphrase or leave it blank for an empty passphrase.
     3. Access the path where the keys are generated. The contents of the public key **id_rsa.pub** is required for setting up environment which are of format
 
-1. You need [Azure Service Principal Client ID and Client Secret](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-create-service-principal-portal){:target="_blank"} for the next exercise.
+1. The [Azure Service Principal Client ID and Client Secret](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-create-service-principal-portal) will be required for the next exercise.
 
 ## Setting up the environment
 
-We require below azure resources for this lab:
+The following azure resources need to be configured for this lab:
 
 Azure resources | Description
 ----------------|------------
@@ -134,23 +134,23 @@ Azure resources | Description
 
    ![Deploy to Azure](images/deploymentsucceeded.png)
 
-1. The components - a **Storage account**, a **Container Registry**, a **Container Service**, a **SQL Server** along with a **SQL Database**. Let us access each of these components and gather their details which are required in Exercise 2.
+1. The components - a **Storage account**, a **Container Registry**, a **Container Service**, a **SQL Server** along with a **SQL Database**. Access each of these components and make a note of the details to be used in Exercise 2.
 
    ![Deploy to Azure](images/azurecomponents.png)
 
-1. Click on **mhcdb** SQL database and note down the **Server name** .
+1. Click on the **mhcdb** SQL database and make a note of the **Server name**.
 
    ![Deploy to Azure](images/getdbserverurl.png)
 
-1. Go back to the resource group, click on the created container registry and note down the **Login server** name.
+1. Navigate back to the resource group, click on the created container registry and make a note of the **Login server** name.
 
     ![Deploy to Azure](images/getacrserver.png)
 
-1. Switch back to the resource group. Click on your container service and note down the **API server address**.
+1. Switch back to the resource group. Click on the container service and make a note of the **API server address**.
 
    ![Deploy to Azure](images/getaksserver.png)
 
-   Now that required the azure components are created, let us create a VSTS project.
+Since all the required azure components are created, the VSTS tem project can be created.
 
 ## Setting up the VSTS Project
 
@@ -170,11 +170,11 @@ Azure resources | Description
 
 Service endpoints are a bundle of properties securely stored by VSTS and is a way for VSTS to connect to external systems or services.
 
-Since the connections are not established during project provisioning, let us manually create 2 endpoints -  **Azure Resource Manager** and **Kubernetes**.
+Since the connections are not established during project provisioning,the two endpoints - **Azure Resource Manager** and **Kubernetes** need to be created manually.
 
-**Azure Resource Manager Service Endpoint** : Defines and secures a connection to a Microsoft Azure subscription using Service Principal Authentication (SPA).
+**Azure Resource Manager Service Endpoint**: Defines and secures a connection to a Microsoft Azure subscription using Service Principal Authentication (SPA).
 
-1. In VSTS, navigate to the **Services** by clicking on the gear icon ![gear](images/gear.png), and click on the **+ New Service Endpoint**. Select **Azure Resource Manager**. Specify the **Connection name**, select your **Subscription** from the dropdown and click **OK**. We use this endpoint to connect **VSTS** and **Azure**.
+1. In VSTS, navigate to the **Services** by clicking on the gear icon ![Settings](images/gear.png), and click on the **+ New Service Endpoint** button. Select the **Azure Resource Manager** and specify the **Connection name**, select the **Subscription** from the dropdown and click on the **Ok** button. This endpoint will be used to connect the **VSTS** and the **Azure**.
 
     You will be prompted to authorize this connection with Azure credentials. Disable pop-up blocker in your browser if you see a blank screen after clicking OK, and retry the step.
 
