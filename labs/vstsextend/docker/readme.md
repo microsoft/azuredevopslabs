@@ -97,17 +97,17 @@ The below diagram details the VSTS DevOps workflow with Docker:
 
    > Disable the pop-up blocker in your browser. If a blank screen is displayed after the **Ok** button is clicked, retry the step.
 
-## Exercise 2: Configure CI-CD
+## Exercise 2: Configure Continuous Integration (CI) and Continuous Delivery (CD)
 
- Now that the connection is established, we will manually map the Azure endpoint and Azure Container Registry to build and release definitions. We will also deploy the dacpac to mhcdb database so that the schema and data is set for the backend.
+ Now that the connection is established, the Azure endpoint and the Azure Container Registry need to be manually configured for the build and release definitions. The dacpac will also be deployed to the mhcdb database so that the schema and data is configured for the backend.
 
->Note : If you encounter an error - ***TFS.WebApi.Exception: Page not found*** for Azure tasks in the build/ release definition, you can fix this by typing a random text in the Azure Subscription field and click the **Refresh** icon next to it. Once the field is refreshed, you can select the endpoint from the drop down. This is due to a recent change in the VSTS Release Management API. We are working on updating VSTS Demo Generator to resolve this issue.
+>An error - `TFS.WebApi.Exception: Page not found` may be encountered for the Azure tasks in the build / release definition. This issue can be fixed by typing a random text in the Azure Subscription field and then clicking the **Refresh** icon next to it. Once the field is refreshed, the endpoint can be selected from the drop down list. This issue occurrence is due to a recent change in the VSTS Release Management API. The VSTS Demo Generator is being updated to handle this change to prevent this issue.
 
-1. Go to **Builds** under **Build and Release** tab, **Edit** the build definition **MHCDocker.build**
+1. Navigate to the **Builds** option under the **Build and Release** tab. Select the build definition `MHCDocker.build`, click on the optionsa and select the **Edit** option.
 
    ![Build](images/build.png)
 
-1. In the **Process** section, update **Azure subscription** and **Azure Container Registry** with the endpoint component from the dropdown. (use arrow keys to choose Azure Container Registry for the first time). Click **Save**.
+1. In the **Process** section, update the **Azure subscription** and the **Azure Container Registry** with the endpoint component from the dropdown. (use the arrow keys to choose Azure Container Registry for the first time). Click on the **Save** button.
 
    ![Tasks](images/updateprocessbd.png)
 
@@ -118,34 +118,34 @@ The below diagram details the VSTS DevOps workflow with Docker:
    |![Push services](images/icon.png) **Push services**| pushes **myhealth.web** image tagged with **$(Build.BuildId)** to container registry|
    |![Publish Build Artifacts](images/publish-build-artifacts.png) **Publish Build Artifacts**| used to share dacpac for database deployment through VSTS artifacts  |
 
-1. Go to **Releases** under **Build & Release** tab, **Edit** the release definition **MHCDocker.release** and select **Tasks**.
+1. Navigate to the **Releases** section under the **Build & Release** tab. Select the release definition `MHCDocker.release`, click on the **Edit** option and then click on the **Tasks** section.
 
    ![Release](images/release.png)
 
    ![Release Tasks](images/release_tasks.png)
 
-1. Description of three phases used in this release are given below:
+1. The usage details of the agents are provided below:
 
-   |Phases|Usage|
+   |Agents|Usage Details|
    |------|-----|
-   |**DB deployment**|**Hosted VS2017** agent is used to create database|
-   |**Web App deployment**|**Hosted Linux Preview** agent is used to deploy application to Linux Web App|
+   |**DB deployment**|**Hosted VS2017** agent is used to create the database|
+   |**Web App deployment**|**Hosted Linux Preview** agent is used to deploy the application to the Linux Web App|
 
-1. Under **Execute Azure SQL:DacpacTask**, update **Azure Subscription** from the dropdown.
+1. Under the **Execute Azure SQL:DacpacTask** section, select the **Azure Subscription** from the dropdown.
 
-    **Execute Azure SQL:DacpacTask**: will deploy the dacpac to **mhcdb** database so that the schema and data is set for the backend.
+    **Execute Azure SQL:DacpacTask**: will deploy the dacpac to the **mhcdb** database so that the schema and data is set for the backend.
 
-    ![](images/update_dbtask.png)
+    ![Update DB Task](images/update_dbtask.png)
 
-1. Under **Azure App Service Deploy** task, update **Azure subscription** and **Azure Service name** with the endpoint components from the dropdown.
+1. Under the **Azure App Service Deploy** task, update the **Azure subscription** and and **Azure Service name** tasks with the endpoint components from the dropdown.
 
     **Azure App Service Deploy** will pull the appropriate image corresponding to the BuildID from repository specified, and deploys the image to Linux App Service.
 
-    ![](images/updatedrd.png)
+    ![Update repository](images/updatedrd.png)
 
 1. Click on **Variables** section, update **ACR** and **SQLserver** with the details noted earlier while setting up the environment. Click **Save**.
 
-    ![](images/update_rdvariables.png)
+    ![Update variables](images/update_rdvariables.png)
 
    >Note: **Database Name** is set to **mhcdb**, **Server Admin Login** is **sqladmin** and **Password** is **P2ssw0rd1234**.
 
@@ -157,11 +157,11 @@ In this exercise, we will update the code to trigger CI-CD.
 
    >Docker/src/MyHealth.Web/Views/Home/**Index.cshtml**
 
-   ![](images/editcode.png)
+   ![Edit code](images/editcode.png)
 
 1. Go to line number **28**, update **JOIN US** to **CONTACT US**, and click **Commit**.
 
-    ![](images/lineedit.png)
+    ![Line Edit](images/lineedit.png)
 
 1. Click **Commit** in the pop-up window.
 
