@@ -52,7 +52,7 @@ The below diagram details the VSTS DevOps workflow with Azure Container Service 
 * The Kubernetes cluster will then pull the **myhealth.web** image from the ACR into the [Pods](https://kubernetes.io/docs/concepts/workloads/pods/pod/){:target="_blank"} and complete the deployment file instructions
 * The myhealth.web application will be accessible through a browser, once the deployment is successfully completed
 
-### Pre-requisites for the lab
+### Prerequisites for the lab
 
 1. **Microsoft Azure Account**: You will need a valid and active Azure account for the Azure labs. If you do not have one, you can sign up for a [free trial](https://azure.microsoft.com/en-us/free/){:target="_blank"}
 

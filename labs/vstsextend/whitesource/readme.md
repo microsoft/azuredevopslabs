@@ -22,7 +22,7 @@ Team Services integration with WhiteSource Bolt will enable you to:
 1. Enforce open source license compliance, including dependencies’ licenses.
 1. Identify outdated open source libraries with recommendations to update.
 
-## Pre-requisites for the lab
+## Prerequisites for the lab
 
 1. You will need a **Visual Studio Team Services Account**. If you do not have one, you can sign up for free [here](https://www.visualstudio.com/products/visual-studio-team-services-vs){:target="_blank"}
 

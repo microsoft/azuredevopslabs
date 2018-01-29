@@ -20,7 +20,7 @@ With Azure Web App for containers, it is easy to deploy container-based web apps
 
 In this lab, you will learn how you can use Release Management(RM) in Visual Studio Team Services (VSTS) to deploy a container Java web application to an Azure web app for containers.
 
-### What's covered in this lab?
+### What's covered in this lab
 
 This lab will show how you can
 

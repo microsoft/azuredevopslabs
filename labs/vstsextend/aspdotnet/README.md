@@ -6,7 +6,7 @@ This lab details the deployment of an [ASP.NET](https://www.asp.net/) applicatio
 
 ASP.NET is an open source web framework for building modern web applications and services. ASP.NET creates websites based on HTML5, CSS, and JavaScript that are simple, fast, and can scale to millions of users.
 
-### Pre-requisites for the lab
+### Prerequisites for the lab
 
 1. An active **Microsoft Azure** account.
 

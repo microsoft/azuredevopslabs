@@ -24,7 +24,7 @@ The below diagram details the VSTS DevOps workflow with Docker:
 
 ## Image to be added here
 
-### Pre-requisites for the lab
+### Prerequisites for the lab
 
 1. **Microsoft Azure Account**: You will need a valid and active Azure account for the Azure labs. If you do not have one, you can sign up for a [free trial](https://azure.microsoft.com/en-us/free/){:target="_blank"}
 

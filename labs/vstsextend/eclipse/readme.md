@@ -29,7 +29,7 @@ In this lab, you will
 
 **Estimated time to complete the lab:**  1 hour
 
-### Pre-requisites for the lab
+### Prerequisites for the lab
 
 1. **Microsoft Azure Account**: You will need a valid and active Azure account for the Azure labs. If you do not have one, you can sign up for a [free trial](https://azure.microsoft.com/en-us/free/){:target="_blank"}
 

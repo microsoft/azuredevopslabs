@@ -18,7 +18,7 @@ The Deployment Group installs a deployment agent on each of the target servers w
 
 ### What's covered in this lab
 
-### Pre-requisites for the lab
+### Prerequisites for the lab
 
 1. **Microsoft Azure Account**: You will need a valid and active Azure account for the Azure labs. If you do not have one, you can sign up for a [free trial](https://azure.microsoft.com/en-us/free/){:target="_blank"}
 

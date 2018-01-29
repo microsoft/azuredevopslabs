@@ -28,7 +28,7 @@ In this lab, you will learn how to setup SonarQube on Azure and to integrate Vis
 - Setup a VSTS project and CI build to integrate with SonarQube
 - Analyze SonarQube reports
 
-### Pre-requisites for the lab
+### Prerequisites for the lab
 
 1. **Microsoft Azure Account**: You will need a valid and active Azure account for the Azure labs. If you do not have one, you can sign up for a [free trial](https://azure.microsoft.com/en-us/free/){:target="_blank"}
 

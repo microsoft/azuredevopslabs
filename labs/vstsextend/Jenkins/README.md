@@ -36,7 +36,7 @@ This lab covers both the approaches and the following tasks will be performed
 * Configure VSTS to integrate with Jenkins
 * Configure Release Management in VSTS to deploy the build artifacts from Jenkins
 
-### Pre-requisites for the lab
+### Prerequisites for the lab
 
 1. **Microsoft Azure Account**: You will need a valid and active Azure account for the Azure labs. If you do not have one, you can sign up for a [free trial](https://azure.microsoft.com/en-us/free/){:target="_blank"}
 
