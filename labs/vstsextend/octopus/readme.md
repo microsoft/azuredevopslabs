@@ -66,6 +66,22 @@ We will spin up a Octopus server on Azure. Click the **Deploy to Azure** button 
 
     ![Octopus Dashboard](images/octopusportal.png)
 
+## Setting up the Deployment Target
+
+In this lab, we will use Azure WebApp as the deployment target.
+
+Click the Deploy to Azure button below to provision Azure WebApp. 
+
+   <a href="https://portal.azure.com/#create/Microsoft.WebSite" target="_blank">![deploybutton](http://azuredeploy.net/deploybutton.png)</a>
+
+1. Provide **Web App name** and **Resource Group**. You can either create new Resource group or use existing one, and click **Create**
+
+    ![webapp](images/webapp.png)
+
+## Generate Octopus API Key
+
+API key is used to authenticate VSTS with Octopus server. Using API key lets you keep your username and password secret.
+
 1. From the Octopus Deploy portal, select **Profile** under *User* menu.
 
    ![User Profile](images/userprofile.png)
