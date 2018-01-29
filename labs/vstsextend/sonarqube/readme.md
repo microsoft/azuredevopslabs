@@ -12,7 +12,7 @@ Last updated : {{ "now" | date: "%b %d,%Y" }}
 
 Technical debt is the set of problems in a development effort that make forward progress on customer value inefficient. Technical debt saps productivity by making code hard to understand, fragile, time-consuming to change, difficult to validate, and creates unplanned work that blocks progress. Unless they are managed, technical debt can accumulate and hurt the overall quality of the software and the productivity of the development team in the long term
 
-[SonarQube](https://www.sonarqube.org/) an open source platform for continuous inspection of code quality to perform automatic reviews with static analysis of code to:
+[SonarQube](https://www.sonarqube.org/){:target="_blank"} an open source platform for continuous inspection of code quality to perform automatic reviews with static analysis of code to:
 
 - Detect Bugs
 - Code Smells
@@ -30,21 +30,27 @@ In this lab, you will learn how to setup SonarQube on Azure and to integrate Vis
 
 ### Pre-requisites for the lab
 
-1. An active **Microsoft Azure** account.
+1. **Microsoft Azure Account**: You will need a valid and active Azure account for the Azure labs. If you do not have one, you can sign up for a [free trial](https://azure.microsoft.com/en-us/free/){:target="_blank"}
 
-1. An active **VSTS** account. Create a new account from [here](https://docs.microsoft.com/en-us/vsts/accounts/create-account-msa-or-work-student).
+   - If you are a Visual Studio Active Subscriber, you are entitled for a $50-$150 credit per month. You can refer to this [link](https://azure.microsoft.com/en-us/pricing/member-offers/msdn-benefits-details/){:target="_blank"} to find out more including how to activate and start using your monthly Azure credit.
 
-1. A [Personal Access Token](https://docs.microsoft.com/en-us/vsts/accounts/use-personal-access-tokens-to-authenticate) (PAT).
+   - If you are not a Visual Studio Subscriber, you can sign up for the FREE [Visual Studio Dev Essentials](https://www.visualstudio.com/dev-essentials/){:target="_blank"} program to create **Azure free account** (includes 1 year of free services, $200 for 1st month).
+
+1. You will need a **Visual Studio Team Services Account**. If you do not have one, you can sign up for free [here](https://www.visualstudio.com/products/visual-studio-team-services-vs){:target="_blank"}
+
+1. You will need a **Personal Access Token** to set up your project using the Demo Generator. Please see this [article](https://docs.microsoft.com/en-us/vsts/accounts/use-personal-access-tokens-to-authenticate){:target="_blank"} for instructions to create your token.
+
+   {% include note.html content= "You should treat Personal Access Tokens like passwords. It is recommended that you save them somewhere safe so that you can re-use them for future requests." %}
 
 ## Setting up the Environment
 
 1. Click the **Deploy To Azure** button below to provision SonarQube Server on Azure VM.
 
-   <a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FMicrosoft%2FVSTS-DevOps-Labs%2Fmaster%2Fsonarqube%2Ftemplates%2Fazuredeploy.json">![](http://azuredeploy.net/deploybutton.png)</a>
+   <a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FMicrosoft%2FVSTS-DevOps-Labs%2Fmaster%2Fsonarqube%2Ftemplates%2Fazuredeploy.json">![deploybutton](http://azuredeploy.net/deploybutton.png)</a>
 
-    ![](images/CustomDeployAzure1.png)
+   ![CustomDeployAzure1](images/CustomDeployAzure1.png)
 
-    ![](images/CustomDeployAzure2.png)
+   ![CustomDeployAzure2](images/CustomDeployAzure2.png)
 
    Provide the following parameters as shown.
 
@@ -62,13 +68,13 @@ In this lab, you will learn how to setup SonarQube on Azure and to integrate Vis
 
 1. After providing all of the required values in the above table, check the ***Terms & Conditions*** checkbox and click on the **Purchase button**.
 
-   ![](images/CustomDeployAzure3.png)
+   ![CustomDeployAzure3](images/CustomDeployAzure3.png)
 
    {% include important.html content= "The deployment in Azure can take up to 30 minutes. At the end of the deployment, SonarQube will be configured to run as a Windows Service on the SonarQube VM. When the SonarQube service starts for the first time, it will configure its database. This can take an additional 15 minutes  to complete during which time the Azure deployment shows as completed but you still won't be able to reach the SonarQube home page. Please give SonarQube some time to update. Click [here](https://blogs.msdn.microsoft.com/visualstudioalmrangers/2016/10/06/easily-deploy-sonarqube-server-in-azure/) for more information." %}
 
 1. Once the deployment is successful, you will see the resources in Azure Portal.
 
-   ![](images/azure_resources.png)
+   ![azure_resources](images/azure_resources.png)
 
 ## Exercise 1: Create a SonarQube Project and configure Quality Gate
 
@@ -76,17 +82,17 @@ In this lab, you will learn how to setup SonarQube on Azure and to integrate Vis
 
    {% include important.html content= "The default port for SonarQube is 9000. Copy the DNS name from the created Virtual Machine in Azure Portal as shown and append :9000 at the end. The final **SonarQube** URL will be **http://YOUR_DNS_NAME:9000**" %}
 
-   ![](images/dns_name.png)
+   ![dns_name](images/dns_name.png)
 
 1. Open a browser and login to the SonarQube Portal using the following credentials-
 
    >**Username= admin, Password= admin**
 
-   ![](images/sonarqube_portal.png)
+   ![sonarqube_portal](images/sonarqube_portal.png)
 
 1. Click on **Administration** in the toolbar, go to **Projects** tab and click **Management**.
 
-   ![](images/sonar_admin.png)
+   ![sonar_admin](images/sonar_admin.png)
 
 1. Create a project with **Name** and **Key** as **MyShuttle**.
 
@@ -96,43 +102,43 @@ In this lab, you will learn how to setup SonarQube on Azure and to integrate Vis
 
    - **Key**: The SonarQube project key that is unique for each project.
 
-   ![](images/project_creation.png)
+   ![project_creation](images/project_creation.png)
 
    Let us create a Quality Gate to enforce a policy which fails the gate if there are bugs in the code. A Quality Gate is a PASS/FAIL check on a code quality that must be enforced before releasing software.
 
 1. Click on **Quality Gates** menu and click **Create** in the Quality Gates screen.
 
-   ![](images/qualitygate.png)
+   ![qualitygate](images/qualitygate.png)
 
-   ![](images/qg-create.png)
+   ![qg-create](images/qg-create.png)
 
 1. Enter name for the Quality Gate and click **Create**.
 
-   ![](images/qgcreate-popup.png)
+   ![qgcreate-popup](images/qgcreate-popup.png)
 
 1. Let us add a condition to check for the number of bugs in the code. Click on **Add Condition** drop down and select the value **Bugs**.
 
-   ![](images/qg-bugs.png)
+   ![qg-bugs](images/qg-bugs.png)
 
 1. Change the **Operator** value to **is greater than** and the **ERROR** threshold value to **0** (zero) and click on the **Add** button.
 
    {% include note.html content= "This condition means that if the number of bugs in Sonar Analysis is greater than 0 (zero), then the quality gate will fail and this fails the VSTS build." %}
 
-   ![](images/qgbug-add.png)
+   ![qgbug-add](images/qgbug-add.png)
 
 1. To enforce this quality gate for **MyShuttle** project, click on **All** under **Projects** section and select the project checkbox.
 
-   ![](images/qg-selectproject.png)
+   ![qg-selectproject](images/qg-selectproject.png)
 
 ## Exercise 2: Setting up the VSTS project
 
-1. Use [VSTS Demo Data Generator](https://vstsdemogenerator.azurewebsites.net/?name=SonarQube&templateid=77364) to provision a project on your VSTS account.
+1. Use [VSTS Demo Data Generator](https://vstsdemogenerator.azurewebsites.net/?name=SonarQube&templateid=77364){:target="_blank"} to provision a project on your VSTS account.
 
-   ![](images/vstsdemogen.png)
+   ![vstsdemogen](images/vstsdemogen.png)
 
 1. Provide the **Project Name**, the **SonarQube URL** that was created previously and click on **Create Project**. Once the project is provisioned, click the URL to navigate.
 
-   ![](images/vsts_project_provisioning.png)
+   ![vsts_project_provisioning](images/vsts_project_provisioning.png)
 
 ## Exercise 3: Modify the Build to Integrate with SonarQube
 
@@ -149,25 +155,25 @@ Now that the SonarQube server is running, we will modify VSTS build definition t
 
    {% include note.html content= "Here, the SonarQube Project Name and SonarQube Project Key values are based on the values you provide in Exercise 1: Step 3." %}
 
-   ![](images/build_configure.png)
+   ![build_configure](images/build_configure.png)
 
 1. Save and queue the build.
 
-   ![](images/build_in_progress.png)
+   ![build_in_progress](images/build_in_progress.png)
 
 1. You will see that the build has failed since the associated  **SonarQube Quality Gate** has **failed**. The  count of bugs is also displayed under **SonarQube Analysis Report**.
 
-   ![](images/build_summary.png)
+   ![build_summary](images/build_summary.png)
 
 1. Click on the **Detailed SonarQube Report** link in the build summary to open the project in SonarQube.
 
-   ![](images/analysis_report.png)
+   ![analysis_report](images/analysis_report.png)
 
 ## Exercise 4: Analyze SonarQube Reports
 
 The link will open the **MyShuttle** project in the SonarQube Dashboard.  Under ***Bugs and Vulnerabilities***, we can see a bug has been caught.
 
-  ![](images/sonar_portal.png)
+  ![sonar_portal](images/sonar_portal.png)
 
   The page has other metrics such as ***Code Smells***, ***Coverage***, ***Duplications*** and ***Size***. The following table briefly explains each of these terms.
 
@@ -184,13 +190,13 @@ The link will open the **MyShuttle** project in the SonarQube Dashboard.  Under 
 
 1. Click on the **Bugs** count to see the details of the bug.
 
-   ![](images/sonar_portal.png)
+   ![sonar_portal](images/sonar_portal.png)
 
-   ![](images/bug_details.png)
+   ![bug_details](images/bug_details.png)
 
 1. You will see the error in line number 28 of **LoginServlet.java** file as **Make "List" serializable or don't store it in the session**.
 
-   ![](images/bug_details_2.png)
+   ![bug_details_2](images/bug_details_2.png)
 
 1. The error is because the session attribute accepts only serialized objects. This can be fixed by explicitly casting the list object to serializable. Lets fix this bug -
 
@@ -204,23 +210,23 @@ The link will open the **MyShuttle** project in the SonarQube Dashboard.  Under 
 
       >session.setAttribute("employeeList", (Serializable)fareList);
 
-      ![](images/code_edit.png)
+      ![code_edit](images/code_edit.png)
 
    - Import the below package.
 
       >import java.io.Serializable;
 
-      ![](images/code_import.png)
+      ![code_import](images/code_import.png)
 
 1. Commit the changes.
 
 1. Once the CI build completes, you will see the Quality Gate as **Passed** in the build summary along with a brief view of **Test Results**, **Code Coverage** and link to SonarQube Analysis Report.
 
-   ![](images/build_summary_bug_fix.png)
+   ![build_summary_bug_fix](images/build_summary_bug_fix.png)
 
 1. Go to SonarQube portal. You will see the bug count is **0**.
 
-   ![](images/bug_fix_sonar_portal.png)
+   ![bug_fix_sonar_portal](images/bug_fix_sonar_portal.png)
 
 ## Summary
 

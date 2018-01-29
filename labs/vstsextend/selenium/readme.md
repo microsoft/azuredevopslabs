@@ -10,19 +10,19 @@ Last updated : {{ "now" | date: "%b %d,%Y" }}
 
 ## Overview
 
-[Selenium](http://www.seleniumhq.org/) is a portable open source software-testing framework for web applications. It has the capability to operate on almost every operating system. It supports all modern browsers and multiple languages including .NET (C#), Java.
+[Selenium](http://www.seleniumhq.org/){:target="_blank"} is a portable open source software-testing framework for web applications. It has the capability to operate on almost every operating system. It supports all modern browsers and multiple languages including .NET (C#), Java.
 
 In this lab, you will learn how to execute selenium testcases on a C# web application as part of the VSTS Continuous Delivery pipeline.
 
-If you are not familiar with creating Selenium UI tests in Visual Studio, you may refer to this lab  [click here](https://almvm.azurewebsites.net/labs/vsts/selenium/)
+If you are not familiar with creating Selenium UI tests in Visual Studio, you may refer to this lab  [click here](https://almvm.azurewebsites.net/labs/vsts/selenium/){:target="_blank"}
 
 ## Pre-requisites for the lab
 
-1. An active **Microsoft Azure** account.
+1. You will need a **Visual Studio Team Services Account**. If you do not have one, you can sign up for free [here](https://www.visualstudio.com/products/visual-studio-team-services-vs){:target="_blank"}
 
-1. An active **VSTS** account. Create a new account from [here](https://docs.microsoft.com/en-us/vsts/accounts/create-account-msa-or-work-student).
+1. You will need a **Personal Access Token** to set up your project using the Demo Generator. Please see this [article](https://docs.microsoft.com/en-us/vsts/accounts/use-personal-access-tokens-to-authenticate){:target="_blank"} for instructions to create your token.
 
-1. A [Personal Access Token](https://docs.microsoft.com/en-us/vsts/accounts/use-personal-access-tokens-to-authenticate) (PAT).
+    {% include note.html content= "You should treat Personal Access Tokens like passwords. It is recommended that you save them somewhere safe so that you can re-use them for future requests." %}
 
 ## Setting up the Environment
 
@@ -33,68 +33,68 @@ If you are not familiar with creating Selenium UI tests in Visual Studio, you ma
 
 1. It should take approximately 20-25 minutes to provision the resources. Once the deployment is successful, you will see the resources as shown.
 
-   ![](images/azure_resources.png)
+   ![azure_resources](images/azure_resources.png)
 
 ## Setting up the VSTS project
 
-1. Use [VSTS Demo Data Generator](https://vstsdemogenerator.azurewebsites.net/?name=Selenium&templateid=77367) to provision the project on your VSTS account.
+1. Use [VSTS Demo Data Generator](https://vstsdemogenerator.azurewebsites.net/?name=Selenium&templateid=77367){:target="_blank"} to provision the project on your VSTS account.
 
-    ![](images/VSTSDemogenerator.png)
+    ![VSTSDemogenerator](images/VSTSDemogenerator.png)
 
     {% include note.html content= "This URL will automatically select **Selenium** template in the demo generator. If you want to try other projects, use this URL instead -[https://vstsdemogenerator.azurewebsites.net/](https://vstsdemogenerator.azurewebsites.net/)" %}
 
 1. Once the project is provisioned, click the URL to navigate to the project.
 
-   ![](images/VSTSDemogenerator2.png)
+   ![VSTSDemogenerator2](images/VSTSDemogenerator2.png)
 
 ## Exercise 1: Creating Deployment Group
 
-We will use Deployment Groups feature in VSTS  to deploy the application to the VM which was provisioned earlier to execute the Selenium test cases. [Deployment Groups](https://docs.microsoft.com/en-us/vsts/build-release/concepts/definitions/release/deployment-groups/) in VSTS makes it easier to organize the servers that you want to use to host your app. A deployment group is a collection of machines with a VSTS agent on each of them. Each machine interacts with VSTS to coordinate deployment of your app.
+We will use Deployment Groups feature in VSTS  to deploy the application to the VM which was provisioned earlier to execute the Selenium test cases. [Deployment Groups](https://docs.microsoft.com/en-us/vsts/build-release/concepts/definitions/release/deployment-groups/){:target="_blank"} in VSTS makes it easier to organize the servers that you want to use to host your app. A deployment group is a collection of machines with a VSTS agent on each of them. Each machine interacts with VSTS to coordinate deployment of your app.
 
 We will also deploy the SQL database in the VM using Deployment Groups.
 
 1. Go to **Deployment Groups** under **Build & Release** tab. Click **Add deployment group** .
 
-   ![](images/add_deploymentgroup.png)
+   ![add_deploymentgroup](images/add_deploymentgroup.png)
 
 1. Provide deployment group name and click **Create**.
 
-   ![](images/create_deploymentgroup.png)
+   ![create_deploymentgroup](images/create_deploymentgroup.png)
 
    This will generate a PowerShell script to associate the VM to this deployment group.
 
 1. Select the **Use a personal access token in the script for authentication** check box so that we will not have to provide password every time the script is executed. Click on **Copy script to clipboard** to copy the script which will be used in the next exercise to associate the VM to  deployment group.
 
-   ![](images/create_deploymentgroup2.png)
+   ![create_deploymentgroup2](images/create_deploymentgroup2.png)
 
 ## Exercise 2: Associate the VM to Deployment Group
 
 In this exercise, we will execute the **registration script** on the VM to associate with the deployment group.
 
-1. Login to the VM using [RDP](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/connect-logon) with the following credentials
+1. Login to the VM using [RDP](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/connect-logon){:target="_blank"} with the following credentials
 
    - **Username**: vmadmin
    - **Password**: P2ssw0rd@123
 
 1. Open **Windows PowerShell** in **administrator** mode, paste the copied **Registration script** and hit **Enter**.
 
-   ![](images/configure_deploymentgroup-2.png)
+   ![configure_deploymentgroup-2](images/configure_deploymentgroup-2.png)
 
 1. When the **Enter deployment group tags for agent? (Y/N) (press enter for N) >** message is prompted in the PowerShell window, type **Y** and hit enter.
 
-   ![](images/deploygroup_agent.png)
+   ![deploygroup_agent](images/deploygroup_agent.png)
 
 1. Enter **web, db** for the tags
 
-   ![](images/configure_deploymentgroup.png)
+   ![configure_deploymentgroup](images/configure_deploymentgroup.png)
 
 1. When prompt -**Enter User account to use for the service (press enter for NT AUTHORITY\SYSTEM) >** is displayed, hit **Enter** to configure the service to run under **NT AUTHORITY\SYSTEM** account.
 
-   ![](images/userserviceaccount-dg.png)
+   ![userserviceaccount-dg](images/userserviceaccount-dg.png)
 
 1. Refresh your VSTS Deployment Groups page, click the created Deployment Group and you will notice the online status, health status and the associated tags of the VM.
 
-   ![](images/configure_deploymentgroup2.png)
+   ![configure_deploymentgroup2](images/configure_deploymentgroup2.png)
 
 ## Exercise 3: Configure agent on the VM
 
@@ -111,23 +111,23 @@ Let us configure a ***private*** agent on this VM, since Selenium requires the a
     - Let us use the default options for rest of the configuration. Press **Enter** for all prompts until the command execution completes.
     - Once the agent is registered, type **run.cmd** and hit **Enter** to start the agent.
 
-    Click [here](https://docs.microsoft.com/en-us/vsts/build-release/actions/agents/v2-windows) for more information on how to configure the agent.
+    Click [here](https://docs.microsoft.com/en-us/vsts/build-release/actions/agents/v2-windows){:target="_blank"} for more information on how to configure the agent.
 
-   ![](images/configure_windowsagent.png)
+   ![configure_windowsagent](images/configure_windowsagent.png)
 
 ## Exercise 4: Configure Release
 
-The target machine is available in the deployment group to deploy the application and run selenium testcases. The release definition uses **[Phases](https://docs.microsoft.com/en-us/vsts/build-release/concepts/process/phases)** to deploy to target servers.
+The target machine is available in the deployment group to deploy the application and run selenium testcases. The release definition uses **[Phases](https://docs.microsoft.com/en-us/vsts/build-release/concepts/process/phases){:target="_blank"}** to deploy to target servers.
 
 1. Go to **Releases** under **Build and Release** tab. Select **Selenium** release definition and **Edit**.
 
-   ![](images/setuprelease.png)
+   ![setuprelease](images/setuprelease.png)
 
 1. Open **Dev** environment to see the three deployment phases.
 
-   ![](images/setuprelease2.png)
+   ![setuprelease2](images/setuprelease2.png)
 
-   ![](images/releasephases.png)
+   ![releasephases](images/releasephases.png)
 
    - **IIS Deployment phase**: In this phase, we deploy application to the VM using following tasks-
 
@@ -135,24 +135,24 @@ The target machine is available in the deployment group to deploy the applicatio
 
       - **IIS Web App Deploy**: This task deploys the application to the IIS server using **Web Deploy**.
 
-   - **Database deploy phase**: In this phase, we use [**SQL Server Database Deploy**](https://github.com/Microsoft/vsts-tasks/blob/master/Tasks/SqlDacpacDeploymentOnMachineGroup/README.md) task to deploy [**dacpac**](https://docs.microsoft.com/en-us/sql/relational-databases/data-tier-applications/data-tier-applications) file to the DB server.
+   - **Database deploy phase**: In this phase, we use [**SQL Server Database Deploy**](https://github.com/Microsoft/vsts-tasks/blob/master/Tasks/SqlDacpacDeploymentOnMachineGroup/README.md){:target="_blank"} task to deploy [**dacpac**](https://docs.microsoft.com/en-us/sql/relational-databases/data-tier-applications/data-tier-applications){:target="_blank"} file to the DB server.
 
    - **Selenium tests execution**: Executing **UI testing** as part of the release process is a great way of detecting unexpected changes, and need not be difficult. In this phase, we will execute Selenium tests on the deployed web application. The below tasks describes using Selenium to test the website in the release pipeline.
 
-     - **Deploy Test Agent**: The [Deploy Test agent](https://github.com/Microsoft/vsts-tasks/blob/master/Tasks/DeployVisualStudioTestAgent/README.md) task will deploy the test agent to the VM. The test agent is used to run distributed tests like Coded UI and Selenium.
-     - **Run Functional tests**: This [task](https://github.com/Microsoft/vsts-tasks/blob/master/Tasks/RunDistributedTests/README.md) uses **vstest.console.exe** to execute the selenium testcases.
+     - **Deploy Test Agent**: The [Deploy Test agent](https://github.com/Microsoft/vsts-tasks/blob/master/Tasks/DeployVisualStudioTestAgent/README.md){:target="_blank"} task will deploy the test agent to the VM. The test agent is used to run distributed tests like Coded UI and Selenium.
+     - **Run Functional tests**: This [task](https://github.com/Microsoft/vsts-tasks/blob/master/Tasks/RunDistributedTests/README.md){:target="_blank"} uses **vstest.console.exe** to execute the selenium testcases.
 
 1. Click on **IIS Deployment** phase and select the Deployment Group which we have created in **Exercise 2**.
 
-   ![](images/setuprelease_IIS.png)
+   ![setuprelease_IIS](images/setuprelease_IIS.png)
 
 1. Repeat the above step for **SQL Deployment** phase
 
-   ![](images/setuprelease_db.png)
+   ![setuprelease_db](images/setuprelease_db.png)
 
 1. Click on **Selenium tests execution** phase and set Agent queue to **Default** then save the changes.
 
-   ![](images/setuprelease_selenium.png)
+   ![setuprelease_selenium](images/setuprelease_selenium.png)
 
 ## Exercise 5: Trigger Build and Release
 
@@ -160,32 +160,32 @@ In this exercise, we will trigger the **VSTS build** to compile the Selenium C# 
 
 1. Navigate to **Builds** under **Build and Release** tab and queue the build.
 
-   ![](images/buildqueue.png)
+   ![buildqueue](images/buildqueue.png)
 
 1. This build will publish the test artifacts to VSTS, which will be used in release.
 
-   ![](images/buildqueue2.png)
+   ![buildqueue2](images/buildqueue2.png)
 
 1. Once the build completes, the release will be triggered. Navigate to **Releases** tab to see the deployment in-progress.
 
-   ![](images/releasequeue.png)
+   ![releasequeue](images/releasequeue.png)
 
 1. When **Selenium test execution** phase starts, connect back to the VM provisioned earlier to see UI tests execution.
 
    {% include note.html content= "It takes approximately 8 minutes to deploy the test agent for the first time on the VM. Once this task is complete, you can connect to the VM to see the actual test execution." %}
 
-   ![](images/Releaseprogress.png)
+   ![Releaseprogress](images/Releaseprogress.png)
 
 1. In this lab, we are executing **4** UI test scenarios configured to run on **Chrome** and **Firefox** browsers.
 
 ### Tests running in Chrome
 
-   ![](images/seleniumtest.png)
+   ![seleniumtest](images/seleniumtest.png)
 
 ### Tests running in Firefox
 
-   ![](images/seleniumtestfirefox.png)
+   ![seleniumtestfirefox](images/seleniumtestfirefox.png)
 
 Once the release succeeds, click the **Tests** tab to analyze the test results. Select **All** in the **Outcome** section to view all the tests and their status.
 
-![](images/analyzetests.png)
+![analyzetests](images/analyzetests.png)
