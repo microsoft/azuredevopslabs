@@ -128,85 +128,83 @@ The below diagram details the VSTS DevOps workflow with Docker:
 
    |Agents|Usage Details|
    |------|-----|
-   |**DB deployment**|**Hosted VS2017** agent is used to create the database|
-   |**Web App deployment**|**Hosted Linux Preview** agent is used to deploy the application to the Linux Web App|
+   |**DB deployment**|The **Hosted VS2017** agent is used to deploy the database|
+   |**Web App deployment**|The **Hosted Linux Preview** agent is used to deploy the application to the Linux Web App|
 
 1. Under the **Execute Azure SQL:DacpacTask** section, select the **Azure Subscription** from the dropdown.
 
-    **Execute Azure SQL:DacpacTask**: will deploy the dacpac to the **mhcdb** database so that the schema and data is set for the backend.
+    **Execute Azure SQL:DacpacTask**: This task will deploy the dacpac to the **mhcdb** database so that the schema and data is configured for the backend.
 
     ![Update DB Task](images/update_dbtask.png)
 
-1. Under the **Azure App Service Deploy** task, update the **Azure subscription** and and **Azure Service name** tasks with the endpoint components from the dropdown.
+1. Under the **Azure App Service Deploy** task, update the **Azure subscription** and the **Azure Service name** tasks with the endpoint components from the dropdown.
 
-    **Azure App Service Deploy** will pull the appropriate image corresponding to the BuildID from repository specified, and deploys the image to Linux App Service.
+    **Azure App Service Deploy** will pull the appropriate docker image corresponding to the BuildID from repository specified, and deploys the image to the Linux App Service.
 
     ![Update repository](images/updatedrd.png)
 
-1. Click on **Variables** section, update **ACR** and **SQLserver** with the details noted earlier while setting up the environment. Click **Save**.
+1. Click on the **Variables** section, update the **ACR** details and the **SQLserver** details with the information noted earlier while setting up the environment. Click on the **Save** button.
 
     ![Update variables](images/update_rdvariables.png)
 
-   >Note: **Database Name** is set to **mhcdb**, **Server Admin Login** is **sqladmin** and **Password** is **P2ssw0rd1234**.
+   >The **Database Name** is set to **mhcdb**, the **Server Admin Login** is set to **sqladmin** and the **Password** is set currently to **P2ssw0rd1234**.
 
-## Exercise 3: Trigger CI-CD with Code Change
+## Exercise 3: Initiating the CI-CD with source Code Change
 
-In this exercise, we will update the code to trigger CI-CD.
+In this exercise, the source code will be modified to trigger the CI-CD.
 
-1. Go to **Files** under **Code** tab, and navigate to the below path to **Edit** the file **Index.cshtml**
-
-   >Docker/src/MyHealth.Web/Views/Home/**Index.cshtml**
+1. Click on the **Files** section under the **Code** tab, and navigate to the `Docker/src/MyHealth.Web/Views/Home` folder and open the `Index.cshtml` file for editing.
 
    ![Edit code](images/editcode.png)
 
-1. Go to line number **28**, update **JOIN US** to **CONTACT US**, and click **Commit**.
+1. Modify the text **JOIN US** to **CONTACT US** on the line number 28 and then click on the **Commit** button.
 
     ![Line Edit](images/lineedit.png)
 
-1. Click **Commit** in the pop-up window.
+1. In the **Commit** window, provide comments and then click on the **Commit** to commit the changes to the repository.This action would initiate an automatic build for the source code.
 
-    ![](images/commit.png)
+    ![Commit](images/commit.png)
 
-1. Go to **Builds** tab. Click on the build number to see the build in progress.
+1. Select the **Builds** tab and click on the build number to view the build in progress.
 
-    ![](images/build3.png)
+    ![Build](images/build3.png)
 
-    Build will generate and push the image to Azure Container Registry. After build completes, you will see the build summary.
+1. The Build will generate and push the docker image of the web application to the Azure Container Registry. Once the build is completed, the build summary will be displayed.
 
-    ![](images/build4.png)
+    ![Build Summary](images/build4.png)
 
-1. Go to [Azure Portal](https://portal.azure.com), navigate to the **App Service** which was created at the beginning of this lab. Select **Docker Container** section. Under **Image Source** highlight **Azure Container Registry**. Select your **Registry** from the dropdown. Under **image** dropdown select **myhealth.web** and under **Tag** dropdown select **latest**. This is required to map Azure Container Registry with the Web App. Click **Save**.
+1. Navigate to the [Azure Portal](https://portal.azure.com) and click on the **App Service** that was created at the beginning of this lab. Select the **Docker Container** option and provide the information as suggested and then click the **Save** button.
+   1. **Image Source**: Select the value **Azure Container Registry**
+   1. **Registry**: Select the registry value from the dropdown
+   1. **image**: Select the value **myhealth.web**
+   1. **Tag**: Select the value **latest**. This is required to map Azure Container Registry with the Web App.
 
-    ![](images/updatereg.png)
+    ![Update registry](images/updatereg.png)
 
-    ![](images/updatereg2.png)
+    ![Update registry](images/updatereg2.png)
 
-    We could configure Continuous Deployment to deploy the web app is updated when a new image is pushed to the registry, within the Azure portal itself. However, setting up a VSTS CD pipeline will provide more flexibility and additional controls (approvals, release gates, etc.) for application deployment.
+   > The Continuous Deployment can be configured to deploy the web app to the designated server whenever a new docker image is pushed to the registry on the Azure portal itself. However, setting up a VSTS CD pipeline will provide better flexibility and additional controls (approvals, release gates, etc.) for the application deployment.
 
-1. To see generated images, go to your **Azure Container Registry** and navigate to **Repositories**.
+1. Navigate to the **Azure Container Portal** and then select the **Repositories** option to view the generated images.
 
-    ![](images/imagesinrepo.png)
+    ![Repository](images/imagesinrepo.png)
 
-1. Switch back to **Releases** in VSTS, and double click on latest release. Navigate to **Logs** section to see the release in progress.
+1. Navigate to the **Releases** section under **Build & Releases** in the VSTS, and double-click on the latest release displayed on the page. Click on the **Logs** section to view the release in progress.
 
-    ![](images/rel3.png)
+    ![Release Progress](images/rel3.png)
 
-1. The release will deploy the image to App Service based on the **BuildID**, which is tagged with the image. You will see below summary once the release is complete.
+1. The release will deploy the docker image to the App Service based on the **BuildID** tagged with the docker image. Once the release is completed, the release sumamry will be displayed.
 
-    ![](images/rel8.png)
+    ![Summary](images/rel8.png)
 
-1. Switch back to [Azure Portal](https://portal.azure.com), navigate to the **Overview** section of your **App Service**. Click on the **URL** to see the changes in your app.
+1. Navigate back to the [Azure Portal](https://portal.azure.com)   and click on the **Overview** section of the **App Service**. Click on the **URL** to browse the application and view the changes.
 
-    ![](images/getwebappurl.png)
+    ![Web app URL](images/getwebappurl.png)
 
-    ![](images/finalresult.png)
+    ![Final Result](images/finalresult.png)
 
-    Use below credentials to login to your **HealthClinic** app:
-
-    **Username**: user
-
-    **Password**: P2ssw0rd@1
+> Use the credentials **Username**: `user` and **Password**: `P2ssw0rd@1` to login to the **HealthClinic** web application.
 
 ## Summary
 
-With **Visual Studio Team Services** and **Azure**, we can build DevOps for dockerized applications by leveraging docker capabilities enabled on VSTS Hosted Agents.
+Using the **VSTS** and the **Azure**, DevOps can be configured for dockerized applications by leveraging docker capabilities enabled on VSTS Hosted Agents.
