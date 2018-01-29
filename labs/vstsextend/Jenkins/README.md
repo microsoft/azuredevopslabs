@@ -60,7 +60,7 @@ This lab covers both the approaches and the following tasks will be performed
 
 Read the complete spec at [https://docs.microsoft.com/en-us/azure/architecture/reference-architectures/jenkins/images/jenkins-server.png](https://docs.microsoft.com/en-us/azure/architecture/reference-architectures/jenkins/images/jenkins-server.png){:target="_blank"}
 
-## Setting up the VSTS project
+## Setting up the VSTS team project
 
 1. Use the [VSTS Demo Generator](https://vstsdemogenerator.azurewebsites.net/?name=MyShuttleDocker&templateid=77373){:target="_blank"} to provision a team project on the VSTS account
 
