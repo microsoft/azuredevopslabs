@@ -197,4 +197,4 @@ The target servers are available in the deployment group for deploying the appli
 
 ## Summary
 
-Using VSTS and Azure, web applications can be easily compiled and deployed to multiple target servers using Deployment Groups.
+Using VSTS and Azure, the web applications can be easily compiled and deployed to multiple target servers using Deployment Groups.
