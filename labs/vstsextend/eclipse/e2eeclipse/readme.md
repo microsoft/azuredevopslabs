@@ -1,14 +1,4 @@
----
-title: End to End workflow with Eclipse
-layout: page
-sidebar: vsts2
-permalink: /labs/vstsextend/eclipse/e2eeclipse
-folder: /labs/vstsextend/eclipse/e2eeclipse
----
-
-Last updated : {{ "now" | date: "%b %d,%Y" }}
-
-## Overview
+# Overview
 
 In this exercise, you are going to see a typical end-to-end workflow for a Java developer.
 
