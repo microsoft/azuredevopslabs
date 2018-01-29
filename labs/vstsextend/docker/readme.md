@@ -85,13 +85,13 @@ The below diagram details the VSTS DevOps workflow with Docker:
 
 ## Setting up the VSTS Project
 
-1. Use the [VSTS Demo Generator](https://vstsdemogenerator.azurewebsites.net/?name=PartsUnlimited){:target="_blank"} to provision the team project on the VSTS account.
+1. Use the [VSTS Demo Generator](https://vstsdemogenerator.azurewebsites.net/?name=Docker&templateid=77363){:target="_blank"} to provision the team project on the VSTS account.
 
-   ![VSTS Demo Generator](images/vstsdemogen.png)
+   ![VSTS Demo Generator](images/VSTSDemogenerator.png)
 
 1. Once the team project is provisioned, click on the URL to navigate to the team project.
 
-   ![VSTS Demo Generator](images/VSTSDemoGeneratorCreate.png)
+   ![VSTS Demo Generator](images/Docker2.jpg)
 
 ## Exercise 1: Endpoint Creation
 
@@ -101,9 +101,9 @@ The connection between the VSTS and the Azure is not automatically established d
 
 1. Click on the **+New Service Endpoint** button and select the **Azure Resource Manager** option. Provide  `Connection name`, select the `Azure Subscription` from the list and the click on the **Ok** button. The Azure credentials will be required to be provided to authorize the connection.
 
-   ![Endpoint Creation](images/endpoint_creation.png)
+   ![Endpoint Creation](images/azureendpoint.png)
 
-   >Disable the pop-up blocker in your browser. If a blank screen is displayed after the **Ok** button is clicked, retry the step.
+   {% include important.html content= "Disable the pop-up blocker in your browser. If a blank screen is displayed after the **Ok** button is clicked, retry the step." %}
 
 ## Exercise 2: Configure Continuous Integration (CI) and Continuous Delivery (CD)
 
@@ -181,7 +181,7 @@ In this exercise, the source code will be modified to trigger the CI-CD.
 
     ![Build Summary](images/build4.png)
 
-1. Navigate to the [Azure Portal](https://portal.azure.com) and click on the **App Service** that was created at the beginning of this lab. Select the **Docker Container** option and provide the information as suggested and then click the **Save** button.
+1. Navigate to the [Azure Portal](https://portal.azure.com){:target="_blank"} and click on the **App Service** that was created at the beginning of this lab. Select the **Docker Container** option and provide the information as suggested and then click the **Save** button.
    1. **Image Source**: Select the value **Azure Container Registry**
    1. **Registry**: Select the registry value from the dropdown
    1. **image**: Select the value **myhealth.web**
@@ -191,7 +191,7 @@ In this exercise, the source code will be modified to trigger the CI-CD.
 
     ![Update registry](images/updatereg2.png)
 
-   > The Continuous Deployment can be configured to deploy the web app to the designated server whenever a new docker image is pushed to the registry on the Azure portal itself. However, setting up a VSTS CD pipeline will provide better flexibility and additional controls (approvals, release gates, etc.) for the application deployment.
+    {% include tip.html content= "The Continuous Deployment can be configured to deploy the web app to the designated server whenever a new docker image is pushed to the registry on the Azure portal itself. However, setting up a VSTS CD pipeline will provide better flexibility and additional controls (approvals, release gates, etc.) for the application deployment." %}
 
 1. Navigate to the **Azure Container Portal** and then select the **Repositories** option to view the generated images.
 
@@ -205,7 +205,7 @@ In this exercise, the source code will be modified to trigger the CI-CD.
 
     ![Summary](images/rel8.png)
 
-1. Navigate back to the [Azure Portal](https://portal.azure.com)   and click on the **Overview** section of the **App Service**. Click on the **URL** to browse the application and view the changes.
+1. Navigate back to the [Azure Portal](https://portal.azure.com){:target="_blank"}   and click on the **Overview** section of the **App Service**. Click on the **URL** to browse the application and view the changes.
 
     ![Web app URL](images/getwebappurl.png)
 
