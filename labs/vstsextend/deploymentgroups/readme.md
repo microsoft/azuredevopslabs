@@ -28,7 +28,7 @@ The Deployment Group installs a deployment agent on each of the target servers w
 
 The following resources will be provisioned on the Azure using an ARM template:
 
-- Six Virtual Machines (VM) web servers with IIS configured
+- Six Virtual Machines (VM) web servers with the IIS configured
 
 - A SQL server VM (db server) and
 
