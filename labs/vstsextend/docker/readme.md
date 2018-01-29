@@ -39,8 +39,11 @@ The below diagram details the VSTS DevOps workflow with Docker:
    [![Deploy to Azure](http://azuredeploy.net/deploybutton.png)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FMicrosoft%2FVSTS-DevOps-Labs%2Fdocker%2Fdocker%2Ftemplates%2Fazuredeploy.json)
 
 1. In the Custom deployment window, select the **Subscription** type, leave the default selection for the resource group and select the **Location**. Provide the **ACR Name, Site Name**, **DB Server Name**, accept the **Terms and Conditions** and click on the **Purchase** button to provision the following resources:
+
    - Azure Container Registry
+
    - Azure Web App
+
    - Azure SQL Server Database
 
    > Use lower case letters for ***DB Server Name***
@@ -53,72 +56,46 @@ The below diagram details the VSTS DevOps workflow with Docker:
 
 1. The following components are provisioned post deployment.
 
-    <table width="100%">
-   <thead>
-      <tr>
-         <th width="50%"><b>Azure Components</b></th>
-         <th><b>Description</b></th>
-      </tr>
-   </thead>
-   <tr>
-      <td><img src="images/container_registry.png" width="30px"><b>Azure Container Registry</b></td>
-      <td>Used to store images privately</td>
-   </tr>
-   <tr>
-      <td><img src="images/storage.png" width="30px"> <b>Storage Account</b></td>
-      <td>Container Registry resides in this storage account</td>
-   </tr>
-   <tr>
-      <td><img src="images/app_service.png" width="30px"> <b>App Service</b></td>
-      <td>Docker images are deployed to containers in this App Service</td>
-   </tr>
-   <tr>
-      <td><img src="images/app_service_plan.png" width="30px"> <b>App Service Plan</b></td>
-      <td>Resource where App Service resides</td>
-   </tr>
-   <tr>
-      <td><img src="images/sqlserver.png" width="30px"> <b>SQL Server</b> </td>
-      <td>SQL Server to host database</td>
-   </tr>
-   <tr>
-      <td><img src="images/sqldb.png" width="30px"> <b>SQL database</b> </td>
-      <td>SQL database to host MyHealthClinic data</td>
-   </tr>
-   </table>
+   Azure Components | Description
+   -----------------|------------
+   ![Azure Container RegistryAzure](images/container_registry.png) Container Registry | Used to store images privately
+   ![Storage Account](images/storage.png) Storage Account | Container Registry resides in this storage account
+   ![App Service](images/app_service.png) App Service | Docker images are deployed to containers in this App Service
+   ![App Service Plan](images/app_service_plan.png) App Service Plan | Resource where App Service resides
+   ![SQL Server](images/sqlserver.png) SQL Server | SQL Server to host database
+   ![SQL database](images/sqldb.png) SQL database | SQL database to host MyHealthClinic data
 
-   ![](images/postazuredeployment.png)
+   ![]Post Azure Deployment(images/postazuredeployment.png)
 
-1. Click on **mhcdb** SQL database. Note down the **Server name**.
+1. Click on the **mhcdb** SQL database and make a note of the server under the header **Server name**.
 
-   ![](images/getdbserverurl.png)
+   ![DB Server URL](images/getdbserverurl.png)
 
-1. Go back to your resource group. Click on container registry and note down the **Login server** name. We need these details later in Exercise 2.
+1. Navigate back to the resource group. Click on the container registry and make a note of the server under the header **Login server**. These server details will be required in the Exercise 2.
 
-   ![](images/getacrserver.png)
+   ![ACR](images/getacrserver.png)
 
 ## Setting up the VSTS Project
 
-1. Use [VSTS Demo Data Generator](https://vstsdemogenerator.azurewebsites.net/?name=Docker&templateid=77363) to provision a project on your VSTS account
+1. Use the [VSTS Demo Generator](https://vstsdemogenerator.azurewebsites.net/?name=PartsUnlimited) to provision the team project on the VSTS account.
 
-    ![](images/VSTSDemogenerator.png)
+   ![VSTS Demo Generator](images/vstsdemogen.png)
 
-1. Provide a Project Name, and click on Create Project.
+1. Once the team project is provisioned, click on the URL to navigate to the team project.
 
-   ![](images/vstsdemogen2.png)
-
-1. Once the project is provisioned, click the **URL** to navigate to the project.
-
-   ![](images/vstsdemogen3.png)
+   ![VSTS Demo Generator](images/VSTSDemoGeneratorCreate.png)
 
 ## Exercise 1: Endpoint Creation
 
-Since the connections are not established during project provisioning, we will manually create the Azure endpoint.
+> The connection between the VSTS and the Azure is not automatically established during the team project provisioning, and hence the endpoints need to be created manually. This endpoint will be used to connect **VSTS** with **Azure**. Follow the steps outlined below to create the endpoint.
 
-1. In VSTS, navigate to **Services** by clicking on the gear icon ![](images/gear.png), and click on **+ New Service Endpoint**. Select **Azure Resource Manager**. Specify **Connection name**, select your **Subscription** from the dropdown and click **OK**. We use this endpoint to connect **VSTS** and **Azure**.
+1. In the VSTS home page, click on the **Settings** gear icon ![Admin Settings](images/gear.png) and then click on the **Services** option to navigate to the **Services** screen.
 
-   ![](images/azureendpoint.png)
+1. Click on the **+New Service Endpoint** button and select the **Azure Resource Manager** option. Provide  `Connection name`, select the `Azure Subscription` from the list and the click on the **Ok** button. The Azure credentials will be required to be provided to authorize the connection.
 
-   You will be prompted to authorize this connection with Azure credentials. Disable pop-up blocker in your browser if you see a blank screen after clicking OK, and retry the step.
+   ![Endpoint Creation](images/endpoint_creation.png)
+
+   > Disable the pop-up blocker in your browser. If a blank screen is displayed after the **Ok** button is clicked, retry the step.
 
 ## Exercise 2: Configure CI-CD
 
@@ -128,24 +105,24 @@ Since the connections are not established during project provisioning, we will m
 
 1. Go to **Builds** under **Build and Release** tab, **Edit** the build definition **MHCDocker.build**
 
-   ![](images/build.png)
+   ![Build](images/build.png)
 
 1. In the **Process** section, update **Azure subscription** and **Azure Container Registry** with the endpoint component from the dropdown. (use arrow keys to choose Azure Container Registry for the first time). Click **Save**.
 
-   ![](images/updateprocessbd.png)
+   ![Tasks](images/updateprocessbd.png)
 
    |Tasks|Usage|
    |-----|-----|
-   |![](images/icon.png) **Run services**| prepares suitable environment by restoring required packages|
-   |![](images/icon.png) **Build services**| builds **myhealth.web** image |
-   |![](images/icon.png) **Push services**| pushes **myhealth.web** image tagged with **$(Build.BuildId)** to container registry|
-      |![](images/publish-build-artifacts.png) **Publish Build Artifacts**| used to share dacpac for database deployment through VSTS artifacts  |
+   |![Run services](images/icon.png) **Run services**| prepares suitable environment by restoring required packages|
+   |![Build services](images/icon.png) **Build services**| builds **myhealth.web** image |
+   |![Push services](images/icon.png) **Push services**| pushes **myhealth.web** image tagged with **$(Build.BuildId)** to container registry|
+   |![Publish Build Artifacts](images/publish-build-artifacts.png) **Publish Build Artifacts**| used to share dacpac for database deployment through VSTS artifacts  |
 
 1. Go to **Releases** under **Build & Release** tab, **Edit** the release definition **MHCDocker.release** and select **Tasks**.
 
-   ![](images/release.png)
+   ![Release](images/release.png)
 
-   ![](images/release_tasks.png)
+   ![Release Tasks](images/release_tasks.png)
 
 1. Description of three phases used in this release are given below:
 
