@@ -172,25 +172,25 @@ Service endpoints are a bundle of properties securely stored by VSTS and is a wa
 
 Since the connections are not established during project provisioning,the two endpoints - **Azure Resource Manager** and **Kubernetes** need to be created manually.
 
-**Azure Resource Manager Service Endpoint**: Defines and secures a connection to a Microsoft Azure subscription using Service Principal Authentication (SPA).
+1. **Azure Resource Manager Service Endpoint**: Defines and secures a connection to a Microsoft Azure subscription using Service Principal Authentication (SPA).
 
-1. In VSTS, navigate to the **Services** by clicking on the gear icon ![Settings](images/gear.png), and click on the **+ New Service Endpoint** button. Select the **Azure Resource Manager** and specify the **Connection name**, select the **Subscription** from the dropdown and click on the **Ok** button. This endpoint will be used to connect the **VSTS** and the **Azure**.
+   * In VSTS, navigate to the **Services** by clicking on the gear icon ![Settings](images/gear.png), and click on the **+ New Service Endpoint** button. Select the **Azure Resource Manager** and specify the **Connection name**, select the **Subscription** from the dropdown and click on the **Ok** button. This endpoint will be used to connect the **VSTS** and the **Azure**.
 
-    You will be prompted to authorize this connection with Azure credentials. Disable pop-up blocker in your browser if you see a blank screen after clicking OK, and retry the step.
+     You will be prompted to authorize this connection with Azure credentials. Disable pop-up blocker in your browser if you see a blank screen after clicking OK, and retry the step.
 
-   > If your subscription is not listed or to specify an existing service principal, click the link in the dialog which will switch to manual configuration mode and follow the [Service Principal creation](https://blogs.msdn.microsoft.com/devops/2015/10/04/automating-azure-resource-group-deployment-using-a-service-principal-in-visual-studio-online-buildrelease-management/){:target="_blank"} link.
+     > If your subscription is not listed or to specify an existing service principal, click the link in the dialog which will switch to manual configuration mode and follow the [Service Principal creation](https://blogs.msdn.microsoft.com/devops/2015/10/04/automating-azure-resource-group-deployment-using-a-service-principal-in-visual-studio-online-buildrelease-management/){:target="_blank"} link.
 
-   ![azureendpoint](images/azureendpoint.png)
+     ![azureendpoint](images/azureendpoint.png)
 
-## Kubernetes Service Endpoint
+1. **Kubernetes Service Endpoint**
 
-1. Click **+ New Service Endpoint**, and select **Kubernetes** from the list. We use this endpoint to connect **VSTS** and **Azure Container Service (AKS)**.
+   * Click **+ New Service Endpoint**, and select **Kubernetes** from the list. We use this endpoint to connect **VSTS** and **Azure Container Service (AKS)**.
 
-    * **Connection Name** : Provide the connection name.
+     * **Connection Name** : Provide the connection name.
 
-    * **Server URL** : Provide the container service address in the format `http://{API server address}`
+     * **Server URL** : Provide the container service address in the format `http://{API server address}`
 
-    * **Kubeconfig** : To get the Kubeconfig value, run the following Azure commands in a command prompt logged in with Administrator privilege.
+     * **Kubeconfig** : To get the Kubeconfig value, run the following Azure commands in a command prompt logged in with Administrator privilege.
 
       1. Type **az login** and hit Enter. Authorize your login by accessing the url given in the prompt and enter the provided unique code to complete the authentication.
 
@@ -200,11 +200,11 @@ Since the connections are not established during project provisioning,the two en
 
          ![Kubernetes Service Endpoint](images/getkubeconfig.png)
 
-    * Navigate to the **.kube** folder under your home directory (eg: C:\Users\YOUR_HOMEDIR\ .kube)
+     * Navigate to the **.kube** folder under your home directory (eg: C:\Users\YOUR_HOMEDIR\ .kube)
 
-    * Copy contents of the **config** file and paste it in the Kubernetes Connection window. Click **OK**.
+     * Copy contents of the **config** file and paste it in the Kubernetes Connection window. Click **OK**.
 
-      ![Kubernetes Service Endpoint](images/aksendpoint.png)
+       ![Kubernetes Service Endpoint](images/aksendpoint.png)
 
 ## Exercise 2: Configure Build and Release definitions
 
