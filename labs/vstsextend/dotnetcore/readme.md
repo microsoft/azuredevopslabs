@@ -9,7 +9,7 @@ This lab shows how to deploy an ASP.NET Core application to Azure App Service wi
 - Deploy to the cloud or on-premises
 - Run on .NET Core or .NET Framework.
 
-## Pre-requisites for the lab
+### Pre-requisites for the lab
 
 1. An active **Microsoft Azure** account.
 

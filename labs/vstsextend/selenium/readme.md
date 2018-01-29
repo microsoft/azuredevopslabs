@@ -16,7 +16,7 @@ In this lab, you will learn how to execute selenium testcases on a C# web applic
 
 If you are not familiar with creating Selenium UI tests in Visual Studio, you may refer to this lab  [click here](https://almvm.azurewebsites.net/labs/vsts/selenium/){:target="_blank"}
 
-## Pre-requisites for the lab
+### Pre-requisites for the lab
 
 1. You will need a **Visual Studio Team Services Account**. If you do not have one, you can sign up for free [here](https://www.visualstudio.com/products/visual-studio-team-services-vs){:target="_blank"}
 
