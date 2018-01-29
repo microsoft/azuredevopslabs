@@ -170,24 +170,25 @@ In this task you will configure the VSTS build definition that will build and pu
 
 1. Return to  VSTS, from the **Build** hub, select and edit the **MyShuttle** build. This build definition contains a *maven* task to build the pom.xml file. The maven task has the following settings
 
-    | Parameter | Value | Notes |
-    | ----------| ----- | ----- |
-    | Options | `-DskipITs --settings ./maven/settings.xml` | Skips integration tests during the build |
-    |Code Coverage Tool | JaCoCo | Selects JaCoCo as the coverage tool |
-    | Source Files Directory | `src/main` | Sets the source files directory for JaCoCo |
+   |Parameter|Value|Notes|
+   |---------|-----|-----|
+   |Options|-DskipITs --settings ./maven/settings.xml|Skips integration tests during the build|
+   |Code Coverage Tool|JaCoCo|Selects JaCoCo as the coverage tool|
+   |Source Files Directory|src/main|Sets the source files directory for JaCoCo|
 
-      ![Maven task settings](images/vsts-mavensettings.png)
+   ![Maven task settings](images/vsts-mavensettings.png)
 
 1. Then there is **Copy** and **Publish** tasks to copy the artifacts to the staging directory and publish to VSTS (or a file share).
 
 1. Next we use the **Docker Compose** task to build and publish the images. The settings of the Docker compose tasks are as follows:
-    | Parameter | Value | Notes |
-    | --------- | ------| ----- |
-    | Container Registry Type | Azure Container Registry | This is to connect to the Azure Container Registry you created earlier |
-    | Azure Subscription | Your Azure subscription | The subscription that contains your registry |
-    | Azure Container Registry | Your registry | Select the Azure Container registry you created earlier |
-    | Additional Image Tags | `$(Build.BuildNumber)` | Sets a unique tag for each instance of the build |
-    | Include Latest Tag | Check (set to true) | Adds the `latest` tag to the images produced by this build |
+
+    |Parameter|Value|Notes|
+    |---------|------|-----|
+    |Container Registry Type|Azure Container Registry|This is to connect to the Azure Container Registry you created earlier|
+    |Azure Subscription|Your Azure subscription|The subscription that contains your registry|
+    |Azure Container Registry|Your registry|Select the Azure Container registry you created earlier|
+    |Additional Image Tags|`$(Build.BuildNumber)`|Sets a unique tag for each instance of the build|
+    |Include Latest Tag|Check (set to true)|Adds the `latest` tag to the images produced by this build|
 
 1. Click the "Save and Queue" button to save and queue this build.Make sure you are using the **Hosted Linux Agent**.
 
@@ -293,7 +294,7 @@ In this exercise, we will setup a CD pipeline to deploy the web application to a
     String conStr = System.getenv("MYSQLCONNSTR_MyShuttleDb");
     ````
 
-You have now setup and configured the database needed to deploy and run the MyShuttle application.
+    You have now setup and configured the database needed to deploy and run the MyShuttle application.
 
 1. You should be able to login to the application now. Return back to the login page and try logging is using any of the username/password combination:
 
