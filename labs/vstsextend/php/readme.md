@@ -15,29 +15,35 @@ This lab shows how to deploy **PHP** application to **Azure App** service using 
 
 ## Pre-requisites for the lab
 
-1. An active **Microsoft Azure** account.
+1. **Microsoft Azure Account**: You will need a valid and active Azure account for the Azure labs. If you do not have one, you can sign up for a [free trial](https://azure.microsoft.com/en-us/free/){:target="_blank"}
 
-1. An active **VSTS** account. Create a new account from [here](https://docs.microsoft.com/en-us/vsts/accounts/create-account-msa-or-work-student).
+    * If you are a Visual Studio Active Subscriber, you are entitled for a $50-$150 credit per month. You can refer to this [link](https://azure.microsoft.com/en-us/pricing/member-offers/msdn-benefits-details/){:target="_blank"} to find out more including how to activate and start using your monthly Azure credit.
 
-1. A [Personal Access Token](https://docs.microsoft.com/en-us/vsts/accounts/use-personal-access-tokens-to-authenticate) (PAT).
+    * If you are not a Visual Studio Subscriber, you can sign up for the FREE [Visual Studio Dev Essentials](https://www.visualstudio.com/dev-essentials/){:target="_blank"} program to create **Azure free account** (includes 1 year of free services, $200 for 1st month).
+
+1. You will need a **Visual Studio Team Services Account**. If you do not have one, you can sign up for free [here](https://www.visualstudio.com/products/visual-studio-team-services-vs){:target="_blank"}
+
+1. You will need a **Personal Access Token** to set up your project using the Demo Generator. Please see this [article](https://docs.microsoft.com/en-us/vsts/accounts/use-personal-access-tokens-to-authenticate){:target="_blank"} for instructions to create your token.
+
+  {% include note.html content= "You should treat Personal Access Tokens like passwords. It is recommended that you save them somewhere safe so that you can re-use them for future requests." %}
 
 ## Setting Up the VSTS Project
 
-1. Use [VSTS Demo Data Generator](https://vstsdemogenerator.azurewebsites.net/?name=PHP&templateid=77365) to provision a PHP project on your VSTS account.
+1. Use [VSTS Demo Data Generator](https://vstsdemogenerator.azurewebsites.net/?name=PHP&templateid=77365){:target="_blank"} to provision a PHP project on your VSTS account.
 
-   ![](images/vstsdemogen.png)
+   ![vstsdemogen](images/vstsdemogen.png)
 
 1. Once the project is provisioned, click the URL to navigate to the project.
 
-   ![](images/vsts_demogenerator_create.png)
+   ![vsts_demogenerator_create](images/vsts_demogenerator_create.png)
 
 ## Exercise 1: Endpoint Creation
 
 Since the connections are not established during project provisioning, we will manually create the endpoints.
 
-In VSTS, navigate to **Services** by clicking the gear icon ![](images/gear.png) , and click  **+ New Service Endpoint**. Select **Azure Resource Manager**. Specify connection name, select your subscription from the dropdown and click OK. We use this endpoint to connect VSTS with Azure.
+In VSTS, navigate to **Services** by clicking the gear icon ![gear](images/gear.png) , and click  **+ New Service Endpoint**. Select **Azure Resource Manager**. Specify connection name, select your subscription from the dropdown and click OK. We use this endpoint to connect VSTS with Azure.
 
-   ![](images/services_endpoint.png)
+   ![services_endpoint](images/services_endpoint.png)
 
 You will be prompted to authorize this connection with Azure credentials.
 
@@ -51,19 +57,19 @@ We will use ARM template as **Infrastructure as a Code**  in the release definit
 
 1. Go to **Releases** under **Build and Release** tab, Select release definition **PHP** and click **Edit**
 
-   ![](images/release_def.png)
+   ![release_def](images/release_def.png)
 
 1. Go to **Tasks** and select **Dev** environment.
 
-   ![](images/dev_release.png)
+   ![dev_release](images/dev_release.png)
 
 1. Under **Azure Resource Group Deployment** task, update **Azure subscription** and **Location**.
 
-   ![](images/azure_sub.png)
+   ![azure_sub](images/azure_sub.png)
 
 1. Under **Azure App Service Deploy** task, update **Azure subscription** and click **Save**.
 
-   ![](images/azure_app_service.png)
+   ![azure_app_service](images/azure_app_service.png)
 
    <table width="70%">
     <thead>
@@ -92,17 +98,17 @@ Let's make a code change to trigger a CI-CD pipeline to build and deploy the app
 
    >php/config.php
 
-   ![](images/code1.png)
+   ![code1](images/code1.png)
 
 1. Go to line number **11**, modify **PHP** to **DevOps for PHP using VSTS** and commit the code.
 
-   ![](images/code_editing.png)
+   ![code_editing](images/code_editing.png)
 
 1. Go to **Builds** tab under **Build and Release** tab to see the associated CI build in progress.
 
-   ![](images/build.png)
+   ![build](images/build.png)
 
-   ![](images/in_progress_build.png)
+   ![in_progress_build](images/in_progress_build.png)
 
    Let's explore the build definition. The tasks used in the build definition are listed as shown.
 
@@ -131,10 +137,10 @@ Let's make a code change to trigger a CI-CD pipeline to build and deploy the app
 
    ![Release in progress](images/release_in_progress.png)
 
-1. Alternatively, you can also login to the [Azure Portal](https://portal.azure.com) and navigate to the **Resource Group** that contains the Web App that was provisioned in the CD pipeline
+1. Alternatively, you can also login to the [Azure Portal](https://portal.azure.com){:target="_blank"} and navigate to the **Resource Group** that contains the Web App that was provisioned in the CD pipeline
 
-   ![](images/azure.png)
+   ![azure](images/azure.png)
 
 1. Select the **App Service** and from the **Overview** tab,  click **Browse** to see the application deployed.
 
-   ![](images/website_php.png)
+   ![website_php](images/website_php.png)

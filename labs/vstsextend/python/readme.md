@@ -12,27 +12,31 @@ Last updated : {{ "now" | date: "%b %d, %Y" }}.
 
 **Python** is a server-side scripting language and a powerful tool for making dynamic and interactive web pages.
 
-This lab shows how to deploy a **Python** application to **Azure App Service** from  **Visual Studio Team Services**. We will use  with [Django](https://www.djangoproject.com/) framework for deployment.
+This lab shows how to deploy a **Python** application to **Azure App Service** from  **Visual Studio Team Services**. We will use  with [Django](https://www.djangoproject.com/){:target="_blank"} framework for deployment.
 
 ## Pre-requisites for the lab
 
-1. An active **Microsoft Azure** account.
+1. **Microsoft Azure Account**: You will need a valid and active Azure account for the Azure labs. If you do not have one, you can sign up for a [free trial](https://azure.microsoft.com/en-us/free/){:target="_blank"}
 
-1. An active **VSTS** account. Create a new account from [here](https://docs.microsoft.com/en-us/vsts/accounts/create-account-msa-or-work-student).
+    * If you are a Visual Studio Active Subscriber, you are entitled for a $50-$150 credit per month. You can refer to this [link](https://azure.microsoft.com/en-us/pricing/member-offers/msdn-benefits-details/){:target="_blank"} to find out more including how to activate and start using your monthly Azure credit.
 
-1. A [Personal Access Token](https://docs.microsoft.com/en-us/vsts/accounts/use-personal-access-tokens-to-authenticate) (PAT).
+    * If you are not a Visual Studio Subscriber, you can sign up for the FREE [Visual Studio Dev Essentials](https://www.visualstudio.com/dev-essentials/){:target="_blank"} program to create **Azure free account** (includes 1 year of free services, $200 for 1st month).
+
+1. You will need a **Visual Studio Team Services Account**. If you do not have one, you can sign up for free [here](https://www.visualstudio.com/products/visual-studio-team-services-vs){:target="_blank"}
+
+1. You will need a **Personal Access Token** to set up your project using the Demo Generator. Please see this [article](https://docs.microsoft.com/en-us/vsts/accounts/use-personal-access-tokens-to-authenticate){:target="_blank"} for instructions to create your token.
+
+    {% include note.html content= "You should treat Personal Access Tokens like passwords. It is recommended that you save them somewhere safe so that you can re-use them for future requests." %}
 
 ## Setting Up the VSTS Project
 
- 1. Use <a href="https://vstsdemogenerator.azurewebsites.net/?name=Python&templateid=77369" target="_blank">VSTS Demo Generator</a> to provision a Python project on your VSTS account.
+1. Use [VSTS Demo Generator](https://vstsdemogenerator.azurewebsites.net/?name=Python&templateid=77369){:target="_blank"} to provision a Python project on your VSTS account.
 
-    <img src="images/vsts_demo.png">
-
- 2. Once the project is provisioned, click the URL to navigate to the project.
+    ![vsts_demo](images/vsts_demo.png)
 
 1. Once the project is provisioned, click the URL to navigate to the project.
 
-    ![](images/python_template.png)
+    ![python_template](images/python_template.png)
 
 ## Exercise 1: Endpoint Creation
 
@@ -40,11 +44,11 @@ Since the connections are not established during project provisioning, we will m
 
 In VSTS, navigate to **Services** by clicking the gear icon, and click  **+ New Service Endpoint**. Select **Azure Resource Manager**. Specify connection name, select your subscription from the drop down and click OK. We use this endpoint to connect VSTS with Azure.
 
-   ![](images/service_endpoint.png)
+   ![service_endpoint](images/service_endpoint.png)
 
-You will be prompted to authorize this connection with Azure credentials.
+   You will be prompted to authorize this connection with Azure credentials.
 
-**Note**: Disable pop-up blocker in your browser if you see a blank screen after clicking OK, and retry the step.
+   {% include note.html content= "Disable pop-up blocker in your browser if you see a blank screen after clicking OK, and retry the step." %}
 
 ## Exercise 2: Configure Release
 
@@ -54,25 +58,25 @@ We will provision the resources on **Azure** using ARM template in the **release
 
 1. Go to **Releases** under **Build and Release** tab, Select release definition **Python** and click **Edit**
 
-   ![](images/releaseedit.png)
+   ![releaseedit](images/releaseedit.png)
 
 1. Go to **Tasks** and select **Dev** environment.
 
-   ![](images/environment.png)
+   ![environment](images/environment.png)
 
 1. Under **Azure Resource Group Deployment** task, update **Azure subscription** and **Location**.
 
-   ![](images/azure_sub.png)
+   ![azure_sub](images/azure_sub.png)
 
-4. Under **Install Python Extension** task, update **Azure subscription**.
+1. Under **Install Python Extension** task, update **Azure subscription**.
 
-   ![](images/python_sub.png)
+   ![python_sub](images/python_sub.png)
 
 1. Under **Azure App Service Deploy** task, update **Azure subscription** and click **Save**.
 
-   ![](images/deploy_app.png">
+   ![deploy_app](images/deploy_app.png)
 
-    <table width="75%">
+   <table width="75%">
     <thead>
         <tr>
           <th width="67%"><b>Tasks</b></th>
@@ -83,16 +87,15 @@ We will provision the resources on **Azure** using ARM template in the **release
         <td><img src="images/azure_resource.png"> <b>Azure Resource Group Deployment</b></td>
         <td>This task will create a resource group with the name <b>Python</b> and  provision an <b>App service</b> and <b>App Service Plan</b> </td>
     </tr>
-      <tr>
-        <td><img src="images/azure_app_service.png"> <b>Install Python Extension </b></td>
-        <td>Installs the specific version of Python into Azure App Service</td>
-    </tr>
+        <tr>
+            <td><img src="images/azure_app_service.png"> <b>Install Python Extension </b></td>
+            <td>Installs the specific version of Python into Azure App Service</td>
+        </tr>
     <tr>
         <td><img src="images/azure_deploy.png"> <b>Azure App Service Deploy</b></td>
         <td>The task is used to update Azure App Service to deploy Web Apps to azure.</td>
     </tr>
-    <tr>
-    </table>
+   </table>
 
 ## Exercise 3: Trigger CI-CD with code change
 
@@ -102,17 +105,17 @@ We will provision the resources on **Azure** using ARM template in the **release
 
    {% include tip.html content= "python/app/templates/app/index.html" %}
 
-   ![](images/code_tab.png)
+   ![code_tab](images/code_tab.png)
 
 1. Go to line number **32**, modify **Continuous Delivery** to **Continuous Delivery for Python** and commit the code.
 
-   ![](images/commit_code.png)
+   ![commit_code](images/commit_code.png)
 
 1. Go to **Builds** tab under **Build and Release** tab to see the build in progress.
 
-   ![](images/build.png)
+   ![build](images/build.png)
 
-   ![](images/in_progress_build.png)
+   ![in_progress_build](images/in_progress_build.png)
 
    Let's explore the build definition while the build is in-progress. The tasks used are listed as shown.
 
@@ -137,25 +140,23 @@ We will provision the resources on **Azure** using ARM template in the **release
     </tr>
     </table>
 
-   <br/>
-
 1. The build generates artifact which is used for deployment to Azure.
 
-   ![](images/build_result.png)
+   ![build_result](images/build_result.png)
 
 1. Once the build is complete, it triggers the CD pipeline. You can notice the linked release is in progress by navigating to Releases under Build and Release. The release will provision the Azure Web app and deploy the zip file generated by the associated build.
 
-   ![](images/release_in_progress.png)
+   ![release_in_progress](images/release_in_progress.png)
 
-   ![](images/release_succesful.png)
+   ![release_succesful](images/release_succesful.png)
 
-1. Login to [Azure Portal](https://portal.azure.com) and go to  the **Resource Group** with the name **Python**. You will see the resources **App Service** and **App Service Plan**.
+1. Login to [Azure Portal](https://portal.azure.com){:target="_blank"} and go to  the **Resource Group** with the name **Python**. You will see the resources **App Service** and **App Service Plan**.
 
-   ![](images/azure_portal.png)
+   ![azure_portal](images/azure_portal.png)
 
 1. Select the **App Service** and from the Overview tab, click Browse to see the application deployed.
 
-   ![](images/pythonapp.png)
+   ![pythonapp](images/pythonapp.png)
 
 ## Summary
 
