@@ -31,13 +31,19 @@ As shown in the above diagram, we'll:
 
 ### Prerequisites for the lab
 
-- An Azure subscription that will allow you to create a deploy a virtual machine from the Azure Marketplace.
+1. **Microsoft Azure Account**: You will need a valid and active Azure account for the Azure labs. If you do not have one, you can sign up for a [free trial](https://azure.microsoft.com/en-us/free/){:target="_blank"}
 
-- Access to **[Azure](http://portal.azure.com){:target="_blank"}** and a compatible web browser.
+    * If you are an active Visual Studio Subscriber, you are entitled for a $50-$150 credit per month. You can refer to this [link](https://azure.microsoft.com/en-us/pricing/member-offers/msdn-benefits-details/){:target="_blank"} to find out more information about this including how to activate and start using your monthly Azure credit.
 
-- Your own VSTS account with Administrative privileges.
+    * If you are not a Visual Studio Subscriber, you can sign up for the FREE [Visual Studio Dev Essentials](https://www.visualstudio.com/dev-essentials/){:target="_blank"} program to create a **Azure free account** (includes 1 year of free services, $200 for 1st month).
 
-- The ParaBank.zip sample system. You can download it **here**.
+1. You will need a **Visual Studio Team Services Account**. If you do not have one, you can sign up for free [here](https://www.visualstudio.com/products/visual-studio-team-services-vs){:target="_blank"}
+
+1. You will need a **Personal Access Token** to set up your project using the **VSTS Demo Generator**. Please see this [article](https://docs.microsoft.com/en-us/vsts/accounts/use-personal-access-tokens-to-authenticate){:target="_blank"} for instructions to create your token.
+
+    {% include note.html content= "You should treat Personal Access Tokens like passwords. It is recommended that you save them somewhere safe so that you can re-use them for future requests." %}
+
+1. The ParaBank.zip sample system. You can download it **here**.
 
 ## Creating a Virtual Machine in Azure
 
@@ -328,7 +334,7 @@ machine we created in the section “Steps to create a Virtual Machine in Azure.
 
 ## Using the Parasoft Deploy/Destroy Tasks in a Real Workflow
 
-In this tutorial, we’ve executed the Deploy and Destroy Parasoft tasks during separate release executions. This made it possible for the user
+In this tutorial, we have executed the Deploy and Destroy Parasoft tasks during separate release executions. This made it possible for the user
 to manually go into Parabank and witness the change in behavior after we deployed a certain virtual environment.
 
 In a real use case, it’s likely that a Deploy task would be utilized to create an appropriate environment for an automated test to execute. We’d
