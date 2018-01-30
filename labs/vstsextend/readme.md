@@ -1,19 +1,6 @@
----
-title: Extend your DevOps Toolchain with VSTS 
-layout: homepage
-permalink: /labs/vstsextend/
-folder: /labs/vstsextend/
----
+# Extend and Integrate with Visual Studio Team Services
 
-<div class="vstsextendMain">
-<div class="productcolmain">
-  <div class="pageheader">
-             <b>Extend and Integrate with Visual Studio Team Services</b> </div>
-     <div class="herotext2">
-             Learn how you can extend and integrate your DevOps Toolchain with Visual Studio Team Services to deploy any app on any platform
-  </div>
-</div>
-</div>
+Learn how to extend and integrate the DevOps Tool chain with Visual Studio Team Services to deploy any app on any platform
 
 ## Step-by-Step Tutorials
 
