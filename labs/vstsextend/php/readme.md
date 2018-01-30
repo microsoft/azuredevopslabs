@@ -29,7 +29,7 @@ This lab shows how to deploy **PHP** application to **Azure App** service using 
 
 ## Setting Up the VSTS Project
 
-1. Use the [VSTS Demo Generator](https://vstsdemogenerator.azurewebsites.net/?TemplateId=77370&name=octopus){:target="_blank"} to provision the project on our VSTS account.
+1. Use the [VSTS Demo Generator](https://vstsdemogenerator.azurewebsites.net/?TemplateId=77370&name=PHP&templateid=77365){:target="_blank"} to provision the project on our VSTS account.
 
    > **VSTS Demo Generator** helps you create team projects on your VSTS account with sample content that include source code, work items,iterations, service endpoints, build and release definitions based on the template you choose during the configuration. 
 
