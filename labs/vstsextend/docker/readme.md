@@ -109,7 +109,7 @@ The connection between the VSTS and the Azure is not automatically established d
 
 ## Exercise 2: Configure Continuous Integration (CI) and Continuous Delivery (CD)
 
-Now that the connection is established, the Azure endpoint and the Azure Container Registry need to be manually configured for the build and release definitions. The dacpac will also be deployed to the mhcdb database so that the schema and data is configured for the backend.
+Now that the connection is established, the **Azure endpoint** and the **Azure Container Registry** need to be manually configured for the build and release definitions. The dacpac will also be deployed to the mhcdb database so that the schema and data is configured for the backend.
 
 {% include warning.html content= "TFS.WebApi.Exception: Page not found may be encountered for the Azure tasks in the build / release definition. This issue can be fixed by typing a random text in the Azure Subscription field and then clicking the **Refresh** icon next to it. Once the field is refreshed, the endpoint can be selected from the drop down list. This issue occurrence is due to a recent change in the VSTS Release Management API. The VSTS Demo Generator is being updated to handle this change to prevent this issue." %}
 
@@ -117,7 +117,7 @@ Now that the connection is established, the Azure endpoint and the Azure Contain
 
    ![Build](images/build.png)
 
-1. In the **Process** section, update the **Azure subscription** and the **Azure Container Registry** with the endpoint component from the dropdown. (use the arrow keys to choose Azure Container Registry for the first time). Click on the **Save** button.
+1. In the **Process** section, update the **Azure subscription** and the **Azure Container Registry** with the endpoint component from the dropdown. (use the arrow keys to choose **Azure Container Registry** for the first time). Click on the **Save** button.
 
    ![Tasks](images/updateprocessbd.png)
 
@@ -153,7 +153,7 @@ Now that the connection is established, the Azure endpoint and the Azure Contain
 
     ![Update repository](images/updatedrd.png)
 
-1. Click on the **Variables** section, update the **ACR** details and the **SQLserver** details with the information noted earlier while setting up the environment. Click on the **Save** button.
+1. Click on the **Variables** section, update the **ACR** details and the **SQLserver** details with the details noted earlier while configuration of the environment. Click on the **Save** button.
 
     ![Update variables](images/update_rdvariables.png)
 
@@ -171,7 +171,7 @@ In this exercise, the source code will be modified to trigger the CI-CD.
 
     ![Line Edit](images/lineedit.png)
 
-1. In the **Commit** window, provide comments and then click on the **Commit** to commit the changes to the repository.This action would initiate an automatic build for the source code.
+1. In the **Commit** window, provide comments and then click on the **Commit** button to commit the changes to the repository.This action would initiate an automatic build for the source code.
 
     ![Commit](images/commit.png)
 
@@ -198,11 +198,11 @@ In this exercise, the source code will be modified to trigger the CI-CD.
 
     {% include tip.html content= "The Continuous Deployment can be configured to deploy the web app to the designated server whenever a new docker image is pushed to the registry on the Azure portal itself. However, setting up a VSTS CD pipeline will provide better flexibility and additional controls (approvals, release gates, etc.) for the application deployment." %}
 
-1. Navigate to the **Azure Container Portal** and then select the **Repositories** option to view the generated images.
+1. Navigate to the **Azure Container Portal** and then select the **Repositories** option to view the generated docker images.
 
     ![Repository](images/imagesinrepo.png)
 
-1. Navigate to the **Releases** section under **Build & Releases** in the VSTS, and double-click on the latest release displayed on the page. Click on the **Logs** section to view the release in progress.
+1. Navigate to the **Releases** section under **Build & Releases** in the VSTS, and double-click on the latest release displayed on the page. Click on the **Logs** section to view the details of the release in progress.
 
     ![Release Progress](images/rel3.png)
 
@@ -210,7 +210,7 @@ In this exercise, the source code will be modified to trigger the CI-CD.
 
     ![Summary](images/rel8.png)
 
-1. Navigate back to the [Azure Portal](https://portal.azure.com){:target="_blank"}   and click on the **Overview** section of the **App Service**. Click on the **URL** to browse the application and view the changes.
+1. Navigate back to the [Azure Portal](https://portal.azure.com){:target="_blank"}   and click on the **Overview** section of the **App Service**. Click on the link displayed under the **URL** field to browse the application and view the changes.
 
     ![Web app URL](images/getwebappurl.png)
 
