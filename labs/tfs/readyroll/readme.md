@@ -19,11 +19,11 @@ application changes with precision and control.
 used as an alternative to the standard SQL Server Database Project, if
 used it allows you to:**
 
--  Easily and accurately automate deployments of SQL Server database changes alongside application changes.
+- Easily and accurately automate deployments of SQL Server database changes alongside application changes.
 
--  Keep up with the pace of application development and deliver value to users quickly and efficiently.
+- Keep up with the pace of application development and deliver value to users quickly and efficiently.
 
--  Extend DevOps practices from your application to your database
+- Extend DevOps practices from your application to your database
 
 The tasks in this lab relate to the PartsUnlimited Sample solution and
 the steps assume you have already connected to and opened the relevant
@@ -50,15 +50,15 @@ project page in your browser.
 
     ![](images/5.jpg)
 
-2. Right click on the **PartsUnlimitedDatabase** project in the Solution Explorer and choose **Properties**.
+1. Right click on the **PartsUnlimitedDatabase** project in the Solution Explorer and choose **Properties**.
 
    ![](images/6.jpg)
 
-3. In the resulting window check both of the boxes in the section headed **Semantic Versioning**.
+1. In the resulting window check both of the boxes in the section headed **Semantic Versioning**.
 
-4. Save the project settings and close the window.
+1. Save the project settings and close the window.
 
-5. In the ReadyRoll window click the ‘Import Database’ button and wait for the process to complete.
+1. In the ReadyRoll window click the ‘Import Database’ button and wait for the process to complete.
 
    ![](images/7.jpg)
 
@@ -74,13 +74,13 @@ project page in your browser.
 
 1. This has added your initial baseline script to your project, now we will create a new folder to hold the changes from this point on.
 
-2. Return to the solution explorer and repeat step 4 but this time add a folder called **1.0.1**.
+1. Return to the solution explorer and repeat step 4 but this time add a folder called **1.0.1**.
 
    ![](images/12.jpg)
 
 1. Save All.
 
-2. Finally, we want to provide a development environment for ReadyRoll to work in, so we need to disconnect the project from the production database and specify localdb for development use, in the ReadyRoll window, click the **configure connection** button from the toolbar (as highlighted) and use the **Connect** window to select MSSQLLocalDB (under **Local**) as the server instance.
+1. Finally, we want to provide a development environment for ReadyRoll to work in, so we need to disconnect the project from the production database and specify localdb for development use, in the ReadyRoll window, click the **configure connection** button from the toolbar (as highlighted) and use the **Connect** window to select MSSQLLocalDB (under **Local**) as the server instance.
 
    ![](images/13.jpg)
 
@@ -122,7 +122,9 @@ project page in your browser.
 
    ![](images/22.jpg)
 
-1. This completes the setup for automated builds, on the toolbar choose **Save & Queue** to save your settings and trigger a build.
+1. This completes the setup for automated builds, on the toolbar choose **Save & Queue** to save your settings and trigger a build. This initial build will fail as it configures the necessary components for future builds.
+
+1. Optionally – If you’d like to check everything is working as expected up to this point you can manually trigger a second build.
 
    ![](images/23.jpg)
 
@@ -148,7 +150,7 @@ project page in your browser.
 
    ![](images/28.jpg)
 
-1. Next specify the Target database again selecting the **PartsUnlimitedWebsite-Prod** we referenced earlier in step 19.
+1. Next specify the Target database again selecting the **PartsUnlimitedWebsite-Prod** we referenced earlier in Task 2, step 4.
 
    >**Note**: If we were deploying to Azure we could change the ‘Target type’ and select an appropriate existing SQL Database running in Azure
 
@@ -172,19 +174,19 @@ products independently depending on region. As a first step we will
 introduce a new ‘PriceGBP’ column for the British market and rename our
 existing ‘Price’ column to ‘PriceUSD’ for the US market.
 
-## Task 4: Making a change using SQL Server Object Explorer 
+## Task 4: Making a change using SQL Server Object Explorer
 
 1. Open SQL Server Object Explorer from the View menu
 
-2. Browse to the PartUnlimitedDatabase database on LocalDB
+1. Browse to the PartUnlimitedDatabase database on LocalDB
 
-3. Expand ‘Tables’, ‘Product’ and ‘Columns’ to find the ‘Price’ column
+1. Expand ‘Tables’, ‘Product’ and ‘Columns’ to find the ‘Price’ column
 
-4. Right click ‘Rename’, and change the name to ‘PriceUSD’
+1. Right click ‘Rename’, and change the name to ‘PriceUSD’
 
    ![](images/31.jpg)
 
-5. When the preview Database Update window launches, click **Generate Script**
+1. When the preview Database Update window launches, click **Generate Script**
 
    >This adds the new migration script to our solution
 
@@ -208,7 +210,7 @@ existing ‘Price’ column to ‘PriceUSD’ for the US market.
 
 1. In the Object explorer, right click on the same database and select **New Query**
 
-2. In the query window, type the code to add the new ‘PriceGBP’ column and execute
+1. In the query window, type the code to add the new ‘PriceGBP’ column and execute
 
    ![](images/35.jpg)
 
@@ -227,8 +229,8 @@ existing ‘Price’ column to ‘PriceUSD’ for the US market.
 1. Rerun the select statement from earlier to check the new values
 
    ![](images/38.jpg)
-    
-2. Open the ReadyRoll window and click ‘Refresh’
+
+1. Open the ReadyRoll window and click ‘Refresh’
 
    ![](images/39.jpg)
 
@@ -244,17 +246,17 @@ existing ‘Price’ column to ‘PriceUSD’ for the US market.
 
     ![](images/41.jpg)
 
-2. We can now save this new version of the change script by pressing Ctrl+S
+1. We can now save this new version of the change script by pressing Ctrl+S
 
-3. Click **Mark as Deployed** to tell ReadyRoll that we’ve already
+1. Click **Mark as Deployed** to tell ReadyRoll that we’ve already
     applied this change to the database.
 
     ![](images/42.jpg)
 
-4. Then rename the script in the project descriptively to
+1. Then rename the script in the project descriptively to
     **Add\_PriceGBP**
 
-5. In the ReadyRoll window, click ‘Refresh (Verify Script)’ to verify the amended migration script
+1. In the ReadyRoll window, click ‘Refresh (Verify Script)’ to verify the amended migration script
 
    ![](images/43.jpg)
 
@@ -264,7 +266,7 @@ existing ‘Price’ column to ‘PriceUSD’ for the US market.
 
 1. In the Object Explorer, right click on the ‘Product’ table and click ‘View Designer’
 
-2. Uncheck the ‘Allow Nulls’ box for the ‘PriceGBP’ column to stop this column from allowing empty values
+1. Uncheck the ‘Allow Nulls’ box for the ‘PriceGBP’ column to stop this column from allowing empty values
 
    ![](images/44.jpg)
 
@@ -274,11 +276,11 @@ existing ‘Price’ column to ‘PriceUSD’ for the US market.
 
 1. Click **Deploy Project** to update the database
 
-2. Once again we can rename the migration script in the project to
+1. Once again we can rename the migration script in the project to
     something descriptive
 
    ![](images/45.jpg)
 
 If these changes were to be deployed on to testing or production using the standard SSDT approach then our update would fail. This is because the data update would not be included and it would be unable to create the new ‘not null’ column (PriceGBP) we’ve added to our development database. However, with ReadyRoll we simply concatenate these verified migration scripts into a single transaction which ensures a successful deployment.
-   
+
 You can now commit these changes to source control to see the automated build and deployment process which will push the changes out to the PartsUnlimitedWebsite-Prod database.

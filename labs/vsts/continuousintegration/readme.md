@@ -56,23 +56,33 @@ If you have provisioned your project using the demo generator, the build definit
 
    <img src="images/1.png" width="624"/>
 
-4. You can start by selecting a template that will add a set of tasks and apply typical settings for the kind of app that you are building or start with an empty process and build from scratch. There is a template available for building ASP.NET Core apps. We will use that. Select  **ASP.NET Core (PREVIEW)**  and click apply to apply the template for the build definition 
+4. You can start by selecting a template that will add a set of tasks and apply typical settings for the kind of app that you are building or start with an empty process and build from scratch. There is a template available for building ASP.NET Core apps. We will use that. Select  **ASP.NET Core**  and click apply to apply the template for the build definition 
 
    <img src="images/3.png" width="624"/>
 
-5. As you can see, the template has applied a set of tasks that are typically involved in building an ASP.NET Core app. In many cases, you might not require to do anything further other than just pointing to the correct repo and branch and you will be good to go. In this case, you will need to make some customizations to the build. Select the **Get sources** task.  You can fetch your code from various source including ***GitHub, SVN, or any other Git repository*** but since you have our code in the VSTS project itself, select **This Project**. Change the repository and branch if it is not pointing to the correct ones.
+5. As you can see, the template has applied a set of tasks that are typically involved in building an ASP.NET Core app. In many cases, you might not require to do anything further other than just pointing to the correct repo and branch and you will be good to go. In this case, you will need to make some customizations to the build. 
+
+Select the **Process** task which states that some settings need attention.  You will need to select the build agent where you want to run this build. You can choose to run the builds on an-premise agent or use the agents hosted on Azure. We will use the **Hosted VS2017** agent as it has the .NET core framework and all other components that are required to build the app.
+
+   <img src="images/4-1.png" width="624"/>
+
+Next select the **Get sources** task.  You can fetch your code from various source including ***GitHub, SVN, or any other Git repository*** but since you have our code in the VSTS project itself, select **This Project**. Change the repository and branch if it is not already pointing to the correct ones.
 
    <img src="images/4.png" width="624"/>
 
 6. The next tasks **Restore** needs no change. Leave it as it is. 
 
-7. Save the build defintion - we will name it as MHC.Web.CI 
+7. Save the build definition.
+
+8. Rename the build definition by clicking on the name and then changing it to **MHC.Web.CI**. Then save the build definition again. 
+
+<img src="images/5-1.png" width="624"/>
 
 The My Health Clinic web application depends on node components and additional libraries. You will need to add tasks to download and install these packages before it can be built. We will see how to add tasks to our build definition in the next task.
 
 ### Task 2: Adding Build Tasks
 
-1. Select **Add Task** and then select **Package** to find tasks relating to the category. Select **npm** and click **Add**. Place it after the **Build** task
+1. Select **Add Task** and then select **Package** to find tasks relating to the category. Select **npm** and click **Add**. Place it after the **Build** task. You can drag and drop tasks to reorder them.
 
     <img src="images/5.png" />
 
@@ -81,43 +91,39 @@ The My Health Clinic web application depends on node components and additional l
   
     >  Next, you will need to run *bower* to install the web packages. You can run bower commands using the **Command Line/Shell Script** utility but a better way to do that would be is to use the **Bower** task. This task is not out-of-the-box and needs to be installed from the Marketplace.
     
-From an another tab, navigate to the <a target ="blank" href="https://marketplace.visualstudio.com/items?itemName=touchify.vsts-bower">Bower extension page</a> on the Marketplace and install it. Close the tab when you are done to return back to the tab where you are editing the build definition. 
+If you didn't install Bower when using the VSTS Demo Generator then from an another tab, navigate to the <a target ="blank" href="https://marketplace.visualstudio.com/items?itemName=touchify.vsts-bower">Bower extension page</a> on the Marketplace and install it. Close the tab when you are done to return back to the tab where you are editing the build definition. 
 
-1. Save the build definition and refresh the page. You should see the **Bower** task under the *Package* tab. Select the task and click **Add**
+3. Save the build definition and refresh the page. You should see the **Bower** task under the *Package* tab. Select the task and click **Add**
 
     <img src="images/7.png" />
 
-6. Select the **Bower** task and change the *Bower JSON Path* to point to the *bower.json* file under the MyHealth.Web folder
+4. Select the **Bower** task and change the *Bower JSON Path* to point to the *bower.json* file under the MyHealth.Web folder
 
     <img src="images/8.png" />
 
-7. Next you will need the **gulp** task. Select **Add Task** and look for the **Gulp from the **Build** section. Add that to the build definition. 
+5. Next you will need the **gulp** task. Gulp can carry out tasks such as compressing files. Select **Add Task** and look for the **Gulp from the **Build** section. Add that to the build definition. 
 
     <img src="images/8-1.png"/>
 
-8. Change the *Gulp file path* to point to the gulp file under the MyHealth.Web folder
+6. Change the *Gulp file path* to point to the gulp file under the MyHealth.Web folder
 
     <img src="images/9.png"/>
 
-9. The rest of the tasks do not need any change. You are ready to run the build. You can make the builds to run as a *Continuous Integration* build so that it runs upon every check-in on the branch. We will see that later in the lab. For now, we will run it manually.
+7. The rest of the tasks do not need any change. You are ready to run the build. You can make the builds to run as a *Continuous Integration* build so that it runs upon every check-in on the branch. We will see that later in the lab. For now, we will run it manually.
 
-10. Select **Save & queue** to save the build definition and queue the build immediately. If you have already saved the build definition, select **Queue** from the menu
+8. Select **Save & queue** to save the build definition and queue the build immediately. If you have already saved the build definition, select **Queue** from the menu
 
     <img src="images/14.png" width="624"/>
-
-11. You will need to select the build agent where you want to run this build. You can choose to run the builds on an-premise agent or use the agents hosted on Azure. We will use the **Hosted VS2017** agent as it has the .NET core framework and all other components that are required to build the app. Select **Queue**
-
-    <img src="images/15.png" width="624"/>
          
-12. You will see the build waiting to find an agent to run. It may take a couple of minutes and it once gets an agent, the build starts executing. You can see the output logs in real-time as the build is running. You can also download the log later should you need to a deeper analysis.
+9. You will see the build waiting to find an agent to run. It may take a couple of minutes and it once gets an agent, the build starts executing. You can see the output logs in real-time as the build is running. You can also download the log later should you need to a deeper analysis.
 
     <img src="images/18.png"/>
 
-13. Once all the steps are completed, you can select the *Build number* on the top to get the detailed information on the run. The **Summary** tab shows the summary of the run including the who triggered it, at what time, what code and commit was fetched, associated work items, tests, etc., 
+10. Once all the steps are completed, you can select the *Build number* on the top to get the detailed information on the run. The **Summary** tab shows the summary of the run including the who triggered it, at what time, what code and commit was fetched, associated work items, tests, etc., 
 
     <img src="images/19.png"/>
 
-14. The **Timeline** view will help you find out how much time did every task to run. If the build definition included publish task and if any files were published, you can find it from the **Artifacts** tab.
+11. The **Timeline** view will help you find out how much time did every task to run. If the build definition included publish task and if any files were published, you can find it from the **Artifacts** tab.
    
        <img src="images/20.png"/>
 
@@ -159,10 +165,10 @@ We will now see how you can deal with variables, setup different trigger mechani
 
    <img src="images/23.png" width="624"/>
    
-1. Click on the **Retention** tab. In most cases you don't need completed builds longer than a certain number of days. Your retention policies automatically delete old completed builds to minimize clutter.
+5. Click on the **Retention** tab. In most cases you don't need completed builds longer than a certain number of days. Your retention policies automatically delete old completed builds to minimize clutter.
    You modify these policies on the Retention tab of your build definition.
 
-1. Click on the **Variables** tab. We can add new user-defined variables.
+6. Click on the **Variables** tab. We can add new user-defined variables.
 
    > - BuildConfiguration: release 
    > - BuildPlatform: any cpu
@@ -171,10 +177,11 @@ We will now see how you can deal with variables, setup different trigger mechani
 
    <img src="images/24.png" width="624"/>
 
-6. Now, modify the build steps to use the new variables. Click on the **npm** task and use the **WebDir** variable in the working directory property.
+7. Now, modify the build steps to use the new variables. Click on the **npm** task and use the **WebDir** variable in the working directory property.
 
    <img src="images/26.png" width="624"/>
 
+8. Save the build.
 
 ## Exercise 3: Working with Artifacts
 
@@ -186,14 +193,14 @@ An artifact is a deployable component of your application. Visual Studio Team Se
 
     <img src="images/33.png" width="624"/>
 
-1. Save and queue the  build. Once the build is completed, go to the build summary and select the **Artifacts** tab. Select the **Explore** button to view the published artifacts
+2. Save and queue the  build. Once the build is completed, go to the build summary and select the **Artifacts** tab. Select the **Explore** button to view the published artifacts
 
    <img src="images/34.png" width="624"/>
 
-1. Expand the drop folder and you should see **MyHealth.Web.zip** file created in the folder
+3. Expand the drop folder and you should see **MyHealth.Web.zip** file created in the folder
    <img src="images/35.png" />
 
-8. We will need the zip file for deployment. We will cover that in the ***Continious Delivery*** lab
+4. We will need the zip file for deployment. We will cover that in the ***Continious Delivery*** lab
    
 
 ## Exercise 4: Running Tests with Build
@@ -204,7 +211,7 @@ The ***MyHealth.API.IntegrationTests*** project contains the unit tests.
 
 <img src="images/36.png" />
 
-If you open the My Health Clinic solution in Visual Studio, you will see the following test cases in the "Test Ecplorer" window.
+If you open the My Health Clinic solution in Visual Studio, you will see the following test cases in the "Test Explorer" window.
 
 <img src="images/37.png" />
 
@@ -212,30 +219,34 @@ The **Test** task that we have in the build defintion will need to be modified t
 
 1. Go to your build definition and select edit. 
 
-2. Select the **Test** task. Change the *Project* and *Arguments* parameters as follows:
-    * **Projects** - test/MyHealth.API.IntegrationTests/*.csproj
-    * **Arguments** - --configuration $(BuildConfiguration) --logger "trx;LogFileName=TestResults.xml"
+2. Select the **Process** task. Change the *Project(s) to test* parameter as follows:
+    * **ProjectS) to test**: test/MyHealth.API.IntegrationTests/*.csproj
+
+   <img src="images/38-1.png" width="624"/>
+
+3. Select the **Test** task. Change the *Arguments* parameter as follows:
+    * **Arguments**: --configuration $(BuildConfiguration) --logger "trx;LogFileName=TestResults.xml"
 
    <img src="images/38.png" width="624"/>
 
-3. We will use the **Publish Test Result** task to publish the results of the tests to the Build summary section. Add the task and change the parameters as follows:
+4. We will use the **Publish Test Result** task to publish the results of the tests to the Build summary section. Add the task and change the parameters as follows:
     - Test Result Format: VSTest
     - Test Results Files: **/TestResults.xml
     - Always run: true - to be sure that the results are published when the unit tests fail.
    <img src="images/40.png" width="624"/>
    <img src="images/40-1.png" width="624"/>
 
-4. Save the build and queue.
+5. Save the build and queue.
 
-5. You should see the build summary showing along with Test results.
+6. You should see the build summary showing along with Test results.
 
    <img src="images/41.png" width="624"/> 
 
-6. Click on **Test** to view detailed summary of Test Results. Make sure that you selected *All* for the **Outcome** filter
+7. Click on **Test** to view detailed summary of Test Results. Make sure that you selected *All* for the **Outcome** filter
 
    <img src="images/42.png" width="624"/>
 
-7. We now have an automated CI build with automated tests that wil run every time a change is committed and verify the changes are not breaking the code. The next lab will cover **Continuous Delivery (CD)** - the ability to release frequently and consistently into various environments including dev, staging, production.
+8. We now have an automated CI build with automated tests that wil run every time a change is committed and verify the changes are not breaking the code. The next lab will cover **Continuous Delivery (CD)** - the ability to release frequently and consistently into various environments including dev, staging, production.
    
 
 

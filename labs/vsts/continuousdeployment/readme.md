@@ -132,8 +132,7 @@ In order to complete this lab you will need-
 
 ### Task 1: Triggers
 
-1. A Release definition can be configured to automatically create a new release when it detects new artifacts are available.
-   Typically as a result of a new build of the application. Click on **Triggers** from your release definition as shown.
+1. Return to the **Pipeline** view of the release by selecting Releases, then your Release definition, then Edit.
 
    ![](images/23.png)
 
@@ -145,15 +144,23 @@ In order to complete this lab you will need-
 
    {% include note.html content= "However, even though a release is automatically created, it might not be deployed automatically to an environment. To enable automatic deployment, you must also configure environment deployment triggers in each environment for which you want automated deployments to occur. The lower section of the Triggers tab lists the environments configured for this release definition." %}
 
-2. Click on **Continuous Deployment** to create a new release automatically.
+   > - **Continuous Deployment:** A new release is created automatically when Release Management detects new built artifacts are available. When you select this option, a drop-down list enables you to select which of the artifact sources linked to this release definition will trigger a new release.
 
    ![](images/24.png)
+   > - **Scheduled:** A new release is created based on a schedule you specify. When you select this option, a set of controls enables you to select the days of the week and the time of day that Release Management will automatically create a new release.
 
-3. Click on the **...** button on the environment and select **Deployment Conditions**.
+   > **NOTE:** However, even though a release is automatically created, it might not be deployed automatically to an environment. To enable automatic deployment, you must also configure environment deployment triggers in each environment for which you want automated deployments to occur.
 
     {% include important.html content= "The deployment conditions dialog for the environment shows the currently configured environment deployment triggers and deployment queuing policies. Users with permission to edit release definitions can edit the deployment conditions here, including environment deployment triggers and deployment queuing policies." %}
 
    ![](images/25.png)
+2. In the **Pipeline** tab, select the icon of a person at either end of the environment for pre and post deployment conditions.
+
+    > The deployment conditions for the environment shows the currently configured environment deployment triggers and deployment queuing policies. Users with permission to edit release definitions can edit the deployment conditions here.
+    Read more in the <a href=https://docs.microsoft.com/en-us/vsts/build-release/concepts/definitions/release/triggers >Deployment Trigger documentation<a/>.
+    
+    <img src="images/23-4.png" width="624"/>
+    <img src="images/23-5.png" width="400"/>
 
 ### Task 2: Artifacts
 

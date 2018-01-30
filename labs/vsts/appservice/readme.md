@@ -20,7 +20,7 @@ business processes.
 
 ![](media/image1.png)
 
-## Pre-Requisites
+## Prerequisites
 
 1. Visual Studio 2015 Update 3 download from [here](https://www.visualstudio.com/downloads/)
 
@@ -33,7 +33,7 @@ business processes.
 Since we already have the source code in the [repo](https://github.com/hsachinraj/DevOps-Immersion-Labs/tree/master/source) we could use the same for our Azure App Service deployment. You can also create your own app
 and try deploying the same.
 
-1. Load the “01\_Demos\_ASPNET5.sln” from your Visual Studio and wait until the package restoration is complete. If any issues found, try the below workarounds-
+1. Load the **01\_Demos\_ASPNET5.sln** from your Visual Studio and wait until the package restoration is complete. If any issues found, try the below workarounds-
 
     - Clean the solution and try to rebuild, which should work fine. Also make sure you have connected to the internet while restoring the
     packages as these would get downloaded over the internet
@@ -131,7 +131,9 @@ and try deploying the same.
 
 1. Login to your Azure from Server Explorer. Expand the node Azure &gt; App Service &gt; YOUR RESOURCE GROUP &gt; YOUR WEBAPP &gt; Files &gt; Views &gt; Index.cshtml and replace the line as below
 
-     `<li><a asp-controller="Account" asp-action="Login">Secret area</a></li> with <li><a asp-controller="Account" asp-action="Login">Secret area</a></li>`
+      ```html
+      <li><a asp-controller="Account" asp-action="Login">Secret area</a></li>
+     ```
 
 1. Save the changes and refresh the browser. You should see the changes reflecting in the site now.
 
@@ -139,7 +141,7 @@ and try deploying the same.
 
 1. We can also remote debug our application from Azure within our Visual Studio.
 
-    Put a breakpoint in your code and Right click and select Publish. You should see the new window as shown-
+   Put a breakpoint in your code and Right click and select Publish. You should see the new window as shown-
 
     ![](media/image22.png)
 

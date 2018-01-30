@@ -75,7 +75,11 @@ Azure Resource Manager enables you to work with the resources in your solution a
 
    ![](images/image6.png)
 
+<<<<<<< HEAD
 1. Create a WebApp with the name **MyHealthClinic** and map the App Service Plan to “MyHealthClinicDemo” that you created in the previous step
+=======
+1. Create a WebApp with the name **MyHealthClinic** and map the App Service Plan to “MyHealthClinicDemo” that you created in                    the previous step
+>>>>>>> master
 
    ![](images/image7.png)
 
