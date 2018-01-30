@@ -1,5 +1,5 @@
 ---
-title: Using Parasoft in VSTS
+title: Leverage virtual services with Parasoft Virtualize
 layout: page
 sidebar: vsts2
 permalink: /labs/vstsextend/parasoft/
