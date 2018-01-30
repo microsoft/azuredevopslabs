@@ -10,31 +10,31 @@ Last updated : {{ "now" | date: "%b %d,%Y" }}
 
 ## Overview
 
-In this lab, you will learn how you can use Release Management(RM) in Visual Studio Team Services (VSTS) to deploy a Java web application to [Apache Tomcat](http://tomcat.apache.org/) with a MySQL database on Azure. Apache Tomcat is an open-source Java Servlet Container developed by the Apache Software Foundation (ASF). MySQL is a popular open-source relational database management system.
-
-For this purpose of the lab, we will use Azure App Service and Azure Database for MySQL, a relational database service based on the open source MySQL Server engine. It is a fully managed database as a service offering capable of handing mission-critical workload with predictable performance and dynamic scalability.
-
-### What's covered in this lab?
-
 With Azure Web App for containers, it is easy to deploy container-based web apps. You can pull container images from Docker Hub or a private Azure Container Registry, and deploy the containerized app with your preferred dependencies to production in seconds.
-
-In this lab, you will learn how you can use Release Management(RM) in Visual Studio Team Services (VSTS) to deploy a container Java web application to an Azure web app for containers.
 
 ### What's covered in this lab
 
+In this lab, you will learn how you can use Release Management(RM) in Visual Studio Team Services (VSTS) to deploy a container Java web application to an Azure web app for containers.
+
 This lab will show how you can
 
-- Create a new Azure App Service and configure it to use Apache Tomcat
-- Create a new MySQL database
-- Use Azure App Service Task to deploy a WAR file
+* Create a new Azure App Service and configure it to use Apache Tomcat
+* Create a new MySQL database
+* Use Azure App Service Task to deploy a WAR file
 
 ### Prerequisites for the lab
 
-1. An active **Microsoft Azure** account.
+1. **Microsoft Azure Account**: You will need a valid and active Azure account for the Azure labs. If you do not have one, you can sign up for a [free trial](https://azure.microsoft.com/en-us/free/){:target="_blank"}
 
-1. An active **VSTS** account. Create a new account from [here](https://docs.microsoft.com/en-us/vsts/accounts/create-account-msa-or-work-student).
+    * If you are a Visual Studio Active Subscriber, you are entitled for a $50-$150 credit per month. You can refer to this [link](https://azure.microsoft.com/en-us/pricing/member-offers/msdn-benefits-details/){:target="_blank"} to find out more including how to activate and start using your monthly Azure credit.
 
-1. A [Personal Access Token](https://docs.microsoft.com/en-us/vsts/accounts/use-personal-access-tokens-to-authenticate) (PAT).
+    * If you are not a Visual Studio Subscriber, you can sign up for the FREE [Visual Studio Dev Essentials](https://www.visualstudio.com/dev-essentials/){:target="_blank"} program to create **Azure free account** (includes 1 year of free services, $200 for 1st month).
+
+1. You will need a **Visual Studio Team Services Account**. If you do not have one, you can sign up for free [here](https://www.visualstudio.com/products/visual-studio-team-services-vs){:target="_blank"}
+
+1. You will need a **Personal Access Token** to set up your project using the Demo Generator. Please see this [article](https://docs.microsoft.com/en-us/vsts/accounts/use-personal-access-tokens-to-authenticate){:target="_blank"} for instructions to create your token.
+
+    {% include note.html content= "You should treat Personal Access Tokens like passwords. It is recommended that you save them somewhere safe so that you can re-use them for future requests." %}
 
 1. The [**Docker Integration**](https://marketplace.visualstudio.com/items?itemName=ms-vscs-rm.docker) extension installed and enabled on the VSTS account.
 
@@ -44,8 +44,7 @@ If you are following this lab from "Working with Jenkins, VSTS and Azure, you ca
 
 If you are following this lab from "Working with Jenkins, VSTS and Azure, you can skip this exercise. Otherwise,
 
-1. Provision a new VSTS project using the [VSTS Demo Data Generator](https://vstsdemobuildertest.azurewebsites.net/?TemplateId=77373&Name=myshuttledocker){:target="_blank
-}
+1. Provision a new VSTS project using the [VSTS Demo Data Generator](https://vstsdemobuildertest.azurewebsites.net/?TemplateId=77373&Name=myshuttledocker){:target="_blank}
 
     ![VSTS Demo Generator](images/vstsdemogen.png)
 
@@ -59,7 +58,7 @@ In this task you will configure the VSTS build definition that will build and pu
 
 1. Open the [**Azure Portal**](https://portal.azure.com){:target="_blank"} in a separate tab
 
-1. Select **+New** and search for **Azure Container**. Select **Create**. In the *Create Container Registry* dialog, enter a name for the service, select the resource group, location, etc., and select **Create**.  
+1. Select **+New** and search for **Azure Container**. Select **Create**. In the *Create Container Registry* dialog, enter a name for the service, select the resource group, location, etc., and select **Create**.
 
     ![Create Azure Container Registry](images/createacr.png)
 
@@ -84,17 +83,17 @@ In this task you will configure the VSTS build definition that will build and pu
     | Additional Image Tags | `$(Build.BuildNumber)` | Sets a unique tag for each instance of the build |
     | Include Latest Tag | Check (set to true) | Adds the `latest` tag to the images produced by this build |
 
-1. Click the "Save and Queue" button to save and queue this build.Make sure you are using the **Hosted Linux Agent** 
+1. Click the "Save and Queue" button to save and queue this build.Make sure you are using the **Hosted Linux Agent**.
 
 1. The build will push the image to the ACR we created earlier. We can verify if the images were pushed correctly from the **Azure Explorer** view. *Sign in* to Azure, refresh Azure Container Registry. Right click and select **Explore Container Registry**. You should see the image - tagged with the build number.
 
     ![Explore Container Registry](images/exploreacr.png)
 
-##  Exercise 3: Deploying to an Azure Web App for containers
+## Exercise 3: Deploying to an Azure Web App for containers
 
 In this exercise, we will setup a CD pipeline to deploy the web application to an Azure web app. First, let's create the Web App
 
-1. Sign into your [Azure Portal](https://portal.azure.com)
+1. Sign into your [Azure Portal](https://portal.azure.com){:target="_blank}
 
 1. In the Azure Portal, choose **New, Web + Mobile** and then choose **Web App for Containers**
 
@@ -141,23 +140,23 @@ In this exercise, we will setup a CD pipeline to deploy the web application to a
 
 ## Setting up MySQL database
 
- Next, let's set up the MySQL database for the application
+Next, let's set up the MySQL database for the application
 
- 1. From the Azure portal, select **+ New** and search for **MySQL**. Choose **Azure Database for MySQL(preview)** from the filtered result list and click **Create**
+1. From the Azure portal, select **+ New** and search for **MySQL**. Choose **Azure Database for MySQL(preview)** from the filtered result list and click **Create**
 
     ![Azure Database MySQL](images/azuredbmysql.png)
 
- 1. Enter all required information and select **Create**
+1. Enter all required information and select **Create**
 
     ![Azure Database MySQL](images/createazuredbmysql.png)
 
- 1. Select **Properties**. Note down **SERVER NAME** and **SERVER ADMIN LOGIN NAME**
+1. Select **Properties**. Note down **SERVER NAME** and **SERVER ADMIN LOGIN NAME**
 
- 1. In this example, the server name is *myshuttle-1-mysqldbserver.mysql.database.azure.com* and the admin user name is *mysqldbuser@myshuttle-1-mysqldbserver*
+1. In this example, the server name is **myshuttle-1-mysqldbserver.mysql.database.azure.com** and the admin user name is **mysqldbuser@myshuttle-1-mysqldbserver**
 
- 1. We will use the MySQL command-line tool to establish a connection to the Azure Database for MySQL server. We will run the MySQL command-line tool from the Azure Cloud Shell in the browser.To launch the Azure Cloud Shell, click the `>_` icon in the top right toolbar.
+1. We will use the MySQL command-line tool to establish a connection to the Azure Database for MySQL server. We will run the MySQL command-line tool from the Azure Cloud Shell in the browser.To launch the Azure Cloud Shell, click the `>_` icon in the top right toolbar.
 
- 1. Enter the following command
+1. Enter the following command
 
     ```HTML
     wget https://raw.githubusercontent.com/hsachinraj/azure-arm-templates/master/vstsazurejl_arm/mydbscript.script
@@ -180,7 +179,8 @@ In this exercise, we will setup a CD pipeline to deploy the web application to a
 
 1. Click **Save** to save the connection string
 
-   >**Note** - Connection Strings configured here will be available as environment variables, prefixed with connection type for Java apps (also for PHP, Python and Node apps). In the `DataAccess.java`file under `src/main/java/com/microsoft/example` folder, we retrieve the connection string using the following code
+   {% include note.html content= "Connection Strings configured here will be available as environment variables, prefixed with connection type for Java apps (also for PHP, Python and Node apps). In the `DataAccess.java`file under `src/main/java/com/microsoft/example` folder, we retrieve the connection string using the following code" %}
+
     ````Java
     String conStr = System.getenv("MYSQLCONNSTR_MyShuttleDb");
     ````
@@ -191,4 +191,4 @@ You have now setup and configured the database needed to deploy and run the MySh
 
     * *fred/fredpassword*
     * *wilma/wilmapassword*
-    * *betty/bettypassword* 
+    * *betty/bettypassword*

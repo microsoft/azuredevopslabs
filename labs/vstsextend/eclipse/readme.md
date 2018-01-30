@@ -95,7 +95,7 @@ Having setup Team Services project, we will now log in to the virtual machine an
 
 1. After Eclipse has started, select **Help** \| **Install New Software** to bring the install dialog page
 
-1. Choose the **Add** button to add a new repository.  Use Team Explorer Everywhere as the name and specify *http://dl.microsoft.com/eclipse* for the location.
+1. Choose the **Add** button to add a new repository.  Use Team Explorer Everywhere as the name and specify *[http://dl.microsoft.com/eclipse](http://dl.microsoft.com/eclipse)* for the location.
 
     ![Add Repository](images/AddRepository.cropped.png "Add Repository")
 
@@ -105,7 +105,7 @@ Having setup Team Services project, we will now log in to the virtual machine an
 
     ![Select Team Explorer Everywhere](images/SelectTee.cropped.png "Select Team Explorer Everywhere")
 
-    > **Note**:If you don't see this option, use the pull-down menu for "Work with:" and find the update site URL you just entered in the list and select it, then select the check box beside the plug-in mentioned above.
+    {% include note.html content= "If you don't see this option, use the pull-down menu for \"Work with:\" and find the update site URL you just entered in the list and select it, then select the check box beside the plug-in mentioned above." %}
 
 1. Choose **Next** to follow the wizard to complete the installation.
 
@@ -268,9 +268,10 @@ In this exercise, we will setup a CD pipeline to deploy the web application to a
 
 1. Enter the following command
 
-    ```HTML
+   ```HTML
     wget https://raw.githubusercontent.com/hsachinraj/azure-arm-templates/master/vstsazurejl_arm/mydbscript.script
-    ```
+   ```
+
     This should download the file that we want to execute on the server
 
 1. Next, we will execute the SQL from the downloaded file on the database server. Enter the following command-
