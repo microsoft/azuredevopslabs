@@ -10,11 +10,11 @@ Last updated : {{ "now" | date: "%b %d, %Y" }}
 
 ## Overview
 
-Service virtualization helps organizations accelerate time to market without compromising quality. Especially in Agile environments, dependent components (e.g., APIs, 3rd-party services, databases, mainframes, etc.) connected to the application under test are not readily accessible for development and testing because they are still evolving, beyond a team's control, or too costly/complex to configure in a test lab. With service virtualization, testing and development can proceed without waiting for access to the actual dependent components. 
+Service virtualization helps organizations accelerate time to market without compromising quality. Especially in Agile environments, dependent components (e.g., APIs, 3rd-party services, databases, mainframes, etc.) connected to the application under test are not readily accessible for development and testing because they are still evolving, beyond a team's control, or too costly/complex to configure in a test lab. With service virtualization, testing and development can proceed without waiting for access to the actual dependent components.
 
 Parasoft's service virtualization solution provides a unique environment-based approach. The combination of Microsoft Azure, Microsoft VSTS, and Parasoft Service Virtualization—operating natively within the Microsoft environment—is designed to provide teams the rapid, scalable, and flexible test environment access required for Agile, DevOps, and "Continuous Everything
 
-Please see the <a href="https://cdn2.hubspot.net/hubfs/69806/New_Pages/Getting Started Parasoft Azure Overview.pdf"  target ="_blank">Getting started with Parasoft and Azure</a>provides for a more in-depth overview of Parasoft  Service Virtualization. 
+Please see the [Getting started with Parasoft and Azure](https://cdn2.hubspot.net/hubfs/69806/New_Pages/Getting%20Started%20Parasoft%20Azure%20Overview.pdf){:target="_blank"} provides for a more in-depth overview of Parasoft  Service Virtualization.
 
 In this lab, we’ll create a complete continuous delivery pipeline for the Parabank application using VSTS and Parasoft. We’ll highlight
 the value of service virtualization and how it facilitates complete virtual environments for testing.
@@ -113,7 +113,7 @@ Before we create a project in VSTS, we need to deploy an Azure virtual machine. 
 
     - Connection Name: ParabankGitHub
 
-    - Server URL: [http://github.com/parasoft/parabank.git](http://github.com/parasoft/parabank.git)
+    - Server URL: [http://github.com/parasoft/parabank.git](http://github.com/parasoft/parabank.git){:target="_blank"}
 
     ![image030](images/image030.jpg)
 
@@ -262,9 +262,9 @@ machine we created in the section “Steps to create a Virtual Machine in Azure.
 
 ## What are environments and instances
 
-*An Environment* is a collection of virtual assets, proxies, data sets and real endpoints that belong to a particular group or physical environment (for example, Dev, Performance, QA, Staging, etc.). In Environment Manager, all Environments belong to a System.
+**An Environment** is a collection of virtual assets, proxies, data sets and real endpoints that belong to a particular group or physical environment (for example, Dev, Performance, QA, Staging, etc.). In Environment Manager, all Environments belong to a System.
 
-*An Instance* is a particular configuration of an Environment. It is typically a subset of all available artifacts in the Environment and describes a specific configuration state for components in the Environment. All Instances belong to an Environment.
+**An Instance** is a particular configuration of an Environment. It is typically a subset of all available artifacts in the Environment and describes a specific configuration state for components in the Environment. All Instances belong to an Environment.
 
 1. Give the release definition a suitable name (like “Parabank Deployment”). To edit the name, select the pencil icon next to the current name. Then click "Save."
 
