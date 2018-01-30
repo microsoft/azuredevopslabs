@@ -1,4 +1,12 @@
-# Docker Deployment to Azure App Service (Linux) using VSTS
+---
+title: Docker Deployment to Azure App Service (Linux) using VSTS
+layout: page
+sidebar: vsts2
+permalink: /labs/vstsextend/docker/
+folder: /labs/vstsextend/docker/
+---
+
+Last updated : {{ "now" | date: "%b %d,%Y" }}
 
 ## Overview
 
@@ -101,7 +109,7 @@ The connection between the VSTS and the Azure is not automatically established d
 
 Now that the connection is established, the Azure endpoint and the Azure Container Registry need to be manually configured for the build and release definitions. The dacpac will also be deployed to the mhcdb database so that the schema and data is configured for the backend.
 
-> "TFS.WebApi.Exception: Page not found may be encountered for the Azure tasks in the build / release definition. This issue can be fixed by typing a random text in the Azure Subscription field and then clicking the **Refresh** icon next to it. Once the field is refreshed, the endpoint can be selected from the drop down list. This issue occurrence is due to a recent change in the VSTS Release Management API. The VSTS Demo Generator is being updated to handle this change to prevent this issue.
+{% include important.html content= "TFS.WebApi.Exception: Page not found may be encountered for the Azure tasks in the build / release definition. This issue can be fixed by typing a random text in the Azure Subscription field and then clicking the **Refresh** icon next to it. Once the field is refreshed, the endpoint can be selected from the drop down list. This issue occurrence is due to a recent change in the VSTS Release Management API. The VSTS Demo Generator is being updated to handle this change to prevent this issue." %}
 
 1. Navigate to the **Builds** option under the **Build and Release** tab. Select the build definition `MHCDocker.build`, click on the optionsa and select the **Edit** option.
 
