@@ -10,193 +10,202 @@ Last updated : {{ "now" | date: "%b %d, %Y" }}.
 
 ## Overview
 
- Earlier with the VSTS Release Management, if the application needed to be deployed to multiple servers, the Windows PowerShell remoting had to be enabled manually, the required ports opened and the deployment agent installed on each of the servers. The pipelines had to be managed manually in case of a roll-out deployment.
+In the earlier versions of the VSTS Release Management, if the application needed to be deployed to multiple servers, the Windows PowerShell remoting had to be enabled manually, the required ports opened and the deployment agent installed on each of the servers. The pipelines had to be managed manually if a roll-out deployment was required.
 
-All the above challenges have been handled seamlessly with the introduction of the [Deployment Groups](https://docs.microsoft.com/en-us/vsts/build-release/concepts/definitions/release/deployment-groups/).
+All the above challenges have been handled seamlessly with the introduction of the [Deployment Groups](https://docs.microsoft.com/en-us/vsts/build-release/concepts/definitions/release/deployment-groups/){:target="_blank"}.
 
-The Deployment Group installs a deployment agent on each of the target servers within a configured group and instructs the Release Management to gradually deploy the application to all servers that belong to the Deployment Group. Multiple pipelines can be created for roll-out deployments so that the latest version of the application could be provided in a phased mannery to multiple user groups for validating the newly introduced features.
+The Deployment Group installs a deployment agent on each of the target servers in the configured group and instructs the Release Management to gradually deploy the application to all these servers that belong to the Deployment Group. Multiple pipelines can be created for roll-out deployments so that the latest version of the application could be provided in a phased manner to multiple user groups for validating the newly introduced features.
 
-## Pre-requisites for the lab
+### What's covered in this lab
 
-1. An active **Microsoft Azure** account.
+This lab covers the configuration of the deployment groups and details how the deployment groups could be used in VSTS Release management. 
 
-1. An active **VSTS** account. Create a new account from [here](https://docs.microsoft.com/en-us/vsts/accounts/create-account-msa-or-work-student).
+### Prerequisites for the lab
 
-1. A [Personal Access Token](https://docs.microsoft.com/en-us/vsts/accounts/use-personal-access-tokens-to-authenticate) (PAT).
+1. **Microsoft Azure Account**: You will need a valid and active Azure account for the Azure labs. If you do not have one, you can sign up for a [free trial](https://azure.microsoft.com/en-us/free/){:target="_blank"}
+
+    * If you are an active Visual Studio Subscriber, you are entitled for a $50-$150 Azure credit per month. You can refer to this [link](https://azure.microsoft.com/en-us/pricing/member-offers/msdn-benefits-details/){:target="_blank"} to find out more information about this including how to activate and start using your monthly Azure credit.
+
+    * If you are not a Visual Studio Subscriber, you can sign up for the FREE [Visual Studio Dev Essentials](https://www.visualstudio.com/dev-essentials/){:target="_blank"} program to create a **Azure free account** (includes 1 year of free services, $200 for 1st month).
+
+1. You will need a **Visual Studio Team Services Account**. If you do not have one, you can sign up for free [here](https://www.visualstudio.com/products/visual-studio-team-services-vs){:target="_blank"}
+
+1. You will need a **Personal Access Token** to set up your project using the **VSTS Demo Generator**. Please see this [article](https://docs.microsoft.com/en-us/vsts/accounts/use-personal-access-tokens-to-authenticate){:target="_blank"} for instructions to create your token.
+
+    {% include note.html content= "You should treat Personal Access Tokens like passwords. It is recommended that you save them somewhere safe so that you can re-use them for future requests." %}
 
 ## Setting up the Environment
 
-We will use an ARM template to provision the below resources on Azure:
+The following resources will be provisioned on the Azure using an ARM template:
 
-- Six VMs (web servers) with IIS configured
+* Six Virtual Machines (VM) web servers with the IIS configured
 
-- A SQL server VM (db server) and
+* SQL server VM (db server) and
 
-- Azure Network Load Balancer
+* Azure Network Load Balancer
 
-1. Click on the **Deploy to Azure** to provision the resources. It takes approximately 10-15 minutes to complete the deployment.
+1. Click on the **Deploy to Azure** button to initiate the resource provisioning. It takes approximately 10-15 minutes to complete the deployment. Provide all the necessary information as shown.
 
-   [![Deploy to Azure](http://azuredeploy.net/deploybutton.png)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FMicrosoft%2FVSTS-DevOps-Labs%2Fdeploymentgroups%2Fdeploymentgroups%2Fazurewebsqldeploy.json)
+   [![Deploy to Azure](http://azuredeploy.net/deploybutton.png)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FMicrosoft%2FVSTS-DevOps-Labs%2Fdeploymentgroups%2Fdeploymentgroups%2Fazurewebsqldeploy.json){:target="_blank"}
 
-   ![](images/azure.png)
+   ![Azure](images/azure.png)
 
-1. Once the deployment is successful, you will see the resources in your Azure Portal.
+1. Once the deployment is successful, the list of all the resources will be displayed on the Azure Portal.
 
-   ![](images/resources.png)
+   ![Resources](images/resources.png)
 
-1. Click on **DB server VM**.
+1. Click on the **DB server VM** to view the details.
 
-   ![](images/azure_resource.png)
+   ![DB Server](images/azure_resource.png)
 
-1. Note down the **DNS** name. This value will be used later in an exercise.
+1. Make a note of the `DNS` name. This value will be required later during an exercise.
 
-   ![](images/sql_dns.png)
+   ![SQL DNS](images/sql_dns.png)
 
-## Setting up the VSTS Project
+## Setting up the VSTS team project
 
-1. Use the [VSTS Demo Generator](https://vstsdemogenerator.azurewebsites.net/?name=DeploymentGroups&templateid=77368) to provision a project on your VSTS account.
+1. Use the [VSTS Demo Generator](https://vstsdemogenerator.azurewebsites.net/?name=PartsUnlimited) to provision the team project on the VSTS account.
 
-   ![](images/vstsdemogen.png)
+   > **VSTS Demo Generator** helps you create team projects on your VSTS account with sample content that include source code, work items,iterations, service endpoints, build and release definitions based on the template you choose during the configuration. 
 
-1. Once the project is provisioned, click on the URL to navigate to the project.
+   ![VSTS Demo Generator](images/vstsdemogen.png)
 
-   ![](images/vsts_demo.png)
+1. Once the team project is provisioned, click on the URL to navigate to the team project.
+
+   ![VSTS Demo Generator](images/vsts_demo.png)
 
 ## Exercise 1: Endpoint Creation
 
-Since the connections are not established during project provisioning, we will manually create the endpoints.
+Since the connections are not established during the project provisioning, the endpoints need to be configured manually.
 
-1. In VSTS, navigate to the **Services** by clicking on the gear icon, and click on the **+ New Service Endpoint** button. Select the **Azure Resource Manager** tab. Specify the **Connection name**, select your **Subscription** from the dropdown and click on the **OK** button. We will use this endpoint to connect **VSTS** and **Azure**.
+1. In the VSTS, navigate to the **Services** by clicking on the gear icon, and click on the **+ New Service Endpoint** button. Select the **Azure Resource Manager** tab. Specify the **Connection name**, select the **Subscription** from the dropdown and click on the **OK** button. This endpoint will be used to connect **VSTS** and **Azure**.
 
-   ![](images/service_endpoint.png)
+   ![Service endpoint](images/service_endpoint.png)
 
-   ![](images/connection_name.png)
+   ![Connection details](images/connection_name.png)
 
-1. Create an endpoint of type **Team Foundation Server/Team Services**. Select the **Token based authentication** option and specify the following details-
+1. Create an endpoint of type **Team Foundation Server/Team Services**. Select the **Token based authentication** option and specify the following details:
 
-   - **Connection Name**: Give any name
+   * **Connection Name**: Provide any name
 
-   - **Connection Url**: Your VSTS account Url
+   * **Connection Url**: The VSTS account Url
 
-   - **Personal Access Token**: Your VSTS Personal Access Token
+   * **Personal Access Token**: The VSTS Personal Access Token
 
-   Created endpoint is used in release definition in the later exercise. We create this connection because  agent registration with deployment group requires access to your VSTS project.
+   > The configured endpoint will be used during the agent registration with deployment groups to provide the access to the VSTS team project.
 
-   ![](images/vsts.png)
+   ![Endpoint](images/vsts.png)
 
-## Exercise 2: Creating Deployment Group
+## Exercise 2: Creating Deployment Groups
 
-[Deployment Groups](https://docs.microsoft.com/en-us/vsts/build-release/concepts/definitions/release/deployment-groups/) in VSTS makes it easier to organize the servers that you want to use to host your app. A deployment group is a collection of machines with a VSTS deployment agent on each of them. Each machine interacts with VSTS to coordinate deployment of your app.
+The VSTS makes it easier to organize the servers for deploying the applications. A deployment group is a collection of machines with a VSTS deployment agent on each of them. Each machine interacts with the VSTS to coordinate deployment of the app.
 
-1. Go to **Deployment Groups** under **Build & Release** tab. Click **Add deployment group** .
+1. Navigate to the **Build & Release** tab and click on the [**Deployment Groups**](https://docs.microsoft.com/en-us/vsts/build-release/concepts/definitions/release/deployment-groups/){:target="_blank"} option. Click on the **Add deployment group** button to configure a Deployment Group.
 
-   ![](images/add_deploymentgroup.png)
+   ![Deployment group](images/add_deploymentgroup.png)
 
-1. Provide  **Deployment group name**, and click create. You will see the registration script generated.
+1. Provide a `Deployment group name`, and click on the **Create** button. The registration script generated will be displayed.
 
-   ![](images/name_dg.png)
+   ![Deployment group](images/name_dg.png)
 
-   ![](images/script_dg.png)
+   ![Registration script](images/script_dg.png)
 
-## Exercise 3: Configure Release
+## Exercise 3: Configure Releases
 
-We have the target machines available in the deployment group to deploy the application. The release definition uses **Phases** to deploy to target servers.
+The target servers are available in the deployment group for deploying the application. The release definition uses **Phases** to deploy the application to the target servers.
 
-A [Phase](https://docs.microsoft.com/en-us/vsts/build-release/concepts/process/phases) is a logical grouping of tasks that defines the runtime target on which the tasks will execute. A deployment group phase executes tasks on the machines defined in a deployment group.
+A [Phase](https://docs.microsoft.com/en-us/vsts/build-release/concepts/process/phases){:target="_blank"} is a logical grouping of the tasks that defines the runtime target on which the tasks will execute. A deployment group phase executes tasks on the machines defined in a deployment group.
 
-1. Go to Release under **Build & Release** tab. Edit the release definition **Deployment Groups** and select **Tasks**.
+1. Click on the **Build & Release** tab and select the **Release** option. Select the release definition **Deployment Groups** and then select the **Tasks** tab
 
-    ![](images/release_tab.png)
+    ![Release](images/release_tab.png)
 
-    ![](images/task.png)
+    ![Tasks](images/task.png)
 
-1. You will see tasks grouped under **Agent phase**, **Database deploy phase** and **IIS Deployment phase**.
+1. The tasks will be grouped under the **Agent phase**, **Database deploy phase** and **IIS Deployment phase**.
 
-   ![](images/phases.png)
+   ![Phases](images/phases.png)
 
-   - **Agent Phase**: In this phase , we will associate the target servers to the deployment group. The below task is used-
+   * **Agent Phase**: In this phase, the target servers will be associated to the deployment group using the Azure Resource Group Deployment task.
 
-     - **Azure Resource Group Deployment**: This task will automate the configuration of the deployment group agents to the web and db servers.
+     * **Azure Resource Group Deployment**: This task will automate the configuration of the deployment group agents to the web and db servers.
 
-       ![](images/agent_phase.png)
+       ![Agent Phase](images/agent_phase.png)
 
-   - **Database deploy phase**: This deployment group phase executes tasks on the machines defined in the deployment group. This phase is linked to **db** tag.
+   * **Database deploy phase**: This deployment group phase executes tasks on the machines defined in the deployment group. This phase is linked to the **db** tag.
 
-     - **Deploy Dacpac**: This task is used to deploy dacpac file to the DB server.
+     * **Deploy Dacpac**: This task is used to deploy dacpac file to the DB server.
 
-       ![](images/db_tag.png)
+       ![tag](images/db_tag.png)
 
-        </br>
+       ![dacpac](images/dacpac.png)
 
-       ![](images/dacpac.png)
+   * **IIS Deployment phase**: In this phase, the application will be deployed to the web servers using the below tasks. This phase is linked to **web** tag.
 
-   - **IIS Deployment phase**: In this phase, we deploy application to the web servers.This phase is linked to **web** tag. We use following tasks-
+      * **Azure Network Load Balancer**: As the target machines are connected to the NLB, this task will disconnect the machines from the NLB prior to the deployment and reconnect them back to the NLB after the deployment.
 
-      - **Azure Network Load Balancer**: As the target machines are connected to NLB, this task will disconnect machines from NLB before the deployment and re-connects to NLB after the deployment.
+      * **IIS Web App Manage**: The task runs on the deployment target machine(s) registered with the Deployment Group configured for the task/phase. It creates a webapp and application pool locally with the name **PartsUnlimited** running under the port **80**
 
-      - **IIS Web App Manage**: The task runs on the deployment target machine(s) registered with the Deployment Group configured for the task/phase. It creates a webapp and application pool locally with the name **PartsUnlimited** running under the port
-      **80**
+      * **IIS Web App Deploy**: The task runs on the deployment target machine(s) registered with the Deployment Group configured for the task/phase. It deploys the application to the IIS server using **Web Deploy**.
 
-      - **IIS Web App Deploy**: The task runs on the deployment target machine(s) registered with the Deployment Group configured for the task/phase. It deploys the application to the IIS server using **Web Deploy**.
+        ![IIS](images/iis.png)
 
-        ![](images/iis.png)
+1. The number of concurrent deployments can be controlled by setting the value in the **Maximum number of targets in parallel** field. For example, in this lab, since there are 6 web servers, setting the target servers to **50%** will deploy the build artifacts to 3 web servers in parallel at a time.
 
-1. We can control the number of concurrent deployments by setting the **Maximum number of targets in parallel**. For example, in this lab we have 6 web servers, setting the target servers to **50%** will deploy the build artifact to 3 web servers parallely and then to the remaining 3 servers.
+   ![Targets](images/targets.png)
 
-   ![](images/targets.png)
+1. Select the **Disconnect Azure Network Load Balancer** task and provide the following details:
 
-1. Go to **Disconnect Azure Network Load Balancer** task and update the following details-
+   * **Azure Subscription**: An ARM Endpoint created in the **Exercise 1**
 
-   - **Azure Subscription**: ARM Endpoint created in **Exercise 1**
+   * **Resource Group**: Name of the Resource Group which was created while provisioning the environment
 
-   - **Resource Group**: Name of the Resource Group which was created while provisioning the environment
+   * **Load Balancer Name**: Select the name from the dropdown
 
-   - **Load Balancer Name**: Select the name from the dropdown
+   * **Action**: Set the action to **Disconnect Primary Network Interface**
 
-   - **Action**: Set the action to **Disconnect Primary Network Interface**
+   ![Disconnect load balancer](images/disconnect_lb.png)
 
-   ![](images/disconnect_lb.png)
+1. Select the **Connect Azure Network Load Balancer** task and provide the following details:
 
-1. Go to **Connect Azure Network Load Balancer** and update the following details-
+    * **Azure Subscription**: An ARM Endpoint created in the **Exercise 1**
 
-    - **Azure Subscription**: ARM Endpoint created in **Exercise 1**
+    * **Resource Group**: Name of the Resource Group which was created while provisioning the environment
 
-    - **Resource Group**: Name of the Resource Group which was created while provisioning the environment
+    * **Load Balancer Name**: Select the name from the dropdown
 
-    - **Load Balancer Name**: Select the name from the dropdown
+    * **Action**: Set the action to **Connect Primary Network Interface**
 
-    - **Action**: Set the action to **Connect Primary Network Interface**
+    ![Connect load balancer](images/connect_lb.png)
 
-    ![](images/connect_lb.png)
+1. Click on the **Variables** tab and select the **Process Variables** option. Replace the value of the **DefaultConnectionString** variable with the `SQL DNS` value noted earlier.
 
-1. Go to **Variables** tab and click on edit  to update the **DefaultConnectionString** value with **Your SQL_DNS name**.
+   ![Release variable](images/release_variable.png)
 
-   ![](images/release_variable.png)
+1. Click on the **Save** button and then click on the **Create release** option.
 
-1. Click **Save** and **Create release**.
+   ![Save](images/save.png)
 
-   ![](images/save.png)
+   ![Create Release](images/create_release.png)
 
-   ![](images/create_release.png)
+   ![New Release](images/release.png)
 
-   ![](images/release.png)
+1. Once the release is completed, the deployments will be done to the DB and Web servers. Click on the logs to view the release summary.
 
-1. Once the release is complete, you will see the deployments are done to DB and Web Servers. Go to Logs to see the summary.
+    ![Release Summary](images/release_summary.png)
 
-    ![](images/release_summary.png)
+1. In the Azure Portal, click on the **DNS** of any web application instance, to access the application.
 
-1. In one of your web servers, go to **DNS** to access the application.
+   {% include important.html content= "The [**Azure Load Balancer**](https://docs.microsoft.com/en-us/azure/load-balancer/load-balancer-overview){:target=\"_blank\"} will distribute incoming traffic among healthy instances of servers defined in a load-balanced set. Hence the **DNS** of all web server instances will be the same." %}
 
-   > [**Azure Load Balancer**](https://docs.microsoft.com/en-us/azure/load-balancer/load-balancer-overview) is being used here which  distributes incoming traffic among healthy instances of services defined in a load-balanced set. So, **DNS** of all web servers are the same.
+   ![Web Server](images/web_server.png)
 
-    ![](images/web_server.png)
+   ![Web DNS](images/web_dns.png)
 
-    ![](images/web_dns.png)
+1. The deployed web application will be launched and the various features can be browsed.
 
-1. The deployed web application is displayed.
-
-    ![](images/application.png)
+    ![Web application](images/application.png)
 
 ## Summary
 
-With Visual Studio Team Services and Azure, we can build and release dotnet applications to multiple target servers using Deployment Groups.
+Using VSTS and Azure, the web applications can be easily compiled and deployed to multiple target servers using Deployment Groups.

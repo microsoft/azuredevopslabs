@@ -1,15 +1,14 @@
-# Overview 
+# Overview
 
-In this exercise, you are going to see a typical end-to-end workflow for a Java developer. 
+In this exercise, you are going to see a typical end-to-end workflow for a Java developer.
 
-You should have completed the exercises in [Part 1: Working with Eclipse - Getting started](../) labs to create a Team Project, set up Eclipse, configure a CI/CD pipeline to publish images to ACR and deploy the application to Azure Web App. 
+You should have completed the exercises in [Part 1: Working with Eclipse - Getting started](../){:target="_blank"} labs to create a Team Project, set up Eclipse, configure a CI/CD pipeline to publish images to ACR and deploy the application to Azure Web App.
 
-In this scenario, you will open the running MyShuttle application and discover a bug. You will then use the [Exploratory Testing extension](https://marketplace.visualstudio.com/items?itemName=ms.vss-exploratorytesting-web) to create a Bug work item in VSTS. You will then branch the code for fixing the bug. Once the bug is fixed on the branch, you will merge the code in via a Pull Request and code review. This will then automatically queue the build/release pipeline and deploy your fix.
-
+In this scenario, you will open the running MyShuttle application and discover a bug. You will then use the [Exploratory Testing extension](https://marketplace.visualstudio.com/items?itemName=ms.vss-exploratorytesting-web){:target="_blank"} to create a Bug work item in VSTS. You will then branch the code for fixing the bug. Once the bug is fixed on the branch, you will merge the code in via a Pull Request and code review. This will then automatically queue the build/release pipeline and deploy your fix.
 
 ## Install the Exploratory Testing Extension for Chrome
 
-In this task you will install the [Exploratory Testing extension](https://marketplace.visualstudio.com/items?itemName=ms.vss-exploratorytesting-web) into Chrome.
+In this task you will install the [Exploratory Testing extension](https://marketplace.visualstudio.com/items?itemName=ms.vss-exploratorytesting-web){:target="_blank"} into Chrome.
 
 1. Open chrome and navigate to `https://chrome.google.com/webstore`. Enter **exploratory testing** into the search box. Find the **Test & Feedback** extension from Microsoft Corporation and click **Add to Chrome**. Click **Install/Add Extension** in the dialog.
 
@@ -21,7 +20,7 @@ In this task you will install the [Exploratory Testing extension](https://market
 
     ![Connect to VSTS](images/connect-to-vsts.png)
 
-    > **Note**: Your team name may be different
+    {% include note.html content= "Your team name may be different." %}
 
 ## Log a Bug using the Exploratory Test Extension
 
@@ -31,7 +30,7 @@ In this task you will start a test session, discover a bug in the MyShuttle app 
 
     ![Start a test sessions](images/start-test-session.png)
 
-    > **Note**: The test extension is now recording all of your interactions. You can see the test icon beaker has a green dot indicating that a session is currently running.
+    {% include note.html content= "The test extension is now recording all of your interactions. You can see the test icon beaker has a green dot indicating that a session is currently running." %}
 
 1. Enter `http://{your web app name}/myshuttledev` in the toolbar to navigate to the application. Enter `fred` for the username and `fredpassword` for the password and click **Log In**.
 
@@ -57,7 +56,7 @@ In this task you will start a test session, discover a bug in the MyShuttle app 
 
     ![Log the Bug](images/log-bug.png)
 
-    > **Note**: All the pages visited, notes, screenshots and other information from the test session is included as details for the Bug, so you don't have to add these details manually. You also should see a button next to the title box reading "0 Similar". VSTS checks to see if there are bugs already logged with similar titles, therefore minimizing duplicate bugs being logged.
+    {% include note.html content= "All the pages visited, notes, screenshots and other information from the test session is included as details for the Bug, so you don't have to add these details manually. You also should see a button next to the title box reading \"0 Similar\". VSTS checks to see if there are bugs already logged with similar titles, therefore minimizing duplicate bugs being logged." %}
 
 1. Once the bug has been created, click the Stop button in the Test Extension toolbar to end the test session.
 
@@ -71,11 +70,9 @@ In this task you will start a test session, discover a bug in the MyShuttle app 
 
 1. Assign the Bug to yourself and change the state to Active. Click Save.
 
-Now it's time to roll up your sleeves to detect the cause and find a fix for the bug. But before we make any code changes, we will create a **branch**. In the world of Git, teams generally create new branches to isolate changes for a feature or a bug fix from the master branch and other work. They commit and push changes to the remote branch. The changes are then presented to the rest of the team for review and approval via **Pull Request** before they are merged to the *master* branch. You can establish requirements for all pull requests to ensure high quality code and protect important branches with **Branch Policy**
+   {% include note.html content= "Now it's time to roll up your sleeves to detect the cause and find a fix for the bug. But before we make any code changes, we will create a **branch**. In the world of Git, teams generally create new branches to isolate changes for a feature or a bug fix from the master branch and other work. They commit and push changes to the remote branch. The changes are then presented to the rest of the team for review and approval via **Pull Request** before they are merged to the *master* branch. You can establish requirements for all pull requests to ensure high quality code and protect important branches with **Branch Policy**." %}
 
 ## Configure Branch Policies
-
-
 
 In this task you will enforce quality on the master branch by creating branch policies
 
@@ -91,7 +88,7 @@ In this task you will enforce quality on the master branch by creating branch po
 
     ![Policy configuration](images/policy.png)
 
-    > **Note**: You can enforce other policy options like comment resolution and minimum number of reviewers, as well as specify the merge options (like squashing). You can also add default reviewers.
+    {% include note.html content= "You can enforce other policy options like comment resolution and minimum number of reviewers, as well as specify the merge options (like squashing). You can also add default reviewers." %}
 
 ## Fix the Bug
 
@@ -99,13 +96,13 @@ In this task you will create a branch of the code to fix the Bug. You will then 
 
 1. Open Eclipse if it is not already open. Open the MyShuttleDocker project.
 
-1. In *Team Explorer* change the drop down to **Work Items**.  If the dropdown does not show work items connect to your VSTS account via the Team Explorer Home page.
+1. In **Team Explorer** change the drop down to **Work Items**.  If the dropdown does not show work items connect to your VSTS account via the Team Explorer Home page.
 
 1. If there are no queries saved in VSTS, a query can be created in Eclipse. Right-click on the My Queries folder and select **New Query**
 
     ![New query](images/newquery.png)
 
-1. You can run an existing query by double clicking it. Double click **Bugs** to get the list of bugs in the project.  
+1. You can run an existing query by double clicking it. Double click **Bugs** to get the list of bugs in the project.
 
     ![Confirm the bug is correctly assigned and in VSTS](images/getbugsquery.png)
 
@@ -115,26 +112,31 @@ In this task you will create a branch of the code to fix the Bug. You will then 
 
     ![New branch](images/newbranch.png)
 
-1. In the dialog, change the branch name to **fixtotalsBug** and click Create Branch. Note that the work item is already associated to the branch
+1. In the dialog, change the branch name to **fixtotalsBug** and click Create Branch. Note that the work item is already associated to the branch.
+
     ![New branch](images/createbranch.png)
 
 1. Return back to Eclipse. In the project view of Eclipse,right-select the project, choose **Team** and then **pull** to fetch the latest changes, including the new branch just created.
+
     ![Fetch Changes](images/gitpull.png)
 
-1. To switch to the new branch, select **Team** , **Switch to...**  and select **Other**
+1. To switch to the new branch, select **Team** , **Switch to...**  and select **Other**.
+
     ![Switch to branch](images/switchto.png)
 
-1. Expand **Remote Tracking** and select the **origin/fixtotalbugs** branch and click **Check Out**. In the resulting dialog, choose **Check out as a local branch** option.  
+1. Expand **Remote Tracking** and select the **origin/fixtotalbugs** branch and click **Check Out**. In the resulting dialog, choose **Check out as a local branch** option.
 
- 1. Browse to `src/main/java/com.microsoft.example.servlet` and open the LoginServlet class.
+1. Browse to `src/main/java/com.microsoft.example.servlet` and open the LoginServlet class.
 
 1. Around line 35, you will see what is causing the bug: the `totalDriverFee` is being calculated but the `driverFeeTotal` session attribute is being set to `totalFareForDriver` (this looks like a classic copy/paste error).
 
-    Change this line of code:
+   Change this line of code:
+
     ```java
         session.setAttribute("driverFeeTotal", totalFareforDriver);
     ```
     to
+
     ```java
         session.setAttribute("driverFeeTotal", totalDriverFee);
     ```
@@ -155,21 +157,21 @@ In this task you will create a branch of the code to fix the Bug. You will then 
 
     ![Build is running to validate the PR](images/pr-overview.png)
 
-    > **Note**: If there was a merge conflict, VSTS would warn you on the overview page. If there is no warning to this effect, then Git will be able to auto-merge the PR into the target branch.
+    {% include note.html content= "If there was a merge conflict, VSTS would warn you on the overview page. If there is no warning to this effect, then Git will be able to auto-merge the PR into the target branch.
 
-    > **Note**: You configured the release to only trigger when successful builds off the master branch are available. Since this build is not building from the master branch, these changes will not yet be deployed.
+    You configured the release to only trigger when successful builds off the master branch are available. Since this build is not building from the master branch, these changes will not yet be deployed." %}
 
 1. Click on the Files tab to open the file compare. Note the changes.
 
     ![PR File Compare](images/PR-file-compare.png)
 
-    > **Note**: You can comment on code or files in the PR and have conversations with the team throughout the review process.
+    {% include note.html content= "You can comment on code or files in the PR and have conversations with the team throughout the review process." %}
 
 1. Click **Approve** to approve the pull request.
 
 1. Now that the policies have been fulfilled, you can complete the PR which will merge the changes into *master* (the target branch). Click **Complete** to do the merge.
 
-1. In the dialog, accept the defaults and click **Complete merge**
+1. In the dialog, accept the defaults and click **Complete merge**.
 
     ![Complete the merge](images/complete-merge.png)
 
