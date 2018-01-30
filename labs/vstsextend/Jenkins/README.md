@@ -30,7 +30,7 @@ While there are pros and cons with both approaches, the later approach has multi
 
 This lab covers both the approaches and the following tasks will be performed
 
-* Provision Jenkins on Azure VM using a Jenkins Template availaable on the Azure Marketplace
+* Provision Jenkins on Azure VM using a Jenkins Template available on the Azure Marketplace
 * Configure Jenkins to work with Maven and VSTS
 * Create a build definition in Jenkins
 * Configure VSTS to integrate with Jenkins
@@ -62,11 +62,11 @@ Read the complete spec at [https://docs.microsoft.com/en-us/azure/architecture/r
 
 ## Setting up the VSTS team project
 
-1. Use the [VSTS Demo Generator](https://vstsdemogenerator.azurewebsites.net/?name=MyShuttleDocker&templateid=77373){:target="_blank"} to provision a team project on the VSTS account
+1. Use the [VSTS Demo Generator](https://vstsdemogenerator.azurewebsites.net/?name=MyShuttleDocker&templateid=77373){:target="_blank"} to provision the MyShuttleDocker sample project on to your VSTS account
 
     ![VSTS Demo Gen](images/vstsdemogen-1.png)
 
-1. Select **MyShuttleDocker** for the template
+1. Provide a project name and click **Create Project**. If the Docker Integration extension is not installed, click the link to install the extension from the marketplace. 
 
     ![VSTS Demo Gen](images/vstsdemogen-2.png)
 
