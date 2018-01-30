@@ -32,6 +32,8 @@ Below are the description for the terminolgy used in the lab document to help yo
 
 [**Kubernetes Manifest file**](https://kubernetes.io/docs/reference/kubectl/cheatsheet/){:target="_blank"}: Kubernetes manifests with deployments, services and pods can be defined in json or yaml. The file extensions .yaml, .yml, and .json can be used.
 
+### What's covered in this lab?
+
 In this lab, the following tasks will be performed:
 
 * Create an Azure Container Registry (ACR), AKS and Azure SQL server
@@ -40,6 +42,8 @@ In this lab, the following tasks will be performed:
 * Configure application database deployment and configure Continuous Deployment (CD) in VSTS
 * Modify database connection string & ACR configuration in the source code
 * Initiate the build to automatically deploy the application
+
+## Reference Architecture
 
 The below diagram details the VSTS DevOps workflow with Azure Container Service with AKS:
 
@@ -51,6 +55,8 @@ The below diagram details the VSTS DevOps workflow with Azure Container Service 
   >**mhc-front** is the application hosted on a load balancer whereas **mhc-back** is the [Redis](https://redis.io/){:target="_blank"} Cache
 * The Kubernetes cluster will then pull the **myhealth.web** image from the ACR into the [Pods](https://kubernetes.io/docs/concepts/workloads/pods/pod/){:target="_blank"} and complete the deployment file instructions
 * The myhealth.web application will be accessible through a browser, once the deployment is successfully completed
+
+You can read the full spec [here](https://azure.microsoft.com/en-in/solutions/architecture/continuous-integration-deployment-containers/){:target="_blank"}
 
 ### Prerequisites for the lab
 

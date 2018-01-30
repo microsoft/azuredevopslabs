@@ -16,6 +16,8 @@ VSTS works with (m)any development tool including Visual Studio, Eclipse, Intell
 
 This lab will walk you through a typical end-to-end workflow for a Java developer using VSTS and working with Eclipse. We will use a hypothetical customer called MyShuttle that provides a portal for its drivers to access travel history and see fares collected. This is a  Java application built on JSP/Servlet technology running on Apache Tomcat and using MySQL as the database. We will develop this on a Ubuntu desktop station and we will deploy the app on Azure.
 
+{% include note.html content="This lab is a subset of 'DevOps with Visual Studio Team Services for Java projects' which covers additional topics such as Package Management, Running Unit Tests, UI Testing with Selenium, etc. Click here to see the [lab](../../java/) " %}
+
 ### What's covered in this lab
 
 In this lab, you will
