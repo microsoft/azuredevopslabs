@@ -34,7 +34,7 @@ Octopus Deploy has two components:
 
 We will spin up a Octopus server on Azure. Click the **Deploy to Azure** button below to provision a Octopus Server.
 
-   <a href="https://portal.azure.com/#create/octopus.octopusdeployoctopus-deploy" target="_blank">![deploybutton](http://azuredeploy.net/deploybutton.png)</a>
+[![Octopus Configuration](http://azuredeploy.net/deploybutton.png)](https://portal.azure.com/#create/octopus.octopusdeployoctopus-deploy){:target="_blank"}
 
 1. Click on **Create** button.
 
@@ -59,9 +59,9 @@ We will spin up a Octopus server on Azure. Click the **Deploy to Azure** button 
 
    ![click_create2](images/click_create2.png)
 
-1. Once the deployment is successful, connect to Octopus server using DNS, and login with Octopus Admin username and password.
+1. It takes approximately 15 minutes for the deployment to complete. Once the deployment is successful, connect to Octopus server using DNS, and login with Octopus Admin username and password.
 
-   ![O1](images/O1.png)
+   ![Octopus_login](images/octopus_login.png)
 
 1. You will see the Octopus deploy web portal.
 
@@ -71,9 +71,9 @@ We will spin up a Octopus server on Azure. Click the **Deploy to Azure** button 
 
 In this lab, we will use Azure WebApp as the deployment target.
 
-Click the Deploy to Azure button below to provision Azure WebApp. 
+Click the Deploy to Azure button below to provision Azure WebApp.
 
-   <a href="https://portal.azure.com/#create/Microsoft.WebSite" target="_blank">![deploybutton](http://azuredeploy.net/deploybutton.png)</a>
+[![WebApp Configuration](http://azuredeploy.net/deploybutton.png)](https://portal.azure.com/#create/Microsoft.WebSite){:target="_blank"}
 
 1. Provide **Web App name** and **Resource Group**. You can either create new Resource group or use existing one, and click **Create**
 
@@ -99,7 +99,7 @@ API key is used to authenticate VSTS with Octopus server. Using API key lets you
 
    ![Generated API Key](images/Key.png)
 
-## Setting up Team Services project
+## Setting up the VSTS team project
 
 1. Use [VSTS Demo Data Generator](https://vstsdemogenerator.azurewebsites.net/?TemplateId=77370&name=octopus){:target="_blank"} to provision the project on our VSTS account.
 
@@ -111,7 +111,7 @@ API key is used to authenticate VSTS with Octopus server. Using API key lets you
 
    ![VSTS Demo Generator](images/DemoGen.png)
 
-   {% include note.html content= "This URL will automatically select Octopus template in the demo generator. If you want to try other projects, use this URL instead - [https://vstsdemogenerator.azurewebsites.net/](https://vstsdemogenerator.azurewebsites.net/)" %}
+   {% include note.html content= "This URL will automatically select Octopus template in the demo generator. If you want to try other projects, use this URL instead - [https://vstsdemogenerator.azurewebsites.net/](https://vstsdemogenerator.azurewebsites.net/){:target=\"_blank\"}" %}
 
 ## Exercise 1: Configure Deployment Target in Octopus Server
 
