@@ -109,7 +109,7 @@ The connection between the VSTS and the Azure is not automatically established d
 
 Now that the connection is established, the Azure endpoint and the Azure Container Registry need to be manually configured for the build and release definitions. The dacpac will also be deployed to the mhcdb database so that the schema and data is configured for the backend.
 
-{% include note.html content= "TFS.WebApi.Exception: Page not found may be encountered for the Azure tasks in the build / release definition. This issue can be fixed by typing a random text in the Azure Subscription field and then clicking the **Refresh** icon next to it. Once the field is refreshed, the endpoint can be selected from the drop down list. This issue occurrence is due to a recent change in the VSTS Release Management API. The VSTS Demo Generator is being updated to handle this change to prevent this issue." %}
+> "TFS.WebApi.Exception: Page not found may be encountered for the Azure tasks in the build / release definition. This issue can be fixed by typing a random text in the Azure Subscription field and then clicking the **Refresh** icon next to it. Once the field is refreshed, the endpoint can be selected from the drop down list. This issue occurrence is due to a recent change in the VSTS Release Management API. The VSTS Demo Generator is being updated to handle this change to prevent this issue.
 
 1. Navigate to the **Builds** option under the **Build and Release** tab. Select the build definition `MHCDocker.build`, click on the optionsa and select the **Edit** option.
 
@@ -124,7 +124,7 @@ Now that the connection is established, the Azure endpoint and the Azure Contain
    |![Run services](images/icon.png) **Run services**| prepares suitable environment by restoring required packages|
    |![Build services](images/icon.png) **Build services**| builds **myhealth.web** image |
    |![Push services](images/icon.png) **Push services**| pushes **myhealth.web** image tagged with **$(Build.BuildId)** to container registry|
-   |![Publish Build Artifacts](images/publish-build-artifacts.png) **Publish Build Artifacts**| used to share dacpac for database deployment through VSTS artifacts  |
+   |![Publish Build Artifacts](images/publish-build-artifacts.png) **Publish Build Artifacts**| used to share dacpac for database deployment through VSTS artifacts|
 
 1. Navigate to the **Releases** section under the **Build & Release** tab. Select the release definition `MHCDocker.release`, click on the **Edit** option and then click on the **Tasks** section.
 
@@ -182,10 +182,13 @@ In this exercise, the source code will be modified to trigger the CI-CD.
     ![Build Summary](images/build4.png)
 
 1. Navigate to the [Azure Portal](https://portal.azure.com){:target="_blank"} and click on the **App Service** that was created at the beginning of this lab. Select the **Docker Container** option and provide the information as suggested and then click the **Save** button.
-   1. **Image Source**: Select the value **Azure Container Registry**
-   1. **Registry**: Select the registry value from the dropdown
-   1. **image**: Select the value **myhealth.web**
-   1. **Tag**: Select the value **latest**. This is required to map Azure Container Registry with the Web App.
+
+Field | Value to be provided
+------- | -------
+**Image Source** | Select the value **Azure Container Registry**
+**Registry** | Select the registry value from the dropdown
+**image** | Select the value **myhealth.web**
+**Tag** | Select the value **latest**. This is required to map Azure Container Registry with the Web App.
 
     ![Update registry](images/updatereg.png)
 
