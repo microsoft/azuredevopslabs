@@ -37,10 +37,15 @@ Below are the description for the terminolgy used in the lab document to help yo
 In this lab, the following tasks will be performed:
 
 * Create an Azure Container Registry (ACR), AKS and Azure SQL server
+
 * Provision VSTS Team Project with .NET Core application using the [VSTS Demo Generator](https://vstsdemogenerator.azurewebsites.net/){:target="_blank"} tool
+
 * Configure endpoints (properties) in VSTS to access Azure and AKS
+
 * Configure application database deployment and configure Continuous Deployment (CD) in VSTS
+
 * Modify database connection string & ACR configuration in the source code
+
 * Initiate the build to automatically deploy the application
 
 ## Reference Architecture
@@ -164,7 +169,9 @@ Since all the required azure components are created, the VSTS tem project can be
 
 ## Setting up the VSTS team project
 
-1. Use [VSTS Demo Generator](https://vstsdemogenerator.azurewebsites.net/?TemplateId=77372&name=AKS){:target="_blank"} to provision the project on your VSTS account. The VSTS Demo Generator creates a Kubernetes project in your VSTS account with preset source code, work items, build and release definitions.
+1. Use [VSTS Demo Generator](https://vstsdemogenerator.azurewebsites.net/?TemplateId=77372&name=AKS){:target="_blank"} to provision the project on your VSTS account. 
+
+   > **VSTS Demo Generator** helps you create team projects on your VSTS account with sample content that include source code, work items,iterations, service endpoints, build and release definitions based on the template you choose during the configuration. 
 
     ![VSTS Demo Generator](images/vstsdg.png)
 
