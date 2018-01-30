@@ -34,8 +34,7 @@ Octopus Deploy has two components:
 
 We will spin up a Octopus server on Azure. Click the **Deploy to Azure** button below to provision a Octopus Server.
 
-   <a href="https://portal.azure.com/#create/octopus.octopusdeployoctopus-deploy" target="_blank">![](http://azuredeploy.net/deploybutton.png)</a>
-
+   <a href="https://portal.azure.com/#create/octopus.octopusdeployoctopus-deploy" target="_blank">![deploybutton](http://azuredeploy.net/deploybutton.png)</a>
 
 1. Click on **Create** button.
 

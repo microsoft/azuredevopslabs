@@ -110,6 +110,7 @@ Having setup Team Services project, we will now log in to the virtual machine an
 1. Choose **Next** to follow the wizard to complete the installation.
 
 1. You might be prompted to trust the Eclipse Foundation certificate. Select ther certificate and click **Accept Selected**.
+
     ![Trust Eclipse Certificate](images/addeclipsecert.png)
 
 1. Eclipse will need to restart. When Eclipse restarts,choose **Windows > Show View** and select **Other...**
