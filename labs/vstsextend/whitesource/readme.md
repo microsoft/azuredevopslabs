@@ -13,7 +13,7 @@ Last updated : {{ "now" | date: "%b %d,%Y" }}
 
 WhiteSource provides WhiteSource Bolt, a lightweight open source security and management solution developed specifically for integration with Microsoft's Visual Studio Team Services (and TFS). It works per project and does not offer real-time alert capabilities like the **Full platform** offering which is generally recommended for larger development teams wanting to automate their open source management throughout the entire software development lifecycle (from the repositories to post-deployment stages) and across all projects and products.
 
-### What's covered in this lab?
+### What's covered in this lab
 
 This lab shows how you can use **WhiteSource Bolt with VSTS** to automatically detect and alerts on vulnerable open source components, outdated libraries, and licenses compliance issues in your code. We will be using WebGoat, a deliberately insecure web application maintained by OWASP designed to teach web application security lessons.
 
@@ -91,7 +91,7 @@ We have a **Java code** provisioned by the demo generator system. We will use **
 
    ![report](images/report.png)
 
-## Analyze Reports
+## Exercise 3: Analyze Reports
 
 WhiteSource bolt automatically detects OpenSource components in the software including transitive dependencies and their respective licenses.
 
@@ -108,7 +108,7 @@ You can see the opensource license distribution and a detailed view of all compo
 
 WhiteSource Bolt also tracks outdated libraries in the project getting all the detailed information and links to newer versions and recommendations.
 
-![outdatedlibraries](images\outdatedlibraries.png)
+![outdatedlibraries](images/outdatedlibraries.png)
 
 ## Summary
 

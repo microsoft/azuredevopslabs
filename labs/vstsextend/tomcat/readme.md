@@ -14,7 +14,7 @@ In this lab, you will learn how you can use Release Management(RM) in Visual Stu
 
 For this purpose of the lab, we will use Azure App Service and Azure Database for MySQL, a relational database service based on the open source MySQL Server engine. It is a fully managed database as a service offering capable of handing mission-critical workload with predictable performance and dynamic scalability.
 
-{% include note.html content= "This article deploys a Java app to App Service on Windows. To deploy a **Net Core App** container to Azure, please see  [deploying Docker .NET Core container to Azure App Service](../docker). To deploy a Dockerized Java application, see [Deploying a Dockerized Java App to Azure Web App for Containers](../dockerjava/)" %}
+{% include note.html content= "This article deploys a Java app to App Service on Windows. To deploy a **Net Core App** container to Azure, please see  [deploying Docker .NET Core container to Azure App Service](../docker){:target=\"_blank\"}. To deploy a Dockerized Java application, see [Deploying a Dockerized Java App to Azure Web App for Containers](../dockerjava/){:target=\"_blank\"}" %}
 
 ### What's covered in this lab
 
@@ -52,7 +52,7 @@ This lab will show how you can
 
 1. We will use the **Web App + MySQL** Azure template from the Azure Marketplace to create a Website and MySQL Database together to start developing even faster.
 
-    [](https://portal.azure.com/#create/Microsoft.WebSiteMySQLDatabase)![azuredeploy](http://azuredeploy.net/deploybutton.png)
+    [![Tomcat Configuration](http://azuredeploy.net/deploybutton.png)](https://portal.azure.com/#create/Microsoft.WebSiteMySQLDatabase){:target="_blank"}
 
 1. This template provides three MySQL options :
 
