@@ -102,10 +102,10 @@ Read the complete specifications at [https://docs.microsoft.com/en-us/azure/arch
 
 1. The initial password needs to be provided in the **Getting Started** screen to unlock Jenkins. For security reasons, Jenkins will generate a password and save it in a file on the server.
 
+    {% include important.html content= "At the time of writing this lab, an open issue in Jenkins was noted where the setup wizard would not resume after restart, skipping some of the steps listed below. If you do not see the screen below, skip the rest of the section and see [Logging into Jenkins with the default credentials](#logging-into-jenkins-with-the-default-credentials) " %}
+
    ![Jenkins Initial Password](images/jenkinsinitialemptypwd.png)
-
-   {% include important.html content= "At the time of writing this lab, an open issue in Jenkins was noted where the setup wizard would not resume after restart, skipping some of the steps listed below. If you do not see the screen above, steps 5 to 7 will not work. The workaround is to use the default user name `admin` with the initial admin password to login as explained in the next step." %}
-
+  
 1. Return to the **Putty** terminal and type the following command to open the password file and copy the password. Press the **Esc** button and then type **:q!** at the prompt to exit the vi editor without saving the file.
 
     `sudo vi /var/lib/jenkins/secrets/initialAdminPassword`
@@ -168,11 +168,13 @@ Read the complete specifications at [https://docs.microsoft.com/en-us/azure/arch
 
    `http://{your account name}.visualstudio.com/{team project name}/_git/MyShuttle`
 
+   {% include note.html content="If you do not see **Git** under Source code management, you will need to install/enable the Git plugin as described [here](#additional-tasks)" %}
+
    ![Configuring VSTS Git URL](images/jenkins-vstsrepo.png)
 
-   > The VSTS Git repos are private and requires user credentials to be provided to access the repository. If the Git credentials is not set already, it can be done from the VSTS.
+   The VSTS Git repos are private and requires user credentials to be provided to access the repository. If the Git credentials is not set already, it can be done from the VSTS.
 
-1. Select the **Clone** option, provide the `User name` and `Password` and then click on the **OK** button.
+1. Go to your VSTS project page and select the **Clone** option, provide the `User name` and `Password` and then click on the **OK** button.
 
    ![Generating Git Credentials](images/vsts-generategitcreds.png)
 
@@ -319,7 +321,11 @@ The next step is to configure the VSTS Release Management to fetch and deploy th
 
 1. The admin password will be the content from the password file created automatically by Jenkins stored in the path `\var\lib\jenkins\secrets\initialAdminPassword`
 
-1. To change password, click on the user name on the top-right corner. Click the **Configure** option, scroll down to the **password** section to specify a new password and then click the **Save** button.
+1. From a terminal window, type `sudo vi /var/lib/jenkins/secrets/initialAdminPassword`to open the file. You can double click on the password text and use **CTRL+C** to copy the text and place it in the clipboard. To close the file without saving, press **ESC** and then **:q!** 
+
+1. It is recommended that you change your password. After login, click on the user name on the top-right corner. Click the **Configure** option, scroll down to the **password** section to specify a new password and then click the **Save** button.
+
+    ![Changing Password](images/configurepwd.png)
 
 ### Installing the Git Plugin
 

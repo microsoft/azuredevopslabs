@@ -61,21 +61,20 @@ In this lab, you will
 
 ## Exercise 1: Setting up VSTS project
 
-1. Use the [VSTS Demo Generator](https://vstsdemogenerator.azurewebsites.net/?name=PartsUnlimited) to provision the team project on the VSTS account.
+1. Use the [VSTS Demo Generator](https://vstsdemogenerator.azurewebsites.net/?name=MyShuttleDocker&templateid=77373) to provision the team project on the VSTS account.
 
    > **VSTS Demo Generator** helps you create team projects on your VSTS account with sample content that include source code, work items,iterations, service endpoints, build and release definitions based on the template you choose during the configuration. 
 
    ![VSTS Demo Generator](images/vstsdemogen.png)
 
-1. Once the team project is provisioned, click on the URL to navigate to the team project.
 
-   ![VSTS Demo Generator](images/VSTSDemoGeneratorCreate.png)
-
-1. Select **MyShuttleDocker** for the template. You will need the [**Docker Integration**](https://marketplace.visualstudio.com/acquisition?itemName=ms-vscs-rm.docker){:target="_blank"} extension to be installed and enabled on the account. If the extension is not installed, click on the extension name to open the extension page on VS Marketplace. Install the extension. Return to the VSTS Demo Generator page and refresh
+1. You will need the [**Docker Integration**](https://marketplace.visualstudio.com/acquisition?itemName=ms-vscs-rm.docker){:target="_blank"} extension to be installed and enabled on the account. If the extension is not installed, click on the extension name to open the extension page on VS Marketplace. Install the extension. Return to the VSTS Demo Generator page and refresh
 
 1. Provide a project name and click **Create Project** to start provisioning.
 
 1. Once the project is provisioned, select the URL to navigate to the project that you provisioned.
+
+ ![VSTS Demo Generator](images/vstsdemogen-2.png)
 
 1. You will see the work items, source code and CI/CD definitions already populated by the demo generator.
 

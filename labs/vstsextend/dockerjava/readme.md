@@ -44,7 +44,7 @@ If you are following this lab from "Working with Jenkins, VSTS and Azure, you ca
 
 If you are following this lab from "Working with Jenkins, VSTS and Azure, you can skip this exercise. Otherwise,
 
-1. Use the [VSTS Demo Generator](https://vstsdemogenerator.azurewebsites.net/?name=PartsUnlimited) to provision the team project on the VSTS account.
+1. Use the [VSTS Demo Generator](https://vstsdemogenerator.azurewebsites.net/?name=MyShuttleDocker&templateid=77373) to provision the team project on the VSTS account.
 
    > **VSTS Demo Generator** helps you create team projects on your VSTS account with sample content that include source code, work items,iterations, service endpoints, build and release definitions based on the template you choose during the configuration. 
 
