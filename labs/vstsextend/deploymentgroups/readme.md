@@ -44,7 +44,7 @@ The following resources will be provisioned on the Azure using an ARM template:
 
 1. Click on the **Deploy to Azure** button to initiate the resource provisioning. It takes approximately 10-15 minutes to complete the deployment.
 
-   [![Deploy to Azure](http://azuredeploy.net/deploybutton.png)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FMicrosoft%2FVSTS-DevOps-Labs%2Fdeploymentgroups%2Fdeploymentgroups%2Fazurewebsqldeploy.json)
+   [![Deploy to Azure](http://azuredeploy.net/deploybutton.png)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FMicrosoft%2FVSTS-DevOps-Labs%2Fdeploymentgroups%2Fdeploymentgroups%2Fazurewebsqldeploy.json){:target="_blank"}
 
    ![Azure](images/azure.png)
 
@@ -60,7 +60,7 @@ The following resources will be provisioned on the Azure using an ARM template:
 
    ![SQL DNS](images/sql_dns.png)
 
-## Setting up the VSTS Project
+## Setting up the VSTS team project
 
 1. Use the [VSTS Demo Generator](https://vstsdemogenerator.azurewebsites.net/?name=DeploymentGroups&templateid=77368){:target="_blank"} to provision a team project on the VSTS account.
 
@@ -193,7 +193,7 @@ A [Phase](https://docs.microsoft.com/en-us/vsts/build-release/concepts/process/p
 
 1. In the Azure Portal, click on the **DNS** of any application instance, to access the application.
 
-   >The [**Azure Load Balancer**](https://docs.microsoft.com/en-us/azure/load-balancer/load-balancer-overview){:target="_blank"} will distribute incoming traffic among healthy instances of servers defined in a load-balanced set. Hence the **DNS** of all web server instances will be the same.
+   {% include important.html content= "The [**Azure Load Balancer**](https://docs.microsoft.com/en-us/azure/load-balancer/load-balancer-overview){:target=\"_blank\"} will distribute incoming traffic among healthy instances of servers defined in a load-balanced set. Hence the **DNS** of all web server instances will be the same." %}
 
    ![Web Server](images/web_server.png)
 
