@@ -40,7 +40,7 @@ These utility provide:
 Using **Free download manager**
 
 - Download and install Free download manager if you currently do not have one installed 
-- Open and select all the <a href="media/almvm2017wu2links.txt">download URLs</a> from the text file. Press ***CTRL+C*** to copy the selected URLs to clipboard.
+- Open and select all the <a href="../media/almvm2017wu2links.txt">download URLs</a> from the text file. Press ***CTRL+C*** to copy the selected URLs to clipboard.
 - Select Menu - ***Paste URLs from clipboard***      
 - When the download is complete, double-click the .exe file to self-extract the RAR files to a folder       
 - Read the “ Working with the …” document to start using the VM
