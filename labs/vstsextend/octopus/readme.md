@@ -106,7 +106,9 @@ API key is used to authenticate VSTS with Octopus server. Using API key lets you
 
 ## Setting up the VSTS team project
 
-1. Use [VSTS Demo Data Generator](https://vstsdemogenerator.azurewebsites.net/?TemplateId=77370&name=octopus){:target="_blank"} to provision the project on our VSTS account.
+1. Use the [VSTS Demo Generator](https://vstsdemogenerator.azurewebsites.net/?TemplateId=77370&name=octopus){:target="_blank"} to provision the project on our VSTS account.
+
+   > **VSTS Demo Generator** helps you create team projects on your VSTS account with sample content that include source code, work items,iterations, service endpoints, build and release definitions based on the template you choose during the configuration. 
 
    ![VSTS Demo Generator](images/1.png)
 

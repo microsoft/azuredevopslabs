@@ -169,7 +169,9 @@ Since all the required azure components are created, the VSTS tem project can be
 
 ## Setting up the VSTS team project
 
-1. Use [VSTS Demo Generator](https://vstsdemogenerator.azurewebsites.net/?TemplateId=77372&name=AKS){:target="_blank"} to provision the project on your VSTS account. The VSTS Demo Generator creates a Kubernetes project in your VSTS account with preset source code, work items, build and release definitions.
+1. Use [VSTS Demo Generator](https://vstsdemogenerator.azurewebsites.net/?TemplateId=77372&name=AKS){:target="_blank"} to provision the project on your VSTS account. 
+
+   > **VSTS Demo Generator** helps you create team projects on your VSTS account with sample content that include source code, work items,iterations, service endpoints, build and release definitions based on the template you choose during the configuration. 
 
     ![VSTS Demo Generator](images/vstsdg.png)
 

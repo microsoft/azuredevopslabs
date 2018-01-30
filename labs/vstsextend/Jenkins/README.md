@@ -64,6 +64,8 @@ Read the complete spec at [https://docs.microsoft.com/en-us/azure/architecture/r
 
 1. Use the [VSTS Demo Generator](https://vstsdemogenerator.azurewebsites.net/?name=MyShuttleDocker&templateid=77373){:target="_blank"} to provision the MyShuttleDocker sample project on to your VSTS account
 
+   > **VSTS Demo Generator** helps you create team projects on your VSTS account with sample content that include source code, work items,iterations, service endpoints, build and release definitions based on the template you choose during the configuration. 
+
     ![VSTS Demo Gen](images/vstsdemogen-1.png)
 
 1. Provide a project name and click **Create Project**. If the Docker Integration extension is not installed,the Click Project would not be available until the extension is installed and enabled on the account. Click the on the extension name to install the extension from the marketplace
