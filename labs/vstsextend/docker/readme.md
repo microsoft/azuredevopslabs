@@ -1,12 +1,4 @@
----
-title: Docker Deployment to Azure App Service (Linux) using VSTS
-layout: page
-sidebar: vsts2
-permalink: /labs/vstsextend/docker/
-folder: /labs/vstsextend/docker/
----
-
-Last updated : {{ "now" | date: "%b %d, %Y" }}.
+# Docker Deployment to Azure App Service (Linux) using VSTS
 
 ## Overview
 

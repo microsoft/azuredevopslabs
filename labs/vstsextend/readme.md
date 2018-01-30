@@ -1,42 +1,28 @@
----
-title: Extend your DevOps Toolchain with VSTS 
-layout: homepage
-permalink: /labs/vstsextend/
-folder: /labs/vstsextend/
----
+# Extend and Integrate with Visual Studio Team Services
 
-<div class="vstsextendMain">
-<div class="productcolmain">
-  <div class="pageheader">
-             <b>Extend and Integrate with Visual Studio Team Services</b> </div>
-     <div class="herotext2">
-             Learn how you can extend and integrate your DevOps Toolchain with Visual Studio Team Services to deploy any app on any platform
-  </div>
-</div>
-</div>
+Learn how to extend and integrate the DevOps Tool chain with Visual Studio Team Services to deploy any app on any platform
 
 ## Step-by-Step Tutorials
 
-<div class="lablist">
-    <div class="header2"> <b>DevOps</b></div>
-        <ul style="list-style: none;">
-          <li> <img src="images/jenkins.png" height="42" width="42"/> <a href="jenkins/"> Integrating with Jenkins</a>    </li><br />
-          <li> <img src="images/tomcat.png" height="42" width="42"/><a href="tomcat/"> Deploying a Java application on Tomcat  </a>    </li><br />
-          <li> <img src="images/sonarqube.png" height="42" width="42"/><a href="sonarqube/"> Technical Debt Management with SonarQube</a> </li><br />
-          <li> <img src="images/whitesource.png" height="42" width="42"/><a href="WhiteSource/"> OSS governance with WhiteSource</a></li><br />
-          <li> <img src="images/octopus.png" height="42" width="42"/><a href="Octopus/"> Integrating Octopus Deploy</a></li><br />
-          <li> <img src="images/selenium.png" height="42" width="42"/><a href="Selenium/"> Driving continuous testing with Selenium</a></li><br />
-           <li> <img src="images/eclipse.png" height="42" width="42"/><a href="eclipse/"> Developing with Eclipse for Java projects</a></li><br />
-          <li> <img src="images/azure.png" /><a href="kubernetes/"> Deploying to Azure Container Service (AKS)</a></li><br />
-          <li> <img src="images/azure.png" /><a href="deploymentgroups/"> Working with Deployment Groups</a></li><br />
-        <li> <img src="images/parasoft.png" height="42" width="42" /><a href="paraosoft/"> Leverage virtual services with Parasoft Virtualize</a></li><br />
-          <li> <img src="images/logo_java.svg" height="42" width="42"/> <a href="../java/"> DevOps with VSTS and Azure for Java projects  </a>    </li><br />
-          <li> <img src="images/logo_nodejs.svg" height="42" width="42"/><a href="../vsts/nodejs/">DevOps for Node.js with VSTS and Azure   </a>    </li><br />
-          <li> <img src="images/python.png" height="42" width="42"/><a href="python/"> How to deploy a Python application to Azure from VSTS</a></li><br />
-          <li> <img src="images/github.png" height="42" width="42"/><a href="github/"> How to continuously deliver code on GitHub with VSTS</a></li><br />
-          <li> <img src="images/php.png" height="42" width="42"/><a href="PHP/"> Deploying a PHP application to Azure</a></li><br />
-          <li> <img src="images/docker.png" height="42" width="42"/><a href="docker/"> Deploying Docker Containers to Azure App Service</a></li><br />
-          <li> <img src="images/intellij.png" height="42" width="42"/><a href="intelliJ/"> Working with IntelliJ</a> <span class="label label-success">Coming soon</span></li><br />
-          <li> <img src="images/azure.png"><a href="azurefunctions/"> Deploying to Azure Functions from VSTS</a> <span class="label label-success">Coming soon</span></li><br />
-        </ul>
-</div>
+### DevOps
+
+Technology / Tool | Tutorial
+------- | -------
+![Integrating with Jenkins](images/jenkins.png) | Integrating with Jenkins
+![Deploying a Java application on Tomcat](images/tomcat.png) | Deploying a Java application on Tomcat
+![Technical Debt Management with SonarQube](images/sonarqube.png) | Technical Debt Management with SonarQube
+![OSS governance with WhiteSource](images/whitesource.png) | OSS governance with WhiteSource
+![Integrating Octopus Deploy](images/octopus.png) | Integrating Octopus Deploy
+![Driving continuous testing with Selenium](images/selenium.png) | Driving continuous testing with Selenium
+![Developing with Eclipse for Java projects](images/eclipse.png) | Developing with Eclipse for Java projects
+![Deploying to Azure Container Service (AKS)](images/azure.png) | Deploying to Azure Container Service (AKS)
+![Working with Deployment Groups](images/azure.png) | Working with Deployment Groups
+![Leverage virtual services with Parasoft Virtualize](images/parasoft.png) | Leverage virtual services with Parasoft Virtualize
+![DevOps with VSTS and Azure for Java projects](images/logo_java.svg) | DevOps with VSTS and Azure for Java projects
+![DevOps for Node.js with VSTS and Azure](images/logo_nodejs.svg) | DevOps for Node.js with VSTS and Azure
+![How to deploy a Python application to Azure from VSTS](images/python.png) | How to deploy a Python application to Azure from VSTS
+![How to continuously deliver code on GitHub with VSTS](images/github.png) | How to continuously deliver code on GitHub with VSTS
+![Deploying a PHP application to Azure](images/php.png) | Deploying a PHP application to Azure
+![Deploying Docker Containers to Azure App Service](images/docker.png) | Deploying Docker Containers to Azure App Service
+![Working with IntelliJ](images/intellij.png) | Working with IntelliJ Coming soon
+![Deploying to Azure Functions from VSTS](images/azure.png) | Deploying to Azure Functions from VSTS Coming soon
