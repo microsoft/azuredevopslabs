@@ -32,7 +32,7 @@ Below are the description for the terminolgy used in the lab document to help yo
 
 [**Kubernetes Manifest file**](https://kubernetes.io/docs/reference/kubectl/cheatsheet/){:target="_blank"}: Kubernetes manifests with deployments, services and pods can be defined in json or yaml. The file extensions .yaml, .yml, and .json can be used.
 
-### What's covered in this lab?
+### What's covered in this lab
 
 In this lab, the following tasks will be performed:
 
@@ -50,9 +50,13 @@ The below diagram details the VSTS DevOps workflow with Azure Container Service 
 [![VSTS DevOps workflow with Azure Container Service with AKS](images/vstsaksdevops.png)](https://azure.microsoft.com/en-in/solutions/architecture/continuous-integration-deployment-containers/){:target="_blank"}
 
 * Firstly, the source code changes are committed to the VSTS git repository
+
 * VSTS will create the custom Docker image **myhealth.web** and push the image tagged with the build ID to the ACR. Subsequently it will publish the [Kubernetes deployment YAML file](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/){:target="_blank"} as a build artifact.
+
 * VSTS will deploy **mhc-front** and **mhc-back** services into the Kubernetes cluster using the YAML file.
-  >**mhc-front** is the application hosted on a load balancer whereas **mhc-back** is the [Redis](https://redis.io/){:target="_blank"} Cache
+
+  {% include important.html content= "**mhc-front** is the application hosted on a load balancer whereas **mhc-back** is the [Redis](https://redis.io/){:target=\"_blank\"} Cache" %}
+
 * The Kubernetes cluster will then pull the **myhealth.web** image from the ACR into the [Pods](https://kubernetes.io/docs/concepts/workloads/pods/pod/){:target="_blank"} and complete the deployment file instructions
 * The myhealth.web application will be accessible through a browser, once the deployment is successfully completed
 
@@ -88,11 +92,11 @@ This lab requires all the pre-requisite executables to be installed and configur
 
 1. Install the [Azure CLI version 2.0.23](https://azurecliprod.blob.core.windows.net/msi/azure-cli-2.0.23.msi){:target="_blank"} on the Azure VM.
 
-   > This is the **Azure Command Line Interface** tool required to authenticate to the Azure subscription and fetch the Azure resource group details required in the Exercise 2.
+   {% include important.html content= "This is the **Azure Command Line Interface** tool required to authenticate to the Azure subscription and fetch the Azure resource group details required in the Exercise 2." %}
 
 1. Download the [KubeCtl](https://storage.googleapis.com/kubernetes-release/release/v1.9.0/bin/windows/amd64/kubectl.exe){:target="_blank"}, and make sure the path of **kubectl.exe** is included in the [PATH Environment Variable](https://msdn.microsoft.com/en-us/library/office/ee537574(v=office.14).aspx){:target="_blank"} of the lab machine.
 
-   > Kubectl is a command line interface for running commands against Kubernetes clusters. In this lab, Kubectl is used to check the status of pods.
+   {% include important.html content= "Kubectl is a command line interface for running commands against Kubernetes clusters. In this lab, Kubectl is used to check the status of pods." %}
 
 1. Follow the below instructions to create a pair of SSH RSA public & private keys which will be used in the next exercise.
     1. Open the **Git Bash**, type the command `ssh-keygen -t rsa` and press the **Enter** button.
@@ -101,21 +105,21 @@ This lab requires all the pre-requisite executables to be installed and configur
         * **Passphrase** : Provide a passphrase or leave it blank for an empty passphrase.
     3. Access the path where the keys are generated. The contents of the public key **id_rsa.pub** is required for setting up environment which are of format
 
-1. The [Azure Service Principal Client ID and Client Secret](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-create-service-principal-portal) will be required for the next exercise.
+1. The [Azure Service Principal Client ID and Client Secret](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-create-service-principal-portal){:target="_blank"} will be required for the next exercise.
 
 ## Setting up the environment
 
 The following azure resources need to be configured for this lab:
 
-Azure resources | Description
-----------------|------------
-![Azure Container Registry](images/container_registry.png) Azure Container Registry | Used to store images privately
-![AKS](images/aks.png) AKS | Docker images are deployed to Pods running inside AKS
-![SQL Server](images/sqlserver.png) SQL Server | SQL Server to host database
+|Azure resources | Description|
+|----------------|------------|
+|![Azure Container Registry](images/container_registry.png) Azure Container Registry | Used to store images privately|
+|![AKS](images/aks.png) AKS | Docker images are deployed to Pods running inside AKS|
+|![SQL Server](images/sqlserver.png) SQL Server | SQL Server to host database|
 
 1. Click on **Deploy to Azure** (or right click and select ***Open in new tab***) to spin up **Azure Container Registry**, **Azure Container Service (AKS)** and **Azure SQL Server**. Enter required details for the below fields and agree to ***Terms and Conditions***, and click **Purchase**.
 
-   > Since the Azure SQL Server name does not support **UPPER** / **Camel** casing for its naming convention, use lower case for ***DB Server Name*** field value.
+   {% include tip.html content= "Since the Azure SQL Server name does not support **UPPER** / **Camel** casing for its naming convention, use lower case for ***DB Server Name*** field value." %}
 
     * Subscription
     * Resource Group
@@ -128,9 +132,9 @@ Azure resources | Description
     * Service Principal Client
     * Service Principal Client Secret
 
-   [![Deploy to Azure](http://azuredeploy.net/deploybutton.png)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FMicrosoft%2FVSTS-DevOps-Labs%2Fkubernetes%2Fkubernetes%2Ftemplates%2Fazuredeploy.json)
+   [![Deploy to Azure](http://azuredeploy.net/deploybutton.png)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FMicrosoft%2FVSTS-DevOps-Labs%2Fkubernetes%2Fkubernetes%2Ftemplates%2Fazuredeploy.json){:target="_blank"}
 
-   > At the time of writing this lab, regions **East US**, **Central US**, **West Europe**, **Canada Central** and **Canada East** are supported locations. For more information, refer [AKS Azure Regions](https://docs.microsoft.com/en-in/azure/aks/container-service-quotas).
+   {% include important.html content= "At the time of writing this lab, regions **East US**, **Central US**, **West Europe**, **Canada Central** and **Canada East** are supported locations. For more information, refer [AKS Azure Regions](https://docs.microsoft.com/en-in/azure/aks/container-service-quotas){:target=\"_blank\"}" %}
 
    ![Deploy to Azure](images/customtemplate1.png)
 
@@ -158,7 +162,7 @@ Azure resources | Description
 
 Since all the required azure components are created, the VSTS tem project can be created.
 
-## Setting up the VSTS Project
+## Setting up the VSTS team project
 
 1. Use [VSTS Demo Generator](https://vstsdemogenerator.azurewebsites.net/?TemplateId=77372&name=AKS){:target="_blank"} to provision the project on your VSTS account. The VSTS Demo Generator creates a Kubernetes project in your VSTS account with preset source code, work items, build and release definitions.
 
@@ -184,7 +188,7 @@ Since the connections are not established during project provisioning,the two en
 
      You will be prompted to authorize this connection with Azure credentials. Disable pop-up blocker in your browser if you see a blank screen after clicking OK, and retry the step.
 
-     > If your subscription is not listed or to specify an existing service principal, click the link in the dialog which will switch to manual configuration mode and follow the [Service Principal creation](https://blogs.msdn.microsoft.com/devops/2015/10/04/automating-azure-resource-group-deployment-using-a-service-principal-in-visual-studio-online-buildrelease-management/){:target="_blank"} link.
+     {% include tip.html content= "If your subscription is not listed or to specify an existing service principal, click the link in the dialog which will switch to manual configuration mode and follow the [Service Principal creation](https://blogs.msdn.microsoft.com/devops/2015/10/04/automating-azure-resource-group-deployment-using-a-service-principal-in-visual-studio-online-buildrelease-management/){:target=\"_blank\"} link." %}
 
      ![azureendpoint](images/azureendpoint.png)
 
@@ -269,7 +273,7 @@ We will update the database connection string for the .NET Core application and 
 
    Scroll down to line number **9** and provide the database server name as given in the step 6 of the previous exercise and manually update the **User ID** to ***sqladmin*** and **Password** to ***P2ssw0rd1234***. Click **Commit**.
 
-   > "DefaultConnection": "Server=YOUR_SQLSERVER_NAME.database.windows.net,1433;Database=mhcdb;Persist Security Info=False;User ID=sqladmin;Password=P2ssw0rd1234"
+   {% include important.html content= "\"DefaultConnection\": \"Server=YOUR_SQLSERVER_NAME.database.windows.net,1433;Database=mhcdb;Persist Security Info=False;User ID=sqladmin;Password=P2ssw0rd1234\"" %}
 
    ![pasteconnectionstring](images/pasteconnectionstring.png)
 
