@@ -6,13 +6,15 @@ permalink: /labs/vsts/git/
 folder: /labs/vsts/git/
 ---
 
+Last updated : {{ "now" | date: "%b %d, %Y" }}.
+
 ## Overview
 
 Team Services supports two types of version control Git and Team Foundation Version Control (TFVC). Here is a quick overview of the two version control systems:
 
-- **Team Foundation Version Control (TFVC)**: TFVC is a centralized version control system. Typically, team members have only one version of each file on their dev machines. Historical data is maintained only on the server. Branches are path-based and created on the server.
+ -**Team Foundation Version Control (TFVC)**: TFVC is a centralized version control system. Typically, team members have only one version of each file on their dev machines. Historical data is maintained only on the server. Branches are path-based and created on the server.
 
-- **Git**: Git is a distributed version control system. Git repositories can live locally (such as on a developer’s machine). Each developer has a copy of the source repository on their dev machine. Developers can commit each set of changes on their dev machine and perform version control operations such as history and compare without a network connection.
+ -**Git**: Git is a distributed version control system. Git repositories can live locally (such as on a developer’s machine). Each developer has a copy of the source repository on their dev machine. Developers can commit each set of changes on their dev machine and perform version control operations such as history and compare without a network connection.
 
 Git is the default version control provider for new projects. You should use Git for version control in your projects unless you have a specific need for centralized version control features in TFVC.
 
@@ -94,8 +96,7 @@ Git commits consists of the following-
 
 ### Task 2: Syncing changes
 
-1. Before syncing, fetch the commits to view changes that your team has made. Fetching changes does not merge the commits into your local repository.
-   You will need to pull the changes to merge them into your local repository.
+1. Before syncing, fetch the commits to view changes that your team has made. Fetching changes does not merge the commits into your local repository. You will need to pull the changes to merge them into your local repository.
 
    ![](images/17.png)
 
@@ -226,7 +227,7 @@ Branches let you work with multiple versions of the source code in the same loca
 
 ### Task 3: Deleting branches locally and remotely
 
-> **NOTE:** Deleting a branch in your local repo doesn't remove the branch on the remote.
+{% include note.html content= "Deleting a branch in your local repo doesn't remove the branch on the remote." %}
 
 1. Open **Team Explorer** from Visual Studio and go to the **Branches** view. Locate the branch you want to delete.
    Make sure that you aren't checked out to that branch. You can't delete the branch you are currently working in.
@@ -392,7 +393,6 @@ Manage your pull requests you own or are assigned to with the Pull Requests tab 
 1. Add comments to the pull request to make suggestions, reply to previous comments, and point out problems with the proposed changes.
 
    ![](images/67.png)
-
 1. We can change to Tree view to get the proper structure of the source code or just list files. We can also view all the comments/active comments/hide comments.
 
    ![](images/68.png)
@@ -421,9 +421,9 @@ Manage your pull requests you own or are assigned to with the Pull Requests tab 
 
     > The default option is Approve, but you can select other options from the drop-down:
 
-    - **Approve with suggestions :** Agree with the pull request, but provide optional suggestions to improve the code.
-    - **Waiting for the author :** Do not approve the changes, and ask the author to review your comments. The author should let you know when you should re-review the code after they have addressed your concerns.
-    - **Rejected :** The changes aren't acceptable. If you are voting this way, you should leave a comment in the pull request detailing why the changes were rejected.
+      - **Approve with suggestions :** Agree with the pull request, but provide optional suggestions to improve the code.
+      - **Waiting for the author :** Do not approve the changes, and ask the author to review your comments. The author should let you know when you should re-review the code after they have addressed your concerns.
+      - **Rejected :** The changes aren't acceptable. If you are voting this way, you should leave a comment in the pull request detailing why the changes were rejected.
 
     ![](images/72.png)
 
@@ -434,7 +434,7 @@ Manage your pull requests you own or are assigned to with the Pull Requests tab 
 1. Enter the message used for the merge commit and update the pull request description as needed in the dialog that follows.
     You can choose to squash merge your pull request and delete the source branch once the merge is complete.
 
-    >**Squash merging** is a merge option that allows you to condense the Git history of topic branches when you complete a pull request. Instead of each commit on the topic branch being added to the history of the default branch, a squash merge takes all the file changes and adds them to a single new commit on the default branch. Squash merging keeps your default branch histories clean and easy to follow without demanding any workflow changes on your team.
+    {% include note.html content= "**Squash merging** is a merge option that allows you to condense the Git history of topic branches when you complete a pull request. Instead of each commit on the topic branch being added to the history of the default branch, a squash merge takes all the file changes and adds them to a single new commit on the default branch. Squash merging keeps your default branch histories clean and easy to follow without demanding any workflow changes on your team." %}
 
     ![](images/74.png)
 

@@ -372,7 +372,7 @@ textarea {
 }
 
 a {
-    color: #248EC2;
+    color: #0078d7;
     text-decoration: none;
 }
 
@@ -510,7 +510,7 @@ h6,
 .h4,
 .h5,
 .h6 {
-    font-family: 'Lora', Georgia, serif;
+    font-family: segoe-ui_normal,Segoe UI,Segoe,Segoe WP,Helvetica Neue,Helvetica,sans-serif;
     font-weight: 500;
     line-height: 1.1;
 }
@@ -1153,7 +1153,7 @@ pre code {
         width: 16.666666666666664%;
     }
     .col-md-3 {
-        width: 25%;
+        width: 20%;
     }
     .col-md-4 {
         width: 33.33333333333333%;
@@ -1162,7 +1162,7 @@ pre code {
         width: 41.66666666666667%;
     }
     .col-md-6 {
-        width: 50%;
+        width: 60%;
     }
     .col-md-7 {
         width: 58.333333333333336%;
@@ -1298,7 +1298,8 @@ pre code {
 
 @media (min-width: 1200px) {
     .container {
-        max-width: 1170px;
+        max-width: 1500px;
+        margin-top: 50px;
     }
     .col-lg-1,
     .col-lg-2,
@@ -5150,7 +5151,7 @@ a.thumbnail:focus {
 }
 
 .alert-warning {
-    background-color: #fcf8e3;
+    background-color: #fea;
     border-color: #fbeed5;
     color: #c09853;
 }

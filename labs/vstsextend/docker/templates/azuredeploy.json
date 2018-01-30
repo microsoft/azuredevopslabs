@@ -1,0 +1,168 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "acrName": {
+            "minLength": 5,
+            "maxLength": 50,
+            "type": "String",
+            "metadata": {
+                "description": "Name of your Azure Container Registry"
+            }
+        },
+        "acrStorageType": {
+            "defaultValue": "Standard_LRS",
+            "allowedValues": [
+                "Standard_LRS",
+                "Standard_ZRS",
+                "Standard_GRS"
+            ],
+            "type": "String",
+            "metadata": {
+                "description": "Type of the storage account that will store container registry data."
+            }
+        },
+        "siteName": {
+            "type": "String",
+            "metadata": {
+                "description": "Name of azure web app"
+            }
+        },
+        "DBServerName": {
+            "type": "String",
+            "metadata": {
+                "description": "SQL server name will be appended to .database.windows.net"
+            }
+        }
+    },
+    "variables": {
+        "acrStorageName": "[concat('acr', uniqueString(resourceGroup().id))]",
+        "acrStorageId": "[resourceId('Microsoft.Storage/storageAccounts', variables('acrStorageName'))]",
+        "hostingPlanName": "[concat(parameters('siteName'), 'serviceplan')]",
+        "location": "[resourceGroup().location]"
+    },
+    "resources": [
+        {
+            "type": "Microsoft.Storage/storageAccounts",
+            "name": "[variables('acrStorageName')]",
+            "apiVersion": "2015-06-15",
+            "location": "[resourceGroup().location]",
+            "tags": {
+                "displayName": "ACR Image's storage",
+                "container.registry": "[parameters('acrName')]"
+            },
+            "properties": {
+                "accountType": "[parameters('acrStorageType')]"
+            },
+            "dependsOn": []
+        },
+        {
+            "type": "Microsoft.ContainerRegistry/registries",
+            "name": "[parameters('acrName')]",
+            "apiVersion": "2016-06-27-preview",
+            "location": "[resourceGroup().location]",
+            "tags": {
+                "displayName": "Container Registry",
+                "container.registry": "[parameters('acrName')]"
+            },
+            "properties": {
+                "adminUserEnabled": "true",
+                "storageAccount": {
+                    "accessKey": "[listKeys(variables('acrStorageId'),'2015-06-15').key1]",
+                    "name": "[variables('acrStorageName')]"
+                }
+            },
+            "dependsOn": [
+                "[variables('acrStorageId')]"
+            ]
+        },
+        {
+            "type": "Microsoft.Web/sites",
+            "name": "[parameters('siteName')]",
+            "apiVersion": "2016-08-01",
+            "location": "[resourceGroup().location]",
+            "properties": {
+                "name": "[parameters('siteName')]",
+                "serverFarmId": "[variables('hostingPlanName')]",
+                "hostingEnvironment": "",
+				"siteConfig": {
+                    "connectionStrings": [
+                        {
+                            "name": "defaultConnection",
+                            "ConnectionString": "[concat('Data Source=tcp:',reference(concat('Microsoft.Sql/servers/', parameters('DBServerName'))).fullyQualifiedDomainName , ',1433;Initial Catalog=mhcdb;User Id=sqladmin;Password=P2ssw0rd1234;')]",
+                            "type": "SQLAzure"
+                        }
+                    ]
+                }
+            },
+			
+            "dependsOn": [
+                "[variables('hostingPlanName')]"
+            ]
+        },
+        {
+            "type": "Microsoft.Web/serverfarms",
+            "sku": {
+                "Tier": "Standard",
+                "Name": "S1"
+            },
+            "kind": "linux",
+            "name": "[variables('hostingPlanName')]",
+            "apiVersion": "2016-09-01",
+            "location": "[resourceGroup().location]",
+            "properties": {
+                "name": "[variables('hostingPlanName')]",
+                "workerSizeId": "1",
+                "reserved": true,
+                "numberOfWorkers": "1",
+                "hostingEnvironment": ""
+            }
+        },
+        {
+            "type": "Microsoft.Sql/servers",
+            "name": "[parameters('DBServerName')]",
+            "apiVersion": "2015-05-01-preview",
+            "location": "[variables('location')]",
+            "properties": {
+                "administratorLogin": "sqladmin",
+                "administratorLoginPassword": "P2ssw0rd1234",
+                "version": "12.0"
+            },
+            "resources": [
+                {
+                    "type": "databases",
+                    "name": "mhcdb",
+                    "apiVersion": "2014-04-01-preview",
+                    "location": "[variables('location')]",
+                    "properties": {
+                        "collation": "SQL_Latin1_General_CP1_CI_AS",
+                        "edition": "Basic",
+                        "maxSizeBytes": "1073741824"
+                    },
+                    "dependsOn": [
+                        "[concat('Microsoft.Sql/servers/', parameters('DBServerName'))]"
+                    ]
+                },
+                {
+                    "type": "firewallrules",
+                    "name": "AllowAllWindowsAzureIps",
+                    "apiVersion": "2014-04-01-preview",
+                    "location": "[variables('location')]",
+                    "properties": {
+                        "endIpAddress": "0.0.0.0",
+                        "startIpAddress": "0.0.0.0"
+                    },
+                    "dependsOn": [
+                        "[concat('Microsoft.Sql/servers/', parameters('DBServerName'))]"
+                    ]
+                }
+            ]
+        }
+    ],
+    "outputs": {
+        "acrLoginServer": {
+            "type": "String",
+            "value": "[reference(resourceId('Microsoft.ContainerRegistry/registries',parameters('acrName')),'2016-06-27-preview').loginServer]"
+        }
+    }
+}

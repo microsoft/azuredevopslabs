@@ -6,6 +6,8 @@ permalink: /labs/vsts/agile/
 folder: /labs/vsts/agile/
 ---
 
+Last updated : {{ "now" | date: "%b %d, %Y" }}.
+
 ## Overview
 
 In this lab, you will learn about the agile planning and portfolio management tools and processes provided by Visual Studio Team Services and how they can help you quickly plan, manage, and track work across your entire team. You will explore the product backlog, sprint backlog, and task boards which can be used to track the flow of work during an iteration. We will also look at how the tools have been enhanced in this release to scale for larger teams and organizations.
@@ -26,9 +28,9 @@ To complete this lab, you will need:
 
 1. Click on the VS icon and browse to the MyHealthClinic project. At this moment, we have only one project. You could select/create as many projects from here.
 
-    > If you haven't already, browse to your Visual Studio Team Services account you can sign in by going to (https://{youraccount}.visualstudio.com).
+   {% include note.html content= "If you haven't already, browse to your Visual Studio Team Services account you can sign in by going to (https://{youraccount}.visualstudio.com)." %}
 
-    ![](images/6.png)
+   ![](images/6.png)
 
 ## Exercise 1: Working with Teams, Areas, and Iterations
 
@@ -77,7 +79,7 @@ To complete this lab, you will need:
 
     ![](images/16.png)
 
-    >You may need to adjust the dates for the sprints you have selected. Pick dates that correspond to the current calendar dates to make more relevant.
+    {% include important.html content= "You may need to adjust the dates for the sprints you have selected. Pick dates that correspond to the current calendar dates to make more relevant." %}
 
 1. Click on **Change** for the default iteration. And set **MyHealthClinic** as the default one.
 
@@ -123,9 +125,9 @@ To complete this lab, you will need:
 
    ![](images/26.png)
 
-   >To maximize a team's ability to consistently deliver high quality software, Kanban emphasize two main practices. The first, visualize the flow of work, requires you to map your team's workflow stages and configure your Kanban board to match. The second, constrain the amount of work in progress, requires you to set work-in-progress (WIP) limits. You're then ready to track progress on your Kanban board and monitor key metrics to reduce lead or cycle time.
+   {% include note.html content= "To maximize a team's ability to consistently deliver high quality software, Kanban emphasize two main practices. The first, visualize the flow of work, requires you to map your team's workflow stages and configure your Kanban board to match. The second, constrain the amount of work in progress, requires you to set work-in-progress (WIP) limits. You're then ready to track progress on your Kanban board and monitor key metrics to reduce lead or cycle time.
 
-   >Your Kanban board turns your backlog into an interactive signboard, providing a visual flow of work. As work progresses from idea to completion, you update the items on the board. Each column represents a work stage, and each card represents a user story (blue cards) or a bug (red cards) at that stage of work.
+   Your Kanban board turns your backlog into an interactive signboard, providing a visual flow of work. As work progresses from idea to completion, you update the items on the board. Each column represents a work stage, and each card represents a user story (blue cards) or a bug (red cards) at that stage of work." %}
 
 1. We are going to modify the **Kanban board** to map the flow of how our team works. Click the gear icon to open the settings dialog.
 
@@ -189,7 +191,7 @@ To complete this lab, you will need:
 
     Your Kanban board supports your ability to visualize the flow of work as it moves from new to done. When you add swimlanes, you can also visualize the status of work that supports different service-level classes. You can create a swimlane to represent any other dimension that supports your tracking needs.
 
-    > For example, you can create three swimlanes-**Expedite**, **Standard**, and **Park**-to track high-priority work, standard work, and work that's currently blocked.
+    {% include note.html content= "For example, you can create three swimlanes-**Expedite**, **Standard**, and **Park**-to track high-priority work, standard work, and work that's currently blocked." %}
 
 1. From your Kanban board, click **Configure board settings** then click Swimlanes. Use the add Swimlane to add **Expedite** swimlane.
 
@@ -213,12 +215,13 @@ Your sprint backlog should contain all the information your team needs to succes
 
    ![](images/25.png)
 
-   >If you don't see any links listed under Current or Future, you need to configure your team's sprint schedule.
+   {% include important.html content= "If you don't see any links listed under Current or Future, you need to configure your team's sprint schedule." %}
 
 1. Next, check the total level of effort of your sprint items.
+
    ![](images/90.png)
 
-   >Your initial plan should identify the subset of requirements that's within your team's capacity based on estimated effort and team velocity. Velocity corresponds to the total Effort or Story Points a team can complete within the sprint time period.
+   {% include note.html content= "Your initial plan should identify the subset of requirements that's within your team's capacity based on estimated effort and team velocity. Velocity corresponds to the total Effort or Story Points a team can complete within the sprint time period." %}
 
 1. As a next step, you'll want to determine your team's actual capacity. Whereas velocity correlates to how your team estimates requirements, capacity correlates to actual task time - either hours or days. Capacity takes into account variation in work hours by team members as well as holidays, vacation days, and non-working days.
 
@@ -228,17 +231,17 @@ Your sprint backlog should contain all the information your team needs to succes
 
    ![](images/91.png)
 
-   >Most teams specify capacity in terms of hours, however, you can also specify it in days. For example, .5 days would correspond to 4 hours for a typical 8-hour day. Choose the same unit you will use to estimate the time a task will take to complete.
+   {% include note.html content= "Most teams specify capacity in terms of hours, however, you can also specify it in days. For example, .5 days would correspond to 4 hours for a typical 8-hour day. Choose the same unit you will use to estimate the time a task will take to complete.
 
-   >If you don't see a team member listed, you need to add them to the team. Also, you only have to indicate planned days off. You manage weekend days or other recurring days off under team settings.
+   If you don't see a team member listed, you need to add them to the team. Also, you only have to indicate planned days off. You manage weekend days or other recurring days off under team settings.
 
-   >Additional options available from the Capacity page include copying capacity from the previous iteration, adding team members, adding multiple activities.
+   Additional options available from the Capacity page include copying capacity from the previous iteration, adding team members, adding multiple activities." %}
 
 1. Click on the column **Days Off** on any user. Introduce start and end date in an interval inside the dates for the Sprint so he has more work than hours available.
 
    ![](images/95.png)
 
-   >When you add days off to a Team Member the **Work Details** planning graph will adapt itself and show red if there is more work assigned to any team member than the work hours we have available for the sprint.
+   {% include note.html content= "When you add days off to a Team Member the **Work Details** planning graph will adapt itself and show red if there is more work assigned to any team member than the work hours we have available for the sprint." %}
 
 1. In the sprint backlog, add a task. Creating tasks from the sprint backlog automatically links the task to it parent backlog item.
 
@@ -248,11 +251,11 @@ Your sprint backlog should contain all the information your team needs to succes
 
    ![](images/93.png)
 
-   >At the planning stage, Remaining Work corresponds to an estimate of how long it will take to complete the task.
+   {% include note.html content= "At the planning stage, Remaining Work corresponds to an estimate of how long it will take to complete the task.
 
-   >A good rule of thumb is to size tasks to take no more than a day to complete. If a task is too large, the team should break it down. In some cases, you may not be able to estimate some tasks effectively until other tasks have been completed. Create the task now, but estimate it when you have enough information.
+   A good rule of thumb is to size tasks to take no more than a day to complete. If a task is too large, the team should break it down. In some cases, you may not be able to estimate some tasks effectively until other tasks have been completed. Create the task now, but estimate it when you have enough information.
 
-   >During the sprint, team members update remaining work to continually reflect the time required to complete the task. This value can increase after work begins. For example, after working 4 hours on a task that was estimated to take 8 hours, the team member realizes he needs 16 hours over what he estimated. He would update the Remaining Work field with 20 (8-4+16). As you perform a task, you might find that more time is required. Always update the task with your best estimate of remaining work. That way, you help accurately reflect the total amount of work remaining in the sprint.
+   During the sprint, team members update remaining work to continually reflect the time required to complete the task. This value can increase after work begins. For example, after working 4 hours on a task that was estimated to take 8 hours, the team member realizes he needs 16 hours over what he estimated. He would update the Remaining Work field with 20 (8-4+16). As you perform a task, you might find that more time is required. Always update the task with your best estimate of remaining work. That way, you help accurately reflect the total amount of work remaining in the sprint." %}
 
 1. As you define tasks and estimate the work, you'll see capacity charts start to fill in for each team member. Capacity bars track the remaining work against the capacity for each team member as well as the entire team.
 
@@ -286,7 +289,7 @@ Your sprint backlog should contain all the information your team needs to succes
 
    ![](images/41.png)
 
-   >Rich cards not only provide at-a-glance info of interest to you and your team, they also provide a way for you to update a field without opening the work item. With style rules, you can highlight those work items with colors, based on the criteria you set.
+   {% include important.html content= "Rich cards not only provide at-a-glance info of interest to you and your team, they also provide a way for you to update a field without opening the work item. With style rules, you can highlight those work items with colors, based on the criteria you set." %}
 
 1. You can see the Avatar and other information on the cards.
 
@@ -302,22 +305,21 @@ Your sprint backlog should contain all the information your team needs to succes
 
    ![](images/98.png)
 
-At the end of the sprint, you'll want to perform these final tasks:
+1. At the end of the sprint, you'll want to perform these final tasks:
 
-- Zero out remaining work of all completed tasks
-- Update the status of all completed backlog items
-- Move incomplete tasks or backlog items to the next sprint or back to the product backlog.
+   - Zero out remaining work of all completed tasks
+   - Update the status of all completed backlog items
+   - Move incomplete tasks or backlog items to the next sprint or back to the product backlog.
 
 Dragging an incomplete item to the product backlog or to a future sprint updates the Iteration Path of all uncompleted child tasks to correspond to the product backlog iteration path or future sprint.
 
 ## Exercise 5: Portfolio Management
 
-Portfolio backlogs provide product owners insight into the work performed by several agile feature teams. Product owners can define the high-level goals as
-Epics or Features, and feature teams can break these down into the user stories they'll prioritize and develop.
+Portfolio backlogs provide product owners insight into the work performed by several agile feature teams. Product owners can define the high-level goals as Epics or Features, and feature teams can break these down into the user stories they'll prioritize and develop.
 
-   ![](images/45.png)
+![](images/45.png)
 
-  >As you advance in the product development, stories can get bigger, making them difficult to handle. We will use the **Feature** Work Item Type for this purpose. With Features, we will group Product Backlog Items to handle an information unit at a bigger level.
+{% include important.html content= "As you advance in the product development, stories can get bigger, making them difficult to handle. We will use the **Feature** Work Item Type for this purpose. With Features, we will group Product Backlog Items to handle an information unit at a bigger level." %}
 
 1. Click on **Features**. You will see list of feature work items available already. If you wish to add few more you can add.
 
@@ -338,7 +340,7 @@ Epics or Features, and feature teams can break these down into the user stories 
 
    ![](images/49.png)
 
-   >It is important to keep track of all artifacts involved in product development, so we can plan and keep track of what has been done, and what needs to be done.
+   {% include important.html content= "It is important to keep track of all artifacts involved in product development, so we can plan and keep track of what has been done, and what needs to be done." %}
 
 1. Go to the **Board**. As we have a Kanban board for checking the states of the Product Backlog Items, we also have a Kanban Board to see the transition and check visually the current state of any particular feature. This is also customizable as we saw in our Sprint Backlog view, and the Product Backlog view.
 
@@ -362,7 +364,7 @@ Each tile corresponds to a widget that provides access to one or more features o
 
    ![](images/52.png)
 
-   >The Overview page provides access to a default team dashboard which you can customize by adding, removing, or rearranging the tiles. Each tile corresponds to a widget that provides access to one or more features or functions.
+   {% include note.html content= "The Overview page provides access to a default team dashboard which you can customize by adding, removing, or rearranging the tiles. Each tile corresponds to a widget that provides access to one or more features or functions." %}
 
 1. You can also add dashboards. From the dashboards tab, click the plus icon and enter a dashboard name.
 
@@ -390,7 +392,7 @@ Each tile corresponds to a widget that provides access to one or more features o
 
     ![](images/104.png)
 
-    >You can also add conditional formatting, so the widget will visually alert the user.
+    {% include note.html content= "You can also add conditional formatting, so the widget will visually alert the user." %}
 
     ![](images/105.png)
 
@@ -470,12 +472,11 @@ Each process—Agile, Scrum, or CMMI—contains 100 or more work item fields. Yo
 
    ![](images/65.png)
 
-   > We are creating a text field for an internal id of the ticketing system inside MyHealthClinic.
+   {% include note.html content= "We are creating a text field for an internal id of the ticketing system inside MyHealthClinic." %}
 
-1. Click on **Layout**. Provide a name for Label as **Ticket ID**. Until now we have only created the field definition, we must add it to the layout of the Work Item.
-    We will create a new group to show our custom information, so all of our customized fields appear together. Provide a name for the group as **MyHealthClinic** and click **Add field**.
+1. Click on **Layout**. Provide a name for Label as **Ticket ID**. Until now we have only created the field definition, we must add it to the layout of the Work Item. We will create a new group to show our custom information, so all of our customized fields appear together. Provide a name for the group as **MyHealthClinic** and click **Add field**.
 
-    ![](images/66.png)
+   ![](images/66.png)
 
 ### Change the process referenced by a team project
 
@@ -497,4 +498,4 @@ You can change the process a team project references to an inherited process or 
 
     ![](images/70.png)
 
-    >Once the Work Item is saved,  VSTS will also save the new custom information we have added to the PBI and will be available for queries and the rest of the VSTS system.
+   Once the Work Item is saved, VSTS will also save the new custom information we have added to the PBI and will be available for queries and the rest of the VSTS system.

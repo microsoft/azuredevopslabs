@@ -2,9 +2,9 @@
 
 entries:
 - title: sidebar
-  product: Java HOLs 
+  product: Extend and Integrate with VSTS
   version: 2017
-  url: /labs/java
+  url: /labs/vstsextend
   folders:
 
   - title:

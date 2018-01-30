@@ -6,6 +6,8 @@ permalink: /labs/vsts/azurecd/
 folder: /labs/vsts/azurecd/
 ---
 
+Last updated : {{ "now" | date: "%b %d, %Y" }}.
+
 ## Overview
 
 Continuous Delivery is a great option for projects that require multiple and frequent contributions to be integrated. Continuous Delivery in Team Services simplifies setting up a robust deployment pipeline for your app to publish the most recent updates to Azure App Service. The pipeline can be configured to build, runs tests, and deploy to a staging slot and then to production.
@@ -32,13 +34,13 @@ This lab will walk you through the steps to create CI/CD pipeline directly from 
 
    ![](images/4.png)
 
-   > In addition to Visual Studio Team Services, you can also select other Git repositories such as GitHub or External Git (a Git  repository not hosted in Team Services or GitHub, For instance, BitBucket). You will have to provide the account, repository and branch details and if it is a private repository, you will need to provide the credentials
+   {% include note.html content= "In addition to Visual Studio Team Services, you can also select other Git repositories such as GitHub or External Git (a Git  repository not hosted in Team Services or GitHub, For instance, BitBucket). You will have to provide the account, repository and branch details and if it is a private repository, you will need to provide the credentials" %}
 
 1. Select **Configure Continuous Delivery** and choose the web application framework you used to develop your app. Since we are targeting .NET Core, select **ASP.NET Core**.
 
    ![](images/5.png)
 
-   >This choice influences the way that Azure Continuous Delivery builds and packages the app for deployment. At present, ASP.NET, ASP.NET Core, PHP, Python, and Node.js are supported. When you're done, choose **OK**.
+   {% include note.html content= "This choice influences the way that Azure Continuous Delivery builds and packages the app for deployment. At present, ASP.NET, ASP.NET Core, PHP, Python, and Node.js are supported. When you're done, choose **OK**." %}
 
 1. You can load test your web application before the changes are deployed to production. You will need to select a web app within the same resource group. If you are specifying for the first time, you can select **Create New** and provide the information to create a new instance. For this exercise, we will skip load test and move to the next step.
 
@@ -56,7 +58,7 @@ This lab will walk you through the steps to create CI/CD pipeline directly from 
 
     ![](images/9.png)
 
-1. In the **Successfully set up Continuous Delivery** item, choose the Build Definition link to open the project containing your app in Team Services, and see the summary for the build definition.
+1. In the **Successfully set up Continuous Delivery** item, choose the Build Definition link to open the project containing your app in Team Services, and see the summary for the build definition. 
 
     ![](images/12.png)
 
@@ -66,7 +68,7 @@ This lab will walk you through the steps to create CI/CD pipeline directly from 
 
     ![](images/13.png)
 
-   >Different tasks are added to the build definition depending on the app framework you selected. For example, .NET Core task is used for ASP.NET Core apps.
+    {% include note.html content= "Different tasks are added to the build definition depending on the app framework you selected. For example, .NET Core task is used for ASP.NET Core apps." %}
 
 1. Select the release definition from **Successfully set up Continuous Delivery**, to open the project containing your app in Team Services, and see the list of releases for this definition. Select **Edit** to see the tasks that have been added and configured.
 
@@ -78,7 +80,7 @@ This lab will walk you through the steps to create CI/CD pipeline directly from 
 
     >There are also links in other items in the Activity Log that open commits, builds, build reports, releases, deployment slots, and the deployed app itself, in relevant windows or apps.
 
-1. Click on **Release summary** to view the successful deployment.
+1. Click on **Release summary** to view the successful deployment. 
 
     ![](images/18.png)
 
@@ -86,7 +88,7 @@ This lab will walk you through the steps to create CI/CD pipeline directly from 
 
     ![](images/19.png)
 
-   >This is because, during the compilation, couple of **js dependencies** are missed out which we will be adding to the build definition in our next task.
+    {% include important.html content= "This is because, during the compilation, couple of **js dependencies** are missed out which we will be adding to the build definition in our next task." %}
 
 ## Customizing the CD pipeline
 

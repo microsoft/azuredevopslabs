@@ -6,6 +6,8 @@ permalink: /labs/vsts/continuousintegration/
 folder: /labs/vsts/continuousintegration/
 ---
 
+Last updated : {{ "now" | date: "%b %d, %Y" }}.
+
 ## Overview
 
 Continuous integration (CI) is the process of integrating your code into a shared repository as frequently as possible. During code integration, a build break or a test failure can inform you, in a timely manner, of an error in your code.

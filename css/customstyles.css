@@ -1,7 +1,8 @@
 body {
     font-size: 15px;
     /*font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" ; */
-    font-family:  "Lato","Geneva CY","Lucida Grande","Arial Unicode MS","Helvetica Neue","Helvetica","Arial",sans-serif; 
+    /*font-family:  "Lato","Geneva CY","Lucida Grande","Arial Unicode MS","Helvetica Neue","Helvetica","Arial",sans-serif; */
+    font-family: segoe-ui_normal,Segoe UI,Segoe,Segoe WP,Helvetica Neue,Helvetica,sans-serif;
     margin: 0px;
     padding: 0px;
     line-height: 1.6;
@@ -318,18 +319,24 @@ ul#results-container a:hover {
     margin: 3px;
 }
 
+div#toc{
+    position: fixed;
+}
+
 div#toc ul li {
     margin: 8px 0px 8px 22px;
     font-size: 100%;
-    list-style: square;
+    list-style: none;
 }
 
 div#toc ul {
-    background-color: whitesmoke;
-    padding: 5px;
+    background-color:whitesmoke;
+    padding: 5px 0px;
     border-radius: 5px;
-    max-width: 300px;
-    color: gray;
+    max-width:  450px;
+    margin-right: 10px;
+  /*  color: gray;*/
+
 }
 
 div#toc ul li ul {
@@ -341,7 +348,7 @@ div#toc ul li ul li::before {
 }
 
 div#toc>ul::before {
-    content: "Table of Contents";
+    content: "In this lab";
     font-weight: 500;
     color: #555;
     text-align: center;
@@ -394,7 +401,10 @@ a.accordion-collapsed {
 .nav ul,
 .nav li {
     list-style: none;
+
 }
+
+
 
 .nav ul {
     padding: 0;
@@ -416,7 +426,7 @@ a.accordion-collapsed {
 }
 
 .nav>li li {
-    margin: 2px 0;
+    margin: 6px 0;
 }
 
 .nav a {
@@ -445,7 +455,7 @@ a.accordion-collapsed {
 
 .nav a:hover,
 .nav li.active>a {
-    background-color: #8D8D8D;
+    background-color: #8D8D8D; 
     color: #f5f5f5;
 }
 
@@ -454,10 +464,10 @@ a.accordion-collapsed {
 }
 
 .nav li a {
-    font-size: 12px;
+ /*   font-size: 12px;
     line-height: 18px;
     padding: 2px 10px;
-    background-color: #f1f1f1;
+  background-color: #f1f1f1;
 }
 
 .nav>li>a {
@@ -483,7 +493,7 @@ ul#mysidebar {
 }
 
 .nav ul li a {
-    background-color: #FAFAFA;
+ /*   background-color: #FAFAFA; */
 }
 
 .nav li a {
@@ -491,7 +501,7 @@ ul#mysidebar {
 }
 
 .nav li a:hover {
-    background-color: #8D8D8D;
+    background-color: black;
 }
 
 .nav ul li a {
@@ -515,11 +525,12 @@ ul#mysidebar {
 }
 
 span.projectTitle {
-    font-family:-"Lato","Geneva CY","Lucida Grande","Arial Unicode MS","Helvetica Neue","Helvetica","Arial",sans-serif;
+    font-family:-segoe-ui_normal,Segoe UI,Segoe,Segoe WP,Helvetica Neue,Helvetica,sans-serif;
     font-weight: bold;
     color: #000000;
     padding-left: 10px;
     word-wrap: break-word;
+    font-size: 20px;
 }
 
 span.rellinkstitle {
@@ -865,12 +876,12 @@ ol.series li {
 
 .navbar-inverse .navbar-collapse,
 .navbar-inverse .navbar-form {
-    font-family: "Lato","Geneva CY","Lucida Grande","Arial Unicode MS","Helvetica Neue","Helvetica","Arial",sans-serif;
+   /* font-family: "Lato","Geneva CY","Lucida Grande","Arial Unicode MS","Helvetica Neue","Helvetica","Arial",sans-serif;*/
     border-color: #248ec2 !important;
 }
 
 .navbar-hdrimage {
-    font-family: "Lato","Geneva CY","Lucida Grande","Arial Unicode MS","Helvetica Neue","Helvetica","Arial",sans-serif;
+   /*  font-family: "Lato","Geneva CY","Lucida Grande","Arial Unicode MS","Helvetica Neue","Helvetica","Arial",sans-serif; */
     border-color: #ffffff !important;
     margin-top: 0px;
 }
@@ -937,6 +948,7 @@ table code {
 
 pre {
     margin: 25px 0px;
+    margin-left: 10px;
 }
 
 #json-box-container pre {
@@ -988,6 +1000,7 @@ h4 code {
 .alert {
     margin-bottom: 10px;
     margin-top: 10px;
+    margin-left: 10px;
 }
 
 a.accordion-toggle {
@@ -1049,7 +1062,8 @@ span.soft {
 
 @media (min-width: 1000px) {
     ul#mysidebar {
-        width: 225px;
+        width: 235px;
+        background-color: rgba(0, 0, 0, 0.03);
     }
 }
 
@@ -1243,7 +1257,7 @@ table thead th code.highlighter-rouge {
     width: 100px;
     height: 80px;
     background-color: #f5f5f5;
-    font-family: "Lato","Geneva CY","Lucida Grande","Arial Unicode MS","Helvetica Neue","Helvetica","Arial",sans-serif;
+   /* font-family: "Lato","Geneva CY","Lucida Grande","Arial Unicode MS","Helvetica Neue","Helvetica","Arial",sans-serif;*/
     font-size: 12px;
     hyphens: auto;
     float: left;
@@ -1268,7 +1282,7 @@ table thead th code.highlighter-rouge {
 }
 
 h2.userMapTitle {
-    font-family: "Lato","Geneva CY","Lucida Grande","Arial Unicode MS","Helvetica Neue","Helvetica","Arial",sans-serif;
+   /* font-family: "Lato","Geneva CY","Lucida Grande","Arial Unicode MS","Helvetica Neue","Helvetica","Arial",sans-serif;*/
 }
 
 #userMap a:hover {
@@ -1431,7 +1445,7 @@ span.headnews {
     color: black;
     line-height: 1.5;
     /*font-family: 'Lora', Georgia, serif;*/
-    font-family:  "Lato","Geneva CY","Lucida Grande","Arial Unicode MS","Helvetica Neue","Helvetica","Arial",sans-serif;
+    /* font-family:  "Lato","Geneva CY","Lucida Grande","Arial Unicode MS","Helvetica Neue","Helvetica","Arial",sans-serif;*/
 }
 
 div.newsitem {
@@ -1463,7 +1477,7 @@ div.lab-item-none {
 }
 
 div.lab-item {
-    width: 350px;
+    width: 340px;
     border-width: 1px;
     border-style: solid;
     border-color: #248ec2;
@@ -1480,14 +1494,7 @@ div.lab-item {
     font-weight: 80%;
     padding-top: 10px;
 }
-div.lab-item:hover{
-    border-style: solid;
-    /*background-color: #efefef
-    border-color: #2361c4;
-    box-shadow: 0 0 0 2px;*/
-    box-shadow: 2px 5px #888888;
-    transition: .5s ease
-}
+
 
 div.clear {
     clear: both;
@@ -1555,22 +1562,22 @@ a.postitem:hover{
 }
 
 div.labcols{
-    margin-left: 60px;
+    margin-left: 0px;
 }
 
 div.rowMain{
     background-image: url("../images/almvm-hero-right-blue.png");
     display: block;
     background-color: skyblue;
-    margin-top: 43px;
-    height: 370px;
+    margin-top: 10px;
+    height: 325px;
 
 }
 
 div.columnMain{
         float: left;
         width: 33%;
-        padding-top: 100px;
+        padding-top: 75px;
         font-size: 32px;
         margin-left: 150px;
 
@@ -1581,7 +1588,8 @@ div.pageheader{
     font-size: 32px;
     font-weight: bold;
     line-height: 1.5;
-    margin-bottom: 4px;
+    margin-bottom: 15px;
+    width: 500px
     }
 
 div.pagedesc{
@@ -1591,3 +1599,101 @@ line-height: 1.6;
 width: 420px;
 }
 
+
+div.tfsMain{
+    background-image: url("../images/tfs.png");
+    display: block;
+    height: 325px;
+    background-color: skyblue;
+}
+
+div.vstsMain{
+    background-image: url("../images/vsts.png");
+    display: block;
+    height: 325px;
+    background-color: skyblue;
+}
+
+div.vstsextendMain{
+    background-image: url("../images/vstsextend.png");
+    display: block;
+    height: 325px;
+    background-color: skyblue;
+}
+
+div.lablist {
+    -webkit-column-count: 3; /* Chrome, Safari, Opera */
+    -moz-column-count: 3; /* Firefox */
+    column-count: 3;
+    -webkit-column-gap: 40px; /* Chrome, Safari, Opera */
+    -moz-column-gap: 40px; /* Firefox */
+    column-gap: 40px;
+    -webkit-column-rule-style: solid; /* Chrome, Safari, Opera */
+    -moz-column-rule-style: solid; /* Firefox */
+    column-rule-style: solid;
+    -webkit-column-rule-width: 1px; /* Chrome, Safari, Opera */
+    -moz-column-rule-width: 1px; /* Firefox */
+    column-rule-width: 1px;
+    -webkit-column-rule-color: lightblue; /* Chrome, Safari, Opera */
+    -moz-column-rule-color: lightblue; /* Firefox */
+    column-rule-color: lightblue;
+}
+
+div.herotext2{
+    font-size: 18px;
+    line-height: 1.6;
+    width: 420px;
+}
+
+div.productcolmain {
+    float: left;
+    padding-top:65px;
+    margin-left: 50px;
+}
+
+a.launch-hol {
+    width: 180 px;
+    font-size: 18px;
+    border-color: #000000;
+    padding: 7px;
+    margin: 5px;
+    background-color: #0078d7;
+    text-decoration: none;
+    color: black;
+}
+
+a.launch-hol {
+    box-shadow: 2px 2px 1px #797979;
+}
+
+li.labslistitems{
+    margin: 20px 0px 20px 0px;
+}
+
+div.header2{
+    font-size: 17px;
+    font-weight: bold;
+    margin: 10px 0px 20px;
+    border-bottom: 1.5px solid #888888;
+}
+
+a.sidebaritems{
+    font-size: 14px;
+}
+
+a.sidebarheadings{
+    font-size: 14px;
+    font-weight: bold;
+    margin: 10px 0px;
+}
+
+ul.sidebarlisting {
+    overflow-y: auto;
+    max-height: 500px;
+
+}
+
+span.topnavbreadcrump
+{
+    font-size:14px;
+}

@@ -1,0 +1,48 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "acrName": {
+      "value": null
+    },
+    "acrStorageType": {
+      "value": "Standard_LRS"
+    },
+    "DBServerName": {
+      "value": null
+    },
+    "resourceName": {
+      "value": null
+    },
+    "dnsPrefix": {
+      "value": null
+    },
+    "osDiskSizeGB": {
+      "value": null
+    },
+    "agentCount": {
+      "value": 3
+    },
+    "agentVMSize": {
+      "value": "Standard_D2_v2"
+    },
+    "linuxAdminUsername": {
+      "value": "azureuser"
+    },
+    "sshRSAPublicKey": {
+      "value": null
+    },
+    "servicePrincipalClientId": {
+      "value": "n/a"
+    },
+    "servicePrincipalClientSecret": {
+      "value": "n/a"
+    },
+    "osType": {
+      "value": "Linux"
+    },
+    "kubernetesVersion": {
+      "value": "1.7.7"
+    }
+  }
+}

@@ -20,7 +20,11 @@ In this lab, you will deploy a web app and SQL database. However, the steps are 
 
 ## Prerequisites
 
-In order to complete this lab you will need the Visual Studio 2017 virtual machine provided by Microsoft. For more information on acquiring and using this virtual machine, please see [this blog post](http://aka.ms/almvm).
+In order to complete this lab you will need the Visual Studio 2017 virtual machine provided by Microsoft. Click the button below to launch the virtual machine on the Microsoft Hands-on-Labs portal.
+
+<a href="https://www.microsoft.com/handsonlabs/SelfPacedLabs?storyId=external%3A%2F%2Fcontent-private%2Fcontent%2Fexternal%2FMicrosoft-Virtual-Labs%2FDT00154" class="launch-hol" role="button" target="_blank"><span class="lab-details">Launch the virtual machine</span></a>
+
+Alternatively, you can download the virtual machine from [here](../almvmdownload/)
 
 You also need an [Azure account](https://azure.microsoft.com/) ([Get 1 yr of free services, $200 for 1st month by joining Visual Studio Dev Essentials](https://www.visualstudio.com/dev-essentials/)).
 
