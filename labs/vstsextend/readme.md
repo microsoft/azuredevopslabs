@@ -24,5 +24,5 @@ Technology / Tool | Tutorial
 ![How to continuously deliver code on GitHub with VSTS](images/github.png) | How to continuously deliver code on GitHub with VSTS
 ![Deploying a PHP application to Azure](images/php.png) | Deploying a PHP application to Azure
 ![Deploying Docker Containers to Azure App Service](images/docker.png) | Deploying Docker Containers to Azure App Service
-![Working with IntelliJ](images/intellij.png) | Working with IntelliJ Coming soon
-![Deploying to Azure Functions from VSTS](images/azure.png) | Deploying to Azure Functions from VSTS Coming soon
+![Working with IntelliJ](images/intellij.png) | Working with IntelliJ `Coming soon`
+![Deploying to Azure Functions from VSTS](images/azure.png) | Deploying to Azure Functions from VSTS `Coming soon`
