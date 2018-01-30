@@ -60,7 +60,7 @@ There are multiple ways to add code to a GitHub repository. We can start with a 
 
    ![8](images/8.png)
 
-## Setting up of a VSTS project
+## Setting up the VSTS team project
 
 1. Use the [VSTS Demo Generator](https://vstsdemogenerator.azurewebsites.net/?name=PartsUnlimited) to provision the team project on the VSTS account.
 
@@ -82,7 +82,7 @@ There are multiple ways to add code to a GitHub repository. We can start with a 
 
    ![4](images/4.png)
 
-   {% include important.html content= "We will need to specify what authorization method you want to provide. If we choose **Grant Authorization**, the default option, as the authorization method, the dialog shows an **Authorize** button that opens the GitHub login page. If we select **Personal access token**, we must obtain a suitable token and paste it into the Token textbox. The dialog shows the recommended scopes for the token: ***repo, user, admin:repo_hook***. See [this page](https://help.github.com/articles/creating-an-access-token-for-command-line-use/) on GitHub for information about obtaining an access token." %}
+   {% include important.html content= "We will need to specify what authorization method you want to provide. If we choose **Grant Authorization**, the default option, as the authorization method, the dialog shows an **Authorize** button that opens the GitHub login page. If we select **Personal access token**, we must obtain a suitable token and paste it into the Token textbox. The dialog shows the recommended scopes for the token: ***repo, user, admin:repo_hook***. See [this page](https://help.github.com/articles/creating-an-access-token-for-command-line-use/){:target=\"_blank\"} on GitHub for information about obtaining an access token." %}
 
 1. Select **Grant Authorization**. Click on the **Authorize** button which opens the **GitHub login page**.
 
