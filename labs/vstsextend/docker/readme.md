@@ -28,7 +28,7 @@ The below diagram details the VSTS DevOps workflow with Docker:
 
 1. **Microsoft Azure Account**: You will need a valid and active Azure account for the Azure labs. If you do not have one, you can sign up for a [free trial](https://azure.microsoft.com/en-us/free/){:target="_blank"}
 
-    * If you are an active Visual Studio Subscriber, you are entitled for a $50-$150 credit per month. You can refer to this [link](https://azure.microsoft.com/en-us/pricing/member-offers/msdn-benefits-details/){:target="_blank"} to find out more information about this including how to activate and start using your monthly Azure credit.
+    * If you are an active Visual Studio Subscriber, you are entitled for a $50-$150 Azure credit per month. You can refer to this [link](https://azure.microsoft.com/en-us/pricing/member-offers/msdn-benefits-details/){:target="_blank"} to find out more information about this including how to activate and start using your monthly Azure credit.
 
     * If you are not a Visual Studio Subscriber, you can sign up for the FREE [Visual Studio Dev Essentials](https://www.visualstudio.com/dev-essentials/){:target="_blank"} program to create a **Azure free account** (includes 1 year of free services, $200 for 1st month).
 
@@ -58,7 +58,7 @@ The below diagram details the VSTS DevOps workflow with Docker:
 
    ![Create Azure Components](images/createazurecomponents.png)
 
-1. It takes approximately 3 to 4 minutes to provision the environment. Click on the **Go To resource group** to view the resource group.
+1. It takes approximately 3 to 4 minutes to provision the environment. Click on the **Go to resource group** to view the resource group.
 
    ![Environment Provision](images/deploymentsucceeded.png)
 
@@ -75,11 +75,11 @@ The below diagram details the VSTS DevOps workflow with Docker:
 
    ![Post Azure Deployment](images/postazuredeployment.png)
 
-1. Click on the **mhcdb** SQL database and make a note of the server under the header **Server name**.
+1. Click on the **mhcdb** SQL database and make a note of the server details under the header **Server name**.
 
    ![DB Server URL](images/getdbserverurl.png)
 
-1. Navigate back to the resource group. Click on the container registry and make a note of the server under the header **Login server**. These server details will be required in the Exercise 2.
+1. Navigate back to the resource group. Click on the container registry and make a note of the server details under the header **Login server**. These details will be required in the Exercise 2.
 
    ![ACR](images/getacrserver.png)
 
@@ -89,23 +89,23 @@ The below diagram details the VSTS DevOps workflow with Docker:
 
    > **VSTS Demo Generator** helps you create team projects on your VSTS account with sample content that include source code, work items,iterations, service endpoints, build and release definitions based on the template you choose during the configuration. 
 
-   ![VSTS Demo Generator](images/vstsdemogen.png)
+   ![VSTS Demo Generator](images/VSTSDemogenerator.png)
 
 1. Once the team project is provisioned, click on the URL to navigate to the team project.
 
-   ![VSTS Demo Generator](images/vsts_demo.png)
+   ![VSTS Demo Generator](images/vstsdemogen3.png)
 
 ## Exercise 1: Endpoint Creation
 
-The connection between the VSTS and the Azure is not automatically established during the team project provisioning, and hence the endpoints need to be created manually. This endpoint will be used to connect **VSTS** with **Azure**. Follow the steps outlined below to create the endpoint.
+The connection between the VSTS and the Azure is not automatically established during the team project provisioning, and hence the endpoints need to be created manually. This endpoint will be used to connect the **VSTS** with **Azure**. Follow the steps outlined below to create the endpoint.
 
 1. In the VSTS home page, click on the **Settings** gear icon ![Admin Settings](images/gear.png) and then click on the **Services** option to navigate to the **Services** screen.
 
-1. Click on the **+New Service Endpoint** button and select the **Azure Resource Manager** option. Provide  `Connection name`, select the `Azure Subscription` from the list and the click on the **Ok** button. The Azure credentials will be required to be provided to authorize the connection.
+1. Click on the **+New Service Endpoint** button and select the **Azure Resource Manager** option. Provide  `Connection name`, select the `Azure Subscription` from the list and the click on the **OK** button. The Azure credentials will be required to be provided to authorize the connection.
 
    ![Endpoint Creation](images/azureendpoint.png)
 
-   {% include important.html content= "Disable the pop-up blocker in your browser. If a blank screen is displayed after the **Ok** button is clicked, retry the step." %}
+   {% include important.html content= "Disable the pop-up blocker in your browser. If a blank screen is displayed after the **OK** button is clicked, retry the step." %}
 
 ## Exercise 2: Configure Continuous Integration (CI) and Continuous Delivery (CD)
 
