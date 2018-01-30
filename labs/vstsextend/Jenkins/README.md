@@ -66,7 +66,7 @@ Read the complete spec at [https://docs.microsoft.com/en-us/azure/architecture/r
 
     ![VSTS Demo Gen](images/vstsdemogen-1.png)
 
-1. Provide a project name and click **Create Project**. If the Docker Integration extension is not installed, click the link to install the extension from the marketplace. 
+1. Provide a project name and click **Create Project**. If the Docker Integration extension is not installed,the Click Project would not be available until the extension is installed and enabled on the account. Click the on the extension name to install the extension from the marketplace
 
     ![VSTS Demo Gen](images/vstsdemogen-2.png)
 
