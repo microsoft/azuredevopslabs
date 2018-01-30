@@ -44,7 +44,7 @@ The below diagram details the VSTS DevOps workflow with Docker:
 
 1. Click on the **Deploy to Azure** button to initiate the configuration.
 
-   [![Deploy to Azure](http://azuredeploy.net/deploybutton.png)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FMicrosoft%2FVSTS-DevOps-Labs%2Fdocker%2Fdocker%2Ftemplates%2Fazuredeploy.json)
+   [![Deploy to Azure](http://azuredeploy.net/deploybutton.png)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FMicrosoft%2FVSTS-DevOps-Labs%2Fdocker%2Fdocker%2Ftemplates%2Fazuredeploy.json){:target="_blank"}
 
 1. In the Custom deployment window, select the **Subscription** type, leave the default selection for the resource group and select the **Location**. Provide the **ACR Name, Site Name**, **DB Server Name**, accept the **Terms and Conditions** and click on the **Purchase** button to provision the following resources:
 
@@ -54,7 +54,7 @@ The below diagram details the VSTS DevOps workflow with Docker:
 
    * Azure SQL Server Database
 
-   > Use lower case letters for ***DB Server Name***
+   {% include tip.html content= "Use lower case letters for **DB Server Name**" %}
 
    ![Create Azure Components](images/createazurecomponents.png)
 
@@ -109,7 +109,7 @@ The connection between the VSTS and the Azure is not automatically established d
 
 Now that the connection is established, the Azure endpoint and the Azure Container Registry need to be manually configured for the build and release definitions. The dacpac will also be deployed to the mhcdb database so that the schema and data is configured for the backend.
 
-{% include important.html content= "TFS.WebApi.Exception: Page not found may be encountered for the Azure tasks in the build / release definition. This issue can be fixed by typing a random text in the Azure Subscription field and then clicking the **Refresh** icon next to it. Once the field is refreshed, the endpoint can be selected from the drop down list. This issue occurrence is due to a recent change in the VSTS Release Management API. The VSTS Demo Generator is being updated to handle this change to prevent this issue." %}
+{% include warning.html content= "TFS.WebApi.Exception: Page not found may be encountered for the Azure tasks in the build / release definition. This issue can be fixed by typing a random text in the Azure Subscription field and then clicking the **Refresh** icon next to it. Once the field is refreshed, the endpoint can be selected from the drop down list. This issue occurrence is due to a recent change in the VSTS Release Management API. The VSTS Demo Generator is being updated to handle this change to prevent this issue." %}
 
 1. Navigate to the **Builds** option under the **Build and Release** tab. Select the build definition `MHCDocker.build`, click on the optionsa and select the **Edit** option.
 
@@ -183,16 +183,16 @@ In this exercise, the source code will be modified to trigger the CI-CD.
 
 1. Navigate to the [Azure Portal](https://portal.azure.com){:target="_blank"} and click on the **App Service** that was created at the beginning of this lab. Select the **Docker Container** option and provide the information as suggested and then click the **Save** button.
 
-Field | Value to be provided
-------- | -------
-**Image Source** | Select the value **Azure Container Registry**
-**Registry** | Select the registry value from the dropdown
-**image** | Select the value **myhealth.web**
-**Tag** | Select the value **latest**. This is required to map Azure Container Registry with the Web App.
+   Field | Value to be provided
+   ------- | -------
+   **Image Source** | Select the value **Azure Container Registry**
+   **Registry** | Select the registry value from the dropdown
+   **image** | Select the value **myhealth.web**
+   **Tag** | Select the value **latest**. This is required to map Azure Container Registry with the Web App.
 
-    ![Update registry](images/updatereg.png)
+   ![Update registry](images/updatereg.png)
 
-    ![Update registry](images/updatereg2.png)
+   ![Update registry](images/updatereg2.png)
 
     {% include tip.html content= "The Continuous Deployment can be configured to deploy the web app to the designated server whenever a new docker image is pushed to the registry on the Azure portal itself. However, setting up a VSTS CD pipeline will provide better flexibility and additional controls (approvals, release gates, etc.) for the application deployment." %}
 
@@ -214,7 +214,7 @@ Field | Value to be provided
 
     ![Final Result](images/finalresult.png)
 
-> Use the credentials **Username**: `user` and **Password**: `P2ssw0rd@1` to login to the **HealthClinic** web application.
+    {% include tip.html content= "Use the credentials **Username**: `user` and **Password**: `P2ssw0rd@1` to login to the **HealthClinic** web application." %}
 
 ## Summary
 
