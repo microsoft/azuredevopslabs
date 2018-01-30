@@ -10,6 +10,12 @@ Last updated : {{ "now" | date: "%b %d, %Y" }}
 
 ## Overview
 
+Service virtualization helps organizations accelerate time to market without compromising quality. Especially in Agile environments, dependent components (e.g., APIs, 3rd-party services, databases, mainframes, etc.) connected to the application under test are not readily accessible for development and testing because they are still evolving, beyond a team's control, or too costly/complex to configure in a test lab. With service virtualization, testing and development can proceed without waiting for access to the actual dependent components. 
+
+Parasoft's service virtualization solution provides a unique environment-based approach. The combination of Microsoft Azure, Microsoft VSTS, and Parasoft Service Virtualization—operating natively within the Microsoft environment—is designed to provide teams the rapid, scalable, and flexible test environment access required for Agile, DevOps, and "Continuous Everything
+
+Please see the <a href="https://cdn2.hubspot.net/hubfs/69806/New_Pages/Getting Started Parasoft Azure Overview.pdf"  target ="_blank">Getting started with Parasoft and Azure</a>provides for a more in-depth overview of Parasoft  Service Virtualization. 
+
 In this lab, we’ll create a complete continuous delivery pipeline for the Parabank application using VSTS and Parasoft. We’ll highlight
 the value of service virtualization and how it facilitates complete virtual environments for testing.
 
