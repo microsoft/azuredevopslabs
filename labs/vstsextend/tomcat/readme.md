@@ -38,9 +38,9 @@ This lab will show how you can
 
    {% include note.html content= "You should treat Personal Access Tokens like passwords. It is recommended that you save them somewhere safe so that you can re-use them for future requests." %}
 
-## Exercise 1: Setting up Visual Studio Team Services
+## Exercise 1: Setting up VSTS team project
 
-1. Provision a new VSTS project using the [VSTS Demo Data Generator](https://vstsdemobuildertest.azurewebsites.net/?TemplateId=77371&name=myshuttle){:target="_blank"}
+1. Provision a new VSTS project using the [VSTS Demo Data Generator](https://vstsdemogenerator.azurewebsites.net/Environment/Create?TemplateId=77373&TemplateName=MyShuttleDocker){:target="_blank"}
 
     ![VSTS Demo Generator](images/vstsdemogen.png)
 

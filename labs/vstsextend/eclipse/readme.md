@@ -61,7 +61,7 @@ In this lab, you will
 
 ## Exercise 1: Setting up VSTS project
 
-1. We will use the [VSTS Demo Data Generator](https://vstsdemobuildertest.azurewebsites.net/?TemplateId=77373&Name=myshuttledocker){:target="_blank"} to provision a project on your VSTS account.
+1. We will use the [VSTS Demo Data Generator](https://vstsdemogenerator.azurewebsites.net/Environment/Create?TemplateId=77373&TemplateName=MyShuttleDocker){:target="_blank"} to provision a project on your VSTS account.
 
    ![VSTS Demo Generator](images/vstsdemogen.png)
 
