@@ -93,7 +93,7 @@ The below diagram details the VSTS DevOps workflow with Docker:
 
 1. Once the team project is provisioned, click on the URL to navigate to the team project.
 
-   ![VSTS Demo Generator](images/VSTSDemoGeneratorCreate.png)
+   ![VSTS Demo Generator](images/vsts_demo.png)
 
 ## Exercise 1: Endpoint Creation
 
