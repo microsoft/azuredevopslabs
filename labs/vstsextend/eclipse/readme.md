@@ -16,9 +16,7 @@ VSTS works with (m)any development tool including Visual Studio, Eclipse, Intell
 
 This lab will walk you through a typical end-to-end workflow for a Java developer using VSTS and working with Eclipse. We will use a hypothetical customer called MyShuttle that provides a portal for its drivers to access travel history and see fares collected. This is a  Java application built on JSP/Servlet technology running on Apache Tomcat and using MySQL as the database. We will develop this on a Ubuntu desktop station and we will deploy the app on Azure.
 
-{% include note.html content="This lab is a subset of 'DevOps with Visual Studio Team Services for Java projects' which covers additional topics such as Package Management, Running Unit Tests, UI Testing with Selenium, etc. Click here to see the [lab](../../java/){:target=\"_blank\"} " %}
-
-### What's covered in this lab
+## What's covered in this lab?
 
 In this lab, you will
 
@@ -31,17 +29,17 @@ In this lab, you will
 
 **Estimated time to complete the lab:**  1 hour
 
-### Prerequisites for the lab
+## Pre-requisites for the lab
 
 1. **Microsoft Azure Account**: You will need a valid and active Azure account for the Azure labs. If you do not have one, you can sign up for a [free trial](https://azure.microsoft.com/en-us/free/){:target="_blank"}
 
-    * If you are an active Visual Studio Subscriber, you are entitled for a $50-$150 credit per month. You can refer to this [link](https://azure.microsoft.com/en-us/pricing/member-offers/msdn-benefits-details/){:target="_blank"} to find out more information about this including how to activate and start using your monthly Azure credit.
+   * If you are a Visual Studio Active Subscriber, you are entitled for a $50-$150 credit per month. You can refer to this [link](https://azure.microsoft.com/en-us/pricing/member-offers/msdn-benefits-details/){:target="_blank"} to find out more including how to activate and start using your monthly Azure credit.
 
-    * If you are not a Visual Studio Subscriber, you can sign up for the FREE [Visual Studio Dev Essentials](https://www.visualstudio.com/dev-essentials/){:target="_blank"} program to create a **Azure free account** (includes 1 year of free services, $200 for 1st month).
+   * If you are not a Visual Studio Subscriber, you can sign up for the FREE [Visual Studio Dev Essentials](https://www.visualstudio.com/dev-essentials/){:target="_blank"} program to create **Azure free account** (includes 1 year of free services, $200 for 1st month).
 
 1. You will need a **Visual Studio Team Services Account**. If you do not have one, you can sign up for free [here](https://www.visualstudio.com/products/visual-studio-team-services-vs){:target="_blank"}
 
-1. You will need a **Personal Access Token** to set up your project using the **VSTS Demo Generator**. Please see this [article](https://docs.microsoft.com/en-us/vsts/accounts/use-personal-access-tokens-to-authenticate){:target="_blank"} for instructions to create your token.
+1. You will need a **Personal Access Token** to set up your project using the Demo Generator. Please see this [article](https://docs.microsoft.com/en-us/vsts/accounts/use-personal-access-tokens-to-authenticate){:target="_blank"} for instructions to create your token.
 
     {% include note.html content= "You should treat Personal Access Tokens like passwords. It is recommended that you save them somewhere safe so that you can re-use them for future requests." %}
 
@@ -49,7 +47,9 @@ In this lab, you will
 
 1. You will need a desktop station. Click on **Deploy to Azure** to provision a Ubuntu VM pre-installed with Eclipse, Docker, Jenkins, and all other software required to run this lab.
 
-    [![Deploy to Azure](http://azuredeploy.net/deploybutton.png)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FMicrosoft%2FVSTS-DevOps-Labs%2Fmaster%2Feclipse%2Farm%2520template%2Fazuredeploy.json){:target="_blank"}
+    <a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FMicrosoft%2FVSTS-DevOps-Labs%2Feclipse%2Feclipse%2Farm%2520template%2Fazuredeploy.json" target="_blank">
+    <img src="http://azuredeploy.net/deploybutton.png"/>
+    </a>
 
 1. Once the machine is provisioned, you can RDP to it. From the **Overview** tab of the virtual machine, note the **DNS Name** and use *Remote Desktop* program to connect and log in
 
@@ -61,20 +61,15 @@ In this lab, you will
 
 ## Exercise 1: Setting up VSTS project
 
-1. Use the [VSTS Demo Generator](https://vstsdemogenerator.azurewebsites.net/?name=MyShuttleDocker&templateid=77373) to provision the team project on the VSTS account.
-
-   > **VSTS Demo Generator** helps you create team projects on your VSTS account with sample content that include source code, work items,iterations, service endpoints, build and release definitions based on the template you choose during the configuration. 
+1. We will use the [VSTS Demo Data Generator](https://vstsdemogenerator.azurewebsites.net/?TemplateId=77373&Name=myshuttledocker){:target="_blank"} to provision a project on your VSTS account.
 
    ![VSTS Demo Generator](images/vstsdemogen.png)
 
-
-1. You will need the [**Docker Integration**](https://marketplace.visualstudio.com/acquisition?itemName=ms-vscs-rm.docker){:target="_blank"} extension to be installed and enabled on the account. If the extension is not installed, click on the extension name to open the extension page on VS Marketplace. Install the extension. Return to the VSTS Demo Generator page and refresh
+1. Select **MyShuttleDocker** for the template. You will need the [**Docker Integration**](https://marketplace.visualstudio.com/acquisition?itemName=ms-vscs-rm.docker){:target="_blank"} extension to be installed and enabled on the account. If the extension is not installed, click on the extension name to open the extension page on VS Marketplace. Install the extension. Return to the VSTS Demo Generator page and refresh
 
 1. Provide a project name and click **Create Project** to start provisioning.
 
 1. Once the project is provisioned, select the URL to navigate to the project that you provisioned.
-
- ![VSTS Demo Generator](images/vstsdemogen-2.png)
 
 1. You will see the work items, source code and CI/CD definitions already populated by the demo generator.
 
@@ -90,7 +85,7 @@ Having setup Team Services project, we will now log in to the virtual machine an
 
 1. Click on the Eclipse icon in the toolbar to open the Eclipse Java IDE.
 
-    ![Click Eclipse in the Toolbar](images/click-eclipse.png "Click Eclipse in the Toolbar")
+    ![Click Eclipse in the Toolbar](images/click-eclipse2.png "Click Eclipse in the Toolbar")
 
 1. The first time you run Eclipse, it will prompt you to choose a workspace. Specify a folder and click on the box **"Use this as the default and do not ask again"** if you want to Eclipse use that as default and not prompt you again.
 
@@ -98,7 +93,7 @@ Having setup Team Services project, we will now log in to the virtual machine an
 
 1. After Eclipse has started, select **Help** \| **Install New Software** to bring the install dialog page
 
-1. Choose the **Add** button to add a new repository.  Use Team Explorer Everywhere as the name and specify *[http://dl.microsoft.com/eclipse](http://dl.microsoft.com/eclipse)* for the location.
+1. Choose the **Add** button to add a new repository.  Use Team Explorer Everywhere as the name and specify *http://dl.microsoft.com/eclipse* for the location.
 
     ![Add Repository](images/AddRepository.cropped.png "Add Repository")
 
@@ -108,12 +103,11 @@ Having setup Team Services project, we will now log in to the virtual machine an
 
     ![Select Team Explorer Everywhere](images/SelectTee.cropped.png "Select Team Explorer Everywhere")
 
-    {% include note.html content= "If you don't see this option, use the pull-down menu for \"Work with:\" and find the update site URL you just entered in the list and select it, then select the check box beside the plug-in mentioned above." %}
+    > **Note**:If you don't see this option, use the pull-down menu for "Work with:" and find the update site URL you just entered in the list and select it, then select the check box beside the plug-in mentioned above.
 
 1. Choose **Next** to follow the wizard to complete the installation.
 
 1. You might be prompted to trust the Eclipse Foundation certificate. Select ther certificate and click **Accept Selected**.
-
     ![Trust Eclipse Certificate](images/addeclipsecert.png)
 
 1. Eclipse will need to restart. When Eclipse restarts,choose **Windows > Show View** and select **Other...**
@@ -138,7 +132,7 @@ Next, we will clone the VSTS Git repository to a local Git repository and import
 
 1. In the **Team Explorer** panel, choose **Git Repositories**. This will list all the Git repositories in the project.
 
-1. Right-click the **MyShuttle** repo in the team project and select **Import Repository**
+1. Right-click the **MyShuttleDocker** repo in the team project and select **Import Repository**
 
     ![Select the VSTS repo](images/eclipse-select-repo.png "Select the VSTS repo")
 
@@ -170,11 +164,11 @@ In this task you will configure the VSTS build definition that will build and pu
 
 1. Open the [**Azure Portal**](https://portal.azure.com){:target="_blank"} in a separate tab
 
-1. Select **+New** and search for **Azure Container**. Select **Create**. In the *Create Container Registry* dialog, enter a name for the service, select the resource group, location, etc., and select **Create**.
+1. Select **+New** and search for **Azure Container**. Select **Create**. In the *Create Container Registry* dialog, enter a name for the service, select the resource group, location, etc., and Enable **Admin user**,  select **Create**.
 
     ![Create Azure Container Registry](images/createacr.png)
 
-1. Return to  VSTS, from the **Build** hub, select and edit the **MyShuttle** build. This build definition contains a *maven* task to build the pom.xml file. The maven task has the following settings
+1. Return to  VSTS, from the **Build** hub, select and edit the **MyShuttle** build. This build definition contains a *maven* task to build the pom.xml file. In the  maven task set the following parameter values
 
    |Parameter|Value|Notes|
    |---------|-----|-----|
@@ -224,13 +218,8 @@ In this exercise, we will setup a CD pipeline to deploy the web application to a
 
     We could configure *Continuous Deployment* to deploy the web app is updated when a new image is pushed to the registry, within the Azure portal itself. However, setting up a VSTS CD pipeline will provide more flexibility and additional controls (approvals, release gates, etc.) for application deployment
 
-1. Back in VSTS, select **Releases** from the **Build and Release**hub. Select **+** and then **Create Release Definition**
-
-1. Select **Pipeline**. Click **+Add** to add the artifacts. Select **Build** for the source type. Select the **Project**, **Source** and the **Default version**.  Finally select **Add** to save the settings
-
-1. Select the **Azure App Service Deployment** template and click **Apply**.
-
-    ![VSTS Add Artifact](images/vsts-cd-addartifact.png)
+1. Back in VSTS, select **Releases** from the **Build and Release**hub. Select the Release definition and click edit
+     ![editrelease](images/editrelease.png)
 
 1. Open the environment. Select **Environment 1** and configure as follows
 
@@ -272,10 +261,9 @@ In this exercise, we will setup a CD pipeline to deploy the web application to a
 
 1. Enter the following command
 
-   ```HTML
+    ```HTML
     wget https://raw.githubusercontent.com/hsachinraj/azure-arm-templates/master/vstsazurejl_arm/mydbscript.script
-   ```
-
+    ```
     This should download the file that we want to execute on the server
 
 1. Next, we will execute the SQL from the downloaded file on the database server. Enter the following command-
@@ -283,7 +271,9 @@ In this exercise, we will setup a CD pipeline to deploy the web application to a
     ````SQL
     mysql -h myshuttle-1-mysqldbserver.mysql.database.azure.com -u mysqldbuser@myshuttle-1-mysqldbserver -p < mydbscript.script
     ````
-    Enter the password that you specified during provisioning the database
+
+
+    Turn ON **Allow access to azure services** in **Connection Security settings** Enter the password that you specified during provisioning the database
 
     ![Creating DB](images/createdatabase.png)
 
