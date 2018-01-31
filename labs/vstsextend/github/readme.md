@@ -64,13 +64,13 @@ There are multiple ways to add code to a GitHub repository. We can start with a 
 
 1. Use the [VSTS Demo Generator](https://vstsdemogenerator.azurewebsites.net/?name=PartsUnlimited) to provision the team project on the VSTS account.
 
-   > **VSTS Demo Generator** helps you create team projects on your VSTS account with sample content that include source code, work items,iterations, service endpoints, build and release definitions based on the template you choose during the configuration. 
+   > **VSTS Demo Generator** helps you create team projects on your VSTS account with sample content that include source code, work items,iterations, service endpoints, build and release definitions based on the template you choose during the configuration.
 
-   ![VSTS Demo Generator](images/vstsdemogen.png)
+   ![VSTS Demo Generator](images/1.png)
 
 1. Once the team project is provisioned, click on the URL to navigate to the team project.
 
-   ![VSTS Demo Generator](images/VSTSDemoGeneratorCreate.png)
+   ![VSTS Demo Generator](images/2.png)
 
 ## Exercise 1: Connecting VSTS to GitHub repository
 
