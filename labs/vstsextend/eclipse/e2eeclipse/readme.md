@@ -58,7 +58,7 @@ In this task you will start a test session, discover a bug in the MyShuttle app 
 
     ![Log the Bug](images/log-bug.png)
 
-    > **Note**: All the pages visited, notes, screenshots and other information from the test session is included as details for the Bug, so you don't have to add these details manually. You also should see a button next to the title box reading "0 Similar". VSTS checks to see if there are bugs already logged with similar titles, therefore minimizing duplicate bugs being logged.
+    {% include note.html content= "All the pages visited, notes, screenshots and other information from the test session is included as details for the Bug, so you don't have to add these details manually. You also should see a button next to the title box reading \"0 Similar\". VSTS checks to see if there are bugs already logged with similar titles, therefore minimizing duplicate bugs being logged" %}.
 
 1. Once the bug has been created, click the Stop button in the Test Extension toolbar to end the test session.
 
