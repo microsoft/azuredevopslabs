@@ -16,7 +16,7 @@ VSTS works with (m)any development tool including Visual Studio, Eclipse, Intell
 
 This lab will walk you through a typical end-to-end workflow for a Java developer using VSTS and working with Eclipse. We will use a hypothetical customer called MyShuttle that provides a portal for its drivers to access travel history and see fares collected. This is a  Java application built on JSP/Servlet technology running on Apache Tomcat and using MySQL as the database. We will develop this on a Ubuntu desktop station and we will deploy the app on Azure.
 
-## What's covered in this lab?
+### What's covered in this lab?
 
 In this lab, you will
 
@@ -29,7 +29,7 @@ In this lab, you will
 
 **Estimated time to complete the lab:**  1 hour
 
-## Pre-requisites for the lab
+### Pre-requisites for the lab
 
 1. **Microsoft Azure Account**: You will need a valid and active Azure account for the Azure labs. If you do not have one, you can sign up for a [free trial](https://azure.microsoft.com/en-us/free/){:target="_blank"}
 
@@ -103,7 +103,7 @@ Having setup Team Services project, we will now log in to the virtual machine an
 
     ![Select Team Explorer Everywhere](images/SelectTee.cropped.png "Select Team Explorer Everywhere")
 
-    > **Note**:If you don't see this option, use the pull-down menu for "Work with:" and find the update site URL you just entered in the list and select it, then select the check box beside the plug-in mentioned above.
+    {% include note.html content= "If you don't see this option, use the pull-down menu for \"Work with:\" and find the update site URL you just entered in the list and select it, then select the check box beside the plug-in mentioned above" %}.
 
 1. Choose **Next** to follow the wizard to complete the installation.
 
