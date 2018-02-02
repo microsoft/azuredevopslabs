@@ -42,7 +42,7 @@ If you are following this lab from "Working with Jenkins, VSTS and Azure, you ca
 
 ## Exercise 1: Setting up Visual Studio Team Services
 
-If you are following this lab from "Working with Jenkins, VSTS and Azure, you can skip this exercise. Otherwise,
+If you are following this lab from [Working with Eclipse](../eclipse/)  you can skip this exercise. Otherwise,
 
 1. Use the [VSTS Demo Generator](https://vstsdemogenerator.azurewebsites.net/?name=MyShuttleDocker&templateid=77373) to provision the team project on the VSTS account.
 
@@ -80,7 +80,7 @@ In this task you will configure the VSTS build definition that will build and pu
 
 1. Then there is **Copy** and **Publish** tasks to copy the artifacts to the staging directory and publish to VSTS (or a file share).
 
-1. Next we use the **Docker Compose** task to build and publish the images. The settings of the Docker compose tasks are as follows:
+1. Next we use the **Docker Compose** task to build and publish the images. Set the **Action** as **Build Service Images**. The other settings of the Docker compose tasks are as follows:
     | Parameter | Value | Notes |
     | --------------- | ---------------------------- | ----------------------------------------------------------- |
     | Container Registry Type | Azure Container Registry | This is to connect to the Azure Container Registry you created earlier |
@@ -89,9 +89,16 @@ In this task you will configure the VSTS build definition that will build and pu
     | Additional Image Tags | `$(Build.BuildNumber)` | Sets a unique tag for each instance of the build |
     | Include Latest Tag | Check (set to true) | Adds the `latest` tag to the images produced by this build |
 
-1. Click the "Save and Queue" button to save and queue this build.Make sure you are using the **Hosted Linux Agent**.
+1. Add another **Docker Compose** task with the same settings (you can also *clone* the previous task). We will just change the **Action** to **Push Images**. This action will instruct the task to push the container image to a container registry
 
-1. The build will push the image to the ACR we created earlier. We can verify if the images were pushed correctly from the **Azure Explorer** view. *Sign in* to Azure, refresh Azure Container Registry. Right click and select **Explore Container Registry**. You should see the image - tagged with the build number.
+      ![Maven task settings](images/vsts-mavensettings2.png)
+
+1. Click the **Save and Queue** button to save and queue this build.Make sure you are using the **Hosted Linux Agent**.
+
+1. Wait for the build to complete. When it is successful you can go to your Azure portal and verify if the images were pushed successfully. 
+    ![images/Azure Container Registry Images](images/portal-acrrepo.png)
+
+1. If you are following this from the Eclipse lab, you can also verify if the images were pushed correctly from the **Azure Explorer** view. *Sign in* to Azure, refresh Azure Container Registry. Right click and select **Explore Container Registry**. You should see the image - tagged with the build number.
 
     ![Explore Container Registry](images/exploreacr.png)
 

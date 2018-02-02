@@ -311,7 +311,7 @@ The next step is to configure the VSTS Release Management to fetch and deploy th
 
    ![Add Jenkins artifact](images/rm_addjenkinsartifact.png)
 
-1. The output .war file can now be deployed on Azure. For details on the deployment, refer to the [Deploying a dockerized Java app on Azure Web App](../dockerjava/){:target="_blank"}
+1. The output .war file can now be deployed on Azure. For details on the deployment, refer to the [Deploying a MySQL Backed Tomcat app on Azure Web App](../tomcat/)
 
 ## Additional Tasks
 
