@@ -9,7 +9,7 @@ comments: true
 
 ## Overview
 
-This exercise will walk you through the steps to creating your Visual Studio Team Services (VSTS) account and create a new project. **If you already have a VSTS account, you can skip a few steps and jump to step 13**. Before you do step 13, you’ll need to log in to your VSTS account and start the New Team Project wizard. You can then follow the steps (the instructions assume you’re creating an account *and* a Team Project at the same time but that’s not mandatory—you just need an account in which you have Project Collection Administrator permissions).
+This exercise will walk you through the steps to creating your Visual Studio Team Services (VSTS) account and create a new project.
 
 > Watch the [video overview](https://youtu.be/O1UTj-wZr3k)
 
