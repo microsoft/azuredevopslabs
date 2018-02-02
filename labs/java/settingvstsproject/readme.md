@@ -6,97 +6,64 @@ permalink: /labs/java/settingvstsproject/
 folder: /labs/java/settingvstsproject/
 comments: true
 ---
-## Creating your Visual Studio Team Services account and Team project
 
-This exercise will walk you through the steps to creating your Visual
-Studio Team Services account and create a new project. **If you already
-have a VSTS account, you can skip a few steps and jump to step 13.**
-Before you do step 13, you’ll need to log in to your VSTS account and
-start the New Team Project wizard. You can then follow the steps (the
-instructions assume you’re creating an account *and* a Team Project at
-the same time but that’s not mandatory—you just need an account in which
-you have Project Collection Administrator permissions).
+## Overview
+
+This exercise will walk you through the steps to creating your Visual Studio Team Services (VSTS) account and create a new project. **If you already have a VSTS account, you can skip a few steps and jump to step 13**. Before you do step 13, you’ll need to log in to your VSTS account and start the New Team Project wizard. You can then follow the steps (the instructions assume you’re creating an account *and* a Team Project at the same time but that’s not mandatory—you just need an account in which you have Project Collection Administrator permissions).
 
 > Watch the [video overview](https://youtu.be/O1UTj-wZr3k)
 
-Depending upon whether or not you have an MSDN Subscription, and whether
-you’ve tried Visual Studio Team Services before, you can get started a
-few ways. Regardless, you’ll need a valid Microsoft Account or already
-linked Organizational Account to move forward.
+Depending upon whether or not you have an MSDN Subscription, and whether you’ve tried Visual Studio Team Services before, you can get started a
+few ways. Regardless, you’ll need a valid Microsoft Account or already linked Organizational Account to move forward.
 
-Creating your Visual Studio Team Services account
--------------------------------------------------
+## Creating your VSTS account
 
 1. Login to the virtual machine.
 
 1. Start the Firefox web browser.
 
-1. If you don’t have an existing Microsoft account that you want to
-    use, visit <https://outlook.live.com/owa/> to create a Microsoft Account
-    and optionally get yourself a free personal e-mail address. If you
-    have a Microsoft account you want to use, just continue to the
-    next step.
+1. If you don’t have an existing Microsoft account that you want to use, visit <https://outlook.live.com/owa/> to create a Microsoft Account and optionally get yourself a free personal e-mail address. If you have a Microsoft account you want to use, just continue to the next step.
 
 1. Navigate to <https://www.visualstudio.com>.
 
 1. In the upper right-hand corner, click the **Sign In** link.
 
-    ![](images/image2.png)
+    ![visual_studio_site](images/visual_studio_site.png)
 
-1. The site redirects you to a log in page like the following if you’re
-    not already logged in (If you don’t see the following screen
-    continue to the next step). Enter your e-mail address for your
-    Microsoft account and its password and click **Sign in**.
+1. The site redirects you to a log in page like the following if you’re not already logged in (If you don’t see the following screen continue to the next step). Enter your e-mail address for your Microsoft account and its password and click **Sign in**.
 
-    ![](images/image3.png)
+    ![login_page](images/login_page.png)
 
-1. Once you’ve logged in, you might be greeted with a page (*if not,
-    jump to the next step*), like the following, that will allow you
-    to confirm your **display name**, **contact e-mail**, and your
-    **country/region**. Once you set this information, you can change
-    it later. Under the **Hello,** field, enter your first and
-    last name. If you want to receive e-mail notifications from Visual
-    Studio Team Services at a different e-mail address than the one
-    associated with your Microsoft account, change the address shown
-    under the **We’ll reach you at:** field. Click **Continue**.
+1. Once you’ve logged in, you might be greeted with a page (*if not, jump to the next step*), like the following, that will allow you to confirm your **display name**, **contact e-mail**, and your **country/region**. Once you set this information, you can change it later. Under the **Hello,** field, enter your first and last name. If you want to receive e-mail notifications from Visual Studio Team Services at a different e-mail address than the one associated with your Microsoft account, change the address shown under the **We’ll reach you at:** field. Click **Continue**.
 
-    ![](images/image4.png)
+    ![create_account1](images/.png)
 
     You should now be at the **My Information** page. You’ll jump from here to the account creation process.
 
     Please continue reading before making choices.
 
-    >When you are creating an account, there are two pieces of data that you will need to provide. 
-    However, from time to time, we experiment with different ways to onboard new customers. It is possible 
-    what you see will vary. In general, the following data is required.
+    {% include note.html content= "When you are creating an account, there are two pieces of data that you will need to provide.
+    However, from time to time, we experiment with different ways to onboard new customers. It is possible
+    what you see will vary. In general, the following data is required." %}
 
     The first piece of data is the **Account URL**. Currently, all Visual Studio Team Services accounts live within the top-level
     **visualstudio.com** domain. The account name you choose could be something personal, like your name, or something more work-related, like
     your company name. If you do intend to set up your account to share with others at your organization, you might want to coordinate this with
     those in your organization that manage your servers and infrastructure.
 
-    The second field that affects your account is where Microsoft hosts your
-    account. Visual Studio Team Services is a purpose-built cloud service
-    hosted in Microsoft Azure. You should pick the one that is closest to
-    you and the majority of users of your account.
+    The second field that affects your account is where Microsoft hosts your account. Visual Studio Team Services is a purpose-built cloud service hosted in Microsoft Azure. You should pick the one that is closest to you and the majority of users of your account.
 
-    Once you have an account, you need at least one Team Project to track
-    you work, store your code, test, and run builds. This lab gives you
-    specific instructions so you can use some tools and complete the lab.
-    Understand that Visual Studio Team Services is very flexible and that
+    Once you have an account, you need at least one Team Project to track you work, store your code, test, and run builds. This lab gives you specific instructions so you can use some tools and complete the lab. Understand that Visual Studio Team Services is very flexible and that
     you should explore it after the event.
 
-    The next section describes the Visual Studio Team Services on-boarding
-    experience. What you see can and will vary if it is your first time
+    The next section describes the Visual Studio Team Services on-boarding experience. What you see can and will vary if it is your first time
     accessing Visual Studio Team Services or not.
 
-1. On the right of the **My Information** page find the **Create a free
-    account now** link and click it.
+1. On the right of the **My Information** page find the **Create a free account now** link and click it.
 
-    ![](images/image5.png)
+    ![my_information](images/my_information.png)
 
-    Once you do this, the experience you get might vary. If this is your
-    very first time creating a team project, you will be prompted to create
+    Once you do this, the experience you get might vary. If this is your very first time creating a team project, you will be prompted to create
     an account. Generally, you will see a screen like the following.
 
     ![](images/image6.png)
