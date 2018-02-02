@@ -78,52 +78,27 @@ few ways. Regardless, you’ll need a valid Microsoft Account or already linked 
 
 1. Click the **Create Account** button.
 
-    If you have picked an account name in use, you will receive a warning.
-    Pick a different name and try again.
+    If you have picked an account name in use, you will receive a warning. Pick a different name and try again.
 
-    Creating a new account is typically fast and can take as little as a few
-    seconds to complete.
+    Creating a new account is typically fast and can take as little as a few seconds to complete.
 
-1. Once done, you will be directed to the **Create
-    your first project** page that helps you create your first Team Project.
-    Continue to the steps after the following screen shot to fill in the
-    details.
+1. Once done, you will be directed to the new Team Project by default.
 
-    ![](images/image9.png)
+    ![default_project](images/default_project.png)
 
-1. Enter **jdev** in the **Project name** field for your Team Project.
-    If you use **jdev** while you are doing in this lab, your screen
-    will match the screen shots and instructions here.
+You can use **VSTS Demo Generator** to provision the source code or you can manually import the source code from GitHub.
 
-1. Select the **Scrum** process template. *This is required*.
+## Setting up the VSTS team project
 
-1. Select **Git** for Version Control. *This is also required*.
+1. Use the [VSTS Demo Generator](https://vstsdemogenerator.azurewebsites.net) to provision the team project on the VSTS account.
 
-1. If you are provided the option, place a check next to **Create a README.md file to describe the project**. If you do not get the option, there is nothing to worry about. Just continue.
+   {% include note.html content= "VSTS Demo Generator helps you create team projects on your VSTS account with sample content that include source code, work items,iterations, service endpoints, build and release definitions based on the template you choose during the configuration." %}
 
-   ![](images/image10.png)
+   ![vstsdemogen](images/vstsdemogen.png)
 
-1. Click **Create Project**. Visual Studio Team Services queues up a job to build your Team
-    Project and, once again, in as little as a few seconds, you will
-    have a new Team Project.
+1. Use **MyShuttle2** for the template. Provide the Project Name (jdev-labs in this lab) and select Create Project. After the project is provisioned, click the URL to navigate to the project.
 
-1. Once done, you should be at your CODE hub in your Team Project.
-    Continue reading if you don’t see a screen like below.
-
-    ![](images/image11.png)
-
-1. If you don’t see the CODE hub but instead see a dialog like the
-    following, click **Add code**. If you just see your Team Project’s
-    home page, click the CODE hub link and continue.
-
-    ![](images/image12.png)
-
-1. If your CODE hub looks a bit different than the figure from earlier
-    (usually because you don’t have a README.md), click the **Create a
-    ReadMe file** button. Once you’ve done this, you’re ready to
-    continue on.
-
-    ![](images/image13.png)
+   ![create_project](images/create_project.png)
 
 ## Importing a Github Repo into VSTS
 
