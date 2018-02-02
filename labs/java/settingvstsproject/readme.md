@@ -36,7 +36,7 @@ few ways. Regardless, you’ll need a valid Microsoft Account or already linked 
 
 1. Once you’ve logged in, you might be greeted with a page (*if not, jump to the next step*), like the following, that will allow you to confirm your **display name**, **contact e-mail**, and your **country/region**. Once you set this information, you can change it later. Under the **Hello,** field, enter your first and last name. If you want to receive e-mail notifications from Visual Studio Team Services at a different e-mail address than the one associated with your Microsoft account, change the address shown under the **We’ll reach you at:** field. Click **Continue**.
 
-    ![create_account1](images/.png)
+    ![create_account1](images/user_details.png)
 
     You should now be at the **My Information** page. You’ll jump from here to the account creation process.
 
@@ -59,24 +59,22 @@ few ways. Regardless, you’ll need a valid Microsoft Account or already linked 
     The next section describes the Visual Studio Team Services on-boarding experience. What you see can and will vary if it is your first time
     accessing Visual Studio Team Services or not.
 
-1. On the right of the **My Information** page find the **Create a free account now** link and click it.
+1. On the **My Information** page find the **Create a free account now** link and click it.
 
     ![my_information](images/my_information.png)
 
     Once you do this, the experience you get might vary. If this is your very first time creating a team project, you will be prompted to create
     an account. Generally, you will see a screen like the following.
 
-    ![](images/image6.png)
+    ![create_account1](images/create_account1.png)
 
 1. Enter a value in the **Account URL** field. It is possible you might have to try a couple different names.
 
 1. Click the **Change Options** link.
 
-    ![](images/image7.png)
+    ![create_account2](images/create_account2.png)
 
 1. Select the appropriate region.
-
-    ![](images/image8.png)
 
 1. Click the **Create Account** button.
 
