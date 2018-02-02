@@ -13,29 +13,6 @@ This exercise assumes you have completed the exercises to create a Team Project.
 
 > **Note**: It is not necessary to run the VSTS agent in a container - but it is convenient to do so and means that you don't have to install any other prerequisites on the machine running the container, since all the prerequisites are inside the container.
 
-## Generating a VSTS Personal Access Token (PAT)
-
-In this task you will generate a PAT for yourself. You will use this PAT to connect the agent to your VSTS account.
-
-> **Note**: If you already have a PAT, you can skip this step and use your existing PAT (assuming it has the correct scopes).
-
-1. Connect to the virtual machine with the user credentials which you specified when creating the VM in Azure.
-
-1. Open Chrome and browse to `http://<youraccount>.visualstudio.com` (where `youraccount` is the account you created in VSTS).
-
-1. In the upper right, click on your profile image and Click Security.
-
-    ![Click on Security](images/click-security.png)
-
-1. On the Personal access tokens page, click the "Add" button. Enter "java" (or whatever you want) for the Description. Scroll to the bottom of the page and click "Create token".
-
-1. When the token is created you will have to copy it - this is your only chance to see the token. Copy it from the browser into the clipboard.
-
-1. Click on the Visual Studio Code icon in the toolbar to open Visual Studio Code.
-
-    ![Open VS Code](images/vs-code.png)
-
-1. Press Ctrl-N (or use File->New File) to create a new file. Paste in your PAT. Save this file (File->Save or Ctrl-S) to `/home/vmadmin/pat.txt`.
 
 ## Starting a VSTS Agent Container using Docker
 
@@ -59,7 +36,7 @@ In this task you will start a VSTS build agent container using Docker. This cont
 
     ![The agent container running](images/agent-container-running.png)
 
-    > **Note**: This starts a docker container (called vstsagent) that has a VSTS agent running inside it. The agent is connected to your VSTS account and has also mounted the VM Docker socket so that the container can perform Docker operations (like building containers). It is created from a Dockerfile (listed below) that installs PhantomJS for running headless Selenium tests and configures Docker certs and environment variables. You can move this terminal to the side since the container is running interactively, so the prompt you are seeing is actually inside the container. Open a new terminal by clicking on the Terminal Emulator icon in the toolbar.
+    {% include note.html content="This starts a docker container (called vstsagent) that has a VSTS agent running inside it. The agent is connected to your VSTS account and has also mounted the VM Docker socket so that the container can perform Docker operations (like building containers). It is created from a Dockerfile (listed below) that installs PhantomJS for running headless Selenium tests and configures Docker certs and environment variables. You can move this terminal to the side since the container is running interactively, so the prompt you are seeing is actually inside the container. Open a new terminal by clicking on the Terminal Emulator icon in the toolbar" %}
 
     ```dockerfile
     # Dockerfile for custom vsts agent image with phantomjd and docker config

@@ -7,13 +7,11 @@ folder: /labs/java/mavenpmjenkins/
 comments: true
 ---
 
-In this exercise, you are going to clone a GitHub repo into VSTS, if you have not already done so. This repo contains a class library (MyShuttleCalc) that is used by the MyShuttle2 application. You will configure a Jenkins build to get the source code from the VSTS repo, build and then publish the MyShuttleCalc package to a VSTS Maven Package feed so that it can be consumed by MyShuttle2 and any other applications that require the calculation code.
+In this exercise, you will configure a Jenkins build to get the source code from the VSTS repo, build and then publish the MyShuttleCalc package to a VSTS Maven Package feed so that it can be consumed by MyShuttle2 and any other applications that require the calculation code.
 
 This exercise assumes you have completed the exercises to create a Team Project, have set up the Docker private VSTS agent, and imported the MyShuttleCalc and MyShuttle2 GitHub repos into your VSTS team project. This exercise also assumes that you have cloned the repos in either IntelliJ or Eclipse. This exercise uses a team project named **jdev**, though your team project name may differ.
 
-> **Note**: It is not necessary to clone GitHub repos into VSTS. VSTS will work just fine with GitHub (or other Git hosted) repos. However, some linkages from source code to other aspects of the DevOps pipeline (such as work items, builds or releases) work best if the code is in VSTS.
-
-> **Note**: This exercise shows how to do a Maven build using Jenkins. To see how to perform a Maven build using just VSTS Team Build that integrates into the VSTS Package Feed, please refer to [Maven Package Management with VSTS and Jenkins](./Maven Package Management with VSTS and Jenkins,md).
+{% include tip.html content="This exercise shows how to do a Maven build using Jenkins. To see how to perform a Maven build using just VSTS Team Build that integrates into the VSTS Package Feed, please refer to [**Maven Package Management with VSTS and Jenkins**](../mavenpmvsts/)" %}
 
 > **Note**: Port 8080 is not open on the Azure VM for security purposes. However, since a local agent is running in Docker on the VM, it will be able to build and interact with VSTS anyway. 
 

@@ -12,7 +12,7 @@ comments: true
 
 ## Overview  of the Java Hands-on-Lab
 
-DevOps for Java teams with Microsoft Visual Studio Team Services hands-on-lab is provided to give you a first-hand, technical experience on how you can leverage the Microsoft DevOps platform for Java development. The labs cover
+**DevOps for Java teams with Microsoft Visual Studio Team Services** hands-on lab is provided to give you a first-hand, technical experience on how you can leverage the Microsoft DevOps platform for Java development. The labs cover
 
 - Creating a new VSTS account
 - Using the Agile  tools to plan and track work items
@@ -22,25 +22,23 @@ DevOps for Java teams with Microsoft Visual Studio Team Services hands-on-lab is
 - Managing Technical Debt with SonarQube
 - Deploying Docker containers to Azure with an Automated delivery pipeline
 
-## Virtual Machine
+## Get the accompanying Virtual Machine
 
 ![](images/nwc_logo.png)
 
 Our partner NorthWest Cadence has built a virtual machine image that is pre-configured with all the software you require to run through the labs. You can find instructions on provisioning and connecting to the virtual machine [here.](https://github.com/nwcadence/java-dev-vsts)
 
-## Target Audience
+{% include important.html content="The image and the accompanying hand-on-labs is for technical audience. As such, familiarity with Visual Studio Team Services, Java and Linux operating system would be preferred although it is not a strict prerequisite" %}
 
-The image and the accompanying hand-on-labs is for technical audience. As such, familiarity with Visual Studio Team Services, Java and Linux operating system would be preferred although it is not a strict prerequisite.
-
-## Provisioning the Project using VSTSDemoGenerator
+## Setting up Team Services project using VSTS Demo Generator
 
 You can use [Visual Studio Team Services Demo Generator](https://vstsdemogenerator.azurewebsites.net) to provision a project with pre-defined data on to your VSTS account to follow the hands-on-labs. Choose **MyShuttle2** template from the dropdown.
 
-## Hands on Labs
+## Hands-on Labs
 
 The labs should be followed in the following order, though there are some equivalent labs that allow you a "choose your adventure" experience:
 
-<table width="70%">
+<table width="100%">
    <thead>
       <tr>
          <th width="75%"><b>Lab Name</b></th>
@@ -53,16 +51,10 @@ The labs should be followed in the following order, though there are some equiva
       <td><a href="dockerbuildagent/">Set up a Docker build agent</a></td>
    </tr>
    <tr>
-      <td><a href="intellijgit/">Cloning a VSTS Repo - IntelliJ</a></td>
+      <td><a href="intellijgit/">Cloning a VSTS Repo - IntelliJ</a> <b>or</b> <a href="eclipsegit/">Cloning a VSTS Repo - Eclipse</a> </td>
    </tr>
    <tr>
-      <td><a href="eclipsegit/">Cloning a VSTS Repo - Eclipse</a></td>
-   </tr>
-   <tr>
-      <td><a href="mavenpmjenkins/">Maven Package Management with VSTS and Jenkins</a></td>
-   </tr>
-   <tr>
-      <td><a href="mavenpmvsts/">Maven Package Management with VSTS Team Build</a></td>
+      <td><a href="mavenpmjenkins/">Maven Package Management with VSTS and Jenkins</a> <b>or</b> <a href="mavenpmvsts/">Maven Package Management with VSTS Team Build</a></td>
    </tr>
    <tr>
       <td><a href="builddocker/">Build Docker containers with VSTS</a></td>
