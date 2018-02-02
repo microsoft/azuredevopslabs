@@ -54,7 +54,7 @@ If you are following this lab from [Working with Eclipse](../eclipse/)  you can 
 
    ![VSTS Demo Generator](images/VSTSDemoGeneratorCreate.png)
 
-1. Use  **MyShuttleDocker** for the template. Provide the Project Name and select **Create Project**. After the project is provisioned, click the URL to navigate to the project.
+
 
     {% include note.html content= "This URL will automatically select the MyShuttleDocker template in the demo generator. If you want to try other projects, use this URL instead - [https://vstsdemogenerator.azurewebsites.net/](https://vstsdemogenerator.azurewebsites.net/)" %}
 
@@ -64,11 +64,11 @@ In this task you will configure the VSTS build definition that will build and pu
 
 1. Open the [**Azure Portal**](https://portal.azure.com){:target="_blank"} in a separate tab
 
-1. Select **+New** and search for **Azure Container**. Select **Create**. In the *Create Container Registry* dialog, enter a name for the service, select the resource group, location, etc., and select **Create**.
+1. Select **+New** and search for **Azure Container Registry**. Select **Create**. In the *Create Container Registry* dialog, enter a name for the service, select the resource group, location, **Enable** Admin User etc., and select **Create**.
 
     ![Create Azure Container Registry](images/createacr.png)
 
-1. Return to  VSTS, from the **Build** hub, select and edit the **MyShuttle** build. This build definition contains a *maven* task to build the pom.xml file. The maven task has the following settings
+1. Return to  VSTS, from the **Build** hub, select and edit the **MyShuttle** build. This build definition contains a *maven* task to build the pom.xml file. The maven task should be updated the following settings
 
     | Parameter | Value | Notes |
     | --------------- | ---------------------------- | ----------------------------------------------------------- |
@@ -104,7 +104,7 @@ In this task you will configure the VSTS build definition that will build and pu
 
 ## Exercise 3: Deploying to an Azure Web App for containers
 
-In this exercise, we will setup a CD pipeline to deploy the web application to an Azure web app. First, let's create the Web App
+In this exercise, we will setup a CD pipeline to deploy the web application to an Azure web app. First, let's create the Web App.
 
 1. Sign into your [Azure Portal](https://portal.azure.com){:target="_blank}
 
@@ -112,7 +112,7 @@ In this exercise, we will setup a CD pipeline to deploy the web application to a
 
      ![New Web App for Containers](images/newwebapp.png)
 
-1. Provide a name for the new web app, select existing or create new resource group for the web app. Then select **Configure Container** to specify the source repository for the images. Since we are using ACR to store the images, select **Azure Container Registry**. Select the **Registry, Image and Tag** from the respective drop-downs.Select **OK** and then select **Create** to start provisioning the web app
+1. Provide a name for the new web app, select existing or create new resource group for the web app. Then select **Configure Container** to specify the source repository for the images. Since we are using ACR to store the images, select **Azure Container Registry**. Select the **Registry**, **Image** value as **web** and **Tag** with the latest build value from the drop-downs. Select **OK** and then select **Create** to start provisioning the web app
 
     ![Creating MyShuttle Web App for Containers](images/myshuttle-webapp.png)
 
@@ -124,19 +124,20 @@ In this exercise, we will setup a CD pipeline to deploy the web application to a
 
     We could configure *Continuous Deployment* to deploy the web app is updated when a new image is pushed to the registry, within the Azure portal itself. However, setting up a VSTS CD pipeline will provide more flexibility and additional controls (approvals, release gates, etc.) for application deployment
 
-1. Back in VSTS, select **Releases** from the **Build and Release**hub. Select **+** and then **Create Release Definition**
+1. Back in VSTS, select **Releases** from the **Build and Release** hub. Select **+** and then **Create Release Definition**
+
+1. Select the **Azure App Service Deployment** template and click **Apply**
 
 1. Select **Pipeline**. Click **+Add** to add the artifacts. Select **Build** for the source type. Select the **Project**, **Source** and the **Default version**.  Finally select **Add** to save the settings
 
-1. Select the **Azure App Service Deployment** template and click **Apply**
     ![VSTS Add Artifact](images/vsts-cd-addartifact.png)
 
 1. Open the environment. Select **Environment 1** and configure as follows
 
     * Pick the Azure subscription
     * Select **Linux App** for the **App Type**
-    * Select the **App Service** that you created
-    * Enter the **Container Registry** name and then
+    * Enter the **App Service** name that you created
+    * Enter the **Azure Container Registry** server url for **Registry or Namespace** and then
     * Enter ***Web*** for the **Repository**
 
     ![VSTS Release Defintion](images/vsts-cd-webapp.png)
@@ -155,7 +156,7 @@ In this exercise, we will setup a CD pipeline to deploy the web application to a
 
 Next, let's set up the MySQL database for the application
 
-1. From the Azure portal, select **+ New** and search for **MySQL**. Choose **Azure Database for MySQL(preview)** from the filtered result list and click **Create**
+1. From the Azure portal, select **+ New** and search for **MySQL**. Choose **Azure Database for MySQL(preview)** from the filtered result list and click **Create**. 
 
     ![Azure Database MySQL](images/azuredbmysql.png)
 
@@ -163,11 +164,11 @@ Next, let's set up the MySQL database for the application
 
     ![Azure Database MySQL](images/createazuredbmysql.png)
 
-1. Select **Properties**. Note down **SERVER NAME** and **SERVER ADMIN LOGIN NAME**
+1. Navigate to **Connection Security** section, enable **Allow Access to Azure Services** and click **Save**. Select **Properties**. Note down **SERVER NAME** and **SERVER ADMIN LOGIN NAME**
 
 1. In this example, the server name is **myshuttle-1-mysqldbserver.mysql.database.azure.com** and the admin user name is **mysqldbuser@myshuttle-1-mysqldbserver**
 
-1. We will use the MySQL command-line tool to establish a connection to the Azure Database for MySQL server. We will run the MySQL command-line tool from the Azure Cloud Shell in the browser.To launch the Azure Cloud Shell, click the `>_` icon in the top right toolbar.
+1. We will use the MySQL command-line tool to establish a connection to the Azure Database for MySQL server. We will run the MySQL command-line tool from the Azure Cloud Shell in the browser. To launch the Azure Cloud Shell, click the `>_` icon in the top right toolbar and choose **Bash** if given an option to choose the shell type.
 
 1. Enter the following command
 
@@ -184,7 +185,7 @@ Next, let's set up the MySQL database for the application
 
     ![Creating DB](images/createdatabase.png)
 
-    >This should create the database, tables and populate records for us.
+    >This should create the database, tables and populate records for us. 
 
 1. Next, navigate to the Web app that you have created. Click **Application Settings** and scroll down to the **Connection Strings** section
 
@@ -192,7 +193,7 @@ Next, let's set up the MySQL database for the application
 
 1. Click **Save** to save the connection string
 
-   {% include note.html content= "Connection Strings configured here will be available as environment variables, prefixed with connection type for Java apps (also for PHP, Python and Node apps). In the `DataAccess.java`file under `src/main/java/com/microsoft/example` folder, we retrieve the connection string using the following code" %}
+   {% include note.html content= "Connection Strings configured here will be available as environment variables, prefixed with connection type for Java apps (also for PHP, Python and Node apps). In the `DataAccess.java` file under `src/main/java/com/microsoft/example` folder, we retrieve the connection string using the following code" %}
 
     ````Java
     String conStr = System.getenv("MYSQLCONNSTR_MyShuttleDb");
