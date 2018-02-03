@@ -30,10 +30,6 @@ Our partner NorthWest Cadence has built a virtual machine image that is pre-conf
 
 {% include important.html content="The image and the accompanying hand-on-labs is for technical audience. As such, familiarity with Visual Studio Team Services, Java and Linux operating system would be preferred although it is not a strict prerequisite" %}
 
-## Setting up Team Services project using VSTS Demo Generator
-
-You can use [Visual Studio Team Services Demo Generator](https://vstsdemogenerator.azurewebsites.net) to provision a project with pre-defined data on to your VSTS account to follow the hands-on-labs. Choose **MyShuttle2** template from the dropdown.
-
 ## Hands-on Labs
 
 The labs should be followed in the following order, though there are some equivalent labs that allow you a "choose your adventure" experience:
