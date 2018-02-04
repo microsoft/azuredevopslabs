@@ -28,13 +28,13 @@ through the MyShuttle scenario.
 
     ![](images/image2.png)
 
-    You’re now on the **Features** backlog.
+    You are now on the **Features** backlog.
 
     ![](images/image3.png)
 
 1. In the Title box, enter **Intranet Site Updates** and press Enter.
 
-1. Let’s add another feature. In the Title box, enter **Internet Site
+1. Let us add another feature. In the Title box, enter **Internet Site
     Updates** and press Enter.
 
     You now have defined two features.
@@ -47,8 +47,7 @@ through the MyShuttle scenario.
 
     ![](images/image5.png)
 
-1. Change the value of the **State** field from **New** to **In
-    Progress**.
+1. Change the value of the **State** field from **New** to **In Progress**.
 
     ![](images/image6.png)
 
@@ -65,7 +64,7 @@ through the MyShuttle scenario.
 1. In the **Description** field, type a short note like, **Complete
     updates to Intranet site for partners**.
 
-    Note this is a rich text field, and you can use various types of
+    > Note this is a rich text field, and you can use various types of
     formatting.
 
     ![](images/image8.png)
@@ -88,7 +87,7 @@ through the MyShuttle scenario.
 1. Click **OK**. Visual Studio Team Services opens up the New Product
     Backlog Item screen. Feel free to add a description.
 
-1. When ready click **Save and close**.
+1. When ready, click **Save and close**.
 
     ![](images/image12.png)
 
@@ -102,7 +101,7 @@ through the MyShuttle scenario.
 1. Double-click on the **Site Fit & Finish** Product Backlog Item (PBI)
     in the list to open up the dialog
 
-1. Change the **State** to **Committed**. You’ll notice that it’s
+1. Change the **State** to **Committed**. You’ll notice that it is
     assigned to you automatically because the parent feature was
     assigned to you.
 
@@ -123,7 +122,7 @@ through the MyShuttle scenario.
 1. Feel free to explore a bit, add a description if you like and then
     click **Save and close** to finish using Task dialog.
 
-1. Back at the PBI screen Click **Save and close** to close the Product
+1. Back at the PBI screen, Click **Save and close** to close the Product
     Backlog Item.
 
 1. Click the small triangle to the left the Explore VS Team
@@ -171,13 +170,13 @@ through the MyShuttle scenario.
 
     ![](images/image22.png)
 
-    Now you can see your work for the just the current sprint.
+    Now you can see your work for just the current sprint.
 
     ![](images/image23.png)
 
     You need to assign the **Add master navigation to menu page** Task to you.
 
-1. Move your mouse and hover over the card and you’ll get a combo-box
+1. Move your mouse and hover over the card and you will get a combo-box
     that opens up.
 
     ![](images/image24.png)
@@ -186,11 +185,11 @@ through the MyShuttle scenario.
 
     One more thing you need to do is add an estimate for each work item.
 
-1. In the task board mouse over at the bottom right corner of the task card and enter the value **1**. This is nothing but **Remaining Work** field , you can also open the work item and then update **Remaining Work** field value and save the changes. Repeat this for another task in task board.
+1. In the task board, mouseover at the bottom right corner of the task card and enter the value **1**. This is the **Remaining Work** field, you can also open the work item and then update **Remaining Work** field value and save the changes. Repeat this for another task in task board.
 
     ![](images/image25.png)
 
-    Now you want to show that you’ve started working.
+    Now you want to show that you have started working.
 
 1. Drag and drop the **Add Master Branding** work item to the **In
     progress** column.
@@ -205,17 +204,16 @@ through the MyShuttle scenario.
     This opens the Settings dialog where you can make adjustments to many
     features of the Work Hub including the Task board.
 
-1. For **Task** check the **Show ID** checkbox to show the work item ID
+1. For **Task**, check the **Show ID** checkbox to show the work item ID
     on the cards.
 
     ![](images/image28.png)
 
 1. Click **Save and Close** when done.
 
-    Now you’ll be able to see the Work Item ID easily when you look at
-    the Task board. You’ll use the IDs later when you commit code to
+    Now you will be able to see the Work Item ID easily when you look at
+    the Task board. You will use the IDs later when you commit code to
     your Git repo in the next exercise.
 
-This is a quick introduction to the Agile Planning tools and Work Items. You’ll work with them
-some more later. If you want to read more about the Agile Planning tools, Sprint Planning, and the Scrum
+This is a quick introduction to the Agile Planning tools and Work Items. You will work with them again later. If you want to read more about the Agile Planning tools, Sprint Planning, and the Scrum
 template follow this [link](https://msdn.microsoft.com/en-us/Library/vs/alm/Work/scrum/sprint-planning)
