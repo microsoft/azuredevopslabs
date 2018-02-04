@@ -11,7 +11,7 @@ In this exercise, you are going to create a Docker Registry in Azure as well as 
 
 This exercise assumes you have completed the exercises to create a Team Project and have set up the Docker private VSTS agent. You should also have set up Maven package management and have a MyShuttleCalc package in the feed. This exercise uses a team project named **jdev**, though your team project name may differ.
 
-> **Note**: You don't have to use the Azure container registry - you can use whatever registry you choose. You can also create an equivalent build using Jenkins.
+> You do not have to use the Azure container registry - you can use whatever registry you choose. You can also create an equivalent build using Jenkins.
 
 ## Create a Docker Container Registry in Azure
 
@@ -35,7 +35,7 @@ This exercise assumes you have completed the exercises to create a Team Project 
 
 In this task you will update the pom.xml file for the MyShuttle2 application so that it can consume the MyShuttleCalc package from the Maven package feed.
 
-1. In Chrome navigate to your VSTS account and team project. Click on the Build & Release Hub, click on Packages, and select the Maven feed. Click on "Connect to Feed". Click on the copy button in the section labeled `Add this feed to your project pom.xml inside the <repositories> tag`.
+1. In Chrome, navigate to your VSTS account and team project. Click on the Build & Release Hub, click on Packages, and select the Maven feed. Click on "Connect to Feed". Click on the copy button in the section labeled `Add this feed to your project pom.xml inside the <repositories> tag`.
 
     ![Get the package repository settings from VSTS](images/maven-packagefeed-settings.png)
 
@@ -71,13 +71,13 @@ In this task you will update the pom.xml file for the MyShuttle2 application so 
 
 1. From the top toolbar of IntelliJ, click Build->Build Project and make sure there are no errors.
 
-1. Click VCS->Commit. Add a commit message "Updating feed settings". Click the drop-down on the Commit button and select Commit and Push. Click Push on the prompt.
+1. Click VCS->Commit. Add a commit message "Updating feed settings". Click the drop-down on the **Commit** button and select **Commit and Push**. Click **Push** on the prompt.
 
     ![Commit the changes to the pom.xml file](images/commit-changes.png)
 
 ### Eclipse
 
-1. You may have to reload the Maven project to update the plugins and dependencies. You can do this by right-clicking on the `myshuttle` working set/project, then selecting Maven -> Update Project. Then, keep the checkbox for `myshuttle` checked and press the OK button.
+1. You may have to reload the Maven project to update the plugins and dependencies. You can do this by right-clicking on the `myshuttle` working set/project, then selecting Maven -> Update Project. Then, keep the checkbox for `myshuttle` checked and press the **OK** button.
 
     ![Refresh Maven](images/eclipse-update-project.png)
 
@@ -89,7 +89,7 @@ In this task you will update the pom.xml file for the MyShuttle2 application so 
 
     ![Build Maven](images/eclipse-maven-configuration.png)
 
-    >Note: Ensure that you have already copied the settings.xml file from MyShuttleCalc to the .m2 folder before you run this. Otherwise, you can specify the settings.xml file in MyShuttle2 by clicking on the "File System..." button to the right of the User settings field in the configuration window to reference a settings file other than in the default .m2 folder.
+    >Ensure that you have already copied the settings.xml file from MyShuttleCalc to the .m2 folder before you run this. Otherwise, you can specify the settings.xml file in MyShuttle2 by clicking on the "File System..." button to the right of the User settings field in the configuration window to reference a settings file other than in the default .m2 folder.
 
 1. Commit and push your changes through Team Explorer Everywhere.
 
