@@ -10,7 +10,7 @@ folder: /labs/java/agile/
 
 In this exercise, you are going to examine the various portfolio planning features of Visual Studio to group and manage your work and that of your team using backlogs. This exercise assumes you have completed Exercise 1, and have created a Team Project using the Scrum template with a Git repo.
 
-This exercise uses a team project named **jdev** (if you have chosen a different name for your project, select the project you created in the previous exercise). For this first part, you will create work items for you in the lab. Later, you will create some more work items as you work
+This exercise uses a team project named **jdev-labs** (if you have chosen a different name for your project, select the project you created in the previous exercise). For this first part, you will create work items for you in the lab. Later, you will create some more work items as you work
 through the MyShuttle scenario.
 
 1. Login to your VSTS account and navigate to your project
