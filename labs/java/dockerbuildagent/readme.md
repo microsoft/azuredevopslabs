@@ -9,7 +9,7 @@ comments: true
 
 In this exercise, you are going to configure a private build agent that runs in a Docker container.
 
-This exercise assumes you have completed the exercises to create a Team Project. This exercise uses a team project named **jdev-labs**, though your team project name may differ.
+This exercise assumes you have completed the exercise to create a Team Project. This exercise uses a team project named **jdev-labs**, though your team project name may differ.
 
 {% include note.html content= "It is not necessary to run the VSTS agent in a container - but it is convenient to do so and means that you don't have to install any other prerequisites on the machine running the container, since all the prerequisites are inside the container." %}
 
@@ -54,10 +54,9 @@ In this task you will start a VSTS build agent container using Docker. This cont
     ENV DOCKER_HOST=tcp://$HOSTNAME:2376 DOCKER_TLS_VERIFY=1
     ```
 
-    > **Note**: `$HOSTNAME` is a variable that resolves in the setup script that executed when you set up your Azure VM.
+    > `$HOSTNAME` is a variable that resolves in the setup script that executed when you set up your Azure VM.
 
 1. If your container stops running for some reason, you can run the following commands to restart and attach to it:
-
     ```sh
     docker start vstsagent
     docker attach vstsagent
