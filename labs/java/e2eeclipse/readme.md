@@ -7,13 +7,13 @@ folder: /labs/java/e2eeclipse/
 comments: true
 ---
 
-In this exercise, you are going to see a typical end-to-end workflow for a Java developer. You should have completed the labs that set up automated build and release (this is a CI/CD pipeline). In this scenario, you will open the running MyShuttle application and discover a bug. You will then use the [Exploratory Testing extension](https://marketplace.visualstudio.com/items?itemName=ms.vss-exploratorytesting-web) to create a Bug work item in VSTS. You will then branch the code for fixing the bug. Once the bug is fixed on the branch, you will merge the code in via a Pull Request and code review. This will then automatically queue the build/release pipeline and your fix will be deployed.
+In this exercise, you are going to see a typical end-to-end workflow for a Java developer. You should have completed the labs that set up automated build and release (this is a CI/CD pipeline). In this scenario, you will open the running MyShuttle application and discover a bug. You will then use the [Exploratory Testing extension](https://marketplace.visualstudio.com/items?itemName=ms.vss-exploratorytesting-web){:target="_blank"} to create a Bug work item in VSTS. You will then branch the code for fixing the bug. Once the bug is fixed on the branch, you will merge the code in via a Pull Request and code review. This will then automatically queue the build/release pipeline and your fix will be deployed.
 
-This exercise assumes you have completed the exercises to create a Team Project and have set up the Docker private VSTS agent. You should also have completed the labs to set up an automated build for both the MyShuttleCalc and the MyShuttle2 repos. You should also have complete the release management lab. This exercise uses a team project named **jdev**, though your team project name may differ.
+This exercise assumes you have completed the exercises to create a Team Project and have set up the Docker private VSTS agent. You should also have completed the labs to set up an automated build for both the MyShuttleCalc and the MyShuttle2 repos. You should also have complete the release management lab. This exercise uses a team project named **jdev-labs**, though your team project name may differ.
 
 ## Install the Exploratory Testing Extension for Chrome
 
-In this task you will install the [Exploratory Testing extension](https://marketplace.visualstudio.com/items?itemName=ms.vss-exploratorytesting-web) into Chrome.
+In this task you will install the [Exploratory Testing extension](https://marketplace.visualstudio.com/items?itemName=ms.vss-exploratorytesting-web){:target="_blank"} into Chrome.
 
 1. Open chrome and navigate to `https://chrome.google.com/webstore`. Enter "exploratory testing" into the search box. Find the "Test & Feedback" extension from Microsoft Corporation and click "Add to Chrome". Click Install in the dialog.
 
@@ -36,6 +36,7 @@ In this task you will install the [Exploratory Testing extension](https://market
 In this task you will enforce quality on the master branch by creating branch policies.
 
 1. In Chrome, connect to your VSTS Team Project. Click on Code to open the Code Hub.
+
 1. Click the Repo dropdown and select "Manage Repositories".
 
     ![Manage Repositories](images/manage-repos.png)
@@ -52,7 +53,7 @@ In this task you will enforce quality on the master branch by creating branch po
 
     ![Policy configuration](images/policy.png)
 
-    > **Note**: You can enforce other policy options like comment resolution and minumum number of reviewers, as well as specify the merge options (like squashing). You can also add default reviewers.
+    {% include note.html content= "You can enforce other policy options like comment resolution and minumum number of reviewers, as well as specify the merge options \(like squashing\). You can also add default reviewers." %}
 
 ## Log a Bug using the Exploratory Test Extension
 
@@ -62,7 +63,7 @@ In this task you will start a test session, discover a bug in the MyShuttle app 
 
     ![Start a test sessions](images/start-test-session.png)
 
-    > **Note**: The test extension is now recording all of your interactions. You can see the test icon beaker has a green dot indicating that a session is currently running.
+    {% include note.html content= "The test extension is now recording all of your interactions. You can see the test icon beaker has a green dot indicating that a session is currently running." %}
 
 1. Enter `http://localhost:8081/myshuttledev` in the toolbar to navigate to the application. Enter `fred` for the username and `fredpassword` for the password and click Log In.
 
@@ -88,7 +89,7 @@ In this task you will start a test session, discover a bug in the MyShuttle app 
 
     ![Log the Bug](images/log-bug.png)
 
-    > **Note**: All the pages visited, notes, screenshots and other information from the test session is included as details for the Bug, so you don't have to add these details manually. You also should see a button next to the title box reading "0 Similar". VSTS checks to see if there are bugs already logged with similar titles, therefore minimizing duplicate bugs being logged.
+    {% include note.html content= "All the pages visited, notes, screenshots and other information from the test session is included as details for the Bug, so you don't have to add these details manually. You also should see a button next to the title box reading **0 Similar**. VSTS checks to see if there are bugs already logged with similar titles, therefore minimizing duplicate bugs being logged." %}
 
 1. Once the bug has been created, click the Stop button in the Test Extension toolbar to end the test session.
 
@@ -108,7 +109,7 @@ In this task you will start a test session, discover a bug in the MyShuttle app 
 
 In this task you will create a branch of the code to fix the Bug. You will then checkout the branch, fix the bug and commit the code. You will then create a Pull Request to merge the fix into master and see that this triggers the CI/CD pipeline to automatically deploy the fix to the dev environment.
 
->Note: Use the personal access token (PAT) generated from the "Set up a Docker Build" lab that should be located at: `home/vmadmin/pat.txt`. Otherwise, follow the instructions from that lab again to generate a new PAT.
+{% include note.html content= "Use the personal access token (PAT) generated from the **Set up a Docker Build** lab that should be located at: `home/vmadmin/pat.txt`. Otherwise, follow the instructions from that lab again to generate a new PAT." %}
 
 1. Open Eclipse if it is not already open. Open the MyShuttle2 project.
 
@@ -172,9 +173,9 @@ In this task you will create a branch of the code to fix the Bug. You will then 
 
     ![Build is running to validate the PR](images/pr-overview.png)
 
-    > **Note**: If there was a merge conflict, VSTS would warn you on the overview page. If there is no warning to this effect, then Git will be able to auto-merge the PR into the target branch.
+    {% include note.html content= "If there was a merge conflict, VSTS would warn you on the overview page. If there is no warning to this effect, then Git will be able to auto-merge the PR into the target branch. <br/>
 
-    > **Note**: You configured the release to only trigger when successful builds off the master branch are available. Since this build is not building from the master branch, these changes will not yet be deployed.
+    You configured the release to only trigger when successful builds off the master branch are available. Since this build is not building from the master branch, these changes will not yet be deployed." %}
 
 1. Click on the Files tab to open the file compare. Note the changes.
 
