@@ -68,7 +68,7 @@ This exercise assumes you have completed Exercise 1, have created a Team Project
 
     ![Select the SDK folder](images/intellij-select-sdk.png)
 
-    {% include note.html content= "The project will not currently compile, since it has a dependency on a library (MyShuttleCalc) that it cannot resolve. You will fix this in the [Package Management lab](../mavenpmvsts)." %}
+    {% include note.html content= "The project will not currently compile, since it has a dependency on a library (MyShuttleCalc) that it cannot resolve. You will fix this in the [**Package Management lab**](../mavenpmvsts)." %}
 
 ## Clone MyShuttleCalc from VSTS with IntelliJ
 

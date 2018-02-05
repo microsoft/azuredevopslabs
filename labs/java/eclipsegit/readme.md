@@ -107,7 +107,7 @@ This exercise assumes you have completed Exercise 1, have created a Team Project
 
     ![MyShuttle project](images/eclipse-myshuttle.png)
 
-    {% include note.html content= "The project will not currently compile and there may be build errors temporarily, since it has a dependency on a library (MyShuttleCalc) that it cannot resolve. You will fix this in the [Package Management lab](../mavenpmvsts)." %}
+    {% include note.html content= "The project will not currently compile and there may be build errors temporarily, since it has a dependency on a library (MyShuttleCalc) that it cannot resolve. You will fix this in the [**Package Management lab**](../mavenpmvsts)." %}
 
 ## Clone MyShuttleCalc from VSTS with Eclipse
 
@@ -139,6 +139,6 @@ This exercise assumes you have completed Exercise 1, have created a Team Project
 
     ![Import the Maven project](images/eclipse-select-mavenproject2.png)
 
-1. Click on Window -> Show View -> Package Explorer in the toolbar at the top of Eclipse to view the myshuttle project in Eclipse in Package Explorer. You may have to minimize other windows to view the Package Explorer view cleanly.
+1. Click on **Window -> Show View -> Package Explorer** in the toolbar at the top of Eclipse to view the myshuttle project in Eclipse in Package Explorer. You may have to minimize other windows to view the Package Explorer view cleanly.
 
     ![MyShuttleCalc project](images/eclipse-myshuttlecalc.png)
