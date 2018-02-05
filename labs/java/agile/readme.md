@@ -8,10 +8,9 @@ folder: /labs/java/agile/
 
 ## Managing your team project backlog
 
-In this exercise, you are going to examine the various portfolio planning features of Visual Studio to group and manage your work and that of your team using backlogs. This exercise assumes you have completed Exercise 1, and have created a Team Project using the Scrum template with a Git repo.
+In this exercise, you are going to examine the various portfolio planning features of Visual Studio Team Services to group and manage your work and that of your team using backlogs. This exercise assumes you have completed the Exercise 1, and have created a Team Project using the Scrum template with a Git repo.
 
-This exercise uses a team project named **jdev-labs** (if you have chosen a different name for your project, select the project you created in the previous exercise). For this first part, you will create work items for you in the lab. Later, you will create some more work items as you work
-through the MyShuttle scenario.
+This exercise uses a team project named **jdev-labs** (if you have chosen a different name for your project, select the project you created in the previous exercise). For this first part, you will create work items for you in the lab. Later, you will create some more work items as you work through the MyShuttle scenario.
 
 1. Login to your VSTS account and navigate to your project
 
@@ -41,7 +40,7 @@ through the MyShuttle scenario.
 
     ![image6](images/image6.png)
 
-1. Press tab to move to the **Assigned To** field, which current is set to **Unassigned**. Assign it to yourself.
+1. Press tab to move to the **Assigned To** field, which currently is set to **Unassigned**. Assign it to yourself.
 
 1. Select the **Iteration** field. Expand the combo-box to see the available values.
 
@@ -59,7 +58,7 @@ through the MyShuttle scenario.
 
     ![image9](images/image9.png)
 
-1. Click the **Add link** drop down menu and select **New item** link.
+1. Click the **Add link** drop down menu and select the **New item** link.
 
     ![image10](images/image10.png)
 
@@ -77,7 +76,7 @@ through the MyShuttle scenario.
 
 1. Back on the Feature dialog, click **Save and close** to update and close the feature.
 
-1. Click the **Backlog Items** link to return to that backlog.
+1. Click the **Backlog Items** link to return to the backlogs screen.
 
     ![image13](images/image13.png)
 
@@ -97,25 +96,25 @@ through the MyShuttle scenario.
 
 1. In the **Title** field, enter **Add master branding**. Click **OK** when ready.
 
-1. Feel free to explore a bit, add a description if you like and then click **Save and close** to finish using Task dialog.
+1. Feel free to explore a bit, add a description if you like and then click **Save and close** to finish using the Task dialog.
 
 1. Back at the PBI screen, Click **Save and close** to close the Product Backlog Item.
 
-1. Click the small triangle to the left the Explore VS Team Services PBI.
+1. Click the small triangle to the left of the **Site Fit & Finish** PBI.
 
     ![image14](images/image14.png)
 
-    You can now see any of the child tasks associated with the PBI.
+    You can now see all the child tasks associated with the PBI.
 
     ![image15](images/image15.png)
 
-    You can also see parent items (in the case Features).
+    You can also see parent items (in this case, Features).
 
-1. On the command bar above the backlog, click the Hide link to the right of the Parents label to “show” the parent Features.
+1. On the command bar above the backlog, click the Hide link to the right of the Parents label to display the parent Features.
 
     ![image16](images/image16.png)
 
-    You now can see the Parent Features.
+    You now can see the parent Features.
 
     ![image17](images/image17.png)
 
@@ -123,9 +122,7 @@ through the MyShuttle scenario.
 
      ![image18](images/image18.png)
 
-1. In the Committed column, on the only card, click the
-
-    ![image19](images/image19.png) item.
+1. In the Committed column, on the **Site Fit & Finish** card, click the ![image19](images/image19.png) item.
 
     ![image20](images/image20.png)
 
@@ -133,7 +130,7 @@ through the MyShuttle scenario.
 
 1. Click the **+ Add task** item.
 
-1. In the open text area, type **Add master navigation to menu page** and press **Enter**.
+1. In the open text area, type **Add master navigation to menu page** and press Enter.
 
     ![image21](images/image21.png)
 
@@ -153,15 +150,15 @@ through the MyShuttle scenario.
 
     ![image24](images/image24.png)
 
-1. Assign the task to yourself. One more thing you need to do is add an estimate for each work item.
+1. Assign the task to yourself. One more thing you need to do is to add an estimate for each work item.
 
-1. In the task board, mouseover at the bottom right corner of the task card and enter the value **1**. This is the **Remaining Work** field, you can also open the work item and then update **Remaining Work** field value and save the changes. Repeat this for another task in task board.
+1. In the task board, mouse-over at the bottom right corner of the task card and enter the value **1**. This is the **Remaining Work** field. You can also open the work item and then update the **Remaining Work** field value and save the changes. Repeat this for the other task in the task board.
 
     ![image25](images/image25.png)
 
-    Now you want to show that you have started working.
+    Now you want to indicate that you have started working.
 
-1. Drag and drop the **Add Master Branding** work item to the **Inprogress** column.
+1. Drag and drop the **Add Master Branding** work item to the **In progress** column.
 
     ![image26](images/image26.png)
 
@@ -171,13 +168,12 @@ through the MyShuttle scenario.
 
     This opens the Settings dialog where you can make adjustments to many features of the Work Hub including the Task board.
 
-1. For **Task**, check the **Show ID** checkbox to show the work item ID on the cards.
+1. For **Task**, check the **Show ID** checkbox to display the work item ID on the cards.
 
     ![image28](images/image28.png)
 
 1. Click **Save and Close** when done.
 
-    Now you will be able to see the Work Item ID easily when you look at the Task board. You will use the IDs later when you commit code to
-    your Git repo in the next exercise.
+    Now you will be able to see the Work Item ID easily when you look at the Task board. You will use the IDs later when you commit code to your Git repo in the next exercise.
 
 This is a quick introduction to the Agile Planning tools and Work Items. You will work with them again later. If you want to read more about the Agile Planning tools, Sprint Planning, and the Scrum template follow this [link](https://msdn.microsoft.com/en-us/Library/vs/alm/Work/scrum/sprint-planning){:target="_blank"}
