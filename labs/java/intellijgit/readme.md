@@ -28,7 +28,7 @@ This exercise assumes you have completed Exercise 1, have created a Team Project
 
     ![Search for the VSTS plugin](images/intellij-search-vsts.png)
 
-1. Click install to install the extension. The install button will change to a **Restart** button - click it to restart IntelliJ.
+1. Click Install to install the extension. The install button will change to a **Restart** button. Click it to restart IntelliJ.
 
     ![Install the plugin and restart IntelliJ](images/intellij-click-install.png)
 
@@ -42,7 +42,7 @@ This exercise assumes you have completed Exercise 1, have created a Team Project
 
 ## Clone MyShuttle2 from VSTS with IntelliJ
 
-1. Once you have authenticated, enter **MyShuttle2** into the search bar and select the MyShuttle2 repo from your team project. Click the Clone button to clone the repo to the VM.
+1. Once you are authenticated, enter **MyShuttle2** into the search bar and select the MyShuttle2 repo from your team project. Click Clone to clone the repo to the VM.
 
     ![Select the VSTS repo](images/intellij-select-repo.png)
 
@@ -64,11 +64,11 @@ This exercise assumes you have completed Exercise 1, have created a Team Project
 
     ![Add an SDK](images/intellij-add-sdk.png)
 
-1. Select `java-8-openjdk-amd64` from the folder list and click OK. Click OK back through the rest of the dialogs.
+1. Select `java-8-openjdk-amd64` from the folder list and click OK. Click OK through the rest of the dialogs.
 
     ![Select the SDK folder](images/intellij-select-sdk.png)
 
-    {% include note.html content= "The project will not currently compile, since it has a dependency on a library (MyShuttleCalc) that it cannot resolve. You will fix this in the [**Package Management lab**](../mavenpmvsts)." %}
+    {% include note.html content= "The project will not currently compile as it has a dependency on a library (MyShuttleCalc) that it cannot resolve. You will fix this in the [**Package Management lab**](../mavenpmvsts)." %}
 
 ## Clone MyShuttleCalc from VSTS with IntelliJ
 
@@ -76,11 +76,11 @@ This exercise assumes you have completed Exercise 1, have created a Team Project
 
     ![New Team Services Git project](images/intellij-new-myshuttlecalc-project.png)
 
-1. Enter **MyShuttleCalc** into the search bar and select the MyShuttleCalc repo from your team project. Click the Clone button to clone the repo to the VM.
+1. Enter **MyShuttleCalc** into the search bar and select the MyShuttleCalc repo from your team project. Click Clone to clone the repo to the VM.
 
     ![Clone the MyShuttleCalc repo](images/intellij-clone-myshuttlecalc.png)
 
-1. IntelliJ will prompt to open the project in the same or a new window. Choose **New Window** to open another instance of IntelliJ with the MyShuttleCalc project.
+1. IntelliJ will prompt you to open the project in the same or a new window. Choose **New Window** to open another instance of IntelliJ with the MyShuttleCalc project.
 
     ![New window](images/intellij-new-window.png)
 
