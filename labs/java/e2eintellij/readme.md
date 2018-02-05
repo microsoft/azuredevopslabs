@@ -7,29 +7,29 @@ folder: /labs/java/e2eintellij/
 comments: true
 ---
 
-In this exercise, you are going to see a typical end-to-end workflow for a Java developer. You should have completed the labs that set up automated build and release (this is a CI/CD pipeline). In this scenario, you will open the running MyShuttle application and discover a bug. You will then use the [Exploratory Testing extension](https://marketplace.visualstudio.com/items?itemName=ms.vss-exploratorytesting-web){:target="_blank"} to create a Bug work item in VSTS. You will then branch the code for fixing the bug. Once the bug is fixed on the branch, you will merge the code in via a Pull Request and code review. This will then automatically queue the build/release pipeline and your fix will be deployed.
+In this exercise, you are going to see a typical end-to-end workflow for a Java developer. You should have completed the labs that set up automated build and release (this is a CI/CD pipeline. In this scenario, you will launch the MyShuttle application and discover a bug. You will then use the [Exploratory Testing extension](https://marketplace.visualstudio.com/items?itemName=ms.vss-exploratorytesting-web){:target="_blank"} to create a Bug work item in VSTS. You will then branch the code for fixing the bug. Once the bug is fixed on the branch, you will merge the code in via a Pull Request and code review. This will then automatically queue the build/release pipeline and your fix will be deployed.
 
-This exercise assumes you have completed the exercises to create a Team Project and have set up the Docker private VSTS agent. You should also have completed the labs to set up an automated build for both the MyShuttleCalc and the MyShuttle2 repos. You should also have complete the release management lab. This exercise uses a team project named **jdev-labs**, though your team project name may differ.
+This exercise assumes you have completed the exercises to create a Team Project and have set up the Docker private VSTS agent. You should also have completed the labs to set up an automated build for both the MyShuttleCalc and the MyShuttle2 repos as well as the release management lab. This exercise uses a team project named **jdev-labs**, though your team project name may differ.
 
 ## Install the Exploratory Testing Extension for Chrome
 
-In this task you will install the [Exploratory Testing extension](https://marketplace.visualstudio.com/items?itemName=ms.vss-exploratorytesting-web){:target="_blank"} into Chrome.
+In this task you will install the [Exploratory Testing extension](https://marketplace.visualstudio.com/items?itemName=ms.vss-exploratorytesting-web){:target="_blank"} on Chrome browser.
 
 1. Open chrome and navigate to [https://chrome.google.com/webstore](https://chrome.google.com/webstore){:target="_blank"}. Enter **exploratory testing** into the search box. Find the **Test & Feedback** extension from Microsoft Corporation and click **Add to Chrome**. Click Install in the dialog.
 
     ![Adding the Exploratory Test Extension to Chrome](images/add-ext.png)
 
-1. Once installed, a beaker icon appears in the top right of the Chrome toolbar. Click it to open the UI.
+1. Once installed, a test extension beaker icon appears in the top right of the Chrome toolbar. Click it to launch the UI.
 
 1. Click on the gear icon to open the settings. Select **Connected** and enter your VSTS account URL and click Next.
 
     ![Connect to VSTS](images/connect-to-vsts.png)
 
-1. Select your team project and expand it and select the default team (which should have the same name as your team project). Click Save.
+1. Select your team project and expand it and select the default project team (which should have the same name as your team project). Click Save.
 
     ![Select the Team to Connect to](images/select-team.png)
 
-    > **Note**: Your team name may be different
+    > Your team name may be different
 
 ## Configure Branch Policies
 
@@ -45,15 +45,15 @@ In this task you will enforce quality on the master branch by creating branch po
 
     ![Open branch policies](images/branch-policies.png)
 
-1. Check the Protect this branch checkbox.
+1. Select the Protect this branch checkbox.
 
-1. Check **Check for linked work items** and set the radio to required.
+1. Select **Check for linked work items** and set the option to required.
 
 1. Under Build validation, click Add build policy. Select MyShuttle2 from the list of build definitions and click Save.
 
     ![Policy configuration](images/policy.png)
 
-    {% include note.html content= "You can enforce other policy options like comment resolution and minimum number of reviewers, as well as specify the merge options \(like squashing\). You can also add default reviewers." %}
+    {% include note.html content= "You can enforce other policy options like comment resolution and minimum number of reviewers, as well as specify the merge options \(like squashing\). You can also configure default reviewers." %}
 
 ## Log a Bug using the Exploratory Test Extension
 
@@ -71,17 +71,17 @@ In this task you will start a test session, discover a bug in the MyShuttle app 
 
 1. On the Dashboard page, click **Access Your Fare History** to navigate to the fare history page.
 
-1. If you look at the totals for the Fare and Driver column in the table, you will note that the total for the driver column is incorrect.
+1. If you look at the totals for the Fare and Driver column in the table, you will notice that the total for the driver column is incorrect.
 
 1. Click the Test Extension beaker icon and click the Camera icon (capture image).
 
     ![Click Add Screenshot](images/click-camera.png)
 
-1. Capture the grid with the incorrect total. Annotate the image appropriately and click the tick (accept) icon.
+1. Capture the grid with the incorrect total. Annotate the image appropriately and click the check (accept) icon.
 
     ![Capture an image of the Bug](images/add-screenshot.png)
 
-1. Click the Test Extension beaker icon and click flyout (lower right) of the icon with the page and exclamation mark (new bug). From the menu click Create bug.
+1. Click the Test Extension beaker icon and click on flyout (lower right) of the icon with the page and exclamation mark (new bug). From the menu click Create bug.
 
     ![Create a new bug](images/new-bug.png)
 
@@ -89,15 +89,15 @@ In this task you will start a test session, discover a bug in the MyShuttle app 
 
     ![Log the Bug](images/log-bug.png)
 
-    {% include note.html content= "All the pages visited, notes, screenshots and other information from the test session is included as details for the Bug, so you don't have to add these details manually. You also should see a button next to the title box reading **0 Similar**. VSTS checks to see if there are bugs already logged with similar titles, therefore minimizing duplicate bugs being logged." %}
+    {% include note.html content= "All the visited pages, added notes, screenshots and other information from the test session is included as details for the Bug, so you do not have to add these details manually. You also should see a button next to the title box reading **0 Similar**. VSTS checks to see if there are bugs already logged with similar titles to minimize logging of duplicate bugs." %}
 
 1. Once the bug has been created, click the Stop button in the Test Extension toolbar to end the test session.
 
-1. Navigate to your VSTS team project. Click Work to navigate to the Work Hub. In the toolbar, enter **driver** into the Search Work Items box and press enter or click the magnifying glass icon.
+1. Navigate to your VSTS team project. Click Work to navigate to the Work Hub. In the toolbar, enter **driver** into the Search Work Items box and press enter or click the search icon.
 
     ![Search for the Bug](images/search-bug.png)
 
-1. You should see the Bug that you logged. Take a moment to look at the Repro Steps.
+1. You should see the Bug that you logged. Take a moment to review the Repro Steps.
 
     ![Bug details](images/bug-details.png)
 
@@ -109,9 +109,9 @@ In this task you will start a test session, discover a bug in the MyShuttle app 
 
 In this task you will create a branch of the code to fix the Bug. You will then checkout the branch, fix the bug and commit the code. You will then create a Pull Request to merge the fix into master and see that this triggers the CI/CD pipeline to automatically deploy the fix to the dev environment.
 
-1. Open IntelliJ if it is not already open. Open the MyShuttle2 project.
+1. Launch IntelliJ if it is not already open. Open the MyShuttle2 project.
 
-1. Click **VCS->Git->Show History** to show the Version Control panel. In the panel, click Work Items. You should see the Bug.
+1. Click **VCS -> Git -> Show History** to show the Version Control panel. In the panel, click Work Items. You should see the Bug.
 
     ![Create a branch from the Work Item](images/create-branch.png)
 
@@ -121,13 +121,13 @@ In this task you will create a branch of the code to fix the Bug. You will then 
 
     ![New branch](images/create-new-branch.png)
 
-1. The branch is created both locally and in the remote (on VSTS). The VSTS extension informs you that the new branch has been created and that it has been associated with the Bug.
+1. The branch is created both locally and in the remote (on VSTS). The VSTS extension informs you that the new branch has been created and has been associated with the Bug.
 
     ![Notifications when creating a branch](images/branch-notifications.png)
 
 1. In the project view, browse to src/main/java/com.microsoft.example/servlet and open the LoginServlet class.
 
-1. Around line 35, you will see what is causing the bug: the `totalDriverFee` is being calculated but the `driverFeeTotal` session attribute is being set to `totalFareForDriver` (this looks like a classic copy/paste error).
+1. Around line 35, you will see the cause of the bug: the `totalDriverFee` value is being calculated but the `driverFeeTotal` session attribute is being set to the `totalFareForDriver` value (seems like a classic copy/paste error).
 
     Change this line of code:
     ```java
@@ -138,35 +138,36 @@ In this task you will create a branch of the code to fix the Bug. You will then 
         session.setAttribute("driverFeeTotal", totalDriverFee);
     ```
 
-1. Commit your changes by selecting **VCS->Git->Commit File**. Enter **Fixing totals bug** as the Commit message.
+1. Commit your changes by selecting **VCS -> Git -> Commit File**. Enter **Fixing totals bug** as the Commit message.
 
 1. On the upper right of the Commit message box there is a VSTS icon. Click it to open the Work Item dialog. This dialog would allow you to associate your commit with a work item. Close the dialog by pressing Cancel.
 
-    > **Note**: In this case we don't need to associate the checkin with the Bug since the branch is already associated with the Bug.
+    > In this case we do not need to associate the checkin with the Bug since the branch is already associated with the Bug.
 
     ![Associate a work item with a commit](images/associate-commit.png)
 
-1. Hover the mouse over the Commit button and select "Commit and Push" to push the changes to VSTS. In the Push commits dialog click the Push button.
+1. Hover the mouse over the Commit button and select 
+**Commit and Push** to push the changes to VSTS. In the Push commits dialog click the Push button.
 
     ![Commit and Push](images/commit-and-push.png)
 
-1. Now that the fix has been pushed to VSTS on a branch, you can create a Pull Request. In the Code History panel click the Pull Request tab. Click the green + button to add a new Pull Request. Accept the defaults and click Create Pull Request.
+1. Now that the fix has been pushed to VSTS on a branch, you can create a Pull Request (PR). In the Code History panel click the Pull Request tab. Click the green + button to add a new Pull Request. Accept the defaults and click Create Pull Request.
 
     ![Create Pull Request](images/create-pull-request.png)
 
-1. Once the PR has been created, right-click it in the PR list and click Open in Browser. You should see that the build is running (this is the build mandated by the Branch Policy you set up earlier).
+1. Once the PR has been created, right-click on it in the PR list and click Open in Browser. You should see that the build is running (this is the build mandated by the Branch Policy you set up earlier).
 
     ![Build is running to validate the PR](images/pr-overview.png)
 
     {% include note.html content= "If there was a merge conflict, VSTS would warn you on the overview page. If there is no warning to this effect, then Git will be able to auto-merge the PR into the target branch. <br/>
 
-    You configured the release to only trigger when successful builds off the master branch are available. Since this build is not building from the master branch, these changes will not yet be deployed." %}
+    You configured the release to only trigger when successful builds off the master branch are available. Since this build has not initiated from the master branch, these changes will not yet be deployed." %}
 
 1. Click on the Files tab to open the file compare. Note the changes.
 
     ![PR File Compare](images/PR-file-compare.png)
 
-    > **Note**: You can comment on code or files in the PR and have conversations with the team throughout the review process.
+    > You can comment on the code or files in the PR and have conversations with the team throughout the review process.
 
 1. Click Approve to approve the PR.
 
@@ -176,22 +177,22 @@ In this task you will create a branch of the code to fix the Bug. You will then 
 
     ![Complete the merge](images/complete-merge.png)
 
-1. The PR completion triggers a new build off the master branch, which in turn will trigger a release. _It also transitions the Bug work item to Resolved_.
+1. The PR completion triggers a new build from the master branch, which in turn will trigger a release. _It also transitions the Bug work item state to Resolved_.
 
-1. Click on Builds to watch your build. When the build completes, you will see the unit test and code coverage results as well as SonarQube analysis and quality gates (if you have configured SonarQube integration).
+1. Click on Builds to view your build progress. When the build completes, you will see the unit test and code coverage results as well as SonarQube analysis and quality gates (if you have configured SonarQube integration).
 
-1. Click on Releases and open the latest release which should have triggered off the PR merge build completion event.
+1. Click on Releases and open the latest release which should have triggered from the PR merge build completion event.
 
 1. On the Release Summary page, you will see the linked Bug work item.
 
     ![Linked work item in Release](images/linked-bug-release.png)
 
-1. Click on commits to see the incoming commits for this release. There is the commit to fix the bug as well as the commit to merge into master.
+1. Click on Commits to view the incoming commits for this release. There is the commit to fix the bug as well as the commit to merge into master.
 
     ![Linked commits](images/linked-commits.png)
 
-1. Click on the Tests tab to see the test results. The UI tests should be passing.
+1. Click on the Tests tab to view the test results. The UI tests should be successful.
 
-1. Open the MyShuttle2 app by navigating to `http://localhost:8081/myshuttledev`. Log in again and verify that the totals column is correct and the Bug has been fixed.
+1. Launch the MyShuttle2 app by navigating to the URL `http://localhost:8081/myshuttledev`. Log in again and verify that the totals column value is correct and the Bug has been fixed.
 
     ![The bug has been fixed](images/bug-fixed.png)
