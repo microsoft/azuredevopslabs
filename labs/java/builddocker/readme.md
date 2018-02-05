@@ -7,9 +7,9 @@ folder: /labs/java/builddocker/
 comments: true
 ---
 
-In this exercise, you are going to create a Docker Registry in Azure as well as a VSTS build that will build two Docker container images and publish then to the registry. In a later lab you will configure a Release in VSTS to run the containers.
+In this exercise, you are going to create a Docker Registry in Azure as well as a VSTS build that will build two Docker container images and publish then to the registry. In a later lab you will configure a Release in VSTS to deploy and run the containers.
 
-This exercise assumes you have completed the exercises to create a Team Project and have set up the Docker private VSTS agent. You should also have set up Maven package management and have a MyShuttleCalc package in the feed. This exercise uses a team project named **jdev-labs**, though your team project name may differ.
+This exercise assumes you have completed the exercises to create a Team Project and have set up the Docker private VSTS agent. You should also set up Maven package management and have a MyShuttleCalc package in the feed. This exercise uses a team project named **jdev-labs**, though your team project name may differ.
 
 {% include note.html content= "You do not have to use the Azure container registry - you can use whatever registry you choose. You can also create an equivalent build using Jenkins." %}
 
@@ -43,7 +43,7 @@ In this task you will update the pom.xml file for the MyShuttle2 application so 
 
 1. Click on the pom.xml file.
 
-1. In the `<repositories>` element there is a reference to a Maven repo. Paste in the repository settings you got from VSTS.
+1. In the `<repositories>` element there is a reference to a Maven repo. Replace the existing value with the repository settings you got from the VSTS.
 
 1. Find the `<dependency>` with `<groupId>com.microsoft.exampledep</groupId>` and update the version number to match the version number of the MyShuttleCalc package in your package feed. This may look something like:
 
@@ -65,19 +65,19 @@ In this task you will update the pom.xml file for the MyShuttle2 application so 
 
 ### IntelliJ
 
-1. You may have to reload the Maven project to update the plugins and dependencies. You can do this by clicking **View->Tool Windows->Maven** and then clicking the reload button (the top-left icon in the Maven project view).
+1. You may have to reload the Maven project to update the plugins and dependencies. You can do this by clicking **View -> Tool Windows -> Maven** and then clicking the reload button (the top-left icon in the Maven project view).
 
     ![Refresh Maven](images/reload-maven.png)
 
-1. From the top toolbar of IntelliJ, click **Build->Build Project** and make sure there are no errors.
+1. From the top toolbar of IntelliJ, click **Build -> Build Project** and make sure there are no errors.
 
-1. Click **VCS->Commit**. Add a commit message **Updating feed settings**. Click the drop-down on the **Commit** button and select **Commit and Push**. Click **Push** on the prompt.
+1. Click **VCS -> Commit**. Add a commit message **Updating feed settings**. Click the drop-down on the **Commit** button and select **Commit and Push**. Click **Push** on the prompt.
 
     ![Commit the changes to the pom.xml file](images/commit-changes.png)
 
 ### Eclipse
 
-1. You may have to reload the Maven project to update the plugins and dependencies. You can do this by right-clicking on the `myshuttle` working set/project, then selecting **Maven -> Update Project**. Then, keep the checkbox for `myshuttle` checked and press the **OK** button.
+1. You may have to reload the Maven project to update the plugins and dependencies. You can do this by right-clicking on the `myshuttle` working set/project, then selecting **Maven -> Update Project**. Then, keep the checkbox for `myshuttle` checked and press **OK**.
 
     ![Refresh Maven](images/eclipse-update-project.png)
 
@@ -95,7 +95,7 @@ In this task you will update the pom.xml file for the MyShuttle2 application so 
 
 ## Create a VSTS Build to Build Docker Images
 
-In this task you will create a VSTS build definition that will create two containers (a mysql database container as well as a tomcat container for running the MyShuttle2 site). The build will publish the containers to the Azure Container Registry you just created.
+In this task you will create a VSTS build definition that will create two containers (a MySql database container as well as a Tomcat container for running the MyShuttle2 site). The build will publish the containers to the Azure Container Registry that you just created.
 
 1. Connect to the virtual machine with the user credentials which you specified when creating the VM in Azure.
 
@@ -103,7 +103,7 @@ In this task you will create a VSTS build definition that will create two contai
 
 1. Click on the **jdev-labs** project and navigate to the **Build & Release** Hub.
 
-1. Click on Builds to go the Builds view. Click on **+ New** to create a new Build definition.
+1. Click on Builds to go to the Builds view. Click on **+ New** to create a new Build definition.
 
     ![Create a new Build Definition](images/new-build-def.png)
 
@@ -154,7 +154,7 @@ In this task you will create a VSTS build definition that will create two contai
     | Parameter | Value | Notes |
     | --------------- | ---------------------------- | ----------------------------------------------------------- |
     | Container Registry Type | Azure Container Registry | This is to connect to the Azure Container Registry you created earlier |
-    | Azure Subscription | Your Azure subscription | The subscription that contains your registry |
+    | Azure Subscription | Your Azure subscription | The subscription that contains your Azure registry |
     | Azure Container Registry | Your registry | Select the Azure Container registry you created earlier |
     | Additional Image Tags | `$(Build.BuildNumber)` | Sets a unique tag for each instance of the build |
     | Include Latest Tag | Check (set to true) | Adds the `latest` tag to the images produced by this build |
@@ -169,15 +169,15 @@ In this task you will create a VSTS build definition that will create two contai
 
     ![Push Service Images Docker Compose task](images/docker-compose-push-task.png)
 
-1. Click on Triggers. Enable the Continuous Integration trigger. Set the branch filter to * to trigger off commits to any branch.
+1. Click on the Triggers. Enable the Continuous Integration trigger. Set the branch filter to * to trigger off commits to any branch.
 
     ![Enable the CI trigger](images/build-trigger.png)
 
-1. On the options page, set the queue to `default` so that your dockerized agent is the agent to run this build.
+1. On the Options page, set the queue to `default` so that your dockerized agent is the agent to run this build.
 
-1. Click the **Save and Queue** button to save and queue this build. Click the Queue button in the dialog and then click the link in the green bar that appears at the top to go to the live logs for the build run.
+1. Click Save and Queue to save and queue this build. Click the Queue button in the dialog and then click the link in the green bar that appears at the top to view the live logs for the build run.
 
-1. You should see a successful build. Click on the build number to navigate to the summary page.
+1. You should see a successful build in a short while. Click on the build number to navigate to the Summary page.
 
     ![Successful build](images/build-success.png)
 
