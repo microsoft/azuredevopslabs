@@ -1,4 +1,10 @@
-
+---
+title: Managing Delivery Plans with Visual Studio Team Services (VSTS)
+layout: page
+sidebar: vsts
+permalink: /labs/vsts/deliveryplans/
+folder: /labs/vsts/deliveryplans/
+---
 
 ## Overview
 
@@ -8,117 +14,117 @@ Delivery Plans provides an easier way to see work across teams and projects. Ava
 
 ## Pre-requisite
 
-- You will need to install the Delivery Plan extension to your VSTS account in order to continue this lab
+- You need to install the Delivery Plan extension to your VSTS account in order to continue this lab
 
 ## Installing delivery plans extension
 
-1. Go to <a href="https://marketplace.visualstudio.com">Visual Studio MarketPlace</a>
+1. Go to [Visual Studio MarketPlace](https://marketplace.visualstudio.com)
 
-   <img src="images/15.png" />
+   ![vs_marketplace](images/vs_marketplace.png)
 
 2. Search for **Delivery Plans** in the search box and click on **install**
 
-   <img src="images/16.png"/>
+   ![marketplace_deliveryplans](images/marketplace_deliveryplans.png)
 
-   <img src="images/17.png"/>
+   ![install](images/install.png)
 
 3. Select the account to which you want to install the extension and click **Install** to proceed with the installation.
 
-   <img src="images/18.png"/>
+   ![install2](images/install2.png)
 
 ## Creating a Delivery Plan
 
 1. From your VSTS account, go to **Plans** page that appears under **Work** hub.
 
-   <img src="images/1.png" />
+   ![create_deliveryplan](images/create_deliveryplan.png)
 
 2. To add a plan, click **New Plan** from the Plans page
 
-   <img src="images/2.png" />
+   ![create_deliveryplan2](images/create_deliveryplan2.png)
 
-   >All users, except users assigned Stakeholder access, have permissions to create a plan and manage the plans they create. 
+   {% include tip.html content= "All users, except users assigned Stakeholder access, have permissions to create a plan and manage the plans they create." %}
 
 3. Provide a name for the plan **MyHealth Clinic Release 1**. Select the project, team and the backlog to appear in your plan.
 
-   <img src="images/3.png" />
-   
+   ![create_deliveryplan3](images/create_deliveryplan3.png)
+
 4. Click on **create**. You should now see the plan which is created.
 
-   <img src="images/4.png" />
+   ![deliveryplan_overview](images/deliveryplan_overview.png)
 
 ## Customizing the plan
 
-Once you've defined a plan, you can further customize it. 
+Once you've defined a plan, you can further customize it.
 
 1. Click the  gear icon to open the Settings dialog.
 
-   <img src="images/5.png" />
+   ![deliveryplan_settings](images/deliveryplan_settings.png)
 
 2. You can customize the plan by editing the teams, setting field criteria, adding markers etc.
 
    Here, we add the **Effort** field criteria. Only work items that contain the effort greater than 5 will appear in the Delivery Plan.
 
-   <img src="images/6.png" />
+   ![add_effort](images/add_effort.png)
 
    Now you will see all backlog items with effort greater than 5.
 
-   <img src="images/20.png" />
+   ![backlogs](images/backlogs.png)
 
 3. You can add multiple teams and view the backlog items. Go to **Teams** tab from the settings page and click on **Add Team** to add new team. Select the project, team and backlog level as shown and click on save.
 
-   <img src="images/21.png" />
+   ![add_teams](images/add_teams.png)
 
    You will see multiple teams in your plan now.
 
-   <img src="images/22.png" />
+   ![teams_overview](images/teams_overview.png)
 
 4. Markers help you to track key dates and events. To set a marker, open the **Markers page**, specify a date and select a color.
 
-   <img src="images/7.png" />
+   ![markers](images/markers.png)
 
-   Markers appear on the plan as shown: 
+   Markers appear on the plan as shown:
 
-   <img src="images/8.png" />
+   ![markers_overview](images/markers_overview.png)
 
 5. To configure the information shown on cards, click on the gear icon and go to **Fields** under the cards section. Add additional fields if required. For example add a field **AreaPath**. The work items show the information related to the areapath that belongs to.
 
-   <img src="images/9.png" />
+   ![add_fields](images/add_fields.png)
 
    You can now see the work items along with the area path on the cards as shown.
 
-   <img src="images/23.png">
+   ![areapath_on_cards](images/areapath_on_cards.png)
 
-6. To quickly change the cards to only show their Title, enter the keyboard shortcut **T**. This will hide all other fields, as shown in the following image, the Assigned to field no longer appears. 
+6. To quickly change the cards to only show their Title, enter the keyboard shortcut **T**. This will hide all other fields, as shown in the following image, the Assigned to field no longer appears.
 
-   <img src="images/10.png" />
+   ![keyboard_shortcuts](images/keyboard_shortcuts.png)
 
 7. As changes occur to the schedule, you can update the iteration for a backlog item by moving a card to a different iteration. This will help to drive alignment across your organization.
 
-   <img src="images/11.png" />
+   ![iteration_updates](images/iteration_updates.png)
 
 8. To gain a summary view of work that is schedule, collapse all teams. You can then more easily look for gaps in the forward forecast.
 
    For example, here you can see the count of Backlogs for MHC Team for the next 3 sprints. You can collapse/expand team rows by clicking the team name or the sprint name.
 
-   <img src="images/12.png" />
+   ![backlogs_count](images/backlogs_count.png)
 
 9. Delivery Plans show the scheduled work items by sprint (iteration path) of selected teams against a calendar view to ensure your teams are aligned with your organizational goals.
 
    For example, here you can see the features and backlogs of multiple teams that are delivered and are in progress states. This gives the teams heads up as to how many features/backlogs are delivered in the current sprint.
 
-   <img src="images/19.png" /> 
+   ![teams_backlogs](images/teams_backlogs.png)
 
 ## Interactive elements of plans
 
 Each team's backlog specified in a Delivery Plan appears as a row within the plan view. When collapsed, a roll-up of the backlog items shows. When expanded, a card for each backlog item appears, organized by their assigned iteration.
 
-<img src="images/13.png" />
+![interactive_elements](images/interactive_elements.png)
 
 In the following example, MHC Team backlogs expanded, 1 item was scheduled for delivery in Sprint 1.
 
-<img src="images/14.png" />
+![backlogs_overview](images/backlogs_overview.png)
 
-You can also quickly see that: 
+You can also quickly see that:
 
 - MHC Team is currently working on Sprint 1 deliverables
 
@@ -127,9 +133,3 @@ You can also quickly see that:
 - The team expects to deliver the backlogs shown by the cards
 
 A benefit of Delivery Plans is to view multiple teams across your projects that you care about.
-
-
-
-
-
-
