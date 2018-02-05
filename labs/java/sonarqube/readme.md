@@ -9,15 +9,15 @@ comments: true
 
 In this exercise, you are going to configure integration between the build system and SonarQube. SonarQube is a well established technical debt management system. Keeping tabs on your technical debt gives you objective measures that you can use to make informed decisions about maintenance, refactoring and enhancements to your code base.
 
-This exercise assumes you have completed the exercises to create a Team Project and have set up the Docker private VSTS agent. You should also have created a VSTS Team Build for MyShuttle2. This exercise uses a team project named **jdev**, though your team project name may differ.
+This exercise assumes you have completed the exercises to create a Team Project and have set up the Docker private VSTS agent. You should also have created a VSTS Team Build for MyShuttle2. This exercise uses a team project named **jdev-labs**, though your team project name may differ.
 
-> **Note**: SonarQube is running in a docker container on your VM. It is only accessible from within the VM. It is therefore not secure - this is not a recommended production configuration.
+{% include note.html content= "SonarQube is running in a docker container on your VM. It is only accessible from within the VM. It is therefore not secure - this is not a recommended production configuration." %}
 
 ## Create a SonarQube Endpoint in VSTS
 
-In this task you will create a Generic SonarQube Endpoint in VSTS. This endpoint abstracts authentication from the build tasks themselves. After obtaining a token from SonarQube, you will create the endpoint in VSTS.
+In this task you will create a Generic SonarQube Endpoint in VSTS. This endpoint abstracts authentication from the build tasks. After obtaining a token from SonarQube, you will create the endpoint in VSTS.
 
-1. Connect to the virtual machine with the user credentials which you specified when creating the VM in Azure.
+1. Connect to the virtual machine using the user credentials specified during the creation of the VM in Azure.
 
 1. Open Chrome and browse to `http://localhost:9000` to open SonarQube. Click on Login.
 
@@ -29,13 +29,13 @@ In this task you will create a Generic SonarQube Endpoint in VSTS. This endpoint
 
 1. Click on the `jdev` team project to navigate to it.
 
-1. Click on the gear icon and select Services to navigate to the service endpoint configuration page. Click "+ New Service Endpoint" and select Generic from the list of options. Enter the following information and click OK.
+1. Click on the gear icon and select Services to navigate to the service endpoint configuration page. Click **+ New Service Endpoint** and select Generic from the list of options. Enter the following information and click OK.
 
     | Property | Value | Notes |
     | --------------- | ---------------------------- | ----------------------------------------------------------- |
     | Connection name | `Azure VM SonarQube` | Display name for the endpoint |
-    | Server URL | `http://10.0.0.4:9000` | The URL for the SonarQube server. Use the Azure internal network IP address so that the build agent running in the Docker container can reach Sonarqube. |
-    | User name | `admin` | This could be anything - it won't be used for SonarQube since the token is sufficient |
+    | Server URL | `http://10.0.0.4:9000` | The URL for the SonarQube server. Use the Azure internal network IP address so that the build agent running in the Docker container can reach Sonarqube |
+    | User name | `admin` | This could be anything - it will not be used for SonarQube since the token is sufficient |
     | Password/Token Key | `admin` | The default password for admin user in SonarQube |
 
     ![Create the Sonarqube Endpoint](images/create-endpoint.png)
@@ -48,7 +48,7 @@ In this task you will create a SonarQube project.
 
 1. Click on Administration in the toolbar and then click on the Projects tab.
 
-1. Click the Create Project button.
+1. Click **Create Project**.
 
     ![Go to projects](images/goto-projects.png)
 
@@ -60,17 +60,13 @@ In this task you will create a SonarQube project.
 
 In this task you will modify the MyShuttle2 build to integrate with SonarQube.
 
-1. In VSTS in your browser, click on Build & Release and then Builds to view your builds. Click on the MyShuttle2 build. Click on the "..." to the right of the build definition, then click the "Edit" button.
+1. In VSTS, click on **Build & Release** and then **Builds** to view your builds. Click on the MyShuttle2 build. Click on  **...** to the right of the build definition, then click Edit.
 
     ![Edit build definition](images/edit-builddefinition.png)
 
-1. Click on the Maven task.
+1. Click on the Maven task and scroll down to the Code Analysis section.
 
-1. Scroll down to the Code Analysis section.
-
-1. Check the "Run SonarQube Analysis" checkbox
-
-1. Configure the remaining settings as follows:
+1. Select the **Run SonarQube Analysis** option and configure the remaining settings as follows:
 
     | Parameter | Value | Notes |
     | --------------- | ---------------------------- | ----------------------------------------------------------- |
@@ -103,7 +99,7 @@ In this task you will update a quality gate in SonarQube and see that failing th
 
     ![Add a new condition to the SonarQube Way quality gate](images/add-condition.png)
 
-1. Enter 50 for the Warning value and 30 for the Error value and click add.
+1. Enter **50** for the Warning value and **30** for the Error value and click Add.
 
     ![Update the Quality Gate](images/config-coverage-fail.png)
 
@@ -113,7 +109,7 @@ In this task you will update a quality gate in SonarQube and see that failing th
 
     ![Failing quality gates fails the build](images/quality-gate-fail.png)
 
-1. Go back to SonarQube and edit the Quality Gate that you just modified. Clear the Error value so that you only get a warning if the coverage < 50% instead of failing the build, then click the update button. Additionally, under the Coverage on New Code metric, move the 80% to a warning message instead of error and update. In the Reliability Rating on New Code metric, change the error threshold from A to blank (click on the "X" next to the A), then click on update.
+1. Go back to SonarQube and edit the Quality Gate that you just modified. Clear the Error value so that you only get a warning if the coverage < 50% instead of failing the build. Click Update. Additionally, under the Coverage on New Code metric, set the 80% value to a warning message instead of error and click Update. In the Reliability Rating on New Code metric, change the error threshold from A to blank (click on the "X" next to the A), then click Update.
 
     ![Update Quality Gates in SonarQube](images/update-qualitygates.png)
 
