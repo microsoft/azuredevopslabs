@@ -9,19 +9,19 @@ comments: true
 
 In this exercise, you are going to create a Docker Registry in Azure as well as a VSTS build that will build two Docker container images and publish then to the registry. In a later lab you will configure a Release in VSTS to run the containers.
 
-This exercise assumes you have completed the exercises to create a Team Project and have set up the Docker private VSTS agent. You should also have set up Maven package management and have a MyShuttleCalc package in the feed. This exercise uses a team project named **jdev**, though your team project name may differ.
+This exercise assumes you have completed the exercises to create a Team Project and have set up the Docker private VSTS agent. You should also have set up Maven package management and have a MyShuttleCalc package in the feed. This exercise uses a team project named **jdev-labs**, though your team project name may differ.
 
-> You do not have to use the Azure container registry - you can use whatever registry you choose. You can also create an equivalent build using Jenkins.
+{% include note.html content= "You do not have to use the Azure container registry - you can use whatever registry you choose. You can also create an equivalent build using Jenkins." %}
 
 ## Create a Docker Container Registry in Azure
 
-1. Open a browser and navigate to the [Azure Portal](https://portal.azure.com)
+1. Open a browser and navigate to the [Azure Portal](https://portal.azure.com){:target="_blank"}
 
-1. Click the + icon in the upper left of the menu, type "azure container registry" and press Enter.
+1. Click the + icon in the upper left of the menu, type **azure container registry** and press Enter.
 
     ![New Azure Container Registry](images/new-registry.png)
 
-1. Click on "Azure Container Registry" and then click the Create button from the Azure Container Registry item blade.
+1. Click on **Azure Container Registry** and then click the Create button from the Azure Container Registry item blade.
 
     ![Click Create](images/start-acr-wizard.png)
 
@@ -35,7 +35,7 @@ This exercise assumes you have completed the exercises to create a Team Project 
 
 In this task you will update the pom.xml file for the MyShuttle2 application so that it can consume the MyShuttleCalc package from the Maven package feed.
 
-1. In Chrome, navigate to your VSTS account and team project. Click on the Build & Release Hub, click on Packages, and select the Maven feed. Click on "Connect to Feed". Click on the copy button in the section labeled `Add this feed to your project pom.xml inside the <repositories> tag`.
+1. In Chrome, navigate to your VSTS account and team project. Click on the **Build & Release** Hub, click on **Packages**, and select the Maven feed. Click on **Connect to Feed**. Click on the copy button in the section labeled `Add this feed to your project pom.xml inside the <repositories> tag`.
 
     ![Get the package repository settings from VSTS](images/maven-packagefeed-settings.png)
 
@@ -65,31 +65,31 @@ In this task you will update the pom.xml file for the MyShuttle2 application so 
 
 ### IntelliJ
 
-1. You may have to reload the Maven project to update the plugins and dependencies. You can do this by clicking `View->Tool Windows->Maven` and then clicking the reload button (the top-left icon in the Maven project view).
+1. You may have to reload the Maven project to update the plugins and dependencies. You can do this by clicking **View->Tool Windows->Maven** and then clicking the reload button (the top-left icon in the Maven project view).
 
     ![Refresh Maven](images/reload-maven.png)
 
-1. From the top toolbar of IntelliJ, click Build->Build Project and make sure there are no errors.
+1. From the top toolbar of IntelliJ, click **Build->Build Project** and make sure there are no errors.
 
-1. Click VCS->Commit. Add a commit message "Updating feed settings". Click the drop-down on the **Commit** button and select **Commit and Push**. Click **Push** on the prompt.
+1. Click **VCS->Commit**. Add a commit message **Updating feed settings**. Click the drop-down on the **Commit** button and select **Commit and Push**. Click **Push** on the prompt.
 
     ![Commit the changes to the pom.xml file](images/commit-changes.png)
 
 ### Eclipse
 
-1. You may have to reload the Maven project to update the plugins and dependencies. You can do this by right-clicking on the `myshuttle` working set/project, then selecting Maven -> Update Project. Then, keep the checkbox for `myshuttle` checked and press the **OK** button.
+1. You may have to reload the Maven project to update the plugins and dependencies. You can do this by right-clicking on the `myshuttle` working set/project, then selecting **Maven -> Update Project**. Then, keep the checkbox for `myshuttle` checked and press the **OK** button.
 
     ![Refresh Maven](images/eclipse-update-project.png)
 
-1. Right-click on the `myshuttle` working set/project, then select Run As -> Maven build.
+1. Right-click on the `myshuttle` working set/project, then select **Run As -> Maven build**.
 
     ![Build Maven](images/eclipse-maven-build.png)
 
-    In the configuration window, type in "compile" as the Maven Goal then press the Run button.
+    In the configuration window, type in **compile** as the Maven Goal then press the Run button.
 
     ![Build Maven](images/eclipse-maven-configuration.png)
 
-    >Ensure that you have already copied the settings.xml file from MyShuttleCalc to the .m2 folder before you run this. Otherwise, you can specify the settings.xml file in MyShuttle2 by clicking on the "File System..." button to the right of the User settings field in the configuration window to reference a settings file other than in the default .m2 folder.
+    {% include important.html content= "Ensure that you have already copied the **settings.xml** file from **MyShuttleCalc** to the **.m2** folder before you run this. Otherwise, you can specify the settings.xml file in MyShuttle2 by clicking on the **File System...** button to the right of the User settings field in the configuration window to reference a settings file other than in the default .m2 folder." %}
 
 1. Commit and push your changes through Team Explorer Everywhere.
 
@@ -101,15 +101,15 @@ In this task you will create a VSTS build definition that will create two contai
 
 1. Open Chrome and browse to `http://<youraccount>.visualstudio.com` (where `youraccount` is the account you created in VSTS).
 
-1. Click on the `jdev` project and navigate to the "Build & Release" Hub.
+1. Click on the **jdev-labs** project and navigate to the **Build & Release** Hub.
 
-1. Click on Builds to go the Builds view. Click on "+ New" to create a new Build definition.
+1. Click on Builds to go the Builds view. Click on **+ New** to create a new Build definition.
 
     ![Create a new Build Definition](images/new-build-def.png)
 
-1. Type "maven" into the search box. Select the Maven template and click Apply.
+1. Type **maven** into the search box. Select the Maven template and click Apply.
 
-1. Change the name of the build to MyShuttle2.
+1. Change the name of the build to **MyShuttle2**.
 
 1. On the Get Sources step, ensure that the repo is `MyShuttle2`, and the branch is `master`. Toggle the Advanced Settings toggle and change `Tag Sources` to "On Success".
 
@@ -125,7 +125,7 @@ In this task you will create a VSTS build definition that will create two contai
 
     ![Maven task settings](images/vsts-maven.png)
 
-1. Click on the "Copy Files" task. Set the Contents property to:
+1. Click on the **Copy Files** task. Set the Contents property to:
 
     ```java
     target/myshuttledev*.*
@@ -143,7 +143,7 @@ In this task you will create a VSTS build definition that will create two contai
     - **Release yml files** - for docker operations
     - **Release xml files** - test configuration files
 
-1. Under the list of tasks, click "Add Task". Type "docker" into the search box and then click the Apply button next to the Docker Compose task.
+1. Under the list of tasks, click **Add Task**. Type **docker** into the search box and then click the Apply button next to the Docker Compose task.
 
     ![Add a Docker Compose task](images/add-docker-compose.png)
 
@@ -165,7 +165,7 @@ In this task you will create a VSTS build definition that will create two contai
 
 1. Position the new task so that it is below the Build Images task.
 
-1. Update the action to "Push services".
+1. Update the action to **Push services**.
 
     ![Push Service Images Docker Compose task](images/docker-compose-push-task.png)
 
@@ -175,7 +175,7 @@ In this task you will create a VSTS build definition that will create two contai
 
 1. On the options page, set the queue to `default` so that your dockerized agent is the agent to run this build.
 
-1. Click the "Save and Queue" button to save and queue this build. Click the Queue button in the dialog and then click the link in the green bar that appears at the top to go to the live logs for the build run.
+1. Click the **Save and Queue** button to save and queue this build. Click the Queue button in the dialog and then click the link in the green bar that appears at the top to go to the live logs for the build run.
 
 1. You should see a successful build. Click on the build number to navigate to the summary page.
 

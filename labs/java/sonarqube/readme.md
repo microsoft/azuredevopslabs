@@ -9,9 +9,9 @@ comments: true
 
 In this exercise, you are going to configure integration between the build system and SonarQube. SonarQube is a well established technical debt management system. Keeping tabs on your technical debt gives you objective measures that you can use to make informed decisions about maintenance, refactoring and enhancements to your code base.
 
-This exercise assumes you have completed the exercises to create a Team Project and have set up the Docker private VSTS agent. You should also have created a VSTS Team Build for MyShuttle2. This exercise uses a team project named **jdev**, though your team project name may differ.
+This exercise assumes you have completed the exercises to create a Team Project and have set up the Docker private VSTS agent. You should also have created a VSTS Team Build for MyShuttle2. This exercise uses a team project named **jdev-labs**, though your team project name may differ.
 
-> **Note**: SonarQube is running in a docker container on your VM. It is only accessible from within the VM. It is therefore not secure - this is not a recommended production configuration.
+{% include note.html content= "SonarQube is running in a docker container on your VM. It is only accessible from within the VM. It is therefore not secure - this is not a recommended production configuration." %}
 
 ## Create a SonarQube Endpoint in VSTS
 

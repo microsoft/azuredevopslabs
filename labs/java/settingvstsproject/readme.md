@@ -7,7 +7,7 @@ folder: /labs/java/settingvstsproject/
 comments: true
 ---
 
-##Overview
+## Overview
 
 This exercise will walk you through the steps to creating your Visual Studio Team Services (VSTS)  project.
 
@@ -15,12 +15,11 @@ This exercise will walk you through the steps to creating your Visual Studio Tea
 
 1. Start the Firefox or Chrome browser.
 
-1. Login to your Team Services account - `https://{your account name}.visualstudio.com`. If you do not have a VSTS account, you can sign up one for free from [here](https://www.visualstudio.com/team-services/)
+1. Login to your Team Services account - `https://{your account name}.visualstudio.com`. If you do not have a VSTS account, you can sign up one for free from [here](https://www.visualstudio.com/team-services/){:target="blank"}
 
-![Sign up for a VSTS Account](images/newaccount.png)
+   ![Sign up for a VSTS Account](images/newaccount.png)
 
-Creating a new account is typically fast and can take as little as a few seconds to complete.   
-
+   Creating a new account is typically fast and can take as little as a few seconds to complete.
 
 ## Generating a VSTS Personal Access Token (PAT)
 
@@ -28,7 +27,7 @@ In this task you will generate a Personal access token for yourself. PATs essent
 
 {% include tip.html content="If you already have a PAT, you can skip this step and use your existing PAT (assuming it has the correct scopes)" %}
 
-1. On your VSTS page, in the upper right, click on your profile image and click **Security**
+1. On your VSTS page, in the upper right, click on your profile image and click **Security**.
 
     ![Click on Security](images/click-security.png)
 
@@ -44,37 +43,35 @@ In this task you will generate a Personal access token for yourself. PATs essent
 
 ## Creating your project
 
-Next, you need to create a project. You can create the project manually or using **VSTS Demo Generator**, a tool that helps you create team projects on your VSTS account with sample content that include source code, work items,iterations, service endpoints, build and release definitions based on the template you choose during the configuration
+Next, you need to create a project. You can create the project manually or using **VSTS Demo Generator**, a tool that helps you create team projects on your VSTS account with sample content that include source code, work items,iterations, service endpoints, build and release definitions based on the template you choose during the configuration.
 
 ### Provisioning a project using the VSTS Demo Generator
 
-
-1.Open [VSTS Demo Generator](https://vstsdemogenerator.azurewebsites.net){:target="blank"} 
+1. Open [VSTS Demo Generator](https://vstsdemogenerator.azurewebsites.net){:target="blank"}
 
 1. Enter your account name and the PAT you saved earlier. Click **Verify and Continue**
 
    ![vstsdemogen](images/vstsdemogen.png)
 
-1. Use **MyShuttle2** for the template. Provide a Project Name (**jdev-labs** in this lab) and select **Create Project**. 
+1. Use **MyShuttle2** for the template. Provide a Project Name (**jdev-labs** in this lab) and select **Create Project**.
 
 1. After the project is provisioned, click the URL to navigate to the project.
 
    ![create_project](images/create_project.png)
 
-
 ### Creating a project manually
 
-If you have not provisioned the project using the VSTS demo generator in the previous exercise,you can follow the steps in this exercise to manually create a project and import code from a GitHub repository
+If you have not provisioned the project using the VSTS demo generator in the previous exercise, you can follow the steps in this exercise to manually create a project and import code from a GitHub repository.
 
-1. From the start page. Select **New Project**
+1. From the start page. Select **New Project**.
 
-1. Provide a Project Name (**jdev-labs** in this lab). Select **Scrum** for the **Work item process** and click **Create**
+1. Provide a Project Name (**jdev-labs** in this lab). Select **Scrum** for the **Work item process** and click **Create**.
 
     ![New Project](images/newproject.png)
 
 1. Click on the `jdev-labs` team project to navigate to it. Click on Code in the blue toolbar at the top to open the Code Hub.
 
-1. Click on the repo drop-down in the upper left (in the grey toolbar) and select **Import repository**
+1. Click on the repo drop-down in the upper left (in the grey toolbar) and select **Import repository**.
 
     ![Import a repository in the Code Hub](images/import-repo.png)
 
@@ -84,7 +81,7 @@ If you have not provisioned the project using the VSTS demo generator in the pre
 
 1. After a few moments, the code will be imported.
 
-1. There is one more repository you need to import - "**MyShuttleCalc**". Repeat the same steps.  Click on the repo drop-down in the upper left (in the grey toolbar) and select **New repository**
+1. There is one more repository you need to import - "**MyShuttleCalc**". Repeat the same steps.  Click on the repo drop-down in the upper left (in the grey toolbar) and select **New repository**.
 
     ![Import a repository in the Code Hub](images/import-repo.png)
 
@@ -94,6 +91,6 @@ If you have not provisioned the project using the VSTS demo generator in the pre
 
 1. Wait for the import to complete.
 
-  {% include note.html content="It is not necessary to clone GitHub repos into VSTS. VSTS will work just fine with GitHub (or other Git hoster) repos. However, some linkages from source code to other aspects of the DevOps pipeline (such as work items, builds or releases) work best if the code is in VSTS" %}
+   {% include note.html content="It is not necessary to clone GitHub repos into VSTS. VSTS will work just fine with GitHub (or other Git hoster) repos. However, some linkages from source code to other aspects of the DevOps pipeline (such as work items, builds or releases) work best if the code is in VSTS" %}
 
-You have now created the project and ready to move to the next exercise [**Setting up a CI/CD private agent** ](../dockerimage/)
+You have now created the project and ready to move to the next exercise [**Setting up a CI/CD private agent**](../dockerbuildagent/)

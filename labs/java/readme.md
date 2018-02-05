@@ -6,9 +6,9 @@ permalink: /labs/java/
 folder: /labs/java/
 comments: true
 ---
-![](images/all_logo.png)
+![all_logo](images/all_logo.png)
 
-[Visual Studio Team Services (VSTS)](https://www.visualstudio.com/products/visual-studio-team-services-vs) and [Team Foundation Server (TFS)](https://www.visualstudio.com/tfs/) provide an integrated set of services and tools to manage your software projects, from planning and development through testing and deployment to speed the development and delivery of your software applications across platforms, including iOS, Android, Java, Linux or Windows.
+[Visual Studio Team Services (VSTS)](https://www.visualstudio.com/products/visual-studio-team-services-vs){:target="_blank"} and [Team Foundation Server (TFS)](https://www.visualstudio.com/tfs/){:target="_blank"} provide an integrated set of services and tools to manage your software projects, from planning and development through testing and deployment to speed the development and delivery of your software applications across platforms, including iOS, Android, Java, Linux or Windows.
 
 ## Overview  of the Java Hands-on-Lab
 
@@ -24,15 +24,15 @@ comments: true
 
 ## Get the accompanying Virtual Machine
 
-![](images/nwc_logo.png)
+![nwc_logo](images/nwc_logo.png)
 
-Our partner NorthWest Cadence has built a virtual machine image that is pre-configured with all the software you require to run through the labs. You can find instructions on provisioning and connecting to the virtual machine [here.](https://github.com/nwcadence/java-dev-vsts)
+Our partner NorthWest Cadence has built a virtual machine image that is pre-configured with all the software you require to run through the labs. You can find instructions on provisioning and connecting to the virtual machine [here.](https://github.com/nwcadence/java-dev-vsts){:target="_blank"}
 
 {% include important.html content="The image and the accompanying hand-on-labs is for technical audience. As such, familiarity with Visual Studio Team Services, Java and Linux operating system would be preferred although it is not a strict prerequisite" %}
 
 ## Hands-on Labs
 
-The labs should be followed in the following order, though there are some equivalent labs that allow you a "choose your adventure" experience:
+The labs should be followed in the following order, though there are some equivalent labs that allow you a **choose your adventure** experience:
 
 <table width="100%">
    <thead>

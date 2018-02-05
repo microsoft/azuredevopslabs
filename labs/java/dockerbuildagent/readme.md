@@ -9,10 +9,9 @@ comments: true
 
 In this exercise, you are going to configure a private build agent that runs in a Docker container.
 
-This exercise assumes you have completed the exercises to create a Team Project. This exercise uses a team project named **jdev**, though your team project name may differ.
+This exercise assumes you have completed the exercises to create a Team Project. This exercise uses a team project named **jdev-labs**, though your team project name may differ.
 
-> **Note**: It is not necessary to run the VSTS agent in a container - but it is convenient to do so and means that you don't have to install any other prerequisites on the machine running the container, since all the prerequisites are inside the container.
-
+{% include note.html content= "It is not necessary to run the VSTS agent in a container - but it is convenient to do so and means that you don't have to install any other prerequisites on the machine running the container, since all the prerequisites are inside the container." %}
 
 ## Starting a VSTS Agent Container using Docker
 
@@ -32,7 +31,7 @@ In this task you will start a VSTS build agent container using Docker. This cont
     - _account_ is your VSTS account name (the bit before .visualstudio.com)
     - _pat_ is your PAT
 
-    You should see a message indicating "Listening for Jobs":
+    You should see a message indicating **Listening for Jobs**:
 
     ![The agent container running](images/agent-container-running.png)
 
