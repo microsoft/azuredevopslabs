@@ -33,7 +33,7 @@ In this task you will generate a Personal access token for yourself. PATs essent
 
 1. On the Personal access tokens page, click **Add**. Enter "java" (or whatever you want) for the *Description*. Scroll to the bottom of the page and click **Create token**.
 
-1. When the token is created, make a note of it as it cannot viewed again. Copy it from the browser into the clipboard.
+1. When the token is created, make a note of it as it cannot be viewed again. Copy it from the browser into the clipboard.
 
 1. Click on the Visual Studio Code icon in the toolbar to open Visual Studio Code.
 
