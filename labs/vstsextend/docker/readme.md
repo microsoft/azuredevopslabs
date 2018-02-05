@@ -85,9 +85,9 @@ The below diagram details the VSTS DevOps workflow with Docker:
 
 ## Setting up the VSTS Project
 
-1. Use the [VSTS Demo Generator](https://vstsdemogenerator.azurewebsites.net/?name=PartsUnlimited) to provision the team project on the VSTS account.
+1. Use the [VSTS Demo Generator](https://vstsdemogenerator.azurewebsites.net/?Name=Docker&TemplateId=77363) to provision the team project on the VSTS account.
 
-   > **VSTS Demo Generator** helps you create team projects on your VSTS account with sample content that include source code, work items,iterations, service endpoints, build and release definitions based on the template you choose during the configuration. 
+   > **VSTS Demo Generator** helps you create team projects on your VSTS account with sample content that include source code, work items,iterations, service endpoints, build and release definitions based on the template you choose during the configuration.
 
    ![VSTS Demo Generator](images/VSTSDemogenerator.png)
 

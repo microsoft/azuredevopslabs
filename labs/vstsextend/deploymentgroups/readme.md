@@ -18,7 +18,7 @@ The Deployment Group installs a deployment agent on each of the target servers i
 
 ### What's covered in this lab
 
-This lab covers the configuration of the deployment groups and details how the deployment groups could be used in VSTS Release management. 
+This lab covers the configuration of the deployment groups and details how the deployment groups could be used in VSTS Release management.
 
 ### Prerequisites for the lab
 
@@ -64,9 +64,9 @@ The following resources will be provisioned on the Azure using an ARM template:
 
 ## Setting up the VSTS team project
 
-1. Use the [VSTS Demo Generator](https://vstsdemogenerator.azurewebsites.net/?name=PartsUnlimited) to provision the team project on the VSTS account.
+1. Use the [VSTS Demo Generator](https://vstsdemogenerator.azurewebsites.net/?Name=deploymentgroups&TemplateId=77368) to provision the team project on the VSTS account.
 
-   > **VSTS Demo Generator** helps you create team projects on your VSTS account with sample content that include source code, work items,iterations, service endpoints, build and release definitions based on the template you choose during the configuration. 
+   > **VSTS Demo Generator** helps you create team projects on your VSTS account with sample content that include source code, work items,iterations, service endpoints, build and release definitions based on the template you choose during the configuration.
 
    ![VSTS Demo Generator](images/vstsdemogen.png)
 

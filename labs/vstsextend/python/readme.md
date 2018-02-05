@@ -30,7 +30,7 @@ This lab shows how to deploy a **Python** application to **Azure App Service** f
 
 ## Setting Up the VSTS Project
 
-1. Use the [VSTS Demo Generator](https://vstsdemogenerator.azurewebsites.net/?name=Python&templateid=77369){:target="_blank"} to provision a Python project on your VSTS account.
+1. Use the [VSTS Demo Generator](https://vstsdemogenerator.azurewebsites.net/?Name=Python&TemplateId=77369){:target="_blank"} to provision a Python project on your VSTS account.
 
    > **VSTS Demo Generator** helps you create team projects on your VSTS account with sample content that include source code, work items,iterations, service endpoints, build and release definitions based on the template you choose during the configuration.
 

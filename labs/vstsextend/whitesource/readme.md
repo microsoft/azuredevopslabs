@@ -36,9 +36,9 @@ Team Services integration with WhiteSource Bolt will enable you to:
 
 ## Setting up the VSTS project
 
-1. Use [VSTS Demo Generator](https://vstsdemogenerator.azurewebsites.net/?name=WhiteSource%20Bolt&templateid=77362){:target="_blank"} to provision the WhiteSource project on your VSTS account.
+1. Use [VSTS Demo Generator](https://vstsdemogenerator.azurewebsites.net/?Name=WhiteSource%20Bolt&TemplateId=77362){:target="_blank"} to provision the WhiteSource project on your VSTS account.
 
-   > **VSTS Demo Generator** helps you create team projects on your VSTS account with sample content that include source code, work items,iterations, service endpoints, build and release definitions based on the template you choose during the configuration. 
+   > **VSTS Demo Generator** helps you create team projects on your VSTS account with sample content that include source code, work items,iterations, service endpoints, build and release definitions based on the template you choose during the configuration.
 
    ![VSTSDemogenerator](images/VSTSDemogenerator.png)
 

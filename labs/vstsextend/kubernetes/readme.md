@@ -169,9 +169,9 @@ Since all the required azure components are now created, the VSTS team project c
 
 ## Setting up the VSTS team project
 
-1. Use the [VSTS Demo Generator](https://vstsdemogenerator.azurewebsites.net/?TemplateId=77372&name=AKS){:target="_blank"} to provision the project on your VSTS account. 
+1. Use the [VSTS Demo Generator](https://vstsdemogenerator.azurewebsites.net/?Name=aks&templateId=77372){:target="_blank"} to provision the project on your VSTS account.
 
-   > **VSTS Demo Generator** helps you create the team projects on your VSTS account with sample content that include source code, work items, iterations, service endpoints, build and release definitions based on the template you choose during the configuration. 
+   > **VSTS Demo Generator** helps you create the team projects on your VSTS account with sample content that include source code, work items, iterations, service endpoints, build and release definitions based on the template you choose during the configuration.
 
     ![VSTS Demo Generator](images/vstsdg.png)
 
