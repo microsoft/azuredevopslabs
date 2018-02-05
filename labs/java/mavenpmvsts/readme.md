@@ -10,7 +10,7 @@ In this exercise, you are going to set up package management with Maven in VSTS.
 
 This exercise assumes you have completed the exercises to create a Team Project, have set up the Docker private VSTS agent, and imported the MyShuttleCalc and MyShuttle2 GitHub repos into your VSTS team project. This exercise also assumes that you have cloned the repos in either IntelliJ or Eclipse. This exercise uses a team project named **jdev-labs**, though your team project name may differ.
 
-{% include note.html content="This exercise shows how to do a Maven build using VSTS. To see how to perform a Maven build using Jenkins that still integrates into the VSTS Package Feed, please refer to the [**Maven Package Management with Jenkins**](../mavenpmjenkins) lab %}
+{% include note.html content="This exercise shows how to do a Maven build using VSTS. To see how to perform a Maven build using Jenkins that still integrates into the VSTS Package Feed, please refer to the [**Maven Package Management with Jenkins**](../mavenpmjenkins) lab" %}
 
 ## Create a Maven Package Feed
 
