@@ -7,9 +7,9 @@ folder: /labs/java/releasemanagement/
 comments: true
 ---
 
-In this exercise, you are going to create a Release Definition that will start the container images from the build lab.
+In this exercise, you are going to create a Release Definition that will deploy the container images from the build lab.
 
-This exercise assumes you have completed the exercises to create a Team Project and have set up the Docker private VSTS agent. You should also have set up Maven package management and have a MyShuttleCalc package in the feed and created a build that creates and publishes Docker images to the Azure Container Registry. This exercise uses a team project named **jdev-labs**, though your team project name may differ.
+This exercise assumes you have completed the exercises to create a Team Project and have set up the Docker private VSTS agent. You should have set up Maven package management and have a MyShuttleCalc package in the feed and created a build that creates and publishes Docker images to the Azure Container Registry. This exercise uses a team project named **jdev-labs**, though your team project name may differ.
 
 ## Install a Marketplace Extension
 
@@ -27,11 +27,11 @@ In this task you will install a VSTS extension from the [VSTS Marketplace](https
 
     ![Search for replacement](images/search-replacement.png)
 
-1. Click on **Colin's ALM Corner Build & Release Tools**. Then click on the Install button.
+1. Click on **Colin's ALM Corner Build & Release Tools** and then click Install.
 
     ![Install the extension](images/install-extension.png)
 
-1. In the dialog that appears, ensure that your VSTS account is selected and click Continue. Once your permissions have been verified, click the Confirm button.
+1. In the dialog that appears, ensure that your VSTS account is selected and click Continue. Once your permissions have been verified, click Confirm.
 
 ## Create a Release Definition
 
@@ -43,7 +43,7 @@ In this task you will create a Release Definition with a single environment call
 
 1. Click on the **jdev-labs** team project to navigate to it.
 
-1. Under the **Build and Releases** hub, click on **Releases** and click the button in the page to create a new release definition.
+1. Under the **Build and Releases** hub, click on **Releases** and click **+** to create a new release definition.
 
     ![Go to the Releases tab](images/goto-releases.png)
 
@@ -55,15 +55,15 @@ In this task you will create a Release Definition with a single environment call
 
     ![Rename Environment1](images/rename-env1.png)
 
-1. In the **Artifacts** component of the release definition, click on the **Add artifact** button to add a build definition as an artifact source to the release definition.
+1. In the **Artifacts** component of the release definition, click **Add artifact** to add a build definition as an artifact source to the release definition.
 
     ![Add artifact](images/add-artifact.png)
 
-1. In the Artifacts flyout, choose the MyShuttle2 build definition as the artifact, keep the default version as latest and the default value of the source alias. Then press the "Add" button.
+1. In the Artifacts flyout, choose the MyShuttle2 build definition as the artifact, keep the default version as latest and the default value of the source alias. Click "Add".
 
     ![Add MyShuttle2 artifact](images/add-myshuttle2artifact.png)
 
-1. Click in the name of the release definition and rename it.
+1. Click on the name of the release definition and rename it.
 
     ![Rename release definition](images/edit-definitionname.png)
 
@@ -83,12 +83,12 @@ In this task you will create a Release Definition with a single environment call
 
     | Parameter | Value | Notes |
     | --------------- | ---------------------------- | ----------------------------------------------------------- |
-    | Source Path | `$(System.DefaultWorkingDirectory)/MyShuttle2/drop` | The path in which to search for tokenized files |
-    | Target File Pattern | `*.release.*` | The file pattern to use to find tokenized files in the Source Path |
+    | Source Path | `$(System.DefaultWorkingDirectory)/MyShuttle2/drop` | The path to search for tokenized files |
+    | Target File Pattern | `*.release.*` | The file pattern to find tokenized files in the Source Path |
 
     ![Replace Tokens task](images/replace-tokens.png)
 
-    {% include note.html content= "There are 2 tokenized files that the release will take advantage of, both of which live in the root of the MyShuttle2 repo. The build process published these files so that they are available as outputs of the build, ready for use in the Release process. `docker-compose.release.yml` contains tokens for the host port, container image names and tags.  `testng.release.xml` contains tokens for the baseUrl to test. These tokenized files make it possible to **Build Once, Deploy Many Times** since they separate the environment configuration and the binaries from the build. The Replace Tokens task inject release variables (which you will define shortly) into the tokens in the files." %}
+    {% include note.html content= "There are two tokenized files used by the release placed in the root of the MyShuttle2 repo. The build process published these files so that they are available as outputs of the build, ready for use in the Release process. `docker-compose.release.yml` contains tokens for the host port, container image names and tags.  `testng.release.xml` contains tokens for the baseUrl to test. These tokenized files make it possible to **Build Once, Deploy Many Times** since they separate the environment configuration and the binaries from the build. The Replace Tokens task inject release variables (which you will define shortly) into the tokens in the files." %}
 
 1. Click the **+** icon on the phase to add a new task. Type **docker** in the search box. Add a **Docker Compose** task.
 
@@ -105,7 +105,7 @@ In this task you will create a Release Definition with a single environment call
 
     ![Run Services task](images/run-services.png)
 
-    > **Note**: This task will start the 2 container apps in the docker engine of the host VM.
+    > This task will start the two container apps in the docker engine of the host VM.
 
 1. Click the **+** icon on the phase to add a new task. Type **command** in the search box. Add a **Command Line** task.
 
@@ -115,11 +115,11 @@ In this task you will create a Release Definition with a single environment call
     | --------------- | ---------------------------- | ----------------------------------------------------------- |
     | Tool | `java` | Invoke java |
     | Arguments | `-cp myshuttledev-tests.jar:test-jars/* org.testng.TestNG ../testng.release.xml` | Arguments for the java command to invoke the integration tests |
-    | Advanced/Working folder | `$(System.DefaultWorkingDirectory)/MyShuttle2/drop/target` | Run the command in the correct folder |
+    | Advanced/Working folder | `$(System.DefaultWorkingDirectory)/MyShuttle2/drop/target` | Run folder for the command |
 
     ![Run Java task](images/run-java.png)
 
-    {% include note.html content= "This command invokes Java to run testNG tests. The run uses the `testng.release.xml` file which at this point in the release contains the correct `baseUrl` for the tests. If the tests fail, the release will fail." %}
+    {% include note.html content= "This command invokes Java to run testNG tests. The run uses the `testng.release.xml` file  from the release containing the correct `baseUrl` for the tests. If the tests fail, the release will fail." %}
 
 1. Click the **+** icon on the phase to add a new task. Type **publish test** in the search box. Add a **Publish Test Results** task.
 
@@ -128,13 +128,13 @@ In this task you will create a Release Definition with a single environment call
     | Parameter | Value | Notes |
     | --------------- | ---------------------------- | ----------------------------------------------------------- |
     | Test results files | `**/TEST-*.xml` | Invoke java |
-    | Control Options/Continue on error | Checked | Uploads the results even if the tests from the previous step fail. |
+    | Control Options/Continue on error | Checked | Uploads the results even if the tests from the previous step fail |
 
     ![Publish Test Results task](images/publish-testresults.png)
 
     {% include note.html content= "This command grabs the JUnit test results file from the test run and publishes them to the release so that the test results are available in the Release summary." %}
 
-1. You should have 4 tasks in this order:
+1. You should have four tasks in this order:
 
     ![Tasks for the Release](images/tasks-view.png)
 
@@ -152,13 +152,13 @@ In this task you will create a Release Definition with a single environment call
 
     {% include note.html content= "You will need to use your azure container registry \(e.g. `cdjavadev.azurecr.io`\) in the image variables. Instead of using the `:latest` tag for the images, we explicitly use the build number, which was used to tag the images during the build. This allows us to **roll-forward** to previous tags for the images if we want to revert a release. The scope setting allows us to make variables that live at a release level \(Release\) or are environment-specific \(like AzureVM\). If you clone the environment to repeat this release in additional environments, you can just specify new values for the variables for those environments." %}
 
-1. Click the Save button in the toolbar to save the definition.
+1. Click Save in the toolbar to save the definition.
 
-1. Click the **+ Release** button and then click Create Release.
+1. Click **+ Release** and then click **Create Release**.
 
     ![Create a new Release](images/create-release.png)
 
-1. Click the queue button on the Create a new release dialog to start the release.
+1. Click **Queue** on the **Create a new release** dialog to start the release.
 
     ![Click the release number](images/click-release.png)
 
@@ -174,4 +174,4 @@ In this task you will create a Release Definition with a single environment call
 
     ![The site is running](images/site-running.png)
 
-    > **Note**: You can log in by entering username `fred` and password `fredpassword`.
+    > You can log in to the site by entering username `fred` and password `fredpassword`.
