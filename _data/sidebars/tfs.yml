@@ -25,7 +25,7 @@ entries:
     folderitems:
 
     - title: Overview and Accessing the VM
-      url: labs/tfs/
+      url: labs/tfs/almvmdownload/
       output: web, pdf
 
     - title: Working with the Visual Studio 2017 ALM VM
