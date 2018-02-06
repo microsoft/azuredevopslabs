@@ -28,8 +28,6 @@ To complete this lab, you will need:
 
 1. Click on the VS icon and browse to the MyHealthClinic project. At this moment, we have only one project. You could select/create as many projects from here.
 
-   {% include note.html content= "If you haven't already, browse to your Visual Studio Team Services account you can sign in by going to (https://{youraccount}.visualstudio.com)." %}
-
    ![](images/6.png)
 
 ## Exercise 1: Working with Teams, Areas, and Iterations

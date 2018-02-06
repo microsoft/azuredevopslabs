@@ -19,8 +19,7 @@ folder: /labs/vsts/
 ## Step-by-Step Tutotrials
 
 <div class="lablist">
-    <div class="header2"> <b>Getting Started</b></div>
-     <ul class="fa-ul">
+    <ul class="fa-ul">
        <li class="labslistitems"><i class="fa-li fa fa-book" style="color:  #002868;"></i> <a href="agile/">Agile Planning and Portfolio Management </a>    </li>
        <li class="labslistitems"><i class="fa-li fa fa-book" style="color:  #002868;"></i> <a href="git/">Version Controlling with Git  </a>    </li>
        <li class="labslistitems"><i class="fa-li fa fa-book" style="color:  #002868;"></i> <a href="packagemanagement/">Package Management</a> </li>
@@ -34,28 +33,30 @@ folder: /labs/vsts/
       <li class="labslistitems"><i class="fa-li fa fa-book" style="color:  #002868;"></i><a href="monitor/">Monitoring Applications using Application Insights</a> </li>
       <li class="labslistitems"><i class="fa-li fa fa-book" style="color:  #002868;"></i><a href="teams/">Increase team collaboration and Communication with Microsoft Teams</a> </li>
       <li class="labslistitems"><i class="fa-li fa fa-book" style="color:  #002868;"></i><a href="powerbi/">Connect to Visual Studio Team Services with Power BI</a> </li>
-
         </ul>
 </div>
 
-## Prerequisites
+## Extend and Integrate
 
-In order to complete these labs you will need
-
-- **Visual Studio Team Services account**: If you don't have one, you can sign up for one, from [here](https://www.visualstudio.com/){:target="_blank"}
-
-- **Microsoft Azure Account**: You will need a valid and active Azure account for the Azure labs. If you do not have one, you can sign up for a [free trial](https://azure.microsoft.com/en-us/free/){:target="_blank"}
-
-  - If you are a Visual Studio Active Subscriber, you are entitled for a $50-$150 credit per month. You can refer to this [link](https://azure.microsoft.com/en-us/pricing/member-offers/msdn-benefits-details/){:target="_blank"} to find out more including how to activate and start using your monthly Azure credit.
-
-  - If you are not a Visual Studio Subscriber, you can sign up for the FREE [Visual Studio Dev Essentials](https://www.visualstudio.com/dev-essentials/){:target="_blank"} program to create **Azure free account** (includes 1 yr of free services, $200 for 1st month).
-
-- **Visual Studio 2017** or higher version - You will need Visual Studio for some of the labs. You can use your own machine with VS 2017 installed, or download and use the latest [ALM VM](../tfs/),  or spin up a VM pre-installed with Visual Studio on [Azure](https://portal.azure.com){:target="_blank"}.
-
-- You can use the [**Visual Studio Team Services Demo Data generator**](https://vstsdemogenerator.azurewebsites.net){:target="_blank"} to provision a project with pre-defined data on to your Visual Studio Team Services account.
-
-## Working with VSTS DemoGenerator
-
-Visual Studio Team Services Demo Generator helps you create projects on your Visual Studio Team Services account with preset sample content which includes source code, work items, service endpoints, build and release definitions based on a template you choose. The purpose of this system is to help follow hands-on-labs, demos and other education material provided by Microsoft. For step-by-step instructions on using the demo generator to provision your project, please see this [document](/labs/vsts/VSTSDemoGenerator)
-
-If you are not using the VSTS Demo Data Generator, you can clone the source code required to run the application referenced in the labs, from this [GitHub repository](https://github.com/Microsoft/myhealthclinic2017)
+<div class="lablist">
+        <ul style="list-style: none;">
+          <li class="extendlabslist"> <img src="../vstsextend/images/jenkins.png" height="42" width="42"/> <a href="../vstsextend/jenkins/"> Integrating with Jenkins</a>    </li>
+          <li class="extendlabslist"> <img src="../vstsextend/images/tomcat.png" height="42" width="42"/><a href="../vstsextend/tomcat/"> Deploying a Java application on Tomcat  </a>    </li>
+          <li class="extendlabslist"> <img src="../vstsextend/images/sonarqube.png" height="42" width="42"/><a href="../vstsextend/sonarqube/"> Technical Debt Management with SonarQube</a> </li>
+          <li class="extendlabslist"> <img src="../vstsextend/images/whitesource.png" height="42" width="42"/><a href="../vstsextend/WhiteSource/"> OSS governance with WhiteSource</a></li>
+          <li class="extendlabslist"> <img src="../vstsextend/images/octopus.png" height="42" width="42"/><a href="../vstsextend/Octopus/"> Integrating Octopus Deploy</a></li>
+          <li class="extendlabslist"> <img src="../vstsextend/images/selenium.png" height="32" width="32"/><a href="../vstsextend/Selenium/"> Driving continuous testing with Selenium</a></li>
+           <li class="extendlabslist"> <img src="../vstsextend/images/eclipse.png" height="32" width="32"/><a href="../vstsextend/eclipse/"> Developing with Eclipse for Java projects</a></li>
+          <li class="extendlabslist"> <img src="../vstsextend/images/azure.png" height="32" width="32" /><a href="../vstsextend/kubernetes/"> Deploying to Azure Container Service (AKS)</a></li>
+          <li class="extendlabslist"> <img src="../vstsextend/images/azure.png" height="32" width="32" /><a href="../vstsextend/deploymentgroups/"> Working with Deployment Groups</a></li>
+        <li class="extendlabslist"> <img src="../vstsextend/images/parasoft.png" height="32" width="32" /><a href="../vstsextend/parasoft/"> Leverage virtual services with Parasoft Virtualize</a></li>
+          <li class="extendlabslist"> <img src="../vstsextend/images/logo_java.svg" height="42" width="42"/> <a href="../vstsextend/../java/"> DevOps with VSTS and Azure for Java projects  </a>    </li>
+          <li class="extendlabslist"> <img src="../vstsextend/images/logo_nodejs.svg" height="32" width="32"/><a href="../vstsextend/../vsts/nodejs/">DevOps for Node.js with VSTS and Azure   </a>    </li>
+          <li class="extendlabslist"> <img src="../vstsextend/images/python.png" height="32" width="32"/><a href="../vstsextend/python/"> How to deploy a Python application to Azure from VSTS</a></li>
+          <li class="extendlabslist"> <img src="../vstsextend/images/github.png" height="32" width="32"/><a href="../vstsextend/github/"> How to continuously deliver code on GitHub with VSTS</a></li>
+          <li class="extendlabslist"> <img src="../vstsextend/images/php.png" height="32" width="32"/><a href="../vstsextend/PHP/"> Deploying a PHP application to Azure</a></li>
+          <li class="extendlabslist"> <img src="../vstsextend/images/docker.png" height="42" width="42"/><a href="../vstsextend/docker/"> Deploying Docker Containers to Azure App Service</a></li>
+          <li class="extendlabslist"> <img src="../vstsextend/images/intellij.png" height="32" width="32"/><a href="../vstsextend/intelliJ/"> Working with IntelliJ</a> <span class="label label-success">Coming soon</span></li>
+          <li class="extendlabslist"> <img src="../vstsextend/images/azure.png" height="32" width="32"><a href="../vstsextend/azurefunctions/"> Deploying to Azure Functions from VSTS</a> <span class="label label-success">Coming soon</span></li>
+        </ul>
+</div>
