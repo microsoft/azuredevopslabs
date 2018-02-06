@@ -16,7 +16,7 @@ summary:
 <div class="productcolmain">
   <div class="pageheader">
              <b>Microsoft Visual Studio DevOps Hands-On-Labs</b> </div>
-     <div class="herotext2">       
+     <div class="herotext2">
               Hands-on-labs for Visual Studio Team Foundation Server and Visual Studio Team Services
   </div>
 </div>
@@ -29,6 +29,7 @@ The Microsoft ALM/DevOps Hands-On-Labs is a set of self-paced labs based on Visu
 <br />
 <br />
  <div align="center" class="labcols">
+ <div class="col-sm-2"></div>
   <div class="lab-item col-md-4" align="center">
          <span class="headnews"> <b><a href="labs/vsts" class="labmain"> Getting started with Visual Studio Team Services</a></b></span><br />
         <a href="labs/vsts"><img style="margin: 10px;" src="images/tile-cloud-hosted-server.png" width="120" height="120"/></a><br />
