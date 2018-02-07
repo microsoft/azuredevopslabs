@@ -22,17 +22,11 @@ To complete this lab, you will need:
 
 - You can use the **[VSTS Demo Data generator](http://vstsdemogenerator.azurewebsites.net/Environment/Create)** to provision a project with pre-defined data on to your Visual Studio Team Services account. Please use the ***My Health Clinic*** template to follow the hands-on-labs.
 
-## Connecting to your Project
+## Exercise 1: Working with Teams, Areas, and Iterations
 
 1. Go to your VSTS account home page.
 
-1. Click on the VS icon and browse to the MyHealthClinic project. At this moment, we have only one project. You could select/create as many projects from here.
-
-   ![](images/6.png)
-
-## Exercise 1: Working with Teams, Areas, and Iterations
-
-1. Connect to the **MyHealthClinic** project.
+1. Click on the VS icon and browse to the MyHealthClinic project. 
 
 1. Navigate to the **Administration Overview** page by choosing the gear icon.
 
