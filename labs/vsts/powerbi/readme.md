@@ -14,17 +14,17 @@ You can gain insight and analyze the progress and quality of your project by con
 
 Power BI is a suite of business analytics tools that deliver insights throughout your organization. Connect to hundreds of data sources, simplify data prep, and drive ad hoc analysis. Produce beautiful reports, then publish them for your organization to consume on the web and across mobile devices. Everyone can create personalized dashboards with a unique, 360-degree view of their business. And scale across the enterprise, with governance and security built-in.
 
-{% include important.html content= "The Visual Studio Team Services (VSTS) Content Pack for Power BI has been deprecated on November 15, 2017 primarily due to the negative impact it has had on VSTS accounts, including throttling end users access. Support will continue for all existing PowerBI.com data sets based on the Content Pack. However, you won’t be able to create any new data sets.
+{% include important.html content= "The Visual Studio Team Services (VSTS) Content Pack for Power BI has been deprecated on November 15, 2017 primarily due to the negative impact it has had on VSTS accounts, including throttling end users access. Support will continue for all existing PowerBI.com data sets based on the Content Pack. However, you won’t be able to create any new data sets.<br/>
 
-The [Analytics Marketplace extension](https://marketplace.visualstudio.com/items?itemName=ms.vss-analytics) and upcoming updates to the [Power BI Desktop connector](https://docs.microsoft.com/en-us/vsts/report/powerbi/data-connector-connect) for VSTS are intended to replace and improve on the capabilities of the Content Pack. While the Analytics Marketplace extension currently supports Work Item Tracking data, we will update it to support additional data types including Tests, Build, Release and Version Control. In the interim, you can use [VSTS REST APIs](https://www.visualstudio.com/en-us/docs/integrate/api/overview) as an alternative to the Content Pack to report on these additional data types." %}
+The [Analytics Marketplace extension](https://marketplace.visualstudio.com/items?itemName=ms.vss-analytics){:target=\"_blank\"} and upcoming updates to the [Power BI Desktop connector](https://docs.microsoft.com/en-us/vsts/report/powerbi/data-connector-connect){:target=\"_blank\"} for VSTS are intended to replace and improve on the capabilities of the Content Pack. While the Analytics Marketplace extension currently supports Work Item Tracking data, we will update it to support additional data types including Tests, Build, Release and Version Control. In the interim, you can use [VSTS REST APIs](https://www.visualstudio.com/en-us/docs/integrate/api/overview){:target=\"_blank\"} as an alternative to the Content Pack to report on these additional data types." %}
 
-## Pre-requisites
+## Prerequisites
 
 1. You should have Office365 account in order to integrate Visual Studio Team Services with Power BI
 
-1. Visual Studio Team Services account. If you don't have one, you can create from [here](https://www.visualstudio.com/)
+1. Visual Studio Team Services account. If you don't have one, you can create from [here](https://www.visualstudio.com/team-services){:target="_blank"}
 
-**You can start a free trial if you don't have Office365 account from [here](https://teams.microsoft.com/start)**
+**You can start a free trial if you don't have Office365 account from [here](https://teams.microsoft.com/start){:target="_blank"}**
 
 ## Authorize Power BI to access your account data
 
@@ -36,13 +36,13 @@ Your first step requires you to authorize Power BI to access your Team Services 
 
 ## Log in to Power BI
 
-1. Go to [Power BI](http://powerbi.com) site
+1. Go to [Power BI](http://powerbi.com){:target="_blank"} site
 
-   ![](images/1.png)
+   ![1](images/1.png)
 
 1. Click **Sign In** in the upper right corner to log in to Power BI.
 
-   ![](images/2.png)
+   ![2](images/2.png)
 
 1. You can use either AAD or MSA account to log in.
 
@@ -54,15 +54,15 @@ Workspaces in Power BI allows you to have isolated area to monitor your teams wo
 
 1. Go to **Workspaces** and click on **Create app workspace**.
 
-   ![](images/11.png)
+   ![11](images/11.png)
 
 1. Give a name for the workspace and set the desired permissions. For this lab let's keep it default and create one.
 
-   ![](images/12.png)
+   ![12](images/12.png)
 
 1. A new workspace is created now.
 
-   ![](images/13.png)
+   ![13](images/13.png)
 
 ## Connect to services with content packs for Power BI
 
@@ -70,39 +70,39 @@ You can connect to content packs for a number of services you use to run your bu
 
 1. Click **Get Data** on the left bottom corner to select .
 
-   ![](images/3.png)
+   ![3](images/3.png)
 
 1. You can pull out the data either from one of the sources. Since we are integrating with VSTS, select **Services** and click on **Get**.
 
-   ![](images/4.png)
+   ![4](images/4.png)
 
 1. Browse the content packs, or tap in the search box and type keywords:
 
-   ![](images/29.png)
+   ![29](images/29.png)
 
 1. In the search box, type **Visual Studio** and click on **Get it now**.
 
-   ![](images/5.png)
+   ![5](images/5.png)
 
 1. Enter **YOUR ACCOUNT NAME**, if your Team Services URl is **YOURACCOUNTNAME.visualstudio.com**. Also enter the Project name that you want to track and click on **Next**
 
-   ![](images/6.png)
+   ![6](images/6.png)
 
 1. A window would appear to allow the access to your VSTS account. Click **Sign in**.
 
-   ![](images/8.png)
+   ![8](images/8.png)
 
 1. A window would pop up to allow the permission to read the data from the VSTS account. Click on **Accept**.
 
-   ![](images/9.png)
+   ![9](images/9.png)
 
 1. Now the data is being imported and you will see the notification on the right corner top.
 
-   ![](images/7.png)
+   ![7](images/7.png)
 
 1. Once the data is imported, you will see the dashboard with the data.
 
-   ![](images/10.png)
+   ![10](images/10.png)
 
 ## Reports in Power BI
 
@@ -110,27 +110,27 @@ A Power BI report is a multi-perspective view into a dataset, with visualization
 
 1. Click on **Reports** and select **Visual Studio Team Services**. By default when the data is imported, a report would have generated automatically.
 
-   ![](images/14.png)
+   ![14](images/14.png)
 
 1. The report along with the data is shown. Modify the report to show the desired data. To do so, click on **Edit report** on the top.
 
-   ![](images/15.png)
+   ![15](images/15.png)
 
 1. Visualizations and additional data can be added from the filter sets and the visualizations table from the right side.
 
-   ![](images/16.png)
+   ![16](images/16.png)
 
 1. Different reports can be obtained. Agile Status report, Sprint Status report, Git report etc.
 
-   ![](images/17.png)
+   ![17](images/17.png)
 
-   ![](images/18.png)
+   ![18](images/18.png)
 
-   ![](images/19.png)
+   ![19](images/19.png)
 
 1. Add new pages to the report with the desired data. Click on + at the bottom of the report to add new and select the visualizations and data to appear in the page.
 
-   ![](images/20.png)
+   ![20](images/20.png)
 
 ## Q&A in Power BI
 
@@ -142,11 +142,11 @@ The experience is truly interactive…and fast! Powered by an in-memory storage,
 
 1. From your workspace, go to Dashboard and click on **Ask a question about your data**
 
-   ![](images/21.png)
+   ![21](images/21.png)
 
 1. Place your cursor in the question box. Even before you start typing, Q&A displays a new screen with suggestions to help you form your question.
 
-   ![](images/23.png)
+   ![23](images/23.png)
 
    This list contains:
 
@@ -158,11 +158,11 @@ The experience is truly interactive…and fast! Powered by an in-memory storage,
 
 1. Select from the dropdown or begin typing your own question.
 
-   ![](images/24.png)
+   ![24](images/24.png)
 
 1. As you type a question, Power BI Q&A picks the best visualization to display your answer; and the visualization changes dynamically as you modify the question. Q&A also helps you formulate your question with auto-completion, by restating your question, and with other textual and visual aids.
 
-   ![](images/25.png)
+   ![25](images/25.png)
 
 1. When you type a query, Power BI looks for an answer in any dataset that has a tile on that dashboard.  If all the tiles are from datasetA, then your answer will come from datasetA.  If there are tiles from datasetA and datasetB, then Q&A will search for the best answer from those 2 datasets.
 
@@ -170,12 +170,12 @@ The experience is truly interactive…and fast! Powered by an in-memory storage,
 
 1. When you're happy with the result, pin the visualization to a dashboard by selecting the pin icon in the top right corner.
 
-   ![](images/26.png)
+   ![26](images/26.png)
 
 1. You can pin this to an **Existing dashboard** or to a **New dashboard**. Select **Existing dashboard.**
 
-   ![](images/27.png)
+   ![27](images/27.png)
 
 1. Go back to dashboard, you should see the pinned item now.
 
-   ![](images/28.png)
+   ![28](images/28.png)
