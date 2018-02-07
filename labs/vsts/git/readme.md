@@ -20,35 +20,41 @@ Git is the default version control provider for new projects. You should use Git
 
 In this lab, you will learn how to establish a local Git repository, which can easily be synchronized with a centralized Git repository in Visual Studio Team Services. In addition, you will learn about Git branching and merging support.
 
+## Prerequisites
+
+In order to complete this lab you will need the Visual Studio 2017 virtual machine provided by Microsoft. Click the button below to launch the virtual machine.
+
+<a href="" class="launch-hol" role="button" target="_blank"><span class="lab-details">Launch the virtual machine</span></a>
+
 ## Exercise 1: Cloning an existing repository
 
 1. Sign in to your **Visual Studio Team Services** account and browse to **MyhealthClinic** project.
 
-    ![](images/78.png)
+    ![78](images/78.png)
 
 1. Navigate to the **Code** hub. Select **Clone** and select **Clone in Visual Studio**
 
-    ![](images/clonecode.png)
+    ![clonecode](images/clonecode.png)
 
 1. Click **Yes**
 
-    ![](images/9.png)
+    ![9](images/9.png)
 
 1. You might be prompted to sign into to your account from Visual Studio. Sign in to your account
 
 1. Click on **Clone this repository**
 
-    ![](images/3.png)
+    ![3](images/3.png)
 
 1. Set the local path where you want the local repository to be placed and select **Clone**.
 
-    ![](images/clonewindowvs.png)
+    ![clonewindowvs](images/clonewindowvs.png)
 
     This will clone the remote repository to the local repository.
 
 1. Select **Show Folder View** under *Solutions* to see all the solutions in the local git folder
 
-    ![](images/showfolderview.png)
+    ![showfolderview](images/showfolderview.png)
 
 1. Double click the **MHC_ASPNetCore.sln** to open the solution
 
@@ -72,45 +78,45 @@ Git commits consists of the following-
 
 1. Go to **Team Explorer** home.
 
-   ![](images/11.jpg)
+   ![11](images/11.jpg)
 
 1. Open the **01_Demos_ASPNET5** solution.
 
-   ![](images/12.jpg)
+   ![12](images/12.jpg)
 
 1. Expand the **MyHealthAPI project**. Go to the **controller** folder and modify any one of the controllers.
    As you write your code, changes are automatically tracked by Visual Studio.
 
-   ![](images/13.png)
+   ![13](images/13.png)
 
 1. Open the **Changes** in **Team Explorer**. Enter a commit message and select **Commit All** to create a new commit with all of your changes.
 
-   ![](images/14.png)
+   ![14](images/14.png)
 
-   ![](images/15.png)
+   ![15](images/15.png)
 
 1. As other team members update the code in the repo, you will need to sync their changes with your own code.
    Open the sync view from the team explorer.
 
-   ![](images/16.png)
+   ![16](images/16.png)
 
 ### Task 2: Syncing changes
 
 1. Before syncing, fetch the commits to view changes that your team has made. Fetching changes does not merge the commits into your local repository. You will need to pull the changes to merge them into your local repository.
 
-   ![](images/17.png)
+   ![17](images/17.png)
 
-   ![](images/18.png)
+   ![18](images/18.png)
 
 1. Sync the changes to push your commits.
 
-   ![](images/19.png)
+   ![19](images/19.png)
 
-   ![](images/20.png)
+   ![20](images/20.png)
 
 1. Go back to your VSTS project. Click on **Code** \| **History** to see the commits.
 
-   ![](images/21.png)
+   ![21](images/21.png)
 
 ### Task 3: Stage
 
@@ -125,13 +131,13 @@ files that might change but you do not want to stage in a commit.
 1. Go to **Changes** view in team explorer. You can see two files being edited. Create a commit from a individual file. Staging a change creates a section in Team Explorer.
    This adds an entry to the file **.gitignore** in your local repo. If the ignored file was added to your repo in an earlier commit, ignoring the file will not remove it from your repo.
 
-   ![](images/22.png)
+   ![22](images/22.png)
 
-   ![](images/23.png)
+   ![23](images/23.png)
 
 1. Click on **Commit Staged and Sync** to update your remote repository.
 
-   ![](images/24.png)
+   ![24](images/24.png)
 
 ## Exercise 3: Review History
 
@@ -145,16 +151,16 @@ Git’s use of **Branches and Merges** feature works through pull requests, mean
 
 1. Open up the Home view in Team Explorer.
 
-   ![](images/25.png)
+   ![25](images/25.png)
 
 1. Expand the **MyHealth.API** project. Go to **controllers** folder and right click the controller file that you modified before and view history.
    The history window will show the commit ID, author, date, and description of all changes to the file in your local repo across all branches.
 
-   ![](images/26.png)
+   ![26](images/26.png)
 
 1. Right-click on the latest commit from the history window and choose **Compare with previous**.
 
-   ![](images/27.png)
+   ![27](images/27.png)
 
 ### Task 2: Retrieve files
 
@@ -162,11 +168,11 @@ Git’s use of **Branches and Merges** feature works through pull requests, mean
 
 1. Right-click on the commit containing the version of the file you want to restore and select **View commit details**.
 
-   ![](images/28.png)
+   ![28](images/28.png)
 
 1. You will see the file in your team explorer. Right click the file and select open to restore in the Commit Details in Team Explorer.
 
-   ![](images/29.png)
+   ![29](images/29.png)
 
 ## Exercise 4: Manage Branches from Visual Studio
 
@@ -186,15 +192,15 @@ current branch.
 
 1. Open **Team Explorer** from Visual Studio and go to the **Branches** view.
 
-   ![](images/30.png)
+   ![30](images/30.png)
 
 1. Right-click the parent branch (usually master) to base your changes and select **New Local Branch From**.
 
-   ![](images/31.png)
+   ![31](images/31.png)
 
 1. Provide a branch name and click **create branch**.
 
-   ![](images/32.png)
+   ![32](images/32.png)
 
 ### Task 2: Checkout and Publish branches
 
@@ -203,27 +209,27 @@ Branches let you work with multiple versions of the source code in the same loca
 
 1. Open **Team Explorer** from Visual Studio and go to the **Branches** view. Locate the branch you want to checkout, right-click the branch name and **checkout**.
 
-   ![](images/33.png)
+   ![33](images/33.png)
 
 1. You can make sure that you have checked out the branch which indicates at the bottom of your Visual Studio window as shown.
 
-   ![](images/34.png)
+   ![34](images/34.png)
 
 1. Locate the branch you want to publish.
 
-   ![](images/35.png)
+   ![35](images/35.png)
 
 1. Right-click the branch name and select **Publish branch**.
 
-   ![](images/36.png)
+   ![36](images/36.png)
 
 1. Go back to your VSTS account and check under the **Code** \| **Branches**, your branch was successfully published.
 
-   ![](images/37.png)
+   ![37](images/37.png)
 
 1. You can also see the branches under **remotes origin** section from your Visual Studio.
 
-   ![](images/38.png)
+   ![38](images/38.png)
 
 ### Task 3: Deleting branches locally and remotely
 
@@ -232,24 +238,24 @@ Branches let you work with multiple versions of the source code in the same loca
 1. Open **Team Explorer** from Visual Studio and go to the **Branches** view. Locate the branch you want to delete.
    Make sure that you aren't checked out to that branch. You can't delete the branch you are currently working in.
 
-   ![](images/39.png)
+   ![39](images/39.png)
 
 1. Select **delete**. You should see the message after the deletion.
 
-   ![](images/40.png)
+   ![40](images/40.png)
 
 1. Let's try to delete a a remote branch. Locate the tree for the remote branch in Team Explorer such as (remotes/origin).
    Right click on the branch you wish to delete and select **Delete Branch From Remote**.
 
-   ![](images/41.png)
+   ![41](images/41.png)
 
 1. You should receive a successful message post deletion.
 
-   ![](images/42.png)
+   ![42](images/42.png)
 
 1. Go back to your VSTS project. Click on **Code** \| **Branches** to make sure that you don't see the branch that you deleted.
 
-   ![](images/43.png)
+   ![43](images/43.png)
 
 ## Exercise 5: Manage branches from the Team Services Portal
 
@@ -259,53 +265,53 @@ Branches let you work with multiple versions of the source code in the same loca
 
 1. Go to **Code** \| **Branches** and click on **New Branch** to create.
 
-   ![](images/44.png)
+   ![44](images/44.png)
 
 1. In the Create a branch dialog, enter a name for your new branch. Select a branch to base on and associate any work items if necessary and click on **create**.
 
-   ![](images/45.png)
+   ![45](images/45.png)
 
 1. Post creation, you should be able to see under your branches.
 
-   ![](images/46.png)
+   ![46](images/46.png)
 
 1. Go back to your Visual Studio to see the branch that was created. You will need to **fetch** the branch before you can swap to it in your local repo.
 
 1. Open Team Explorer and go to Sync view and click **fetch**.
 
-   ![](images/47.png)
+   ![47](images/47.png)
 
-   ![](images/48.png)
+   ![48](images/48.png)
 
 1. Go to the **Branches** view to see if the remote branch is available.
 
-   ![](images/49.png)
+   ![49](images/49.png)
 
 1. Locate the remote branch you want to checkout to your local repository. Right click the branch name and select **New Local Branch From**.
 
-   ![](images/50.png)
+   ![50](images/50.png)
 
 1. Provide a name for the local branch and click on **create**.
 
-   ![](images/51.png)
+   ![51](images/51.png)
 
 1. You should now see the local branch post creation.
 
-     ![](images/52.png)
+     ![52](images/52.png)
 
 ### Task 2: Deleting a branch
 
 1. Locate the branches from the web.
 
-   ![](images/46.png)
+   ![46](images/46.png)
 
 1. Select the **trashcan** icon next to the branch you want to delete.
 
-   ![](images/53.png)
+   ![53](images/53.png)
 
 1. Once deleted, you should see something like this.  You can revert back by clicking **undo** if you accidentally delete a branch.
 
-   ![](images/54.png)
+   ![54](images/54.png)
 
 ### Task 3: Locking Branch
 
@@ -319,11 +325,11 @@ Share with your team the reason for locking the branch and make sure your team k
 
 1. Lock the branch by selecting the **...** icon next to the branch name and then select **Lock** from the menu.
 
-   ![](images/55.png)
+   ![55](images/55.png)
 
 1. You should see the lock symbol after locking the branch.
 
-   ![](images/56.png)
+   ![56](images/56.png)
 
 1. You can unlock the branch by selecting the **Unlock** from the menu.
 
@@ -340,7 +346,7 @@ Reviewers can step through the proposed changes, leave comments, and vote to app
 
 1. Expand the **MyHealth.API** project. Go to **Controllers** folder and modify any one of the controller file and sync the changes to push your commits and pull changes from others.
 
-   ![](images/57.png)
+   ![57](images/57.png)
 
 1. Now, your changes are updated in remote dev branch.
 
@@ -348,19 +354,19 @@ Reviewers can step through the proposed changes, leave comments, and vote to app
 
 1. Select **Pull requests** from Team Explorer pane. You will promote changes from dev to Master branch.
 
-   ![](images/58.png)
+   ![58](images/58.png)
 
 1. Select the **New Pull Request** link to open up a browser window to create a new pull request on the web.
 
-   ![](images/59.png)
+   ![59](images/59.png)
 
 1. You can Link work items and describe the changes in the branch to make it easier for others to see what problem you are trying to solve. You can also add reviewers.
 
-   ![](images/60.png)
+   ![60](images/60.png)
 
 1. Click on **New Pull Request** to create. You should see the overview. You can approve, add comments and do lot more.
 
-   ![](images/61.png)
+   ![61](images/61.png)
 
 ### Task 2: Manage Pull requests
 
@@ -369,41 +375,41 @@ Manage your pull requests you own or are assigned to with the Pull Requests tab 
 1. Open the Pull Request view while viewing your repo on the web. Select **Active** to show all active pull requests for the current repo.
    You can also select Completed or Abandoned to bring up a history of closed pull requests.
 
-   ![](images/62.png)
+   ![62](images/62.png)
 
 1. Select any of the existing pull request assigned to you. The Overview tab shows the current state of the pull request at a glance.
 
-   ![](images/63.png)
+   ![63](images/63.png)
 
 1. Review the title, description, and discussion to get an understanding of the proposed changes and see issues brought up by other reviewers.
 
 1. Select the **Files** tab to view the differences between the most changes between the source and target branch of the pull request.
 
-   ![](images/64.png)
+   ![64](images/64.png)
 
 1. Review previous versions of the code pushed to the source branch of the pull request from the **All changes** drop-down.
    A new version is added to the list in the drop-down and on the Updates tab every time the branch is updated in Team Services.
 
-   ![](images/65.png)
+   ![65](images/65.png)
 
 1. Locate the file where you want to add a new comment.
 
-   ![](images/66.png)
+   ![66](images/66.png)
 
 1. Add comments to the pull request to make suggestions, reply to previous comments, and point out problems with the proposed changes.
 
-   ![](images/67.png)
+   ![67](images/67.png)
 1. We can change to Tree view to get the proper structure of the source code or just list files. We can also view all the comments/active comments/hide comments.
 
-   ![](images/68.png)
+   ![68](images/68.png)
 
 1. Browse a list of changes by push from the author using the Updates tab.
 
-   ![](images/69.png)
+   ![69](images/69.png)
 
 1. You can select and view changes made in commits on the branch in the **Commits** tab.
 
-    ![](images/70.png)
+    ![70](images/70.png)
 
 1. Go back to the **Files** Tab. Click on the **comments** to check the details of the files modified and comments given by reviewer.
 
@@ -415,7 +421,7 @@ Manage your pull requests you own or are assigned to with the Pull Requests tab 
     - **Won't Fix:** Note the suggestion in the comment, but don't make changes in this pull request to address it.
     - **Closed:** Discussion for this comment is closed.
 
-    ![](images/71.png)
+    ![71](images/71.png)
 
 1. Click **Approve** in the upper right of the pull request view.
 
@@ -425,30 +431,30 @@ Manage your pull requests you own or are assigned to with the Pull Requests tab 
       - **Waiting for the author :** Do not approve the changes, and ask the author to review your comments. The author should let you know when you should re-review the code after they have addressed your concerns.
       - **Rejected :** The changes aren't acceptable. If you are voting this way, you should leave a comment in the pull request detailing why the changes were rejected.
 
-    ![](images/72.png)
+    ![72](images/72.png)
 
 1. Click **Complete** in the upper right of the pull request view.
 
-    ![](images/73.png)
+    ![73](images/73.png)
 
 1. Enter the message used for the merge commit and update the pull request description as needed in the dialog that follows.
     You can choose to squash merge your pull request and delete the source branch once the merge is complete.
 
     {% include note.html content= "**Squash merging** is a merge option that allows you to condense the Git history of topic branches when you complete a pull request. Instead of each commit on the topic branch being added to the history of the default branch, a squash merge takes all the file changes and adds them to a single new commit on the default branch. Squash merging keeps your default branch histories clean and easy to follow without demanding any workflow changes on your team." %}
 
-    ![](images/74.png)
+    ![74](images/74.png)
 
 1. Click Complete merge. You should see a successful message as completed.
 
-    ![](images/75.png)
+    ![75](images/75.png)
 
 1. Go back to your **Pull Requests** from the web, you should see completed pull request under **completed** tab.
 
-    ![](images/76.png)
+    ![76](images/76.png)
 
 1. Open the file view and select the **master** branch \| **History** to make sure the changes have merged successfully.
 
-    ![](images/77.png)
+    ![77](images/77.png)
 
 1. The master branch is updated successfully.
 
@@ -462,26 +468,26 @@ Create Git repos in team projects to manage your project's source code. Each Git
 
 1. From your account overview page, select your team project. To find your team project, you can search as well.
 
-   ![](images/78.png)
+   ![78](images/78.png)
 
 1. Go to **Code** tab and select the drop-down next to the current repo name.
 
-   ![](images/79.png)
+   ![79](images/79.png)
 
 1. Select **New Repository** to create one. In the Create a new repository window, verify that Git is the repo type and enter a name for your new repo.
 
-   ![](images/80.png)
+   ![80](images/80.png)
 
 1. Click **Create**. A new empty Git repo is now created in your team project. You can select clone in your favorite IDE to connect the repo to your local
    development environment, or connect to your new repo using the command line instructions provided.
 
-   ![](images/81.png)
+   ![81](images/81.png)
 
 1. Open up the Connect view in Team Explorer. Visual Studio will show all the existing repos in the Team Service project so you can choose whatever you want to clone.
 
-   ![](images/82.png)
+   ![82](images/82.png)
 
-   ![](images/83.png)
+   ![83](images/83.png)
 
 ### Task 2: Delete a Git repo from your team project
 
@@ -489,26 +495,26 @@ Remove unused repos from your team project to organize your project's source cod
 
 1. Select the **gear icon** and navigate to **Version Control**.
 
-   ![](images/84.png)
+   ![84](images/84.png)
 
 1. Choose the repository that you wish to remove and click on **...** to select **delete repository**.
 
-   ![](images/85.png)
+   ![85](images/85.png)
 
 1. Confirm the removal of the repository by clicking on **Delete.**
 
-   ![](images/86.png)
+   ![86](images/86.png)
 
 ### Task 3: Renaming a Git repository in your team project
 
 1. Select the **gear icon** and navigate to **Version Control**.
 
-   ![](images/84.png)
+   ![84](images/84.png)
 
 1. Choose the repository that you wish to rename and click on **...** to select **rename repository**.
 
-   ![](images/87.png)
+   ![87](images/87.png)
 
 1. Confirm the rename of the repository by clicking on **Rename.**
 
-   ![](images/87.png)
+   ![87](images/87.png)
