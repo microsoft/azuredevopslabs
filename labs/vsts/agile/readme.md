@@ -1,7 +1,7 @@
 ---
 title: Agile Planning and Portfolio Management with Visual Studio Team Services
 layout: page
-sidebar: vsts
+sidebar: vsts2
 permalink: /labs/vsts/agile/
 folder: /labs/vsts/agile/
 ---

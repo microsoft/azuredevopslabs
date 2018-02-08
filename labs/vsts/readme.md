@@ -16,7 +16,7 @@ folder: /labs/vsts/
 </div>
 </div>
 
-## Step-by-Step Tutorials
+## Getting Started
 
 <div class="lablist">
     <ul class="fa-ul">
