@@ -1,7 +1,7 @@
 ---
 title: Deploy and Manage Azure Resources
 layout: page
-sidebar: vsts
+sidebar: vsts2
 permalink: /labs/vsts/azureresource/
 folder: /labs/vsts/azureresource/
 ---

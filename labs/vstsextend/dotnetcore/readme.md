@@ -1,4 +1,12 @@
-# Deploy an ASP.NET Core application to Azure App Service using VSTS
+---
+title: Deploy an ASP.NET Core application to Azure App Service using VSTS
+layout: page
+sidebar: vsts2
+permalink: /labs/vstsextend/dotnetcore/
+folder: /labs/vstsextend/dotnetcore/
+---
+
+## Overview
 
 This lab shows how to deploy an ASP.NET Core application to Azure App Service with Visual Studio Team Services.
 
@@ -25,15 +33,15 @@ This lab shows how to deploy an ASP.NET Core application to Azure App Service wi
 
 ## Setting up the VSTS Project
 
-1. Use the [VSTS Demo Generator](https://vstsdemogenerator.azurewebsites.net) to provision the team project on the VSTS account.
+1. Use the [VSTS Demo Generator](https://vstsdemogenerator.azurewebsites.net/?name=MyHealthClinic){:target="_blank"} to provision the team project on the VSTS account.
 
    > **VSTS Demo Generator** helps you create team projects on your VSTS account with sample content that include source code, work items,iterations, service endpoints, build and release definitions based on the template you choose during the configuration.
 
-   ![VSTS Demo Generator](images/vstsdemogen.png)
+   ![VSTS Demo Generator](images/vsts_demoGen.png)
 
 1. Once the team project is provisioned, click on the URL to navigate to the team project.
 
-   ![VSTS Demo Generator](images/VSTSDemoGeneratorCreate.png)
+   ![VSTS Demo Generator](images/project_provision.png)
 
 ## Exercise 1: Endpoint Creation
 

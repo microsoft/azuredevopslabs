@@ -1,7 +1,7 @@
 ---
 title: Test Planning and Management with Visual Studio Team Services
 layout: page
-sidebar: vsts
+sidebar: vsts2
 permalink: /labs/vsts/testmanagement/
 folder: /labs/vsts/testmanagement/
 ---

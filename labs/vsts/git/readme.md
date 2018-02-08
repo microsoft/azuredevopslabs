@@ -1,7 +1,7 @@
 ---
 title: Version Controlling with Git using VSTS
 layout: page
-sidebar: vsts
+sidebar: vsts2
 permalink: /labs/vsts/git/
 folder: /labs/vsts/git/
 ---
@@ -22,9 +22,11 @@ In this lab, you will learn how to establish a local Git repository, which can e
 
 ## Prerequisites
 
-In order to complete this lab you will need the Visual Studio 2017 virtual machine provided by Microsoft. Click the button below to launch the virtual machine.
+In order to complete this lab you will need Visual Studio 2017. Click the button below to deploy a VS 2017 Community VM from the Azure marketplace.
 
-<a href="" class="launch-hol" role="button" target="_blank"><span class="lab-details">Launch the virtual machine</span></a>
+<a href="https://portal.azure.com/#create/Microsoft.VisualStudioCommunity2017onWindowsServer2016x64" class="launch-hol" role="button" target="_blank"><span class="lab-details">Launch the virtual machine</span></a>
+
+{% include note.html content= "If you do not have an Azure subscription, you can sign up one for Free [here](https://azure.microsoft.com/en-us/free/){:target=\"_blank\"}" %}
 
 ## Exercise 1: Cloning an existing repository
 

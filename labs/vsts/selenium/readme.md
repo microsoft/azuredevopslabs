@@ -1,7 +1,7 @@
 ---
 title: UI Automation using Selenium Tests
 layout: page
-sidebar: vsts
+sidebar: vsts2
 permalink: /labs/vsts/selenium/
 folder: /labs/vsts/selenium/
 ---

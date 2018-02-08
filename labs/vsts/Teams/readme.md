@@ -1,7 +1,7 @@
 ---
 title: Microsoft Teams Integration (Collaborate, Communicate and Celebrate)
 layout: page
-sidebar: vsts
+sidebar: vsts2
 permalink: /labs/vsts/teams/
 folder: /labs/vsts/teams/
 ---

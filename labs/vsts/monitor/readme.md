@@ -1,7 +1,7 @@
 ---
 title: Monitoring Applications using Application Insights
 layout: page
-sidebar: vsts
+sidebar: vsts2
 permalink: /labs/vsts/monitor/
 folder: /labs/vsts/monitor/
 ---
@@ -25,15 +25,13 @@ It provides benefits as:
 
 ## Pre-requisites
 
-In order to complete this lab you will need-
+In order to complete this lab you will need Visual Studio 2017. Click the button below to deploy a VS 2017 Community VM from the Azure marketplace.
 
-- Visual Studio 2017 virtual machine provided by Microsoft. Click the button below to launch the virtual machine.
+<a href="https://portal.azure.com/#create/Microsoft.VisualStudioCommunity2017onWindowsServer2016x64" class="launch-hol" role="button" target="_blank"><span class="lab-details">Launch the virtual machine</span></a>
 
-  <a href="" class="launch-hol" role="button" target="_blank"><span class="lab-details">Launch the virtual machine</span></a>
+{% include note.html content= "If you do not have an Azure subscription, you can sign up one for Free [here](https://azure.microsoft.com/en-us/free/){:target=\"_blank\"}" %}
 
 - **Visual Studio Team Services account**. If you don't have one, you can create from [here](https://www.visualstudio.com/team-services){:target="_blank"}
-
-- **Visual Studio 2017** or higher version
 
 - You can use the **[VSTS Demo Data generator](http://vstsdemogenerator.azurewebsites.net/Environment/Create){:target="_blank"}** to provison a project with pre-defined data on to your Visual Studio Team Services account. Please use the ***My Health Clinic*** template to follow the hands-on-labs.
 

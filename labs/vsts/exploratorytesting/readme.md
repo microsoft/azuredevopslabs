@@ -1,7 +1,7 @@
 ---
 title: Exploratory Testing and Feedback Management with Visual Studio Team Services
 layout: page
-sidebar: vsts
+sidebar: vsts2
 permalink: /labs/vsts/exploratorytesting/
 folder: /labs/vsts/exploratorytesting/
 ---

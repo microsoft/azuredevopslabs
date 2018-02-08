@@ -1,7 +1,7 @@
 ---
 title: Package Management in Team Services
 layout: page
-sidebar: vsts
+sidebar: vsts2
 permalink: /labs/vsts/packagemanagement/
 folder: /labs/vsts/packagemanagement/
 ---

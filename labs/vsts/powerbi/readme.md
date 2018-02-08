@@ -1,7 +1,7 @@
 ---
 title: Connect to Visual Studio Team Services with Power BI
 layout: page
-sidebar: vsts
+sidebar: vsts2
 permalink: /labs/vsts/powerbi/
 folder: /labs/vsts/powerbi/
 ---
@@ -14,7 +14,7 @@ You can gain insight and analyze the progress and quality of your project by con
 
 Power BI is a suite of business analytics tools that deliver insights throughout your organization. Connect to hundreds of data sources, simplify data prep, and drive ad hoc analysis. Produce beautiful reports, then publish them for your organization to consume on the web and across mobile devices. Everyone can create personalized dashboards with a unique, 360-degree view of their business. And scale across the enterprise, with governance and security built-in.
 
-{% include important.html content= "The Visual Studio Team Services (VSTS) Content Pack for Power BI has been deprecated on November 15, 2017 primarily due to the negative impact it has had on VSTS accounts, including throttling end users access. Support will continue for all existing PowerBI.com data sets based on the Content Pack. However, you won’t be able to create any new data sets.<br/>
+{% include important.html content= "The Visual Studio Team Services (VSTS) Content Pack for Power BI has been deprecated on November 15, 2017 primarily due to the negative impact it has had on VSTS accounts, including throttling end users access. Support will continue for all existing [PowerBI.com](https://powerbi.microsoft.com/en-us/){:target=\"_blank\"} data sets based on the Content Pack. However, you won’t be able to create any new data sets.<br/>
 
 The [Analytics Marketplace extension](https://marketplace.visualstudio.com/items?itemName=ms.vss-analytics){:target=\"_blank\"} and upcoming updates to the [Power BI Desktop connector](https://docs.microsoft.com/en-us/vsts/report/powerbi/data-connector-connect){:target=\"_blank\"} for VSTS are intended to replace and improve on the capabilities of the Content Pack. While the Analytics Marketplace extension currently supports Work Item Tracking data, we will update it to support additional data types including Tests, Build, Release and Version Control. In the interim, you can use [VSTS REST APIs](https://www.visualstudio.com/en-us/docs/integrate/api/overview){:target=\"_blank\"} as an alternative to the Content Pack to report on these additional data types." %}
 
@@ -24,7 +24,7 @@ The [Analytics Marketplace extension](https://marketplace.visualstudio.com/items
 
 1. Visual Studio Team Services account. If you don't have one, you can create from [here](https://www.visualstudio.com/team-services){:target="_blank"}
 
-**You can start a free trial if you don't have Office365 account from [here](https://teams.microsoft.com/start){:target="_blank"}**
+{% include tip.html content ="You can start a free trial if you don't have Office365 account from [here](https://teams.microsoft.com/start){:target=\"_blank\"}" %}
 
 ## Authorize Power BI to access your account data
 

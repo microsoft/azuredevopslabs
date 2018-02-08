@@ -1,7 +1,7 @@
 ---
 title: Continuous Integration using Visual Studio Team Services
 layout: page
-sidebar: vsts
+sidebar: vsts2
 permalink: /labs/vsts/continuousintegration/
 folder: /labs/vsts/continuousintegration/
 ---
