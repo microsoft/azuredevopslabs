@@ -26,7 +26,8 @@ In order to complete this lab you will need Visual Studio 2017. Click the button
 
 <a href="https://portal.azure.com/#create/Microsoft.VisualStudioCommunity2017onWindowsServer2016x64" class="launch-hol" role="button" target="_blank"><span class="lab-details">Launch the virtual machine</span></a>
 
-{% include note.html content= "If you do not have an Azure subscription, you can sign up one for Free [here](https://azure.microsoft.com/en-us/free/){:target=\"_blank\"}" %}
+{% include note.html content= "
+If you don't have an Azure subscription, you can get one free through [Visual Studio Dev Essentials](https://www.visualstudio.com/dev-essentials/){:target=\"_blank\"}" %}
 
 ## Exercise 1: Cloning an existing repository
 
