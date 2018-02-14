@@ -16,7 +16,7 @@ folder: /labs/vsts/
 </div>
 </div>
 
-## Step-by-Step Tutotrials
+## Step-by-Step Tutorials
 
 <div class="lablist">
     <div class="header2"> <b>Getting Started</b></div>
@@ -34,7 +34,6 @@ folder: /labs/vsts/
       <li class="labslistitems"><i class="fa-li fa fa-book" style="color:  #002868;"></i><a href="monitor/">Monitoring Applications using Application Insights</a> </li>
       <li class="labslistitems"><i class="fa-li fa fa-book" style="color:  #002868;"></i><a href="teams/">Increase team collaboration and Communication with Microsoft Teams</a> </li>
       <li class="labslistitems"><i class="fa-li fa fa-book" style="color:  #002868;"></i><a href="powerbi/">Connect to Visual Studio Team Services with Power BI</a> </li>
-
         </ul>
 </div>
 
