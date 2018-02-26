@@ -38,7 +38,7 @@ In this lab, the following tasks will be performed:
 
 * Create an Azure Container Registry (ACR), AKS and Azure SQL server
 
-* Provision the VSTS Team Project with a .NET Core application using the [VSTS Demo Generator](https://vstsdemogenerator.azurewebsites.net/){:target="_blank"} tool
+* Provision the VSTS Team Project with a .NET Core application using the [VSTS Demo Generator](https://vstsdemogenerator.azurewebsites.net/?Name=aks&templateId=77372){:target="_blank"} tool
 
 * Configure endpoints (properties) in VSTS to access Azure and AKS
 
