@@ -79,8 +79,9 @@ In this task you will configure the VSTS build definition that will build and pu
 1. Then there is **Copy** and **Publish** tasks to copy the artifacts to the staging directory and publish to VSTS (or a file share).
 
 1. Next we use the **Docker Compose** task to build and publish the images. Set the **Action** as **Build Service Images**. The other settings of the Docker compose tasks are as follows:
+
     | Parameter | Value | Notes |
-    | --------------- | ---------------------------- | ----------------------------------------------------------- |
+    | --------------- | ---------------------------- | ------------------------------------------- |
     | Container Registry Type | Azure Container Registry | This is to connect to the Azure Container Registry you created earlier |
     | Azure Subscription | Your Azure subscription | The subscription that contains your registry |
     | Azure Container Registry | Your registry | Select the Azure Container registry you created earlier |
