@@ -1,7 +1,7 @@
 ---
 title: Exploratory Testing and Feedback Management with Visual Studio Team Services
 layout: page
-sidebar: vsts
+sidebar: vsts2
 permalink: /labs/vsts/exploratorytesting/
 folder: /labs/vsts/exploratorytesting/
 ---
@@ -16,18 +16,17 @@ The Test & Feedback extension helps teams perform exploratory testing and provid
 
 In order to complete this lab you will need-
 
-- **Visual Studio Team Services account**. If you don't have one, you can create from [here](https://www.visualstudio.com)
+- **Visual Studio Team Services account**. If you don't have one, you can create from [here](https://www.visualstudio.com/team-services){:target="_blank"}
 
-- **Visual Studio 2017** or higher version
-
-- You can use the **[VSTS Demo Data generator](http://vstsdemogenerator.azurewebsites.net/Environment/Create)** to provison a project with pre-defined data on to your Visual Studio Team Services account. Please use the ***My Health Clinic*** template to follow the hands-on-labs.
+- You can use the **[VSTS Demo Data Generator](http://vstsdemogenerator.azurewebsites.net){:target="_blank"}** to provison a project with pre-defined data on to your Visual Studio Team Services account. Please use the ***My Health Clinic*** template to follow the hands-on-labs.
 
 - If you are not using the VSTS Demo Data Generator, you can clone the code from here
 
-**Using the extension**
+### Using the extension
+
 Using the extension is a simple, three step process.
 
-![](images/1.png)
+![1](images/1.png)
 
 **Capture your findings** quickly and easily using the tools in the extension. Capture notes, screenshots with annotations, and screen recordings to describe your findings and highlight issues. Additionally, in the background the extension automatically captures rich data such as user actions as an image action log, page load data, and system information about the browser, operating system, memory, and more that can serve as a starting point for debugging.
 
@@ -39,86 +38,85 @@ As users perform exploratory testing, you can get insights from the sessions in 
 
 ## Task 1: Installing the Test & Feedback extension
 
-For using the Test & Feedback extension you will need Chrome, as it is the only browser compatible with the extension at this moment, so you need to [download and install Chrome](https://www.google.com/chrome/browser/desktop/).
+For using the Test & Feedback extension you will need Chrome, as it is the only browser compatible with the extension at this moment, so you need to [download and install Chrome](https://www.google.com/chrome/browser/desktop/){:target="_blank"}.
 
-1. Go to [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=ms.vss-exploratorytesting-web/) Test & Feedback</a> and install the extension.
+1. Go to [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=ms.vss-exploratorytesting-web/){:target="_blank"} Test & Feedback and install the extension.
 
-    ![](images/2.png)
+    ![2](images/2.png)
 
 1. Add the Test & Feedback extension to Chrome.
 
-    ![](images/3.png)
-    ![](images/4.png)
+    ![3](images/3.png)
+
+    ![4](images/4.png)
 
 1. Go to Chrome and open the extension.
 
-    ![](images/5.png)
+    ![5](images/5.png)
 
 1. Select to use the extension in Connected mode. And introduce the URL for your Visual Studio Team Services account **https://{youraccount}.visualstudio.com** and click **Next**
 
-    ![](images/6.jpg)
+    ![6](images/6.jpg)
 
 1. Select the desired **Team** and click **Save**
 
-    ![](images/7.jpg)
+    ![7](images/7.jpg)
 
 ## Task 2: Create Test Case from exploration
 
 1. Start your **Exploratory testing** session.
 
-    ![](images/8.png)
+    ![8](images/8.png)
 
     >When you start the exploration you have different tools to add information to the session, like snapshots, screen video or notes.
 
-    ![](images/9.png)
+    ![9](images/9.png)
 
     > Open the web application: `YOUR_WEBAPP_URI` (Check the web app uri in the existing resource group). and start exploring it.
 
-    ![](images/10.png)
+    ![10](images/10.png)
 
 1. When done exploring click on the **Create Work item** button and then on **Create Test case**
 
-    ![](images/11.jpg)
+    ![11](images/11.jpg)
 
-    ![](images/12.jpg)
+    ![12](images/12.jpg)
 
 1. Introduce a title for the new **Test Case** and click **Save**.
 
-    ![](images/13.jpg)
+    ![13](images/13.jpg)
 
-    > You can see in the **Create Test Case** screen all the steps recorded during the exploration. This allows you to quickly create new test cases, based on your navigation, that you can use later to test your application with manual or automated testing.
-    > Let's continue with the next steps to create a new **Bug**
+    {% include note.html content= "You can see in the **Create Test Case** screen all the steps recorded during the exploration. This allows you to quickly create new test cases, based on your navigation, that you can use later to test your application with manual or automated testing. Let's continue with the next steps to create a new **Bug**" %}
 
 ## Task 3: Create bug
 
 1. Click on take snapshot. You will be able to select the region of the screen you want to capture. Once selected the region, you will be able to include shapes and other information to the capture.
 
-   ![](images/14.jpg)
+   ![14](images/14.jpg)
 
    > Click on the *tick* when done to finish the capture.
 
-   ![](images/15.jpg)
+   ![15](images/15.jpg)
 
 1. Click on add note and add a descriptive note and click on **Save** when done.
 
-    ![](images/16.jpg)
+    ![16](images/16.jpg)
 
-1. When done exploring click on the **Create Work item** button and then on **Create Bug**
+1. When done exploring click on the **Create Work item** button and then on **Create Bug**.
 
-    ![](images/17.jpg)
+    ![17](images/17.jpg)
 
-    ![](images/18.jpg)
+    ![18](images/18.jpg)
 
 1. Introduce a title for the new **Bug** and click **Save**
 
-    ![](images/19.jpg)
+    ![19](images/19.jpg)
 
-    > As with the **Test Case** creation, you will be able to see all recorded actions, as well as all additional screen shots and information included in the exploratory testing session.
-    > This will allow developers to quickly review and be able to reproduce the bug to solve it.
+    > As with the **Test Case** creation, you will be able to see all recorded actions, as well as all additional screen shots and information included in the exploratory testing session. This will allow developers to quickly review and be able to reproduce the bug to solve it.
 
 1. Close the exploratory testing session clicking on the stop button.
 
-    ![](images/20.jpg)
+    ![20](images/20.jpg)
 
 ## Task 4: Review Test Cases and Bugs
 
@@ -128,22 +126,22 @@ For using the Test & Feedback extension you will need Chrome, as it is the only 
 
 1. Click on **Work \| Queries** to open your Work Item Queries.
 
-    ![](images/21.jpg)
+    ![21](images/21.jpg)
 
 1. Test Cases created within exploratory testing sessions are automatically assigned to you, so you will see them on your assigned items, if you want you can assign them to any other member of the team once you review them and are ready to be used.
 
-    ![](images/22.jpg)
+    ![22](images/22.jpg)
 
     > Opening the test case work item you will see all the information recorded during the session.
 
 1. Click on **Work \| Backlogs** to open the backlogs.
 
-    ![](images/23.jpg)
+    ![23](images/23.jpg)
 
     > Bugs are introduced in the backlogs by default.
 
 1. You should see the created bug in the backlog, if you double click on it, as with the Test Case, you will be able to see all the captured information, which is relevant to the bug, and will help developers to be able to reproduce and solve it.
 
-    ![](images/24.jpg)
+    ![24](images/24.jpg)
 
-    >It is very important to provide all the information you can within the bugs to developers. This will ease all the process of reproducing and solving bugs during development cycles.
+    > It is very important to provide all the information you can within the bugs to developers. This will ease all the process of reproducing and solving bugs during development cycles.

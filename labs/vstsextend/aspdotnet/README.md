@@ -1,9 +1,14 @@
-# Deployment of ASP.NET application to the Azure App Service using VSTS
-
-This lab details the deployment of an [ASP.NET](https://www.asp.net/) application to the Azure App Service using Visual Studio Team Services (VSTS).
+---
+title: Deployment of ASP.NET application to the Azure App Service using VSTS
+layout: page
+sidebar: vsts2
+permalink: /labs/vstsextend/aspdotnet/
+folder: /labs/vstsextend/aspdotnet/
+---
 
 ## Overview
 
+This lab details the deployment of an [ASP.NET](https://www.asp.net/){:target="_blank"} application to the Azure App Service using Visual Studio Team Services (VSTS).
 ASP.NET is an open source web framework for building modern web applications and services. ASP.NET creates websites based on HTML5, CSS, and JavaScript that are simple, fast, and can scale to millions of users.
 
 ### Prerequisites for the lab
@@ -22,7 +27,7 @@ ASP.NET is an open source web framework for building modern web applications and
 
 ## Setting up the VSTS Project
 
-1. Use the [VSTS Demo Generator](https://vstsdemogenerator.azurewebsites.net/?name=PartsUnlimited) to provision the team project on the VSTS account.
+1. Use the [VSTS Demo Generator](https://vstsdemogenerator.azurewebsites.net/?name=PartsUnlimited){:target="_blank"} to provision the team project on the VSTS account.
 
    > **VSTS Demo Generator** helps you create team projects on your VSTS account with sample content that include source code, work items,iterations, service endpoints, build and release definitions based on the template you choose during the configuration.
 
@@ -34,7 +39,7 @@ ASP.NET is an open source web framework for building modern web applications and
 
 ## Exercise 1: Endpoint Creation
 
-> The connection between the VSTS and the Azure is not automatically established during the team project provisioning, and hence the endpoints need to be created manually. This endpoint will be used to connect **VSTS** with **Azure**. Follow the steps outlined below to create the endpoint.
+The connection between the VSTS and the Azure is not automatically established during the team project provisioning, and hence the endpoints need to be created manually. This endpoint will be used to connect **VSTS** with **Azure**. Follow the steps outlined below to create the endpoint.
 
 1. In the VSTS home page, click on the **Settings** gear icon ![Admin Settings](images/gear.png) and then click on the **Services** option to navigate to the **Services** screen.
 
@@ -48,7 +53,7 @@ ASP.NET is an open source web framework for building modern web applications and
 
 1. Once the connection is established, manually map the endpoints to the release definition.
 
-   > An error `TFS.WebApi.Exception: Page not found` will be encountered for the Azure tasks in the release definition. This is due to a recent change in the VSTS Release Management API. While this is being fixed on the VSTS Demo Generator, the issue can be fixed by typing a random text in the **Azure Subscription** field and then clicking the **Refresh** icon next to it. Once the field is refreshed, the endpoint can be selected from the dropdown.
+   {% include warning.html content= "An error `TFS.WebApi.Exception: Page not found` will be encountered for the Azure tasks in the release definition. This is due to a recent change in the VSTS Release Management API. While this is being fixed on the VSTS Demo Generator, the issue can be fixed by typing a random text in the **Azure Subscription** field and then clicking the **Refresh** icon next to it. Once the field is refreshed, the endpoint can be selected from the dropdown." %}
 
 1. Click on the **Build & Release** section and then click on the **Releases**. Select the release definition **PartsUnlimitedE2E** and click on the **Edit** button.
 
@@ -84,7 +89,7 @@ ASP.NET is an open source web framework for building modern web applications and
 
 ## Exercise 3: Initiate Continuous Integration (CI) and Continuous Deployment (CD)
 
->To automatically initiate the CI-CD, the source code needs to be modified and committed to the source code repository.
+To automatically initiate the CI-CD, the source code needs to be modified and committed to the source code repository.
 
 1. Navigate to the **Code** hub on the VSTS portal.
 
@@ -130,7 +135,7 @@ ASP.NET is an open source web framework for building modern web applications and
 
 ## Exercise 4: Continuous Delivery
 
-> The release pipeline is configured as **Infrastructure as a Code** to deploy the application which is associated to the build and is automatically triggered when the build is successfully completed.
+The release pipeline is configured as **Infrastructure as a Code** to deploy the application which is associated to the build and is automatically triggered when the build is successfully completed.
 
 1. To view the release progress, click on the **Build and Release** hub and select the **Release** option.
 
@@ -148,7 +153,7 @@ ASP.NET is an open source web framework for building modern web applications and
 
    | Tasks used in Release | Usage / Purpose |
    |-------|-------|
-   | **Azure Resource Group Deployment**|The project used in this lab contains the front-end (Azure App Service) and back-end (Azure SQL DB) services. These will be provisioned as [PAAS on Azure](https://azure.microsoft.com/en-in/overview/what-is-paas/) using [ARM](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-manager-create-first-template) templates. The task will create the above services in a resource group named **ASPDOTNET**|
+   | **Azure Resource Group Deployment**|The project used in this lab contains the front-end (Azure App Service) and back-end (Azure SQL DB) services. These will be provisioned as [PAAS on Azure](https://azure.microsoft.com/en-in/overview/what-is-paas/){:target="_blank"} using [ARM](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-manager-create-first-template){:target="_blank"} templates. The task will create the above services in a resource group named **ASPDOTNET**|
    | **Azure App Service Deploy**| The task is used to deploy a Web project to the Azure App Service created in the previous step|
 
 1. To view the outcome of the release, click on the **View releases** option.
