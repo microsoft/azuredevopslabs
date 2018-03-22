@@ -38,7 +38,7 @@ In this lab, the following tasks will be performed:
 
 * Create an Azure Container Registry (ACR), AKS and Azure SQL server
 
-* Provision the VSTS Team Project with a .NET Core application using the [VSTS Demo Generator](https://vstsdemogenerator.azurewebsites.net/){:target="_blank"} tool
+* Provision the VSTS Team Project with a .NET Core application using the [VSTS Demo Generator](https://vstsdemogenerator.azurewebsites.net/?Name=aks&templateId=77372){:target="_blank"} tool
 
 * Configure endpoints (properties) in VSTS to access Azure and AKS
 
@@ -137,7 +137,7 @@ The following azure resources need to be configured for this lab:
     * Service Principal Client
     * Service Principal Client Secret
 
-   [![Deploy to Azure](http://azuredeploy.net/deploybutton.png)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FMicrosoft%2FVSTS-DevOps-Labs%2Fkubernetes%2Fkubernetes%2Ftemplates%2Fazuredeploy.json){:target="_blank"}
+   [![Deploy to Azure](http://azuredeploy.net/deploybutton.png)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FMicrosoft%2FVSTS-DevOps-Labs%2Fmaster%2Farmtemplates%2Fkubernetes%2Fazuredeploy.json){:target="_blank"}
 
    {% include important.html content= "At the time of writing this lab, only the **East US**, **Central US**, **West Europe**, **Canada Central** and **Canada East** are the supported locations. For updates, refer to the [AKS Azure Regions](https://docs.microsoft.com/en-in/azure/aks/container-service-quotas){:target=\"_blank\"}" %}
 
