@@ -1,4 +1,12 @@
-# Modernizing your existing ASP.NET Apps with Azure
+---
+title: Modernizing your existing ASP.NET Apps with Azure
+layout: page
+sidebar: vsts2
+permalink: /labs/vstsextend/aspnetmodernize/
+folder: /labs/vstsextend/aspnetmodernize/
+---
+
+Last updated : {{ "now" | date: "%b %d, %Y" }}.
 
 ## Overview
 
@@ -10,7 +18,7 @@ Depending on the type of application, re-architecting your apps might not be nec
 
 In this Lab we will use Nerd Dinner Application. Nerd Dinner is an Open Source ASP.NET MVC Project that helps nerds and computer people plan get-togethers. You can see the site running LIVE at http://www.nerddinner.com. We will move the application DB to Azure SQL instance and add the Docker support to the application to run the application in Azure Container Instances.
 
-What's covered in this lab?
+## What's covered in this lab?
 
 In this lab, you will
 
