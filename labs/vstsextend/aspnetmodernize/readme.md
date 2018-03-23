@@ -1,8 +1,8 @@
-# Lift and Shift - Adding Docker to Nerd Dinner
+# Modernizing your Existing .NET Apps with Azure
 
 ## Overview
 
-When you decide to modernize your web applications and move them to the cloud (also known as "Lift and Shift".), you don’t necessarily have to entirely re-architect your apps. Establishing an environment that emulates your on-premises architecture and putting your application "gets" you there, but doesn't accomplish much more than that.
+When you decide to modernize your web applications and move them to the cloud, you don’t necessarily have to entirely re-architect your apps. Establishing an environment that emulates your on-premises architecture and putting your application "gets" you there, but doesn't accomplish much more than that.
 
 Re-architecting an application by using an advanced approach like micro-services isn't always an option, because of cost and time restraints. Ripping apart the app and re-writing what sometimes can be years of work and iterations of people and business decisions probably wouldn't be the advised first step.
 
