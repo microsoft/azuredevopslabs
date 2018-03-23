@@ -52,7 +52,7 @@ Azure Functions is an event driven, compute-on-demand experience that extends th
 
 ## Setting up the VSTS team project
 
-1. Use the [VSTS Demo Generator](https://vstsdemobuildertest.azurewebsites.net/) to provision the project on your VSTS account.
+1. Use the [VSTS Demo Generator](https://vstsdemogenerator.azurewebsites.net/?Name=AzureFunctions&TemplateId=77374) to provision the project on your VSTS account.
 
    > **VSTS Demo Generator** helps you create team projects on your VSTS account with sample content that include source code, work items,iterations, service endpoints, build and release definitions based on the template you choose during the configuration.
 
