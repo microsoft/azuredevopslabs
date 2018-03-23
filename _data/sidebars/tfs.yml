@@ -25,14 +25,14 @@ entries:
     folderitems:
 
     - title: Overview and Accessing the VM
-      url: labs/tfs/
+      url: labs/tfs/almvmdownload/
       output: web, pdf
 
-    - title: Working with the Visual Studio 2017 ALM VM
+    - title: Working with the Visual Studio 2017 VM
       url: labs/tfs/started
       output: web, pdf
 
-    - title: Running the labs on TechNet Virtual Center
+    - title: Running the labs on Hands-on Lab portal
       url: labs/tfs/technet
       output: web, pdf
 
