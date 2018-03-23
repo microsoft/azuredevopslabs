@@ -43,7 +43,7 @@ Azure Functions is an event driven, compute-on-demand experience that extends th
 
 1. Click **Deploy To Azure** to provision an Azure App service plan with two web apps.
 
-   [![Deploy to Azure](http://azuredeploy.net/deploybutton.png)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fsriramdasbalaji%2FAzureFunctions%2Fmaster%2Farm%2520template%2Fazuredeploy.json)
+   [![Deploy to Azure](http://azuredeploy.net/deploybutton.png)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FMicrosoft%2Falmvm%2Farmtemplates%2Flabs%2Fvstsextend%2Farmtemplates%2Fazurefunctions%2Fazuredeploy.json)
 
 1. It should take approximately 5-10 minutes to provision the resources. Once the deployment is successful, you will see the resources as shown.
 
