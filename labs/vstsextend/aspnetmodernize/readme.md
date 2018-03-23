@@ -1,4 +1,4 @@
-# Modernizing your Existing .NET Apps with Azure
+# Modernizing your existing ASP.NET Apps with Azure
 
 ## Overview
 
