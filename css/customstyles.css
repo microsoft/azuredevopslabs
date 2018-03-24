@@ -1,11 +1,11 @@
 body {
-    font-size: 15px;
+    font-size: 14px;
     /*font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" ; */
-    /*font-family:  "Lato","Geneva CY","Lucida Grande","Arial Unicode MS","Helvetica Neue","Helvetica","Arial",sans-serif; */
-    font-family: segoe-ui_normal,Segoe UI,Segoe,Segoe WP,Helvetica Neue,Helvetica,sans-serif;
+    font-family:  "Lato","Geneva CY","Lucida Grande","Arial Unicode MS","Helvetica Neue","Helvetica","Arial",sans-serif; 
+    /*font-family: segoe-ui_normal,Segoe UI,Segoe,Segoe WP,Helvetica Neue,Helvetica,sans-serif;*/
     margin: 0px;
     padding: 0px;
-    line-height: 1.6;
+    line-height: 1.8;
     /*background-color: #248ec2;*/
 }
 
