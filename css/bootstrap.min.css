@@ -2010,7 +2010,8 @@ pre code {
         width: 75%
     }
     .col-md-8 {
-        width: 66.66666667%
+        width: 66.66666667%;
+        margin-top: 40px
     }
     .col-md-7 {
         width: 58.33333333%
@@ -2028,7 +2029,7 @@ pre code {
         width: 25%
     }
     .col-md-2 {
-        width: 16.66666667%
+        width: 16.66666667%;
     }
     .col-md-1 {
         width: 8.33333333%
@@ -2046,7 +2047,8 @@ pre code {
         right: 75%
     }
     .col-md-pull-8 {
-        right: 66.66666667%
+        right: 66.66666667%;
+        margin-top: 60px
     }
     .col-md-pull-7 {
         right: 58.33333333%
