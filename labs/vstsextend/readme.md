@@ -42,6 +42,5 @@ folder: /labs/vstsextend/
             <li> <img src="images/azure.png" height="32" width="32"><a href="#releasegates/"> Control the Deployment through Release Gates</a> <span class="label label-success">Coming soon</span></li><br />
            <li> <img src="images/azure.png" height="32" width="32"><a href="#devopsprojectforjava/"> Azure DevOps project for Java</a> <span class="label label-success">Coming soon</span></li><br />
            <li> <img src="images/azure.png" height="32" width="32"><a href="#devopsprojectfordotnet/"> Azure DevOps project for .NET </a> <span class="label label-success">Coming soon</span></li><br />
-          
         </ul>
 </div>
