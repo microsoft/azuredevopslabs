@@ -18,7 +18,7 @@ folder: /labs/vstsextend/
 ## Step-by-Step Tutorials
 
 <div class="lablist">
-    <div class="header2"> <b>DevOps</b></div>
+    <div class="header2"> 
         <ul style="list-style: none;">
           <li> <img src="images/jenkins.png" height="42" width="42"/> <a href="jenkins/"> Integrating with Jenkins</a>    </li><br />
           <li> <img src="images/tomcat.png" height="42" width="42"/><a href="tomcat/"> Deploying a Java application on Tomcat  </a>    </li><br />
