@@ -1,0 +1,47 @@
+{
+    "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "variables":{
+        "serverFarmName":"[concat('PartsUnlimited','-plan-',uniqueString(resourceGroup().id))]"
+    },
+    "resources": [
+        {
+            "type": "Microsoft.Web/serverfarms",
+            "sku": {
+                "name": "F1"
+            },
+            "name": "[variables('serverFarmName')]",
+            "apiVersion": "2015-08-01",
+            "location": "[resourceGroup().location]",
+            "properties": {
+                "name": "[variables('serverFarmName')]"
+            }
+        },
+        {
+            "type": "Microsoft.Web/sites",
+            "name": "[concat('PartsUnlimited','-Web-',uniqueString(resourceGroup().id))]",
+            "apiVersion": "2015-08-01",
+            "location": "[resourceGroup().location]",
+            "properties": {
+                "serverFarmId": "[variables('serverFarmName')]"
+            },
+            
+            "dependsOn": [
+                "[resourceId('Microsoft.Web/serverfarms', variables('serverFarmName'))]"
+            ]
+        },
+		{
+            "type": "Microsoft.Web/sites",
+            "name": "[concat('PartsUnlimited','-API-',uniqueString(resourceGroup().id))]",
+            "apiVersion": "2015-08-01",
+            "location": "[resourceGroup().location]",
+            "properties": {
+                "serverFarmId": "[variables('serverFarmName')]"
+            },
+            
+            "dependsOn": [
+                "[resourceId('Microsoft.Web/serverfarms', variables('serverFarmName'))]"
+            ]
+        }
+    ]
+}

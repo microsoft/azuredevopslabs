@@ -3,7 +3,11 @@ layout: default
 ---
 
 <div class="post-header " style="margin-left: 40px;" >
-   <p><span class="PageTitle">{{ page.title }}</span></p>
+   <p><span class="PageTitle">{{ page.title }}</span><br />
+   <script>function fbs_click() {u="http://aka.ms/devopslabs";t={{page.title | url_encode}};window.open('http://www.facebook.com/sharer.php?u='+encodeURIComponent(u)+'&t='+encodeURIComponent(t),'sharer','toolbar=0,status=0,width=626,height=436');return false;}</script><a href="http://www.facebook.com/share.php?u=http://aka.ms/devopslabs" onclick="return fbs_click()" target="_blank"><button class="btn btn-sm" style="background-color:#3b5998; color:white;"><span class="fa fa-facebook mr-2"></span></button></a>
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://aka.ms/devopslabs&title={{page.title | url_encode}}" onclick="return lnk_click()" target="_blank"><button class="btn btn-sm" style="background-color:#0077B5; color:white;"><span class="fa fa-linkedin"></span></button>
+    <a href="https://twitter.com/intent/tweet?url=http://aka.ms/devopslabs&text={{page.title | url_encode}}  #devopslabs @visualstudio" data-size="large" target="_blank"><button class="btn btn-sm" style="background-color:#00aced; color:white;"><span class="fa fa-twitter"></span></button></a>
+    </p>
 </div>
 
 {% if page.simple_map == true %}
