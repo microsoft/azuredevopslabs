@@ -16,12 +16,11 @@ Re-architecting an application by using an advanced approach like micro-services
 
 Depending on the type of application, re-architecting your apps might not be necessary. But adding a Dockerfile, and maybe migrating the database to a service offering like Azure's SQL Database require no code change other than connection strings.
 
-In this Lab we will use Nerd Dinner Application. Nerd Dinner is an Open Source ASP.NET MVC Project that helps nerds and computer people plan get-togethers. You can see the site running LIVE at http://www.nerddinner.com. We will move the application DB to Azure SQL instance and add the Docker support to the application to run the application in Azure Container Instances.
+In this Lab we will use Nerd Dinner Application. Nerd Dinner is an Open Source ASP.NET MVC Project that helps nerds and computer people plan get-togethers. You can see the site running LIVE at [http://www.nerddinner.com](http://www.nerddinner.com). We will move the application DB to Azure SQL instance and add the Docker support to the application to run the application in Azure Container Instances.
 
 ## What's covered in this lab?
 
 In this lab, you will
-
 
 * Migrate the LocalDB to SQL Server in Azure
 * Using the Docker tools in Visual Studio 2017, add the Docker support for the application
@@ -30,12 +29,11 @@ In this lab, you will
 
 ## Pre-requisites for the lab
 
-1.  **Microsoft Azure Account**: You will need a valid and active Azure account for the Azure labs. If you do not have one, you can sign up for a [free trial](https://azure.microsoft.com/en-us/free/){:target="_blank"}
+1. **Microsoft Azure Account**: You will need a valid and active Azure account for the Azure labs. If you do not have one, you can sign up for a [free trial](https://azure.microsoft.com/en-us/free/){:target="_blank"}
 
     * If you are a Visual Studio Active Subscriber, you are entitled for a $50-$150 credit per month. You can refer to this [link](https://azure.microsoft.com/en-us/pricing/member-offers/msdn-benefits-details/) to find out more including how to activate and start using your monthly Azure credit.
 
     * If you are not a Visual Studio Subscriber, you can sign up for the FREE [Visual Studio Dev Essentials](https://www.visualstudio.com/dev-essentials/)program to create **Azure free account** (includes 1 year of free services, $200 for 1st month).
-
 
 2. **Visual Studio 2017** latest version  with **.Net Core SDK** and **Azure Development Tools** for Visual Studio are installed.
 
@@ -43,24 +41,23 @@ In this lab, you will
 
 ## Setting up the Environment
 
-1. Clone the application repo from https://github.com/spboyer/nerddinner-mvc4 in your local machine and open the solution in Visual Studio 2017.
+1. Clone the application repo from [https://github.com/spboyer/nerddinner-mvc4](https://github.com/spboyer/nerddinner-mvc4) in your local machine and open the solution in Visual Studio 2017.
 
      ![cloneandopensolution](images/cloneandopensolution.png)
 
-2. Rebuild the solution and run the application locally to ensure that the application is working fine.
-The application looks like as shown in below figure.
-   
+2. Rebuild the solution and run the application locally to ensure that the application is working fine. The application looks like as shown in below figure.
+
    ![apphomepage](images/apphomepage.png)
 
 ## Exercise 1: Migrate the LocalDB to SQL Server in Azure
-  In this exercise we will create a SQL azure instance and  migrate the application LoaclDB to SQL Server in Azure.
 
-1. Create a new SQL Azure instance in the Azure portal by following the below document. 
+In this exercise we will create a SQL azure instance and  migrate the application LoaclDB to SQL Server in Azure.
+
+1. Create a new SQL Azure instance in the Azure portal by following the below document.
 
    [Create an Azure SQL database in the Azure portal](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-get-started-portal).
 
-2. Once the SQL database is provisioned in Azure, open the **SQL Server Object Explorer** in Visual Studio.
-Click on **Add Server** icon and connect to the Azure SQL server which you have deployed in previuous step.
+2. Once the SQL database is provisioned in Azure, open the **SQL Server Object Explorer** in Visual Studio. Click on **Add Server** icon and connect to the Azure SQL server which you have deployed in previuous step.
 
     ![connecttoazuresql](images/connecttoazuresql.png)
 3. To get the schema moved from the LocalDB to the new SQL Azure instance right-click on the LocalDB Instance and select the Schema Compare option.
@@ -77,7 +74,7 @@ Click on **Add Server** icon and connect to the Azure SQL server which you have 
    ![updateschema2](images/updateschema2.png)
 
 4. Similarly to get the data moved from the LocalDB to the SQL Azure instance right-click on the LocalDB Instance and select the Data Compare tool and walk through the SQL Data Compare wizard.
-      
+
       ![datacompare](images/datacompare.png)
 
    In the wizard select target as Azure sql database and click on compare.
@@ -85,16 +82,16 @@ Click on **Add Server** icon and connect to the Azure SQL server which you have 
       ![datacompare2](images/datacompare2.png)
 
    Click on **Update** to move data to Azure SQL database.
-   
+
       ![datacompare3](images/datacompare3.png)
 
 5. In order to accomplish the **zero code change mantra**, using web.config transforms is the best way to accomplish. Here we will add a new **web.release.config** with a new entry. Open the **web.release.config** in Visual Studio and add the below entry.
-   ```csharp
-   <connectionStrings>  
-      <add name="DefaultConnection" connectionString="Data Source=nerddinnerlabsql.database.windows.net;Initial Catalog=nerddinnerlab;Integrated Security=False;User ID=yourUserID;Password=yourdbpassword;Connect Timeout=30;Encrypt=True;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False" providerName="System.Data.SqlClient"  
-        xdt:Transform="SetAttributes" xdt:Locator="Match(name)"/>
-</connectionStrings>  
 
+   ```csharp
+   <connectionStrings>
+      <add name="DefaultConnection" connectionString="Data Source=nerddinnerlabsql.database.windows.net;Initial Catalog=nerddinnerlab;Integrated Security=False;User ID=yourUserID;Password=yourdbpassword;Connect Timeout=30;Encrypt=True;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False" providerName="System.Data.SqlClient" xdt:Transform="SetAttributes" xdt:Locator="Match(name)"/>
+   </connectionStrings>
+   ```
 
    >**Note**: Replace the connection string with your Azure SQL database connection string.
 
@@ -116,7 +113,8 @@ Click on **Add Server** icon and connect to the Azure SQL server which you have 
    FROM microsoft/aspnet:4.7.1-windowsservercore-ltsc2016
    ARG source
    WORKDIR /inetpub/wwwroot
-   COPY ${source:-obj/Docker/publish} .
+   COPY ${source:-obj/Docker/publish}
+   ```
 
 3. To run the application locally and debug within the Docker container using Visual Studio and to test the connectivity to the SQL Azure instance, set the **docker-compose** as startup project and click on **Docker**.
 
@@ -130,15 +128,15 @@ Click on **Add Server** icon and connect to the Azure SQL server which you have 
 
     ![applicationlaunch](images/applicationlaunch.png)
 
-   Now the application is running in local docker. To see the list of docker images you can run the following commad 
+   Now the application is running in local docker. To see the list of docker images you can run the following command.
+
    ```csharp
     docker images
    ```
 
      You will see the images similar to this
-   
-   ![dockerimages](images/dockerimages.png)
 
+   ![dockerimages](images/dockerimages.png)
 
 ## Exercise 3: Publish Docker Images to Azure Container Registry (ACR)
 
@@ -164,16 +162,16 @@ Click on **Add Server** icon and connect to the Azure SQL server which you have 
 
    ![acrrepositories](images/acrrepositories.png)
 
-
 6. Selcect **Access Keys** under settings in ACR and copy the **password**. This password is required in the next exercise.
 
    ![accesskey](images/accesskey.png)
 
 ## Exercise 4: Push the new Docker images from ACR to Azure Container Instances (ACI)
 
-  In this exercise we will create Azure Container Instance and push the new Docker image from ACR to Azure Container Instance.
+In this exercise we will create Azure Container Instance and push the new Docker image from ACR to Azure Container Instance.
 
- we have options as to where the application can be deployed.
+We have options as to where the application can be deployed.
+
 * Azure Container Instances
 * Azure Container Service
 * Service Fabric
@@ -183,17 +181,21 @@ In this Lab, we will use a Windows Container on Azure Container Instances (ACI) 
 1. We will use Azure CLI to create and push image to Azure Container Instance. Click on **Cloud Shell** in Azure portal.
 
    ![cloudshell](images/cloudshell.png)
+
 2. Run the following command to create a new resource group for ACI
+
    ```csharp
     az group create --name nerddinnerapp --location westus
    ```
 
      ![acirgcreate](images/acirgcreate.png)
 
-3. Run the following command to Create windows ACI and push the Nerd Dinner image from ACR
+3. Run the following command to Create windows ACI and push the Nerd Dinner image from ACR.
+
    ```csharp
-   az container create --name nerddinnerapp --resource-group nerddinnerapp --os-type windows --image {your acr name}.azurecr.io/nerddinner:{Image Tag} --ip-address public 
+   az container create --name nerddinnerapp --resource-group nerddinnerapp --os-type windows --image {your acr name}.azurecr.io/nerddinner:{Image Tag} --ip-address public
    ```
+
    ![deployaci](images/deployaci.png)
 
    When prompted for **image registry password** paste the password which we have copied in the previous exercise
