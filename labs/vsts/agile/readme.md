@@ -1,7 +1,7 @@
 ---
 title: Agile Planning and Portfolio Management with Visual Studio Team Services
 layout: page
-sidebar: vsts
+sidebar: vsts2
 permalink: /labs/vsts/agile/
 folder: /labs/vsts/agile/
 ---
@@ -16,114 +16,104 @@ In this lab, you will learn about the agile planning and portfolio management to
 
 To complete this lab, you will need:
 
-- **Visual Studio Team Services account**. If you don't have one, you can create from [here](https://www.visualstudio.com/)
+- **Visual Studio Team Services account**. If you don't have one, you can create from [here](https://www.visualstudio.com/team-services){:target="_blank"}
 
-- **Visual Studio 2017** or higher version
-
-- You can use the **[VSTS Demo Data generator](http://vstsdemogenerator.azurewebsites.net/Environment/Create)** to provision a project with pre-defined data on to your Visual Studio Team Services account. Please use the ***My Health Clinic*** template to follow the hands-on-labs.
-
-## Connecting to your Project
-
-1. Go to your VSTS account home page.
-
-1. Click on the VS icon and browse to the MyHealthClinic project. At this moment, we have only one project. You could select/create as many projects from here.
-
-   {% include note.html content= "If you haven't already, browse to your Visual Studio Team Services account you can sign in by going to (https://{youraccount}.visualstudio.com)." %}
-
-   ![](images/6.png)
+- You can use the **[VSTS Demo Data generator](http://vstsdemogenerator.azurewebsites.net/Environment/Create){:target="_blank"}** to provision a project with pre-defined data on to your Visual Studio Team Services account. Please use the ***My Health Clinic*** template to follow the hands-on-labs.
 
 ## Exercise 1: Working with Teams, Areas, and Iterations
 
-1. Connect to the **MyHealthClinic** project.
+1. Go to your VSTS account home page.
+
+1. Click on the VS icon and browse to the MyHealthClinic project.
 
 1. Navigate to the **Administration Overview** page by choosing the gear icon.
 
-    ![](images/7.png)
+    ![images](images/7.png)
 
 1. Check the existing teams, there are three teams by name **MyHealthClinic Team, Team1, and Team2**.
     The default team has the same name as your VSTS project. You can create new teams if needed from here.
 
-    ![](images/8.png)
+    ![images](images/8.png)
 
 1. Delete both **Team 1** and **Team 2** by clicking the ellipsis next to each team and selecting **Delete**.
 
-    ![](images/71.png)
+    ![images](images/71.png)
 
 1. Now create a new team by clicking the **New team** link and giving it a name of **Web**. Make sure the **Team area** has a check mark. This option will create a corresponding area for the team, so they can group all their work items and keep them separate from other teams. If you do not select this option, you will have to set the default area path for the team once you create it. Follow the same steps to create a team called **Database**.
 
-    ![](images/72.png)
+    ![images](images/72.png)
 
-    ![](images/73.png)
+    ![images](images/73.png)
 
 1. While on the **Overview** screen, click on the default team to view the members.   We see our user as the only current member.
 
-    ![](images/10.png)
+    ![images](images/10.png)
 
 1. Click **Add** button to add new members to the team.
 
-    ![](images/11.png)
+    ![images](images/11.png)
 
 1. Because we are currently in the sub-area for the **Web** team.  We need to navigate back up to the default team, so we can setup management of sub-area paths.
 
-    ![](images/74.png)
+    ![images](images/74.png)
 
 1. Select the **Work** tab at the top then select **Areas** option to view the area path for the team.
 
-    ![](images/75.png)
+    ![images](images/75.png)
 
 1. Now we want to change the area path setting for management areas to include sub-area paths.  The default setting for all teams is to exclude sub-area paths. We will change it to include sub-areas so that the team gets visibility into all of the work items from all teams. Optionally, the management team could also choose to not include sub-areas. Thereby removing work items from their view as soon as they are assigned to one of the teams. Click on the ellipsis for **MyHealthClinic** and select **Include sub-areas**.
 
-    ![](images/76.png)
+    ![images](images/76.png)
 
 1. Go to **Iterations** and click **Select Iteration**. Select **Sprint 1**. Repeat this step to add **Sprint 2**.
 
-    ![](images/16.png)
+    ![images](images/16.png)
 
     {% include important.html content= "You may need to adjust the dates for the sprints you have selected. Pick dates that correspond to the current calendar dates to make more relevant." %}
 
 1. Click on **Change** for the default iteration. And set **MyHealthClinic** as the default one.
 
-    ![](images/17.png)
+    ![images](images/17.png)
 
-    ![](images/18.png)
+    ![images](images/18.png)
 
 1. Repeat steps 11 and 12 for both the **Web** team as well as the **Database** team. You can switch your team focus to a team project or team you've recently viewed from the team project/team drop-down menu. If you don't see the team or team project you want, click Browse… to browse all team projects and teams.
 
-    ![](images/77.png)
+    ![images](images/77.png)
 
 ## Exercise 2: Work Items in VSTS
 
 1. Navigate to **Web** team dashboard by selecting **MyHealthClinic\Web** from the project/team drop-down menu. This is the main screen for the Web team.
 
-    ![](images/21.png)
+    ![images](images/21.png)
 
 1. Let's create our **first Product Backlog** item. On the **New Work Item** widget, enter the title of **Create appointment** and change the work item type to **Product Backlog**. We can also create Bugs, Tasks, Features and several other Work item types.
 
-    ![](images/22.png)
+    ![images](images/22.png)
 
 1. You can see that the product backlog would open automatically. Enter the description **As a user, I want to create appointments.** Enter the acceptance criteria as **Any user can create appointments. After creating an appointment, it should appear in the user appointment list.**
 
-    ![](images/23.png)
+    ![images](images/23.png)
 
 1. Click **Save & close**.
 
 1. Navigate to the default team's backlog by selecting **MyHealthClinic Team** from the project/team drop-down menu. If you are not on the **Work** tab, then click **Work** option from the top menu.
 
-    ![](images/77.png)
+    ![images](images/77.png)
 
 1. You can create several backlog items repeating the above steps. If you used the **[VSTS Demo Data generator,](http://vstsdemogenerator.azurewebsites.net/Environment/Create)** then you can see pre-defined work items in the default team's backlog list.
 
-    ![](images/24.png)
+    ![images](images/24.png)
 
 1. Select the desired product backlog items, drag and drop it to the current sprint. In this case, the current sprint happens to be **Sprint 1**.
 
-    ![](images/25.png)
+    ![images](images/25.png)
 
 ## Exercise 3: Working with Kanban boards
 
 1. To view your Kanban board, click the **Board** link from the **Work>Backlogs** page.
 
-   ![](images/26.png)
+   ![images](images/26.png)
 
    {% include note.html content= "To maximize a team's ability to consistently deliver high quality software, Kanban emphasize two main practices. The first, visualize the flow of work, requires you to map your team's workflow stages and configure your Kanban board to match. The second, constrain the amount of work in progress, requires you to set work-in-progress (WIP) limits. You're then ready to track progress on your Kanban board and monitor key metrics to reduce lead or cycle time.
 
@@ -131,27 +121,27 @@ To complete this lab, you will need:
 
 1. We are going to modify the **Kanban board** to map the flow of how our team works. Click the gear icon to open the settings dialog.
 
-   ![](images/28.png)
+   ![images](images/28.png)
 
 1. You can either increase or simplify the information that displays on your cards. Your best bet is to show fields on cards based on what your team frequently refers to or updates when using the **Kanban** and **Task** boards. Make sure the fields for your cards match the following image.
 
-    ![](images/78.png)
+    ![images](images/78.png)
 
 1. To cause a card on the **Kanban** board to change color based on criteria you specify, open **Styles**. Add a styling rule and set the criteria for the rule. Create the **High Effort** styling as follows.
 
-    ![](images/79.png)
+    ![images](images/79.png)
 
 1. Prior to setting tag colors, first add tags to backlog items that you want to highlight with color. To add color to **Kanban** cards, open **Tag colors** and select a tag and the color you want it to display. If you used the **[VSTS Demo Data generator](http://vstsdemogenerator.azurewebsites.net/Environment/Create)** then you will already have a **Doctor** tag and set to green.
 
-    ![](images/80.png)
+    ![images](images/80.png)
 
 1. With the Kanban board, you gain a rich set of tools and a rich set of customization options. **Annotations** provide visual cues about work items, indicating the number of tasks or tests that have been defined for that work item. Click an annotation to expand the set or gain more information.
 
-    ![](images/81.png)
+    ![images](images/81.png)
 
 1. You can control the test plan under which inline tests you add through the Kanban board are created. You can choose to create a new test plan for each new test that you add, or add all new tests to a selected test plan going forward.
 
-    ![](images/82.png)
+    ![images](images/82.png)
 
    Kanban's number one practice is to visualize the flow of work. Accordingly, your number one task is to visualize your team's workflow. You do this by identifying the types of work and handoffs that occur regularly as your team moves items off the backlog and into a shippable state.
 
@@ -167,11 +157,11 @@ To complete this lab, you will need:
 
 1. Rename the **New** column to **Backlog**. Click the **+ Column** to create a new column. Name the new column **Analyze** and set the state mapping to **Approved** for both **Bug** and **Product Backlog Item**. Rename the **Build and test** to **Test**.
 
-    ![](images/83.png)
+    ![images](images/83.png)
 
 1. The WIP limit is already set for **Test** column. You can also set for other columns as well. To do so, from the settings page go to columns tab. Click the **Develop** column. Set the WIP Limit to **3**.
 
-    ![](images/84.png)
+    ![images](images/84.png)
 
     However, a lag often exists between when work gets moved into a column and when work starts. To counter that lag and reveal the actual state of work in progress, you can turn on split columns.
 
@@ -181,13 +171,13 @@ To complete this lab, you will need:
 
 1. Now that you understand how your team can use split columns, here's how to turn them on. Select the **Develop** column and click the **Split column into doing and done** checkbox. Do the same thing for the **Test** column.
 
-    ![](images/89.png)
+    ![images](images/89.png)
 
 1. As your team updates the status of work as it progresses from one stage to the next, it helps that they agree on what “done” means. By specifying the **Definition of Done** criteria for each Kanban column, you help share the essential tasks to complete before moving an item into a downstream stage. For the **Develop** column, add the following definition:
 
-    ![](images/85.png)
+    ![images](images/85.png)
 
-    ![](images/86.png)
+    ![images](images/86.png)
 
     Your Kanban board supports your ability to visualize the flow of work as it moves from new to done. When you add swimlanes, you can also visualize the status of work that supports different service-level classes. You can create a swimlane to represent any other dimension that supports your tracking needs.
 
@@ -195,11 +185,11 @@ To complete this lab, you will need:
 
 1. From your Kanban board, click **Configure board settings** then click Swimlanes. Use the add Swimlane to add **Expedite** swimlane.
 
-    ![](images/87.png)
+    ![images](images/87.png)
 
 1. Now rename the default swimlane to **Standard**. Add one more swimlane named **Park**. You can drag the swimlanes to organize them in the order you wish. Drag **Park** below Standard.
 
-    ![](images/88.png)
+    ![images](images/88.png)
 
 ## Exercise 4: Sprint Planning and Task Board
 
@@ -213,13 +203,13 @@ Your sprint backlog should contain all the information your team needs to succes
 
 1. You begin your planning efforts from your product backlog. Move items that you expect to work on into the current sprint, one item at a time. Simply drag each item from the product backlog onto the sprint.
 
-   ![](images/25.png)
+   ![images](images/25.png)
 
    {% include important.html content= "If you don't see any links listed under Current or Future, you need to configure your team's sprint schedule." %}
 
 1. Next, check the total level of effort of your sprint items.
 
-   ![](images/90.png)
+   ![images](images/90.png)
 
    {% include note.html content= "Your initial plan should identify the subset of requirements that's within your team's capacity based on estimated effort and team velocity. Velocity corresponds to the total Effort or Story Points a team can complete within the sprint time period." %}
 
@@ -229,7 +219,7 @@ Your sprint backlog should contain all the information your team needs to succes
 
    From the Capacity page, enter the capacity and days off for each member of your team.
 
-   ![](images/91.png)
+   ![images](images/91.png)
 
    {% include note.html content= "Most teams specify capacity in terms of hours, however, you can also specify it in days. For example, .5 days would correspond to 4 hours for a typical 8-hour day. Choose the same unit you will use to estimate the time a task will take to complete.
 
@@ -239,17 +229,17 @@ Your sprint backlog should contain all the information your team needs to succes
 
 1. Click on the column **Days Off** on any user. Introduce start and end date in an interval inside the dates for the Sprint so he has more work than hours available.
 
-   ![](images/95.png)
+   ![images](images/95.png)
 
    {% include note.html content= "When you add days off to a Team Member the **Work Details** planning graph will adapt itself and show red if there is more work assigned to any team member than the work hours we have available for the sprint." %}
 
 1. In the sprint backlog, add a task. Creating tasks from the sprint backlog automatically links the task to it parent backlog item.
 
-   ![](images/92.png)
+   ![images](images/92.png)
 
 1. Name the task and enter an estimate for Remaining Work. Also, if you know who'll perform the work, go ahead and assign the task to that team member.
 
-   ![](images/93.png)
+   ![images](images/93.png)
 
    {% include note.html content= "At the planning stage, Remaining Work corresponds to an estimate of how long it will take to complete the task.
 
@@ -261,49 +251,49 @@ Your sprint backlog should contain all the information your team needs to succes
 
    You'll also see a roll-up of the remaining work required to complete each requirement or bug.
 
-   ![](images/94.png)
+   ![images](images/94.png)
 
 1. Click on the upper right corner where the sprint burndown is shown. Throughout your sprint, you can monitor the sprint burndown chart to determine if your team is on track to complete its sprint plan.
 
-   ![](images/36.png)
+   ![images](images/36.png)
 
 ### Task Board
 
 1. Once you have your sprint plan in place, you'll execute that plan for the duration of the sprint. In your daily Scrum meetings, your team can view progress made to backlog items and tasks from the sprint task board.
 
-   ![](images/99.png)
+   ![images](images/99.png)
 
    During your daily Scrum, you can filter your task board to help focus on items of interest.
 
    - Group by Backlog items or Group by stories to monitor progress of your product backlog items, stories, requirements, or bugs.
 
-     ![](images/96.png)
+     ![images](images/96.png)
 
    - Group by People when you want to monitor progress of individual team members.
 
-     ![](images/97.png)
+     ![images](images/97.png)
 
    - Use the Person filter when you want to focus on work assigned to individual team members.
 
 1. Click on **gear icon** for the settings. Select the **Task** tab.
 
-   ![](images/41.png)
+   ![images](images/41.png)
 
    {% include important.html content= "Rich cards not only provide at-a-glance info of interest to you and your team, they also provide a way for you to update a field without opening the work item. With style rules, you can highlight those work items with colors, based on the criteria you set." %}
 
 1. You can see the Avatar and other information on the cards.
 
-   ![](images/42.png)
+   ![images](images/42.png)
 
 1. The task board makes quick work of updating both task status and remaining work. Simply drag tasks to a downstream column to reflect if they are in progress or completed.
 
-   ![](images/43.png)
+   ![images](images/43.png)
 
 1. Updating Remaining Work, preferably prior to the daily Scrum meeting, helps the team stay informed of the progress being made. It also ensures a smoother burndown chart.
 
    Each team member can review the tasks they've worked on and estimate the work remaining. If they've discovered that it's taking longer than expected to complete, they should increase the remaining work for the task. Remaining work should always reflect exactly how much work the team member estimates is remaining to complete the task.
 
-   ![](images/98.png)
+   ![images](images/98.png)
 
 1. At the end of the sprint, you'll want to perform these final tasks:
 
@@ -317,42 +307,42 @@ Dragging an incomplete item to the product backlog or to a future sprint updates
 
 Portfolio backlogs provide product owners insight into the work performed by several agile feature teams. Product owners can define the high-level goals as Epics or Features, and feature teams can break these down into the user stories they'll prioritize and develop.
 
-![](images/45.png)
+![images](images/45.png)
 
 {% include important.html content= "As you advance in the product development, stories can get bigger, making them difficult to handle. We will use the **Feature** Work Item Type for this purpose. With Features, we will group Product Backlog Items to handle an information unit at a bigger level." %}
 
 1. Click on **Features**. You will see list of feature work items available already. If you wish to add few more you can add.
 
-   ![](images/44.png)
+   ![images](images/44.png)
 
 1. If you've already created your backlog, and now you want to organize it, you can do that most easily by mapping them. Go back to **Backlog items**. Click on **Mapping** to enable as shown.
 
-   ![](images/46.png)
+   ![images](images/46.png)
 
-   ![](images/47.png)
+   ![images](images/47.png)
 
 1. With the mapping panel enabled, drag items that are currently unparented to the feature under which they belong. Also, you can drag a backlog item to a different feature to change its parent.
 
-   ![](images/48.png)
+   ![images](images/48.png)
 
 1. To have a full view of the work escalation and decomposition to tasks Click on **Features**. Expand all the levels by clicking twice on the + icon.
    Review the full structure from Feature to tasks.
 
-   ![](images/49.png)
+   ![images](images/49.png)
 
    {% include important.html content= "It is important to keep track of all artifacts involved in product development, so we can plan and keep track of what has been done, and what needs to be done." %}
 
 1. Go to the **Board**. As we have a Kanban board for checking the states of the Product Backlog Items, we also have a Kanban Board to see the transition and check visually the current state of any particular feature. This is also customizable as we saw in our Sprint Backlog view, and the Product Backlog view.
 
-   ![](images/50.png)
+   ![images](images/50.png)
 
 1. Click on the first card where the blue badge with the Product Backlog Items. You Check any User Story to mark it as completed.
 
-   ![](images/51.png)
+   ![images](images/51.png)
 
 1. You can also Drag and Drop any Feature to other state and check how it changes its current state.
 
-   ![](images/100.png)
+   ![images](images/100.png)
 
 ## Exercise 6: Working with VSTS Dashboards
 
@@ -362,67 +352,67 @@ Each tile corresponds to a widget that provides access to one or more features o
 
 1. Go to the default **Dashboard** called Overview.
 
-   ![](images/52.png)
+   ![images](images/52.png)
 
    {% include note.html content= "The Overview page provides access to a default team dashboard which you can customize by adding, removing, or rearranging the tiles. Each tile corresponds to a widget that provides access to one or more features or functions." %}
 
 1. You can also add dashboards. From the dashboards tab, click the plus icon and enter a dashboard name.
 
-   ![](images/53.png)
+   ![images](images/53.png)
 
    With the dashboard selected, you can add a widget to the dashboard. Or, you can add a chart to a team dashboard from the Work, Build, or Test hubs.
 
-   ![](images/54.png)
+   ![images](images/54.png)
 
    When finished, click the **Close** button. Then click the checkmark to take the dashboard out of edit mode.
 
 1. Click on **edit** button to modify the dashboard and add your widgets like **Build Summary, Release Summary, Markdowns** etc.
 
-    ![](images/101.png)
+    ![images](images/101.png)
 
 1. Add the **Query Tile** to the Test dashboard.
 
-    ![](images/102.png)
+    ![images](images/102.png)
 
 1. After you add the widget, you may need to configure it. For example, to configure the **Query tile** widget, click the Configure widget icon to open the configuration dialog.
 
-    ![](images/103.png)
+    ![images](images/103.png)
 
 1. Then select the query and specify any rules you want.
 
-    ![](images/104.png)
+    ![images](images/104.png)
 
     {% include note.html content= "You can also add conditional formatting, so the widget will visually alert the user." %}
 
-    ![](images/105.png)
+    ![images](images/105.png)
 
 1. In addition to widgets, you can add a chart to your dashboard. You add an item to a dashboard from the code, work, and build pages. First, make sure you have the team context selected from the Queries page to which you want to add a query or chart. Go to the **Work** tab and click **Queries** on the top left.
 
-    ![](images/106.png)
+    ![images](images/106.png)
 
 1. Select the query that you want to create the chart from and click the **Charts** option.
 
-    ![](images/107.png)
+    ![images](images/107.png)
 
 1. Next, click the **New chart** option to bring up the configuration of the chart.
 
-    ![](images/108.png)
+    ![images](images/108.png)
 
 1. And, you can add a chart to a team dashboard by clicking on the ellipsis and choosing **Add to dashboard** > select the dashboard you want to add the chart to in the context menu.
 
-    ![](images/109.png)
+    ![images](images/109.png)
 
-    ![](images/110.png)
+    ![images](images/110.png)
 
 1. You can move or delete a widget from the dashboard by clicking **Edit** dashboard icon to modify your dashboard. You can then drag tiles to reorder their sequence on the dashboard. To remove a widget, click the widget's **Trash** icon or **Delete** icon. When you're finished with your changes, click **Exit edit-dashboard-mode** icon to exit dashboard editing.
 
-    ![](images/111.png)
+    ![images](images/111.png)
 
 1. You can rename, reorder, or delete a dashboard. Also, you can enable auto-refresh, and the dashboard will automatically update every 5 minutes.
 
-    ![](images/55.png)
+    ![images](images/55.png)
 
-    ![](images/56.png)
+    ![images](images/56.png)
 
 ## Exercise 7: Process Customization
 
@@ -438,23 +428,23 @@ Once you've created an inherited process, you can customize it, create team proj
 
 1. To open the admin context from the user context, click the gear Settings icon and choose **Account settings**.
 
-   ![](images/57.png)
+   ![images](images/57.png)
 
 1. Click **Process**.
 
-   ![](images/58.png)
+   ![images](images/58.png)
 
 1. You can create an inherited process from any one of the three system processes: Agile, Scrum, or CMMI. From the **Process** page, open the context menu of the process you'll use to create an inherited process. Here, we create an inherited process from the **Scrum** system process. Then click on **Create inherited process**.
 
-   ![](images/59.png)
+   ![images](images/59.png)
 
 1. Enter a name for your process and optionally a description. Something like **MyHealthClinic Scrum template**.
 
-   ![](images/61.png)
+   ![images](images/61.png)
 
 1. You should see the successful message after creating the inherited template.
 
-   ![](images/62.png)
+   ![images](images/62.png)
 
 ### Customize a field for a process
 
@@ -462,21 +452,21 @@ Each process—Agile, Scrum, or CMMI—contains 100 or more work item fields. Yo
 
 1. Select the inherited template that was created.
 
-   ![](images/63.png)
+   ![images](images/63.png)
 
 1. Navigate to **Work Item Types** tab. Now we have different options to modify this scrum template.
 
-   ![](images/64.png)
+   ![images](images/64.png)
 
 1. We will directly add a new field for the PBI Work Item template. Select **Product Backlog item** \| **Layout** \| **New field**. On the definition screen provide a name **HealthClinicTicketId**.
 
-   ![](images/65.png)
+   ![images](images/65.png)
 
    {% include note.html content= "We are creating a text field for an internal id of the ticketing system inside MyHealthClinic." %}
 
 1. Click on **Layout**. Provide a name for Label as **Ticket ID**. Until now we have only created the field definition, we must add it to the layout of the Work Item. We will create a new group to show our custom information, so all of our customized fields appear together. Provide a name for the group as **MyHealthClinic** and click **Add field**.
 
-   ![](images/66.png)
+   ![images](images/66.png)
 
 ### Change the process referenced by a team project
 
@@ -484,18 +474,18 @@ You can change the process a team project references to an inherited process or 
 
 1. At this moment, we have only created the template. We must assign this template to our VSTS Project so that we can use this new field. We can change the process template from a VSTS Project, with their inherited templates or default templates. This is done in the main process screen. Go back to **Process** tab, click on ellipsis button on our new template and select **Change Team Projects to use MyHealthClinic Scrum template**.
 
-    ![](images/67.png)
+    ![images](images/67.png)
 
 1. Select the **MyHealthClinic** project to change the process and click **>** button.
 
-    ![](images/68.png)
+    ![images](images/68.png)
 
 1. Click **Ok** button. You should see a successful message after changing the process.
 
-    ![](images/69.png)
+    ![images](images/69.png)
 
 1. Let’s review how the new field appears on our Product Backlog Item Template. Go back to **Work** \| **Backlogs**. Open the first product backlog. Look after **Acceptance Criteria** for the **MyHeathClinic** group. Fill in the information for the **Ticket ID** like **HK89JY13**. Click **Save & close**.
 
-    ![](images/70.png)
+    ![images](images/70.png)
 
    Once the Work Item is saved, VSTS will also save the new custom information we have added to the PBI and will be available for queries and the rest of the VSTS system.
