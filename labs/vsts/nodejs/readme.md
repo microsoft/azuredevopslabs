@@ -286,12 +286,14 @@ Now the build definition is complete running it will result in the code being de
 1. Edit the code in `view\index.handlebars` to add a `dl` list containing a presentation of the articles in the view model.
 
     ```handlebars
+    {% raw %}
     <dl>
-        \{{#each articles\}}
+        {{#each articles}}
         <dt>{{title}}</dt>
         <dd>{{text}}</dd>
-        \{{\/each\}}
+        {{/each}}
     </dl>
+    {% endraw %}
     ````
 
     ![Edit view code](media/48-edit-view-code.png)

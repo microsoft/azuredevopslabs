@@ -10,7 +10,7 @@ folder: /labs/vsts/
 <div class="productcolmain">
   <div class="pageheader">
              <b>DevOps with Visual Studio Team Services</b> </div>
-     <div class="herotext2">       
+     <div class="herotext2">
              Learn how you can plan better, code together and ship faster with Visual Studio Team Services
   </div>
 </div>
@@ -19,9 +19,8 @@ folder: /labs/vsts/
 ## Step-by-Step Tutorials
 
 <div class="lablist">
-    <div class="header2"> <b>Getting Started</b></div>
-     <ul class="fa-ul">
-       <li class="labslistitems"><i class="fa-li fa fa-book" style="color:  #002868;"></i> <a href="agile/">Agile Planning and Portfolio Management </a>    </li>
+    <ul class="fa-ul">
+       <li class="labslistitems" style="margin-top: 0px;"><i class="fa-li fa fa-book" style="color:  #002868;"></i> <a href="agile/">Agile Planning and Portfolio Management </a>    </li>
        <li class="labslistitems"><i class="fa-li fa fa-book" style="color:  #002868;"></i> <a href="git/">Version Controlling with Git  </a>    </li>
        <li class="labslistitems"><i class="fa-li fa fa-book" style="color:  #002868;"></i> <a href="packagemanagement/">Package Management</a> </li>
        <li class="labslistitems"><i class="fa-li fa fa-book" style="color:  #002868;"></i> <a href="continuousintegration/">Setting up a Continuous Integration</a> </li>
