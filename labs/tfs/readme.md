@@ -5,6 +5,7 @@ permalink: /labs/tfs/
 comments: true
 folder: /labs/tfs/
 landing-page: false
+description: Learn how you can remove barriers between teams, encourage collaboration, and improve the flow of value to your customers with Visual Studio and Team Foundation Server
 ---
 <div class="tfsMain">
 <div class="productcolmain">

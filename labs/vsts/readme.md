@@ -4,6 +4,7 @@ layout: homepage
 sidebar: vsts
 permalink: /labs/vsts/
 folder: /labs/vsts/
+description: Learn how you can plan better, code together and ship faster with Visual Studio Team Services
 ---
 
 <div class="vstsMain">

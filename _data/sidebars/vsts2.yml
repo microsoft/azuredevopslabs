@@ -3,5 +3,5 @@ entries:
 - title: sidebar
   product: Visual Studio Team Services
   version: 
-  url: /labs/vsts
+  url: /labs/vstsextend
   folders:

@@ -3,6 +3,7 @@ title: Extend and Integrate with VSTS
 layout: homepage
 permalink: /labs/vstsextend/
 folder: /labs/vstsextend/
+description: Learn how you can extend and integrate your DevOps Toolchain with Visual Studio Team Services to deploy any app on any platform
 ---
 
 <div class="vstsextendMain">

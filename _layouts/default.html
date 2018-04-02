@@ -70,8 +70,12 @@
     <meta property="og:url"           content="{{site.url }}{{site.baseurl }}{{page.url }}" />
   <meta property="og:type"          content="website" />
   <meta property="og:title"         content="{{page.title }}" />
-  <meta property="og:description"   content="Check out the tutorial '{{page.title }}' and many more at https://aka.ms/devopslabs" />
-  <meta property="og:image"         content="https://almvm.azurewebsites.net/images/2017.png" />
+        {% if page.layout == "homepage" %}
+            <meta property="og:description"   content="{{page.description }} " />
+        {% else %}
+            <meta property="og:description"   content="Check out the tutorial '{{page.title }}' and many more at https://aka.ms/devopslabs" />
+        {% endif %}
+  <meta property="og:image"         content="https://almvm.azurewebsites.net/images/devopslabs.png" />
 
 </head>
 
