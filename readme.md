@@ -6,7 +6,7 @@ tags: [overview]
 permalink: default.html
 comments: true
 landingpage: false
-summary: 
+description: Evaluating your next DevOps toolchain? Want to go deep and learn how you can implement modern DevOps practices with Visual Studio, Team Services and Azure? If you said yes to any of these questions, then this VM and Hands-on-labs are what you are looking for
 ---
 
 <div class="col-lg-1"></div>
