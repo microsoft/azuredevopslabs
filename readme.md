@@ -1,12 +1,12 @@
 ---
 layout: homepage
-title: Home
+title: Modern DevOps practices with Visual Studio, Team Services and Azure
 keywords: ALM VM homepage
 tags: [overview]
 permalink: default.html
 comments: true
 landingpage: false
-description: Evaluating your next DevOps toolchain? Want to go deep and learn how you can implement modern DevOps practices with Visual Studio, Team Services and Azure? If you said yes to any of these questions, then this VM and Hands-on-labs are what you are looking for
+description: Learn how you can implement modern DevOps practices with Visual Studio, Team Services and Azure.
 ---
 
 <div class="col-lg-1"></div>
