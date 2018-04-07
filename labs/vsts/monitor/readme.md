@@ -1,7 +1,7 @@
 ---
 title: Monitoring Applications using Application Insights
 layout: page
-sidebar: vsts2
+sidebar: vsts
 permalink: /labs/vsts/monitor/
 folder: /labs/vsts/monitor/
 ---

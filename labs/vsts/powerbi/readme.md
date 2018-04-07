@@ -1,7 +1,7 @@
 ---
 title: Connect to Visual Studio Team Services with Power BI
 layout: page
-sidebar: vsts2
+sidebar: vsts
 permalink: /labs/vsts/powerbi/
 folder: /labs/vsts/powerbi/
 ---
