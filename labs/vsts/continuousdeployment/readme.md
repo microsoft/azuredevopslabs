@@ -1,7 +1,7 @@
 ---
 title: Continuous Deployment using Visual Studio Team Services
 layout: page
-sidebar: vsts2
+sidebar: vsts
 permalink: /labs/vsts/continuousdeployment/
 folder: /labs/vsts/continuousdeployment/
 ---

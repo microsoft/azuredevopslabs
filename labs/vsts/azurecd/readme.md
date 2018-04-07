@@ -1,7 +1,7 @@
 ---
 title: Setting up Continuous Delivery workflow from the Azure Portal
 layout: page
-sidebar: vsts2
+sidebar: vsts
 permalink: /labs/vsts/azurecd/
 folder: /labs/vsts/azurecd/
 ---

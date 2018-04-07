@@ -1,7 +1,7 @@
 ---
 title: Load and Performance Testing using Visual Studio Team Services
 layout: page
-sidebar: vsts2
+sidebar: vsts
 permalink: /labs/vsts/load/
 folder: /labs/vsts/load/
 ---
