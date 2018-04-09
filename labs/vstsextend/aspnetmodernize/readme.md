@@ -113,7 +113,7 @@ In this exercise we will create a SQL azure instance and  migrate the applicatio
    FROM microsoft/aspnet:4.7.1-windowsservercore-ltsc2016
    ARG source
    WORKDIR /inetpub/wwwroot
-   COPY ${source:-obj/Docker/publish}
+   COPY ${source:-obj/Docker/publish} .
    ```
 
 3. To run the application locally and debug within the Docker container using Visual Studio and to test the connectivity to the SQL Azure instance, set the **docker-compose** as startup project and click on **Docker**.
