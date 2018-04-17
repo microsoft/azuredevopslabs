@@ -90,8 +90,8 @@ We will set up a new build definition that integrates with SonarCloud to analyze
    |Setting|Value|Notes|
    |---------|-----|-----|
    |**SonarCloud Service Endpoint**|SonarCloudSamples|The name of the VSTS endpoint that connects to SonarCloud|
-   |**Organization**|_{your SonarCloud org id}_ |The unique key of your organization in SonarCloud|
-   |**Project Key**|[your account].visualstudio.com.sonarexamples.netfx |The unique key of the project in SonarCloud|
+   |**Organization**|{your SonarCloud org id}|The unique key of your organization in SonarCloud|
+   |**Project Key**|{your VSTS account name}.visualstudio.com.sonarexamples.netfx |The unique key of the project in SonarCloud|
 
    {% include important.html content= "Currently the project key must be globally unique across all projects in SonarCloud. In the future, the project key will only need to be unique within your SonarCloud organization." %}
 
@@ -121,11 +121,11 @@ We will set up a new build definition that integrates with SonarCloud to analyze
 
 1. Authorize SonarCloud to use the identity provider
 
-   > The first time you access SonarCloud, you will be asked to grant SonarCloud.io access to your account. The only permission that SonarCloud requires is to read your email address
+   > The first time you access SonarCloud, you will be asked to grant SonarCloud.io access to your account. The only permission that SonarCloud requires is to read your email address.
 
     ![sc_authorize](images/ex1/sc_authorize.png)
 
-    After authorizing and logging in, we will be redirected to the **Generate token** page
+    After authorizing and logging in, we will be redirected to the **Generate token** page.
 
 1. Generate a token to allow VSTS to access your account on SonarCloud:
 
@@ -147,7 +147,7 @@ We will set up a new build definition that integrates with SonarCloud to analyze
    We have now created an organization on SonarCloud, and have the token needed configure the VSTS endpoint.
 
 1. Finish creating the endpoint in VSTS
-   - return to VSTS **Add new SonarCloud Connection** page, set the **Connection name** to **SonarCloud** enter the **SonarCloud Token** you have just created.
+   - return to VSTS **Add new SonarCloud Connection** page, set the **Connection name** to **SonarCloud**, and enter the **SonarCloud Token** you have just created.
    - click **Verify connection** to check the endpoint is working, then click **OK** to save the endpoint.
 
     ![build_config_endpoint_completed](images/ex1/build_config_endpoint_completed.png)
@@ -254,7 +254,7 @@ Open the **Sonar Examples - NetFx** project in the SonarCloud Dashboard.  Under 
 
       ![vsts_home](images/ex3/vsts_home.png)
 
-   - click on the settings link ("**...**") for **master** and select **Branch policies***
+   - click on the settings link ("**...**") for **master** and select **Branch policies**
 
       ![vsts_branches](images/ex3/vsts_branches.png)
 
@@ -268,13 +268,13 @@ Open the **Sonar Examples - NetFx** project in the SonarCloud Dashboard.  Under 
 
       ![vsts_branch_policy_add](images/ex3/vsts_branch_policy_add.png)
 
-   VSTS is now configured to trigger a SonarCloud analysis when any pull request targetting the **master** branch is created.
+   VSTS is now configured to trigger a SonarCloud analysis when any pull request targeting the **master** branch is created.
 
 1. Create a new pull request
    
    Now we need to make a change to a file and create a new request so we check that the pull request triggers the analysis.
 
-   - navigate to the code file **Program.cs** at **sonarqube-scanner-msbuild/CSharpProject/SomeConsoleApplication/Program.cs**
+   - navigate to the code file **Program.cs** at **sonarqube-scanner-msbuild/CSharpProject/SomeConsoleApplication/Program.cs** and click **Edit**
    - add an empty method to the code as shown in the following screen shot, then click **Commit...**
 
    ![vsts_program_edit](images/ex3/vsts_program_edit.png)
@@ -282,11 +282,11 @@ Open the **Sonar Examples - NetFx** project in the SonarCloud Dashboard.  Under 
    In the dialogue that appears:
    - change the branch name from **master** to **branch1**
    - check the **Create a pull request** checkbox
-   - click **Commit**, then click **Create** on the next screen
+   - click **Commit**, then click **Create** on the next screen to submit the pull request
 
    ![vsts_program_commit](images/ex3/vsts_program_commit.png)
    
-   If the PR integration is correctly configured the UI will show that the build analysis build is in progress.
+   If the pull request integration is correctly configured the UI will show that an analysis build is in progress.
    
    ![vsts_pr_in_progress_partial](images/ex3/vsts_pr_in_progress_partial.png)
 
@@ -297,11 +297,11 @@ Open the **Sonar Examples - NetFx** project in the SonarCloud Dashboard.  Under 
 
    ![vsts_pr_check_failed](images/ex3/vsts_pr_check_failed.png)
 
-   Note that the only issues in code that was changed or added in the pull request are reported - pre-existing issues in **Program.cs** or in other files are ignored.
+   Note that the only issues in code that was changed or added in the pull request are reported - pre-existing issues in **Program.cs** and other files are ignored.
 
 1. Block pull requests if the Code Quality check failed
 
-   At present it is still possible to complete the pull request and commit the changes even though the Code Quality check has failed.
+   At this point it is still possible to complete the pull request and commit the changes even though the Code Quality check has failed.
    However, it is simple to configure VSTS to block the commit unless the Code Quality check passes:
    - return to the **Branch Policy** page
    - click **Add status policy**
