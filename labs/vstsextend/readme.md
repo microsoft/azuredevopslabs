@@ -3,6 +3,7 @@ title: Extend and Integrate with VSTS
 layout: homepage
 permalink: /labs/vstsextend/
 folder: /labs/vstsextend/
+description: Learn how you can extend and integrate your DevOps Toolchain with Visual Studio Team Services to deploy any app on any platform
 ---
 
 <div class="vstsextendMain">
@@ -18,7 +19,6 @@ folder: /labs/vstsextend/
 ## Step-by-Step Tutorials
 
 <div class="lablist">
-    <div class="header2"> <b>DevOps</b></div>
         <ul style="list-style: none;">
           <li> <img src="images/jenkins.png" height="42" width="42"/> <a href="jenkins/"> Integrating with Jenkins</a>    </li><br />
           <li> <img src="images/tomcat.png" height="42" width="42"/><a href="tomcat/"> Deploying a Java application on Tomcat  </a>    </li><br />
@@ -36,11 +36,9 @@ folder: /labs/vstsextend/
           <li> <img src="images/github.png" height="32" width="32"/><a href="github/"> How to continuously deliver code on GitHub with VSTS</a></li><br />
           <li> <img src="images/php.png" height="32" width="32"/><a href="PHP/"> Deploying a PHP application to Azure</a></li><br />
           <li> <img src="images/docker.png" height="42" width="42"/><a href="docker/"> Deploying Docker Containers to Azure App Service</a></li><br />
+          <li> <img src="images/azure.png" height="32" width="32"><a href="azurefunctions/"> Deploying to Azure Functions from VSTS</a></li><br />
           <li> <img src="images/aspnet-logo.png" height="32" width="32"><a href="aspnetmodernize/"> Modernizing your existing ASP.NET Apps with Azure</a></li><br />
-         <li> <img src="images/azure.png" height="32" width="32"><a href="azurefunctions/"> Deploying to Azure Functions from VSTS</a> </li><br />
-          <li> <img src="images/intellij.png" height="32" width="32"/><a href="#intelliJ/"> Working with IntelliJ</a> <span class="label label-success">Coming soon</span></li><br />
-            <li> <img src="images/azure.png" height="32" width="32"><a href="#releasegates/"> Control the Deployment through Release Gates</a> <span class="label label-success">Coming soon</span></li><br />
-           <li> <img src="images/azure.png" height="32" width="32"><a href="#devopsprojectforjava/"> Azure DevOps project for Java</a> <span class="label label-success">Coming soon</span></li><br />
-           <li> <img src="images/azure.png" height="32" width="32"><a href="#devopsprojectfordotnet/"> Azure DevOps project for .NET </a> <span class="label label-success">Coming soon</span></li><br />
+          <li> <img src="images/azure.png" height="32" width="32"><a href="devopsprojectforjava/"> Azure DevOps Project for Java</a></li><br />
+          <li> <img src="images/intellij.png" height="32" width="32"/><a href="intelliJ/"> Working with IntelliJ</a> <span class="label label-success">Coming soon</span></li><br />
         </ul>
 </div>
