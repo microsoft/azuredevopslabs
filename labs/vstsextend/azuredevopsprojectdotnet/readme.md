@@ -14,7 +14,7 @@ The **Azure DevOps Project** simplifies the initial configuration of a continuou
 ## What's covered in this lab?
 
  In this lab, you will
-* Create new VSTS accont with ASP.NET sample using **Azure DevOps Project** feature in Azure
+* Create a new VSTS account with ASP.NET sample using **Azure DevOps Project** feature in Azure
 * Examine the CI/CD pipelines configured by **Azure DevOps Project**
 * Commit the code changes and execute CI/CD
 * Configure Azure Application Insights monitoring
@@ -28,7 +28,7 @@ The **Azure DevOps Project** simplifies the initial configuration of a continuou
    * If you are not a Visual Studio Subscriber, you can sign up for the FREE [Visual Studio Dev Essentials](https://www.visualstudio.com/dev-essentials/)program to create **Azure free account** (includes 1 year of free services, $200 for 1st month).
 
 
-## Exercise 1: Setting up Sample ASP.NET project using **Azure DevOps Project**
+## Exercise 1: Setting up Sample ASP.NET project using Azure DevOps Project
 
 
 1. Sign into the [Microsoft Azure portal](https://portal.azure.com).
