@@ -38,6 +38,7 @@ description: Learn how you can extend and integrate your DevOps Toolchain with V
           <li> <img src="images/docker.png" height="42" width="42"/><a href="docker/"> Deploying Docker Containers to Azure App Service</a></li><br />
           <li> <img src="images/azure.png" height="32" width="32"><a href="azurefunctions/"> Deploying to Azure Functions from VSTS</a></li><br />
           <li> <img src="images/aspnet-logo.png" height="32" width="32"><a href="aspnetmodernize/"> Modernizing your existing ASP.NET Apps with Azure</a></li><br />
+          <li> <img src="images/azure.png" height="32" width="32"><a href="devopsprojectforjava/"> Azure DevOps Project for Java</a></li><br />
           <li> <img src="images/intellij.png" height="32" width="32"/><a href="intelliJ/"> Working with IntelliJ</a> <span class="label label-success">Coming soon</span></li><br />
         </ul>
 </div>
