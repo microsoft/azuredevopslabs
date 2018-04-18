@@ -1,8 +1,16 @@
-# Create a CI/CD pipeline for Java with the Azure DevOps Project
+---
+title: Create a CI/CD pipeline for Java with the Azure DevOps Project
+layout: page
+sidebar: vsts2
+permalink: /labs/vstsextend/devopsprojectforjava/
+folder: /labs/vstsextend/devopsprojectforjava/
+---
+
+Last updated : {{ "now" | date: "%b %d, %Y" }}.
 
 ## Overview
 
-The Azure DevOps Project presents a simplified experience which creates Azure resources and sets up a continuous integration (CI) and continuous delivery (CD) pipeline for your Java app in Visual Studio Team Services (VSTS), which is Microsoft's DevOps solution for Azure.
+The Azure DevOps Project simplifies the initial configuration of a continuous integration (CI) and continuous delivery (CD) pipeline for your Java app in Visual Studio Team Services (VSTS).
 
 
 
