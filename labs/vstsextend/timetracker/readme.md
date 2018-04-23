@@ -28,7 +28,7 @@ This section helps you with the steps to enable **7pace Timetracker** for VSTS w
 
 1. On the Timetracker application page, click **Get**.
 
-1. Select the drop-down in **Select a Visual Studio Team Services account** filed and select your Team Services account, then select **Start 30 day free trial**. With this Timetracker extension will be installed to your VSTS account.
+1. Select the drop-down in **Select a Visual Studio Team Services account** field and select your Team Services account, then select **Start 30 day free trial**. With this Timetracker extension will be installed to your VSTS account.
 
    ![selectvstsaccount](images/selectvstsaccount.png)
 
