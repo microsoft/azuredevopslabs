@@ -197,7 +197,7 @@ Open the **Sonar Examples - NetFx** project in the SonarCloud Dashboard.  Under 
    |**Duplications**|The duplications decoration shows which parts of the source code are duplicated|
    |**Size**|Provides the count of lines of code within the project including the number of statements, Functions, Classes, Files and Directories|
 
-  {% include important.html content= "In this example, along with the bug count, a character **C** is displayed which is known as **Reliability Rating**. **C** indicates that there is **at least 1 major bug** in this code. For more information on Reliability Rating, click [here](https://docs.sonarqube.org/display/SONAR/Metric+Definitions#MetricDefinitions-Reliability)". For more information on rule types and severities, see [here](https://docs.sonarqube.org/display/SONAR/Rules+-+types+and+severities). %}
+  {% include important.html content= "In this example, along with the bug count, a character **C** is displayed which is known as **Reliability Rating**. **C** indicates that there is **at least 1 major bug** in this code. For more information on Reliability Rating, click [here](https://docs.sonarqube.org/display/SONAR/Metric+Definitions#MetricDefinitions-Reliability). For more information on rule types and severities, see [here](https://docs.sonarqube.org/display/SONAR/Rules+-+types+and+severities)." %}
 
 1. Click on the **Bugs** count to see the details of the bug.
 
@@ -219,7 +219,7 @@ Open the **Sonar Examples - NetFx** project in the SonarCloud Dashboard.  Under 
 
 ## Exercise 3: Set up pull request integration
    
-   Configurating SonarCloud analysis to run when a pull request is created has two parts:
+   Configuring SonarCloud analysis to run when a pull request is created has two parts:
    - the SonarCloud project needs to be provided with an access token so it can add PR comments to VSTS, and
    - a Branch Policy needs to be configured in VSTS to trigger the PR build
 
@@ -315,4 +315,4 @@ Open the **Sonar Examples - NetFx** project in the SonarCloud Dashboard.  Under 
 
 ## Summary
 
-With  the **SonarCloud** extension for **Visual Studio Team Services**, you can embed automated testing in your CI/CD pipleine to automate the measurement of your technical debt including code semantics, testing coverage, vulnerabilities. etc. You can also integrate the analysis into the VSTS pull request process so that issues are discovered before they are merged.
+With  the **SonarCloud** extension for **Visual Studio Team Services**, you can embed automated testing in your CI/CD pipeline to automate the measurement of your technical debt including code semantics, testing coverage, vulnerabilities. etc. You can also integrate the analysis into the VSTS pull request process so that issues are discovered before they are merged.
