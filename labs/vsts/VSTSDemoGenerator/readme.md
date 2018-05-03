@@ -39,14 +39,14 @@ Before you start:
 
    >If you want to manually install the extensions, you can click on the extension which will take you to the page on Visual Studio Team Services Marketplace, from where you can install the extension.
 
-   ![](images/4.png)
+   ![](images/choose_template.png)
 
-6. Upon successful creation of a project, you will see a link with the URL to the team project you created.
+1. Upon successful creation of a project, you will see a link with the URL to the team project you created.
 
-   ![](images/6.png)
+   ![](images/projectcreated.png)
 
-7. Select the link to navigate to the project and confirm the project was successfully provisioned.
+1. Select the link to navigate to the project and confirm the project was successfully provisioned.
 
-   ![](images/7.png)
+   ![](images/projecthomepage.png)
 
    >**Note:** You will need to provide your own information such as URLs, user name, password, etc. for the endpoints created. You will need to provide them before you attempt to use them, say in build, release definitions, for example.
