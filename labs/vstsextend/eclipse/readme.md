@@ -281,7 +281,7 @@ In this exercise, we will setup a CD pipeline to deploy the web application to a
 
 1. Next, navigate to the Web app that you have created. Click **Application Settings** and scroll down to the **Connection Strings** section
 
-1. Add a new MySQL connection string with **MyShuttleDb** as the name and the following string for the value - `jdbc:mysql://{MySQL Server Name}:3306/alm?useSSL=true&requireSSL=false&autoReconnect=true&user={your user name}&password={your password}`
+1. Add a new MySQL connection string with **MyShuttleDb** as the name and the following string for the value - `jdbc:mysql://`**`{MySQL Server Name}`**`.mysql.database.azure.com:3306/alm?useSSL=true&requireSSL=false&autoReconnect=true&user=`**`{your user name}`**`@`**`{MySQL Server Name}`**`&password=`**`{your password}`**
 
 1. Click **Save** to save the connection string
 
