@@ -170,7 +170,7 @@ In this task you will configure the VSTS build definition that will build and pu
 
    |Parameter|Value|Notes|
    |---------|-----|-----|
-   |Options|-DskipITs --settings ./maven/settings.xml|Skips integration tests during the build|
+   |Options|-DskipITs -settings ./maven/settings.xml|Skips integration tests during the build|
    |Code Coverage Tool|JaCoCo|Selects JaCoCo as the coverage tool|
    |Source Files Directory|src/main|Sets the source files directory for JaCoCo|
 
