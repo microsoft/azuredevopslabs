@@ -253,7 +253,7 @@ In this exercise, we will setup a CD pipeline to deploy the web application to a
 
 1. Select **Properties**. Note down **SERVER NAME** and **SERVER ADMIN LOGIN NAME**
 
-1. In this example, the server name is **myshuttle-1-mysqldbserver.mysql.database.azure.com** and the admin user name is **mysqldbuser@myshuttle-1-mysqldbserver**
+1. In this example, the server name is **myshuttledbserver.mysql.database.azure.com** and the admin user name is **mysqldbuser@myshuttledbserver**
 
 1. We will use the MySQL command-line tool to establish a connection to the Azure Database for MySQL server. We will run the MySQL command-line tool from the Azure Cloud Shell in the browser.To launch the Azure Cloud Shell, click the `>_` icon in the top right toolbar.
 
@@ -267,7 +267,7 @@ In this exercise, we will setup a CD pipeline to deploy the web application to a
 1. Next, we will execute the SQL from the downloaded file on the database server. Enter the following command-
 
     ````SQL
-    mysql -h myshuttle-1-mysqldbserver.mysql.database.azure.com -u mysqldbuser@myshuttle-1-mysqldbserver -p < mydbscript.script
+    mysql -h myshuttledbserver.mysql.database.azure.com -u mysqldbuser@myshuttledbserver -p < mydbscript.script
     ````
     Turn ON **Allow access to azure services** in **Connection Security settings** Enter the password that you specified during provisioning the database
 
