@@ -40,6 +40,7 @@ description: Learn how you can extend and integrate your DevOps Toolchain with V
           <li> <img src="images/aspnet-logo.png" height="32" width="32"><a href="aspnetmodernize/"> Modernizing your existing ASP.NET Apps with Azure</a></li><br />
           <li> <img src="images/azure.png" height="32" width="32"><a href="devopsprojectforjava/"> Azure DevOps Project for Java</a></li><br />
           <li> <img src="images/sonarcloud.png" height="32" width="32"><a href="sonarcloud/"> Managing Technical Debt using VSTS and SonarCloud</a> <span class="label label-success">New</span></li><br />
+          <li> <img src="images/vsts.png" height="32" width="32"><a href="releasegates/"> Release deployment control using gates</a> <span class="label label-success">New</span></li><br />
           <li> <img src="images/intellij.png" height="32" width="32"/><a href="intelliJ/"> Working with IntelliJ</a> <span class="label label-success">Coming soon</span></li><br />
         </ul>
 </div>
