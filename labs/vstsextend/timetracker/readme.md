@@ -1,6 +1,10 @@
-
-# The Best Ways to Track Time With 7pace Timetracker
-
+---
+title: The Best Ways to Track Time With 7pace TimeTracker
+layout: page
+sidebar: vsts2
+permalink: /labs/vstsextend/timetracker/
+folder: /labs/vstsextend/timetracker/
+---
 ## Overview 
 **7pace Timetracker** is a professional full-feature time recording and management solution that seamlessly integrates with Visual Studio Team Services (VSTS). Designed for software engineers, by software engineers, Timetracker exists within the same environment in which you work, allowing you to quickly and easily plan, estimate, enter, and track time directly on work items, and then use the resulting data to improve your productivity. This integration between work done and time tracked lets you know exactly how much time you’re spending on your work items, leading to better estimation and more efficient time management. The entire development team can see team members' individual pace, remaining time, and decreasing burndown.
 
@@ -15,7 +19,7 @@ In this tutorial, you will see how you can easily add time from various location
 1.	How to Add External Time into Timetracker with Microsoft Excel
 1.	How to View the Health of Your Sprint on Timetracker’s **Iterations** Page.
 
-## Pre-requisites for the lab
+## Prerequisites for the lab
 You will need a **Visual Studio Team Services Account**. If you do not have one, you can sign up for free [here](https://www.visualstudio.com/products/visual-studio-team-services-vs)
 ## Setting up the environment
 
@@ -43,7 +47,7 @@ This section helps you with the steps to enable **7pace Timetracker** for VSTS w
 1. (Optional) Pair the Windows Client with your Team Services account by clicking the **Download** link again on the **Monthly** page of Timetracker and then selecting **Pair** or clicking on the **Pair account** link under the **Pairing** section of the **Apps** page of Timetracker. For more information, see 7pace’s [Client Installation and Pairing Guide](https://support.7pace.com/hc/en-us/articles/115000516926-7pace-Timetracker-Client-Installation-and-Pairing-Guide).
 
 
-## Exercise 1:How to Record Your Time on the Work Item Form (Details tab **Start Tracking** and Time tab **Add Time** buttons)
+## Exercise 1:How to Record Your Time on the Work Item Form (Details tab Start Tracking and Time tab Add Time buttons)
 
 7pace Timetracker is fully integrated with your VSTS account. Throughout each sub-tab of Timetracker or within your VSTS account, any time you click on a work item, the work item details popup window displays.
 
@@ -167,7 +171,7 @@ If you have previously tracked time on a work item(s), the prediction feature of
 
     The tracker fields are minimized, allowing you to continue your work. The current work item number and description displays in the **Tracking** field, as well as the **Activity Type** you selected (if any), the total length of time you have worked on this item in the current calendar day (**TODAY** field), and the current length of time you have tracked on the item since hitting **Start Tracking**(to the right of the **TODAY** field).
 
-## Exercise 3: How to Record Your Time with Timetracker’s **Monthly**, **Timesheet** (Add New Time, Timesheet Cells and List Editor) and **Times Explorer** Pages
+## Exercise 3: How to Record Your Time with Timetracker’s Monthly, Timesheet (Add New Time, Timesheet Cells and List Editor) and Times Explorer Pages
 
 1. On the 7pace Timetracker menu bar, click the **Monthly** selection.
 The **Monthly** page's calendar interface allows you to enter time, track, and maintain your work efforts. You can easily navigate to different months and years, view daily, weekly, and monthly totals of time entered, as well as view the time entry details of a particular day.
