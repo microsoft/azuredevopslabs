@@ -170,7 +170,7 @@ In this task you will configure the VSTS build definition that will build and pu
 
    |Parameter|Value|Notes|
    |---------|-----|-----|
-   |Options|-DskipITs --settings ./maven/settings.xml|Skips integration tests during the build|
+   |Options|-DskipITs -settings ./maven/settings.xml|Skips integration tests during the build|
    |Code Coverage Tool|JaCoCo|Selects JaCoCo as the coverage tool|
    |Source Files Directory|src/main|Sets the source files directory for JaCoCo|
 
@@ -253,7 +253,11 @@ In this exercise, we will setup a CD pipeline to deploy the web application to a
 
 1. Select **Properties**. Note down **SERVER NAME** and **SERVER ADMIN LOGIN NAME**
 
-1. In this example, the server name is **myshuttle-1-mysqldbserver.mysql.database.azure.com** and the admin user name is **mysqldbuser@myshuttle-1-mysqldbserver**
+1. In this example, the server name is **myshuttledbserver.mysql.database.azure.com** and the admin user name is **mysqldbuser@myshuttledbserver**
+
+1. Turn ON **Allow access to azure services** in **Connection Security settings**
+
+    ![Connection Security](images/connection-security.png)
 
 1. We will use the MySQL command-line tool to establish a connection to the Azure Database for MySQL server. We will run the MySQL command-line tool from the Azure Cloud Shell in the browser.To launch the Azure Cloud Shell, click the `>_` icon in the top right toolbar.
 
@@ -267,17 +271,17 @@ In this exercise, we will setup a CD pipeline to deploy the web application to a
 1. Next, we will execute the SQL from the downloaded file on the database server. Enter the following command-
 
     ````SQL
-    mysql -h myshuttle-1-mysqldbserver.mysql.database.azure.com -u mysqldbuser@myshuttle-1-mysqldbserver -p < mydbscript.script
+    mysql -h myshuttledbserver.mysql.database.azure.com -u mysqldbuser@myshuttledbserver -p < mydbscript.script
     ````
-    Turn ON **Allow access to azure services** in **Connection Security settings** Enter the password that you specified during provisioning the database
+     Enter the password that you specified during provisioning the database    
 
-    ![Creating DB](images/createdatabase.png)
+    ![Creating Database](images/create-mysqldb.png)
 
     > This should create the database, tables and populate records for us.
 
 1. Next, navigate to the Web app that you have created. Click **Application Settings** and scroll down to the **Connection Strings** section
 
-1. Add a new MySQL connection string with **MyShuttleDb** as the name and the following string for the value - `jdbc:mysql://{MySQL Server Name}:3306/alm?useSSL=true&requireSSL=false&autoReconnect=true&user={your user name}&password={your password}`
+1. Add a new MySQL connection string with **MyShuttleDb** as the name and the following string for the value - `jdbc:mysql://`**`{MySQL Server Name}`**`.mysql.database.azure.com:3306/alm?useSSL=true&requireSSL=false&autoReconnect=true&user=`**`{your user name}`**`@`**`{MySQL Server Name}`**`&password=`**`{your password}`**
 
 1. Click **Save** to save the connection string
 
