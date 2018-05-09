@@ -73,7 +73,7 @@ In this lab you will create two **Web Apps** in Azure to depict two environments
 
 ## Setting up the VSTS team project
 
-Use [VSTS Demo Generator](https://vstsdemogenerator-test.azurewebsites.net/?TemplateId=77375&Name=ReleaseGates) to provision the project on your VSTS account.
+Use [VSTS Demo Generator](https://vstsdemogenerator.azurewebsites.net/?TemplateId=77375&Name=ReleaseGates) to provision the project on your VSTS account.
 
    > ***VSTS Demo Generator** helps you create team projects on your VSTS account with sample content that include source code, work items, iterations, service endpoints, build and release definitions based on the template you choose during the configuration.*
 
