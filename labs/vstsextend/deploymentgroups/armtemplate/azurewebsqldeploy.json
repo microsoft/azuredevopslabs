@@ -136,7 +136,7 @@
         "vmExtensionName": "dscExtension",
         "vmCSExtensionName": "CustomScriptExtension",
         "modulesUrl": "https://github.com/bayernmunich/AspNetWebApp/blob/master/WebServerConfig5.0.ps1.zip?raw=true",
-        "modulesDBUrl": "https://raw.githubusercontent.com/Microsoft/VSTS-DevOps-Labs/deploymentgroups/deploymentgroups/configureDBfirewallUsers.ps1",
+        "modulesDBUrl": "https://raw.githubusercontent.com/Microsoft/almvm/master/labs/vstsextend/deploymentgroups/armtemplate/configureDBfirewallUsers.ps1",
         "configurationFunction": "WebServerConfig.ps1\\WebServerConfig",
         "sqlDns":"[concat(parameters('envPrefixName'), 'sql', uniqueString(resourceGroup().id))]"
     },
