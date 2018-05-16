@@ -88,7 +88,7 @@
                         "value": "[resourceGroup().location]"
                     },
                     "fileUris": {
-                        "value": "https://raw.githubusercontent.com/Microsoft/VSTS-DevOps-Labs/master/selenium/arm%20template/chrome_%20firefox_VSTSagent_IIS.ps1"
+                        "value": "https://raw.githubusercontent.com/Microsoft/almvm/master/labs/vstsextend/selenium/armtemplate/chrome_%20firefox_VSTSagent_IIS.ps1"
                     }
                 }
             },

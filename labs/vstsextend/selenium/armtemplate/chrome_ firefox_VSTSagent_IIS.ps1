@@ -47,7 +47,7 @@ Start-Sleep -s 35
 rm -Force $workdir\firefox*
 
 #copy geckodriver
-Invoke-WebRequest https://github.com/Microsoft/VSTS-DevOps-Labs/blob/master/selenium/arm%20template/geckodriver.exe?raw=true -OutFile "C:\Program Files\Mozilla Firefox\geckodriver.exe"
+Invoke-WebRequest https://github.com/Microsoft/almvm/blob/master/labs/vstsextend/selenium/armtemplate/geckodriver.exe?raw=true -OutFile "C:\Program Files\Mozilla Firefox\geckodriver.exe"
 
 #Downlaod and extract VSTS windows agent
 mkdir C:\VSTSwinAgent ;

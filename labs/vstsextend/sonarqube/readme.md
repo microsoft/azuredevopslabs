@@ -46,7 +46,7 @@ In this lab, you will learn how to setup SonarQube on Azure and to integrate Vis
 
 1. Click the **Deploy To Azure** button below to provision SonarQube Server on Azure VM.
 
-   [![Deploy to Azure](http://azuredeploy.net/deploybutton.png)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FMicrosoft%2FVSTS-DevOps-Labs%2Fmaster%2Farmtemplates%2Fsonarqube%2Ftemplates%2Fazuredeploy.json){:target="_blank"}
+   [![Deploy to Azure](http://azuredeploy.net/deploybutton.png)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FMicrosoft%2Falmvm%2Fmaster%2Flabs%2Fvstsextend%2Fsonarqube%2Farmtemplate%2Fazuredeploy.json){:target="_blank"}
 
    ![CustomDeployAzure1](images/CustomDeployAzure1.png)
 
