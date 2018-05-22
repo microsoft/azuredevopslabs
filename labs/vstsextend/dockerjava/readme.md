@@ -52,9 +52,7 @@ If you are following this lab from [Working with Eclipse](../eclipse/)  you can 
 
 1. Once the team project is provisioned, click on the URL to navigate to the team project.
 
-   ![VSTS Demo Generator](images/VSTSDemoGeneratorCreate.png)
-
-
+   ![VSTS Demo Generator](images/vstsdemogen2.png)
 
     {% include note.html content= "This URL will automatically select the MyShuttleDocker template in the demo generator. If you want to try other projects, use this URL instead - [https://vstsdemogenerator.azurewebsites.net/](https://vstsdemogenerator.azurewebsites.net/)" %}
 
