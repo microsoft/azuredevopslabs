@@ -13,7 +13,7 @@ Last updated:6/17/2017
 <a name="Overview"></a>
 ## Overview ##
 
-In this lab, you will learn how to use the Team Foundation Build in order to build, test, and deploy your applications. This scriptable build system is both web-based and cross-platform, while also providing a modern interface for visualizing sophisticated workflows. Although we won't demonstrate all of the cross-platform possibilities in this lab, it is important to point out that you can also build for iOS, Android, Java (using Ant, Maven, or Gradle), and Linux.
+In this lab, you will learn how to configure continuous integration (CI) and continuous deployment(CD) for your applications using Build and Release in VSTS. This scriptable CI/CD system is both web-based and cross-platform, while also providing a modern interface for visualizing sophisticated workflows. Although we won't demonstrate all of the cross-platform possibilities in this lab, it is important to point out that you can also build for iOS, Android, Java (using Ant, Maven, or Gradle), and Linux.
 
 <a name="Prerequisites"></a>
 ### Prerequisites ###
@@ -64,7 +64,7 @@ In this lab, you will learn how to use the Team Foundation Build in order to bui
 
     ![](images/008.png)
 
-1. Select the **History** tab. There's nothing here yet, but it will fill up once you start completing builds.
+1. Select the **History** tab. There's nothing here yet, but it will show a history of changes you make to the build definition.
 
     ![](images/009.png)
 
