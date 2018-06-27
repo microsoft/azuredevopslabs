@@ -1,5 +1,5 @@
 ---
-title: The Best Ways to Track Time With 7pace TimeTracker
+title: The Best Ways to Track Time With 7pace Timetracker
 layout: page
 sidebar: vsts2
 permalink: /labs/vstsextend/timetracker/
@@ -26,7 +26,7 @@ You will need a **Visual Studio Team Services Account**. If you do not have one,
 This section helps you with the steps to enable **7pace Timetracker** for VSTS web server on your Visual Studio Team Services account and (optional) install the Windows Client to your local system. 
 
 1. Login to https://www.visualstudio.com/ using your valid Microsoft Visual Studio Team Services account. 
-1. Click [here](https://marketplace.visualstudio.com/items?itemName=Berichthaus.TfsTimetracker) to navigate to the **TimeTracker** extension in VSTS Marketplace. Or Search for **TimeTracker** in VSTS Marketplace and click on the **TimeTracker** icon.
+1. Click [here](https://marketplace.visualstudio.com/items?itemName=Berichthaus.TfsTimetracker) to navigate to the **Timetracker** extension in VSTS Marketplace. Or Search for **Timetracker** in VSTS Marketplace and click on the **Timetracker** icon.
 
    ![Timetrackericon](images/TimetrackerIcon.png)
 
