@@ -27,7 +27,7 @@ description: Learn how you can extend and integrate your DevOps Toolchain with V
           <li> <img src="images/octopus.png" height="42" width="42"/><a href="Octopus/"> Integrating Octopus Deploy</a></li><br />
           <li> <img src="images/selenium.png" height="32" width="32"/><a href="Selenium/"> Driving continuous testing with Selenium</a></li><br />
            <li> <img src="images/eclipse.png" height="32" width="32"/><a href="eclipse/"> Developing with Eclipse for Java projects</a></li><br />
-          <li> <img src="images/azure.png" height="32" width="32" /><a href="kubernetes/"> Deploying to Azure Container Service (AKS)</a></li><br />
+          <li> <img src="images/azure.png" height="32" width="32" /><a href="kubernetes/"> Deploying to Azure Kubernetes Service (AKS)</a></li><br />
           <li> <img src="images/azure.png" height="32" width="32" /><a href="deploymentgroups/"> Working with Deployment Groups</a></li><br />
         <li> <img src="images/parasoft.png" height="32" width="32" /><a href="parasoft/"> Leverage virtual services with Parasoft Virtualize</a></li><br />
           <li> <img src="images/logo_java.svg" height="42" width="42"/> <a href="../java/"> DevOps with VSTS and Azure for Java projects  </a>    </li><br />
