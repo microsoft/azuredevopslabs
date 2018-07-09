@@ -8,7 +8,7 @@ folder: /labs/vsts/pul/wiki/
 
 Lab version:15.7.3
 
-Last updated:6/17/2018
+Last updated:7/9/2018
 
 <a name="Overview"></a>
 ## Overview ##
@@ -194,4 +194,73 @@ In this lab, you'll learn about the wiki feature of Visual Studio Team Services 
 1. Once the sync has completed, return to the browser and refresh the page. Your new team bios page will appear in the navigation, so select it to view the content.
 
     ![](images/038.png)
+
+<a name="Ex1Task3"></a>
+### Task 3: Publishing code as a wiki ###
+
+You can also publish markdown files from a git repository to the VSTS Wiki. Developers often write SDK documents, product documentation, or README files explaining a product in a git repository. Such pages are often updated alongside code in the code repository. Git provides a friction free experience where code and docs can live on the same branch and are reviewed together in pull requests and are released together using the same build and release process.
+
+1. Navigate to the **Code** hub.
+
+    ![](images/039.png)
+
+1. From the repo dropdown, select **New repository**.
+
+    ![](images/040.png)
+
+1. Create a new repository named **"PULWiki"** and check **Add a README to describe your repository**.
+
+    ![](images/041.png)
+
+1. Navigate to **Overview | Wiki**.
+
+    ![](images/042.png)
+
+1. From the wiki dropdown, select **Publish code as wiki**.
+
+    ![](images/043.png)
+
+1. Select the **PULWiki** repo and the **/** folder. This effectively includes everything in our new wiki, but you could easily specify a more precise path if you kept your markdown in a subfolder. Set the **Wiki name** to **"Repo Wiki"** and click **Publish**.
+
+    ![](images/044.png)
+
+1. The only page in this new wiki is the readme automatically created with the repo.
+
+    ![](images/045.png)
+
+1. Navigate to **Code | Files**.
+
+    ![](images/046.png)
+
+1. Use the file dropdown to select **New | File**.
+
+    ![](images/047.png)
+
+1. Enter a new file name of **"My-topic/My-page.md"** and click **Create**. Based on the wiki convention, this will add a nested item to the wiki outline that maps to the folder structure of the repo.
+
+    ![](images/048.png)
+
+1. Add some content and click **Commit**.
+
+    ![](images/049.png)
+
+1. Navigate to **Overview | Wiki**.
+
+    ![](images/050.png)
+
+1. If not viewing the new wiki, select it from the dropdown.
+
+    ![](images/051.png)
+
+1. Locate the newly created page using the outline navigation.
+
+    ![](images/052.png)
+
+1. Your new page is ready for viewing. Now you can return to the repo to add more content and order files to structure it however you like.
+
+    ![](images/053.png)
+
+1. If you ever need to unpublish the entire wiki, you can select that option from the wiki dropdown.
+
+    ![](images/054.png)
 
