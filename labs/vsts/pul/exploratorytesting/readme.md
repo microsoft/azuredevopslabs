@@ -74,19 +74,19 @@ In this lab, you will learn about the exploratory testing and feedback managemen
 
 1. Navigate to [http://localhost:5001](http://localhost:5001/).
 
-1. Das
+1. In search box enter **jumper lead** and press **Enter**.
 
     ![](images/008.png)
 
-1. Da
+1. You will see the search results as shown below.
 
     ![](images/009.png)
 
-1. Da
+1. Now in the search box enter **jumper leads** and press **Enter**.
 
     ![](images/010.png)
 
-1. Das
+1. You can see there are no search results. When you search for **jumper lead** it showed the results. But when you search for **jumper leads** it showed no results. This seems to be a bug. 
 
     ![](images/011.png)
 
@@ -133,7 +133,7 @@ In this lab, you will learn about the exploratory testing and feedback managemen
 
     ![](images/021.png)
 
-1. Enter **"Search for jumper leads fails"** as the name of the bug. All the screenshots and videos captured earlier are already a part of the bug. In addition to this the image action log (user actions) has also been inserted for you so that it's easy for others to easily reproduce the issue. Click **Save** to save the bug to TFS.
+1. Enter **"Search for jumper leads fails"** as the name of the bug. All the screenshots and videos captured earlier are already a part of the bug. In addition to this the image action log (user actions) has also been inserted for you so that it's easy for others to easily reproduce the issue. Click **Save** to save the bug to VSTS.
 
     ![](images/022.png)
 
@@ -157,7 +157,7 @@ In this lab, you will learn about the exploratory testing and feedback managemen
 
     ![](images/027.png)
 
-1. Now back on the TFS site, you can update the bug as needed, such as by assigning it to someone or adjusting the severity.
+1. Now back on the VSTS site, you can update the bug as needed, such as by assigning it to someone or adjusting the severity.
 
     ![](images/028.png)
 
