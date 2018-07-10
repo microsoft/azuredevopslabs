@@ -83,7 +83,7 @@ It takes several teams to develop large software projects. Very large projects r
 
     ![](images/012.png)
 
-1. Set the new criteria to filter down to items where **State** does not equal (**<>**) **Closed**.
+1. Set the new criteria to filter down to items where **State** does not equal (**<>**) **Done**.
 
     ![](images/013.png)
 
@@ -142,7 +142,15 @@ It takes several teams to develop large software projects. Very large projects r
 
     ![](images/026.png)
 
-1. The last thing we need to do to configure the new team is to specify that it uses those new project sprints as its iterations. Select the **Teams** tab and click **External integration team**.
+1. Now select **Areas**. Make sure the root **Parts Unlimited** area is selected and click New child.
+    
+    ![](images/026-1.png)
+
+1. Name the new child **External integration** and click **Save and close**. This area will be specifically intended for use by the team of the same name.
+
+   ![](images/026-2.png)
+
+1. The last thing we need to do to configure the new team is to specify that it uses those new project sprints as its iterations and new area as its area path. Select the **Teams** tab and click **External integration team**.
 
     ![](images/027.png)
 
@@ -154,6 +162,14 @@ It takes several teams to develop large software projects. Very large projects r
 
     ![](images/029.png)
 
+1. Now select **Areas** and click **Select area(s)**.
+
+     ![](images/029-1.png)
+
+1. Select **PartsUnlimited\External integration** and click **Save and close**. 
+
+    ![](images/029-2.png)
+    
 <a name="Ex1Task4"></a>
 ### Task 4: Making delivery decisions ###
 
