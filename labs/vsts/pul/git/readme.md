@@ -13,7 +13,7 @@ Last updated:6/17/2018
 <a name="Overview"></a>
 ## Overview ##
 
-Team Services supports two types of version control Git and Team Foundation Version Control (TFVC). Here is a quick overview of the two version control systems:
+Team Services supports two types of version control, Git and Team Foundation Version Control (TFVC). Here is a quick overview of the two version control systems:
 
 - **Team Foundation Version Control (TFVC)**: TFVC is a centralized version control system. Typically, team members have only one version of each file on their dev machines. Historical data is maintained only on the server. Branches are path-based and created on the server.
 
@@ -174,7 +174,7 @@ Staging changes allows you to selectively add certain files to a commit while pa
 
 Git uses the parent reference information stored in each commit to manage a full history of your development. You can easily review this commit history to find out when file changes were made and determine differences between versions of your code.
 
-Git's use of **Branches and Merges** feature works through pull requests, so the commit history of your development doesn't necessarily form a straight, chronological line. When you use history to compare versions, think in terms of file changes between two commits instead of file changes between two points in time. A recent change to a file in the master branch may have come from a commit created two weeks ago in a feature branch but was only merged yesterday.
+Git's use of the **Branches and Merges** feature works through pull requests, so the commit history of your development doesn't necessarily form a straight, chronological line. When you use history to compare versions, think in terms of file changes between two commits instead of file changes between two points in time. A recent change to a file in the master branch may have come from a commit created two weeks ago in a feature branch but was only merged yesterday.
 
 <a name="Ex3Task1"></a>
 ### Task 1: Comparing files ###
@@ -211,7 +211,7 @@ Git's use of **Branches and Merges** feature works through pull requests, so the
 
 You can manage the work in your VSTS Git repo from the **Branches** view on the web. You can also customize the view to track the branches you care most about so you can stay on top of changes made by your team.
 
-Committing changes to a branch will not affect other branches, and you can share branches with others without having to merge the changes into the main project. You can also create new branches to isolate changes for a feature or a bug fix from your master branch and other work. Since the branches are lightweight, switching between branches is quick and easy. Git does not create multiple copies of your source when working with branches, but rather uses the history information stored in commits to recreate the files on a branch when you start working on it. Your Git workflow should create and use branches for managing features and bugfixes. The rest of the Git workflow, such as sharing code and reviewing code with pull requests, all work through branches. Isolating work in branches makes it very simple to change what you are working on by simply changing you current branch.
+Committing changes to a branch will not affect other branches, and you can share branches with others without having to merge the changes into the main project. You can also create new branches to isolate changes for a feature or a bug fix from your master branch and other work. Since the branches are lightweight, switching between branches is quick and easy. Git does not create multiple copies of your source when working with branches, but rather uses the history information stored in commits to recreate the files on a branch when you start working on it. Your Git workflow should create and use branches for managing features and bugfixes. The rest of the Git workflow, such as sharing code and reviewing code with pull requests, all work through branches. Isolating work in branches makes it very simple to change what you are working on by simply changing your current branch.
 
 <a name="Ex4Task1"></a>
 ### Task 1: Creating a new branch in your local repository ###
@@ -466,7 +466,7 @@ Pull requests let your team give feedback on changes in feature branches before 
 <a name="Ex6Task3"></a>
 ### Task 3: Tagging a release ###
 
-1. While it may not seem like much, the product team has decided that this version of the site is exactly what's needed for v1.0. In order to mark it as such, navigate to the **Tags** tab.
+1. While it may not seem like much, the product team has decided that this version of the site is exactly what's needed for v1.1. In order to mark it as such, navigate to the **Tags** tab.
 
     ![](images/083.png)
 
@@ -498,7 +498,7 @@ You can create Git repos in team projects to manage your project's source code. 
 
     ![](images/088.png)
 
-1. That's it. Your repo is ready. You can now close it with Visual Studio or your tools of choice.
+1. That's it. Your repo is ready. You can now clone it with Visual Studio or your tools of choice.
 
     ![](images/089.png)
 
@@ -532,7 +532,7 @@ You can create Git repos in team projects to manage your project's source code. 
 
     ![](images/095.png)
 
-1. VSTS branch policies are very effective in enforcing a level of quality control in the repo. For example, you can control pull requests by requiring a minimum number of reviewers, checking for linked work items, requiring that all comments have been resolves, and more. You can even require validation through a successful build and configure external approval services. If there are certain sections of code that require their own approvers to be included, you can include them here as well.
+1. VSTS branch policies are very effective in enforcing a level of quality control in the repo. For example, you can control pull requests by requiring a minimum number of reviewers, checking for linked work items, requiring that all comments have been resolved, and more. You can even require validation through a successful build and configure external approval services. If there are certain sections of code that require their own approvers to be included, you can include them here as well.
 
     ![](images/096.png)
 
