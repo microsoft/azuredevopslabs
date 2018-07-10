@@ -28,7 +28,7 @@ In this lab, you will learn about the agile planning and portfolio management to
 
 1. Navigate to your Parts Unlimited project on VSTS. It will be something like [https://YOURACCOUNT.visualstudio.com/Parts%20Unlimited](https://youraccount.visualstudio.com/Parts Unlimited).
 
-1. Open the settings page using the **Project settings** navigation.
+1. Open the settings page using the **Project settings** navigation located at the bottom left of the page.
 
     ![](images/000.png)
 
@@ -80,7 +80,7 @@ In this lab, you will learn about the agile planning and portfolio management to
 
     ![](images/012.png)
 
-1. From the area dropdown, select **Include sub areas**. The default setting for all teams is to exclude sub-area paths. We will change it to include sub-areas so that the team gets visibility into all of the work items from all teams. Optionally, the management team could also choose to not include sub-areas. Thereby removing work items from their view as soon as they are assigned to one of the teams.
+1. From the area dropdown, select **Include sub areas**. The default setting for all teams is to exclude sub-area paths. We will change it to include sub-areas so that the team gets visibility into all of the work items from all teams. Optionally, the management team could also choose to not include sub-areas, thereby removing work items from their view as soon as they are assigned to one of the teams.
 
     ![](images/013.png)
 
@@ -224,7 +224,7 @@ Planning meetings typically consist of two parts. In the first part, the team an
 
     ![](images/045.png)
 
-1. From the **View options** dropdown, set the **Work details** to **On**.
+1. From the **View options** dropdown, select the **Work details**.
 
     ![](images/046.png)
 
@@ -260,7 +260,7 @@ Planning meetings typically consist of two parts. In the first part, the team an
 
     ![](images/054.png)
 
-1. One convenient feature of the boards is that you can easily update key data in line. It's a good practice to regularly update the **Remaining Work** estimate to reflect the amount of time expected for each task. Let's say you've reviewed the work for the **Add page** task and found that it will actually take longer than originally expected. Set it to whatever your total capacity is for this sprint.
+1. One convenient feature of the boards is that you can easily update key data in-line. It's a good practice to regularly update the **Remaining Work** estimate to reflect the amount of time expected for each task. Let's say you've reviewed the work for the **Add page** task and found that it will actually take longer than originally expected. Set it to whatever your total capacity is for this sprint.
 
     ![](images/055.png)
 
@@ -268,7 +268,7 @@ Planning meetings typically consist of two parts. In the first part, the team an
 
     ![](images/056.png)
 
-1. One way to resolve this capacity issue would be to move the task to a future iteration. There are a few ways this could be done. First, you could open the task here and edit it in the dialog. The **Backlog** view, on the other hand, provides an in line menu option to move it. Don't move it now.
+1. One way to resolve this capacity issue would be to move the task to a future iteration. There are a few ways this could be done. First, you could open the task here and edit it in the dialog. The **Backlog** view, on the other hand, provides an in-line menu option to move it. Don't move it now.
 
     ![](images/057.png)
 
@@ -385,11 +385,11 @@ To maximize a team's ability to consistently deliver high quality software, Kanb
 
     ![](images/084.png)
 
-1. Return to the **Columns** tab and select **QA Approved**. A lag often exists between when work gets moved into a column and when work starts. To counter that lag and reveal the actual state of work in progress, you can turn on split columns. When split, each column contains two sub-columns: **Doing** and **Done**. Split columns let your team to implement a pull model. Without split columns, teams push work forward, to signal that they've completed their stage of work. However, pushing it to the next stage doesn't necessarily mean that a team member immediately starts work on that item. Check **Split column into doing and done** to create two separate columns for this.
+1. Return to the **Columns** tab and select **QA Approved**. A lag often exists between when work gets moved into a column and when work starts. To counter that lag and reveal the actual state of work in progress, you can turn on split columns. When split, each column contains two sub-columns: **Doing** and **Done**. Split columns let your team  implement a pull model. Without split columns, teams push work forward, to signal that they've completed their stage of work. However, pushing it to the next stage doesn't necessarily mean that a team member immediately starts work on that item. Check **Split column into doing and done** to create two separate columns for this.
 
     ![](images/085.png)
 
-1. As your team updates the status of work as it progresses from one stage to the next, it helps that they agree on what "done" means. By specifying the **Definition of done** criteria for each Kanban column, you help share the essential tasks to complete before moving an item into a downstream stage. Add a **Definition of done** using markdown, such as **"Passes **all** tests."**. Click **Save**.
+1. As your team updates the status of work as it progresses from one stage to the next, it helps that they agree on what **done** means. By specifying the **Definition of done** criteria for each Kanban column, you help share the essential tasks to complete before moving an item into a downstream stage. Add a **Definition of done** using markdown, such as **"Passes **all** tests."**. Click **Save**.
 
     ![](images/086.png)
 
@@ -405,7 +405,7 @@ To maximize a team's ability to consistently deliver high quality software, Kanb
 
     ![](images/089.png)
 
-1. Your Kanban board supports your ability to visualize the flow of work as it moves from new to done. When you add **swimlanes**, you can also visualize the status of work that supports different service-level classes. You can create a swimlane to represent any other dimension that supports your tracking needs. From the **Swimlans** tab, click **Add Swimlane** and set the **Name** to **"Expedite"**. Click **Save**.
+1. Your Kanban board supports your ability to visualize the flow of work as it moves from new to done. When you add **swimlanes**, you can also visualize the status of work that supports different service-level classes. You can create a swimlane to represent any other dimension that supports your tracking needs. From the **Swimlanes** tab, click **Add Swimlane** and set the **Name** to **"Expedite"**. Click **Save**.
 
     ![](images/090.png)
 
@@ -417,7 +417,7 @@ To maximize a team's ability to consistently deliver high quality software, Kanb
 
     ![](images/092.png)
 
-1. This board provides a playground for you to experiment with changes and review the results.
+1. This board provides a playground for you to experiment with  and review the results.
 
     ![](images/093.png)
 
@@ -428,7 +428,7 @@ To maximize a team's ability to consistently deliver high quality software, Kanb
 
     ![](images/094.png)
 
-1. Dashboards allow teams to visualize status and monitor progress across the project. At a glance, you can make informed decisions without having to drill down into other parts of your team project site. The Overview page provides access to a default team dashboard which you can customize by adding, removing, or rearranging the tiles. Each tile corresponds to a widget that provides access to one or more features or functions.
+1. From the dashboard dropdown, select **Parts Unlimited Team Overview**. Dashboards allow teams to visualize status and monitor progress across the project. At a glance, you can make informed decisions without having to drill down into other parts of your team project site. The Overview page provides access to a default team dashboard which you can customize by adding, removing, or rearranging the tiles. Each tile corresponds to a widget that provides access to one or more features or functions.
 
     ![](images/095.png)
 
@@ -507,9 +507,9 @@ In addition, all processes are shared. That is, one or more team projects can re
 
 Once you've created an inherited process, you can customize it, create team projects based on it, and migrate existing team projects to reference it. The Git team project can't be customized until it's migrated to an inherited process.
 
-In this task we'll create a new process that inherits Scrum. The one change we'll make is to add a backlog item field designed to track to a proprietary PartsUnlimited ticket ID.
+In this task we'll create a new process that inherits from Scrum. The one change we'll make is to add a backlog item field designed to track to a proprietary PartsUnlimited ticket ID.
 
-1. Click the **VSTS** log in the top left corner to navigate to the account root. From the menu dropdown, select **Settings**. These are account-level settings.
+1. Click the **VSTS** log in the top left corner to navigate to the account root. From the left bottom corner select **Admin settings**. These are account-level settings.
 
     ![](images/112.png)
 
@@ -577,5 +577,5 @@ In this task we'll create a new process that inherits Scrum. The one change we'l
 
     ![](images/128.png)
 
-1. Once the work item is saved, VSTS will also save the new custom information so that it will be available for queries and the rest of VSTS.
+1. Once the work item is saved, VSTS will also save the new custom information so that it will be available for queries and through the rest of VSTS.
 
