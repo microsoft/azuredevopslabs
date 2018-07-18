@@ -56,6 +56,8 @@ The below diagram details the VSTS DevOps workflow with Docker:
 
    {% include tip.html content= "Use lower case letters for **DB Server Name**" %}
 
+     {% include note.html content= " **ACR name** may contain alpha numeric characters only and must be between 5 and 50 characters." %}
+
    ![Create Azure Components](images/createazurecomponents.png)
 
 1. It takes approximately 3 to 4 minutes to provision the environment. Click on the **Go to resource group** to view the resource group.
@@ -87,7 +89,7 @@ The below diagram details the VSTS DevOps workflow with Docker:
 
 1. Use the [VSTS Demo Generator](https://vstsdemogenerator.azurewebsites.net/?Name=Docker&TemplateId=77363) to provision the team project on the VSTS account.
 
-   > **VSTS Demo Generator** helps you create team projects on your VSTS account with sample content that include source code, work items,iterations, service endpoints, build and release definitions based on the template you choose during the configuration.
+   > **VSTS Demo Generator** helps you create team projects on your VSTS account with sample content that include source code, work items, iterations, service endpoints, build and release definitions based on the template you choose during the configuration.
 
    ![VSTS Demo Generator](images/VSTSDemogenerator.png)
 
@@ -171,7 +173,7 @@ In this exercise, the source code will be modified to trigger the CI-CD.
 
     ![Line Edit](images/lineedit.png)
 
-1. In the **Commit** window, provide comments and then click on the **Commit** button to commit the changes to the repository.This action would initiate an automatic build for the source code.
+1. In the **Commit** window, provide comments and then click on the **Commit** button to commit the changes to the repository. This action would initiate an automatic build for the source code.
 
     ![Commit](images/commit.png)
 
@@ -183,7 +185,7 @@ In this exercise, the source code will be modified to trigger the CI-CD.
 
     ![Build Summary](images/build4.png)
 
-1. Navigate to the [Azure Portal](https://portal.azure.com){:target="_blank"} and click on the **App Service** that was created at the beginning of this lab. Select the **Docker Container** option and provide the information as suggested and then click the **Save** button.
+1. Navigate to the [Azure Portal](https://portal.azure.com){:target="_blank"} and click on the **App Service** that was created at the beginning of this lab. Select the **Container Settings** option and provide the information as suggested and then click the **Save** button.
 
    Field | Value to be provided
    ------- | -------
@@ -192,9 +194,9 @@ In this exercise, the source code will be modified to trigger the CI-CD.
    **image** | Select the value **myhealth.web**
    **Tag** | Select the value **latest**. This is required to map Azure Container Registry with the Web App.
 
-   ![Update registry](images/updatereg.png)
+   ![Update registry](images/updatereg3.png)
 
-   ![Update registry](images/updatereg2.png)
+   ![Update registry](images/updatereg4.png)
 
     {% include tip.html content= "The Continuous Deployment can be configured to deploy the web app to the designated server whenever a new docker image is pushed to the registry on the Azure portal itself. However, setting up a VSTS CD pipeline will provide better flexibility and additional controls (approvals, release gates, etc.) for the application deployment." %}
 
@@ -206,7 +208,7 @@ In this exercise, the source code will be modified to trigger the CI-CD.
 
     ![Release Progress](images/rel3.png)
 
-1. The release will deploy the docker image to the App Service based on the **BuildID** tagged with the docker image. Once the release is completed, the release sumamry will be displayed.
+1. The release will deploy the docker image to the App Service based on the **BuildID** tagged with the docker image. Once the release is completed, the release summary will be displayed.
 
     ![Summary](images/rel8.png)
 
