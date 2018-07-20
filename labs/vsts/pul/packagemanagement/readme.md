@@ -30,7 +30,7 @@ Package Management is an extension that makes it easy to discover, install, and 
 
 1. Navigate to your team project on VSTS.
 
-1. Delivery Plans is provided as a marketplace extension. From the **Marketplace** navigation dropdown, select **Browse Marketplace**.
+1. Package Management is provided as a marketplace extension. From the **Marketplace** navigation dropdown, select **Browse Marketplace**.
 
     ![](images/000.png)
 

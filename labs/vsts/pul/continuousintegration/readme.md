@@ -122,7 +122,7 @@ In this lab, you will learn how to configure continuous integration (CI) and con
 
     ![](images/021.png)
 
-1. Make a minor cosmetic change, such as by tweaking the title of the document. Click **Commt**.
+1. Make a minor cosmetic change, such as by tweaking the title of the document. Click **Commit**.
 
     ![](images/022.png)
 

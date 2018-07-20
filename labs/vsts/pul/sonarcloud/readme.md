@@ -32,7 +32,7 @@ Technical debt is the set of problems in a development effort that make forward 
 
 1. Navigate to your team project on VSTS.
 
-1. Delivery Plans is provided as a marketplace extension. From the **Marketplace** navigation dropdown, select **Browse Marketplace**.
+1. Sonar Cloud is provided as a marketplace extension. From the **Marketplace** navigation dropdown, select **Browse Marketplace**.
 
     ![](images/000.png)
 

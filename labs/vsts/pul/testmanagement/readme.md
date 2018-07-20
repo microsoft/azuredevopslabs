@@ -13,7 +13,7 @@ Last updated:6/17/2018
 <a name="Overview"></a>
 ## Overview ##
 
-In this lab, you will learn how to use Visual Studio Team Services to manage your project's testing lifecycle. This project will guide you through creating test plans designed efficiently validate your software milestones. You will also create and execute manual tests that can be consistently reproduced over the course of each release.
+In this lab, you will learn how to use Visual Studio Team Services to manage your project's testing lifecycle. This project will guide you through creating test plans designed to efficiently validate your software milestones. You will also create and execute manual tests that can be consistently reproduced over the course of each release.
 
 <a name="Prerequisites"></a>
 ### Prerequisites ###
@@ -36,7 +36,7 @@ In this exercise, you will learn how to create and manage test plans, test suite
 
     ![](images/000.png)
 
-1. In general, every major milestone in a project should have its own **test plan**. Within each test plan are **test suites**, which are collections of **test cases** (and optionally other test suites) designed to validate a work item, such as a feature implementation or bug fix. Each test case is designed to confirm a specific behavior and may belong to one or more test suites. The Parts Unlimited project has one test plan, which is under the **Parts Unlimited Team** and called **Parts Unlimited_TestPlan1**.
+1. In general, every major milestone in a project should have its own **test plan**. Within each test plan are **test suites**, which are collections of **test cases** (and optionally other test suites) designed to validate a work item, such as a feature implementation or bug fix. Each test case is designed to confirm a specific behavior and may belong to one or more test suites. The Parts Unlimited project has one test plan, which is under the **Parts Unlimited Team** and called **Parts Unlimited_TestPlan1**. Select **Parts Unlimited_TestPlan1** test plan.
 
     ![](images/001.png)
 
