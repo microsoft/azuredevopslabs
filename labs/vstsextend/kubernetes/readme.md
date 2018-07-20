@@ -52,7 +52,7 @@ In this lab, the following tasks will be performed:
 
 The below diagram details the VSTS DevOps workflow with Azure Container Service with AKS:
 
-[![VSTS DevOps workflow with Azure Container Service with AKS](images/vstsaksdevops.png)](https://azure.microsoft.com/en-in/solutions/architecture/continuous-integration-deployment-containers/){:target="_blank"}
+[![VSTS DevOps workflow with Azure Container Service with AKS](images/vstsaksdevops2.png)](https://azure.microsoft.com/en-in/solutions/architecture/continuous-integration-deployment-containers/){:target="_blank"}
 
 * Firstly, the source code changes are committed to the VSTS git repository
 

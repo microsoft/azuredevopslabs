@@ -5,7 +5,7 @@
         "acrName": {
             "minLength": 5,
             "maxLength": 50,
-            "type": "String",
+            "type": "string",
             "metadata": {
                 "description": "Name of your Azure Container Registry"
             }
@@ -17,19 +17,19 @@
                 "Standard_ZRS",
                 "Standard_GRS"
             ],
-            "type": "String",
+            "type": "string",
             "metadata": {
                 "description": "Type of the storage account that will store container registry data."
             }
         },
         "siteName": {
-            "type": "String",
+            "type": "string",
             "metadata": {
                 "description": "Name of azure web app"
             }
         },
         "DBServerName": {
-            "type": "String",
+            "type": "string",
             "metadata": {
                 "description": "SQL server name will be appended to .database.windows.net"
             }
@@ -77,46 +77,53 @@
             ]
         },
         {
-            "type": "Microsoft.Web/sites",
+            "apiVersion": "2016-03-01",
             "name": "[parameters('siteName')]",
-            "apiVersion": "2016-08-01",
-            "location": "[resourceGroup().location]",
+            "type": "Microsoft.Web/sites",
             "properties": {
                 "name": "[parameters('siteName')]",
-                "serverFarmId": "[variables('hostingPlanName')]",
-                "hostingEnvironment": "",
-				"siteConfig": {
+                "siteConfig": {
+                    "appSettings": [
+                        {
+                            "name": "WEBSITES_ENABLE_APP_SERVICE_STORAGE",
+                            "value": "false"
+                        }
+                    ],
                     "connectionStrings": [
                         {
                             "name": "defaultConnection",
                             "ConnectionString": "[concat('Data Source=tcp:',reference(concat('Microsoft.Sql/servers/', parameters('DBServerName'))).fullyQualifiedDomainName , ',1433;Initial Catalog=mhcdb;User Id=sqladmin;Password=P2ssw0rd1234;')]",
                             "type": "SQLAzure"
                         }
-                    ]
-                }
+                    ],
+                    "appCommandLine": "",
+                    "linuxFxVersion": "DOCKER|appsvc/sample-hello-world:latest"
+                },
+                "serverFarmId": "[variables('hostingPlanName')]",
+                "hostingEnvironment": ""
             },
-			
+            "location": "[resourceGroup().location]",
             "dependsOn": [
-                "[variables('hostingPlanName')]"
+                "[concat('Microsoft.Web/serverfarms/', variables('hostingPlanName'))]"
             ]
         },
         {
+            "apiVersion": "2016-09-01",
+            "name": "[variables('hostingPlanName')]",
             "type": "Microsoft.Web/serverfarms",
+            "location": "[resourceGroup().location]",
+            "properties": {
+                "name": "[variables('hostingPlanName')]",
+                "workerSizeId": 0,
+                "reserved": true,
+                "numberOfWorkers": "1",
+                "hostingEnvironment": ""
+            },
             "sku": {
                 "Tier": "Standard",
                 "Name": "S1"
             },
-            "kind": "linux",
-            "name": "[variables('hostingPlanName')]",
-            "apiVersion": "2016-09-01",
-            "location": "[resourceGroup().location]",
-            "properties": {
-                "name": "[variables('hostingPlanName')]",
-                "workerSizeId": "1",
-                "reserved": true,
-                "numberOfWorkers": "1",
-                "hostingEnvironment": ""
-            }
+            "kind": "linux"
         },
         {
             "type": "Microsoft.Sql/servers",
