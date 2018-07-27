@@ -18,7 +18,7 @@ In order to complete this lab you will need-
 
 - Visual Studio 2017 virtual machine provided by Microsoft. Click the button below to launch the virtual machine.
 
-  <a href="" class="launch-hol" role="button" target="_blank"><span class="lab-details">Launch the virtual machine</span></a>
+  <a href="https://labondemand.com/AuthenticatedLaunch/39008?providerId=4" class="launch-hol" role="button" target="_blank"><span class="lab-details">Launch the virtual machine</span></a>
 
 - **Visual Studio Team Services account**. If you don't have one, you can create from [here](https://www.visualstudio.com/team-services){:target="_blank"}
 
