@@ -20,9 +20,9 @@ The Web App for Containers allows creation of custom [Docker](https://www.docker
 
 1. Deploy and [run](https://docs.docker.com/engine/reference/commandline/run/){:target="_blank"} the images inside the Docker Containers
 
-The below diagram details the VSTS DevOps workflow with Docker:
+   The below diagram details the VSTS DevOps workflow with Docker:
 
-## Image to be added here
+   ![](images/vstsdockerdevops.png)
 
 ### Prerequisites for the lab
 
