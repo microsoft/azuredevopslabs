@@ -18,7 +18,7 @@ In this lab, you will learn about the agile planning and portfolio management to
 <a name="Prerequisites"></a>
 ### Prerequisites ###
 
-- This lab requires you to complete task 1 from the prerequisite instructions.
+- This lab requires you to complete task 1 from the <a href="../prereq/">prerequisite</a> instructions.
 
 <a name="Exercise1"></a>
 ## Exercise 1: Agile Project Management ##

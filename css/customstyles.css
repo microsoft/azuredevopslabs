@@ -265,17 +265,9 @@ p.post-meta {
 
 /* search area */
 
-#search-demo-container ul#results-container {
-    list-style: none;
-    font-size: 12px;
-    position: absolute;
-    top: 72px;
-    /* if you change anything about the nav, you'll prob. need to reset the top and left values here.*/
-    left: 20px;
-    z-index: -1;
-    width: 240px;
-    background: #ffffff;
-}
+#search-demo-container ul#results-container {list-style: none;
+font-size: 15px;position: absolute;top: 38px;right: 26px;z-index: -1;
+width: 238px;padding: 5px 10px;background: #ffffff;}
 
 ul#results-container a {
     background-color: transparent;
@@ -283,7 +275,7 @@ ul#results-container a {
 
 ul#results-container a:hover {
     color: black;
-    background: #ccc;
+    
 }
 
 #search-demo-container a:hover {
@@ -292,8 +284,8 @@ ul#results-container a:hover {
 }
 
 #search-input {
+    margin-bottom:12px;
     padding: .3em;
-    margin-left: 17px;
     padding-left: 35px;
     width: 16.2em;
     font-size: 1em;
@@ -301,7 +293,7 @@ ul#results-container a:hover {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     float: right;
-    margin-top: 16px;
+    margin-top: 2px;
     border-color: #248ec2;
     border: 1px solid #248ec2;
     outline: none;
@@ -321,6 +313,8 @@ ul#results-container a:hover {
 
 div#toc{
     position: fixed;
+height:500px;
+    overflow-y: auto; 
 }
 
 div#toc ul li {
@@ -1640,9 +1634,9 @@ div.lablist {
 }
 
 div.herotext2{
-    font-size: 18px;
-    line-height: 1.6;
-    width: 420px;
+    font-size: 16px;
+    line-height: 1.9;
+    width: 60%;
 }
 
 div.productcolmain {

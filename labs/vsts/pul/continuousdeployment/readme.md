@@ -20,7 +20,7 @@ In this lab, you will learn about the release management features available in V
 
 - An Azure account (free from [https://azure.com/free](https://azure.com/free)).
 
-- Complete task 1 from the prerequisite instructions.
+- Complete task 1 from the <a href="../prereq/">prerequisite</a> instructions.
 
 <a name="Exercise1"></a>
 ## Exercise 1: Embracing Continuous Delivery with Visual Studio Team Services ##

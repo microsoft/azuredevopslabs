@@ -2,7 +2,7 @@
 
 entries:
 - title: sidebar
-  product: Visual Studio Team Services
+  product: Azure DevOps
   version: 
   url: /labs/vsts
   folders:
@@ -24,7 +24,7 @@ entries:
     output: web, pdf
     folderitems:
 
-    - title: VSTS Hands-on-Labs Overview
+    - title: Azure DevOps Hands-on-Labs Overview
       url: labs/vsts
       output: web, pdf
       type: homepage

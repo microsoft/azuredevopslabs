@@ -18,7 +18,7 @@ It takes several teams to develop large software projects. Very large projects r
 <a name="Prerequisites"></a>
 ### Prerequisites ###
 
-- This lab requires you to complete task 1 from the prerequisite instructions
+- This lab requires you to complete task 1 from the <a href="../prereq/">prerequisite</a> instructions
 
 <a name="Exercise1"></a>
 ## Exercise 1: Managing Delivery Plans with Visual Studio Team Services ##
