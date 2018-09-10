@@ -1,6 +1,6 @@
 ---
 layout: homepage
-title: Modern DevOps practices with Azure, Azure DevOps Services and Team Foundation Server
+title: Modern DevOps practices with Azure, Azure DevOps and Team Foundation Server
 keywords: ALM VM homepage
 tags: [overview]
 permalink: default.html
@@ -15,8 +15,8 @@ description: Learn how you can implement modern DevOps practices with  Azure, Az
     <div class="row">
       <div class="col-sm-12">
       <div style="margin-top: 20px;">
-      <h1>Azure DevOps Hands-On-Labs</h1>
-      <p>Hands-on-labs for Azure DevOps and Team Foundation Server</p>
+      <h1>Azure DevOps Hands-On Labs</h1>
+      <p>Hands-on labs for Azure DevOps and Team Foundation Server</p>
       <div class="herotext2">
          Evaluating your next DevOps toolchain? Want to go deep and learn how you can implement modern DevOps practices with Azure, Azure DevOps and Team Foundation Server? 
          If you said yes to any of these questions, then this set of self-paced labs are what you are looking for.        
@@ -44,7 +44,7 @@ description: Learn how you can implement modern DevOps practices with  Azure, Az
             <div id="services-labs" class="container tab-pane active">
               <div class="col-sm-12">
                   <!--h2 class="pading-t-10">Azure DevOps Services</h2--> 
-                  <div><p>Simplify and speed the DevOps process with Azure DevOps Services. The following labs will help you to get started with Azure DevOps Services to automate software delivery and meet business needs.</p> </div>
+                  <div><p>Simplify and speed the DevOps process with Azure DevOps services. The following labs will help you to get started with Azure DevOps services to automate software delivery and meet business needs.</p> </div>
               </div>
               <div class="col-sm-12">
                   <h2>Getting started</h2> 
@@ -55,7 +55,7 @@ description: Learn how you can implement modern DevOps practices with  Azure, Az
                              <li><a href="/labs/azuredevops/agile/" class="barleft">Agile Planning and Portfolio Management </a></li>
                              <li><a href="/labs/azuredevops/git/" class="barleft">Version Controlling with Git  </a></li>
                              <li><a href="/labs/azuredevops/packagemanagement/" class="barleft">Package Management</a></li>
-                             <li><a href="/labs/azuredevops/continuousintegration/" class="barleft">Enabling Continuous Integration with Azure DevOps Build</a></li>
+                             <li><a href="/labs/azuredevops/continuousintegration/" class="barleft">Enabling Continuous Integration with Azure Pipelines</a></li>
                           </ul>
                     </div>
                     </div>
@@ -137,7 +137,7 @@ description: Learn how you can implement modern DevOps practices with  Azure, Az
                       In order to complete these labs you will need:
                       <ul>
                               <li>
-                              <strong>Azure DevOps Services Organization:</strong> Of course! you will need an Azure DevOps Services account. If you don’t have one, you can sign up for one, from <a href="https://www.visualstudio.com/" target="_blank">here</a>
+                              <strong>Azure DevOps services Organization:</strong> Of course! you will need an Azure DevOps services account. If you don’t have one, you can sign up for one, from <a href="https://www.visualstudio.com/" target="_blank">here</a>
                               </li>
                               <li>
                               <strong>Microsoft Azure Account</strong>: You will need a valid and active Azure account. If you do not have one, 
@@ -151,7 +151,7 @@ description: Learn how you can implement modern DevOps practices with  Azure, Az
                               </ul>
                               </li>
                               <li>
-                                  <a href="https://vstsdemogenerator.azurewebsites.net" target="_blank"><strong>Azure DevOps Demo Generator:</strong></a> You can use the Azure DevOps Demo Generator to provision a project with pre-defined data on to your Azure DevOps Services organization.
+                                  <a href="https://vstsdemogenerator.azurewebsites.net" target="_blank"><strong>Azure DevOps Demo Generator:</strong></a> You can use the Azure DevOps Demo Generator to provision a project with pre-defined data on to your Azure DevOps services organization.
                               </li>
                       </ul>
               </div> 
