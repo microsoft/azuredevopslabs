@@ -182,7 +182,8 @@ a {
 }
 .barleft, .osslist {
   -webkit-box-align: center;
-  -ms-flex-align: center; /*align-items: center*/
+  -ms-flex-align: center; 
+  align-items: center;
   border-left: solid 1px hsla(0, 0%, 89%, 1);
   display: -webkit-box;
   display: -ms-flexbox;
