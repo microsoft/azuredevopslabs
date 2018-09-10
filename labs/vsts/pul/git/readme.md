@@ -28,7 +28,7 @@ In this lab, you will learn how to establish a local Git repository, which can e
 
 - Visual Studio 2017.
 
-- This lab requires you to complete task 1 from the prerequisite instructions.
+- This lab requires you to complete task 1 from the <a href="../prereq/">prerequisite</a> instructions.
 
 <a name="Exercise1"></a>
 ## Exercise 1: Cloning an existing repository ##

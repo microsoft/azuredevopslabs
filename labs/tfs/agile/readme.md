@@ -1,7 +1,6 @@
 ---
 title: Agile Planning & Portfolio Management with Team Foundation Server
 layout: page
-sidebar: tfs
 permalink: /labs/tfs/agile/
 folder: /labs/tfs/agile/
 ---

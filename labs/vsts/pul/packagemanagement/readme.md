@@ -20,7 +20,7 @@ Package Management is an extension that makes it easy to discover, install, and 
 
 - Visual Studio 2017
 
-- This lab requires you to complete tasks 1 and 2 from the prerequisite instructions
+- This lab requires you to complete tasks 1 and 2 from the <a href="../prereq/">prerequisite</a> instructions
 
 <a name="Exercise1"></a>
 ## Exercise 1: Working with the package management service ##

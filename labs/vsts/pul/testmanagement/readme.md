@@ -20,7 +20,7 @@ In this lab, you will learn how to use Visual Studio Team Services to manage you
 
 - Visual Studio 2017
 
-- This lab requires you to complete tasks 1 and 2 from the prerequisite instructions
+- This lab requires you to complete tasks 1 and 2 from the <a href="../prereq/">prerequisite</a> instructions
 
 <a name="Exercise1"></a>
 ## Exercise 1: Managing Test Plans, Suites, and Cases ##

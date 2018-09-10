@@ -2,7 +2,7 @@
 
 entries:
 - title: sidebar
-  product: Team Foundation Server 2018 Labs 
+  product: Team Foundation Server 
   version: 2018
   url: /labs/tfs
   folders:
