@@ -101,6 +101,7 @@ sidebars:
 - product2_sidebar
 - other
 
+site.google_analytics: UA-93010880-1
 
 # the description is used in the feed.xml file
 description: "RSS Feed for Microsoft Visual Studio ALM Virtual Machine"
