@@ -34,9 +34,9 @@ description: Learn how you can implement modern DevOps practices with  Azure, Az
   <div class="col-sm-8">
 <h1>Get Started with DevOps</h1>
 Don't have an account? No worries! Sign up for <b>free</b> now and get
-<ul class="tick"><li> Automated CI/CD pipelines</li>
+<ul class="tick"><li>Automated CI/CD pipelines</li>
 <li>free private Git repositories</li>
-<li> configurable Kanban boards, and </li>
+<li>configurable Kanban boards, and </li>
 <li>extensive automated and cloud-based load testing tools.</li>
 </ul>
 </div>
