@@ -14,10 +14,9 @@ description: Learn how you can implement modern DevOps practices with  Azure, Az
   <div class="row">
     <div class="row">
       <div class="col-sm-12">
-      <div style="margin-top: 20px;">
+      <div style="margin-top:20px">
       <h1>Azure DevOps Hands-On Labs</h1>
-      <br />
-      <div class="herotext2">
+            <div class="herotext2" style="margin-top:10px">
          Evaluating your next DevOps toolchain? Want to go deep and learn how you can implement modern DevOps practices?<br /><br />
          
         Learn how you can plan smarter, collaborate better, and ship faster with a set of modern dev services. 
@@ -31,16 +30,15 @@ description: Learn how you can implement modern DevOps practices with  Azure, Az
 <div class="container">
     <div class="row">
     
-  <div class="col-sm-8">
-<h1>Get Started with DevOps</h1>
-Don't have an account? No worries! Sign up for <b>free</b> now and get
+<div class="col-sm-10" style="padding-top:20px">
+<h1>New to Azure DevOps?</h1>
+<div style="margin-top:2px">Don't have an account? No worries! Sign up for a <b>free</b> Azure DevOps organization now and get
 <ul class="tick"><li>Automated CI/CD pipelines</li>
-<li>free private Git repositories</li>
+<li>free unlimited private Git repositories</li>
 <li>configurable Kanban boards, and </li>
 <li>extensive automated and cloud-based load testing tools.</li>
-</ul>
-</div>
-    <div class="col-md-4" style="margin-top:90px;"><a href="https://go.microsoft.com/fwlink/?LinkId=2014881" class="launch-hol" role="button" target="_blank" onclick="pageTracker._trackEvent('SignUp', 'Click', 'New User SignUp');" style="
+</ul></div>
+<a href="https://go.microsoft.com/fwlink/?LinkId=2014881" class="launch-hol" role="button" target="_blank" onclick="pageTracker._trackEvent('SignUp', 'Click', 'New User SignUp');" style="
     align-self:  right;"><span class="lab-details">Sign up for free now</span></a></div>
 </div>
 </div>
