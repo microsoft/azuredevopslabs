@@ -38,7 +38,7 @@ nav {
 /* end header css */
 /* start body css */
 body {
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 400;
   line-height: 1.8;
   color: #505055;
@@ -193,6 +193,18 @@ a {
   padding-right: 12px;
   padding-bottom: 5px;
 }
+.mainpagetable{
+  border: 0px;
+  width: 100px;
+  background-color: white;
+}
+ul.tick{
+  list-style: none;
+}
+
+ul.tick li:before {
+  content: '✓';
+}
 .osslist{
     margin-top: 10px;
 }
@@ -236,6 +248,9 @@ a {
 }
 .tab-bg-color li a:hover {
   background-color: #ecf2f6;
+}
+.nav-link {
+  border-top: 5px solid transparent;
 }
 .nav-tabs .nav-link.active {
   color: #505055;
