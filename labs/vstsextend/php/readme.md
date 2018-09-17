@@ -105,7 +105,7 @@ Let's make a code change to trigger a CI-CD pipeline to build and deploy the app
 
 1. Go to line number **11**, modify **PHP** to **DevOps for PHP using Azure DevOps Organization** and commit the code.
 
-   ![code_editing](images/Repos1_6.png)
+   ![code_editing](images/Repos2_2.png)
 
 1. Go to **Builds** tab under **Pipelines** to view the associated CI build in progress, click on ellipsis to **View build results**.
 
@@ -148,4 +148,4 @@ Let's make a code change to trigger a CI-CD pipeline to build and deploy the app
 
 1. Select the **App Service** and from the **Overview** tab,  click **Browse** to see the application deployed.
 
-   ![website_php](images/final.png)
+   ![website_php](images/FinalDevOps.png)
