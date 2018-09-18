@@ -252,7 +252,7 @@ description: Learn how you can implement modern DevOps practices with  Azure, Az
                       <p>You can get access to the virtual machine the following ways:</p>
                       <ul>
                           <li>
-                            <strong>Download the Virtual Machine</strong> - You can download the virtual machine, if you prefer to use it offline. The size of the download is about 18 GB and we highly recommend that you use a download manager to download the VHD file. The <strong><a href="almvmdownload\">Accessing the VM</a></strong> page has detailed instructions on downloading the VM, including links to both current and the previous versions of TFS labs.
+                            <strong>Download the Virtual Machine</strong> - You can download the virtual machine, if you prefer to use it offline. The size of the download is about 18 GB and we highly recommend that you use a download manager to download the VHD file. The <strong><a href="labs/tfs/almvmdownload\">Accessing the VM</a></strong> page has detailed instructions on downloading the VM, including links to both current and the previous versions of TFS labs.
                           </li>
                           <li>
                             <strong>Try it on Microsoft Hands-on Labs</strong> - If you are evaluating or want to try the labs without the hassle of downloading or setting up the virtual machine, you can access them from the <a href="technet/"><strong>Microsoft Hands-on-Labs</strong></a> center. You only need a browser. There is absolutely no download or setup required!
