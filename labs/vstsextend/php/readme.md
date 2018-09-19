@@ -11,7 +11,7 @@ Last updated : {{ "now" | date: "%b %d, %Y" }}.
 
 **PHP** is a server-side scripting language, and a powerful tool for making dynamic and interactive Web pages.
 
-This lab shows how to deploy **PHP** application to **Azure App** service using **Azure DevOps Organization**.
+This lab shows how to deploy **PHP** application to **Azure App** service using **Azure DevOps**.
 
 ### Prerequisites for the lab
 
@@ -24,11 +24,11 @@ This lab shows how to deploy **PHP** application to **Azure App** service using 
 1. You will need an **Azure DevOps Organization**. If you do not have one, you can sign up for free [here](https://www.visualstudio.com/products/visual-studio-team-services-vs){:target="_blank"}
 
 
-## Setting Up the Azure DevOps Organization Project
+## Setting Up the Azure DevOps Project
 
 1. Use the [Azure DevOps Demo Generator](https://azuredevopsdemogenerator.azurewebsites.net/?TemplateId=77365&Name=PHP){:target="_blank"} to provision project on your Azure DevOps Organization.
 
-   > **Azure DevOps Demo Generator** helps you create team projects on your Azure DevOps Organization with sample content that include source code, work items,iterations, service endpoints, build and release definitions based on the template you choose during the configuration.
+   > **Azure DevOps Demo Generator** helps you create team projects on your Azure DevOps Organization with sample content that include source code, work items, iterations, service endpoints, build and release definitions based on the template you choose during the configuration.
 
    ![VSTS Demo Generator](images/vstsdemogen1-1.png)
 
@@ -103,7 +103,7 @@ Let's make a code change to trigger a CI-CD pipeline to build and deploy the app
 
    ![code1](images/Repos1_5.png)
 
-1. Go to line number **11**, modify **PHP** to **DevOps for PHP using Azure DevOps Organization** and commit the code.
+1. Go to line number **11**, modify **PHP** to **DevOps for PHP using Azure DevOps** and commit the code.
 
    ![code_editing](images/Repos2_2.png)
 
