@@ -176,4 +176,4 @@ The release pipeline is configured as **Infrastructure as a Code** to deploy the
 
 ## Summary
 
-The **VSTS** simplifies the creation of the continuous integration and continuous delivery pipelines for the application to be deployed to the Azure platform.
+The **Azure DevOps Services** simplifies the creation of the continuous integration and continuous delivery pipelines for the application to be deployed to the Azure platform. 
