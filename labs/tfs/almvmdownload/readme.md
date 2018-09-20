@@ -6,7 +6,7 @@ permalink: /labs/tfs/almvmdownload/
 folder: /labs/tfs/almvmdownload/
 ---
 
-We highly recommend that you use the [**Microsoft Hands-on-Labs**](technet/) center to run the VM - You do not require a high configuration machine or have to download and setup the machine. Simply access them from a browser of your choice. 
+We highly recommend that you use the [**Microsoft Hands-on-Labs**](../technet/) center to run the VM - You do not require a high configuration machine or have to download and setup the machine. Simply access them from a browser of your choice. 
 
 If you prefer to download the VM instead, please see the instructions below.
 
@@ -56,5 +56,5 @@ Using **Free download manager**
 
 If you wish to download the previous versions of the Visual Studio ALM VM - here are the links:
 * Version 2017 -  [VM](../media/almvm2017url.txt){:target="_blank"} \|  [Lab documents](https://almvm2017.blob.core.windows.net/vm2017/VisualStudio ALMVM 2017 Labs.zip)
-* Version 2015 Update 2: [VM](https://msdnshared.blob.core.windows.net/media/2016/06/ALMVM-2015-Update-2-Downloads.txt) \| [Lab documents](http://vsalmvm.azurewebsites.net/visual-studio-2015-update-2-alm-virtual-machine-and-hands-on-labs-demo-scripts/)
+* Version 2015 Update 2: [VM](https://msdnshared.blob.core.windows.net/media/2016/06/ALMVM-2015-Update-2-Downloads.txt) \| [Lab documents](https://msdnshared.blob.core.windows.net/media/2016/06/ALMVM-2015-Update-2-Downloads.txt)
 
