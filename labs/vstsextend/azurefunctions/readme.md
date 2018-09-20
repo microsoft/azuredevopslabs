@@ -103,37 +103,37 @@ The Azure Functions created in this exercise will act as a switching proxy or me
     
 1. Expand the **PartsUnlimited.AzureFunction** project, open **Function1.cs** and replace the existing code with the following code.
 
-```C Sharp
-  using System;
-  using System.Linq;
-  using System.Net;
-  using System.Net.Http;
-  using System.Threading.Tasks;
-  using Microsoft.Azure.WebJobs;
-  using Microsoft.Azure.WebJobs.Extensions.Http;
-  using Microsoft.Azure.WebJobs.Host;
+    ```C Sharp
+    using System;
+    using System.Linq;
+    using System.Net;
+    using System.Net.Http;
+    using System.Threading.Tasks;
+    using Microsoft.Azure.WebJobs;
+    using Microsoft.Azure.WebJobs.Extensions.Http;
+    using Microsoft.Azure.WebJobs.Host;
 
-  namespace PartsUnlimited.AzureFunction
- {
- public static class Function1
- {
-     [FunctionName("HttpTriggerCSharp1")]
-     public static async Task<HttpResponseMessage> Run([HttpTrigger(AuthorizationLevel.Function, "get", "post", Route = null)]HttpRequestMessage req, TraceWriter log)
-     {
-         var userIdKey = req.GetQueryNameValuePairs().FirstOrDefault(q => string.Equals(q.Key, "UserId", StringComparison.OrdinalIgnoreCase));
-         var userId = string.IsNullOrEmpty(userIdKey.Value) ? int.MaxValue : Convert.ToInt64(userIdKey.Value);
-         var url = $"https://<<YourAPIAppServiceUrl>>/api/{(userId > 10 ? "v1" : "v2")}/specials/GetSpecialsByUserId?id={userId}";
-         using (HttpClient httpClient = new HttpClient())
-         {
-             return await httpClient.GetAsync(url);
-         }
-     }
- }
-}
+    namespace PartsUnlimited.AzureFunction
+    {
+    public static class Function1
+    {
+        [FunctionName("HttpTriggerCSharp1")]
+        public static async Task<HttpResponseMessage> Run([HttpTrigger(AuthorizationLevel.Function, "get", "post", Route = null)]HttpRequestMessage req, TraceWriter log)
+        {
+            var userIdKey = req.GetQueryNameValuePairs().FirstOrDefault(q => string.Equals(q.Key, "UserId", StringComparison.OrdinalIgnoreCase));
+            var userId = string.IsNullOrEmpty(userIdKey.Value) ? int.MaxValue : Convert.ToInt64(userIdKey.Value);
+            var url = $"https://<<YourAPIAppServiceUrl>>/api/{(userId > 10 ? "v1" : "v2")}/specials/GetSpecialsByUserId?id={userId}";
+            using (HttpClient httpClient = new HttpClient())
+            {
+                return await httpClient.GetAsync(url);
+            }
+        }
+    }
+    }
 
-```
+    ```
 
-1. Navigate to the resource group which was configured in the **Create required Azure resources** exercise. Click **PartsUnlimited-API-XXXXXXX.azurewebsites.net** and click the Copy icon under the URL section to copy the whole URL. Copy and replace the value of **YourAPIAppServiceUrl** in url variable with API app service name.
+1. Navigate to the resource group which was configured in the **Create required Azure resources** exercise. Click **PartsUnlimited-API-XXXXXXX.azurewebsites.net** and click the Copy icon under the URL section to copy the whole URL. Copy and replace the value of `https://<<**YourAPIAppServiceUrl**>>` in url variable with API app service name.
 
 1. In Visual Studio, open **StoreController.cs** from the path **PartsUnlimitedWebsite > Controllers > StoreController.cs**.
 
