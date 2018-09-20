@@ -23,7 +23,7 @@ The lab additionally requires Visual Studio 2017 version 15.4 or later with [.Ne
 
 ## Create required Azure resources
 
-1. Click **Deploy To Azure** to provision an Azure App service plan with two web apps.
+1. Click the below **Deploy To Azure** button to provision an Azure App service plan with two web apps.
 
    [![Deploy to Azure](http://azuredeploy.net/deploybutton.png)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FMicrosoft%2Falmvm%2Fmaster%2Flabs%2Fvstsextend%2Fazurefunctions%2Farmtemplate%2Fazuredeploy.json)
 
@@ -49,7 +49,7 @@ Refer the **Getting Started** page to understand the purpose of the **Azure DevO
 
      ![clonepath](images/clonepath.png)
 
-1. In Team Explorer under **Solutions**, you will see the list of solutions within the local git folder and double click on **PartsUnlimited.sln** to open the project.
+1. In Team Explorer under **Solutions**, you will see  **PartsUnlimited.sln**. Double click the solution to open the project.
 
      ![openproject](images/opensolution.png)
 
@@ -63,7 +63,7 @@ The Azure Functions created in this exercise will act as a switching proxy or me
 
     ![createfunctionapp](images/createfunctionapp.png)
 
-1. Use the function app settings as specified in below image. Select Create to provision and deploy the function app.
+1. Create a Function app with similar settings as specified in the below image. Select Create to provision and deploy the function app.
 
     ![functionapp](images/functionapp.png)
 
@@ -133,7 +133,7 @@ The Azure Functions created in this exercise will act as a switching proxy or me
 
 ```
 
-1. Navigate to the resource group where you have created resources in the Azure Portal. Click **PartsUnlimited-API-XXXXXXX.azurewebsites.net** and click the Copy icon under the URL section to copy the whole URL. Copy and replace **YourAPIAppServiceUrl** in url variable with API app service name.
+1. Navigate to the resource group which was configured in the **Create required Azure resources** exercise. Click **PartsUnlimited-API-XXXXXXX.azurewebsites.net** and click the Copy icon under the URL section to copy the whole URL. Copy and replace the value of **YourAPIAppServiceUrl** in url variable with API app service name.
 
 1. In Visual Studio, open **StoreController.cs** from the path **PartsUnlimitedWebsite > Controllers > StoreController.cs**.
 
