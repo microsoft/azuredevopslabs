@@ -65,12 +65,7 @@ We will use ARM template as **Infrastructure as a Code**  in the release definit
 
     ![Deployment Location](images/dev5.png)   
 
-<<<<<<< HEAD
-1. Select the **Azure App Service Deploy** task and pick **Azure subscription** from the dropdown list, click on **Save**. 
-=======
-
-1. Select the **Azure App Service Deploy** task and pick **Azure subscription** from the dropdown list,then click on **Save**. 
->>>>>>> 0902fbf46217b121100512e256dc1f39b6846a9e
+1. Select the **Azure App Service Deploy** task and pick **Azure subscription** from the dropdown list, then click on **Save**. 
 
     ![Deployment Slot](images/dev6.png)    
 
