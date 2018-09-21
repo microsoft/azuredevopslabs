@@ -33,7 +33,7 @@ The lab additionally requires Visual Studio 2017 version 15.4 or later with [.Ne
 
 ## Setting up the VSTS team project
 
-1. Use the [Azure DevOps Demo Generator](http://azuredevopsdemogenerator.azurewebsites.net/?TemplateId=77376&Name=AzureFunctions_BuildWorkshop) and follow the instructions in [Getting Started](../readme/) page to provision the project to your **Azure DevOps**.
+1. Click the [Azure DevOps Demo Generator](http://azuredevopsdemogenerator.azurewebsites.net/?TemplateId=77376&Name=AzureFunctions_BuildWorkshop) link and follow the instructions in [Getting Started](../readme/) page to provision the project to your **Azure DevOps**.
 
 ## Exercise 1: Cloning an existing repository
 
