@@ -23,7 +23,6 @@ This lab shows how to deploy **PHP** application to **Azure App** service using 
 
 1. You will need an **Azure DevOps Organization**. If you do not have one, you can sign up for free [here](https://www.visualstudio.com/products/visual-studio-team-services-vs){:target="_blank"}
 
-
 ## Setting Up the Azure DevOps Project
 
 1. Use the [Azure DevOps Demo Generator](https://azuredevopsdemogenerator.azurewebsites.net/?TemplateId=77365&Name=PHP){:target="_blank"} to provision project on your Azure DevOps Organization. 
@@ -32,8 +31,7 @@ This lab shows how to deploy **PHP** application to **Azure App** service using 
 
    ![VSTS Demo Generator](images/vstsdemogen1-1.png)
 
-
-1. Once the project is provisioned, click the URL to navigate to the project.
+1. Once the project is provisioned, click the team project URL to navigate to the project.
 
    ![VSTS Demo Generator](images/vstsdemogen1_2.png)
 
@@ -43,8 +41,7 @@ This lab shows how to deploy **PHP** application to **Azure App** service using 
 
 We will use ARM template as **Infrastructure as a Code**  in the release definition to provisions a Web App and a Web App Service Plan under the specified resource group.
 
-
-1. Go to **Releases** under **Pipelines** tab, Select release definition **PHP** and click on **Edit**
+1. Go to **Releases** under **Pipelines** tab, select release definition **PHP** and click on **Edit**
 
    ![release_def](images/release1_3.png)
 
@@ -68,11 +65,9 @@ We will use ARM template as **Infrastructure as a Code**  in the release definit
 
     ![Deployment Location](images/dev5.png)   
 
-
 1. Select the **Azure App Service Deploy** task and pick **Azure subscription** from the dropdown list, click on **Save**. 
 
     ![Deployment Slot](images/dev6.png)    
-
 
    <table width="70%">
     <thead>
@@ -142,10 +137,12 @@ Let's make a code change to trigger a CI-CD pipeline to build and deploy the app
 
    ![Release success](images/release2_1.png)
 
-1. Alternatively, you can also login to the [Azure Portal](https://portal.azure.com){:target="_blank"} and navigate to the **Resource Group** that contains the Web App that was provisioned in the CD pipeline
+1. Alternatively, you can also login to the [Azure Portal](https://portal.azure.com){:target="_blank"} and navigate to the **Resource Group** that contains the Web App that was provisioned in the CD pipeline.
 
    ![azure](images/azure.png)
 
 1. Select the **App Service** and from the **Overview** tab,  click **Browse** to see the application deployed.
 
    ![website_php](images/FinalDevOps.png)
+
+
