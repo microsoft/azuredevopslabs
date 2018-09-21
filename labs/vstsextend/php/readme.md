@@ -145,4 +145,7 @@ Let's make a code change to trigger a CI-CD pipeline to build and deploy the app
 
    ![website_php](images/FinalDevOps.png)
 
+## Summary
+
+This lab shows how to create a continuous integration and continuous deployment pipeline for PHP code with Azure DevOps and Azure.
 
