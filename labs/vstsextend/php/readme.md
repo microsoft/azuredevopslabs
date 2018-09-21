@@ -9,7 +9,7 @@ folder: /labs/vstsextend/php/
 Last updated : {{ "now" | date: "%b %d, %Y" }}.
 ## Overview
 
-**PHP** is a server-side scripting language, and a powerful tool for making dynamic and interactive Web pages.
+**PHP** is a server-side scripting language, and a powerful tool enough for making dynamic and interactive Web pages.
 
 This lab shows how to deploy **PHP** application to **Azure App** service using **Azure DevOps**.
 
@@ -17,9 +17,9 @@ This lab shows how to deploy **PHP** application to **Azure App** service using 
 
 1. **Microsoft Azure Account**: You will need a valid and active Azure account for the Azure labs. If you do not have one, you can sign up for a [free trial](https://azure.microsoft.com/en-us/free/){:target="_blank"}
 
-    * If you are an active Visual Studio Subscriber, you are entitled for a $50-$150 credit per month. You can refer to this [link](https://azure.microsoft.com/en-us/pricing/member-offers/msdn-benefits-details/){:target="_blank"} to find out more information about this including how to activate and start using your monthly Azure credit.
+    * If you are an active Visual Studio Subscriber, you are entitled for a $50-$150 credit per month. You can refer to this [link](https://azure.microsoft.com/en-us/pricing/member-offers/msdn-benefits-details/){:target="_blank"} to get more information about this, including how to activate and start using your monthly Azure credit.
 
-    * If you are not a Visual Studio Subscriber, you can sign up for the FREE [Visual Studio Dev Essentials](https://www.visualstudio.com/dev-essentials/){:target="_blank"} program to create an **Azure free account** (includes 1 year of free services, $200 for 1st month).
+    * If you are not a Visual Studio Subscriber, you can sign up for FREE [Visual Studio Dev Essentials](https://www.visualstudio.com/dev-essentials/){:target="_blank"} program to create an **Azure free account** (includes 1 year of free services, $200 for 1st month).
 
 1. You will need an **Azure DevOps Organization**. If you do not have one, you can sign up for free [here](https://www.visualstudio.com/products/visual-studio-team-services-vs){:target="_blank"}
 
@@ -28,7 +28,7 @@ This lab shows how to deploy **PHP** application to **Azure App** service using 
 
 1. Use the [Azure DevOps Demo Generator](https://azuredevopsdemogenerator.azurewebsites.net/?TemplateId=77365&Name=PHP){:target="_blank"} to provision project on your Azure DevOps Organization. 
 
-   > **Azure DevOps Demo Generator** helps you create team projects on your Azure DevOps Organization with sample content that include source code, work items, iterations, service endpoints, build and release definitions based on the template you choose during the configuration.
+   > **Azure DevOps Demo Generator** helps you create team projects on your Azure DevOps Organization with sample content that include source code, work items, iterations, service endpoints, build and release definitions based on the template that you choose during the configuration.
 
    ![VSTS Demo Generator](images/vstsdemogen1-1.png)
 
@@ -37,11 +37,11 @@ This lab shows how to deploy **PHP** application to **Azure App** service using 
 
    ![VSTS Demo Generator](images/vstsdemogen1_2.png)
 
-   {% include note.html content= "This URL will automatically select PHP template in the demo generator. If you want to try other projects, use this URL instead - [https://azuredevopsdemogenerator.azurewebsites.net/](https://azuredevopsdemogenerator.azurewebsites.net/){:target=\"_blank\"}" %}
+   {% include note.html content= "This URL will automatically select the PHP template in the demo generator. If you want to try other project, use this URL instead - [https://azuredevopsdemogenerator.azurewebsites.net/](https://azuredevopsdemogenerator.azurewebsites.net/){:target=\"_blank\"}" %}
 
 ## Exercise 1: Configure Release Definition
 
-We will use ARM template as **Infrastructure as a Code**  in the release definition to provisions a Web App and a Web App Service Plan under the specified resource group.
+We will use ARM template as **Infrastructure as a Code**  in the release definition to provisions a Web App, and a Web App Service Plan, under the specified resource group.
 
 
 1. Go to **Releases** under **Pipelines** tab, Select release definition **PHP** and click on **Edit**
@@ -54,9 +54,9 @@ We will use ARM template as **Infrastructure as a Code**  in the release definit
 
 1. Select the **Azure Resource Group Deployment** task, choose the **Azure subscription**. There are 2 ways of choosing the Azure subscription.
    
-    * If your subscription is not listed or if you want to use an existing service principal, click the `Manage` link. 
+    * If your subscription is not listed or if you want to use an existing service principal, please click the `Manage` link. 
 
-        1. Click on the `+New Service Connection` button and select the **Azure Resource Manager** option. Provide Connection name, select the Azure Subscription from the list and the click on the Ok button. The Azure credentials will be required to authorize the connection.
+        1. Click on the `+New Service Connection` button and select the **Azure Resource Manager** option. Provide Connection name, select the Azure Subscription from the list and then click on the Ok button. The Azure credentials will be required to authorize the connection.
 
         ![Endpoint](images/endpoint_creation.png)
 
@@ -69,7 +69,7 @@ We will use ARM template as **Infrastructure as a Code**  in the release definit
     ![Deployment Location](images/dev5.png)   
 
 
-1. Select the **Azure App Service Deploy** task and pick **Azure subscription** from the dropdown list, click on **Save**. 
+1. Select the **Azure App Service Deploy** task and pick **Azure subscription** from the dropdown list,then click on **Save**. 
 
     ![Deployment Slot](images/dev6.png)    
 
@@ -113,7 +113,7 @@ Let's make a code change to trigger a CI-CD pipeline to build and deploy the app
 
    ![in_progress_build](images/Buildcomplete10.png)
 
-   Let's explore the build definition. The tasks used in the build definition are listed as shown.
+   Let's explore the build definition. The tasks used in the build definition are listed below.
 
    <table width="70%">
     <thead>
@@ -136,7 +136,7 @@ Let's make a code change to trigger a CI-CD pipeline to build and deploy the app
     </tr>
    </table>
 
-1. Once the build is completed, it triggers the CD pipeline. You can notice the linked release is in progress by navigating to **Releases** under **Pipelines**. The release will provision the Azure Web app and deploy the zip file generated by the associated build. Double click to **View release** and click on **Logs** to view the release summary.
+1. Once the build is completed, it triggers the CD pipeline. You can notice the linked release is in progress by navigating to **Releases** under **Pipelines**. The release will provision the Azure Web app and deploy the zip file generated by the associated build. Double click on **View release** and then click on **Logs** to view the release summary.
 
    ![Release in progress](images/release1_2.png)
 
