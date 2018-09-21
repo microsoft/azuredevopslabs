@@ -17,7 +17,7 @@ Azure Functions is an event driven, compute-on-demand experience that extends th
 
 ## Pre-requisites for the lab
 
-Refer the **Getting Started** page to know the prerequisites for this lab.
+Refer the [Getting Started](../gettingstarted/) page to know the prerequisites for this lab.
 
 The lab additionally requires Visual Studio 2017 version 15.4 or later with [.Net Core SDK](https://www.microsoft.com/net/learn/get-started/windows#windows) and [Azure Development Tools for Visual Studio](https://docs.microsoft.com/en-us/azure/azure-functions/functions-develop-vs) installed.
 
@@ -33,7 +33,7 @@ The lab additionally requires Visual Studio 2017 version 15.4 or later with [.Ne
 
 ## Setting up the VSTS team project
 
-Refer the **Getting Started** page to understand the purpose of the **Azure DevOps Demo Generator** in this lab.
+Refer the [Getting Started](../gettingstarted/) page to understand the purpose of the **Azure DevOps Demo Generator** in this lab.
 
 1. Use the [Azure DevOps Demo Generator](http://azuredevopsdemogenerator.azurewebsites.net/?TemplateId=77376&Name=AzureFunctions_BuildWorkshop) to provision the project on your Azure DevOps Services account.
 
