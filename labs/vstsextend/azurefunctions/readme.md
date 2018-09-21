@@ -1,4 +1,4 @@
-# Deploying Azure Functions using VSTS
+# Deploying Azure Functions using Azure DevOps
 
 ## Overview
 
@@ -17,13 +17,13 @@ Azure Functions is an event driven, compute-on-demand experience that extends th
 
 ## Pre-requisites for the lab
 
-Refer the **Getting Started** page to know the prerequisites for this lab.
+Refer the [Getting Started](../Setup/) page to know the prerequisites for this lab.
 
 The lab additionally requires Visual Studio 2017 version 15.4 or later with [.Net Core SDK](https://www.microsoft.com/net/learn/get-started/windows#windows) and [Azure Development Tools for Visual Studio](https://docs.microsoft.com/en-us/azure/azure-functions/functions-develop-vs) installed.
 
 ## Create required Azure resources
 
-1. Click **Deploy To Azure** to provision an Azure App service plan with two web apps.
+1. Click the below **Deploy To Azure** button to provision an Azure App service plan with two web apps.
 
    [![Deploy to Azure](http://azuredeploy.net/deploybutton.png)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FMicrosoft%2Falmvm%2Fmaster%2Flabs%2Fvstsextend%2Fazurefunctions%2Farmtemplate%2Fazuredeploy.json)
 
@@ -31,11 +31,9 @@ The lab additionally requires Visual Studio 2017 version 15.4 or later with [.Ne
 
    ![azure_resources](images/azure_resources.png)
 
-## Setting up the VSTS team project
+## Setting up the Azure DevOps team project
 
-Refer the **Getting Started** page to understand the purpose of the **Azure DevOps Demo Generator** in this lab.
-
-1. Use the [Azure DevOps Demo Generator](http://azuredevopsdemogenerator.azurewebsites.net/?TemplateId=77376&Name=AzureFunctions_BuildWorkshop) to provision the project on your Azure DevOps Services account.
+1. Click the [Azure DevOps Demo Generator](http://azuredevopsdemogenerator.azurewebsites.net/?TemplateId=77376&Name=AzureFunctions_BuildWorkshop) link and follow the instructions in [Getting Started](../Setup/) page to provision the project to your **Azure DevOps**.
 
 ## Exercise 1: Cloning an existing repository
 
@@ -49,7 +47,7 @@ Refer the **Getting Started** page to understand the purpose of the **Azure DevO
 
      ![clonepath](images/clonepath.png)
 
-1. In Team Explorer under **Solutions**, you will see the list of solutions within the local git folder and double click on **PartsUnlimited.sln** to open the project.
+1. In Team Explorer under **Solutions**, you will see  **PartsUnlimited.sln**. Double click the solution to open the project.
 
      ![openproject](images/opensolution.png)
 
@@ -63,7 +61,7 @@ The Azure Functions created in this exercise will act as a switching proxy or me
 
     ![createfunctionapp](images/createfunctionapp.png)
 
-1. Use the function app settings as specified in below image. Select Create to provision and deploy the function app.
+1. Create a Function app with similar settings as specified in the below image. Select Create to provision and deploy the function app.
 
     ![functionapp](images/functionapp.png)
 
@@ -103,37 +101,37 @@ The Azure Functions created in this exercise will act as a switching proxy or me
     
 1. Expand the **PartsUnlimited.AzureFunction** project, open **Function1.cs** and replace the existing code with the following code.
 
-```C Sharp
-  using System;
-  using System.Linq;
-  using System.Net;
-  using System.Net.Http;
-  using System.Threading.Tasks;
-  using Microsoft.Azure.WebJobs;
-  using Microsoft.Azure.WebJobs.Extensions.Http;
-  using Microsoft.Azure.WebJobs.Host;
+    ```C Sharp
+    using System;
+    using System.Linq;
+    using System.Net;
+    using System.Net.Http;
+    using System.Threading.Tasks;
+    using Microsoft.Azure.WebJobs;
+    using Microsoft.Azure.WebJobs.Extensions.Http;
+    using Microsoft.Azure.WebJobs.Host;
 
-  namespace PartsUnlimited.AzureFunction
- {
- public static class Function1
- {
-     [FunctionName("HttpTriggerCSharp1")]
-     public static async Task<HttpResponseMessage> Run([HttpTrigger(AuthorizationLevel.Function, "get", "post", Route = null)]HttpRequestMessage req, TraceWriter log)
-     {
-         var userIdKey = req.GetQueryNameValuePairs().FirstOrDefault(q => string.Equals(q.Key, "UserId", StringComparison.OrdinalIgnoreCase));
-         var userId = string.IsNullOrEmpty(userIdKey.Value) ? int.MaxValue : Convert.ToInt64(userIdKey.Value);
-         var url = $"https://<<YourAPIAppServiceUrl>>/api/{(userId > 10 ? "v1" : "v2")}/specials/GetSpecialsByUserId?id={userId}";
-         using (HttpClient httpClient = new HttpClient())
-         {
-             return await httpClient.GetAsync(url);
-         }
-     }
- }
-}
+    namespace PartsUnlimited.AzureFunction
+    {
+    public static class Function1
+    {
+        [FunctionName("HttpTriggerCSharp1")]
+        public static async Task<HttpResponseMessage> Run([HttpTrigger(AuthorizationLevel.Function, "get", "post", Route = null)]HttpRequestMessage req, TraceWriter log)
+        {
+            var userIdKey = req.GetQueryNameValuePairs().FirstOrDefault(q => string.Equals(q.Key, "UserId", StringComparison.OrdinalIgnoreCase));
+            var userId = string.IsNullOrEmpty(userIdKey.Value) ? int.MaxValue : Convert.ToInt64(userIdKey.Value);
+            var url = $"https://<<YourAPIAppServiceUrl>>/api/{(userId > 10 ? "v1" : "v2")}/specials/GetSpecialsByUserId?id={userId}";
+            using (HttpClient httpClient = new HttpClient())
+            {
+                return await httpClient.GetAsync(url);
+            }
+        }
+    }
+    }
 
-```
+    ```
 
-1. Navigate to the resource group where you have created resources in the Azure Portal. Click **PartsUnlimited-API-XXXXXXX.azurewebsites.net** and click the Copy icon under the URL section to copy the whole URL. Copy and replace **YourAPIAppServiceUrl** in url variable with API app service name.
+1. Navigate to the resource group which was configured in the **Create required Azure resources** exercise. Click **PartsUnlimited-API-XXXXXXX.azurewebsites.net** and click the Copy icon under the URL section to copy the whole URL. Copy and replace the value of `https://<<**YourAPIAppServiceUrl**>>` in url variable with API app service name.
 
 1. In Visual Studio, open **StoreController.cs** from the path **PartsUnlimitedWebsite > Controllers > StoreController.cs**.
 
@@ -151,7 +149,7 @@ The Azure Functions created in this exercise will act as a switching proxy or me
 
 In this exercise, you will look at the build definition to get an insight of how the code is built as part of the CI pipeline.
 
-1. Click the **Pipelines** hub in VSTS portal and notice that **Builds** menu is the default selected option. Since there is only one build definition - *AzureFunctions_CI*, click **Edit** option in the menu to view the tasks of that build definition.
+1. Click the **Pipelines** hub in Azure DevOps portal and notice that **Builds** menu is the default selected option. Since there is only one build definition - *AzureFunctions_CI*, click **Edit** option in the menu to view the tasks of that build definition.
 
     ![build definition](images/builddefinition.png)
 
