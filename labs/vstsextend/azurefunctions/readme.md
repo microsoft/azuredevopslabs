@@ -1,4 +1,4 @@
-# Deploying Azure Functions using VSTS
+# Deploying Azure Functions using Azure DevOps
 
 ## Overview
 
@@ -17,7 +17,7 @@ Azure Functions is an event driven, compute-on-demand experience that extends th
 
 ## Pre-requisites for the lab
 
-Refer the [Getting Started](../readme/) page to know the prerequisites for this lab.
+Refer the [Getting Started](../Setup/) page to know the prerequisites for this lab.
 
 The lab additionally requires Visual Studio 2017 version 15.4 or later with [.Net Core SDK](https://www.microsoft.com/net/learn/get-started/windows#windows) and [Azure Development Tools for Visual Studio](https://docs.microsoft.com/en-us/azure/azure-functions/functions-develop-vs) installed.
 
@@ -31,9 +31,9 @@ The lab additionally requires Visual Studio 2017 version 15.4 or later with [.Ne
 
    ![azure_resources](images/azure_resources.png)
 
-## Setting up the VSTS team project
+## Setting up the Azure DevOps team project
 
-1. Click the [Azure DevOps Demo Generator](http://azuredevopsdemogenerator.azurewebsites.net/?TemplateId=77376&Name=AzureFunctions_BuildWorkshop) link and follow the instructions in [Getting Started](../readme/) page to provision the project to your **Azure DevOps**.
+1. Click the [Azure DevOps Demo Generator](http://azuredevopsdemogenerator.azurewebsites.net/?TemplateId=77376&Name=AzureFunctions_BuildWorkshop) link and follow the instructions in [Getting Started](../Setup/) page to provision the project to your **Azure DevOps**.
 
 ## Exercise 1: Cloning an existing repository
 
@@ -149,7 +149,7 @@ The Azure Functions created in this exercise will act as a switching proxy or me
 
 In this exercise, you will look at the build definition to get an insight of how the code is built as part of the CI pipeline.
 
-1. Click the **Pipelines** hub in VSTS portal and notice that **Builds** menu is the default selected option. Since there is only one build definition - *AzureFunctions_CI*, click **Edit** option in the menu to view the tasks of that build definition.
+1. Click the **Pipelines** hub in Azure DevOps portal and notice that **Builds** menu is the default selected option. Since there is only one build definition - *AzureFunctions_CI*, click **Edit** option in the menu to view the tasks of that build definition.
 
     ![build definition](images/builddefinition.png)
 
