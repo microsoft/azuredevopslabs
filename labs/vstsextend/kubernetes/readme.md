@@ -202,30 +202,7 @@ Since the connections are not established during project provisioning, the two e
 
      ![azureendpoint](images/azureendpoint.png)
 
-1. **Kubernetes service connection**
-
-   * Click the **+ New Service connection** button, and select **Kubernetes** from the list. We can use this endpoint to connect **Azure DevOps** and the **Azure Container Service (AKS)**.
-
-     * **Connection Name**: Provide the connection name.
-
-     * **Server URL**: Provide the container service address in the format `https://{API server address}`
-
-     * **Kubeconfig**: To get the Kubeconfig value, run the following Azure commands in a command prompt launched with the Administrator privilege.
-
-      1. Type **az login** in the command prompt and hit Enter. Authorize your login by accessing the url given in the prompt and enter the provided unique code to complete the authentication.
-
-         ![Kubernetes Service Endpoint](images/azlogin.png)
-
-      1. Type **az aks get-credentials --resource-group yourResourceGroup --name yourAKSname** in the command prompt to get the access credentials for the Kubernetes cluster.
-
-         ![Kubernetes Service Endpoint](images/getkubeconfig.png)
-
-     * Navigate to the **.kube** folder under your home directory (eg: C:\Users\YOUR_HOMEDIR\ .kube)
-
-     * Copy the contents of the **config** file and paste it in the KubeConfig textarea. Check combobox to **Accept untrusted certificates** and **Verify connection**. Click the  **OK** button.
-
-       ![Kubernetes Service Endpoint](images/aksendpoint.png)
-
+     
 ## Exercise 2: Configure Build and Release definitions
 
 Now that the connections are established, we will manually map the created Azure endpoint, AKS and Azure Container Registry to the build and release definitions.
@@ -315,13 +292,21 @@ In this exercise, let us trigger a build manually and upon completion, an automa
 
     ![release_summary1](images/release_summary1.png)
 
-1. Once the release is complete, launch the command prompt and run the below command to see the pods running in AKS:
+1. Once the release is complete, launch the command prompt with Administrator privilege and run the below commands to see the pods running in AKS:
 
-    **`kubectl get pods`**
+    1. Type **`az login`** in the command prompt and hit Enter. Authorize your login by providing your credentials.
 
-    ![getpods](images/getpods.png)
+         ![Kubernetes Service Endpoint](images/azlogin.png)
 
-    The deployed web application is running in the displayed pods.
+    1. Type **`az aks get-credentials --resource-group yourResourceGroup --name yourAKSname`** in the command prompt to get the access credentials for the Kubernetes cluster.
+
+         ![Kubernetes Service Endpoint](images/getkubeconfig.png)
+
+    1. **`kubectl get pods`**
+
+        ![getpods](images/getpods.png)
+
+        The deployed web application is running in the displayed pods.
 
 1. To access the application, run the below command. If you see that **External-IP** is pending, wait for sometime until an IP is assigned.
 
