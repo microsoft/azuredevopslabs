@@ -190,7 +190,7 @@ Since all the required azure components are now created, the Azure DevOps team p
 
 Service endpoints are a bundle of properties securely stored by the Azure DevOps and is a way for Azure DevOps to connect to the external systems or services.
 
-Since the connections are not established during project provisioning, the two endpoints - **Azure Resource Manager** and **Kubernetes** need to be created manually.
+Since the connections are not established during project provisioning, the endpoint - **Azure Resource Manager** needs to be created manually.
 
 1. **Azure Resource Manager Service Endpoint**: Defines and secures a connection to a Microsoft Azure subscription using Service Principal Authentication (SPA).
 
@@ -202,10 +202,10 @@ Since the connections are not established during project provisioning, the two e
 
      ![azureendpoint](images/azureendpoint.png)
 
-     
+
 ## Exercise 2: Configure Build and Release definitions
 
-Now that the connections are established, we will manually map the created Azure endpoint, AKS and Azure Container Registry to the build and release definitions.
+Now that the connection is established, we will manually map the created Azure endpoint, AKS and Azure Container Registry to the build and release definitions.
 
 {% include note.html content= "If you encounter an error - ***TFS.WebApi.Exception: Page not found*** for Azure tasks in the build / release definition, you can fix this by typing a random text in the Azure Subscription field and click the **Refresh** icon next to it. Once the field is refreshed, you can select the endpoint from the drop down. This is due to a recent change in the Azure DevOps Release Management API. We are working on updating Azure DevOps Demo Generator to resolve this issue." %}
 
