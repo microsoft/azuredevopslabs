@@ -234,11 +234,13 @@ Now that the connections are established, we will manually map the created Azure
 
     ![update_CD3](images/update_CD3.png)
 
-1. In the **AKS deployment** phase, Under the **Create Deployments & Services in AKS** task, update the **Kubernetes Service Connection** value from the dropdown. Expand the **Secrets** section and update the parameters - **Azure subscription** and  **Azure Container Registry** with the endpoint components from the dropdown.
+1. In the **AKS deployment** phase, Under the **Create Deployments & Services in AKS** task, update the **Azure Subscription**, **Resource Group** and **Kubernetes cluster** value from the dropdown. Expand the **Secrets** section and update the parameters - **Azure subscription** and  **Azure Container Registry** with the endpoint components from the dropdown.
 
 1. Repeat similar steps for **Update image in AKS** task.
 
     ![update_rd1](images/update_rd1.png)
+
+    ![update_rd1](images/update_rd2.png)
 
     * **Create Deployments & Services in AKS** will create the deployments and services in AKS as per the configuration specified in **mhc-aks.yaml** file. The Pod, for the first time will pull the latest docker image.
 
