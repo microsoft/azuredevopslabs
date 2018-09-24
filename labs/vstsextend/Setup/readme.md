@@ -1,10 +1,10 @@
-## Getting started
+## Before you begin
 
 Welcome! We are excited you want to learn how to integrate Azure DevOps with 3rd party tools. 
 
 Before you start following the labs, you need to complete the below tasks.
 
-### Prerequisites
+## Prerequisites
 
 1. **Microsoft Azure Account**: You will need a valid and active Azure account for the Azure labs. If you do not have one, you can sign up for a [free trial](https://azure.microsoft.com/en-us/free/){:target="_blank"}. 
 
@@ -18,19 +18,25 @@ Before you start following the labs, you need to complete the below tasks.
 
 **Azure DevOps Demo Generator** helps you create team projects on your Azure DevOps Organization with sample content that include source code, work items, iterations, service endpoints, build and release definitions based on the template you choose during the configuration.
 
-   > Every lab has its own project template which needs to be provisioned to your **Azure DevOps** account before starting with the lab exercises.
-
-You can try the **Azure DevOps Demo Generator** to create other team projects with below instructions.
+Try the **Azure DevOps Demo Generator**  to experiment with different services and options in a personal, pre-configured sandbox by following the instructions below.
 
 1. In the [Azure DevOps Demo Generator](https://azuredevopsdemogenerator.azurewebsites.net){:target="_blank"} page, Click **Sign In** and provide the appropriate credentials to sign into the account.
    
    ![VSTS Demo Generator](images/vstsdemogen1.png)
 
-1. In the **Create New Project** page, choose the **Organization Name** to select your Azure DevOps organization, provide a **New Project Name**, click the *ellipsis* to choose a project template,**accept terms** if any extensions are required to be installed and enabled and click **Create Project**. 
+1. In the **Create New Project** page, 
+
+   1. Choose the **Organization Name** 
+   2. Provide a **New Project Name** 
+   3. Click the *ellipsis* to choose a project template
+   4. Click **accept terms** if any extensions are required to be installed and enabled
+   5. Click **Create Project**.
+
+    > If you are following a specific lab which has its own template, skip Step 3.  
 
     ![VSTS Demo Generator](images/vstsdemogen1_3.png)
 
-1. Once team project is provisioned, click on the URL to navigate to the team project.
+1. Once team project is provisioned, click on the resulting URL to navigate to the team project.
 
    ![VSTS Demo Generator](images/vstsdemogen1_2.png)
 
