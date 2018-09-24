@@ -71,7 +71,7 @@ The Azure Functions created in this exercise will act as a switching proxy or th
 
 1. Expand your new function app, then click the + button next to **Functions**.
 
-1. In the *Get started quickly page, select `WebHook + API`, Choose `CSharp` as language for your function, and then click on **Create this function**.
+1. In the *Get started quickly page*, select `WebHook + API`, Choose `CSharp` as language for your function, and then click on **Create this function**.
 
     ![webhook](images/webhook.png) 
 
