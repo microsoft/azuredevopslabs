@@ -2,9 +2,9 @@
 
 ## Overview
 
-Azure Functions is an event driven, compute-on-demand experience that extends the existing Azure application platform with capabilities to implement the code triggered by events occurring in Azure or third-party service as well as on-premises systems. Azure Functions allows developers to act by connecting to data sources or messaging solutions thus making it easy to process and react to events. Developers can leverage Azure Functions to build HTTP-based API endpoints accessible by a wide range of applications, mobile and IoT devices.
+Azure Functions is an event driven, compute-on-demand experience that extends the existing Azure application platform with capabilities to implement the code, triggered by events occurring in Azure or third-party services as well as on-premises systems. Azure Functions allows developers to act, by connecting to data sources or messaging solutions, thus making it easy to process and react to events. Developers can leverage Azure Functions to build HTTP-based API endpoints that are accessible by a wide range of applications, mobile and IoT devices.
 
-**Lab Scenario**: In this lab, you will be using a fictional eCommerce website - *PartsUnlimited*. The PartsUnlimited team wants to roll out a new discount for its employees and customers and wants to build Azure Functions that will retrieve the right discount depending on whether the logged in user is an employee or a customer.
+**Lab Scenario**: In this lab, you will be using a fictional eCommerce website - *PartsUnlimited*. The PartsUnlimited team wants to roll out a new discount for its employees and customers, and wants to build Azure Functions that will retrieve the right discounts depending on whether the logged in user is an employee or a customer.
 
  ## What is covered in this lab?
 
@@ -21,7 +21,7 @@ Refer the [Getting Started](../Setup/) page to know the prerequisites for this l
 
 The lab additionally requires Visual Studio 2017 version 15.4 or later with [.Net Core SDK](https://www.microsoft.com/net/learn/get-started/windows#windows) and [Azure Development Tools for Visual Studio](https://docs.microsoft.com/en-us/azure/azure-functions/functions-develop-vs) installed.
 
-## Create required Azure resources
+## Create the required Azure resources
 
 1. Click the below **Deploy To Azure** button to provision an Azure App service plan with two web apps.
 
@@ -41,7 +41,7 @@ The lab additionally requires Visual Studio 2017 version 15.4 or later with [.Ne
 
      ![clonetherepo](images/clonetherepo.png)
 
-1. An instance of **Visual Studio** opens and you might be prompted to sign into to your account. Sign in to your account.
+1. An instance of **Visual Studio** opens and you might be prompted to sign into to your account.You may Sign in to your account.
 
 1. Set the local path where you want the local repository to be placed and select **Clone**.
 
@@ -51,11 +51,11 @@ The lab additionally requires Visual Studio 2017 version 15.4 or later with [.Ne
 
      ![openproject](images/opensolution.png)
 
-## Exercise 2: Create Azure Function in Azure Portal and Visual Studio
+## Exercise 2: Create Azure Function in Azure Portal and in Visual Studio
 
 In this exercise, you will create an **Azure Functions** App from the Azure portal and then add code by creating an Azure Functions project in Visual Studio.
 
-The Azure Functions created in this exercise will act as a switching proxy or mechanism to return different (discount) information based on the user logged in to the application. Although you have used a simple condition here, this could also use more complex rules which could potentially be hidden behind another web api call.
+The Azure Functions created in this exercise will act as a switching proxy or the mechanism to return to different (discount) information based on the user logged in to the application. Although you have used a simple condition here, this could also use more complex rules which could potentially be hidden behind another web api call.
 
 1. Login to the Azure Portal. Select the `+ Create a resource` button found on the upper left-hand corner of the Azure portal, then select Compute > Function App.
 
@@ -69,9 +69,9 @@ The Azure Functions created in this exercise will act as a switching proxy or me
 
     ![notification](images/notifications.png)
 
-1. Expand your new function app, then click the + button next to **Functions**.
+1. Expand your new function apps, then click the + button next to **Functions**.
 
-1. In the *Get started quickly page, select `WebHook + API`, Choose `CSharp` as language for your function, and click **Create this function**.
+1. In the *Get started quickly page, select `WebHook + API`, Choose `CSharp` as language for your function, and then click on **Create this function**.
 
     ![webhook](images/webhook.png) 
 
@@ -85,7 +85,7 @@ The Azure Functions created in this exercise will act as a switching proxy or me
 
     ![copyfunctionurl](images/copyurl.png)
 
-1. Return to Visual Studio, double click on the **PartsUnlimited.sln** solution to open it. You will add code to the Functions App. While there are many ways of doing it, you will use Visual Studio in this lab. You will write code to redirect to the right APIs based on the user login, to return different (discount) information.
+1. Return to the Visual Studio, double click on the **PartsUnlimited.sln** solution to open it. You will have to add code to the Functions App. While there are many ways of doing it, you will use Visual Studio in this lab. You will write code to redirect to the right APIs based on the user login, to return different (discount) information.
 
 1. Right click on the solution and select **Add** and select **New Project**.
 
@@ -99,7 +99,7 @@ The Azure Functions created in this exercise will act as a switching proxy or me
 
     ![frameworktrigger](images/frameworktrigger.png)
     
-1. Expand the **PartsUnlimited.AzureFunction** project, open **Function1.cs** and replace the existing code with the following code.
+1. Expand the **PartsUnlimited.AzureFunction** project, open **Function1.cs** and then replace the existing code with the following code.
 
     ```C Sharp
     using System;
@@ -149,11 +149,11 @@ The Azure Functions created in this exercise will act as a switching proxy or me
 
 In this exercise, you will look at the build definition to get an insight of how the code is built as part of the CI pipeline.
 
-1. Click the **Pipelines** hub in Azure DevOps portal and notice that **Builds** menu is the default selected option. Since there is only one build definition - *AzureFunctions_CI*, click **Edit** option in the menu to view the tasks of that build definition.
+1. Click on the **Pipelines** hub in Azure DevOps portal and notice that **Builds** menu is the default selected option. Since there is only one build definition - *AzureFunctions_CI*, click **Edit** option in the menu to view the tasks of that build definition.
 
     ![build definition](images/builddefinition.png)
 
-1. Before the build is executed, you will make this a **CI** build. Click the **Triggers** tab in the build definition. Enable the **Continuous Integration** trigger. Click **Save & queue**  to save the changes and trigger a build. This will ensure that the build process is automatically triggered every time you commit a change to your repository.
+1. Before the build is executed, you will make this a **CI** build. Clickon the **Triggers** tab in the build definition. Enable the **Continuous Integration** trigger. Click **Save & queue**  to save the changes and trigger a build. This will ensure that the build process is automatically triggered every time you commit a change to your repository.
 
     ![CI Trigger](images/enableci.png)
     ![Save and Queue](images/saveandqueue.png)
@@ -176,13 +176,13 @@ In this exercise, you will look at the build definition to get an insight of how
 
     ![Continuous Deployment](images/cd.png) 
 
-1. To deploy **PartsUnlimited Website**, click Tasks and select the first **Deploy PartsUnlimited Website** task and configure the inputs as shown below.
+1. To deploy **PartsUnlimited Website**, click Tasks and select the first **Deploy PartsUnlimited Website** task, and configure the inputs as shown below.
 
     ![Deploy Site](images/deploysite.png) 
 
-    * If your Azure subscription is not listed or if you want to use an existing service principal, click the `Manage` link.
+    * If your Azure subscription is not listed or if you want to use an existing service principal, click on the `Manage` link.
 
-        * Click on the +New Service Connection button and select the Azure Resource Manager option. Provide Connection name, select the Azure Subscription from the list and the click on the Ok button. The Azure credentials will be required to be provided to authorize the connection.
+        * Click on the +New Service Connection button and select the Azure Resource Manager option. Provide Connection name, select the Azure Subscription from the list and the click on the Ok button. The Azure credentials will be required to authorize the connection.
 
             ![Resource Manager](images/armendpoint.png)
 
@@ -200,7 +200,7 @@ In this exercise, you will look at the build definition to get an insight of how
 
     ![PartsUnlimited Function](images/function.png)
 
-1. Click *Save*. In the Save dialog box, click OK. To test the release definition, click **Release** and then **Create Release**.
+1. Click on *Save*. In the Save dialog box, click OK. To test the release definition, click **Release** and then **Create Release**.
 
     ![Release Create](images/createrelease.png) 
 
@@ -212,7 +212,7 @@ In this exercise, you will look at the build definition to get an insight of how
 
     ![Release ID](images/Release.png)
 
-1. You can watch the live logs for the deployment as it happens. Wait for the release to be deployed to the Azure web app. Wait for the release to complete and succeed before proceeding to the next section.
+1. You can watch the live logs for the deployment as it happens. Wait for the release to be deployed to the Azure web app. Wait for the release to complete and happen before proceeding to the next section.
 
     ![Release logs](images/releaselogs.png)
 
@@ -226,10 +226,10 @@ In this exercise, you will look at the build definition to get an insight of how
 
     ![Discounted Price](images/discountedprice.png)
 
-1. Now log in as **Administrator@test.com** with password **YouShouldChangeThisPassword1!** and navigate to Oil category again. You will notice that for this user Azure function routes the request to another API and shows discount as **30%**.
+1. Now log in as **Administrator@test.com** with password **YouShouldChangeThisPassword1!** and navigate to Oil category again. You will notice that for this user, Azure function routes the request to another API and shows discount as **30%**.
 
     ![Site Login](images/sitelogin.png)
     
     ![New Discounted Price](images/discountedprice30.png)
 
-You have connected PartsUnlimited website to the Web API and used Azure function to retrieve data from either v1 or v2 of the API based on the user ID.
+You have connected PartsUnlimited website to the Web API and has used Azure function to retrieve data from either v1 or v2 of the API based on the user ID.
