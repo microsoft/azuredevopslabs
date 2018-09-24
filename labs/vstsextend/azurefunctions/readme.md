@@ -4,7 +4,7 @@
 
 Azure Functions is an event driven, compute-on-demand experience that extends the existing Azure application platform with capabilities to implement the code, triggered by events occurring in Azure or third-party services as well as on-premises systems. Azure Functions allows developers to act, by connecting to data sources or messaging solutions, thus making it easy to process and react to events. Developers can leverage Azure Functions to build HTTP-based API endpoints that are accessible by a wide range of applications, mobile and IoT devices.
 
-**Lab Scenario**: In this lab, you will be using a fictional eCommerce website - *PartsUnlimited*. The PartsUnlimited team wants to roll out a new discount for its employees and customers, and wants to build Azure Functions that will retrieve the right discounts depending on whether the logged in user is an employee or a customer.
+**Lab Scenario**: In this lab, you will be using a fictional eCommerce website - *PartsUnlimited*. The PartsUnlimited team wants to roll out a new discount for its employees and customers, and wants to build Azure Functions that will retrieve the right discount depending on whether the logged in user is an employee or a customer.
 
  ## What is covered in this lab?
 
@@ -41,7 +41,7 @@ The lab additionally requires Visual Studio 2017 version 15.4 or later with [.Ne
 
      ![clonetherepo](images/clonetherepo.png)
 
-1. An instance of **Visual Studio** opens and you might be prompted to sign into to your account.You may Sign in to your account.
+1. An instance of **Visual Studio** opens and you might be prompted to sign into to your account. Sign in to your account.
 
 1. Set the local path where you want the local repository to be placed and select **Clone**.
 
@@ -69,7 +69,7 @@ The Azure Functions created in this exercise will act as a switching proxy or th
 
     ![notification](images/notifications.png)
 
-1. Expand your new function apps, then click the + button next to **Functions**.
+1. Expand your new function app, then click the + button next to **Functions**.
 
 1. In the *Get started quickly page, select `WebHook + API`, Choose `CSharp` as language for your function, and then click on **Create this function**.
 
