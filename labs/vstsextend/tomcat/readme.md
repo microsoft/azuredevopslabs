@@ -95,9 +95,9 @@ Next, navigate to the Web app that you have created. As we are deploying a Java 
 
     Next, we need to update the connection strings for the web app to connect to the database correctly. There are multiple ways you can do this - but for the purpose of this lab, we will take a simple approach. We will update it directly on the Azure portal.
 
-1. From the Azure portal, Select the Web app you provisioned. Select **Application Settings**. Scroll down to the **Connection Strings** section.
+1. From the Azure portal, select the Web app you provisioned. Select **Application Settings** and scroll down to the **Connection Strings** section.
 
-1. Add a new MySQL connection string with **MyShuttleDb** as the name and the following string for the value -
+1. Add a new MySQL connection string with **MyShuttleDb** as the name, paste following string for the value and replace **MySQL Server Name**, **your user name** and **your password** with the appropriate values -
 
    `jdbc:mysql://{MySQL Server Name}:3306/alm?useSSL=true&requireSSL=false&autoReconnect=true&user={your user name}&password={your password}`
 
@@ -135,7 +135,7 @@ You have now setup and configured all the resources that is needed to deploy and
 
 1. Wait for the release to complete. Then navigate to the Web App and select the **URL** from the overview blade. Add **/myshuttledev** context to the URL. For instance -  [http://myshuttle1.azurewebsites.net/myshuttledev](http://myshuttle1.azurewebsites.net/myshuttledev){:target="_blank"}
 
-1. Select **Login** and try logging in to the site with anyone of the following credentials.
+1. Select **Login** and try logging in to the site with any one of the following credentials.
 
    |Username|Password|
    |--|--|
