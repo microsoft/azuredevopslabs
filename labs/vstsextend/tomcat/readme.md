@@ -26,7 +26,7 @@ This lab will show how you can
 
 ### Prerequisites for the lab
 
-Refer the [Getting Started](../readme) before you start the exercises.
+Refer the [Getting Started](../setup/readme) before you start the exercises.
 
 ## Exercise 1: Setting up VSTS team project
 
