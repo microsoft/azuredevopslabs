@@ -88,11 +88,11 @@ If you are a Visual Studio Active Subscriber, you are entitled to a $50-$150 cre
 
          Assume that this **Member Portal** module is a new feature and you would like to control this feature using **LaunchDarkly Feature flag** so that when you turn on the flag in LaunchDarkly then only this feature should be visible to users else not.
 
-    1. Open **HomeController.cs** from the path **\PartsUnlimitedWebsite\Controllers** and replace the code from  following [code snippet](https://raw.githubusercontent.com/Hoyg/azuredevopslabs/launchdarkly/labs/vstsextend/launchdarkly/codesnippet/HomeController.cs).
+   1. Open **HomeController.cs** from the path **\PartsUnlimitedWebsite\Controllers** and replace the code from  following [code snippet](https://raw.githubusercontent.com/Hoyg/azuredevopslabs/launchdarkly/labs/vstsextend/launchdarkly/codesnippet/HomeController.cs).
 
-    1. Open **AccountController.cs** from the path **\PartsUnlimitedWebsite\Controllers** and replace the code from  following [code snippet](https://raw.githubusercontent.com/Hoyg/azuredevopslabs/launchdarkly/labs/vstsextend/launchdarkly/codesnippet/AccountController.cs).
+   1. Open **AccountController.cs** from the path **\PartsUnlimitedWebsite\Controllers** and replace the code from  following [code snippet](https://raw.githubusercontent.com/Hoyg/azuredevopslabs/launchdarkly/labs/vstsextend/launchdarkly/codesnippet/AccountController.cs).
 
-    1. Open **_Layout.chtml** from the path **PartsUnlimitedWebsite\Views\Shared** and replace line 55 ` @await Html.PartialAsync("_Login")` with the below code.
+   1. Open **_Layout.chtml** from the path **PartsUnlimitedWebsite\Views\Shared** and replace line 55 ` @await Html.PartialAsync("_Login")` with the below code.
 
        `
        @if (ViewBag.togglevalue == true)
@@ -101,7 +101,7 @@ If you are a Visual Studio Active Subscriber, you are entitled to a $50-$150 cre
          }
       `
 
-    1. In **Home Controller.cs** and **AccountController.cs** replace **\_\_YourLaunchDarklySDKKey__** with your LaunchDarkly account SDK key which you have copied in previous exercise.
+   1. In **Home Controller.cs** and **AccountController.cs** replace **\_\_YourLaunchDarklySDKKey__** with your LaunchDarkly account SDK key which you have copied in previous exercise.
 
        ` static LdClient client = new LdClient("__YourLaunchDarklySDKKey__");`
 
@@ -109,18 +109,18 @@ If you are a Visual Studio Active Subscriber, you are entitled to a $50-$150 cre
 
        {% include note.html content= "So what did we do? The HomeController starts with initializing a static LaunchDarkly client. And the methods to view **MemberPortal** are modified to check the Feature flag toggle in LaunchDarkly is On or Off. Finally, the _Layout.cshtml page checks the toggle value and renders the MemberPortal link if the flag is turned on." %}
 
-    1. Now **Save** all the changes and launch the application locally. Since the **MemberPortal** flag which we created is turned off we would be not able to see **Member portal** link as below.
+   1. Now **Save** all the changes and launch the application locally. Since the **MemberPortal** flag which we created is turned off we would be not able to see **Member portal** link as below.
           ![](images/dashboard.png)
           ![](images/ldoff.png)
 
         So we have implemented feature flag control using LaunchDarkly. In the next exercise, we will try to Turn the feature flag on in Azure DevOps Release pipeline using the LaunchDarkly extension. To include feature flags as part of release process we need to associate this changes with the Azure DevOps work item to get complete control. 
 
-    1. Note down the Work item id which is assigned to you as shown below. (in my case it is 2051 )
+   1. Note down the Work item id which is assigned to you as shown below. (in my case it is 2051 )
 
        ![](images/workassigned.gif)
 
         
-     1. Now navigate to **Changes** tab in Team Explorer and enter comment suffixed with work item id with hash tag (ex: integrated LaunchDarkly #2051) and select **Commit and Push** to push all the changes to the Repo.
+   1. Now navigate to **Changes** tab in Team Explorer and enter comment suffixed with work item id with hash tag (ex: integrated LaunchDarkly #2051) and select **Commit and Push** to push all the changes to the Repo.
        
         ![](images/pushldchanges.gif)
 
