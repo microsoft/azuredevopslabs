@@ -183,7 +183,7 @@ If you are a Visual Studio Active Subscriber, you are entitled to a $50-$150 cre
 
      You will see the **Member Portal** is enabled on your website.
 
-      ![](images/browseapp.png) 
+    ![](images/browseapp.png)
  
 
     
