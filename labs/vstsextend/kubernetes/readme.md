@@ -10,17 +10,17 @@ Last updated : {{ "now" | date: "%b %d, %Y" }}.
 
 ## Overview
 
-This lab outlines the process to compile a Docker-based ASP.NET Core web application and deploy it to a **Kubernetes** cluster running on **Azure Container Service (AKS)** using **Azure DevOps**.
+This lab outlines the process, to compile a Docker-based ASP.NET Core web application and deploy it to a **Kubernetes** cluster running on **Azure Container Service (AKS)** using **Azure DevOps**.
 
-[**Azure Kubernetes Service (AKS)**](https://azure.microsoft.com/en-us/services/container-service/){:target="_blank"} is the quickest way to use Kubernetes on Azure. AKS provides capabilities to deploy and manage Docker containers using Kubernetes, Docker Swarm and Mesosphere DC/OS orchestrators. With AKS, customers get the benefits of the open source Kubernetes without the complexity and the operational overhead. Azure DevOps helps in creating the application container Docker images for faster deployments reliably using the continuous build option.
+[**Azure Kubernetes Service (AKS)**](https://azure.microsoft.com/en-us/services/container-service/){:target="_blank"} is the quickest way to use Kubernetes on Azure. AKS provides capabilities to deploy and manage Docker containers using Kubernetes, Docker Swarm and Mesosphere DC/OS orchestrators. With AKS, customers automatically get the benefits of the open source Kubernetes without the complexity and the operational overhead. Azure DevOps helps in creating the application container Docker images for faster deployments, reliably using the continuous build option.
 
 Below are the description for the terminolgy used in the lab document to help you get started:
 
-[**Docker**](https://www.docker.com/){:target="_blank"}: Docker is a software technology that provides operating-system-level virtualization to easily deploy applications in a sandbox (called containers) to run on Linux.
+[**Docker**](https://www.docker.com/){:target="_blank"}: Docker is a software technology, that provides operating-system-level virtualization to easily deploy applications in a sandbox (called containers) to run on Linux.
 
-[**Images**](https://docs.docker.com/engine/docker-overview/#docker-objects){:target="_blank"}: An image is a read-only template with the necessary instructions required for the application to run.
+[**Images**](https://docs.docker.com/engine/docker-overview/#docker-objects){:target="_blank"}: An image is a read-only template, with the necessary instructions required for the application to run.
 
-[**Containers**](https://docs.docker.com/engine/docker-overview/#docker-objects){:target="_blank"}: Provides an isolated environment in which an app along with its environment is run.
+[**Containers**](https://docs.docker.com/engine/docker-overview/#docker-objects){:target="_blank"}: Provides an isolated environment in which an app along with its environment is being run.
 
 [**Kubernetes**](https://kubernetes.io/){:target="_blank"}: Kubernetes is an open source system for managing containerized applications across multiple hosts, providing basic mechanisms for deployment, maintenance, and scaling of applications.
 
@@ -30,7 +30,7 @@ Below are the description for the terminolgy used in the lab document to help yo
 
 [**Deployments**](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/){:target="_blank"}: A Deployment controller provides declarative updates for Pods
 
-[**Kubernetes Manifest file**](https://kubernetes.io/docs/reference/kubectl/cheatsheet/){:target="_blank"}: Kubernetes manifests with deployments, services and pods can be defined in json or yaml. The file extensions .yaml, .yml, and .json can be used.
+[**Kubernetes Manifest file**](https://kubernetes.io/docs/reference/kubectl/cheatsheet/){:target="_blank"}: Kubernetes manifests with deployments, whereas services and pods can be defined in json or yaml. The file extensions .yaml, .yml, and .json can be used.
 
 ### What's covered in this lab
 
@@ -42,7 +42,7 @@ In this lab, the following tasks will be performed:
 
 * Configure endpoints (properties) in Azure DevOps to access Azure and AKS
 
-* Configure application and database deployment using Continuous Deployment (CD) in Azure DevOps
+* Configure application and database deployment, using Continuous Deployment (CD) in Azure DevOps
 
 * Modify database connection string & ACR configuration in the source code
 
@@ -55,7 +55,7 @@ The below diagram details the Azure DevOps workflow with Azure Container Service
 [![Azure DevOps workflow with Azure Container Service with AKS](images/azureaksarchitecture.png)](https://azure.microsoft.com/en-in/solutions/architecture/cicd-for-containers/)
 {:target="_blank"}
 
-* Firstly, the source code changes are committed to the Azure DevOps git repository
+* First, the source code changes are committed to the Azure DevOps git repository
 
 * Azure DevOps will create the custom Docker image **myhealth.web** and push the image tagged with the build ID to the ACR. Subsequently it will publish the [Kubernetes deployment YAML file](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/){:target="_blank"} as a build artifact.
 
@@ -70,7 +70,7 @@ You can read the full specification of the architecture [here](https://azure.mic
 
 ### Prerequisites for the lab
 
-1. **Microsoft Azure Account**: You will need a valid and active Azure account for the Azure labs. If you do not have one, you can sign up for a [free trial](https://azure.microsoft.com/en-us/free/){:target="_blank"}
+1. **Microsoft Azure Account**: You will need a valid and active Azure account, for the Azure labs. If you do not have one, you can sign up for a [free trial](https://azure.microsoft.com/en-us/free/){:target="_blank"}
 
     * If you are a Visual Studio Active Subscriber, you are entitled for a $50-$150 Azure credit per month. You can refer to this [link](https://azure.microsoft.com/en-us/pricing/member-offers/msdn-benefits-details/){:target="_blank"} to find out more including how to activate and start using your monthly Azure credit.
 
@@ -92,7 +92,7 @@ This lab requires all the pre-requisite executables to be installed and configur
 
 1. Download and install the [Git Bash](https://git-scm.com/downloads){:target="_blank"} on the Azure VM.
 
-1. Install the [Azure CLI version 2.0.45](https://azurecliprod.blob.core.windows.net/msi/azure-cli-2.0.45.msi){:target="_blank"} on the Azure VM.
+1. Install  [Azure CLI version 2.0.45](https://azurecliprod.blob.core.windows.net/msi/azure-cli-2.0.45.msi){:target="_blank"} on the Azure VM.
 
    {% include important.html content= "Azure CLI is the Azure command line Interface tool required to authenticate to the Azure subscription and fetch the Azure resource group details required in the Exercise 2." %}
 
@@ -107,7 +107,7 @@ This lab requires all the pre-requisite executables to be installed and configur
         * **Passphrase** : Provide a passphrase or leave it blank for an empty passphrase.
     3. Access the path where the keys are generated. The contents of the public key **id_rsa.pub** is required for setting up the environment.
 
-1. Type **az login** in the command prompt and hit Enter. Authorize your login in the browser.
+1. Type **az login** in the command prompt and press Enter. Authorize your login in the browser.
 
      1. Type **az ad sp create-for-rbac -n "MySampleApp" --password P2SSWORD** in the command prompt to get the Service Principal Client and Service Principal Client Secret.
 
@@ -174,7 +174,7 @@ Since all the required azure components are now created, the Azure DevOps team p
 
 1. Use the [Azure DevOps Demo Generator](https://azuredevopsdemogenerator.azurewebsites.net/?templateId=77372&Name=aks){:target="_blank"} to provision the project on your Azure DevOps account. Click **Sign In** to authorize and **Accept** permissions.
 
-   > **Azure DevOps Demo Generator** helps you create the team projects on your Azure DevOps account with sample content that include source code, work items, iterations, service endpoints, build and release definitions based on the template you choose during the configuration.
+   > **Azure DevOps Demo Generator** helps you create the team projects on your Azure DevOps account, with sample content that include source code, work items, iterations, service endpoints, build and release definitions based on the template you choose during the configuration.
 
     ![Azure DevOps Demo Generator](images/azdevopsdg.png)
 
@@ -192,13 +192,13 @@ Service endpoints are a bundle of properties securely stored by the Azure DevOps
 
 Since the connections are not established during project provisioning, the endpoint - **Azure Resource Manager** needs to be created manually.
 
-1. **Azure Resource Manager Service Endpoint**: Defines and secures a connection to a Microsoft Azure subscription using Service Principal Authentication (SPA).
+1. **Azure Resource Manager Service Endpoint**: Defines and secures a connection to a Microsoft Azure subscription, using Service Principal Authentication (SPA).
 
    * In the Azure DevOps, navigate to the **Project Settings** and click on **Service connections** followed by  **+ New service connection** button. Select the **Azure Resource Manager** and specify the **Connection name**, select the **Subscription** from the dropdown and click on the **OK** button. This endpoint will be used to connect the **Azure DevOps** and the **Azure**.
 
-     You will be prompted to authorize this connection with Azure credentials. Disable pop-up blocker in your browser if you see a blank screen after clicking the OK button, and retry the step.
+     You will be prompted to authorize this connection with Azure credentials. Disable pop-up blocker in your browser if you see a blank screen after clicking the OK button, and please retry the step.
 
-     {% include tip.html content= "If your subscription is not listed or to specify an existing service principal, click the link in the dialog which will switch to manual configuration mode and follow the [Service Principal creation](https://blogs.msdn.microsoft.com/devops/2015/10/04/automating-azure-resource-group-deployment-using-a-service-principal-in-visual-studio-online-buildrelease-management/){:target=\"_blank\"} instructions." %}
+     {% include tip.html content= "If your subscription is not listed or to specify an existing service principal, click on the link in the dialog which will switch to manual configuration mode and follow the [Service Principal creation](https://blogs.msdn.microsoft.com/devops/2015/10/04/automating-azure-resource-group-deployment-using-a-service-principal-in-visual-studio-online-buildrelease-management/){:target=\"_blank\"} instructions." %}
 
      ![azureendpoint](images/azureendpoint.png)
 
@@ -207,13 +207,13 @@ Since the connections are not established during project provisioning, the endpo
 
 Now that the connection is established, we will manually map the created Azure endpoint, AKS and Azure Container Registry to the build and release definitions.
 
-{% include note.html content= "If you encounter an error - ***TFS.WebApi.Exception: Page not found*** for Azure tasks in the build / release definition, you can fix this by typing a random text in the Azure Subscription field and click the **Refresh** icon next to it. Once the field is refreshed, you can select the endpoint from the drop down. This is due to a recent change in the Azure DevOps Release Management API. We are working on updating Azure DevOps Demo Generator to resolve this issue." %}
+{% include note.html content= "If you encounter an error - ***TFS.WebApi.Exception: Page not found*** for Azure tasks in the build / release definition, you can fix this by typing a random text in the Azure Subscription field and click on the **Refresh** icon next to it. Once the field is refreshed, you can select the endpoint from the drop down. This is due to a recent change in the Azure DevOps Release Management API. We are working on updating Azure DevOps Demo Generator to resolve this issue." %}
 
 1. Select the **Builds** section under the **Pipelines** hub and **Edit** the build definition **MyHealth.AKS.Build**.
 
    ![build](images/build.png)
 
-1. In **Run services** section under the **Tasks** tab, select the previously created endpoints from the dropdown for the parameters - **Azure subscription** and **Azure Container Registry** as shown. Repeat this for Build services, Push services and Lock services. Click the **Save** option.
+1. In **Run services** section under the **Tasks** tab, select the previously created endpoints from the dropdown for the parameters - **Azure subscription** and **Azure Container Registry** as shown. Repeat this for the Build services, Push services and Lock services. Click the **Save** option.
 
     ![updateprocessbd](images/updateprocessbd.png)
 
@@ -242,9 +242,9 @@ Now that the connection is established, we will manually map the created Azure e
 
     ![update_rd1](images/update_rd2.png)
 
-    * **Create Deployments & Services in AKS** will create the deployments and services in AKS as per the configuration specified in **mhc-aks.yaml** file. The Pod, for the first time will pull the latest docker image.
+    * **Create Deployments & Services in AKS** will create the deployments and services in AKS as per the configuration specified in **mhc-aks.yaml** file. The Pod, for the first time will pull up the latest docker image.
 
-    * **Update image in AKS** will pull the appropriate image corresponding to the BuildID from the repository specified, and deploys the docker image to the **mhc-front pod** running in AKS.
+    * **Update image in AKS** will pull up the appropriate image corresponding to the BuildID from the repository specified, and deploys the docker image to the **mhc-front pod** running in AKS.
 
 1. Click on the **Variables** section under the release definition, update **ACR** and **SQL server** values for **Process Variables** with the details noted earlier while configuring the environment. Click on the **Save** button.
 
@@ -264,7 +264,7 @@ We will update the database connection string for the .NET Core application and 
 
    ![pasteconnectionstring](images/pasteconnectionstring.png)
 
-1. Navigate to the `AKS` path to **edit** the file `mhc-aks.yaml`. This YAML manifest file contains configuration details of **deployments**,**services** and **pods** which will be deployed in Kubernetes.
+1. Navigate to the `AKS` path to **edit** the file `mhc-aks.yaml`. This YAML manifest file, contains configuration details of **deployments**,**services** and **pods** which will be deployed in Kubernetes.
 
    Scroll to the line number **93**. modify the value **YOUR_ACR** with your **ACR Login server** which was noted earlier while setting up the environment. Click on the **Commit** button.
 
@@ -284,7 +284,7 @@ In this exercise, let us trigger a build manually and upon completion, an automa
 
     ![buildinprog1](images/buildinprog1.png)
 
-1. The build will generate and push the docker image to ACR. After the build completes, you will see the build summary. To view the generated images in the Azure Portal, click on the **Azure Container Registry** and navigate to the **Repositories**.
+1. The build will generate and push the docker image to ACR. After the build is completes, you will see the build summary. To view the generated images in the Azure Portal, click on the **Azure Container Registry** and navigate to the **Repositories**.
 
     ![imagesinrepo](images/imagesinrepo.png)
 
@@ -316,7 +316,7 @@ In this exercise, let us trigger a build manually and upon completion, an automa
 
     ![watchfront](images/watchfront.png)
 
-1. Copy the **External-IP** and paste it in the browser and hit the Enter button to launch the application.
+1. Copy the **External-IP** and paste it in the browser and press the Enter button to launch the application.
 
     ![finalresult](images/finalresult.png)
 
