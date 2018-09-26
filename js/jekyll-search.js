@@ -187,7 +187,10 @@
                 }
 
                 function appendToResultsContainer(text) {
-                    opt.resultsContainer.innerHTML += text
+
+                    if (text.indexOf("/labs/vsts/") == -1) {
+                        opt.resultsContainer.innerHTML += text
+                    }
                 }
 
                 function registerInput() {

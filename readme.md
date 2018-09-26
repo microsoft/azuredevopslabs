@@ -106,26 +106,26 @@ description: Learn how you can implement modern DevOps practices with  Azure, Az
                     <div class="col-sm-4 col-xs-12">
                     <div class="bg-color-white equal-height-column">
                         <ul class="mar-left-40">
+                            <li class="osslist"> <img src="/images/github-42.png" height="42" class="icon-bor-p-m"/><a href="/labs/vstsextend/github-integration/"> Integrate Your GitHub Projects With Azure DevOps Pipelines</a></li>
                             <li class="osslist"> <img src="/images/jenkins-42.png" height="42" class="icon-bor-p-m" /> <a href="/labs/vstsextend/jenkins/"> Integrating with Jenkins</a>    </li>
                             <li class="osslist"> <img src="/images/tomcat-42.png" height="42" class="icon-bor-p-m"/><a href="/labs/vstsextend/tomcat/"> Deploying a Java application on Tomcat  </a>    </li>
                             <li class="osslist"> <img src="/images/sonarqube-42.png" height="42" class="icon-bor-p-m"/><a href="/labs/vstsextend/sonarqube/"> Technical Debt Management with SonarQube</a> </li>
                             <li class="osslist"> <img src="/images/whitesource-42.png" height="42" class="icon-bor-p-m"/><a href="/labs/vstsextend/WhiteSource/"> OSS governance with WhiteSource</a></li>
                             <li class="osslist"> <img src="/images/octopus-42.png" height="42" class="icon-bor-p-m"/><a href="/labs/vstsextend/Octopus/"> Integrating Octopus Deploy</a></li>
                             <li class="osslist"> <img src="/images/selenium-42.png" height="42" class="icon-bor-p-m"/><a href="/labs/vstsextend/Selenium/"> Driving continuous testing with Selenium</a></li>
-                             <li class="osslist"> <img src="/images/eclipse-42.png" height="42" class="icon-bor-p-m"/><a href="/labs/vstsextend/eclipse/"> Developing with Eclipse for Java projects</a></li>
-                            <li class="osslist"> <img src="/images/azure-42.png" height="42" class="icon-bor-p-m"/><a href="/labs/vstsextend/kubernetes/"> Deploying to Azure Kubernetes Service (AKS)</a></li>                            
+                             <li class="osslist"> <img src="/images/eclipse-42.png" height="42" class="icon-bor-p-m"/><a href="/labs/vstsextend/eclipse/"> Developing with Eclipse for Java projects</a></li>                            
                           </ul>
                     </div>
                     </div>
                     <div class="col-sm-4 col-xs-12">
                     <div class="bg-color-white equal-height-column">
                         <ul class="mar-left-40">
+                        <li class="osslist"> <img src="/images/azure-42.png" height="42" class="icon-bor-p-m"/><a href="/labs/vstsextend/kubernetes/"> Deploying to Azure Kubernetes Service (AKS)</a></li>
                         <li class="osslist"> <img src="/images/azure-42.png" height="42" class="icon-bor-p-m"/><a href="/labs/vstsextend/deploymentgroups/"> Working with Deployment Groups</a></li>
                           <li class="osslist"> <img src="/images/parasoft-42.png" height="42" class="icon-bor-p-m"/><a href="/labs/vstsextend/parasoft/"> Leverage virtual services with Parasoft Virtualize</a></li>
                             <li class="osslist"> <img src="/images/java-42.png" height="42" class="icon-bor-p-m"/> <a href="/labs/java/"> DevOps with VSTS and Azure for Java projects  </a>    </li>
                             <li class="osslist"> <img src="/images/nodejs-42.png" height="42" class="icon-bor-p-m"/><a href="/labs/vsts/nodejs/">DevOps for Node.js with VSTS and Azure   </a>    </li>
                             <li class="osslist"> <img src="/images/python-42.png" height="42" class="icon-bor-p-m"/><a href="/labs/vstsextend/python/"> How to deploy a Python application to Azure from VSTS</a></li>
-                            <li class="osslist"> <img src="/images/github-42.png" height="42" class="icon-bor-p-m"/><a href="/labs/vstsextend/github/"> How to continuously deliver code on GitHub with VSTS</a></li>
                             <li class="osslist"> <img src="/images/php-42.png" height="42" class="icon-bor-p-m"/><a href="/labs/vstsextend/PHP/"> Deploying a PHP application to Azure</a></li>
                             <li class="osslist"> <img src="/images/docker-42.png" height="42" class="icon-bor-p-m"/><a href="/labs/vstsextend/docker/"> Deploying Docker Containers to Azure App Service</a></li>
                         </ul>
