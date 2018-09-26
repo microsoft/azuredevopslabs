@@ -10,9 +10,9 @@ Last updated : {{ "now" | date: "%b %d,%Y" }}
 
 ## Overview
 
-In this lab, you will learn how you can use Release Management(RM) in Azure DevOps to deploy a Java web application to [Apache Tomcat](http://tomcat.apache.org/){:target="_blank"} with a MySQL database on Azure. Apache Tomcat is an open-source Java Servlet Container developed by the Apache Software Foundation (ASF). MySQL is a popular open-source relational database management system.
+In this lab, you will learn how you can use Release Management(RM) in Azure DevOps to deploy a Java web application to [Apache Tomcat](http://tomcat.apache.org/){:target="_blank"} with a MySQL database on Azure. Apache Tomcat is an open-source Java Servlet Container developed by the Apache Software Foundation (ASF). MySQL is a very popular open-source relational database management system.
 
-For this lab, you will use Azure App Service and Azure Database for MySQL, a relational database service based on the open source MySQL Server engine. It is a fully managed database as a service offering capable of handing mission-critical workload with predictable performance and dynamic scalability.
+For this lab, you will use Azure App Service and Azure Database for MySQL, a relational database service based on the open source MySQL Server engine. It is a fully managed database as a service,  capable of handing mission-critical workload with predictable performance and dynamic scalability.
 
 {% include note.html content= "This article deploys a Java app to App Service on Windows. To deploy a **Net Core App** container to Azure, please see  [deploying Docker .NET Core container to Azure App Service](../docker){:target=\"_blank\"}. To deploy a Dockerized Java application, see [Deploying a Dockerized Java App to Azure Web App for Containers](../dockerjava/){:target=\"_blank\"}" %}
 
@@ -41,7 +41,7 @@ Refer the [Getting Started](../setup/readme) before you start the exercises.
 1. This template provides two MySQL options :
 
     - **Azure Database for MySQL** provides a managed database service for app development. ***You will choose this option.***
-    - **MySQL In app** is an App Service feature where MySQL database is created for your web app. In this scenario, MySQL server is running on the same instance side by side with your web server hosting the site. This is recommended to development purposes and has no additional cost.
+    - **MySQL In app** is an App Service feature where MySQL database is created for your web app. In this scenario, MySQL server is running on the same instance side by side with your web server hosting the site. This is recommended for development purposes and has no additional cost.
 
     ![Create Web App+MySQL](images/createwebappmysql.png)
 
@@ -75,7 +75,7 @@ Refer the [Getting Started](../setup/readme) before you start the exercises.
     ````SQL
     mysql -h myshuttle-1-mysqldbserver.mysql.database.azure.com -u mysqldbuser@myshuttle-1-mysqldbserver -p < mydbscript.script
     ````
-    Enter the password that you specified during provisioning the database
+    Enter the password that you have specified during provisioning the database
 
     ![Creating DB](images/createdatabase.png)
 
@@ -85,7 +85,7 @@ Refer the [Getting Started](../setup/readme) before you start the exercises.
 
 Next, navigate to the Web app that you have created. As you are deploying a Java application, you need to change the web app's web container to Apache Tomcat.
 
-1. Click **Application Settings**. To change it to Tomcat, you will first need to install Java. Select a **Java Version** to install and then change **Web container** to use Apache Tomcat. For this purpose of the lab, you will choose ***Java 8*** and ***Apache Tomcat 9.0*** though the version number would not matter much for the simple app that we are deploying.
+1. Click on **Application Settings**. To change it to Tomcat, you will first need to install Java. Select a **Java Version** to install and then change **Web container** to use Apache Tomcat. For this purpose of the lab, you will choose ***Java 8*** and ***Apache Tomcat 9.0*** though the version number would not matter much for the simple app that we are deploying.
 
     ![Setting Web container to Tomcat](images/webcontainer.png)
 
@@ -97,7 +97,7 @@ Next, navigate to the Web app that you have created. As you are deploying a Java
 
 1. From the Azure portal, select the Web app you provisioned. Select **Application Settings** and scroll down to the **Connection Strings** section.
 
-1. Add a new MySQL connection string with **MyShuttleDb** as the name, paste following string for the value and replace **MySQL Server Name**, **your user name** and **your password** with the appropriate values -
+1. Add a new MySQL connection string with **MyShuttleDb** as the name, paste the following string for the value and replace **MySQL Server Name**, **your user name** and **your password** with the appropriate values -
 
    `jdbc:mysql://{MySQL Server Name}:3306/alm?useSSL=true&requireSSL=false&autoReconnect=true&user={your user name}&password={your password}`
 
@@ -121,11 +121,11 @@ You have now setup and configured all the resources that is needed to deploy and
 
    ![Edit MyShuttle Release Definition ](images/editrelease.png)
 
-1. If you following this lab from Jenkins hands-on-lab, make sure the artifact is pointing to Jenkins. Otherwise, it should be pointing to the **Team Build** artifact as shown below:
+1. If you are following this lab from Jenkins hands-on-lab, make sure the artifact is pointing to Jenkins. Otherwise, it should be pointing to the **Team Build** artifact as shown below:
 
    ![Team Build Artifact](images/addartifacts.png)
 
-1. Select the **Deploy Azure App Service**, select the Azure subscription from the drop down, click **Authorize** and ensure that the app service name is reflected correctly.
+1. Select the **Deploy Azure App Service**, select the Azure subscription from the drop down, click on **Authorize** and ensure that the app service name is reflected correctly.
 
    {% include note.html content= "We are using the **Deploy Azure App Service** task. This task is used to update Azure App Service to deploy Web Apps and WebJobs to Azure.  The task works on cross platform agents running Windows, Linux or Mac and uses the underlying deployment technologies of Web Deploy and Kudu. The task works for ASP.NET, ASP.NET Core 1 and Node.js based web applications. Note that this task works with  Azure Resource Manager APIs only." %}
 
