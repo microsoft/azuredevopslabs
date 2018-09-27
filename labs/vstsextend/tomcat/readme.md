@@ -10,7 +10,7 @@ Last updated : {{ "now" | date: "%b %d,%Y" }}
 
 ## Overview
 
-In this lab, you will learn how you can use Release Management(RM) in Azure DevOps to deploy a Java web application to [Apache Tomcat](http://tomcat.apache.org/){:target="_blank"} with a MySQL database on Azure. Apache Tomcat is an open-source Java Servlet Container developed by the Apache Software Foundation (ASF). MySQL is a very popular open-source relational database management system.
+In this lab, you will learn how you can use Azure Pipelines in Azure DevOps to deploy a Java web application to [Apache Tomcat](http://tomcat.apache.org/){:target="_blank"} with a MySQL database on Azure. Apache Tomcat is an open-source Java Servlet Container developed by the Apache Software Foundation (ASF). MySQL is a very popular open-source relational database management system.
 
 For this lab, you will use Azure App Service and Azure Database for MySQL, a relational database service based on the open source MySQL Server engine. It is a fully managed database as a service,  capable of handing mission-critical workload with predictable performance and dynamic scalability.
 
@@ -26,9 +26,7 @@ This lab will show how you can
 
 ### Prerequisites for the lab
 
-Refer the [Getting Started](../setup/readme) before you start the exercises.
-
-## Exercise 1: Setting up Azure DevOps project
+1. Refer the [Getting Started](../setup/readme) page before you begin following the exercises.
 
 1. Use  **MyShuttle** as a template to provision the new Azure DevOps project using the [Azure DevOps Demo Generator](https://azuredevopsdemogenerator.azurewebsites.net/Environment/Create?TemplateId=77373&TemplateName=MyShuttle){:target="_blank"}.
 
@@ -47,8 +45,6 @@ Refer the [Getting Started](../setup/readme) before you start the exercises.
 
 1. Wait for the Web App and the database to be provisioned. It roughly takes 3-5 minutes.
 
-## Exercise 3: Configuring MySQL database
-
 1. Navigate to the resource group that you have created. You should see a **Azure Database for MySQL server** provisioned. Select the database server.
 
    ![Resource Group](images/resourcegroup.png)
@@ -59,29 +55,7 @@ Refer the [Getting Started](../setup/readme) before you start the exercises.
 
     In this example, the server name is **myshuttle-1-mysqldbserver.mysql.database.azure.com** and the admin user name is **mysqldbuser@myshuttle-1-mysqldbserver**.
 
-1. You will use the MySQL command-line tool to establish a connection to the Azure Database for MySQL server and  run the MySQL command-line tool from the Azure Cloud Shell in the browser. To launch the Azure Cloud Shell, click the `>_` icon in the top right toolbar.
-
-   ![Launch Azure Cloudshell](images/azurecloudshell.png)
-
-1. Enter the following command
-
-    ```HTML
-    wget https://raw.githubusercontent.com/hsachinraj/azure-arm-templates/master/vstsazurejl_arm/mydbscript.script
-    ```
-    This should download the file that you want to execute on the server.
-
-1. Next, you will execute the SQL from the downloaded file on the database server. Enter the following command
-
-    ````SQL
-    mysql -h myshuttle-1-mysqldbserver.mysql.database.azure.com -u mysqldbuser@myshuttle-1-mysqldbserver -p < mydbscript.script
-    ````
-    Enter the password that you have specified during provisioning the database
-
-    ![Creating DB](images/createdatabase.png)
-
-    {% include note.html content= "This should create the database, tables and populate the records." %}
-
-## Exercise 4: Updating the App Settings for the Web App
+## Exercise 3: Updating the App Settings for the Web App
 
 Next, navigate to the Web app that you have created. As you are deploying a Java application, you need to change the web app's web container to Apache Tomcat.
 
@@ -111,9 +85,30 @@ Next, navigate to the Web app that you have created. As you are deploying a Java
 
 You have now setup and configured all the resources that is needed to deploy and run the MyShuttle application.
 
-## Exercise 5: Deploying to App Service from Azure DevOps
+## Exercise 4: Configuring the Build
 
 1. Navigate to the Azure DevOps project that you provisioned.
+
+1. Select **Pipelines** and click **Edit** to open the build definition.
+
+    ![Edit Build Definition](images/editbuild.png)
+
+1. Select **Execute Azure MySQL** task and provide the following details. 
+
+    * Azure Subscription Details : Select the appropriate subscription, click **Authorize** and login to your Azure subscription in the pop-up window.
+    * Host Name : Select the **MySQL Database server** that was created.
+    * Server Admin Login : Provide the **SERVER ADMIN LOGIN NAME** that you copied in *Exercise 2: Step 5*.
+    * Password : Provide the password that you created under *Database* in the **Web App + MYSQL** blade of Azure portal.
+
+   ![Execute Azure MySQL Task](images/azuremysqltask.png)
+
+1. Click **Save & queue** to save and trigger a manual build.
+
+   ![Save and queue](images/saveandqueue.png)
+
+1. Wait for the build to succeed and then look at the build logs for detailed information.
+
+## Exercise 5: Deploy the changes to Web App
 
 1. Select **Pipelines** and then **Releases**.
 
@@ -121,7 +116,7 @@ You have now setup and configured all the resources that is needed to deploy and
 
    ![Edit MyShuttle Release Definition ](images/editrelease.png)
 
-1. If you are following this lab from Jenkins hands-on-lab, make sure the artifact is pointing to Jenkins. Otherwise, it should be pointing to the **Team Build** artifact as shown below:
+1. If you are following this lab from Jenkins hands-on-lab, make sure the artifact is pointing to Jenkins. Otherwise, it should be pointing to the **Build** artifact as shown below:
 
    ![Team Build Artifact](images/addartifacts.png)
 
