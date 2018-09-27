@@ -15,7 +15,7 @@ WhiteSource provides WhiteSource Bolt, a lightweight open source security and ma
 
 ### What's covered in this lab
 
-This lab shows how you can use **WhiteSource Bolt with Azure DevOps** to automatically detect alerts on vulnerable open source components, outdated libraries, and license compliance issues in your code. We will be using WebGoat, a deliberately insecure web application, maintained by OWASP designed to teach web application security lessons.
+This lab shows how you can use **WhiteSource Bolt with Azure DevOps** to automatically detect alerts on vulnerable open source components, outdated libraries, and license compliance issues in your code. You will be using WebGoat, a deliberately insecure web application, maintained by OWASP designed to teach web application security lessons.
 
 Azure DevOps integration with WhiteSource Bolt will enable you to:
 
@@ -63,7 +63,7 @@ Upon activation, the below message is displayed.
 
 ## Exercise 2: Trigger a build
 
-We have a **Java code** provisioned by the Azure DevOps demo generator. We will use **WhiteSource Bolt** extension to check the vulnerable components present in this code.
+Now you have a **Java code** provisioned by the Azure DevOps demo generator. You will use **WhiteSource Bolt** extension to check the vulnerable components present in this code.
 
 1. Go to **Builds** section under **Pipelines** tab, and select the build definition **WhiteSourceBolt** and click on **Queue** to trigger a build.
 
@@ -85,7 +85,7 @@ We have a **Java code** provisioned by the Azure DevOps demo generator. We will 
     |![copy-files](images/copy-files.png) **Copy Files**| copies the resulting JAR files from the source to the destination folder using match patterns|
     |![publish-build-artifacts](images/publish-build-artifacts.png) **Publish Build Artifacts**| publishes the artifacts produced by the build|
 
-1. Once the build is completed, you will see the summary which shows **Test results, Build artifacts** etc.. as shown below.
+1. Once the build is completed, you will see the summary which shows **Test results, Build artifacts** etc. as shown below.
 
    ![build_summary](images/buildsuccess.png)
 
