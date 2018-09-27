@@ -25,7 +25,7 @@ You will use ARM template as **Infrastructure as a Code** in the release definit
 
 1. Go to **Releases** under **Pipelines** tab, select release definition **PHP** and click on **Edit**
 
-    [![](release1_3.png) ](release1_3.png)
+    ![release1_3.png](release1_3.png =200x200)
 
 1. Go to **Tasks** and select **Dev** environment.
 
