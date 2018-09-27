@@ -9,7 +9,7 @@ folder: /labs/vstsextend/php/
 Last updated : {{ "now" | date: "%b %d, %Y" }}.
 ## Overview
 
-**PHP** is a server-side scripting language, and a powerful tool enough for making dynamic and interactive Web pages.
+**PHP** is a server-side scripting language and a powerful tool enough for making dynamic and interactive Web pages.
 
 This lab shows how to deploy **PHP** application to **Azure App** service using **Azure DevOps**.
 
@@ -31,7 +31,7 @@ This lab shows how to deploy **PHP** application to **Azure App** service using 
 
    ![VSTS Demo Generator](images/vstsdemogen1-1.png)
 
-1. Once the project is provisioned, click the team project URL to navigate to the project.
+1. Once the project is provisioned, click on the team project URL to navigate to the project.
 
    ![VSTS Demo Generator](images/vstsdemogen1_2.png)
 
@@ -39,7 +39,7 @@ This lab shows how to deploy **PHP** application to **Azure App** service using 
 
 ## Exercise 1: Configure Release Definition
 
-We will use ARM template as **Infrastructure as a Code**  in the release definition to provisions a Web App, and a Web App Service Plan, under the specified resource group.
+You will use ARM template as **Infrastructure as a Code** in the release definition to provision a Web App, and a Web App Service Plan under the specified resource group.
 
 1. Go to **Releases** under **Pipelines** tab, select release definition **PHP** and click on **Edit**
 
@@ -88,7 +88,7 @@ We will use ARM template as **Infrastructure as a Code**  in the release definit
 
 ## Exercise 2: Deploying the application
 
-**PHP** is an interpreted language, so we don't have to compile the code. Instead we will create an archive file which will be deployed to the Azure App Service.
+**PHP** is an interpreted language, so you don't have to compile the code. Instead you will create an archive file which will be deployed to the Azure App Service.
 
 Let's make a code change to trigger a CI-CD pipeline to build and deploy the application.
 
