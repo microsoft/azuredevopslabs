@@ -86,7 +86,7 @@ Click on **+New Service Endpoint** dropdown and select the **Github** option.
 
    ![5](images/5.png)
 
-1. When access is granted, you will see a message that confirms the connection and you can name the connection accordingly and Click OK.
+1. When access is granted, you will see a message that confirms the connection and you can name the connection accordingly and click OK.
 
    ![6](images/endpoint5.png)
 
@@ -166,7 +166,7 @@ Navigate to your forked GitHub repository. Let's make a simple change in the cod
 
    ![30](images/release1_3.png)
 
-1. Let us explore the release definition. Click edit to see the release pipeline where the target environment is **Dev**.
+1. Let us explore the release definition. Click on edit to see the release pipeline where the target environment is **Dev**.
 
    ![25](images/release15.png)
 
