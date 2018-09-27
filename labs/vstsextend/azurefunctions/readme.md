@@ -17,9 +17,11 @@ Azure Functions is an event driven, compute-on-demand experience that extends th
 
 ## Pre-requisites for the lab
 
-Refer the [Getting Started](../Setup/) page to know the prerequisites for this lab.
+1. Refer the [Getting Started](../Setup/) page to know the prerequisites for this lab.
 
-The lab additionally requires Visual Studio 2017 version 15.4 or later with [.Net Core SDK](https://www.microsoft.com/net/learn/get-started/windows#windows) and [Azure Development Tools for Visual Studio](https://docs.microsoft.com/en-us/azure/azure-functions/functions-develop-vs) installed.
+1. The lab additionally requires Visual Studio 2017 version 15.4 or later with [.Net Core SDK](https://www.microsoft.com/net/learn/get-started/windows#windows) and [Azure Development Tools for Visual Studio](https://docs.microsoft.com/en-us/azure/azure-functions/functions-develop-vs) installed.
+
+1. Click the [Azure DevOps Demo Generator](http://azuredevopsdemogenerator.azurewebsites.net/?TemplateId=77376&Name=AzureFunctions_BuildWorkshop) link and follow the instructions in [Getting Started](../Setup/) page to provision the project to your **Azure DevOps**.
 
 ## Create the required Azure resources
 
@@ -31,9 +33,10 @@ The lab additionally requires Visual Studio 2017 version 15.4 or later with [.Ne
 
    ![azure_resources](images/azure_resources.png)
 
-## Setting up the Azure DevOps team project
+Once the deployment succeeds, you will see 2 Web Apps and an App Service Plan provisioned -
 
-1. Click the [Azure DevOps Demo Generator](http://azuredevopsdemogenerator.azurewebsites.net/?TemplateId=77376&Name=AzureFunctions_BuildWorkshop) link and follow the instructions in [Getting Started](../Setup/) page to provision the project to your **Azure DevOps**.
+  * Web App - Used to deploy the Parts Unlimited website.
+  * API App - Used to redirect users to different discounts page based on the user login.
 
 ## Exercise 1: Cloning an existing repository
 
@@ -41,7 +44,7 @@ The lab additionally requires Visual Studio 2017 version 15.4 or later with [.Ne
 
      ![clonetherepo](images/clonetherepo.png)
 
-1. An instance of **Visual Studio** opens and you might be prompted to sign into to your account. Sign in to your account.
+1. An instance of **Visual Studio** opens. Sign in to Visual Studio if prompted.
 
 1. Set the local path where you want the local repository to be placed and select **Clone**.
 
@@ -232,4 +235,6 @@ In this exercise, you will look at the build definition to get an insight of how
     
     ![New Discounted Price](images/discountedprice30.png)
 
-You have connected PartsUnlimited website to the Web API and has used Azure function to retrieve data from either v1 or v2 of the API based on the user ID.
+## Congratulations, you have completed the lab!
+
+   You have learned how to connect PartsUnlimited website to the Web API and use Azure function to retrieve data from API based on the user ID.
