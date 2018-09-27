@@ -12,7 +12,7 @@ Last updated : {{ "now" | date: "%b %d,%Y" }}
 
 This lab outlines the process to build custom Docker images of an [**ASP.NET Core**](https://docs.docker.com/engine/examples/dotnetcore){:target="_blank"} application, push those images to a private repository in [Azure Container Registry](https://azure.microsoft.com/en-in/services/container-registry/){:target="_blank"} (ACR). These images will be used to deploy the application to the Docker containers in the **Azure App Service** (Linux) using Azure DevOps.
 
-The Web App for Containers allows creation of custom [Docker](https://www.docker.com/what-docker){:target="_blank"} container images, easily deploy and run them at scale on Azure. Combination of Azure DevOps and Azure integration with Docker will enable the following:
+The Web App for Containers, allows creation of custom [Docker](https://www.docker.com/what-docker){:target="_blank"} container images, easily deploy and then run them on Azure. Combination of Azure DevOps and Azure integration with Docker will enable the following:
 
 1. [Build](https://docs.docker.com/engine/reference/commandline/build/){:target="_blank"} custom Docker images using [Azure DevOps Hosted Linux agent](https://docs.microsoft.com/en-us/vsts/build-release/concepts/agents/hosted){:target="_blank"}
 
@@ -23,9 +23,9 @@ The Web App for Containers allows creation of custom [Docker](https://www.docker
 
 ### Prerequisites for the lab
 
-1. **Microsoft Azure Account**: You will need a valid and active Azure account for the Azure labs. If you do not have one, you can sign up for a [free trial](https://azure.microsoft.com/en-us/free/){:target="_blank"}
+1. **Microsoft Azure Account**: You will need a valid and active Azure account, for the Azure labs. If you do not have one, you can sign up for a [free trial](https://azure.microsoft.com/en-us/free/){:target="_blank"}
 
-    * If you are an active Visual Studio Subscriber, you are entitled for a $50-$150 Azure credit per month. You can refer to this [link](https://azure.microsoft.com/en-us/pricing/member-offers/msdn-benefits-details/){:target="_blank"} to find out more information about this including how to activate and start using your monthly Azure credit.
+    * If you are an active Visual Studio Subscriber, you are entitled for a $50-$150 Azure credit per month. You can refer to this [link](https://azure.microsoft.com/en-us/pricing/member-offers/msdn-benefits-details/){:target="_blank"} to find out more information about this, including how to activate and start using your monthly Azure credit.
 
     * If you are not a Visual Studio Subscriber, you can sign up for the FREE [Visual Studio Dev Essentials](https://www.visualstudio.com/dev-essentials/){:target="_blank"} program to create an **Azure free account** (includes 1 year of free services, $200 for 1st month).
 
@@ -40,7 +40,7 @@ The Web App for Containers allows creation of custom [Docker](https://www.docker
 
    [![Deploy to Azure](http://azuredeploy.net/deploybutton.png)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FMicrosoft%2Falmvm%2Fmaster%2Flabs%2Fvstsextend%2Fdocker%2Farmtemplate%2Fazuredeploy.json){:target="_blank"}
 
-1. In Custom deployment window, select the **Subscription** type, leave the default selection for the resource group and select the **Location**. Provide the **ACR Name**, **Site Name**, **DB Server Name**, accept the **Terms and Conditions** and click on  **Purchase** button to provision the following resources:
+1. In Custom deployment window, select the **Subscription** type, leave the default selection for the resource group, and select the **Location**. Provide the **ACR Name**, **Site Name**, **DB Server Name**, accept the **Terms and Conditions** and click on the **Purchase** button to provision the following resources:
 
    * Azure Container Registry
 
@@ -54,7 +54,7 @@ The Web App for Containers allows creation of custom [Docker](https://www.docker
 
    ![Create Azure Components](images/createazurecomponents.png)
 
-1. It takes approximately 3 to 4 minutes to provision the environment. Click on the **Go to resource group** to view the resource group.
+1. It takes approximately 3 to 4 minutes to provision the environment. Click on  **Go to resource group** to view the resource group.
 
    ![Environment Provision](images/deploymentsucceeded.png)
 
@@ -83,7 +83,7 @@ The Web App for Containers allows creation of custom [Docker](https://www.docker
 
 1. Use the [Azure DevOps Demo Generator](https://vstsdemogenerator.azurewebsites.net/?Name=Docker&TemplateId=77363) to provision the team project on your Azure DevOps Organization.
 
-   > **Azure DevOps Demo Generator** helps you create team projects on your Azure Devops Organization with sample content that include source code, work items, iterations, service endpoints, build and release definitions based on the template you choose during the configuration.
+   > **Azure DevOps Demo Generator** helps you create team projects on your Azure Devops Organization with sample content that include source code, work items, iterations, service endpoints, build and release definitions based on the template that you choose during the configuration.
 
    ![VSTS Demo Generator](images/DemoGenerator2.png)
 
@@ -97,7 +97,7 @@ The connection between Azure DevOps and Azure is not automatically established d
 
 1. In Azure DevOps home page, click on **Project settings** gear icon and then click on **Service connections** option to navigate to the **Service connections** screen.
 Click on the **+New Service Endpoint** dropdown and select **Azure Resource Manager** option. Provide  `Connection name`, select the `Azure Subscription` and select the
-appropriate `Resource Group` which we have created earlier and click on **OK**. The Azure credentials will be required to authorize the connection.
+appropriate `Resource Group` which we have created earlier, and then click on **OK**. The Azure credentials will be required to authorize the connection.
 
    ![Endpoint Creation](images/endpoint.png)
 
@@ -121,7 +121,7 @@ Now that the connection is established, the **Azure endpoint** and the **Azure C
 
    |Tasks|Usage|
    |-----|-----|
-   |![Run services](images/icon.png) **Run services**| prepares suitable environment by restoring required packages|
+   |![Run services](images/icon.png) **Run services**| prepares suitable environment by restoring the required packages|
    |![Build services](images/icon.png) **Build services**| builds **myhealth.web** image |
    |![Push services](images/icon.png) **Push services**| pushes **myhealth.web** image tagged with **$(Build.BuildId)** to container registry|
    |![Publish Build Artifacts](images/publish-build-artifacts.png) **Publish Build Artifacts**| used to share dacpac for database deployment through VSTS artifacts|
@@ -147,11 +147,11 @@ Now that the connection is established, the **Azure endpoint** and the **Azure C
 
 1. Under **Azure App Service Deploy** task, update the **Azure subscription** and **Azure Service name** with the endpoint components from the dropdown.
 
-    **Azure App Service Deploy** will pull the appropriate docker image corresponding to the BuildID from repository specified, and deploys the image to the Linux App Service.
+    **Azure App Service Deploy** will pull the appropriate docker image corresponding to the BuildID from repository specified, and then deploys the image to the Linux App Service.
 
     ![Update repository](images/release11.png)
 
-1. Click on the **Variables** section, update the **ACR** details and the **SQLserver** details with the details noted earlier while configuration of the environment and click on **Save** button.
+1. Click on the **Variables** section, update the **ACR** details and the **SQLserver** details with the details noted earlier while configuration of the environment and click on the **Save** button.
 
     ![Update variables](images/release12.png)
 
@@ -170,7 +170,7 @@ In this exercise, the source code will be modified to trigger the CI-CD.
     ![Line Edit](images/code14.png)
 
 
-1. Click on **Builds** tab, select the build definition `MHCDoker.build` and click on ellipsis to view the build in progress.
+1. Click on **Builds** tab, and subsequently select the build definition `MHCDoker.build` and again click on ellipsis to view the build in progress.
 
     ![Build](images/build1_1.png)
 
