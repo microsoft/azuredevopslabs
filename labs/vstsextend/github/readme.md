@@ -1,5 +1,5 @@
 ---
-title: CI-CD using GitHub and Visual Studio Team Services
+title: CI-CD using GitHub and Azure DevOps
 layout: page
 sidebar: vsts2
 permalink: /labs/vstsextend/github/
@@ -26,7 +26,7 @@ Teams can overcome this shortfall by using Azure DevOps as a continuous integrat
 
 ### What's covered in this lab
 
-In this hands-on lab, we will introduce you to open source DevOps using **GitHub, Azure DevOps** and **Azure**. You will learn how to deploy an **ASP.Net** application to Azure App Service using CI/CD pipeline in Azure DevOps with code repository in GitHub. We will cover the following steps:
+In this hands-on lab, we will introduce you to open source DevOps using **GitHub, Azure DevOps** and **Azure**. You will learn how to deploy an **ASP.Net** application to Azure App Service using CI/CD pipeline in Azure DevOps with code repository in GitHub. You will cover the following steps:
 
 * Forking project repository to your GitHub account
 * Linking GitHub account to Azure DevOps
@@ -49,11 +49,11 @@ In this hands-on lab, we will introduce you to open source DevOps using **GitHub
 
 ## Setting up the code repository on GitHub
 
-There are multiple ways to add code to a GitHub repository. We can start with a new empty repository and manually add files, commit and push. But for the purpose of this lab, we will ***Fork*** an existing repository. A *Fork* is nothing but a copy of a repository.  When we *Fork*, we are creating a personal copy of the repository - any changes that we make will not affect the original code. If we want  to contribute back to the original, you can submit a *Pull Request*
+There are multiple ways to add code to a GitHub repository. You can start with a new empty repository and manually add files, commit and push. But for the purpose of this lab, you will ***Fork*** an existing repository. A *Fork* is nothing but a copy of a repository.  When you *Fork*, you are creating a personal copy of the repository - any changes that you make will not affect the original code. If you want to contribute back to the original, you can submit a *Pull Request*
 
-1. Let us go to [**GitHub**](http://www.github.com){:target="_blank"} and make sure we are logged in with our GitHub user account.
+1. Go to [**GitHub**](http://www.github.com){:target="_blank"} and make sure you are logged in with your GitHub user account.
 
-1. Let us navigate to the [**PartsUnlimitedE2E**](https://github.com/Microsoft/PartsUnlimitedE2E){:target="_blank"} repository and select **Fork** to our GitHub account.
+1. Navigate to the [**PartsUnlimitedE2E**](https://github.com/Microsoft/PartsUnlimitedE2E){:target="_blank"} repository and select **Fork** to your GitHub account.
 
    ![8](images/8.png)
 
@@ -76,11 +76,11 @@ Click on **+New Service Endpoint** dropdown and select the **Github** option.
 
    ![VSTS Demo Generator](images/endpoint1_3.png)
 
-   {% include important.html content= "We will need to specify what authorization method you want to provide. If we choose **Grant Authorization**, the default option, as the authorization method, the dialog shows an **Authorize** button that opens the GitHub login page. If we select **Personal access token**, we must obtain a suitable token and paste it into the Token textbox. The dialog shows the recommended scopes for the token: ***repo, user, admin:repo_hook***. See [this page](https://help.github.com/articles/creating-an-access-token-for-command-line-use/){:target=\"_blank\"} on GitHub for information about obtaining an access token." %}
+   {% include important.html content= "You will need to specify what authorization method you want to provide. If you choose **Grant Authorization**, the default option as the authorization method, the dialog shows an **Authorize** button that opens the GitHub login page. If you select **Personal access token**, you must obtain a suitable token and paste it into the Token textbox. The dialog shows the recommended scopes for the token: ***repo, user, admin:repo_hook***. See [this page](https://help.github.com/articles/creating-an-access-token-for-command-line-use/){:target=\"_blank\"} on GitHub for information about obtaining an access token." %}
 
 1. Select **Grant Authorization**. Click on the **Authorize** button which opens the **GitHub login page**.
 
-   We will follow the steps required by GitHub to authorize access to our account.
+   You will follow the steps required by GitHub to authorize access to our account.
 
    ![21](images/endpoint4.png)
 
@@ -192,4 +192,4 @@ Navigate to your forked GitHub repository. Let's make a simple change in the cod
 
 ## Summary
 
-Whether your code lives in **Azure DevOps** or **GitHub** (or both), manage build, test, and deploy in one place. Create and manage a Continuous Integration process that connects to GitHub, gets the source files, compiles and deploys the binaries to any environment with Continuous Deployment feature.
+Whether your code lives in **Azure DevOps** or **GitHub** (or both), manage build, test and deploy in one place. Create and manage a Continuous Integration process that connects to GitHub, get the source files, compiles and deploys the binaries to any environment with Continuous Deployment feature.
