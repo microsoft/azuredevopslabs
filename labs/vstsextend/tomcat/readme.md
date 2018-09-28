@@ -26,7 +26,7 @@ This lab will show how you can
 
 ### Prerequisites for the lab
 
-1. Refer the [Getting Started](../setup/readme) page before you begin following the exercises.
+1. Refer the [Getting Started](../Setup/) page before you begin following the exercises.
 
 1. Use  **MyShuttle** as a template to provision the new Azure DevOps project using the [Azure DevOps Demo Generator](https://azuredevopsdemogenerator.azurewebsites.net/Environment/Create?TemplateId=77373&TemplateName=MyShuttle){:target="_blank"}.
 
@@ -71,13 +71,13 @@ Next, navigate to the Web app that you have created. As you are deploying a Java
 
 1. From the Azure portal, select the Web app you provisioned. Select **Application Settings** and scroll down to the **Connection Strings** section.
 
-1. Add a new MySQL connection string with **MyShuttleDb** as the name, paste the following string for the value and replace **MySQL Server Name**, **your user name** and **your password** with the appropriate values -
+1. Add a new **MySQL** connection string with **MyShuttleDb** as the name, paste the following string for the value and replace **MySQL Server Name**, **your user name** and **your password** with the appropriate values -
 
    `jdbc:mysql://{MySQL Server Name}:3306/alm?useSSL=true&requireSSL=false&autoReconnect=true&user={your user name}&password={your password}`
 
 1. Click on **Save** to save the connection string.
 
-    {% include note.html content= "Connection Strings configured here will be available as environment variables, prefixed with connection type for Java apps (also for PHP, Python and Node apps). In the **DataAccess.java** file under **src/main/java/com/microsoft/example** folder, we retrieve the connection string using the following code" %}
+    > {% include note.html content= "Connection Strings configured here will be available as environment variables, prefixed with connection type for Java apps (also for PHP, Python and Node apps). In the **DataAccess.java** file under **src/main/java/com/microsoft/example** folder, we retrieve the connection string using the following code" %}
 
     ````Java
     String conStr = System.getenv("MYSQLCONNSTR_MyShuttleDb");
@@ -85,34 +85,11 @@ Next, navigate to the Web app that you have created. As you are deploying a Java
 
 You have now setup and configured all the resources that is needed to deploy and run the MyShuttle application.
 
-## Exercise 4: Configuring the Build
-
-1. Navigate to the Azure DevOps project that you provisioned.
-
-1. Select **Pipelines** and click **Edit** to open the build definition.
-
-    ![Edit Build Definition](images/editbuild.png)
-
-1. Select **Execute Azure MySQL** task and provide the following details. 
-
-    * Azure Subscription Details : Select the appropriate subscription, click **Authorize** and login to your Azure subscription in the pop-up window.
-    * Host Name : Select the **MySQL Database server** that was created.
-    * Server Admin Login : Provide the **SERVER ADMIN LOGIN NAME** that you copied in *Exercise 2: Step 5*.
-    * Password : Provide the password that you created under *Database* in the **Web App + MYSQL** blade of Azure portal.
-
-   ![Execute Azure MySQL Task](images/azuremysqltask.png)
-
-1. Click **Save & queue** to save and trigger a manual build.
-
-   ![Save and queue](images/saveandqueue.png)
-
-1. Wait for the build to succeed and then look at the build logs for detailed information.
-
-## Exercise 5: Deploy the changes to Web App
+## Exercise 4: Deploy the changes to Web App
 
 1. Select **Pipelines** and then **Releases**.
 
-1. Select **MyShuttle Release** and click **Edit** to open the release definition.
+1. Select **MyShuttle Release** and click **Edit Pipeline** to open the release definition.
 
    ![Edit MyShuttle Release Definition ](images/editrelease.png)
 
@@ -120,9 +97,20 @@ You have now setup and configured all the resources that is needed to deploy and
 
    ![Team Build Artifact](images/addartifacts.png)
 
-1. Select the **Deploy Azure App Service**, select the Azure subscription from the drop down, click on **Authorize** and ensure that the app service name is reflected correctly.
+
+1. Click **Tasks** and select **Execute Azure MySQL : SqlTaskFile** task and provide the following details. 
+
+    * Azure Subscription Details : Select the appropriate subscription, click **Authorize** and login to your Azure subscription in the pop-up window.
+    * Host Name : Select the **MySQL Database server** that was created.
+    * Server Admin Login : Provide the **SERVER ADMIN LOGIN NAME** that you noted down previously.
+    * Password : Provide the password that you created under *Database* in the **Web App + MYSQL** blade of Azure portal.
+
+   ![Execute Azure MySQL Task](images/azuremysqltask.png)
+
+1. Select the **Deploy Azure App Service** task, select the Azure subscription from the drop down and ensure that the created app service name is reflected correctly.
 
    {% include note.html content= "We are using the **Deploy Azure App Service** task. This task is used to update Azure App Service to deploy Web Apps and WebJobs to Azure.  The task works on cross platform agents running Windows, Linux or Mac and uses the underlying deployment technologies of Web Deploy and Kudu. The task works for ASP.NET, ASP.NET Core 1 and Node.js based web applications. Note that this task works with  Azure Resource Manager APIs only." %}
+
 
 1. Click on **Save** and then **+Release \| Create Release** to start a new release
 
