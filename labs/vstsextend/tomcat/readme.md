@@ -130,3 +130,7 @@ You have now setup and configured all the resources that is needed to deploy and
     {% include warning.html content="If you encounter an error with ***The specified CGI application encountered an error and the server terminated the process*** message, check whether you have entered the app settings variables and values (for the database connection) correctly" %}
 
     ![MyShuttle page after login](images/myshuttle-afterlogin.png)
+
+## Congratulations, you have completed the lab!
+
+In this lab, you have learnt how to deploy a Java application with MySQL database on Azure through Azure DevOps organization.
