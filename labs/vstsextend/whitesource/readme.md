@@ -1,5 +1,5 @@
 ---
-title: Checking Vulnerabilities using WhiteSource Bolt with Visual Studio Team Services
+title: Checking Vulnerabilities using WhiteSource Bolt with Azure DevOps
 layout: page
 sidebar: vsts2
 permalink: /labs/vstsextend/whitesource/
@@ -28,20 +28,7 @@ Azure DevOps integration with WhiteSource Bolt will enable you to:
 
 1. You will need an **Azure DevOps Organization**. If you do not have one, you can sign up for free [here](https://www.visualstudio.com/products/visual-studio-team-services-vs){:target="_blank"}
 
-
-1. The **WhiteSource Bolt** extension from the [Extensions for Azure DevOps](https://marketplace.visualstudio.com/items?itemName=whitesource.ws-bolt){:target="_blank"} needs to be installed and enabled on your Azure DevOps Organization.
-
-## Setting up the Azure DevOps project
-
 1. Use [Azure DevOps Demo Generator](https://azuredevopsdemogenerator.azurewebsites.net/?name=WhiteSource-Bolt&templateid=77362){:target="_blank"} to provision the WhiteSource project on your Azure DevOps Organization.
-
-   > **Azure DevOps Demo Generator** helps you create team projects on your Azure DevOps Organization with sample content, that include source code, work items, iterations, service endpoints, build and release definitions based on the template you choose during the configuration.
-
-   ![VSTSDemogenerator](images/vstsdemogen1-1.png)
-
-1. Once the project is provisioned, click on the URL to navigate to the project.
-
-   ![VSTSDemogenerator-create](images/vstsdemogen2.png)
 
 ## Exercise 1: Activate WhiteSource Bolt
 
@@ -76,15 +63,15 @@ Now you have a **Java code** provisioned by the Azure DevOps demo generator. You
 
    ![queue-build](images/build6.png)
 
-1. While the build is, in progress, let's explore the build definition. The tasks that is used in the build definition are listed in the table below.
+1. While the build is in progress, let's explore the build definition. The tasks that is used in the build definition are listed in the table below.
 
     |Tasks|Usage|
     |----|------|
     |![maven](images/maven.png) **Maven**| builds Java code with the provided pom xml file|
     |![whitesourcebolt](images/whitesourcebolt.png) **WhiteSource Bolt**| scans the code in the provided working directory/root directory to detect security vulnerabilities, problematic open source licenses|
     |![copy-files](images/copy-files.png) **Copy Files**| copies the resulting JAR files from the source to the destination folder using match patterns|
-    |![publish-build-artifacts](images/publish-build-artifacts.png) **Publish Build Artifacts**| publishes the artifacts produced by the build|
-
+    |![publish-build-artifacts](images/publish-build-artifacts.png) **Publish Build Artifacts**| publishes the artifacts produced by the build
+    
 1. Once the build is completed, you will see the summary which shows **Test results, Build artifacts** etc. as shown below.
 
    ![build_summary](images/buildsuccess.png)
