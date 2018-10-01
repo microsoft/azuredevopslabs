@@ -1,13 +1,12 @@
----
-layout: homepage
-title: Modern DevOps practices with Azure, Azure DevOps and Team Foundation Server
-keywords: ALM VM homepage
-tags: [overview]
-permalink: default.html
-comments: true
-landingpage: false
-description: Learn how you can implement modern DevOps practices with  Azure, Azure DevOps Services and Team Foundation Server.
----
+| Layout | homepage |
+| Title | Modern DevOps practices with Azure, Azure DevOps and Team Foundation Server |
+| Keywords | ALM VM homepage |
+| Tags: | [overview] |
+| Permalink: | default.html |
+| Comments: | true |
+| Landingpage | false |
+| Description | Learn how you can implement modern DevOps practices with  Azure, Azure DevOps Services and Team Foundation Server.
+
 
 <div class="bg-image">
 <div class="container pading-t-10">
@@ -18,9 +17,9 @@ description: Learn how you can implement modern DevOps practices with  Azure, Az
       <h1>Azure DevOps Hands-On Labs</h1>
             <div class="herotext2" style="margin-top:10px">
          Evaluating your next DevOps toolchain? Want to go deep and learn how you can implement modern DevOps practices?<br /><br />
-         
-        Learn how you can plan smarter, collaborate better, and ship faster with a set of modern dev services. 
-       </div> 
+
+        Learn how you can plan smarter, collaborate better, and ship faster with a set of modern dev services.
+       </div>
        </div>
       </div>
     </div>
@@ -29,7 +28,7 @@ description: Learn how you can implement modern DevOps practices with  Azure, Az
 </div>
 <div class="container">
     <div class="row">
-    
+
 <div class="col-sm-10" style="padding-top:20px">
 <h1>New to Azure DevOps?</h1>
 <div style="margin-top:2px">Don't have an account? No worries! Sign up for a <b>free</b> Azure DevOps organization now and get
@@ -57,11 +56,11 @@ description: Learn how you can implement modern DevOps practices with  Azure, Az
           <div class="tab-content bg-color-wit-mlr">
             <div id="services-labs" class="container tab-pane active">
               <div class="col-sm-12">
-                  <!--h2 class="pading-t-10">Azure DevOps Services</h2--> 
+                  <!--h2 class="pading-t-10">Azure DevOps Services</h2-->
                   <div><p>Simplify and speed the DevOps process with Azure DevOps services. The following labs will help you to get started with Azure DevOps services to automate software delivery and meet business needs.</p> </div>
               </div>
               <div class="col-sm-12">
-                  <h2>Getting started</h2> 
+                  <h2>Getting started</h2>
                   <div class="row equal-height-columns">                    
                     <div class="col-sm-4 col-xs-12">
                     <div class="bg-color-grey equal-height-column mar-left-40">
@@ -76,7 +75,7 @@ description: Learn how you can implement modern DevOps practices with  Azure, Az
                     <div class="col-sm-4 col-xs-12">
                     <div class="bg-color-grey equal-height-column mar-left-40">
                     <ul>
-                     <li><a href="/labs/azuredevops/continuousdeployment/" class="barleft">Embracing Continuous Delivery with Azure DevOps</a></li> 
+                     <li><a href="/labs/azuredevops/continuousdeployment/" class="barleft">Embracing Continuous Delivery with Azure DevOps</a></li>
                              <li><a href="/labs/azuredevops/testmanagement/" class="barleft">Test Planning and Management with Azure DevOps</a></li>
                              <li><a href="/labs/azuredevops/exploratorytesting/" class="barleft">Exploratory Testing with Azure DevOps</a></li>
                              <li><a href="/labs/azuredevops/load/" class="barleft">Web Application Load and Performance Testing</a></li>
@@ -94,9 +93,9 @@ description: Learn how you can implement modern DevOps practices with  Azure, Az
                     </div>
                     </div>                    
                  </div>                            
-              </div> 
+              </div>
               <div class="col-sm-12 col-xs-12">
-                  <h2>Azure DevOps Integration with 3rd party tools</h2> 
+                  <h2>Azure DevOps Integration with 3rd party tools</h2>
                   <p>Azure DevOps provides integration with popular open source and third-party tools and services—across the entire DevOps workflow. Use the tools and languages you know. Spend less time integrating and more time delivering higher-quality software, faster.
                   </p>
                 </div>
@@ -154,7 +153,7 @@ description: Learn how you can implement modern DevOps practices with  Azure, Az
                               <strong>Azure DevOps services Organization:</strong> Of course! you will need an Azure DevOps services account. If you don’t have one, you can sign up for one, from <a href="https://www.visualstudio.com/" target="_blank">here</a>
                               </li>
                               <li>
-                              <strong>Microsoft Azure Account</strong>: You will need a valid and active Azure account. If you do not have one, 
+                              <strong>Microsoft Azure Account</strong>: You will need a valid and active Azure account. If you do not have one,
                               <ul>
                               <li>
                                 You can create a <a href="https://azure.microsoft.com/en-us/free/" target="_blank">free Azure account</a> and enjoy 12 months of free Azure services
@@ -168,7 +167,7 @@ description: Learn how you can implement modern DevOps practices with  Azure, Az
                                   <a href="https://vstsdemogenerator.azurewebsites.net" target="_blank"><strong>Azure DevOps Demo Generator:</strong></a> You can use the Azure DevOps Demo Generator to provision a project with pre-defined data on to your Azure DevOps services organization.
                               </li>
                       </ul>
-              </div> 
+              </div>
             </div>
             <div id="server-labs" class="container tab-pane fade">
               <div class="col-sm-12">
@@ -212,7 +211,7 @@ description: Learn how you can implement modern DevOps practices with  Azure, Az
                        <li><a href="/labs/tfs/technicaldebt/" class="barleft">Managing Technical Debt with SonarQube </a>    </li>
                        <li><a href="/labs/tfs/packagemanagement/" class="barleft">Package Management  </a>    </li>
                        <li><a href="/labs/tfs/build/" class="barleft">Enabling Continuous Delivery </a> </li>
-                     </ul> 
+                     </ul>
                      <h4 class="bor-bot">Test Management and Execution</h4>
                         <ul class="mar-left-40">
                        <li><a href="/labs/tfs/liveunittesting/" class="barleft">Unit Testing, Code Coverage, and Code Clone Analysis </a>    </li>
@@ -221,12 +220,12 @@ description: Learn how you can implement modern DevOps practices with  Azure, Az
                     </div>
                     </div>            
                     <div class="col-sm-4 col-xs-12">
-                    <div class="bg-color-grey equal-height-column"> 
+                    <div class="bg-color-grey equal-height-column">
                     <ul class="mar-left-40">
                     <li><a href="/labs/tfs/manualtesting/" class="barleft">Test Planning and Management </a> </li>
                        <li><a href="/labs/tfs/exploratorytesting/" class="barleft">Exploratory Testing and Feedback Management  </a>    </li>
                        <li><a href="/labs/tfs/codedui/" class="barleft">UI Automation using Coded UI Tests</a>    </li>
-                       <li><a href="/labs/tfs/load/" class="barleft">Web Application Load and Performance Testing  </a> </li> 
+                       <li><a href="/labs/tfs/load/" class="barleft">Web Application Load and Performance Testing  </a> </li>
                     </ul>              
                    <h4 class="bor-bot">Continuous Delivery</h4>
                        <ul class="mar-left-40">
@@ -265,7 +264,7 @@ description: Learn how you can implement modern DevOps practices with  Azure, Az
                 </div>                 
               </div>
             </div>
-          
-    </div> 
+
+    </div>
     </div>
 </div>
