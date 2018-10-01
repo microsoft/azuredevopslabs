@@ -3,7 +3,7 @@
 | Layout      | homepage                                                                                                           |
 | Title       | Modern DevOps practices with Azure, Azure DevOps and Team Foundation Server                                        |
 | Keywords    | ALM VM homepage                                                                                                    |
-| Tags:       | [overview]                                                                                                         |
+| Tags:       | [overview](https://github.com/Microsoft/azuredevopslabs)                                                           |
 | Permalink:  | default.html                                                                                                       |
 | Comments:   | true                                                                                                               |
 | Landingpage | false                                                                                                              |
