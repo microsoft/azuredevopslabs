@@ -1,11 +1,13 @@
-| Layout | homepage |
-| Title | Modern DevOps practices with Azure, Azure DevOps and Team Foundation Server |
-| Keywords | ALM VM homepage |
-| Tags: | [overview] |
-| Permalink: | default.html |
-| Comments: | true |
+| Subject     | Description|
+| ----------- | --- |
+| Layout      | homepage |
+| Title       | Modern DevOps practices with Azure, Azure DevOps and Team Foundation Server |
+| Keywords    | ALM VM homepage |
+| Tags:       | [overview] |
+| Permalink:  | default.html |
+| Comments:   | true |
 | Landingpage | false |
-| Description | Learn how you can implement modern DevOps practices with  Azure, Azure DevOps Services and Team Foundation Server.
+| Description | Learn how you can implement modern DevOps practices with  Azure, Azure DevOps Services and Team Foundation Server. |
 
 
 <div class="bg-image">
