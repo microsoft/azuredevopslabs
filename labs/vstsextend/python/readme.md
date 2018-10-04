@@ -128,7 +128,7 @@ You will provision the resources on **Azure** using ARM template in the **releas
 
    ![release_succesful](images/release_succesful.png)
 
-1. Login to [Azure Portal](https://portal.azure.com){:target="_blank"} and go to  the **Resource Group** with the name **Python**. You will see the resources **App Service** and **App Service Plan**.
+1. Once the Release is succeeded, login to [Azure Portal](https://portal.azure.com){:target="_blank"} and go to  the **Resource Group** with the name **Python**. You will see the resources **App Service** and **App Service Plan**.
 
    ![azure_portal](images/azure_portal.png)
 
