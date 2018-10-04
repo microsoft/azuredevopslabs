@@ -26,7 +26,7 @@ Since the connections are not established during project provisioning, you will 
 
 In **Azure DevOps**, navigate to **Project settings**, under **Pipelines** select **Service connections**, click on **+ New service connection** and select **Azure Resource Manager**. Specify connection name, select your subscription from the drop down and click on OK. We use this endpoint to connect Azure DevOps with Azure.
 
-   ![service_endpoint](images/service_endpoint1.png)
+  ![service_endpoint](images/service_endpoint1.png)
 
    You will be prompted to authorize this connection with Azure credentials.
 
