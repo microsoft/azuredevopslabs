@@ -45,7 +45,7 @@ In this lab, you will
 
     ![DNS of the VM](images/eclipse-vmname.png)
 
-1. Choose **Xvnc** from the *Module* list drop down, log in with the user name and password provided.
+1. Choose **Xorg** from the *Module* list drop down, log in with the user name and password provided.
 
     ![Log into the VM](images/loginvm.png)
 
@@ -90,8 +90,6 @@ Having setup an Azure DevOps Organization project, we will now log in to the vir
 1. Search for **Team Explorer**, select the **Team Explorer** View, and click **Open**.
 
     ![Checkout from Team Services Git](images/showtee2.png) 
-
-1. Next, select **Windows > Show View** and select **Other...**. Search for **Azure**, select **Azure Explorer** and click **Open**.
 
 1. From the **Team Explorer** view, click the link to **Connect to a Team Foundation Server or Team Services account**, then type in the name of the VSTS account (`https://dev.azure.com/{your-account-name}`) and press the **Next** button.
 
@@ -167,7 +165,9 @@ In this task you will configure the Azure Pipelines build definition that will b
 
 1. Click the "Save and Queue" button to save and queue this build. Make sure you are using the **Hosted Linux Preview**.
 
-1. The build will push the image to the *Azure Container Registry* we created earlier. We can verify if the images were pushed correctly from the **Azure Explorer** view within Eclipse. Select the **Azure Explorer** window and right click to *Sign in* to Azure and then refresh Azure Container Registry. Right click and select **Open ACR Explorer**. You should see the image - tagged with the build number.
+1. The build will push the image to the *Azure Container Registry* we created earlier. 
+
+1. We can verify if the images were pushed correctly from the **Azure Explorer** view within Eclipse. Select **Windows > Show View** and select **Other...**. Search for **Azure Explorer**, select and click **Open**. Right click to *Sign in* to Azure and then refresh Azure Container Registry. Right click and select **Open ACR Explorer**. You should see the image - tagged with the build number.
 
     ![Azure Explorer View](images/azureexplorerview.png)
 
@@ -179,7 +179,7 @@ In this exercise, we will setup a Release pipeline to deploy the web application
 
 1. Sign into your [Azure Portal](https://portal.azure.com){:target="_blank"}.
 
-1. In the Azure Portal, choose **+ Create a resource**, search for **Web App for Containers + MYSQL** and then click Create.
+1. In the Azure Portal, choose **+ Create a resource**, search for **Web App for Containers + MYSQL**, select and click *Create*.
 
      ![New Web App for Containers](images/newwebapp.png)
 
@@ -201,7 +201,7 @@ In this exercise, we will setup a Release pipeline to deploy the web application
 1. Append **/myshuttledev** to the web application context path in the URL to get to the MyShuttle login page. For example if your web app URL is `https://myshuttle-azure.azurewebsites.net/` , then your URL to the login page is `https://myshuttle-azure.azurewebsites.net/myshuttledev/`
 
     ![Login Page](images/loginpage.png)
-
+ 
     We could configure *Continuous Deployment* to deploy the web app when a new image is pushed to the registry, within the Azure portal itself. However, setting up an Azure Pipeline will provide more flexibility and additional controls (approvals, release gates, etc.) for application deployment.
 
 1. Back in Azure DevOps account, select **Releases** from the **Pipelines** hub. Select the Release definition and click *Edit Pipeline*.
@@ -252,6 +252,7 @@ In this exercise, we will setup a Release pipeline to deploy the web application
     * *fred/fredpassword*
     * *wilma/wilmapassword*
     * *betty/bettypassword*
+    
 
 ## Next: End to End workflow with Eclipse
 
