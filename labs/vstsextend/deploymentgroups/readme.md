@@ -22,17 +22,9 @@ This lab covers the configuration of the deployment groups and details how the d
 
 ### Prerequisites for the lab
 
-1. **Microsoft Azure Account**: You will need a valid and active Azure account for the Azure labs. If you do not have one, you can sign up for a [free trial](https://azure.microsoft.com/en-us/free/){:target="_blank"}
+1. Refer the [Getting Started](../Setup/) page to know the prerequisites for this lab.
 
-    * If you are an active Visual Studio Subscriber, you are entitled for a $50-$150 Azure credit per month. You can refer to this [link](https://azure.microsoft.com/en-us/pricing/member-offers/msdn-benefits-details/){:target="_blank"} to find out more information about this including how to activate and start using your monthly Azure credit.
-
-    * If you are not a Visual Studio Subscriber, you can sign up for the FREE [Visual Studio Dev Essentials](https://www.visualstudio.com/dev-essentials/){:target="_blank"} program to create a **Azure free account** (includes 1 year of free services, $200 for 1st month).
-
-1. You will need a **Azure DevOps** account. If you do not have one, you can sign up for free [here](https://www.visualstudio.com/products/visual-studio-team-services-vs){:target="_blank"}
-
-1. You will need a **Personal Access Token** to set up your project using the **Azure DevOps Demo Generator**. Please see this [article](https://docs.microsoft.com/en-us/vsts/accounts/use-personal-access-tokens-to-authenticate){:target="_blank"} for instructions to create your token.
-
-    {% include note.html content= "You should treat Personal Access Tokens like passwords. It is recommended that you save them somewhere safe so that you can re-use them for future requests." %}
+1. Click the [Azure DevOps Demo Generator](http://azuredevopsdemogenerator.azurewebsites.net/?TemplateId=77376&Name=AzureFunctions_BuildWorkshop) link and follow the instructions in [Getting Started](../Setup/) page to provision the project to your **Azure DevOps**.
 
 ## Setting up the Environment
 
@@ -62,29 +54,17 @@ The following resources will be provisioned on the Azure using an ARM template:
 
    ![SQL DNS](images/sql_dns.png)
 
-## Setting up the Azure DevOps project
-
-1. Use the [Azure DevOps Demo Generator](https://vstsdemogenerator.azurewebsites.net/?Name=deploymentgroups&TemplateId=77368) to provision the team project on the Azure DevOps account.
-
-   > **Azure DevOps Demo Generator** helps you create team projects on your Azure DevOps account with sample content that include source code, work items,iterations, service endpoints, build and release definitions based on the template you choose during the configuration.
-
-   ![VSTS Demo Generator](images/vstsdemogen.png)
-
-1. Once the team project is provisioned, click on the URL to navigate to the team project.
-
-   ![VSTS Demo Generator](images/vsts_demo.png)
-
 ## Exercise 1: Endpoint Creation
 
 Since the connections are not established during the project provisioning, the endpoints need to be configured manually.
 
-1. In the Azure DevOps, navigate to the **Services** by clicking on the gear icon, and click on the **+ New Service Endpoint** button. Select the **Azure Resource Manager** tab. Specify the **Connection name**, select the **Subscription** from the dropdown and click on the **OK** button. This endpoint will be used to connect **VSTS** and **Azure**.
+1. In the Azure DevOps home page, click on the below **Project Settings**. Click on the service connections under pipelines, and add a new service connection of type **Azure Resource Manager**. Specify the **Connection name**, select the **Subscription** from the dropdown and click on the **OK** button. This endpoint will be used to connect **Azure DevOps** and **Azure**.
 
-   ![Service endpoint](images/service_endpoint.png)
+   ![Service endpoint](images/services.png)
 
-   ![Connection details](images/connection_name.png)
+   ![Connection details](images/azureresourcemanager.png)
 
-1. Create an endpoint of type **Team Foundation Server/Team Services**. Select the **Token based authentication** option and specify the following details:
+1. Create an endpoint of type **Azure Repos/Team Foundation Server**. Select the **Token based authentication** option and specify the following details:
 
    * **Connection Name**: Provide any name
 
@@ -94,21 +74,21 @@ Since the connections are not established during the project provisioning, the e
 
    > The configured endpoint will be used during the agent registration with deployment groups to provide the access to the Azure DevOps project.
 
-   ![Endpoint](images/vsts.png)
+   ![Endpoint](images/tokenbased.png)
 
 ## Exercise 2: Creating Deployment Groups
 
 The Azure DevOps makes it easier to organize the servers for deploying the applications. A deployment group is a collection of machines with a deployment agent on each of them. Each machine interacts with the Azure DevOps to coordinate deployment of the app.
 
-1. Navigate to the **Build & Release** tab and click on the [**Deployment Groups**](https://docs.microsoft.com/en-us/vsts/build-release/concepts/definitions/release/deployment-groups/){:target="_blank"} option. Click on the **Add deployment group** button to configure a Deployment Group.
+1. From the pipelines, select the [**Deployment Groups**](https://docs.microsoft.com/en-us/vsts/build-release/concepts/definitions/release/deployment-groups/){:target="_blank"} option. Click on the **Add deployment group** button to configure.
 
-   ![Deployment group](images/add_deploymentgroup.png)
+   ![Deployment group](images/deploymentgroup.png)
 
 1. Provide a `Deployment group name`, and click on the **Create** button. The registration script generated will be displayed.
 
-   ![Deployment group](images/name_dg.png)
+   ![Deployment group](images/deploymentgroup2.png)
 
-   ![Registration script](images/script_dg.png)
+   ![Registration script](images/dgscript.png)
 
 ## Exercise 3: Configure Releases
 
@@ -116,11 +96,9 @@ The target servers are available in the deployment group for deploying the appli
 
 A [Phase](https://docs.microsoft.com/en-us/vsts/build-release/concepts/process/phases){:target="_blank"} is a logical grouping of the tasks that defines the runtime target on which the tasks will execute. A deployment group phase executes tasks on the machines defined in a deployment group.
 
-1. Click on the **Build & Release** tab and select the **Release** option. Select the release definition **Deployment Groups** and then select the **Tasks** tab
+1. From the pipelines, click on the **Releases** option and edit the pipeline.
 
-    ![Release](images/release_tab.png)
-
-    ![Tasks](images/task.png)
+    ![Release](images/releasepipeline.png)
 
 1. The tasks will be grouped under the **Agent phase**, **Database deploy phase** and **IIS Deployment phase**.
 
