@@ -75,7 +75,7 @@ You will set up a new build definition that integrates with SonarCloud to analyz
 
     ![build_templates](images/ex1/build_templates.png)
 
-    The template contains all of the necessary tasks and most of the required settings. We will now provide the values for the remaining settings.
+    The template contains all of the necessary tasks and most of the required settings.You will now provide the values for the remaining settings.
 
 1. Select the _Hosted VS2017_ agent queue 
 
@@ -113,7 +113,7 @@ You will set up a new build definition that integrates with SonarCloud to analyz
 
 1. Select the identity provider to use to log in to SonarCloud
 
-   As we are not currently logged in to SonarCloud we will be taken to the SonarCloud login page.
+   As you are not currently logged in to SonarCloud, you will be taken to the SonarCloud login page.
 
    - Select the identity provider you want use and complete the log in process
 
@@ -265,7 +265,7 @@ Open the **Sonar Examples - NetFx** project in the SonarCloud Dashboard. Under *
 
       ![vsts_branch_policy](images/ex3/vsts_branch_policy.png)
 
-   - Select the build definition we created earlier from the **Build definition** drop-down
+   - Select the build definition you created earlier from the **Build definition** drop-down
 
    - Set the **Display name** to **SonarCloud analysis**
 
