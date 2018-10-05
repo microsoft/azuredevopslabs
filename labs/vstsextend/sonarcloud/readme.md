@@ -71,7 +71,7 @@ You will set up a new build definition that integrates with SonarCloud to analyz
 
    > The SonarCloud extension contains custom build templates for Maven, Gradle, .NET Core and .NET Desktop applications. The templates are based on the standard Azure DevOps templates but with additional analysis-specific tasks and some pre-configured settings.
 
-1. Select the .NET Desktop with SonarCloud template.
+1. Select the **.NET Desktop with SonarCloud template**.
 
     ![build_templates](images/ex1/build_templates.png)
 
