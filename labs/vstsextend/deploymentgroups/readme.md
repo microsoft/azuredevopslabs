@@ -1,5 +1,5 @@
 ---
-title: Multi-machine deployments using VSTS
+title: Multi-machine deployments using Azure DevOps
 layout: page
 sidebar: vsts2
 permalink: /labs/vstsextend/deploymentgroups/
@@ -10,29 +10,21 @@ Last updated : {{ "now" | date: "%b %d, %Y" }}.
 
 ## Overview
 
-In the earlier versions of the VSTS Release Management, if the application needed to be deployed to multiple servers, the Windows PowerShell remoting had to be enabled manually, the required ports opened and the deployment agent installed on each of the servers. The pipelines had to be managed manually if a roll-out deployment was required.
+In the earlier versions of Azure DevOps, if the application needed to be deployed to multiple servers, the Windows PowerShell remoting had to be enabled manually, the required ports opened and the deployment agent installed on each of the servers. The pipelines had to be managed manually if a roll-out deployment was required.
 
 All the above challenges have been handled seamlessly with the introduction of the [Deployment Groups](https://docs.microsoft.com/en-us/vsts/build-release/concepts/definitions/release/deployment-groups/){:target="_blank"}.
 
 The Deployment Group installs a deployment agent on each of the target servers in the configured group and instructs the Release Management to gradually deploy the application to all these servers that belong to the Deployment Group. Multiple pipelines can be created for roll-out deployments so that the latest version of the application could be provided in a phased manner to multiple user groups for validating the newly introduced features.
 
-### What's covered in this lab
+### What's covered in this lab?
 
-This lab covers the configuration of the deployment groups and details how the deployment groups could be used in VSTS Release management.
+This lab covers the configuration of the deployment groups and details how the deployment groups could be used in Azure DevOps.
 
 ### Prerequisites for the lab
 
-1. **Microsoft Azure Account**: You will need a valid and active Azure account for the Azure labs. If you do not have one, you can sign up for a [free trial](https://azure.microsoft.com/en-us/free/){:target="_blank"}
+1. Refer the [Getting Started](../Setup/) page to know the prerequisites for this lab.
 
-    * If you are an active Visual Studio Subscriber, you are entitled for a $50-$150 Azure credit per month. You can refer to this [link](https://azure.microsoft.com/en-us/pricing/member-offers/msdn-benefits-details/){:target="_blank"} to find out more information about this including how to activate and start using your monthly Azure credit.
-
-    * If you are not a Visual Studio Subscriber, you can sign up for the FREE [Visual Studio Dev Essentials](https://www.visualstudio.com/dev-essentials/){:target="_blank"} program to create a **Azure free account** (includes 1 year of free services, $200 for 1st month).
-
-1. You will need a **Visual Studio Team Services Account**. If you do not have one, you can sign up for free [here](https://www.visualstudio.com/products/visual-studio-team-services-vs){:target="_blank"}
-
-1. You will need a **Personal Access Token** to set up your project using the **VSTS Demo Generator**. Please see this [article](https://docs.microsoft.com/en-us/vsts/accounts/use-personal-access-tokens-to-authenticate){:target="_blank"} for instructions to create your token.
-
-    {% include note.html content= "You should treat Personal Access Tokens like passwords. It is recommended that you save them somewhere safe so that you can re-use them for future requests." %}
+1. Click the [Azure DevOps Demo Generator](http://azuredevopsdemogenerator.azurewebsites.net/?TemplateId=77376&Name=AzureFunctions_BuildWorkshop) link and follow the instructions in [Getting Started](../Setup/) page to provision the project to your **Azure DevOps**.
 
 ## Setting up the Environment
 
@@ -62,53 +54,41 @@ The following resources will be provisioned on the Azure using an ARM template:
 
    ![SQL DNS](images/sql_dns.png)
 
-## Setting up the VSTS team project
-
-1. Use the [VSTS Demo Generator](https://vstsdemogenerator.azurewebsites.net/?Name=deploymentgroups&TemplateId=77368) to provision the team project on the VSTS account.
-
-   > **VSTS Demo Generator** helps you create team projects on your VSTS account with sample content that include source code, work items,iterations, service endpoints, build and release definitions based on the template you choose during the configuration.
-
-   ![VSTS Demo Generator](images/vstsdemogen.png)
-
-1. Once the team project is provisioned, click on the URL to navigate to the team project.
-
-   ![VSTS Demo Generator](images/vsts_demo.png)
-
 ## Exercise 1: Endpoint Creation
 
 Since the connections are not established during the project provisioning, the endpoints need to be configured manually.
 
-1. In the VSTS, navigate to the **Services** by clicking on the gear icon, and click on the **+ New Service Endpoint** button. Select the **Azure Resource Manager** tab. Specify the **Connection name**, select the **Subscription** from the dropdown and click on the **OK** button. This endpoint will be used to connect **VSTS** and **Azure**.
+1. In the Azure DevOps home page, click on the below **Project Settings**. Click on the service connections under pipelines, and add a new service connection of type **Azure Resource Manager**. Specify the **Connection name**, select the **Subscription** from the dropdown and click on the **OK** button. This endpoint will be used to connect **Azure DevOps** and **Azure**.
 
-   ![Service endpoint](images/service_endpoint.png)
+   ![Service endpoint](images/services.png)
 
-   ![Connection details](images/connection_name.png)
+   ![Connection details](images/azureresourcemanager.png)
 
-1. Create an endpoint of type **Team Foundation Server/Team Services**. Select the **Token based authentication** option and specify the following details:
+1. Create an endpoint of type **Azure Repos/Team Foundation Server**. Select the **Token based authentication** option and specify the following details:
 
    * **Connection Name**: Provide any name
 
-   * **Connection Url**: The VSTS account Url
+   * **Connection Url**: URL of the Azure DevOps organization
 
-   * **Personal Access Token**: The VSTS Personal Access Token
+   * **Personal Access Token**: The Azure DevOps organizations Personal Access Token
 
-   > The configured endpoint will be used during the agent registration with deployment groups to provide the access to the VSTS team project.
+   > The configured endpoint will be used during the agent registration with deployment groups to provide the access to the Azure DevOps project.
 
-   ![Endpoint](images/vsts.png)
+   ![Endpoint](images/tokenbased.png)
 
 ## Exercise 2: Creating Deployment Groups
 
-The VSTS makes it easier to organize the servers for deploying the applications. A deployment group is a collection of machines with a VSTS deployment agent on each of them. Each machine interacts with the VSTS to coordinate deployment of the app.
+The Azure DevOps makes it easier to organize the servers for deploying the applications. A deployment group is a collection of machines with a deployment agent on each of them. Each machine interacts with the Azure DevOps to coordinate deployment of the app.
 
-1. Navigate to the **Build & Release** tab and click on the [**Deployment Groups**](https://docs.microsoft.com/en-us/vsts/build-release/concepts/definitions/release/deployment-groups/){:target="_blank"} option. Click on the **Add deployment group** button to configure a Deployment Group.
+1. From the pipelines, select the [**Deployment Groups**](https://docs.microsoft.com/en-us/vsts/build-release/concepts/definitions/release/deployment-groups/){:target="_blank"} option. Click on the **Add deployment group** button to configure.
 
-   ![Deployment group](images/add_deploymentgroup.png)
+   ![Deployment group](images/deploymentgroup.png)
 
 1. Provide a `Deployment group name`, and click on the **Create** button. The registration script generated will be displayed.
 
-   ![Deployment group](images/name_dg.png)
+   ![Deployment group](images/deploymentgroup2.png)
 
-   ![Registration script](images/script_dg.png)
+   ![Registration script](images/dgscript.png)
 
 ## Exercise 3: Configure Releases
 
@@ -116,15 +96,17 @@ The target servers are available in the deployment group for deploying the appli
 
 A [Phase](https://docs.microsoft.com/en-us/vsts/build-release/concepts/process/phases){:target="_blank"} is a logical grouping of the tasks that defines the runtime target on which the tasks will execute. A deployment group phase executes tasks on the machines defined in a deployment group.
 
-1. Click on the **Build & Release** tab and select the **Release** option. Select the release definition **Deployment Groups** and then select the **Tasks** tab
+1. From the pipelines, click on the **Releases** option and edit the pipeline.
 
-    ![Release](images/release_tab.png)
+    ![Release](images/releasepipeline.png)
 
-    ![Tasks](images/task.png)
+1. You will see the pipeline. Select the environment **Dev** from the tasks dropdown.
 
-1. The tasks will be grouped under the **Agent phase**, **Database deploy phase** and **IIS Deployment phase**.
+   ![Environment](images/releaseenvironment.png)
 
-   ![Phases](images/phases.png)
+1. The tasks will be grouped under the **Agent phase**, **Deployment group phase** and **IIS Deployment phase**.
+
+   ![Phases](images/differentphases.png)
 
    * **Agent Phase**: In this phase, the target servers will be associated to the deployment group using the Azure Resource Group Deployment task.
 
@@ -148,11 +130,9 @@ A [Phase](https://docs.microsoft.com/en-us/vsts/build-release/concepts/process/p
 
       * **IIS Web App Deploy**: The task runs on the deployment target machine(s) registered with the Deployment Group configured for the task/phase. It deploys the application to the IIS server using **Web Deploy**.
 
+      * The number of concurrent deployments can be controlled by setting the value in the **Maximum number of targets in parallel** field. For example, in this lab, since there are 6 web servers, setting the target servers to **50%** will deploy the build artifacts to 3 web servers in parallel at a time.
+
         ![IIS](images/iis.png)
-
-1. The number of concurrent deployments can be controlled by setting the value in the **Maximum number of targets in parallel** field. For example, in this lab, since there are 6 web servers, setting the target servers to **50%** will deploy the build artifacts to 3 web servers in parallel at a time.
-
-   ![Targets](images/targets.png)
 
 1. Select the **Disconnect Azure Network Load Balancer** task and provide the following details:
 
@@ -184,10 +164,6 @@ A [Phase](https://docs.microsoft.com/en-us/vsts/build-release/concepts/process/p
 
 1. Click on the **Save** button and then click on the **Create release** option.
 
-   ![Save](images/save.png)
-
-   ![Create Release](images/create_release.png)
-
    ![New Release](images/release.png)
 
 1. Once the release is completed, the deployments will be done to the DB and Web servers. Click on the logs to view the release summary.
@@ -208,4 +184,4 @@ A [Phase](https://docs.microsoft.com/en-us/vsts/build-release/concepts/process/p
 
 ## Summary
 
-Using VSTS and Azure, the web applications can be easily compiled and deployed to multiple target servers using Deployment Groups.
+Using Azure DevOps and Azure, the web applications can be easily compiled and deployed to multiple target servers using Deployment Groups.
