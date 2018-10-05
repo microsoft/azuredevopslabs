@@ -22,10 +22,10 @@ In this lab, you will
 
 * Provision a Azure DevOps Organization team project with some sample data and users
 * Provision a Ubuntu VM with Eclipse installed
-* Install and explore **Team Explorer Everywhere**, the Azure DeVOps plug-in for Eclipse
+* Install and explore **Team Explorer Everywhere**, the Azure DevOps plug-in for Eclipse
 * Install and explore **Azure Toolkit for Eclipse**
-* Setup a build definition to build and test the code, then push it to a Azure Container Registry
-* Setup an Azure Web app and configure a CD pipeline in Azure Pipelines
+* Setup a build pipeline to build and test the code, then push it to a Azure Container Registry
+* Setup an Azure Web app and configure a Continuous Deployment (CD) pipeline in Azure Pipelines
 
 **Estimated time to complete the lab:**  1 hour
 
@@ -91,15 +91,15 @@ Having setup an Azure DevOps Organization project, we will now log in to the vir
 
     ![Checkout from Team Services Git](images/showtee2.png) 
 
-1. From the **Team Explorer** view, click the link to **Connect to a Team Foundation Server or Team Services account**, then type in the name of the VSTS account (`https://dev.azure.com/{your-account-name}`) and press the **Next** button.
+1. From the **Team Explorer** view, click the link to **Connect to a Team Foundation Server or Team Services account**, then type in the name of the Azure DevOps Organization (`https://dev.azure.com/{your-account-name}`) and press the **Next** button.
 
     The "Follow the instructions to complete sign-in" window will pop up. Click on the hyperlink to be redirected to the Device Login page in a browser on the VM (Note that link may have a black background for security purposes).
 
-1. Log in to authenticate the Azure DevOps Organization account.
+1. Log in to authenticate the Azure DevOps Organization.
 
 1. Choose the **Team Project** that you provisioned with *Azure DevOps Demo Generator* at the start of this lab and click **Finish**.
 
-## Exercise 2: Clone MyShuttle from VSTS with Eclipse
+## Exercise 2: Clone MyShuttle from an Azure DevOps Services Git repo using Eclipse
 
 Next, clone the **Azure Repos Git repository** to a local Git repository and import the code to a project in Eclipse.
 
