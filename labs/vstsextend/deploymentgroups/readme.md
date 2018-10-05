@@ -184,4 +184,4 @@ A [Phase](https://docs.microsoft.com/en-us/vsts/build-release/concepts/process/p
 
 ## Summary
 
-Using VSTS and Azure, the web applications can be easily compiled and deployed to multiple target servers using Deployment Groups.
+Using Azure DevOps and Azure, the web applications can be easily compiled and deployed to multiple target servers using Deployment Groups.
