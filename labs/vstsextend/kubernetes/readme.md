@@ -213,14 +213,15 @@ Now that the connection is established, we will manually map the created Azure e
 
     |Tasks|Usage|
     |-----|-----|
+    |**Replace tokens**| replace tokens in files with variable values|
     |![icon](images/icon.png) **Run services**| prepares the suitable environment by restoring required packages|
     |![icon](images/icon.png) **Build services**| builds the docker images specified in a **docker-compose.yml** file with registry-qualified names and additional tags such as **$(Build.BuildId)**|
     |![icon](images/icon.png) **Push services**| pushes the docker images specified in a **docker-compose.yml** file, to the container registry|
     |![publish-build-artifacts](images/publish-build-artifacts.png) **Publish Build Artifacts**| publishes the **myhealth.dacpac** file to Azure DevOps|
 
-    The **applicationsettings.json** file contains details of database connection string used to connect with Azure database which was created in the beginning of this lab.
+    **applicationsettings.json** file contains details of database connection string used to connect with Azure database which was created in the beginning of this lab.
     
-    The **mhc-aks.yaml** manifest file, contains configuration details of **deployments**, **services** and **pods** which will be deployed in Azure Kubernetes Service.
+    **mhc-aks.yaml** manifest file contains configuration details of **deployments**, **services** and **pods** which will be deployed in Azure Kubernetes Service.
 
 1. Update **ACR** and **SQLserver** values for **Pipeline Variables** with the details noted earlier while configuring the environment. Click on the **Save** button.
 
