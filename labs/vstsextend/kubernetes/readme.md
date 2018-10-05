@@ -68,17 +68,11 @@ The below diagram details the Azure DevOps workflow with Azure Container Service
 
 You can read the full specification of the architecture [here](https://azure.microsoft.com/en-in/solutions/architecture/continuous-integration-deployment-containers/){:target="_blank"}
 
-### Prerequisites for the lab
+## Pre-requisites for the lab
 
-1. **Microsoft Azure Account**: You will need a valid and active Azure account, for the Azure labs. If you do not have one, you can sign up for a [free trial](https://azure.microsoft.com/en-us/free/){:target="_blank"}
+1. Refer the [Getting Started](../Setup/) page to know the prerequisites for this lab.
 
-    * If you are a Visual Studio Active Subscriber, you are entitled for a $50-$150 Azure credit per month. You can refer to this [link](https://azure.microsoft.com/en-us/pricing/member-offers/msdn-benefits-details/){:target="_blank"} to find out more including how to activate and start using your monthly Azure credit.
-
-    * If you are not a Visual Studio Subscriber, you can sign up for the FREE [Visual Studio Dev Essentials](https://www.visualstudio.com/dev-essentials/){:target="_blank"} program to create **Azure free account** (includes 1 year of free services, $200 for 1st month).
-
-1. You will need a **Azure DevOps Account**. If you do not have one, you can sign up for free [here](https://www.visualstudio.com/products/visual-studio-team-services-vs){:target="_blank"}
-
-1. **Kubernetes extension** from [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=tsuyoshiushio.k8s-endpoint){:target="_blank"} installed to the Azure DevOps account
+1. Click the [Azure DevOps Demo Generator](http://azuredevopsdemogenerator.azurewebsites.net/?TemplateId=77376&Name=Aks) link and follow the instructions in [Getting Started](../Setup/) page to provision the project to your **Azure DevOps**.
 
 ## Preparing the user machine
 
@@ -213,7 +207,7 @@ Now that the connection is established, we will manually map the created Azure e
 
    ![build](images/build.png)
 
-1. In **Run services** section under the **Tasks** tab, select the previously created endpoints from the dropdown for the parameters - **Azure subscription** and **Azure Container Registry** as shown. Repeat this for the Build services, Push services and Lock services. Click the **Save** option.
+1. In **Run services** section under the **Tasks** tab, select the previously created endpoints from the dropdown for the parameters - **Azure subscription** and **Azure Container Registry** as shown. Repeat this for the Build services, Push services and Lock services. Click the **Variables** tab.
 
     ![updateprocessbd](images/updateprocessbd.png)
 
@@ -223,6 +217,14 @@ Now that the connection is established, we will manually map the created Azure e
     |![icon](images/icon.png) **Build services**| builds the docker images specified in a **docker-compose.yml** file with registry-qualified names and additional tags such as **$(Build.BuildId)**|
     |![icon](images/icon.png) **Push services**| pushes the docker images specified in a **docker-compose.yml** file, to the container registry|
     |![publish-build-artifacts](images/publish-build-artifacts.png) **Publish Build Artifacts**| publishes the **myhealth.dacpac** file to Azure DevOps|
+
+    The **applicationsettings.json** file contains details of database connection string used to connect with Azure database which was created in the beginning of this lab.
+    
+    The **mhc-aks.yaml** manifest file, contains configuration details of **deployments**, **services** and **pods** which will be deployed in Azure Kubernetes Service.
+
+1. Update **ACR** and **SQLserver** values for **Pipeline Variables** with the details noted earlier while configuring the environment. Click on the **Save** button.
+
+    ![updateprocessbd](images/updatevariablesbd.png)
 
 1. Navigate to the **Releases** section under the **Build & Release** menu, **Edit** the release definition **MyHealth.AKS.Release** and select **Tasks**.
 
@@ -246,31 +248,13 @@ Now that the connection is established, we will manually map the created Azure e
 
     * **Update image in AKS** will pull up the appropriate image corresponding to the BuildID from the repository specified, and deploys the docker image to the **mhc-front pod** running in AKS.
 
-1. Click on the **Variables** section under the release definition, update **ACR** and **SQL server** values for **Process Variables** with the details noted earlier while configuring the environment. Click on the **Save** button.
+1. Click on the **Variables** section under the release definition, update **ACR** and **SQLserver** values for **Pipeline Variables** with the details noted earlier while configuring the environment. Click on the **Save** button.
 
    {% include note.html content= "The **Database Name** is set to **mhcdb** and the **Server Admin Login** is **sqladmin** and **Password** is **P2ssw0rd1234**." %}
 
    ![releasevariables](images/releasevariables.png)
 
-## Exercise 3: Update Connection String & ACR URL in the manifest file
-
-We will update the database connection string for the .NET Core application and ACR URL in the manifest YAML file.
-
-1. Click on the **Repos** tab, and navigate to the below path `AKS/src/MyHealth.Web` to **edit** the file `appsettings.json`
-
-   Scroll down to the line number **9** and provide the database server name as noted down in the beginning of this lab. Click on the **Commit** button.
-
-   {% include important.html content= "\"DefaultConnection\": \"Server=YOUR_SQLSERVER_NAME.database.windows.net,1433;Database=mhcdb;Persist Security Info=False;User ID=sqladmin;Password=P2ssw0rd1234\"" %}
-
-   ![pasteconnectionstring](images/pasteconnectionstring.png)
-
-1. Navigate to the `AKS` path to **edit** the file `mhc-aks.yaml`. This YAML manifest file, contains configuration details of **deployments**,**services** and **pods** which will be deployed in Kubernetes.
-
-   Scroll to the line number **93**. modify the value **YOUR_ACR** with your **ACR Login server** which was noted earlier while setting up the environment. Click on the **Commit** button.
-
-   ![editmhcaks](images/editmhcaks.png)
-
-## Exercise 4: Trigger a Build and deploy application
+## Exercise 3: Trigger a Build and deploy application
 
 In this exercise, let us trigger a build manually and upon completion, an automatic deployment of the application will be triggered. Our application is designed to be deployed in the pod with the **load balancer** in the front-end and **Redis cache** in the back-end.
 
