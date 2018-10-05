@@ -53,9 +53,9 @@ In this lab, you will learn how to integrate Azure DevOps with SonarCloud
 
     - Import the **Sonar Scanning Examples repository** from GitHub at https://github.com/SonarSource/sonar-scanning-examples.git
 
-    ![sc_marketplace](images/ex1/setup_import.png)
-
     See [here](https://docs.microsoft.com/en-us/vsts/git/import-git-repository?view=vsts){:target="_blank"} for detailed instructions on importing a repository.
+    
+    ![sc_marketplace](images/ex1/setup_import.png)
 
     The scanning examples repository contains sample projects for a number of build systems and languages including C# with MSBuild, and Maven and Gradle with Java.
 
