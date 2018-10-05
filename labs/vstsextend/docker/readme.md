@@ -1,9 +1,9 @@
 ---
-title: Docker Deployment to Azure App Service (Linux) using VSTS
+title: Docker Deployment to Azure App Service (Linux) using Azure DevOps
 layout: page
-sidebar: vsts2
-permalink: /labs/vstsextend/docker/
-folder: /labs/vstsextend/docker/
+sidebar: Azure DevOps2
+permalink: /labs/Azure DevOpsextend/docker/
+folder: /labs/Azure DevOpsextend/docker/
 ---
 
 Last updated : {{ "now" | date: "%b %d,%Y" }}
@@ -14,25 +14,18 @@ This lab outlines the process to build custom Docker images of an [**ASP.NET Cor
 
 The Web App for Containers, allows creation of custom [Docker](https://www.docker.com/what-docker){:target="_blank"} container images, easily deploy and then run them on Azure. Combination of Azure DevOps and Azure integration with Docker will enable the following:
 
-1. [Build](https://docs.docker.com/engine/reference/commandline/build/){:target="_blank"} custom Docker images using [Azure DevOps Hosted Linux agent](https://docs.microsoft.com/en-us/vsts/build-release/concepts/agents/hosted){:target="_blank"}
+1. Build custom Docker images using [Azure DevOps Hosted Linux agent](https://docs.microsoft.com/en-us/Azure DevOps/build-release/concepts/agents/hosted){:target="_blank"}
 
-1. [Push](https://docs.docker.com/engine/reference/commandline/push/){:target="_blank"} and store the Docker images in a private repository
+1. Push and store the Docker images in a private repository
 
-1. Deploy and [run](https://docs.docker.com/engine/reference/commandline/run/){:target="_blank"} the images inside the Docker Containers
-
-
-### Prerequisites for the lab
-
-1. **Microsoft Azure Account**: You will need a valid and active Azure account, for the Azure labs. If you do not have one, you can sign up for a [free trial](https://azure.microsoft.com/en-us/free/){:target="_blank"}
-
-    * If you are an active Visual Studio Subscriber, you are entitled for a $50-$150 Azure credit per month. You can refer to this [link](https://azure.microsoft.com/en-us/pricing/member-offers/msdn-benefits-details/){:target="_blank"} to find out more information about this, including how to activate and start using your monthly Azure credit.
-
-    * If you are not a Visual Studio Subscriber, you can sign up for the FREE [Visual Studio Dev Essentials](https://www.visualstudio.com/dev-essentials/){:target="_blank"} program to create an **Azure free account** (includes 1 year of free services, $200 for 1st month).
-
-1. You will need an **Azure DevOps Organization**. If you do not have one, you can sign up for free [here](https://www.visualstudio.com/products/visual-studio-team-services-vs){:target="_blank"}
+1. Deploy and run the images inside the Docker Containers
 
 
-1. Installation of the **Docker Integration** extension from [Extensions for Azure DevOps](https://marketplace.visualstudio.com/items?itemName=ms-vscs-rm.docker){:target="_blank"}
+## Pre-requisites for the lab
+
+1. Refer the [Getting Started](../Setup/) page to know the prerequisites for this lab.
+
+1. Click the [Azure DevOps Demo Generator](http://azuredevopsdemogenerator.azurewebsites.net/?TemplateId=77376&Name=AzureFunctions_BuildWorkshop) link and follow the instructions in [Getting Started](../Setup/) page to provision the project to your **Azure DevOps**.
 
 ## Setting up the Environment
 
@@ -81,15 +74,15 @@ The Web App for Containers, allows creation of custom [Docker](https://www.docke
 
 ## Setting up the Azure DevOps Project
 
-1. Use the [Azure DevOps Demo Generator](https://vstsdemogenerator.azurewebsites.net/?Name=Docker&TemplateId=77363) to provision the team project on your Azure DevOps Organization.
+1. Use the [Azure DevOps Demo Generator](https://azuredevopsdemogenerator.azurewebsites.net/?Name=Docker&TemplateId=77363) to provision the team project on your Azure DevOps Organization.
 
    > **Azure DevOps Demo Generator** helps you create team projects on your Azure Devops Organization with sample content that include source code, work items, iterations, service endpoints, build and release definitions based on the template that you choose during the configuration.
 
-   ![VSTS Demo Generator](images/DemoGenerator2.png)
+   ![Azure DevOps Demo Generator](images/DemoGenerator2.png)
 
 1. Once the team project is provisioned, click on the URL to navigate to the team project.
 
-   ![VSTS Demo Generator](images/DemoGenerator1_2.png)
+   ![Azure DevOps Demo Generator](images/DemoGenerator1_2.png)
 
 ## Exercise 1: Endpoint Creation
 
@@ -124,7 +117,7 @@ Now that the connection is established, the **Azure endpoint** and the **Azure C
    |![Run services](images/icon.png) **Run services**| prepares suitable environment by restoring the required packages|
    |![Build services](images/icon.png) **Build services**| builds **myhealth.web** image |
    |![Push services](images/icon.png) **Push services**| pushes **myhealth.web** image tagged with **$(Build.BuildId)** to container registry|
-   |![Publish Build Artifacts](images/publish-build-artifacts.png) **Publish Build Artifacts**| used to share dacpac for database deployment through VSTS artifacts|
+   |![Publish Build Artifacts](images/publish-build-artifacts.png) **Publish Build Artifacts**| used to share dacpac for database deployment through Azure DevOps artifacts|
 
 1. Navigate to the **Releases** section under the **Pipelines** tab. Select the release definition `MHCDocker.release`, click on **Edit** option and then click on the **Tasks** section.
 
@@ -193,7 +186,7 @@ In this exercise, the source code will be modified to trigger the CI-CD.
 
    ![Update registry](images/updatereg4.png)
 
-    {% include tip.html content= "The Continuous Deployment can be configured to deploy the web app to the designated server whenever a new docker image is pushed to the registry on the Azure portal itself. However, setting up a VSTS CD pipeline will provide better flexibility and additional controls (approvals, release gates, etc.) for the application deployment." %}
+    {% include tip.html content= "The Continuous Deployment can be configured to deploy the web app to the designated server whenever a new docker image is pushed to the registry on the Azure portal itself. However, setting up an Azure DevOps CD pipeline will provide better flexibility and additional controls (approvals, release gates, etc.) for the application deployment." %}
 
 1. Navigate to the **Azure Container Portal** and then select the **Repositories** option to view the generated docker images.
 
@@ -219,4 +212,4 @@ In this exercise, the source code will be modified to trigger the CI-CD.
 
 ## Summary
 
-Using **Azure DevOps** and the **Azure**, DevOps can be configured for dockerized applications by leveraging docker capabilities enabled on Azure DevOps Hosted Agents.
+Using **Azure DevOps** and **Azure**, DevOps can be configured for dockerized applications by leveraging docker capabilities enabled on Azure DevOps Linux Hosted Agents.
