@@ -100,9 +100,13 @@ A [Phase](https://docs.microsoft.com/en-us/vsts/build-release/concepts/process/p
 
     ![Release](images/releasepipeline.png)
 
-1. The tasks will be grouped under the **Agent phase**, **Database deploy phase** and **IIS Deployment phase**.
+1. You will see the pipeline. Select the environment **Dev** from the tasks dropdown.
 
-   ![Phases](images/phases.png)
+   ![Environment](images/releaseenvironment.png)
+
+1. The tasks will be grouped under the **Agent phase**, **Deployment group phase** and **IIS Deployment phase**.
+
+   ![Phases](images/differentphases.png)
 
    * **Agent Phase**: In this phase, the target servers will be associated to the deployment group using the Azure Resource Group Deployment task.
 
@@ -126,11 +130,9 @@ A [Phase](https://docs.microsoft.com/en-us/vsts/build-release/concepts/process/p
 
       * **IIS Web App Deploy**: The task runs on the deployment target machine(s) registered with the Deployment Group configured for the task/phase. It deploys the application to the IIS server using **Web Deploy**.
 
+      * The number of concurrent deployments can be controlled by setting the value in the **Maximum number of targets in parallel** field. For example, in this lab, since there are 6 web servers, setting the target servers to **50%** will deploy the build artifacts to 3 web servers in parallel at a time.
+
         ![IIS](images/iis.png)
-
-1. The number of concurrent deployments can be controlled by setting the value in the **Maximum number of targets in parallel** field. For example, in this lab, since there are 6 web servers, setting the target servers to **50%** will deploy the build artifacts to 3 web servers in parallel at a time.
-
-   ![Targets](images/targets.png)
 
 1. Select the **Disconnect Azure Network Load Balancer** task and provide the following details:
 
@@ -161,10 +163,6 @@ A [Phase](https://docs.microsoft.com/en-us/vsts/build-release/concepts/process/p
    ![Release variable](images/release_variable.png)
 
 1. Click on the **Save** button and then click on the **Create release** option.
-
-   ![Save](images/save.png)
-
-   ![Create Release](images/create_release.png)
 
    ![New Release](images/release.png)
 
