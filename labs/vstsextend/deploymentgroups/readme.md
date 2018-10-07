@@ -76,7 +76,7 @@ Since the connections are not established during the project provisioning, the e
 
    ![Endpoint](images/tokenbased.png)
 
-## Exercise 2: Creating Deployment Groups
+## Exercise 2: Creating Deployment Groups and Configuring Release
 
 The Azure DevOps makes it easier to organize the servers for deploying the applications. A deployment group is a collection of machines with a deployment agent on each of them. Each machine interacts with the Azure DevOps to coordinate deployment of the app.
 
@@ -90,11 +90,9 @@ The Azure DevOps makes it easier to organize the servers for deploying the appli
 
    ![Registration script](images/dgscript.png)
 
-## Exercise 3: Configure Releases
+   > The target servers are available in the deployment group for deploying the application. The release definition uses **Phases** to deploy the application to the target servers.
 
-The target servers are available in the deployment group for deploying the application. The release definition uses **Phases** to deploy the application to the target servers.
-
-A [Phase](https://docs.microsoft.com/en-us/vsts/build-release/concepts/process/phases){:target="_blank"} is a logical grouping of the tasks that defines the runtime target on which the tasks will execute. A deployment group phase executes tasks on the machines defined in a deployment group.
+   > A [Phase](https://docs.microsoft.com/en-us/vsts/build-release/concepts/process/phases){:target="_blank"} is a logical grouping of the tasks that defines the runtime target on which the tasks will execute. A deployment group phase executes tasks on the machines defined in a deployment group.
 
 1. From the pipelines, click on the **Releases** option and edit the pipeline.
 
