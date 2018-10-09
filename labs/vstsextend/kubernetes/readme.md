@@ -222,9 +222,7 @@ Now that the project is created, we will manually map Azure resources such as AK
 
     ![update_CD3](images/update_CD3.png)
 
-1. In the **AKS deployment** phase, Under the **Create Deployments & Services in AKS** task, update the **Azure Subscription**, **Resource Group** and **Kubernetes cluster** value from the dropdown. Expand the **Secrets** section and update the parameters - **Azure subscription** and  **Azure Container Registry** with the endpoint components from the dropdown.
-
-1. Repeat similar steps for **Update image in AKS** task.
+1. In the **AKS deployment** phase, under the **Create Deployments & Services in AKS** task, update the **Azure Subscription**, **Resource Group** and **Kubernetes cluster** from the dropdown. Expand the **Secrets** section and update the parameters for **Azure subscription** and **Azure Container Registry** from the dropdown. Repeat similar steps for **Update image in AKS** task.
 
     ![update_rd1](images/update_rd1.png)
 
