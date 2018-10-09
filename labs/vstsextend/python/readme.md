@@ -38,8 +38,6 @@ In **Azure DevOps**, navigate to **Project settings**, under **Pipelines** selec
 
 You will provision the resources on **Azure** using ARM template in the **release definition**.
 
-{% include note.html content= "You will encounter an error - **TFS.WebApi.Exception: Page not found** for Azure tasks in the release definition. This is due to a recent change in the Azure DevOps Release Management API. While we are working on updating Azure DevOps Demo Generator to resolve this issue, you can fix this by typing a random text in the **Azure Subscription** field and click the **Refresh** icon next to it. Once the field is refreshed, you can select the endpoint from the drop down." %}
-
 1. Go to **Releases** under **Pipelines** tab, select release definition **Python** and click **Edit pipeline**
 
    ![releaseedit](images/releaseedit.png)
