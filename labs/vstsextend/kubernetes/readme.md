@@ -103,9 +103,9 @@ This lab requires all the pre-requisite executables to be installed and configur
 
      1. Type **az ad sp create-for-rbac -n "MySampleApp" --password P2SSWORD** in the command prompt to get the Service Principal Client and Service Principal Client Secret.
 
-     * Copy appId which is the Service Principal Client
+     * Copy appId which is the **Service Principal Client ID**
 
-     * P2SSWORD is the Service Principal Client Secret. Both will be required for the next exercise. (keep this window open)
+     * P2SSWORD is the **Service Principal Client Secret**. Both will be required for the next exercise. (keep this window open)
 
          ![Kubernetes Service Endpoint](images/azlogin1.png)
 
