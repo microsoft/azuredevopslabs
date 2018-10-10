@@ -28,7 +28,7 @@ This lab will show how you can
 
 1. Refer the [Getting Started](../Setup/) page before you begin following the exercises.
 
-1. Use  **MyShuttle** as a template to provision the new Azure DevOps project using the [Azure DevOps Demo Generator](https://azuredevopsdemogenerator.azurewebsites.net/Environment/Create?TemplateId=77373&TemplateName=MyShuttle){:target="_blank"}.
+1. Use  **MyShuttle** as a template to provision the new Azure DevOps project using the [Azure DevOps Demo Generator](https://azuredevopsdemogenerator.azurewebsites.net/?TemplateId=77371&Name=MyShuttle){:target="_blank"}.
 
 ## Exercise 2: Creating Azure Web App and MySQL database
 
