@@ -38,33 +38,11 @@ In this lab, the following tasks will be performed:
 
 * Create an Azure Container Registry (ACR), AKS and Azure SQL server
 
-* Provision the Azure DevOps Team Project with a .NET Core application using the [Azure DevOps Demo Generator](https://Azure DevOpsdemogenerator.azurewebsites.net/?Name=aks&templateId=77372){:target="_blank"} tool
+* Provision the Azure DevOps Team Project with a .NET Core application using the [Azure DevOps Demo Generator](https://azure devopsdemogenerator.azurewebsites.net/?Name=aks&templateId=77372){:target="_blank"} tool
 
 * Configure application and database deployment, using Continuous Deployment (CD) in Azure DevOps
 
-* Modify database connection string & ACR configuration in the source code
-
 * Initiate the build to automatically deploy the application
-
-## Reference Architecture
-
-The below diagram details the Azure DevOps workflow with Azure Container Service with AKS:
-
-[![Azure DevOps workflow with Azure Container Service with AKS](images/azureaksarchitecture.png)](https://azure.microsoft.com/en-in/solutions/architecture/cicd-for-containers/)
-{:target="_blank"}
-
-* First, the source code changes are committed to the Azure DevOps git repository
-
-* Azure DevOps will create the custom Docker image **myhealth.web** and push the image tagged with the build ID to the ACR. Subsequently it will publish the [Kubernetes deployment YAML file](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/){:target="_blank"} as a build artifact.
-
-* Azure DevOps will deploy **mhc-front** and **mhc-back** services into the Kubernetes cluster using the YAML file.
-
-  {% include important.html content= "**mhc-front** is the application hosted on a load balancer whereas **mhc-back** is the [Redis](https://redis.io/){:target=\"_blank\"} Cache" %}
-
-* The Kubernetes cluster will then pull the **myhealth.web** image from the ACR into the [Pods](https://kubernetes.io/docs/concepts/workloads/pods/pod/){:target="_blank"} and complete the deployment file instructions
-* The myhealth.web application will be accessible through a browser, once the deployment is successfully completed
-
-You can read the full specification of the architecture [here](https://azure.microsoft.com/en-in/solutions/architecture/continuous-integration-deployment-containers/){:target="_blank"}
 
 ## Pre-requisites for the lab
 
@@ -117,9 +95,9 @@ The following azure resources need to be configured for this lab:
 |----------------|------------|
 |![Azure Container Registry](images/container_registry.png) Azure Container Registry | Used to store the Docker images privately|
 |![AKS](images/aks.png) AKS | Docker images are deployed to Pods running inside AKS|
-|![SQL Server](images/sqlserver.png) SQL Server | SQL Server to host database|
+|![Azure SQL Server](images/sqlserver.png) Azure SQL Server | SQL Server on Azure to host database|
 
-1. Click on the **Deploy to Azure** button (or right click and select the ***Open in new tab*** option) to spin up **Azure Container Registry**, **Azure Container Service (AKS)** and **Azure SQL Server**. Enter required details for the below fields, agree to the ***Terms and Conditions***, and then click on the **Purchase** button.
+1. Select the **Deploy to Azure** button (or right click and select the ***Open in new tab*** option) to spin up **Azure Container Registry**, **Azure Container Service (AKS)** and **Azure SQL Server**. Enter required details for the below fields, agree to the ***Terms and Conditions***, and then Select the **Purchase** button.
 
    {% include tip.html content= "Since the Azure SQL Server name does not support **UPPER** / **Camel** casing naming conventions, use lowercase for the ***DB Server Name*** field value." %}
 
@@ -140,7 +118,7 @@ The following azure resources need to be configured for this lab:
 
    ![Deploy to Azure](images/customtemplate3.png)
 
-1. It takes about 5 minutes to provision the environment. Once the deployment succeeds, a notification is displayed in the Azure portal. Click on the **Go to resource group** button.
+1. It takes about 5 minutes to provision the environment. Once the deployment succeeds, a notification is displayed in the Azure portal. Select the **Go to resource group** button.
 
    ![Deploy to Azure](images/deploymentsucceeded.png)
 
@@ -148,35 +126,19 @@ The following azure resources need to be configured for this lab:
 
    ![Deploy to Azure](images/azurecomponents.png)
 
-1. Click on the **mhcdb** SQL database and make a note of the **Server name**.
+1. Select the **mhcdb** SQL database and make a note of the **Server name**.
 
    ![Deploy to Azure](images/getdbserverurl.png)
 
-1. Navigate back to the resource group, click on the created container registry and make a note of the **Login server** name.
+1. Navigate back to the resource group, select the created container registry and make a note of the **Login server** name.
 
     ![Deploy to Azure](images/getacrserver.png)
 
 Since all the required azure components are now created, the Azure DevOps team project can be created.
 
-## Setting up the Azure DevOps team project
-
-1. Use the [Azure DevOps Demo Generator](https://azuredevopsdemogenerator.azurewebsites.net/?templateId=77372&Name=aks){:target="_blank"} to provision the project on your Azure DevOps account. Click **Sign In** to authorize and **Accept** permissions.
-
-   > **Azure DevOps Demo Generator** helps you create the team projects on your Azure DevOps account, with sample content that include source code, work items, iterations, service endpoints, build and release definitions based on the template you choose during the configuration.
-
-    ![Azure DevOps Demo Generator](images/azdevopsdg.png)
-
-1. Select an **Organization Name** and provide a **New Project Name**. Click on the **Create Project** button.
-
-   ![Azure DevOps Demo Generator](images/azdevopsdg2.png)
-
-1. Once the project is provisioned, click on the link displayed under the **URL** field to navigate to the project.
-
-   ![Azure DevOps Demo Generator](images/azdevopsdg3.png)
-
 ## Exercise 1: Configure Build and Release definitions
 
-Now that the project is created, we will manually map Azure resources such as AKS and Azure Container Registry to the build and release definitions.
+Make sure that you have created the AKS project in your Azure DevOps account through [Azure DevOps Demo Generator](http://azuredevopsdemogenerator.azurewebsites.net/?TemplateId=77372&Name=Aks) (as mentioned in pre-requisites). We will manually map Azure resources such as AKS and Azure Container Registry to the build and release definitions.
 
 1. Select **Builds** section under the **Pipelines** hub and **Edit** the build definition **MyHealth.AKS.Build**.
 
@@ -200,7 +162,7 @@ Now that the project is created, we will manually map Azure resources such as AK
     |-----|-----|
     |**Replace tokens**| replace tokens in files with variable values|
     |![icon](images/icon.png) **Run services**| prepares the suitable environment by restoring required packages|
-    |![icon](images/icon.png) **Build services**| builds the docker images specified in a **docker-compose.yml** file with registry-qualified names and additional tags such as **$(Build.BuildId)**|
+    |![icon](images/icon.png) **Build services**| builds the docker images specified in a **docker-compose.yml** file and tags images with **$(Build.BuildId)** and **latest**|
     |![icon](images/icon.png) **Push services**| pushes the docker images specified in a **docker-compose.yml** file, to the container registry|
     |![publish-build-artifacts](images/publish-build-artifacts.png) **Publish Build Artifacts**| publishes the **myhealth.dacpac** file to Azure DevOps|
 
@@ -208,7 +170,7 @@ Now that the project is created, we will manually map Azure resources such as AK
     
     **mhc-aks.yaml** manifest file contains configuration details of **deployments**, **services** and **pods** which will be deployed in Azure Kubernetes Service.
 
-1. Update **ACR** and **SQLserver** values for **Pipeline Variables** with the details noted earlier while configuring the environment. Click on the **Save** button.
+1. Update **ACR** and **SQLserver** values for **Pipeline Variables** with the details noted earlier while configuring the environment. Select the **Save** button.
 
     ![updateprocessbd](images/updatevariablesbd.png)
 
@@ -232,7 +194,7 @@ Now that the project is created, we will manually map Azure resources such as AK
 
     * **Update image in AKS** will pull up the appropriate image corresponding to the BuildID from the repository specified, and deploys the docker image to the **mhc-front pod** running in AKS.
 
-1. Click on the **Variables** section under the release definition, update **ACR** and **SQLserver** values for **Pipeline Variables** with the details noted earlier while configuring the environment. Click on the **Save** button.
+1. Select the **Variables** section under the release definition, update **ACR** and **SQLserver** values for **Pipeline Variables** with the details noted earlier while configuring the environment. Select the **Save** button.
 
    {% include note.html content= "The **Database Name** is set to **mhcdb** and the **Server Admin Login** is **sqladmin** and **Password** is **P2ssw0rd1234**." %}
 
@@ -242,21 +204,21 @@ Now that the project is created, we will manually map Azure resources such as AK
 
 In this exercise, let us trigger a build manually and upon completion, an automatic deployment of the application will be triggered. Our application is designed to be deployed in the pod with the **load balancer** in the front-end and **Redis cache** in the back-end.
 
-1. Click **Pipelines** tab and click on the **Queue** button.
+1. Click **Pipelines** tab and select the **Queue** button.
 
     ![manualbuild](images/manualbuild.png)
 
-1. Once the build process starts, click on the build number to see the build in progress.
+1. Once the build process starts, select the build number to see the build in progress.
 
     ![clickbuild](images/clickbuild.png)
 
     ![buildinprog1](images/buildinprog1.png)
 
-1. The build will generate and push the docker image to ACR. After the build is completes, you will see the build summary. To view the generated images in the Azure Portal, click on the **Azure Container Registry** and navigate to the **Repositories**.
+1. The build will generate and push the docker image to ACR. After the build is completes, you will see the build summary. To view the generated images in the Azure Portal, select the **Azure Container Registry** and navigate to the **Repositories**.
 
     ![imagesinrepo](images/imagesinrepo.png)
 
-1. Switch back to the Azure DevOps portal. Click on the **Releases** tab in the **Pipelines** section and double-click on the latest release. Click on **In progress** link to see the live logs and release summary.
+1. Switch back to the Azure DevOps portal. Select the **Releases** tab in the **Pipelines** section and double-click the latest release. Select **In progress** link to see the live logs and release summary.
 
     ![releaseinprog](images/releaseinprog.png)
 
