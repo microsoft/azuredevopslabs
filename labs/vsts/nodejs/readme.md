@@ -8,13 +8,13 @@ folder: /labs/vsts/nodejs/
 
 ## Overview
 
-This lab shows you how to deploy Node application to Azure App Service using Azure DevOps.
+This lab shows you how to deploy Node.js Express application to Azure App Service using Azure DevOps.
 
 ## Prerequisites for the lab
 
 1. Refer the [Getting Started](../Setup/) page to know the prerequisites for this lab.
 
-1. Click the [Azure DevOps Demo Generator](http://azuredevopsdemogenerator.azurewebsites.net/?TemplateId=77376&Name=AzureFunctions_BuildWorkshop) link and follow the instructions in [Getting Started](../Setup/) page to provision the project to your **Azure DevOps**.
+1. Click the [Azure DevOps Demo Generator](http://azuredevopsdemogenerator.azurewebsites.net) link and follow the instructions in [Getting Started](../Setup/) page to provision the project to your **Azure DevOps**.
 
 ## Exercise 1: Configure Build
 
@@ -63,7 +63,7 @@ In this exercise, we will configure an Azure service connection in the release p
 
    ![Azure Subscription](media/authorize1.png)
 
-1. Click on the pipeline to set the trigger to continuous deployment.
+1. Click on the pipeline to set the trigger to continuous deployment and save the release pipeline.
 
    ![Continuous Deployment](media/enablecd.png)
 
@@ -86,7 +86,7 @@ Let us make a code change to trigger CI-CD pipeline to build and deploy the appl
    ```
    Your Node.js Express app is up and running on Azure
    ```
-   to
+   change to
    ```
    Successfully deployed Node.js Express app from Azure DevOps
    ```
