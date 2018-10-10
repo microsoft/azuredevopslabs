@@ -21,45 +21,29 @@ This lab will walk you through a typical end-to-end workflow for a Java develope
 In this lab, you will
 
 * Provision a Azure DevOps Organization team project with some sample data and users
-* Provision a Ubuntu VM with Eclipse installed
-* Install and explore **Team Explorer Everywhere**, the Azure DevOps plug-in for Eclipse
+* Install **Eclipse Photon** and **Team Explorer Everywhere**, the Azure DevOps plug-in for Eclipse
 * Install and explore **Azure Toolkit for Eclipse**
-* Setup a build pipeline to build and test the code, then push it to a Azure Container Registry
-* Setup an Azure Web app and configure a Continuous Deployment (CD) pipeline in Azure Pipelines
+* Setup an Azure Build pipeline to build and test the code, then push it to a Azure Container Registry
+* Setup an Azure Web app and configure an Azure Release pipeline to deploy the image to Azure Web App
 
 **Estimated time to complete the lab:**  1 hour
 
-### Pre-requisites for the lab
+### Before you begin
 
-1. Refer the [Getting Started](../Setup/) before you begin the exercises.
+1. Refer the [Getting Started](../Setup/) before you start following the exercises.
+
+1. You will need to install and configure [JDK](https://java.com/en/download/help/windows_manual_download.xml), [Eclipse](https://www.eclipse.org/downloads/download.php?file=/oomph/epp/photon/R/eclipse-inst-win64.exe) on your Windows machine.
 
 1. You will need the [**Docker Integration**](https://marketplace.visualstudio.com/items?itemName=ms-vscs-rm.docker){:target="_blank"} extension installed and enabled on your Azure DevOps Organization.
 
 1. You will need to provision a team project with [Azure DevOps Demo Generator](https://vstsdemogenerator.azurewebsites.net/?TemplateId=77373&Name=myshuttledocker). The template **MyShuttleDocker** is used here.
 
-1. You will need a desktop station. Click on **Deploy to Azure** to provision a Ubuntu VM pre-installed with Eclipse, Docker, Jenkins, and all other software required to run this lab.
-
-    [![Eclipse](http://azuredeploy.net/deploybutton.png)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fnwcadence%2Fjava-dev-vsts%2Fmaster%2Fenv%2FJavaDevVSTS.json){:target="_blank"}
-
-1. Once the machine is provisioned, you can RDP to it. From the **Overview** tab of the virtual machine, note the **DNS Name** and use *Remote Desktop* program to connect and log in.
-
-    ![DNS of the VM](images/eclipse-vmname.png)
-
-1. Choose **Xorg** from the *Module* list drop down, log in with the user name and password provided.
-
-    ![Log into the VM](images/loginvm.png)
 
 ## Exercise 1: Setting up Eclipse
 
-Having setup an Azure DevOps Organization project, we will now log in to the virtual machine and set up Eclipse.
+Having setup an Azure DevOps Organization project, we will now set up Eclipse.
 
-1. Log in to the virtual machine, if not yet.
-
-1. Click on the Eclipse icon in the toolbar to open the Eclipse Java IDE.
-
-    ![Click Eclipse in the Toolbar](images/click-eclipse2.png "Click Eclipse in the Toolbar")
-
-1. The first time you run Eclipse, it will prompt you to choose a workspace. Specify a folder and click the check box **"Use this as the default and do not ask again"** if you want Eclipse to use that as default and not prompt you again.
+1. Open the Eclipse Java IDE. The first time you run Eclipse, it will prompt you to choose a workspace. Specify a folder and click the check box **"Use this as the default and do not ask again"** if you want Eclipse to use that as default and not prompt you again.
 
     ![Default Workspace](images/def-workspace.png)
 
@@ -80,10 +64,6 @@ Having setup an Azure DevOps Organization project, we will now log in to the vir
     {% include note.html content= "If you don't see this option, use the pull-down menu for \"Work with:\" and find the update site URL you just entered in the list and select it, then select the check box beside the plug-in mentioned above" %}.
 
 1. Choose **Next** to follow the wizard, accept the terms and complete the installation.
-
-1. You might be prompted to trust the Eclipse Foundation certificate. Select the certificate and click **Accept Selected**.
-
-    ![Trust Eclipse Certificate](images/addeclipsecert.png)
 
 1. You might receive a pop-up to allow restart of Eclipse to apply the changes. Choose **Restart Now**. After Eclipse restarts, go to **Windows > Show View** and select **Other...**
 
@@ -133,7 +113,7 @@ Next, clone the **Azure Repos Git repository** to a local Git repository and imp
 
 ## Exercise 3:  Create an Azure Pipeline to build Docker image
 
-In this task you will configure the Azure Pipelines build definition that will build and push the image to an Azure Container Registry.
+In this task, you will configure the Azure Pipelines build definition that will build and push the image to an Azure Container Registry.
 
 1. Open the [**Azure Portal**](https://portal.azure.com){:target="_blank"} in a separate tab
 
@@ -163,7 +143,7 @@ In this task you will configure the Azure Pipelines build definition that will b
     |Additional Image Tags|`$(Build.BuildNumber)`|Sets a unique tag for each instance of the build|
     |Include Latest Tag|Check (set to true)|Adds the `latest` tag to the images produced by this build|
 
-1. Click the "Save and Queue" button to save and queue this build. Make sure you are using the **Hosted Linux Preview**.
+1. Click the "Save and Queue" button to save and queue this build. Make sure you are using the **Hosted Ubuntu 1604** agent.
 
 1. The build will push the image to the *Azure Container Registry* we created earlier. 
 
@@ -218,7 +198,7 @@ In this exercise, we will setup a Release pipeline to deploy the web application
 
     ![VSTS Release Defintion](images/vsts-cd-webapp.png)
 
-1. Select the **Execute Azure MYSQL:SqlTaskFile** task Choose the Azure subscription, and provide the DB details which were noted down earlier during the creation of the database server. 
+1. Select the **Execute Azure MYSQL:SqlTaskFile** task, choose the Azure subscription, and provide the DB details which were noted down earlier during the creation of the database server. 
 
     * Select the *Host Name* from the drop down. You can find this value in the **Properties** page of the created MYSQL database in Azure portal.
     * Enter the *Server Admin Login*. You can find this value in the **Properties** page of the created MYSQL database in Azure portal.
@@ -229,7 +209,7 @@ In this exercise, we will setup a Release pipeline to deploy the web application
 
     > After the database, tables and records are created for the *first time*, we need to disable the task for further deployments. Right click on the task and select **Disable selected task(s)** and save.
 
-1. Select the **Deploy Azure App Service** task and make sure that these settings are reflected correctly. Note that the task allows you to specify the **Tag** that you want to pull. This will allow you to achieve end-to-end traceability from code to deployment by using a build-specific tag for each deployment. For example, with the Docker build tasks  you can tag your images with the Build.Number for each deployment.
+1. Select the **Deploy Azure App Service** task and make sure that these settings are reflected correctly. Note that the task allows you to specify the **Tag** that you want to pull. This will allow you to achieve end-to-end traceability from code to deployment by using a build-specific tag for each deployment. For example, with the Docker build tasks  you can tag your images with the *Build.Number* for each deployment.
 
     ![Build Tags](images/vsts-buildtag.png)
 
@@ -243,11 +223,15 @@ In this exercise, we will setup a Release pipeline to deploy the web application
 
 1. Navigate to the Web app that you have created. Click **Application Settings** and scroll down to the **Connection Strings** section
 
-1. Add a new MySQL connection string with **MyShuttleDb** as the name and the following string for the value - `jdbc:mysql://`**`{MySQL Server Name}`**`.mysql.database.azure.com:3306/alm?useSSL=true&requireSSL=false&autoReconnect=true&user=`**`{your user name}`**`@`**`{MySQL Server Name}`**`&password=`**`{your password}`**
+1. Add a new MySQL connection string with **MyShuttleDb** as the name and the following string - `jdbc:mysql://`**`{MySQL Server Name}`**`.mysql.database.azure.com:3306/alm?useSSL=true&requireSSL=false&autoReconnect=true&user=`**`{your user name}`**`@`**`{MySQL Server Name}`**`&password=`**`{your password}`**. Replace the following with values that you have noted down
 
-1. Click **Save** to save the connection string
+    * MYSQL Server Name - **Server Name** in the MYSQL Server *Properties* page
+    * Your user name -  **SERVER ADMIN LOGIN NAME** in the MYSQL Server *Properties* page  
+    * Your password -**Password** that you provided during the creation of MYSQL server in Azure
 
-1. You should be able to login to the application now. Return to the login page and try logging in using any of the below username/password combination:
+1. Click **Save** to save the connection string.
+
+1. You should be able to login to the application now. Return to the login page and try logging in using any of the below *username/password* combination:
 
     * *fred/fredpassword*
     * *wilma/wilmapassword*
