@@ -55,9 +55,8 @@ namespace PartsUnlimited.Controllers
             };
             var category = _db.Categories.ToList();
             //LaunchDarkly start
-            User user = GetUser();
-
-            bool value = client.BoolVariation("login-page", user, false);
+            User user = LaunchDarkly.Client.User.WithKey("administrator@test.com");
+            bool value = client.BoolVariation("member-portal", user, false);
             if (value)
             {
                 ViewBag.Message = "Your application description page.";
@@ -70,10 +69,6 @@ namespace PartsUnlimited.Controllers
             }
            // return View(viewModel);
 
-        }
-        private static User GetUser()
-        {
-            return LaunchDarkly.Client.User.WithKey("administrator@test.com");
         }
         //LaunchDarkly End
         //Can be removed and handled when HandleError filter is implemented

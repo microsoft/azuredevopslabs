@@ -22,23 +22,15 @@ In this lab, you will learn
 
 ### Before you begin
 
+1. Refer the [Getting Started](https://github.com/Hoyg/azuredevopslabs/blob/master/labs/vstsextend/Setup) page before you begin following the exercises.
 1. **LaunchDarkly account**: You will need a LaunchDarkly account. If you don't have one sign up for a trial account [here](https://launchdarkly.com).
-1. **Azure DevOps services Organization**: You will need an Azure DevOps services account. If you don’t have one, you can sign up for one, from [here](https://www.visualstudio.com/)
-1. **Microsoft Azure Account**: You will need a valid and active Azure account. If you do not have one,
-You can create a [free Azure account](https://azure.microsoft.com/en-us/free/) and enjoy 12 months of free Azure services
-If you are a Visual Studio Active Subscriber, you are entitled to a $50-$150 credit per month. You can refer to this [link](https://azure.microsoft.com/en-us/pricing/member-offers/msdn-benefits-details/) to find out more including how to activate and start using your monthly Azure credit.
+
 1. Visual Studio 2017 version 15.4 or later with [.Net Core SDK](https://www.microsoft.com/net/learn/get-started/windows#windows) installed.
 
-
-### Setting up the Azure DevOps project
 1. Use the [Azure DevOps Demo Generator](https://azuredevopsdemogenerator.azurewebsites.net/) to provision the project on your Azure DevOps organization.
-
-   **Azure DevOps Demo Generator** helps you create projects on your Azure DevOps Organization with pre-populated sample content that includes source code, work items, iterations, service endpoints, build and release definitions based on a template you choose.
-
-    ![demogen](images/demogen.png)
    This URL will automatically select **LaunchDarkly** template in the demo generator. If you want to try other projects, use this URL instead -https://azuredevopsdemogenerator.azurewebsites.net/
 
-1.  Follow the [simple walkthrough](https://docs.microsoft.com/en-us/azure/devops/demo-gen/use-vsts-demo-generator-v2?view=vsts) to know how to use the Azure DevOps Demo Generator.
+   Follow the [simple walkthrough](https://docs.microsoft.com/en-us/azure/devops/demo-gen/use-vsts-demo-generator-v2?view=vsts) to know how to use the Azure DevOps Demo Generator.
 
 ## Exercise 1: Create a Feature Flag in LaunchDarkly
 
@@ -50,7 +42,7 @@ If you are a Visual Studio Active Subscriber, you are entitled to a $50-$150 cre
 
     ![](images/memberportal-featureflag.png)
 
-1. You’ve created a flag named **Member Portal** that you want to use to determine the visibility of the **Member Portal** feature in your ASP.NET MVC web app. Now your dashboard looks as below
+1. You’ve created a flag named **Member Portal**. Assume that you want to use this flag to determine the visibility of the **Member Portal** feature in your ASP.NET MVC web app. Now your dashboard looks as below
    
    ![](images/dashboard.png)
 
@@ -67,7 +59,7 @@ If you are a Visual Studio Active Subscriber, you are entitled to a $50-$150 cre
 
       ![](images/Clonerepo.gif)
 
-   1. When the code opens in Visual Studio, if you are prompted to sign into Azure DevOps Services,  use the same credentials (that you used above to create the azure devops project), choose the local path to clone the repo and select **Clone**.
+   1. When the code opens in Visual Studio if you are prompted to sign into Azure DevOps Services,  use the same credentials (that you used above to create the azure devops project), choose the local path to clone the repo and select **Clone**.
 
       ![](images/clone.png)
 
@@ -75,18 +67,18 @@ If you are a Visual Studio Active Subscriber, you are entitled to a $50-$150 cre
  
       ![](images/checkoutLaunchdarkly.gif)
 
-   1. To integrate **LaunchDarkly** with .NET applications you need to install  NuGet package with the LaunchDarkly client. In the current project we have already added for ease of use.
+   1. To integrate **LaunchDarkly** with .NET applications you need to install  NuGet package with the **LaunchDarkly client**. In the current project, we have already added for ease of use.
 
         ![](images/ldclient.png)
 
-   1. Launch the application locally once. You would be able to see **Member Portal** on right side corner of the application.
+   1. Launch the application locally once. You would be able to see **Member Portal** on the right side corner of the application.
 
        ![](images/launchapp.png)
 
        ![](images/memberportal.png)
 
 
-         Assume that this **Member Portal** module is a new feature and you would like to control this feature using **LaunchDarkly Feature flag** so that when you turn on the flag in LaunchDarkly then only this feature should be visible to users else not.
+         >Assume that this **Member Portal** module is a new feature and you would like to control this feature using **LaunchDarkly Feature flag** so that when you turn on the flag in LaunchDarkly then only this feature should be visible to users else not.
 
    1. Open **HomeController.cs** from the path **\PartsUnlimitedWebsite\Controllers** and replace the code from  following [code snippet](https://raw.githubusercontent.com/Hoyg/azuredevopslabs/launchdarkly/labs/vstsextend/launchdarkly/codesnippet/HomeController.cs).
 
@@ -101,19 +93,47 @@ If you are a Visual Studio Active Subscriber, you are entitled to a $50-$150 cre
          }
       `
 
-   1. In **Home Controller.cs** and **AccountController.cs** replace **\_\_YourLaunchDarklySDKKey__** with your LaunchDarkly account SDK key which you have copied in previous exercise.
+   1. In **Home Controller.cs** and **AccountController.cs** replace **\_\_YourLaunchDarklySDKKey__** with your LaunchDarkly account SDK key which you have copied in previous exercise. This is to create a new LDClient with your environment-specific SDK key:
 
        ` static LdClient client = new LdClient("__YourLaunchDarklySDKKey__");`
 
          ![](images/replacesdkkey.png)
 
-       {% include note.html content= "So what did we do? The HomeController starts with initializing a static LaunchDarkly client. And the methods to view **MemberPortal** are modified to check the Feature flag toggle in LaunchDarkly is On or Off. Finally, the _Layout.cshtml page checks the toggle value and renders the MemberPortal link if the flag is turned on." %}
+       {% include note.html content= "So what did we do? The **HomeController** starts with initializing a static LaunchDarkly client. And the methods to view **MemberPortal** are modified to check the Feature flag toggle in LaunchDarkly is On or Off. Finally, the **_Layout.cshtml** page checks the toggle value and renders the MemberPortal link if the flag is turned on." %}
 
-   1. Now **Save** all the changes and launch the application locally. Since the **MemberPortal** flag which we created is turned off we would be not able to see **Member portal** link as below.
+   1. In **HomeController.cs** if you go through code from line 57 to 74 
+      ```   
+      //LaunchDarkly start
+            User user = LaunchDarkly.Client.User.WithKey("administrator@test.com");
+     
+            bool value = client.BoolVariation("member-portal", user, false);
+            if (value)
+            {
+                ViewBag.Message = "Your application description page.";
+                ViewData["togglevalue"] = value;
+                return View(viewModel);
+            }
+            else
+            {
+                return View(viewModel);
+            }
+           // return View(viewModel);
+
+        }
+        //LaunchDarkly End
+      ```
+      When you request a feature flag, you need to pass in a user object. So we are initializing user object in the beginning. This will be used to check whether a user with specified key exists in LaunchDarkly or not. In this sample, we have hardcoded the user value. In real time it might be from logged in user, database etc..
+
+      Then we are calling the **BoolVariation** method to check feature flag value in LaunchDarkly. If the flag is true it will set **[ViewData["togglevalue"]**  to true which is used in **_Layout.chtml** to view Member Portal module. If it is false it won't show Member Portal Module.
+
+      Similarly in **AccountController.cs** we have added LaunchDarkly code to **Login()** method which is responsible to show Login page once you click on **Member portal** icon. If the flag in LaunchDarkly is false an HttpNotFound error will be returned for the Login page.
+
+
+   1. Now **Save** all the changes and launch the application locally. Since the **MemberPortal** flag which we created is turned off we would not be able to see **Member portal** link as below.
           ![](images/dashboard.png)
           ![](images/ldoff.png)
 
-        So we have implemented feature flag control using LaunchDarkly. In the next exercise, we will try to Turn the feature flag on in Azure DevOps Release pipeline using the LaunchDarkly extension. To include feature flags as part of release process we need to associate this changes with the Azure DevOps work item to get complete control. 
+        So we have implemented feature flag control using LaunchDarkly. Though you can enable the toggle from the LaunchDarkly portal manually in this lab, we will try to Turn the feature flag on in Azure DevOps Release pipeline using the LaunchDarkly extension. To include feature flags as part of the release process we need to associate this changes with the Azure DevOps work item to get complete control. 
 
    1. Note down the Work item id which is assigned to you as shown below. (in my case it is 2051 )
 
@@ -169,7 +189,7 @@ If you are a Visual Studio Active Subscriber, you are entitled to a $50-$150 cre
 
     ![](images/task3.png)
 
-1. Now you are done with the configuring release pipeline. Navigate to Pipelines-->Builds and Queue **LaunchDarkly-CI** build. Once the build completes successfully a release would be triggered to deploy app and rollout feature flag in launch darkly.
+1. Now you are done with the configuring release pipeline. Navigate to **Pipelines-->Builds** and Queue **LaunchDarkly-CI** build. This CI pipeline has tasks to compile .Net Core project. For more guidance on how to build .Net Core projects with Azure Pipelines see [here](https://docs.microsoft.com/en-us/azure/devops/pipelines/languages/dotnet-core?view=vsts&tabs=designer#build-your-project). Once the build completes successfully a release would be triggered to deploy app and rollout feature flag in launch darkly.
    
     ![](images/buildandrelease.gif)
 
@@ -181,9 +201,19 @@ If you are a Visual Studio Active Subscriber, you are entitled to a $50-$150 cre
     
      ![](images/appservice.png) 
 
-     You will see the **Member Portal** is enabled on your website.
+     You will see that the **Member Portal** is enabled on your website.
 
     ![](images/browseapp.png)
+
+    And this is only the beginning. There are lot more features of LaunchDarkly. 
+    
+    - **User Targeting**: LaunchDarkly targeting lets you turn features on or off for individual users or groups of users. You can use the Targeting tab to roll features out for internal testing, private betas, or usability tests before performing a broader rollout. You can create your own rules to target who you want, when you want. Learn more about targeting users in our documentation [here](https://docs.launchdarkly.com/docs/targeting-users).
+
+    - **Custom targeting rules**: In addition to targeting individual users, LaunchDarkly allows you to target segments of users by constructing custom rules. In other words, you can create custom rules to target users based on any attributes you send us. Learn more [here](https://docs.launchdarkly.com/docs/targeting-users#targeting-rules-based-on-user-attributes)
+
+    - **Projects and environments to manage your development process**: [Projects](https://docs.launchdarkly.com/docs/projects) allow you to manage multiple different software projects under one LaunchDarkly account. [Environments](https://docs.launchdarkly.com/docs/environments) allow you to manage your feature flags throughout your entire development lifecycle — from local development to QA, staging, and production. 
+
+    Do you want to learn more about LaunchDarkly? If yes click [here](https://docs.launchdarkly.com/docs) for LaunchDarkly documentation.
  
 
     

@@ -39,9 +39,9 @@ namespace PartsUnlimited.Controllers
         public IActionResult Login(string returnUrl = null)
         {
             //LaunchDarkly start
-            User user = GetUser();
+            User user = LaunchDarkly.Client.User.WithKey("administrator@test.com");
 
-            bool value = client.BoolVariation("login-page", user, false);
+            bool value = client.BoolVariation("member-portal", user, false);
             if (value)
             {
                 ViewBag.Message = "Your application description page.";
@@ -54,11 +54,6 @@ namespace PartsUnlimited.Controllers
                 return NotFound();
             }
 
-        }
-        private static User GetUser()
-        {
-            return LaunchDarkly.Client.User.WithKey("administrator@test.com");
-            
         }
         //LaunchDarkly end
         //
