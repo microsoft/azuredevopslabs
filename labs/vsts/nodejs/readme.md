@@ -26,6 +26,8 @@ Since the Azure DevOps demo generator would have created the pipeline, we will n
 
 1. The build pipeline uses Hosted VS 2017 agent to cater the build. It uses 4 tasks. Below are the details for each of these tasks:- 
 
+    ![Build Pipeline](media/buildtasks.png)
+
     * **Use Node version**: Finds/downloads the specific version of Node and adds it to the path
 
     * **npm install**: Installs the npm packages to the project directory. In this lab, the npm install is set to the applications folder, where the packages will be installed and used
