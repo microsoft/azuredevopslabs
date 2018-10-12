@@ -43,7 +43,7 @@ Since the Azure DevOps demo generator would have created the pipeline, we will n
 
 ## Exercise 2: Configure Release
 
-In this exercise, we will configure an Azure service connection in the release pipeline.
+In this exercise, we will configure an Azure pipeline to deploy the NodeJS express application to Azure App Service.
 
 1. From the pipelines, select **Releases**. Click on the **edit pipeline**.
 
@@ -54,6 +54,26 @@ In this exercise, we will configure an Azure service connection in the release p
    ![Azure CLI Task](media/azureclitask.png)
 
    ![Azure CLI Task](media/azureclitask1.png)
+
+   * The **Azure CLI** task is used to provision the resources on Azure. Below is the script as shown :
+
+   Creates a Resource group in the specified location.
+
+   ```
+   call az group create --location $(location) --name $(RG)
+   ```
+
+   Creates an AppService Plan of standard tier.
+   
+   ```
+   call az appservice plan create --name $(appserviceplan) --resource-group $(RG) --sku S1
+   ```
+
+   Creates an WebApp
+   
+   ```
+   call az webapp create --name $(webappname) --resource-group $(RG) --plan $(appserviceplan)
+   ```
 
 1. In the Azure subscription field, select the required subscription from the dropdown and click on **Authorize** to    configure an Azure service connection.
 
