@@ -237,4 +237,4 @@ In this exercise, you will look at the build definition to get an insight of how
 
 ## Congratulations, you have completed the lab!
 
-   You have learned how to connect PartsUnlimited website to the Web API and use Azure function to retrieve data from API based on the user ID.
+   You have learned how to create and code Azure Functions in Visual Studio and setup a CI/CD pipeline to deploy the Functions App.
