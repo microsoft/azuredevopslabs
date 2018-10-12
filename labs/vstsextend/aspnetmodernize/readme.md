@@ -10,13 +10,13 @@ Last updated : {{ "now" | date: "%b %d, %Y" }}.
 
 ## Overview
 
-When you decide to modernize your web applications and move them to the cloud, you don’t necessarily have to entirely re-architect your apps. Establishing an environment that emulates your on-premises architecture and putting your application "gets" you there, but doesn't accomplish much more than that.
+When you decide to modernize your web applications and move them to cloud, you don’t necessarily have to entirely re-architect your apps. Establishing an environment that emulates your on-premises architecture and putting your application "gets" you there, but doesn't accomplish much more than that.
 
 Re-architecting an application by using an advanced approach like micro-services isn't always an option, because of cost and time restraints. Ripping apart the app and re-writing what sometimes can be years of work and iterations of people and business decisions probably wouldn't be the advised first step.
 
 Depending on the type of application, re-architecting your apps might not be necessary. But adding a Dockerfile, and maybe migrating the database to a service offering like Azure's SQL Database require no code change other than connection strings.
 
-In this Lab we will use Nerd Dinner Application. Nerd Dinner is an Open Source ASP.NET MVC Project that helps nerds and computer people plan get-togethers. You can see the site running LIVE at [http://www.nerddinner.com](http://www.nerddinner.com). We will move the application DB to Azure SQL instance and add the Docker support to the application to run the application in Azure Container Instances.
+In this Lab you will use Nerd Dinner Application. Nerd Dinner is an Open Source ASP.NET MVC Project that helps nerds and computer people plan get-togethers. You can see the site running LIVE at [http://www.nerddinner.com](http://www.nerddinner.com). You will move the application DB to Azure SQL instance and add the Docker support to the application to run the application in Azure Container Instances.
 
 ## What's covered in this lab?
 
@@ -30,10 +30,6 @@ In this lab, you will
 ## Pre-requisites for the lab
 
 1. **Microsoft Azure Account**: You will need a valid and active Azure account for the Azure labs. If you do not have one, you can sign up for a [free trial](https://azure.microsoft.com/en-us/free/){:target="_blank"}
-
-    * If you are a Visual Studio Active Subscriber, you are entitled for a $50-$150 credit per month. You can refer to this [link](https://azure.microsoft.com/en-us/pricing/member-offers/msdn-benefits-details/) to find out more including how to activate and start using your monthly Azure credit.
-
-    * If you are not a Visual Studio Subscriber, you can sign up for the FREE [Visual Studio Dev Essentials](https://www.visualstudio.com/dev-essentials/)program to create **Azure free account** (includes 1 year of free services, $200 for 1st month).
 
 2. **Visual Studio 2017** latest version  with **.Net Core SDK** and **Azure Development Tools** for Visual Studio are installed.
 
@@ -51,7 +47,7 @@ In this lab, you will
 
 ## Exercise 1: Migrate the LocalDB to SQL Server in Azure
 
-In this exercise we will create a SQL azure instance and  migrate the application LoaclDB to SQL Server in Azure.
+In this exercise you will create a SQL azure instance and  migrate the application LoaclDB to SQL Server in Azure.
 
 1. Create a new SQL Azure instance in the Azure portal by following the below document.
 
@@ -85,7 +81,7 @@ In this exercise we will create a SQL azure instance and  migrate the applicatio
 
       ![datacompare3](images/datacompare3.png)
 
-5. In order to accomplish the **zero code change mantra**, using web.config transforms is the best way to accomplish. Here we will add a new **web.release.config** with a new entry. Open the **web.release.config** in Visual Studio and add the below entry.
+5. In order to accomplish the **zero code change mantra**, using web.config transforms is the best way to accomplish. Here you will add a new **web.release.config** with a new entry. Open the **web.release.config** in Visual Studio and add the below entry.
 
    ```csharp
    <connectionStrings>
@@ -95,11 +91,11 @@ In this exercise we will create a SQL azure instance and  migrate the applicatio
 
    >**Note**: Replace the connection string with your Azure SQL database connection string.
 
-  Now we  have successfully migrated the application LocalDB to Azure SQL Db, and also updated connection string to refer to Azure SQL.
+  Now you have successfully migrated the application LocalDB to Azure SQL Db and also updated connection string to refer to Azure SQL.
 
 ## Exercise 2: Add the Docker Support and run the application locally & debug within the Docker container using Visual Studio
 
-1. Visual Studio has great support for Docker. In order to containerize the application using Docker, all you have to do is right-click on the project, select **Add->Docker Support**
+1. Visual Studio has great support for Docker. In order to containerize the application using Docker, all you have to do is right-click on the project, select **Add->Container Orchestrator Support**
 
    ![adddockersupport](images/adddockersupport.png)
 
@@ -168,17 +164,17 @@ In this exercise we will create a SQL azure instance and  migrate the applicatio
 
 ## Exercise 4: Push the new Docker images from ACR to Azure Container Instances (ACI)
 
-In this exercise we will create Azure Container Instance and push the new Docker image from ACR to Azure Container Instance.
+In this exercise you will create Azure Container Instance and push the new Docker image from ACR to Azure Container Instance.
 
-We have options as to where the application can be deployed.
+You have options as to where the application can be deployed.
 
 * Azure Container Instances
 * Azure Container Service
 * Service Fabric
 
-In this Lab, we will use a Windows Container on Azure Container Instances (ACI) to bring up Nerd Dinner.
+In this Lab, you will use a Windows Container on Azure Container Instances (ACI) to bring up Nerd Dinner.
 
-1. We will use Azure CLI to create and push image to Azure Container Instance. Click on **Cloud Shell** in Azure portal.
+1. You will use Azure CLI to create and push image to Azure Container Instance. Click on **Cloud Shell** in Azure portal.
 
    ![cloudshell](images/cloudshell.png)
 
@@ -198,15 +194,15 @@ In this Lab, we will use a Windows Container on Azure Container Instances (ACI) 
 
    ![deployaci](images/deployaci.png)
 
-   When prompted for **image registry password** paste the password which we have copied in the previous exercise
+   When prompted for **image registry password** paste the password which you had copied in the previous exercise
    > Replace **your acr name** and **Image tag** with your resources details
 
    It would take approximately 5-10 minutes to deploy ACI.
 
-4. Navigate to the resource group where we ACI is being deployed or deployed, and select the **nerddinnerapp** container group.
+4. Navigate to the resource group where ACI is being deployed or deployed, and select the **nerddinnerapp** container group.
 
     ![acistatus](images/acistatus.png)
 
-    Once the **State** of the container is **Running** we can access the deployed **Nerd Dinner** application using **IP address**. Copy the **IP address** and paste in the browser to see the application running.
+    Once the **State** of the container is **Running** you can access the deployed **Nerd Dinner** application using **IP address**. Copy the **IP address** and paste in the browser to see the application running.
 
     ![finaloutput](images/finaloutput.png)

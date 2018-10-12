@@ -1,5 +1,5 @@
 ---
-title: Release safely - Expose changes to end users in a phased manner
+title: Release Safely - Expose changes to end users in a phased manner
 layout: page
 sidebar: vsts2
 permalink: /labs/vstsextend/releasegates/
@@ -10,7 +10,7 @@ Last updated : {{ "now" | date: "%b %d,%Y" }}
 
 ## Overview
 
-As you may be aware, a release definition specifies the end-to-end release process for an application to be deployed across a range of environments. Deployments to each environment are fully automated by using phases and tasks. 
+As you may be aware, a release pipeline specifies the end-to-end release process for an application to be deployed across a range of environments. Deployments to each environment are fully automated by using phases and tasks. 
 Ideally, you do not want new updates to the applications to be exposed to all the users at the same time. It is a best practice to expose updates in a phased manner i.e. expose to a subset of users, monitor their usage and expose to other users based on the experience the initial set of users had.
 
 Approvals and gates enable you to take control over the start and completion of the deployments in a release. 
@@ -19,8 +19,10 @@ Using release gates, you can specify application health criteria that must be me
 
 Gates can be added to an environment in the release definition from the pre-deployment conditions or the post-deployment conditions panel. Multiple gates can be added to the environment conditions to ensure all the inputs are successful for the release.
 
-As an example- 
+As an example:
+
 **Pre-deployment gates** ensures there are no active issues in the work item or problem management system before deploying a build to an environment.
+
 **Post-deployment gates** ensures there are no incidents from the monitoring or incident management system for the app after it's been deployed, before promoting the release to next environment.
 
 4 types of gates are included by default for every account.
@@ -35,20 +37,16 @@ As an example-
 
 ## What's covered in this lab?
 
-This lab covers the configuration of the deployment gates and details how to add control to VSTS releases.
+This lab covers the configuration of the deployment gates and details how to add control to Azure pipelines.
 You will configure a release definition with two environments for an Azure Web App. You will deploy to the **Canary** environment only when there are no blocking bugs for the app and mark the Canary environment complete only when there are no active alerts in Azure Monitor (Application Insights). 
 
 ## Prerequisites
 
-1. You will need a **Visual Studio Team Services Account**. If you do not have one, you can sign up for free [here](https://www.visualstudio.com/team-services/)
+1. Refer the [Getting Started](../Setup/) page to know the prerequisites for this lab.
 
-1. **Microsoft Azure Subscription:** You will need an active Azure subscription for the lab. You should be an [Owner](https://docs.microsoft.com/en-us/azure/role-based-access-control/built-in-roles#owner), or [Global administrator](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-assign-admin-roles-azure-portal#global-administrator), or [User Account administrator](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-assign-admin-roles-azure-portal#user-account-administrator) on the subscription. If you do not have one, you can sign up for a [free trial](https://azure.microsoft.com/en-us/free/){:target="_blank"}
+1. Click the [Azure DevOps Demo Generator](http://azuredevopsdemogenerator.azurewebsites.net/?TemplateId=77376&Name=AzureFunctions_BuildWorkshop) link and follow the instructions in [Getting Started](../Setup/) page to provision the project to your **Azure DevOps**.
 
-   * If you are a Visual Studio Active Subscriber, you are entitled for a $50-$150 credit per month. You can refer to this [link](https://azure.microsoft.com/en-us/pricing/member-offers/msdn-benefits-details/) to find out more including how to activate and start using your monthly Azure credit.
-
-   * If you are not a Visual Studio Subscriber, you can sign up for the FREE [Visual Studio Dev Essentials](https://www.visualstudio.com/dev-essentials/)program to create **Azure free account** (includes 1 year of free services, $200 for 1st month).
-
-## Setting up Target Environment
+## Setting up the Target Environment
 
 In this lab you will create two **Web Apps** in Azure to depict two environments **Canary** and **Production** to deploy the application.
 
