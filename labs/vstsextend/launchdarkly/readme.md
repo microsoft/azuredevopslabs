@@ -182,14 +182,17 @@ In this lab, you will learn
 
      ![](images/task1.png) 
 
-1. Select **Launch Darkly** task and choose your LaunchDarkly service connection from the Account drop down
+1. Select **LaunchDarkly** task and choose your LaunchDarkly service connection from the Account drop down
       
       ![](images/task2.png)
-1. Select **Azure App Service Deploy** task and choose your Azure subscription. **Save** your changes.
+1. Select **Azure App Service Deploy** task and choose your Azure subscription.
 
     ![](images/task3.png)
+1. Select **Variables** and for **launchdarkly-pat** variable enter your Azure DevOps services **Personal Access Token (PAT)**. If you don't have one click [here](https://docs.microsoft.com/en-us/azure/devops/organizations/accounts/use-personal-access-tokens-to-authenticate?view=vsts) to know how to create personal access tokens for Azure DevOps Services.  **Save** your changes.
 
-1. Now you are done with the configuring release pipeline. Navigate to **Pipelines-->Builds** and Queue **LaunchDarkly-CI** build. This CI pipeline has tasks to compile .Net Core project. For more guidance on how to build .Net Core projects with Azure Pipelines see [here](https://docs.microsoft.com/en-us/azure/devops/pipelines/languages/dotnet-core?view=vsts&tabs=designer#build-your-project). Once the build completes successfully a release would be triggered to deploy app and rollout feature flag in launch darkly.
+     ![](images/azuredevopsPAT.png)
+     
+1. Now you are done with the configuring release pipeline. Navigate to **Pipelines-->Builds** and Queue **LaunchDarkly-CI** build. This CI pipeline has tasks to compile .Net Core project. For more guidance on how to build .Net Core projects with Azure Pipelines see [here](https://docs.microsoft.com/en-us/azure/devops/pipelines/languages/dotnet-core?view=vsts&tabs=designer#build-your-project). Once the build completes successfully a release would be triggered to deploy app and rollout feature flag in LaunchDarkly.
    
     ![](images/buildandrelease.gif)
 
