@@ -1,5 +1,5 @@
 ---
-title: Deploying a Dockerized Java app to Azure Web App
+title: Deploying a Dockerized Java app to Azure Web App for Containers
 layout: page
 sidebar: vsts2
 permalink: /labs/vstsextend/dockerjava/
@@ -14,7 +14,7 @@ With Azure Web App for containers, it is easy to deploy container-based web apps
 
 ### What's covered in this lab
 
-In this lab, you will learn how you can use Release Management(RM) in Visual Studio Team Services (VSTS) to deploy a container Java web application to an Azure web app for containers.
+In this lab, you will learn how you can set up a Continuous Integration (CI) and Continuous Delivery (CD) pipelines with Azure Pipelines to deploy a container-based Java web application to an Azure web app for containers.
 
 This lab will show how you can
 
@@ -24,49 +24,25 @@ This lab will show how you can
 
 ### Prerequisites for the lab
 
-1. **Microsoft Azure Account**: You will need a valid and active Azure account for the Azure labs. If you do not have one, you can sign up for a [free trial](https://azure.microsoft.com/en-us/free/){:target="_blank"}
+1. Refer the [Getting Started](../Setup/) page to know the prerequisites for this lab.
 
-    * If you are an active Visual Studio Subscriber, you are entitled for a $50-$150 credit per month. You can refer to this [link](https://azure.microsoft.com/en-us/pricing/member-offers/msdn-benefits-details/){:target="_blank"} to find out more information about this including how to activate and start using your monthly Azure credit.
+1. Use the [Azure DevOps Demo Generator](http://azuredevopsdemogenerator.azurewebsites.net) to provision the project to your Azure DevOps Org. Use the **MyShuttle** template.
 
-    * If you are not a Visual Studio Subscriber, you can sign up for the FREE [Visual Studio Dev Essentials](https://www.visualstudio.com/dev-essentials/){:target="_blank"} program to create a **Azure free account** (includes 1 year of free services, $200 for 1st month).
+  {% include note.html content= "If you are following this lab from "Working with Jenkins, VSTS and Azure, you can skip the next two exercises and go to [deploy](#deploying-to-an-azure-web-app-for-containers)" %}
 
-1. You will need a **Visual Studio Team Services Account**. If you do not have one, you can sign up for free [here](https://www.visualstudio.com/products/visual-studio-team-services-vs){:target="_blank"}
+## Exercise 2:  Configuring a CI pipeline to build and publish Docker images
 
-1. You will need a **Personal Access Token** to set up your project using the **VSTS Demo Generator**. Please see this [article](https://docs.microsoft.com/en-us/vsts/accounts/use-personal-access-tokens-to-authenticate){:target="_blank"} for instructions to create your token.
+In this task you will configure a CI pipeline that will build and push the image to Azure Container Registry
 
-    {% include note.html content= "You should treat Personal Access Tokens like passwords. It is recommended that you save them somewhere safe so that you can re-use them for future requests." %}
-
-1. The [**Docker Integration**](https://marketplace.visualstudio.com/items?itemName=ms-vscs-rm.docker) extension installed and enabled on the VSTS account.
-
-If you are following this lab from "Working with Jenkins, VSTS and Azure, you can skip the next two exercises and go to [deploy](#deploying-to-an-azure-web-app-for-containers). 
-
-## Exercise 1: Setting up Visual Studio Team Services
-
-If you are following this lab from [Working with Eclipse](../eclipse/)  you can skip this exercise. Otherwise,
-
-1. Use the [VSTS Demo Generator](https://vstsdemogenerator.azurewebsites.net/?name=MyShuttleDocker&templateid=77373) to provision the team project on the VSTS account.
-
-   > **VSTS Demo Generator** helps you create team projects on your VSTS account with sample content that include source code, work items,iterations, service endpoints, build and release definitions based on the template you choose during the configuration. 
-
-   ![VSTS Demo Generator](images/vstsdemogen.png)
-
-1. Once the team project is provisioned, click on the URL to navigate to the team project.
-
-   ![VSTS Demo Generator](images/vstsdemogen2.png)
-
-    {% include note.html content= "This URL will automatically select the MyShuttleDocker template in the demo generator. If you want to try other projects, use this URL instead - [https://vstsdemogenerator.azurewebsites.net/](https://vstsdemogenerator.azurewebsites.net/)" %}
-
-## Exercise 2:  Create a VSTS Build to Build Docker Images
-
-In this task you will configure the VSTS build definition that will build and push the image to an Azure Container Registry
-
-1. Open the [**Azure Portal**](https://portal.azure.com){:target="_blank"} in a separate tab
+1. Open the <a href="https://portal.azure.com" target="_blank">Azure Portal</a>
 
 1. Select **+New** and search for **Azure Container Registry**. Select **Create**. In the *Create Container Registry* dialog, enter a name for the service, select the resource group, location, **Enable** Admin User etc., and select **Create**.
 
     ![Create Azure Container Registry](images/createacr.png)
 
-1. Return to  VSTS, from the **Build** hub, select and edit the **MyShuttle** build. This build definition contains a *maven* task to build the pom.xml file. The maven task should be updated the following settings
+1. Return to  Azure DevOps, from **Azure Pipelines**, select **Builds**. Select **+ New** and +**New Build pipeline**. 
+
+1. Select the **Maven** template. This template will add a *maven* task to build the pom.xml file. The maven task should be updated to the following settings
 
     | Parameter | Value | Notes |
     | --------------- | ---------------------------- | ----------------------------------------------------------- |
@@ -76,21 +52,42 @@ In this task you will configure the VSTS build definition that will build and pu
 
       ![Maven task settings](images/vsts-mavensettings.png)
 
-1. Then there is **Copy** and **Publish** tasks to copy the artifacts to the staging directory and publish to VSTS (or a file share).
+1. Then there is **Copy** task. We will copy the WAR file from the sources directory to the staging folder.
 
-1. Next we use the **Docker Compose** task to build and publish the images. Set the **Action** as **Build Service Images**. The other settings of the Docker compose tasks are as follows:
+    | Parameter | Value | Notes |
+    | --------------- | ---------------------------- | ----------------------------------------------------------- |
+    |Source Folder| $(build.sourcesdirectory)| Copy from the source folder|
+    |Contents|target/myshuttledev*.war| Copy the MyShuttle WAR file
+    |Target Folder|$(build.artifactstagingdirectory)|we will copy it to the default staging folder|
+
+1.  Next, we have a **Publish** tasks to publish the build artifacts to Azure Pipelines.
+    | Parameter | Value | Notes |
+    | --------------- | ---------------------------- | ----------------------------------------------------------- |
+    |Path to publish| $(build.artifactstagingdirectory)| Copy contents from the staging folder|
+    |Artifact name|drop|Provide a name for the artifact folder.  |
+    |Artifact publish location |Visual Studio Team Services/TFS|we will publish it to Azure pipelines|
+
+
+1. Next add two **Docker** tasks to build and publish  the images. Select the first **Docker** task and set the **Command** to **Build**. The other settings of the Docker compose tasks are as follows:
 
     | Parameter | Value | Notes |
     | --------------- | ---------------------------- | ------------------------------------------- |
-    | Container Registry Type | Azure Container Registry | This is to connect to the Azure Container Registry you created earlier |
     | Azure Subscription | Your Azure subscription | The subscription that contains your registry |
+    | Container Registry Type | Azure Container Registry | This is to connect to the Azure Container Registry you created earlier |
     | Azure Container Registry | Your registry | Select the Azure Container registry you created earlier |
-    | Additional Image Tags | `$(Build.BuildNumber)` | Sets a unique tag for each instance of the build |
+    |Command|build|Docker command|
+    |Dockerfile|src/Dockerfile|Point to the src folder for the docker file|
+    |Use default build context|Uncheck this option|
+    |Build context|. (dot representing the root folder)| The build context should be the root folder|
+    |Image name| `Web:$(Build.BuildNumber)` | Sets a unique name for each instance of the build |
+    |Qualify image name| Check (set to true)|   
     | Include Latest Tag | Check (set to true) | Adds the `latest` tag to the images produced by this build |
 
-1. Add another **Docker Compose** task with the same settings (you can also *clone* the previous task). We will just change the **Action** to **Push Images**. This action will instruct the task to push the container image to a container registry
+    ![Docker build task](images/dockerbuildtask.png)
 
-      ![Maven task settings](images/vsts-mavensettings2.png)
+1. We will add another **Docker** task with the same settings (you can also *clone* the previous task). We will change the **Command** to **Push** and set the **Image name** to  `Web:$(Build.BuildNumber)`. This action will instruct the task to push the Web image to the container registry
+
+      ![Maven task settings](images/dockerpublishtask.png)
 
 1. Click the **Save and Queue** button to save and queue this build.Make sure you are using the **Hosted Linux Agent**.
 
@@ -103,17 +100,15 @@ In this task you will configure the VSTS build definition that will build and pu
 
 ## Exercise 3: Deploying to an Azure Web App for containers
 
-In this exercise, we will setup a CD pipeline to deploy the web application to an Azure web app. First, let's create the Web App.
+In this exercise, we will setup a CD pipeline to deploy the web application to Azure web app. First, let's create the Web App.
 
-1. Sign into your [Azure Portal](https://portal.azure.com){:target="_blank}
+1. Sign into your <a href="https://portal.azure.com" target="_blank">Azure Portal</a>
 
 1. In the Azure Portal, choose **New, Web + Mobile** and then choose **Web App for Containers**
 
      ![New Web App for Containers](images/newwebapp.png)
 
 1. Provide a name for the new web app, select existing or create new resource group for the web app. Then select **Configure Container** to specify the source repository for the images. Since we are using ACR to store the images, select **Azure Container Registry**. Select the **Registry**, **Image** value as **web** and **Tag** with the latest build value from the drop-downs. Select **OK** and then select **Create** to start provisioning the web app
-
-    ![Creating MyShuttle Web App for Containers](images/myshuttle-webapp.png)
 
 1. Once the provisioning is complete, go to the web app properties page, and select the URL to browse the web app. You should see the default **Tomcat** page
 
@@ -123,7 +118,7 @@ In this exercise, we will setup a CD pipeline to deploy the web application to a
 
     We could configure *Continuous Deployment* to deploy the web app is updated when a new image is pushed to the registry, within the Azure portal itself. However, setting up a VSTS CD pipeline will provide more flexibility and additional controls (approvals, release gates, etc.) for application deployment
 
-1. Back in VSTS, select **Releases** from the **Build and Release** hub. Select **+** and then **Create Release Definition**
+1. Back in Azure DevOps, select **Azure Pipelines** and then **Releases**. Select **+** and then **Create Release Definition**
 
 1. Select the **Azure App Service Deployment** template and click **Apply**
 
@@ -149,7 +144,7 @@ In this exercise, we will setup a CD pipeline to deploy the web application to a
 
 1. Check the artifact version you want to use and then select **Create**
 
-1. Wait for the release is complete and then navigate to the URL `http://{your web app name}.azurewebsites.net/myshuttledev`. You should be able to see the login page
+1. Wait for the release to complete and then navigate to the URL `http://{your web app name}.azurewebsites.net/myshuttledev`. You should be able to see the login page
 
 ## Setting up MySQL database
 
