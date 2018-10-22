@@ -34,9 +34,9 @@ description: Learn how you can implement modern DevOps practices with  Azure, Az
 <h1>New to Azure DevOps?</h1>
 <div style="margin-top:2px">Don't have an account? No worries! Sign up for a <b>free</b> Azure DevOps organization now and get
 <ul class="tick"><li>Automated CI/CD pipelines</li>
-<li>free unlimited private Git repositories</li>
-<li>configurable Kanban boards, and </li>
-<li>extensive automated and cloud-based load testing tools.</li>
+<li>Free unlimited private Git repositories</li>
+<li>Configurable Kanban boards, and </li>
+<li>Extensive automated and cloud-based load testing tools.</li>
 </ul></div>
 <a href="https://go.microsoft.com/fwlink/?LinkId=2014881" class="launch-hol" role="button" target="_blank" onclick="pageTracker._trackEvent('SignUp', 'Click', 'New User SignUp');" style="
     align-self:  right;"><span class="lab-details">Sign up for free now</span></a></div>
@@ -58,7 +58,7 @@ description: Learn how you can implement modern DevOps practices with  Azure, Az
             <div id="services-labs" class="container tab-pane active">
               <div class="col-sm-12">
                   <!--h2 class="pading-t-10">Azure DevOps Services</h2--> 
-                  <div><p>Simplify and speed the DevOps process with Azure DevOps services. The following labs will help you to get started with Azure DevOps services to automate software delivery and meet business needs.</p> </div>
+                  <div><p>Simplify and speed up the DevOps process with Azure DevOps services. The following labs will help you to get started with Azure DevOps services to automate software delivery and meet business needs.</p> </div>
               </div>
               <div class="col-sm-12">
                   <h2>Getting started</h2> 
