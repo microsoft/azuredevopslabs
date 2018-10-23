@@ -1,5 +1,5 @@
 ---
-title: Enabling Continuous Integration with Azure DevOps Build
+title: Enabling Continuous Integration with Azure Pipelines
 layout: page
 sidebar: vsts
 permalink: /labs/azuredevops/continuousintegration/
@@ -13,7 +13,7 @@ Last updated: 9/5/2018
 <a name="Overview"></a>
 ## Overview ##
 
-In this lab, you will learn how to configure continuous integration (CI) and continuous deployment (CD) for your applications using Build and Release in Azure DevOps. This scriptable CI/CD system is both web-based and cross-platform, while also providing a modern interface for visualizing sophisticated workflows. Although we won't demonstrate all of the cross-platform possibilities in this lab, it is important to point out that you can also build for iOS, Android, Java (using Ant, Maven, or Gradle), and Linux.
+In this lab, you will learn how to configure continuous integration (CI) and continuous deployment (CD) for your applications using Build and Release in Azure Pipelines. This scriptable CI/CD system is both web-based and cross-platform, while also providing a modern interface for visualizing sophisticated workflows. Although we won't demonstrate all of the cross-platform possibilities in this lab, it is important to point out that you can also build for iOS, Android, Java (using Ant, Maven, or Gradle), and Linux.
 
 <a name="Prerequisites"></a>
 ### Prerequisites ###

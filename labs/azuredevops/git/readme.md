@@ -1,5 +1,5 @@
 ---
-title: Version Controlling with Git in Azure DevOps
+title: Version Controlling with Git in Azure Repos
 layout: page
 sidebar: vsts
 permalink: /labs/azuredevops/git/
@@ -13,7 +13,7 @@ Last updated: 9/5/2018
 <a name="Overview"></a>
 ## Overview ##
 
-Team Services supports two types of version control, Git and Team Foundation Version Control (TFVC). Here is a quick overview of the two version control systems:
+Azure Repos supports two types of version control, Git and Team Foundation Version Control (TFVC). Here is a quick overview of the two version control systems:
 
 - **Team Foundation Version Control (TFVC)**: TFVC is a centralized version control system. Typically, team members have only one version of each file on their dev machines. Historical data is maintained only on the server. Branches are path-based and created on the server.
 

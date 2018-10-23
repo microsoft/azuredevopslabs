@@ -66,9 +66,9 @@ description: Learn how you can implement modern DevOps practices with  Azure, Az
                     <div class="col-sm-4 col-xs-12">
                     <div class="bg-color-grey equal-height-column mar-left-40">
                           <ul>
-                             <li><a href="/labs/azuredevops/agile/" class="barleft">Agile Planning and Portfolio Management </a></li>
-                             <li><a href="/labs/azuredevops/git/" class="barleft">Version Controlling with Git  </a></li>
-                             <li><a href="/labs/azuredevops/packagemanagement/" class="barleft">Package Management</a></li>
+                             <li><a href="/labs/azuredevops/agile/" class="barleft">Agile Planning and Portfolio Management with Azure Boards </a></li>
+                             <li><a href="/labs/azuredevops/git/" class="barleft">Version Controlling with Azure Repos  </a></li>
+                             <li><a href="/labs/azuredevops/packagemanagement/" class="barleft">Package Management with Azure Artifacts</a></li>
                              <li><a href="/labs/azuredevops/continuousintegration/" class="barleft">Enabling Continuous Integration with Azure Pipelines</a></li>
                           </ul>
                     </div>
@@ -76,9 +76,9 @@ description: Learn how you can implement modern DevOps practices with  Azure, Az
                     <div class="col-sm-4 col-xs-12">
                     <div class="bg-color-grey equal-height-column mar-left-40">
                     <ul>
-                     <li><a href="/labs/azuredevops/continuousdeployment/" class="barleft">Embracing Continuous Delivery with Azure DevOps</a></li> 
-                             <li><a href="/labs/azuredevops/testmanagement/" class="barleft">Test Planning and Management with Azure DevOps</a></li>
-                             <li><a href="/labs/azuredevops/exploratorytesting/" class="barleft">Exploratory Testing with Azure DevOps</a></li>
+                     <li><a href="/labs/azuredevops/continuousdeployment/" class="barleft">Embracing Continuous Delivery with Azure Pipelines</a></li> 
+                             <li><a href="/labs/azuredevops/testmanagement/" class="barleft">Test Planning and Management with Azure Test Plans</a></li>
+                             <li><a href="/labs/azuredevops/exploratorytesting/" class="barleft">Exploratory Testing with Azure Test Plans</a></li>
                              <li><a href="/labs/azuredevops/load/" class="barleft">Web Application Load and Performance Testing</a></li>
                     </ul>
                     </div>
@@ -86,10 +86,10 @@ description: Learn how you can implement modern DevOps practices with  Azure, Az
                     <div class="col-sm-4 col-xs-12">
                     <div class="bg-color-grey equal-height-column mar-left-40">
                           <ul>   
-                            <li><a href="/labs/azuredevops/deliveryplans/" class="barleft">Managing Delivery Plans with Azure DevOps</a></li>
+                            <li><a href="/labs/azuredevops/deliveryplans/" class="barleft">Managing Project Schedules across teams with Delivery Plans</a></li>
                             <li><a href="/labs/azuredevops/sonarcloud/" class="barleft">Managing Technical Debt with Azure DevOps and SonarCloud</a></li>
-                            <li><a href="/labs/azuredevops/wiki/" class="barleft">Collaboration Experiences for Development Teams using Azure DevOps</a></li>
-                            <li><a href="/labs/azuredevops/yaml/" class="barleft">Configuring Builds as Code with YAML in Azure DevOps</a></li>
+                            <li><a href="/labs/azuredevops/wiki/" class="barleft">Collaborating with Azure DevOps Wiki</a></li>
+                            <li><a href="/labs/azuredevops/yaml/" class="barleft">Configuring Build as Code with YAML in Azure DevOps</a></li>
                           </ul>
                     </div>
                     </div>                    
@@ -106,7 +106,7 @@ description: Learn how you can implement modern DevOps practices with  Azure, Az
                     <div class="col-sm-4 col-xs-12">
                     <div class="bg-color-white equal-height-column">
                         <ul class="mar-left-40">
-                            <li class="osslist"> <img src="/images/github-42.png" height="42" class="icon-bor-p-m"/><a href="/labs/vstsextend/github-integration/"> Integrate Your GitHub Projects With Azure DevOps Pipelines</a></li>
+                            <li class="osslist"> <img src="/images/github-42.png" height="42" class="icon-bor-p-m"/><a href="/labs/vstsextend/github-integration/"> Integrate Your GitHub Projects With Azure Pipelines</a></li>
                             <li class="osslist"> <img src="/images/jenkins-42.png" height="42" class="icon-bor-p-m" /> <a href="/labs/vstsextend/jenkins/"> Integrating with Jenkins</a>    </li>
                             <li class="osslist"> <img src="/images/tomcat-42.png" height="42" class="icon-bor-p-m"/><a href="/labs/vstsextend/tomcat/"> Deploying a Java application on Tomcat  </a>    </li>
                             <li class="osslist"> <img src="/images/sonarqube-42.png" height="42" class="icon-bor-p-m"/><a href="/labs/vstsextend/sonarqube/"> Technical Debt Management with SonarQube</a> </li>

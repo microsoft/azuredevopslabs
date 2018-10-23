@@ -1,5 +1,5 @@
 ---
-title: Configuring Builds as Code with YAML in Azure DevOps
+title: Configuring Builds as Code with YAML in Azure Pipelines
 layout: page
 sidebar: vsts
 permalink: /labs/azuredevops/yaml/

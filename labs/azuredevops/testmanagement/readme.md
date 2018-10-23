@@ -1,5 +1,5 @@
 ---
-title: Test Planning and Management with Azure DevOps
+title: Test Planning and Management with Azure Test Plans
 layout: page
 sidebar: vsts
 permalink: /labs/azuredevops/testmanagement/

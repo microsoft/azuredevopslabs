@@ -1,5 +1,5 @@
 ---
-title: Web Application Load and Performance Testing with Visual Studio 2017
+title: Web Application Load and Performance Testing
 layout: page
 sidebar: vsts
 permalink: /labs/azuredevops/load/
