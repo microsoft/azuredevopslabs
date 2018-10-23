@@ -1,5 +1,5 @@
 ---
-title: Embracing Continuous Delivery with Azure DevOps
+title: Embracing Continuous Delivery with Azure Pipelines
 layout: page
 sidebar: vsts
 permalink: /labs/azuredevops/continuousdeployment/
@@ -13,7 +13,7 @@ Last updated: 9/5/2018
 <a name="Overview"></a>
 ## Overview ##
 
-In this lab, you will learn about the release management features available in Azure DevOps that automate the deployment of applications. These features help development and operations teams integrate with Team Foundation Server to configure and automate complex deployments of their automated builds to target stages more easily. Development teams can also model their release processes and track approvals, sign-offs, and visualize their release status.
+In this lab, you will learn about the release management features available in Azure Pipelines that automate the deployment of applications. These features help development and operations teams integrate with Team Foundation Server to configure and automate complex deployments of their automated builds to target stages more easily. Development teams can also model their release processes and track approvals, sign-offs, and visualize their release status.
 
 <a name="Prerequisites"></a>
 ### Prerequisites ###

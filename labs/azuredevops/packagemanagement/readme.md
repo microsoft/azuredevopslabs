@@ -1,5 +1,5 @@
 ---
-title: Package Management with Azure DevOps
+title: Package Management with Azure Artifacts
 layout: page
 sidebar: vsts
 permalink: /labs/azuredevops/packagemanagement/
@@ -13,7 +13,7 @@ Last updated: 9/5/2018
 <a name="Overview"></a>
 ## Overview ##
 
-Package Management is an extension that makes it easy to discover, install, and publish NuGet, npm, and Maven packages in Azure DevOps. It's deeply integrated with other hubs like Build so that package management can become a seamless part of your existing workflows.
+PAzure Artifacts is an extension that makes it easy to discover, install, and publish NuGet, npm, and Maven packages in Azure DevOps. It's deeply integrated with other hubs like Build so that package management can become a seamless part of your existing workflows.
 
 <a name="Prerequisites"></a>
 ### Prerequisites ###

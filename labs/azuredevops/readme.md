@@ -1,60 +1,102 @@
 ---
-title: Visual Studio Team Services- Hands-on-Labs 
+title: Azure DevOps- Hands-on-Labs
 layout: homepage
 sidebar: vsts
 permalink: /labs/vsts/
 folder: /labs/vsts/
-description: Learn how you can plan better, code together and ship faster with Visual Studio Team Services
+description: Learn how you can plan better, code together and ship faster with Azure DevOps
 ---
-
 <div class="vstsMain">
-<div class="productcolmain">
-  <div class="pageheader">
-             <b>DevOps with Visual Studio Team Services</b> </div>
-     <div class="herotext2">
-             Learn how you can plan better, code together and ship faster with Visual Studio Team Services
-  </div>
-</div>
+   <div class="productcolmain">
+      <div class="pageheader">
+         <b>DevOps with Visual Studio Team Services</b> 
+      </div>
+      <div class="herotext2">
+         Learn how you can plan better, code together and ship faster with Azure DevOps
+      </div>
+   </div>
 </div>
 
 ## Step-by-Step Tutorials
-
-<div class="lablist">
-    <ul class="fa-ul">
-       <li class="labslistitems" style="margin-top: 0px;"><i class="fa-li fa fa-book" style="color:  #002868;"></i> <a href="agile/">Agile Planning and Portfolio Management </a>    </li>
-       <li class="labslistitems"><i class="fa-li fa fa-book" style="color:  #002868;"></i> <a href="git/">Version Controlling with Git  </a>    </li>
-       <li class="labslistitems"><i class="fa-li fa fa-book" style="color:  #002868;"></i> <a href="packagemanagement/">Package Management</a> </li>
-       <li class="labslistitems"><i class="fa-li fa fa-book" style="color:  #002868;"></i> <a href="continuousintegration/">Setting up a Continuous Integration</a> </li>
-       <li class="labslistitems"><i class="fa-li fa fa-book" style="color:  #002868;"></i> <a href="continuousdeployment/">Enabling a Continuous Delivery</a> </li>
-       <li class="labslistitems"><i class="fa-li fa fa-book" style="color:  #002868;"></i><a href="azurecd/">Setting up Continuous Delivery workflow from the Azure Portal</a> </li>
-       <li class="labslistitems"><i class="fa-li fa fa-book" style="color:  #002868;"></i><a href="testmanagement/">Test Planning and Management with Visual Studio Team Services</a> </li>
-       <li class="labslistitems"><i class="fa-li fa fa-book" style="color:  #002868;"></i><a href="exploratorytesting/">Exploratory Testing and Feedback Management using Visual Studio Team Services</a> </li>
-       <li class="labslistitems"><i class="fa-li fa fa-book" style="color:  #002868;"></i><a href="selenium/">UI Automation using Selenium Tests</a> </li>
-      <li class="labslistitems"><i class="fa-li fa fa-book" style="color:  #002868;"></i><a href="load/">Load Testing using Visual Studio Team Services</a> </li>
-      <li class="labslistitems"><i class="fa-li fa fa-book" style="color:  #002868;"></i><a href="monitor/">Monitoring Applications using Application Insights</a> </li>
-      <li class="labslistitems"><i class="fa-li fa fa-book" style="color:  #002868;"></i><a href="teams/">Increase team collaboration and Communication with Microsoft Teams</a> </li>
-      <li class="labslistitems"><i class="fa-li fa fa-book" style="color:  #002868;"></i><a href="powerbi/">Connect to Visual Studio Team Services with Power BI</a> </li>
-        </ul>
+<div class="col-sm-10" style="padding-top:20px">
+   <h1>New to Azure DevOps?</h1>
+   <div style="margin-top:2px">
+      Don't have an account? No worries! Sign up for a <b>free</b> Azure DevOps organization now and get
+      <ul class="tick">
+         <li>Automated CI/CD pipelines</li>
+         <li>Free unlimited private Git repositories</li>
+         <li>Configurable Kanban boards, and </li>
+         <li>Extensive automated and cloud-based load testing tools.</li>
+      </ul>
+   </div>
+   <a href="https://go.microsoft.com/fwlink/?LinkId=2014881" class="launch-hol" role="button" target="_blank" onclick="pageTracker._trackEvent('SignUp', 'Click', 'New User SignUp');" style="
+      align-self:  right;"><span class="lab-details">Sign up for free now</span></a>
 </div>
-
-## Prerequisites
-
-In order to complete these labs you will need
-
-- **Visual Studio Team Services account**: If you don't have one, you can sign up for one, from [here](https://www.visualstudio.com/){:target="_blank"}
-
-- **Microsoft Azure Account**: You will need a valid and active Azure account for the Azure labs. If you do not have one, you can sign up for a [free trial](https://azure.microsoft.com/en-us/free/){:target="_blank"}
-
-  - If you are a Visual Studio Active Subscriber, you are entitled for a $50-$150 credit per month. You can refer to this [link](https://azure.microsoft.com/en-us/pricing/member-offers/msdn-benefits-details/){:target="_blank"} to find out more including how to activate and start using your monthly Azure credit.
-
-  - If you are not a Visual Studio Subscriber, you can sign up for the FREE [Visual Studio Dev Essentials](https://www.visualstudio.com/dev-essentials/){:target="_blank"} program to create **Azure free account** (includes 1 yr of free services, $200 for 1st month).
-
-- **Visual Studio 2017** or higher version - You will need Visual Studio for some of the labs. You can use your own machine with VS 2017 installed, or download and use the latest [ALM VM](../tfs/),  or spin up a VM pre-installed with Visual Studio on [Azure](https://portal.azure.com){:target="_blank"}.
-
-- You can use the [**Visual Studio Team Services Demo Data generator**](https://vstsdemogenerator.azurewebsites.net){:target="_blank"} to provision a project with pre-defined data on to your Visual Studio Team Services account.
-
-## Working with VSTS DemoGenerator test
-
-Visual Studio Team Services Demo Generator helps you create projects on your Visual Studio Team Services account with preset sample content which includes source code, work items, service endpoints, build and release definitions based on a template you choose. The purpose of this system is to help follow hands-on-labs, demos and other education material provided by Microsoft. For step-by-step instructions on using the demo generator to provision your project, please see this [document](/labs/vsts/VSTSDemoGenerator)
-
-If you are not using the VSTS Demo Data Generator, you can clone the source code required to run the application referenced in the labs, from this [GitHub repository](https://github.com/Microsoft/myhealthclinic2017)
+</div>
+</div>
+<div class="tab-content bg-color-wit-mlr">
+<div id="services-labs" class="container tab-pane active">
+<div class="col-sm-12">
+   <!--h2 class="pading-t-10">Azure DevOps Services</h2--> 
+   <div>
+      <p>Simplify and speed up the DevOps process with Azure DevOps services. The following labs will help you to get started with Azure DevOps services to automate software delivery and meet business needs.</p>
+   </div>
+</div>
+<div class="col-sm-12">
+   <h2>Getting started</h2>
+   <div class="row equal-height-columns">
+      <div class="col-sm-4 col-xs-12">
+         <div class="bg-color-grey equal-height-column mar-left-40">
+            <ul>
+               <li><a href="/labs/azuredevops/agile/" class="barleft">Agile Planning and Portfolio Management with Azure Boards </a></li>
+               <li><a href="/labs/azuredevops/git/" class="barleft">Version Controlling with Azure Repos  </a></li>
+               <li><a href="/labs/azuredevops/packagemanagement/" class="barleft">Package Management with Azure Artifacts</a></li>
+               <li><a href="/labs/azuredevops/continuousintegration/" class="barleft">Enabling Continuous Integration with Azure Pipelines</a></li>
+            </ul>
+         </div>
+      </div>
+      <div class="col-sm-4 col-xs-12">
+         <div class="bg-color-grey equal-height-column mar-left-40">
+            <ul>
+               <li><a href="/labs/azuredevops/continuousdeployment/" class="barleft">Embracing Continuous Delivery with Azure Pipelines</a></li>
+               <li><a href="/labs/azuredevops/testmanagement/" class="barleft">Test Planning and Management with Azure Test Plans</a></li>
+               <li><a href="/labs/azuredevops/exploratorytesting/" class="barleft">Exploratory Testing with Azure Test Plans</a></li>
+               <li><a href="/labs/azuredevops/load/" class="barleft">Web Application Load and Performance Testing</a></li>
+            </ul>
+         </div>
+      </div>
+      <div class="col-sm-4 col-xs-12">
+         <div class="bg-color-grey equal-height-column mar-left-40">
+            <ul>
+               <li><a href="/labs/azuredevops/deliveryplans/" class="barleft">Managing Project Schedules across teams with Delivery Plans</a></li>
+               <li><a href="/labs/azuredevops/sonarcloud/" class="barleft">Managing Technical Debt with Azure DevOps and SonarCloud</a></li>
+               <li><a href="/labs/azuredevops/wiki/" class="barleft">Collaborating with Azure DevOps Wiki</a></li>
+               <li><a href="/labs/azuredevops/yaml/" class="barleft">Configuring Build as Code with YAML in Azure DevOps</a></li>
+            </ul>
+         </div>
+      </div>
+   </div>
+</div>
+<div class="col-sm-12">
+   <h2>Prerequisites</h2>
+   In order to complete these labs you will need:
+   <ul>
+      <li>
+         <strong>Azure DevOps services Organization:</strong> Of course! you will need an Azure DevOps services account. If you don’t have one, you can sign up for one, from <a href="https://www.visualstudio.com/" target="_blank">here</a>
+      </li>
+      <li>
+         <strong>Microsoft Azure Account</strong>: You will need a valid and active Azure account. If you do not have one, 
+         <ul>
+            <li>
+               You can create a <a href="https://azure.microsoft.com/en-us/free/" target="_blank">free Azure account</a> and enjoy 12 months of free Azure services
+            </li>
+            <li>
+               If you are a Visual Studio Active Subscriber, you are entitled for a $50-$150 credit per month. You can refer to this <a href="https://azure.microsoft.com/en-us/pricing/member-offers/msdn-benefits-details/" target="_blank">link</a> to find out more including how to activate and start using your monthly Azure credit.
+            </li>
+         </ul>
+      </li>
+      <li>
+         <a href="https://vstsdemogenerator.azurewebsites.net" target="_blank"><strong>Azure DevOps Demo Generator:</strong></a> You can use the Azure DevOps Demo Generator to provision a project with pre-defined data on to your Azure DevOps services organization.
+      </li>
+   </ul>
+</div>

@@ -1,5 +1,5 @@
 ---
-title: Agile Planning and Portfolio Management with Azure DevOps
+title: Agile Planning and Portfolio Management with Azure Boards
 layout: page
 sidebar: vsts
 permalink: /labs/azuredevops/agile/
@@ -11,9 +11,10 @@ Lab version: 15.8.2
 Last updated: 9/5/2018
 
 <a name="Overview"></a>
+
 ## Overview ##
 
-In this lab, you will learn about the agile planning and portfolio management tools and processes provided by Azure DevOps and how they can help you quickly plan, manage, and track work across your entire team. You will explore the product backlog, sprint backlog, and task boards which can be used to track the flow of work during the course of an iteration. We will also take a look at how the tools have been enhanced in this release to scale for larger teams and organizations.
+In this lab, you will learn about the agile planning and portfolio management tools and processes provided by Azure Boards and how they can help you quickly plan, manage, and track work across your entire team. You will explore the product backlog, sprint backlog, and task boards which can be used to track the flow of work during the course of an iteration. We will also take a look at how the tools have been enhanced in this release to scale for larger teams and organizations.
 
 <a name="Prerequisites"></a>
 ### Prerequisites ###

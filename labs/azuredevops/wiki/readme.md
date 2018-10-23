@@ -1,5 +1,5 @@
 ---
-title: Collaboration Experiences for Development Teams using Azure DevOps
+title: Collaborating using Azure DevOps Wiki
 layout: page
 sidebar: vsts
 permalink: /labs/azuredevops/wiki/

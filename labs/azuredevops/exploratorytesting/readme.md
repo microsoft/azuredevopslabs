@@ -1,5 +1,5 @@
 ---
-title: Exploratory Testing with Azure DevOps
+title: Exploratory Testing with Azure Test Plans
 layout: page
 sidebar: vsts
 permalink: /labs/azuredevops/exploratorytesting/
