@@ -6,8 +6,6 @@ permalink: /labs/vstsextend/releasegates/
 folder: /labs/vstsextend/releasegates/
 ---
 
-Last updated : {{ "now" | date: "%b %d,%Y" }}
-
 ## Overview
 
 As you may be aware, a release definition specifies the end-to-end release process for an application to be deployed across a range of environments. Deployments to each environment are fully automated by using phases and tasks. 

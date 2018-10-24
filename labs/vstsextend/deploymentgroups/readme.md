@@ -6,8 +6,6 @@ permalink: /labs/vstsextend/deploymentgroups/
 folder: /labs/vstsextend/deploymentgroups/
 ---
 
-Last updated : {{ "now" | date: "%b %d, %Y" }}.
-
 ## Overview
 
 In the earlier versions of the VSTS Release Management, if the application needed to be deployed to multiple servers, the Windows PowerShell remoting had to be enabled manually, the required ports opened and the deployment agent installed on each of the servers. The pipelines had to be managed manually if a roll-out deployment was required.

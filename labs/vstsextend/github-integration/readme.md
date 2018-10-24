@@ -6,7 +6,6 @@ permalink: /labs/vstsextend/github-integration/
 folder: /labs/vstsextend/github-integration/
 ---
 
-Last updated : {{ "now" | date: "%b %d,%Y" }}
 <a name="Title"></a>
 # Integrate Your GitHub Projects With Azure DevOps Pipelines #
 

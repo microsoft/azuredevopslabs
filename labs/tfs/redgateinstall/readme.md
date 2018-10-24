@@ -4,11 +4,9 @@ layout: page
 sidebar: tfs
 permalink: /labs/tfs/redgateinstall/
 folder: /labs/tfs/redgateinstall/
+version: Lab version - 15.0.26020.1
+updated: Last updated - 4/11/2017
 ---
-
-Lab version: 15.0.26020.1
-
-Last updated: 4/11/2017
 
 # Installing Redgate Data Tools for Visual Studio Enterprise 2017
 

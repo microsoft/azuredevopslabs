@@ -6,7 +6,6 @@ permalink: /labs/vstsextend/php/
 folder: /labs/vstsextend/php/
 ---
 
-Last updated : {{ "now" | date: "%b %d, %Y" }}.
 ## Overview
 
 **PHP** is a server-side scripting language, and a powerful tool for making dynamic and interactive Web pages.

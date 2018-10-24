@@ -4,11 +4,9 @@ layout: page
 sidebar: vsts
 permalink: /labs/azuredevops/testmanagement/
 folder: /labs/azuredevops/testmanagement/
+version: Lab version - 15.8.2
+updated: Last updated - 9/6/2018
 ---
-
-Lab version: 15.8.2
-
-Last updated: 9/6/2018
 
 <a name="Overview"></a>
 ## Overview ##

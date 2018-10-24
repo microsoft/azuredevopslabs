@@ -4,11 +4,9 @@ layout: page
 sidebar: tfs
 permalink: /labs/tfs/debugging/
 folder: /labs/tfs/debugging/
+version: Lab version - 15.5
+updated: Last updated - 12/6/2017
 ---
-
-Lab version:15.5
-
-Last updated:12/6/2017
 
 ## Overview
 

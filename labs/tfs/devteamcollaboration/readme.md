@@ -4,11 +4,9 @@ layout: page
 sidebar: tfs
 permalink: /labs/tfs/devteamcollaboration/
 folder: /labs/tfs/devteamcollaboration/
+version: Lab version - 15.4
+updated: Last updated - 12/5/2017
 ---
-
-Lab version:15.4
-
-Last updated:12/5/2017
 
 ## Overview
 

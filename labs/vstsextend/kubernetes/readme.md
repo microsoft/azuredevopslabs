@@ -6,8 +6,6 @@ permalink: /labs/vstsextend/kubernetes/
 folder: /labs/vstsextend/kubernetes/
 ---
 
-Last updated : {{ "now" | date: "%b %d, %Y" }}.
-
 ## Overview
 
 This lab outlines the process to compile a Docker-based ASP.NET Core web application and deploy it to a **Kubernetes** cluster running on **Azure Container Service (AKS)** using the **Visual Studio Team Services (VSTS)**.
