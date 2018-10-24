@@ -1,9 +1,9 @@
 ---
-title: Integrate Your GitHub Projects With Azure DevOps Pipelines
+title: Integrate Your GitHub Projects With Azure Pipelines
 layout: page
 sidebar: vsts2
-permalink: /labs/vstsextend/github-integration/
-folder: /labs/vstsextend/github-integration/
+permalink: /labs/azuredevops/github-integration/
+folder: /labs/azuredevops/github-integration/
 ---
 
 Last updated : {{ "now" | date: "%b %d,%Y" }}
@@ -36,9 +36,6 @@ In this lab, you'll see how easy it is to set up Azure Pipelines with your GitHu
 - A GitHub account from [https://github.com](https://github.com/).
 
 <a name="Intended Audience"></a>
-## Intended Audience ##
-
-This lab is intended for developers at any experience level.
 
 <a name="Exercise1"></a>
 ## Exercise 1: Getting started with Azure Pipelines ##
