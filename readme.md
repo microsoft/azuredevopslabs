@@ -89,7 +89,7 @@ description: Learn how you can implement modern DevOps practices with  Azure, Az
                             <li><a href="/labs/azuredevops/deliveryplans/" class="barleft">Managing Project Schedules across teams with Delivery Plans</a></li>
                             <li><a href="/labs/azuredevops/sonarcloud/" class="barleft">Managing Technical Debt with Azure DevOps and SonarCloud</a></li>
                             <li><a href="/labs/azuredevops/wiki/" class="barleft">Collaborating with Azure DevOps Wiki</a></li>
-                            <li><a href="/labs/azuredevops/yaml/" class="barleft">Configuring Build as Code with YAML in Azure DevOps</a></li>
+                            <li><a href="/labs/azuredevops/yaml/" class="barleft">Configuring Build as Code with YAML in Azure Pipelines</a></li>
                           </ul>
                     </div>
                     </div>                    
