@@ -2,8 +2,8 @@
 title: Azure DevOps- Hands-on-Labs
 layout: homepage
 sidebar: vsts
-permalink: /labs/vsts/
-folder: /labs/vsts/
+permalink: /labs/azuredevops/
+folder: /labs/azuredevops/
 description: Learn how you can plan better, code together and ship faster with Azure DevOps
 ---
 <div class="vstsMain">

@@ -1,5 +1,5 @@
 ---
-title: Managing project schedules across teams with Delivery Pipelines 
+title: Managing project schedules across teams with Delivery Plans 
 layout: page
 sidebar: vsts
 permalink: /labs/azuredevops/deliveryplans/
