@@ -293,7 +293,7 @@ ul#results-container a:hover {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     float: right;
-    margin-top: 2px;
+    margin-top: 8px;
     border-color: #248ec2;
     border: 1px solid #248ec2;
     outline: none;
@@ -1645,7 +1645,7 @@ div.lablist {
 div.herotext2{
     font-size: 16px;
     line-height: 1.9;
-    width: 60%;
+    /* width: 60%; */
 }
 
 div.productcolmain {
