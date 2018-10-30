@@ -112,7 +112,7 @@ description: Learn how you can implement modern DevOps practices with  Azure, Az
                      <div class="col-sm-4 col-xs-12">
                         <div class="bg-color-white equal-height-column">
                            <ul class="mar-left-40">
-                              <li class="osslist"> <img src="/images/launchdarkly.png" height="42" class="icon-bor-p-m"/><a href="/labs/azuredevops/github-integration/"> Feature Flag Management with LaunchDarkly</a></li>
+                              <li class="osslist"> <img src="/images/launchdarkly.png" height="42" class="icon-bor-p-m"/><a href="/labs/vstsextend/launchdarkly"> Feature Flag Management with LaunchDarkly</a></li>
                                <li class="osslist"> <img src="/images/github-42.png" height="42" class="icon-bor-p-m"/><a href="/labs/azuredevops/github-integration/"> Integrate Your GitHub Projects With Azure Pipelines</a></li>
                               <li class="osslist"> <img src="/images/jenkins-42.png" height="42" class="icon-bor-p-m" /> <a href="/labs/vstsextend/jenkins/"> Integrating with Jenkins</a>    </li>
                               <li class="osslist"> <img src="/images/tomcat-42.png" height="42" class="icon-bor-p-m"/><a href="/labs/vstsextend/tomcat/"> Deploying a Java application on Tomcat  </a>    </li>
