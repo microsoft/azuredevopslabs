@@ -413,6 +413,7 @@ iframe .flickity-viewport{
   .bg-of-header {background: #0078d7!important;}
   .flickity-prev-next-button.previous{left:-10px!important;}
   .flickity-prev-next-button.next{right:-10px!important;}
+  .tab-bg-color li a {font-size: 1.1rem;}
   .col-white-fon-20 {font-size: 16px !important;  }
   .search-icon-css {
     top: 159px;
