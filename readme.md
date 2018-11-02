@@ -141,7 +141,7 @@ description: Learn how you can implement modern DevOps practices with  Azure, Az
                         <div class="bg-color-white equal-height-column">
                            <ul class="mar-left-40">
                               <li class="osslist"> <img src="/images/azure-42.png" height="42" class="icon-bor-p-m"/><a href="/labs/vstsextend/deploymentgroups/"> Working with Deployment Groups</a></li>
-                              <li class="osslist"> <img src="/images/AzureFunction.jpg" height="42" class="icon-bor-p-m"/><a href="/labs/vstsextend/azurefunctions/"> Deploying to Azure Functions from VSTS</a></li>
+                              <li class="osslist"> <img src="/images/AzureFunction.jpg" height="42" class="icon-bor-p-m"/><a href="/labs/vstsextend/azurefunctions/"> Deploying Azure Functions using Azure DevOps</a></li>
                               <li class="osslist"> <img src="/images/aspnet-logo-42.png" height="42" class="icon-bor-p-m"/><a href="/labs/vstsextend/aspnetmodernize/"> Modernizing your existing ASP.NET Apps with Azure</a></li>
                               <li class="osslist"> <img src="/images/vsts-1-42.png" height="42" class="icon-bor-p-m"/><a href="/labs/vstsextend/releasegates/"> Controlling deployments using Release Gates</a> </li>
                               <li class="osslist"> <img src="/images/parasoft-42.png" height="42" class="icon-bor-p-m"/><a href="/labs/vstsextend/parasoft/"> Leverage virtual services with Parasoft Virtualize</a></li>
