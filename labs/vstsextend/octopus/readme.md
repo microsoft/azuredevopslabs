@@ -1,5 +1,5 @@
 ---
-title: Automating Deployments with VSTS and Octopus Deploy
+title: Automating Deployments with Azure DevOps and Octopus Deploy
 layout: page
 sidebar: vsts2
 permalink: /labs/vstsextend/octopus/
@@ -13,23 +13,18 @@ Last updated : {{ "now" | date: "%b %d, %Y" }}.
 
 [Octopus Deploy](https://Octopus.com) is an automated deployment server that makes it easy to automate deployment of ASP.NET web applications, Java applications, NodeJS application and custom scripts to multiple environments.
 
-Visual Studio Team Services includes a first-class, powerful release management capability that simplifies deployment of any application to any platform. But teams who prefer or already have chosen Octopus deploy, can use the **[Octopus Deploy Integration](https://marketplace.visualstudio.com/items?itemName=octopusdeploy.octopus-deploy-build-release-tasks)** extension available on the Visual Studio Marketplace that provides Build and Release tasks to integrate Octopus Deploy with Team Services and Team Foundation Server.
+<!-- Azure DevOps includes a first-class, powerful release management capability that simplifies deployment of any application to any platform. But teams who prefer or already have chosen Octopus deploy, can use the **[Octopus Deploy Integration](https://marketplace.visualstudio.com/items?itemName=octopusdeploy.octopus-deploy-build-release-tasks)** extension available on **Extensions for Azure DevOps** that provides Build and Release tasks to integrate Octopus Deploy with Azure DevOps and Azure DevOps Server.
 
-This lab shows how  we  can integrate VSTS/TFS Team Build and Octopus to automate build and deployment application using a sample PHP application that will be deployed to an Azure App Service.
+This lab shows how we can integrate Azure DevOps/Azure DevOps Server Build with Octopus to automate build and deployment of an ASP.NET Core application to an Azure App Service. -->
 
-## Prerequisites for the lab
+Azure DevOps will be handle the build/CI automation part of the process and will work with Octopus Deploy to handle deployment orchestration. The Octopus setup contains a central deployment server, along with “Tentacle” agents that run on any target VMs where deployment will take place. 
 
-1. **Microsoft Azure Account**: You will need a valid and active Azure account for the Azure labs. If you do not have one, you can sign up for a [free trial](https://azure.microsoft.com/en-us/free/){:target="_blank"}
+Here, we will see how to use Octopus Deploy in conjunction with Azure DevOps to deploy in the cloud in a repeatable and reliable way. 
 
-    * If you are an active Visual Studio Subscriber, you are entitled for a $50-$150 credit per month. You can refer to this [link](https://azure.microsoft.com/en-us/pricing/member-offers/msdn-benefits-details/){:target="_blank"} to find out more information about this including how to activate and start using your monthly Azure credit.
+## Before you begin
 
-    * If you are not a Visual Studio Subscriber, you can sign up for the FREE [Visual Studio Dev Essentials](https://www.visualstudio.com/dev-essentials/){:target="_blank"} program to create a **Azure free account** (includes 1 year of free services, $200 for 1st month).
+1. Refer the [Getting Started](../Setup/) before you begin to follow the below exercises.
 
-1. You will need a **Visual Studio Team Services Account**. If you do not have one, you can sign up for free [here](https://www.visualstudio.com/products/visual-studio-team-services-vs){:target="_blank"}
-
-1. You will need a **Personal Access Token** to set up your project using the **VSTS Demo Generator**. Please see this [article](https://docs.microsoft.com/en-us/vsts/accounts/use-personal-access-tokens-to-authenticate){:target="_blank"} for instructions to create your token.
-
-    {% include note.html content= "You should treat Personal Access Tokens like passwords. It is recommended that you save them somewhere safe so that you can re-use them for future requests." %}
 ## Setting up the Environment
 
 Octopus Deploy has two components:
@@ -37,253 +32,222 @@ Octopus Deploy has two components:
 * **Octopus Server** - a centralized web front-end that orchestrates deployments , and
 * **Tentacle** - agent that needs to be on every target endpoint.
 
-We will spin up a Octopus server on Azure. Click the **Deploy to Azure** button below to provision a Octopus Server.
+We will spin up an Octopus server on Azure. Click the **Deploy to Azure** button below to provision an Octopus Server.
 
-[![Octopus Configuration](http://azuredeploy.net/deploybutton.png)](https://portal.azure.com/#create/octopus.octopusdeployoctopus-deploy){:target="_blank"}
-
-1. Click on **Create** button.
-
-   ![click_create](images/click_create.png)
-
-1. Provide **Resource group** name and click **OK**.
-   ![create_RG](images/create_RG.png)
-
-1. Provide Octopus server **Domain Name**, VM Admin **username and password**, and SQL admin **username and password**. Note down the Domain Name (DNS) as this is used later to connect to Octopus server.
-
-   ![server_details](images/server_details.png)
-
-1. Provide Octopus Admin **username and password**. This is used to login to Octopus server. Also provide your **name, organization name** and **email address** to activate trial license for octopus server. Click OK.
-
-   ![octopus_details](images/octopus_details.png)
-
-1. Click **OK** in the Summary section.
-
-   ![summary](images/summary.png)
-
-1. Click **Create** in the Buy section.
-
-   ![click_create2](images/click_create2.png)
+   [![Deploy to Azure](http://azuredeploy.net/deploybutton.png)](https://portal.azure.com/#create/octopus.octopusdeployoctopus-deploy){:target="_blank"}
 
 1. It takes approximately 15 minutes for the deployment to complete. Once the deployment is successful, connect to Octopus server using DNS, and login with Octopus Admin username and password.
 
-   ![Octopus_login](images/octopus_login.png)
+   ![Octopus_login](images/OctopusDeploy15_1.png)
 
 1. You will see the Octopus deploy web portal.
 
-    ![Octopus Dashboard](images/octopusportal.png)
+    ![Octopus Dashboard](images/OctopusDeploy15_2.png)
+
+## Generating Service Principal Names(SPN) details from Azure
+
+We need to generate SPN details to get **Tenant ID**, **Application ID** and **Application Password/Key** which will be used in the later part of the lab.
+
+1. Login to your Azure account and click on **Cloud Shell**.
+
+    ![webapp](images/CloudShellMicrosoftAzure.png)
+
+1. Select **Bash** or **Powershell** to run the command which will generate the SPN details.
+ 
+    ![webapp](images/DashboardMicrosoftAzure2.png)
+
+1. Create Storage account as Azure Cloud Shell requires an Azure file share to persist files, If you already have one select it or create new. Select the subscription and click on **Create storage**. 
+    ![webapp](images/DashboardMicrosoftAzure3.png)
+
+1. Once the storage account is provisioned, replace the variables within in brackets with values below  and run the command to get the SPN details.
+
+    `az ad sp create-for-rbac --name (provide a short name) --password (provide a password)`
+    
+    ![webapp](images/DashboardMicrosoftAzure5.png)
+
+1. Note down the **Tenant ID**, **Appliction ID** and the **Password** in a notepad. 
+
+    ![webapp](images/DashboardMicrosoftAzure6.png)
+
 
 ## Setting up the Deployment Target
 
-In this lab, we will use Azure WebApp as the deployment target.
+Since, the deployment target is an Azure WebApp, we need to create one.
 
-Click the Deploy to Azure button below to provision Azure WebApp.
+Click the button below to provision an Azure WebApp.
 
-[![WebApp Configuration](http://azuredeploy.net/deploybutton.png)](https://portal.azure.com/#create/Microsoft.WebSite){:target="_blank"}
-
-1. Provide **Web App name** and **Resource Group**. You can either create new Resource group or use existing one, and click **Create**
-
-    ![webapp](images/webapp.png)
+[![Deploy to Azure](http://azuredeploy.net/deploybutton.png)](https://portal.azure.com/#create/Microsoft.WebSite){:target="_blank"}
 
 ## Generate Octopus API Key
 
-API key is used to authenticate VSTS with Octopus server. Using API key lets you keep your username and password secret.
+An *API key* is used to authenticate Azure DevOps with Octopus server. Using API key lets you keep your username and password a secret.
 
 1. From the Octopus Deploy portal, select **Profile** under *User* menu.
 
-   ![User Profile](images/userprofile.png)
+   ![User Profile](images/OctopusDeploy15_3.png)
 
-1. Select **My API Key** and click **New API Key** to create one. We will use the API Key to connect Octopus Deploy with Team Services
+1. Select **My API Key** and click **New API Key** to create one. We will use the API Key to connect Octopus Deploy with Azure DevOps
 
    ![Request New API Key](images/APIKey.png)
 
-1. Specify a **purpose**, for e.g., **VSTS Integration** and click **Generate New**.
+1. Specify a **purpose**, for instance, **Azure DevOps Integration** and click **Generate New**.
 
-   ![Generate New API Key](images/Generate_new.png)
+   ![Generate New API Key](images/OctopusDeploy7.png)
 
-1. Copy the API Key to clipboard and save this somewhere as you may use it for future requests.
+1. Copy the API Key to clipboard and save this to a notepad as you might use it for future requests.
 
-   ![Generated API Key](images/Key.png)
+   ![Generated API Key](images/OctopusDeploy8.png)
 
-## Setting up the VSTS team project
+## Setting up the Azure DevOps team project
 
-1. Use the [VSTS Demo Generator](https://vstsdemogenerator.azurewebsites.net/?Name=octopus&TemplateId=77370){:target="_blank"} to provision the project on our VSTS account.
-
-   > **VSTS Demo Generator** helps you create team projects on your VSTS account with sample content that include source code, work items,iterations, service endpoints, build and release definitions based on the template you choose during the configuration.
-
-   ![VSTS Demo Generator](images/1.png)
-
-1. Provide a name for your project. Paste, the Octopus URL (VM's DNS URL) that was created previously, API Key and click on **Create Project**.
-
-1. Once the project is provisioned, click the URL to navigate to the project.
-
-   ![VSTS Demo Generator](images/DemoGen.png)
-
-   {% include note.html content= "This URL will automatically select Octopus template in the demo generator. If you want to try other projects, use this URL instead - [https://vstsdemogenerator.azurewebsites.net/](https://vstsdemogenerator.azurewebsites.net/){:target=\"_blank\"}" %}
+1. Use [Azure DevOps Demo Generator](https://azuredevopsdemogenerator.azurewebsites.net/?Name=octopus&TemplateId=77370){:target="_blank"} to provision the project on your Azure DevOps Organization.
 
 ## Exercise 1: Configure Deployment Target in Octopus Server
 
-Let us create a deployment environment in Octopus server and link to Azure using Management Certificate. Environments are deployment targets consisting of machines or services used by Octopus Deploy to deploy software. With Octopus Deploy,  we  can deploy software to Windows servers, Linux servers, Microsoft Azure, or even an offline package drop.
+Let us create a deployment environment in Octopus server and link to Azure using Management Certificate. Environments are deployment targets consisting of machines or services used by Octopus Deploy to deploy applications. With Octopus Deploy,  we  can deploy applications to Windows servers, Linux servers, Microsoft Azure, or even an offline package drop.
 
 Grouping  our deployment targets by environment lets you define your deployment processes and have Octopus deploy the right versions of our software to the right environments at the right time.
 
-In this lab, we are using Azure App Service as the deployment target.
+In this lab, we are using **Azure App Service** as the deployment target.
 
-1. From the Octopus portal, select **Create environments** to go into the **Infrastructure** page
+1. On the Octopus portal dashboard, select **Create environments** to go into the **Infrastructure** page.
 
    ![CreateEnvironment](images/CreateEnvironment.png)
 
 1. Once inside, click **Add Environment**.
 
-   ![AddEnvironment](images/AddEnvironment.png)
+   ![AddEnvironment](images/OctopusDeploy15_4.png)
 
 1. Provide the environment name and click **Save**.
 
-   ![DevEnvironment](images/DevEnvironment.png)
+   ![DevEnvironment](images/OctopusDeploy15_5.png)
 
-1. Octopus Deploy provides first-class support for deploying Azure Cloud Services and Azure Web Applications. To deploy software to Azure,   we must add  our  Azure subscription to Octopus Deploy, and then use the built-in step templates to deploy to the cloud. Once the environment is created, click on **Accounts**.
+1. Octopus Deploy provides first-class support for deploying Azure Cloud Services and Azure Web Applications. To deploy software to Azure,   we must add  our  Azure subscription to Octopus Deploy, and then use the built-in step templates to deploy to the cloud. Once the environment is created, click on **Accounts** select **Azure Subscription** from **ADD ACCOUNT** dropdown.
 
-   ![Select Accounts](images/Dev.png)
 
-1. Select **ADD ACCOUNT**.
+   ![Add Account](images/OctopusDeploy15_6.png)
 
-   ![Add Account](images/AddAccount.png)
+1. Octopus Deploy authenticates with Azure with one of the two methods:
 
-1. Octopus Deploy authenticates with Azure in one of two methods:
+    * To deploy to Azure Resource Manager (ARM), Octopus requires [**Azure Service Principal Account**](https://octopus.com/docs/infrastructure/azure/creating-an-azure-account/creating-an-azure-service-principal-account){:target="_blank"}.
 
-    * To deploy to Azure Resource Manager (ARM), Octopus requires [**Azure Service Principal Account**](https://octopus.com/docs/infrastructure/azure/creating-an-azure-account/creating-an-azure-service-principal-account){:target="_blank"}
-
-    * [**Azure Management Certificate**](https://octopus.com/docs/infrastructure/azure/creating-an-azure-account/creating-an-azure-management-certificate-account){:target="_blank"} is used by Octopus to deploy to Cloud Services and Azure Web Apps.
+    * To deploy to Cloud Services and Azure Web Apps, Octopus requires [**Azure Management Certificate**](https://octopus.com/docs/infrastructure/azure/creating-an-azure-account/creating-an-azure-management-certificate-account){:target="_blank"}. 
 
     Enter the following details -
 
     * **Name**: Provide an account name
     * **Subscription ID**: Your [Azure Subscription ID](https://blogs.msdn.microsoft.com/mschray/2016/03/18/getting-your-azure-subscription-guid-new-portal/){:target="_blank"}
-    * **Authentication Method**: Choose **Use Management Certificate**
+    * **Authentication Method**: Choose **Use a Service Principal**
+    * **Tenant ID**, **Application ID**, **Application Password/Key**: Created earlier in the lab
 
-   ![Create Account](images/CreateAccount.png)
 
-1. Click **Save** and notice that a management certificate is generated. Download this certificate.
+   ![Create Account](images/AccountOctopusDeploy.png)
 
-   ![Download Certificate](images/DownloadCertificate.png)
+   ![Create Account](images/accountOctopusDeploy2.png)
 
-1. To upload the certificate in Azure, go to [Azure Portal](https://portal.azure.com){:target="_blank"} and search for **Subscriptions**.
+1. Click **SAVE AND TEST** and notice that your account is verified.
 
-   ![O8](images/O8.png)
+   ![Download Certificate](images/accountverifyOctopusDeploy.png)
 
-1. Click on the Subscription.
+1. To add the deployment target, go to **Deployment Targets**, click on **ADD DEPLOYMENT TARGET**, select **Azure Web App** and click **NEXT**.
 
-   ![O9](images/O9.png)
+   ![O8](images/AddDeploymentTargetsOctopusDeploy.png)
 
-1. Scroll down and click **Management certificates**.
+   ![O8](images/NewDeploymentTarget.png)
 
-    ![O10](images/O10.png)
+1. In **Create deployment target** page, provide **Display Name**, choose **Environment** from the dropdown, add **Target Roles**(Tags), select the **Account** which was created earlier and select **Azure Web App** from the dropdown as shown below and click **Save**..
 
-1. Click **Upload** to upload the certificate which was downloaded in the **step 7**.
+   ![O9](images/Createdeploymenttarget.png)
 
-    ![O11](images/O11.png)
-
-    ![O12](images/O12.png)
-
-1. Once the certificate is uploaded successfully, go back to Octopus portal and click **Save and Test**. If the test succeeds,  we should be able to configure Octopus to deploy application packages to Azure.
-
-    ![VerificationSuccess](images/VerificationSuccess.png)
+   ![O9](images/Createdeploymenttarget2.png)
 
 ## Exercise 2: Create Project in Octopus
 
 Let us create a Project in Octopus to deploy the package to **Azure App Service**. A [**Project**](https://octopus.com/docs/deployment-process/projects){:target="_blank"} is a collection of deployment steps and configuration variables that define how your software is deployed.
 
-1. Go to Octopus dashboard and click **Create a project**.
+1. Go to the Octopus dashboard and click on **Create a project**.
 
    ![Project](images/Project.png)
 
 1. Click on **ADD PROJECT**, provide the project name, description and click on **SAVE**.
 
-   ![AddProject](images/AddProject.png)
+   ![AddProject](images/OctopusDeploy15_11.png)
 
-   ![PUProject](images/PUProject.png)
+   ![PUProject](images/Projects.png)
 
 1. Once the project is created, click **Define your deployment process**. The [deployment process](https://octopus.com/docs/deploying-applications/deployment-process){:target="_blank"} is like a recipe for deploying your software.
 
-   ![DefineProcess](images/DefineProcess.png)
+   ![DefineProcess](images/project2.png)
 
 1. Click on **ADD STEP** to see a list of built-in step templates, custom step templates, and community contributed step templates.
 
-   ![AddStep](images/AddStep.png)
+   ![AddStep](images/Project3.png)
 
 1. **Search** for **Azure Web App** template and click **Add**.
 
-   ![AddWebAppStep](images/AddWebAppStep.png)
+   ![AddWebAppStep](images/Project4.png)
 
 1. Populate the step template with required details -
 
    * **Step Name** : A short, unique name for the template.
-   * **Package ID** : PHP (if you are providing different package ID, update it in **Package PHP** task of the build definition)
-   * **Azure account** & **Web App** : Select from the dropdown
+   * **On Behalf Of** : Choose the target role from the drop down that was created in previous exercise step **8**. 
+   * **Package ID** : Type-in as **Asp.netcore** (if you are providing different package ID, update it in Package Application task of the build definition)
 
-   ![PkgID](images/PkgID.png)
+   ![PkgID](images/project5.png)
 
-   ![Azure](images/Azure.png)
+   ![Azure](images/project6.png)
 
-1. Clicking **Save** should define the project creation and its deployment process.
+1. Click **Save** to complete the project creation and its deployment process.
 
 ## Exercise 3: Triggering CI-CD
 
-In this exercise, we will package PHP application and push the package to Octopus Server. We will use build tasks of **Octopus Deploy Integration** extension which was installed during Team Project provisioning.
+In this exercise, we will package the ASP.NET Core application and push the package to Octopus Server. We will use build tasks of **Octopus Deploy Integration** extension which was installed during Team Project provisioning.
 
 | Tasks| Usage|
 |-------| ------|
-|![octopuspackage](images/octopuspackage.png) **Package Application** | We will package the PHP source code into a zip file with the version number|
-|![copyfiles](images/copyfiles.png) **Copy Files**| The Copy Files task will copy the generated package to artifacts directory in VSTS|
-|![pushpackage](images/pushpackage.png) **Push packages to Octopus**| The copied package will be pushed to Octopus server from VSTS artifacts directory|
+|![dotnetcore](images/dotnetcore.png) **Restore**| dotnet command-line tool restores all the package dependencies like **ASP.NET Core Identity, ASP.NET Core session** etc. required to build this project|
+|![dotnetcore](images/dotnetcore.png) **Build**| We will use dotnet command-line tool to build the project and its dependencies into a set of binaries|
+|![dotnetcore](images/dotnetcore.png) **Publish**| We will use this task to create a package with published content for the web deployment|
+|![octopuspackage](images/octopuspackage.png) **Package Application** | We will package the ASP.NET Core build output into a zip file with the version number|
+|![pushpackage](images/pushpackage.png) **Push packages to Octopus**| The copied package will be pushed to Octopus server from the artifacts directory|
 |![createoctopus](images/createoctopus.png) **Create Octopus Release**|Automates the creation of release in Octopus server. A release captures all the project and package details to be deployed over and over in a safe and repeatable way|
 |![releaseoctopus](images/releaseoctopus.png) **Deploy Octopus Release**| Automates the deployment of release in Octopus server. A deployment is the execution of the steps to deploy a release to an environment. An individual release can be deployed numerous times to different environments|
 
-1. Go to **Builds** under **Build and Release** tab and click on **Octopus** build definition.
+1. Go to **Builds** under **Pipelines** tab, select **Octopus** build definition and click on **Edit**.
 
-   ![BuildDefinition](images/BuildDefinition.png)
+   ![BuildDefinition](images/Builds11.png)
 
-1. **Edit** the build definition to update Octopus server endpoint.
-
-   ![EditBD](images/EditBD.png)
 
 1. In **Push Packages to Octopus** task, update **Octopus Deploy Server** field with the created endpoint value.
 
-   {% include note.html content= "You will encounter an error - **TFS.WebApi.Exception: Page not found** for Azure tasks in the release definition. This is due to a recent change in the VSTS Release Management API. While we are working on updating VSTS Demo Generator to resolve this issue, you can fix this by typing a random text in the **Azure Subscription** field and click the **Refresh** icon next to it. Once the field is refreshed, you can select the endpoint from the drop down." %}
 
-   ![QBuild](images/QBuild.png)
+   ![QBuild](images/BuildAzureDevOpsServices1.png)
 
-1. In **Create Octopus Release** task, update **Octopus Deploy Server** field with the created endpoint value and **Project** fields.
+1. In **Create Octopus Release** task, update **Octopus Deploy Server** field with the created endpoint value and choose the created **Project** from drop down.
 
-    ![Update1](images/Update1.png)
+    ![Update1](images/BuildAzureDevOpsServices2.png)
 
-1. In **Deploy Octopus Release** task, update **Octopus Deploy Server** field with the created endpoint value, choose the appropriate values from the drop down for fields - **Project**  and **Deploy to Environments**.
+1. In **Deploy Octopus Release** task, update **Octopus Deploy Server** field with the created endpoint value, choose the appropriate values from the drop down for fields - **Project**  and **Deploy to Environments** and **Save & Queue** the build definition.
 
-    ![Update](images/Update.png)
+    ![Update](images/BuildAzureDevOpsServices3.png)
 
-1. Save the build definition.
+1. Navigate back to the **Build** tab see progress of the build.
 
-    ![Save](images/Save.png)
+    ![BuildProgress](images/BuildPipelines.png)
 
-1. Go to **Code** tab and edit the file **functions.php**
+1. Once the build completes, go to Octopus portal project dashboard to see the release progress.
 
-    ![EditFile](images/EditFile.png)
+    ![CD-Octopus](images/OctopusDeploy24.png)
 
-1. Update the **line 41** as shown, change the title to - **PHP DevOps Using VSTS, Octopus and Azure** and **commit** the changes.
+1. Go to the created Azure Web App from your **Azure Portal** and click **Browse**.
 
-    ![EditCommit](images/EditCommit.png)
+   ![Browse](images/MicrosoftAzure24.png)
 
-1. Go to **Build** tab, you will see in-progress build.
+1. You will see the associated ASP.NET Core application up and running.
 
-    ![BuildProgress](images/BuildProgress.png)
+   ![Changes](images/PartsUnlimited.png)
 
-1. Once the build completes, go to Octopus portal project dashboard. We will see the release completion in Octopus.
 
-    ![CD-Octopus](images/CD-Octopus.png)
+## Summary
 
-1. Go to Azure Web App from your **[Azure Portal](https://portal.azure.com){:target="_blank"}** and click on **Browse**.
-
-   ![Browse](images/Browse.png)
-
-1. You will see the PHP application up and running.
-
-   ![Changes](images/Changes.png)
+The lab demonstrates how Azure Pipelines pick up a code commit, build the changes and push the deployment to Octopus which deploys to an Azure Web App.
