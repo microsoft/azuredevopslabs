@@ -1,5 +1,5 @@
 ---
-title: Docker Deployment to Azure App Service (Linux) using VSTS
+title: Docker Deployment to Linux Azure App Service using Azure DevOps
 layout: page
 sidebar: vsts2
 permalink: /labs/vstsextend/docker/
@@ -10,35 +10,22 @@ Last updated : {{ "now" | date: "%b %d,%Y" }}
 
 ## Overview
 
-This lab outlines the process to build custom Docker images of an [**ASP.NET Core**](https://docs.docker.com/engine/examples/dotnetcore){:target="_blank"} application, push those images to a private repository in [Azure Container Registry](https://azure.microsoft.com/en-in/services/container-registry/){:target="_blank"} (ACR). These images will be used to deploy the application to the Docker containers in the **Azure App Service** (Linux) using VSTS.
+This lab outlines the process to build custom Docker images of an [**ASP.NET Core**](https://docs.docker.com/engine/examples/dotnetcore){:target="_blank"} application, push those images to a private repository in [Azure Container Registry](https://azure.microsoft.com/en-in/services/container-registry/){:target="_blank"} (ACR). These images will be used to deploy the application to the Docker containers in the **Azure App Service** (Linux) using Azure DevOps.
 
-The Web App for Containers allows creation of custom [Docker](https://www.docker.com/what-docker){:target="_blank"} container images, easily deploy and run them at scale on Azure. Combination of VSTS and Azure integration with Docker will enable the following:
+The Web App for Containers, allows creation of custom [Docker](https://www.docker.com/what-docker){:target="_blank"} container images, easily deploy and then run them on Azure. Combination of Azure DevOps and Azure integration with Docker will enable the following:
 
-1. [Build](https://docs.docker.com/engine/reference/commandline/build/){:target="_blank"} custom Docker images using [VSTS Hosted Linux agent](https://docs.microsoft.com/en-us/vsts/build-release/concepts/agents/hosted){:target="_blank"}
+1. Build custom Docker images using [Azure DevOps Hosted Linux agent](https://docs.microsoft.com/en-us/azure/devops/pipelines/agents/agents?view=vsts){:target="_blank"}
 
-1. [Push](https://docs.docker.com/engine/reference/commandline/push/){:target="_blank"} and store the Docker images in a private repository
+1. Push and store the Docker images in a private repository
 
-1. Deploy and [run](https://docs.docker.com/engine/reference/commandline/run/){:target="_blank"} the images inside the Docker Containers
+1. Deploy and run the images inside the Docker Containers
 
-   The below diagram details the VSTS DevOps workflow with Docker:
 
-   ![](images/vstsdockerdevops.png)
+## Before you begin
 
-### Prerequisites for the lab
+1. Refer the [Getting Started](../Setup/) page to know the prerequisites for this lab.
 
-1. **Microsoft Azure Account**: You will need a valid and active Azure account for the Azure labs. If you do not have one, you can sign up for a [free trial](https://azure.microsoft.com/en-us/free/){:target="_blank"}
-
-    * If you are an active Visual Studio Subscriber, you are entitled for a $50-$150 Azure credit per month. You can refer to this [link](https://azure.microsoft.com/en-us/pricing/member-offers/msdn-benefits-details/){:target="_blank"} to find out more information about this including how to activate and start using your monthly Azure credit.
-
-    * If you are not a Visual Studio Subscriber, you can sign up for the FREE [Visual Studio Dev Essentials](https://www.visualstudio.com/dev-essentials/){:target="_blank"} program to create a **Azure free account** (includes 1 year of free services, $200 for 1st month).
-
-1. You will need a **Visual Studio Team Services Account**. If you do not have one, you can sign up for free [here](https://www.visualstudio.com/products/visual-studio-team-services-vs){:target="_blank"}
-
-1. You will need a **Personal Access Token** to set up your project using the **VSTS Demo Generator**. Please see this [article](https://docs.microsoft.com/en-us/vsts/accounts/use-personal-access-tokens-to-authenticate){:target="_blank"} for instructions to create your token.
-
-    {% include note.html content= "You should treat Personal Access Tokens like passwords. It is recommended that you save them somewhere safe so that you can re-use them for future requests." %}
-
-1. Installation of the **Docker Integration** extension from [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=ms-vscs-rm.docker){:target="_blank"}
+1. Click the [Azure DevOps Demo Generator](https://azuredevopsdemogenerator.azurewebsites.net/?Name=Docker&TemplateId=77363) link and follow the instructions in [Getting Started](../Setup/) page to provision the project to your **Azure DevOps**.
 
 ## Setting up the Environment
 
@@ -46,7 +33,7 @@ The Web App for Containers allows creation of custom [Docker](https://www.docker
 
    [![Deploy to Azure](http://azuredeploy.net/deploybutton.png)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FMicrosoft%2Falmvm%2Fmaster%2Flabs%2Fvstsextend%2Fdocker%2Farmtemplate%2Fazuredeploy.json){:target="_blank"}
 
-1. In the Custom deployment window, select the **Subscription** type, leave the default selection for the resource group and select the **Location**. Provide the **ACR Name, Site Name**, **DB Server Name**, accept the **Terms and Conditions** and click on the **Purchase** button to provision the following resources:
+1. In Custom deployment window, select the **Subscription** type, leave the default selection for the resource group, and select the **Location**. Provide the **ACR Name**, **Site Name**, **DB Server Name**, accept the **Terms and Conditions** and click on the **Purchase** button to provision the following resources:
 
    * Azure Container Registry
 
@@ -58,9 +45,11 @@ The Web App for Containers allows creation of custom [Docker](https://www.docker
 
      {% include note.html content= " **ACR name** may contain alpha numeric characters only and must be between 5 and 50 characters." %}
 
+     {% include tip.html content= "At the time of writing this lab, the only location that can be used for creation of ACR and SQL is **SouthCentralUS**." %}
+
    ![Create Azure Components](images/createazurecomponents.png)
 
-1. It takes approximately 3 to 4 minutes to provision the environment. Click on the **Go to resource group** to view the resource group.
+1. It takes approximately 3 to 4 minutes to provision the environment. Click on  **Go to resource group** to view the resource group.
 
    ![Environment Provision](images/deploymentsucceeded.png)
 
@@ -85,105 +74,82 @@ The Web App for Containers allows creation of custom [Docker](https://www.docker
 
    ![ACR](images/getacrserver.png)
 
-## Setting up the VSTS Project
+## Exercise 1: Configure Continuous Integration (CI) and Continuous Delivery (CD)
 
-1. Use the [VSTS Demo Generator](https://vstsdemogenerator.azurewebsites.net/?Name=Docker&TemplateId=77363) to provision the team project on the VSTS account.
+Now that the required resources are provisioned, the **Build** and the **Release** definition need to be manually configured with the new information. The dacpac will also be deployed to the mhcdb database so that the schema and data is configured for the backend.
 
-   > **VSTS Demo Generator** helps you create team projects on your VSTS account with sample content that include source code, work items, iterations, service endpoints, build and release definitions based on the template you choose during the configuration.
+1. Navigate to the **Builds** option under the **Pipelines** tab. Select the build definition `MHCDocker.build`, and select the **Edit** option.
 
-   ![VSTS Demo Generator](images/VSTSDemogenerator.png)
+   ![Build](images/build1_4.png)
 
-1. Once the team project is provisioned, click on the URL to navigate to the team project.
+1. In the **Run services, Build services and Push services** task, authorize (only for the first task) the **Azure subscription** and update **Azure Container Registry** with the endpoint component from the dropdown and click on **Save**.
 
-   ![VSTS Demo Generator](images/vstsdemogen3.png)
+   ![Tasks](images/build5.png)
 
-## Exercise 1: Endpoint Creation
+   ![Tasks](images/build6.png)
 
-The connection between the VSTS and the Azure is not automatically established during the team project provisioning, and hence the endpoints need to be created manually. This endpoint will be used to connect the **VSTS** with **Azure**. Follow the steps outlined below to create the endpoint.
-
-1. In the VSTS home page, click on the **Settings** gear icon ![Admin Settings](images/gear.png) and then click on the **Services** option to navigate to the **Services** screen.
-
-1. Click on the **+New Service Endpoint** button and select the **Azure Resource Manager** option. Provide  `Connection name`, select the `Azure Subscription` from the list and the click on the **OK** button. The Azure credentials will be required to be provided to authorize the connection.
-
-   ![Endpoint Creation](images/azureendpoint.png)
-
-   {% include important.html content= "Disable the pop-up blocker in your browser. If a blank screen is displayed after the **OK** button is clicked, retry the step." %}
-
-## Exercise 2: Configure Continuous Integration (CI) and Continuous Delivery (CD)
-
-Now that the connection is established, the **Azure endpoint** and the **Azure Container Registry** need to be manually configured for the build and release definitions. The dacpac will also be deployed to the mhcdb database so that the schema and data is configured for the backend.
-
-{% include warning.html content= "TFS.WebApi.Exception: Page not found may be encountered for the Azure tasks in the build / release definition. This issue can be fixed by typing a random text in the Azure Subscription field and then clicking the **Refresh** icon next to it. Once the field is refreshed, the endpoint can be selected from the drop down list. This issue occurrence is due to a recent change in the VSTS Release Management API. The VSTS Demo Generator is being updated to handle this change to prevent this issue." %}
-
-1. Navigate to the **Builds** option under the **Build and Release** tab. Select the build definition `MHCDocker.build`, click on the ellipsis and select the **Edit** option.
-
-   ![Build](images/build.png)
-
-1. In the **Process** section, update the **Azure subscription** and the **Azure Container Registry** with the endpoint component from the dropdown. (use the arrow keys to choose **Azure Container Registry** for the first time). Click on the **Save** button.
-
-   ![Tasks](images/updateprocessbd.png)
+   ![Tasks](images/pushbuild5.png)
 
    |Tasks|Usage|
    |-----|-----|
-   |![Run services](images/icon.png) **Run services**| prepares suitable environment by restoring required packages|
+   |![Run services](images/icon.png) **Run services**| prepares suitable environment by restoring the required packages|
    |![Build services](images/icon.png) **Build services**| builds **myhealth.web** image |
    |![Push services](images/icon.png) **Push services**| pushes **myhealth.web** image tagged with **$(Build.BuildId)** to container registry|
-   |![Publish Build Artifacts](images/publish-build-artifacts.png) **Publish Build Artifacts**| used to share dacpac for database deployment through VSTS artifacts|
+   |![Publish Build Artifacts](images/publish-build-artifacts.png) **Publish Build Artifacts**| used to share dacpac for database deployment through Azure DevOps artifacts|
 
-1. Navigate to the **Releases** section under the **Build & Release** tab. Select the release definition `MHCDocker.release`, click on the **Edit** option and then click on the **Tasks** section.
+1. Navigate to the **Releases** section under the **Pipelines** tab. Select the release definition `MHCDocker.release`, click **Edit Pipeline** option and then click on the **Tasks** section.
 
-   ![Release](images/release.png)
+   ![Release](images/release1_6.png)
 
-   ![Release Tasks](images/release_tasks.png)
+   ![Release Tasks](images/release9.png)
 
 1. The usage details of the agents are provided below:
 
    |Agents|Usage Details|
    |------|-----|
    |**DB deployment**|The **Hosted VS2017** agent is used to deploy the database|
-   |**Web App deployment**|The **Hosted Linux Preview** agent is used to deploy the application to the Linux Web App|
+   |**Web App deployment**|The **Hosted Ubuntu 1604** agent is used to deploy the application to the Linux Web App|
 
 1. Under the **Execute Azure SQL:DacpacTask** section, select the **Azure Subscription** from the dropdown.
 
     **Execute Azure SQL:DacpacTask**: This task will deploy the dacpac to the **mhcdb** database so that the schema and data is configured for the backend.
 
-    ![Update DB Task](images/update_dbtask.png)
+    ![Update DB Task](images/release10.png)
 
-1. Under the **Azure App Service Deploy** task, update the **Azure subscription** and the **Azure Service name** tasks with the endpoint components from the dropdown.
+1. Under **Azure App Service Deploy** task, update the **Azure subscription** and **Azure Service name** with the endpoint components from the dropdown.
 
-    **Azure App Service Deploy** will pull the appropriate docker image corresponding to the BuildID from repository specified, and deploys the image to the Linux App Service.
+    **Azure App Service Deploy** will pull the appropriate docker image corresponding to the BuildID from repository specified, and then deploys the image to the Linux App Service.
 
-    ![Update repository](images/updatedrd.png)
+    ![Update repository](images/release11.png)
 
-1. Click on the **Variables** section, update the **ACR** details and the **SQLserver** details with the details noted earlier while configuration of the environment. Click on the **Save** button.
+1. Click on the **Variables** section, update the **ACR** details and the **SQLserver** details with the details noted earlier while configuration of the environment and click on the **Save** button.
 
-    ![Update variables](images/update_rdvariables.png)
+    ![Update variables](images/release12.png)
 
    >The **Database Name** is set to **mhcdb**, the **Server Admin Login** is set to **sqladmin** and the **Password** is set currently to **P2ssw0rd1234**.
 
-## Exercise 3: Initiating the CI-CD with source Code Change
+## Exercise 3: Initiate the CI Build and Deployment through code commit 
 
 In this exercise, the source code will be modified to trigger the CI-CD.
 
-1. Click on the **Files** section under the **Code** tab, and navigate to the `Docker/src/MyHealth.Web/Views/Home` folder and open the `Index.cshtml` file for editing.
+1. Click on **Files** section under the **Repos** tab, and navigate to the `Docker/src/MyHealth.Web/Views/Home` folder and open the `Index.cshtml` file for editing.
 
-   ![Edit code](images/editcode.png)
+   ![Edit code](images/Repos7.png)
 
-1. Modify the text **JOIN US** to **CONTACT US** on the line number 28 and then click on the **Commit** button.
+1. Modify the text **JOIN US** to **CONTACT US** on the line number 28 and then click on the **Commit** button.This action would initiate an automatic build for the source code.
 
-    ![Line Edit](images/lineedit.png)
+    ![Line Edit](images/code14.png)
 
-1. In the **Commit** window, provide comments and then click on the **Commit** button to commit the changes to the repository. This action would initiate an automatic build for the source code.
 
-    ![Commit](images/commit.png)
+1. Click on **Builds** tab, and subsequently select the build definition `MHCDoker.build` and again click on ellipsis to view the build in progress.
 
-1. Select the **Builds** tab and click on the build number to view the build in progress.
+    ![Build](images/build1_1.png)
 
-    ![Build](images/build3.png)
+    ![Build](images/prog1_1.png)
 
 1. The Build will generate and push the docker image of the web application to the Azure Container Registry. Once the build is completed, the build summary will be displayed.
 
-    ![Build Summary](images/build4.png)
+    ![Build Summary](images/bsumm.png)
 
 1. Navigate to the [Azure Portal](https://portal.azure.com){:target="_blank"} and click on the **App Service** that was created at the beginning of this lab. Select the **Container Settings** option and provide the information as suggested and then click the **Save** button.
 
@@ -196,21 +162,21 @@ In this exercise, the source code will be modified to trigger the CI-CD.
 
    ![Update registry](images/updatereg3.png)
 
-   ![Update registry](images/updatereg4.png)
-
-    {% include tip.html content= "The Continuous Deployment can be configured to deploy the web app to the designated server whenever a new docker image is pushed to the registry on the Azure portal itself. However, setting up a VSTS CD pipeline will provide better flexibility and additional controls (approvals, release gates, etc.) for the application deployment." %}
+    {% include tip.html content= "The Continuous Deployment can be configured to deploy the web app to the designated server whenever a new docker image is pushed to the registry on the Azure portal itself. However, setting up an Azure DevOps CD pipeline will provide better flexibility and additional controls (approvals, release gates, etc.) for the application deployment." %}
 
 1. Navigate to the **Azure Container Portal** and then select the **Repositories** option to view the generated docker images.
 
     ![Repository](images/imagesinrepo.png)
 
-1. Navigate to the **Releases** section under **Build & Releases** in the VSTS, and double-click on the latest release displayed on the page. Click on the **Logs** section to view the details of the release in progress.
+1. Navigate to the **Releases** section under **Pipelines** tab, and double-click on the latest release displayed on the page. Click on **Logs** to view the details of the release in progress.
 
-    ![Release Progress](images/rel3.png)
+    ![Release Progress](images/dobleclick.png)
 
-1. The release will deploy the docker image to the App Service based on the **BuildID** tagged with the docker image. Once the release is completed, the release summary will be displayed.
+    ![Release Progress](images/lgs1_1.png)
 
-    ![Summary](images/rel8.png)
+1. The release will deploy the docker image to the App Service based on the **BuildID** tagged with the docker image. Once the release is completed, the release **Logs** will be displayed.
+
+    ![Summary](images/releasesucc19.png)
 
 1. Navigate back to the [Azure Portal](https://portal.azure.com){:target="_blank"}   and click on the **Overview** section of the **App Service**. Click on the link displayed under the **URL** field to browse the application and view the changes.
 
@@ -218,8 +184,8 @@ In this exercise, the source code will be modified to trigger the CI-CD.
 
     ![Final Result](images/finalresult.png)
 
-    {% include tip.html content= "Use the credentials **Username**: `user` and **Password**: `P2ssw0rd@1` to login to the **HealthClinic** web application." %}
+1. Use the credentials **Username**: `user` and **Password**: `P2ssw0rd@1` to login to the **HealthClinic** web application.
 
 ## Summary
 
-Using the **VSTS** and the **Azure**, DevOps can be configured for dockerized applications by leveraging docker capabilities enabled on VSTS Hosted Agents.
+With **Azure DevOps** and **Azure**, we have configured a dockerized application by leveraging docker capabilities enabled on Azure DevOps Ubuntu Hosted Agent.
