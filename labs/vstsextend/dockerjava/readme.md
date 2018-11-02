@@ -1,5 +1,5 @@
 ---
-title: Deploying a Dockerized Java app to Azure Web App
+title: Deploying a Dockerized Java app to Azure Web App for Containers
 layout: page
 sidebar: vsts2
 permalink: /labs/vstsextend/dockerjava/
@@ -14,59 +14,37 @@ With Azure Web App for containers, it is easy to deploy container-based web apps
 
 ### What's covered in this lab
 
-In this lab, you will learn how you can use Release Management(RM) in Visual Studio Team Services (VSTS) to deploy a container Java web application to an Azure web app for containers.
+In this lab, you will learn how you can set up a Continuous Integration (CI) and Continuous Delivery (CD) pipelines with Azure Pipelines to deploy a container-based Java web application to an Azure web app for containers.
 
 This lab will show how you can
 
-* Create a new Azure App Service and configure it to use Apache Tomcat
+* Create a new Azure App Service with Container and configure it to use Apache Tomcat
 * Create a new MySQL database
 * Use Azure App Service Task to deploy a WAR file
 
 ### Prerequisites for the lab
 
-1. **Microsoft Azure Account**: You will need a valid and active Azure account for the Azure labs. If you do not have one, you can sign up for a [free trial](https://azure.microsoft.com/en-us/free/){:target="_blank"}
+1. Refer the [Getting Started](../Setup/) page to know the prerequisites for this lab.
 
-    * If you are an active Visual Studio Subscriber, you are entitled for a $50-$150 credit per month. You can refer to this [link](https://azure.microsoft.com/en-us/pricing/member-offers/msdn-benefits-details/){:target="_blank"} to find out more information about this including how to activate and start using your monthly Azure credit.
+1. Use the [Azure DevOps Demo Generator](https://azuredevopsdemogenerator.azurewebsites.net/?TemplateId=77371&Name=MyShuttle) to provision the project to your Azure DevOps Org. Use the **MyShuttle** template.
 
-    * If you are not a Visual Studio Subscriber, you can sign up for the FREE [Visual Studio Dev Essentials](https://www.visualstudio.com/dev-essentials/){:target="_blank"} program to create a **Azure free account** (includes 1 year of free services, $200 for 1st month).
+  {% include note.html content= "If you are following this lab from Working with Jenkins, VSTS and Azure, you can skip the next two exercises and go to [deploy](#exercise-2-deploying-to-an-azure-web-app-for-containers)" %}
 
-1. You will need a **Visual Studio Team Services Account**. If you do not have one, you can sign up for free [here](https://www.visualstudio.com/products/visual-studio-team-services-vs){:target="_blank"}
+## Exercise 1:  Configuring a CI pipeline to build and publish Docker image
 
-1. You will need a **Personal Access Token** to set up your project using the **VSTS Demo Generator**. Please see this [article](https://docs.microsoft.com/en-us/vsts/accounts/use-personal-access-tokens-to-authenticate){:target="_blank"} for instructions to create your token.
+In this task, you will configure a CI pipeline that will build and push the image to Azure Container Registry.
 
-    {% include note.html content= "You should treat Personal Access Tokens like passwords. It is recommended that you save them somewhere safe so that you can re-use them for future requests." %}
+1. Open the <a href="https://portal.azure.com" target="_blank">Azure Portal</a>.
 
-1. The [**Docker Integration**](https://marketplace.visualstudio.com/items?itemName=ms-vscs-rm.docker) extension installed and enabled on the VSTS account.
-
-If you are following this lab from "Working with Jenkins, VSTS and Azure, you can skip the next two exercises and go to [deploy](#deploying-to-an-azure-web-app-for-containers). 
-
-## Exercise 1: Setting up Visual Studio Team Services
-
-If you are following this lab from [Working with Eclipse](../eclipse/)  you can skip this exercise. Otherwise,
-
-1. Use the [VSTS Demo Generator](https://vstsdemogenerator.azurewebsites.net/?name=MyShuttleDocker&templateid=77373) to provision the team project on the VSTS account.
-
-   > **VSTS Demo Generator** helps you create team projects on your VSTS account with sample content that include source code, work items,iterations, service endpoints, build and release definitions based on the template you choose during the configuration. 
-
-   ![VSTS Demo Generator](images/vstsdemogen.png)
-
-1. Once the team project is provisioned, click on the URL to navigate to the team project.
-
-   ![VSTS Demo Generator](images/vstsdemogen2.png)
-
-    {% include note.html content= "This URL will automatically select the MyShuttleDocker template in the demo generator. If you want to try other projects, use this URL instead - [https://vstsdemogenerator.azurewebsites.net/](https://vstsdemogenerator.azurewebsites.net/)" %}
-
-## Exercise 2:  Create a VSTS Build to Build Docker Images
-
-In this task you will configure the VSTS build definition that will build and push the image to an Azure Container Registry
-
-1. Open the [**Azure Portal**](https://portal.azure.com){:target="_blank"} in a separate tab
-
-1. Select **+New** and search for **Azure Container Registry**. Select **Create**. In the *Create Container Registry* dialog, enter a name for the service, select the resource group, location, **Enable** Admin User etc., and select **Create**.
+1. Select **+ Create a resource** and search for **Container Registry**. Select **Create**. In the *Create Container Registry* dialog, enter a name for the service, select the resource group, location, **Enable** Admin User and click **Create**.
 
     ![Create Azure Container Registry](images/createacr.png)
 
-1. Return to  VSTS, from the **Build** hub, select and edit the **MyShuttle** build. This build definition contains a *maven* task to build the pom.xml file. The maven task should be updated the following settings
+1. In the Azure DevOps portal, select **Builds** from **Pipelines**. Select **MyShuttleDockerBuild** and click **Edit**. 
+
+1. Lets look at the tasks used in the build definition.
+
+1. Select the **Maven** task. This task is used to build the pom.xml file. The maven task is updated with the following additional settings
 
     | Parameter | Value | Notes |
     | --------------- | ---------------------------- | ----------------------------------------------------------- |
@@ -76,132 +54,137 @@ In this task you will configure the VSTS build definition that will build and pu
 
       ![Maven task settings](images/vsts-mavensettings.png)
 
-1. Then there is **Copy** and **Publish** tasks to copy the artifacts to the staging directory and publish to VSTS (or a file share).
+1. Then there is **Copy** task. We will copy the WAR file from the sources directory to the staging folder.
 
-1. Next we use the **Docker Compose** task to build and publish the images. Set the **Action** as **Build Service Images**. The other settings of the Docker compose tasks are as follows:
+    | Parameter | Value | Notes |
+    | --------------- | ---------------------------- | ----------------------------------------------------------- |
+    |Source Folder| $(build.sourcesdirectory)| Copy from the source folder|
+    |Contents|target/myshuttledev*.war, *.sql| Copy the MyShuttle WAR file
+    |Target Folder|$(build.artifactstagingdirectory)|Copy it to the default staging folder|
+
+1.  Next, we have a **Publish** task to publish the build artifacts to Azure Pipelines.
+
+    | Parameter | Value | Notes |
+    | --------------- | ---------------------------- | ----------------------------------------------------------- |
+    |Path to publish| $(build.artifactstagingdirectory)| Copy contents from the staging folder|
+    |Artifact name|drop|Provide a name for the artifact folder.  |
+    |Artifact publish location |Visual Studio Team Services/TFS|we will publish it to Azure pipelines|
+
+
+1. Next, there are two **Docker** tasks to build and publish the images. Select the first **Docker** task and notice that the **Command** is set to **Build**. The other settings of the Docker compose tasks are as follows:
 
     | Parameter | Value | Notes |
     | --------------- | ---------------------------- | ------------------------------------------- |
+    | Azure Subscription | Authorize your Azure subscription | The subscription that contains your registry |
     | Container Registry Type | Azure Container Registry | This is to connect to the Azure Container Registry you created earlier |
-    | Azure Subscription | Your Azure subscription | The subscription that contains your registry |
     | Azure Container Registry | Your registry | Select the Azure Container registry you created earlier |
-    | Additional Image Tags | `$(Build.BuildNumber)` | Sets a unique tag for each instance of the build |
+    |Command|build|Docker command|
+    |Dockerfile|src/Dockerfile|Point to the src folder for the docker file|
+    |Use default build context|Uncheck this option|
+    |Build context|. (dot representing the root folder)| The build context should be the root folder|
+    |Image name| `Web:$(Build.BuildNumber)` | Sets a unique name for each instance of the build |
+    |Qualify image name| Check (set to true)|   
     | Include Latest Tag | Check (set to true) | Adds the `latest` tag to the images produced by this build |
 
-1. Add another **Docker Compose** task with the same settings (you can also *clone* the previous task). We will just change the **Action** to **Push Images**. This action will instruct the task to push the container image to a container registry
+    ![Docker build task](images/dockerbuildtask.png)
 
-      ![Maven task settings](images/vsts-mavensettings2.png)
+1. There is a second **Docker** task with almost the same settings. The only change is the **Command** is set to **Push** and the **Image name** is set to  `Web:$(Build.BuildNumber)`. This action will instruct the task to push the Web image to the container registry.
 
-1. Click the **Save and Queue** button to save and queue this build.Make sure you are using the **Hosted Linux Agent**.
+      ![Maven task settings](images/dockerpublishtask.png)
 
-1. Wait for the build to complete. When it is successful you can go to your Azure portal and verify if the images were pushed successfully. 
+1. Click the **Save and Queue** button to save and queue this build. Make sure you are using the **Hosted Ubuntu 1604** build agent.
+
+1. Wait for the build to complete. When it is successful, you can go to your Azure portal and verify if the images were pushed successfully. 
     ![images/Azure Container Registry Images](images/portal-acrrepo.png)
 
 1. If you are following this from the Eclipse lab, you can also verify if the images were pushed correctly from the **Azure Explorer** view. *Sign in* to Azure, refresh Azure Container Registry. Right click and select **Explore Container Registry**. You should see the image - tagged with the build number.
 
     ![Explore Container Registry](images/exploreacr.png)
 
-## Exercise 3: Deploying to an Azure Web App for containers
+## Exercise 2: Deploying to an Azure Web App for containers
 
-In this exercise, we will setup a CD pipeline to deploy the web application to an Azure web app. First, let's create the Web App.
+In this exercise, we will setup a Release pipeline to deploy the web application to an Azure web app. First,let's create a Web App for Container with MYSQL.
 
-1. Sign into your [Azure Portal](https://portal.azure.com){:target="_blank}
+1. Sign into your [Azure Portal](https://portal.azure.com){:target="_blank"}.
 
-1. In the Azure Portal, choose **New, Web + Mobile** and then choose **Web App for Containers**
+1. In the Azure Portal, choose **+ Create a resource**, search for **Web App for Containers + MYSQL**, select and click *Create*.
 
      ![New Web App for Containers](images/newwebapp.png)
 
-1. Provide a name for the new web app, select existing or create new resource group for the web app. Then select **Configure Container** to specify the source repository for the images. Since we are using ACR to store the images, select **Azure Container Registry**. Select the **Registry**, **Image** value as **web** and **Tag** with the latest build value from the drop-downs. Select **OK** and then select **Create** to start provisioning the web app
+1. Provide the following details and click **Create**- 
 
-    ![Creating MyShuttle Web App for Containers](images/myshuttle-webapp.png)
+    * Enter a name for the new web app
+    * Choose the Azure subscription 
+    * Select existing or create new resource group for the web app. 
+    * Leave the App Service plan/Location as it is.
+    * In the *Configure Container* option, select **Azure   Container Registry**. Select the **Registry, Image and Tag** from the respective drop-downs and click **Apply**.
+    * In the *Database* section, provide all the required mandatory information and note down **Server Name, Server admin login name, Password** to a notepad. We will use it later in the Deployment pipeline.
 
-1. Once the provisioning is complete, go to the web app properties page, and select the URL to browse the web app. You should see the default **Tomcat** page
+    ![Creating MyShuttle Web App for Containers](images/myshuttle-webapp2.png)
+    ![Creating MYSQL Server](images/mysql-webapp.png)
 
-1. Append **/myshuttledev** the web application context path for the app, to the URL to get to the MyShuttle login page. For example if your web app URL is `https://myshuttle-azure.azurewebsites.net/` , then your URL to the login page is `https://myshuttle-azure.azurewebsites.net/myshuttledev/`
+1. Once the provisioning is complete, go to the web app Overview page, and select the URL to browse the web app. You should see the default **Tomcat** page.
+
+1. Append **/myshuttledev** to the web application context path in the URL to get to the MyShuttle login page. For example if your web app URL is `https://myshuttle-azure.azurewebsites.net/` , then your URL to the login page is `https://myshuttle-azure.azurewebsites.net/myshuttledev/`
 
     ![Login Page](images/loginpage.png)
+ 
+    We could configure *Continuous Deployment* to deploy the web app when a new image is pushed to the registry, within the Azure portal itself. However, setting up an Azure Pipeline will provide more flexibility and additional controls (approvals, release gates, etc.) for application deployment.
 
-    We could configure *Continuous Deployment* to deploy the web app is updated when a new image is pushed to the registry, within the Azure portal itself. However, setting up a VSTS CD pipeline will provide more flexibility and additional controls (approvals, release gates, etc.) for application deployment
+1. Back in Azure DevOps account, select **Releases** from the **Pipelines** hub. Select the Release definition - **MyShuttleDockerRelease** and click *Edit Pipeline*.
 
-1. Back in VSTS, select **Releases** from the **Build and Release** hub. Select **+** and then **Create Release Definition**
+     ![editrelease](images/editrelease.png)
 
-1. Select the **Azure App Service Deployment** template and click **Apply**
-
-1. Select **Pipeline**. Click **+Add** to add the artifacts. Select **Build** for the source type. Select the **Project**, **Source** and the **Default version**.  Finally select **Add** to save the settings
-
-    ![VSTS Add Artifact](images/vsts-cd-addartifact.png)
-
-1. Open the environment. Select **Environment 1** and configure as follows
+1. Hover the mouse on **Tasks** and select **Azure-Dev**. Configure the environment as below - 
 
     * Pick the Azure subscription
-    * Select **Linux App** for the **App Type**
-    * Enter the **App Service** name that you created
-    * Enter the **Azure Container Registry** server url for **Registry or Namespace** and then
-    * Enter ***Web*** for the **Repository**
+    * Enter the **App Service** that you created
 
     ![VSTS Release Defintion](images/vsts-cd-webapp.png)
 
-1. Select the **Deploy Azure App Service** task and make sure that these settings are reflected correctly. Note that the task allows you to specify the **Tag** that you want to pull. This will allow you to achieve end-to-end traceability from code to deployment by using a build-specific tag for each deployment. For example, with the Docker build tasks  you can tag your images with the Build.ID for each deployment.
+1. Select the **Execute Azure MYSQL:SqlTaskFile** task, choose the Azure subscription, and provide the DB details which were noted down earlier during the creation of the database server. 
+
+    * Select the *Host Name* from the drop down. You can find this value in the **Properties** page of the created MYSQL database in Azure portal.
+    * *Server Admin Login* - You can find this value in the **Properties** page of the created MYSQL database in Azure portal. Go to **Variables** section and enter the value for the variable - *$(DBUSER)*. 
+    * Enter the *Password*. This is the password provided during the creation of MYSQL database in Azure portal. Go to **Variables** section and enter the value for the variable - *$(DBPASSWORD)*. Click the **lock** icon to decrypt the dummy value and then, enter the password.
+
+    ![Variables](images/variables.png)
+
+    * A *MYSQL script* that is version controlled and provided here which creates the database, tables and populate records.
+
+    ![MySQL DB](images/mysqlcreatetask.png)
+
+1. Select the Deploy Azure App Service task and make sure that the following values are provided. Note that the task allows you to specify the Tag that you want to pull. This will allow you to achieve end-to-end traceability from code to deployment by using a build-specific tag for each deployment. For example, with the Docker build tasks you can tag your images with the Build.Number for each deployment.
+
+    - Registry or Namespace - Provide the value of Login server of the created Container Registry. You will find it in the Overview section.
+    - Image - Provide the value as web. This is where the container image is stored after build.
+    - Tag - Provide the value as $(Build.BuildNumber).
 
     ![Build Tags](images/vsts-buildtag.png)
+ 
+1. Select **Save** and then click **+ Release** \| **Create Release**.
 
-1. Select **Save** and then click **+ Release**  \| **Create Release** to start a new release
+1. Check the artifact version you want to use and then select **Create**.
 
-1. Check the artifact version you want to use and then select **Create**
+1. Wait for the release is complete and then navigate to the URL `http://{your web app name}.azurewebsites.net/myshuttledev`. You should be able to see the login page.
 
-1. Wait for the release is complete and then navigate to the URL `http://{your web app name}.azurewebsites.net/myshuttledev`. You should be able to see the login page
+## Exercise 3: Configuring MySQL connection strings in the Web App
 
-## Setting up MySQL database
+1. Navigate to the Web app that you have created. Click **Application Settings** and scroll down to the **Connection Strings** section
 
-Next, let's set up the MySQL database for the application
+1. Add a new MySQL connection string with **MyShuttleDb** as the name and the following string - `jdbc:mysql://`**`{MySQL Server Name}`**`.mysql.database.azure.com:3306/alm?useSSL=true&requireSSL=false&autoReconnect=true&user=`**`{your user name}`**`@`**`{MySQL Server Name}`**`&password=`**`{your password}`**. Replace the following with values that you have noted down
 
-1. From the Azure portal, select **+ New** and search for **MySQL**. Choose **Azure Database for MySQL(preview)** from the filtered result list and click **Create**. 
+    * MYSQL Server Name - **Server Name** in the MYSQL Server *Properties* page
+    * Your user name -  **SERVER ADMIN LOGIN NAME** in the MYSQL Server *Properties* page  
+    * Your password -**Password** that you provided during the creation of MYSQL server in Azure
 
-    ![Azure Database MySQL](images/azuredbmysql.png)
+    ![MySQL Connection](images/mysqldbconn.png)
 
-1. Enter all required information and select **Create**
+1. Click **Save** to save the connection string.
 
-    ![Azure Database MySQL](images/createazuredbmysql.png)
-
-1. Navigate to **Connection Security** section, enable **Allow Access to Azure Services** and click **Save**. Select **Properties**. Note down **SERVER NAME** and **SERVER ADMIN LOGIN NAME**
-
-1. In this example, the server name is **myshuttle-1-mysqldbserver.mysql.database.azure.com** and the admin user name is **mysqldbuser@myshuttle-1-mysqldbserver**
-
-1. We will use the MySQL command-line tool to establish a connection to the Azure Database for MySQL server. We will run the MySQL command-line tool from the Azure Cloud Shell in the browser. To launch the Azure Cloud Shell, click the `>_` icon in the top right toolbar and choose **Bash** if given an option to choose the shell type.
-
-1. Enter the following command
-
-    ```HTML
-    wget https://raw.githubusercontent.com/hsachinraj/azure-arm-templates/master/vstsazurejl_arm/mydbscript.script
-    ```
-    This should download the file that we want to execute on the server
-
-1. Next, we will execute the SQL from the downloaded file on the database server. Enter the following command
-    ````SQL
-    mysql -h myshuttle-1-mysqldbserver.mysql.database.azure.com -u mysqldbuser@myshuttle-1-mysqldbserver -p < mydbscript.script
-    ````
-    Enter the password that you specified during provisioning the database
-
-    ![Creating DB](images/createdatabase.png)
-
-    >This should create the database, tables and populate records for us. 
-
-1. Next, navigate to the Web app that you have created. Click **Application Settings** and scroll down to the **Connection Strings** section
-
-1. Add a new MySQL connection string with **MyShuttleDb** as the name and the following string for the value - `jdbc:mysql://{MySQL Server Name}:3306/alm?useSSL=true&requireSSL=false&autoReconnect=true&user={your user name}&password={your password}`
-
-1. Click **Save** to save the connection string
-
-   {% include note.html content= "Connection Strings configured here will be available as environment variables, prefixed with connection type for Java apps (also for PHP, Python and Node apps). In the `DataAccess.java` file under `src/main/java/com/microsoft/example` folder, we retrieve the connection string using the following code" %}
-
-    ````Java
-    String conStr = System.getenv("MYSQLCONNSTR_MyShuttleDb");
-    ````
-
-You have now setup and configured the database needed to deploy and run the MyShuttle application.
-
-1. You should be able to login to the application now. Return back to the login page and try logging is using any of the username/password combination:
+1. You should be able to login to the application now. Return to the web application and try logging in using any of the below *username/password* combination:
 
     * *fred/fredpassword*
     * *wilma/wilmapassword*
     * *betty/bettypassword*
+
