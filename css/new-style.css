@@ -344,7 +344,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#047ad8', end
 .txt-col{color: #505055;}
 .txt-col:hover{color: #0078d7!important;}
 .carousel-cell a:hover{text-decoration: none!important;}
-.carousel {
+.carousel, .carousel1 {
   background: transparent;
 }
 
@@ -467,4 +467,10 @@ iframe .flickity-viewport{
 li.osslist:hover {
   transform: translate3d(0,-3px,0);
   /* border-color: #009ad2ab; */
+}
+
+iframe{
+  border:none !important;
+  outline: none !important;
+
 }

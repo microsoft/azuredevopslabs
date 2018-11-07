@@ -33,7 +33,26 @@
 
 <script>
 
+//     $(function(){
+//         console.log('outside resize');
+//         var $carousel = $('.carousel').flickity();
+
+
+//         $(".tfsTab").on("click",function(){
+//             $carousel.show().flickity('resize');
+//             console.log('inside resize');
+//         });
+//         $('a[data-toggle="pill"]').on('shown.bs.tab', function (e) {
+//             $carousel.show().flickity('resize');
+//             console.log('inside resize');
+// });
+//     });
+
         $(window).scroll(function(){
+            $(".nav-item a").on("shown.bs.tab",function(){
+            $carousel.show().flickity('resize');
+            console.log('inside resize');
+        });
             if ($(window).scrollTop() >= 10) {
                 $('nav').addClass('fixed-header');
                 $('nav div').addClass('visible-title');

@@ -51,10 +51,10 @@ description: Learn how you can implement modern DevOps practices with  Azure, Az
       <div class="col-sm-12 px-0">
          <ul class="nav nav-tabs tab-bg-color" role="tablist">
             <li class="nav-item w-50 text-center">
-               <a class="nav-link active tabs-padding-bor-rad" data-toggle="pill" href="#services-labs">Azure DevOps</a>
+               <a class="nav-link active tabs-padding-bor-rad" data-toggle="tab" href="#services-labs">Azure DevOps</a>
             </li>
             <li class="nav-item w-50 text-center">
-               <a class="nav-link tab-bor-sm tabs-padding-bor-rad" data-toggle="pill" href="#server-labs">Team Foundation Server</a>
+               <a class="nav-link tab-bor-sm tabs-padding-bor-rad tfsTab" data-toggle="tab" href="#server-labs">Team Foundation Server</a>
             </li>
          </ul>
          <!-- Tab panes -->
@@ -369,6 +369,120 @@ description: Learn how you can implement modern DevOps practices with  Azure, Az
              </div>  
                <div class="container">
                <div class="row">
+               <div class="col-md-12">
+<h2 class="border-0 fon-normal">Recently added Labs</h2>
+<iframe height="230px" scrolling="no" width="100%" src="slider.html"></iframe>
+<!-- <div class="carousel mt-3" data-flickity='{ "groupCells": true, "pageDots": false } '>
+  <div class="carousel-cell">  
+    <div class="row">
+      <div class="col-sm-12">
+	  <div class="col-sm-6 offset-md-3 text-center">
+        <a href="/labs/tfs/releasemanagement/">
+		<img src="/images/azurepipelines.png" width="50" alt="azurepipelines">
+		</a>
+		</div>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-sm-12 text-center">
+	  <a href="/labs/tfs/releasemanagement/">
+        <p class="mb-0 txt-col">Embracing Continuous Delivery with Release Management</p>
+		</a>
+      </div>
+    </div>
+  </div>
+  <div class="carousel-cell">
+    <div class="row">
+      <div class="col-sm-12">
+	  <div class="col-sm-6 offset-md-3 text-center">
+	  <a href="/labs/tfs/readyroll/">
+        <img src="/images/Azure.png" width="50" alt="Azure">
+		</a>
+		</div>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-sm-12 text-center">
+	  <a href="/labs/tfs/readyroll/">
+        <p class="mb-0 txt-col">Develop and Deploy Databases with ReadyRoll</p>
+		</a>
+      </div>
+    </div>
+  </div>
+  <div class="carousel-cell">
+    <div class="row">
+      <div class="col-sm-12">
+	  <div class="col-sm-6 offset-md-3 text-center">
+	  <a href="/labs/tfs/appinsights/">
+        <img src="/images/Azure.png" width="50" alt="azure">
+		</a>
+		</div>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-sm-12 text-center">
+	  <a href="/labs/tfs/appinsights/">
+        <p class="mb-0 txt-col">Instrumenting ASP.NET with Application Insights</p>
+		</a>
+      </div>
+    </div>
+  </div>
+  <div class="carousel-cell">
+    <div class="row">
+      <div class="col-sm-12">
+	  <div class="col-sm-6 offset-md-3 text-center">
+	  <a href="/labs/tfs/armtemplates/">
+        <img src="/images/Azure.png" width="50" alt="Azure">
+		</a>
+		</div>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-sm-12 text-center">
+	  <a href="/labs/tfs/armtemplates/">
+        <p class="mb-0 txt-col">Authoring ARM Templates with Visual Studio</p>
+		</a>
+      </div>
+    </div>
+  </div>
+  <div class="carousel-cell">  
+    <div class="row">
+      <div class="col-sm-12">
+	  <div class="col-sm-6 offset-md-3 text-center">
+        <a href="/labs/tfs/aspnetazure/">
+		<img src="/images/Azure.png" width="50" alt="Azure">
+		</a>
+		</div>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-sm-12 text-center">
+	  <a href="/labs/tfs/aspnetazure/">	  
+        <p class="mb-0 txt-col">Deploying a SQL Database Backed ASP.NET App to Azure</p>
+		</a>
+      </div>
+    </div>
+  </div>
+  <div class="carousel-cell">
+    <div class="row">
+      <div class="col-sm-12">
+	 <div class="col-sm-6 offset-md-3 text-center">
+	  <a href="/labs/tfs/packagemanagement/">
+        <img src="/images/azureartifacts.png" width="50" alt="azureartifacts">
+		</a>
+	 </div>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-sm-12 text-center">
+	  <a href="/labs/tfs/packagemanagement/">
+        <p class="mb-0 txt-col">Package Management</p>
+		</a>
+      </div>
+    </div>
+  </div>  
+ </div> -->
+</div> 
                 <div class="col-sm-12">
   <h2 class="border-0 fon-normal">Agile Planning</h2>
   <div class="row equal-height-columns">
@@ -556,7 +670,7 @@ description: Learn how you can implement modern DevOps practices with  Azure, Az
   </div>
 </div>            
                  
-               <div class="col-sm-12">
+<div class="col-sm-12">
                   <h2 class="border-0 fon-normal">Get the accompanying VM</h2>
                   <p>To make it easy for you to follow the labs, we offer a virtual machine pre-installed with Visual Studio Enterprise 2017 (15.5),  Visual Studio Team Foundation Server 2018, Office and pre-configured with sample projects, users and data.</p>
                   <p>You can get access to the virtual machine the following ways:</p>
