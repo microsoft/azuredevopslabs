@@ -2,27 +2,8 @@
 
 <head>
     {% include head.html %}
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
-<link rel="stylesheet" href="https://npmcdn.com/flickity@2/dist/flickity.css">  
-<script src="https://npmcdn.com/flickity@2/dist/flickity.pkgd.js"></script>
     <script>
-        // $("#server-labs").show();
-
         $(document).ready(function() {
-        // $("#server-labs").show();
-        console.log('outside resize');
-        // var $carousel = $('.carousel2').flickity();
-
-        // $(".nav-item a").on("show.bs.tab",function(){
-        // var $carousel = $('.carousel2').flickity();
-        //     $carousel.show().flickity('resize');
-        //     console.log('inside resize');
-        // });
-
-       
-
             // Initialize navgoco with default options
             $("#mysidebar").navgoco({
                 caretHtml: '',
@@ -72,65 +53,7 @@
     });
   
   });
-    </script>
-    <script>
-//         var currentPage = $('.nav-item a').filter('.active');
-//         var pId = $(currentPage).attr('href');
-//         var currentPageId = pId.substring(1, pId.length);
-//         var prevPageId;
-//         var pageId; 
-//         $(document).ready(function() {
-// console.log("inside");
-//         $(".nav-item a").click(function(event) {
-
-//         prevPageId = currentPageId;
-//         var href = $(this).attr('href');
-//         pageId = href.substring(1, href.length);
-//         currentPageId = pageId;
-//         event.preventDefault();
-
-//         $('#' + prevPageId).removeClass('tab-pane fade show active');
-//         $('#' + prevPageId).addClass('tab-pane fade');
-//         $('#' + prevPageId).attr("aria-expanded","false");
-// console.log(prevPageTd);
-//         $('#' + currentPageId).removeClass('tab-pane fade');
-//         $('#' + currentPageId).addClass('tab-pane fade show active');
-//         $('#' + currentPageId).attr("aria-expanded","true");
-
-//         if (currentPageId === 'home') {
-//             $('.carousel-item:first').addClass('active');
-//         }
-
-//         });
-
-
-//         });
-// $(function() {
-//      var slider2_initialized = false;
-          
-//      $( ".nav-tabs" ).tabs({
-//          activate: function( event, ui ) {
-//             console.log(ui);
-//             var tab_id = $(ui.newPanel).attr('href');
-            
-//             if(tab_id == "server-labs" && slider2_initialized == false)
-//             {    
-//                 $('.carousel1').flickity-slider({
-//                   mode: 'fade'
-                  
-//                 }); 
-//                 //update initialization flag to true
-//                 slider2_initialized = true;
-//             }
-            
-//          }
-//      });
-     
-// $('.carousel').flickity-slider({
-//   mode: 'fade'
-// });     
-// });
-    </script>
+    </script>    
     <script>
         $(function() {
             $('[data-toggle="tooltip"]').tooltip()
