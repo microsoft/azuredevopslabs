@@ -59,7 +59,7 @@
   color: #666;
 }
 /* default/mobile, 2 cells in group */
-.carousel-cell { width: 100%; }
+.carousel-cell { width: 18%; }
 
 @media ( min-width: 512px ) {
   /* tablet size, 3 cells in group */
@@ -71,6 +71,7 @@
   /* tablet size, 3 cells in group */
   .carousel-cell { width: 33.33%; }
 }
+
 
 @media ( min-width: 1024px ) {
   /* desktop, 4 cells in group */
@@ -94,12 +95,14 @@ iframe .flickity-viewport{
     margin-left: -228px;
   }}
   p{
-      font-size: 13px !important;
+      font-size: 14px !important;
+      line-height: 25px;
   }
   
 </style>
 </head>
 <body>
+
         <div class="carousel mt-3" data-flickity='{ "groupCells": true, "pageDots": false } '>
                 <div class="carousel-cell">
                    <div class="row">
@@ -210,5 +213,6 @@ iframe .flickity-viewport{
                    </div>
                 </div>
              </div>
+
 </body>
 </html>
