@@ -1,6 +1,6 @@
 ---
 layout: homepage
-title: Modern DevOps practices with Azure, Azure DevOps and Team Foundation Server
+title: Azure DevOps Hands-On Labs
 keywords: ALM VM homepage
 tags: [overview]
 permalink: default.html
@@ -10,23 +10,23 @@ description: Learn how you can implement modern DevOps practices with  Azure, Az
 ---
 
 <div class="bg-image">
-   <div class="container p-t-65">
+   <div class="container" style="padding-top:45px">
       <div class="row">             
                <div class="col-sm-7">
-                  <h1>Azure DevOps Hands-On Labs</h1>
+                  <h1 class="mt-2">Azure DevOps Hands-On Labs</h1>
                   <div class="herotext2">
-                     Evaluating your next DevOps toolchain? Want to go deep and learn how you can implement modern DevOps practices?<br />
-                     Learn how you can plan smarter, collaborate better, and ship faster with a set of modern dev services. 
+                     <p>Evaluating your next DevOps tool chain? Want to dive deeper and learn how you can implement modern DevOps practice?</p>
+                     <p>Learn to plan smartly, collaborate better, and ship faster with a set of modern development services. </p>
                   </div>
                </div>
                <div class="align-items-center col-sm-5">
-               <img src="/images/lab.png" alt="banner-image" style="max-width:100%">
+               <img src="/images/lab.png" alt="banner-image" style="max-width:100%;margin-top:15px">
                </div>                    
       </div>
    </div>
 </div>
 
-<div class="container pading-t-20">
+<div class="container pading-t-10">
    <div class="row">
       <div class="col-sm-8">
          <h1>New to Azure DevOps?</h1>
@@ -41,38 +41,42 @@ description: Learn how you can implement modern DevOps practices with  Azure, Az
          </div>         
       </div>
       <div class="col-sm-4">
-      <a href="https://go.microsoft.com/fwlink/?LinkId=2014881" class="launch-hol btn-css text-white text-uppercase w-100 h-100 align-items-center d-flex justify-content-center" role="button" target="_blank" onclick="pageTracker._trackEvent('SignUp', 'Click', 'New User SignUp');" >Sign up for free now</a>
+      <a href="https://go.microsoft.com/fwlink/?LinkId=2014881" class="launch-hol btn-css text-white align-items-center d-flex justify-content-center" role="button" target="_blank" onclick="pageTracker._trackEvent('SignUp', 'Click', 'New User SignUp');" >Sign up for free now</a>
       </div>
    </div>
 </div>
 
-<div class="container-fluid padding-t-30">
+<div class="container-fluid">
    <div class="row">
       <div class="col-sm-12 px-0">
          <ul class="nav nav-tabs tab-bg-color" role="tablist">
             <li class="nav-item w-50 text-center">
-               <a class="nav-link active tabs-padding-bor-rad" data-toggle="tab" href="#services-labs">Azure DevOps</a>
+               <a class="nav-link active tabs-padding-bor-rad" data-toggle="tab" href="#services-labs">Azure DevOps
+               <p class="tab-p">Simplify and speed up the DevOps process with Azure DevOps services. The following labs will help you to get started with Azure DevOps services to automate software delivery and meet business needs.</p></a>
             </li>
             <li class="nav-item w-50 text-center">
-               <a class="nav-link tab-bor-sm tabs-padding-bor-rad tfsTab" data-toggle="tab" href="#server-labs">Team Foundation Server</a>
+               <a class="nav-link tab-bor-sm tabs-padding-bor-rad tfsTab" data-toggle="tab" href="#server-labs">Team Foundation Server
+               <p class="tab-p">
+                        Learn how you can remove barriers between teams, encourage collaboration, and improve the flow of value to your customers with Visual Studio and Team Foundation Server. 
+                  </p>
+               </a>
             </li>
          </ul>
          <!-- Tab panes -->
          <div class="tab-content bg-color-wit-mlr p-0 pt-0">
             <div id="services-labs" class="container-fluid tab-pane active p-0">               
                   <!--h2 class="pading-t-10">Azure DevOps Services</h2--> 
-             <div  class="jumbotron mb-3 p-10-0">
+             <!-- <div  class="jumbotron mb-3 p-10-0">
               <div class="container"> 
                <div class="row">
-                  <div class="col-sm-12">                 
-                     <p>Simplify and speed up the DevOps process with Azure DevOps services. The following labs will help you to get started with Azure DevOps services to automate software delivery and meet business needs.</p>
+                  <div class="col-sm-12">                    
                   </div> 
                </div>
               </div>
-             </div>               
+             </div>                -->
                <div class="container">
                <div class="row">
-               <div class="col-md-12">
+               <div class="col-md-12 pading-t-10">
                <h2 class="border-0 fon-normal">Recently added Labs</h2>
 <div class="carousel mt-3" data-flickity='{ "groupCells": true, "pageDots": false } '>
   <div class="carousel-cell">  
@@ -106,7 +110,7 @@ description: Learn how you can implement modern DevOps practices with  Azure, Az
     <div class="row mt-3">
       <div class="col-sm-12 text-center">
 	  <a href="/labs/azuredevops/git/">
-        <p class="mb-0 txt-col">Version Controll with Git in Azure Repos</p>
+        <p class="mb-0 txt-col">Version Control with Git in Azure Repos</p>
 		</a>
       </div>
     </div>
@@ -356,132 +360,19 @@ description: Learn how you can implement modern DevOps practices with  Azure, Az
                </div>
             </div>
             <div id="server-labs" class="container-fluid tab-pane fade p-0">
-             <div  class="jumbotron mb-3 p-10-0">
+             <!-- <div  class="jumbotron mb-3 p-10-0">
               <div class="container"> 
                <div class="row">
-                <div class="col-sm-12"> 
-                  <p>
-                        Learn how you can remove barriers between teams, encourage collaboration, and improve the flow of value to your customers with Visual Studio and Team Foundation Server. <br />
-                  </p>
+                <div class="col-sm-12">                   
                 </div>
                </div>
               </div>
-             </div>  
+             </div>   -->
                <div class="container">
                <div class="row">
-               <div class="col-md-12">
+               <div class="col-md-12 pading-t-10">
 <h2 class="border-0 fon-normal">Recently added Labs</h2>
 <iframe height="230px" scrolling="no" width="100%" src="slider.html"></iframe>
-<!-- <div class="carousel mt-3" data-flickity='{ "groupCells": true, "pageDots": false } '>
-  <div class="carousel-cell">  
-    <div class="row">
-      <div class="col-sm-12">
-	  <div class="col-sm-6 offset-md-3 text-center">
-        <a href="/labs/tfs/releasemanagement/">
-		<img src="/images/azurepipelines.png" width="50" alt="azurepipelines">
-		</a>
-		</div>
-      </div>
-    </div>
-    <div class="row mt-3">
-      <div class="col-sm-12 text-center">
-	  <a href="/labs/tfs/releasemanagement/">
-        <p class="mb-0 txt-col">Embracing Continuous Delivery with Release Management</p>
-		</a>
-      </div>
-    </div>
-  </div>
-  <div class="carousel-cell">
-    <div class="row">
-      <div class="col-sm-12">
-	  <div class="col-sm-6 offset-md-3 text-center">
-	  <a href="/labs/tfs/readyroll/">
-        <img src="/images/Azure.png" width="50" alt="Azure">
-		</a>
-		</div>
-      </div>
-    </div>
-    <div class="row mt-3">
-      <div class="col-sm-12 text-center">
-	  <a href="/labs/tfs/readyroll/">
-        <p class="mb-0 txt-col">Develop and Deploy Databases with ReadyRoll</p>
-		</a>
-      </div>
-    </div>
-  </div>
-  <div class="carousel-cell">
-    <div class="row">
-      <div class="col-sm-12">
-	  <div class="col-sm-6 offset-md-3 text-center">
-	  <a href="/labs/tfs/appinsights/">
-        <img src="/images/Azure.png" width="50" alt="azure">
-		</a>
-		</div>
-      </div>
-    </div>
-    <div class="row mt-3">
-      <div class="col-sm-12 text-center">
-	  <a href="/labs/tfs/appinsights/">
-        <p class="mb-0 txt-col">Instrumenting ASP.NET with Application Insights</p>
-		</a>
-      </div>
-    </div>
-  </div>
-  <div class="carousel-cell">
-    <div class="row">
-      <div class="col-sm-12">
-	  <div class="col-sm-6 offset-md-3 text-center">
-	  <a href="/labs/tfs/armtemplates/">
-        <img src="/images/Azure.png" width="50" alt="Azure">
-		</a>
-		</div>
-      </div>
-    </div>
-    <div class="row mt-3">
-      <div class="col-sm-12 text-center">
-	  <a href="/labs/tfs/armtemplates/">
-        <p class="mb-0 txt-col">Authoring ARM Templates with Visual Studio</p>
-		</a>
-      </div>
-    </div>
-  </div>
-  <div class="carousel-cell">  
-    <div class="row">
-      <div class="col-sm-12">
-	  <div class="col-sm-6 offset-md-3 text-center">
-        <a href="/labs/tfs/aspnetazure/">
-		<img src="/images/Azure.png" width="50" alt="Azure">
-		</a>
-		</div>
-      </div>
-    </div>
-    <div class="row mt-3">
-      <div class="col-sm-12 text-center">
-	  <a href="/labs/tfs/aspnetazure/">	  
-        <p class="mb-0 txt-col">Deploying a SQL Database Backed ASP.NET App to Azure</p>
-		</a>
-      </div>
-    </div>
-  </div>
-  <div class="carousel-cell">
-    <div class="row">
-      <div class="col-sm-12">
-	 <div class="col-sm-6 offset-md-3 text-center">
-	  <a href="/labs/tfs/packagemanagement/">
-        <img src="/images/azureartifacts.png" width="50" alt="azureartifacts">
-		</a>
-	 </div>
-      </div>
-    </div>
-    <div class="row mt-3">
-      <div class="col-sm-12 text-center">
-	  <a href="/labs/tfs/packagemanagement/">
-        <p class="mb-0 txt-col">Package Management</p>
-		</a>
-      </div>
-    </div>
-  </div>  
- </div> -->
 </div> 
                 <div class="col-sm-12">
   <h2 class="border-0 fon-normal">Agile Planning</h2>

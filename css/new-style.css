@@ -30,7 +30,7 @@ nav {
 .search-icon-css {
   position: absolute;
   padding-left: 15px;
-  top: 27px;
+  top: 19px;
 }
 #results-container li {
   padding: 5px 0px;
@@ -107,7 +107,7 @@ a {
   background-repeat: repeat-x, repeat;
   background-size: 200px, 700px;
   background-attachment: scroll, fixed;
-  height: 300px;
+  height: 280px;
   width: 100%;
 }
 .bg-image-lab{
@@ -254,7 +254,7 @@ ul.tick li:before {
 /*sign up button css*/
 a.launch-hol:hover{text-decoration:none!important;}
 .btn-css{
-border-radius: 16px;
+border-radius: 5px;
 background: #047ad8; /* Old browsers */
 background: -moz-linear-gradient(-45deg, #047ad8 0%, #4ba6ed 100%); /* FF3.6-15 */
 background: -webkit-linear-gradient(-45deg, #047ad8 0%,#4ba6ed 100%); /* Chrome10-25,Safari5.1-6 */
@@ -274,6 +274,14 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#047ad8', end
 .tab-bg-color li a:hover {
   background-color: #ecf2f6;
 }
+.tab-p{
+  font-size: 12px!important;
+  font-weight: 400!important;
+  margin-bottom: 0px!important;
+  color: #505055!important;
+  margin-top: 5px!important;
+  padding:0px 10px;
+}
 .nav-link {
   border-top: 5px solid transparent;
   color:#fff!important;
@@ -282,7 +290,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#047ad8', end
   border-bottom:none!important;
 }
 .nav-tabs .nav-link.active {  
-  background-color: #fff;
+  background-color: #a4dffd7d;;
   border-left: none;
   border-right: none;
   border-top: none;
@@ -453,9 +461,9 @@ iframe .flickity-viewport{
   }
 }
 @media (min-width: 768px) and (max-width: 991px) {
-  .bg-image {height:320px!important} .osslist {height:150px!important;}
+  .bg-image {height:330px!important} .osslist {height:150px!important;}
   .search-icon-css {
-    top: 24px;
+    top: 19px;
     margin-left: 2px;
   }
 }

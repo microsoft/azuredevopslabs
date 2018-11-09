@@ -3,9 +3,9 @@
 
 <header>
   <nav class="navbar navbar-expand-sm bg-of-header navbar-dark">
-    <ul class="navbar-nav">
-      <li class="nav-item">
-        <a class="nav-link" href="{{site.url}}{{site.baseurl}}"><img src="{{site.url}}{{ site.baseurl }}/images/azure-devops.png" height="32" alt="company logo"
+    <ul class="navbar-nav" style="margin-bottom:-13px">
+      <li class="nav-item" style="margin-top:-26px">
+        <a class="nav-link" href="{{site.url}}{{site.baseurl}}"><img src="{{site.url}}{{ site.baseurl }}/images/azure-devops.png" height="24" style="margin-top:-7px" alt="company logo"
           /><b class="col-white-fon-20">{{site.topnav_title}}</b></a>
       </li>
     </ul>
@@ -14,18 +14,18 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="collapsibleNavbar">
-      <ul class="navbar-nav ml-auto">
+      <ul class="navbar-nav ml-auto"  style="margin-top:-10px;margin-bottom:-3px;">
         <li class="nav-item">
           <a class="nav-link" href="#" data-toggle="tooltip" data-placement="left" title="Send Feedback" onclick="javascript:window.location='mailto:{{site.feedback_email}}?subject={{site.feedback_subject_line}} &body=I have some feedback about the {{page.title}} page: ' + window.location.href;">
             <i class="fa fa-envelope" aria-hidden="true"></i></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="https://github.com/Microsoft/almvm" data-toggle="tooltip" data-placement="bottom" title="Edit on GitHub">
+          <a class="nav-link" href="https://github.com/Microsoft/azuredevopslabs" data-toggle="tooltip" data-placement="bottom" title="Edit on GitHub">
             <i class="fa fa-github" aria-hidden="true"></i></a>
         </li>
         <li class="nav-item">
           <!--start search-->
-          <div id="search-demo-container">
+          <div id="search-demo-container" style="padding-top: 6px;">
             <input type="text" class="search-field" id="search-input" placeholder="{{site.data.strings.search_placeholder_text}}">
             <i class="fa fa-search search-icon-css" aria-hidden="true"></i>
             <ul id="results-container"></ul>
@@ -40,9 +40,7 @@
               noResultsText: '{{site.data.strings.search_no_results_text}}',
               limit: 6,
               fuzzy: true,
-            })
-
-           
+            })          
           </script>
           <!--end search-->
         </li>
