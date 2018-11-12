@@ -4,11 +4,9 @@ layout: page
 sidebar: tfs
 permalink: /labs/tfs/deliveryplans/
 folder: /labs/tfs/deliveryplans/
+version: Lab version - 15.4.1
+updated: Last updated - 10/31/2017
 ---
-
-Lab version:15.4.1
-
-Last updated:10/31/2017
 
 ## Overview
 

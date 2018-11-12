@@ -4,6 +4,7 @@ layout: page
 sidebar: tfs
 permalink: /labs/tfs/technicaldebt/
 folder: /labs/tfs/technicaldebt/
+updated: blank
 ---
 ## Overview
 

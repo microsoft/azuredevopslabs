@@ -5,6 +5,7 @@ sidebar: java
 permalink: /labs/java/
 folder: /labs/java/
 comments: true
+updated: blank
 ---
 ![all_logo](images/all_logo.png)
 

@@ -6,8 +6,6 @@ permalink: /labs/vstsextend/dockerjava/
 folder: /labs/vstsextend/dockerjava/
 ---
 
-Last updated : {{ "now" | date: "%b %d,%Y" }}
-
 ## Overview
 
 With Azure Web App for containers, it is easy to deploy container-based web apps. You can pull container images from Docker Hub or a private Azure Container Registry, and deploy the containerized app with your preferred dependencies to production in seconds.

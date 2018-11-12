@@ -6,8 +6,6 @@ permalink: /labs/vstsextend/devopsprojectforjava/
 folder: /labs/vstsextend/devopsprojectforjava/
 ---
 
-Last updated : {{ "now" | date: "%b %d, %Y" }}.
-
 ## Overview
 
 The Azure DevOps Project simplifies the initial configuration of a continuous integration (CI) and continuous delivery (CD) pipeline for your Java app in Visual Studio Team Services (VSTS).

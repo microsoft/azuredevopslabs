@@ -6,7 +6,6 @@ permalink: /labs/vstsextend/azuredevopsprojectdotnet/
 folder: /labs/vstsextend/azuredevopsprojectdotnet/
 ---
 
-Last updated : {{ "now" | date: "%b %d, %Y" }}.
 ## Overview
 
 The **Azure DevOps Project** simplifies the initial configuration of a continuous integration (CI) and continuous delivery (CD) pipeline for your .NET core or ASP.NET applications in **Visual Studio Team Services (VSTS)**.

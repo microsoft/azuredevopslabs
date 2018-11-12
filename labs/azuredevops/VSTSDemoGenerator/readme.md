@@ -5,7 +5,7 @@ sidebar: vsts
 permalink: /labs/vsts/VSTSDemoGenerator/
 folder: /labs/vsts/VSTSDemoGenerator/
 ---
-Last updated : {{ "now" | date: "%b %d,%Y" }}.
+
 
 ## Overview
 

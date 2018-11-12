@@ -4,11 +4,9 @@ layout: page
 sidebar: tfs
 permalink: /labs/tfs/armtemplates/
 folder: /labs/tfs/armtemplates/
+version: Lab version - 15.4.1
+updated: Last updated - 10/26/2017
 ---
-
-Lab version:15.4.1
-
-Last updated:10/26/2017
 
 ## Overview
 

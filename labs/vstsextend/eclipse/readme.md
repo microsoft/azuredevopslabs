@@ -6,8 +6,6 @@ permalink: /labs/vstsextend/eclipse/
 folder: /labs/vstsextend/eclipse/
 ---
 
-Last updated : {{ "now" | date: "%b %d,%Y" }}
-
 ## Overview
 
 Azure DevOps services helps teams modernize their application development lifecycle and go from idea to deployment with continuous integration, testing, and deployment for any app targeting any platform.

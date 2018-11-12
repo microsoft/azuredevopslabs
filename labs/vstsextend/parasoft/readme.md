@@ -6,8 +6,6 @@ permalink: /labs/vstsextend/parasoft/
 folder: /labs/vstsextend/parasoft/
 ---
 
-Last updated : {{ "now" | date: "%b %d, %Y" }}
-
 ## Overview
 
 Service virtualization helps organizations accelerate time to market without compromising quality. Especially in Agile environments, dependent components (e.g., APIs, 3rd-party services, databases, mainframes, etc.) connected to the application under test are not readily accessible for development and testing because they are still evolving, beyond a team's control, or too costly/complex to configure in a test lab. With service virtualization, testing and development can proceed without waiting for access to the actual dependent components.

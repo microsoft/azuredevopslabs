@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://npmcdn.com/flickity@2/dist/flickity.css">  
+<script src="https://npmcdn.com/flickity@2/dist/flickity.pkgd.js"></script>
+<style>
+.flickity-prev-next-button.next{right:-20px!important;border: 1px solid #ddd!important;border-radius: 4px!important;}
+.flickity-prev-next-button.previous{left:-20px!important;border: 1px solid #ddd!important;border-radius: 4px!important;}
+.txt-col{color: #505055;}
+.txt-col:hover{color: #0078d7!important;}
+.carousel-cell a:hover{text-decoration: none!important;}
+.carousel, .carousel1 {
+  background: transparent;
+}
+
+.carousel-cell img{
+  max-width: 100%;
+}
+
+.carousel-cell.activated{
+  border: 1px solid;
+}
+
+.carousel-cell {
+/*   width: 28%; */
+  transition: all 0.3s ease-in-out; 
+  height: 180px;
+  padding: 20px 10px;
+  margin-right: 10px;
+  background: #fff;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  /* box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.1);  */
+  counter-increment: carousel-cell;
+  cursor: pointer;
+/*   z-index: 9999999999999; */
+}
+
+/* .carousel-cell.is-selected {
+  background: #ED2;
+} */
+
+/* cell number */
+.carousel-cell:before {
+  display: block;
+  text-align: center;
+/*   content: counter(carousel-cell); */
+  line-height: 200px;
+  font-size: 2em;
+  color: #666;
+}
+/* default/mobile, 2 cells in group */
+.carousel-cell { width: 18%; }
+
+@media ( min-width: 512px ) {
+  /* tablet size, 3 cells in group */
+  .carousel-cell { width: 50%; } .flickity-prev-next-button.previous{left:-10px!important;}
+  .flickity-prev-next-button.next{right:-10px!important;}
+}
+
+@media ( min-width: 768px ) {
+  /* tablet size, 3 cells in group */
+  .carousel-cell { width: 33.33%; }
+}
+
+
+@media ( min-width: 1024px ) {
+  /* desktop, 4 cells in group */
+  .carousel-cell { width: 18%; }
+}
+iframe .flickity-viewport{
+  height: 300px !important
+}
+/*Slider CSS end*/
+/*media queries*/
+@media (min-width: 375px) and (max-width: 499px) {
+  .bg-image {height:477px!important}.osslist {height:60px!important;}
+  .p-l-r-override {padding-right: 15px!important;padding-left: 10px!important;}
+  .bg-of-header {background: #0078d7!important;}
+  .flickity-prev-next-button.previous{left:-10px!important;}
+  .flickity-prev-next-button.next{right:-10px!important;}
+  .tab-bg-color li a {font-size: 1.1rem;}
+  .col-white-fon-20 {font-size: 16px !important;  }
+  .search-icon-css {
+    top: 159px;
+    margin-left: -228px;
+  }}
+  p{
+      font-size: 14px !important;
+      line-height: 25px;
+  }
+  
+</style>
+</head>
+<body>
+
+        <div class="carousel mt-3" data-flickity='{ "groupCells": true, "pageDots": false } '>
+                <div class="carousel-cell">
+                   <div class="row">
+                      <div class="col-sm-12">
+                         <div class="col-sm-6 offset-md-3 text-center">
+                            <a target="_blank"  href="/labs/tfs/releasemanagement/">
+                            <img src="/images/azurepipelines.png" width="50" alt="azurepipelines">
+                            </a>
+                         </div>
+                      </div>
+                   </div>
+                   <div class="row mt-3">
+                      <div class="col-sm-12 text-center">
+                         <a target="_blank"  href="/labs/tfs/releasemanagement/">
+                            <p class="mb-0 txt-col">Embracing Continuous Delivery with Release Management</p>
+                         </a>
+                      </div>
+                   </div>
+                </div>
+                <div class="carousel-cell">
+                   <div class="row">
+                      <div class="col-sm-12">
+                         <div class="col-sm-6 offset-md-3 text-center">
+                            <a target="_blank"  href="/labs/tfs/readyroll/">
+                            <img src="/images/Azure.png" width="50" alt="Azure">
+                            </a>
+                         </div>
+                      </div>
+                   </div>
+                   <div class="row mt-3">
+                      <div class="col-sm-12 text-center">
+                         <a target="_blank"  href="/labs/tfs/readyroll/">
+                            <p class="mb-0 txt-col">Develop and Deploy Databases with ReadyRoll</p>
+                         </a>
+                      </div>
+                   </div>
+                </div>
+                <div class="carousel-cell">
+                   <div class="row">
+                      <div class="col-sm-12">
+                         <div class="col-sm-6 offset-md-3 text-center">
+                            <a target="_blank"  href="/labs/tfs/appinsights/">
+                            <img src="/images/Azure.png" width="50" alt="azure">
+                            </a>
+                         </div>
+                      </div>
+                   </div>
+                   <div class="row mt-3">
+                      <div class="col-sm-12 text-center">
+                         <a target="_blank"  href="/labs/tfs/appinsights/">
+                            <p class="mb-0 txt-col">Instrumenting ASP.NET with Application Insights</p>
+                         </a>
+                      </div>
+                   </div>
+                </div>
+                <div class="carousel-cell">
+                   <div class="row">
+                      <div class="col-sm-12">
+                         <div class="col-sm-6 offset-md-3 text-center">
+                            <a target="_blank"  href="/labs/tfs/armtemplates/">
+                            <img src="/images/Azure.png" width="50" alt="Azure">
+                            </a>
+                         </div>
+                      </div>
+                   </div>
+                   <div class="row mt-3">
+                      <div class="col-sm-12 text-center">
+                         <a target="_blank"  href="/labs/tfs/armtemplates/">
+                            <p class="mb-0 txt-col">Authoring ARM Templates with Visual Studio</p>
+                         </a>
+                      </div>
+                   </div>
+                </div>
+                <div class="carousel-cell">
+                   <div class="row">
+                      <div class="col-sm-12">
+                         <div class="col-sm-6 offset-md-3 text-center">
+                            <a target="_blank"  href="/labs/tfs/aspnetazure/">
+                            <img src="/images/Azure.png" width="50" alt="Azure">
+                            </a>
+                         </div>
+                      </div>
+                   </div>
+                   <div class="row mt-3">
+                      <div class="col-sm-12 text-center">
+                         <a target="_blank"  href="/labs/tfs/aspnetazure/">
+                            <p class="mb-0 txt-col">Deploying a SQL Database Backed ASP.NET App to Azure</p>
+                         </a>
+                      </div>
+                   </div>
+                </div>
+                <div class="carousel-cell">
+                   <div class="row">
+                      <div class="col-sm-12">
+                         <div class="col-sm-6 offset-md-3 text-center">
+                            <a target="_blank"  href="/labs/tfs/packagemanagement/">
+                            <img src="/images/azureartifacts.png" width="50" alt="azureartifacts">
+                            </a>
+                         </div>
+                      </div>
+                   </div>
+                   <div class="row mt-3">
+                      <div class="col-sm-12 text-center">
+                         <a target="_blank"  href="/labs/tfs/packagemanagement/">
+                            <p class="mb-0 txt-col">Package Management</p>
+                         </a>
+                      </div>
+                   </div>
+                </div>
+             </div>
+
+</body>
+</html>
