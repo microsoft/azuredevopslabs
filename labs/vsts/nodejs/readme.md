@@ -4,6 +4,7 @@ layout: page
 sidebar: vsts
 permalink: /labs/vsts/nodejs/
 folder: /labs/vsts/nodejs/
+updated: blank
 ---
 
 ## Overview

@@ -33,7 +33,26 @@
 
 <script>
 
+//     $(function(){
+//         console.log('outside resize');
+//         var $carousel = $('.carousel').flickity();
+
+
+//         $(".tfsTab").on("click",function(){
+//             $carousel.show().flickity('resize');
+//             console.log('inside resize');
+//         });
+//         $('a[data-toggle="pill"]').on('shown.bs.tab', function (e) {
+//             $carousel.show().flickity('resize');
+//             console.log('inside resize');
+// });
+//     });
+
         $(window).scroll(function(){
+            $(".nav-item a").on("shown.bs.tab",function(){
+            $carousel.show().flickity('resize');
+            console.log('inside resize');
+        });
             if ($(window).scrollTop() >= 10) {
                 $('nav').addClass('fixed-header');
                 $('nav div').addClass('visible-title');
@@ -66,18 +85,17 @@
 
 
         {{content}}
-        <div class="column">
+        <!--<div class="column">
             <div class="col-lg-12">
                         
-            </div>        
-                {% include footer.html %}
-                <div>
-                    <div class="container">
-
-                    </div>
-                    {% include gototop.html %}
-                </div>                       
-        </div>
+            </div>    -->    
+            {% include footer.html %}
+            <!--<div>
+                <div class="container">
+                </div>-->
+                {% include gototop.html %}
+            <!--</div>   -->                    
+    <!--</div>-->
     
         
     <!-- begin usabilla live embed code -->
@@ -86,7 +104,7 @@
     /*]]>{/literal}*/</script> -->
     <!-- end usabilla live embed code -->
     <!-- begin SurveySparrow live embed code -->
-    <script>(function(){var t,e,s,n="ss-widget",r="script",a=document,o=window;o.SS_WIDGET_TOKEN="tt-1c06a0",o.SS_ACCOUNT="mssupport.surveysparrow.com",o.SS_SURVEY_NAME="azuredevops-labs-feedback-survey";a.getElementById(n)||(t=a.getElementsByTagName(r),s=t[t.length-1],e=a.createElement(r),e.type="text/javascript",e.async=!0,e.id=n,e.src=["https://","mssupport.surveysparrow.com/widget/",o.SS_WIDGET_TOKEN].join(""),s.parentNode.insertBefore(e,s))})();</script>
+    <!--<script>(function(){var t,e,s,n="ss-widget",r="script",a=document,o=window;o.SS_WIDGET_TOKEN="tt-1c06a0",o.SS_ACCOUNT="mssupport.surveysparrow.com",o.SS_SURVEY_NAME="azuredevops-labs-feedback-survey";a.getElementById(n)||(t=a.getElementsByTagName(r),s=t[t.length-1],e=a.createElement(r),e.type="text/javascript",e.async=!0,e.id=n,e.src=["https://","mssupport.surveysparrow.com/widget/",o.SS_WIDGET_TOKEN].join(""),s.parentNode.insertBefore(e,s))})();</script>-->
     <!-- end SurveySparrow live embed code -->
 </body>
 </html>

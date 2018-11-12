@@ -4,10 +4,9 @@ layout: page
 sidebar: tfs
 permalink: /labs/tfs/vsproductivity/
 folder: /labs/tfs/vsproductivity/
+version: Lab version - 15.4
+updated: Last updated - 11/6/2017
 ---
-
-Lab version:15.4
-Last updated:11/6/2017
 
 ## Overview
 

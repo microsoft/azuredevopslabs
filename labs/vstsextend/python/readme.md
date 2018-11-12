@@ -6,8 +6,6 @@ permalink: /labs/vstsextend/python/
 folder: /labs/vstsextend/python/
 ---
 
-Last updated : {{ "now" | date: "%b %d, %Y" }}.
-
 ## Overview
 
 **Python** is a server-side scripting language and a powerful tool for making dynamic and interactive web pages.

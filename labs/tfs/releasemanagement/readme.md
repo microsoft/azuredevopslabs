@@ -4,11 +4,9 @@ layout: page
 sidebar: tfs
 permalink: /labs/tfs/releasemanagement/
 folder: /labs/tfs/releasemanagement/
+version: Lab version - 15.4
+updated: Last updated - 11/10/2017
 ---
-
-Lab version:15.4
-
-Last updated:11/10/2017
 
 ## Overview
 

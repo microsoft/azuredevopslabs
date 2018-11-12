@@ -4,11 +4,9 @@ layout: page
 sidebar: tfs
 permalink: /labs/tfs/smartword4tfs/
 folder: /labs/tfs/smartword4tfs/
+version: Lab version - 14.0.25123
+updated: Last updated - 12/7/2017
 ---
-
-Lab version: 14.0.25123
-
-Last updated: 12/7/2017
 
 ## Overview
 

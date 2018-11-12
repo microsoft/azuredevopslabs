@@ -4,11 +4,9 @@ layout: page
 sidebar: tfs
 permalink: /labs/tfs/load/
 folder: /labs/tfs/load/
+version: Lab version - 15.4
+updated: Last updated - 11/3/2017
 ---
-
-Lab version:15.4
-
-Last updated:11/3/2017
 
 ## Overview
 

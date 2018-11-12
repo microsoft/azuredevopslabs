@@ -4,6 +4,7 @@ layout: page
 sidebar: vsts2
 permalink: /labs/vstsextend/dotnetcore/
 folder: /labs/vstsextend/dotnetcore/
+updated: blank
 ---
 
 ## Overview

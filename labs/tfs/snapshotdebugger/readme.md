@@ -4,11 +4,9 @@ layout: page
 sidebar: tfs
 permalink: /labs/tfs/snapshotdebugger/
 folder: /labs/tfs/snapshotdebugger/
+version: Lab version - 15.5
+updated: Last updated - 12/7/2017
 ---
-
-Lab version:15.5
-
-Last updated:12/7/2017
 
 ## Overview
 

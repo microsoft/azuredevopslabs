@@ -4,11 +4,9 @@ layout: page
 sidebar: vsts
 permalink: /labs/azuredevops/yaml/
 folder: /labs/azuredevops/yaml/
+version: Lab version - 15.8.2
+updated: Last updated - 9/4/2018
 ---
-
-Lab version: 15.8.2
-
-Last updated: 9/4/2018
 
 <a name="Overview"></a>
 ## Overview ##

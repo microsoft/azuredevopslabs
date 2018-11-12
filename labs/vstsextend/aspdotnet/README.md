@@ -4,6 +4,7 @@ layout: page
 sidebar: vsts2
 permalink: /labs/vstsextend/aspdotnet/
 folder: /labs/vstsextend/aspdotnet/
+updated: blank
 ---
 
 ## Overview

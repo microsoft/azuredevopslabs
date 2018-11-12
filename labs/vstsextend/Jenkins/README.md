@@ -6,8 +6,6 @@ permalink: /labs/vstsextend/jenkins/
 folder: /labs/vstsextend/jenkins/
 ---
 
-Last updated : {{ "now" | date: "%b %d,%Y" }}
-
 ## Overview
 
 [Jenkins](https://jenkins.io/){:target="_blank"} is a very popular Java-based open source continuous integration (CI) server that allows teams to continuously build applications across platforms. Azure Pipeline includes the ability to build any application on any platform including Windows, Linux and Mac. However, it also integrates well with Jenkins for teams who already use or prefer to use Jenkins for CI.

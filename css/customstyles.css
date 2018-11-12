@@ -266,7 +266,7 @@ p.post-meta {
 /* search area */
 
 #search-demo-container ul#results-container {list-style: none;
-font-size: 15px;position: absolute;top: 38px;right: 26px;z-index: -1;
+font-size: 15px;position: absolute;top: 23px;right: 26px;z-index: -1;
 width: 208px;padding: 5px 10px;background: #ffffff;}
 
 ul#results-container a {
@@ -284,8 +284,8 @@ ul#results-container a:hover {
 }
 
 #search-input {
-    margin-bottom:12px;
-    padding: .3em;
+    /* margin-bottom: 12px; */
+    padding: 2px 5px;
     padding-left: 35px;
     width: 16.2em;
     font-size: 1em;
@@ -293,7 +293,7 @@ ul#results-container a:hover {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     float: right;
-    margin-top: 2px;
+    /* margin-top: 8px; */
     border-color: #248ec2;
     border: 1px solid #248ec2;
     outline: none;
@@ -318,28 +318,27 @@ height:500px;
 }
 
 div#toc ul li {
-    margin: 8px 0px 8px 22px;
+    margin: 8px 0px 8px 10px;
     font-size: 100%;
     list-style: none;
 }
 
 div#toc ul {
     background-color:whitesmoke;
-    padding: 5px 0px;
+    padding: 1px 0px;
     border-radius: 5px;
     max-width:  450px;
-    margin-right: 10px;
-  /*  color: gray;*/
+    
 
 }
 
-div#toc ul li ul {
+/* div#toc ul li ul {
     padding-left: 8px;
 }
 
 div#toc ul li ul li::before {
     content: "–  ";
-}
+} */
 
 div#toc>ul::before {
     content: "In this lab";
@@ -353,7 +352,17 @@ div#toc>ul::before {
     padding-bottom: 20px;
     padding-left: 10px;
 }
-
+#toc ul li a, #toc ul li ul li a{
+    display:block;
+    padding:0px 5px;
+    border-left:2px solid transparent;
+}
+#toc ul li a.active, #toc ul li ul li a.active
+{   border-left:2px solid #0050c7;
+    padding:0px 5px;
+    font-weight: 600!important;
+    color:#0050c7!important;
+}
 li.dropdownActive a {
     font-weight: bold;
 }
@@ -486,9 +495,9 @@ ul#mysidebar {
     background-color: whitesmoke !important;
 }
 
-.nav ul li a {
- /*   background-color: #FAFAFA; */
-}
+/*.nav ul li a {
+    background-color: #FAFAFA; 
+}*/
 
 .nav li a {
     padding-right: 10px;
@@ -1275,9 +1284,9 @@ table thead th code.highlighter-rouge {
     font-weight: bold;
 }
 
-h2.userMapTitle {
-   /* font-family: "Lato","Geneva CY","Lucida Grande","Arial Unicode MS","Helvetica Neue","Helvetica","Arial",sans-serif;*/
-}
+/* h2.userMapTitle {
+   font-family: "Lato","Geneva CY","Lucida Grande","Arial Unicode MS","Helvetica Neue","Helvetica","Arial",sans-serif;
+}*/
 
 #userMap a:hover {
     text-decoration: none;
@@ -1404,7 +1413,7 @@ span.mainPageText {
 
 span.PageTitle {
     font-size: 24px;
-    font-weight: bold;
+    font-weight: 500;
     padding-top: 8px;
     padding-bottom: 8px;
     margin-top: 8px;
@@ -1636,7 +1645,7 @@ div.lablist {
 div.herotext2{
     font-size: 16px;
     line-height: 1.9;
-    width: 60%;
+    /* width: 60%; */
 }
 
 div.productcolmain {
@@ -1646,19 +1655,19 @@ div.productcolmain {
 }
 
 a.launch-hol {
-    width: 180 px;
+    width: 65%;
     font-size: 18px;
     border-color: #000000;
     padding: 7px;
-    margin: 5px;
+    margin: 60px 0px 5px;
     background-color: #0078d7;
     text-decoration: none;
-    color: black;
+    color: black;    
 }
 
-a.launch-hol {
+/* a.launch-hol {
     box-shadow: 2px 2px 1px #797979;
-}
+} */
 
 li.labslistitems{
     margin: 20px 0px 20px 0px;

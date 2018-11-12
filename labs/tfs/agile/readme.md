@@ -3,11 +3,9 @@ title: Agile Planning & Portfolio Management with Team Foundation Server
 layout: page
 permalink: /labs/tfs/agile/
 folder: /labs/tfs/agile/
+version: Lab version - 15.4
+updated: Last updated - 12/5/2017
 ---
-
-Lab version:15.4
-
-Last updated:12/5/2017
 
 ## Overview
 

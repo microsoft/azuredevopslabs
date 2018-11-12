@@ -4,6 +4,7 @@ layout: page
 sidebar: vsts2
 permalink: /labs/vstsextend/timetracker/
 folder: /labs/vstsextend/timetracker/
+updated: blank
 ---
 ## Overview 
 **7pace Timetracker** is a professional full-feature time recording and management solution that seamlessly integrates with Visual Studio Team Services (VSTS). Designed for software engineers, by software engineers, Timetracker exists within the same environment in which you work, allowing you to quickly and easily plan, estimate, enter, and track time directly on work items, and then use the resulting data to improve your productivity. This integration between work done and time tracked lets you know exactly how much time you’re spending on your work items, leading to better estimation and more efficient time management. The entire development team can see team members' individual pace, remaining time, and decreasing burndown.
