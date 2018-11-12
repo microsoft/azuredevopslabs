@@ -733,8 +733,7 @@ description: Learn how you can implement modern DevOps practices with Azure, Azu
                                     </div>
                                 </div>
                             </div>
-
-                                <div class="col-sm-12">
+                            <div class="col-sm-12">
                                 <h2 class="border-0 fon-normal">Get the accompanying VM</h2>
                                 <p>To make it easy for you to follow the labs, we offer a virtual machine pre-installed
                                     with Visual Studio Enterprise 2017 (15.5), Visual Studio Team Foundation Server
