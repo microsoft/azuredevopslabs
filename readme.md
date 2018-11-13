@@ -57,17 +57,11 @@ description: Learn how you can implement modern DevOps practices with Azure, Azu
                 <li class="nav-item w-50 text-center">
                     <a class="nav-link active tabs-padding-bor-rad" data-toggle="tab" href="#services-labs">Azure
                         DevOps
-                        <p class="tab-p">Simplify and speed up the DevOps process with Azure DevOps services. The
-                            following labs will help you to get started with Azure DevOps services to automate software
-                            delivery and meet business needs.</p></a>
+                     </a>
                 </li>
                 <li class="nav-item w-50 text-center">
                     <a class="nav-link tab-bor-sm tabs-padding-bor-rad tfsTab" data-toggle="tab" href="#server-labs">Team
-                        Foundation Server
-                        <p class="tab-p">
-                            Learn how you can remove barriers between teams, encourage collaboration, and improve the
-                            flow of value to your customers with Visual Studio and Team Foundation Server.
-                        </p>
+                        Foundation Server                       
                     </a>
                 </li>
             </ul>
@@ -82,7 +76,7 @@ description: Learn how you can implement modern DevOps practices with Azure, Azu
                   </div> 
                </div>
               </div>
-             </div>                -->
+             </div> -->
                     <div class="container">
                         <div class="row">
                             <!-- <div class="col-md-12 pading-t-10">
@@ -241,6 +235,9 @@ description: Learn how you can implement modern DevOps practices with Azure, Azu
                             </div> -->
                             <div class="col-sm-12 pading-t-20">
                                 <h2 class="border-0 fon-normal">Getting started</h2>
+                                 <p class="tab-p">Simplify and speed up the DevOps process with Azure DevOps services. The
+                            following labs will help you to get started with Azure DevOps services to automate software
+                            delivery and meet business needs.</p>
                                 <div class="row equal-height-columns">
                                     <div class="col-sm-3 col-xs-12 p-l-r-override">
                                         <div class="bg-color-white equal-height-column">
@@ -434,7 +431,7 @@ description: Learn how you can implement modern DevOps practices with Azure, Azu
                                 In order to complete these labs you will need:
                                 <ul>
                                     <li>
-                                        <strong>Azure DevOps services Organization:</strong> Of course! you will need
+                                        <strong>Azure DevOps services Organization:</strong> You will need
                                         an Azure DevOps services account. If you don’t have one, you can sign up for
                                         one, from <a href="https://www.visualstudio.com/" target="_blank">here</a>
                                     </li>
@@ -482,6 +479,10 @@ description: Learn how you can implement modern DevOps practices with Azure, Azu
                                 <iframe height="230px" scrolling="no" width="100%" src="slider.html"></iframe>
                             </div> -->
                             <div class="col-sm-12" style="margin-top:10px;">
+                                 <p class="tab-p">
+                            Learn how you can remove barriers between teams, encourage collaboration, and improve the
+                            flow of value to your customers with Visual Studio and Team Foundation Server.
+                                    </p>
                                 <h2 class="border-0 fon-normal">Agile Planning</h2>
                                 <div class="row equal-height-columns">
                                     <div class="col-md-3 col-sm-12 p-l-r-override">
