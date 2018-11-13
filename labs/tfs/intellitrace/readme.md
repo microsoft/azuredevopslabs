@@ -4,11 +4,9 @@ layout: page
 sidebar: tfs
 permalink: /labs/tfs/intellitrace/
 folder: /labs/tfs/intellitrace/
+version: Lab version - 15.4
+updated: Last updated - 11/15/2017
 ---
-
-Lab version:15.4
-
-Last updated:11/15/2017
 
 ## Overview
 

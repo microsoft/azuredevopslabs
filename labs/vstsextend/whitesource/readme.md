@@ -5,8 +5,6 @@ sidebar: vsts2
 permalink: /labs/vstsextend/whitesource/
 folder: /labs/vstsextend/whitesource/
 ---
-Last updated : {{ "now" | date: "%b %d,%Y" }}
-
 ## Overview
 
 [WhiteSource](https://www.whitesourcesoftware.com/){:target="_blank"} is the leader in continuous open source software security and compliance management. WhiteSource integrates into your build process, no matter your programming languages, build tools, or development environments. It works automatically, continuously, and silently in the background, checking the security, licensing, and quality of your open source components against WhiteSource constantly-updated deﬁnitive database of open source repositories

@@ -4,6 +4,7 @@ layout: page
 sidebar: tfs
 permalink: /labs/tfs/technet/
 folder: /labs/tfs/technet/
+updated: blank
 ---
 
 <a href="https://www.microsoft.com/handsonlabs" target="_blank">Microsoft Hands-On Labs</a> provides a quick and easy way to evaluate and test Microsoft’s newest products and technologies through virtual environments that do not require any complex setup or installation. You can use virtual labs online immediately for free :)

@@ -151,6 +151,7 @@ In this lab, you will learn
    ![](images/launchdarklypat.png)
 
 1. In Azure DevOps project navigate to Project Settings-->Build and Release-->Service connections. Select **+New service connection** and choose **LaunchDarkly**.
+
       ![](images/launchdarklyendpoint.png)
 
 1. In **Add LaunchDarkly service connection** window give connection name and paste the access token which you copied in the first step and click **OK**
