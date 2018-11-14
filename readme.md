@@ -52,6 +52,7 @@ description: Learn how you can implement modern DevOps practices with Azure, Azu
 
 <div class="container-fluid">
     <div class="row">
+    <div class="container">  
         <div class="col-sm-12 px-0">
             <ul class="nav nav-tabs tab-bg-color" role="tablist">
                 <li class="nav-item w-50 text-center">
@@ -68,171 +69,8 @@ description: Learn how you can implement modern DevOps practices with Azure, Azu
             <!-- Tab panes -->
             <div class="tab-content bg-color-wit-mlr p-0 pt-0">
                 <div id="services-labs" class="container-fluid tab-pane active p-0">
-                    <!--h2 class="pading-t-10">Azure DevOps Services</h2-->
-                    <!-- <div  class="jumbotron mb-3 p-10-0">
-              <div class="container"> 
-               <div class="row">
-                  <div class="col-sm-12">                    
-                  </div> 
-               </div>
-              </div>
-             </div> -->
                     <div class="container">
-                        <div class="row">
-                            <!-- <div class="col-md-12 pading-t-10">
-                                <h2 class="border-0 fon-normal">Recently added Labs</h2>
-                                <div class="carousel mt-3" data-flickity='{ "groupCells": true, "pageDots": false } '>
-                                    <div class="carousel-cell">
-                                        <div class="row">
-                                            <div class="col-sm-12">
-                                                <div class="col-sm-6 offset-md-3 text-center">
-                                                    <a href="/labs/azuredevops/agile/">
-                                                        <img src="/images/azureboards.png" width="50" alt="agile-planning">
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row mt-3">
-                                            <div class="col-sm-12 text-center">
-                                                <a href="/labs/azuredevops/agile/">
-                                                    <p class="mb-0 txt-col">Agile Planning and Portfolio Management
-                                                        with Azure Boards</p>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="carousel-cell">
-                                        <div class="row">
-                                            <div class="col-sm-12">
-                                                <div class="col-sm-6 offset-md-3 text-center">
-                                                    <a href="/labs/azurerepos/git/">
-                                                        <img src="/images/azurerepos.png" width="50" alt="git-image">
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row mt-3">
-                                            <div class="col-sm-12 text-center">
-                                                <a href="/labs/azuredevops/git/">
-                                                    <p class="mb-0 txt-col">Version Control with Git in Azure Repos</p>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="carousel-cell">
-                                        <div class="row">
-                                            <div class="col-sm-12">
-                                                <div class="col-sm-6 offset-md-3 text-center">
-                                                    <a href="/labs/azuredevops/continuousintegration/">
-                                                        <img src="/images/azurepipelines.png" width="50" alt="azure">
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row mt-3">
-                                            <div class="col-sm-12 text-center">
-                                                <a href="/labs/azuredevops/continuousintegration/">
-                                                    <p class="mb-0 txt-col">Enabling Continuous Integration with Azure
-                                                        Pipelines</p>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="carousel-cell">
-                                        <div class="row">
-                                            <div class="col-sm-12">
-                                                <div class="col-sm-6 offset-md-3 text-center">
-                                                    <a href="/labs/azuredevops/continuousdeployment/">
-                                                        <img src="/images/azurepipelines.png" width="50" alt="azureDevOpsDelivery">
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row mt-3">
-                                            <div class="col-sm-12 text-center">
-                                                <a href="/labs/azuredevops/continuousdeployment/">
-                                                    <p class="mb-0 txt-col">Embracing Continuous Delivery with Azure
-                                                        Pipelines</p>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="carousel-cell">
-                                        <div class="row">
-                                            <div class="col-sm-12">
-                                                <div class="col-sm-6 offset-md-3 text-center">
-                                                    <a href="/labs/vstsextend/github-integration/">
-                                                        <img src="/images/azurepipelines.png" width="50" alt="git">
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row mt-3">
-                                            <div class="col-sm-12 text-center">
-                                                <a href="/labs/vstsextend/github-integration/">
-                                                    <p class="mb-0 txt-col">Integrate your GitHub Projects with Azure
-                                                        Pipelines</p>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="carousel-cell">
-                                        <div class="row">
-                                            <div class="col-sm-12">
-                                                <div class="col-sm-6 offset-md-3 text-center">
-                                                    <a href="/labs/vstsextend/jenkins/">
-                                                        <img src="/images/jenkins.png" width="50" alt="jenkins">
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row mt-3">
-                                            <div class="col-sm-12 text-center">
-                                                <a href="/labs/vstsextend/jenkins/">
-                                                    <p class="mb-0 txt-col">Integrating with Jenkins</p>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="carousel-cell">
-                                        <div class="row">
-                                            <div class="col-sm-12">
-                                                <div class="col-sm-6 offset-md-3 text-center">
-                                                    <a href="/labs/vstsextend/kubernetes/">
-                                                        <img src="/images/Azure.png" width="50" alt="azure">
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row mt-3">
-                                            <div class="col-sm-12 text-center">
-                                                <a href="/labs/vstsextend/kubernetes/">
-                                                    <p class="mb-0 txt-col">Deploying to Azure Kubernetes Service (AKS)</p>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="carousel-cell">
-                                        <div class="row">
-                                            <div class="col-sm-12">
-                                                <div class="col-sm-6 offset-md-3 text-center">
-                                                    <a href="/labs/vstsextend/docker/">
-                                                        <img src="/images/docker.png" width="50" alt="docker">
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row mt-3">
-                                            <div class="col-sm-12 text-center">
-                                                <a href="/labs/vstsextend/docker/">
-                                                    <p class="mb-0 txt-col">Deploying Docker Containers to Azure App
-                                                        Service</p>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div> -->
+                        <div class="row">                          
                             <div class="col-sm-12 pading-t-20">
                                 <h2 class="border-0 fon-normal">Getting started</h2>
                                  <p class="tab-p">Simplify and speed up the DevOps process with Azure DevOps services. The
@@ -773,5 +611,6 @@ description: Learn how you can implement modern DevOps practices with Azure, Azu
                 </div>
             </div>
         </div>
+    </div>
     </div>
 </div>
