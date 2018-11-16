@@ -168,19 +168,18 @@ description: Learn how you can implement modern DevOps practices with Azure, Azu
                                                         Feature Flag Management with LaunchDarkly</a></li>
                                                 <li class="osslist"> <img src="/images/kubernetes.png" height="42" class="icon-bor-p-m" /><a
                                                         href="/labs/vstsextend/kubernetes/" class="fon-size-13">
-                                                        Deploying to Azure Kubernetes Service (AKS)</a></li>
+                                                        Deploying a multi-container application to Azure Kubernetes Services </a></li>
                                                 <li class="osslist"> <img src="/images/github-42.png" height="42" class="icon-bor-p-m" /><a
                                                         href="/labs/azuredevops/github-integration/" class="fon-size-13">
-                                                        Integrate your GitHub Projects with Azure Pipelines</a></li>
+                                                        Setting up a CI/CD pipeline for your GitHub repository</a></li>
                                                 <li class="osslist"> <img src="/images/jenkins-42.png" height="42"
                                                         class="icon-bor-p-m" /> <a href="/labs/vstsextend/jenkins/"
-                                                        class="fon-size-13"> Integrating with Jenkins</a> </li>
+                                                        class="fon-size-13"> Configuring a CD pipeline for your Jenkins CI</a> </li>
                                                 <li class="osslist"> <img src="/images/tomcat-42.png" height="42" class="icon-bor-p-m" /><a
-                                                        href="/labs/vstsextend/tomcat/" class="fon-size-13"> Deploying
-                                                        a Java Application on Tomcat </a> </li>
+                                                        href="/labs/vstsextend/tomcat/" class="fon-size-13"> Deploying a Java-based Tomcat application to Azure </a> </li>
                                                 <li class="osslist"> <img src="/images/sonarqube-42.png" height="42"
                                                         class="icon-bor-p-m" /><a href="/labs/vstsextend/sonarqube/"
-                                                        class="fon-size-13"> Technical Debt Management with SonarQube</a>
+                                                        class="fon-size-13"> Managing technical debt with SonarQube and Azure DevOps</a>
                                                 </li>
                                             </ul>
                                         </div>
@@ -190,21 +189,20 @@ description: Learn how you can implement modern DevOps practices with Azure, Azu
                                             <ul class="p-l-5px">
                                                 <li class="osslist"> <img src="/images/eclipse-42.png" height="42"
                                                         class="icon-bor-p-m" /><a href="/labs/vstsextend/eclipse/"
-                                                        class="fon-size-13"> Developing with Eclipse for Java Projects</a></li>
+                                                        class="fon-size-13"> Integrating Azure Repos and Azure Pipelines with Eclipse</a></li>
                                                  <li class="osslist"> <img src="/images/docker-42.png" height="42" class="icon-bor-p-m" /><a
-                                                        href="/labs/vstsextend/docker/" class="fon-size-13"> Deploying
-                                                        Docker Containers to Azure App Service</a></li>
+                                                        href="/labs/vstsextend/docker/" class="fon-size-13"> Deploying a Docker based web application to Azure App Service</a></li>
                                                  <li class="osslist"> <img src="/images/docker-42.png" height="42" class="icon-bor-p-m" /><a
                                                         href="/labs/vstsextend/dockerjava/" class="fon-size-13"> Deploying a Dockerized Java app to Azure Web App for Containers</a></li>
                                                 <li class="osslist"> <img src="/images/octopus-42.png" height="42"
                                                         class="icon-bor-p-m" /><a href="/labs/vstsextend/Octopus/"
-                                                        class="fon-size-13"> Integrating Octopus Deploy</a></li>
+                                                        class="fon-size-13"> Automating Deployments from Azure Repos with  Octopus Deploy</a></li>
                                                  <li class="osslist"> <img src="/images/whitesource-42.png" height="42"
                                                         class="icon-bor-p-m" /><a href="/labs/vstsextend/WhiteSource/"
-                                                        class="fon-size-13"> OSS Governance with WhiteSource</a></li>
+                                                        class="fon-size-13"> Managing Open-source security and license with WhiteSource</a></li>
                                                 <li class="osslist"> <img src="/images/selenium-42.png" height="42"
                                                         class="icon-bor-p-m" /><a href="/labs/vstsextend/Selenium/"
-                                                        class="fon-size-13"> Driving Continuous Testing with Selenium</a></li>
+                                                        class="fon-size-13"> Automating Selenium Tests in Azure Pipelines</a></li>
                                                 <!-- <li class="osslist"> <img src="/images/java-42.png" height="42" class="icon-bor-p-m" />
                                                     <a href="/labs/java/" class="fon-size-13"> DevOps with VSTS and
                                                         Azure for Java Projects </a> </li> -->
@@ -216,22 +214,19 @@ description: Learn how you can implement modern DevOps practices with Azure, Azu
                                             <ul class="p-l-5px">
                                                 <li class="osslist"> <img src="/images/azure-42.png" height="42" class="icon-bor-p-m" /><a
                                                         href="/labs/vstsextend/deploymentgroups/" class="fon-size-13">
-                                                        Working with Deployment Groups</a></li>
+                                                        Deploying to Azure VM using Deployment Groups</a></li>
                                                 <li class="osslist"> <img src="/images/AzureFunction.jpg" height="42" class="icon-bor-p-m" /><a
                                                         href="/labs/vstsextend/azurefunctions/" class="fon-size-13">
-                                                        Deploying Azure Functions using Azure Pipelines</a></li>
+                                                        Setting up a CI/CD pipeline for Azure Functions</a></li>
                                                  <li class="osslist"> <img src="/images/vsts-1-42.png" height="42" class="icon-bor-p-m" /><a
                                                         href="/labs/vstsextend/releasegates/" class="fon-size-13">
                                                         Controlling Deployments using Release Gates</a> </li>
                                                 <li class="osslist"> <img src="/images/nodejs-42.png" height="42" class="icon-bor-p-m" /><a
-                                                        href="/labs/vsts/nodejs/" class="fon-size-13">DevOps for
-                                                        Node.js with VSTS and Azure </a> </li>
+                                                        href="/labs/vsts/nodejs/" class="fon-size-13">Configure CI/CD for Node application with Azure Pipelines</a> </li>
                                                 <li class="osslist"> <img src="/images/python-42.png" height="42" class="icon-bor-p-m" /><a
-                                                        href="/labs/vstsextend/python/" class="fon-size-13"> How to
-                                                        Deploy a Python Application to Azure from VSTS</a></li>
+                                                        href="/labs/vstsextend/python/" class="fon-size-13"> Deploying a CD pipleine for a Django-based Python app </a></li>
                                                 <li class="osslist"> <img src="/images/php.png" height="42" class="icon-bor-p-m" /><a
-                                                        href="/labs/vstsextend/PHP/" class="fon-size-13"> Deploying a
-                                                        PHP Application to Azure</a></li>
+                                                        href="/labs/vstsextend/PHP/" class="fon-size-13"> Setting up a CI/CD pipeline for your PHP application</a></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -250,8 +245,7 @@ description: Learn how you can implement modern DevOps practices with Azure, Azu
                                                         Azure DevOps Project for .NET</a></li> -->
                                                 <li class="osslist"> <img src="/images/sonarcloud-42.png" height="42"
                                                         class="icon-bor-p-m" /><a href="/labs/vstsextend/sonarcloud/"
-                                                        class="fon-size-13"> Managing Technical Debt using VSTS and
-                                                        SonarCloud</a></li>
+                                                        class="fon-size-13"> Driving continuous quality of your code with SonarCloud</a></li>
                                                   <li class="osslist"> <img src="/images/parasoft-42.png" height="42"
                                                         class="icon-bor-p-m" /><a href="/labs/vstsextend/parasoft/"
                                                         class="fon-size-13"> Leverage Virtual Services with Parasoft
