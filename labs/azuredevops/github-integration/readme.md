@@ -7,6 +7,7 @@ folder: /labs/azuredevops/github-integration/
 ---
 
 Last updated : {{ "now" | date: "%b %d,%Y" }}
+<div class="rw-ui-container"></div>
 
 
 <a name="Overview"></a>

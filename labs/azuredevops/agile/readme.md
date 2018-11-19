@@ -7,7 +7,7 @@ folder: /labs/azuredevops/agile/
 version: Lab version - 15.8.2
 updated: Last updated - 9/5/2018
 ---
-
+<div class="rw-ui-container"></div>
 <a name="Overview"></a>
 
 ## Overview ##
@@ -569,4 +569,3 @@ In this task we'll create a new process that inherits from Scrum. The one change
     ![](images/126.png)
 
 1. Once the work item is saved, Azure DevOps will also save the new custom information so that it will be available for queries and through the rest of Azure DevOps.
-
