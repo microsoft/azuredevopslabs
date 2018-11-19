@@ -7,8 +7,9 @@ folder: /labs/azuredevops/sonarcloud/
 version: Lab version - 15.8.2
 updated: Last updated - 9/6/2018
 ---
-
+<div class="rw-ui-container"></div>
 <a name="Overview"></a>
+
 ## Overview ##
 
 In this lab, you will be introduced to technical debt, how to configure your Azure Build definitions to use SonarCloud, how to understand the analysis results, and finally how to configure quality profile to control the rule set used by SonarCloud for analyzing your project.

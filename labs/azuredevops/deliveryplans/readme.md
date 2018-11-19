@@ -7,8 +7,9 @@ folder: /labs/azuredevops/deliveryplans/
 version: Lab version - 15.8.2
 updated: Last updated - 9/5/2018
 ---
-
+<div class="rw-ui-container"></div>
 <a name="Overview"></a>
+
 ## Overview ##
 
 It takes several teams to develop large software projects. Very large projects require multiple autonomous teams that can manage their own backlog and priority while contributing to a unified direction for that project. Regular reviews of the project schedule with these teams help ensure that the teams are working toward common goals. Delivery Plans provide the needed multi-team view of your project schedule.

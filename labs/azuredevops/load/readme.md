@@ -7,8 +7,9 @@ folder: /labs/azuredevops/load/
 version: Lab version - 15.8.2
 updated: Last updated - 9/5/2018
 ---
-
+<div class="rw-ui-container"></div>
 <a name="Overview"></a>
+
 ## Overview ##
 
 In this lab, you will be introduced to the [Web performance and Load testing capabilities](https://www.visualstudio.com/en-us/docs/test/performance-testing/getting-started/getting-started-with-performance-testing) provided in Visual Studio Enterprise 2017. You will walk through a scenario using a fictional online storefront where your goal is to model and analyze its performance with a number of simultaneous users. This will involve the definition of web performance tests that represent users browsing and ordering products, the definition of a load test based on the web performance tests, and finally the analysis of the load test results.
