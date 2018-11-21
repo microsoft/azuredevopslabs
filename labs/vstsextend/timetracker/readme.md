@@ -4,16 +4,15 @@ layout: page
 sidebar: vsts2
 permalink: /labs/vstsextend/timetracker/
 folder: /labs/vstsextend/timetracker/
-updated: blank
 ---
 ## Overview 
-**7pace Timetracker** is a professional full-feature time recording and management solution that seamlessly integrates with Visual Studio Team Services (VSTS). Designed for software engineers, by software engineers, Timetracker exists within the same environment in which you work, allowing you to quickly and easily plan, estimate, enter, and track time directly on work items, and then use the resulting data to improve your productivity. This integration between work done and time tracked lets you know exactly how much time you’re spending on your work items, leading to better estimation and more efficient time management. The entire development team can see team members' individual pace, remaining time, and decreasing burndown.
+**7pace Timetracker** is a professional full-feature time recording and management solution that seamlessly integrates with Azure DevOps. Designed for software engineers, by software engineers, Timetracker exists within the same environment in which you work, allowing you to quickly and easily plan, estimate, enter, and track time directly on work items, and then use the resulting data to improve your productivity. This integration between work done and time tracked lets you know exactly how much time you’re spending on your work items, leading to better estimation and more efficient time management. The entire development team can see team members' individual pace, remaining time, and decreasing burndown.
 
 **Timetracker** also offers an optional desktop Windows Client that can be installed on your local system. In Timetracker 4.0, time tracking moved to the server with a built-in Web Client that allows you to start tracking right from any work item. You can use multiple desktops, run the Windows Client everywhere or just open your browser; you will see a synced time interface that you can control from wherever you are.
 
 ## What’s covered in this lab
 
-In this tutorial, you will see how you can easily add time from various locations within Timetracker and VSTS and then use that time data to increase your knowledge and productivity:
+In this tutorial, you will see how you can easily add time from various locations within Timetracker and Azure DevOps and then use that time data to increase your knowledge and productivity:
 1.	How to Record Your Time on the Work Item Form (Details tab **Start Tracking** and Time tab **Add Time** buttons)
 1.	How to Record Your Time with Timetracker’s Windows and Web Clients
 1.	How to Record Your Time with Timetracker’s **Monthly**, **Timesheet** (Add **New Time** Timesheet Cells and List Editor) and **Times Explorer** Pages
@@ -21,43 +20,43 @@ In this tutorial, you will see how you can easily add time from various location
 1.	How to View the Health of Your Sprint on Timetracker’s **Iterations** Page.
 
 ## Prerequisites for the lab
-You will need a **Visual Studio Team Services Account**. If you do not have one, you can sign up for free [here](https://www.visualstudio.com/products/visual-studio-team-services-vs)
+You will need an **Azure DevOps Organization**. If you do not have one, you can sign up for free [here](https://go.microsoft.com/fwlink/?LinkId=2014881)
+
 ## Setting up the environment
 
-This section helps you with the steps to enable **7pace Timetracker** for VSTS web server on your Visual Studio Team Services account and (optional) install the Windows Client to your local system. 
+This section helps you with the steps to enable **7pace Timetracker** for your Azure DevOps Organization and (optional) install the Windows Client to your local system. 
 
-1. Login to https://www.visualstudio.com/ using your valid Microsoft Visual Studio Team Services account. 
-1. Click [here](https://marketplace.visualstudio.com/items?itemName=Berichthaus.TfsTimetracker) to navigate to the **Timetracker** extension in VSTS Marketplace. Or Search for **Timetracker** in VSTS Marketplace and click on the **Timetracker** icon.
+1. Login to your valid Azure DevOps Organization account. 
+1. Click [here](https://marketplace.visualstudio.com/items?itemName=7pace.TfsTimetracker) to navigate to the **Timetracker** extension in Azure DevOps Marketplace. Or Search for **Timetracker** in Azure DevOps Marketplace and click on the **Timetracker** icon.
 
    ![Timetrackericon](images/TimetrackerIcon.png)
 
 1. On the Timetracker application page, click **Get**.
 
-1. Select the drop-down in **Select a Visual Studio Team Services account** field and select your Team Services account, then select **Start 30 day free trial**. With this Timetracker extension will be installed to your VSTS account.
+1. Select the drop-down in **Select an Azure DevOps organization** field and select your Azure DevOps Organization, then select **Start 30 day free trial**. With this Timetracker extension will be installed to your VSTS account.
 
    ![selectvstsaccount](images/selectvstsaccount.png)
 
-1. Once the Timetracker server component is enabled on your account, ensure that the **Time** menu selection appears on the main menu bar of Team Services.
+1. Once the Timetracker server component is enabled on your account, ensure that the **Time** menu selection appears on the main menu bar of Azure DevOps Project.
 
-1. Once the above steps have been completed, you have the option of downloading the Windows Client. From the main menu bar, select **Time -> Apps**. Click the **Downloads** link on **Desktop Apps**  or at the top-right corner of the page.
+   ![timetrackerimage](images/timetrackeroption.png)
+
+1. Once the above steps have been completed, you have the option of downloading the Windows Client. Click **Yes, I agree** to accept the Privacy Terms. From the main menu bar, select **Time -> Apps**. Click the **Download client** link within **7pace Timetracker Windows client**.
 
      ![DownloadClient1](images/DownloadClient1.png)
 
-    ![DownloadClient2](images/DownloadClient2.png)
+1. (Optional) Pair the Windows Client with your Azure DevOps account by following the 7pace’s [Client Installation and Pairing Guide] guide.(https://support.7pace.com/hc/en-us/articles/115000516926-7pace-Timetracker-Client-Installation-and-Pairing-Guide).
 
-1. (Optional) Pair the Windows Client with your Team Services account by clicking the **Download** link again on the **Monthly** page of Timetracker and then selecting **Pair** or clicking on the **Pair account** link under the **Pairing** section of the **Apps** page of Timetracker. For more information, see 7pace’s [Client Installation and Pairing Guide](https://support.7pace.com/hc/en-us/articles/115000516926-7pace-Timetracker-Client-Installation-and-Pairing-Guide).
+   ![PairwithDevOps](images/pair.png)
 
 
 ## Exercise 1:How to Record Your Time on the Work Item Form (Details tab Start Tracking and Time tab Add Time buttons)
 
-7pace Timetracker is fully integrated with your VSTS account. Throughout each sub-tab of Timetracker or within your VSTS account, any time you click on a work item, the work item details popup window displays.
+7pace Timetracker is fully integrated with your Azure DevOps Project. Throughout each sub-tab of Timetracker or within your Azure DevOps Project, any time you click on a work item, the work item details popup window displays.
 
-1. Open any work item on your VSTS sprint board.
+1. Open any work item on your Azure DevOps Project sprint board.
 
-
-   ![OpenWorkitem](images/OpenWorkitem.png)
-
- 
+   ![OpenWorkitem](images/OpenWorkitem.png) 
 
 1. Under the **Details** tab, you will find a new section **Work**. Under that section, you will find the **Start Tracking** button.
 
