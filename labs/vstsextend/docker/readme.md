@@ -126,7 +126,7 @@ Now that the required resources are provisioned, the **Build** and the **Release
 
    >The **Database Name** is set to **mhcdb**, the **Server Admin Login** is set to **sqladmin** and the **Password** is set currently to **P2ssw0rd1234**.
 
-## Exercise 3: Initiate the CI Build and Deployment through code commit 
+## Exercise 2: Initiate the CI Build and Deployment through code commit 
 
 In this exercise, the source code will be modified to trigger the CI-CD.
 

@@ -38,26 +38,22 @@ In this lab, you will learn how to setup SonarQube on Azure and integrate with A
 
    ![CustomDeployAzure1](images/CustomDeployAzure1.png)
 
-   ![CustomDeployAzure2](images/CustomDeployAzure2.png)
-
    Provide the following parameters as shown.
 
    |Parameter Name| Description|
    |--------------|------------|
    |**Subscription Details**|Choose the active Azure subscription, create a new resource group along with the location of creation|
-   |**SQ_VM_Name**|name of the VM where SonarQube will be installed|
-   |**SQ_DNS_NAME**|**unique** dns name to be provided with the following pattern:- **^[a-z][a-z0-9-]{1,61}[a-z0-9]$** or it will throw an error. For ex: sonarqubedns|
-   |**SQ_VM_UserName**|local admin account for the SonarQube VM|
-   |**SQ_VM_UserPassword**|password for the SonarQube VM|
-   |**SQ_DBAdmin_UserName**|admin account for Azure SQL Server|
-   |**SQ_DBAdmin_Password**|password for Azure SQL Server|
-   |**_artifacts Location**|This value will be automatically generated. Leave the field as it is|
-   |**_artifacts Location Sas Token**|The Sas Token will be automatically generated. Leave the field as it is|
+   |**SQ_VM_App Name**|Name of the VM where SonarQube will be installed|
+   |**SQ_Public IP_DNS Pefix**|**unique** DNS name to be provided with the following pattern:- **^[a-z][a-z0-9-]{1,61}[a-z0-9]$** or it will throw an error. For ex: sonarqubedns|
+   |**SQ VM_App Admin_User Name**|Local admin account for the SonarQube VM|
+   |**SQ VM_App Admin_User Password**|Password for the SonarQube VM|
+   |**SQ DB_Admin_User Name**|Admin account for Azure SQL Server|
+   |**SQ DB_Admin_Password**|Password for Azure SQL Server|
+   |**SQ DB_DBEdition**|Choose **Standard** as the Azure SQL database edition|
 
 1. After providing all of the required values in the above table, check the ***Terms & Conditions*** checkbox and click on the **Purchase button**.
 
-   ![CustomDeployAzure3](images/CustomDeployAzure3.png)
-
+   
    {% include important.html content= "The deployment in Azure can take up to 30 minutes. At the end of the deployment, SonarQube will be configured to run as a Windows Service on the SonarQube VM. When the SonarQube service starts for the first time, it will configure its database. This can take an additional 15 minutes  to complete during which time the Azure deployment shows as completed but you still won't be able to reach the SonarQube home page. Please give SonarQube some time to update. Click [here](https://blogs.msdn.microsoft.com/visualstudioalmrangers/2016/10/06/easily-deploy-sonarqube-server-in-azure/){:target=\"_blank\"} for more information." %}
 
 1. Once the deployment is successful, you will see the resources in Azure Portal.
@@ -188,7 +184,8 @@ The link will open the **MyShuttle** project in the SonarQube Dashboard.  Under 
 
    ![bug_details](images/bug_details.png)
 
+With Azure DevOps and SonarQube,the capability is to not only show the health of an application but also to highlight newer issues. With a Quality Gate in place, you can fix the leak and therefore improve code quality systematically. 
 
 ## Summary
 
-With  the **SonarQube** extension for **Visual Studio Team Services**, you can embed automated testing in your CI/CD pipleine to automate the measurement of your technical debt including code semantics, testing coverage, vulnerabilities. etc.
+With SonarQube direct integration with Azure Pipeline, you learnt how to have a quality management tool to ensure that your code is up to standards. You can embed automated testing in your CI/CD pipleine to automate the measurement of your technical debt including code semantics, testing coverage, vulnerabilities. etc.

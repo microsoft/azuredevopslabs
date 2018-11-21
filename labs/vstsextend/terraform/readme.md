@@ -82,7 +82,9 @@ In this exercise, you will create azure resources using Terraform as part of you
 1. Select **Dev** stage and click **View stage tasks** to view the pipeline tasks.
 
       ![](images/viewstagetasks.png)
-  You will see the tasks as below
+
+1. You will see the tasks as below.
+
       ![](images/releasetasks.png)
 
 1. Select the **Azure CLI** task. Select the Azure subscription from the drop-down list and click **Authorize** to configure Azure service connection.
@@ -153,3 +155,8 @@ In this exercise, you will create azure resources using Terraform as part of you
    ![](images/webapp.png)
 
    Do you want to learn more about Terraform? If yes click [here](https://www.terraform.io/) for Terraform documentation.
+
+
+## Summary
+
+In this lab, you have learned how to automate repeatable deployments with Terraform on Azure using Azure Pipelines.
