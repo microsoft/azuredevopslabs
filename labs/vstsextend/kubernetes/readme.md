@@ -1,9 +1,9 @@
 ---
 title: Deploy application to AKS using Kubernetes
 layout: page
-sidebar: Azure DevOps2
-permalink: /labs/Azure DevOpsextend/kubernetes/
-folder: /labs/Azure DevOpsextend/kubernetes/
+sidebar: vsts2
+permalink: /labs/vstsextend/kubernetes/
+folder: /labs/vstsextend/kubernetes/
 ---
 
 Last updated : {{ "now" | date: "%b %d, %Y" }}.
