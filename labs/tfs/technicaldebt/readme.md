@@ -16,7 +16,11 @@ Technical debt is the set of problems in a development effort that make forward 
 
 ## Pre-requisites
 
-1- In order to complete this lab you will need the Visual Studio 2017 virtual machine provided by Microsoft. For more information on acquiring and using this virtual machine, please see [this blog post](http://aka.ms/ALMVM).
+1- In order to complete this lab you will need the Visual Studio 2017 virtual machine provided by Microsoft. Click the button below to launch the virtual machine on the Microsoft Hands-on-Labs portal.
+
+<a href="https://labondemand.com/AuthenticatedLaunch/32383?providerId=4" class="launch-hol" role="button" target="_blank"><span class="lab-details">Launch the virtual machine</span></a>
+
+Alternatively, you can download the virtual machine from [here](../almvmdownload/)
 
 2- You will need to manually install SonarQube on the above virtual machine using the recommended installation guide created by the Visual Studio ALM Rangers, please see this installation guide on GitHub. Alternatively, you may follow exercise 1 in this lab to install and configure SoanrQube for demo and evaluation purposes.
 
