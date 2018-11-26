@@ -16,7 +16,7 @@ updated: Last updated - 10/26/2017
 
 In order to complete this lab you will need the Visual Studio 2017 virtual machine provided by Microsoft. Click the button below to launch the virtual machine on the Microsoft Hands-on-Labs portal.
 
-<a href="https://www.microsoft.com/handsonlabs/SelfPacedLabs?storyId=external%3A%2F%2Fcontent-private%2Fcontent%2Fexternal%2FMicrosoft-Virtual-Labs%2FDT00155" class="launch-hol" role="button" target="_blank"><span class="lab-details">Launch the virtual machine</span></a>
+<a href="https://www.microsoft.com/handsonlabs/SelfPacedLabs/?storyId=external://content-private/content/external/Microsoft-Virtual-Labs/DT00155" class="launch-hol" role="button" target="_blank"><span class="lab-details">Launch the virtual machine</span></a>
 
 Alternatively, you can download the virtual machine from [here](../almvmdownload/)
 

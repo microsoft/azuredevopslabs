@@ -400,8 +400,8 @@ description: Learn how you can implement modern DevOps practices with Azure, Azu
                                                 <li class="osslist"> <img src="/images/vside.png" height="42" class="icon-bor-p-m" /><a
                                                         href="/labs/tfs/snapshotdebugger/" class="fon-size-13">Debugging
                                                         with Snapshot Debugger</a> </li>
-                                                <li class="osslist"> <img src="/images/azureboards.png" height="42"
-                                                        class="icon-bor-p-m" /><a href="/images/validation.png" class="fon-size-13">Live
+                                                <li class="osslist"> <img src="/images/validation.png" height="42"
+                                                        class="icon-bor-p-m" /><a href="/labs/tfs/livedependencyvalidation/" class="fon-size-13">Live
                                                         Dependency Validation</a> </li>
                                                 <li class="osslist"> <img src="/images/vside.png" height="42" class="icon-bor-p-m" /><a
                                                         href="/labs/tfs/codeanalysis/" class="fon-size-13"> Using Code
@@ -453,7 +453,7 @@ description: Learn how you can implement modern DevOps practices with Azure, Azu
                                             <ul class="p-l-5px">
                                                 <li class="osslist"> <img src="/images/azurepipelines.png" height="42"
                                                         class="icon-bor-p-m" /><a href="/labs/tfs/build/" class="fon-size-13">Enabling
-                                                        Continuous Delivery </a> </li>
+                                                        Continuous Integration </a> </li>
                                             </ul>
                                         </div>
                                     </div>
