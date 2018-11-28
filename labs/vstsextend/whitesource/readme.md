@@ -1,5 +1,5 @@
 ---
-title: Checking Vulnerabilities using WhiteSource Bolt with Azure DevOps
+title: Managing Open-source security and license with WhiteSource
 layout: page
 sidebar: vsts2
 permalink: /labs/vstsextend/whitesource/

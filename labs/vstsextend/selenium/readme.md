@@ -1,5 +1,5 @@
 ---
-title: Automated UI Testing with Selenium and Azure Pipelines
+title: Automating Selenium Tests in Azure Pipelines
 layout: page
 sidebar: vsts2
 permalink: /labs/vstsextend/selenium/

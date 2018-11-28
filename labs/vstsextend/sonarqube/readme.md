@@ -1,5 +1,5 @@
 ---
-title: Integrating Azure DevOps with SonarQube
+title: Managing technical debt with SonarQube and Azure DevOps
 layout: page
 sidebar: vsts2
 permalink: /labs/vstsextend/sonarqube/

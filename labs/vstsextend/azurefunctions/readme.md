@@ -1,5 +1,5 @@
 ---
-title: Deploying Azure Functions using Azure DevOps
+title: Setting up a CI/CD pipeline for Azure Functions
 layout: page
 sidebar: vsts2
 permalink: /labs/vstsextend/azurefunctions/

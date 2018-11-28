@@ -1,5 +1,5 @@
 ---
-title: Automating Deployments with Azure DevOps and Octopus Deploy
+title: Automating Deployments from Azure Repos with Octopus Deploy
 layout: page
 sidebar: vsts2
 permalink: /labs/vstsextend/octopus/

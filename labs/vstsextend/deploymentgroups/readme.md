@@ -1,5 +1,5 @@
 ---
-title: Multi-machine deployments with Azure Pipelines
+title: Deploying to Azure VM using Deployment Groups
 layout: page
 sidebar: vsts2
 permalink: /labs/vstsextend/deploymentgroups/

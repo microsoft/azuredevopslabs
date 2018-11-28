@@ -1,5 +1,5 @@
 ---
-title: Deploy Python application to Azure App Service using Azure DevOps
+title: Deploying a CD pipleine for a Django-based Python app
 layout: page
 sidebar: vsts2
 permalink: /labs/vstsextend/python/

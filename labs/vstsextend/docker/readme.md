@@ -1,5 +1,5 @@
 ---
-title: Docker Deployment to Linux Azure App Service using Azure DevOps
+title: Deploying a Docker based web application to Azure App Service
 layout: page
 sidebar: vsts2
 permalink: /labs/vstsextend/docker/
