@@ -1,5 +1,5 @@
 ---
-title: Deploy application to AKS using Kubernetes
+title: Deploying a multi-container application to Azure Kubernetes Services
 layout: page
 sidebar: vsts2
 permalink: /labs/vstsextend/kubernetes/

@@ -1,5 +1,5 @@
 ---
-title: Integrating Jenkins CI with Azure Pipelines
+title: Configuring a CD pipeline for your Jenkins CI
 layout: page
 sidebar: vsts2
 permalink: /labs/vstsextend/jenkins/

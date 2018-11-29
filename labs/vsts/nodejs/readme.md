@@ -1,5 +1,5 @@
 ---
-title: DevOps with Node.js, Team Services, and Azure App Service
+title: Configure CI/CD for Node application with Azure Pipelines
 layout: page
 sidebar: vsts
 permalink: /labs/vsts/nodejs/

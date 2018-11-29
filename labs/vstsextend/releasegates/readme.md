@@ -1,5 +1,5 @@
 ---
-title: Release Safely - Expose changes to end users in a phased manner
+title: Controlling Deployments using Release Gates
 layout: page
 sidebar: vsts2
 permalink: /labs/vstsextend/releasegates/
