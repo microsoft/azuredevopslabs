@@ -1,5 +1,5 @@
 ---
-title: Deploying a CD pipleine for a Django-based Python app
+title: Deploying a CD pipeline for a Django-based Python app
 layout: page
 sidebar: vsts2
 permalink: /labs/vstsextend/python/
