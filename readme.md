@@ -227,7 +227,7 @@ description: Learn how you can implement modern DevOps practices with Azure, Azu
                                                 <li class="osslist"> <img src="/images/nodejs-42.png" height="42" class="icon-bor-p-m" /><a
                                                         href="/labs/vsts/nodejs/" class="fon-size-13">Configure CI/CD for Node application with Azure Pipelines</a> </li>
                                                 <li class="osslist"> <img src="/images/python-42.png" height="42" class="icon-bor-p-m" /><a
-                                                        href="/labs/vstsextend/python/" class="fon-size-13"> Deploying a CD pipleine for a Django-based Python app </a></li>
+                                                        href="/labs/vstsextend/python/" class="fon-size-13"> Deploying a CD pipeline for a Django-based Python app </a></li>
                                             </ul>
                                         </div>
                                     </div>
