@@ -2,8 +2,8 @@
 title: Java CI/CD using Jenkins and Azure Web Apps
 layout: page
 sidebar: vsts
-permalink: /labs/azuredevops/jenkinscicd/
-folder: /labs/azuredevops/jenkinscicd/
+permalink: /labs/azure/jenkinscicd/
+folder: /labs/azure/jenkinscicd/
 ---
 
 
