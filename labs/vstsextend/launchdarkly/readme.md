@@ -6,7 +6,6 @@ permalink: /labs/vstsextend/launchdarkly/
 folder: /labs/vstsextend/launchdarkly/
 ---
 
-Last updated : {{ "now" | date: "%b %d, %Y" }}
 
 ## Overview
 

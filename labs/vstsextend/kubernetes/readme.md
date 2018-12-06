@@ -6,7 +6,6 @@ permalink: /labs/vstsextend/kubernetes/
 folder: /labs/vstsextend/kubernetes/
 ---
 
-Last updated : {{ "now" | date: "%b %d, %Y" }}.
 
 ## Overview
 

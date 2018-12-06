@@ -6,7 +6,6 @@ permalink: /labs/vstsextend/php/
 folder: /labs/vstsextend/php/
 ---
 
-Last updated : {{ "now" | date: "%b %d, %Y" }}.
 ## Overview
 
 Azure Pipelines helps you set up a highly customizable continuous integration (CI) and continuous delivery (CD) pipeline to target app services, virtual machines, or containers in Azure whether you are developing a .NET, Java, Node, PHP, or a Python app.   
