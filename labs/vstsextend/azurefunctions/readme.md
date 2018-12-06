@@ -6,7 +6,6 @@ permalink: /labs/vstsextend/azurefunctions/
 folder: /labs/vstsextend/azurefunctions/
 ---
 
-Last updated : {{ "now" | date: "%b %d,%Y" }}
 
 ## Overview
 

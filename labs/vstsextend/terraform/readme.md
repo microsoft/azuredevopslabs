@@ -6,7 +6,6 @@ permalink: /labs/vstsextend/terraform/
 folder: /labs/vstsextend/terraform/
 ---
 
-Last updated : {{ "now" | date: "%b %d, %Y" }}
 
 ## Overview
 

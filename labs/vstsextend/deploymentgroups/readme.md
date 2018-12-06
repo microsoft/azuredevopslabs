@@ -6,7 +6,6 @@ permalink: /labs/vstsextend/deploymentgroups/
 folder: /labs/vstsextend/deploymentgroups/
 ---
 
-Last updated : {{ "now" | date: "%b %d, %Y" }}.
 
 ## Overview
 

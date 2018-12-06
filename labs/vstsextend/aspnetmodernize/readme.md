@@ -6,8 +6,6 @@ permalink: /labs/vstsextend/aspnetmodernize/
 folder: /labs/vstsextend/aspnetmodernize/
 ---
 
-Last updated : {{ "now" | date: "%b %d, %Y" }}.
-
 ## Overview
 
 When you decide to modernize your web applications and move them to the cloud, you don’t necessarily have to entirely re-architect your apps. Establishing an environment that emulates your on-premises architecture and putting your application "gets" you there, but doesn't accomplish much more than that.

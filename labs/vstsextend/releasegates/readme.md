@@ -6,7 +6,6 @@ permalink: /labs/vstsextend/releasegates/
 folder: /labs/vstsextend/releasegates/
 ---
 
-Last updated : {{ "now" | date: "%b %d,%Y" }}
 
 ## Overview
 

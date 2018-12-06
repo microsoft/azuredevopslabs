@@ -6,7 +6,6 @@ permalink: /labs/vstsextend/python/
 folder: /labs/vstsextend/python/
 ---
 
-Last updated : {{ "now" | date: "%b %d, %Y" }}.
 
 ## Overview
 

@@ -5,7 +5,6 @@ sidebar: vsts2
 permalink: /labs/vstsextend/whitesource/
 folder: /labs/vstsextend/whitesource/
 ---
-Last updated : {{ "now" | date: "%b %d,%Y" }}
 
 ## Overview
 
