@@ -33,7 +33,7 @@ In this lab, you will see
 
 ### Setting up the Environment
 ### Task 1: Create an Azure service principal with Azure CLI
-Ansible includes a suite of modules for interacting with Azure Resource Manager, giving you the tools to easily create and orchestrate infrastructure on the Microsoft Azure Cloud. Using the Azure Resource Manager modules requires authenticating with the Azure API. In this lab you will use Azure service principal for authentication.
+Ansible includes a suite of modules for interacting with Azure Resource Manager, giving you the tools to easily create and orchestrate infrastructure on the Microsoft Azure Cloud. Using the Azure Resource Manager modules requires authenticating with the Azure API. In this lab, you will use Azure service principal for authentication.
 
 1. Login to the [Azure portal](https://portal.azure.com).
 
@@ -60,7 +60,7 @@ Ansible includes a suite of modules for interacting with Azure Resource Manager,
 
 ### Task 2: Configure Ansible in a Linux machine
 
-To create and provision the resources in Azure with Ansible, we need to have  a Linux VM with Ansible configured. In this exercise, you will deploy an Azure Linux VM which is pre-installed and configured with Ansible.
+To create and provision the resources in Azure with Ansible, we need to have a Linux VM with Ansible configured. In this exercise, you will deploy an Azure Linux VM which is pre-installed and configured with Ansible.
 
 1. Click on the **Deploy to Azure** button to provision a **Ubuntu 18.04 VM** with Ansible.
 
@@ -78,7 +78,7 @@ To create and provision the resources in Azure with Ansible, we need to have  a 
    
     ![](images/connecttovm.png)
 
-1. Open Command prompt and paste the copied login command and log in. It will prompt for confirmation to connect, type **Yes** and provide the Password you have given in step 1.
+1. Open a Command prompt and paste the copied login command and log in. It will prompt for confirmation to connect, type **Yes** and provide the Password you have given in step 1.
 
    ![](images/sshtovm.png) 
 
@@ -88,7 +88,7 @@ To create and provision the resources in Azure with Ansible, we need to have  a 
 
    `nano ~/.azure/credentials`
 
-1. Insert the following lines into the **credentials** file. Replace the placeholders with the information from the service principal details you copied in previuous task. Press **Ctrl+O** to save the file and **Ctrl+X** to exit from the text editor.
+1. Insert the following lines into the **credentials** file. Replace the placeholders with the information from the service principal details you copied in the previuous task. Press **Ctrl+O** to save the file and **Ctrl+X** to exit from the text editor.
 
    `[default]`
 
@@ -100,7 +100,7 @@ To create and provision the resources in Azure with Ansible, we need to have  a 
 
    `tenant=<azure serviceprincipal-tenant>`
 
-1. Ansible is an agentless architecture based automation tool . Only it needs ssh authentication using Ansible Control Machine private/public key pair. Now let us create a pair of private and public keys. Run the following command to generate private/public key pair for ssh and to install the public key in the local machine.
+1. Ansible is an agentless architecture based automation tool . Only it needs ssh authentication using Ansible Control Machine private/public key pair. Now let us create a pair of private and public keys. Run the following command to generate a private/public key pair for ssh and to install the public key in the local machine.
 
    `ssh-keygen -t rsa`
    
@@ -116,7 +116,7 @@ To create and provision the resources in Azure with Ansible, we need to have  a 
 
    ![](images/sshkeys.png) 
 
-1. In the next task you need SSH private key to created SSH endpoint in Azure DevOps service. Run the following command to get the private key. Copy the private key to notepad.
+1. In the next task, you need SSH private key to created SSH endpoint in Azure DevOps service. Run the following command to get the private key. Copy the private key to notepad.
 
     `cat ~/.ssh/id_rsa`
 
@@ -124,7 +124,7 @@ To create and provision the resources in Azure with Ansible, we need to have  a 
 
 ### Task 3: Create a SSH Service Connection in Azure DevOps
 
-To connect and run playbooks through Ansible VM in Azure pipelines, we need to have connection between Azure DevOps and Ansible VM. This service connection provides authentication to Ansible.
+To connect and run playbooks through Ansible VM in Azure pipelines, we need to have a connection between Azure DevOps and Ansible VM. This service connection provides authentication to Ansible.
 
 1. Navigate to the project we created above using [Azure DevOps Demo Generator](https://azuredevopsdemogenerator.azurewebsites.net/?Name=Ansible).
 
@@ -202,11 +202,11 @@ In this exercise, you will build your application and publish the required files
 
     Your CD pipeline is provisioned with some default values. If required you can changes the variable values.
 
-1. Select the **Ansible** task. Select Ansible Location as **Remote Machine** and select **Ansible SSH endpoint** that you created in **Task 3**.
+1. Select the **Ansible** task. This task is to integrate with [Ansible](https://docs.ansible.com/ansible/latest/index.html). This task executes a given Ansible playbook on a specified list of inventory nodes via command line interface. This task requires that the Playbook files be located either on a private Linux agent or on a remote machine where Ansible automation engine has been installed. Select Ansible Location as **Remote Machine** and select **Ansible SSH endpoint** that you created in **Task 3**.
 
     ![](images/ansibletask.png)
 
-1. Select **Azure App Service Deploy** task. Select the Azure subscription from the drop-down list and click **Authorize** to configure Azure service connection. And this application require few app settings to connect to the MySQL database provisioned using Ansible script. That we are updating using **App settings** parameter in the task. This task will deploy the Smarthotel360-CouponManagement package to Azure app service which is provisioned by Ansible task in previous step.
+1. Select **Azure App Service Deploy** task. Select the Azure subscription from the drop-down list and click **Authorize** to configure Azure service connection. And this application require few app settings to connect to the MySQL database provisioned using Ansible script. That we are updating using **App settings** parameter in the task. This task will deploy the SmartHotel360-CouponManagement package to Azure app service which is provisioned by Ansible task in previous step.
 
     ![](images/appservicedeploy.png)
 
