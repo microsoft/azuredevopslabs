@@ -172,20 +172,23 @@ description: Learn how you can implement modern DevOps practices with Azure, Azu
                                                 <li class="osslist"> <img src="/images/terraform.png" height="42" class="icon-bor-p-m" /><a
                                                         href="/labs/vstsextend/terraform/" class="fon-size-13">
                                                         Automating your infrastructure deployments in the Cloud with Terraform and Azure Pipelines</a></li>
+                                                <li class="osslist"> <img src="/images/ansible.png" height="42" class="icon-bor-p-m" /><a
+                                                        href="/labs/vstsextend/ansible/" class="fon-size-13">
+                                                        Automating your infrastructure deployments in the Cloud with Ansible and Azure Pipelines</a></li>
                                                 <li class="osslist"> <img src="/images/github-42.png" height="42" class="icon-bor-p-m" /><a
                                                         href="/labs/azuredevops/github-integration/" class="fon-size-13">
                                                         Setting up a CI/CD pipeline for your GitHub repository</a></li>
                                                 <li class="osslist"> <img src="/images/jenkins-42.png" height="42"
                                                         class="icon-bor-p-m" /> <a href="/labs/vstsextend/jenkins/"
                                                         class="fon-size-13"> Configuring a CD pipeline for your Jenkins CI</a> </li>
-                                                <li class="osslist"> <img src="/images/tomcat-42.png" height="42" class="icon-bor-p-m" /><a
-                                                        href="/labs/vstsextend/tomcat/" class="fon-size-13"> Deploying a Java-based Tomcat application to Azure </a> </li>
                                             </ul>
                                         </div>
                                     </div>
                                     <div class="col-sm-3 col-xs-12 p-l-r-override">
                                         <div class="bg-color-white equal-height-column">
                                             <ul class="p-l-5px">
+                                                <li class="osslist"> <img src="/images/tomcat-42.png" height="42" class="icon-bor-p-m" /><a
+                                                        href="/labs/vstsextend/tomcat/" class="fon-size-13"> Deploying a Java-based Tomcat application to Azure </a> </li>
                                                 <li class="osslist"> <img src="/images/sonarqube-42.png" height="42"
                                                         class="icon-bor-p-m" /><a href="/labs/vstsextend/sonarqube/"
                                                         class="fon-size-13"> Managing technical debt with SonarQube and Azure DevOps</a>
@@ -200,9 +203,6 @@ description: Learn how you can implement modern DevOps practices with Azure, Azu
                                                 <li class="osslist"> <img src="/images/octopus-42.png" height="42"
                                                         class="icon-bor-p-m" /><a href="/labs/vstsextend/Octopus/"
                                                         class="fon-size-13"> Automating Deployments from Azure Repos with  Octopus Deploy</a></li>
-                                                 <li class="osslist"> <img src="/images/whitesource-42.png" height="42"
-                                                        class="icon-bor-p-m" /><a href="/labs/vstsextend/WhiteSource/"
-                                                        class="fon-size-13"> Managing Open-source security and license with WhiteSource</a></li>
                                                 <!-- <li class="osslist"> <img src="/images/java-42.png" height="42" class="icon-bor-p-m" />
                                                     <a href="/labs/java/" class="fon-size-13"> DevOps with VSTS and
                                                         Azure for Java Projects </a> </li> -->
@@ -212,6 +212,9 @@ description: Learn how you can implement modern DevOps practices with Azure, Azu
                                     <div class="col-sm-3 col-xs-12 p-l-r-override">
                                         <div class="bg-color-white equal-height-column">
                                             <ul class="p-l-5px">
+                                                 <li class="osslist"> <img src="/images/whitesource-42.png" height="42"
+                                                        class="icon-bor-p-m" /><a href="/labs/vstsextend/WhiteSource/"
+                                                        class="fon-size-13"> Managing Open-source security and license with WhiteSource</a></li>
                                                 <li class="osslist"> <img src="/images/selenium-42.png" height="42"
                                                         class="icon-bor-p-m" /><a href="/labs/vstsextend/Selenium/"
                                                         class="fon-size-13"> Automating Selenium Tests in Azure Pipelines</a></li>
@@ -226,14 +229,14 @@ description: Learn how you can implement modern DevOps practices with Azure, Azu
                                                         Controlling Deployments using Release Gates</a> </li>
                                                 <li class="osslist"> <img src="/images/nodejs-42.png" height="42" class="icon-bor-p-m" /><a
                                                         href="/labs/vsts/nodejs/" class="fon-size-13">Configure CI/CD for Node application with Azure Pipelines</a> </li>
-                                                <li class="osslist"> <img src="/images/python-42.png" height="42" class="icon-bor-p-m" /><a
-                                                        href="/labs/vstsextend/python/" class="fon-size-13"> Deploying a CD pipeline for a Django-based Python app </a></li>
                                             </ul>
                                         </div>
                                     </div>
                                     <div class="col-sm-3 col-xs-12 p-l-r-override">
                                         <div class="bg-color-white equal-height-column">
                                             <ul class="p-l-5px">
+                                                <li class="osslist"> <img src="/images/python-42.png" height="42" class="icon-bor-p-m" /><a
+                                                        href="/labs/vstsextend/python/" class="fon-size-13"> Deploying a CD pipeline for a Django-based Python app </a></li>
                                                 <li class="osslist"> <img src="/images/php.png" height="42" class="icon-bor-p-m" /><a
                                                         href="/labs/vstsextend/PHP/" class="fon-size-13"> Setting up a CI/CD pipeline for your PHP application</a></li>
                                                 <li class="osslist"> <img src="/images/aspnet-logo-42.png" height="42"
