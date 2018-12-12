@@ -183,7 +183,7 @@
         "typeHandlerVersion": "1.4",
         "autoUpgradeMinorVersion": true,
         "settings": {
-          "fileUris": [ "https://raw.githubusercontent.com/sriramdasbalaji/Myshuttle_Ansible/master/install_ansible.sh" ],
+          "fileUris": [ "https://raw.githubusercontent.com/Microsoft/azuredevopslabs/master/labs/vstsextend/ansible/armtemplate/install_ansible.sh" ],
           "commandToExecute": "sh install_ansible.sh"
         }
       },
