@@ -64,7 +64,7 @@ To create and provision the resources in Azure with Ansible, we need to have a L
 
 1. Click on the **Deploy to Azure** button to provision a **Ubuntu 18.04 VM** with Ansible.
 
-   [![Deploy to Azure](http://azuredeploy.net/deploybutton.png)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fsriramdasbalaji%2FMyshuttle_Ansible%2Fmaster%2Fansible_vm_deploy.json){:target="_blank"}
+   [![Deploy to Azure](http://azuredeploy.net/deploybutton.png)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FMicrosoft%2Fazuredevopslabs%2Fmaster%2Flabs%2Fvstsextend%2Fansible%2Farmtemplate%2Fansible_vm_deploy.json){:target="_blank"}
 
    Provide all the necessary information as is shown. It takes approximately 5-10 minutes to complete the deployment. 
     
