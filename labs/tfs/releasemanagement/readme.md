@@ -7,6 +7,7 @@ folder: /labs/tfs/releasemanagement/
 version: Lab version - 15.4
 updated: Last updated - 11/10/2017
 ---
+<div class="rw-ui-container"></div>
 
 ## Overview
 

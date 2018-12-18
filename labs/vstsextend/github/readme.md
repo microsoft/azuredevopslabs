@@ -5,6 +5,7 @@ sidebar: vsts2
 permalink: /labs/vstsextend/github/
 folder: /labs/vstsextend/github/
 ---
+<div class="rw-ui-container"></div>
 
 ## Overview
 

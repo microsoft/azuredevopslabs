@@ -5,6 +5,7 @@ sidebar: vsts2
 permalink: /labs/vstsextend/jenkins/
 folder: /labs/vstsextend/jenkins/
 ---
+<div class="rw-ui-container"></div>
 
 ## Overview
 

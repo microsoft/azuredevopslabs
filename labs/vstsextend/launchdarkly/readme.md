@@ -5,7 +5,7 @@ sidebar: vsts2
 permalink: /labs/vstsextend/launchdarkly/
 folder: /labs/vstsextend/launchdarkly/
 ---
-
+<div class="rw-ui-container"></div>
 
 ## Overview
 

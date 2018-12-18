@@ -5,6 +5,7 @@ sidebar: vsts2
 permalink: /labs/vstsextend/whitesource/
 folder: /labs/vstsextend/whitesource/
 ---
+<div class="rw-ui-container"></div>
 
 ## Overview
 

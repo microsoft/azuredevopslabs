@@ -5,7 +5,7 @@ sidebar: vsts2
 permalink: /labs/vstsextend/kubernetes/
 folder: /labs/vstsextend/kubernetes/
 ---
-
+<div class="rw-ui-container"></div>
 
 ## Overview
 

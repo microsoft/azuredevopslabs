@@ -6,6 +6,7 @@ permalink: /labs/vstsextend/dotnetcore/
 folder: /labs/vstsextend/dotnetcore/
 updated: blank
 ---
+<div class="rw-ui-container"></div>
 
 ## Overview
 

@@ -5,6 +5,7 @@ sidebar: vsts2
 permalink: /labs/vstsextend/eclipse/
 folder: /labs/vstsextend/eclipse/
 ---
+<div class="rw-ui-container"></div>
 
 ## Overview
 

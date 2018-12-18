@@ -5,6 +5,7 @@ sidebar: vsts2
 permalink: /labs/vstsextend/php/
 folder: /labs/vstsextend/php/
 ---
+<div class="rw-ui-container"></div>
 
 ## Overview
 

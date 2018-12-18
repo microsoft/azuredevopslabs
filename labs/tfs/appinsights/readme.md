@@ -7,6 +7,7 @@ folder: /labs/tfs/appinsights/
 version: Lab version - 15.4
 updated: Last updated - 11/13/2017
 ---
+<div class="rw-ui-container"></div>
 
 ## Overview
 

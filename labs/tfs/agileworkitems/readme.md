@@ -7,6 +7,7 @@ folder: /labs/tfs/agileworkitems/
 version: Lab version - 15.4
 updated: Last updated - 12/5/2017
 ---
+<div class="rw-ui-container"></div>
 
 ## Overview
 

@@ -5,6 +5,7 @@ sidebar: vsts2
 permalink: /labs/vstsextend/tomcat/
 folder: /labs/vstsextend/tomcat/
 ---
+<div class="rw-ui-container"></div>
 
 ## Overview
 

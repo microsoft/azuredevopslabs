@@ -5,7 +5,7 @@ sidebar: vsts2
 permalink: /labs/vstsextend/releasegates/
 folder: /labs/vstsextend/releasegates/
 ---
-
+<div class="rw-ui-container"></div>
 
 ## Overview
 

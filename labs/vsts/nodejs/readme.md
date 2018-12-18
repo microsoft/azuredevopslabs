@@ -6,6 +6,7 @@ permalink: /labs/vsts/nodejs/
 folder: /labs/vsts/nodejs/
 updated: blank
 ---
+<div class="rw-ui-container"></div>
 
 ## Overview
 

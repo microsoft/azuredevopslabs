@@ -5,6 +5,7 @@ sidebar: vsts2
 permalink: /labs/vstsextend/aspnetmodernize/
 folder: /labs/vstsextend/aspnetmodernize/
 ---
+<div class="rw-ui-container"></div>
 
 ## Overview
 
