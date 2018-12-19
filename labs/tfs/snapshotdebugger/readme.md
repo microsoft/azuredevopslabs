@@ -7,6 +7,7 @@ folder: /labs/tfs/snapshotdebugger/
 version: Lab version - 15.5
 updated: Last updated - 12/7/2017
 ---
+<div class="rw-ui-container"></div>
 
 ## Overview
 

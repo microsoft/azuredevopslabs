@@ -5,7 +5,7 @@ sidebar: vsts2
 permalink: /labs/vstsextend/terraform/
 folder: /labs/vstsextend/terraform/
 ---
-
+<div class="rw-ui-container"></div>
 
 ## Overview
 

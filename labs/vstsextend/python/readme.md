@@ -5,7 +5,7 @@ sidebar: vsts2
 permalink: /labs/vstsextend/python/
 folder: /labs/vstsextend/python/
 ---
-
+<div class="rw-ui-container"></div>
 
 ## Overview
 

@@ -5,6 +5,7 @@ sidebar: vsts2
 permalink: /labs/vstsextend/parasoft/
 folder: /labs/vstsextend/parasoft/
 ---
+<div class="rw-ui-container"></div>
 
 ## Overview
 

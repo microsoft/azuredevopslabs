@@ -5,7 +5,7 @@ sidebar: vsts2
 permalink: /labs/vstsextend/deploymentgroups/
 folder: /labs/vstsextend/deploymentgroups/
 ---
-
+<div class="rw-ui-container"></div>
 
 ## Overview
 

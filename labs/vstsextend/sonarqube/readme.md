@@ -5,6 +5,7 @@ sidebar: vsts2
 permalink: /labs/vstsextend/sonarqube/
 folder: /labs/vstsextend/sonarqube/
 ---
+<div class="rw-ui-container"></div>
 
 ## Overview
 

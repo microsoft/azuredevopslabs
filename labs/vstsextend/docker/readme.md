@@ -5,6 +5,7 @@ sidebar: vsts2
 permalink: /labs/vstsextend/docker/
 folder: /labs/vstsextend/docker/
 ---
+<div class="rw-ui-container"></div>
 
 ## Overview
 

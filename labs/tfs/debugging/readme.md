@@ -7,6 +7,7 @@ folder: /labs/tfs/debugging/
 version: Lab version - 15.5
 updated: Last updated - 12/6/2017
 ---
+<div class="rw-ui-container"></div>
 
 ## Overview
 

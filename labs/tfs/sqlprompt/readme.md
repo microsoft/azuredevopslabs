@@ -7,6 +7,7 @@ folder: /labs/tfs/sqlprompt/
 version: Lab version - 15.0.26020.0
 updated: Last updated - 2/15/2017
 ---
+<div class="rw-ui-container"></div>
 
 ## Overview
 

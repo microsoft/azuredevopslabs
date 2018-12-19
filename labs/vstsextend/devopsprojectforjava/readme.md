@@ -5,6 +5,7 @@ sidebar: vsts2
 permalink: /labs/vstsextend/devopsprojectforjava/
 folder: /labs/vstsextend/devopsprojectforjava/
 ---
+<div class="rw-ui-container"></div>
 
 ## Overview
 

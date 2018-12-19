@@ -5,7 +5,7 @@ sidebar: vsts2
 permalink: /labs/vstsextend/ansible/
 folder: /labs/vstsextend/ansible/
 ---
-
+<div class="rw-ui-container"></div>
 
 ## Overview
 

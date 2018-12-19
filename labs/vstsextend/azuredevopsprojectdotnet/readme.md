@@ -5,6 +5,7 @@ sidebar: vsts2
 permalink: /labs/vstsextend/azuredevopsprojectdotnet/
 folder: /labs/vstsextend/azuredevopsprojectdotnet/
 ---
+<div class="rw-ui-container"></div>
 
 ## Overview
 

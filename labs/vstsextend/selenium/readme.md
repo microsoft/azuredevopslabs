@@ -5,6 +5,7 @@ sidebar: vsts2
 permalink: /labs/vstsextend/selenium/
 folder: /labs/vstsextend/selenium/
 ---
+<div class="rw-ui-container"></div>
 
 ## Overview
 

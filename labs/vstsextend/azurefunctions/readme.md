@@ -5,7 +5,7 @@ sidebar: vsts2
 permalink: /labs/vstsextend/azurefunctions/
 folder: /labs/vstsextend/azurefunctions/
 ---
-
+<div class="rw-ui-container"></div>
 
 ## Overview
 
