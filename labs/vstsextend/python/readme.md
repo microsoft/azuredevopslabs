@@ -19,112 +19,142 @@ This lab shows how to deploy a **Python** application to **Azure App Service** u
 
 1. Click the [Azure DevOps Demo Generator](https://azuredevopsdemogenerator.azurewebsites.net/?Name=Python&TemplateId=77369) link and follow the instructions in [Getting Started](../Setup/) page to provision the project to your **Azure DevOps**.
 
-## Exercise 1: Configure Release
+## Exercise 1: Examine the source code
 
-You will provision the resources on **Azure** using ARM template in the **release definition**.
+In this lab, you will use a simple **Python** web application built using **Django** framework. **Django** is a high-level Python Web framework that encourages rapid development and clean, pragmatic design. 
+In this exercise, you will examine the source code provisioned by [Azure DevOps Demo Generator](https://azuredevopsdemogenerator.azurewebsites.net/?Name=Python&TemplateId=77369).
 
-1. Go to **Releases** under **Pipelines** tab, select release definition **Python** and click **Edit pipeline**
+1. Navigate to the project you created above using [Azure DevOps Demo Generator](https://azuredevopsdemogenerator.azurewebsites.net/?Name=Python&TemplateId=77369).
 
-   ![releaseedit](images/releaseedit.png)
+1. Select **Repos**. In this repository you have 
 
-1. Go to **Tasks** and select **Dev** environment, under **Azure Deployment** task, authorize the **Azure subscription**. There are 2 ways of selecting the Azure subscription. 
+   * **Application** folder which has a web application developed using Python and Django
+   * **unit_tests** folder has few unit test cases which can be executed as part of your CI pipeline
+   * **functional_test** folder which has a Selenium test case which can be executed as part of the CD pipeline after the application deployed.
 
-   - If your subscription is not listed or if you want to use an existing service principal, click the Manage link. Click on the **+New Service Connection** button and select the Azure Resource Manager option. Provide Connection name, select the Azure Subscription from the list and then click on the Ok button. The Azure credentials will be required to authorize the connection.
+     ![](images/sourcecode.png)
 
-    - If the subscription is already listed, select the Azure subscription from the list and click **Authorize**.
+   In the following exercises, we will Build this application using Azure DevOps CI pipeline and Deploy the application to Azure App service using Azure DevOps CD pipeline.
+
+## Exercise 2: Examine the CI pipeline
+
+**Python** is an interpreted language, and hence compilation is not required. In this exercise, we will run unit tests and we will archive the application files to use in the release for deployment.
+
+1. Navigate to **Pipelines –> Builds**. Select **Python-CI** and click **Edit**.
+
+    ![](images/python-ci-edit.png)
+
+1. Your build pipeline will look like as below. This pipeline has tasks to install dependencies of application, run unit tests, archive& publish the application into a zip file (package) which can be deployed to a web application.
+
+     ![](images/ci-pipeline.png)
+
+1. Select **[Use Python Version](https://docs.microsoft.com/en-us/azure/devops/pipelines/tasks/tool/use-python-version?view=vsts)** task. This task is used in a build or release pipeline to select a version of Python to run on an agent, and optionally add it to PATH.
+   
+      ![](images/python-version.png)
+
+1. Select **Install dependencies** task. In this task, we are using [Command Line task](https://docs.microsoft.com/en-us/azure/devops/pipelines/tasks/utility/command-line?view=vsts&tabs=yaml) to install dependencies of the application like Django framework version etc..
+
+   ![](images/install-dependencies.png)
+
+1. Select **pytest** task. In this task also we are using [Command Line task](https://docs.microsoft.com/en-us/azure/devops/pipelines/tasks/utility/command-line?view=vsts&tabs=yaml) to run **Unit tests** using **[pytest](https://docs.pytest.org/en/latest/)** and publish the test results to **test-results.xml** file.
+  
+    ![](images/pytest.png)
+
+1. Select **[Publish Test Results](https://docs.microsoft.com/en-us/azure/devops/pipelines/tasks/test/publish-test-results?view=vsts&tabs=yaml)**. Using this task we will publish the test results form the previous task to Azure Pipelines. The published test results will be displayed in the **Tests** tab in a build or release summary.
 
 
-1. Select the **Location**.
+   ![](images/publish-testresults.png)
 
-   ![azure_sub](images/azure_sub.png)
+1. Select **Archive application** task. Using [Archive files](https://docs.microsoft.com/en-us/azure/devops/pipelines/tasks/utility/archive-files?view=vsts) task we are creating a **zip** (package) file from the application folder to use in the release pipeline.
 
-1. Under **Install Python Extension** task, update **Azure subscription** and select **Python 3.6.4 x86** in **Install Extensions**.
+     ![](images/archive-application.png)
 
-   ![python_sub](images/python_sub.png)
+1. Select **Archive Tests** task. We have few Selenium functional tests which need to be executed after the deployment in the release pipeline. Using [Archive files](https://docs.microsoft.com/en-us/azure/devops/pipelines/tasks/utility/archive-files?view=vsts) task we are creating a **zip** (package) file from Tests folder to use in the release pipeline.
 
-1. Under **Azure App Service Deploy** task, update **Azure subscription** and click on **Save**.
+     ![](images/archive-tests.png)
 
-   ![deploy_app](images/deploy_app.png)
+1. Select **[Publish Artifacts](https://docs.microsoft.com/en-us/azure/devops/pipelines/tasks/utility/publish-build-artifacts?view=vsts)** task. This task is used to publish build artifacts (Application and Tests packages from previous tasks) to Azure Pipelines.
 
-   <table width="75%">
-    <thead>
-        <tr>
-          <th width="67%"><b>Tasks</b></th>
-          <th><b>Usage</b></th>
-        </tr>
-    </thead>
-    <tr>
-        <td><img src="images/azure_resource.png"> <b>Azure Resource Group Deployment</b></td>
-        <td>This task will create a resource group with the name <b>Python</b> and  provision an <b>App service</b> and <b>App Service Plan</b> </td>
-    </tr>
-        <tr>
-            <td><img src="images/azure_app_service.png"> <b>Install Python Extension </b></td>
-            <td>Installs the specific version of Python into Azure App Service</td>
-        </tr>
-    <tr>
-        <td><img src="images/azure_deploy.png"> <b>Azure App Service Deploy</b></td>
-        <td>The task is used to update Azure App Service to deploy Web Apps to azure.</td>
-    </tr>
-   </table>
+   ![](images/publish_artifact.png)
 
-## Exercise 2: Trigger Build and Release pipeline with code change
+1. Select **Triggers** and **[Enable continuous integration](https://docs.microsoft.com/en-us/azure/devops/pipelines/get-started-designer?view=vsts&tabs=new-nav#enable-continuous-integration-ci)** trigger. A continuous integration trigger on a build pipeline indicates that the system should automatically queue a new build whenever a code change is committed. **Save** changes.
 
-**Python** is an interpreted language, and hence compilation is not required. We will archive the files in the build and use the package in the release for deployment. Update the code to trigger CI-CD using **Hosted build agent**.
+   ![](images/enable-ci.png)
+
+## Exercise 3: Configure Release pipeline
+
+In this exercise, you will configure release (CD) pipeline to create Azure resources using Azure CLI  as part of your deployment and deploy the Python application to the App service provisioned.
+
+1. Go to **Releases** under **Pipelines** tab, select release definition **Python-CD** and click **Edit** pipeline.
+   
+   ![](images/python-cd-edit.png)
+
+1. Select **Dev** stage and click **View stage tasks** to view the pipeline tasks.
+
+   ![](images/view-tasks.png)
+
+1. You will see the tasks as below.
+
+   
+   ![](images/cd-tasks.png)
+
+1. Select the **Azure CLI** task. Select the Azure subscription from the drop-down list and click **Authorize** to configure Azure service connection. 
+
+    ![](images/azure-cli.png)
+
+   In this task we are using Azure CLI commands to create Azure Resources required to deploy Python web application.
+
+   If you observe the commands you will see few variables like **$(Location), $(ResourceGroup)** etc.. These are the required values to deploy resources and the values are defined in **Variables** section. If required you can modify this variable values as desired.
+      
+    ![](images/variables.png)
+
+1. Select **Azure App Service Manage** task. Select the service connection for the Azure Subscription where the resources are created above. Using this task we are installing Python Extension for Azure App service created in previous task to support Python web application. Make sure App Service name is set to variable **$(appservice-name)**
+
+    ![](images/install-python-extension.png)
+
+1. Select **Azure App Service Deploy** task. Make sure the settings are as shown below. This task is used to deploy Application package to Azure app service which is provisioned above.
+
+    ![](images/azure-appservice-deploy.png)
+
+1. Select **Run Functional Tests** task. Here we are using Command line task to run Selenium tests after the application deployed to the Azure app service. And the test results will be published to release summary using **Publish Test Results** task.
+
+    ![](images/run-functionaltests.png)
+
+1. Let us enable **Continuous deployment trigger**. Select **Pipelines** and click ****Continuous deployment trigger** option. Enable the trigger and **Save** the changes.
+    
+      ![](images/enable-cd.png)
+
+ Now you have configured a release pipeline to provision required Azure resources, Deploy the web application and Run functional tests. 
+
+## Exercise 4: Trigger Build and Release pipeline with a code change
+
+   In the previous exercises, we have configured build and release pipelines and enabled CI-CD. Let us update the code to trigger CI-CD.
 
 1. Go to **Repos** tab and navigate to the below path to edit the file.
 
-   {% include tip.html content= "python/app/templates/app/index.html" %}
+   `Application/app/templates/app/index.html`
 
-   ![code_tab](images/code_tab.png)
+     ![](images/edit-code.png)
 
-1. Click on **Edit** and go to line number **32**, modify **Continuous Delivery** to **Continuous Delivery for Python** and commit the code.
+ 1. Click on **Edit** and go to line number 32, modify **Continuous Delivery** to **Continuous Delivery for Python** and **Commit** the code.
+    
+     ![](images/commit_code.png)
 
-   ![commit_code](images/commit_code.png)
+ 1. Since we have enabled CI-CD triggers a build will be queued automatically. Go to **Builds**, under **Pipelines** tab to see the build in progress.
 
-1. Go to **Builds**, under **Pipelines** tab to see the build in progress.
+     ![](images/build-progress.gif)
+  
+    You would be able to see the test results under **Tests** tab in build summary. Once the build is complete, it triggers the CD pipeline. You can notice the linked release is in progress by navigating to Releases under Pipelines. The release will provision the Azure Web app and deploy the zip file generated by the associated build.
 
-   ![in_progress_build](images/in_progress_build.png)
+1. Now go to **Releases**, under **Pipelines** tab to see the release in progress.
 
-   Let's explore the build definition while the build is in-progress. The tasks used are listed as shown.
+     ![](images/release-progress.gif)
 
-   <table width="80%">
-    <thead>
-      <tr>
-         <th width="60%"><b>Tasks</b></th>
-         <th><b>Usage</b></th>
-      </tr>
-    </thead>
-    <tr>
-        <td><img src="images/archive_files.png"> <b>Archive files</b></td>
-        <td>creates zip file for deployment</td>
-    </tr>
-    <tr>
-        <td><img src="images/copy_files.png"> <b>Copy Files</b></td>
-        <td>copies ARM template which is used to provision resources on azure </td>
-    </tr>
-    <tr>
-        <td><img src="images/publish_artifact.png"> <b>Publish Build Artifacts</b></td>
-        <td> publishes the build artifacts </td>
-    </tr>
-    </table>
+1. Once the Release succeeds, login to [Azure Portal](https://portal.azure.com) and go to the **Resource Group** with the name **Python**. You will see the resources **App Service** and **App Service Plan**.
+Select the **App Service** and from the Overview tab, click on **Browse** to see the application deployed.
 
-1. The build generates artifact which is used for deployment to Azure.
+     ![](images/release-output.gif)
 
-   ![build_result](images/build_result.png)
-
-1. Once the build is complete, it triggers the CD pipeline. You can notice the linked release is in progress by navigating to Releases under Pipelines. The release will provision the Azure Web app and deploy the zip file generated by the associated build.
-
-   ![release_in_progress](images/release_in_progress.png)
-
-   ![release_succesful](images/release_succesful.png)
-
-1. Once the Release succeeds, login to [Azure Portal](https://portal.azure.com){:target="_blank"} and go to  the **Resource Group** with the name **Python**. You will see the resources **App Service** and **App Service Plan**.
-
-   ![azure_portal](images/azure_portal.png)
-
-1. Select the **App Service** and from the Overview tab, click on **Browse** to see the application deployed.
-
-   ![pythonapp](images/pythonapp.png)
 
 ## Summary
 
