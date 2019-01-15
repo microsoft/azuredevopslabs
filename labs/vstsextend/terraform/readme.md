@@ -34,7 +34,11 @@ In this lab, you will use PartsUnlimited which is an example eCommerce website d
 
 1. Navigate to the project you created above using [Azure DevOps Demo Generator](https://azuredevopsdemogenerator.azurewebsites.net/?TemplateId=77382&Name=Terraform)
 
-1. Select **Repos**. Make sure that you are on **terraform** branch. If not switch to **terraform** branch.
+1. Select **Repos**. Switch to **terraform** branch.
+
+    ![](images/select-terraform-branch.png)
+
+    Make sure that you are now on the **terraform** branch and **Terraform** folder is there in the repo.
 
     ![](images/terraformrepo.png)
 
