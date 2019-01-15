@@ -68,7 +68,7 @@ This lab requires all the pre-requisite executables to be installed and configur
 
 1. Type **az login** in the command prompt and press Enter. Authorize your login in the browser.
 
-     1. Type **az ad sp create-for-rbac -n "MySampleApp" --password P2SSWORD** in the command prompt to get the Service Principal Client and the Service Principal Client Secret.(Note that it is a double dash before the **password** parameter)
+     1. Type **az ad sp create-for-rbac -n "MySampleApp" -p P2SSWORD** in the command prompt to get the Service Principal Client and the Service Principal Client Secret.
 
      * Copy appId which is the **Service Principal Client ID**
 
