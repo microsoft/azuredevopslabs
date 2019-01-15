@@ -1,10 +1,11 @@
 ---
-title: Automating Deployments with Azure DevOps and Octopus Deploy
+title: Automating Deployments from Azure Repos with Octopus Deploy
 layout: page
 sidebar: vsts2
 permalink: /labs/vstsextend/octopus/
 folder: /labs/vstsextend/octopus/
 ---
+<div class="rw-ui-container"></div>
 ## Overview
 
 [Octopus Deploy](https://Octopus.com) is an automated deployment server that makes it easy to automate deployment of ASP.NET web applications, Java applications, NodeJS application and custom scripts to multiple environments.

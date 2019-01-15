@@ -7,6 +7,7 @@ folder: /labs/tfs/deliveryplans/
 version: Lab version - 15.4.1
 updated: Last updated - 10/31/2017
 ---
+<div class="rw-ui-container"></div>
 
 ## Overview
 
@@ -14,7 +15,11 @@ It takes several teams to develop large software projects. Very large projects r
 
 ## Prerequisites
 
-In order to complete this lab you will need the Visual Studio 2017 virtual machine provided by Microsoft. For more information on acquiring and using this virtual machine, please see [this blog post](http://aka.ms/almvm).
+In order to complete this lab you will need the Visual Studio 2017 virtual machine provided by Microsoft. Click the button below to launch the virtual machine on the Microsoft Hands-on-Labs portal.
+
+<a href="https://labondemand.com/AuthenticatedLaunch/38311?providerId=4" class="launch-hol" role="button" target="_blank"><span class="lab-details">Launch the virtual machine</span></a>
+
+Alternatively, you can download the virtual machine from [here](../almvmdownload/)
 
 ## Exercise 1: Managing Delivery Plans with Team Foundation Server 2018
 

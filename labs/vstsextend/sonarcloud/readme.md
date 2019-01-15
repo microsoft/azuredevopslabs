@@ -1,10 +1,11 @@
 ---
-title: Managing Technical Debt using VSTS and SonarCloud
+title: Driving continuous quality of your code with SonarCloud
 layout: page
 sidebar: vsts2
 permalink: /labs/vstsextend/sonarcloud/
 folder: /labs/vstsextend/sonarcloud/
 ---
+<div class="rw-ui-container"></div>
 
 ## Overview
 

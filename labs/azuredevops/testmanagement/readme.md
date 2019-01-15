@@ -7,8 +7,9 @@ folder: /labs/azuredevops/testmanagement/
 version: Lab version - 15.8.2
 updated: Last updated - 9/6/2018
 ---
-
+<div class="rw-ui-container"></div>
 <a name="Overview"></a>
+
 ## Overview ##
 
 In this lab, you will learn how to use Azure DevOps to manage your project's testing lifecycle. This project will guide you through creating test plans designed to efficiently validate your software milestones. You will also create and execute manual tests that can be consistently reproduced over the course of each release.

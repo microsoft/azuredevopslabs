@@ -7,8 +7,9 @@ folder: /labs/azuredevops/packagemanagement/
 version: Lab version - 15.8.2
 updated: Last updated - 9/5/2018
 ---
-
+<div class="rw-ui-container"></div>
 <a name="Overview"></a>
+
 ## Overview ##
 
 PAzure Artifacts is an extension that makes it easy to discover, install, and publish NuGet, npm, and Maven packages in Azure DevOps. It's deeply integrated with other hubs like Build so that package management can become a seamless part of your existing workflows.

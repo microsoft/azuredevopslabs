@@ -6,6 +6,7 @@ permalink: /labs/vstsextend/aspdotnet/
 folder: /labs/vstsextend/aspdotnet/
 updated: blank
 ---
+<div class="rw-ui-container"></div>
 
 ## Overview
 

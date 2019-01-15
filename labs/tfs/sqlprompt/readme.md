@@ -7,6 +7,7 @@ folder: /labs/tfs/sqlprompt/
 version: Lab version - 15.0.26020.0
 updated: Last updated - 2/15/2017
 ---
+<div class="rw-ui-container"></div>
 
 ## Overview
 
@@ -22,10 +23,11 @@ names or aliases.
 
 ## Pre-requisites
 
-In order to complete this lab you will need the Visual Studio 2017
-virtual machine provided by Microsoft. For more information on acquiring
-and using this virtual machine, please see [this blog
-post](http://aka.ms/almvm).
+In order to complete this lab you will need the Visual Studio 2017 virtual machine provided by Microsoft. Click the button below to launch the virtual machine on the Microsoft Hands-on-Labs portal.
+
+<a href="https://labondemand.com/AuthenticatedLaunch/32384?providerId=4" class="launch-hol" role="button" target="_blank"><span class="lab-details">Launch the virtual machine</span></a>
+
+Alternatively, you can download the virtual machine from [here](../almvmdownload/)
 
 **Important Note: Redgate Data Tools (ReadyRoll Core, SQL Prompt Core, and SQL Search) are available now out of the box with Visual Studio 2017 Enterprise but we missed to include these components in the VM. You will need to install these components before you proceed further with the lab. Please see this [page](../redgateinstall/) for step-by-step instructions on installing Redgate Data Tools in Visual Studio and ReadyRoll Extension for Team Foundation Server.**
 

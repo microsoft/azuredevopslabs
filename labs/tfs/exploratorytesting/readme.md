@@ -7,6 +7,7 @@ folder: /labs/tfs/exploratorytesting/
 version: Lab version - 15.4
 updated: Last updated - 11/5/2017
 ---
+<div class="rw-ui-container"></div>
 
 ## Overview
 
@@ -16,7 +17,7 @@ In this lab, you will learn about the exploratory testing and feedback managemen
 
 In order to complete this lab you will need the Visual Studio 2017 virtual machine provided by Microsoft. Click the button below to launch the virtual machine on the Microsoft Hands-on-Labs portal.
 
-<a href="https://www.microsoft.com/handsonlabs/SelfPacedLabs?storyId=external%3A%2F%2Fcontent-private%2Fcontent%2Fexternal%2FMicrosoft-Virtual-Labs%2FDT00162" class="launch-hol" role="button" target="_blank"><span class="lab-details">Launch the virtual machine</span></a>
+<a href="https://labondemand.com/AuthenticatedLaunch/38302?providerId=4" class="launch-hol" role="button" target="_blank"><span class="lab-details">Launch the virtual machine</span></a>
 
 Alternatively, you can download the virtual machine from [here](../almvmdownload/)
 

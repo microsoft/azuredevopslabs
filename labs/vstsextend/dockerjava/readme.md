@@ -5,6 +5,7 @@ sidebar: vsts2
 permalink: /labs/vstsextend/dockerjava/
 folder: /labs/vstsextend/dockerjava/
 ---
+<div class="rw-ui-container"></div>
 
 ## Overview
 

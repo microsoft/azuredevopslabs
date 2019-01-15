@@ -7,8 +7,9 @@ folder: /labs/azuredevops/wiki/
 version: Lab version - 15.8.2
 updated: Last updated - 9/4/2018
 ---
-
+<div class="rw-ui-container"></div>
 <a name="Overview"></a>
+
 ## Overview ##
 
 In this lab, you'll learn about the wiki feature of Azure DevOps that enables easier collaboration experiences for development teams. Each project in Azure DevOps now supports its own wiki, which enables you to conveniently write pages that help your team members and other users understand, use, and contribute to your project.

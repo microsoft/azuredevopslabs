@@ -209,6 +209,40 @@
             <!-- begin SurveySparrow live embed code -->
     <script>(function(){var t,e,s,n="ss-widget",r="script",a=document,o=window;o.SS_WIDGET_TOKEN="tt-1c06a0",o.SS_ACCOUNT="mssupport.surveysparrow.com",o.SS_SURVEY_NAME="azuredevops-labs-feedback-survey";a.getElementById(n)||(t=a.getElementsByTagName(r),s=t[t.length-1],e=a.createElement(r),e.type="text/javascript",e.async=!0,e.id=n,e.src=["https://","mssupport.surveysparrow.com/widget/",o.SS_WIDGET_TOKEN].join(""),s.parentNode.insertBefore(e,s))})();</script>
     <!-- end SurveySparrow live embed code -->
+      <script type="text/javascript">(function(d, t, e, m){
+    
+        // Async Rating-Widget initialization.
+        window.RW_Async_Init = function(){
+                    
+            RW.init({
+                huid: "422497",
+                uid: "02abadf52f23c9da4406772fb9ff2084",
+                source: "website",
+                options: {
+                    "advanced": {
+                        "text": {
+                            "rateThis": "Rate this lab"
+                        }
+                    },
+                    "size": "medium",
+                    "style": "oxygen",
+                    "isDummy": false
+                } 
+            });
+            RW.render();
+        };
+            // Append Rating-Widget JavaScript library.
+        var rw, s = d.getElementsByTagName(e)[0], id = "rw-js",
+            l = d.location, ck = "Y" + t.getFullYear() + 
+            "M" + t.getMonth() + "D" + t.getDate(), p = l.protocol,
+            f = ((l.search.indexOf("DBG=") > -1) ? "" : ".min"),
+            a = ("https:" == p ? "secure." + m + "js/" : "js." + m);
+        if (d.getElementById(id)) return;              
+        rw = d.createElement(e);
+        rw.id = id; rw.async = true; rw.type = "text/javascript";
+        rw.src = p + "//" + a + "external" + f + ".js?ck=" + ck;
+        s.parentNode.insertBefore(rw, s);
+        }(document, new Date(), "script", "rating-widget.com/"));</script>
 </body>
 {% include google_analytics.html %} {% include gototop.html %}
 

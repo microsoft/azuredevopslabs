@@ -7,6 +7,7 @@ folder: /labs/tfs/smartword4tfs/
 version: Lab version - 14.0.25123
 updated: Last updated - 12/7/2017
 ---
+<div class="rw-ui-container"></div>
 
 ## Overview
 

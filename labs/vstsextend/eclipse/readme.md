@@ -1,10 +1,11 @@
 ---
-title: Working with Eclipse - Getting started
+title: Integrating Azure Repos and Azure Pipelines with Eclipse
 layout: page
 sidebar: vsts2
 permalink: /labs/vstsextend/eclipse/
 folder: /labs/vstsextend/eclipse/
 ---
+<div class="rw-ui-container"></div>
 
 ## Overview
 

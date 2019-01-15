@@ -7,8 +7,9 @@ folder: /labs/azuredevops/git/
 version: Lab version - 15.8.2
 updated: Last updated - 9/5/2018
 ---
-
+<div class="rw-ui-container"></div>
 <a name="Overview"></a>
+
 ## Overview ##
 
 Azure Repos supports two types of version control, Git and Team Foundation Version Control (TFVC). Here is a quick overview of the two version control systems:

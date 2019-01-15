@@ -52,6 +52,7 @@ description: Learn how you can implement modern DevOps practices with Azure, Azu
 
 <div class="container-fluid">
     <div class="row">
+    <div class="container">  
         <div class="col-sm-12 px-0">
             <ul class="nav nav-tabs tab-bg-color" role="tablist">
                 <li class="nav-item w-50 text-center">
@@ -68,171 +69,8 @@ description: Learn how you can implement modern DevOps practices with Azure, Azu
             <!-- Tab panes -->
             <div class="tab-content bg-color-wit-mlr p-0 pt-0">
                 <div id="services-labs" class="container-fluid tab-pane active p-0">
-                    <!--h2 class="pading-t-10">Azure DevOps Services</h2-->
-                    <!-- <div  class="jumbotron mb-3 p-10-0">
-              <div class="container"> 
-               <div class="row">
-                  <div class="col-sm-12">                    
-                  </div> 
-               </div>
-              </div>
-             </div> -->
                     <div class="container">
-                        <div class="row">
-                            <!-- <div class="col-md-12 pading-t-10">
-                                <h2 class="border-0 fon-normal">Recently added Labs</h2>
-                                <div class="carousel mt-3" data-flickity='{ "groupCells": true, "pageDots": false } '>
-                                    <div class="carousel-cell">
-                                        <div class="row">
-                                            <div class="col-sm-12">
-                                                <div class="col-sm-6 offset-md-3 text-center">
-                                                    <a href="/labs/azuredevops/agile/">
-                                                        <img src="/images/azureboards.png" width="50" alt="agile-planning">
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row mt-3">
-                                            <div class="col-sm-12 text-center">
-                                                <a href="/labs/azuredevops/agile/">
-                                                    <p class="mb-0 txt-col">Agile Planning and Portfolio Management
-                                                        with Azure Boards</p>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="carousel-cell">
-                                        <div class="row">
-                                            <div class="col-sm-12">
-                                                <div class="col-sm-6 offset-md-3 text-center">
-                                                    <a href="/labs/azurerepos/git/">
-                                                        <img src="/images/azurerepos.png" width="50" alt="git-image">
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row mt-3">
-                                            <div class="col-sm-12 text-center">
-                                                <a href="/labs/azuredevops/git/">
-                                                    <p class="mb-0 txt-col">Version Control with Git in Azure Repos</p>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="carousel-cell">
-                                        <div class="row">
-                                            <div class="col-sm-12">
-                                                <div class="col-sm-6 offset-md-3 text-center">
-                                                    <a href="/labs/azuredevops/continuousintegration/">
-                                                        <img src="/images/azurepipelines.png" width="50" alt="azure">
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row mt-3">
-                                            <div class="col-sm-12 text-center">
-                                                <a href="/labs/azuredevops/continuousintegration/">
-                                                    <p class="mb-0 txt-col">Enabling Continuous Integration with Azure
-                                                        Pipelines</p>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="carousel-cell">
-                                        <div class="row">
-                                            <div class="col-sm-12">
-                                                <div class="col-sm-6 offset-md-3 text-center">
-                                                    <a href="/labs/azuredevops/continuousdeployment/">
-                                                        <img src="/images/azurepipelines.png" width="50" alt="azureDevOpsDelivery">
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row mt-3">
-                                            <div class="col-sm-12 text-center">
-                                                <a href="/labs/azuredevops/continuousdeployment/">
-                                                    <p class="mb-0 txt-col">Embracing Continuous Delivery with Azure
-                                                        Pipelines</p>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="carousel-cell">
-                                        <div class="row">
-                                            <div class="col-sm-12">
-                                                <div class="col-sm-6 offset-md-3 text-center">
-                                                    <a href="/labs/vstsextend/github-integration/">
-                                                        <img src="/images/azurepipelines.png" width="50" alt="git">
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row mt-3">
-                                            <div class="col-sm-12 text-center">
-                                                <a href="/labs/vstsextend/github-integration/">
-                                                    <p class="mb-0 txt-col">Integrate your GitHub Projects with Azure
-                                                        Pipelines</p>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="carousel-cell">
-                                        <div class="row">
-                                            <div class="col-sm-12">
-                                                <div class="col-sm-6 offset-md-3 text-center">
-                                                    <a href="/labs/vstsextend/jenkins/">
-                                                        <img src="/images/jenkins.png" width="50" alt="jenkins">
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row mt-3">
-                                            <div class="col-sm-12 text-center">
-                                                <a href="/labs/vstsextend/jenkins/">
-                                                    <p class="mb-0 txt-col">Integrating with Jenkins</p>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="carousel-cell">
-                                        <div class="row">
-                                            <div class="col-sm-12">
-                                                <div class="col-sm-6 offset-md-3 text-center">
-                                                    <a href="/labs/vstsextend/kubernetes/">
-                                                        <img src="/images/Azure.png" width="50" alt="azure">
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row mt-3">
-                                            <div class="col-sm-12 text-center">
-                                                <a href="/labs/vstsextend/kubernetes/">
-                                                    <p class="mb-0 txt-col">Deploying to Azure Kubernetes Service (AKS)</p>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="carousel-cell">
-                                        <div class="row">
-                                            <div class="col-sm-12">
-                                                <div class="col-sm-6 offset-md-3 text-center">
-                                                    <a href="/labs/vstsextend/docker/">
-                                                        <img src="/images/docker.png" width="50" alt="docker">
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row mt-3">
-                                            <div class="col-sm-12 text-center">
-                                                <a href="/labs/vstsextend/docker/">
-                                                    <p class="mb-0 txt-col">Deploying Docker Containers to Azure App
-                                                        Service</p>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div> -->
+                        <div class="row">                          
                             <div class="col-sm-12 pading-t-20">
                                 <h2 class="border-0 fon-normal">Getting started</h2>
                                  <p class="tab-p">Simplify and speed up the DevOps process with Azure DevOps services. The
@@ -330,43 +168,41 @@ description: Learn how you can implement modern DevOps practices with Azure, Azu
                                                         Feature Flag Management with LaunchDarkly</a></li>
                                                 <li class="osslist"> <img src="/images/kubernetes.png" height="42" class="icon-bor-p-m" /><a
                                                         href="/labs/vstsextend/kubernetes/" class="fon-size-13">
-                                                        Deploying to Azure Kubernetes Service (AKS)</a></li>
+                                                        Deploying a multi-container application to Azure Kubernetes Services </a></li>
+                                                <li class="osslist"> <img src="/images/terraform.png" height="42" class="icon-bor-p-m" /><a
+                                                        href="/labs/vstsextend/terraform/" class="fon-size-13">
+                                                        Automating your infrastructure deployments in the Cloud with Terraform and Azure Pipelines</a></li>
+                                                <li class="osslist"> <img src="/images/ansible.png" height="42" class="icon-bor-p-m" /><a
+                                                        href="/labs/vstsextend/ansible/" class="fon-size-13">
+                                                        Automating your infrastructure deployments in the Cloud with Ansible and Azure Pipelines</a></li>
                                                 <li class="osslist"> <img src="/images/github-42.png" height="42" class="icon-bor-p-m" /><a
                                                         href="/labs/azuredevops/github-integration/" class="fon-size-13">
-                                                        Integrate your GitHub Projects with Azure Pipelines</a></li>
+                                                        Setting up a CI/CD pipeline for your GitHub repository</a></li>
                                                 <li class="osslist"> <img src="/images/jenkins-42.png" height="42"
                                                         class="icon-bor-p-m" /> <a href="/labs/vstsextend/jenkins/"
-                                                        class="fon-size-13"> Integrating with Jenkins</a> </li>
-                                                <li class="osslist"> <img src="/images/tomcat-42.png" height="42" class="icon-bor-p-m" /><a
-                                                        href="/labs/vstsextend/tomcat/" class="fon-size-13"> Deploying
-                                                        a Java Application on Tomcat </a> </li>
-                                                <li class="osslist"> <img src="/images/sonarqube-42.png" height="42"
-                                                        class="icon-bor-p-m" /><a href="/labs/vstsextend/sonarqube/"
-                                                        class="fon-size-13"> Technical Debt Management with SonarQube</a>
-                                                </li>
+                                                        class="fon-size-13"> Configuring a CD pipeline for your Jenkins CI</a> </li>
                                             </ul>
                                         </div>
                                     </div>
                                     <div class="col-sm-3 col-xs-12 p-l-r-override">
                                         <div class="bg-color-white equal-height-column">
                                             <ul class="p-l-5px">
+                                                <li class="osslist"> <img src="/images/tomcat-42.png" height="42" class="icon-bor-p-m" /><a
+                                                        href="/labs/vstsextend/tomcat/" class="fon-size-13"> Deploying a Java-based Tomcat application to Azure </a> </li>
+                                                <li class="osslist"> <img src="/images/sonarqube-42.png" height="42"
+                                                        class="icon-bor-p-m" /><a href="/labs/vstsextend/sonarqube/"
+                                                        class="fon-size-13"> Managing technical debt with SonarQube and Azure DevOps</a>
+                                                </li>
                                                 <li class="osslist"> <img src="/images/eclipse-42.png" height="42"
                                                         class="icon-bor-p-m" /><a href="/labs/vstsextend/eclipse/"
-                                                        class="fon-size-13"> Developing with Eclipse for Java Projects</a></li>
+                                                        class="fon-size-13"> Integrating Azure Repos and Azure Pipelines with Eclipse</a></li>
                                                  <li class="osslist"> <img src="/images/docker-42.png" height="42" class="icon-bor-p-m" /><a
-                                                        href="/labs/vstsextend/docker/" class="fon-size-13"> Deploying
-                                                        Docker Containers to Azure App Service</a></li>
+                                                        href="/labs/vstsextend/docker/" class="fon-size-13"> Deploying a Docker based web application to Azure App Service</a></li>
                                                  <li class="osslist"> <img src="/images/docker-42.png" height="42" class="icon-bor-p-m" /><a
                                                         href="/labs/vstsextend/dockerjava/" class="fon-size-13"> Deploying a Dockerized Java app to Azure Web App for Containers</a></li>
                                                 <li class="osslist"> <img src="/images/octopus-42.png" height="42"
                                                         class="icon-bor-p-m" /><a href="/labs/vstsextend/Octopus/"
-                                                        class="fon-size-13"> Integrating Octopus Deploy</a></li>
-                                                 <li class="osslist"> <img src="/images/whitesource-42.png" height="42"
-                                                        class="icon-bor-p-m" /><a href="/labs/vstsextend/WhiteSource/"
-                                                        class="fon-size-13"> OSS Governance with WhiteSource</a></li>
-                                                <li class="osslist"> <img src="/images/selenium-42.png" height="42"
-                                                        class="icon-bor-p-m" /><a href="/labs/vstsextend/Selenium/"
-                                                        class="fon-size-13"> Driving Continuous Testing with Selenium</a></li>
+                                                        class="fon-size-13"> Automating Deployments from Azure Repos with  Octopus Deploy</a></li>
                                                 <!-- <li class="osslist"> <img src="/images/java-42.png" height="42" class="icon-bor-p-m" />
                                                     <a href="/labs/java/" class="fon-size-13"> DevOps with VSTS and
                                                         Azure for Java Projects </a> </li> -->
@@ -376,30 +212,33 @@ description: Learn how you can implement modern DevOps practices with Azure, Azu
                                     <div class="col-sm-3 col-xs-12 p-l-r-override">
                                         <div class="bg-color-white equal-height-column">
                                             <ul class="p-l-5px">
+                                                 <li class="osslist"> <img src="/images/whitesource-42.png" height="42"
+                                                        class="icon-bor-p-m" /><a href="/labs/vstsextend/WhiteSource/"
+                                                        class="fon-size-13"> Managing Open-source security and license with WhiteSource</a></li>
+                                                <li class="osslist"> <img src="/images/selenium-42.png" height="42"
+                                                        class="icon-bor-p-m" /><a href="/labs/vstsextend/Selenium/"
+                                                        class="fon-size-13"> Automating Selenium Tests in Azure Pipelines</a></li>
                                                 <li class="osslist"> <img src="/images/azure-42.png" height="42" class="icon-bor-p-m" /><a
                                                         href="/labs/vstsextend/deploymentgroups/" class="fon-size-13">
-                                                        Working with Deployment Groups</a></li>
+                                                        Deploying to Azure VM using Deployment Groups</a></li>
                                                 <li class="osslist"> <img src="/images/AzureFunction.jpg" height="42" class="icon-bor-p-m" /><a
                                                         href="/labs/vstsextend/azurefunctions/" class="fon-size-13">
-                                                        Deploying Azure Functions using Azure Pipelines</a></li>
+                                                        Setting up a CI/CD pipeline for Azure Functions</a></li>
                                                  <li class="osslist"> <img src="/images/vsts-1-42.png" height="42" class="icon-bor-p-m" /><a
                                                         href="/labs/vstsextend/releasegates/" class="fon-size-13">
                                                         Controlling Deployments using Release Gates</a> </li>
                                                 <li class="osslist"> <img src="/images/nodejs-42.png" height="42" class="icon-bor-p-m" /><a
-                                                        href="/labs/vsts/nodejs/" class="fon-size-13">DevOps for
-                                                        Node.js with VSTS and Azure </a> </li>
-                                                <li class="osslist"> <img src="/images/python-42.png" height="42" class="icon-bor-p-m" /><a
-                                                        href="/labs/vstsextend/python/" class="fon-size-13"> How to
-                                                        Deploy a Python Application to Azure from VSTS</a></li>
-                                                <li class="osslist"> <img src="/images/php.png" height="42" class="icon-bor-p-m" /><a
-                                                        href="/labs/vstsextend/PHP/" class="fon-size-13"> Deploying a
-                                                        PHP Application to Azure</a></li>
+                                                        href="/labs/vsts/nodejs/" class="fon-size-13">Configure CI/CD for Node application with Azure Pipelines</a> </li>
                                             </ul>
                                         </div>
                                     </div>
                                     <div class="col-sm-3 col-xs-12 p-l-r-override">
                                         <div class="bg-color-white equal-height-column">
                                             <ul class="p-l-5px">
+                                                <li class="osslist"> <img src="/images/python-42.png" height="42" class="icon-bor-p-m" /><a
+                                                        href="/labs/vstsextend/python/" class="fon-size-13"> Deploying a CD pipeline for a Django-based Python app </a></li>
+                                                <li class="osslist"> <img src="/images/php.png" height="42" class="icon-bor-p-m" /><a
+                                                        href="/labs/vstsextend/PHP/" class="fon-size-13"> Setting up a CI/CD pipeline for your PHP application</a></li>
                                                 <li class="osslist"> <img src="/images/aspnet-logo-42.png" height="42"
                                                         class="icon-bor-p-m" /><a href="/labs/vstsextend/aspnetmodernize/"
                                                         class="fon-size-13"> Modernizing your Existing ASP.NET Apps
@@ -412,8 +251,7 @@ description: Learn how you can implement modern DevOps practices with Azure, Azu
                                                         Azure DevOps Project for .NET</a></li> -->
                                                 <li class="osslist"> <img src="/images/sonarcloud-42.png" height="42"
                                                         class="icon-bor-p-m" /><a href="/labs/vstsextend/sonarcloud/"
-                                                        class="fon-size-13"> Managing Technical Debt using VSTS and
-                                                        SonarCloud</a></li>
+                                                        class="fon-size-13"> Driving continuous quality of your code with SonarCloud</a></li>
                                                   <li class="osslist"> <img src="/images/parasoft-42.png" height="42"
                                                         class="icon-bor-p-m" /><a href="/labs/vstsextend/parasoft/"
                                                         class="fon-size-13"> Leverage Virtual Services with Parasoft
@@ -565,8 +403,8 @@ description: Learn how you can implement modern DevOps practices with Azure, Azu
                                                 <li class="osslist"> <img src="/images/vside.png" height="42" class="icon-bor-p-m" /><a
                                                         href="/labs/tfs/snapshotdebugger/" class="fon-size-13">Debugging
                                                         with Snapshot Debugger</a> </li>
-                                                <li class="osslist"> <img src="/images/azureboards.png" height="42"
-                                                        class="icon-bor-p-m" /><a href="/images/validation.png" class="fon-size-13">Live
+                                                <li class="osslist"> <img src="/images/validation.png" height="42"
+                                                        class="icon-bor-p-m" /><a href="/labs/tfs/livedependencyvalidation/" class="fon-size-13">Live
                                                         Dependency Validation</a> </li>
                                                 <li class="osslist"> <img src="/images/vside.png" height="42" class="icon-bor-p-m" /><a
                                                         href="/labs/tfs/codeanalysis/" class="fon-size-13"> Using Code
@@ -618,7 +456,7 @@ description: Learn how you can implement modern DevOps practices with Azure, Azu
                                             <ul class="p-l-5px">
                                                 <li class="osslist"> <img src="/images/azurepipelines.png" height="42"
                                                         class="icon-bor-p-m" /><a href="/labs/tfs/build/" class="fon-size-13">Enabling
-                                                        Continuous Delivery </a> </li>
+                                                        Continuous Integration </a> </li>
                                             </ul>
                                         </div>
                                     </div>
@@ -773,5 +611,6 @@ description: Learn how you can implement modern DevOps practices with Azure, Azu
                 </div>
             </div>
         </div>
+    </div>
     </div>
 </div>
