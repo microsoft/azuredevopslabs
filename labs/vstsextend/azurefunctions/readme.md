@@ -113,7 +113,7 @@ The Azure Functions created in this exercise will act as a switching proxy or th
     
 1. Expand the **PartsUnlimited.AzureFunction** project, open **Function1.cs** and then replace the existing code with the following code.
 
-    ```C Sharp
+    ```CSharp
     using System;
     using System.Linq;
     using System.Net;
