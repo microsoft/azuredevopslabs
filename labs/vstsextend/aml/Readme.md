@@ -105,10 +105,16 @@ In this exercise, we will configure Release pipeline which will deploy the image
       ![](images/update-config.png)
 
    > You can find the details of the code and scripts [here](https://github.com/praneetmsft/DevOpsForAI/blob/master/docs/code_description.md)
+
 1. Since we have enabled in **CI trigger** a build will be queued automatically. Navigate to **Pipelines -->Builds** and you will see a build is queued. Open the build to see the progress.
+Once the build is success a release will be queued automatically. Navigate to **Pipelines --> Releases** to see the release in progress.
+  
+   ![](images/build-release-progress.gif)
 
+1. Now navigate to your Azure portal to view the resources provisioned and deployed by CI-CD pipelines.
+   
+    ![](images/azureportal1.gif)
 
-1. Once the build is success a release will be queued automatically. Navigate to **Pipelines --> Releases** to see the release in progress.
 
 ### References 
 Do you want to learn more about **Azure Machine Learning service**? if yes below are few references to look at
