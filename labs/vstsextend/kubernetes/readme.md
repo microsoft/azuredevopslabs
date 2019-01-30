@@ -105,7 +105,7 @@ The following azure resources need to be configured for this lab:
     * Service Principal Client
     * Service Principal Client Secret
 
-   [![Deploy to Azure](http://azuredeploy.net/deploybutton.png)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FHoyg%2Fazuredevopslabs%2FAKS-Karthik%2Flabs%2Fvstsextend%2Fkubernetes%2Farmtemplate%2Fazuredeploy.json){:target="_blank"}
+   [![Deploy to Azure](http://azuredeploy.net/deploybutton.png)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FMicrosoft%2Fazuredevopslabs%2Fmaster%2Flabs%2Fvstsextend%2Fkubernetes%2Farmtemplate%2Fazuredeploy.json){:target="_blank"}
 
    {% include important.html content= "At the time of writing this lab, only **Australia East**, **Canada Central**, **Canada East**, **Central US**, **East US**, **East US2**, **Japan East**, **North Europe**, **South India**, **Southeast Asia**, **UK South**, **West Europe**, **West US**, **West US 2** are the supported locations. For updates, refer to the [AKS Azure Regions](https://docs.microsoft.com/en-in/azure/aks/container-service-quotas){:target=\"_blank\"}" %}
 
