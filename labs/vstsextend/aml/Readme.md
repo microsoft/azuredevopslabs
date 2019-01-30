@@ -18,7 +18,7 @@ In this lab, you will see
 
 We will be using the Azure DevOps project for build and release pipelines along with Azure ML services for ML/AI model management and operationalization. 
 
-This template contains code and pipeline definition for a machine learning project demonstrating how to automate the end to end ML/AI project. The build pipelines include DevOps tasks for data sanity test, unit test, model training on different compute targets, model version management, model evaluation/model selection, model deployment as real-time web service, staged deployment to QA/prod, integration testing and functional testing.
+This template contains code and pipeline definition for a machine learning project demonstrating how to automate the end to end ML/AI project. The build pipelines include DevOps tasks for data sanity test, model training on different compute targets, model version management, model evaluation/model selection, model deployment as real-time web service, staged deployment to QA/prod, integration testing and functional testing.
 
 ### Before you begin
 
@@ -33,7 +33,7 @@ This template contains code and pipeline definition for a machine learning proje
 
 ### Exercise 1: Configure CI pipeline for ML/AI project
 
-In this exercise, you will configure CI pipeline for your ML/AI project. This build pipeline includes DevOps tasks for data sanity test, unit test, model training on different compute targets, model version management, model evaluation/model selection etc.
+In this exercise, you will configure CI pipeline for your ML/AI project. This build pipeline includes DevOps tasks for data sanity test, model training on different compute targets, model version management, model evaluation/model selection etc.
 
 1.  Navigate to **Pipeline > Builds**. Select **DevOps-for-AI-CI** and click **Edit**.
 
@@ -62,14 +62,15 @@ In this exercise, you will configure CI pipeline for your ML/AI project. This bu
     - Prepare the python environment
     - Get or Create the workspace for AML service
     - Submit Training job on the remote DSVM / Local Python Env
+    - Compare performance of different models and select the best
     - Register model to the workspace
-    - Create Docker Image for Scoring Webservice
+    - Create Docker Image for Scoring Web service
     - Copy and Publish the Artifacts to Release Pipeline
 
 ### Exercise 2: Configure CD pipeline for ML/AI project
 In this exercise, we will configure Release pipeline which will deploy the image created from the build pipeline to Azure Container Instance and Azure Kubernetes Services
 
-1. Navigate to **Pipeline >> Releases**. Select **Deploy Webservice** and click **Edit** pipeline. 
+1. Navigate to **Pipeline >> Releases**. Select **Deploy Web service** and click **Edit** pipeline. 
 
    ![](images/edit-cd.png)
 
@@ -84,7 +85,7 @@ In this exercise, we will configure Release pipeline which will deploy the image
 
     ![](images/qa-aci.png)
 
-1. Select **Test ACI Webservice** task. Update the Azure subscription details. This task is to test the scoring image deployed.
+1. Select **Test ACI Web service** task. Update the Azure subscription details. This task is to test the scoring image deployed.
 
    ![](images/qa-test.png)
 
