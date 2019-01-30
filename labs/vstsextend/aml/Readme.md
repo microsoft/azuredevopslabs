@@ -5,6 +5,8 @@ sidebar: vsts2
 permalink: /labs/vstsextend/aml/
 folder: /labs/vstsextend/aml/
 ---
+<div class="rw-ui-container"></div>
+
 ## Overview
 **Machine learning** is a data science technique that allows computers to use existing data to forecast future behaviours, outcomes, and trends. By using machine learning, computers learn without being explicitly programmed.
 
