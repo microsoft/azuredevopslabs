@@ -90,10 +90,14 @@ The following azure resources need to be configured for this lab:
 
    {% include tip.html content= "Since the Azure SQL Server name does not support **UPPER** / **Camel** casing naming conventions, use lowercase for the ***DB Server Name*** field value." %}
 
+   {% include tip.html content= " ACR name may contain alpha numeric characters only and must be between 5 and 50 characters" %}
+
+   {% include tip.html content= " AKS  name must contain between 3 and 31 characters inclusive. The name can contain only letters, numbers, and hyphens. The name must start with a letter and must end with a letter or a number." %}
+
     * Subscription
     * Resource Group
     * Location
-    * Acr Name
+    * Acr Name 
     * DB Server Name
     * AKS Name
     * DNS Prefix

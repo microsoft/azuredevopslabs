@@ -7,7 +7,7 @@
             "maxLength": 50,
             "type": "string",
             "metadata": {
-                "description": "Name of your Azure Container Registry"
+                "description": "Name of your Azure Container Registry. ACR name may contain alpha numeric characters only and must be between 5 and 50 characters."
             }
         },
         "acrStorageType": {
@@ -31,7 +31,7 @@
         "aksName": {
             "type": "string",
             "metadata": {
-                "description": "The name of the Managed Cluster resource."
+                "description": "The name of the Managed Cluster resource. AKS  name must contain between 3 and 31 characters inclusive. The name can contain only letters, numbers, and hyphens. The name must start with a letter and must end with a letter or a number."
             }
         },
         "dnsPrefix": {
