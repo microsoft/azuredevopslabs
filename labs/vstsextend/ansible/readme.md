@@ -24,7 +24,7 @@ In this lab, you will see
 
 ### Before you begin
 
-1. Refer the [Getting Started](https://github.com/Hoyg/azuredevopslabs/blob/master/labs/vstsextend/Setup) page before you begin following the exercises.
+1. Refer the [Getting Started](../Setup/) page before you begin following the exercises.
 
 1. Use the [Azure DevOps Demo Generator](https://azuredevopsdemogenerator.azurewebsites.net/?Name=Ansible) to provision the project on your Azure DevOps organization.
    This URL will automatically select **Ansible** template in the demo generator. If you want to try other projects, use this URL instead -https://azuredevopsdemogenerator.azurewebsites.net/

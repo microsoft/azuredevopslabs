@@ -175,6 +175,9 @@ description: Learn how you can implement modern DevOps practices with Azure, Azu
                                                 <li class="osslist"> <img src="/images/ansible.png" height="42" class="icon-bor-p-m" /><a
                                                         href="/labs/vstsextend/ansible/" class="fon-size-13">
                                                         Automating your infrastructure deployments in the Cloud with Ansible and Azure Pipelines</a></li>
+                                                <li class="osslist"> <img src="/images/aml.png" height="42" class="icon-bor-p-m" /><a
+                                                        href="/labs/vstsextend/aml/" class="fon-size-13">
+                                                        Enabling CI/CD for Machine Learning project with Azure Pipelines</a></li>
                                                 <li class="osslist"> <img src="/images/github-42.png" height="42" class="icon-bor-p-m" /><a
                                                         href="/labs/azuredevops/github-integration/" class="fon-size-13">
                                                         Setting up a CI/CD pipeline for your GitHub repository</a></li>
