@@ -26,12 +26,7 @@ This template contains code and pipeline definition for a machine learning proje
 
 1. Refer the [Getting Started](../Setup/) page before you begin following the exercises.
 
-1. Use the [Azure DevOps Demo Generator](https://azuredevopsdemogenerator.azurewebsites.net/?name=azure%20machine%20learning) to provision the project on your Azure DevOps organization.
-   This URL will automatically select **Azure Machine Learning** template in the demo generator. This template contains code and pipeline definition for a machine learning project demonstrating how to automate the end to end ML/AI project.
-   
-    If you want to try other projects, use this URL instead -https://azuredevopsdemogenerator.azurewebsites.net/
-
-   Follow the [simple walkthrough](https://docs.microsoft.com/en-us/azure/devops/demo-gen/use-vsts-demo-generator-v2?view=vsts) to know how to use the Azure DevOps Demo Generator.
+1. Use the [Azure DevOps Demo Generator](https://azuredevopsdemogenerator.azurewebsites.net/?name=azure%20machine%20learning) to provision the project on your Azure DevOps organization. This URL will automatically select **Azure Machine Learning** template in the demo generator. This template contains code and pipeline definition for a machine learning project demonstrating how to automate the end to end ML/AI project. 
 
 ### Exercise 1: Configure CI pipeline for ML/AI project
 
