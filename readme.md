@@ -92,6 +92,10 @@ description: Learn how you can implement modern DevOps practices with Azure, Azu
                                                     <a href="/labs/azuredevops/packagemanagement/" class="fon-size-13">Package
                                                         Management with Azure Artifacts</a>
                                                 </li>
+                                                 <li class="osslist"><img src="/images/teams.png" height="42"
+                                                        class="icon-bor-p-m" />
+                                                    <a href="/labs/azuredevops/teams/" class="fon-size-13">Microsoft Teams with Azure DevOps Services</a>
+                                                </li>
                                             </ul>
                                         </div>
                                     </div>
