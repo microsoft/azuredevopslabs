@@ -7,6 +7,8 @@ folder: /labs/vstsextend/aml/
 ---
 <div class="rw-ui-container"></div>
 
+### Author: Praneet Singh Solanki
+
 ## Overview
 **Machine learning** is a data science technique that allows computers to use existing data to forecast future behaviours, outcomes, and trends. By using machine learning, computers learn without being explicitly programmed.
 
