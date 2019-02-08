@@ -2,8 +2,8 @@
 title: Microsoft Teams with Azure DevOps Services (Collaborate, Communicate and Celebrate)
 layout: page
 sidebar: vsts
-permalink: /labs/azuredevops/teams/
-folder: /labs/azuredevops/teams/
+permalink: /labs/vstsextend/teams/
+folder: /labs/vstsextend/teams/
 ---
 <div class="rw-ui-container"></div>
 <a name="Overview"></a>
