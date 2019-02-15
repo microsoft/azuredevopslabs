@@ -49,7 +49,7 @@ Many teams prefer to define their builds using YAML (Yet Another Markup Language
 
     ![](images/004.png)
 
-1. Name the new file **".vsts-ci.yml"** and click **Create**. To make it more convenient to create YAML build definitions, Azure DevOps automatically creates a definition when you add this file to the root of your repository. The build definition is created in a folder that has the same name as the repository.
+1. Name the new file **"azure-pipelines.yml"** and click **Create**. To make it more convenient to create YAML build definitions, Azure DevOps automatically creates a definition when you add this file to the root of your repository. The build definition is created in a folder that has the same name as the repository.
 
     ![](images/005.png)
 
@@ -102,7 +102,7 @@ Many teams prefer to define their builds using YAML (Yet Another Markup Language
 
     ![](images/015.png)
 
-1. Open **.vsts-ci.yaml** in the **Editor**.
+1. Open **azure-pipelines.yml** in the **Editor**.
 
     ![](images/016.png)
 
