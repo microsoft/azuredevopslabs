@@ -219,6 +219,9 @@ description: Learn how you can implement modern DevOps practices with Azure, Azu
                                     <div class="col-sm-3 col-xs-12 p-l-r-override">
                                         <div class="bg-color-white equal-height-column">
                                             <ul class="p-l-5px">
+                                                 <li class="osslist"> <img src="/images/github-azurepipelines.png" height="42"
+                                                        class="icon-bor-p-m" /><a href="/labs/vstsextend/github-azurepipelines/"
+                                                        class="fon-size-13"> GitHub Integration with Azure Pipelines</a></li>
                                                  <li class="osslist"> <img src="/images/whitesource-42.png" height="42"
                                                         class="icon-bor-p-m" /><a href="/labs/vstsextend/WhiteSource/"
                                                         class="fon-size-13"> Managing Open-source security and license with WhiteSource</a></li>
@@ -242,6 +245,9 @@ description: Learn how you can implement modern DevOps practices with Azure, Azu
                                     <div class="col-sm-3 col-xs-12 p-l-r-override">
                                         <div class="bg-color-white equal-height-column">
                                             <ul class="p-l-5px">
+                                                <li class="osslist"> <img src="/images/github-azureboards.png" height="42"
+                                                        class="icon-bor-p-m" /><a href="/labs/vstsextend/github-azureboards/"
+                                                        class="fon-size-13"> GitHub Integration with Azure Boards</a></li>
                                                 <li class="osslist"> <img src="/images/python-42.png" height="42" class="icon-bor-p-m" /><a
                                                         href="/labs/vstsextend/python/" class="fon-size-13"> Deploying a CD pipeline for a Django-based Python app </a></li>
                                                 <li class="osslist"> <img src="/images/php.png" height="42" class="icon-bor-p-m" /><a
