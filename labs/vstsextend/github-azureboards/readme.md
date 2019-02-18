@@ -266,11 +266,3 @@ behaviour we want our users to see.
 
     ![](images/image106.png)
 
-## Summary
-
-Many organizations have their projects hosted in GitHub, and we just
-achieved how you can set up automated deployment to Azure in minutes. And
-it doesn't matter what kind of application they're building or what kind
-of environment they're deploying to. Once this automation is in place,
-companies can turn their focus to developing business value instead of
-infrastructure.
