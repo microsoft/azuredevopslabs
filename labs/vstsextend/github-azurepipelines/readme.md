@@ -17,7 +17,7 @@ folder: /labs/vstsextend/github-azurepipelines/
 
 Azure Pipelines provides unlimited CI/CD minutes and 10 parallel jobs to every GitHub open source project for free. All open source projects run on the same infrastructure that our paying customers use. That means you'll have the same fast performance and high quality of service. Many of the top open source projects are already using Azure Pipelines for CI/CD, such as Atom, CPython, Pipenv, Tox, Visual Studio Code, and TypeScript---and the list is growing every day.
 
-In this lab, you'll see how easy it is to set up **Azure Pipelines** with your **GitHub** projects and how you can start seeing benefits immediately.
+In this lab, you'll see how easy it is to set up **Azure Pipelines** with your **GitHub** projects and how you can achieve an end-to-end traceability from work items to code change, commit, to build and release.
 
 ## Prerequisites
 

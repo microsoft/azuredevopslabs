@@ -9,7 +9,7 @@ folder: /labs/vstsextend/github-azureboards/
 
 ## Overview 
 
-**DevOps** is not just about automation; while continuous integration and continuous delivery are key practices, teams also need continuous planning. As the saying software, development is a team sport - it is vital that everyone stays on the same page. While GitHub issues help teams manage work artifacts such as issues and bugs which might be sufficient for individuals and small teams, but they do not scale well to support the needs of enterprise teams.  
+**DevOps** is not just about automation; while continuous integration and continuous delivery are key practices, teams also need continuous planning. Software, development is a team sport - it is vital that everyone stays on the same page. While GitHub issues help teams manage work artifacts such as issues and bugs which might be sufficient for individuals and small teams, but they do not scale well to support the needs of enterprise teams.  
 
  ![](images/github-azureboards.png)
  
@@ -17,8 +17,7 @@ folder: /labs/vstsextend/github-azureboards/
 custom reporting. By connecting Azure Boards with GitHub repositories, teams can take advantage of the rich project management capabilities. You can create links between GitHub commits and pull requests to work items tracked in Azure Boards. This enables a seamless way for you to use GitHub for software development while using Azure Boards to plan and track your work.
 
 In this lab, you'll see how easy it is to set up
-**Azure Boards** with your **GitHub** projects and how you can start seeing
-benefits immediately.
+**Azure Boards** with your **GitHub** projects and how you can achieve an end-to-end traceability from work items to code change, commit, to build and release.
 
  {% include important.html content= "Before you proceed with this lab we recommend you to complete the **[GitHub integration with Azure Pipelines](../github-azurepipelines)** lab." %}
 
@@ -48,7 +47,7 @@ benefits immediately.
 
     ![](images/image88.png)
 
-     Let us assume that in our scenario, users will need to be able to book flights by selecting the cities involved. We will create a new
+     Let us assume in our scenario, we want to change the sort order of the airport listing by cities. We will create a new
     user story to sort the airports listed in the booking form in alphabetical order by city. Ordinarily, we would create the user
     story at a higher level and add tasks to define how the story is to be implemented, but for our demo purposes here we'll leave it as
     a single work item.
@@ -191,8 +190,8 @@ behaviour we want our users to see.
     ![](images/image96.png)
    
 
-12. Change the **base fork** to point at your project. By default it
-    points at the original Microsoft repo, so be sure to change it.
+12. Change the **base fork** to point at your project. By default **base fork**
+    points at the original Microsoft repo, so be sure to change **base fork**.
 
     ![](images/image97.png)
    
