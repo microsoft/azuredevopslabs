@@ -9,12 +9,11 @@ folder: /labs/vstsextend/github-azureboards/
 
 ## Overview 
 
-**DevOps** is not just about automation; while continuous integration and continuous delivery are key practices, teams also need continuous planning. Software, development is a team sport - it is vital that everyone stays on the same page. While GitHub issues help teams manage work artifacts such as issues and bugs which might be sufficient for individuals and small teams, but they do not scale well to support the needs of enterprise teams.  
+ **Azure Boards** provides a wealth of project management functionality that spans Kanban boards, backlogs, team dashboards, and
+custom reporting. By connecting Azure Boards with GitHub repositories, teams can take advantage of the rich project management capabilities. You can create links between GitHub commits and pull requests to work items tracked in Azure Boards. This enables a seamless way for you to use GitHub for software development while using Azure Boards to plan and track your work.
 
  ![](images/github-azureboards.png)
- 
-**Azure Boards** provides a wealth of project management functionality that spans Kanban boards, backlogs, team dashboards, and
-custom reporting. By connecting Azure Boards with GitHub repositories, teams can take advantage of the rich project management capabilities. You can create links between GitHub commits and pull requests to work items tracked in Azure Boards. This enables a seamless way for you to use GitHub for software development while using Azure Boards to plan and track your work.
+
 
 In this lab, you'll see how easy it is to set up
 **Azure Boards** with your **GitHub** projects and how you can achieve an end-to-end traceability from work items to code change, commit, to build and release.
