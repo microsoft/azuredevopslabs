@@ -184,6 +184,9 @@ description: Learn how you can implement modern DevOps practices with Azure, Azu
                                                 <li class="osslist"> <img src="/images/jenkins-42.png" height="42"
                                                         class="icon-bor-p-m" /> <a href="/labs/vstsextend/jenkins/"
                                                         class="fon-size-13"> Configuring a CD pipeline for your Jenkins CI</a> </li>
+                                                  <li class="osslist"> <img src="/images/appcenter.png" height="42"
+                                                        class="icon-bor-p-m" /> <a href="/labs/vstsextend/appcenter/"
+                                                        class="fon-size-13"> Build-Test-Distribute Mobile Apps using App Center</a> </li>
                                             </ul>
                                         </div>
                                     </div>
