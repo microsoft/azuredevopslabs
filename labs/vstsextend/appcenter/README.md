@@ -9,10 +9,9 @@ folder: /labs/vstsextend/appcenter/
 
 ## Overview
 
-[Visual Studio App Center](https://appcenter.ms/) brings together multiple services commonly used by mobile developers into an integrated cloud solution. Developers use App Center to Build, Test, and Distribute applications. Once the app's deployed, developers monitor the status and usage of the app using the Analytics and Diagnostics services, and engage with users using the Push service.
+[Visual Studio App Center](https://appcenter.ms/) is an integrated mobile development lifecycle solution for iOS, Android, Windows and macOS apps. It brings together multiple services commonly used by mobile developers, including build, test, distribute, monitor, diagnose , etc., into one single integrated cloud solution.
 
-In this lab, we are going to Automate the **Build-Test-Distribute** process for **Tailwind Traders** mobile applications using **App Center + GitHub**. Tailwind Traders is a fictitious retail company showcasing the future of intelligent application experiences. These reference apps are powered by the Azure cloud, built with best-in-class tools, and made smarter through data and AI. The source repository used  in this lab is  imported from the below location
- - [TailwindTraders-Mobile](https://github.com/Microsoft/TailwindTraders-Mobile.git)
+In this lab, we are going to automate the **Build-Test-Distribute** process for **Tailwind Traders** mobile applications using **App Center**. The code for the mobile application is on GitHub at [TailwindTraders-Mobile](https://github.com/Microsoft/TailwindTraders-Mobile.git)
 
   ![](images/mobile.png)
 
@@ -35,16 +34,16 @@ You must have the following -
    
     ![](images/homepage.png)
 
-1. Enter the valid **App Center API Token** in the **App Center API Token** text field and click the **Verify & Continue** button.
+1. Enter a valid **App Center API Token** in the **App Center API Token** text field and click the **Verify & Continue** button.
    
    ![](images/appcentertoken.png)
 
-1. In the resulting page, choose **Tailwind Traders** template from a number of templates by clicking the **...** *ellipsis* button next to **Selected App Template** field. **Tailwind Traders** is the default selected template.
+1. **Tailwind Traders** is the default selected template. But the App Center Demo Generator has several other templates which can be chosen by selecting the **ellispis (...)** button next to the **Selected App Template** field.
      
     ![](images/choosetemplate.png) 
     ![](images/selecttailwind.png)
 
-1. Once the template is selected, a name for the application is auto-generated. Enter the valid GitHub token that was created previously. If you haven't created the token yet, click the **Generate a token** to generate a token with **repo** access. Click the **Create App** button.
+1. Once the template is selected, a name for the application is auto-generated. Enter a valid GitHub token that was created previously. If you haven't created the token yet, click the **Generate a token** to generate a token with **repo** access. Click the **Create App** button.
 
     ![](images/createapp.png)
 
@@ -74,7 +73,7 @@ You must have the following -
     
      ![](images/collaborators.png)
 
-1. Select **Teams**. Use teams to better organize people that repeatedly work together. Any collaborator within an organization can create teams. Teams allow for better management of collaborators and app permissions. For more information on creating and managing teams click [here](https://docs.microsoft.com/en-us/appcenter/dashboard/creating-and-managing-teams)
+1. Select **Teams**. Use teams to better organize people that work together. Any collaborator within an organization can create teams. Teams allow for better management of collaborators and app permissions. For more information on creating and managing teams click [here](https://docs.microsoft.com/en-us/appcenter/dashboard/creating-and-managing-teams)
 
     ![](images/teams.png)
 
@@ -150,6 +149,7 @@ These are the build configuration steps available for your application in App Ce
 
 1. Since we enabled **Test on real device** feature in build configuration, the build may take more than 10 minutes to complete.
 
+   > Testing mobile applications is extremely critical as mobile users are considered less forgiving. Statistics show that many users delete the app immediately if they find them buggy or non-performing. Users may post bad reviews in the app stores that would undermine the future product releases. Given that there are a wide range of mobile devices in the market running on various hardware and OS versions, testing the app on every device can be very expensive, more complex and challenging than a desktop or web application. Fortunately, the App Center offers thousands of physical devices to deploy apps and run tests. This is offered as a service (aka Test Cloud) making it affordable for teams of any size. You can choose from thousands of real physical devices to test the mobile app.
 1. Once the build is a success, you can download the application `.apk` file and build logs from the build output.
 
     ![](images/download_build.png)
