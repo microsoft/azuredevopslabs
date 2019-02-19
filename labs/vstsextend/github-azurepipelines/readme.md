@@ -9,7 +9,7 @@ folder: /labs/vstsextend/github-azurepipelines/
 
 ## Overview 
 
-**GitHub** hosts over 25 million repositories containing applications of all shapes and sizes. But GitHub is just a start---those applications still need to get built, released, and managed to reach their full potential.
+**GitHub** hosts over 100 million repositories containing applications of all shapes and sizes. But GitHub is just a start---those applications still need to get built, released, and managed to reach their full potential.
 
 [Azure Pipelines](https://azure.microsoft.com/services/devops/pipelines/) that enables you to continuously build, test, and deploy to any platform or cloud. It has cloud-hosted agents for Linux, macOS, and Windows; powerful workflows with native container support; and flexible deployments to Kubernetes, VMs, and serverless environments.
 
