@@ -146,7 +146,7 @@
         },
         "kubernetesVersion": {
             "type": "string",
-            "defaultValue": "1.11.5",
+            "defaultValue": "1.12.5",
             "allowedValues": [
                 "1.12.5"
                 "1.12.4",
