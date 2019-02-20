@@ -73,7 +73,7 @@ description: Learn how you can implement modern DevOps practices with Azure, Azu
                         <div class="row">                          
                             <div class="col-sm-12 pading-t-20">
                                 <h2 class="border-0 fon-normal">Getting started</h2>
-                                 <p class="tab-p">Simplify and speed up the DevOps process with Azure DevOps services. The
+                                 <p>Simplify and speed up the DevOps process with Azure DevOps services. The
                             following labs will help you to get started with Azure DevOps services to automate software
                             delivery and meet business needs.</p>
                                 <div class="row equal-height-columns">
@@ -178,9 +178,6 @@ description: Learn how you can implement modern DevOps practices with Azure, Azu
                                                 <li class="osslist"> <img src="/images/aml.png" height="42" class="icon-bor-p-m" /><a
                                                         href="/labs/vstsextend/aml/" class="fon-size-13">
                                                         Enabling CI/CD for Machine Learning project with Azure Pipelines</a></li>
-                                                <li class="osslist"> <img src="/images/github-42.png" height="42" class="icon-bor-p-m" /><a
-                                                        href="/labs/azuredevops/github-integration/" class="fon-size-13">
-                                                        Setting up a CI/CD pipeline for your GitHub repository</a></li>
                                                 <li class="osslist"> <img src="/images/jenkins-42.png" height="42"
                                                         class="icon-bor-p-m" /> <a href="/labs/vstsextend/jenkins/"
                                                         class="fon-size-13"> Configuring a CD pipeline for your Jenkins CI</a> </li>
@@ -333,7 +330,7 @@ description: Learn how you can implement modern DevOps practices with Azure, Azu
                                 <iframe height="230px" scrolling="no" width="100%" src="slider.html"></iframe>
                             </div> -->
                             <div class="col-sm-12" style="margin-top:10px;">
-                                 <p class="tab-p">
+                                 <p>
                             Learn how you can remove barriers between teams, encourage collaboration, and improve the
                             flow of value to your customers with Visual Studio and Team Foundation Server.
                                     </p>
