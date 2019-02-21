@@ -183,7 +183,7 @@ description: Learn how you can implement modern DevOps practices with Azure, Azu
                                                         class="fon-size-13"> Configuring a CD pipeline for your Jenkins CI</a> </li>
                                                   <li class="osslist"> <img src="/images/appcenter.png" height="42"
                                                         class="icon-bor-p-m" /> <a href="/labs/vstsextend/appcenter/"
-                                                        class="fon-size-13"> Build-Test-Distribute Mobile Apps using App Center</a> </li>
+                                                        class="fon-size-13"> Build-Test-Distribute Mobile Apps using App Center</a><span class="label label-success" style="color: white;background-color: #0078d7;position: relative;top: -31px;right: -10px;font-size: 16px;padding-right: 6px;padding-left: 6px;"> New </span> </li>
                                             </ul>
                                         </div>
                                     </div>
@@ -192,7 +192,7 @@ description: Learn how you can implement modern DevOps practices with Azure, Azu
                                             <ul class="p-l-5px">
                                                  <li class="osslist"><img src="/images/teams.png" height="42"
                                                         class="icon-bor-p-m" />
-                                                    <a href="/labs/vstsextend/teams/" class="fon-size-13">Microsoft Teams with Azure DevOps Services</a>
+                                                    <a href="/labs/vstsextend/teams/" class="fon-size-13">Microsoft Teams with Azure DevOps Services</a><span class="label label-success" style="color: white;background-color: #0078d7;position: relative;top: -31px;right: -10px;font-size: 16px;padding-right: 6px;padding-left: 6px;"> New </span>
                                                 </li>
                                                 <li class="osslist"> <img src="/images/tomcat-42.png" height="42" class="icon-bor-p-m" /><a
                                                         href="/labs/vstsextend/tomcat/" class="fon-size-13"> Deploying a Java-based Tomcat application to Azure </a> </li>
@@ -221,7 +221,7 @@ description: Learn how you can implement modern DevOps practices with Azure, Azu
                                             <ul class="p-l-5px">
                                                  <li class="osslist"> <img src="/images/github-azurepipelines.png" height="42"
                                                         class="icon-bor-p-m" /><a href="/labs/vstsextend/github-azurepipelines/"
-                                                        class="fon-size-13"> GitHub Integration with Azure Pipelines</a></li>
+                                                        class="fon-size-13"> GitHub Integration with Azure Pipelines</a><span class="label label-success" style="color: white;background-color: #0078d7;position: relative;top: -31px;right: -10px;font-size: 16px;padding-right: 6px;padding-left: 6px;"> New </span></li>
                                                  <li class="osslist"> <img src="/images/whitesource-42.png" height="42"
                                                         class="icon-bor-p-m" /><a href="/labs/vstsextend/WhiteSource/"
                                                         class="fon-size-13"> Managing Open-source security and license with WhiteSource</a></li>
@@ -247,7 +247,7 @@ description: Learn how you can implement modern DevOps practices with Azure, Azu
                                             <ul class="p-l-5px">
                                                 <li class="osslist"> <img src="/images/github-azureboards.png" height="42"
                                                         class="icon-bor-p-m" /><a href="/labs/vstsextend/github-azureboards/"
-                                                        class="fon-size-13"> GitHub Integration with Azure Boards</a></li>
+                                                        class="fon-size-13"> GitHub Integration with Azure Boards</a><span class="label label-success" style="color: white;background-color: #0078d7;position: relative;top: -31px;right: -10px;font-size: 16px;padding-right: 6px;padding-left: 6px;"> New </span></li>
                                                 <li class="osslist"> <img src="/images/python-42.png" height="42" class="icon-bor-p-m" /><a
                                                         href="/labs/vstsextend/python/" class="fon-size-13"> Deploying a CD pipeline for a Django-based Python app </a></li>
                                                 <li class="osslist"> <img src="/images/php.png" height="42" class="icon-bor-p-m" /><a
