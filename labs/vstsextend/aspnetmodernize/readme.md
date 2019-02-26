@@ -46,7 +46,7 @@ In this lab, you will
 
 ## Exercise 1: Migrate the LocalDB to SQL Server in Azure
 
-In this exercise, you will create a SQL Azure instance and migrate the application LoaclDB to SQL Server in Azure.
+In this exercise, you will create a SQL Azure instance and migrate the application LocalDB to SQL Server in Azure.
 
 1. Create a new SQL Azure instance in the Azure portal by following the below document.
 
