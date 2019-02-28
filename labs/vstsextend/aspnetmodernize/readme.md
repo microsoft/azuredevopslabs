@@ -1,5 +1,5 @@
 ---
-title: Modernizing your existing ASP.NET Apps with Azure
+title: Deploy existing .NET apps as Windows containers (Modernizing .NET apps)
 layout: page
 sidebar: vsts2
 permalink: /labs/vstsextend/aspnetmodernize/
@@ -40,7 +40,7 @@ In this lab, you will
 
      ![cloneandopensolution](images/cloneandopensolution.png)
 
-2. Rebuild the solution and run the application locally to ensure that the application is working fine. The application looks like as shown in below figure.
+2. Rebuild the solution and run the application locally to ensure that the application is working fine. The application looks like as shown in the below figure.
 
    ![apphomepage](images/apphomepage.png)
 
@@ -52,7 +52,7 @@ In this exercise, you will create a SQL Azure instance and migrate the applicati
 
    [Create an Azure SQL database in the Azure portal](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-get-started-portal).
 
-2. Once the SQL database is provisioned in Azure, open the **SQL Server Object Explorer** in Visual Studio. Click on **Add Server** icon and connect to the Azure SQL server which you have deployed in previous step.
+2. Once the SQL database is provisioned in Azure, open the **SQL Server Object Explorer** in Visual Studio. Click on **Add Server** icon and connect to the Azure SQL server which you have deployed in the previous step.
 
     ![connecttoazuresql](images/connecttoazuresql.png)
 3. To get the schema moved from the LocalDB to the new SQL Azure instance right-click on the LocalDB Instance and select the Schema Compare option.
@@ -163,7 +163,7 @@ In this exercise, you will create a SQL Azure instance and migrate the applicati
 
 ## Exercise 4: Push the new Docker images from ACR to Azure Container Instances (ACI)
 
-In this exercise, you will create Azure Container Instance and push the new Docker image from ACR to Azure Container Instance.
+In this exercise, you will create an Azure Container Instance and push the new Docker image from ACR to Azure Container Instance.
 
 You have options as to where the application can be deployed.
 
@@ -208,4 +208,5 @@ You will use a Windows Container on Azure Container Instances (ACI) to bring up 
 
 ## Summary
 
-You have learnt how to migrate from a LocalDB to SQL server in Azure and access the dockerised application from an Azure Container Instance.
+You have learnt how to modernize existing .NET applications with Azure cloud and Windows Containers with minimal code/config
+changes.

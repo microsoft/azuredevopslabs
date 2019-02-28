@@ -194,6 +194,10 @@ description: Learn how you can implement modern DevOps practices with Azure, Azu
                                                         class="icon-bor-p-m" />
                                                     <a href="/labs/vstsextend/teams/" class="fon-size-13">Microsoft Teams with Azure DevOps Services</a><span class="label label-success" style="color: white;background-color: #0078d7;position: relative;top: -31px;right: -10px;font-size: 16px;padding-right: 6px;padding-left: 6px;"> New </span>
                                                 </li>
+                                                <li class="osslist"> <img src="/images/docker-42.png" height="42" class="icon-bor-p-m" /><a
+                                                        href="/labs/vstsextend/docker/" class="fon-size-13"> Deploying a Docker based web application to Azure App Service</a></li>
+                                                 <li class="osslist"> <img src="/images/docker-42.png" height="42" class="icon-bor-p-m" /><a
+                                                        href="/labs/vstsextend/dockerjava/" class="fon-size-13"> Deploying a Dockerized Java app to Azure Web App for Containers</a></li>
                                                 <li class="osslist"> <img src="/images/tomcat-42.png" height="42" class="icon-bor-p-m" /><a
                                                         href="/labs/vstsextend/tomcat/" class="fon-size-13"> Deploying a Java-based Tomcat application to Azure </a> </li>
                                                 <li class="osslist"> <img src="/images/sonarqube-42.png" height="42"
@@ -203,10 +207,6 @@ description: Learn how you can implement modern DevOps practices with Azure, Azu
                                                 <li class="osslist"> <img src="/images/eclipse-42.png" height="42"
                                                         class="icon-bor-p-m" /><a href="/labs/vstsextend/eclipse/"
                                                         class="fon-size-13"> Integrating Azure Repos and Azure Pipelines with Eclipse</a></li>
-                                                 <li class="osslist"> <img src="/images/docker-42.png" height="42" class="icon-bor-p-m" /><a
-                                                        href="/labs/vstsextend/docker/" class="fon-size-13"> Deploying a Docker based web application to Azure App Service</a></li>
-                                                 <li class="osslist"> <img src="/images/docker-42.png" height="42" class="icon-bor-p-m" /><a
-                                                        href="/labs/vstsextend/dockerjava/" class="fon-size-13"> Deploying a Dockerized Java app to Azure Web App for Containers</a></li>
                                                 <li class="osslist"> <img src="/images/octopus-42.png" height="42"
                                                         class="icon-bor-p-m" /><a href="/labs/vstsextend/Octopus/"
                                                         class="fon-size-13"> Automating Deployments from Azure Repos with  Octopus Deploy</a></li>
@@ -222,6 +222,9 @@ description: Learn how you can implement modern DevOps practices with Azure, Azu
                                                  <li class="osslist"> <img src="/images/github-azurepipelines.png" height="42"
                                                         class="icon-bor-p-m" /><a href="/labs/vstsextend/github-azurepipelines/"
                                                         class="fon-size-13"> GitHub Integration with Azure Pipelines</a><span class="label label-success" style="color: white;background-color: #0078d7;position: relative;top: -31px;right: -10px;font-size: 16px;padding-right: 6px;padding-left: 6px;"> New </span></li>
+                                                         <li class="osslist"> <img src="/images/aspnetmodernize.png" height="42"
+                                                        class="icon-bor-p-m" /><a href="/labs/vstsextend/aspnetmodernize/"
+                                                        class="fon-size-13"> Deploy existing .NET apps as Windows containers (Modernizing .NET apps)</a></li>
                                                  <li class="osslist"> <img src="/images/whitesource-42.png" height="42"
                                                         class="icon-bor-p-m" /><a href="/labs/vstsextend/WhiteSource/"
                                                         class="fon-size-13"> Managing Open-source security and license with WhiteSource</a></li>
@@ -237,8 +240,6 @@ description: Learn how you can implement modern DevOps practices with Azure, Azu
                                                  <li class="osslist"> <img src="/images/vsts-1-42.png" height="42" class="icon-bor-p-m" /><a
                                                         href="/labs/vstsextend/releasegates/" class="fon-size-13">
                                                         Controlling Deployments using Release Gates</a> </li>
-                                                <li class="osslist"> <img src="/images/nodejs-42.png" height="42" class="icon-bor-p-m" /><a
-                                                        href="/labs/vsts/nodejs/" class="fon-size-13">Configure CI/CD for Node application with Azure Pipelines</a> </li>
                                             </ul>
                                         </div>
                                     </div>
@@ -252,10 +253,8 @@ description: Learn how you can implement modern DevOps practices with Azure, Azu
                                                         href="/labs/vstsextend/python/" class="fon-size-13"> Deploying a CD pipeline for a Django-based Python app </a></li>
                                                 <li class="osslist"> <img src="/images/php.png" height="42" class="icon-bor-p-m" /><a
                                                         href="/labs/vstsextend/PHP/" class="fon-size-13"> Setting up a CI/CD pipeline for your PHP application</a></li>
-                                                <li class="osslist"> <img src="/images/aspnet-logo-42.png" height="42"
-                                                        class="icon-bor-p-m" /><a href="/labs/vstsextend/aspnetmodernize/"
-                                                        class="fon-size-13"> Modernizing your Existing ASP.NET Apps
-                                                        with Azure</a></li>
+                                                <li class="osslist"> <img src="/images/nodejs-42.png" height="42" class="icon-bor-p-m" /><a
+                                                        href="/labs/vsts/nodejs/" class="fon-size-13">Configure CI/CD for Node application with Azure Pipelines</a> </li>
                                                 <!-- <li class="osslist"> <img src="/images/azure-42.png" height="42" class="icon-bor-p-m" /><a
                                                         href="/labs/vstsextend/devopsprojectforjava/" class="fon-size-13">
                                                         Azure DevOps Project for Java</a></li> -->
