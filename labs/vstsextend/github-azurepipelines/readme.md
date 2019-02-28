@@ -129,37 +129,32 @@ Now that Azure Pipelines has been installed and configured, we can start buildin
 1. Replace the default template with the YAML below.
 
    ```YAML
-   pool:  
-     vmImage: 'ubuntu-16.04' 
-  
-   trigger: 
-    - master
-
+   pool:
+     vmImage: 'ubuntu-16.04'
+   trigger:
+     - master
    steps:
-   - task: CopyFiles@2
-     displayName: 'Copy Files to: $(build.artifactstagingdirectory)/Templates'
-     inputs:
-       SourceFolder: deployment
-       Contents: '*.json'
-       TargetFolder: '$(build.artifactstagingdirectory)/Templates'
+     - task: CopyFiles@2
+       displayName: 'Copy Files to: $(build.artifactstagingdirectory)/Templates'
+       inputs:
+         SourceFolder: deployment
+         Contents: '*.json'
+         TargetFolder: '$(build.artifactstagingdirectory)/Templates'
+     - task: Npm@1
+       displayName: 'npm custom'
+       inputs:
+         command: custom
+         verbose: false
+         customCommand: 'install --production'
+     - task: ArchiveFiles@2
+       displayName: 'Archive $(Build.SourcesDirectory)'
+       inputs:
+         rootFolderOrFile: '$(Build.SourcesDirectory)'
+         includeRootFolder: false
+     - task: PublishBuildArtifacts@1
+       displayName: 'Publish Artifact: drop'
 
-   - task: Npm@1
-     displayName: 'npm custom'
-     inputs:
-       command: custom
-       verbose: false
-       customCommand: 'install --production'
-
-   - task: ArchiveFiles@2
-     displayName: 'Archive $(Build.SourcesDirectory)'
-     inputs:
-    rootFolderOrFile: '$(Build.SourcesDirectory)'
-    includeRootFolder: false
-
-   - task: PublishBuildArtifacts@1
-     displayName: 'Publish Artifact: drop'
-
-     ```
+   ```
 
       {% include note.html content='YAML is very strict with indentation. If you are new to YAML, we would recommend that you use tools to format and validate the code. There are several free tools available on the web.' %}
 
@@ -244,54 +239,45 @@ Now that we have our CI successfully built, it's time to deploy but how do we kn
 
 1. Remove all the steps and replace it with the following code. Press **Ctrl+S** to save the file.
 
-    ````yaml
-    
-   pool:  
-     vmImage: 'ubuntu-16.04' 
-  
-   trigger: 
-       - master
-
+   ```YAML
+   pool:
+     vmImage: ubuntu-16.04
+   trigger:
+     - master
    steps:
      - task: Npm@1
        inputs:
-         command: 'install'
+         command: install
      - script: 'npm test'
        displayName: 'Run unit tests'
        continueOnError: true
-
      - task: PublishTestResults@2
-          displayName: 'Publish Test Results'
-          condition: succeededOrFailed()
-          inputs:
-            testResultsFiles: '$(System.DefaultWorkingDirectory)/test-report.xml'
-
-        - task: PublishCodeCoverageResults@1
-          displayName: 'Publish Code Coverage'
-          condition: in(variables['Agent.JobStatus'], 'Succeeded')
-          inputs:
-            codeCoverageTool: Cobertura
-            summaryFileLocation: '$(System.DefaultWorkingDirectory)/coverage/*coverage.xml'
-            reportDirectory: '$(System.DefaultWorkingDirectory)/coverage'
-
-        - task: ArchiveFiles@2
+       displayName: 'Publish Test Results'
+       condition: succeededOrFailed()
+       inputs:
+         testResultsFiles: $(System.DefaultWorkingDirectory)/test-report.xml
+     - task: PublishCodeCoverageResults@1
+       displayName: 'Publish Code Coverage'
+       condition: 'in(variables[''Agent.JobStatus''], ''Succeeded'')'
+       inputs:
+         codeCoverageTool: Cobertura
+         summaryFileLocation: '$(System.DefaultWorkingDirectory)/coverage/*coverage.xml'
+         reportDirectory: $(System.DefaultWorkingDirectory)/coverage
+     - task: ArchiveFiles@2
        displayName: 'Archive sources'
        inputs:
-         rootFolderOrFile: '$(Build.SourcesDirectory)'
+         rootFolderOrFile: $(Build.SourcesDirectory)
          includeRootFolder: false
-
      - task: CopyFiles@2
        displayName: 'Copy ARM templates'
        inputs:
          SourceFolder: deployment
          Contents: '*.json'
-         TargetFolder: '$(build.artifactstagingdirectory)/Templates'
-
+         TargetFolder: $(build.artifactstagingdirectory)/Templates
      - task: PublishBuildArtifacts@1
-       displayName: 'Publish Artifact: drop' 
+       displayName: 'Publish Artifact: drop'
 
-
-    ````
+   ```
 
 
 1.  From the **Source Control** tab, enter a commit message like **Updated build pipeline** and press **Ctrl+Enter** to commit.
