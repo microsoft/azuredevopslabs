@@ -14,7 +14,7 @@ updated: Last updated - 2/27/2019
 
 Pull requests let your team give feedback on changes in feature branches before merging the code into the master branch. Reviewers can step through the proposed changes, leave comments, and vote to approve or reject the code. Azure DevOps provides a rich experience for creating, reviewing, and approving pull requests.
 
-It is recommended that you complete the Git lab prior to taking this lab.
+It is required that you complete the [Git lab](../git) prior to taking this lab.
 
 <a name="Prerequisites"></a>
 ### Prerequisites ###
@@ -23,7 +23,7 @@ It is recommended that you complete the Git lab prior to taking this lab.
 
 - This lab requires you to complete task 1 from the [prerequisite instructions](../prereq).
 
-- The Git lab is required to be completed as a prerequisite for this lab.
+- The [Git lab](../git) is required to be completed as a prerequisite for this lab.
 
 <a name="Exercise1"></a>
 ## Exercise 1: Working with pull requests ##
@@ -134,7 +134,7 @@ When the Git lab ended, we had created a new branch and made a change to some of
 
     ![](images/022.png)
 
-1. You can review the pull request, as well as **Cherry-pick** or **Revert** it if needed.
+1. You can review the pull request, as well as **Cherry-pick** or **Revert** it if needed. Cherry-picking is the process of selecting specific commits from one branch to apply to another, conceptually similar to a copy/paste operation.
 
     ![](images/023.png)
 
@@ -151,7 +151,7 @@ When the Git lab ended, we had created a new branch and made a change to some of
     ![](images/026.png)
 
 <a name="Ex1Task3"></a>
-### Task 3: Managing Git repo and pull request policies ###
+### Task 3: Managing Git branch and pull request policies ###
 
 As projects and teams scale in complexity, it becomes help to automate more of the processes put in place to ensure quality.
 
