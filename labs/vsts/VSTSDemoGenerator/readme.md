@@ -15,7 +15,7 @@ The purpose of this system is to help follow hands-on-labs, demos and other educ
 
 ## How to use?
 
-1. Browse to [VSTS Demo Generator](https://vstsdemogenerator.azurewebsites.net/)
+1. Browse to [VSTS Demo Generator](https://azuredevopsdemogenerator.azurewebsites.net/)
 
 1. Sign In with your VSTS credentials. If you don't have Team Service account, Click on ***Get Started for Free*** to create a VSTS account.
 

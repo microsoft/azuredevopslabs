@@ -47,7 +47,7 @@ Next, you need to create a team project. You can create the team project manuall
 
 ### Provisioning a project using the VSTS Demo Generator
 
-1. Open [VSTS Demo Generator](https://vstsdemogenerator.azurewebsites.net){:target="blank"}
+1. Open [VSTS Demo Generator](https://azuredevopsdemogenerator.azurewebsites.net){:target="blank"}
 
 1. Enter your account name and the PAT you saved earlier. Click **Verify and Continue**
 
