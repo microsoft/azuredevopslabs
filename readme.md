@@ -303,7 +303,7 @@ description: Learn how you can implement modern DevOps practices with Azure, Azu
                                         </ul>
                                     </li>
                                     <li>
-                                        <a href="https://vstsdemogenerator.azurewebsites.net" target="_blank"><strong>Azure
+                                        <a href="https://azuredevopsdemogenerator.azurewebsites.net/" target="_blank"><strong>Azure
                                                 DevOps Demo Generator:</strong></a> You can use the Azure DevOps Demo
                                         Generator to provision a project with pre-defined data on to your Azure DevOps
                                         services organization.
