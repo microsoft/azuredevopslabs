@@ -92,7 +92,7 @@ description: Learn how you can implement modern DevOps practices with Azure, Azu
                                                     <a href="/labs/azuredevops/packagemanagement/" class="fon-size-13">Package
                                                         Management with Azure Artifacts</a>
                                                 </li>
-                                                <li class="osslist"><img src="/images/pullrequest.png" height="42" class="icon-bor-p-m" />
+                                                <li class="osslist"><img src="/images/pullrequests.png" height="42" class="icon-bor-p-m" />
                                                     <a href="/labs/azuredevops/pullrequests/" class="fon-size-13">Working with Pull Requests in Visual Studio Code and Azure DevOps </a></li>
                                             </ul>
                                         </div>
