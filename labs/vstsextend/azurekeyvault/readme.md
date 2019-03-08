@@ -21,31 +21,36 @@ In this lab, you will see how you can use Azure Key Vault in a pipeline
 ### Before you begin
 
 1. Refer the [Getting Started](../Setup/) page before you begin following the exercises.
-1. Fork the [**SmartHotel360-CouponManagement**](https://github.com/Microsoft/SmartHotel360-CouponManagement) repository to your GitHub account
 
+1. Use the Azure DevOps Demo Generator to provision a new project
 
-### Task 1: Creating a service principal 
+### Task 1: Check the Azure Pipeline
 
-You will need a service principal to deploy an app to an Azure resource from Azure Pipelines. A service principal is automatically created by Azure Pipeline when you connect to an Azure subscription from inside a pipeline definition or when you create a new service connection from the project settings page. You can also manually create the service principal from the portal or using Azure CLI,  and re-use it across projects. It is recommended that you use an existing service principal when you want to have a pre-defined set of permissions. 
+1. Navigate to the Azure DevOps project you generated using the demo generator.
 
-We will create one manually using the Azure CLI. If you do already have a service principal, you can skip this task.
+    ![](images/project.png)
 
-1. Login to the [**Azure Portal**](https://portal.azure.com) 
+1. Select **Pipelines** and choose **Builds**
 
-1. Open the Azure cloud shell. Select **Bash** when prompted to choose shell.
-    ![](images/azurecloudshell.png)
+1. Select the **Queue** button to manually queue the build definition. Wait for the build to complete
 
-1. Enter the following command by replacing ServicePrincipalName and PASSWORD with your desired values.
+    ![](images/build.png)
 
-   `az ad sp create-for-rbac --name ServicePrincipalName --password PASSWORD `
+1. Select **Releases** under **Pipelines** and then select **Edit**
 
-   It will give you a JSON output as shown in the image. Copy the output to notepad or text file. You will need them later.
-         
-    ![](images/azureserviceprincipal.png)
+1. Notice the first task is **Azure Deployment**, a task that is used to deploy an  ARM template. Select the Azure subscription from the drop-down where you want to deploy
 
-1. Enter the following command to get Azure SubscriptionID and copy the subscription ID and name to notepad.
-   
-    `az account show`
+1. You will need a service principal to deploy an app to an Azure resource from Azure Pipelines. If you do not have one, select **Authorize** for Azure pipelines to automatically create a service connection with a service principal
+
+    ![](images/release1.png)
+
+    >If you prefer to use an existing service principal, you can choose **Advanced Options** from the drop down next to the *Authorize* button and use the full service dialog to enter the Service principal ID, passphrase, tenant ID, etc., 
+
+1. Select the location in which you want the resource group to be created
+
+1. Repeat the same for the next task
+
+1. Now, let's go back to the first task and check the **Override template parameters** field. You will notice the password field for the MySQL Database is passed  
 
 ### Task 2: Creating a key vault
 Next, we will create a key vault in Azure. For this lab scenario, we will use it to store the password of database as a secret which will be used when creating a new database. 
