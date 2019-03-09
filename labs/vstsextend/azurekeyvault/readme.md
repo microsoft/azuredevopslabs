@@ -24,38 +24,35 @@ In this lab, you will see how you can use Azure Key Vault in a pipeline
 
 1. Use the Azure DevOps Demo Generator to provision a new project
 
-### Task 1: Check the Azure Pipeline
+### Task 1: Creating a service principal 
 
-1. Navigate to the Azure DevOps project you generated using the demo generator.
+You will need a service principal to deploy an app to an Azure resource from Azure Pipelines. Since we are going to retrieve secrets in a pipeline, we will need to grant permission to the service when we create the key vault. 
 
-    ![](images/project.png)
+A service principal is automatically created by Azure Pipeline when you connect to an Azure subscription from inside a pipeline definition or when you create a new service connection from the project settings page. You can also manually create the service principal from the portal or using Azure CLI,  and re-use it across projects. It is recommended that you use an existing service principal when you want to have a pre-defined set of permissions
 
-1. Select **Pipelines** and choose **Builds**
+We will create one manually using the Azure CLI. If you do already have a service principal, you can skip this task.
 
-1. Select the **Queue** button to manually queue the build definition. Wait for the build to complete
+1. Login to the [**Azure Portal**](https://portal.azure.com) 
 
-    ![](images/build.png)
+1. Open the Azure cloud shell. Select **Bash** when prompted to choose shell.
 
-1. Select **Releases** under **Pipelines** and then select **Edit**
+    ![](images/azurecloudshell.png)
 
-1. Notice the first task is **Azure Deployment**, a task that is used to deploy an  ARM template. Select the Azure subscription from the drop-down where you want to deploy
+1. Enter the following command by replacing ServicePrincipalName and PASSWORD with your desired values.
 
-1. You will need a service principal to deploy an app to an Azure resource from Azure Pipelines. If you do not have one, select **Authorize** for Azure pipelines to automatically create a service connection with a service principal
+   `az ad sp create-for-rbac --name ServicePrincipalName --password PASSWORD `
 
-    ![](images/release1.png)
+   It will give you a JSON output as shown in the image. Copy the output to notepad or text file. You will need them later.
 
-    >If you prefer to use an existing service principal, you can choose **Advanced Options** from the drop down next to the *Authorize* button and use the full service dialog to enter the Service principal ID, passphrase, tenant ID, etc., 
+    ![](images/azureserviceprincipal.png)
 
-1. Select the location in which you want the resource group to be created
+1. Enter the following command to get Azure SubscriptionID and copy the subscription ID and name to notepad.
 
-1. Repeat the same for the next task
-
-1. Now, let's go back to the first task and check the **Override template parameters** field. You will notice the password field for the MySQL Database is passed  
+    `az account show`
 
 ### Task 2: Creating a key vault
-Next, we will create a key vault in Azure. For this lab scenario, we will use it to store the password of database as a secret which will be used when creating a new database. 
 
-The SmartHotel360 Coupon Management is a sample app built on node.JS which connects to a MySQL database.  
+Next, we will create a key vault in Azure. For this lab scenario, since we are using a node-based app that connects to a MySQL database, we will  store the password of MySQL database as a secret in the key vault.
 
 1. If not already logged in, login to the [Azure Portal](https://portal.azure.com)
 
@@ -71,7 +68,7 @@ The SmartHotel360 Coupon Management is a sample app built on node.JS which conne
 
 1. Select **Access policies** and then select **+Add new** to setup a new policy
 
-1. You will need specify the permission that you intend to grant the application. This can be permissions to manage the key vault itself or just the data. In any case, applications can access the key vault in two ways:
+1. You will need specify the permission that you intend to grant the application. This can be permissions to manage the keys, data(secrets), . In any case, applications can access the key vault in two ways:
 
     * User + Application access: Access is granted to specific user who can then be allowed to use any application or can be restricted to use a specific application. 
 
@@ -87,36 +84,58 @@ The SmartHotel360 Coupon Management is a sample app built on node.JS which conne
 
 1.  Click **OK** to close the open blades and select **Create** to create the vault.
 
-It should not take long but a couple of minutes for the service to be created. Once it is provisioned, select the key vault and add a new secret. Let's name it **sqldbpassword**. Provide any value that will be accepted as a password for a MySQL database
+1. It should only take a couple of minutes for the service to be created. Once it is provisioned, select the key vault and add a new secret. Let's name it **sqldbpassword**. Provide any value that will be accepted as a password for a MySQL database
 
-### Task 3: Using the Key Vault in Azure Pipelines
+    ![](images/createsecret.png)
 
-1. Return back to the Azure DevOps project that you provisioned using the demo generator
+### Task 3: Check the Azure Pipeline
 
-1. Select **Builds** under **Pipelines** and then select the **SmartHotel-CouponManagement-CI** build and queue it
+Now, lets go to the Azure DevOps project that you provisioned using the demo generator and configure the Azure Pipelines to read the secret from the key vault
 
-1. Wait for the build to complete. Before we deploy this build, let's take a look at the release definition
+1. Navigate to the Azure DevOps project 
+
+    ![](images/project.png)
+
+1. Select **Pipelines** and choose **Builds**
+
+1. Select the **Queue** button to manually queue the build definition. Wait for the build to complete
+
+    ![](images/build.png)
 
 1. Go to **Releases** under **Pipelines** and then select and edit the **SmartHotel-CouponManagement-CD** definition
 
 1. You will notice the release definition for **Dev** stage has **Azure Key Vault** task at the top. This task downloads *Secrets* from an Azure Key Vault. You will need to point to the subscription and the Azure Key Vault resource you created earlier in the lab.
 
-1. You can use the ***Secret Filter*** field to download only selected list of secrets. If more than one, you should separate them by a comma. Use an asterisk (*) to download all secrets
+1. You need to authorize the pipeline to deploy to Azure. Azure pipelines can automatically create a service connection with a new service principal but we want to use the one we created earlier. So, choose the **Advanced Options** from the drop down next to the *Authorize* button and use the full service dialog to enter the Service principal ID, passphrase, tenant ID, etc., 
 
-    The downloaded secrets will be available as an environment variable which means the secret that you created earlier can be accessed in the subsequent tasks using the variable notation
+    ![](images/azureserviceconnection.png)
 
-1. Next task in the definition is **Azure Deploy** which is used for deploying an ARM template to a resource group. Select that and point to the Azure subscription to where you want to deploy. 
+1. Press **OK** to save and close the dialog. Once the connection is established, you can enter the name or select the key vault you created from the drop-down
 
-1. Note that the *Template* and *Template Parameter* fields are referring to the respective JSON files from the build output folder. 
+1. In the **Secrets filter** field, you can specify an *asterisk* (*) to read all secrets or if you want only specific ones, you can provide the names of the secrets as comma-separated values
 
-1. Notice the *override templates parameters* field has the following value
+    ![](images/keyvaulttask.png)
 
-    `-webAppName $(webappName) -mySQLAdminLoginName "azureuser" -mySQLAdminLoginPassword $(sqldbpassword) `
 
-    In the above value, note that the webappname is a variable defined in the release manually but the sqldbpassword is a variable that is avaialble from the earlier task
+    At runtime, Azure Pipelines will fetch the latest values of the secrets and set them as task variables which can be consumed in the following tasks which means  the password we stored earlier can be read using **$(sqldbpassword)**.  
 
-1. This will provision the MySQL database defined in the ARM template using the password that you have specified in the key vault. It's that easy!!!
+1. We pass this value in the next task, **Azure Deployment** where we deploy an ARM template
 
-1. The final step in the release definition is the **App Service Deploy** task which will deploy the web application to the Azure Web App.
+    ![](images/armtemplatedeploytask.png)
 
-1. Initate a release and 
+Notice the **Override template parameters** field has the database user name as a string but the password value is passed as a variable
+
+ `-webAppName $(webappName) -mySQLAdminLoginName "azureuser" -mySQLAdminLoginPassword $(sqldbpassword)`
+
+This will provision the MySQL database defined in the ARM template using the password that you have specified in the key vault. It's that easy!!! ***It's that easy!!!***
+
+You may want to complete the pipeline definition by specifying the subscription., location for the task. Repeat the same for the last task in the pipeline **Azure App Service Deploy**. Finally, save and create a new release to start the deployment
+
+{% include note.html content= "You may wonder that we could have passed the value as a secret task variable itself within Azure Pipelines. While that is possible, task variables are specific to a pipeline and can't be used outside the definition it is created. Also, in most cases, secrets such as these are defined by Ops who may not want to set this for every pipeline" %}
+
+### Exercise Challenge
+
+Try creating a new secret to store the user name for the MySQL Database and change the pipeline to fetch and use the secret
+
+
+### Related Labs
