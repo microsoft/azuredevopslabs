@@ -39,7 +39,7 @@ In this lab, you will learn how to establish a local Git repository, which can e
 
 1. Open **Visual Studio Code**. In this task, you will configure a Git credential helper to securely store the Git credentials used to communicate with Azure DevOps. If you have already configured a credential helper and Git identity, you can skip to the next task.
 
-1. From the main menu, select **Terminal | New Terminal** to open a terminal window.
+1. From the main menu, select **Terminal \| New Terminal** to open a terminal window.
 
 1. Execute the command below to configure a credential helper.
 
