@@ -130,6 +130,11 @@ Messages are a good way to connect and keep a history of the conversation. It's 
 
 1. Teams can have a collaborative experience with the latest updates with respect to the **work items, build summary** etc so that it helps in better transparency
 
+1. **Easily find and discuss work items from DevOps in Teams** : You can easily search, find and discuss work items from Azure DevOps in Teams, keeping the conversation and collaboration within your Teams app. For example if you would like to discuss about any User Story you can click on **Azure DevOps** icon. It will prompt a window where you can search your project workitems. Select the work item to discuss and enter your comments.
+
+      ![](images/workitems.png)
+      ![](images/workitems2.png)
+      
 For more information about using the Conversation tab in Microsoft Teams click [here](https://support.office.com/en-us/article/using-the-conversation-tab-in-microsoft-teams-53d1c530-3797-4a6f-9892-6760f8763df2)
 
 ## Working with Channels
@@ -165,20 +170,30 @@ As your team works together you'll undoubtedly have files that you'll want to sh
 
    ![](images/conversation_files.png)
 
-1. You can also share the related websites within the Teams as Tabs. Click on **+** and select **Website**
+1. You can also share the related websites within the Teams as Tabs. As we use **Wiki** to explain project objectives, epics, specs, release notes, best practices or other content to ensure all your team members and stakeholders learn, you can also share your Team's **[Wiki](https://azure.microsoft.com/en-in/services/devops/wiki/)** content as website within teams as tab. 
+
+1. Navigate to your Azure DevOps projects Wiki page. Copy the URL.
+       
+    ![](images/wikipage.png)
+
+1. Now switch back to the **Teams**. Click on **+** and select **Website**
 
    ![](images/add_tab.png)
 
    ![](images/add_website.png)
 
-1. Provide a name for the website and click on **Save**. It appears on the channel where all of the team members can access to get quick information if there were any updates done
+1. Provide a name for the website, enter the wiki URL copied in previous step and click on **Save**. It appears on the channel where all of the team members can access to get quick information if there were any updates done
 
-    ![](images/add_website2.png)
+    ![](images/wikiasweb.png)
 
-1. This is how the website looks when added to the channel.
+1. This is how the website/Wiki looks when added to the channel.
 
-   ![](images/add_website3.png)
+   ![](images/wikiasweb2.png)
 
+Now that you have connected Microsoft Teams and Azure DevOps think about the other development team information that you can expose via Microsoft teams, for example: 
+
+- [Add a OneNote notebook to Teams](https://support.office.com/en-us/article/Add-a-OneNote-notebook-to-Teams-0ec78cc3-ba3b-4279-a88e-aa40af9865c2) to keep meeting notes such as **Sprint Planning Meetings** and **Retrospective Meetings**. 
+- [Connect Azure DevOps to Power BI ](https://docs.microsoft.com/en-us/azure/devops/report/powerbi/?view=azure-devops) and [add a Power BI tab ](https://support.office.com/en-us/article/add-a-powerbi-tab-to-teams-708ce6fe-0318-40fa-80f5-e9174f841918) that displays advanced reports from Azure DevOps or other data related to your project.
 ## References
 
 - [Microsoft Teams with Azure DevOps Services](https://docs.microsoft.com/en-us/azure/devops/service-hooks/services/teams?view=azure-devops)
