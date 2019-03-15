@@ -139,3 +139,6 @@ Try creating a new secret to store the user name for the MySQL Database and chan
 
 
 ### Related Labs
+* [Embracing Continuous Delivery with Azure Pipelines] (https://azuredevopslabs.com/labs/azuredevops/continuousdeployment/)
+
+* [GitHub integration with Azure Pipelines](https://azuredevopslabs.com/labs/vstsextend/github-azurepipelines/)
