@@ -22,7 +22,7 @@ In this lab, you will see how you can use Azure Key Vault in a pipeline
 
 1. Refer the [Getting Started](../Setup/) page before you begin following the exercises.
 
-1. Use the Azure DevOps Demo Generator to provision a new project
+1. Use the [Azure DevOps Demo Generator](https://azuredevopsdemogenerator.azurewebsites.net/?name=keyvault) to provision a new project
 
 ### Task 1: Creating a service principal 
 
