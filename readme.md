@@ -256,9 +256,9 @@ description: Learn how you can implement modern DevOps practices with Azure, Azu
                                                         class="icon-bor-p-m" /><a href="/labs/vstsextend/aspnetmodernize/"
                                                         class="fon-size-13"> Modernizing your Existing ASP.NET Apps
                                                         with Azure</a></li>
-                                                <!-- <li class="osslist"> <img src="/images/azure-42.png" height="42" class="icon-bor-p-m" /><a
-                                                        href="/labs/vstsextend/devopsprojectforjava/" class="fon-size-13">
-                                                        Azure DevOps Project for Java</a></li> -->
+                                                <li class="osslist"> <img src="/images/key-vault.png" height="42" class="icon-bor-p-m" /><a
+                                                        href="/labs/vstsextend/azurekeyvault/" class="fon-size-13">
+                                                        Using secrets from Azure Key Vault in a pipeline</a></li> 
                                                 <!-- <li class="osslist"> <img src="/images/azure-42.png" height="42" class="icon-bor-p-m" /><a
                                                         href="/labs/vstsextend/azuredevopsprojectdotnet/" class="fon-size-13">
                                                         Azure DevOps Project for .NET</a></li> -->
