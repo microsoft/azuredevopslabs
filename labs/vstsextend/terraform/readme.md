@@ -50,7 +50,7 @@ In this lab, you will use PartsUnlimited which is an example eCommerce website d
 
     In this example, we want to deploy an Azure Resource group, App service plan and App service required to deploy the website. And we have added Terraform file (Infrastructure as Code) to source control repository in your Azure DevOps project which can deploy the required Azure resources. 
     
-    If you would like to learn more about the terraform basics click [here](https://azurecitadel.github.io/workshops/terraform/lab1/).
+    If you would like to learn more about the terraform basics click [here](https://azurecitadel.com/automation/terraform/lab1/).
   
 
 ## Exercise 2: Build your application using Azure CI Pipeline
