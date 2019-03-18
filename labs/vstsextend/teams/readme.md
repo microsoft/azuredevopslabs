@@ -193,7 +193,13 @@ As your team works together you'll undoubtedly have files that you'll want to sh
 Now that you have connected Microsoft Teams and Azure DevOps think about the other development team information that you can expose via Microsoft teams, for example: 
 
 - [Add a OneNote notebook to Teams](https://support.office.com/en-us/article/Add-a-OneNote-notebook-to-Teams-0ec78cc3-ba3b-4279-a88e-aa40af9865c2) to keep meeting notes such as **Sprint Planning Meetings** and **Retrospective Meetings**. 
+     
+    ![](images/onenote.png)
+
 - [Connect Azure DevOps to Power BI ](https://docs.microsoft.com/en-us/azure/devops/report/powerbi/?view=azure-devops) and [add a Power BI tab ](https://support.office.com/en-us/article/add-a-powerbi-tab-to-teams-708ce6fe-0318-40fa-80f5-e9174f841918) that displays advanced reports from Azure DevOps or other data related to your project.
+
+   ![](images/powerbi.png)
+   
 ## References
 
 - [Microsoft Teams with Azure DevOps Services](https://docs.microsoft.com/en-us/azure/devops/service-hooks/services/teams?view=azure-devops)
