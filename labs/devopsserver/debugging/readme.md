@@ -22,7 +22,7 @@ In order to complete this lab you will need the Visual Studio 2019 virtual machi
 
 <a href="https://labondemand.com/AuthenticatedLaunch/38297?providerId=4" class="launch-hol" role="button" target="_blank"><span class="lab-details">Launch the virtual machine</span></a>
 
-Alternatively, you can download the virtual machine from [here](../almvmdownload/).
+Alternatively, you can download the virtual machine from [here](../devopsvmdownload).
 
 <a name="Exercise1"></a>
 ## Exercise 1: Debugging with IntelliTrace ##
