@@ -181,7 +181,7 @@ description: Learn how you can implement modern DevOps practices with Azure, Azu
                                                         href="/labs/vstsextend/aml/" class="fon-size-13">
                                                         Enabling CI/CD for Machine Learning project with Azure Pipelines</a></li>
                                                 <li class="osslist"> <img src="/images/jenkins-42.png" height="42"
-                                                        class="icon-bor-p-m" /> <a href="/labs/vstsextend/jenkins/"
+                                                        class="icon-bor-p-m" /> <a href="/labs/vstsextend/Jenkins/"
                                                         class="fon-size-13"> Configuring a CD pipeline for your Jenkins CI</a> </li>
                                                   <li class="osslist"> <img src="/images/appcenter.png" height="42"
                                                         class="icon-bor-p-m" /> <a href="/labs/vstsextend/appcenter/"
@@ -210,7 +210,7 @@ description: Learn how you can implement modern DevOps practices with Azure, Azu
                                                         class="icon-bor-p-m" /><a href="/labs/vstsextend/eclipse/"
                                                         class="fon-size-13"> Integrating Azure Repos and Azure Pipelines with Eclipse</a></li>
                                                 <li class="osslist"> <img src="/images/octopus-42.png" height="42"
-                                                        class="icon-bor-p-m" /><a href="/labs/vstsextend/Octopus/"
+                                                        class="icon-bor-p-m" /><a href="/labs/vstsextend/octopus/"
                                                         class="fon-size-13"> Automating Deployments from Azure Repos with  Octopus Deploy</a></li>
                                                 <!-- <li class="osslist"> <img src="/images/java-42.png" height="42" class="icon-bor-p-m" />
                                                     <a href="/labs/java/" class="fon-size-13"> DevOps with VSTS and
@@ -228,10 +228,10 @@ description: Learn how you can implement modern DevOps practices with Azure, Azu
                                                         class="icon-bor-p-m" /><a href="/labs/vstsextend/aspnetmodernize/"
                                                         class="fon-size-13"> Deploy existing .NET apps as Windows containers (Modernizing .NET apps)</a></li>
                                                  <li class="osslist"> <img src="/images/whitesource-42.png" height="42"
-                                                        class="icon-bor-p-m" /><a href="/labs/vstsextend/WhiteSource/"
+                                                        class="icon-bor-p-m" /><a href="/labs/vstsextend/whitesource/"
                                                         class="fon-size-13"> Managing Open-source security and license with WhiteSource</a></li>
                                                 <li class="osslist"> <img src="/images/selenium-42.png" height="42"
-                                                        class="icon-bor-p-m" /><a href="/labs/vstsextend/Selenium/"
+                                                        class="icon-bor-p-m" /><a href="/labs/vstsextend/selenium/"
                                                         class="fon-size-13"> Automating Selenium Tests in Azure Pipelines</a></li>
                                                 <li class="osslist"> <img src="/images/azure-42.png" height="42" class="icon-bor-p-m" /><a
                                                         href="/labs/vstsextend/deploymentgroups/" class="fon-size-13">
@@ -254,7 +254,7 @@ description: Learn how you can implement modern DevOps practices with Azure, Azu
                                                 <li class="osslist"> <img src="/images/python-42.png" height="42" class="icon-bor-p-m" /><a
                                                         href="/labs/vstsextend/python/" class="fon-size-13"> Deploying a CD pipeline for a Django-based Python app </a></li>
                                                 <li class="osslist"> <img src="/images/php.png" height="42" class="icon-bor-p-m" /><a
-                                                        href="/labs/vstsextend/PHP/" class="fon-size-13"> Setting up a CI/CD pipeline for your PHP application</a></li>
+                                                        href="/labs/vstsextend/php/" class="fon-size-13"> Setting up a CI/CD pipeline for your PHP application</a></li>
                                                 <li class="osslist"> <img src="/images/nodejs-42.png" height="42" class="icon-bor-p-m" /><a
                                                         href="/labs/vsts/nodejs/" class="fon-size-13">Configure CI/CD for Node application with Azure Pipelines</a> </li>
                                                 <!-- <li class="osslist"> <img src="/images/azure-42.png" height="42" class="icon-bor-p-m" /><a
