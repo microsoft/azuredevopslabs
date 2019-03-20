@@ -23,7 +23,7 @@ The 2019 (Spring Update) includes Microsoft Visual Studio DevOps VM and the acco
 
 4. Microsoft Office Professional Plus 2016 (Word, PowerPoint, Excel, Outlook)
 
-5. Microsoft SQL Server Standard 2016
+5. Microsoft SQL Server Standard 2017
 
 6. Sample users and data required to support hands-on-lab scripts which accompany this download.
 
