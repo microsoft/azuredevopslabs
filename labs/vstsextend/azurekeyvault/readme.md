@@ -40,7 +40,7 @@ We will create one manually using the Azure CLI. If you do already have a servic
 
 1. Enter the following command by replacing ServicePrincipalName and PASSWORD with your desired values.
 
-   `az ad sp create-for-rbac --name ServicePrincipalName --password PASSWORD `
+   `az ad sp create-for-rbac -n ServicePrincipalName -p PASSWORD `
 
    It will give you a JSON output as shown in the image. Copy the output to notepad or text file. You will need them later.
 
@@ -139,6 +139,6 @@ Try creating a new secret to store the user name for the MySQL Database and chan
 
 
 ### Related Labs
-* [Embracing Continuous Delivery with Azure Pipelines] (https://azuredevopslabs.com/labs/azuredevops/continuousdeployment/)
+* [Embracing Continuous Delivery with Azure Pipelines](https://azuredevopslabs.com/labs/azuredevops/continuousdeployment/)
 
 * [GitHub integration with Azure Pipelines](https://azuredevopslabs.com/labs/vstsextend/github-azurepipelines/)
