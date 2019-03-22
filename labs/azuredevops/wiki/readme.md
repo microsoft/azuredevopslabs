@@ -4,12 +4,12 @@ layout: page
 sidebar: vsts
 permalink: /labs/azuredevops/wiki/
 folder: /labs/azuredevops/wiki/
-version: Lab version - 15.8.2
-updated: Last updated - 9/4/2018
+version: Lab version - 15.9.6
+updated: Last updated - 2/8/2019
 ---
 <div class="rw-ui-container"></div>
-<a name="Overview"></a>
 
+<a name="Overview"></a>
 ## Overview ##
 
 In this lab, you'll learn about the wiki feature of Azure DevOps that enables easier collaboration experiences for development teams. Each project in Azure DevOps now supports its own wiki, which enables you to conveniently write pages that help your team members and other users understand, use, and contribute to your project.
@@ -49,7 +49,7 @@ In this lab, you'll learn about the wiki feature of Azure DevOps that enables ea
 
     ![](images/004.png)
 
-1. By default, all members of the **Contributors** group can edit README files and wiki pages. **Stakeholders** can read files and revisions, but cannot edit anything. Select **More \| Wiki security** to review permissions.
+1. By default, all members of the **Contributors** group can edit README files and wiki pages. **Stakeholders** can read files and revisions, but cannot edit anything. Select **More | Wiki security** to review permissions.
 
     ![](images/005.png)
 
@@ -125,72 +125,139 @@ In this lab, you'll learn about the wiki feature of Azure DevOps that enables ea
 
     ![](images/023.png)
 
-<a name="Ex1Task2"></a>
-### Task 2: Working with the wiki offline ###
-
-1. Sometimes you may want to work against the wiki without being connected via browser. Fortunately, your Azure DevOps wiki is backed by a Git repo, so you could clone it and edit it just like any other Git project whether you're online or not.
-
-1. Select **More \| Clone wiki** to view the clone URL.
+1. Wiki pages are also indexed to show up in search results. Use the search bar in the top right corner to search for **"Azure"**.
 
     ![](images/024.png)
 
-1. Click the **Copy** button to copy the URL to the clipboard.
+1. The wiki page you just updated should appear as one of the results. Click it.
 
     ![](images/025.png)
 
-1. Launch a new instance of Visual Studio.
-
-1. From **Team Explorer**, click the **Manage Connections** button.
+1. Now anyone working on the project can easily find wiki content alongside code and work item results.
 
     ![](images/026.png)
 
-1. Locate the **Local Git Repositories** section and click the **Clone** link. Paste the remote URL and note the local path the repo will be cloned to. Click **Clone**.
+<a name="Ex1Task2"></a>
+### Task 2: Publishing code as wiki ###
+
+1. Content that you already maintain in a Git repository can be published to a wiki. For example, content written to support a software development kit (SDK), product documentation, or README files can quickly be published to a wiki. Multiple wikis can be published within a single team project. To get started, navigate to the **Repos** hub.
 
     ![](images/027.png)
 
-1. Select **File \| Open \| Folder** and open the path the repo was cloned to. You could alternatively do your editing in any other environment or even Notepad. It's all Markdown and Git at this point.
-
-1. Open **Solution Explorer**. The wiki file structure is pretty straightforward. Markdown files (.md) contain content for each page at that path. If you want sub-pages, then create a folder with the same name of that file (without the .md), such as **Getting-started** as shown in the screenshot below. Every folder also requires a **.order** file to specify the order of the pages. If you have any attachments for your wiki, they are stored in a **.attachments** folder in the root directory.
+1. Create a **New repository**.
 
     ![](images/028.png)
 
-1. Start off by adding a new file. To keep things simple, just copy and paste **Home.md**.
+1. Set the new **Repository name** to **"Docs"** and check the **Add a README** option. Click **Create**.
 
     ![](images/029.png)
 
-1. Rename the copied file to **Team-bios.md**.
+1. From the **README.md** dropdown, select **Rename**. We will reuse this file for the wiki itself.
 
     ![](images/030.png)
 
-1. Add some content to the file using your favorite Markdown syntax.
+1. Change the name to **"Our-team.md"**. Note that the wiki engine will use the name of the file as a title of the article and automatically replaces dashes with spaces. Click **Commit**.
 
     ![](images/031.png)
 
-1. Open the **.order** file from the root of the repo. This is the top-level order.
+1. From the **Our-team.md** dropdown. Select **Edit**.
 
     ![](images/032.png)
 
-1. Note that the format of this file is straightforward-just put the file names (without .md) in the order you want them to appear in the wiki. Add **Team-bios** as the second line.
+1. Add some markdown to the file and **Commit** the changes. Confirm the commit when prompted.
 
     ![](images/033.png)
 
-1. There is also a **.order** file in **Getting-started**, but that's just for .md files in that folder. We won't change that here.
+1. Now that we have a file in place, let's publish our code as wiki. From the **Overview** navigation, right-click **Wiki** and select **Open in new tab**. The next few steps will involve making changes and reviewing the results, so it will be easier to have a browser tab open to each.
 
     ![](images/034.png)
 
-1. Right-click the folder root and select **Go To Git Changes**.
+1. From the wiki dropdown, select **Publish code as wiki**. Note that this dropdown will enable you to unpublish a wiki later on.
 
     ![](images/035.png)
 
-1. Visual Studio will have added some additional files to the folder, so right-click the **.vs** folder and select **Ignore these local items**. This will update **.gitignore** for you.
+1. Ensure **Docs** is the selected wiki. Note that you also have the option to select a specific branch if you prefer. In this case, leave it to **master**. Click the **Browse** button to select a **Folder**.
 
     ![](images/036.png)
 
-1. Set a message of "**Added team bios"** and select **Commit All \| Commit All and Sync**. Choose to save all files when prompted.
+1. Select the root of the repo and click **OK**.
 
     ![](images/037.png)
 
-1. Once the sync has completed, return to the browser and refresh the page. Your new team bios page will appear in the navigation, so select it to view the content.
+1. Set the **Wiki name** to **"Documentation"** and click **Publish**.
 
     ![](images/038.png)
+
+1. You should now see the markdown file you edited earlier as the landing page of the wiki.
+
+    ![](images/039.png)
+
+1. Note that you can also publish different versions of a wiki, as well as specify the version you would like to view.
+
+    ![](images/040.png)
+
+<a name="Ex1Task3"></a>
+### Task 3: Editing wiki in a repo ###
+
+1. You can edit the repo however you like, whether it's using Visual Studio or any other Git-compatible tools. You can also continue to edit the wiki in the browser, which we will do in this lab. Return to the tab open to the wiki repo.
+
+1. From the dropdown for the **Docs** repo root, select **New | Folder**.
+
+    ![](images/041.png)
+
+1. Enter a **New folder name** of **"Upcoming-events"** and a **New file name** of **"January-events.md"**. Note that the same naming convention is used for folders. Click **Create**.
+
+    ![](images/042.png)
+
+1. Add some markdown to the January events page and **Commit** the changes. Confirm the commit.
+
+    ![](images/043.png)
+
+1. Return to the tab open to the wiki browser and refresh the page.
+
+1. There is now a folder for "Upcoming events" and a page for "January events".
+
+    ![](images/044.png)
+
+1. Expand the dropdown menu for **January events**. Note that it provides an option to **Edit in Repos**, which will bring you to the same edit page we have open in the other tab.
+
+    ![](images/045.png)
+
+1. Return to the tab open to the wiki repo.
+
+1. From the **Upcoming-events** dropdown, select **New | File**.
+
+    ![](images/046.png)
+
+1. Name this file **February-events.md** and click **Create**.
+
+    ![](images/047.png)
+
+1. Add some markdown to the February events page and **Commit** the changes. Confirm the commit.
+
+    ![](images/048.png)
+
+1. Return to the tab open to the wiki browser and refresh the page.
+
+1. Note that the pages are orders alphabetically by default. If you would like to set a specific order, you may do so using a **.order** file.
+
+    ![](images/049.png)
+
+1. Return to the tab open to the wiki repo.
+
+1. Add a new file to the **Upcoming-events** folder as before.
+
+    ![](images/050.png)
+
+1. Name this file **".order"** and click **Create**.
+
+    ![](images/051.png)
+
+1. Put the names of the files without their extensions in the order you want them to be displayed. In this case, put **January-events** before **February-events**. Commit the file and confirm.
+
+    ![](images/052.png)
+
+1. Return to the browser tab with the wiki viewer and refresh the page. The articles will now be ordered as defined in the .order file.
+
+    ![](images/053.png)
 
