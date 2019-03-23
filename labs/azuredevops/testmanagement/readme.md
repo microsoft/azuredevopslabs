@@ -6,6 +6,7 @@ permalink: /labs/azuredevops/testmanagement/
 folder: /labs/azuredevops/testmanagement/
 version: Lab version - 15.8.2
 updated: Last updated - 9/6/2018
+redirect_from: "/labs/vsts/testmanagement/index.htm"
 ---
 <div class="rw-ui-container"></div>
 <a name="Overview"></a>

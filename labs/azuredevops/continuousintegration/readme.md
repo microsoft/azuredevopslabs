@@ -6,6 +6,7 @@ permalink: /labs/azuredevops/continuousintegration/
 folder: /labs/azuredevops/continuousintegration/
 version: Lab version - 15.8.2
 updated: Last updated - 9/5/2018
+redirect_from: "/labs/vsts/continuousintegration/index.htm"
 ---
 <div class="rw-ui-container"></div>
 <a name="Overview"></a>

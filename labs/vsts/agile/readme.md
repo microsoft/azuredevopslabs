@@ -4,6 +4,7 @@ layout: page
 sidebar: vsts
 permalink: /labs/vsts/agile/
 folder: /labs/vsts/agile/
+redirect_to:  /labs/azuredevops/agile/
 ---
 
 Last updated : {{ "now" | date: "%b %d, %Y" }}.

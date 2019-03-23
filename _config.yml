@@ -112,7 +112,6 @@ baseurl: /
 
 site.google_analytics: UA-93010880-1
 
-
 plugins:
   - jekyll-redirect-from
   
