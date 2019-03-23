@@ -110,3 +110,6 @@ description: "RSS Feed for Microsoft Visual Studio ALM Virtual Machine"
 url: https://localhost:4000
 baseurl: /
 disqus: true
+
+plugins:
+  - jekyll-redirect-from

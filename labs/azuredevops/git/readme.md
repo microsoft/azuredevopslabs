@@ -6,6 +6,7 @@ permalink: /labs/azuredevops/git/
 folder: /labs/azuredevops/git/
 version: Lab version - 1.31.1
 updated: Last updated - 2/27/2019
+redirect_from: "/labs/vsts/git/index.htm"
 ---
 <div class="rw-ui-container"></div>
 <a name="Overview"></a>
