@@ -165,6 +165,9 @@ description: Learn how you can implement modern DevOps practices with Azure, Azu
                                     <div class="col-sm-3 col-xs-12 p-l-r-override">
                                         <div class="bg-color-white equal-height-column">
                                             <ul class="p-l-5px">
+                                            <li class="osslist"> <img src="/images/azurekeyvault.png" height="42" class="icon-bor-p-m" /><a
+                                                        href="/labs/vstsextend/azurekeyvault/" class="fon-size-13">
+                                                        Using secrets from Azure Key Vault in a pipeline</a><span class="label label-success" style="color: white;background-color: #0078d7;position: relative;top: -31px;right: -10px;font-size: 16px;padding-right: 6px;padding-left: 6px;"> New </span></li>
                                                 <li class="osslist"> <img src="/images/launchdarkly.png" height="42" class="icon-bor-p-m" /><a
                                                         href="/labs/vstsextend/launchdarkly/" class="fon-size-13">
                                                         Feature Flag Management with LaunchDarkly</a></li>
