@@ -84,68 +84,68 @@ description: Learn how you can implement modern DevOps practices with Azure, Azu
                                                         class="icon-bor-p-m" />
                                                     <a href="/labs/azuredevops/agile/" class="fon-size-13">Agile
                                                         Planning and Portfolio Management with Azure Boards </a></li>
+                                                        <li class="osslist"><img src="/images/azurepipelines.png" height="42"
+                                                        class="icon-bor-p-m" />
+                                                    <a href="/labs/azuredevops/yaml/" class="fon-size-13">Configuring
+                                                        Build as Code with YAML in Azure Pipelines</a></li>
+                                                         <li class="osslist"><img src="/images/azuretestplans.png" height="42"
+                                                        class="icon-bor-p-m" /><a href="/labs/azuredevops/testmanagement/"
+                                                        class="fon-size-13">Test Planning and Management with Azure
+                                                        Test Plans</a></li>
+                                                           <li class="osslist"><img src="/images/wiki.png" height="42" class="icon-bor-p-m" />
+                                                    <a href="/labs/azuredevops/wiki/" class="fon-size-13">Collaborating
+                                                        with Azure DevOps Wiki</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-3 col-xs-12 p-l-r-override">
+                                        <div class="bg-color-white equal-height-column">
+                                            <ul class="p-l-5px">
+                                                 <li class="osslist"><img src="/images/deliveryplans2.png" height="42" class="icon-bor-p-m" />
+                                                    <a href="/labs/azuredevops/deliveryplans/" class="fon-size-13">Managing
+                                                        Project Schedules across Teams with Delivery Plans</a></li>
+                                                            <li class="osslist"><img src="/images/azurepipelines.png" height="42"
+                                                        class="icon-bor-p-m" /><a href="/labs/azuredevops/continuousintegration/"
+                                                        class="fon-size-13">Enabling Continuous Integration with Azure
+                                                        Pipelines</a></li>
+                                                         <li class="osslist"><img src="/images/exploratorytesting2.png" height="42"
+                                                        class="icon-bor-p-m" />
+                                                    <a href="/labs/azuredevops/exploratorytesting/" class="fon-size-13">Exploratory
+                                                        Testing with Azure Test Plans</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-3 col-xs-12 p-l-r-override">
+                                        <div class="bg-color-white equal-height-column">
+                                            <ul class="p-l-5px">
                                                 <li class="osslist"><img src="/images/azurerepos.png" height="42" class="icon-bor-p-m" />
                                                     <a href="/labs/azuredevops/git/" class="fon-size-13">Version
                                                         Controlling with Azure Repos </a></li>
-                                                <li class="osslist"><img src="/images/azureartifacts.png" height="42"
+                                                 <li class="osslist"><img src="/images/azurepipelines.png" height="42"
+                                                        class="icon-bor-p-m" /><a href="/labs/azuredevops/continuousdeployment/"
+                                                        class="fon-size-13">Embracing Continuous Delivery with Azure
+                                                        Pipelines</a></li>
+                                                <li class="osslist"><img src="/images/webtest.png" height="42"
+                                                        class="icon-bor-p-m" />
+                                                    <a href="/labs/azuredevops/load/" class="fon-size-13">Web
+                                                        Application Load and Performance Testing</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-3 col-xs-12 p-l-r-override">
+                                        <div class="bg-color-white equal-height-column">
+                                            <ul class="p-l-5px">
+                                                <li class="osslist"><img src="/images/pullrequests.png" height="42" class="icon-bor-p-m" />
+                                                    <a href="/labs/azuredevops/pullrequests/" class="fon-size-13">Working with Pull Requests in Visual Studio Code and Azure DevOps </a></li>
+                                                 <li class="osslist"><img src="/images/azureartifacts.png" height="42"
                                                         class="icon-bor-p-m" />
                                                     <a href="/labs/azuredevops/packagemanagement/" class="fon-size-13">Package
                                                         Management with Azure Artifacts</a>
                                                 </li>
-                                                <li class="osslist"><img src="/images/pullrequests.png" height="42" class="icon-bor-p-m" />
-                                                    <a href="/labs/azuredevops/pullrequests/" class="fon-size-13">Working with Pull Requests in Visual Studio Code and Azure DevOps </a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-3 col-xs-12 p-l-r-override">
-                                        <div class="bg-color-white equal-height-column">
-                                            <ul class="p-l-5px">
-                                                <li class="osslist"><img src="/images/azurepipelines.png" height="42"
-                                                        class="icon-bor-p-m" /><a href="/labs/azuredevops/continuousintegration/"
-                                                        class="fon-size-13">Enabling Continuous Integration with Azure
-                                                        Pipelines</a></li>
-                                                <li class="osslist"><img src="/images/azurepipelines.png" height="42"
-                                                        class="icon-bor-p-m" /><a href="/labs/azuredevops/continuousdeployment/"
-                                                        class="fon-size-13">Embracing Continuous Delivery with Azure
-                                                        Pipelines</a></li>
-                                                <li class="osslist"><img src="/images/azuretestplans.png" height="42"
-                                                        class="icon-bor-p-m" /><a href="/labs/azuredevops/testmanagement/"
-                                                        class="fon-size-13">Test Planning and Management with Azure
-                                                        Test Plans</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-3 col-xs-12 p-l-r-override">
-                                        <div class="bg-color-white equal-height-column">
-                                            <ul class="p-l-5px">
-                                                <li class="osslist"><img src="/images/azuretestplans.png" height="42"
-                                                        class="icon-bor-p-m" />
-                                                    <a href="/labs/azuredevops/exploratorytesting/" class="fon-size-13">Exploratory
-                                                        Testing with Azure Test Plans</a></li>
-                                                <li class="osslist"><img src="/images/azuretestplans.png" height="42"
-                                                        class="icon-bor-p-m" />
-                                                    <a href="/labs/azuredevops/load/" class="fon-size-13">Web
-                                                        Application Load and Performance Testing</a></li>
-                                                <li class="osslist"><img src="/images/overview.png" height="42" class="icon-bor-p-m" />
-                                                    <a href="/labs/azuredevops/deliveryplans/" class="fon-size-13">Managing
-                                                        Project Schedules across Teams with Delivery Plans</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-3 col-xs-12 p-l-r-override">
-                                        <div class="bg-color-white equal-height-column">
-                                            <ul class="p-l-5px">
                                                 <li class="osslist"><img src="/images/azuredevops.png" height="42"
                                                         class="icon-bor-p-m" />
                                                     <a href="/labs/azuredevops/sonarcloud/" class="fon-size-13">Managing
                                                         Technical Debt with Azure DevOps and SonarCloud</a></li>
-                                                <li class="osslist"><img src="/images/wiki.png" height="42" class="icon-bor-p-m" />
-                                                    <a href="/labs/azuredevops/wiki/" class="fon-size-13">Collaborating
-                                                        with Azure DevOps Wiki</a></li>
-                                                <li class="osslist"><img src="/images/azurepipelines.png" height="42"
-                                                        class="icon-bor-p-m" />
-                                                    <a href="/labs/azuredevops/yaml/" class="fon-size-13">Configuring
-                                                        Build as Code with YAML in Azure Pipelines</a></li>
                                             </ul>
                                         </div>
                                     </div>
