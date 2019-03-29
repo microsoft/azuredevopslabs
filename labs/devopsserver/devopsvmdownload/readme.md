@@ -1,9 +1,9 @@
 ---
 title: Downloading the DevOps Virtual Machine
 layout: page    
-sidebar: tfs
-permalink: /labs/tfs/almvmdownload/
-folder: /labs/tfs/almvmdownload/
+sidebar: vsts
+permalink: /labs/devopsserver/almvmdownload/
+folder: /labs/devopsserver/almvmdownload/
 updated: Last updated - 3/18/2019
 ---
 
