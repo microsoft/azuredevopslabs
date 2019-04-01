@@ -12,7 +12,7 @@ updated: Last updated - 3/21/2019
 <a name="Overview"></a>
 ## Overview ##
 
-In this lab, you will learn how to use the Azure DevOps Build in order to build, test, and deploy your applications. This scriptable build system is both web-based and cross-platform, while also providing a modern interface for visualizing sophisticated workflows. Although we won't demonstrate all of the cross-platform possibilities in this lab, it is important to point out that you can also build for iOS, Android, Java (using Ant, Maven, or Gradle), and Linux.
+In this lab, you will learn how to use Azure Pipelines to setup a continuous integration (CI) pipeline to build and test your applications. This scriptable build system is both web-based and cross-platform, while also providing a modern interface for visualizing sophisticated workflows. Although we won’t demonstrate all of the cross-platform possibilities in this lab, it is important to note that you can also build for iOS, Android, Java (using Ant, Maven, or Gradle), and Linux.
 
 <a name="Prerequisites"></a>
 ## Prerequisites ##
