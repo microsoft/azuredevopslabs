@@ -5,14 +5,14 @@ sidebar: vsts
 permalink: /labs/devopsserver/releasemanagement/
 folder: /labs/devopsserver/releasemanagement/
 version: Lab version - 16.0.0
-updated: Last updated - 3/25/2019
+updated: Last updated - 3/31/2019
 ---
 <div class="rw-ui-container"></div>
 
 <a name="Overview"></a>
 ## Overview ##
 
-In this lab, you will learn about the release management features available in Azure DevOps Serer 2019 and its suite of release and deployment tools that automate the deployment of applications across the desktop, server, and the cloud. The release management features of Visual Studio 2019 help development and operations teams integrate with Azure DevOps Serer to configure and automate complex deployments of their automated builds to target environments more easily. Development teams can also model their release processes and track approvals, sign-offs, and visualize their release status.
+In this lab, you will learn about the release management features available in Azure DevOps Server 2019 and its suite of release and deployment tools that automate the deployment of applications across the desktop, server, and the cloud. Development teams can also model their release processes, visualize their release status, and track approvals and sign-offs.
 
 <a name="Prerequisites"></a>
 ## Prerequisites ##
@@ -23,12 +23,12 @@ In order to complete this lab you will need the Visual Studio 2019 virtual machi
 
 Alternatively, you can download the virtual machine from [here](../devopsvmdownload).
 
-This lab requires an Azure service principal, which you can set up using the steps [here](../azureserviceprincipal).
+This lab requires an Azure account. You can sign up for a free trial at [https://azure.microsoft.com/en-us/free/](https://azure.microsoft.com/en-us/free/). You will also need to create an Azure service principal, which you can set up following the instructions [here](../azureserviceprincipal).
 
 <a name="Exercise1"></a>
 ## Exercise 1: Continuous Release Management ##
 
-In this exercise, you will use the release management features of Team Foundation Server to produce an automated deployment solution. This exercise will take an existing enterprise application and automate its deployment to the development team's testing environment after each source check-in.
+In this exercise, you will use the release management features of Azure DevOps Server to produce an automated deployment solution. This exercise will take an existing enterprise application and automate its deployment to the development team's testing environment after each source check-in.
 
 <a name="Ex1Task1"></a>
 ### Task 1: Invoking a build ###
@@ -60,7 +60,7 @@ This task will create a build as a starting point for a continuous release. If y
 
     ![](images/004.png)
 
-1. There are many release pipeline templates available out of the box for common deployment scenarios. To start off with, select the **IIS website deployment** template and click **Apply**. This will provide the tasks required to deploy to an IIS instance running locally on the VM.
+1. There are many release pipeline templates available out of the box for common deployment scenarios. To start off with, we will create a stage in the release pipeline that deploys the application to the IIS instance running on the VM. Select the **IIS website deployment** template and click **Apply**. This will provide the tasks required to deploy to IIS.
 
     ![](images/005.png)
 
@@ -225,7 +225,9 @@ The release management tools are incredibly flexible. Not only can you automate 
 <a name="Ex3Task1"></a>
 ### Task 1: Setting up Azure resources ###
 
-1. Open a new browser tab to your Azure portal at [https://portal.azure.com](https://portal.azure.com/).
+1. Install **Chrome**. The Azure portal does not support Internet Explorer.
+
+1. Open a new Chrome instance to your Azure portal at [https://portal.azure.com](https://portal.azure.com/).
 
 1. Select **Create a resource** and search for **"web sql"**.
 
