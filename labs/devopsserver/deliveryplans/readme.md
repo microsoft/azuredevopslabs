@@ -16,7 +16,7 @@ It takes several teams to develop large software projects. Very large projects r
 <a name="Prerequisites"></a>
 ## Prerequisites ##
 
-In order to complete this lab you will need the Visual Studio 2019 virtual machine provided by Microsoft. Click the button below to launch the virtual machine on the Microsoft Hands-on-Labs portal.
+In order to complete this lab you will need the Azure DevOps Server 2019 virtual machine provided by Microsoft. Click the button below to launch the virtual machine on the Microsoft Hands-on-Labs portal.
 
 <a href="https://labondemand.com/AuthenticatedLaunch/38297?providerId=4" class="launch-hol" role="button" target="_blank"><span class="lab-details">Launch the virtual machine</span></a>
 
@@ -65,7 +65,7 @@ Alternatively, you can download the virtual machine from [here](../devopsvmdownl
 <a name="Ex1Task2"></a>
 ### Task 2: Installing the Delivery Plans extension ###
 
-1. Delivery Plans is provided as an optional extension to TFS. From the **Marketplace** navigation dropdown, select **Manage extensions**.
+1. Delivery Plans is provided as an optional extension to Azure DevOps Server. From the **Marketplace** navigation dropdown, select **Manage extensions**.
 
     ![](images/008.png)
 

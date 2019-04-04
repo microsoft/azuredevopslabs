@@ -2,12 +2,13 @@
 title: Using Code Analysis with Visual Studio 2019 to Improve Code Quality
 layout: page
 sidebar: vsts
-permalink: /labs/devopsserver/codeanalysis/
-folder: /labs/devopsserver/codeanalysis/
+permalink: /labs/devopsserver/build/
+folder: /labs/devopsserver/build/
 version: Lab version - 16.0.0
-updated: Last updated - 3/14/2019
+updated: Last updated - 4/2/2019
 ---
 <div class="rw-ui-container"></div>
+
 <a name="Overview"></a>
 ## Overview ##
 
@@ -18,7 +19,7 @@ In this lab, you will be introduced to Code Analysis, how to configure rules set
 <a name="Prerequisites"></a>
 ## Prerequisites ##
 
-In order to complete this lab you will need the Visual Studio 2019 virtual machine provided by Microsoft. Click the button below to launch the virtual machine on the Microsoft Hands-on-Labs portal.
+In order to complete this lab you will need the Azure DevOps Server 2019 virtual machine provided by Microsoft. Click the button below to launch the virtual machine on the Microsoft Hands-on-Labs portal.
 
 <a href="https://labondemand.com/AuthenticatedLaunch/38297?providerId=4" class="launch-hol" role="button" target="_blank"><span class="lab-details">Launch the virtual machine</span></a>
 
@@ -207,7 +208,7 @@ In this exercise, you will learn about the code analysis features in Visual Stud
 
     ![](images/033.png)
 
-1. Locate the **All** property of the **AlertsRepository** class. It uses **this** to access a member field, which is now flagged as a warning (you may need to close and reopen the file to see the green squiggle).
+1. Locate the **All** property of the **AlertsRepository** class. It uses **this** to access a member field, which is now flagged as a warning (you may need to close and reopen the file to see the green squiggle). You may need to reopen the file to see the warning.
 
     ![](images/034.png)
 

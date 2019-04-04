@@ -5,9 +5,10 @@ sidebar: vsts
 permalink: /labs/devopsserver/livedependencyvalidation/
 folder: /labs/devopsserver/livedependencyvalidation/
 version: Lab version - 16.0.0
-updated: Last updated - 3/12/2019
+updated: Last updated - 4/3/2019
 ---
 <div class="rw-ui-container"></div>
+
 <a name="Overview"></a>
 ## Overview ##
 
@@ -21,7 +22,7 @@ See this [blog post](https://blogs.msdn.microsoft.com/visualstudioalm/2016/11/30
 <a name="Prerequisites"></a>
 ## Prerequisites ##
 
-In order to complete this lab you will need the Visual Studio 2019 virtual machine provided by Microsoft. Click the button below to launch the virtual machine on the Microsoft Hands-on-Labs portal.
+In order to complete this lab you will need the Azure DevOps Server 2019 virtual machine provided by Microsoft. Click the button below to launch the virtual machine on the Microsoft Hands-on-Labs portal.
 
 <a href="https://labondemand.com/AuthenticatedLaunch/38297?providerId=4" class="launch-hol" role="button" target="_blank"><span class="lab-details">Launch the virtual machine</span></a>
 
@@ -43,7 +44,7 @@ Alternatively, you can download the virtual machine from [here](../devopsvmdownl
 
 1. Press **Ctrl+Shift+B** to rebuild the solution.
 
-1. Select **Extensions | Architecture | New Dependency Validation Diagram** from the main menu.
+1. Select **Architecture | New Dependency Validation Diagram** from the main menu.
 
 1. Enter a **Name** of **"PartsUnlimited.Dependencies"** and click **Create**.
 
@@ -61,7 +62,7 @@ Alternatively, you can download the virtual machine from [here](../devopsvmdownl
 
     ![](images/004.png)
 
-1. In this case, we're going to automatically generate a code map and then use that to codify our architecture via the diagram. Select **Extensions | Architecture | Generate Code Map for Solution**. This code map will pull in everything it can about the project and represent it in a diagram so we can easily walk through the de facto dependencies and relationships each component (class, etc) has.
+1. In this case, we're going to automatically generate a code map and then use that to codify our architecture via the diagram. Select **Architecture | Generate Code Map for Solution**. This code map will pull in everything it can about the project and represent it in a diagram so we can easily walk through the de facto dependencies and relationships each component (class, etc) has.
 
 1. Expand the **PartsUnlimited.dll** component to see the namespaces it contains.
 

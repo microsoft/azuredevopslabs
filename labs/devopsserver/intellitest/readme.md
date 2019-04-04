@@ -5,9 +5,10 @@ sidebar: vsts
 permalink: /labs/devopsserver/intellitest/
 folder: /labs/devopsserver/intellitest/
 version: Lab version - 16.0.0
-updated: Last updated - 3/12/2019
+updated: Last updated - 4/3/2019
 ---
 <div class="rw-ui-container"></div>
+
 <a name="Overview"></a>
 ## Overview ##
 
@@ -18,7 +19,7 @@ When you run IntelliTest, you can easily see which tests are failing and add any
 <a name="Prerequisites"></a>
 ## Prerequisites ##
 
-In order to complete this lab you will need the Visual Studio 2019 virtual machine provided by Microsoft. Click the button below to launch the virtual machine on the Microsoft Hands-on-Labs portal.
+In order to complete this lab you will need the Azure DevOps Server 2019 virtual machine provided by Microsoft. Click the button below to launch the virtual machine on the Microsoft Hands-on-Labs portal.
 
 <a href="https://labondemand.com/AuthenticatedLaunch/38297?providerId=4" class="launch-hol" role="button" target="_blank"><span class="lab-details">Launch the virtual machine</span></a>
 
@@ -115,9 +116,7 @@ In practical terms, white box unit test development includes an iterative workfl
     ```c#
     [PexUseType(typeof(FakeQueryDataStore))]
     ```
-1. In the **IntelliTest Exploration Results** window, click the **Run** button.
-
-    ![](images/013.png)
+1. Right-click within the **Handle** method and select **IntelliTest | Run IntelliTest**.
 
 <a name="Ex1Task4"></a>
 ### Task 4: Modifying the Parameterized Unit Test to increase code coverage ###
@@ -143,7 +142,7 @@ Since IntelliTest can synthesize data values, we will add this to the PUT's sign
     ```
 1. The signature of the PUT method should now look like the following screenshot.
 
-    ![](images/014.png)
+    ![](images/013.png)
 
 1. We should also add in some additional hints to IntelliTest about the assumptions we would like to make about the input parameters. Insert the following code snippet to the **beginning** of the PUT:
 
@@ -183,21 +182,21 @@ Since IntelliTest can synthesize data values, we will add this to the PUT's sign
     ```
 1. **Delete** the **.g.cs** file once again, since we changed the signature of the PUT.
 
-1. **Run** IntelliTest and note that we now have full code coverage (52/52 blocks), with three passing tests, four failing tests, and a number of warnings.
+1. **Run** IntelliTest from the test's Handle method and note that we now have full code coverage (52/52 blocks), with three passing tests, four failing tests, and a number of warnings.
 
-    ![](images/015.png)
+    ![](images/014.png)
 
 1. Take a quick look at the warnings, and note that none is related to the code-under-test.
 
-    ![](images/016.png)
+    ![](images/015.png)
 
 1. Select the **Object Creation** category and then select all of the warnings. Click the **Suppress** button to suppress them all.
 
-    ![](images/017.png)
+    ![](images/016.png)
 
 1. This will update the **PexAssemblyInfo.cs** file in your test project with directives to suppress those results.
 
-    ![](images/018.png)
+    ![](images/017.png)
 
 1. Repeat the process to suppress the warnings for the other categories.
 
@@ -205,21 +204,21 @@ Since IntelliTest can synthesize data values, we will add this to the PUT's sign
 
 1. Two of the tests fail because they uncover a **NullReferenceException** when the '**e**' parameter is **null**.
 
-    ![](images/019.png)
+    ![](images/018.png)
 
 1. One of the tests uncovers a potential **DivideByZeroException**. This will happen if **stats.GamesPlayed** has a value of **1**. In this case, the statement **stats.GamesPlayed**-- will make it **0**, and subsequently **stats.Profit / stats.GamesPlayed** will raise the exception.
 
-    ![](images/020.png)
+    ![](images/019.png)
 
 1. To see where in code the **DivideByZeroException** was thrown, select the test in the **IntelliTest Exploration Results** window, expand the **Stack Trace** on the right-hand side, and then double-click on the first line shown.
 
-    ![](images/021.png)
+    ![](images/020.png)
 
 1. Another test uncovered an **OverflowException**.
 
 1. Select the failed test in the **IntelliTest Exploration Results** window and take a moment to scroll through the **Details** section. This shows the specific test and parameters that were used against the code-under-test in order to generate the exception.
 
-    ![](images/022.png)
+    ![](images/021.png)
 
 1. This shows that IntelliTest has generated tests that uncovered previously unknown errors in the code. If we were to add additional assertions about the expected behavior of the code-under-test, then it would generate tests for validating that as well.
 

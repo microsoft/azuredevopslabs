@@ -2,10 +2,10 @@
 title: Getting Started with GitHub using Visual Studio 2019
 layout: page
 sidebar: vsts
-permalink: /labs/devopsserver/github/
-folder: /labs/devopsserver/github/
+permalink: /labs/devopsserver/git/
+folder: /labs/devopsserver/git/
 version: Lab version - 16.0.0
-updated: Last updated - 3/28/2019
+updated: Last updated - 4/2/2019
 ---
 <div class="rw-ui-container"></div>
 
@@ -14,10 +14,12 @@ updated: Last updated - 3/28/2019
 
 GitHub has grown from being a fledgling source control provider into a formidable DevOps solution in just a few short years. Along with the portal experience, GitHub provides great integration for apps like Visual Studio to deliver a superior experience integrated within the environments developers spend their days in. In this lab, you'll learn about GitHub support in Visual Studio 2019.
 
+If you'd like to learn more about the basics of Git, please check out [this lab](../git).
+
 <a name="Prerequisites"></a>
 ## Prerequisites ##
 
-In order to complete this lab you will need the Visual Studio 2019 virtual machine provided by Microsoft. Click the button below to launch the virtual machine on the Microsoft Hands-on-Labs portal.
+In order to complete this lab you will need the Azure DevOps Server 2019 virtual machine provided by Microsoft. Click the button below to launch the virtual machine on the Microsoft Hands-on-Labs portal.
 
 <a href="https://labondemand.com/AuthenticatedLaunch/38297?providerId=4" class="launch-hol" role="button" target="_blank"><span class="lab-details">Launch the virtual machine</span></a>
 
@@ -33,7 +35,7 @@ Alternatively, you can download the virtual machine from [here](../devopsvmdownl
 
 1. Install **Google Chrome** from [https://google.com/chrome](https://google.com/chrome). GitHub does not support Internet Explorer, so use Chrome for the remainder of this lab.
 
-1. Fork the project at [https://github.com/Microsoft/PartsUnlimited](https://github.com/Microsoft/PartsUnlimited) into your own account.
+1. Fork the project at [https://github.com/Microsoft/PartsUnlimitedE2E](https://github.com/Microsoft/PartsUnlimitedE2E) into your own account.
 
     ![](images/000.png)
 
@@ -74,7 +76,7 @@ Alternatively, you can download the virtual machine from [here](../devopsvmdownl
 
     ![](images/008.png)
 
-1. Under **GitHub**, click **Sign in**. Complete the process to sign in to your GitHub account.
+1. Under **GitHub**, click **Connect**. Complete the process to sign in to your GitHub account.
 
     ![](images/009.png)
 
@@ -82,7 +84,7 @@ Alternatively, you can download the virtual machine from [here](../devopsvmdownl
 
     ![](images/010.png)
 
-1. Select the project cloned earlier and set the **Local path** to **"C:\GitHub"**. Note that due to the long lengths of some of the file paths in this project, it's best to create this folder off of the drive root.
+1. Select the project cloned earlier and click **Clone**.
 
     ![](images/011.png)
 
@@ -156,11 +158,11 @@ Alternatively, you can download the virtual machine from [here](../devopsvmdownl
 
     ![](images/027.png)
 
-1. Click **create a pull request**.
+1. Click **Create New** to create a new pull request.
 
     ![](images/028.png)
 
-1. Enter a title of **"Updated to v2.0"** and set the comment to **"Fixes #1."**. Note that you may need to replace the #1 with the ID created earlier if it were different. By tagging the pull request with the issue ID, you can automate closing the issue later on when the request is merged. Click **Create pull request**.
+1. Set the branch to merge into to **master** from your project. Note that it will default to the Microsoft project, which you do not want to use. Set the comment to **"Fixes #1."**. Note that you may need to replace the #1 with the ID created earlier if it were different. By tagging the pull request with the issue ID, you can automate closing the issue later on when the request is merged. Click **Create pull request**.
 
     ![](images/029.png)
 
@@ -184,39 +186,35 @@ Alternatively, you can download the virtual machine from [here](../devopsvmdownl
 
     ![](images/034.png)
 
-1. From **Team Explorer**, you can navigate between pull requests and changes. Click the pull request ID.
+1. Your review is now visible as part of the pull request. Click **Continue your review**.
 
     ![](images/035.png)
 
-1. Your review is now visible as part of the pull request. Click **Continue your review**.
+1. Enter a review summary and select **Submit review | Comment only**.
 
     ![](images/036.png)
 
-1. Enter a review summary and select **Submit review | Comment only**.
+1. In the GitHub browser window, select the **Pull requests** tab.
 
     ![](images/037.png)
 
-1. In the GitHub browser window, select the **Pull requests** tab.
+1. Click the pull request to open it.
 
     ![](images/038.png)
 
-1. Click the pull request to open it.
+1. All of the information added from Visual Studio is visible in the pull request. Others can comment or review the changes as well. Click **Resolve conversation** to resolve the comment left during your review.
 
     ![](images/039.png)
 
-1. All of the information added from Visual Studio is visible in the pull request. Others can comment or review the changes as well. Click **Resolve conversation** to resolve the comment left during your review.
+1. Click **Merge pull request**.
 
     ![](images/040.png)
 
-1. Click **Merge pull request**.
+1. Confirm the merge.
 
     ![](images/041.png)
 
-1. Confirm the merge.
-
-    ![](images/042.png)
-
 1. Navigate back to the **Issues** tab. Note that the issue created earlier has been closed now that the pull request was approved.
 
-    ![](images/043.png)
+    ![](images/042.png)
 

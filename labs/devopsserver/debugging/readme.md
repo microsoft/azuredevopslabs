@@ -5,9 +5,10 @@ sidebar: vsts
 permalink: /labs/devopsserver/debugging/
 folder: /labs/devopsserver/debugging/
 version: Lab version - 16.0.0
-updated: Last updated - 3/5/2019
+updated: Last updated - 4/2/2019
 ---
 <div class="rw-ui-container"></div>
+
 <a name="Overview"></a>
 ## Overview ##
 
@@ -18,7 +19,7 @@ IntelliTrace expands this traditional debugging experience by recording specific
 <a name="Prerequisites"></a>
 ## Prerequisites ##
 
-In order to complete this lab you will need the Visual Studio 2019 virtual machine provided by Microsoft. Click the button below to launch the virtual machine on the Microsoft Hands-on-Labs portal.
+In order to complete this lab you will need the Azure DevOps Server 2019 virtual machine provided by Microsoft. Click the button below to launch the virtual machine on the Microsoft Hands-on-Labs portal.
 
 <a href="https://labondemand.com/AuthenticatedLaunch/38297?providerId=4" class="launch-hol" role="button" target="_blank"><span class="lab-details">Launch the virtual machine</span></a>
 
@@ -117,7 +118,7 @@ In this scenario the business owner has asked us to determine why we are seeing 
 
     ![](images/011.png)
 
-1. We can now tell that the issue here is that we're indexing past the end of the query in our call to **Substring**. This could have been a lot harder to find without IntelliSense.
+1. We can now tell that the issue here is that we're indexing past the end of the query in our call to **Substring**. This could have been a lot harder to find without IntelliTrace.
 
 1. Select **Debugging | Stop Debugging** to end the debug session.
 
@@ -188,15 +189,15 @@ Step-back debugging enables you to retrace your steps during a debugging session
 
     ![](images/020.png)
 
-1. Press **F10** to step over the current statement. If you see the option to enable IntelliTrace with Snapshots, click **Enable** and restart the debugging session.
+1. Mouse over **topSellingProducts** again to confirm it has been set.
 
     ![](images/021.png)
 
-1. Mouse over **topSellingProducts** again to confirm it has been set.
+1. On the **Debug** toolbar, click the **Step Backward** button. This allows you to retrace to the previous line of execution.
 
     ![](images/022.png)
 
-1. On the **Debug** toolbar, click the **Step Backward** button. This allows you to retrace to the previous line of execution.
+1. Press **F10** to step over the current statement. If you see the option to enable IntelliTrace with Snapshots, click **Enable** and restart the debugging session after a rebuild.
 
     ![](images/023.png)
 

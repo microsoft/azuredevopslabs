@@ -5,9 +5,10 @@ sidebar: vsts
 permalink: /labs/devopsserver/agile/
 folder: /labs/devopsserver/agile/
 version: Lab version - 16.0.0
-updated: Last updated - 3/13/2019
+updated: Last updated - 4/3/2019
 ---
 <div class="rw-ui-container"></div>
+
 <a name="Overview"></a>
 ## Overview ##
 
@@ -16,7 +17,7 @@ This lab is all about those "fit-and-finish" scenarios in Azure DevOps Server th
 <a name="Prerequisites"></a>
 ## Prerequisites ##
 
-In order to complete this lab you will need the Visual Studio 2019 virtual machine provided by Microsoft. Click the button below to launch the virtual machine on the Microsoft Hands-on-Labs portal.
+In order to complete this lab you will need the Azure DevOps Server 2019 virtual machine provided by Microsoft. Click the button below to launch the virtual machine on the Microsoft Hands-on-Labs portal.
 
 <a href="https://labondemand.com/AuthenticatedLaunch/38297?providerId=4" class="launch-hol" role="button" target="_blank"><span class="lab-details">Launch the virtual machine</span></a>
 
@@ -534,7 +535,7 @@ Another common but unavoidable difficulty faced by developers is context switchi
 
     ![](images/099.png)
 
-1. Ordinarily you would want to shelve other pending changes before taking on an out-of-band update like this. However, it's easy to work around when you don't. Under **Included Changes**, right-click **_profile.cshtml** and select **Exclude Unselected** to focus on only the change for the **Release1** branch.
+1. Ordinarily you would want to shelve other pending changes before taking on an out-of-band update like this. However, it's easy to work around when you don't. Under **Included Changes**, right-click **_Profile.cshtml** and select **Exclude Unselected** to focus on only the change for the **Release1** branch.
 
     ![](images/100.png)
 
