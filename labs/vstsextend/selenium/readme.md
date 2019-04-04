@@ -4,6 +4,7 @@ layout: page
 sidebar: vsts2
 permalink: /labs/vstsextend/selenium/
 folder: /labs/vstsextend/selenium/
+redirect_from: "/labs/vsts/selenium/index.htm"
 ---
 <div class="rw-ui-container"></div>
 
