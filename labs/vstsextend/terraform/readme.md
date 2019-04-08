@@ -9,30 +9,30 @@ folder: /labs/vstsextend/terraform/
 
 ## Overview
 
-[Terraform](https://www.terraform.io/intro/index.html) is a tool for building, changing, and versioning infrastructure safely and efficiently. Terraform can manage existing and popular cloud service providers as well as custom in-house solutions.
+[Terraform](https://www.terraform.io/intro/index.html) is a tool for building, changing and versioning infrastructure safely and efficiently. Terraform can manage existing and popular cloud service providers as well as custom in-house solutions.
 
-Configuration files describe to Terraform the components needed to run a single application or your entire datacenter. Terraform generates an execution plan describing what it will do to reach the desired state, and then executes it to build the described infrastructure. As the configuration changes, Terraform is able to determine what changed and create incremental execution plans which can be applied. 
+Configuration files describe to **Terraform** the components needed to run a single application or your entire datacenter. Terraform generates an execution plan describing what it will do to reach the desired state, and then executes it to build the described infrastructure. As the configuration changes, Terraform is able to determine what changed and create incremental execution plans which can be applied. 
 
 ### What’s covered in this lab
 
 In this lab, you will see
 
-1. How open source tools, such as Terraform can be leveraged to implement Infrastructure as Code (IaC)
+1. How open source tools, such as Terraform can be leveraged to implement Infrastructure as Code (**IaC**)
 1. How to automate your infrastructure deployments in the Cloud with Terraform and Azure Pipelines
 
 ### Before you begin
 
-1. Refer the [Getting Started](https://github.com/Hoyg/azuredevopslabs/blob/master/labs/vstsextend/Setup) page before you begin following the exercises.
+1. Refer to the [Getting Started](../Setup/) page before you begin following the exercises.
 
-1. Use the [Azure DevOps Demo Generator](https://azuredevopsdemogenerator.azurewebsites.net/?TemplateId=77382&Name=Terraform) to provision the project on your Azure DevOps organization.
+1. Use the [Azure DevOps Demo Generator](https://azuredevopsdemogenerator.azurewebsites.net/?TemplateId=77382&Name=Terraform){:target="_blank"} to provision the project on your Azure DevOps organization.
    This URL will automatically select **Terraform** template in the demo generator. If you want to try other projects, use this URL instead -https://azuredevopsdemogenerator.azurewebsites.net/
 
-   Follow the [simple walkthrough](https://docs.microsoft.com/en-us/azure/devops/demo-gen/use-vsts-demo-generator-v2?view=vsts) to know how to use the Azure DevOps Demo Generator.
+   Follow the [simple walkthrough](https://docs.microsoft.com/en-us/azure/devops/demo-gen/use-vsts-demo-generator-v2?view=vsts){:target="_blank"} to know how to use the Azure DevOps Demo Generator.
 
 ## Exercise 1: Examine the Terraform file (IaC) in your Source code
 In this lab, you will use PartsUnlimited which is an example eCommerce website developed using .Net Core. You will examine the terraform file which helps you to provision the Azure Resources required to deploy PartsUnlimited website.
 
-1. Navigate to the project you created above using [Azure DevOps Demo Generator](https://azuredevopsdemogenerator.azurewebsites.net/?TemplateId=77382&Name=Terraform)
+1. Navigate to the project you created above using [Azure DevOps Demo Generator](https://azuredevopsdemogenerator.azurewebsites.net/?TemplateId=77382&Name=Terraform){:target="_blank"}
 
 1. Select **Repos**. Switch to **terraform** branch.
 
@@ -50,7 +50,7 @@ In this lab, you will use PartsUnlimited which is an example eCommerce website d
 
     In this example, we want to deploy an Azure Resource group, App service plan and App service required to deploy the website. And we have added Terraform file (Infrastructure as Code) to source control repository in your Azure DevOps project which can deploy the required Azure resources. 
     
-    If you would like to learn more about the terraform basics click [here](https://azurecitadel.com/automation/terraform/lab1/).
+    If you would like to learn more about the terraform basics click [here](https://azurecitadel.com/automation/terraform/lab1/){:target="_blank"}.
   
 
 ## Exercise 2: Build your application using Azure CI Pipeline
@@ -127,13 +127,13 @@ In this exercise, you will create azure resources using Terraform as part of you
        
       ![](images/terraform-init.png)
 
-    > This task runs `terraform init` command. The `terraform init` command looks through all of the *.tf files in the current working directory and automatically downloads any of the providers required for them. In this example, it will download [Azure provider](https://www.terraform.io/docs/providers/azurerm/) as we are going to deploy Azure resources. For more information about terraform init command click [here](https://www.terraform.io/docs/commands/init.html)
+    > This task runs `terraform init` command. The `terraform init` command looks through all of the *.tf files in the current working directory and automatically downloads any of the providers required for them. In this example, it will download [Azure provider](https://www.terraform.io/docs/providers/azurerm/) as we are going to deploy Azure resources. For more information about `terraform init` command click [here](https://www.terraform.io/docs/commands/init.html)
 
 1. Select the **Terraform plan** task. Select Azure service connection from the drop-down.
        
       ![](images/terraform-plan.png)
  
-    > The `terraform plan` command is used to create an execution plan. Terraform determines what actions are necessary to achieve the desired state specified in the configuration files. This is a dry run and shows which actions will be made.  For more information about terraform plan command click [here](https://www.terraform.io/docs/commands/plan.html)
+    > The `terraform plan` command is used to create an execution plan. Terraform determines what actions are necessary to achieve the desired state specified in the configuration files. This is a dry run and shows which actions will be made.  For more information about `terraform plan` command click [here](https://www.terraform.io/docs/commands/plan.html)
 
 1. Select the **Terraform Apply** task. Select Azure service connection from the drop-down.
   
