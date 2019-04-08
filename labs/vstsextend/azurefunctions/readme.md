@@ -9,15 +9,15 @@ folder: /labs/vstsextend/azurefunctions/
 
 ## Overview
 
-Azure Functions is an event driven, compute-on-demand experience that extends the existing Azure application platform with capabilities to implement the code, triggered by events occurring in Azure or third-party services as well as on-premises systems. Azure Functions allows developers to act, by connecting to data sources or messaging solutions, thus making it easy to process and react to events. Developers can leverage Azure Functions to build HTTP-based API endpoints that are accessible by a wide range of applications, mobile and IoT devices.
+**Azure Functions** is an event-driven, compute-on-demand experience that extends the existing Azure application platform with capabilities to implement the code, triggered by events occurring in Azure or third-party services as well as on-premises systems. Azure Functions allows developers to act, by connecting to data sources or messaging solutions, thus making it easy to process and react to events. Developers can leverage Azure Functions to build HTTP-based API endpoints that are accessible by a wide range of applications, mobile and IoT devices.
 
-**Lab Scenario**: In this lab, you will be using a fictional eCommerce website - *PartsUnlimited*. The PartsUnlimited team wants to roll out a new discount for its employees and customers, and wants to build Azure Functions that will retrieve the right discount depending on whether the logged in user is an employee or a customer.
+**Lab Scenario**: In this lab, you will be using a fictional eCommerce website - **PartsUnlimited**. The PartsUnlimited team wants to roll out a new discount for its employees and customers and wants to build Azure Functions that will retrieve the right discount depending on whether the logged in user is an employee or a customer.
 
- ## What is covered in this lab?
+## What is covered in this lab?
 
  In this lab, you will
 
- * Generate the *PartsUnlimited* project in the **Azure DevOps Services** account with **Azure DevOps Demo Generator** tool.
+ * Generate the **PartsUnlimited** project in your **Azure DevOps Services** organization with **Azure DevOps Demo Generator** tool.
  * Setup **Azure Functions** in Azure portal and add code via Visual Studio.
  * Configure a **Build pipeline** in Azure DevOps Organization to build and test the code.
  * Configure a **Release pipeline** in Azure DevOps Organization for Website, API and Azure Functions.
@@ -28,26 +28,26 @@ Azure Functions is an event driven, compute-on-demand experience that extends th
 
 1. The lab additionally requires Visual Studio 2017 version 15.4 or later with [.Net Core SDK](https://www.microsoft.com/net/learn/get-started/windows#windows) and [Azure Development Tools for Visual Studio](https://docs.microsoft.com/en-us/azure/azure-functions/functions-develop-vs) installed.
 
-1. Click the [Azure DevOps Demo Generator](http://azuredevopsdemogenerator.azurewebsites.net/?TemplateId=77374&Name=AzureFunctions) link and follow the instructions in [Getting Started](../Setup/) page to provision the project to your **Azure DevOps**.
+1. Click the [Azure DevOps Demo Generator](http://azuredevopsdemogenerator.azurewebsites.net/?TemplateId=77374&Name=AzureFunctions) link and follow the instructions in [Getting Started](../Setup/) page to provision the project to your Azure DevOps Organization.
 
 ## Create the required Azure resources
 
 1. Click the below **Deploy To Azure** button to provision an Azure App service plan with two web apps.
 
-   [![Deploy to Azure](http://azuredeploy.net/deploybutton.png)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FMicrosoft%2Falmvm%2Fmaster%2Flabs%2Fvstsextend%2Fazurefunctions%2Farmtemplate%2Fazuredeploy.json)
+   [![Deploy to Azure](http://azuredeploy.net/deploybutton.png)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FMicrosoft%2Falmvm%2Fmaster%2Flabs%2Fvstsextend%2Fazurefunctions%2Farmtemplate%2Fazuredeploy.json){:target="_blank"}
 
-1. It should take approximately 5-10 minutes to provision the resources. Once the deployment is successful, you will see the resources as shown.
+1. It takes approximately 5-10 minutes to provision the resources. Once the deployment is successful, you will see the resources as shown.
 
    ![azure_resources](images/azure_resources.png)
 
-Once the deployment succeeds, you will see 2 Web Apps and an App Service Plan provisioned -
+After the successfull deployment of the resources, you will see 2 App Services and an App Service Plan provisioned -
 
   * Web App - Used to deploy the Parts Unlimited website.
   * API App - Used to redirect users to different discounts page based on the user login.
 
 ## Exercise 1: Cloning an existing repository
 
-1. Navigate to the **Repos** hub. Select **Clone** and select **Clone in Visual Studio**
+1. Navigate to the **Repos**. Select **Clone** and select **Clone in Visual Studio**.
 
      ![clonetherepo](images/clonetherepo.png)
 
@@ -67,11 +67,11 @@ In this exercise, you will create an **Azure Functions** App from the Azure port
 
 The Azure Functions created in this exercise will act as a switching proxy or the mechanism to return to different (discount) information based on the user logged in to the application. Although you have used a simple condition here, this could also use more complex rules which could potentially be hidden behind another web api call.
 
-1. Login to the Azure Portal. Select the `+ Create a resource` button found on the upper left-hand corner of the Azure portal, then select Compute > Function App.
+1. Login to the Azure Portal. Select the **+ Create a resource** button on the upper left-hand corner of the Azure portal, then select **Compute > Function App**.
 
     ![createfunctionapp](images/createfunctionapp.png)
 
-1. Create a Function app with similar settings as specified in the below image. Select Create to provision and deploy the function app.
+1. Create a Function app with similar settings as specified in the below image. Click **Create** to provision and deploy the function app.
 
     ![functionapp](images/functionapp.png)
 
@@ -87,9 +87,9 @@ The Azure Functions created in this exercise will act as a switching proxy or th
     ![webhook](images/webhook.png) 
 
 
-   > This lab uses CSharp as script language for the function, but a function can be created in any supported language.
+   > This lab uses CSharp as the development language for the function, but a function can be created in any supported language.
 
-1. Select HttpTrigger1 in Functions and click </>Get Function Url.
+1. Select **HttpTrigger1** in Functions and click `</>Get Function Url`.
 
     ![httptrigger](images/httptrigger.png)
     
@@ -161,7 +161,7 @@ The Azure Functions created in this exercise will act as a switching proxy or th
 
 In this exercise, you will look at the build definition to get an insight of how the code is built as part of the CI pipeline.
 
-1. Click on the **Pipelines** hub in Azure DevOps portal and notice that **Builds** menu is the default selected option. Since there is only one build definition - *AzureFunctions_CI*, click **Edit** option in the menu to view the tasks of that build definition.
+1. Click on the **Pipelines** hub in Azure DevOps portal and notice that **Builds** menu is the default selected option. Since there is only one build definition - **AzureFunctions_CI**, click **Edit** option in the menu to view the tasks of that build definition.
 
     ![build definition](images/builddefinition.png)
 
@@ -170,17 +170,15 @@ In this exercise, you will look at the build definition to get an insight of how
     ![CI Trigger](images/enableci.png)
     ![Save and Queue](images/saveandqueue.png)
 
-1. A new build is started. You will see a link to the new build on the top of the page. Click the link to watch the live logs of the build as it progresses. Wait for the build to complete and succeed before proceeding to the next section.
+1. A new build is started. You will see a link to the new build on the top of the page. Click the link to view the live logs of the build as it progresses. Wait for the build to complete and succeed before proceeding to the next section.
 
     ![Queued Build](images/queuedbuild.png) 
 
 ## Exercise 4: Configuring Continuous Deployment with Azure Release Pipelines
 
-1. Once the build succeeds, click the **Releases** option under the **Repos** hub.
+1. Once the build succeeds, click the **Releases** option under the **Pipelines**.
 
-    ![Release Hub](images/releasehub.png) 
-
-1. In the Release page, click *Edit* for the highlighted release definition- **AzureFunctions_CD**. 
+1. In the Release pipelines page, click **Edit** for the highlighted release definition- **AzureFunctions_CD**. 
 
     ![Edit Release](images/editrelease.png) 
 
@@ -188,7 +186,7 @@ In this exercise, you will look at the build definition to get an insight of how
 
     ![Continuous Deployment](images/cd.png) 
 
-1. To deploy **PartsUnlimited Website**, click Tasks and select the first **Deploy PartsUnlimited Website** task, and configure the inputs as shown below.
+1. To deploy **PartsUnlimited Website**, click Tasks and select the **Deploy PartsUnlimited Website** task, and configure the inputs as shown below.
 
     ![Deploy Site](images/deploysite.png) 
 
