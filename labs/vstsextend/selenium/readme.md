@@ -30,7 +30,7 @@ In this lab, you will learn how to execute selenium test cases on a C# web appli
 
 ## Exercise 1: Create a Deployment Group
 
-We will use Deployment Groups feature in Azure DevOps to deploy the application on a VM which was provisioned earlier to execute the Selenium test cases. [Deployment Groups](https://docs.microsoft.com/en-us/vsts/build-release/concepts/definitions/release/deployment-groups/){:target="_blank"} in Azure DevOps makes it easier to organize the servers that you use to host your app. A deployment group is a collection of machines with a Azure DevOps agent on each of them. Each machine interacts with Azure DevOps to coordinatthe e deployment of your applications.
+We will use Deployment Groups feature in Azure DevOps to deploy the application on a VM which was provisioned earlier to execute the Selenium test cases. [Deployment Groups](https://docs.microsoft.com/en-us/vsts/build-release/concepts/definitions/release/deployment-groups/){:target="_blank"} in Azure DevOps makes it easier to organize the servers that you use to host your app. A deployment group is a collection of machines with a Azure DevOps agent on each of them. Each machine interacts with Azure DevOps to coordinate the deployment of your applications.
 
 We will also deploy the SQL database in the VM using Deployment Groups.
 
