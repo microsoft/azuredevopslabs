@@ -29,7 +29,7 @@ In this lab, you will learn how to setup SonarQube on Azure and integrate with A
 
 ### Before you begin
 
-1. Refer the [Getting Started](../Setup/) page before you begin the exercises.
+1. Refer to the [Getting Started](../Setup/) page before you begin the exercises.
 
 1. Click the **Deploy To Azure** button below to provision SonarQube Server on Azure VM.
 
@@ -53,7 +53,7 @@ In this lab, you will learn how to setup SonarQube on Azure and integrate with A
 1. After providing all of the required values in the above table, check the ***Terms & Conditions*** checkbox and click on the **Purchase button**.
 
    
-   {% include important.html content= "The deployment in Azure can take up to 30 minutes. At the end of the deployment, SonarQube will be configured to run as a Windows Service on the SonarQube VM. When the SonarQube service starts for the first time, it will configure its database. This can take an additional 15 minutes  to complete during which time the Azure deployment shows as completed but you still won't be able to reach the SonarQube home page. Please give SonarQube some time to update. Click [here](https://blogs.msdn.microsoft.com/visualstudioalmrangers/2016/10/06/easily-deploy-sonarqube-server-in-azure/){:target=\"_blank\"} for more information." %}
+   {% include important.html content= "The deployment in Azure can take up to 20 minutes. At the end of the deployment, SonarQube will be configured to run as a Windows Service on the SonarQube VM. When the SonarQube service starts for the first time, it will configure its database. This can take an additional 15 minutes  to complete during which time the Azure deployment shows as completed but you still won't be able to reach the SonarQube home page. Please give SonarQube some time to update. Click [here](https://blogs.msdn.microsoft.com/visualstudioalmrangers/2016/10/06/easily-deploy-sonarqube-server-in-azure/){:target=\"_blank\"} for more information." %}
 
 1. Once the deployment is successful, you will see the resources in Azure Portal.
 
@@ -75,7 +75,10 @@ In this lab, you will learn how to setup SonarQube on Azure and integrate with A
 
 1. Install JDK by the following the wizard.
 
-1. Restart the **SonarQube** service by typing services.msc in Run prompt - **Services**.
+1. Start the **SonarQube** service by typing below command in command line
+   ```
+   net start SonarQube
+   ```
 
 1. Use the [Azure DevOps Demo Generator](https://azuredevopsdemogenerator.azurewebsites.net/?TemplateId=77364&Name=SonarQube){:target="_blank"} to provision a project on your Azure DevOps Organization.
 
@@ -113,7 +116,7 @@ In this lab, you will learn how to setup SonarQube on Azure and integrate with A
 
    Let us create a Quality Gate to enforce a policy which fails the gate if there are bugs in the code. A Quality Gate is a PASS/FAIL check on a code quality that must be enforced before releasing software.
 
-1. Click the **Quality Gates** menu and click **Create** in the Quality Gates screen. Enter name for the Quality Gate and click **Create**.
+1. Click the **Quality Gates** menu and click **Create** in the Quality Gates screen. Enter a name for the Quality Gate and click **Create**.
 
    ![qualitygate](images/qualitygate.png)
 
@@ -135,20 +138,23 @@ In this lab, you will learn how to setup SonarQube on Azure and integrate with A
 
 Now that the SonarQube server is running, we will modify Azure Build pipeline to integrate with SonarQube to analyze the java code provisioned by the Azure DevOps Demo Generator system.
 
-1. Go to **Builds** under **Pipelines** tab, edit the build pipeline **SonarQube**. This is a Java application and we are using Maven to build the code. The Maven task includes out-of-the-box support for SonarQube. 
+1. Go to **Builds** under **Pipelines** tab, edit the build pipeline **SonarQube**. This is a Java application and we are using [Maven](https://docs.microsoft.com/en-us/azure/devops/pipelines/tasks/build/maven?view=azure-devops) to build the code. And we are using [SonarQube](https://marketplace.visualstudio.com/items?itemName=SonarSource.sonarqube) extension tasks to prepare  analysis on SonarQube and publish Quality Gate results.
 
-1. Click on the **Maven** task and scroll down to the **Code Analysis** section. Configure the SonarQube settings as follows-
+1. **Prepare Analysis Configuration** task is to configure all the required settings before executing the build. Click **+ NEW** to add SonarQube server endpoint. 
+    
+    ![](images/prepare-analysis.png)
 
-   |Parameter|Value|Notes|
-   |---------|-----|-----|
-   |**SonarQube Project Name**|MyShuttle|The name of the project in SonarQube|
-   |**SonarQube Project Key**|MyShuttle|The unique key of the project in SonarQube|
+   In the **Add SonarQube service connection** wizard enter the SonarQube server URL and SonarQube security token detials. If you don't have SonarQube security token follow [this](https://docs.sonarqube.org/latest/user-guide/user-token/) to create one. And make sure SonarQube project name and project key are same as you entered while creating SonarQube project in **Exercise 1**. 
+   
+    ![](images/sonar_endpoint.png)
 
-   {% include note.html content= "Here, the SonarQube Project Name and SonarQube Project Key values are based on the values you provide in Exercise 1: Step 3." %}
+   {% include note.html content= "The tokens are used to run analysis or invoke web services without access to the user's actual credentials." %}
 
-   ![build_configure](images/build_configure.png)
+1. **Publish Quality Gate Result** task is to display the Quality Gate status in the build summary.
+     
+     ![](images/publish_qualitygate.png)
 
-1. Save and queue the build.
+1. **Save** the changes and queue the build.
 
    ![build_in_progress](images/build_in_progress.png)
 
@@ -183,7 +189,7 @@ The link will open the **MyShuttle** project in the SonarQube Dashboard.  Under 
 
    ![bug_details](images/bug_details.png)
 
-With Azure DevOps and SonarQube,the capability is to not only show the health of an application but also to highlight newer issues. With a Quality Gate in place, you can fix the leak and therefore improve code quality systematically. 
+With Azure DevOps and SonarQube, the capability is to not only show the health of an application but also to highlight newer issues. With a Quality Gate in place, you can fix the leak and therefore improve code quality systematically. 
 
 ## Summary
 
