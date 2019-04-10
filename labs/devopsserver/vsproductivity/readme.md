@@ -2,10 +2,11 @@
 title: Making Developers More Productive with Azure DevOps Server 2019
 layout: page
 sidebar: vsts
-permalink: /labs/devopsserver/agile/
-folder: /labs/devopsserver/agile/
+permalink: /labs/devopsserver/vsproductivity/
+folder: /labs/devopsserver/vsproductivity/
 version: Lab version - 16.0.0
 updated: Last updated - 4/3/2019
+redirect_from: "labs/tfs/vsproductivity/index.htm"
 ---
 <div class="rw-ui-container"></div>
 

@@ -6,6 +6,7 @@ permalink: /labs/devopsserver/agile/
 folder: /labs/devopsserver/agile/
 version: Lab version - 16.0.0
 updated: Last updated - 3/7/2019
+redirect_from: "labs/tfs/agile/index.htm"
 ---
 <div class="rw-ui-container"></div>
 

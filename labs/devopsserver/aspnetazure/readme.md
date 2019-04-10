@@ -6,6 +6,7 @@ permalink: /labs/devopsserver/aspnetazure/
 folder: /labs/devopsserver/aspnetazure/
 version: Lab version - 16.0.0
 updated: Last updated - 3/15/2019
+redirect_from: "labs/tfs/aspnetazure/index.htm"
 ---
 <div class="rw-ui-container"></div>
 <a name="Overview"></a>

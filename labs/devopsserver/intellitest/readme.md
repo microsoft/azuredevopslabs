@@ -6,6 +6,7 @@ permalink: /labs/devopsserver/intellitest/
 folder: /labs/devopsserver/intellitest/
 version: Lab version - 16.0.0
 updated: Last updated - 4/3/2019
+redirect_from: "labs/tfs/intellitest/index.htm"
 ---
 <div class="rw-ui-container"></div>
 

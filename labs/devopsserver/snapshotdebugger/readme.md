@@ -6,6 +6,7 @@ permalink: /labs/devopsserver/snapshotdebugger/
 folder: /labs/devopsserver/snapshotdebugger/
 version: Lab version - 16.0.0
 updated: Last updated - 4/4/2019
+redirect_from: "labs/tfs/snapshotdebugger/index.htm"
 ---
 <div class="rw-ui-container"></div>
 

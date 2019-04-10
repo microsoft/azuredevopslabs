@@ -6,6 +6,7 @@ permalink: /labs/devopsserver/wiki/
 folder: /labs/devopsserver/wiki/
 version: Lab version - 16.0.0
 updated: Last updated - 3/8/2019
+redirect_from: "labs/tfs/devteamcollaboration/index.htm"
 ---
 <div class="rw-ui-container"></div>
 <a name="Overview"></a>

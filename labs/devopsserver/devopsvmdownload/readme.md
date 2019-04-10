@@ -2,9 +2,10 @@
 title: Downloading the DevOps Virtual Machine
 layout: page    
 sidebar: vsts
-permalink: /labs/devopsserver/almvmdownload/
-folder: /labs/devopsserver/almvmdownload/
+permalink: /labs/devopsserver/devopsvmdownload/
+folder: /labs/devopsserver/devopsvmdownload/
 updated: Last updated - 3/18/2019
+redirect_from: "labs/tfs/almvmdownload/index.htm"
 ---
 
 We highly recommend that you use the [**Microsoft Hands-on-Labs**](../technet/) center to run the VM - You do not require a high configuration machine or have to download and setup the machine. Simply access them from a browser of your choice. 

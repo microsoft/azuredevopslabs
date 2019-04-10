@@ -6,6 +6,7 @@ permalink: /labs/devopsserver/livedependencyvalidation/
 folder: /labs/devopsserver/livedependencyvalidation/
 version: Lab version - 16.0.0
 updated: Last updated - 4/3/2019
+redirect_from: "labs/tfs/livedependencyvalidation/index.htm"
 ---
 <div class="rw-ui-container"></div>
 

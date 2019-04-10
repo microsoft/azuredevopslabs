@@ -2,10 +2,11 @@
 title: Using Code Analysis with Visual Studio 2019 to Improve Code Quality
 layout: page
 sidebar: vsts
-permalink: /labs/devopsserver/build/
-folder: /labs/devopsserver/build/
+permalink: /labs/devopsserver/codeanalysis/
+folder: /labs/devopsserver/codeanalysis/
 version: Lab version - 16.0.0
 updated: Last updated - 4/2/2019
+redirect_from: "labs/tfs/codeanalysis/index.htm"
 ---
 <div class="rw-ui-container"></div>
 

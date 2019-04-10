@@ -6,6 +6,7 @@ permalink: /labs/devopsserver/releasemanagement/
 folder: /labs/devopsserver/releasemanagement/
 version: Lab version - 16.0.0
 updated: Last updated - 3/31/2019
+redirect_from: "labs/tfs/releasemanagement/index.htm"
 ---
 <div class="rw-ui-container"></div>
 

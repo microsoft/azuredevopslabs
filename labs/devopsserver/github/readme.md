@@ -2,8 +2,8 @@
 title: Getting Started with GitHub using Visual Studio 2019
 layout: page
 sidebar: vsts
-permalink: /labs/devopsserver/git/
-folder: /labs/devopsserver/git/
+permalink: /labs/devopsserver/github/
+folder: /labs/devopsserver/github/
 version: Lab version - 16.0.0
 updated: Last updated - 4/2/2019
 ---

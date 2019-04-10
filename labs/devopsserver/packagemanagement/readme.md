@@ -6,6 +6,7 @@ permalink: /labs/devopsserver/packagemanagement/
 folder: /labs/devopsserver/packagemanagement/
 version: Lab version - 16.0.0
 updated: Last updated - 3/31/2019
+redirect_from: "labs/tfs/packagemanagement/index.htm"
 ---
 <div class="rw-ui-container"></div>
 

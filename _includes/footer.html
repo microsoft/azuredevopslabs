@@ -1,16 +1,72 @@
 <footer>
   
-  
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-12">             
-            <h2>Feedback</h2>
-            Do you want to contribute? have an idea or a suggestion for a topic? found something outdated or not working? whatever it is, please write to us. We need your feedback. Post your comments on social using the buttons below, in the disqus forum, or send us an <a href="mailto:devopsdemos@microsoft.com">email</a>. Your feedback is so important to us!!!
-          <br />
-          <hr color="#80cae5" size="3" width="100%">	                
-               &copy;{{ site.time | date: "%Y"  }} {{site.company_name}}. All rights reserved. <br />	   <br />	   <br />	  
-              
-      </div>
-    </div>      
+  <div class="footerSection1">
+  <div class="container-fluid">    
+    <div class="row px-4 py-5">
+        <div class="col-sm-2"> </div>
+                 
+        <div class="col-sm-2">  
+             <h4>Microsoft Azure Account</h4> 
+             <p>You will need a valid and active Azure account. You can sign up for a free azure account and enjoy 12 months of services</p>
+             <a href="https://azure.microsoft.com/en-us/free/"  target="_blank" class="footer-btn">
+             Create your free account</a>
+        </div>  
+        <div class="col-sm-1"> </div>
+          <div class="col-sm-2">  
+          <h4>Azure DevOps </h4> 
+          <p>Easily set up automated pipelines to build, test, and deploy your code to any platform. If you don’t have one, sign up for one</p>
+          <a href="https://azure.microsoft.com/en-us/services/devops/"  target="_blank" class="footer-btn">
+          Try for free</a>
+        </div>
+          <div class="col-sm-1"> </div>
+      <div class="col-sm-2">
+          <h4>Azure DevOps Demo Generator</h4> 
+          <p>Provision a project with pre-defined data on to your Azure DevOps services organization. </p><br />
+          <a href="https://azuredevopsdemogenerator.azurewebsites.net/" target="_blank" class="footer-btn">
+          Learn more</a>
+              </div>
+    </div>
   </div>
+</div>
+  <div class="footerSection2">
+      <div class="container-fluid">
+    <div class="row px-4 py-5">
+      <div class="col-sm-3"> 
+        <h6>Go Social</h6>
+        <!--div class="sharethis-inline-share-buttons"></div-->
+        <ul class="list-unstyled">
+          <li><a href="http://www.facebook.com/sharer.php?u={{site.url }}{{site.baseurl }}{{page.url }}&t={{page.title | url_encode}}" target="_blank" class="text-white-50"><i class="fa fa-facebook-square fa-2x text-white"></i> Facebook</a></li>
+          <li><a href="https://www.linkedin.com/shareArticle?mini=true&url=https://azuredevopslabs.com/&t=Azure+DevOps+Hands-On+Labs" target="_blank" class="text-white-50"><i class="fa fa-linkedin-square fa-2x text-white"></i> LinkedIn</a></li>
+          <li><a href="https://twitter.com/intent/tweet?url=url={{site.url }}{{site.baseurl }}{{page.url }}&text={{page.title | url_encode}}&via=visualstudio&hashtags=devopslabs" target="_blank" class="text-white-50"><i class="fa fa-twitter-square fa-2x text-white"></i> Twitter</a></li>
+        </ul>         
+        </div>
+        <div class="col-sm-3"> 
+            <h6>DevOps Resources</h6>
+            <ul class="list-unstyled">
+              <li><a href="https://docs.microsoft.com/en-us/azure/devops/learn/" class="text-white-50">DevOps Resource Center</a></li>
+              <li><a href="https://docs.microsoft.com/en-us/azure/devops/index?view=azure-devops" class="text-white-50"> Azure DevOps Documentation </a></li>
+              <li><a href="https://www.youtube.com/channel/UC-ikyViYMM69joIAv7dlMsA" class="text-white-50">Azure DevOps Videos</a></li>
+            </ul> 
+          </div>
+          <div class="col-sm-3"> 
+              <h6>Additional Links</h6>
+              <ul class="list-unstyled">
+              <li class="text-white-50">Azure Tips and Tricks</li>
+              <li><a href="https://aka.ms/appcenterdemogenerator" target="_blank" class="text-white-50">App Center Demo Generator</a></li>
+              <li><a href="https://aka.ms/TailwindTraders" target="_blank" class="text-white-50">Tailwind Traders Repo on GitHub</a></li>
+            </ul> 
+            </div>
+            <div class="col-sm-3"> 
+                <h6>Other Links</h6>
+                <ul class="list-unstyled">
+                  <li><a href="mailto:devopsdemos@microsoft.com" class="text-white-50">Contact us</a></li>
+                  <li><a href="https://github.com/Microsoft/azuredevopslabs/issues" target="_blank" class="text-white-50">Feedback</a></li>
+                  <li><a href="https://github.com/Microsoft/azuredevopslabs" target="_blank" class="text-white-50">GitHub Page</a></li>
+                </ul>
+              </div>
+    </div> 
+  </div>     
+  </div>
+  <hr color="#80cae5" size="3" width="100%">	                
+               &copy;{{ site.time | date: "%Y"  }} {{site.company_name}}. All rights reserved. <br />	   <br />	   
 </footer>

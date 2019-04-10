@@ -6,6 +6,7 @@ permalink: /labs/devopsserver/debugging/
 folder: /labs/devopsserver/debugging/
 version: Lab version - 16.0.0
 updated: Last updated - 4/2/2019
+redirect_from: "labs/tfs/debugging/index.htm"
 ---
 <div class="rw-ui-container"></div>
 

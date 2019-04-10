@@ -6,6 +6,7 @@ permalink: /labs/devopsserver/testmanagement/
 folder: /labs/devopsserver/testmanagement/
 version: Lab version - 16.0.0
 updated: Last updated - 3/8/2019
+redirect_from: "labs/tfs/manualtesting/index.htm"
 ---
 <div class="rw-ui-container"></div>
 <a name="Overview"></a>
