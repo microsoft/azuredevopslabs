@@ -9,9 +9,11 @@ folder: /labs/vstsextend/docker/
 
 ## Overview
 
+A Docker container image is a lightweight, standalone, executable package of software that includes everything needed to run an application: code, runtime, system tools, system libraries and settings.
+
 This lab outlines the process to build custom Docker images of an [**ASP.NET Core**](https://docs.docker.com/engine/examples/dotnetcore){:target="_blank"} application, push those images to a private repository in [Azure Container Registry](https://azure.microsoft.com/en-in/services/container-registry/){:target="_blank"} (ACR). These images will be used to deploy the application to the Docker containers in the **Azure App Service** (Linux) using Azure DevOps.
 
-The Web App for Containers, allows creation of custom [Docker](https://www.docker.com/what-docker){:target="_blank"} container images, easily deploy and then run them on Azure. Combination of Azure DevOps and Azure integration with Docker will enable the following:
+The Web App for Containers allows the creation of custom [Docker](https://www.docker.com/what-docker){:target="_blank"} container images, easily deploy and then run them on Azure. Combination of Azure DevOps and Azure integration with Docker will enable the following:
 
 1. Build custom Docker images using [Azure DevOps Hosted Linux agent](https://docs.microsoft.com/en-us/azure/devops/pipelines/agents/agents?view=vsts){:target="_blank"}
 
@@ -32,19 +34,19 @@ The Web App for Containers, allows creation of custom [Docker](https://www.docke
 
    [![Deploy to Azure](http://azuredeploy.net/deploybutton.png)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FMicrosoft%2Falmvm%2Fmaster%2Flabs%2Fvstsextend%2Fdocker%2Farmtemplate%2Fazuredeploy.json){:target="_blank"}
 
-1. In Custom deployment window, select the **Subscription** type, leave the default selection for the resource group, and select the **Location**. Provide the **ACR Name**, **Site Name**, **DB Server Name**, accept the **Terms and Conditions** and click on the **Purchase** button to provision the following resources:
+1. In Custom deployment window, select the **Subscription** type, leave the default selection for the resource group, and select the **Location**. Provide the **Registry Name**, **Site Name**, **DB Server Name**, accept the **Terms and Conditions** and click on the **Purchase** button to provision the following resources:
 
    * Azure Container Registry
 
-   * Azure Web App
+   * Azure Web App for Containers
 
    * Azure SQL Server Database
 
    {% include tip.html content= "Use lower case letters for **DB Server Name**" %}
 
-     {% include note.html content= " **ACR name** may contain alpha numeric characters only and must be between 5 and 50 characters." %}
+     {% include note.html content= " **Registry name** may contain alpha numeric characters only and must be between 5 and 50 characters." %}
 
-     {% include tip.html content= "At the time of writing this lab, the only location that can be used for creation of ACR and SQL is **SouthCentralUS**." %}
+     {% include tip.html content= "At the time of writing this lab, the only location that can be used for the creation of ACR and SQL is **SouthCentralUS**." %}
 
    ![Create Azure Components](images/createazurecomponents.png)
 
@@ -57,8 +59,7 @@ The Web App for Containers, allows creation of custom [Docker](https://www.docke
    Azure Components | Description
    -----------------|------------
    ![Azure Container RegistryAzure](images/container_registry.png) Container Registry | Used to store images privately
-   ![Storage Account](images/storage.png) Storage Account | Container Registry resides in this storage account
-   ![App Service](images/app_service.png) App Service | Docker images are deployed to containers in this App Service
+   ![Web App for Containers](images/app_service.png) Web App for Containers | Docker images are deployed to containers in this App Service
    ![App Service Plan](images/app_service_plan.png) App Service Plan | Resource where App Service resides
    ![SQL Server](images/sqlserver.png) SQL Server | SQL Server to host database
    ![SQL database](images/sqldb.png) SQL database | SQL database to host MyHealthClinic data
@@ -81,7 +82,7 @@ Now that the required resources are provisioned, the **Build** and the **Release
 
    ![Build](images/build1_4.png)
 
-1. In the **Run services, Build services and Push services** task, authorize (only for the first task) the **Azure subscription** and update **Azure Container Registry** with the endpoint component from the dropdown and click on **Save**.
+1. In the **Run services, Build services and Push services** tasks, authorize (only for the first task) the **Azure subscription** and update **Azure Container Registry** with the endpoint component from the dropdown and click on **Save**.
 
    ![Tasks](images/build5.png)
 
@@ -109,19 +110,19 @@ Now that the required resources are provisioned, the **Build** and the **Release
    |**DB deployment**|The **Hosted VS2017** agent is used to deploy the database|
    |**Web App deployment**|The **Hosted Ubuntu 1604** agent is used to deploy the application to the Linux Web App|
 
-1. Under the **Execute Azure SQL:DacpacTask** section, select the **Azure Subscription** from the dropdown.
+1. Under the **Execute Azure SQL: DacpacTask** section, select the **Azure Subscription** from the dropdown.
 
-    **Execute Azure SQL:DacpacTask**: This task will deploy the dacpac to the **mhcdb** database so that the schema and data is configured for the backend.
+    **Execute Azure SQL: DacpacTask**: This task will deploy the dacpac to the **mhcdb** database so that the schema and data are configured for the backend.
 
     ![Update DB Task](images/release10.png)
 
-1. Under **Azure App Service Deploy** task, update the **Azure subscription** and **Azure Service name** with the endpoint components from the dropdown.
+1. Under **Azure App Service Deploy** task, update the **Azure subscription** and **Azure App Service name** with the endpoint components from the dropdown.
 
     **Azure App Service Deploy** will pull the appropriate docker image corresponding to the BuildID from repository specified, and then deploys the image to the Linux App Service.
 
     ![Update repository](images/release11.png)
 
-1. Click on the **Variables** section, update the **ACR** details and the **SQLserver** details with the details noted earlier while configuration of the environment and click on the **Save** button.
+1. Click on the **Variables** section, update the **ACR** details and the **SQLserver** details with the details noted earlier while the configuration of the environment and click on the **Save** button.
 
     ![Update variables](images/release12.png)
 
@@ -135,12 +136,12 @@ In this exercise, the source code will be modified to trigger the CI-CD.
 
    ![Edit code](images/Repos7.png)
 
-1. Modify the text **JOIN US** to **CONTACT US** on the line number 28 and then click on the **Commit** button.This action would initiate an automatic build for the source code.
+1. Modify the text **JOIN US** to **CONTACT US** on the line number 28 and then click on the **Commit** button. This action would initiate an automatic build for the source code.
 
     ![Line Edit](images/code14.png)
 
 
-1. Click on **Builds** tab, and subsequently select the build definition `MHCDoker.build` and again click on ellipsis to view the build in progress.
+1. Click on **Builds** tab, you will see `MHCDoker.build` buils is queued. Double click on **Build #** or **Commit** to view the build in progress.
 
     ![Build](images/build1_1.png)
 
@@ -163,7 +164,7 @@ In this exercise, the source code will be modified to trigger the CI-CD.
 
     {% include tip.html content= "The Continuous Deployment can be configured to deploy the web app to the designated server whenever a new docker image is pushed to the registry on the Azure portal itself. However, setting up an Azure DevOps CD pipeline will provide better flexibility and additional controls (approvals, release gates, etc.) for the application deployment." %}
 
-1. Navigate to the **Azure Container Portal** and then select the **Repositories** option to view the generated docker images.
+1. Navigate to the **Azure Container registry** created and then select the **Repositories** option to view the generated docker images.
 
     ![Repository](images/imagesinrepo.png)
 
