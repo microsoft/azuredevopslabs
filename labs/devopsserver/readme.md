@@ -51,7 +51,7 @@ description: Learn how you can remove barriers between teams, encourage collabor
 					</div>
 					<div class="col-lg-9 col-md-9 col-sm-9 col-9 cont-mt cont-pl">					
 							<a href="/labs/devopsserver/deliveryplans/" class="text-col-gunpower">	
-								<div class="bg-white text-font">Managing Delivery Plans</div>
+								<div class="bg-white text-font">Managing Delivery Plans with Azure DevOps Server 2019</div>
 							</a>
 					</div>					
 				</div>
@@ -73,123 +73,41 @@ description: Learn how you can remove barriers between teams, encourage collabor
 				</div>
 			</div>	
 			</div>	
-            <div class="col-lg-3 col-md-6 col-sm-6 col-12 mt-small-5">
+			 <div class="col-lg-3 col-md-6 col-sm-6 col-12 mt-small-5">
 			<div class="hover-effect equal-height-column box-cover ml-forsm">
 				<div class="row">
 					<div class="col-lg-3 col-md-3 col-sm-3 col-3 pl-0 pr-lg-0 pl-small-15 img-mt">
-						<div class=" bg bg-purple p-2 text-center">
-							<div class="icon-cover"><img src="/images/vside.png" alt="vside" height="20"></div>
+						<div class=" bg bg-crimson p-2 text-center">
+							<div class="icon-cover"><img src="/images/azurerepos.png" alt="git" height="20"></div>
 						</div>
 					</div>
 					<div class="col-lg-9 col-md-9 col-sm-9 col-9 cont-mt cont-pl">					
-							<a href="/labs/devopsserver/vsproductivity/" class="text-col-gunpower">	
-								<div class="bg-white text-font">Making Developers More Productive</div>
+							<a href="/labs/devopsserver/git/" class="text-col-gunpower">	
+								<div class="bg-white text-font">Getting Started with Git using Azure DevOps Server</div>
 							</a>
 					</div>					
 				</div>
 			</div>	
-			</div>				
-     </div>
-  <div class="row equal-height-columns my-1">        
-			<div class="col-lg-3 col-md-6 col-sm-6 col-12 mt-small-5">
-			<div class="hover-effect equal-height-column box-cover ml-forsm">
-				<div class="row">
-					<div class="col-lg-3 col-md-3 col-sm-3 col-3 pl-0 pr-lg-0 pl-small-15 img-mt">
-						<div class=" bg bg-purple p-2 text-center">
-							<div class="icon-cover"><img src="/images/vside.png" alt="vside" height="20"></div>
-						</div>
-					</div>
-					<div class="col-lg-9 col-md-9 col-sm-9 col-9 cont-mt cont-pl">					
-							<a href="/labs/devopsserver/debugging/" class="text-col-gunpower">	
-								<div class="bg-white text-font">Debugging with IntelliTrace</div>
-							</a>
-					</div>					
-				</div>
 			</div>	
 			</div>
-			<div class="col-lg-3 col-md-6 col-sm-6 col-12 mt-small-5">
+			<div class="row equal-height-columns my-1">  
+			 <div class="col-lg-3 col-md-6 col-sm-6 col-12 mt-small-5">
 			<div class="hover-effect equal-height-column box-cover ml-forsm">
 				<div class="row">
 					<div class="col-lg-3 col-md-3 col-sm-3 col-3 pl-0 pr-lg-0 pl-small-15 img-mt">
-						<div class=" bg bg-pink p-2 text-center">
-							<div class="icon-cover"><img src="/images/validation.png" alt="validation" height="20"></div>
+						<div class=" bg bg-color-black p-2 text-center">
+							<div class="icon-cover"><img src="/images/github-42.png" alt="git" height="20"></div>
 						</div>
 					</div>
 					<div class="col-lg-9 col-md-9 col-sm-9 col-9 cont-mt cont-pl">					
-							<a href="/labs/devopsserver/livedependencyvalidation/" class="text-col-gunpower">	
-								<div class="bg-white text-font">Live Dependency Validation</div>
-							</a>
-					</div>					
-				</div>
-			</div>	
-			</div>
-            <div class="col-lg-3 col-md-6 col-sm-6 col-12 mt-small-5">
-			<div class="hover-effect equal-height-column box-cover ml-forsm">
-				<div class="row">
-					<div class="col-lg-3 col-md-3 col-sm-3 col-3 pl-0 pr-lg-0 pl-small-15 img-mt">
-						<div class=" bg bg-purple p-2 text-center">
-							<div class="icon-cover"><img src="/images/vside.png" alt="vside" height="20"></div>
-						</div>
-					</div>
-					<div class="col-lg-9 col-md-9 col-sm-9 col-9 cont-mt cont-pl">					
-							<a href="/labs/devopsserver/intellitrace/" class="text-col-gunpower">	
-								<div class="bg-white text-font">Diagnosing Issues in Production with IntelliTrace</div>
+							<a href="/labs/devopsserver/github/" class="text-col-gunpower">	
+								<div class="bg-white text-font">Getting Started with GitHub using Visual Studio 2019</div>
 							</a>
 					</div>					
 				</div>
 			</div>	
 			</div>	
-            <div class="col-lg-3 col-md-6 col-sm-6 col-12 mt-small-5">
-			<div class="hover-effect equal-height-column box-cover ml-forsm">
-				<div class="row">
-					<div class="col-lg-3 col-md-3 col-sm-3 col-3 pl-0 pr-lg-0 pl-small-15 img-mt">
-						<div class=" bg bg-purple p-2 text-center">
-							<div class="icon-cover"><img src="/images/azuretestplans.png" alt="azuretestplans" height="20"></div>
-						</div>
-					</div>
-					<div class="col-lg-9 col-md-9 col-sm-9 col-9 cont-mt cont-pl">					
-							<a href="/labs/devopsserver/intellitest/" class="text-col-gunpower">	
-								<div class="bg-white text-font">Generate Unit Tests with IntelliTest</div>
-							</a>
-					</div>					
-				</div>
-			</div>	
-			</div>				
-     </div>
-	 <div class="row equal-height-columns my-1">        
-			<div class="col-lg-3 col-md-6 col-sm-6 col-12 mt-small-5">
-			<div class="hover-effect equal-height-column box-cover ml-forsm">
-				<div class="row">
-					<div class="col-lg-3 col-md-3 col-sm-3 col-3 pl-0 pr-lg-0 pl-small-15 img-mt">
-						<div class=" bg bg-purple p-2 text-center">
-							<div class="icon-cover"><img src="/images/vside.png" alt="vside" height="20"></div>
-						</div>
-					</div>
-					<div class="col-lg-9 col-md-9 col-sm-9 col-9 cont-mt cont-pl">					
-							<a href="/labs/devopsserver/codeanalysis/" class="text-col-gunpower">	
-								<div class="bg-white text-font">Using Code Analysis to Improve Code Quality</div>
-							</a>
-					</div>					
-				</div>
-			</div>	
-			</div>
-			<div class="col-lg-3 col-md-6 col-sm-6 col-12 mt-small-5">
-			<div class="hover-effect equal-height-column box-cover ml-forsm">
-				<div class="row">
-					<div class="col-lg-3 col-md-3 col-sm-3 col-3 pl-0 pr-lg-0 pl-small-15 img-mt">
-						<div class=" bg bg-purple p-2 text-center">
-							<div class="icon-cover"><img src="/images/azuretestplans.png" alt="azuretestplans" height="20"></div>
-						</div>
-					</div>
-					<div class="col-lg-9 col-md-9 col-sm-9 col-9 cont-mt cont-pl">					
-							<a href="/labs/devopsserver/liveunittesting/" class="text-col-gunpower">	
-								<div class="bg-white text-font">Live Unit Testing, Code Coverage and Code Clone Analysis</div>
-							</a>
-					</div>					
-				</div>
-			</div>	
-			</div>
-            <div class="col-lg-3 col-md-6 col-sm-6 col-12 mt-small-5">
+			 <div class="col-lg-3 col-md-6 col-sm-6 col-12 mt-small-5">
 			<div class="hover-effect equal-height-column box-cover ml-forsm">
 				<div class="row">
 					<div class="col-lg-3 col-md-3 col-sm-3 col-3 pl-0 pr-lg-0 pl-small-15 img-mt">
@@ -199,7 +117,7 @@ description: Learn how you can remove barriers between teams, encourage collabor
 					</div>
 					<div class="col-lg-9 col-md-9 col-sm-9 col-9 cont-mt cont-pl">					
 							<a href="/labs/devopsserver/build/" class="text-col-gunpower">	
-								<div class="bg-white text-font">Introduction to Build Pipelines</div>
+								<div class="bg-white text-font">Introduction to Build Pipelines in Azure DevOps Server 2019</div>
 							</a>
 					</div>					
 				</div>
@@ -220,9 +138,7 @@ description: Learn how you can remove barriers between teams, encourage collabor
 					</div>					
 				</div>
 			</div>	
-			</div>				
-     </div>
-	 <div class="row equal-height-columns my-1">        
+			</div>
 			<div class="col-lg-3 col-md-6 col-sm-6 col-12 mt-small-5">
 			<div class="hover-effect equal-height-column box-cover ml-forsm">
 				<div class="row">
@@ -233,12 +149,128 @@ description: Learn how you can remove barriers between teams, encourage collabor
 					</div>
 					<div class="col-lg-9 col-md-9 col-sm-9 col-9 cont-mt cont-pl">					
 							<a href="/labs/devopsserver/packagemanagement/" class="text-col-gunpower">	
-								<div class="bg-white text-font">Package Management</div>
+								<div class="bg-white text-font">Package Management in Azure DevOps Server 2019</div>
+							</a>
+					</div>					
+				</div>
+			</div>	
+			</div>				
+     </div>
+  <div class="row equal-height-columns my-1">  
+  <div class="col-lg-3 col-md-6 col-sm-6 col-12 mt-small-5">
+			<div class="hover-effect equal-height-column box-cover ml-forsm">
+				<div class="row">
+					<div class="col-lg-3 col-md-3 col-sm-3 col-3 pl-0 pr-lg-0 pl-small-15 img-mt">
+						<div class=" bg bg-purple p-2 text-center">
+							<div class="icon-cover"><img src="/images/vs2019logo.png" alt="vs2019logo" height="20"></div>
+						</div>
+					</div>
+					<div class="col-lg-9 col-md-9 col-sm-9 col-9 cont-mt cont-pl">					
+							<a href="/labs/devopsserver/vsproductivity/" class="text-col-gunpower">	
+								<div class="bg-white text-font">Making Developers More Productive with Azure DevOps Server 2019</div>
+							</a>
+					</div>					
+				</div>
+			</div>	
+			</div>      
+			<div class="col-lg-3 col-md-6 col-sm-6 col-12 mt-small-5">
+			<div class="hover-effect equal-height-column box-cover ml-forsm">
+				<div class="row">
+					<div class="col-lg-3 col-md-3 col-sm-3 col-3 pl-0 pr-lg-0 pl-small-15 img-mt">
+						<div class=" bg bg-purple p-2 text-center">
+							<div class="icon-cover"><img src="/images/azuretestplans.png" alt="azuretestplans" height="20"></div>
+						</div>
+					</div>
+					<div class="col-lg-9 col-md-9 col-sm-9 col-9 cont-mt cont-pl">					
+							<a href="/labs/devopsserver/testmanagement/" class="text-col-gunpower">	
+								<div class="bg-white text-font">Test Planning and Management with Azure DevOps Server 2019</div>
+							</a>
+					</div>					
+				</div>
+			</div>	
+			</div>	
+			<div class="col-lg-3 col-md-6 col-sm-6 col-12 mt-small-5">
+			<div class="hover-effect equal-height-column box-cover ml-forsm">
+				<div class="row">
+					<div class="col-lg-3 col-md-3 col-sm-3 col-3 pl-0 pr-lg-0 pl-small-15 img-mt">
+						<div class=" bg bg-purple p-2 text-center">
+							<div class="icon-cover"><img src="/images/vs2019logo.png" alt="vs2019logo" height="20"></div>
+						</div>
+					</div>
+					<div class="col-lg-9 col-md-9 col-sm-9 col-9 cont-mt cont-pl">					
+							<a href="/labs/devopsserver/debugging/" class="text-col-gunpower">	
+								<div class="bg-white text-font">Debugging with IntelliTrace in Visual Studio Enterprise 2019</div>
 							</a>
 					</div>					
 				</div>
 			</div>	
 			</div>
+				<div class="col-lg-3 col-md-6 col-sm-6 col-12 mt-small-5">
+			<div class="hover-effect equal-height-column box-cover ml-forsm">
+				<div class="row">
+					<div class="col-lg-3 col-md-3 col-sm-3 col-3 pl-0 pr-lg-0 pl-small-15 img-mt">
+						<div class=" bg bg-purple p-2 text-center">
+							<div class="icon-cover"><img src="/images/vs2019logo.png" alt="validation" height="20"></div>
+						</div>
+					</div>
+					<div class="col-lg-9 col-md-9 col-sm-9 col-9 cont-mt cont-pl">					
+							<a href="/labs/devopsserver/snapshotdebugger/" class="text-col-gunpower">	
+								<div class="bg-white text-font">Debugging with Snapshot Debugger</div>
+							</a>
+					</div>					
+				</div>
+			</div>	
+			</div>
+			</div>
+			<div class="row equal-height-columns my-1">  
+			 <div class="col-lg-3 col-md-6 col-sm-6 col-12 mt-small-5">
+			<div class="hover-effect equal-height-column box-cover ml-forsm">
+				<div class="row">
+					<div class="col-lg-3 col-md-3 col-sm-3 col-3 pl-0 pr-lg-0 pl-small-15 img-mt">
+						<div class=" bg bg-purple p-2 text-center">
+							<div class="icon-cover"><img src="/images/vs2019logo.png" alt="vs2019logo" height="20"></div>
+						</div>
+					</div>
+					<div class="col-lg-9 col-md-9 col-sm-9 col-9 cont-mt cont-pl">					
+							<a href="/labs/devopsserver/intellitrace/" class="text-col-gunpower">	
+								<div class="bg-white text-font">Diagnosing Issues in Production with IntelliTrace</div>
+							</a>
+					</div>					
+				</div>
+			</div>	
+			</div>	
+			<div class="col-lg-3 col-md-6 col-sm-6 col-12 mt-small-5">
+			<div class="hover-effect equal-height-column box-cover ml-forsm">
+				<div class="row">
+					<div class="col-lg-3 col-md-3 col-sm-3 col-3 pl-0 pr-lg-0 pl-small-15 img-mt">
+						<div class=" bg bg-purple p-2 text-center">
+							<div class="icon-cover"><img src="/images/azuretestplans.png" alt="azuretestplans" height="20"></div>
+						</div>
+					</div>
+					<div class="col-lg-9 col-md-9 col-sm-9 col-9 cont-mt cont-pl">					
+							<a href="/labs/devopsserver/intellitest/" class="text-col-gunpower">	
+								<div class="bg-white text-font">Generate Unit Tests with IntelliTest using Visual Studio 2019</div>
+							</a>
+					</div>					
+				</div>
+			</div>	
+			</div>		
+			<div class="col-lg-3 col-md-6 col-sm-6 col-12 mt-small-5">
+			<div class="hover-effect equal-height-column box-cover ml-forsm">
+				<div class="row">
+					<div class="col-lg-3 col-md-3 col-sm-3 col-3 pl-0 pr-lg-0 pl-small-15 img-mt">
+						<div class=" bg bg-pink p-2 text-center">
+							<div class="icon-cover"><img src="/images/validation.png" alt="validation" height="20"></div>
+						</div>
+					</div>
+					<div class="col-lg-9 col-md-9 col-sm-9 col-9 cont-mt cont-pl">					
+							<a href="/labs/devopsserver/livedependencyvalidation/" class="text-col-gunpower">	
+								<div class="bg-white text-font">Live Dependency Validation</div>
+							</a>
+					</div>					
+				</div>
+			</div>	
+			</div>	
 			<div class="col-lg-3 col-md-6 col-sm-6 col-12 mt-small-5">
 			<div class="hover-effect equal-height-column box-cover ml-forsm">
 				<div class="row">
@@ -249,23 +281,25 @@ description: Learn how you can remove barriers between teams, encourage collabor
 					</div>
 					<div class="col-lg-9 col-md-9 col-sm-9 col-9 cont-mt cont-pl">					
 							<a href="/labs/devopsserver/liveunittesting/" class="text-col-gunpower">	
-								<div class="bg-white text-font">Unit Testing, Code Coverage and Code Clone Analysis</div>
+								<div class="bg-white text-font">Live Unit Testing, Code Coverage and Code Clone Analysis</div>
 							</a>
 					</div>					
 				</div>
 			</div>	
-			</div>
-            <div class="col-lg-3 col-md-6 col-sm-6 col-12 mt-small-5">
+			</div>			
+     </div>
+	 <div class="row equal-height-columns my-1">        
+			<div class="col-lg-3 col-md-6 col-sm-6 col-12 mt-small-5">
 			<div class="hover-effect equal-height-column box-cover ml-forsm">
 				<div class="row">
 					<div class="col-lg-3 col-md-3 col-sm-3 col-3 pl-0 pr-lg-0 pl-small-15 img-mt">
 						<div class=" bg bg-purple p-2 text-center">
-							<div class="icon-cover"><img src="/images/azuretestplans.png" alt="azuretestplans" height="20"></div>
+							<div class="icon-cover"><img src="/images/vs2019logo.png" alt="vs2019logo" height="20"></div>
 						</div>
 					</div>
 					<div class="col-lg-9 col-md-9 col-sm-9 col-9 cont-mt cont-pl">					
-							<a href="/labs/devopsserver/intellitest/" class="text-col-gunpower">	
-								<div class="bg-white text-font">Generate Unit Tests with IntelliTest</div>
+							<a href="/labs/devopsserver/codeanalysis/" class="text-col-gunpower">	
+								<div class="bg-white text-font">Using Code Analysis to Improve Code Quality</div>
 							</a>
 					</div>					
 				</div>
@@ -286,41 +320,7 @@ description: Learn how you can remove barriers between teams, encourage collabor
 					</div>					
 				</div>
 			</div>	
-			</div>				
-     </div>
-  <div class="row equal-height-columns my-1">        
-			<div class="col-lg-3 col-md-6 col-sm-6 col-12 mt-small-5">
-			<div class="hover-effect equal-height-column box-cover ml-forsm">
-				<div class="row">
-					<div class="col-lg-3 col-md-3 col-sm-3 col-3 pl-0 pr-lg-0 pl-small-15 img-mt">
-						<div class=" bg bg-purple p-2 text-center">
-							<div class="icon-cover"><img src="/images/azuretestplans.png" alt="azuretestplans" height="20"></div>
-						</div>
-					</div>
-					<div class="col-lg-9 col-md-9 col-sm-9 col-9 cont-mt cont-pl">					
-							<a href="/labs/devopsserver/testmanagement/" class="text-col-gunpower">	
-								<div class="bg-white text-font">Test Management</div>
-							</a>
-					</div>					
-				</div>
-			</div>	
-			</div>
-			<div class="col-lg-3 col-md-6 col-sm-6 col-12 mt-small-5">
-			<div class="hover-effect equal-height-column box-cover ml-forsm">
-				<div class="row">
-					<div class="col-lg-3 col-md-3 col-sm-3 col-3 pl-0 pr-lg-0 pl-small-15 img-mt">
-						<div class=" bg bg-purple p-2 text-center">
-							<div class="icon-cover"><img src="/images/appinsights.png" alt="appinsights" height="20"></div>
-						</div>
-					</div>
-					<div class="col-lg-9 col-md-9 col-sm-9 col-9 cont-mt cont-pl">					
-							<a href="/labs/devopsserver/wiki/" class="text-col-gunpower">	
-								<div class="bg-white text-font">Instrumenting ASP.NET with Application Insights</div>
-							</a>
-					</div>					
-				</div>
-			</div>	
-			</div>
+			</div>				     
             <div class="col-lg-3 col-md-6 col-sm-6 col-12 mt-small-5">
 			<div class="hover-effect equal-height-column box-cover ml-forsm">
 				<div class="row">
@@ -354,24 +354,24 @@ description: Learn how you can remove barriers between teams, encourage collabor
 			</div>	
 			</div>				
      </div>
-	 <div class="row equal-height-columns my-1">        
+	  <div class="row equal-height-columns my-1">        
 			<div class="col-lg-3 col-md-6 col-sm-6 col-12 mt-small-5">
 			<div class="hover-effect equal-height-column box-cover ml-forsm">
 				<div class="row">
 					<div class="col-lg-3 col-md-3 col-sm-3 col-3 pl-0 pr-lg-0 pl-small-15 img-mt">
-						<div class=" bg bg-azureblue p-2 text-center">
-							<div class="icon-cover"><img src="/images/azure-42.png" alt="azure-42" height="20"></div>
+						<div class=" bg bg-purple p-2 text-center">
+							<div class="icon-cover"><img src="/images/vs2019logo.png" alt="vs2019logo" height="20"></div>
 						</div>
 					</div>
 					<div class="col-lg-9 col-md-9 col-sm-9 col-9 cont-mt cont-pl">					
-							<a href="/labs/devopsserver/azureserviceprincipal/" class="text-col-gunpower">	
-								<div class="bg-white text-font">Azure Service Principal</div>
+							<a href="/labs/devopsserver/editorconfig/" class="text-col-gunpower">	
+								<div class="bg-white text-font">Working with EditorConfig in Visual Studio 2019</div>
 							</a>
 					</div>					
 				</div>
 			</div>	
-			</div>							
-     </div>
+			</div>	
+			</div>
      <div class="row">
 	 <div class="col-sm-12">
                                 <h2 class="border-0 fon-normal">Get the accompanying VM</h2>

@@ -366,11 +366,11 @@ description: Learn how you can implement modern DevOps practices with Azure, Azu
 			</div>			
 			<div class="col-sm-2 my-2">
 				<div class="shadow-sm hover-effect equal-height-column">
-					<a href="/labs/vstsextend/github-integration/" class="text-col-gunpower">
+					<a href="/labs/vstsextend/launchdarkly/" class="text-col-gunpower">
 						<div class="bg-azureblue1 p-2 text-center">
-							<div class="icon-cover1"><img src="/images/azurepipelines.png" alt="azurepipelines" height="42"></div>
+							<div class="icon-cover1"><img src="/images/launchdarkly.png" alt="launchdarkly" height="42"></div>
 						</div>
-						<div class="bg-white py-2 text-center">Integrate your GitHub Projects with Azure Pipelines</div>
+						<div class="bg-white py-2 text-center">Feature Flag Management with LaunchDarkly</div>
 					</a>	
 				</div>
 			</div>
@@ -387,466 +387,495 @@ description: Learn how you can implement modern DevOps practices with Azure, Azu
 <img src="/images/deep-dive.png" alt="Deep dive into Azure DevOps" width="250">
 </div>
 </div>
-  <div class="row equal-height-columns my-1">        
-			<div class="col-lg-3 col-md-6 col-sm-6 col-12 mt-small-5">
-			<div class="hover-effect equal-height-column box-cover ml-forsm">
-				<div class="row">
-					<div class="col-lg-3 col-md-3 col-sm-3 col-3 pl-0 pr-lg-0 pl-small-15 img-mt">
-						<div class="bg bg-color-1 p-2 text-center">
-							<div class="icon-cover"><img src="/images/launchdarkly.png" alt="launchdarkly" height="20"></div>
-						</div>
+  <div class="row equal-height-columns my-1">  
+		<div class="col-lg-3 col-md-6 col-sm-6 col-12 mt-small-5">
+		<div class="hover-effect equal-height-column box-cover ml-forsm">
+			<div class="row">
+				<div class="col-lg-3 col-md-3 col-sm-3 col-3 pl-0 pr-lg-0 pl-small-15 img-mt">
+					<div class="bg bg-azureblue p-2 text-center">
+						<div class="icon-cover"><img src="/images/azurekeyvault.png" alt="azurekeyvault" height="20"></div>
 					</div>
-					<div class="col-lg-9 col-md-9 col-sm-9 col-9 cont-mt cont-pl">					
-							<a href="/labs/vstsextend/launchdarkly/" class="text-col-gunpower">	
-								<div class="bg-white text-font">Feature Flag Management with LaunchDarkly</div>
-							</a>
-					</div>					
 				</div>
-			</div>	
+				<div class="col-lg-9 col-md-9 col-sm-9 col-9 cont-mt cont-pl">					
+						<a href="/labs/vstsextend/azurekeyvault/" class="text-col-gunpower align-relative">	
+							<div class="bg-white text-font">Using secrets from Azure Key Vault in a pipeline
+							<img src="/images/new-tag.png" alt="new-tag" class="align-on-labs">
+							</div>
+						</a>
+				</div>					
 			</div>
-			<div class="col-lg-3 col-md-6 col-sm-6 col-12 mt-small-5">
-			<div class="hover-effect equal-height-column box-cover ml-forsm">
-				<div class="row">
-					<div class="col-lg-3 col-md-3 col-sm-3 col-3 pl-0 pr-lg-0 pl-small-15 img-mt">
-						<div class=" bg bg-color-2 p-2 text-center">
-							<div class="icon-cover"><img src="/images/teams.png" alt="teams" height="20"></div>
-						</div>
+		</div>	
+		</div>
+		<div class="col-lg-3 col-md-6 col-sm-6 col-12 mt-small-5">
+		<div class="hover-effect equal-height-column box-cover ml-forsm">
+			<div class="row">
+				<div class="col-lg-3 col-md-3 col-sm-3 col-3 pl-0 pr-lg-0 pl-small-15 img-mt">
+					<div class=" bg bg-color-2 p-2 text-center">
+						<div class="icon-cover"><img src="/images/teams.png" alt="teams" height="20"></div>
 					</div>
-					<div class="col-lg-9 col-md-9 col-sm-9 col-9 cont-mt cont-pl">					
-							<a href="/labs/vstsextend/teams/" class="text-col-gunpower">	
-								<div class="bg-white text-font">Microsoft Teams with Azure DevOps Services</div>
-							</a>
-					</div>					
 				</div>
-			</div>	
+				<div class="col-lg-9 col-md-9 col-sm-9 col-9 cont-mt cont-pl">					
+						<a href="/labs/vstsextend/teams/" class="text-col-gunpower align-relative">	
+							<div class="bg-white text-font">Microsoft Teams with Azure DevOps Services
+							<img src="/images/new-tag.png" alt="new-tag" class="align-on-labs">
+							</div>
+						</a>
+				</div>					
 			</div>
-            <div class="col-lg-3 col-md-6 col-sm-6 col-12 mt-small-5">
-			<div class="hover-effect equal-height-column box-cover ml-forsm">
-				<div class="row">
-					<div class="col-lg-3 col-md-3 col-sm-3 col-3 pl-0 pr-lg-0 pl-small-15 img-mt">
-						<div class=" bg bg-color-black p-2 text-center">
-							<div class="icon-cover"><img src="/images/github-42.png" alt="github" height="20"></div>
-						</div>
+		</div>	
+		</div>
+		<div class="col-lg-3 col-md-6 col-sm-6 col-12 mt-small-5">
+		<div class="hover-effect equal-height-column box-cover ml-forsm">
+			<div class="row">
+				<div class="col-lg-3 col-md-3 col-sm-3 col-3 pl-0 pr-lg-0 pl-small-15 img-mt">
+					<div class=" bg bg-color-black p-2 text-center">
+						<div class="icon-cover"><img src="/images/github-42.png" alt="github" height="20"></div>
 					</div>
-					<div class="col-lg-9 col-md-9 col-sm-9 col-9 cont-mt cont-pl">					
-							<a href="/labs/vstsextend/github-azurepipelines/" class="text-col-gunpower">	
-								<div class="bg-white text-font">GitHub Integration with Azure Pipelines</div>
-							</a>
-					</div>					
 				</div>
-			</div>	
-			</div>	
-            <div class="col-lg-3 col-md-6 col-sm-6 col-12 mt-small-5">
-			<div class="hover-effect equal-height-column box-cover ml-forsm">
-				<div class="row">
-					<div class="col-lg-3 col-md-3 col-sm-3 col-3 pl-0 pr-lg-0 pl-small-15 img-mt">
-						<div class=" bg bg-color-black p-2 text-center">
-							<div class="icon-cover"><img src="/images/github-42.png" alt="github" height="20"></div>
-						</div>
-					</div>
-					<div class="col-lg-9 col-md-9 col-sm-9 col-9 cont-mt cont-pl">					
-							<a href="/labs/vstsextend/github-azureboards/" class="text-col-gunpower">	
-								<div class="bg-white text-font">GitHub Integration with Azure Boards</div>
-							</a>
-					</div>					
-				</div>
-			</div>	
-			</div>				
-     </div>
-  <div class="row equal-height-columns my-1">        
-			<div class="col-lg-3 col-md-6 col-sm-6 col-12 mt-small-5">
-			<div class="hover-effect equal-height-column box-cover ml-forsm">
-				<div class="row">
-					<div class="col-lg-3 col-md-3 col-sm-3 col-3 pl-0 pr-lg-0 pl-small-15 img-mt">
-						<div class=" bg bg-blue2 p-2 text-center">
-							<div class="icon-cover"><img src="/images/kubernetes.png" alt="kubernetes" height="20"></div>
-						</div>
-					</div>
-					<div class="col-lg-9 col-md-9 col-sm-9 col-9 cont-mt cont-pl">					
-							<a href="/labs/vstsextend/kubernetes/" class="text-col-gunpower">	
-								<div class="bg-white text-font">Deploying a multi-container application to Azure Kubernetes Services</div>
-							</a>
-					</div>					
-				</div>
-			</div>	
+				<div class="col-lg-9 col-md-9 col-sm-9 col-9 cont-mt cont-pl">					
+						<a href="/labs/vstsextend/github-azurepipelines/" class="text-col-gunpower align-relative">	
+							<div class="bg-white text-font">GitHub Integration with Azure Pipelines
+							<img src="/images/new-tag.png" alt="new-tag" class="align-on-labs">
+							</div>
+						</a>
+				</div>					
 			</div>
-			<div class="col-lg-3 col-md-6 col-sm-6 col-12 mt-small-5">
-			<div class="hover-effect equal-height-column box-cover ml-forsm">
-				<div class="row">
-					<div class="col-lg-3 col-md-3 col-sm-3 col-3 pl-0 pr-lg-0 pl-small-15 img-mt">
-						<div class=" bg bg-yellow p-2 text-center">
-							<div class="icon-cover"><img src="/images/tomcat-42.png" alt="tomcat-42" height="20"></div>
-						</div>
+		</div>	
+		</div>	
+		<div class="col-lg-3 col-md-6 col-sm-6 col-12 mt-small-5">
+		<div class="hover-effect equal-height-column box-cover ml-forsm">
+			<div class="row">
+				<div class="col-lg-3 col-md-3 col-sm-3 col-3 pl-0 pr-lg-0 pl-small-15 img-mt">
+					<div class=" bg bg-color-black p-2 text-center">
+						<div class="icon-cover"><img src="/images/github-42.png" alt="github" height="20"></div>
 					</div>
-					<div class="col-lg-9 col-md-9 col-sm-9 col-9 cont-mt cont-pl">					
-							<a href="/labs/vstsextend/tomcat/" class="text-col-gunpower">	
-								<div class="bg-white text-font">Deploying a Java-based Tomcat application to Azure</div>
-							</a>
-					</div>					
 				</div>
-			</div>	
+				<div class="col-lg-9 col-md-9 col-sm-9 col-9 cont-mt cont-pl">					
+						<a href="/labs/vstsextend/github-azureboards/" class="text-col-gunpower align-relative">	
+							<div class="bg-white text-font">GitHub Integration with Azure Boards
+							<img src="/images/new-tag.png" alt="new-tag" class="align-on-labs">
+							</div>
+						</a>
+				</div>					
 			</div>
-            <div class="col-lg-3 col-md-6 col-sm-6 col-12 mt-small-5">
-			<div class="hover-effect equal-height-column box-cover ml-forsm">
-				<div class="row">
-					<div class="col-lg-3 col-md-3 col-sm-3 col-3 pl-0 pr-lg-0 pl-small-15 img-mt">
-						<div class=" bg bg-yellow2 p-2 text-center">
-							<div class="icon-cover"><img src="/images/whitesource-42.png" alt="whitesource-42" height="20"></div>
-						</div>
+		</div>	
+		</div>	
+  </div>
+  <div class="row equal-height-columns my-1"> 
+		<div class="col-lg-3 col-md-6 col-sm-6 col-12 mt-small-5">
+		<div class="hover-effect equal-height-column box-cover ml-forsm">
+			<div class="row">
+				<div class="col-lg-3 col-md-3 col-sm-3 col-3 pl-0 pr-lg-0 pl-small-15 img-mt">
+					<div class="bg bg-color-1 p-2 text-center">
+						<div class="icon-cover"><img src="/images/launchdarkly.png" alt="launchdarkly" height="20"></div>
 					</div>
-					<div class="col-lg-9 col-md-9 col-sm-9 col-9 cont-mt cont-pl">					
-							<a href="/labs/vstsextend/WhiteSource/" class="text-col-gunpower">	
-								<div class="bg-white text-font">Managing Open-source security and license with WhiteSource</div>
-							</a>
-					</div>					
 				</div>
-			</div>	
-			</div>	
-            <div class="col-lg-3 col-md-6 col-sm-6 col-12 mt-small-5">
-			<div class="hover-effect equal-height-column box-cover ml-forsm">
-				<div class="row">
-					<div class="col-lg-3 col-md-3 col-sm-3 col-3 pl-0 pr-lg-0 pl-small-15 img-mt">
-						<div class=" bg bg-slateblue p-2 text-center">
-							<div class="icon-cover"><img src="/images/python-42.png" alt="python-42" height="20"></div>
-						</div>
-					</div>
-					<div class="col-lg-9 col-md-9 col-sm-9 col-9 cont-mt cont-pl">					
-							<a href="/labs/vstsextend/python/" class="text-col-gunpower">	
-								<div class="bg-white text-font">Deploying a CD pipeline for a Django-based Python app</div>
-							</a>
-					</div>					
-				</div>
-			</div>	
-			</div>				
-     </div>
-	 <div class="row equal-height-columns my-1">        
-			<div class="col-lg-3 col-md-6 col-sm-6 col-12 mt-small-5">
-			<div class="hover-effect equal-height-column box-cover ml-forsm">
-				<div class="row">
-					<div class="col-lg-3 col-md-3 col-sm-3 col-3 pl-0 pr-lg-0 pl-small-15 img-mt">
-						<div class=" bg bg-blue p-2 text-center">
-							<div class="icon-cover"><img src="/images/terraform.png" alt="terraform" height="20"></div>
-						</div>
-					</div>
-					<div class="col-lg-9 col-md-9 col-sm-9 col-9 cont-mt cont-pl">					
-							<a href="/labs/vstsextend/terraform/" class="text-col-gunpower">	
-								<div class="bg-white text-font">Automating your infrastructure deployments in the Cloud with Terraform and Azure Pipelines</div>
-							</a>
-					</div>					
-				</div>
-			</div>	
+				<div class="col-lg-9 col-md-9 col-sm-9 col-9 cont-mt cont-pl">					
+						<a href="/labs/vstsextend/launchdarkly/" class="text-col-gunpower">	
+							<div class="bg-white text-font">Feature Flag Management with LaunchDarkly</div>
+						</a>
+				</div>					
 			</div>
-			<div class="col-lg-3 col-md-6 col-sm-6 col-12 mt-small-5">
-			<div class="hover-effect equal-height-column box-cover ml-forsm">
-				<div class="row">
-					<div class="col-lg-3 col-md-3 col-sm-3 col-3 pl-0 pr-lg-0 pl-small-15 img-mt">
-						<div class=" bg bg-azureblue p-2 text-center">
-							<div class="icon-cover"><img src="/images/sonarqube-42.png" alt="sonarqube-42" height="20"></div>
-						</div>
+		</div>	
+		</div>
+		<div class="col-lg-3 col-md-6 col-sm-6 col-12 mt-small-5">
+		<div class="hover-effect equal-height-column box-cover ml-forsm">
+			<div class="row">
+				<div class="col-lg-3 col-md-3 col-sm-3 col-3 pl-0 pr-lg-0 pl-small-15 img-mt">
+					<div class=" bg bg-azureblue p-2 text-center">
+						<div class="icon-cover"><img src="/images/docker-42.png" alt="docker-42" height="20"></div>
 					</div>
-					<div class="col-lg-9 col-md-9 col-sm-9 col-9 cont-mt cont-pl">					
-							<a href="/labs/vstsextend/sonarqube/" class="text-col-gunpower">	
-								<div class="bg-white text-font">Managing technical debt with SonarQube and Azure DevOps</div>
-							</a>
-					</div>					
 				</div>
-			</div>	
+				<div class="col-lg-9 col-md-9 col-sm-9 col-9 cont-mt cont-pl">					
+						<a href="/labs/vstsextend/docker/" class="text-col-gunpower">	
+							<div class="bg-white text-font">Deploying a Docker based web application to Azure App Service</div>
+						</a>
+				</div>					
 			</div>
-            <div class="col-lg-3 col-md-6 col-sm-6 col-12 mt-small-5">
-			<div class="hover-effect equal-height-column box-cover ml-forsm">
-				<div class="row">
-					<div class="col-lg-3 col-md-3 col-sm-3 col-3 pl-0 pr-lg-0 pl-small-15 img-mt">
-						<div class=" bg bg-sel-grey p-2 text-center">
-							<div class="icon-cover"><img src="/images/selenium-42.png" alt="selenium-42" height="20"></div>
-						</div>
+		</div>	
+		</div>
+		<div class="col-lg-3 col-md-6 col-sm-6 col-12 mt-small-5">
+		<div class="hover-effect equal-height-column box-cover ml-forsm">
+			<div class="row">
+				<div class="col-lg-3 col-md-3 col-sm-3 col-3 pl-0 pr-lg-0 pl-small-15 img-mt">
+					<div class=" bg bg-sel-grey p-2 text-center">
+						<div class="icon-cover"><img src="/images/aspnet-logo-42.png" alt="aspnet-logo-42" height="20"></div>
 					</div>
-					<div class="col-lg-9 col-md-9 col-sm-9 col-9 cont-mt cont-pl">					
-							<a href="/labs/vstsextend/Selenium/" class="text-col-gunpower">	
-								<div class="bg-white text-font">Automating Selenium Tests in Azure Pipelines</div>
-							</a>
-					</div>					
 				</div>
-			</div>	
-			</div>	
-            <div class="col-lg-3 col-md-6 col-sm-6 col-12 mt-small-5">
-			<div class="hover-effect equal-height-column box-cover ml-forsm">
-				<div class="row">
-					<div class="col-lg-3 col-md-3 col-sm-3 col-3 pl-0 pr-lg-0 pl-small-15 img-mt">
-						<div class=" bg bg-slateblue p-2 text-center">
-							<div class="icon-cover"><img src="/images/php.png" alt="php" height="20"></div>
-						</div>
-					</div>
-					<div class="col-lg-9 col-md-9 col-sm-9 col-9 cont-mt cont-pl">					
-							<a href="/labs/vstsextend/PHP/" class="text-col-gunpower">	
-								<div class="bg-white text-font">Setting up a CI/CD pipeline for your PHP application</div>
-							</a>
-					</div>					
-				</div>
-			</div>	
-			</div>				
-     </div>
-	 <div class="row equal-height-columns my-1">        
-			<div class="col-lg-3 col-md-6 col-sm-6 col-12 mt-small-5">
-			<div class="hover-effect equal-height-column box-cover ml-forsm">
-				<div class="row">
-					<div class="col-lg-3 col-md-3 col-sm-3 col-3 pl-0 pr-lg-0 pl-small-15 img-mt">
-						<div class="bg bg-color-black p-2 text-center">
-							<div class="icon-cover"><img src="/images/ansible.png" alt="ansible" height="20"></div>
-						</div>
-					</div>
-					<div class="col-lg-9 col-md-9 col-sm-9 col-9 cont-mt cont-pl">					
-							<a href="/labs/vstsextend/ansible/" class="text-col-gunpower">	
-								<div class="bg-white text-font">Automating your infrastructure deployments in the Cloud with Ansible and Azure Pipelines</div>
-							</a>
-					</div>					
-				</div>
-			</div>	
+				<div class="col-lg-9 col-md-9 col-sm-9 col-9 cont-mt cont-pl">					
+						<a href="/labs/vstsextend/aspnetmodernize/" class="text-col-gunpower">	
+							<div class="bg-white text-font">Deploy existing .NET apps as Windows containers (Modernizing .NET apps)</div>
+						</a>
+				</div>					
 			</div>
-			<div class="col-lg-3 col-md-6 col-sm-6 col-12 mt-small-5">
-			<div class="hover-effect equal-height-column box-cover ml-forsm">
-				<div class="row">
-					<div class="col-lg-3 col-md-3 col-sm-3 col-3 pl-0 pr-lg-0 pl-small-15 img-mt">
-						<div class=" bg bg-color-2 p-2 text-center">
-							<div class="icon-cover"><img src="/images/eclipse-42.png" alt="eclipse-42" height="20"></div>
-						</div>
+		</div>	
+		</div>
+		<div class="col-lg-3 col-md-6 col-sm-6 col-12 mt-small-5">
+		<div class="hover-effect equal-height-column box-cover ml-forsm">
+			<div class="row">
+				<div class="col-lg-3 col-md-3 col-sm-3 col-3 pl-0 pr-lg-0 pl-small-15 img-mt">
+					<div class=" bg bg-slateblue p-2 text-center">
+						<div class="icon-cover"><img src="/images/python-42.png" alt="python-42" height="20"></div>
 					</div>
-					<div class="col-lg-9 col-md-9 col-sm-9 col-9 cont-mt cont-pl">					
-							<a href="/labs/vstsextend/eclipse/" class="text-col-gunpower">	
-								<div class="bg-white text-font">Integrating Azure Repos and Azure Pipelines with Eclipse</div>
-							</a>
-					</div>					
 				</div>
-			</div>	
+				<div class="col-lg-9 col-md-9 col-sm-9 col-9 cont-mt cont-pl">					
+						<a href="/labs/vstsextend/python/" class="text-col-gunpower">	
+							<div class="bg-white text-font">Deploying a CD pipeline for a Django-based Python app</div>
+						</a>
+				</div>					
 			</div>
-            <div class="col-lg-3 col-md-6 col-sm-6 col-12 mt-small-5">
-			<div class="hover-effect equal-height-column box-cover ml-forsm">
-				<div class="row">
-					<div class="col-lg-3 col-md-3 col-sm-3 col-3 pl-0 pr-lg-0 pl-small-15 img-mt">
-						<div class=" bg bg-azureblue p-2 text-center">
-							<div class="icon-cover"><img src="/images/azure-42.png" alt="azure-42" height="20"></div>
-						</div>
-					</div>
-					<div class="col-lg-9 col-md-9 col-sm-9 col-9 cont-mt cont-pl">					
-							<a href="/labs/vstsextend/deploymentgroups/" class="text-col-gunpower">	
-								<div class="bg-white text-font">Deploying to Azure VM using Deployment Groups</div>
-							</a>
-					</div>					
+		</div>	
+		</div>		
+  </div>
+  <div class="row equal-height-columns my-1"> 
+    <div class="col-lg-3 col-md-6 col-sm-6 col-12 mt-small-5">
+	<div class="hover-effect equal-height-column box-cover ml-forsm">
+		<div class="row">
+			<div class="col-lg-3 col-md-3 col-sm-3 col-3 pl-0 pr-lg-0 pl-small-15 img-mt">
+				<div class=" bg bg-blue2 p-2 text-center">
+					<div class="icon-cover"><img src="/images/kubernetes.png" alt="kubernetes" height="20"></div>
 				</div>
-			</div>	
-			</div>	
-            <div class="col-lg-3 col-md-6 col-sm-6 col-12 mt-small-5">
-			<div class="hover-effect equal-height-column box-cover ml-forsm">
-				<div class="row">
-					<div class="col-lg-3 col-md-3 col-sm-3 col-3 pl-0 pr-lg-0 pl-small-15 img-mt">
-						<div class=" bg bg-sel-grey p-2 text-center">
-							<div class="icon-cover"><img src="/images/aspnet-logo-42.png" alt="aspnet-logo-42" height="20"></div>
-						</div>
-					</div>
-					<div class="col-lg-9 col-md-9 col-sm-9 col-9 cont-mt cont-pl">					
-							<a href="/labs/vstsextend/aspnetmodernize/" class="text-col-gunpower">	
-								<div class="bg-white text-font">Modernizing your Existing ASP.NET Apps with Azure</div>
-							</a>
-					</div>					
-				</div>
-			</div>	
-			</div>				
-     </div>
-  <div class="row equal-height-columns my-1">        
-			<div class="col-lg-3 col-md-6 col-sm-6 col-12 mt-small-5">
-			<div class="hover-effect equal-height-column box-cover ml-forsm">
-				<div class="row">
-					<div class="col-lg-3 col-md-3 col-sm-3 col-3 pl-0 pr-lg-0 pl-small-15 img-mt">
-						<div class=" bg bg-azureblue p-2 text-center">
-							<div class="icon-cover"><img src="/images/aml.png" alt="aml" height="20"></div>
-						</div>
-					</div>
-					<div class="col-lg-9 col-md-9 col-sm-9 col-9 cont-mt cont-pl">					
-							<a href="/labs/vstsextend/aml/" class="text-col-gunpower">	
-								<div class="bg-white text-font">Enabling CI/CD for Machine Learning project with Azure Pipelines</div>
-							</a>
-					</div>					
-				</div>
-			</div>	
 			</div>
-			<div class="col-lg-3 col-md-6 col-sm-6 col-12 mt-small-5">
-			<div class="hover-effect equal-height-column box-cover ml-forsm">
-				<div class="row">
-					<div class="col-lg-3 col-md-3 col-sm-3 col-3 pl-0 pr-lg-0 pl-small-15 img-mt">
-						<div class=" bg bg-azureblue p-2 text-center">
-							<div class="icon-cover"><img src="/images/docker-42.png" alt="docker-42" height="20"></div>
-						</div>
-					</div>
-					<div class="col-lg-9 col-md-9 col-sm-9 col-9 cont-mt cont-pl">					
-							<a href="/labs/vstsextend/docker/" class="text-col-gunpower">	
-								<div class="bg-white text-font">Deploying a Docker based web application to Azure App Service</div>
-							</a>
-					</div>					
+			<div class="col-lg-9 col-md-9 col-sm-9 col-9 cont-mt cont-pl">					
+					<a href="/labs/vstsextend/kubernetes/" class="text-col-gunpower">	
+						<div class="bg-white text-font">Deploying a multi-container application to Azure Kubernetes Services</div>
+					</a>
+			</div>					
+		</div>
+	</div>	
+	</div>
+	<div class="col-lg-3 col-md-6 col-sm-6 col-12 mt-small-5">
+	<div class="hover-effect equal-height-column box-cover ml-forsm">
+		<div class="row">
+			<div class="col-lg-3 col-md-3 col-sm-3 col-3 pl-0 pr-lg-0 pl-small-15 img-mt">
+				<div class=" bg bg-azureblue p-2 text-center">
+					<div class="icon-cover"><img src="/images/docker-42.png" alt="docker-42" height="20"></div>
 				</div>
-			</div>	
 			</div>
-            <div class="col-lg-3 col-md-6 col-sm-6 col-12 mt-small-5">
-			<div class="hover-effect equal-height-column box-cover ml-forsm">
-				<div class="row">
-					<div class="col-lg-3 col-md-3 col-sm-3 col-3 pl-0 pr-lg-0 pl-small-15 img-mt">
-						<div class=" bg bg-yellow2 p-2 text-center">
-							<div class="icon-cover"><img src="/images/AzureFunction.jpg" alt="AzureFunction" height="20"></div>
-						</div>
-					</div>
-					<div class="col-lg-9 col-md-9 col-sm-9 col-9 cont-mt cont-pl">					
-							<a href="/labs/vstsextend/azurefunctions/" class="text-col-gunpower">	
-								<div class="bg-white text-font">Setting up a CI/CD pipeline for Azure Functions</div>
-							</a>
-					</div>					
+			<div class="col-lg-9 col-md-9 col-sm-9 col-9 cont-mt cont-pl">					
+					<a href="/labs/vstsextend/dockerjava/" class="text-col-gunpower">	
+						<div class="bg-white text-font">Deploying a Dockerized Java app to Azure Web App for Containers</div>
+					</a>
+			</div>					
+		</div>
+	</div>	
+	</div>
+	<div class="col-lg-3 col-md-6 col-sm-6 col-12 mt-small-5">
+	<div class="hover-effect equal-height-column box-cover ml-forsm">
+		<div class="row">
+			<div class="col-lg-3 col-md-3 col-sm-3 col-3 pl-0 pr-lg-0 pl-small-15 img-mt">
+				<div class=" bg bg-yellow2 p-2 text-center">
+					<div class="icon-cover"><img src="/images/whitesource-42.png" alt="whitesource-42" height="20"></div>
 				</div>
-			</div>	
-			</div>	
-            <div class="col-lg-3 col-md-6 col-sm-6 col-12 mt-small-5">
-			<div class="hover-effect equal-height-column box-cover ml-forsm">
-				<div class="row">
-					<div class="col-lg-3 col-md-3 col-sm-3 col-3 pl-0 pr-lg-0 pl-small-15 img-mt">
-						<div class=" bg bg-crimson p-2 text-center">
-							<div class="icon-cover"><img src="/images/sonarcloud-42.png" alt="sonarcloud-42" height="20"></div>
-						</div>
-					</div>
-					<div class="col-lg-9 col-md-9 col-sm-9 col-9 cont-mt cont-pl">					
-							<a href="/labs/vstsextend/sonarcloud/" class="text-col-gunpower">	
-								<div class="bg-white text-font">Driving continuous quality of your code with SonarCloud</div>
-							</a>
-					</div>					
-				</div>
-			</div>	
-			</div>				
-     </div>
-	 <div class="row equal-height-columns my-1">        
-			<div class="col-lg-3 col-md-6 col-sm-6 col-12 mt-small-5">
-			<div class="hover-effect equal-height-column box-cover ml-forsm">
-				<div class="row">
-					<div class="col-lg-3 col-md-3 col-sm-3 col-3 pl-0 pr-lg-0 pl-small-15 img-mt">
-						<div class=" bg bg-sel-grey p-2 text-center">
-							<div class="icon-cover"><img src="/images/jenkins-42.png" alt="jenkins-42" height="20"></div>
-						</div>
-					</div>
-					<div class="col-lg-9 col-md-9 col-sm-9 col-9 cont-mt cont-pl">					
-							<a href="/labs/vstsextend/jenkins/" class="text-col-gunpower">	
-								<div class="bg-white text-font">Configuring a CD pipeline for your Jenkins CI</div>
-							</a>
-					</div>					
-				</div>
-			</div>	
 			</div>
-			<div class="col-lg-3 col-md-6 col-sm-6 col-12 mt-small-5">
-			<div class="hover-effect equal-height-column box-cover ml-forsm">
-				<div class="row">
-					<div class="col-lg-3 col-md-3 col-sm-3 col-3 pl-0 pr-lg-0 pl-small-15 img-mt">
-						<div class=" bg bg-azureblue p-2 text-center">
-							<div class="icon-cover"><img src="/images/docker-42.png" alt="docker-42" height="20"></div>
-						</div>
-					</div>
-					<div class="col-lg-9 col-md-9 col-sm-9 col-9 cont-mt cont-pl">					
-							<a href="/labs/vstsextend/dockerjava/" class="text-col-gunpower">	
-								<div class="bg-white text-font">Deploying a Dockerized Java app to Azure Web App for Containers</div>
-							</a>
-					</div>					
+			<div class="col-lg-9 col-md-9 col-sm-9 col-9 cont-mt cont-pl">					
+					<a href="/labs/vstsextend/WhiteSource/" class="text-col-gunpower">	
+						<div class="bg-white text-font">Managing Open-source security and license with WhiteSource</div>
+					</a>
+			</div>					
+		</div>
+	</div>	
+	</div>
+	<div class="col-lg-3 col-md-6 col-sm-6 col-12 mt-small-5">
+	<div class="hover-effect equal-height-column box-cover ml-forsm">
+		<div class="row">
+			<div class="col-lg-3 col-md-3 col-sm-3 col-3 pl-0 pr-lg-0 pl-small-15 img-mt">
+				<div class=" bg bg-slateblue p-2 text-center">
+					<div class="icon-cover"><img src="/images/php.png" alt="php" height="20"></div>
 				</div>
-			</div>	
 			</div>
-            <div class="col-lg-3 col-md-6 col-sm-6 col-12 mt-small-5">
-			<div class="hover-effect equal-height-column box-cover ml-forsm">
-				<div class="row">
-					<div class="col-lg-3 col-md-3 col-sm-3 col-3 pl-0 pr-lg-0 pl-small-15 img-mt">
-						<div class=" bg bg-azureblue p-2 text-center">
-							<div class="icon-cover"><img src="/images/vsts-1-42.png" alt="vsts-1-42" height="20"></div>
-						</div>
-					</div>
-					<div class="col-lg-9 col-md-9 col-sm-9 col-9 cont-mt cont-pl">					
-							<a href="/labs/vstsextend/releasegates/" class="text-col-gunpower">	
-								<div class="bg-white text-font">Controlling Deployments using Release Gates</div>
-							</a>
-					</div>					
+			<div class="col-lg-9 col-md-9 col-sm-9 col-9 cont-mt cont-pl">					
+					<a href="/labs/vstsextend/PHP/" class="text-col-gunpower">	
+						<div class="bg-white text-font">Setting up a CI/CD pipeline for your PHP application</div>
+					</a>
+			</div>					
+		</div>
+	</div>	
+	</div>
+  </div>
+  <div class="row equal-height-columns my-1"> 
+    <div class="col-lg-3 col-md-6 col-sm-6 col-12 mt-small-5">
+	<div class="hover-effect equal-height-column box-cover ml-forsm">
+		<div class="row">
+			<div class="col-lg-3 col-md-3 col-sm-3 col-3 pl-0 pr-lg-0 pl-small-15 img-mt">
+				<div class=" bg bg-blue p-2 text-center">
+					<div class="icon-cover"><img src="/images/terraform.png" alt="terraform" height="20"></div>
 				</div>
-			</div>	
-			</div>	
-            <div class="col-lg-3 col-md-6 col-sm-6 col-12 mt-small-5">
-			<div class="hover-effect equal-height-column box-cover ml-forsm">
-				<div class="row">
-					<div class="col-lg-3 col-md-3 col-sm-3 col-3 pl-0 pr-lg-0 pl-small-15 img-mt">
-						<div class=" bg bg-color-1 p-2 text-center">
-							<div class="icon-cover"><img src="/images/parasoft-42.png" alt="parasoft-42" height="20"></div>
-						</div>
-					</div>
-					<div class="col-lg-9 col-md-9 col-sm-9 col-9 cont-mt cont-pl">					
-							<a href="/labs/vstsextend/parasoft/" class="text-col-gunpower">	
-								<div class="bg-white text-font">Leverage Virtual Services with Parasoft Virtualize</div>
-							</a>
-					</div>					
-				</div>
-			</div>	
-			</div>				
-     </div>
-	 <div class="row equal-height-columns my-1">        
-			<div class="col-lg-3 col-md-6 col-sm-6 col-12 mt-small-5">
-			<div class="hover-effect equal-height-column box-cover ml-forsm">
-				<div class="row">
-					<div class="col-lg-3 col-md-3 col-sm-3 col-3 pl-0 pr-lg-0 pl-small-15 img-mt">
-						<div class="bg bg-pink p-2 text-center">
-							<div class="icon-cover"><img src="/images/appcenter.png" alt="appcenter" height="20"></div>
-						</div>
-					</div>
-					<div class="col-lg-9 col-md-9 col-sm-9 col-9 cont-mt cont-pl">					
-							<a href="/labs/vstsextend/appcenter/" class="text-col-gunpower">	
-								<div class="bg-white text-font">Build-Test-Distribute Mobile Apps using App Center</div>
-							</a>
-					</div>					
-				</div>
-			</div>	
 			</div>
-			<div class="col-lg-3 col-md-6 col-sm-6 col-12 mt-small-5">
-			<div class="hover-effect equal-height-column box-cover ml-forsm">
-				<div class="row">
-					<div class="col-lg-3 col-md-3 col-sm-3 col-3 pl-0 pr-lg-0 pl-small-15 img-mt">
-						<div class=" bg bg-slateblue p-2 text-center">
-							<div class="icon-cover"><img src="/images/octopus-42.png" alt="octopus-42" height="20"></div>
-						</div>
-					</div>
-					<div class="col-lg-9 col-md-9 col-sm-9 col-9 cont-mt cont-pl">					
-							<a href="/labs/vstsextend/Octopus/" class="text-col-gunpower">	
-								<div class="bg-white text-font">Automating Deployments from Azure Repos with  Octopus Deploy</div>
-							</a>
-					</div>					
+			<div class="col-lg-9 col-md-9 col-sm-9 col-9 cont-mt cont-pl">					
+					<a href="/labs/vstsextend/terraform/" class="text-col-gunpower">	
+						<div class="bg-white text-font">Automating your infrastructure deployments in the Cloud with Terraform and Azure Pipelines</div>
+					</a>
+			</div>					
+		</div>
+	</div>	
+	</div>
+	<div class="col-lg-3 col-md-6 col-sm-6 col-12 mt-small-5">
+	<div class="hover-effect equal-height-column box-cover ml-forsm">
+		<div class="row">
+			<div class="col-lg-3 col-md-3 col-sm-3 col-3 pl-0 pr-lg-0 pl-small-15 img-mt">
+				<div class=" bg bg-yellow p-2 text-center">
+					<div class="icon-cover"><img src="/images/tomcat-42.png" alt="tomcat-42" height="20"></div>
 				</div>
-			</div>	
-			</div>            	
-            <div class="col-lg-3 col-md-6 col-sm-6 col-12 mt-small-5">
-			<div class="hover-effect equal-height-column box-cover ml-forsm">
-				<div class="row">
-					<div class="col-lg-3 col-md-3 col-sm-3 col-3 pl-0 pr-lg-0 pl-small-15 img-mt">
-						<div class=" bg bg-nodegreen p-2 text-center">
-							<div class="icon-cover"><img src="/images/nodejs-42.png" alt="nodejs-42" height="20"></div>
-						</div>
-					</div>
-					<div class="col-lg-9 col-md-9 col-sm-9 col-9 cont-mt cont-pl">					
-							<a href="/labs/vsts/nodejs/" class="text-col-gunpower">	
-								<div class="bg-white text-font">Configure CI/CD for Node application with Azure Pipelines</div>
-							</a>
-					</div>					
-				</div>
-			</div>	
 			</div>
-            <div class="col-lg-3 col-md-6 col-sm-6 col-12 mt-small-5">
-			<div class="hover-effect equal-height-column box-cover ml-forsm">
-				<div class="row">
-					<div class="col-lg-3 col-md-3 col-sm-3 col-3 pl-0 pr-lg-0 pl-small-15 img-mt">
-						<div class=" bg bg-azureblue p-2 text-center">
-							<div class="icon-cover"><img src="/images/7pacetimetracker-42.png" alt="github" height="20"></div>
-						</div>
-					</div>
-					<div class="col-lg-9 col-md-9 col-sm-9 col-9 cont-mt cont-pl">					
-							<a href="/labs/vstsextend/timetracker/" class="text-col-gunpower">	
-								<div class="bg-white text-font">Track Time With 7pace Timetracker</div>
-							</a>
-					</div>					
+			<div class="col-lg-9 col-md-9 col-sm-9 col-9 cont-mt cont-pl">					
+					<a href="/labs/vstsextend/tomcat/" class="text-col-gunpower">	
+						<div class="bg-white text-font">Deploying a Java-based Tomcat application to Azure</div>
+					</a>
+			</div>					
+		</div>
+	</div>	
+	</div>
+	<div class="col-lg-3 col-md-6 col-sm-6 col-12 mt-small-5">
+	<div class="hover-effect equal-height-column box-cover ml-forsm">
+		<div class="row">
+			<div class="col-lg-3 col-md-3 col-sm-3 col-3 pl-0 pr-lg-0 pl-small-15 img-mt">
+				<div class=" bg bg-sel-grey p-2 text-center">
+					<div class="icon-cover"><img src="/images/selenium-42.png" alt="selenium-42" height="20"></div>
 				</div>
-			</div>	
-			</div>			
-     </div>
- </div>
+			</div>
+			<div class="col-lg-9 col-md-9 col-sm-9 col-9 cont-mt cont-pl">					
+					<a href="/labs/vstsextend/Selenium/" class="text-col-gunpower">	
+						<div class="bg-white text-font">Automating Selenium Tests in Azure Pipelines</div>
+					</a>
+			</div>					
+		</div>
+	</div>	
+	</div>
+    <div class="col-lg-3 col-md-6 col-sm-6 col-12 mt-small-5">
+	<div class="hover-effect equal-height-column box-cover ml-forsm">
+		<div class="row">
+			<div class="col-lg-3 col-md-3 col-sm-3 col-3 pl-0 pr-lg-0 pl-small-15 img-mt">
+				<div class=" bg bg-nodegreen p-2 text-center">
+					<div class="icon-cover"><img src="/images/nodejs-42.png" alt="nodejs-42" height="20"></div>
+				</div>
+			</div>
+			<div class="col-lg-9 col-md-9 col-sm-9 col-9 cont-mt cont-pl">					
+					<a href="/labs/vsts/nodejs/" class="text-col-gunpower">	
+						<div class="bg-white text-font">Configure CI/CD for Node application with Azure Pipelines</div>
+					</a>
+			</div>					
+		</div>
+	</div>	
+	</div>
+ </div>	
+ <div class="row equal-height-columns my-1"> 	
+    <div class="col-lg-3 col-md-6 col-sm-6 col-12 mt-small-5">
+	<div class="hover-effect equal-height-column box-cover ml-forsm">
+		<div class="row">
+			<div class="col-lg-3 col-md-3 col-sm-3 col-3 pl-0 pr-lg-0 pl-small-15 img-mt">
+				<div class="bg bg-color-black p-2 text-center">
+					<div class="icon-cover"><img src="/images/ansible.png" alt="ansible" height="20"></div>
+				</div>
+			</div>
+			<div class="col-lg-9 col-md-9 col-sm-9 col-9 cont-mt cont-pl">					
+					<a href="/labs/vstsextend/ansible/" class="text-col-gunpower">	
+						<div class="bg-white text-font">Automating your infrastructure deployments in the Cloud with Ansible and Azure Pipelines</div>
+					</a>
+			</div>					
+		</div>
+	</div>	
+	</div>	
+	<div class="col-lg-3 col-md-6 col-sm-6 col-12 mt-small-5">
+	<div class="hover-effect equal-height-column box-cover ml-forsm">
+		<div class="row">
+			<div class="col-lg-3 col-md-3 col-sm-3 col-3 pl-0 pr-lg-0 pl-small-15 img-mt">
+				<div class=" bg bg-azureblue p-2 text-center">
+					<div class="icon-cover"><img src="/images/sonarqube-42.png" alt="sonarqube-42" height="20"></div>
+				</div>
+			</div>
+			<div class="col-lg-9 col-md-9 col-sm-9 col-9 cont-mt cont-pl">					
+					<a href="/labs/vstsextend/sonarqube/" class="text-col-gunpower">	
+						<div class="bg-white text-font">Managing technical debt with SonarQube and Azure DevOps</div>
+					</a>
+			</div>					
+		</div>
+	</div>	
+	</div>
+	<div class="col-lg-3 col-md-6 col-sm-6 col-12 mt-small-5">
+	<div class="hover-effect equal-height-column box-cover ml-forsm">
+		<div class="row">
+			<div class="col-lg-3 col-md-3 col-sm-3 col-3 pl-0 pr-lg-0 pl-small-15 img-mt">
+				<div class=" bg bg-azureblue p-2 text-center">
+					<div class="icon-cover"><img src="/images/azure-42.png" alt="azure-42" height="20"></div>
+				</div>
+			</div>
+			<div class="col-lg-9 col-md-9 col-sm-9 col-9 cont-mt cont-pl">					
+					<a href="/labs/vstsextend/deploymentgroups/" class="text-col-gunpower">	
+						<div class="bg-white text-font">Deploying to Azure VM using Deployment Groups</div>
+					</a>
+			</div>					
+		</div>
+	</div>	
+	</div>	
+	<div class="col-lg-3 col-md-6 col-sm-6 col-12 mt-small-5">
+	<div class="hover-effect equal-height-column box-cover ml-forsm">
+		<div class="row">
+			<div class="col-lg-3 col-md-3 col-sm-3 col-3 pl-0 pr-lg-0 pl-small-15 img-mt">
+				<div class=" bg bg-crimson p-2 text-center">
+					<div class="icon-cover"><img src="/images/sonarcloud-42.png" alt="sonarcloud-42" height="20"></div>
+				</div>
+			</div>
+			<div class="col-lg-9 col-md-9 col-sm-9 col-9 cont-mt cont-pl">					
+					<a href="/labs/vstsextend/sonarcloud/" class="text-col-gunpower">	
+						<div class="bg-white text-font">Driving continuous quality of your code with SonarCloud</div>
+					</a>
+			</div>					
+		</div>
+	</div>	
+	</div>	
+  </div>
+  <div class="row equal-height-columns my-1"> 
+    <div class="col-lg-3 col-md-6 col-sm-6 col-12 mt-small-5">
+	<div class="hover-effect equal-height-column box-cover ml-forsm">
+		<div class="row">
+			<div class="col-lg-3 col-md-3 col-sm-3 col-3 pl-0 pr-lg-0 pl-small-15 img-mt">
+				<div class=" bg bg-azureblue p-2 text-center">
+					<div class="icon-cover"><img src="/images/aml.png" alt="aml" height="20"></div>
+				</div>
+			</div>
+			<div class="col-lg-9 col-md-9 col-sm-9 col-9 cont-mt cont-pl">					
+					<a href="/labs/vstsextend/aml/" class="text-col-gunpower">	
+						<div class="bg-white text-font">Enabling CI/CD for Machine Learning project with Azure Pipelines</div>
+					</a>
+			</div>					
+		</div>
+	</div>	
+	</div> 
+	<div class="col-lg-3 col-md-6 col-sm-6 col-12 mt-small-5">
+	<div class="hover-effect equal-height-column box-cover ml-forsm">
+		<div class="row">
+			<div class="col-lg-3 col-md-3 col-sm-3 col-3 pl-0 pr-lg-0 pl-small-15 img-mt">
+				<div class=" bg bg-color-2 p-2 text-center">
+					<div class="icon-cover"><img src="/images/eclipse-42.png" alt="eclipse-42" height="20"></div>
+				</div>
+			</div>
+			<div class="col-lg-9 col-md-9 col-sm-9 col-9 cont-mt cont-pl">					
+					<a href="/labs/vstsextend/eclipse/" class="text-col-gunpower">	
+						<div class="bg-white text-font">Integrating Azure Repos and Azure Pipelines with Eclipse</div>
+					</a>
+			</div>					
+		</div>
+	</div>	
+	</div>
+	<div class="col-lg-3 col-md-6 col-sm-6 col-12 mt-small-5">
+	<div class="hover-effect equal-height-column box-cover ml-forsm">
+		<div class="row">
+			<div class="col-lg-3 col-md-3 col-sm-3 col-3 pl-0 pr-lg-0 pl-small-15 img-mt">
+				<div class=" bg bg-yellow2 p-2 text-center">
+					<div class="icon-cover"><img src="/images/AzureFunction.jpg" alt="AzureFunction" height="20"></div>
+				</div>
+			</div>
+			<div class="col-lg-9 col-md-9 col-sm-9 col-9 cont-mt cont-pl">					
+					<a href="/labs/vstsextend/azurefunctions/" class="text-col-gunpower">	
+						<div class="bg-white text-font">Setting up a CI/CD pipeline for Azure Functions</div>
+					</a>
+			</div>					
+		</div>
+	</div>	
+	</div>
+	<div class="col-lg-3 col-md-6 col-sm-6 col-12 mt-small-5">
+	<div class="hover-effect equal-height-column box-cover ml-forsm">
+		<div class="row">
+			<div class="col-lg-3 col-md-3 col-sm-3 col-3 pl-0 pr-lg-0 pl-small-15 img-mt">
+				<div class=" bg bg-color-1 p-2 text-center">
+					<div class="icon-cover"><img src="/images/parasoft-42.png" alt="parasoft-42" height="20"></div>
+				</div>
+			</div>
+			<div class="col-lg-9 col-md-9 col-sm-9 col-9 cont-mt cont-pl">					
+					<a href="/labs/vstsextend/parasoft/" class="text-col-gunpower">	
+						<div class="bg-white text-font">Leverage Virtual Services with Parasoft Virtualize</div>
+					</a>
+			</div>					
+		</div>
+	</div>	
+	</div>	
+  </div>
+  <div class="row equal-height-columns my-1"> 
+    <div class="col-lg-3 col-md-6 col-sm-6 col-12 mt-small-5">
+	<div class="hover-effect equal-height-column box-cover ml-forsm">
+		<div class="row">
+			<div class="col-lg-3 col-md-3 col-sm-3 col-3 pl-0 pr-lg-0 pl-small-15 img-mt">
+				<div class=" bg bg-sel-grey p-2 text-center">
+					<div class="icon-cover"><img src="/images/jenkins-42.png" alt="jenkins-42" height="20"></div>
+				</div>
+			</div>
+			<div class="col-lg-9 col-md-9 col-sm-9 col-9 cont-mt cont-pl">					
+					<a href="/labs/vstsextend/jenkins/" class="text-col-gunpower">	
+						<div class="bg-white text-font">Configuring a CD pipeline for your Jenkins CI</div>
+					</a>
+			</div>					
+		</div>
+	</div>	
+	</div>
+	<div class="col-lg-3 col-md-6 col-sm-6 col-12 mt-small-5">
+	<div class="hover-effect equal-height-column box-cover ml-forsm">
+		<div class="row">
+			<div class="col-lg-3 col-md-3 col-sm-3 col-3 pl-0 pr-lg-0 pl-small-15 img-mt">
+				<div class=" bg bg-slateblue p-2 text-center">
+					<div class="icon-cover"><img src="/images/octopus-42.png" alt="octopus-42" height="20"></div>
+				</div>
+			</div>
+			<div class="col-lg-9 col-md-9 col-sm-9 col-9 cont-mt cont-pl">					
+					<a href="/labs/vstsextend/Octopus/" class="text-col-gunpower">	
+						<div class="bg-white text-font">Automating Deployments from Azure Repos with  Octopus Deploy</div>
+					</a>
+			</div>					
+		</div>
+	</div>	
+	</div>
+	<div class="col-lg-3 col-md-6 col-sm-6 col-12 mt-small-5">
+	<div class="hover-effect equal-height-column box-cover ml-forsm">
+		<div class="row">
+			<div class="col-lg-3 col-md-3 col-sm-3 col-3 pl-0 pr-lg-0 pl-small-15 img-mt">
+				<div class=" bg bg-azureblue p-2 text-center">
+					<div class="icon-cover"><img src="/images/vsts-1-42.png" alt="vsts-1-42" height="20"></div>
+				</div>
+			</div>
+			<div class="col-lg-9 col-md-9 col-sm-9 col-9 cont-mt cont-pl">					
+					<a href="/labs/vstsextend/releasegates/" class="text-col-gunpower">	
+						<div class="bg-white text-font">Controlling Deployments using Release Gates</div>
+					</a>
+			</div>					
+		</div>
+	</div>	
+	</div>
+    <div class="col-lg-3 col-md-6 col-sm-6 col-12 mt-small-5">
+	<div class="hover-effect equal-height-column box-cover ml-forsm">
+		<div class="row">
+			<div class="col-lg-3 col-md-3 col-sm-3 col-3 pl-0 pr-lg-0 pl-small-15 img-mt">
+				<div class=" bg bg-azureblue p-2 text-center">
+					<div class="icon-cover"><img src="/images/7pacetimetracker-42.png" alt="github" height="20"></div>
+				</div>
+			</div>
+			<div class="col-lg-9 col-md-9 col-sm-9 col-9 cont-mt cont-pl">					
+					<a href="/labs/vstsextend/timetracker/" class="text-col-gunpower">	
+						<div class="bg-white text-font">Track Time With 7pace Timetracker</div>
+					</a>
+			</div>					
+		</div>
+	</div>	
+	</div>	
+  </div>
+  <div class="row equal-height-columns my-1">
+    <div class="col-lg-3 col-md-6 col-sm-6 col-12 mt-small-5">
+	<div class="hover-effect equal-height-column box-cover ml-forsm">
+		<div class="row">
+			<div class="col-lg-3 col-md-3 col-sm-3 col-3 pl-0 pr-lg-0 pl-small-15 img-mt">
+				<div class="bg bg-pink p-2 text-center">
+					<div class="icon-cover"><img src="/images/appcenter.png" alt="appcenter" height="20"></div>
+				</div>
+			</div>
+			<div class="col-lg-9 col-md-9 col-sm-9 col-9 cont-mt cont-pl">					
+					<a href="/labs/vstsextend/appcenter/" class="text-col-gunpower align-relative">	
+						<div class="bg-white text-font">Build-Test-Distribute Mobile Apps using App Center
+						<img src="/images/new-tag.png" alt="new-tag" class="align-on-labs">
+						</div>
+					</a>
+			</div>					
+		</div>
+	</div>	
+	</div>
+  </div>  
+</div>  
+  
