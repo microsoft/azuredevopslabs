@@ -565,7 +565,7 @@ description: Learn how you can implement modern DevOps practices with Azure, Azu
 		<div class="row">
 			<div class="col-lg-3 col-md-3 col-sm-3 col-3 pl-0 pr-lg-0 pl-small-15 img-mt">
 				<div class=" bg bg-yellow2 p-2 text-center">
-					<div class="icon-cover"><img src="/images/whitesource-42.png" alt="whitesource-42" height="20"></div>
+					<div class="icon-cover"><img src="/images/whitesourcebolt.png" alt="whitesourcebolt" height="20"></div>
 				</div>
 			</div>
 			<div class="col-lg-9 col-md-9 col-sm-9 col-9 cont-mt cont-pl">					
@@ -647,7 +647,7 @@ description: Learn how you can implement modern DevOps practices with Azure, Azu
 		<div class="row">
 			<div class="col-lg-3 col-md-3 col-sm-3 col-3 pl-0 pr-lg-0 pl-small-15 img-mt">
 				<div class=" bg bg-nodegreen p-2 text-center">
-					<div class="icon-cover"><img src="/images/nodejs-42.png" alt="nodejs-42" height="20"></div>
+					<div class="icon-cover"><img src="/images/nodejs.png" alt="nodejs" height="20"></div>
 				</div>
 			</div>
 			<div class="col-lg-9 col-md-9 col-sm-9 col-9 cont-mt cont-pl">					

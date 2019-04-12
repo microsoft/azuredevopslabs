@@ -424,6 +424,7 @@ iframe .flickity-viewport{
 .banner1{height:282px!important} .banner2{height:282px!important} .banner3{height:282px!important}
 .banner4{height:245px!important}.pl-small-15{padding-left:0px!important}.mt-small-5 {margin-top: 5px!important;}
 .cont-mt{margin-top:3px!important}.ml-forsm{margin-left:0px!important}.mt-30-xs{margin-top:30px!important}
+.align-on-labs {top: -11px!important;left: 191px!important;}
 }
 @media (min-width: 375px) and (max-width: 499px) {
   .bg-image {height:477px!important}.osslist {height:60px!important;}
@@ -455,6 +456,7 @@ iframe .flickity-viewport{
         .pl-small-15{padding-left:0px!important}.mt-small-5 {margin-top: 5px!important;}
         .cont-mt{margin-top:3px!important}
         .ml-forsm{margin-left:0px!important}.mt-30-xs{margin-top:30px!important}
+        .align-on-labs {top: -11px!important;left: 233px!important;}
 }
 @media (min-width: 500px) and (max-width: 767px) {
   .bg-image {height:440px!important}.osslist {height:60px!important;}
@@ -485,11 +487,12 @@ iframe .flickity-viewport{
     top: 19px;
     margin-left: 2px;
   }
-  .cont-mt{margin-top:3px!important}
+  .cont-mt{margin-top:3px!important}.align-on-labs {top: -12px!important;left: 222px!important;}
 }
 @media (min-width: 992px) and (max-width: 1200px) {
   .banner1{background-position: left 13%!important;} .banner2 {background-position: left 13%!important;} .banner3{background-position: left 13%!important;}
-  .osslist {height:120px!important;} }
+  .osslist {height:120px!important;}.align-on-labs{top: -3px!important;left: 116px!important;} 
+}
 @media (min-width: 576px)  {
   .search-icon-css {
     top: 20px;}
@@ -509,6 +512,10 @@ iframe .flickity-viewport{
   @media (min-width: 1024px) and (max-width: 1400px) {    
     .cont-mt{margin-top:3px!important}
     }
+@media (min-width: 1440px){
+    .align-on-labs{top: -10px!important;}
+    }
+    @media (min-width: 425px) and (max-width: 767px){.align-on-labs{left: 269px!important;}   } 
 /* TRANSITION */
 li.osslist:hover {
   transform: translate3d(0,-3px,0);
@@ -768,4 +775,8 @@ transform: translate3d(0,-3px,0);
   top: -3px;
   left: 166px;
   width:38px;
+}
+.col-md-9.cont-mt img {
+  max-width: none!important;
+  max-height: none!important;
 }

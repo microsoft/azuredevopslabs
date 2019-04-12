@@ -385,7 +385,7 @@ description: Learn how you can remove barriers between teams, encourage collabor
                                         GB and we highly recommend that you use a download manager to download the VHD
                                         file. The <strong><a href="./devopsvmdownload/">Accessing the VM</a></strong>
                                         page has detailed instructions on downloading the VM, including links to both
-                                        current and the previous versions of TFS labs.
+                                        current and the previous versions of Azure DevOps Server (previously named Visual Studio Team Foundation Server) labs.
                                     </li>
                                     <li>
                                         <strong>Try it on Microsoft Hands-on Labs</strong> - If you are evaluating or
@@ -398,7 +398,7 @@ description: Learn how you can remove barriers between teams, encourage collabor
                                         <strong>Run it on Azure</strong> - Though the VM is currently not supported to
                                         run on Azure, you can simply upload the VHD to Azure as a specialized VHD and
                                         create a VM from it. Thanks to <strong>Pieter Gheysens</strong> who has written
-                                        a PowerShell script to create VM instances based on the ALM VM. His <a href="https://intovsts.net/2018/01/03/generating-azure-vms-from-a-specialized-vhd-file/"
+                                        a PowerShell script to create VM instances based on the DevOps VM. His <a href="https://intovsts.net/2018/01/03/generating-azure-vms-from-a-specialized-vhd-file/"
                                             target="_blank">blog</a> has more details.
                                         If you want to and customize and upload the VHD yourself, please see this
                                         article for step-by-step instructions - <a href="https://docs.microsoft.com/en-us/azure/virtual-machines/windows/create-vm-specialized"
