@@ -21,12 +21,12 @@ In this lab, you will learn how to use Azure DevOps to manage your project's tes
 - This lab requires you to complete tasks 1 and 2 from the <a href="../prereq/">prerequisite</a>  instructions.
 
 <a name="Exercise1"></a>
-## Exercise 1: Managing Test Plans, Suites, and Cases ##
+## Exercise 1: Managing Test Plans, Suites and Cases ##
 
-In this exercise, you will learn how to create and manage test plans, test suites, and test cases.
+In this exercise, you will learn how to create and manage test plans, test suites and test cases.
 
 <a name="Ex1Task1"></a>
-### Task 1: Understanding Test Plans, Suites, and Cases ###
+### Task 1: Understanding Test Plans, Suites and Cases ###
 
 1. Navigate to your team project on Azure DevOps.
 
@@ -70,7 +70,7 @@ In this exercise, you will learn how to create and manage test plans, test suite
 
     ![](images/009.png)
 
-1. The parent feature is now associated with the suite that tests it, and anyone can navigate between them to view their relationship relative to the other work items involved.
+1. The parent feature is now associated with the suite that tests it and anyone can navigate between them to view their relationship relative to the other work items involved.
 
     ![](images/010.png)
 
@@ -202,14 +202,14 @@ In this exercise, you will learn how to create and manage test plans, test suite
 
     ![](images/040.png)
 
-1. Let's say you wanted to create a set of test suites based on bugs related to shipping in the project. Change the **Work Item Type** to **Microsoft.BugCategory** to search for bugs and click **Run query**. You now have a list of bugs that you can select to create suites from, if you choose.
+1. Let's say you wanted to create a test suite out of test cases related to shipping in the project. Change the **Work Item Type** to **Microsoft.TestCaseCategory** to search for test cases and click **Run query**. You now have a list of test cases that you can select to create suites from, if you choose.
 
-    ![](images/041.png)
+    ![](images/041-2.png)
 
 1. Press **Esc** to close the dialog.
 
 <a name="Exercise2"></a>
-## Exercise 2: Authoring, Running, and Analyzing Manual Tests ##
+## Exercise 2: Authoring, Running and Analyzing Manual Tests ##
 
 In this exercise, you will learn how to create a manual test plan and populate it with steps. The plan can later be run to confirm the expected behavior of your software. In this lab, we're going to focus on creating a new manual test case and running it.
 
@@ -218,9 +218,9 @@ In this exercise, you will learn how to create a manual test plan and populate i
 
 1. Install **Google Chrome** from [http://google.com/chrome](http://google.com/chrome). The rest of this exercise will use Chrome as its browser. If you're already using Chrome, just open a new instance for the next set of steps.
 
-1. Navigate to the **Visual Studio Marketplace** at [http://marketplace.visualstudio.com](http://marketplace.visualstudio.com/).
+1. Navigate to the **Azure DevOps Marketplace** at [http://marketplace.visualstudio.com](http://marketplace.visualstudio.com/).
 
-1. Select the **Visual Studio Team Services** tab. Search for "**feedback**" and click the **Test & Feedback** extension.
+1. Select the **Azure DevOps** tab. Search for "**feedback**" and click the **Test & Feedback** extension.
 
     ![](images/042.png)
 
