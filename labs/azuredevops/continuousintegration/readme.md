@@ -13,7 +13,7 @@ redirect_from: "/labs/vsts/continuousintegration/index.htm"
 
 ## Overview ##
 
-In this lab, you will learn how to configure continuous integration (CI) and continuous deployment (CD) for your applications using Build and Release in Azure Pipelines. This scriptable CI/CD system is both web-based and cross-platform, while also providing a modern interface for visualizing sophisticated workflows. Although we won't demonstrate all of the cross-platform possibilities in this lab, it is important to point out that you can also build for iOS, Android, Java (using Ant, Maven, or Gradle), and Linux.
+In this lab, you will learn how to configure continuous integration (CI) and continuous deployment (CD) for your applications using Build and Release in Azure Pipelines. This scriptable CI/CD system is both web-based and cross-platform, while also providing a modern interface for visualizing sophisticated workflows. Although we won't demonstrate all of the cross-platform possibilities in this lab, it is important to point out that you can also build for iOS, Android, Java (using Ant, Maven, or Gradle) and Linux.
 
 <a name="Prerequisites"></a>
 ### Prerequisites ###
@@ -36,9 +36,9 @@ In this lab, you will learn how to configure continuous integration (CI) and con
 
     ![](images/001.png)
 
-1. The default option for build pipelines involves using YAML to define the process. If you are interested in that, please check out that lab. For this lab, click **use the visual designer**.
+1. The default option for build pipelines involves using YAML to define the process. If you are interested in that, please check out that lab. For this lab, click **use the classic editor**.
 
-    ![](images/002.png)
+    ![](images/002-1.png)
 
 1. The first thing you'll need to do is to configure the source repository. Every major platform is available, but the default options are all we need here. This build will use the **master** branch of the **PartsUnlimited** repo. Leave the defaults and click **Continue**.
 
@@ -56,7 +56,7 @@ In this lab, you will learn how to configure continuous integration (CI) and con
 
     ![](images/006.png)
 
-1. Select the **Triggers** tab. These triggers enable you to automatically invoke builds on a schedule, when another build completes, or when changes are made to the source. Check **Enable continuous integration** so that this build will get invoked whenever source changes are committed.
+1. Select the **Triggers** tab. These triggers enable you to automatically invoke builds on a schedule, when another build completes or when changes are made to the source. Check **Enable continuous integration** so that this build will get invoked whenever source changes are committed.
 
     ![](images/007.png)
 
@@ -103,7 +103,7 @@ In this lab, you will learn how to configure continuous integration (CI) and con
 
     ![](images/017.png)
 
-1. Select the **Tests** tab to review test performance for this build. Note that you also have easy access to the pipeline editor, the ability to queue a new build, and download the artifacts of this build.
+1. Select the **Tests** tab to review test performance for this build. Note that you also have easy access to the pipeline editor, the ability to queue a new build and download the artifacts of this build.
 
     ![](images/018.png)
 
