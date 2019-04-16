@@ -13,42 +13,50 @@ redirect_from: "/labs/vsts/packagemanagement/index.htm"
 
 ## Overview ##
 
-Azure Artifacts is an extension that makes it easy to discover, install, and publish NuGet, npm, and Maven packages in Azure DevOps. It's deeply integrated with other hubs like Build so that package management can become a seamless part of your existing workflows.
+**Azure Artifacts** is an extension that makes it easy to discover, install and publish NuGet, npm and Maven packages in Azure DevOps. It's deeply integrated with other hubs like Build so that package management can become a seamless part of your existing workflows.
 
 <a name="Prerequisites"></a>
 ### Prerequisites ###
 
-- Visual Studio 2017
+- Visual Studio 2017 or later
 
 - This lab requires you to complete tasks 1 and 2 from the <a href="../prereq/">prerequisite</a>  instructions
 
 <a name="Exercise1"></a>
-## Exercise 1: Working with the package management service ##
+## Exercise 1: Working with the Azure Artifacts ##
+
+**Azure Artifacts** is an extension to Azure DevOps Services and Azure DevOps Server.  It comes pre-installed in Azure DevOps Services, Azure DevOps Server 2019 and Team Foundation Server (TFS) 2017 and 2018.
 
 <a name="Ex1Task1"></a>
-### Task 1: Configuring the service ###
+### Task 1: Assign Artifacts in Azure DevOps Services ###
 
-1. Navigate to your team project on Azure DevOps.
+Each organization gets five (5) free licenses. You will need to assign your licenses by following the instructions below:
 
-1. Package Management is provided as a marketplace extension. From the **Marketplace** navigation dropdown, select **Browse Marketplace**.
+1. Go to your organization, select **Organization settings** in the bottom left of the UX.
+
+1. Select **Users**. Select the user or users you wish to assign the Azure Artifacts extension to, and choose **Manage extensions**. And choose the **Azure Artifacts (Package Management)** extension.
+
+   > If you have a **Visual Studio Enterprise** license, you already have access to Azure Artifacts and don't need to be assigned a license, just ensure that you've been assigned the "Visual Studio Enterprise" access level.
+
+1. If you don't have any of the licenses mentioned above you can start a 30 day free trial. From the **Marketplace** navigation dropdown, select **Browse Marketplace**.
 
     ![](images/000.png)
 
-1. Search for **"Package Management"**.
+1. Search for **"Azure Artifacts"**.
 
-    ![](images/001.png)
+    ![](images/001-new.png)
 
-1. Select the **Package Management** option.
+1. Select the **Azure Artifacts** option.
 
-    ![](images/002.png)
+    ![](images/002-new.png)
 
 1. Click **Get**.
 
-    ![](images/003.png)
+    ![](images/003-new.png)
 
-1. Select the account to install **Package Management** into. This should be the account that contains your Parts Unlimited project. Then select the licensing option that best fits your circumstances.
+1. Select the account to install **Azure Artifacts** into. This should be the account that contains your Parts Unlimited project. Then select **Start 30 day free trial**.
 
-    ![](images/004.png)
+    ![](images/004-new.png)
 
 1. Click **Proceed to organization**.
 
@@ -61,7 +69,7 @@ Azure Artifacts is an extension that makes it easy to discover, install, and pub
 <a name="Ex1Task2"></a>
 ### Task 2: Creating and connecting to a feed ###
 
-1. Navigate to the **Artifacts** hub. This is a new option added by the Package Management extension.
+1. Navigate to the **Artifacts** hub.
 
     ![](images/007.png)
 
@@ -98,7 +106,7 @@ Azure Artifacts is an extension that makes it easy to discover, install, and pub
 
 1. From the main menu of **Visual Studio**, select **File \| New \| Project**. We will now create a shared assembly that will be published as a NuGet package so that other teams can integrate it and stay up to date without having to work directly with the project source.
 
-1. From the **Visual C#** section, select the **Class Library** template and set the **Name** to **"PartsUnlimited.Shared"**. Click **OK** to create the project.
+1. From the **Visual C#** section, select the **Class Library (.Net Framework)** template and set the **Name** to **"PartsUnlimited.Shared"**. Click **OK** to create the project.
 
     ![](images/014.png)
 
