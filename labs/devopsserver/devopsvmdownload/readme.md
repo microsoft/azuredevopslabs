@@ -30,7 +30,7 @@ The 2019 (Spring Update) includes Microsoft Visual Studio DevOps VM and the acco
 
 ## Downloading the VM
 
-The size of the download is about 18 GB. It is recommended that you use a download manager  like [**Free download manager**](http://www.freedownloadmanager.org/){:target="_blank"} or [**Download Accelerator Plus**](http://www.speedbit.com/dap/){:target="_blank"}.
+The size of the download is about 30 GB. It is recommended that you use a download manager  like [**Free download manager**](http://www.freedownloadmanager.org/){:target="_blank"} or [**Download Accelerator Plus**](http://www.speedbit.com/dap/){:target="_blank"}.
 
 These utility provide:
 
@@ -41,7 +41,7 @@ These utility provide:
 Using **Free download manager**
 
 - Download and install Free download manager if you currently do not have one installed 
-- Open and select all the <a href="../media/almvm2017wu2links.txt" target="_blank">download URLs</a> from the text file. Press ***CTRL+C*** to copy the selected URLs to clipboard.
+- Open and select all the <a href="./devopsvm2019links.txt" target="_blank">download URLs</a> from the text file. Press ***CTRL+C*** to copy the selected URLs to clipboard.
 - Select Menu - ***Paste URLs from clipboard***      
 - When the download is complete, double-click the .exe file to self-extract the RAR files to a folder       
 - Read the "Working with the …" document to start using the VM
