@@ -391,11 +391,11 @@ description: Learn how you can implement modern DevOps practices with Azure, Azu
  <div class="col-sm-12 mar-bot">
                                 <!-- <h3 id="step-by-step-tutorials">Step-by-Step Tutorials</h3>  -->
                                 <div class="row equal-height-columns">
-                                    <div class="col-sm-3 col-xs-12 p-l-r-override">
+                                    <div class="col-lg-3 col-md-6 col-sm-6 col-12 p-l-r-override">
                                         <div class="bg-color-white equal-height-column">
                                             <ul class="p-l-5px">
-                                            <li class="osslist"> <img src="/images/azurekeyvault.png" height="42" class="icon-bor-p-m" /><a
-                                                        href="/labs/vstsextend/azurekeyvault/" class="fon-size-13 align-relative">
+                                            <li class="osslist align-relative"> <img src="/images/azurekeyvault.png" height="42" class="icon-bor-p-m" /><a
+                                                        href="/labs/vstsextend/azurekeyvault/" class="fon-size-13">
                                                         Using secrets from Azure Key Vault in a pipeline <img src="/images/new-tag.png" alt="new-tag" class="align-on-labs"/></a></li>
                                                 <li class="osslist"> <img src="/images/launchdarkly.png" height="42" class="icon-bor-p-m" /><a
                                                         href="/labs/vstsextend/launchdarkly/" class="fon-size-13">
@@ -415,18 +415,18 @@ description: Learn how you can implement modern DevOps practices with Azure, Azu
                                                 <li class="osslist"> <img src="/images/jenkins-42.png" height="42"
                                                         class="icon-bor-p-m" /> <a href="/labs/vstsextend/Jenkins/"
                                                         class="fon-size-13"> Configuring a CD pipeline for your Jenkins CI</a> </li>
-                                                  <li class="osslist"> <img src="/images/appcenter.png" height="42"
+                                                  <li class="osslist align-relative"> <img src="/images/appcenter.png" height="42"
                                                         class="icon-bor-p-m" /> <a href="/labs/vstsextend/appcenter/"
-                                                        class="fon-size-13 align-relative"> Build-Test-Distribute Mobile Apps using App Center <img src="/images/new-tag.png" alt="new-tag" class="align-on-labs"/></a></li>
+                                                        class="fon-size-13"> Build-Test-Distribute Mobile Apps using App Center <img src="/images/new-tag.png" alt="new-tag" class="align-on-labs"/></a></li>
                                             </ul>
                                         </div>
                                     </div>
-                                    <div class="col-sm-3 col-xs-12 p-l-r-override">
+                                    <div class="col-lg-3 col-md-6 col-sm-6 col-12 p-l-r-override">
                                         <div class="bg-color-white equal-height-column">
                                             <ul class="p-l-5px">
-                                                 <li class="osslist"><img src="/images/teams.png" height="42"
+                                                 <li class="osslist align-relative"><img src="/images/teams.png" height="42"
                                                         class="icon-bor-p-m" />
-                                                    <a href="/labs/vstsextend/teams/" class="fon-size-13 align-relative">Microsoft Teams with Azure DevOps Services <img src="/images/new-tag.png" alt="new-tag" class="align-on-labs"/></a>
+                                                    <a href="/labs/vstsextend/teams/" class="fon-size-13">Microsoft Teams with Azure DevOps Services <img src="/images/new-tag.png" alt="new-tag" class="align-on-labs"/></a>
                                                 </li>
                                                 <li class="osslist"> <img src="/images/docker-42.png" height="42" class="icon-bor-p-m" /><a
                                                         href="/labs/vstsextend/docker/" class="fon-size-13"> Deploying a Docker based web application to Azure App Service</a></li>
@@ -450,12 +450,12 @@ description: Learn how you can implement modern DevOps practices with Azure, Azu
                                             </ul>
                                         </div>
                                     </div>
-                                    <div class="col-sm-3 col-xs-12 p-l-r-override">
+                                    <div class="col-lg-3 col-md-6 col-sm-6 col-12 p-l-r-override">
                                         <div class="bg-color-white equal-height-column">
                                             <ul class="p-l-5px">
-                                                 <li class="osslist"> <img src="/images/github-42.png" height="42"
+                                                 <li class="osslist align-relative"> <img src="/images/github-42.png" height="42"
                                                         class="icon-bor-p-m" /><a href="/labs/vstsextend/github-azurepipelines/"
-                                                        class="fon-size-13 align-relative"> GitHub Integration with Azure Pipelines <img src="/images/new-tag.png" alt="new-tag" class="align-on-labs"/></a></li>
+                                                        class="fon-size-13"> GitHub Integration with Azure Pipelines <img src="/images/new-tag.png" alt="new-tag" class="align-on-labs"/></a></li>
                                                          <li class="osslist"> <img src="/images/aspnetmodernize.png" height="42"
                                                         class="icon-bor-p-m" /><a href="/labs/vstsextend/aspnetmodernize/"
                                                         class="fon-size-13"> Deploy existing .NET apps as Windows containers (Modernizing .NET apps)</a></li>
@@ -477,12 +477,12 @@ description: Learn how you can implement modern DevOps practices with Azure, Azu
                                             </ul>
                                         </div>
                                     </div>
-                                    <div class="col-sm-3 col-xs-12 p-l-r-override">
+                                    <div class="col-lg-3 col-md-6 col-sm-6 col-12 p-l-r-override">
                                         <div class="bg-color-white equal-height-column">
                                             <ul class="p-l-5px">
-                                                <li class="osslist"> <img src="/images/github-42.png" height="42"
+                                                <li class="osslist align-relative"> <img src="/images/github-42.png" height="42"
                                                         class="icon-bor-p-m" /><a href="/labs/vstsextend/github-azureboards/"
-                                                        class="fon-size-13 align-relative"> GitHub Integration with Azure Boards <img src="/images/new-tag.png" alt="new-tag" class="align-on-labs"/></a></li>
+                                                        class="fon-size-13"> GitHub Integration with Azure Boards <img src="/images/new-tag.png" alt="new-tag" class="align-on-labs"/></a></li>
                                                 <li class="osslist"> <img src="/images/python-42.png" height="42" class="icon-bor-p-m" /><a
                                                         href="/labs/vstsextend/python/" class="fon-size-13"> Deploying a CD pipeline for a Django-based Python app </a></li>
                                                 <li class="osslist"> <img src="/images/php.png" height="42" class="icon-bor-p-m" /><a
