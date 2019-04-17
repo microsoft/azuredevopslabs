@@ -391,7 +391,7 @@ description: Learn how you can remove barriers between teams, encourage collabor
                                         file. The <strong><a href="./devopsvmdownload/">Accessing the VM</a></strong>
                                         page has detailed instructions on downloading the VM, including links to both
                                         current and the previous versions of Azure DevOps Server (previously named Visual Studio Team Foundation Server) labs.
-                                    </li><!--
+                                    </li>
                                     <li>
                                         <strong>Try it on Microsoft Hands-on Labs</strong> - If you are evaluating or
                                         want to try the labs without the hassle of downloading or setting up the
@@ -399,7 +399,7 @@ description: Learn how you can remove barriers between teams, encourage collabor
                                                 Hands-on-Labs</strong></a> center. You only need a browser. There is
                                         absolutely no download or setup required!
                                     </li>
-                                    <li>
+                                    <li><!--
                                         <strong>Run it on Azure</strong> - Though the VM is currently not supported to
                                         run on Azure, you can simply upload the VHD to Azure as a specialized VHD and
                                         create a VM from it. Thanks to <strong>Pieter Gheysens</strong> who has written
