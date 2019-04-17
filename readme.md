@@ -144,7 +144,7 @@ description: Learn how you can implement modern DevOps practices with Azure, Azu
 					</div>
 					<div class="col-lg-9 col-md-9 col-sm-9 col-9 cont-mt cont-pl">					
 							<a href="/labs/azuredevops/pullrequests/" class="text-col-gunpower">	
-								<div class="bg-white text-font">Working with Pull Requests in Visual Studio Code and Azure DevOps</div>
+								<div class="bg-white text-font">Working with Pull Requests</div>
 							</a>
 					</div>					
 				</div>

@@ -410,7 +410,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#047ad8', end
   /* desktop, 4 cells in group */
   .carousel-cell { width: 18%; }
   .text-font {
-    padding: 3px 2px 3px 7px!important;    
+    padding: 0px 2px 3px 7px!important;    
     /*margin-left: 0px!important; */
 } .pr-lg-0{padding-right:0px!important}
 }
@@ -609,7 +609,7 @@ height:auto;
 }
 /* New UI changes related css*/
 .box-cover{height:70px;border:1px solid hsla(0, 0%, 89%, 1);} 
-.text-font{padding: 3px 2px 3px 1px; line-height: 1.4; font-size: 13px;} 
+.text-font{padding: 0px 2px 3px 1px;  font-size: 13px;} 
 .icon-cover{
 background-color:#fff;display:inline-block;width:30px;height:30px;border-radius:50%;
 /*padding:12px;*/
