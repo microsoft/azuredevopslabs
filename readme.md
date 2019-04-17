@@ -301,12 +301,13 @@ description: Learn how you can implement modern DevOps practices with Azure, Azu
 			</div>	     
             <div class="col-lg-3 col-md-6 col-sm-6 col-12 mt-small-5">			
      </div>
+		 <br />
       <div class="row" style="margin-left: 10px;margin-top: 10px;">
       <p>For the on-premises platform, Azure DevOps Server (previously named Visual Studio Team Foundation Server), see  <a href="/labs/devopsserver/" class="btn btn-sm btn-primary">Azure DevOps Server 2019 Labs</a></p>
       </div>
      </div>
 
-<hr height="1" />  
+<hr height="1" style="width: 75%;" />  
   <div class="container px-3 pb-3 pt-1 rounded">
   <div class="row">
   <div class="col-md-12">
