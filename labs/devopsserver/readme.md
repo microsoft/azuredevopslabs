@@ -398,8 +398,8 @@ description: Learn how you can remove barriers between teams, encourage collabor
                                         virtual machine, you can access them from the <a href="./handsonlabs/"><strong>Microsoft
                                                 Hands-on-Labs</strong></a> center. You only need a browser. There is
                                         absolutely no download or setup required!
-                                    </li>
-                                    <li><!--
+                                    </li><!--
+                                    <li>
                                         <strong>Run it on Azure</strong> - Though the VM is currently not supported to
                                         run on Azure, you can simply upload the VHD to Azure as a specialized VHD and
                                         create a VM from it. Thanks to <strong>Pieter Gheysens</strong> who has written
