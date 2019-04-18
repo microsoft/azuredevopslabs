@@ -233,7 +233,7 @@ Git's use of the **Branches and Merges** feature works through pull requests, so
 
     ![](images/028.png)
 
-1. Press **Ctrl|Shift+P** to open the **Command Palette**.
+1. Press **Ctrl\|Shift+P** to open the **Command Palette**.
 
 1. Start typing **"Team"** and select **Team: View History** when it becomes available. This is a feature of the Azure Repos extension that makes it easy to jump right to the history of this file in a new browser tab.
 

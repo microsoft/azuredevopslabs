@@ -95,7 +95,7 @@ Alternatively, you can download the virtual machine from [here](../devopsvmdownl
 
     ![](images/013.png)
 
-1. Navigate to **Boards | Plans**.
+1. Navigate to **Boards \| Plans**.
 
     ![](images/014.png)
 
@@ -197,7 +197,7 @@ Alternatively, you can download the virtual machine from [here](../devopsvmdownl
 <a name="Ex1Task5"></a>
 ### Task 5: Making delivery decisions ###
 
-1. Navigate to **Boards | Plans**.
+1. Navigate to **Boards \| Plans**.
 
     ![](images/038.png)
 

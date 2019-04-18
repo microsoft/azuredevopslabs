@@ -63,7 +63,7 @@ In this exercise, you will learn how to create and manage test plans, test suite
 
     ![](images/006.png)
 
-1. However, it's not yet associated with the feature it's designed to test, which we can link now. Click **Add link | Existing item**.
+1. However, it's not yet associated with the feature it's designed to test, which we can link now. Click **Add link \| Existing item**.
 
     ![](images/007.png)
 
@@ -191,7 +191,7 @@ In this exercise, you will learn how to create and manage test plans, test suite
 
     ![](images/036.png)
 
-1. While you can create test cases one at a time, it's sometimes easier to use a grid layout to quickly add many test cases. In the test cases panel, select **New | New test case using grid**.
+1. While you can create test cases one at a time, it's sometimes easier to use a grid layout to quickly add many test cases. In the test cases panel, select **New \| New test case using grid**.
 
     ![](images/037.png)
 
@@ -276,7 +276,7 @@ In this exercise, you will learn how to create a manual test plan and populate i
 
     ![](images/052.png)
 
-1. From the **Tests** tab, select **New | New test case** to create a new test case.
+1. From the **Tests** tab, select **New \| New test case** to create a new test case.
 
     ![](images/053.png)
 

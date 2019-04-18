@@ -78,7 +78,7 @@ You also need an [Azure account](https://azure.microsoft.com/) ([Get a $25 month
 
     ![](images/006.png)
 
-1. Select the **resources | Website** node and note how the associated JSON is highlighted in the editor.
+1. Select the **resources \| Website** node and note how the associated JSON is highlighted in the editor.
 
     ![](images/007.png)
 
@@ -113,7 +113,7 @@ You also need an [Azure account](https://azure.microsoft.com/) ([Get a $25 month
 <a name="Ex1Task3"></a>
 ### Task 3: Deploying the Resource Group project to Azure ###
 
-1. From **Solution Explorer**, right-click the **AzureResourceGroup1** project node and select **Deploy | New**. When you deploy an Azure Resource Group project, you deploy it to an Azure resource group. The resource group is a logical grouping of resources that share a common lifecycle.
+1. From **Solution Explorer**, right-click the **AzureResourceGroup1** project node and select **Deploy \| New**. When you deploy an Azure Resource Group project, you deploy it to an Azure resource group. The resource group is a logical grouping of resources that share a common lifecycle.
 
 1. Select **Add an account** and log in using the Microsoft account associated with your Azure subscription.
 
@@ -172,7 +172,7 @@ You also need an [Azure account](https://azure.microsoft.com/) ([Get a $25 month
 
 1. At this point, you have deployed the infrastructure for your app, but there is no actual code deployed with the project. This task walks through the process of deploying a web app and SQL database tables. Note that if you were deploying a virtual machine instead of a web app, you would instead want to run some code on the machine as part of deployment. The processes for deploying code for a web app or for setting up a virtual machine are very similar.
 
-1. In **Solution Explorer**, right-click the solution node and select **Add | New Project**.
+1. In **Solution Explorer**, right-click the solution node and select **Add \| New Project**.
 
     ![](images/027.png)
 
@@ -212,7 +212,7 @@ You also need an [Azure account](https://azure.microsoft.com/) ([Get a $25 month
 
     ![](images/035.png)
 
-1. Now you can deploy the full app. In **Solution Explorer**, right-click the resource group project node and select **Deploy | AzureResourceGroup1**.
+1. Now you can deploy the full app. In **Solution Explorer**, right-click the resource group project node and select **Deploy \| AzureResourceGroup1**.
 
     ![](images/036.png)
 

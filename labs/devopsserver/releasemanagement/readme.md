@@ -309,11 +309,11 @@ The release management tools are incredibly flexible. Not only can you automate 
 
     ![](images/061.png)
 
-1. Select **Add | Query Work Items**.
+1. Select **Add \| Query Work Items**.
 
     ![](images/062.png)
 
-1. Select the **Shared Queries | Critical Bugs** query. The release will be held up until this query returns zero results.
+1. Select the **Shared Queries \| Critical Bugs** query. The release will be held up until this query returns zero results.
 
     ![](images/063.png)
 
@@ -360,11 +360,11 @@ The release management tools are incredibly flexible. Not only can you automate 
 
     ![](images/072.png)
 
-1. Navigate to **Boards | Queries** in a new tab.
+1. Navigate to **Boards \| Queries** in a new tab.
 
     ![](images/073.png)
 
-1. From the **All** tab, select **Shared Queries | Critical Bugs**.
+1. From the **All** tab, select **Shared Queries \| Critical Bugs**.
 
     ![](images/074.png)
 

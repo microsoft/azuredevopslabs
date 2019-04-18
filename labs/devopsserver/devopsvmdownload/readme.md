@@ -49,7 +49,7 @@ Using **Free download manager**
   <img src="images/fdm.png" />
 
 
-   >There are quite a number of important instructions on how to use the VM including activating the VM, taking snapshots/check points, etc., documented. We highly recommend that you read through the [Working with the Visual Studio 2017 (Winter Update) ALM Virtual Machine](../started/) document prior to using the VM, even if you may have used the earlier version of the VM.
+   >There are quite a number of important instructions on how to use the VM including activating the VM, taking snapshots/check points, etc., documented. We highly recommend that you read through the [Working with the Microsoft Visual Studio DevOps (Winter Update) Virtual Machine](../started/) document prior to using the VM, even if you may have used the earlier version of the VM.
 
    >Note that The VM has about 15 GB of free hard disk space. Should you want to increase the size of the disk, you will need to do so before creating snapshots/check points. You can refer this article on [TechNet](https://technet.microsoft.com/en-us/library/dn282284(v=ws.11).aspx){:target="_blank"} for instructions on expanding the virtual hard disk.
 

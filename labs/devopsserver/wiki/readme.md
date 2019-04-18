@@ -57,7 +57,7 @@ Alternatively, you can download the virtual machine from [here](../devopsvmdownl
 
     ![](images/005.png)
 
-1. By default, all members of the **Contributors** group can edit README files and wiki pages. **Stakeholders** can read files and revisions, but cannot edit anything. Select **More | Wiki security** to review permissions.
+1. By default, all members of the **Contributors** group can edit README files and wiki pages. **Stakeholders** can read files and revisions, but cannot edit anything. Select **More \| Wiki security** to review permissions.
 
     ![](images/006.png)
 
@@ -213,7 +213,7 @@ Alternatively, you can download the virtual machine from [here](../devopsvmdownl
 
 1. You can edit the repo however you like, whether it's using Visual Studio or any other Git-compatible tools. You can also continue to edit the wiki in the browser, which we will do in this lab. Return to the tab open to the wiki repo.
 
-1. From the dropdown for the **Docs** repo root, select **New | Folder**.
+1. From the dropdown for the **Docs** repo root, select **New \| Folder**.
 
     ![](images/043.png)
 
@@ -237,7 +237,7 @@ Alternatively, you can download the virtual machine from [here](../devopsvmdownl
 
 1. Return to the tab open to the wiki repo.
 
-1. From the **Upcoming-events** dropdown, select **New | File**.
+1. From the **Upcoming-events** dropdown, select **New \| File**.
 
     ![](images/048.png)
 

@@ -48,7 +48,7 @@ In practical terms, white box unit test development includes an iterative workfl
 
 1. Scroll down and locate the **Handle** method that takes a **GameDeletedEvent** parameter (around line 31). When a Game is deleted, this method is responsible for updating the stats of the affected players. As with most real-world code, this code interacts with other objects and layers. Our goal with this demonstration is to enable IntelliTest reach 100% code coverage on the **Handle** method.
 
-1. **Right-click** somewhere within the **Handle** method and then select **IntelliTest | Run IntelliTest**.
+1. **Right-click** somewhere within the **Handle** method and then select **IntelliTest \| Run IntelliTest**.
 
     ![](images/002.png)
 
@@ -117,7 +117,7 @@ In practical terms, white box unit test development includes an iterative workfl
     ```c#
     [PexUseType(typeof(FakeQueryDataStore))]
     ```
-1. Right-click within the **Handle** method and select **IntelliTest | Run IntelliTest**.
+1. Right-click within the **Handle** method and select **IntelliTest \| Run IntelliTest**.
 
 <a name="Ex1Task4"></a>
 ### Task 4: Modifying the Parameterized Unit Test to increase code coverage ###

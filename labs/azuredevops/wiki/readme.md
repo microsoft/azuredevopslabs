@@ -49,7 +49,7 @@ In this lab, you'll learn about the wiki feature of Azure DevOps that enables ea
 
     ![](images/004.png)
 
-1. By default, all members of the **Contributors** group can edit README files and wiki pages. **Stakeholders** can read files and revisions, but cannot edit anything. Select **More | Wiki security** to review permissions.
+1. By default, all members of the **Contributors** group can edit README files and wiki pages. **Stakeholders** can read files and revisions, but cannot edit anything. Select **More \| Wiki security** to review permissions.
 
     ![](images/005.png)
 
@@ -201,7 +201,7 @@ In this lab, you'll learn about the wiki feature of Azure DevOps that enables ea
 
 1. You can edit the repo however you like, whether it's using Visual Studio or any other Git-compatible tools. You can also continue to edit the wiki in the browser, which we will do in this lab. Return to the tab open to the wiki repo.
 
-1. From the dropdown for the **Docs** repo root, select **New | Folder**.
+1. From the dropdown for the **Docs** repo root, select **New \| Folder**.
 
     ![](images/041.png)
 
@@ -225,7 +225,7 @@ In this lab, you'll learn about the wiki feature of Azure DevOps that enables ea
 
 1. Return to the tab open to the wiki repo.
 
-1. From the **Upcoming-events** dropdown, select **New | File**.
+1. From the **Upcoming-events** dropdown, select **New \| File**.
 
     ![](images/046.png)
 

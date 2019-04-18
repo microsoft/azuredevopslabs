@@ -143,7 +143,7 @@ Alternatively, you can download the virtual machine from [here](../devopsvmdownl
 
     ![](images/024.png)
 
-1. The source change made earlier will be shown here. Enter a commit message of **"Updated to v2.0"** and select **Commit All | Commit All and Sync**. This will commit your change and push it to the server.
+1. The source change made earlier will be shown here. Enter a commit message of **"Updated to v2.0"** and select **Commit All \| Commit All and Sync**. This will commit your change and push it to the server.
 
     ![](images/025.png)
 
@@ -190,7 +190,7 @@ Alternatively, you can download the virtual machine from [here](../devopsvmdownl
 
     ![](images/035.png)
 
-1. Enter a review summary and select **Submit review | Comment only**.
+1. Enter a review summary and select **Submit review \| Comment only**.
 
     ![](images/036.png)
 

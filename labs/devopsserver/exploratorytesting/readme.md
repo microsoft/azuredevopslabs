@@ -89,7 +89,7 @@ In this set of hands-on labs, you will take part in a number of scenarios that i
 
     ![](images/009.png)
 
-1. Click the **Exploratory Testing** icon button and click the **Capture screenshot | Browser** button.
+1. Click the **Exploratory Testing** icon button and click the **Capture screenshot \| Browser** button.
 
     ![](images/010.png)
 
@@ -243,7 +243,7 @@ In this exercise, you will learn about managing the feedback lifecycle in Azure 
 
     ![](images/041.png)
 
-1. Attach a screenshot by clicking the **Screenshot | Browser** button.
+1. Attach a screenshot by clicking the **Screenshot \| Browser** button.
 
     ![](images/042.png)
 
@@ -268,7 +268,7 @@ In this exercise, you will learn about managing the feedback lifecycle in Azure 
 
 1. Return to the **Deniz** account by minimizing the RDP window.
 
-1. Navigate to **Overview | Dashboards** from the navigation menu.
+1. Navigate to **Overview \| Dashboards** from the navigation menu.
 
     ![](images/047.png)
 
@@ -292,7 +292,7 @@ In this exercise, you will learn about managing the feedback lifecycle in Azure 
 
     ![](images/052.png)
 
-1. Based on the feedback received, the team can then create additional work items as necessary in order to act upon the feedback. Select **Add link | New item**.
+1. Based on the feedback received, the team can then create additional work items as necessary in order to act upon the feedback. Select **Add link \| New item**.
 
     ![](images/053.png)
 

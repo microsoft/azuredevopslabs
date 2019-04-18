@@ -67,7 +67,7 @@ In this exercise, you will learn how to create, clone, and push commits to a Git
 
     ![](images/006.png)
 
-1. Select **Build | Build Solution** to build the solution.
+1. Select **Build \| Build Solution** to build the solution.
 
 <a name="Exercise2"></a>
 ## Exercise 2: Saving work with commits ##
@@ -165,7 +165,7 @@ Staging changes allows you to selectively add certain files to a commit while pa
 
     ![](images/023.png)
 
-1. Enter a comment of **"Added comments"** and select **Commit Staged | Commit Staged and Sync**. This will commit the staged file and sync it with the server in one process.
+1. Enter a comment of **"Added comments"** and select **Commit Staged \| Commit Staged and Sync**. This will commit the staged file and sync it with the server in one process.
 
     ![](images/024.png)
 
@@ -368,7 +368,7 @@ Pull requests let your team give feedback on changes in feature branches before 
 
     ![](images/060.png)
 
-1. There is still a pending change from earlier in the lab, so enter a comment of **"Checkout controller changes"** and select **Commit All | Commit All and Sync**.
+1. There is still a pending change from earlier in the lab, so enter a comment of **"Checkout controller changes"** and select **Commit All \| Commit All and Sync**.
 
     ![](images/061.png)
 

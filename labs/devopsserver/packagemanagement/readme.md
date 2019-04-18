@@ -89,7 +89,7 @@ Alternatively, you can download the virtual machine from [here](../devopsvmdownl
 
     ![](images/011.png)
 
-1. Select **Tools | NuGet Package Manager | Package Manager Settings**.
+1. Select **Tools \| NuGet Package Manager \| Package Manager Settings**.
 
 1. Locate the **Package Sources** section and click the **Add** button to add a new package source.
 
@@ -102,7 +102,7 @@ Alternatively, you can download the virtual machine from [here](../devopsvmdownl
 <a name="Ex1Task3"></a>
 ### Task 3: Creating and publishing a NuGet package ###
 
-1. From the main menu of **Visual Studio**, select **File | New | Project**. We will now create a shared assembly that will be published as a NuGet package so that other teams can integrate it and stay up to date without having to work directly with the project source.
+1. From the main menu of **Visual Studio**, select **File \| New \| Project**. We will now create a shared assembly that will be published as a NuGet package so that other teams can integrate it and stay up to date without having to work directly with the project source.
 
 1. Search for **"class library"**. Select the **Class Library (.NET Framework)** template and click **Next**. Note that there are multiple class library templates, so be sure to select this specific one.
 
@@ -130,7 +130,7 @@ Alternatively, you can download the virtual machine from [here](../devopsvmdownl
 
     ![](images/019.png)
 
-1. In the same **Windows Explorer** window, select **File | Open command prompt**.
+1. In the same **Windows Explorer** window, select **File \| Open command prompt**.
 
     ![](images/020.png)
 
@@ -196,7 +196,7 @@ Alternatively, you can download the virtual machine from [here](../devopsvmdownl
 
 1. Switch to the instance of **Visual Studio** that has the **PartsUnlimited.Shared** project open (the NuGet source project).
 
-1. In **Solution Explorer**, right-click the **PartsUnlimited.Shared** project node and select **Add | New Item**.
+1. In **Solution Explorer**, right-click the **PartsUnlimited.Shared** project node and select **Add \| New Item**.
 
     ![](images/031.png)
 
@@ -256,7 +256,7 @@ Alternatively, you can download the virtual machine from [here](../devopsvmdownl
 
     ![](images/038.png)
 
-1. If you receive an error indicating that the package is not available, you may need to clear your NuGet cache. You can do this by opening the NuGet options via **Tools | NuGet Package Manager | Options** and clicking **Clear All NuGet Cache(s)**.
+1. If you receive an error indicating that the package is not available, you may need to clear your NuGet cache. You can do this by opening the NuGet options via **Tools \| NuGet Package Manager \| Options** and clicking **Clear All NuGet Cache(s)**.
 
     ![](images/039.png)
 

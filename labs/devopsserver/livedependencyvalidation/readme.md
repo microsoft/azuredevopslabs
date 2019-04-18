@@ -45,7 +45,7 @@ Alternatively, you can download the virtual machine from [here](../devopsvmdownl
 
 1. Press **Ctrl+Shift+B** to rebuild the solution.
 
-1. Select **Architecture | New Dependency Validation Diagram** from the main menu.
+1. Select **Architecture \| New Dependency Validation Diagram** from the main menu.
 
 1. Enter a **Name** of **"PartsUnlimited.Dependencies"** and click **Create**.
 
@@ -63,7 +63,7 @@ Alternatively, you can download the virtual machine from [here](../devopsvmdownl
 
     ![](images/004.png)
 
-1. In this case, we're going to automatically generate a code map and then use that to codify our architecture via the diagram. Select **Architecture | Generate Code Map for Solution**. This code map will pull in everything it can about the project and represent it in a diagram so we can easily walk through the de facto dependencies and relationships each component (class, etc) has.
+1. In this case, we're going to automatically generate a code map and then use that to codify our architecture via the diagram. Select **Architecture \| Generate Code Map for Solution**. This code map will pull in everything it can about the project and represent it in a diagram so we can easily walk through the de facto dependencies and relationships each component (class, etc) has.
 
 1. Expand the **PartsUnlimited.dll** component to see the namespaces it contains.
 
