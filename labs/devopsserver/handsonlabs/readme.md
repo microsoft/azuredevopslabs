@@ -27,15 +27,15 @@ Here are the links to the labs on Microsoft Hands-On Labs:
   </tr>
   <tr>
     <td >Managing Delivery Plans with Azure DevOps Server 2019</td>
-    <td ><a href="https://labondemand.com/AuthenticatedLaunch/38293?providerId=4" target="_blank">Launch Lab</a></td>
+    <td ><a href="https://labondemand.com/AuthenticatedLaunch/38311?providerId=4" target="_blank">Launch Lab</a></td>
   </tr>
   <tr>
     <td >Collaboration Experiences for Development Teams using Azure DevOps Server 2019</td>
-    <td ><a href="https://labondemand.com/AuthenticatedLaunch/38294?providerId=4" target="_blank">Launch Lab</a></td>
+    <td ><a href="https://labondemand.com/AuthenticatedLaunch/38296?providerId=4" target="_blank">Launch Lab</a></td>
   </tr>
   <tr>
     <td >Getting Started with Git using Azure DevOps Server 2019</td>
-    <td ><a href="https://www.microsoft.com/handsonlabs/SelfPacedLabs/?storyId=external://content-private/content/external/Microsoft-Virtual-Labs/DT00155" target="_blank">Launch Lab</a></td>
+    <td ><a href="https://labondemand.com/AuthenticatedLaunch/38303?providerId=4" target="_blank">Launch Lab</a></td>
   </tr>
   <tr>
     <td >Getting Started with GitHub using Visual Studio 2019</td>
@@ -47,23 +47,23 @@ Here are the links to the labs on Microsoft Hands-On Labs:
   </tr>
   <tr>
     <td >Embracing Continuous Delivery with Release Management for Azure DevOps Server 2019</td>
-    <td ><a href="https://labondemand.com/AuthenticatedLaunch/38297?providerId=4" target="_blank">Launch Lab</a></td>
-  </tr>
-  <tr>
-    <td >Package Management in Azure DevOps Server 2019</td>
-    <td ><a href="https://labondemand.com/AuthenticatedLaunch/38299?providerId=4" target="_blank">Launch Lab</a></td>
-  </tr>
-  <tr>
-    <td >Making Developers More Productive with Azure DevOps Server 2019</td>
-    <td ><a href="https://labondemand.com/AuthenticatedLaunch/38300?providerId=4" target="_blank">Launch Lab</a></td>
-  </tr>
-  <tr>
-    <td >Test Planning and Management with Azure DevOps Server 2019</td>
     <td ><a href="https://labondemand.com/AuthenticatedLaunch/38301?providerId=4" target="_blank">Launch Lab</a></td>
   </tr>
   <tr>
+    <td >Package Management in Azure DevOps Server 2019</td>
+    <td ><a href="https://labondemand.com/AuthenticatedLaunch/38313?providerId=4" target="_blank">Launch Lab</a></td>
+  </tr>
+  <tr>
+    <td >Making Developers More Productive with Azure DevOps Server 2019</td>
+    <td ><a href="https://labondemand.com/AuthenticatedLaunch/38310?providerId=4" target="_blank">Launch Lab</a></td>
+  </tr>
+  <tr>
+    <td >Test Planning and Management with Azure DevOps Server 2019</td>
+    <td ><a href="https://labondemand.com/AuthenticatedLaunch/38315?providerId=4" target="_blank">Launch Lab</a></td>
+  </tr>
+  <tr>
     <td >Debugging with IntelliTrace in Visual Studio Enterprise 2019</td>
-    <td ><a href="https://labondemand.com/AuthenticatedLaunch/38302?providerId=4" target="_blank">Launch Lab</a></td>
+    <td ><a href="https://labondemand.com/AuthenticatedLaunch/38297?providerId=4" target="_blank">Launch Lab</a></td>
   </tr>
   <tr>
     <td >Debugging with Snapshot Debugger</td>
@@ -71,11 +71,11 @@ Here are the links to the labs on Microsoft Hands-On Labs:
   </tr>
   <tr>
     <td >Diagnosing Issues in Production with IntelliTrace and Visual Studio 2019</td>
-    <td ><a href="https://labondemand.com/AuthenticatedLaunch/38306?providerId=4" target="_blank">Launch Lab</a></td>
+    <td ><a href="https://labondemand.com/AuthenticatedLaunch/38300?providerId=4" target="_blank">Launch Lab</a></td>
   </tr>
   <tr>
     <td >Generating Unit Tests with IntelliTest using Visual Studio Enterprise 2019</td>
-    <td ><a href="https://labondemand.com/AuthenticatedLaunch/38304?providerId=4" target="_blank">Launch Lab</a></td>
+    <td ><a href="https://labondemand.com/AuthenticatedLaunch/38306?providerId=4" target="_blank">Launch Lab</a></td>
   </tr>
   <tr>
     <td >Live Dependency Validation in Visual Studio 2019</td>
@@ -87,15 +87,15 @@ Here are the links to the labs on Microsoft Hands-On Labs:
   </tr>
   <tr>
     <td >Using Code Analysis with Visual Studio 2019 to Improve Code Quality</td>
-    <td ><a href="https://labondemand.com/AuthenticatedLaunch/38310?providerId=4" target="_blank">Launch Lab</a></td>
+    <td ><a href="https://labondemand.com/AuthenticatedLaunch/38316?providerId=4" target="_blank">Launch Lab</a></td>
   </tr>
   <tr>
     <td >Exploratory Testing and Feedback Management using Azure DevOps Server 2019</td>
-    <td ><a href="https://labondemand.com/AuthenticatedLaunch/38311?providerId=4" target="_blank">Launch Lab</a></td>
+    <td ><a href="https://labondemand.com/AuthenticatedLaunch/38302?providerId=4" target="_blank">Launch Lab</a></td>
   </tr>
   <tr>
     <td >Authoring ARM Templates with Visual Studio</td>
-    <td ><a href="https://labondemand.com/AuthenticatedLaunch/32383?providerId=4" target="_blank">Launch Lab</a></td>
+    <td ><a href="https://labondemand.com/AuthenticatedLaunch/38294?providerId=4" target="_blank">Launch Lab</a></td>
   </tr>
   <tr>
     <td >Building ASP.NET apps in Azure with SQL Database</td>
@@ -103,6 +103,6 @@ Here are the links to the labs on Microsoft Hands-On Labs:
   </tr>
   <tr>
     <td >Working with EditorConfig in Visual Studio 2019</td>
-    <td ><a href="https://www.microsoft.com/handsonlabs/SelfPacedLabs/?storyId=external://content-private/content/external/Microsoft-Virtual-Labs/DT00174" target="_blank">Launch Lab</a></td>
+    <td ><a href="https://labondemand.com/AuthenticatedLaunch/38318?providerId=4" target="_blank">Launch Lab</a></td>
   </tr>
 </table>
