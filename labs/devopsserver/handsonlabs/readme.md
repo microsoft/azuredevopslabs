@@ -39,11 +39,11 @@ Here are the links to the labs on Microsoft Hands-On Labs:
   </tr>
   <tr>
     <td >Getting Started with GitHub using Visual Studio 2019</td>
-    <td ><a href="https://labondemand.com/AuthenticatedLaunch/38296?providerId=4" target="_blank">Launch Lab</a></td>
+    <td ><a href="https://labondemand.com/AuthenticatedLaunch/54149?providerId=4" target="_blank">Launch Lab</a></td>
   </tr>
   <tr>
     <td >Introduction to Build Pipelines in Azure DevOps Server 2019</td>
-    <td ><a href="https://www.microsoft.com/handsonlabs/SelfPacedLabs/?storyId=external://content-private/content/external/Microsoft-Virtual-Labs/DT00158" target="_blank">Launch Lab</a></td>
+    <td ><a href= "https://labondemand.com/AuthenticatedLaunch/54150?providerId=4" target="_blank">Launch Lab</a></td>
   </tr>
   <tr>
     <td >Embracing Continuous Delivery with Release Management for Azure DevOps Server 2019</td>
