@@ -26,7 +26,7 @@ In this lab, you will learn about how to create an Azure service principal that 
 
     ![](images/000.png)
 
-1. Navigate to **Pipelines | Service connections**.
+1. Navigate to **Pipelines \| Service connections**.
 
     ![](images/001.png)
 

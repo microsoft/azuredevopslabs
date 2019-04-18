@@ -6,6 +6,7 @@ permalink: /labs/devopsserver/snapshotdebugger/
 folder: /labs/devopsserver/snapshotdebugger/
 version: Lab version - 16.0.0
 updated: Last updated - 4/4/2019
+redirect_from: "labs/tfs/snapshotdebugger/index.htm"
 ---
 <div class="rw-ui-container"></div>
 
@@ -201,7 +202,7 @@ You also need an [Azure account](https://azure.microsoft.com/) ([Get a $25 month
 
 1. Return to **Visual Studio**.
 
-1. Select **File | Open | File** and open the diagnostic session file downloaded earlier. Approve any warnings about the trustworthiness of the file.
+1. Select **File \| Open \| File** and open the diagnostic session file downloaded earlier. Approve any warnings about the trustworthiness of the file.
 
 1. This minidump provides a ton of valuable information about the state of the machine and its memory at the time of the exception. However, we're specifically interested in the state of the application. Click **Debug with Managed Only**.
 
@@ -219,7 +220,7 @@ You also need an [Azure account](https://azure.microsoft.com/) ([Get a $25 month
 
     ![](images/037.png)
 
-1. Now that we know what the error is and why it wasn't getting surfaced, we can generate a code map of this path to see if it might be an unknown problem in other parts of the application. Right-click the reference to **Depluralize** and select **Code Map | Find All References on Code Map**.
+1. Now that we know what the error is and why it wasn't getting surfaced, we can generate a code map of this path to see if it might be an unknown problem in other parts of the application. Right-click the reference to **Depluralize** and select **Code Map \| Find All References on Code Map**.
 
     ![](images/038.png)
 
@@ -231,14 +232,14 @@ You also need an [Azure account](https://azure.microsoft.com/) ([Get a $25 month
 
     ![](images/040.png)
 
-1. Select **Debug | Stop Debugging** to end the session.
+1. Select **Debug \| Stop Debugging** to end the session.
 
 <a name="Ex1Task5"></a>
 ### Task 5: Working with Snappoints and Logpoints ###
 
 1. In addition to automatic snapshots, Application Insights enables two additional features that make it easy to debug production apps: **Snappoints** and **Logpoints**. Snappoints are like breakpoints in that they allow you to take snapshots of a system when a given line is executed, but without actually noticeably pausing the execution of the application. Logpoints work in the same way, except that they allow you to inject custom logging into production apps on the fly.
 
-1. Select **View | Cloud Explorer**.
+1. Select **View \| Cloud Explorer**.
 
 1. Click the **Account** button.
 
@@ -294,5 +295,5 @@ You also need an [Azure account](https://azure.microsoft.com/) ([Get a $25 month
 
     ![](images/053.png)
 
-1. Select **Debug | Stop Debugging** to end the session.
+1. Select **Debug \| Stop Debugging** to end the session.
 

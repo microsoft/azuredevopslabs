@@ -2,10 +2,11 @@
 title: Making Developers More Productive with Azure DevOps Server 2019
 layout: page
 sidebar: vsts
-permalink: /labs/devopsserver/agile/
-folder: /labs/devopsserver/agile/
+permalink: /labs/devopsserver/vsproductivity/
+folder: /labs/devopsserver/vsproductivity/
 version: Lab version - 16.0.0
 updated: Last updated - 4/3/2019
+redirect_from: "labs/tfs/vsproductivity/index.htm"
 ---
 <div class="rw-ui-container"></div>
 
@@ -19,7 +20,7 @@ This lab is all about those "fit-and-finish" scenarios in Azure DevOps Server th
 
 In order to complete this lab you will need the Azure DevOps Server 2019 virtual machine provided by Microsoft. Click the button below to launch the virtual machine on the Microsoft Hands-on-Labs portal.
 
-<a href="https://labondemand.com/AuthenticatedLaunch/38297?providerId=4" class="launch-hol" role="button" target="_blank"><span class="lab-details">Launch the virtual machine</span></a>
+<a href="https://labondemand.com/AuthenticatedLaunch/38310?providerId=4" class="launch-hol" role="button" target="_blank"><span class="lab-details">Launch the virtual machine</span></a>
 
 Alternatively, you can download the virtual machine from [here](../devopsvmdownload).
 
@@ -164,7 +165,7 @@ In this exercise, you will see a high-level view of the changes made to Team Exp
 
 1. Launch **Internet Information Services (IIS) Manager**.
 
-1. In IIS Manager, expand the **VSALM** server node and the **Sites** node to find and select the **Azure DevOps Server** site. Right-click it and select **Manage Website | Stop**.
+1. In IIS Manager, expand the **VSALM** server node and the **Sites** node to find and select the **Azure DevOps Server** site. Right-click it and select **Manage Website \| Stop**.
 
     ![](images/024.png)
 
@@ -176,13 +177,13 @@ In this exercise, you will see a high-level view of the changes made to Team Exp
 
     ![](images/026.png)
 
-1. Add a new file into the Content folder by right-clicking in a blank area of the view and selecting **New | Text Document** from the context menu. Accept the default name.
+1. Add a new file into the Content folder by right-clicking in a blank area of the view and selecting **New \| Text Document** from the context menu. Accept the default name.
 
     > **Note:** We will use this file in a demonstration a little later - the contents are not important and can be left blank.
 
     ![](images/027.png)
 
-1. In the **Explorer** window, right-click **Site.css** and select **Open With | Notepad** from the context menu.
+1. In the **Explorer** window, right-click **Site.css** and select **Open With \| Notepad** from the context menu.
 
 1. In Notepad, change the "**body**" style color to "**red**".
 
@@ -221,7 +222,7 @@ In this exercise, you will see a high-level view of the changes made to Team Exp
 
     ![](images/035.png)
 
-1. In the Internet Information Services (IIS) Manager window, right-click the **Azure DevOps Server** site and select **Manage Website | Start**.
+1. In the Internet Information Services (IIS) Manager window, right-click the **Azure DevOps Server** site and select **Manage Website \| Start**.
 
     ![](images/036.png)
 
@@ -242,7 +243,7 @@ Another common but unavoidable difficulty faced by developers is context switchi
 
     ![](images/039.png)
 
-1. Open the **Immediate** window from **Debug | Windows | Immediate**.
+1. Open the **Immediate** window from **Debug \| Windows \| Immediate**.
 
 1. Now imagine that your boss asks you to stop working on the current task, and work on a high-priority bug instead. We currently have a lot of time invested in getting Visual Studio debugging tools in place, and we would like to be able to return to this current context after the bug fix is complete.
 
@@ -256,9 +257,9 @@ Another common but unavoidable difficulty faced by developers is context switchi
 
     ![](images/041.png)
 
-1. Close all document windows by selecting **Window | Close All Documents** from the main menu.
+1. Close all document windows by selecting **Window \| Close All Documents** from the main menu.
 
-1. Reset to the default window layout by selecting **Window | Reset Window Layout** from the main menu. Click **Yes** when asked to confirm the action.
+1. Reset to the default window layout by selecting **Window \| Reset Window Layout** from the main menu. Click **Yes** when asked to confirm the action.
 
     ![](images/042.png)
 
@@ -282,7 +283,7 @@ Another common but unavoidable difficulty faced by developers is context switchi
 
     ![](images/047.png)
 
-1. Imagine that other team members are tackling these child tasks already, but that we know of another problem related to the parent bug that also needs to be fixed. Select **Add link | New item** to add a new task.
+1. Imagine that other team members are tackling these child tasks already, but that we know of another problem related to the parent bug that also needs to be fixed. Select **Add link \| New item** to add a new task.
 
     ![](images/048.png)
 
@@ -357,7 +358,7 @@ Another common but unavoidable difficulty faced by developers is context switchi
 
 1. In the Compare Files toolbar, select the **compare mode** drop down button to view the various display modes that the diff viewer can use. Try out a few of the different modes.
 
-    > **Note:** If the Compare Files toolbar is not open, open it from **View | Toolbars | Compare Files** from the main menu in Visual Studio.
+    > **Note:** If the Compare Files toolbar is not open, open it from **View \| Toolbars \| Compare Files** from the main menu in Visual Studio.
 
     ![](images/064.png)
 
@@ -399,7 +400,7 @@ Another common but unavoidable difficulty faced by developers is context switchi
 
     ![](images/073.png)
 
-1. For this scenario, let's say that we are done with the code review process. Select **Close Review | Complete**.
+1. For this scenario, let's say that we are done with the code review process. Select **Close Review \| Complete**.
 
     ![](images/074.png)
 
@@ -495,7 +496,7 @@ Another common but unavoidable difficulty faced by developers is context switchi
 
     ![](images/091.png)
 
-1. Expand the **Releases** node and right-click **Release1** to select **Advanced | Properties** from the context menu.
+1. Expand the **Releases** node and right-click **Release1** to select **Advanced \| Properties** from the context menu.
 
     ![](images/092.png)
 
@@ -616,7 +617,7 @@ In this task, you will learn how to visualize and track changesets while merging
 
     ![](images/116.png)
 
-1. In **Solution Explorer**, navigate to and right-click **_Profile.cshtml** to select **Source Control | Annotate** from the context menu.
+1. In **Solution Explorer**, navigate to and right-click **_Profile.cshtml** to select **Source Control \| Annotate** from the context menu.
 
 1. Scroll to the bottom of the annotated **_Profile.cshtml** file and locate the HTML that you previously commented out.
 

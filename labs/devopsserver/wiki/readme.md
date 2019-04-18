@@ -6,6 +6,7 @@ permalink: /labs/devopsserver/wiki/
 folder: /labs/devopsserver/wiki/
 version: Lab version - 16.0.0
 updated: Last updated - 3/8/2019
+redirect_from: "labs/tfs/devteamcollaboration/index.htm"
 ---
 <div class="rw-ui-container"></div>
 <a name="Overview"></a>
@@ -18,7 +19,7 @@ In this lab, you'll learn about the wiki feature of Azure DevOps Server 2019 tha
 
 In order to complete this lab you will need the Azure DevOps Server 2019 virtual machine provided by Microsoft. Click the button below to launch the virtual machine on the Microsoft Hands-on-Labs portal.
 
-<a href="https://labondemand.com/AuthenticatedLaunch/38297?providerId=4" class="launch-hol" role="button" target="_blank"><span class="lab-details">Launch the virtual machine</span></a>
+<a href="https://labondemand.com/AuthenticatedLaunch/38296?providerId=4" class="launch-hol" role="button" target="_blank"><span class="lab-details">Launch the virtual machine</span></a>
 
 Alternatively, you can download the virtual machine from [here](../devopsvmdownload).
 
@@ -56,7 +57,7 @@ Alternatively, you can download the virtual machine from [here](../devopsvmdownl
 
     ![](images/005.png)
 
-1. By default, all members of the **Contributors** group can edit README files and wiki pages. **Stakeholders** can read files and revisions, but cannot edit anything. Select **More | Wiki security** to review permissions.
+1. By default, all members of the **Contributors** group can edit README files and wiki pages. **Stakeholders** can read files and revisions, but cannot edit anything. Select **More \| Wiki security** to review permissions.
 
     ![](images/006.png)
 
@@ -212,7 +213,7 @@ Alternatively, you can download the virtual machine from [here](../devopsvmdownl
 
 1. You can edit the repo however you like, whether it's using Visual Studio or any other Git-compatible tools. You can also continue to edit the wiki in the browser, which we will do in this lab. Return to the tab open to the wiki repo.
 
-1. From the dropdown for the **Docs** repo root, select **New | Folder**.
+1. From the dropdown for the **Docs** repo root, select **New \| Folder**.
 
     ![](images/043.png)
 
@@ -236,7 +237,7 @@ Alternatively, you can download the virtual machine from [here](../devopsvmdownl
 
 1. Return to the tab open to the wiki repo.
 
-1. From the **Upcoming-events** dropdown, select **New | File**.
+1. From the **Upcoming-events** dropdown, select **New \| File**.
 
     ![](images/048.png)
 

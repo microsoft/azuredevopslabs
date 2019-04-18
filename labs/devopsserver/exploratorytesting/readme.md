@@ -6,6 +6,7 @@ permalink: /labs/devopsserver/exploratorytesting/
 folder: /labs/devopsserver/exploratorytesting/
 version: Lab version - 16.0.0
 updated: Last updated - 3/15/2019
+redirect_from: "labs/tfs/exploratorytesting/index.htm"
 ---
 <div class="rw-ui-container"></div>
 <a name="Overview"></a>
@@ -18,7 +19,7 @@ In this lab, you will learn about the exploratory testing and feedback managemen
 
 In order to complete this lab you will need the Azure DevOps Server 2019 virtual machine provided by Microsoft. Click the button below to launch the virtual machine on the Microsoft Hands-on-Labs portal.
 
-<a href="https://labondemand.com/AuthenticatedLaunch/38297?providerId=4" class="launch-hol" role="button" target="_blank"><span class="lab-details">Launch the virtual machine</span></a>
+<a href="https://labondemand.com/AuthenticatedLaunch/38302?providerId=4" class="launch-hol" role="button" target="_blank"><span class="lab-details">Launch the virtual machine</span></a>
 
 Alternatively, you can download the virtual machine from [here](../devopsvmdownload).
 
@@ -88,7 +89,7 @@ In this set of hands-on labs, you will take part in a number of scenarios that i
 
     ![](images/009.png)
 
-1. Click the **Exploratory Testing** icon button and click the **Capture screenshot | Browser** button.
+1. Click the **Exploratory Testing** icon button and click the **Capture screenshot \| Browser** button.
 
     ![](images/010.png)
 
@@ -242,7 +243,7 @@ In this exercise, you will learn about managing the feedback lifecycle in Azure 
 
     ![](images/041.png)
 
-1. Attach a screenshot by clicking the **Screenshot | Browser** button.
+1. Attach a screenshot by clicking the **Screenshot \| Browser** button.
 
     ![](images/042.png)
 
@@ -267,7 +268,7 @@ In this exercise, you will learn about managing the feedback lifecycle in Azure 
 
 1. Return to the **Deniz** account by minimizing the RDP window.
 
-1. Navigate to **Overview | Dashboards** from the navigation menu.
+1. Navigate to **Overview \| Dashboards** from the navigation menu.
 
     ![](images/047.png)
 
@@ -291,7 +292,7 @@ In this exercise, you will learn about managing the feedback lifecycle in Azure 
 
     ![](images/052.png)
 
-1. Based on the feedback received, the team can then create additional work items as necessary in order to act upon the feedback. Select **Add link | New item**.
+1. Based on the feedback received, the team can then create additional work items as necessary in order to act upon the feedback. Select **Add link \| New item**.
 
     ![](images/053.png)
 

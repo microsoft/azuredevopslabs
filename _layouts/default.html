@@ -114,7 +114,9 @@
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-NMC3LPS');</script>
     <!-- End Google Tag Manager -->
-  
+  <!-- Sharethis.com -->
+<script type='text/javascript' src='//platform-api.sharethis.com/js/sharethis.js#property=5c888611cbb218001761db30&product=inline-share-buttons' async='async'></script>
+<!-- Sharethis.com -->
 </head>
 
 <body border="1" border-color="#000000">
@@ -137,28 +139,33 @@
 
     <!-- div style="color:#F87431;height:7px;">-------------------</div-->
     <!-- Page Content -->
-    <div class="bg-image-lab" style="padding-top:45px">
+    <div class="banner2-for-labs text-white" style="padding-top:45px">
             <div class="container">
              <div class="row">
                 <div class="col-sm-12">
                    <div class="post-header" >
                     <p style="margin-bottom:0px">
                         <span class="PageTitle">{{ page.title }}</span><br />
+                       <div class="sharethis-inline-share-buttons"></div>                        
                         <script>function fbs_click() {u="http://aka.ms/devopslabs";t={{page.title | url_encode}};window.open('http://www.facebook.com/sharer.php?u='+encodeURIComponent(u)+'&t='+encodeURIComponent(t),'sharer','toolbar=0,status=0,width=626,height=436');return false;}</script>
+                        
                         {% if page.updated == "blank" %}
                          
                         {% elsif page.updated == null %} 
                         <span>Last updated : {{ "now" | date: "%b %d,%Y" }}</span>
                         {% else %}
                         {{page.version}}<span>&nbsp;&nbsp;&nbsp;&nbsp;</span>{{page.updated}}
-                        {% endif %}             
+                        {% endif %}   
+                        &nbsp;&nbsp;&nbsp;&nbsp;
                         
+                        &nbsp;&nbsp;&nbsp;&nbsp;
                     </p>                
-                    <p style="margin-bottom:5px">
+                    <!-- <p style="margin-bottom:5px">
                         <a href="http://www.facebook.com/sharer.php?u={{site.url }}{{site.baseurl }}{{page.url }}&t={{page.title | url_encode}}" onclick="return fbs_click()" target="_blank"><button class="btn btn-sm fb-css"><span class="fa fa-facebook mr-2"></span></button></a>
-                        <a href="https://www.linkedin.com/shareArticle?mini=true&url={{site.url }}{{site.baseurl }}{{page.url }}&t={{page.title | url_encode}}" onclick="return lnk_click()" target="_blank"><button class="btn btn-sm insta-css"><span class="fa fa-linkedin"></span></button>
-                        <a href="https://twitter.com/intent/tweet?url={{site.url }}{{site.baseurl }}{{page.url }}&text={{page.title | url_encode}}&via=visualstudio&hashtags=devopslabs" data-size="large" target="_blank"><button class="btn btn-sm twit-css"><span class="fa fa-twitter"></span></button></a>
+                        <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://aka.ms/devopslabs&title={{page.title | url_encode}}" onclick="return lnk_click()" target="_blank"><button class="btn btn-sm linkedin-css"><span class="fa fa-linkedin"></span></button>
+                        <a href="https://twitter.com/intent/tweet?url=http://aka.ms/devopslabs&text={{page.title | url_encode}}&via=visualstudio&hashtags=devopslabs" data-size="large" target="_blank"><button class="btn btn-sm twit-css"><span class="fa fa-twitter"></span></button></a>
                     </p>
+                    <div class="sharethis-inline-share-buttons"></div> -->
                    </div>
                 </div>
              </div>
@@ -193,8 +200,8 @@
         </div>
         <div class="container">
                 <div class="row">
-                        <div clas="col-sm-12" id="footer-content">
-                                {% include footer.html %}
+                        <div class="col-sm-10 pl-3" id="footer-content">
+                                {% include feedbackforlabs.html %}
                         </div>
                 </div>
             </div>
@@ -243,6 +250,7 @@
         rw.src = p + "//" + a + "external" + f + ".js?ck=" + ck;
         s.parentNode.insertBefore(rw, s);
         }(document, new Date(), "script", "rating-widget.com/"));</script>
+
 </body>
 {% include google_analytics.html %} {% include gototop.html %}
 

@@ -9,7 +9,7 @@ landingpage: false
 description: Learn how you can implement modern DevOps practices with Azure, Azure DevOps Services and Team Foundation Server.
 ---
 
-<div class="bg-image">
+<!-- <div class="bg-image">
     <div class="container" style="padding-top:45px">
         <div class="row">
             <div class="col-sm-7">
@@ -26,148 +26,377 @@ description: Learn how you can implement modern DevOps practices with Azure, Azu
             </div>
         </div>
     </div>
-</div>
+</div> -->
+<div id="demo" class="carousel slide" data-ride="carousel">
 
-<div class="container pading-t-10">
-    <div class="row">
-        <div class="col-sm-8">
-            <h1>New to Azure DevOps?</h1>
-            <div style="margin-top:2px">
-                Don't have an account? No worries! Sign up for a <b>free</b> Azure DevOps organization now and get
-                <ul class="tick">
-                    <li>Automated CI/CD pipelines</li>
-                    <li>Free unlimited private Git repositories</li>
-                    <li>Configurable Kanban boards, and </li>
-                    <li>Extensive automated and cloud-based load testing tools.</li>
-                </ul>
-            </div>
-        </div>
-        <div class="col-sm-4">
-            <a href="https://go.microsoft.com/fwlink/?LinkId=2014881" class="launch-hol btn-css text-white align-items-center d-flex justify-content-center"
-                role="button" target="_blank" onclick="pageTracker._trackEvent('SignUp', 'Click', 'New User SignUp');">Sign
-                up for free now</a>
-        </div>
+  <!-- Indicators -->
+  <ul class="carousel-indicators">
+    <li data-target="#demo" data-slide-to="0" class="active"></li>
+    <li data-target="#demo" data-slide-to="1"></li>
+    <li data-target="#demo" data-slide-to="2"></li>
+  </ul>
+
+  <!-- The slideshow -->
+  <div class="carousel-inner">
+    <div class="carousel-item active banner1">     
+      <div class="text-center p-t-60px">
+      <p class="bannerTitle">What is DevOps?</p>
+      <p class="bannerText mb-1">DevOps brings together people, processes, and technology, automating software delivery to provide continuous value to your users. <br /> DevOps automates and speeds software delivery. It makes your process and your products more reliable.</p>
+      </div>
     </div>
+    <div class="carousel-item banner2">      
+       <div class="text-center p-t-60px">
+      <p class="bannerTitle">New to Azure DevOps?</p>
+      <p class="bannerText">Don't have an account? No worries! Sign up for free Azure DevOps Organization<br></p>
+<p><a href="https://go.microsoft.com/fwlink/?LinkId=2014881" class="btn btn-sm btn-primary mt-1">Sign Up for free now</a></p>
+      </div>
+    </div>
+    <div class="carousel-item banner3">
+      <div class="text-center p-t-60px">
+      <p class="bannerTitle">Azure DevOps Server Labs available now</p>
+      <p class="bannerText">Learn how you can remove barriers between teams, encourage collaboration, and improve the flow of value to your customers.<br></p>
+      <p><a href="/labs/devopsserver/" class="btn btn-sm btn-primary mt-1">Start Learning</a></p>
+      </div>
+    </div>  
+  </div>
+
+  <!-- Left and right controls -->
+  <a class="carousel-control-prev" href="#demo" data-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </a>
+  <a class="carousel-control-next" href="#demo" data-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </a>
+
 </div>
 
-<div class="container-fluid">
-    <div class="row">
-    <div class="container">  
-        <div class="col-sm-12 px-0">
-            <ul class="nav nav-tabs tab-bg-color" role="tablist">
-                <li class="nav-item w-50 text-center">
-                    <a class="nav-link active tabs-padding-bor-rad" data-toggle="tab" href="#services-labs">Azure
-                        DevOps
-                     </a>
-                </li>
-                <li class="nav-item w-50 text-center">
-                    <a class="nav-link tab-bor-sm tabs-padding-bor-rad tfsTab" data-toggle="tab" href="#server-labs">Team
-                        Foundation Server                       
-                    </a>
-                </li>
-            </ul>
-            <!-- Tab panes -->
-            <div class="tab-content bg-color-wit-mlr p-0 pt-0">
-                <div id="services-labs" class="container-fluid tab-pane active p-0">
-                    <div class="container">
-                        <div class="row">                          
-                            <div class="col-sm-12 pading-t-20">
-                                <h2 class="border-0 fon-normal">Getting started</h2>
-                                 <p>Simplify and speed up the DevOps process with Azure DevOps services. The
-                            following labs will help you to get started with Azure DevOps services to automate software
-                            delivery and meet business needs.</p>
-                                <div class="row equal-height-columns">
-                                    <div class="col-sm-3 col-xs-12 p-l-r-override">
-                                        <div class="bg-color-white equal-height-column">
-                                            <ul class="p-l-5px">
-                                                <li class="osslist"><img src="/images/azureboards.png" height="42"
-                                                        class="icon-bor-p-m" />
-                                                    <a href="/labs/azuredevops/agile/" class="fon-size-13">Agile
-                                                        Planning and Portfolio Management with Azure Boards </a></li>
-                                                        <li class="osslist"><img src="/images/azurepipelines.png" height="42"
-                                                        class="icon-bor-p-m" />
-                                                    <a href="/labs/azuredevops/yaml/" class="fon-size-13">Configuring
-                                                        Build as Code with YAML in Azure Pipelines</a></li>
-                                                         <li class="osslist"><img src="/images/azuretestplans.png" height="42"
-                                                        class="icon-bor-p-m" /><a href="/labs/azuredevops/testmanagement/"
-                                                        class="fon-size-13">Test Planning and Management with Azure
-                                                        Test Plans</a></li>
-                                                           <li class="osslist"><img src="/images/wiki.png" height="42" class="icon-bor-p-m" />
-                                                    <a href="/labs/azuredevops/wiki/" class="fon-size-13">Collaborating
-                                                        with Azure DevOps Wiki</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-3 col-xs-12 p-l-r-override">
-                                        <div class="bg-color-white equal-height-column">
-                                            <ul class="p-l-5px">
-                                                 <li class="osslist"><img src="/images/deliveryplans2.png" height="42" class="icon-bor-p-m" />
-                                                    <a href="/labs/azuredevops/deliveryplans/" class="fon-size-13">Managing
-                                                        Project Schedules across Teams with Delivery Plans</a></li>
-                                                            <li class="osslist"><img src="/images/azurepipelines.png" height="42"
-                                                        class="icon-bor-p-m" /><a href="/labs/azuredevops/continuousintegration/"
-                                                        class="fon-size-13">Enabling Continuous Integration with Azure
-                                                        Pipelines</a></li>
-                                                         <li class="osslist"><img src="/images/exploratorytesting2.png" height="42"
-                                                        class="icon-bor-p-m" />
-                                                    <a href="/labs/azuredevops/exploratorytesting/" class="fon-size-13">Exploratory
-                                                        Testing with Azure Test Plans</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-3 col-xs-12 p-l-r-override">
-                                        <div class="bg-color-white equal-height-column">
-                                            <ul class="p-l-5px">
-                                                <li class="osslist"><img src="/images/azurerepos.png" height="42" class="icon-bor-p-m" />
-                                                    <a href="/labs/azuredevops/git/" class="fon-size-13">Version
-                                                        Controlling with Azure Repos </a></li>
-                                                 <li class="osslist"><img src="/images/azurepipelines.png" height="42"
-                                                        class="icon-bor-p-m" /><a href="/labs/azuredevops/continuousdeployment/"
-                                                        class="fon-size-13">Embracing Continuous Delivery with Azure
-                                                        Pipelines</a></li>
-                                                <li class="osslist"><img src="/images/webtest.png" height="42"
-                                                        class="icon-bor-p-m" />
-                                                    <a href="/labs/azuredevops/load/" class="fon-size-13">Web
-                                                        Application Load and Performance Testing</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-3 col-xs-12 p-l-r-override">
-                                        <div class="bg-color-white equal-height-column">
-                                            <ul class="p-l-5px">
-                                                <li class="osslist"><img src="/images/pullrequests.png" height="42" class="icon-bor-p-m" />
-                                                    <a href="/labs/azuredevops/pullrequests/" class="fon-size-13">Working with Pull Requests in Visual Studio Code and Azure DevOps </a></li>
-                                                 <li class="osslist"><img src="/images/azureartifacts.png" height="42"
-                                                        class="icon-bor-p-m" />
-                                                    <a href="/labs/azuredevops/packagemanagement/" class="fon-size-13">Package
-                                                        Management with Azure Artifacts</a>
-                                                </li>
-                                                <li class="osslist"><img src="/images/azuredevops.png" height="42"
-                                                        class="icon-bor-p-m" />
-                                                    <a href="/labs/azuredevops/sonarcloud/" class="fon-size-13">Managing
-                                                        Technical Debt with Azure DevOps and SonarCloud</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-12 col-xs-12">
-                                <h2 class="border-0 fon-normal">Deep Dive into Azure DevOps</h2>
-                                <p>Azure DevOps provides integration with popular open source and third-party tools and
-                                    services—across the entire DevOps workflow. Use the tools and languages you know.
-                                    Spend less time integrating and more time delivering higher-quality software,
-                                    faster.
-                                </p>
-                            </div>
-                            <div class="col-sm-12 mar-bot">
+<!--  <a href="https://go.microsoft.com/fwlink/?LinkId=2014881" class="launch-hol btn-css text-white align-items-center d-flex justify-content-center"
+                role="button" target="_blank" onclick="pageTracker._trackEvent('SignUp', 'Click', 'New User SignUp');">Sign
+                up for free now</a>-->
+<div class="container">
+<div class="row my-2">
+  <div class="col-sm-8" style="margin-top:30px; margin-bottom: 20px">
+  <h2 class="border-0 fon-normal">Getting started with Azure DevOps</h2> 
+                                  <p>Simplify and speed up the DevOps process with Azure DevOps services. The
+                                    following labs will help you to get started with Azure DevOps services to automate software
+                                    delivery and meet business needs.</p>
+</div>
+<div class="col-sm-4" style="text-align:right">
+<img src="/images/AzureDevOps-img.png" alt="Azure DevOps" width="250">
+</div>
+</div>
+  <div class="row equal-height-columns my-1">        
+			<div class="col-lg-3 col-md-6 col-sm-6 col-12 mt-small-5">
+			<div class="hover-effect equal-height-column box-cover ml-forsm">
+				<div class="row">
+					<div class="col-lg-3 col-md-3 col-sm-3 col-3 pl-0 pr-lg-0 pl-small-15 img-mt">
+						<div class="bg bg-niagara p-2 text-center">
+							<div class="icon-cover"><img src="/images/azureboards.png" alt="azureboards" height="20"></div>
+						</div>
+					</div>
+					<div class="col-lg-9 col-md-9 col-sm-9 col-9 cont-mt cont-pl">					
+							<a href="/labs/azuredevops/agile/" class="text-col-gunpower">	
+								<div class="bg-white text-font">Agile Planning and Portfolio Management with Azure Boards</div>
+							</a>
+					</div>					
+				</div>
+			</div>	
+			</div>
+			<div class="col-lg-3 col-md-6 col-sm-6 col-12 mt-small-5">
+			<div class="hover-effect equal-height-column box-cover ml-forsm">
+				<div class="row">
+					<div class="col-lg-3 col-md-3 col-sm-3 col-3 pl-0 pr-lg-0 pl-small-15 img-mt">
+						<div class=" bg bg-azureblue p-2 text-center">
+							<div class="icon-cover"><img src="/images/deliveryplans2.png" alt="overview" height="20"></div>
+						</div>
+					</div>
+					<div class="col-lg-9 col-md-9 col-sm-9 col-9 cont-mt cont-pl">					
+							<a href="/labs/azuredevops/deliveryplans/" class="text-col-gunpower">	
+								<div class="bg-white text-font">Managing Project Schedules across Teams with Delivery Plans</div>
+							</a>
+					</div>					
+				</div>
+			</div>	
+			</div>
+			<div class="col-lg-3 col-md-6 col-sm-6 col-12 mt-small-5">
+			<div class="hover-effect equal-height-column box-cover ml-forsm">
+				<div class="row">
+					<div class="col-lg-3 col-md-3 col-sm-3 col-3 pl-0 pr-lg-0 pl-small-15 img-mt">
+						<div class=" bg bg-crimson p-2 text-center">
+							<div class="icon-cover"><img src="/images/azurerepos.png" alt="azurerepos" height="20"></div>
+						</div>
+					</div>
+					<div class="col-lg-9 col-md-9 col-sm-9 col-9 cont-mt cont-pl">					
+							<a href="/labs/azuredevops/git/" class="text-col-gunpower">	
+								<div class="bg-white text-font">Version Controlling with Azure Repos</div>
+							</a>
+					</div>					
+				</div>
+			</div>	
+			</div>
+			<div class="col-lg-3 col-md-6 col-sm-6 col-12 mt-small-5">
+			<div class="hover-effect equal-height-column box-cover ml-forsm">
+				<div class="row">
+					<div class="col-lg-3 col-md-3 col-sm-3 col-3 pl-0 pr-lg-0 pl-small-15 img-mt">
+						<div class=" bg bg-azureblue p-2 text-center">
+							<div class="icon-cover"><img src="/images/pullrequests.png" alt="azurerepos" height="20"></div>
+						</div>
+					</div>
+					<div class="col-lg-9 col-md-9 col-sm-9 col-9 cont-mt cont-pl">					
+							<a href="/labs/azuredevops/pullrequests/" class="text-col-gunpower">	
+								<div class="bg-white text-font">Working with Pull Requests</div>
+							</a>
+					</div>					
+				</div>
+			</div>	
+			</div>
+            <!-- <div class="col-lg-3 col-md-6 col-sm-6 col-12 mt-small-5">
+			<div class="hover-effect equal-height-column box-cover ml-forsm">
+				<div class="row">
+					<div class="col-lg-3 col-md-3 col-sm-3 col-3 pl-0 pr-lg-0 pl-small-15 img-mt">
+						<div class=" bg bg-azureblue p-2 text-center">
+							<div class="icon-cover"><img src="/images/azuredevops.png" alt="azuredevops" height="20"></div>
+						</div>
+					</div>
+					<div class="col-lg-9 col-md-9 col-sm-9 col-9 cont-mt cont-pl">					
+							<a href="/labs/azuredevops/sonarcloud/" class="text-col-gunpower">	
+								<div class="bg-white text-font">Managing Technical Debt with Azure DevOps and SonarCloud</div>
+							</a>
+					</div>					
+				</div>
+			</div>	
+			</div>				 -->
+     </div>
+  <div class="row equal-height-columns my-1">   
+  	<div class="col-lg-3 col-md-6 col-sm-6 col-12 mt-small-5">
+  <div class="hover-effect equal-height-column box-cover ml-forsm">
+				<div class="row">
+					<div class="col-lg-3 col-md-3 col-sm-3 col-3 pl-0 pr-lg-0 pl-small-15 img-mt">
+						<div class=" bg bg-slateblue p-2 text-center">
+							<div class="icon-cover"><img src="/images/azurepipelines.png" alt="azurepipelines" height="20"></div>
+						</div>
+					</div>
+					<div class="col-lg-9 col-md-9 col-sm-9 col-9 cont-mt cont-pl">					
+							<a href="/labs/azuredevops/yaml/" class="text-col-gunpower">	
+								<div class="bg-white text-font">Configuring Build as Code with YAML in Azure Pipelines</div>
+							</a>
+					</div>					
+				</div>
+			</div>	
+			</div>	
+  <div class="col-lg-3 col-md-6 col-sm-6 col-12 mt-small-5">
+			<div class="hover-effect equal-height-column box-cover ml-forsm">
+				<div class="row">
+					<div class="col-lg-3 col-md-3 col-sm-3 col-3 pl-0 pr-lg-0 pl-small-15 img-mt">
+						<div class=" bg bg-slateblue p-2 text-center">
+							<div class="icon-cover"><img src="/images/azurepipelines.png" alt="azurepipelines" height="20"></div>
+						</div>
+					</div>
+					<div class="col-lg-9 col-md-9 col-sm-9 col-9 cont-mt cont-pl">					
+							<a href="/labs/azuredevops/continuousintegration/" class="text-col-gunpower">	
+								<div class="bg-white text-font">Enabling Continuous Integration with Azure Pipelines</div>
+							</a>
+					</div>					
+				</div>
+			</div>	
+			</div>     
+			<div class="col-lg-3 col-md-6 col-sm-6 col-12 mt-small-5">
+			<div class="hover-effect equal-height-column box-cover ml-forsm">
+				<div class="row">
+					<div class="col-lg-3 col-md-3 col-sm-3 col-3 pl-0 pr-lg-0 pl-small-15 img-mt">
+						<div class=" bg bg-slateblue p-2 text-center">
+							<div class="icon-cover"><img src="/images/azurepipelines.png" alt="azurepipelines" height="20"></div>
+						</div>
+					</div>
+					<div class="col-lg-9 col-md-9 col-sm-9 col-9 cont-mt cont-pl">					
+							<a href="/labs/azuredevops/continuousdeployment/" class="text-col-gunpower">	
+								<div class="bg-white text-font">Embracing Continuous Delivery with Azure Pipelines</div>
+							</a>
+					</div>					
+				</div>
+			</div>	
+			</div>
+			<div class="col-lg-3 col-md-6 col-sm-6 col-12 mt-small-5">
+			<div class="hover-effect equal-height-column box-cover ml-forsm">
+				<div class="row">
+					<div class="col-lg-3 col-md-3 col-sm-3 col-3 pl-0 pr-lg-0 pl-small-15 img-mt">
+						<div class=" bg bg-pink p-2 text-center">
+							<div class="icon-cover"><img src="/images/azureartifacts.png" alt="azureartifacts" height="20"></div>
+						</div>
+					</div>
+					<div class="col-lg-9 col-md-9 col-sm-9 col-9 cont-mt cont-pl">					
+							<a href="/labs/azuredevops/packagemanagement/" class="text-col-gunpower">	
+								<div class="bg-white text-font">Package Management with Azure Artifacts</div>
+							</a>
+					</div>					
+				</div>
+			</div>	
+			</div>
+			</div>
+			 <div class="row equal-height-columns my-1">  
+            <div class="col-lg-3 col-md-6 col-sm-6 col-12 mt-small-5">
+			<div class="hover-effect equal-height-column box-cover ml-forsm">
+				<div class="row">
+					<div class="col-lg-3 col-md-3 col-sm-3 col-3 pl-0 pr-lg-0 pl-small-15 img-mt">
+						<div class=" bg bg-azureblue p-2 text-center">
+							<div class="icon-cover"><img src="/images/wiki.png" alt="wiki" height="20"></div>
+						</div>
+					</div>
+					<div class="col-lg-9 col-md-9 col-sm-9 col-9 cont-mt cont-pl">					
+							<a href="/labs/azuredevops/wiki/" class="text-col-gunpower">	
+								<div class="bg-white text-font">Collaborating with Azure DevOps Wiki</div>
+							</a>
+					</div>					
+				</div>
+			</div>	
+			</div>				
+	 <div class="col-lg-3 col-md-6 col-sm-6 col-12 mt-small-5">
+			<div class="hover-effect equal-height-column box-cover ml-forsm">
+				<div class="row">
+					<div class="col-lg-3 col-md-3 col-sm-3 col-3 pl-0 pr-lg-0 pl-small-15 img-mt">
+						<div class=" bg bg-purple p-2 text-center">
+							<div class="icon-cover"><img src="/images/azuretestplans.png" alt="azuretestplans" height="20"></div>
+						</div>
+					</div>
+					<div class="col-lg-9 col-md-9 col-sm-9 col-9 cont-mt cont-pl">					
+							<a href="/labs/azuredevops/testmanagement/" class="text-col-gunpower">	
+								<div class="bg-white text-font">Test Planning and Management with Azure Test Plans</div>
+							</a>
+					</div>					
+				</div>
+			</div>	
+			</div>	
+	  <div class="col-lg-3 col-md-6 col-sm-6 col-12 mt-small-5">
+			<div class="hover-effect equal-height-column box-cover ml-forsm">
+				<div class="row">
+					<div class="col-lg-3 col-md-3 col-sm-3 col-3 pl-0 pr-lg-0 pl-small-15 img-mt">
+						<div class=" bg bg-purple p-2 text-center">
+							<div class="icon-cover"><img src="/images/azuretestplans.png" alt="azuretestplans" height="20"></div>
+						</div>
+					</div>
+					<div class="col-lg-9 col-md-9 col-sm-9 col-9 cont-mt cont-pl">					
+							<a href="/labs/azuredevops/exploratorytesting/" class="text-col-gunpower">	
+								<div class="bg-white text-font">Exploratory Testing with Azure Test Plans</div>
+							</a>
+					</div>					
+				</div>
+			</div>	
+			</div>	
+			<div class="col-lg-3 col-md-6 col-sm-6 col-12 mt-small-5">
+			<div class="hover-effect equal-height-column box-cover ml-forsm">
+				<div class="row">
+					<div class="col-lg-3 col-md-3 col-sm-3 col-3 pl-0 pr-lg-0 pl-small-15 img-mt">
+						<div class=" bg bg-purple p-2 text-center">
+							<div class="icon-cover"><img src="/images/azuretestplans.png" alt="azuretestplans" height="20"></div>
+						</div>
+					</div>
+					<div class="col-lg-9 col-md-9 col-sm-9 col-9 cont-mt cont-pl">					
+							<a href="/labs/azuredevops/load/" class="text-col-gunpower">	
+								<div class="bg-white text-font">Web Application Load and Performance Testing</div>
+							</a>
+					</div>					
+				</div>
+			</div>	
+			</div>
+			</div>	     
+            <div class="col-lg-3 col-md-6 col-sm-6 col-12 mt-small-5">			
+     </div>
+		 <br />
+      <div class="row" style="margin-left: 10px;margin-top: 10px;">
+      <p>For the on-premises platform, Azure DevOps Server (previously named Visual Studio Team Foundation Server), see  <a href="/labs/devopsserver/" class="btn btn-sm btn-primary">Azure DevOps Server 2019 Labs</a></p>
+      </div>
+     </div>
+
+<hr height="1" style="width: 75%;" />  
+  <div class="container px-3 pb-3 pt-1 rounded">
+  <div class="row">
+  <div class="col-md-12">
+               <h2 class="border-0 fon-normal">Featured Labs</h2>
+</div>
+</div>
+ <div class="row equal-height-columns my-2">        
+			<div class="col-sm-2 my-2">
+				<div class="shadow-sm hover-effect equal-height-column">
+					<a href="/labs/vstsextend/kubernetes/" class="text-col-gunpower">
+						<div class="bg-azureblue1 p-2 text-center">
+							<div class="icon-cover1"><img src="/images/kubernetes.png" alt="kubernetes" height="42"></div>
+						</div>
+						<div class="bg-white py-2 text-center">Deploying a multi-container application to Azure Kubernetes Services</div>
+					</a>	
+				</div>
+			</div>
+			<div class="col-sm-2 my-2">
+				<div class="shadow-sm hover-effect equal-height-column">
+					<a href="/labs/vstsextend/jenkins/" class="text-col-gunpower">
+						<div class="bg-sel-grey1 p-2 text-center">
+							<div class="icon-cover1"><img src="/images/jenkins.png" alt="jenkins" height="42"></div>
+						</div>
+						<div class="bg-white py-2 text-center">Integrating Azure DevOps with Jenkins</div>
+					</a>	
+				</div>
+			</div>
+			<div class="col-sm-2 my-2">
+				<div class="shadow-sm hover-effect equal-height-column">
+					<a href="/labs/vstsextend/docker/" class="text-col-gunpower">
+						<div class="bg-azureblue1 p-2 text-center">
+							<div class="icon-cover1"><img src="/images/docker-42.png" alt="azurerepos" height="42"></div>
+						</div>
+						<div class="bg-white py-2 text-center">Deploying a Docker based web application to Azure App Service</div>
+					</a>	
+				</div>
+			</div>
+			<div class="col-sm-2 my-2">
+				<div class="shadow-sm hover-effect equal-height-column">
+					<a href="/labs/vstsextend/terraform/" class="text-col-gunpower">
+						<div class="bg-blue1 p-2 text-center">
+							<div class="icon-cover1"><img src="/images/terraform.png" alt="azurepipelines" height="42"></div>
+						</div>
+						<div class="bg-white py-2 text-center">Automating your infrastructure deployments in the Cloud with Terraform</div>
+					</a>	
+				</div>
+			</div>
+			<div class="col-sm-2 my-2">
+				<div class="shadow-sm hover-effect equal-height-column">
+					<a href="/labs/vstsextend/ansible/" class="text-col-gunpower">
+						<div class="bg-color-black1 p-2 text-center">
+							<div class="icon-cover1"><img src="/images/ansible.png" alt="azurepipelines" height="42"></div>
+						</div>
+						<div class="bg-white py-2 text-center">Automating Infrastructure Deployments in the Cloud with Ansible</div>
+					</a>	
+				</div>
+			</div>			
+			<div class="col-sm-2 my-2">
+				<div class="shadow-sm hover-effect equal-height-column">
+					<a href="/labs/vstsextend/launchdarkly/" class="text-col-gunpower">
+						<div class="bg-azureblue1 p-2 text-center">
+							<div class="icon-cover1"><img src="/images/launchdarkly.png" alt="launchdarkly" height="42"></div>
+						</div>
+						<div class="bg-white py-2 text-center">Feature Flag Management with LaunchDarkly</div>
+					</a>	
+				</div>
+			</div>
+     </div>
+</div>
+
+<div class="container pb-4">
+<div class="row my-2">
+  <div class="col-sm-8" style="margin-top:30px; margin-bottom: 20px">
+  <h2 class="border-0 fon-normal">Deep Dive into Azure DevOps</h2> 
+                                  <p>Azure DevOps provides integration with popular open source and third-party tools and services—across the entire DevOps workflow. Use the tools and languages you know. Spend less time integrating and more time delivering higher-quality software, faster.</p>
+</div>
+<div class="col-sm-4" style="text-align:right">
+<img src="/images/deep-dive.png" alt="Deep dive into Azure DevOps" width="250">
+</div>
+</div>
+ <div class="col-sm-12 mar-bot">
                                 <!-- <h3 id="step-by-step-tutorials">Step-by-Step Tutorials</h3>  -->
                                 <div class="row equal-height-columns">
-                                    <div class="col-sm-3 col-xs-12 p-l-r-override">
+                                    <div class="col-lg-3 col-md-6 col-sm-6 col-12 p-l-r-override">
                                         <div class="bg-color-white equal-height-column">
                                             <ul class="p-l-5px">
-                                            <li class="osslist"> <img src="/images/azurekeyvault.png" height="42" class="icon-bor-p-m" /><a
+                                            <li class="osslist align-relative"> <img src="/images/azurekeyvault.png" height="42" class="icon-bor-p-m" /><a
                                                         href="/labs/vstsextend/azurekeyvault/" class="fon-size-13">
-                                                        Using secrets from Azure Key Vault in a pipeline</a><span class="label label-success" style="color: white;background-color: #0078d7;position: relative;top: -31px;right: -10px;font-size: 16px;padding-right: 6px;padding-left: 6px;"> New </span></li>
+                                                        Using secrets from Azure Key Vault in a pipeline <img src="/images/new-tag.png" alt="new-tag" class="align-on-labs"/></a></li>
                                                 <li class="osslist"> <img src="/images/launchdarkly.png" height="42" class="icon-bor-p-m" /><a
                                                         href="/labs/vstsextend/launchdarkly/" class="fon-size-13">
                                                         Feature Flag Management with LaunchDarkly</a></li>
@@ -186,18 +415,18 @@ description: Learn how you can implement modern DevOps practices with Azure, Azu
                                                 <li class="osslist"> <img src="/images/jenkins-42.png" height="42"
                                                         class="icon-bor-p-m" /> <a href="/labs/vstsextend/Jenkins/"
                                                         class="fon-size-13"> Configuring a CD pipeline for your Jenkins CI</a> </li>
-                                                  <li class="osslist"> <img src="/images/appcenter.png" height="42"
+                                                  <li class="osslist align-relative"> <img src="/images/appcenter.png" height="42"
                                                         class="icon-bor-p-m" /> <a href="/labs/vstsextend/appcenter/"
-                                                        class="fon-size-13"> Build-Test-Distribute Mobile Apps using App Center</a><span class="label label-success" style="color: white;background-color: #0078d7;position: relative;top: -31px;right: -10px;font-size: 16px;padding-right: 6px;padding-left: 6px;"> New </span> </li>
+                                                        class="fon-size-13"> Build-Test-Distribute Mobile Apps using App Center <img src="/images/new-tag.png" alt="new-tag" class="align-on-labs"/></a></li>
                                             </ul>
                                         </div>
                                     </div>
-                                    <div class="col-sm-3 col-xs-12 p-l-r-override">
+                                    <div class="col-lg-3 col-md-6 col-sm-6 col-12 p-l-r-override">
                                         <div class="bg-color-white equal-height-column">
                                             <ul class="p-l-5px">
-                                                 <li class="osslist"><img src="/images/teams.png" height="42"
+                                                 <li class="osslist align-relative"><img src="/images/teams.png" height="42"
                                                         class="icon-bor-p-m" />
-                                                    <a href="/labs/vstsextend/teams/" class="fon-size-13">Microsoft Teams with Azure DevOps Services</a><span class="label label-success" style="color: white;background-color: #0078d7;position: relative;top: -31px;right: -10px;font-size: 16px;padding-right: 6px;padding-left: 6px;"> New </span>
+                                                    <a href="/labs/vstsextend/teams/" class="fon-size-13">Microsoft Teams with Azure DevOps Services <img src="/images/new-tag.png" alt="new-tag" class="align-on-labs"/></a>
                                                 </li>
                                                 <li class="osslist"> <img src="/images/docker-42.png" height="42" class="icon-bor-p-m" /><a
                                                         href="/labs/vstsextend/docker/" class="fon-size-13"> Deploying a Docker based web application to Azure App Service</a></li>
@@ -221,12 +450,12 @@ description: Learn how you can implement modern DevOps practices with Azure, Azu
                                             </ul>
                                         </div>
                                     </div>
-                                    <div class="col-sm-3 col-xs-12 p-l-r-override">
+                                    <div class="col-lg-3 col-md-6 col-sm-6 col-12 p-l-r-override">
                                         <div class="bg-color-white equal-height-column">
                                             <ul class="p-l-5px">
-                                                 <li class="osslist"> <img src="/images/github-azurepipelines.png" height="42"
+                                                 <li class="osslist align-relative"> <img src="/images/github-42.png" height="42"
                                                         class="icon-bor-p-m" /><a href="/labs/vstsextend/github-azurepipelines/"
-                                                        class="fon-size-13"> GitHub Integration with Azure Pipelines</a><span class="label label-success" style="color: white;background-color: #0078d7;position: relative;top: -31px;right: -10px;font-size: 16px;padding-right: 6px;padding-left: 6px;"> New </span></li>
+                                                        class="fon-size-13"> GitHub Integration with Azure Pipelines <img src="/images/new-tag.png" alt="new-tag" class="align-on-labs"/></a></li>
                                                          <li class="osslist"> <img src="/images/aspnetmodernize.png" height="42"
                                                         class="icon-bor-p-m" /><a href="/labs/vstsextend/aspnetmodernize/"
                                                         class="fon-size-13"> Deploy existing .NET apps as Windows containers (Modernizing .NET apps)</a></li>
@@ -248,12 +477,12 @@ description: Learn how you can implement modern DevOps practices with Azure, Azu
                                             </ul>
                                         </div>
                                     </div>
-                                    <div class="col-sm-3 col-xs-12 p-l-r-override">
+                                    <div class="col-lg-3 col-md-6 col-sm-6 col-12 p-l-r-override">
                                         <div class="bg-color-white equal-height-column">
                                             <ul class="p-l-5px">
-                                                <li class="osslist"> <img src="/images/github-azureboards.png" height="42"
+                                                <li class="osslist align-relative"> <img src="/images/github-42.png" height="42"
                                                         class="icon-bor-p-m" /><a href="/labs/vstsextend/github-azureboards/"
-                                                        class="fon-size-13"> GitHub Integration with Azure Boards</a><span class="label label-success" style="color: white;background-color: #0078d7;position: relative;top: -31px;right: -10px;font-size: 16px;padding-right: 6px;padding-left: 6px;"> New </span></li>
+                                                        class="fon-size-13"> GitHub Integration with Azure Boards <img src="/images/new-tag.png" alt="new-tag" class="align-on-labs"/></a></li>
                                                 <li class="osslist"> <img src="/images/python-42.png" height="42" class="icon-bor-p-m" /><a
                                                         href="/labs/vstsextend/python/" class="fon-size-13"> Deploying a CD pipeline for a Django-based Python app </a></li>
                                                 <li class="osslist"> <img src="/images/php.png" height="42" class="icon-bor-p-m" /><a
@@ -281,353 +510,4 @@ description: Learn how you can implement modern DevOps practices with Azure, Azu
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-sm-12 pading-t-10">
-                                <h2 class="border-0 fon-normal">Prerequisites</h2>
-                                In order to complete these labs you will need:
-                                <ul>
-                                    <li>
-                                        <strong>Azure DevOps services Organization:</strong> You will need
-                                        an Azure DevOps services account. If you don’t have one, you can sign up for
-                                        one, from <a href="https://www.visualstudio.com/" target="_blank">here</a>
-                                    </li>
-                                    <li>
-                                        <strong>Microsoft Azure Account</strong>: You will need a valid and active
-                                        Azure account. If you do not have one,
-                                        <ul>
-                                            <li>
-                                                You can create a <a href="https://azure.microsoft.com/en-us/free/"
-                                                    target="_blank">free Azure account</a> and enjoy 12 months of free
-                                                Azure services
-                                            </li>
-                                            <li>
-                                                If you are a Visual Studio Active Subscriber, you are entitled for a
-                                                $50-$150 credit per month. You can refer to this <a href="https://azure.microsoft.com/en-us/pricing/member-offers/msdn-benefits-details/"
-                                                    target="_blank">link</a> to find out more including how to activate
-                                                and start using your monthly Azure credit.
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <a href="https://azuredevopsdemogenerator.azurewebsites.net/" target="_blank"><strong>Azure
-                                                DevOps Demo Generator:</strong></a> You can use the Azure DevOps Demo
-                                        Generator to provision a project with pre-defined data on to your Azure DevOps
-                                        services organization.
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div id="server-labs" class="container-fluid tab-pane fade p-0">
-                    <!-- <div  class="jumbotron mb-3 p-10-0">
-              <div class="container"> 
-               <div class="row">
-                <div class="col-sm-12">                   
-                </div>
-               </div>
-              </div>
-             </div>   -->
-                    <div class="container">
-                        <div class="row">
-                            <!-- <div class="col-md-12 pading-t-10">
-                                <h2 class="border-0 fon-normal">Recently added Labs</h2>
-                                <iframe height="230px" scrolling="no" width="100%" src="slider.html"></iframe>
-                            </div> -->
-                            <div class="col-sm-12" style="margin-top:10px;">
-                                 <p>
-                            Learn how you can remove barriers between teams, encourage collaboration, and improve the
-                            flow of value to your customers with Visual Studio and Team Foundation Server.
-                                    </p>
-                                <h2 class="border-0 fon-normal">Agile Planning</h2>
-                                <div class="row equal-height-columns">
-                                    <div class="col-md-3 col-sm-12 p-l-r-override">
-                                        <div class="bg-color-white equal-height-column">
-                                            <ul class="p-l-5px">
-                                                <li class="osslist"> <img src="/images/azureboards.png" height="42"
-                                                        class="icon-bor-p-m" /><a href="/labs/tfs/agile/" class="fon-size-13">Agile
-                                                        Planning and Portfolio Management </a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3 col-sm-12 p-l-r-override">
-                                        <div class="bg-color-white equal-height-column">
-                                            <ul class="p-l-5px">
-                                                <li class="osslist"> <img src="/images/azureboards.png" height="42"
-                                                        class="icon-bor-p-m" /><a href="/labs/tfs/agileworkitems/"
-                                                        class="fon-size-13">Agile Work Item Management </a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3 col-sm-12 p-l-r-override">
-                                        <div class="bg-color-white equal-height-column">
-                                            <ul class="p-l-5px">
-                                                <li class="osslist"> <img src="/images/azureboards.png" height="42"
-                                                        class="icon-bor-p-m" /><a href="/labs/tfs/smartword4tfs/" class="fon-size-13">Introduction
-                                                        to the Modern Requirements Suite4TFS</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3 col-sm-12 p-l-r-override">
-                                        <div class="bg-color-white equal-height-column">
-                                            <ul class="p-l-5px">
-                                                <li class="osslist"> <img src="/images/azureboards.png" height="42"
-                                                        class="icon-bor-p-m" /><a href="/labs/tfs/deliveryplans/" class="fon-size-13">Managing
-                                                        Delivery Plans</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-12">
-                                <h2 class="border-0 fon-normal">Develop</h2>
-                                <div class="row equal-height-columns">
-                                    <div class="col-md-3 col-sm-12 p-l-r-override">
-                                        <div class="bg-color-white equal-height-column">
-                                            <ul class="p-l-5px">
-                                                <li class="osslist"> <img src="/images/wiki.png" height="42" class="icon-bor-p-m" /><a
-                                                        href="/labs/tfs/devteamcollaboration/" class="fon-size-13">Collaboration
-                                                        Experiences for Development Teams with Wiki</a> </li>
-                                                <li class="osslist"> <img src="/images/overview.png" height="42" class="icon-bor-p-m" /><a
-                                                        href="/labs/tfs/devexp/" class="fon-size-13">Developer
-                                                        Experience Enhancements</a> </li>
-                                                <li class="osslist"> <img src="/images/vside.png" height="42" class="icon-bor-p-m" /><a
-                                                        href="/labs/tfs/vsproductivity/" class="fon-size-13"> Making
-                                                        Developers More Productive</a> </li>
-                                                <li class="osslist"> <img src="/images/vside.png" height="42" class="icon-bor-p-m" /><a
-                                                        href="/labs/tfs/editorconfig/" class="fon-size-13"> Working
-                                                        with EditorConfig</a> </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3 col-sm-12 p-l-r-override">
-                                        <div class="bg-color-white equal-height-column">
-                                            <ul class="p-l-5px">
-                                                <li class="osslist"> <img src="/images/vside.png" height="42" class="icon-bor-p-m" /><a
-                                                        href="/labs/tfs/debugging/" class="fon-size-13">Debugging with
-                                                        IntelliTrace </a> </li>
-                                                <li class="osslist"> <img src="/images/azuretestplans.png" height="42"
-                                                        class="icon-bor-p-m" /><a href="/labs/tfs/intellitest/" class="fon-size-13">Generate
-                                                        Unit Tests with IntelliTest</a> </li>
-                                                <li class="osslist"> <img src="/images/azure-42.png" height="42" class="icon-bor-p-m" /><a
-                                                        href="/labs/tfs/sqlprompt/" class="fon-size-13"> SQL Prompt</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3 col-sm-12 p-l-r-override">
-                                        <div class="bg-color-white equal-height-column">
-                                            <ul class="p-l-5px">
-                                                <li class="osslist"> <img src="/images/vside.png" height="42" class="icon-bor-p-m" /><a
-                                                        href="/labs/tfs/snapshotdebugger/" class="fon-size-13">Debugging
-                                                        with Snapshot Debugger</a> </li>
-                                                <li class="osslist"> <img src="/images/validation.png" height="42"
-                                                        class="icon-bor-p-m" /><a href="/labs/tfs/livedependencyvalidation/" class="fon-size-13">Live
-                                                        Dependency Validation</a> </li>
-                                                <li class="osslist"> <img src="/images/vside.png" height="42" class="icon-bor-p-m" /><a
-                                                        href="/labs/tfs/codeanalysis/" class="fon-size-13"> Using Code
-                                                        Analysis to Improve Code Quality</a> </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3 col-sm-12 p-l-r-override">
-                                        <div class="bg-color-white equal-height-column">
-                                            <ul class="p-l-5px">
-                                                <li class="osslist"> <img src="/images/vside.png" height="42" class="icon-bor-p-m" /><a
-                                                        href="/labs/tfs/intellitrace/" class="fon-size-13">Diagnosing
-                                                        Issues in Production with IntelliTrace</a> </li>
-                                                <li class="osslist"> <img src="/images/azuretestplans.png" height="42"
-                                                        class="icon-bor-p-m" /><a href="/labs/tfs/liveunittesting/"
-                                                        class="fon-size-13">Live Unit Testing, Code Coverage and Code
-                                                        Clone Analysis</a> </li>
-                                                <li class="osslist"> <img src="/images/azurerepos.png" height="42"
-                                                        class="icon-bor-p-m" /><a href="/labs/tfs/git/" class="fon-size-13">
-                                                        Version Control with Git </a> </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-12">
-                                <h2 class="border-0 fon-normal">Continuous Integration</h2>
-                                <div class="row equal-height-columns">
-                                    <div class="col-md-3 col-sm-12 p-l-r-override">
-                                        <div class="bg-color-white equal-height-column">
-                                            <ul class="p-l-5px">
-                                                <li class="osslist"> <img src="/images/vside.png" height="42" class="icon-bor-p-m" /><a
-                                                        href="/labs/tfs/technicaldebt/" class="fon-size-13">Managing
-                                                        Technical Debt with SonarQube </a> </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3 col-sm-12 p-l-r-override">
-                                        <div class="bg-color-white equal-height-column">
-                                            <ul class="p-l-5px">
-                                                <li class="osslist"> <img src="/images/azureartifacts.png" height="42"
-                                                        class="icon-bor-p-m" /><a href="/labs/tfs/packagemanagement/"
-                                                        class="fon-size-13">Package Management </a> </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3 col-sm-12 p-l-r-override">
-                                        <div class="bg-color-white equal-height-column">
-                                            <ul class="p-l-5px">
-                                                <li class="osslist"> <img src="/images/azurepipelines.png" height="42"
-                                                        class="icon-bor-p-m" /><a href="/labs/tfs/build/" class="fon-size-13">Enabling
-                                                        Continuous Integration </a> </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-12">
-                                <h2 class="border-0 fon-normal">Test Management and Execution</h2>
-                                <div class="row equal-height-columns">
-                                    <div class="col-md-3 col-sm-12 p-l-r-override">
-                                        <div class="bg-color-white equal-height-column">
-                                            <ul class="p-l-5px">
-                                                <li class="osslist"> <img src="/images/azuretestplans.png" height="42"
-                                                        class="icon-bor-p-m" /><a href="/labs/tfs/liveunittesting/"
-                                                        class="fon-size-13">Unit Testing, Code Coverage and Code Clone
-                                                        Analysis </a> </li>
-                                                <li class="osslist"> <img src="/images/azuretestplans.png" height="42"
-                                                        class="icon-bor-p-m" /><a href="/labs/tfs/codedui/" class="fon-size-13">UI
-                                                        Automation using Coded UI Tests</a> </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3 col-sm-12 p-l-r-override">
-                                        <div class="bg-color-white equal-height-column">
-                                            <ul class="p-l-5px">
-                                                <li class="osslist"> <img src="/images/azuretestplans.png" height="42"
-                                                        class="icon-bor-p-m" /><a href="/labs/tfs/intellitest/" class="fon-size-13">Generate
-                                                        Unit Tests with IntelliTest</a> </li>
-                                                <li class="osslist"> <img src="/images/azuretestplans.png" height="42"
-                                                        class="icon-bor-p-m" /><a href="/labs/tfs/load/" class="fon-size-13">Web
-                                                        Application Load and Performance Testing </a> </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3 col-sm-12 p-l-r-override">
-                                        <div class="bg-color-white equal-height-column">
-                                            <ul class="p-l-5px">
-                                                <li class="osslist"> <img src="/images/azuretestplans.png" height="42"
-                                                        class="icon-bor-p-m" /><a href="/labs/tfs/manualtesting/" class="fon-size-13">Test
-                                                        Planning and Management </a> </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3 col-sm-12 p-l-r-override">
-                                        <div class="bg-color-white equal-height-column">
-                                            <ul class="p-l-5px">
-                                                <li class="osslist"> <img src="/images/azuretestplans.png" height="42"
-                                                        class="icon-bor-p-m" /><a href="/labs/tfs/exploratorytesting/"
-                                                        class="fon-size-13">Exploratory Testing and Feedback Management
-                                                    </a> </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-12">
-                                <h2 class="border-0 fon-normal">Continuous Delivery</h2>
-                                <div class="row equal-height-columns">
-                                    <div class="col-md-3 col-sm-12 p-l-r-override">
-                                        <div class="bg-color-white equal-height-column">
-                                            <ul class="p-l-5px">
-                                                <li class="osslist"> <img src="/images/azurepipelines.png" height="42"
-                                                        class="icon-bor-p-m" /><a href="/labs/tfs/releasemanagement/"
-                                                        class="fon-size-13">Embracing Continuous Delivery with Release
-                                                        Management </a> </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3 col-sm-12 p-l-r-override">
-                                        <div class="bg-color-white equal-height-column">
-                                            <ul class="p-l-5px">
-                                                <li class="osslist"> <img src="/images/azure-42.png" height="42" class="icon-bor-p-m" /><a
-                                                        href="/labs/tfs/readyroll/" class="fon-size-13">Develop and
-                                                        Deploy Databases with ReadyRoll</a> </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-12">
-                                <h2 class="border-0 fon-normal">Application Monitoring</h2>
-                                <div class="row equal-height-columns">
-                                    <div class="col-md-3 col-sm-12 p-l-r-override">
-                                        <div class="bg-color-white equal-height-column">
-                                            <ul class="p-l-5px">
-                                                <li class="osslist"> <img src="/images/azure-42.png" height="42" class="icon-bor-p-m" /><a
-                                                        href="/labs/tfs/appinsights/" class="fon-size-13">Instrumenting
-                                                        ASP.NET with Application Insights </a> </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-12">
-                                <h2 class="border-0 fon-normal">Azure</h2>
-                                <div class="row equal-height-columns">
-                                    <div class="col-md-3 col-sm-12 p-l-r-override">
-                                        <div class="bg-color-white equal-height-column">
-                                            <ul class="p-l-5px">
-                                                <li class="osslist"> <img src="/images/azure-42.png" height="42" class="icon-bor-p-m" /><a
-                                                        href="/labs/tfs/armtemplates/" class="fon-size-13">Authoring
-                                                        ARM Templates with Visual Studio </a> </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3 col-sm-12 p-l-r-override">
-                                        <div class="bg-color-white equal-height-column">
-                                            <ul class="p-l-5px">
-                                                <li class="osslist"> <img src="/images/azure-42.png" height="42" class="icon-bor-p-m" /><a
-                                                        href="/labs/tfs/aspnetazure/" class="fon-size-13">Deploying a
-                                                        SQL Database Backed ASP.NET App to Azure </a> </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-12">
-                                <h2 class="border-0 fon-normal">Get the accompanying VM</h2>
-                                <p>To make it easy for you to follow the labs, we offer a virtual machine pre-installed
-                                    with Visual Studio Enterprise 2017 (15.5), Visual Studio Team Foundation Server
-                                    2018, Office and pre-configured with sample projects, users and data.</p>
-                                <p>You can get access to the virtual machine the following ways:</p>
-                                <ul>
-                                    <li>
-                                        <strong>Download the Virtual Machine</strong> - You can download the virtual
-                                        machine, if you prefer to use it offline. The size of the download is about 18
-                                        GB and we highly recommend that you use a download manager to download the VHD
-                                        file. The <strong><a href="labs/tfs/almvmdownload\">Accessing the VM</a></strong>
-                                        page has detailed instructions on downloading the VM, including links to both
-                                        current and the previous versions of TFS labs.
-                                    </li>
-                                    <li>
-                                        <strong>Try it on Microsoft Hands-on Labs</strong> - If you are evaluating or
-                                        want to try the labs without the hassle of downloading or setting up the
-                                        virtual machine, you can access them from the <a href="labs/tfs/technet/"><strong>Microsoft
-                                                Hands-on-Labs</strong></a> center. You only need a browser. There is
-                                        absolutely no download or setup required!
-                                    </li>
-                                    <li>
-                                        <strong>Run it on Azure</strong> - Though the VM is currently not supported to
-                                        run on Azure, you can simply upload the VHD to Azure as a specialized VHD and
-                                        create a VM from it. Thanks to <strong>Pieter Gheysens</strong> who has written
-                                        a PowerShell script to create VM instances based on the ALM VM. His <a href="https://intovsts.net/2018/01/03/generating-azure-vms-from-a-specialized-vhd-file/"
-                                            target="_blank">blog</a> has more details.
-                                        If you want to and customize and upload the VHD yourself, please see this
-                                        article for step-by-step instructions - <a href="https://docs.microsoft.com/en-us/azure/virtual-machines/windows/create-vm-specialized"
-                                            target="_blank">Create a Windows VM from a specialized disk</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    </div>
-</div>
+  

@@ -6,6 +6,7 @@ permalink: /labs/devopsserver/armtemplates/
 folder: /labs/devopsserver/armtemplates/
 version: Lab version - 16.0.0
 updated: Last updated - 3/15/2019
+redirect_from: "labs/tfs/armtemplates/index.htm"
 ---
 <div class="rw-ui-container"></div>
 <a name="Overview"></a>
@@ -22,7 +23,7 @@ In this lab, you will deploy a web app and SQL database. However, the steps are 
 
 In order to complete this lab you will need the Azure DevOps Server 2019 virtual machine provided by Microsoft. Click the button below to launch the virtual machine on the Microsoft Hands-on-Labs portal.
 
-<a href="https://labondemand.com/AuthenticatedLaunch/38297?providerId=4" class="launch-hol" role="button" target="_blank"><span class="lab-details">Launch the virtual machine</span></a>
+<a href="https://labondemand.com/AuthenticatedLaunch/38294?providerId=4" class="launch-hol" role="button" target="_blank"><span class="lab-details">Launch the virtual machine</span></a>
 
 Alternatively, you can download the virtual machine from [here](../devopsvmdownload).
 
@@ -77,7 +78,7 @@ You also need an [Azure account](https://azure.microsoft.com/) ([Get a $25 month
 
     ![](images/006.png)
 
-1. Select the **resources | Website** node and note how the associated JSON is highlighted in the editor.
+1. Select the **resources \| Website** node and note how the associated JSON is highlighted in the editor.
 
     ![](images/007.png)
 
@@ -112,7 +113,7 @@ You also need an [Azure account](https://azure.microsoft.com/) ([Get a $25 month
 <a name="Ex1Task3"></a>
 ### Task 3: Deploying the Resource Group project to Azure ###
 
-1. From **Solution Explorer**, right-click the **AzureResourceGroup1** project node and select **Deploy | New**. When you deploy an Azure Resource Group project, you deploy it to an Azure resource group. The resource group is a logical grouping of resources that share a common lifecycle.
+1. From **Solution Explorer**, right-click the **AzureResourceGroup1** project node and select **Deploy \| New**. When you deploy an Azure Resource Group project, you deploy it to an Azure resource group. The resource group is a logical grouping of resources that share a common lifecycle.
 
 1. Select **Add an account** and log in using the Microsoft account associated with your Azure subscription.
 
@@ -171,7 +172,7 @@ You also need an [Azure account](https://azure.microsoft.com/) ([Get a $25 month
 
 1. At this point, you have deployed the infrastructure for your app, but there is no actual code deployed with the project. This task walks through the process of deploying a web app and SQL database tables. Note that if you were deploying a virtual machine instead of a web app, you would instead want to run some code on the machine as part of deployment. The processes for deploying code for a web app or for setting up a virtual machine are very similar.
 
-1. In **Solution Explorer**, right-click the solution node and select **Add | New Project**.
+1. In **Solution Explorer**, right-click the solution node and select **Add \| New Project**.
 
     ![](images/027.png)
 
@@ -211,7 +212,7 @@ You also need an [Azure account](https://azure.microsoft.com/) ([Get a $25 month
 
     ![](images/035.png)
 
-1. Now you can deploy the full app. In **Solution Explorer**, right-click the resource group project node and select **Deploy | AzureResourceGroup1**.
+1. Now you can deploy the full app. In **Solution Explorer**, right-click the resource group project node and select **Deploy \| AzureResourceGroup1**.
 
     ![](images/036.png)
 

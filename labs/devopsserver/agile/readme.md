@@ -6,6 +6,7 @@ permalink: /labs/devopsserver/agile/
 folder: /labs/devopsserver/agile/
 version: Lab version - 16.0.0
 updated: Last updated - 3/7/2019
+redirect_from: "labs/tfs/agile/index.htm"
 ---
 <div class="rw-ui-container"></div>
 
@@ -19,7 +20,7 @@ In this lab, you will learn about the agile planning and portfolio management to
 
 In order to complete this lab you will need the Azure DevOps Server 2019 virtual machine provided by Microsoft. Click the button below to launch the virtual machine on the Microsoft Hands-on-Labs portal.
 
-<a href="https://labondemand.com/AuthenticatedLaunch/38297?providerId=4" class="launch-hol" role="button" target="_blank"><span class="lab-details">Launch the virtual machine</span></a>
+<a href="https://labondemand.com/AuthenticatedLaunch/38292?providerId=4" class="launch-hol" role="button" target="_blank"><span class="lab-details">Launch the virtual machine</span></a>
 
 Alternatively, you can download the virtual machine from [here](../devopsvmdownload).
 
@@ -86,7 +87,7 @@ Alternatively, you can download the virtual machine from [here](../devopsvmdownl
 
 1. This task is designed to illustrate a variety of ways you can create different kinds of work items, as well as to demonstrate the breadth of features available on the platform. As a result, these steps should not be viewed as prescriptive guidance for project management. The features are intended to be flexible enough to fit your process needs, so explore and experiment as you go.
 
-1. Navigate to **Overview | Dashboards**.
+1. Navigate to **Overview \| Dashboards**.
 
     ![](images/012.png)
 
@@ -110,7 +111,7 @@ Alternatively, you can download the virtual machine from [here](../devopsvmdownl
 
     ![](images/017.png)
 
-1. Navigate to **Boards | Work Items**.
+1. Navigate to **Boards \| Work Items**.
 
     ![](images/018.png)
 
@@ -118,7 +119,7 @@ Alternatively, you can download the virtual machine from [here](../devopsvmdownl
 
     ![](images/019.png)
 
-1. The work item form includes everything you could ever want to know about a work item. This includes details about who it's assigned to, its status across many parameters, and all the associated information and history for how it has been handled since creation. One of the key areas to focus on is the Related Work. One of the ways to add a feature to this epic is to select Add link | New item.
+1. The work item form includes everything you could ever want to know about a work item. This includes details about who it's assigned to, its status across many parameters, and all the associated information and history for how it has been handled since creation. One of the key areas to focus on is the Related Work. One of the ways to add a feature to this epic is to select **Add link \| New item**.
 
     ![](images/020.png)
 
@@ -217,7 +218,7 @@ Your team builds the sprint backlog during the sprint planning meeting, typicall
 
 Planning meetings typically consist of two parts. In the first part, the team and product owner identify the backlog items that the team feels it can commit to completing in the sprint, based on experience with previous sprints. These items get added to the sprint backlog. In the second part, your team determines how it will develop and test each item. They then define and estimate the tasks required to complete each item. Finally, your team commits to implementing some or all the items based on these estimates.
 
-1. Your sprint backlog should contain all the information your team needs to successfully plan and complete work within the time allotted without having to rush at the end. Before you start planning your sprint, you'll want to have created, prioritized, and estimated your backlog and defined your sprints. Navigate to the **Boards | Sprints** view using the navigation.
+1. Your sprint backlog should contain all the information your team needs to successfully plan and complete work within the time allotted without having to rush at the end. Before you start planning your sprint, you'll want to have created, prioritized, and estimated your backlog and defined your sprints. Navigate to the **Boards \| Sprints** view using the navigation.
 
     ![](images/043.png)
 
@@ -410,7 +411,7 @@ To maximize a team's ability to consistently deliver high quality software, Kanb
 
     ![](images/089.png)
 
-1. Drag and drop the Committed work item onto **QA Approved | Doing** so that it gets recognized as having priority when QA bandwidth becomes available.
+1. Drag and drop the Committed work item onto **QA Approved \| Doing** so that it gets recognized as having priority when QA bandwidth becomes available.
 
     ![](images/090.png)
 
@@ -429,7 +430,7 @@ To maximize a team's ability to consistently deliver high quality software, Kanb
 <a name="Ex1Task5"></a>
 ### Task 5: Defining dashboards ###
 
-1. Navigate to **Overview | Dashboards**.
+1. Navigate to **Overview \| Dashboards**.
 
     ![](images/094.png)
 
@@ -469,7 +470,7 @@ To maximize a team's ability to consistently deliver high quality software, Kanb
 
     ![](images/103.png)
 
-1. Another way of customizing dashboards is to generate charts based on work item queries, which you can share to a dashboard. Navigate to **Boards | Queries**.
+1. Another way of customizing dashboards is to generate charts based on work item queries, which you can share to a dashboard. Navigate to **Boards \| Queries**.
 
     ![](images/104.png)
 
@@ -505,7 +506,7 @@ To maximize a team's ability to consistently deliver high quality software, Kanb
 
     ![](images/112.png)
 
-1. Navigate to **Overview | Dashboards**.
+1. Navigate to **Overview \| Dashboards**.
 
     ![](images/113.png)
 

@@ -6,6 +6,7 @@ permalink: /labs/devopsserver/intellitrace/
 folder: /labs/devopsserver/intellitrace/
 version: Lab version - 16.0.0
 updated: Last updated - 4/3/2019
+redirect_from: "labs/tfs/intellitrace/index.htm"
 ---
 <div class="rw-ui-container"></div>
 
@@ -19,7 +20,7 @@ IntelliTrace - first released in Visual Studio 2010 - changed the game for debug
 
 In order to complete this lab you will need the Azure DevOps Server 2019 virtual machine provided by Microsoft. Click the button below to launch the virtual machine on the Microsoft Hands-on-Labs portal.
 
-<a href="https://labondemand.com/AuthenticatedLaunch/38297?providerId=4" class="launch-hol" role="button" target="_blank"><span class="lab-details">Launch the virtual machine</span></a>
+<a href="https://labondemand.com/AuthenticatedLaunch/38300?providerId=4" class="launch-hol" role="button" target="_blank"><span class="lab-details">Launch the virtual machine</span></a>
 
 Alternatively, you can download the virtual machine from [here](../devopsvmdownload).
 
@@ -163,9 +164,9 @@ In this task, you will see how we can use the IntelliTrace file that was generat
 
     ![](images/013.png)
 
-1. Since this IntelliTrace session isn't associated with an active solution, you'll need to temporarily disable the **Just My Code** feature to get the full experience. From the main menu select **Tools | Options**.
+1. Since this IntelliTrace session isn't associated with an active solution, you'll need to temporarily disable the **Just My Code** feature to get the full experience. From the main menu select **Tools \| Options**.
 
-1. In the left tree view, locate **Debugging | General** and uncheck the **Enable Just My Code** option in the right panel. Click **OK** to apply.
+1. In the left tree view, locate **Debugging \| General** and uncheck the **Enable Just My Code** option in the right panel. Click **OK** to apply.
 
     ![](images/014.png)
 

@@ -2,12 +2,13 @@
 title: Downloading the DevOps Virtual Machine
 layout: page    
 sidebar: vsts
-permalink: /labs/devopsserver/almvmdownload/
-folder: /labs/devopsserver/almvmdownload/
+permalink: /labs/devopsserver/devopsvmdownload/
+folder: /labs/devopsserver/devopsvmdownload/
 updated: Last updated - 3/18/2019
+redirect_from: "labs/tfs/almvmdownload/index.htm"
 ---
 
-We highly recommend that you use the [**Microsoft Hands-on-Labs**](../technet/) center to run the VM - You do not require a high configuration machine or have to download and setup the machine. Simply access them from a browser of your choice. 
+We highly recommend that you use the [**Microsoft Hands-on-Labs**](../handsonlabs/) center to run the VM - You do not require a high configuration machine or have to download and setup the machine. Simply access them from a browser of your choice. 
 
 If you prefer to download the VM instead, please see the instructions below.
 
@@ -29,7 +30,7 @@ The 2019 (Spring Update) includes Microsoft Visual Studio DevOps VM and the acco
 
 ## Downloading the VM
 
-The size of the download is about 18 GB. It is recommended that you use a download manager  like [**Free download manager**](http://www.freedownloadmanager.org/){:target="_blank"} or [**Download Accelerator Plus**](http://www.speedbit.com/dap/){:target="_blank"}.
+The size of the download is about 30 GB. It is recommended that you use a download manager  like [**Free download manager**](http://www.freedownloadmanager.org/){:target="_blank"} or [**Download Accelerator Plus**](http://www.speedbit.com/dap/){:target="_blank"}.
 
 These utility provide:
 
@@ -40,7 +41,7 @@ These utility provide:
 Using **Free download manager**
 
 - Download and install Free download manager if you currently do not have one installed 
-- Open and select all the <a href="../media/almvm2017wu2links.txt" target="_blank">download URLs</a> from the text file. Press ***CTRL+C*** to copy the selected URLs to clipboard.
+- Open and select all the <a href="./devopsvm2019links.txt" target="_blank">download URLs</a> from the text file. Press ***CTRL+C*** to copy the selected URLs to clipboard.
 - Select Menu - ***Paste URLs from clipboard***      
 - When the download is complete, double-click the .exe file to self-extract the RAR files to a folder       
 - Read the "Working with the …" document to start using the VM
@@ -48,7 +49,7 @@ Using **Free download manager**
   <img src="images/fdm.png" />
 
 
-   >There are quite a number of important instructions on how to use the VM including activating the VM, taking snapshots/check points, etc., documented. We highly recommend that you read through the [Working with the Visual Studio 2017 (Winter Update) ALM Virtual Machine](../started/) document prior to using the VM, even if you may have used the earlier version of the VM.
+   >There are quite a number of important instructions on how to use the VM including activating the VM, taking snapshots/check points, etc., documented. We highly recommend that you read through the [Working with the Microsoft Visual Studio DevOps (Winter Update) Virtual Machine](../started/) document prior to using the VM, even if you may have used the earlier version of the VM.
 
    >Note that The VM has about 15 GB of free hard disk space. Should you want to increase the size of the disk, you will need to do so before creating snapshots/check points. You can refer this article on [TechNet](https://technet.microsoft.com/en-us/library/dn282284(v=ws.11).aspx){:target="_blank"} for instructions on expanding the virtual hard disk.
 

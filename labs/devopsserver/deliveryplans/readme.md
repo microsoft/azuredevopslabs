@@ -6,6 +6,7 @@ permalink: /labs/devopsserver/deliveryplans/
 folder: /labs/devopsserver/deliveryplans/
 version: Lab version - 16.0.0
 updated: Last updated - 3/5/2019
+redirect_from: "labs/tfs/deliveryplans/index.htm"
 ---
 <div class="rw-ui-container"></div>
 <a name="Overview"></a>
@@ -18,7 +19,7 @@ It takes several teams to develop large software projects. Very large projects r
 
 In order to complete this lab you will need the Azure DevOps Server 2019 virtual machine provided by Microsoft. Click the button below to launch the virtual machine on the Microsoft Hands-on-Labs portal.
 
-<a href="https://labondemand.com/AuthenticatedLaunch/38297?providerId=4" class="launch-hol" role="button" target="_blank"><span class="lab-details">Launch the virtual machine</span></a>
+<a href="https://labondemand.com/AuthenticatedLaunch/38311?providerId=4" class="launch-hol" role="button" target="_blank"><span class="lab-details">Launch the virtual machine</span></a>
 
 Alternatively, you can download the virtual machine from [here](../devopsvmdownload).
 
@@ -94,7 +95,7 @@ Alternatively, you can download the virtual machine from [here](../devopsvmdownl
 
     ![](images/013.png)
 
-1. Navigate to **Boards | Plans**.
+1. Navigate to **Boards \| Plans**.
 
     ![](images/014.png)
 
@@ -196,7 +197,7 @@ Alternatively, you can download the virtual machine from [here](../devopsvmdownl
 <a name="Ex1Task5"></a>
 ### Task 5: Making delivery decisions ###
 
-1. Navigate to **Boards | Plans**.
+1. Navigate to **Boards \| Plans**.
 
     ![](images/038.png)
 

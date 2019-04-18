@@ -6,6 +6,7 @@ permalink: /labs/devopsserver/liveunittesting/
 folder: /labs/devopsserver/liveunittesting/
 version: Lab version - 16.0.0
 updated: Last updated - 4/3/2019
+redirect_from: "labs/tfs/liveunittesting/index.htm"
 ---
 <div class="rw-ui-container"></div>
 
@@ -46,9 +47,9 @@ In this task, you will learn about the unit testing story in Visual Studio 2019.
 
 1. Update all NuGet packages for the solution.
 
-1. Select **Build | Build Solution**.
+1. Select **Build \| Build Solution**.
 
-1. Open the **Test Explorer** window from **Test | Windows | Test Explorer**. All of the detected tests will appear here, and you can toggle whether they're organized by hierarchy. Click the **Show Test Hierarchy** button to turn it off.
+1. Open the **Test Explorer** window from **Test \| Windows \| Test Explorer**. All of the detected tests will appear here, and you can toggle whether they're organized by hierarchy. Click the **Show Test Hierarchy** button to turn it off.
 
     ![](images/001.png)
 
@@ -60,7 +61,7 @@ In this task, you will learn about the unit testing story in Visual Studio 2019.
 
     ![](images/003.png)
 
-    > **Note:** Visual Studio also provides **Continuous Test Runner** functionality that can be enabled with the **Test | Test Settings | Run Tests After Build** option. With this option selected, tests will always run after builds.
+    > **Note:** Visual Studio also provides **Continuous Test Runner** functionality that can be enabled with the **Test \| Test Settings \| Run Tests After Build** option. With this option selected, tests will always run after builds.
 
 1. Expand the **Passed Tests** group (if necessary) and **double-click** the test with the name **CreateInsertsCustomerAndSaves** to open the source code.
 
@@ -122,7 +123,7 @@ In this task, you will learn about the unit testing story in Visual Studio 2019.
 
 1. Up until now, we've walked through the process of manually running tests to find bugs. While this approach does work, there's an even better option that will save you a ton of time: **Live Unit Testing**. Live unit testing continually runs your unit tests in the background as you edit code, providing real-time feedback on how changes impact the quality of the overall codebase.
 
-1. Select **Test | Live Unit Testing | Start** to enable it. After it builds and runs the tests in the background, you'll see some new glyphs alongside the code.
+1. Select **Test \| Live Unit Testing \| Start** to enable it. After it builds and runs the tests in the background, you'll see some new glyphs alongside the code.
 
     ![](images/018.png)
 
@@ -137,7 +138,7 @@ In this task, you will learn about the unit testing story in Visual Studio 2019.
 <a name="Ex1Task2"></a>
 ### Task 2: Unit Test Organization ###
 
-1. So far, we have seen how to run all discovered tests, search for specific tests, and view tests by their outcome. Now let's take a look at a few other ways that you can organize and navigate them to make unit testing easier. To start with, there are a number of useful grouping options. **Right-click** somewhere within the **Test Explorer** window and select **Group By | Class**.
+1. So far, we have seen how to run all discovered tests, search for specific tests, and view tests by their outcome. Now let's take a look at a few other ways that you can organize and navigate them to make unit testing easier. To start with, there are a number of useful grouping options. **Right-click** somewhere within the **Test Explorer** window and select **Group By \| Class**.
 
     ![](images/020.png)
 
@@ -145,7 +146,7 @@ In this task, you will learn about the unit testing story in Visual Studio 2019.
 
     ![](images/021.png)
 
-1. **Right-click** somewhere within the Test Explorer window and select **Group By | Project**.
+1. **Right-click** somewhere within the Test Explorer window and select **Group By \| Project**.
 
     ![](images/022.png)
 
@@ -167,13 +168,13 @@ In this task, you will learn about the unit testing story in Visual Studio 2019.
 
 1. Build the solution by pressing **Ctrl+Shift+B**.
 
-1. **Right-click** within **Test Explorer** and select **Group By | Traits**.
+1. **Right-click** within **Test Explorer** and select **Group By \| Traits**.
 
 1. With the coded UI tests categorized appropriately, it is now easy to select and run just the UI tests if desired.
 
     ![](images/027.png)
 
-1. You can also create sets of tests called **playlists**. This provides custom grouping without the need to modify your unit testing code. **Right-click** the _**CodedUITestMethod1**_ test and select **Add to Playlist | New Playlist**.
+1. You can also create sets of tests called **playlists**. This provides custom grouping without the need to modify your unit testing code. **Right-click** the _**CodedUITestMethod1**_ test and select **Add to Playlist \| New Playlist**.
 
     ![](images/028.png)
 
@@ -270,7 +271,7 @@ In this task, you will learn about code coverage features that make it easier to
 
     In this exercise, you will learn about the Code Clone analysis feature that looks for semantically similar code using a heuristic search technique, rather than simply searching for exact matches.
 
-1. Select **Analyze | Analyze Solution for Code Clones** from the main menu in Visual Studio.
+1. Select **Analyze \| Analyze Solution for Code Clones** from the main menu in Visual Studio.
 
 1. Once the analysis is complete, the **Code Clone Analysis Results** window will show clone candidates grouped by match strength. Expand the **Strong Match** group to expose the two files that had a strong match.
 
@@ -288,7 +289,7 @@ In this task, you will learn about code coverage features that make it easier to
 
     ![](images/052.png)
 
-1. Select **Window | Close All Documents** from the main menu to clear up some screen real estate space.
+1. Select **Window \| Close All Documents** from the main menu to clear up some screen real estate space.
 
 1. You can also narrow the focus of the search for code clones if desired. In **Solution Explorer**, navigate to **Controllers** folder of the **FabrikamFiber.Web** project and open **CustomersController.cs** in the code editor.
 

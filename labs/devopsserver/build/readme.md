@@ -6,6 +6,7 @@ permalink: /labs/devopsserver/build/
 folder: /labs/devopsserver/build/
 version: Lab version - 16.0.0
 updated: Last updated - 3/21/2019
+redirect_from: "labs/tfs/build/index.htm"
 ---
 <div class="rw-ui-container"></div>
 

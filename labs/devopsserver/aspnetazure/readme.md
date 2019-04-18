@@ -6,6 +6,7 @@ permalink: /labs/devopsserver/aspnetazure/
 folder: /labs/devopsserver/aspnetazure/
 version: Lab version - 16.0.0
 updated: Last updated - 3/15/2019
+redirect_from: "labs/tfs/aspnetazure/index.htm"
 ---
 <div class="rw-ui-container"></div>
 <a name="Overview"></a>
@@ -53,7 +54,7 @@ You also need an [Azure account](https://azure.microsoft.com/) ([Get a $25 month
 
     ![](images/002.png)
 
-1. Select **Add an account | Add an account** and log in using the Microsoft account associated with your Azure subscription.
+1. Select **Add an account \| Add an account** and log in using the Microsoft account associated with your Azure subscription.
 
     ![](images/003.png)
 
@@ -112,7 +113,7 @@ You also need an [Azure account](https://azure.microsoft.com/) ([Get a $25 month
 <a name="Ex1Task3"></a>
 ### Task 3: Accessing the Azure SQL database locally ###
 
-1. Select **View | SQL Server Object Explorer**.
+1. Select **View \| SQL Server Object Explorer**.
 
 1. Click the **Add SQL Server** button.
 
@@ -148,7 +149,7 @@ You also need an [Azure account](https://azure.microsoft.com/) ([Get a $25 month
     ```c#
     public bool Done { get; set; }
     ```
-1. Select **Tools | NuGet Package Manager | Package Manager Console**.
+1. Select **Tools \| NuGet Package Manager \| Package Manager Console**.
 
 1. Execute the command below to enable Code First Migrations for the project. This will also create an initial schema class based on the current database.
 
@@ -274,7 +275,7 @@ You also need an [Azure account](https://azure.microsoft.com/) ([Get a $25 month
 
     ![](images/037.png)
 
-1. Select **View | Cloud Explorer**.
+1. Select **View \| Cloud Explorer**.
 
 1. Locate the application under its resource group. Right-click it and select **View Streaming Logs**.
 

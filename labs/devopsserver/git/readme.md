@@ -6,6 +6,7 @@ permalink: /labs/devopsserver/git/
 folder: /labs/devopsserver/git/
 version: Lab version - 16.0.0
 updated: Last updated - 3/27/2019
+redirect_from: "labs/tfs/git/index.htm"
 ---
 <div class="rw-ui-container"></div>
 
@@ -19,7 +20,7 @@ In this lab, you'll learn about Git support in Azure DevOps Server 2019 and Visu
 
 In order to complete this lab you will need the Azure DevOps Server 2019 virtual machine provided by Microsoft. Click the button below to launch the virtual machine on the Microsoft Hands-on-Labs portal.
 
-<a href="https://labondemand.com/AuthenticatedLaunch/38297?providerId=4" class="launch-hol" role="button" target="_blank"><span class="lab-details">Launch the virtual machine</span></a>
+<a href="https://labondemand.com/AuthenticatedLaunch/38303?providerId=4" class="launch-hol" role="button" target="_blank"><span class="lab-details">Launch the virtual machine</span></a>
 
 Alternatively, you can download the virtual machine from [here](../devopsvmdownload).
 
@@ -66,7 +67,7 @@ In this exercise, you will learn how to create, clone, and push commits to a Git
 
     ![](images/006.png)
 
-1. Select **Build | Build Solution** to build the solution.
+1. Select **Build \| Build Solution** to build the solution.
 
 <a name="Exercise2"></a>
 ## Exercise 2: Saving work with commits ##
@@ -164,7 +165,7 @@ Staging changes allows you to selectively add certain files to a commit while pa
 
     ![](images/023.png)
 
-1. Enter a comment of **"Added comments"** and select **Commit Staged | Commit Staged and Sync**. This will commit the staged file and sync it with the server in one process.
+1. Enter a comment of **"Added comments"** and select **Commit Staged \| Commit Staged and Sync**. This will commit the staged file and sync it with the server in one process.
 
     ![](images/024.png)
 
@@ -367,7 +368,7 @@ Pull requests let your team give feedback on changes in feature branches before 
 
     ![](images/060.png)
 
-1. There is still a pending change from earlier in the lab, so enter a comment of **"Checkout controller changes"** and select **Commit All | Commit All and Sync**.
+1. There is still a pending change from earlier in the lab, so enter a comment of **"Checkout controller changes"** and select **Commit All \| Commit All and Sync**.
 
     ![](images/061.png)
 

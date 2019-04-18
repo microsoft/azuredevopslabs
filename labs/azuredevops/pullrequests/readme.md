@@ -43,7 +43,7 @@ When the Git lab ended, we had created a new branch and made a change to some of
 
     ![](images/001.png)
 
-1. Press **Ctrl|Shift+P** to open the **Command Palette**.
+1. Press **Ctrl\|Shift+P** to open the **Command Palette**.
 
 1. Start typing **"Team"** and select **Team: Create Pull Request** when it becomes available. This will open a new pull request for the current branch in a new browser tab.
 

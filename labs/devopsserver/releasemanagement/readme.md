@@ -6,6 +6,7 @@ permalink: /labs/devopsserver/releasemanagement/
 folder: /labs/devopsserver/releasemanagement/
 version: Lab version - 16.0.0
 updated: Last updated - 3/31/2019
+redirect_from: "labs/tfs/releasemanagement/index.htm"
 ---
 <div class="rw-ui-container"></div>
 
@@ -19,7 +20,7 @@ In this lab, you will learn about the release management features available in A
 
 In order to complete this lab you will need the Azure DevOps Server 2019 virtual machine provided by Microsoft. Click the button below to launch the virtual machine on the Microsoft Hands-on-Labs portal.
 
-<a href="https://labondemand.com/AuthenticatedLaunch/38297?providerId=4" class="launch-hol" role="button" target="_blank"><span class="lab-details">Launch the virtual machine</span></a>
+<a href="https://labondemand.com/AuthenticatedLaunch/38301?providerId=4" class="launch-hol" role="button" target="_blank"><span class="lab-details">Launch the virtual machine</span></a>
 
 Alternatively, you can download the virtual machine from [here](../devopsvmdownload).
 
@@ -308,11 +309,11 @@ The release management tools are incredibly flexible. Not only can you automate 
 
     ![](images/061.png)
 
-1. Select **Add | Query Work Items**.
+1. Select **Add \| Query Work Items**.
 
     ![](images/062.png)
 
-1. Select the **Shared Queries | Critical Bugs** query. The release will be held up until this query returns zero results.
+1. Select the **Shared Queries \| Critical Bugs** query. The release will be held up until this query returns zero results.
 
     ![](images/063.png)
 
@@ -359,11 +360,11 @@ The release management tools are incredibly flexible. Not only can you automate 
 
     ![](images/072.png)
 
-1. Navigate to **Boards | Queries** in a new tab.
+1. Navigate to **Boards \| Queries** in a new tab.
 
     ![](images/073.png)
 
-1. From the **All** tab, select **Shared Queries | Critical Bugs**.
+1. From the **All** tab, select **Shared Queries \| Critical Bugs**.
 
     ![](images/074.png)
 

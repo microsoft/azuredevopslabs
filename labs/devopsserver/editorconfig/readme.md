@@ -6,6 +6,7 @@ permalink: /labs/devopsserver/editorconfig/
 folder: /labs/devopsserver/editorconfig/
 version: Lab version - 16.0.0
 updated: Last updated - 3/11/2019
+redirect_from: "labs/tfs/editorconfig/index.htm"
 ---
 <div class="rw-ui-container"></div>
 
@@ -19,7 +20,7 @@ updated: Last updated - 3/11/2019
 
 In order to complete this lab you will need the Azure DevOps Server 2019 virtual machine provided by Microsoft. Click the button below to launch the virtual machine on the Microsoft Hands-on-Labs portal.
 
-<a href="https://labondemand.com/AuthenticatedLaunch/38297?providerId=4" class="launch-hol" role="button" target="_blank"><span class="lab-details">Launch the virtual machine</span></a>
+<a href="https://labondemand.com/AuthenticatedLaunch/38318?providerId=4" class="launch-hol" role="button" target="_blank"><span class="lab-details">Launch the virtual machine</span></a>
 
 Alternatively, you can download the virtual machine from [here](../devopsvmdownload).
 
@@ -37,7 +38,7 @@ Alternatively, you can download the virtual machine from [here](../devopsvmdownl
 
     ![](images/000.png)
 
-1. **EditorConfig** files are just ordinary text files that can be added to the project and managed through source control. In **Solution Explorer**, right-click **src** and select **Add | New Item**.
+1. **EditorConfig** files are just ordinary text files that can be added to the project and managed through source control. In **Solution Explorer**, right-click **src** and select **Add \| New Item**.
 
     ![](images/001.png)
 
@@ -71,13 +72,13 @@ Alternatively, you can download the virtual machine from [here](../devopsvmdownl
 
     ![](images/004.png)
 
-1. Press **Ctrl+K** followed by **Ctrl+D**. This is a shortcut that will format the document according to the configured styles. Note that you could alternatively do this from the menu via **Edit | Advanced | Format Document**.
+1. Press **Ctrl+K** followed by **Ctrl+D**. This is a shortcut that will format the document according to the configured styles. Note that you could alternatively do this from the menu via **Edit \| Advanced \| Format Document**.
 
 1. Count the indentation now used before the attribute. It should be only two spaces.
 
     ![](images/005.png)
 
-1. Let's suppose that the team has decided that the **Controllers** directory needs some special settings for C# code. To help enforce this, you can add an **.editorconfig** file to the folder. In **Solution Explorer**, right-click the **Controllers** folder and select **Add | New Item**.
+1. Let's suppose that the team has decided that the **Controllers** directory needs some special settings for C# code. To help enforce this, you can add an **.editorconfig** file to the folder. In **Solution Explorer**, right-click the **Controllers** folder and select **Add \| New Item**.
 
     ![](images/006.png)
 
