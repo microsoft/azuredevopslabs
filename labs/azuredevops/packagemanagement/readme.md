@@ -124,7 +124,7 @@ Each organization gets five (5) free licenses. You will need to assign your lice
 
 1. Press **Ctrl+Shift+B** to build the project. In the next task we'll use **NuGet.exe** to generate a NuGet package directly from the built project, but it requires the project to be built first.
 
-1. Return to the browser and click **Download NuGet + VSTS Credential Provider**. Extract the zip somewhere you can easily access.
+1. Return to the browser and click **Download NuGet + Credential Provider**. Extract the zip somewhere you can easily access.
 
     ![](images/018.png)
 
