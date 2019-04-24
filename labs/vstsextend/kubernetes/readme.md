@@ -9,13 +9,13 @@ folder: /labs/vstsextend/kubernetes/
 
 ## Overview
 
-[**Azure Kubernetes Service (AKS)**](https://azure.microsoft.com/en-us/services/container-service/){:target="_blank"} is the quickest way to use Kubernetes on Azure. AKS provides capabilities to deploy and manage Docker containers using Kubernetes. With AKS, customers automatically get the benefits of the open source Kubernetes without the complexity and the operational overhead. Azure DevOps helps in creating Docker images for faster deployments and reliability using the continuous build option.
+[**Azure Kubernetes Service (AKS)**](https://azure.microsoft.com/en-us/services/container-service/){:target="_blank"} is the quickest way to use Kubernetes on Azure. **Azure Kubernetes Service (AKS)** manages your hosted Kubernetes environment, making it quick and easy to deploy and manage containerized applications without container orchestration expertise. It also eliminates the burden of ongoing operations and maintenance by provisioning, upgrading, and scaling resources on demand, without taking your applications offline. Azure DevOps helps in creating Docker images for faster deployments and reliability using the continuous build option.
 
 One of the biggest advantage to use AKS is that instead of creating resources in cloud you can create resources and infrastructure inside Azure Kubernetes Cluster through Deployments and Services manifest files.
 
 ### Lab Scenario
 
-This lab uses a Docker-based ASP.NET Core web application - **MyHealthClinic** and is deployed to a **Kubernetes** cluster running on **Azure Container Service (AKS)** using **Azure DevOps**.There is a  **mhc-aks.yaml** manifest file which consists of definitions to spin up Deployments and Services such as **Load Balancer** in the front and **Redis Cache** in the backend. The MHC application will be running in the mhc-front pod along with the Load Balancer.
+This lab uses a Dockerized ASP.NET Core web application - **MyHealthClinic** (MHC) and is deployed to a **Kubernetes** cluster running on **Azure Kubernetes Service (AKS)** using **Azure DevOps**.There is a  **mhc-aks.yaml** configuration file which consists of definitions to spin up Deployments and Services such as **Load Balancer** in the front and **Redis Cache** in the backend. The MHC application will be running in the mhc-front pod along with the Load Balancer.
 
 If you are new to Kubernetes, [click here](documentation/readme.md){:target="_blank"} for description of terminology used in this lab.
 
@@ -51,7 +51,7 @@ This lab requires all the pre-requisite executables to be installed and configur
 
 1. Download and install the [Git Bash](https://git-scm.com/downloads){:target="_blank"} on the Azure VM.
 
-1. Install  [Azure CLI version 2.0.45](https://azurecliprod.blob.core.windows.net/msi/azure-cli-2.0.45.msi){:target="_blank"} on the Azure VM.
+1. Install  [Azure CLI](https://aka.ms/installazurecliwindows){:target="_blank"} on the Azure VM.
 
    {% include important.html content= "Azure CLI is the Azure command line Interface tool required to authenticate to the Azure subscription and fetch the Azure resource group details required in the Exercise 2." %}
 
@@ -111,11 +111,11 @@ The following azure resources need to be configured for this lab:
 
    ![Deploy to Azure](images/customtemplate3.png)
 
-1. It takes about 5 minutes to provision the environment. Once the deployment succeeds, a notification is displayed in the Azure portal. Select the **Go to resource group** button.
+1. It takes about 5-10 minutes to provision the environment. Once the deployment succeeds, a notification is displayed in the Azure portal. Select the **Go to resource group** button.
 
    ![Deploy to Azure](images/deploymentsucceeded.png)
 
-1. The following components - **Storage account**, **Container Registry**, **Container Service**, **SQL Server** along with **SQL Database** are deployed. Access each of these components individually and make a note of the details which will be used in Exercise 1.
+1. The following components - **Container Registry**, **Kubernetes Service**, **SQL Server** along with **SQL Database** are deployed. Access each of these components individually and make a note of the details which will be used in Exercise 1.
 
    ![Deploy to Azure](images/azurecomponents.png)
 
