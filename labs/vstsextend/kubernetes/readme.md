@@ -131,13 +131,13 @@ Since all the required azure components are now created, the Azure DevOps team p
 
 ## Exercise 1: Configure Build and Release pipeline
 
-Make sure that you have created the AKS project in your Azure DevOps account through [Azure DevOps Demo Generator](http://azuredevopsdemogenerator.azurewebsites.net/?TemplateId=77372&Name=AKS) (as mentioned in pre-requisites). We will manually map Azure resources such as AKS and Azure Container Registry to the build and release definitions.
+Make sure that you have created the AKS project in your Azure DevOps organization through [Azure DevOps Demo Generator](http://azuredevopsdemogenerator.azurewebsites.net/?TemplateId=77372&Name=AKS) (as mentioned in pre-requisites). We will manually map Azure resources such as AKS and Azure Container Registry to the build and release definitions.
 
 1. Select **Builds** section under the **Pipelines** hub and **Edit** the build definition **MyHealth.AKS.Build**.
 
    ![build](images/build.png)
 
-1. In **Run services** section, under the **Tasks** tab select your Azure subscription from **Azure subscription** dropdown. Click **Authorize**.
+1. In **Run services** task, select your Azure subscription from **Azure subscription** dropdown. Click **Authorize**.
 
     ![azureendpoint](images/endpoint.png)
 
@@ -147,7 +147,7 @@ Make sure that you have created the AKS project in your Azure DevOps account thr
 
      {% include tip.html content= "If your subscription is not listed or to specify an existing service principal, follow the [Service Principal creation](https://docs.microsoft.com/en-us/azure/devops/pipelines/library/connect-to-azure?view=vsts){:target=\"_blank\"} instructions." %}
 
-1. Select appropriate values from the dropdown - **Azure subscription** and **Azure Container Registry** as shown. Repeat this for the Build services, Push services and Lock services. Click on the **Variables** tab.
+1. Select appropriate values from the dropdown - **Azure subscription** and **Azure Container Registry** as shown. Repeat this for the **Build services, Push services** and **Lock services** tasks in the pipeline. Click on the **Variables** tab.
 
     ![updateprocessbd](images/updateprocessbd.png)
 
@@ -175,7 +175,7 @@ Make sure that you have created the AKS project in your Azure DevOps account thr
 
    ![releasetasks](images/releasetasks.png)
 
-1. In the **Dev** environment, under the **DB deployment** phase, select **Azure Resource Manager** from the drop down for **azure service connection type**,  update the **Azure Subscription** value from the dropdown for **Execute Azure SQL: DacpacTask** task.
+1. In the **Dev** environment, under the **DB deployment** phase, select **Azure Resource Manager** from the drop down for **Azure Service Connection Type**,  update the **Azure Subscription** value from the dropdown for **Execute Azure SQL: DacpacTask** task.
 
     ![update_CD3](images/update_CD3.png)
 
@@ -189,7 +189,7 @@ Make sure that you have created the AKS project in your Azure DevOps account thr
 
     * **Update image in AKS** will pull up the appropriate image corresponding to the BuildID from the repository specified, and deploys the docker image to the **mhc-front pod** running in AKS.
 
-    * A secret called **mysecretkey** is created in AKS cluster through Azure DevOps by using command *kubectl create secret* in the background. This secret will be used for authorization while pulling myhealth.web image from the Azure Container Registry.
+    * A secret called **mysecretkey** is created in AKS cluster through Azure DevOps by using command `kubectl create secret` in the background. This secret will be used for authorization while pulling myhealth.web image from the Azure Container Registry.
 
 1. Select the **Variables** section under the release definition, update **ACR** and **SQLserver** values for **Pipeline Variables** with the details noted earlier while configuring the environment. Select the **Save** button.
 
@@ -263,4 +263,4 @@ In this exercise, let us trigger a build manually and upon completion, an automa
 
 ## Summary
 
-AKS reduces the complexity and operational overhead of managing a Kubernetes cluster by offloading much of that responsibility to the Azure. With **Azure DevOps** and **Azure Container Services (AKS)**, we can build DevOps for dockerized applications by leveraging docker capabilities enabled on Azure DevOps Hosted Agents.
+[**Azure Kubernetes Service (AKS)**](https://azure.microsoft.com/en-us/services/container-service/){:target="_blank"}  reduces the complexity and operational overhead of managing a Kubernetes cluster by offloading much of that responsibility to the Azure. With **Azure DevOps** and **Azure Container Services (AKS)**, we can build DevOps for dockerized applications by leveraging docker capabilities enabled on Azure DevOps Hosted Agents.
