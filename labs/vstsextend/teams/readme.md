@@ -4,6 +4,7 @@ layout: page
 sidebar: vsts
 permalink: /labs/vstsextend/teams/
 folder: /labs/vstsextend/teams/
+redirect_from: "/labs/vsts/teams/index.htm"
 ---
 <div class="rw-ui-container"></div>
 <a name="Overview"></a>
