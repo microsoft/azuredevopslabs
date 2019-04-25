@@ -267,9 +267,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#047ad8', end
   color: #505055 !important;
   padding: 0.39rem;
   border-radius: 0rem !important;
-  font-size: 1.3rem;
+  /*font-size: 1.3rem;
   font-weight: 600;
-  /* margin-right: 10px; */
+  margin-right: 10px; */
 }
 .tab-bg-color li a:hover {
   background-color: #ecf2f6;
@@ -290,12 +290,19 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#047ad8', end
   border-bottom:none!important;
 }
 .nav-tabs .nav-link.active {  
-  background-color: #a4dffd7d;;
+ /* background-color: #a4dffd7d;;
   border-left: none;
   border-right: none;
   border-top: none;
+  color:#0074d9!important; */
   border-bottom: 2px solid #0074d9 !important;
-  color:#0074d9!important;
+  font-weight: bold;
+
+ }
+.tab-content{
+  border-width: 1px;
+  border-style: solid;
+  border-color: grey;
 }
 .nav-tabs .nav-link.active:hover {
   background-color: #fff; 
