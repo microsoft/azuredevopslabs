@@ -166,7 +166,7 @@ Now that the SonarQube server is running, we will modify Azure Build pipeline to
 
    ![analysis_report](images/analysis_report.png)
 
-## Exercise 4: Analyze SonarQube Reports
+## Exercise 3: Analyze SonarQube Reports
 
 The link will open the **MyShuttle** project in the SonarQube Dashboard.  Under ***Bugs and Vulnerabilities***, we can see that there are 4 bugs reported.
 
