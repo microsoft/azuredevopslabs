@@ -18,7 +18,7 @@ For this lab, you will use Azure App Service and Azure Database for MySQL, a rel
 
 This lab will show how you will
 
-- Create a new Azure App Service with a MYSQL database server and configure the web app to use Apache Tomcat
+- Create a new Azure App Service with a MySQL database server and configure the web app to use Apache Tomcat
 - Use Azure App Service Task to deploy a WAR file
 
 ### Before you begin
@@ -29,117 +29,76 @@ This lab will show how you will
 
 ## Exercise 1: Creating Azure Web App and MySQL database
 
-<div class="col-sm-12 px-0" >
-<ul class="nav nav-tabs tab-bg-color" role="tablist">
-                <li class="nav-item text-center tabs-padding-bor-rad active show" >
-                    <a class="nav-link tabs-padding-bor-rad active show" data-toggle="tab" href="#cli">Using Azure CLI
-                     </a>
-                </li>
-                <li class="nav-item text-center">
-                    <a class="nav-link tabs-padding-bor-rad" data-toggle="tab" href="#arm">Using ARM Template
-                    </a>
-                </li>
-            </ul>
+1. Launch the [Azure Cloud Shell](https://docs.microsoft.com/en-in/azure/cloud-shell/overview) from the portal.  To deploy to a resource group, enter the following command
 
-</div>
-<div class="tab-content bg-color-wit-mlr p-0 pt-0" >
-                <div id="arm" class="container-fluid tab-pane p-0">
-<ol>
-<li><p>Click the below button to provision a Website and MySQL Database together to start developing even faster.</p>
+    <code style="color:black;">
+    az group create --name MyResourceGroup  --location westus</code>
 
-<p><a href="https://portal.azure.com/#create/Microsoft.WebSiteMySQLDatabase"><img src="http://azuredeploy.net/deploybutton.png" alt="Tomcat Configuration" /></a>{:target="_blank"}</p></li>
+1. To create an App service plan
 
-<li><p>This template provides two MySQL options :</p>
+     <code style="color:black;">
+    az appservice plan create --resource-group MyResourceGroup --name MyPlan --sku S1</code>
 
-<ul>
-<li><strong>Azure Database for MySQL</strong> provides a managed database service for app development. <strong><em>You will choose this option.</em></strong></li>
+1. Create the web app with a unique app name
 
-<li><strong>MySQL In app</strong> is an App Service feature where MySQL database is created for your web app. In this scenario, MySQL server is running on the same instance side by side with your web server hosting the site. This is recommended for development purposes and has no additional cost.</li></ul>
+    <code style="color:black;">
+    az webapp create --resource-group MyResourceGroup --plan MyPlan --name MyUniqueAppName
+   </code>
 
-<p><img src="images/createwebappmysql.png" alt="Create Web App+MySQL" /></p></li>
+1. Finally, create the MySQL server with a unique server name.
 
-<li><p>Wait for the Web App and the database to be provisioned. It roughly takes 3-5 minutes.</p></li>
-<li><p>Navigate to the resource group that you have created. You should see a <b>Azure Database for MySQL server</b> provisioned. Select the database server.</p>
-<p><img src="images/resourcegroup.png" alt="resourcegroup" /></p>
-</li>
-<li><p>Select <b>Properties</b>. Save the <b>SERVER NAME</b> and <b>SERVER ADMIN LOGIN NAME</b> to a notepad.</p>
-<p><img src="images/dbproperties.png" alt="dbproperties" /></p>
-<p>In this example, the server name is <b>myshuttle-1-mysqldbserver.mysql.database.azure.com</b> and the admin user name is <b>mysqldbuser@myshuttle-1-mysqldbserver</b>.
-</p>
-</li>
-</ol>
-
-</div>
-    <div id="cli" class="container-fluid tab-pane p-0"  style="display:block">      
-            <ol>
-                <li>Launch the Azure CLI from the portal </li>
-                <li> To deploy to a resource group, enter the following command</li>
-                <code>
-                        az group create --name MyResourceGroup  --location westus
-                </code>
-            <li>To create an App sercuce plan</li>
-               <code>
-                az appservice plan create --resource-group MyResourceGroup --name MyPlan --is-linux --number-of-workers 4 --sku S1
-                </code>
-            <li>Finally, create the web app with a unique app name</li>
-                <code>
-                az webapp create --resource-group MyResourceGroup -p-plan MyPlan --name MyUniqueAppName --runtime "TOMCAT|9.0-java11"
-                </code>
-            <li><p>Navigate to the resource group that you have created. You should see a <b>Azure Database for MySQL server</b> provisioned. Select the database server.</p>
-<p><img src="images/resourcegroup.png" alt="resourcegroup" /></p>
-</li>
-<li><p>Select <b>Properties</b>. Save the <b>SERVER NAME</b> and <b>SERVER ADMIN LOGIN NAME</b> to a notepad.</p>
-<p><img src="images/dbproperties.png" alt="dbproperties" /></p>
-<p>In this example, the server name is <b>myshuttle-1-mysqldbserver.mysql.database.azure.com</b> and the admin user name is <b>mysqldbuser@myshuttle-1-mysqldbserver</b>.
-</p>
-</li>
-              </ol>  
-    </div>
-</div>
-
-<!-- 1. Navigate to the resource group that you have created. You should see a **Azure Database for MySQL server** provisioned. Select the database server.
+    <code style="color:black;">
+    az mysql server create --resource-group MyResourceGroup --name mysqldbserver --admin-user mysqldbuser --admin-password P2ssw0rd@123 --sku-name GP_Gen5_2
+    </code>
+1. Navigate to the resource group that you have created. You should see a **Azure Database for MySQL server** provisioned. Select the database server.
 
    ![Resource Group](images/resourcegroup.png)
 
-1. Select **Properties**. Save the **SERVER NAME** and **SERVER ADMIN LOGIN NAME** to a notepad.
+1. Select **Properties**. Save the **Server name** and **Server admin login name** to a notepad.
 
    ![Database properties](images/dbproperties.png)
 
-   In this example, the server name is **myshuttle-1-mysqldbserver.mysql.database.azure.com** and the admin user name is **mysqldbuser@myshuttle-1-mysqldbserver**. -->
+   In this example, the server name is **myshuttle-1-mysqldbserver.mysql.database.azure.com** and the admin user name is **mysqldbuser@myshuttle-1-mysqldbserver**. 
 
 ## Exercise 2: Updating the App Settings for the Web App
 
-Next, navigate to the Web app that you have created. As you are deploying a Java application, you need to change the web app's web container to Apache Tomcat.
+Next, navigate to the Web app that you have created. As you are deploying a Java application, you need to change the web app’s web container to Apache Tomcat. 
 
-1. Click **Application Settings**. To change it to Tomcat, you will first need to install Java. Select a **Java Version** to install and then change **Web container** to use Apache Tomcat. For this purpose of the lab, you will choose **_Java 8_** and **_Apache Tomcat 9.0_** though the version number would not matter much for the simple app that we are deploying.
+1. Select **Configuration**. Set the **Stack settings** as shown in below image and click **Save**.
 
-   ![Setting Web container to Tomcat](images/webcontainer.png)
+    ![Setting Web container to Tomcat](images/webcontainer.png)
 
-1. Click on **Save** and wait for the update to be applied. The web page will now look like the below image.
+1. Select **Overview** and click **Browse**.
+
+     ![Default Java App](images/browseapp.png)
+
+    The web page will look like the below image.
 
    ![Default Java App](images/defaultappjava.png)
 
-   Next, you need to update the connection strings for the web app to connect to the database correctly. There are multiple ways you can do this - but for the purpose of this lab, you will take a simple approach by updating it directly on the Azure portal.
+   Next, you need to update the **connection strings** for the web app to connect to the database correctly. There are multiple ways you can do this - but for the purpose of this lab, you will take a simple approach by updating it directly on the Azure portal.
 
-1. From the Azure portal, select the Web app you provisioned. Select **Application Settings** and scroll down to the **Connection Strings** section.
+1. From the Azure portal, select the Web app you provisioned. Go to **Configuration \| Application settings \| Connection strings** and click on **+ New connection string**.
 
-1. Add a new **MySQL** connection string with **MyShuttleDb** as the name, paste the following string for the value and replace **MySQL Server Name**, **your user name** and **your password** with the appropriate values -
+     ![](images/connectionstringsetup.png)
 
-   > `jdbc:mysql://{MySQL Server Name}:3306/alm?useSSL=true&requireSSL=false&autoReconnect=true&user={your user name}&password={your password}`
+1. In **Add/Edit connection string** window, add a new **MySQL** connection string with **MyShuttleDb** as the name, paste the following string for the value and replace **MySQL Server Name**, **your user name** and **your password** with the appropriate values. Click **Update**.
+
+   > <code style="color:black;">jdbc:mysql://{MySQL Server Name}:3306/alm?useSSL=true&requireSSL=false&autoReconnect=true&user={your user name}&password={your password}</code>
 
    ![DB Connection](images/dbconnstrings.png)
 
    - MySQL Server Name : Value that you copied previously from the MySQL server Properties.
    - your user name : Value that you copied previously from the MySQL server Properties.
-   - your password : Value that you provided during the creation of MYSQL database server in the _Deploy to Azure_ phase.
+   - your password : Value that you provided during the creation of MySQL database server.
 
 1. Click on **Save** to save the connection string.
 
    > {% include note.html content= "Connection Strings configured here will be available as environment variables, prefixed with connection type for Java apps (also for PHP, Python and Node apps). In the **DataAccess.java** file under **src/main/java/com/microsoft/example** folder, we retrieve the connection string using the following code" %}
 
-   ```Java
+   <code style="color:black;">
    String conStr = System.getenv("MYSQLCONNSTR_MyShuttleDb");
-   ```
+   </code>
 
 You have now setup and configured all the resources that is needed to deploy and run the MyShuttle application.
 
@@ -149,16 +108,16 @@ You have now setup and configured all the resources that is needed to deploy and
 
    ![Builds](images/choosebuilddefn.png)
 
-   > The lab uses the standard **Maven** build template to compile the code, copy and publish the resulting artifacts for deployment. An additional file which is copied here is the _CreateMYSQLDB.sql_ file which creates a MYSQL database and inserts a few records into it during the deployment.
+   > The lab uses the standard **Maven** build template to compile the code, copy and publish the resulting artifacts for deployment. An additional file which is copied here is the `CreateMYSQLDB.sql` file which creates a MySQL database and inserts a few records into it during the deployment.
 
-1. Click **Queue** to queue the build and wait for the build to complete.
+1. Click **Queue** to trigger the build and wait for the build to complete.
 
    ![Queue Build](images/queuebuild.png)
    ![Queue Build 2](images/clickqueue.png)
 
-1. Once the build succeeds, Select **Releases** under **Pipelines**.
+1. Once the build succeeds, select **Releases** under **Pipelines**.
 
-1. Select **MyShuttle Release** and click **Edit Pipeline** to open the release definition.
+1. Select **MyShuttle Release** and click **Edit** to open the release definition.
 
    ![Edit MyShuttle Release Definition ](images/editrelease.png)
 
@@ -170,16 +129,16 @@ You have now setup and configured all the resources that is needed to deploy and
 
    ![Link Parameters](images/parameters.png)
 
-1) Click **Tasks** and select **Execute Azure MySQL : SqlTaskFile** task and provide the following details.
+1. Select **Execute Azure MySQL : SqlTaskFile** task and provide the following details.
 
    - Azure Subscription Details : Select the appropriate subscription.
    - Host Name : Select the **MySQL Database server** host name that was created.
-   - Server Admin Login : Provide the **SERVER ADMIN LOGIN NAME** that you noted down previously.
-   - Password : Provide the password that you created during the creation of _Azure Web App + MYSQL_ database server in the Azure portal.
+   - Server Admin Login : Provide the **Server admin login name** that you noted down previously.
+   - Password : Provide the password that you created during the creation of MySQL server in the Azure portal.
 
    ![Execute Azure MySQL Task](images/azuremysqltask.png)
 
-1) Select the **Deploy Azure App Service** task and ensure that the created **App service name** is reflected correctly.
+1. Select the **Deploy Azure App Service** task and ensure that the created **App service name** is reflected correctly.
 
    {% include note.html content= "We are using the **Deploy Azure App Service** task. This task is used to update Azure App Service to deploy Web Apps and WebJobs to Azure.  The task works on cross platform agents running Windows, Linux or Mac and uses the underlying deployment technologies of Web Deploy and Kudu. The task works for ASP.NET, ASP.NET Core 1 and Node.js based web applications. Note that this task works with  Azure Resource Manager APIs only." %}
 
