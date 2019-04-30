@@ -52,33 +52,29 @@ The following azure resources need to be configured for this lab:
 
 1. **Deploy Kubernetes to Azure, using CLI**:
 
-   i. To get the latest available Kubernetes version run the following commands
+   i. Get the latest available Kubernetes version in your preferred region into a bash variable. Replace `<region>` with the region of your choosing, for example eastus.
 
       ```bash
-      region=<targeted AKS region>
-
-      az aks get-versions -l $region -o table
-
-      kubernetesVersionLatest=$(az aks get-versions -l ${region} --query 'orchestrators[-1].orchestratorVersion' -o tsv)
+     version=$(az aks get-versions -l <region> --query 'orchestrators[-1].orchestratorVersion' -o tsv)
       ```
-
+   
    ii. Create a Resource Group
 
     ```bash
-     az group create --name akshandsonlab --location $region
+     az group create --name akshandsonlab --location <region>
     ```
 
    iii. Create AKS using the latest version available
     
     ```bash
-    az aks create --resource-group akshandsonlab --name <unique-aks-cluster-name> --enable-addons monitoring --kubernetes-version $kubernetesVersionLatest --generate-ssh-keys --location $region
+    az aks create --resource-group akshandsonlab --name <unique-aks-cluster-name> --enable-addons monitoring --kubernetes-version $version --generate-ssh-keys --location <region>
     ```
     {% include important.html content= "Enter a unique AKS cluster name. AKS name must contain between 3 and 31 characters inclusive. The name can contain only letters, numbers, and hyphens. The name must start with a letter and must end with a letter or a number. The AKS deployment may take 10-15 minutes" %}
 
 1. **Deploy Azure Container Registry(ACR)**: Run the below command to create your own private container registry using Azure Container Registry (ACR).
 
     ```bash
-    az acr create --resource-group akshandsonlab --name <unique-acr-name> --sku Standard --location $region
+    az acr create --resource-group akshandsonlab --name <unique-acr-name> --sku Standard --location <region>
     ```
     {% include important.html content= "Enter a unique ACR name. ACR name may contain alpha numeric characters only and must be between 5 and 50 characters" %}
 
@@ -86,7 +82,7 @@ The following azure resources need to be configured for this lab:
     Create an Azure SQL server.
     
     ```bash
-    az sql server create -l $region -g akshandsonlab -n <unique-sqlserver-name> -u sqladmin -p P2ssw0rd1234
+    az sql server create -l <region> -g akshandsonlab -n <unique-sqlserver-name> -u sqladmin -p P2ssw0rd1234
     ```
 
     Create a database
@@ -143,13 +139,23 @@ Make sure that you have created the AKS project in your Azure DevOps organizatio
 
     **applicationsettings.json** file contains details of the database connection string used to connect to Azure database which was created in the beginning of this lab.
     
-    **mhc-aks.yaml** manifest file contains configuration details of **deployments**, **services** and **pods** which will be deployed in Azure Kubernetes Service.
+   > **mhc-aks.yaml** manifest file contains configuration details of **deployments**, **services** and **pods** which will be deployed in Azure Kubernetes Service. The manifest file will look like as below
+
+      ![](images/aksmanifest.png)
+
+   For more information on the deployment manifest, see
+
+   - [AKS Deployments and YAML manifests](https://docs.microsoft.com/en-us/azure/aks/concepts-clusters-workloads#deployments-and-yaml-manifests)
+
+   - [Kubernetes deployments](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/)
 
 1. Update **ACR** and **SQLserver** values for **Pipeline Variables** with the details noted earlier while configuring the environment. Select the **Save** button.
 
     ![updateprocessbd](images/updatevariablesbd.png)
 
-1. Navigate to the **Release** section under the **Build & Release** menu, **Edit** the release definition **MyHealth.AKS.Release** and select **Tasks**.
+    ![updateprocessbd](images/savebuild.png)
+
+1. Navigate to the **Releases** section under the **Pipelines**, **Edit** the release definition **MyHealth.AKS.Release** and select **Tasks**.
 
    ![release](images/release.png)
 
@@ -173,7 +179,7 @@ Make sure that you have created the AKS project in your Azure DevOps organizatio
 
 1. Select the **Variables** section under the release definition, update **ACR** and **SQLserver** values for **Pipeline Variables** with the details noted earlier while configuring the environment. Select the **Save** button.
 
-   {% include note.html content= "The **Database Name** is set to **mhcdb** and the **Server Admin Login** is **sqladmin** and **Password** is **P2ssw0rd1234**." %}
+   {% include note.html content= "The **Database Name** is set to **mhcdb** and the **Server Admin Login** is **sqladmin** and **Password** is **P2ssw0rd1234**. If you have entered different details while creating Azure SQL server, update the values accordingly" %}
 
    ![releasevariables](images/releasevariables.png)
 
@@ -201,11 +207,7 @@ In this exercise, let us trigger a build manually and upon completion, an automa
 
     ![release_summary1](images/release_summary1.png)
 
-1. Once the release is complete, launch the command prompt with Administrator privilege and run the below commands to see the pods running in AKS:
-
-    1. Type **`az login`** in the command prompt and press Enter. Authorize your login by providing your credentials.
-
-         ![Kubernetes Service Endpoint](images/azlogin.png)
+1. Once the release is complete, launch the [Azure Cloud Shell](https://docs.microsoft.com/en-in/azure/cloud-shell/overview) and run the below commands to see the pods running in AKS:
 
     1. Type **`az aks get-credentials --resource-group yourResourceGroup --name yourAKSname`** in the command prompt to get the access credentials for the Kubernetes cluster. Replace the variables `yourResourceGroup` and `yourAKSname` with the actual values.
 
@@ -227,19 +229,11 @@ In this exercise, let us trigger a build manually and upon completion, an automa
 
     ![finalresult](images/finalresult.png)
 
-    **Access AKS through the browser**
-    Type the below command in the command prompt to access the AKS through the browser.
+### Access the Kubernetes web dashboard in Azure Kubernetes Service (AKS)
 
-    **`az aks browse --resource-group <yourResourceGroup> --name <yourAKSname>`**
+Kubernetes includes a web dashboard that can be used for basic management operations. This dashboard lets you view basic health status and metrics for your applications, create and deploy services, and edit existing applications. Follow [these instructions](https://docs.microsoft.com/en-us/azure/aks/kubernetes-dashboard) to access the Kubernetes web dashboard in Azure Kubernetes Service (AKS).
 
-    ![AKS through browser](images/aksbrowse.png)
-
-    **AKS Dashboard:**
-    Once the AKS dashboard is launched, the following details will be displayed.
-
-    ![AKS Dashboard](images/aksdashboard.png)
-
-    **Note**: Under Release Definition, you can optionally disable **Execute Azure SQL: DacpacTask** and **Create Deployments & Services in AKS** tasks as they are required to run only once in the beginning.
+![finalresult](images/aksdashboard.png)
 
 ## Summary
 
