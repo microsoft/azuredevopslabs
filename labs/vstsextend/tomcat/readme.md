@@ -50,6 +50,8 @@ This lab will show how you will
     <code style="color:black;">
     az mysql server create --resource-group MyResourceGroup --name mysqldbserver --admin-user mysqldbuser --admin-password P2ssw0rd@123 --sku-name GP_Gen5_2
     </code>
+
+     {% include important.html content= "Enter a unique SQL server name. Since the Azure SQL Server name does not support **UPPER** / **Camel** casing naming conventions, use lowercase for the ***DB Server Name*** field value." %}
 1. Navigate to the resource group that you have created. You should see a **Azure Database for MySQL server** provisioned. Select the database server.
 
    ![Resource Group](images/resourcegroup.png)
@@ -125,20 +127,17 @@ You have now setup and configured all the resources that is needed to deploy and
 
    ![Team Build Artifact](images/addartifacts.png)
 
-1. Click **Tasks**, select **Azure-Dev** and choose the **Azure subscription** details from the drop down. Click **Authorize** and login to your Azure subscription in the pop-up window. Provide or choose the created **App Service Name** with the web app that you created previously in this lab.
+1. Click **Tasks**. Select **Execute Azure MySQL : SqlTaskFile** task and provide the following details.
 
-   ![Link Parameters](images/parameters.png)
-
-1. Select **Execute Azure MySQL : SqlTaskFile** task and provide the following details.
-
-   - Azure Subscription Details : Select the appropriate subscription.
+   - Azure Subscription Details : Select the appropriate subscription. Click **Authorize** and login to your Azure subscription in the pop-up window.
    - Host Name : Select the **MySQL Database server** host name that was created.
    - Server Admin Login : Provide the **Server admin login name** that you noted down previously.
    - Password : Provide the password that you created during the creation of MySQL server in the Azure portal.
 
    ![Execute Azure MySQL Task](images/azuremysqltask.png)
 
-1. Select the **Deploy Azure App Service** task and ensure that the created **App service name** is reflected correctly.
+1. Select the **Deploy Azure App Service** task, choose the **Azure subscription** details and select **App Service name** from the dropdown.
+   ![](images/azureappservicetask.png)
 
    {% include note.html content= "We are using the **Deploy Azure App Service** task. This task is used to update Azure App Service to deploy Web Apps and WebJobs to Azure.  The task works on cross platform agents running Windows, Linux or Mac and uses the underlying deployment technologies of Web Deploy and Kudu. The task works for ASP.NET, ASP.NET Core 1 and Node.js based web applications. Note that this task works with  Azure Resource Manager APIs only." %}
 
