@@ -787,3 +787,6 @@ transform: translate3d(0,-3px,0);
   max-width: none!important;
   max-height: none!important;
 }
+pre,pre.highlight{
+  background-color: #ecf2f6!important;
+}
