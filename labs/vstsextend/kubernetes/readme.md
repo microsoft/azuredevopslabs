@@ -16,7 +16,7 @@ One of the biggest advantage to use AKS is that instead of creating resources in
 ### Lab Scenario
 
 This lab uses a Dockerized ASP.NET Core web application - **MyHealthClinic** (MHC) and is deployed to a **Kubernetes** cluster running on **Azure Kubernetes Service (AKS)** using **Azure DevOps**.
->There is a  **mhc-aks.yaml** manifest file which consists of definitions to spin up Deployments and Services such as **Load Balancer** in the front and **Redis Cache** in the backend. The MHC application will be running in the mhc-front pod along with the Load Balancer.
+> There is a  **mhc-aks.yaml** manifest file which consists of definitions to spin up Deployments and Services such as **Load Balancer** in the front and **Redis Cache** in the backend. The MHC application will be running in the mhc-front pod along with the Load Balancer.
 
 If you are new to Kubernetes, [click here](documentation/readme.md){:target="_blank"} for description of terminology used in this lab.
 
@@ -77,7 +77,20 @@ The following azure resources need to be configured for this lab:
     az acr create --resource-group akshandsonlab --name <unique-acr-name> --sku Standard --location <region>
     ```
     {% include important.html content= "Enter a unique ACR name. ACR name may contain alpha numeric characters only and must be between 5 and 50 characters" %}
+1. **Grant AKS-generated Service Principal access to ACR** : Authorize the AKS cluster to connect to the Azure Container Registry using the AKS generated Service Principal. Replace the variables `$AKS_RESOURCE_GROUP, $AKS_CLUSTER_NAME, $ACR_RESOURCE_GROUP` with appropriate values below and run the commands.
 
+    ```bash
+    # Get the id of the service principal configured for AKS
+    CLIENT_ID=$(az aks show --resource-group $AKS_RESOURCE_GROUP --name $AKS_CLUSTER_NAME --query "servicePrincipalProfile.clientId" --output tsv)
+
+    # Get the ACR registry resource id
+    ACR_ID=$(az acr show --name $ACR_NAME --resource-group $ACR_RESOURCE_GROUP --query "id" --output tsv)
+
+   # Create role assignment
+   az role assignment create --assignee $CLIENT_ID --role acrpull --scope $ACR_ID
+   ```
+
+   > For more information see document on how to  [Authenticate with Azure Container Registry from Azure Kubernetes Service](https://docs.microsoft.com/en-us/azure/container-registry/container-registry-auth-aks)
 1. **Create Azure SQL server and Database**: 
     Create an Azure SQL server.
     
@@ -143,11 +156,7 @@ Make sure that you have created the AKS project in your Azure DevOps organizatio
 
       ![](images/aksmanifest.png)
 
-   For more information on the deployment manifest, see
-
-   - [AKS Deployments and YAML manifests](https://docs.microsoft.com/en-us/azure/aks/concepts-clusters-workloads#deployments-and-yaml-manifests)
-
-   - [Kubernetes deployments](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/)
+   > For more information on the deployment manifest, see [AKS Deployments and YAML manifests](https://docs.microsoft.com/en-us/azure/aks/concepts-clusters-workloads#deployments-and-yaml-manifests)
 
 1. Update **ACR** and **SQLserver** values for **Pipeline Variables** with the details noted earlier while configuring the environment. Select the **Save** button.
 
