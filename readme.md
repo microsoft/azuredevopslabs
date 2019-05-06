@@ -178,7 +178,7 @@ description: Learn how you can implement modern DevOps practices with Azure, Azu
 					</div>
 					<div class="col-lg-9 col-md-9 col-sm-9 col-9 cont-mt cont-pl">					
 							<a href="/labs/azuredevops/yaml/" class="text-col-gunpower">	
-								<div class="bg-white text-font">Configuring Build as Code with YAML in Azure Pipelines</div>
+								<div class="bg-white text-font">Configuring pipeline as Code with YAML </div>
 							</a>
 					</div>					
 				</div>
