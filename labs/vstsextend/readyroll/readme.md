@@ -1,5 +1,5 @@
 ---
-title: Deploying Database changes alongside application with Redgate ReadyRoll and Azure DevOps
+title: Deploying Database changes with Redgate SQL Change Automation and Azure DevOps
 layout: page
 sidebar: vsts2
 permalink: /labs/vstsextend/readyroll/
