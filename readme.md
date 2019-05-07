@@ -337,11 +337,11 @@ description: Learn how you can implement modern DevOps practices with Azure, Azu
 			</div>
 			<div class="col-sm-2 my-2">
 				<div class="shadow-sm hover-effect equal-height-column">
-					<a href="/labs/vstsextend/docker/" class="text-col-gunpower">
+					<a href="/labs/azuredevops/yaml/" class="text-col-gunpower">
 						<div class="bg-azureblue1 p-2 text-center">
-							<div class="icon-cover1"><img src="/images/docker-42.png" alt="azurerepos" height="42"></div>
+							<div class="icon-cover1"><img src="/images/azurepipelines.png" alt="yaml" height="42"></div>
 						</div>
-						<div class="bg-white py-2 text-center">Deploying a Docker based web application to Azure App Service</div>
+						<div class="bg-white py-2 text-center">Configuring pipeline as Code with YAML</div>
 					</a>	
 				</div>
 			</div>
