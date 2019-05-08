@@ -169,7 +169,7 @@ Now that Azure Pipelines has been installed and configured, we can start buildin
 1. Follow the build through to completion.
     
 
-    ![](images/build1.png)
+    ![](images/build1-2.png)
 
 ## Task 3: Adding a build status badge
 
@@ -179,9 +179,9 @@ An important sign for a quality project is its build status badge. When someone 
     
     ![](images/buildpipeline.png)
 
-1. From the **ellipses (...)** dropdown, select **Status badge**.
+1. From the **vertical ellipses (⋮)** dropdown, select **Status badge**.
     
-    ![](images/statusbadge1.png)
+    ![](images/statusbadge1-2.png)
 
 1. The **Status badge** UI provides a quick and easy way to integrate the build status wherever you want. Often, you'll want to use the provided URLs in your own dashboards, or you can use the Markdown snippet to add the status badge to locations such as Wiki pages. Click the **Copy to clipboard** button for **Sample Markdown**.
 
@@ -290,22 +290,22 @@ Now that we have our CI successfully built, it's time to deploy but how do we kn
     ![](images/image44.png)
 
 
-1. Back in Azure DevOps, navigate to **Pipelines --> Builds**. We can see that our build pipeline has kicked off a new build.
+1. Back in Azure DevOps, navigate to **Pipelines --> Pipelines**. We can see that our build pipeline has kicked off a new build.
 
-    ![](images/updated-build.png)
+    ![](images/updated-build-2.png)
     
    We can follow as it executes the tasks we defined earlier, and even get a real-time view into what's going on at each step. When the build completes, we can review the logs and any tests that were performed as part of the process.
    Track the build tasks.
 
-    ![](images/image47.png)
+    ![](images/image47-2.png)
 
    Follow the build through to completion.
 
-    ![](images/image48.png)
 
 1. Now that the build has completed, let's check out the **Tests** tab to view the published tests results. We can get quantitative metrics such as total test count, test pass percentage, failed test cases, etc., from the **Summary**  section
-
-    ![](images/image-tests1.png)
+    
+     ![](images/buildsummary.png)
+    ![](images/image-tests1-2.png)
 
 1. The **Results** section lists all tests executed and reported as part of the current build or release. The default view shows only the failed and aborted tests in order to focus on tests that require attention. However, you can choose other outcomes using the filters provided
 
@@ -322,9 +322,9 @@ From the results, we can see all 40 tests have passed which means we have not br
  
  Like the build templates, there are many packaged options available that cover common deployment scenarios, such as publishing to Azure. But to illustrate how flexible and productive the experience is, we will build this pipeline from an empty template.
 
-1.  From the build summary page, click **Release** to create a new CD pipeline to deploy the artifacts produced by the build.
+1.  Naviagte to **Pipelines \| Releases**. Click **New Pipeline**
 
-    ![](images/image13.png)
+    ![](images/releasepipeline.png)
 
 1.  Click **Empty job**.
 
@@ -335,14 +335,14 @@ From the results, we can see all 40 tests have passed which means we have not br
     schedule, such as if we wanted to release the latest build every
     night.
 
-1.  Select the associated artifact. 
+1.  Click **+ Add an artifact**. 
 
-    ![](images/image15-1.png)
+    ![](images/addartifact.png)
 
 1.  Set **Source** to the build pipeline created earlier and **Default
     version** to **Latest**. Change the **Source alias**, if you want, to something like **"\_ContosoAir-CI"** and click **Add**. Note that this is an identifier (typically a short name) that uniquely identifies an artifact linked to the release pipeline. It cannot contain the characters: \ / : * ? < > | or double quotes
 
-    ![](images/image16.png)
+    ![](images/addartifact2.png)
 
     As we did with continuous integration starting on a source commit, we also want to have this pipeline automatically start when the build pipeline completes. It's just as easy.
 
