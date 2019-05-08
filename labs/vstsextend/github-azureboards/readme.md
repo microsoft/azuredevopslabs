@@ -60,13 +60,15 @@ In this lab, you'll see how easy it is to set up
     > If you don't see the **Boards** navigate to **Project settings** and enable **Azure Boards**
        ![](images/azureboards.png)
     
-1.  Click **New Work Item** and add a user story with the title **As a customer, I want to see airports sorted by city**. Press **Enter** to create.
+1.  Click **New Work Item** and add a user story with the title **User can select airport by city**. Press **Enter** to create.
 
-    ![](images/image77.png)
+    ![](images/adduserstory.png)
 
     In addition to working with work items in a backlog, we have a very flexible Kanban board option. With the
     board, we can edit items on a card in line, or even drag cards around to change their state and assignment. Let's take ownership of
     the new user story so we can begin work.
+
+    >  Add a work item—Issue (Basic), User Story (Agile), or Product Backlog Item (Scrum)—depending on the process model used by your Azure Boards project. 
 
 1.  Click **View as board**.
 
@@ -162,12 +164,16 @@ behaviour we want our users to see.
     We'll commit it using a comment that includes special syntax to link it to the Azure Boards task we saw earlier. Now this commit will become trackable from project management, as
     long as we include the phrase "Fixes AB\#ID".
 
-8.  Switch to the **Source Control** tab and enter a commit message of
+8.  **Use AB# mention to link from GitHub to Azure Boards work items:** 
+
+    Switch to the **Source Control** tab and enter a commit message of
     **"Changes airport sorting. Fixes AB\#3464."**, but replace **3464**
     with the actual ID of the Azure Boards task. Press **Ctrl+Enter**
     and confirm the commit if prompted.
 
     ![](images/image94.png)
+
+    > For more information on how to use **AB#** mention to link from GitHub to Azure Boards work items see [here](https://docs.microsoft.com/en-us/azure/devops/boards/github/link-to-from-github?view=azure-devops#use-ab-mention-to-link-from-github-to-azure-boards-work-items)
    
 
 9.  Click the **Publish Changes** button at the bottom of the screen.
@@ -265,3 +271,40 @@ behaviour we want our users to see.
 
     ![](images/image106.png)
 
+## Task 4:  Add link from a work item to a GitHub commit, pull request, or issue
+
+By connecting your Azure Boards project with GitHub.com repositories, you support linking between GitHub commits and pull requests to work items.
+
+1. Open the **Commits** page of your **ContosoAir** repository.
+   
+    ![](images/githubcommits.png)
+
+    Select the commit you did to add the status badge in your previous lab and copy the commit URL.
+
+    ![](images/statusbadgecommit.png)
+
+    ![](images/commiturl.png)
+
+   > If you would like to link pull request or issue to work item get the URL for the same.
+
+1.  To link to a commit or pull request, open the work item and choose **Add Link** under the Development section.
+
+     ![](images/addlink.png)
+
+    To link to an issue, choose the **Links** tab, and then choose **Add Link>Existing item**.
+
+     ![](images/linkissue.png)
+
+1. From the **Add link** dialog, select one of the GitHub link types, enter the URL to the commit, pull request, or issue and then choose **OK**.
+
+   Here, we add a link to GitHub commit with **GitHub Commit** link type, enter the URL to the commit and then choose **OK**.
+
+    ![](images/addcommiturl.png)
+
+    Azure Boards performs a check to ensure that you've entered a valid link. Then commit will appear under the **Development** section as shown below
+
+    ![](images/linkedcommit.png)
+
+1. **View or open links from the Development section** : The Development section within the work item form lists the links created to GitHub commits and pull requests with the   GitHub icon. Choose the link provided to open the commit or pull request in GitHub.
+
+     ![](images/githublinks.png)
