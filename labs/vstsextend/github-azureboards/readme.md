@@ -89,17 +89,23 @@ In this lab, you'll see how easy it is to set up
 
 ## Task 2: Configure the Azure Boards app for GitHub
 
-1. Go to the [**Azure Boards**](https://github.com/marketplace/azure-boards) app in the GitHub Marketplace.
+Azure Boards is now available on GitHub Marketplace which simplifies the installation process and configuration of your GitHub repository connections. 
+
+1. To install it, navigate to the  [**Azure Boards**](https://github.com/marketplace/azure-boards) page on GitHub.
 
 1. Choose **Set up a plan**.
 
      ![](images/setupplan.png)
 
+1. Azure Boards offers free licenses (first five users for private and many more for public repos) for you to start. Select **Install it for free**
+
      ![](images/installfree.png)
+
+1. Select the **Complete the order and begin installation** button to start the installation
     
      ![](images/completeinstall.png)
 
-1. Choose the repositories you want to connect to Azure Boards. Here we choose to connect to all repositories.
+1. Select the repositories you want to connect to Azure Boards (or all repositories) and click **Install**.
 
      ![](images/installboards.png)
 
@@ -113,11 +119,9 @@ In this lab, you'll see how easy it is to set up
       
       ![](images/authorizeboards.png)
     
-1. Confirm the GitHub.com repositories that you want to connect. Select each repository you want to connect to. Unselect any repositories that you don't want to participate in the integration.
-     
+1. If you have selected **All repositories**, you will need to confirm the GitHub repositories that you want to use with Azure Boards project to complete the integration.     
       ![](images/confirm-github-repos.png)
 
-      Now your **Azure Boards + GitHub** connection is completed.
 ## Task 3: Committing to Complete a Task
 
 
@@ -275,18 +279,15 @@ In this lab, you'll see how easy it is to set up
 
     ![](images/image106.png)
 
-## Task 4:  Add link from a work item to a GitHub commit, pull request, or issue
+## Task 4: Linking GitHub Issues to Azure Boards
 
-Incase you forgot to link work item to GitHub commit or pull request, you can link to a commit or pull request from work item as well.
+You can also link GitHub issues to work items in Azure Boards.
 
-
-1.  To link to a commit or pull request, open the work item and choose **Add Link** under the Development section.
-
-     ![](images/addlink.png)
-
-    To link to an issue, choose the **Links** tab, and then choose **Add Link>Existing item**.
+1. To link to an issue, choose the **Links** tab, and then choose **Add Link -> Existing item**.
 
      ![](images/linkissue.png)
+
+    You can also manually connect a GitHub Commit or a pull request by selecting **Add Link** under the Development section.  This is useful in sutuations where you missed to assoaciate the commit or pull request using the AB#{ID} method. 
 
 1. From the **Add link** dialog, select one of the GitHub link types, enter the URL to the commit, pull request, or issue and then choose **OK**.
 
