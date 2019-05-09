@@ -28,46 +28,7 @@ redirect_from: "/labs/vsts/packagemanagement/index.htm"
 **Azure Artifacts** is an extension to Azure DevOps Services and Azure DevOps Server.  It comes pre-installed in Azure DevOps Services, Azure DevOps Server 2019 and Team Foundation Server (TFS) 2017 and 2018.
 
 <a name="Ex1Task1"></a>
-### Task 1: Assign Artifacts in Azure DevOps Services ###
-
-Each organization gets five (5) free licenses. You will need to assign your licenses by following the instructions below:
-
-1. Go to your organization, select **Organization settings** in the bottom left of the UX.
-
-1. Select **Users**. Select the user or users you wish to assign the Azure Artifacts extension to, and choose **Manage extensions**. And choose the **Azure Artifacts (Package Management)** extension.
-
-   > If you have a **Visual Studio Enterprise** license, you already have access to Azure Artifacts and don't need to be assigned a license, just ensure that you've been assigned the "Visual Studio Enterprise" access level.
-
-1. If you don't have any of the licenses mentioned above you can start a 30 day free trial. From the **Marketplace** navigation dropdown, select **Browse Marketplace**.
-
-    ![](images/000.png)
-
-1. Search for **"Azure Artifacts"**.
-
-    ![](images/001-new.png)
-
-1. Select the **Azure Artifacts** option.
-
-    ![](images/002-new.png)
-
-1. Click **Get**.
-
-    ![](images/003-new.png)
-
-1. Select the account to install **Azure Artifacts** into. This should be the account that contains your Parts Unlimited project. Then select **Start 30 day free trial**.
-
-    ![](images/004-new.png)
-
-1. Click **Proceed to organization**.
-
-    ![](images/005.png)
-
-1. Click the Parts Unlimited project link to return to its dashboard.
-
-    ![](images/006.png)
-
-<a name="Ex1Task2"></a>
-### Task 2: Creating and connecting to a feed ###
+### Task 1: Creating and connecting to a feed ###
 
 1. Navigate to the **Artifacts** hub.
 
@@ -101,8 +62,8 @@ Each organization gets five (5) free licenses. You will need to assign your lice
 
     ![](images/013.png)
 
-<a name="Ex1Task3"></a>
-### Task 3: Creating and publishing a NuGet package ###
+<a name="Ex1Task2"></a>
+### Task 2: Creating and publishing a NuGet package ###
 
 1. From the main menu of **Visual Studio**, select **File \| New \| Project**. We will now create a shared assembly that will be published as a NuGet package so that other teams can integrate it and stay up to date without having to work directly with the project source.
 
@@ -174,8 +135,8 @@ Each organization gets five (5) free licenses. You will need to assign your lice
 
     ![](images/027.png)
 
-<a name="Ex1Task4"></a>
-### Task 4: Importing a NuGet package ###
+<a name="Ex1Task3"></a>
+### Task 3: Importing a NuGet package ###
 
 1. Switch to the instance of **Visual Studio** that has the full **Parts Unlimited** solution open.
 
@@ -193,8 +154,8 @@ Each organization gets five (5) free licenses. You will need to assign your lice
 
 1. Press **Ctrl+Shift+B** to build the project. It should succeed. The NuGet package doesn't add any value yet, but at least we know it's there.
 
-<a name="Ex1Task5"></a>
-### Task 5: Updating a NuGet package ###
+<a name="Ex1Task4"></a>
+### Task 4: Updating a NuGet package ###
 
 1. Switch to the instance of **Visual Studio** that has the **PartsUnlimited.Shared** project open (the NuGet source project).
 
