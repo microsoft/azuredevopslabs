@@ -159,7 +159,7 @@ Here, you will create a SQL Change Automation project in your existing PartsUnli
 
    > The schema of the Deployment Target will be read in order to create a baseline schema. This will not modify the Deployment Target in any way.
 
-1. Now you should be able to see a database project added to your solution and also the **ReadyRoll Core Edition** window.
+1. Now you should be able to see a database project added to your solution and also the **SQL Change Automation Edition** window.
 
       ![](images/readyrollwindow.png)
 
@@ -196,18 +196,31 @@ Let us see how to manage database changes and deploy alongside the application.
   
    ![](images/addnewcolumn.png)
 
-   In **Preview Database updates** window, select **Generate Script**.
+   In **Preview Database updates** window, select **Update Database**.
    
-   ![](images/previewdatabasechanges.png)
+   ![](images/updatedatabase.png)
 
-    This will add a new migration script in your database project with Schema changes. Click **Deploy Project** to verify the changes.
+    This will updated the changes to the local database.
 
-   ![](images/deployproject.png)
- 
+
     > ReadyRoll generates numerically ordered SQL migration scripts that sit inside your Visual Studio project and take your schema from one version to the next. You can add these migration scripts to version control, use them to build and release, and automate database deployments, all in one process.
 
+1. Open SQL Change Automation window and click **Refresh** to check the pending changes to import.
+      ![](images/refreshsqlchanges.png)
+
+      Now click Generate scripts icon as shown below
+      ![](images/generatescripts.png)
+
+1. This will add a new migration script in your database project with Schema changes.  Click **Refresh(verify script)** to verify the script.
+
+   ![](images/scriptadded.png)
+
+
+    >ReadyRoll generates numerically ordered SQL migration scripts that sit inside your Visual Studio project and take your schema from one version to the next. You can add these migration scripts to version control, use them to build and release, and automate database deployments, all in one process.
+
 1. You can rename the script for better understanding.
-  ![](images/renamescript.png)
+
+     ![](images/renamescript.png)
 
 1. Select **Products** table form the local database, right click and select **View Data**.
 
@@ -242,69 +255,70 @@ Let us see how to manage database changes and deploy alongside the application.
 
    ![](images/indexfile.png)
 
+1. Right click solution and select **Configuration Manager**. For **Release**  configuration unselect the check boxes for Build and Deploy to the PartsUnlimited Database project. We will use SQL change automation task in the pipelines to build this project.
+
+   ![](images/configurationmanager.png)
+
 1. Commit the changes to the server; create Build and Release pipelines in Azure DevOps to compile and deploy the changes. 
 
    In the **Team Explorer**, select **Changes**. Enter a commit comment and select **Commit All and Push** to commit the changes to the server.
    
     ![](images/commitproject2.png)
 
-    With this, you have added ReadyRoll Database project with version control support and committed the project to the Azure Repos.
+    With this, you have added SQL Change Automation project with version control support and committed the project to the Azure Repos.
 
 ### Exercise 3: Create Build pipeline in Azure DevOps
 
-Now you have version controlled both the application and database project. Next, you will create a build pipeline to build your ReadyRoll Database project alongside your application.
+Now you have version controlled both the application and database project. Next, you will create a build pipeline to build your SQL Change Automation project alongside your application.
 
-1. Navigate to **Pipelines --> Builds** in your Azure DevOps organization. Select **New Build pipeline** to create new build pipeline.
+1. Navigate to **Pipelines --> Builds** in your Azure DevOps organization. Before creating new pipeline, you will want to disable the existing build pipeline.
+
+   Select the existing PartsUnlimitedE2E pipeline.
+
+    ![](images/existingpipeline.png)
+
+   From the dropdown, select Pause pipeline.
+
+    ![](images/disablepipeline.png)
+
+1. Select **New Build pipeline** to create new build pipeline.
 
      ![](images/newbuild.png)
 
-   In the **Select a source** window make sure source settings are correct and click **Continue**.
-
-1. In **Choose a template** section search for **ReadyRoll**, select **ReadyRoll** template and click **Apply**.
-
-     ![](images/ReadyRollTemplate.png)
-
-   > If you don't see the above template make sure you have installed **Redgate ReadyRoll** extension from [here](https://marketplace.visualstudio.com/items?itemName=redgatesoftware.redgate-readyroll).
-
-1. Your build pipeline will look like as below. You can see that ReadyRoll tasks are added to the pipeline.
-
-      ![](images/buildpipeline.png)
-
-1. Select **Hosted VS2017** as agent pool.
-
-    ![](images/agentpool.png)
-
-1. Select **ReadyRoll Download Build Components** task. This task downloads the ReadyRoll build components using NuGet so that you don't have to install them manually.
-
-    ![](images/readyrollcomponents.png)
-
-1. Select **ReadyRoll Set Target Database** task.  This task makes it easy to configure the target database that ReadyRoll uses to generate reports. Select **Target type** as **Azure SQL Database**. Enter your Azure SQL database details which you created at the beginning of the lab.
+1. Select **Use the classic editor** to create pipeline.
     
-    
-    ![](images/settarget.png)
+      ![](images/classiceditor.png)
 
-1. Select **Visual Studio Build Solution** task. This task builds both the application and ReadyRoll database project. You will need to create packages for the application and database to deploy to the Azure web app and SQL database respectively. Replace the **MSBuild arguments** with the following to do so. And select **Restore Nuget Packages** checkbox to restore the Nuget packages before the build.
+1.  In the **Select a source** window make sure source settings are correct and click **Continue**.
 
-   `/p:GenerateSqlPackage=True @"$(Build.SourcesDirectory)\$(ReadyRoll.MsBuildResponseFileName)" /p:DeployOnBuild=true /p:WebPublishMethod=Package /p:PackageAsSingleFile=true /p:SkipInvalidConfigurations=true /p:PackageLocation="$(build.artifactstagingdirectory)\\"
-`
+1. In **Choose a template** section, select ASP.NET template and click **Apply**.
 
-   ![](images/visualstudiobuild.png)
+     ![](images/dotnettemplate.png)
 
-1. Select **Variables**. Create a variable with name **TargetPassword** and enter your Azure SQL server admin password as value.
-  
-    ![](images/variables.png)
+   This template has tasks to compile and create package for your .NET project.
+   
+1. Add **Redgate SQL Change Automation: Build** task just below the Visual Studio build task.
 
-1. Select **Triggers**. Enable **Continuous Integration** trigger.
-    
-     ![](images/enableci.png)
+      ![](images/addsqltask.png)
+
+      ![](images/addsqltask2.png)
+
+   >If you don't see the above task make sure you have installed [SQL Change Automation: Build](https://marketplace.visualstudio.com/items?itemName=redgatesoftware.redgateDlmAutomationBuild) extension.
+
+
+1. Select **Redgate SQL Change Automation: Build** task. This task will build your SQL Change Automation project and creates a Nuget package with the migration scripts . Browse & select **SQL Change Automation project**. Enter **Output Nuget Package ID** as `PartsUnlimiteDatabase`.
+
+    ![](images/sqlbuildtask.png)
 
 1. **Save & Queue** the build pipeline. 
    
    ![](images/queuebuild.png)
 
-1. Once the build succeeds, make sure **PartsUnlimited_DatabasePackage.ps1** and **PartsUnlimitedWebsite.zip** are available as part of the build Artifacts.
+1. Once the build succeeds, make sure **PartsUnlimitedDatabase.1.0.nupkg** and **PartsUnlimitedWebsite.zip** are available as part of the build Artifacts.
 
-    ![](images/artifacts.png)
+    ![](images/artifact1.png)
+
+    ![](images/artifact2.png)
 
 ### Exercise 4: Create Release pipeline in Azure DevOps
 
@@ -334,30 +348,25 @@ Now you have both the application and database packages available as build artif
 
     ![](images/stage1.png)
 
-1. Click **+** icon to add a new task to the pipeline. Search for ReadyRool tasks and select **ReadyRoll Deploy Database Package** task.
+1. Click **+** icon to add a new task to the pipeline. Search for **Redgate** and select **Redgate SQL Change Automation: Release** task.
 
    
-    ![](images/addreadyrolltask.png)
+    ![](images/addsqlreleasetask.png)
 
     Now you have two tasks in the pipeline.
 
 1. **Deploy Azure App Service**: Using this task you will deploy application package to Azure app service which was created. 
 
-    ![](images/appdeploytask.png)
 
-1. **ReadyRoll Deploy Database**: This deploy task will take the package produced by building a ReadyRoll project and deploy it to a target database. Select  **ReadyRoll Deploy Database** task and enter the details as shown in the image below.
+1. **Redgate SQL Change Automation: Release**: This task will take the package produced by building a SQL Change Automation project and deploy it to a target database. Select  **Redgate SQL Change Automation: Release** task, select **Operation** as `Deploy database changes from a build artifact` and select package path from the build artifact.
 
-      ![](images/readyrolltask.png)
+      ![](images/selectdbpackage.png)
 
-1. Select **Variables**. Create a variable with name **TargetPassword** and enter your Azure SQL server admin password as value.
+   Under the **Target database** section, enter the target SQL server details.
+      
+    ![](images/targetdatabase.png)
 
-   ![](images/releasevariables.png)
-
-1. Select **Pipeline**. Enable **Continuous deployment** trigger and **Save** the changes.
-
-    ![](images/enablecd.png)
-
-1. Trigger the release pipeline manually. 
+1. **Save** the changes and trigger the release. 
 
       ![](images/release.gif)
 
@@ -369,4 +378,3 @@ Now you have both the application and database packages available as build artif
 
    When you select **Brakes** category, you can see the updated price as well which means that the database changes are also updated to the Production database along with the application.
 
-   Since the CI & CD is enabled, if any database changes are committed, CI & CD will be triggered automatically and changes will be deployed.
