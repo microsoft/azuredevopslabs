@@ -31,16 +31,35 @@ folder: /labs/vstsextend/azurefunctions/
 1. Click the [Azure DevOps Demo Generator](http://azuredevopsdemogenerator.azurewebsites.net/?TemplateId=77374&Name=AzureFunctions) link and follow the instructions in [Getting Started](../Setup/) page to provision the project to your Azure DevOps Organization.
 
 ## Create the required Azure resources
+You need to create two Azure App services for this lab.
+1. Launch the [Azure Cloud Shell](https://docs.microsoft.com/en-in/azure/cloud-shell/overview) from the Azure portal and choose **Bash**.
 
-1. Click the below **Deploy To Azure** button to provision an Azure App service plan with two web apps.
+1. Create a Resource Group. Replace `<region>` with the region of your choosing, for example eastus.
+   
+   ```bash
+   az group create --name MyResourceGroup --location <region>
+   ```
 
-   [![Deploy to Azure](http://azuredeploy.net/deploybutton.png)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FMicrosoft%2Falmvm%2Fmaster%2Flabs%2Fvstsextend%2Fazurefunctions%2Farmtemplate%2Fazuredeploy.json){:target="_blank"}
+1. To create an App service plan
+   
+   ```bash
+   az appservice plan create --resource-group MyResourceGroup --name MyPlan --sku S1
+   ```
+1. Create two web apps with a unique app names.
+ 
+    ```bash
+    az webapp create --resource-group MyResourceGroup --plan MyPlan --name PartsUnlimited-Web
+    ```
 
-1. It takes approximately 5-10 minutes to provision the resources. Once the deployment is successful, you will see the resources as shown.
+    ```bash
+    az webapp create --resource-group MyResourceGroup --plan MyPlan --name PartsUnlimited-API
+    ```
+
+1. Navigate to the resource group you created, you will see the resources as shown.
 
    ![azure_resources](images/azure_resources.png)
 
-After the successfull deployment of the resources, you will see 2 App Services and an App Service Plan provisioned -
+We created two App Services and an App Service Plan.
 
   * Web App - Used to deploy the Parts Unlimited website.
   * API App - Used to redirect users to different discounts page based on the user login.
