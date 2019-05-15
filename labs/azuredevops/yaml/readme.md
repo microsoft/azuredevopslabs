@@ -101,6 +101,10 @@ Many teams prefer to define their build and release pipelines using YAML (Yet An
 
     ![](images/015.png)
 
+1. As this lab was initially built for VS2017, and the latest released VM Image is currently VS2019, the VMImage the build will run on needs to be updated to the older version of the hosted build agent.  Update the vmImage attribute in the pool section of the YAML to 'vs2017-win2016'.  A complete list of available hosted agent VM's can be found on the [Microsoft Docs Website](https://docs.microsoft.com/en-us/azure/devops/pipelines/agents/hosted?view=azure-devops).
+
+    ![](images/YamlVmImageEdit.png)
+
 1. Review the contents of the YAML definition. It will be saved as a new file called **"azure-pipelines.yml"** in the root of the repository and contain everything needed to build and test a typical ASP.NET solution. Click **Save and run**.
 
     ![](images/016.png)
