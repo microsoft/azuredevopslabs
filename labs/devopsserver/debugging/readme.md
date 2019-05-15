@@ -121,7 +121,7 @@ In this scenario the business owner has asked us to determine why we are seeing 
 
 1. We can now tell that the issue here is that we're indexing past the end of the query in our call to **Substring**. This could have been a lot harder to find without IntelliTrace.
 
-1. Select **Debugging \| Stop Debugging** to end the debug session.
+1. Select **Debug \| Stop Debugging** to end the debug session.
 
 1. Select **File \| Close Solution** to close all files. Do not save any.
 
