@@ -82,6 +82,19 @@ The Web App for Containers allows the creation of custom [Docker](https://www.do
     az sql db create -g DockerRG -s <unique-sqlserver-name> -n mhcdb --service-objective S0
     ```
       {% include important.html content= "Enter a unique SQL server name. Since the Azure SQL Server name does not support **UPPER** / **Camel** casing naming conventions, use lowercase for the ***DB Server Name*** field value." %}
+
+1. Create a firewall rule for SQL server that allows access from Azure services
+
+    ```bash
+    az sql server firewall-rule create --resource-group DockerRG --server <your-sqlserver-name> --name AllowAllAzureIps --start-ip-address 0.0.0.0 --end-ip-address 0.0.0.0
+    ```
+1. Update web app's connection string
+   
+   ```bash
+   az webapp config connection-string set -g DockerRG -n <your-appservice-name> -t SQLAzure --settings defaultConnection='Data Source=tcp:<your-sqlserver-name>.database.windows.net,1433;Initial Catalog=mhcdb;User Id=sqladmin;Password=P2ssw0rd1234;'
+   ```
+    > Update your app service name and SQL server name in the above command. This command will add a connection string to your app service with the name `defaultConnection`.
+
 1. Navigate to the resource group. You can see that the following components are provisioned.
 
    Azure Components | Description
