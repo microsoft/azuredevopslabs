@@ -206,6 +206,9 @@ In this exercise, you will build your application and publish the required files
 
     ![](images/ansibletask.png)
 
+   Under the **Inventory** section, select **Host list** as inventory location and enter pubic ip of your ansible vm in **Host list** field as shown below.
+    
+    ![](images/ansibletask2.png)
 1. Select **Azure App Service Deploy** task. Select the Azure subscription from the drop-down list and click **Authorize** to configure Azure service connection. And this application require few app settings to connect to the MySQL database provisioned using Ansible script. That we are updating using **App settings** parameter in the task. This task will deploy the SmartHotel360-CouponManagement package to Azure app service which is provisioned by Ansible task in previous step.
 
     ![](images/appservicedeploy.png)
