@@ -5,7 +5,7 @@ sidebar: vsts
 permalink: /labs/azuredevops/yaml/
 folder: /labs/azuredevops/yaml/
 version: Lab version - 1.33.1
-updated: Last updated - 4/30/2019
+updated: Last updated - 4/23/2019
 ---
 <div class="rw-ui-container"></div>
 
@@ -101,84 +101,155 @@ Many teams prefer to define their build and release pipelines using YAML (Yet An
 
     ![](images/015.png)
 
-1. Review the contents of the YAML definition. It will be saved as a new file called **"azure-pipelines.yml"** in the root of the repository and contain everything needed to build and test a typical ASP.NET solution. Click **Save and run**.
+1. Review the contents of the YAML definition. It will be saved as a new file called **"azure-pipelines.yml"** in the root of the repository and contain everything needed to build and test a typical ASP.NET solution. You can also customize the build as needed. In this case, update the **pool** to specify the build should use a Visual Studio 2017 build VM. Be sure to keep it at the same two-space indentation.
 
+    ```
+    name: Hosted VS2017
+    demands:
+    - msbuild
+    - visualstudio
+    - vstest
+    ```
     ![](images/016.png)
 
-1. Click **Save and run** to confirm the commit.
+1. Click **Save and run**.
 
     ![](images/017.png)
 
-1. Track the build until it completes. Click **Job** to see the logs.
+1. Click **Save and run** to confirm the commit.
 
     ![](images/018.png)
 
-1. Each task from the YAML file is available for review, including any warnings and errors.
+1. Track the build until it completes. Click **Job** to see the logs.
 
     ![](images/019.png)
 
-1. Close the tasks view.
+1. Each task from the YAML file is available for review, including any warnings and errors.
 
     ![](images/020.png)
 
-1. Select the **Tests** tab.
+1. Close the tasks view.
 
     ![](images/021.png)
 
-1. The tests should now succeed as expected.
+1. Select the **Tests** tab.
 
     ![](images/022.png)
+
+1. The tests should now succeed as expected.
+
+    ![](images/023.png)
 
 <a name="Ex1Task4"></a>
 ### Task 4: Adding continuous delivery to the YAML definition ###
 
 1. Now that the build and test processes are successful, we can now add delivery to the YAML definition. From the options dropdown, select **Edit pipeline**.
 
-    ![](images/023.png)
-
-1. Set the cursor on a new line at the end of the YAML definition. This will be the location where new tasks are added.
-
     ![](images/024.png)
 
-1. Select the **Azure App Service Deploy** task.
+1. Add the configuration lines below after the **trigger** section to define a **Build** stage in the YAML pipeline. You can define whatever stages you need to better organize and track pipeline progress.
 
+    ```
+    stages:
+    - stage: Build
+      jobs:
+      - job: Build
+    ```
     ![](images/025.png)
 
-1. Select the Azure subscription where you created the app service earlier. Click **Authorize** and follow the path to complete authorization.
+1. Highlight the remainder of the YAML file and indent it four spaces (two tabs). This will simply take the existing build definition and relocate it as a child of the **jobs** node.
 
     ![](images/026.png)
 
-1. Enter the **App Service name** you used to create the app service earlier. Update the **Package or folder** to **"$(build.artifactstagingdirectory)/*.zip"**. Click **Add**.
+1. At the bottom of the file, add the configuration below to define a second stage.
 
+    ```
+    - stage: Deploy
+      jobs:
+      - job: Deploy
+        steps:
+    ```
     ![](images/027.png)
 
-1. The YAML that defines the task will be added to the cursor location in the file.
+1. Set the cursor on a new line at the end of the YAML definition. This will be the location where new tasks are added.
 
     ![](images/028.png)
 
-1. Click **Save** to commit the changes.
+1. Select the **Azure App Service Deploy** task.
 
     ![](images/029.png)
 
-1. Confirm the **Save**. This will begin a new build.
+1. Select the Azure subscription where you created the app service earlier. Click **Authorize** and follow the path to complete authorization.
 
     ![](images/030.png)
 
-1. Return to the **Pipelines** view.
+1. Enter the **App Service name** you used to create the app service earlier. Update the **Package or folder** to **"$(System.ArtifactsDirectory)/drop/*.zip"**. Click **Add**.
 
     ![](images/031.png)
 
-1. From the **Runs** tab, open the new build.
+1. The YAML that defines the task will be added to the cursor location in the file.
 
     ![](images/032.png)
 
-1. Click **Job** to follow each task.
+1. With the added task still selected in the editor, indent it four spaces (two tabs) so that it is a child of the **steps** task.
 
     ![](images/033.png)
 
-1. Expand the **AzureRmWebAppDeployment** task to review the steps performed during the Azure deployment. Once the task completes, your app will be live on Azure.
+1. It's important to note that these two stages will be run independently. As a result, the build output from the first stage will not be available to the second stage without special consideration. For this, we will use one task to publish the build output at the end of the build stage and another to download it in the beginning of the deploy stage. Place the cursor on a blank line at the end of the build stage.
 
     ![](images/034.png)
+
+1. Search the tasks for **"publish build"** and select the **Publish Build Artifacts** task. There may be more than one available, so be sure to select the one that is not deprecated.
+
+    ![](images/035.png)
+
+1. Accept the defaults and click **Add**. This will publish the build artifacts to a location that will be downloadable under the alias **drop**.
+
+    ![](images/036.png)
+
+1. Indent the publish task four spaces (two tabs). You may also want to add an empty space before and after to make it easier to read.
+
+    ![](images/037.png)
+
+1. Place the cursor on the first line under the **steps** node of the deployment stage.
+
+    ![](images/038.png)
+
+1. Search the tasks for **"download build"** and select the **Download Build Artifacts** task.
+
+    ![](images/039.png)
+
+1. Set the **Artifact name** to "**drop"** and click **Add**.
+
+    ![](images/040.png)
+
+1. Indent the publish task four spaces (two tabs). You may also want to add an empty space before and after to make it easier to read.
+
+    ![](images/041.png)
+
+1. Click **Save** to commit the changes.
+
+    ![](images/042.png)
+
+1. Confirm the **Save**. This will begin a new build.
+
+    ![](images/043.png)
+
+1. Return to the **Pipelines** view.
+
+    ![](images/044.png)
+
+1. From the **Runs** tab, click the new build run to open it. Note that there are now multiple stages shown based on the YAML definition edits from earlier.
+
+    ![](images/045.png)
+
+1. When the **Build** stage completes, click the **Deploy** stage to follow each task.
+
+    ![](images/046.png)
+
+1. Expand the **AzureRmWebAppDeployment** task to review the steps performed during the Azure deployment. Once the task completes, your app will be live on Azure.
+
+    ![](images/047.png)
 
 <a name="Ex1Task5"></a>
 ### Task 5: Reviewing the deployed site ###
@@ -189,29 +260,29 @@ Many teams prefer to define their build and release pipelines using YAML (Yet An
 
 1. Select the **Configuration** tab.
 
-    ![](images/035.png)
+    ![](images/048.png)
 
 1. Click the **defaultConnection** setting.
 
-    ![](images/036.png)
+    ![](images/049.png)
 
 1. Update the **Name** to **"DefaultConnectionString"**, which is the key expected by the application. This will enable it to connect to the database created for the app service. Click **Update**.
 
-    ![](images/037.png)
+    ![](images/050.png)
 
 1. Click **Save** to apply the changes.
 
-    ![](images/038.png)
+    ![](images/051.png)
 
 1. Return to the **Overview** tab.
 
-    ![](images/039.png)
+    ![](images/052.png)
 
 1. Click the **URL** to open your site in a new tab.
 
-    ![](images/040.png)
+    ![](images/053.png)
 
 1. The deployed site should load expected.
 
-    ![](images/041.png)
+    ![](images/054.png)
 
