@@ -1,13 +1,9 @@
----
-title: Configuring CI/CD Pipelines as Code with YAML in Azure DevOps
-layout: page
-sidebar: vsts
-permalink: /labs/azuredevops/yaml/
-folder: /labs/azuredevops/yaml/
-version: Lab version - 1.33.1
-updated: Last updated - 4/23/2019
----
-<div class="rw-ui-container"></div>
+<a name="Title"></a>
+# Configuring CI/CD Pipelines as Code with YAML in Azure DevOps #
+
+Lab version:1.33.1
+
+Last updated:5/23/2019
 
 <a name="Overview"></a>
 ## Overview ##
