@@ -96,7 +96,7 @@ description: Learn how you can plan better, code together and ship faster with A
          </ul>
       </li>
       <li>
-         <a href="https://vstsdemogenerator.azurewebsites.net" target="_blank"><strong>Azure DevOps Demo Generator:</strong></a> You can use the Azure DevOps Demo Generator to provision a project with pre-defined data on to your Azure DevOps services organization.
+         <a href="https://azuredevopsdemogenerator.azurewebsites.net" target="_blank"><strong>Azure DevOps Demo Generator:</strong></a> You can use the Azure DevOps Demo Generator to provision a project with pre-defined data on to your Azure DevOps services organization.
       </li>
    </ul>
 </div>

@@ -6,6 +6,7 @@ permalink: /labs/azuredevops/agile/
 folder: /labs/azuredevops/agile/
 version: Lab version - 15.8.2
 updated: Last updated - 9/5/2018
+redirect_from: "/labs/vsts/agile/index.htm"
 ---
 <div class="rw-ui-container"></div>
 <a name="Overview"></a>
@@ -176,7 +177,7 @@ This task is designed to illustrate a variety of ways you can create different k
 
     ![](images/035.png)
 
-1. The task board is one view into the backlog. View the tabular form by clicking **Backlog items backlog**.
+1. The task board is one view into the backlog. View the tabular form by clicking **View as Backlog**.
 
     ![](images/036.png)
 
@@ -184,7 +185,7 @@ This task is designed to illustrate a variety of ways you can create different k
 
     ![](images/037.png)
 
-1. Set the **Title** to **"Add page for most recent tutorials"**. Set the **Remaining Work** to **"5"**and the **Activity** to **"Development"**. Click **Save & Close**.
+1. Set the **Title** to **"Add page for most recent tutorials"**. Set the **Remaining Work** to **"5"** and the **Activity** to **"Development"**. Click **Save & Close**.
 
     ![](images/038.png)
 
@@ -291,7 +292,7 @@ Planning meetings typically consist of two parts. In the first part, the team an
 
     ![](images/062.png)
 
-1. Click **Save** to save the styling rule.
+1. Click **Save and close** to save the styling rule.
 
     ![](images/063.png)
 
@@ -324,9 +325,9 @@ To maximize a team's ability to consistently deliver high quality software, Kanb
 
     ![](images/069.png)
 
-1. Click **Save**.
+1. Click **Save and close**.
 
-    ![](images/070.png)
+    ![](images/063.png)
 
 1. Open the **new tutorials** backlog item.
 
@@ -348,9 +349,9 @@ To maximize a team's ability to consistently deliver high quality software, Kanb
 
     ![](images/075.png)
 
-1. Click **Save**.
+1. Click **Save and close**.
 
-    ![](images/076.png)
+    ![](images/063.png)
 
 1. You will now see the new stage in the workflow.
 
@@ -376,7 +377,7 @@ To maximize a team's ability to consistently deliver high quality software, Kanb
 
     ![](images/082.png)
 
-1. As your team updates the status of work as it progresses from one stage to the next, it helps that they agree on what **done** means. By specifying the **Definition of done** criteria for each Kanban column, you help share the essential tasks to complete before moving an item into a downstream stage. Add a **Definition of done** using markdown, such as **"Passes \*\*all\*\* tests."**. Click **Save**.
+1. As your team updates the status of work as it progresses from one stage to the next, it helps that they agree on what **done** means. By specifying the **Definition of done** criteria for each Kanban column, you help share the essential tasks to complete before moving an item into a downstream stage. Add a **Definition of done** using markdown, such as **"Passes \*\*all\*\* tests."**. Click **Save and close**.
 
     ![](images/083.png)
 
@@ -496,7 +497,7 @@ Once you've created an inherited process, you can customize it, create team proj
 
 In this task we'll create a new process that inherits from Scrum. The one change we'll make is to add a backlog item field designed to track to a proprietary PartsUnlimited ticket ID.
 
-1. Click the **Azure DevOps** log in the top left corner to navigate to the account root.
+1. Click the **Azure DevOps** logo in the top left corner to navigate to the account root.
 
     ![](images/109.png)
 
@@ -550,13 +551,13 @@ In this task we'll create a new process that inherits from Scrum. The one change
 
 1. Return to the account dashboard using the logo link.
 
-    ![](images/122.png)
+    ![](images/109.png)
 
 1. Open the **Parts Unlimited** portal.
 
     ![](images/123.png)
 
-1. Select **Work \| Work Items**.
+1. Select **Boards \| Work Items**.
 
     ![](images/124.png)
 

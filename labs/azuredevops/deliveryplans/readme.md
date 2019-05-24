@@ -109,7 +109,7 @@ It takes several teams to develop large software projects. Very large projects r
 <a name="Ex1Task3"></a>
 ### Task 3: Adding an external team to the project ###
 
-1. Our delivery plan has been pretty simple so far because we only have the one team. However, the real power of delivery planning comes into play when orchestrating multiple autonomous teams across their efforts. Click **Project Settings**.
+1. Our delivery plan has been pretty simple so far because we only have the one team. However, the real power of delivery planning comes into play when orchestrating multiple autonomous teams across their efforts. Open the settings page using the **Project Settings** navigation located at the bottom left of the page.
 
     ![](images/019.png)
 

@@ -266,7 +266,7 @@ p.post-meta {
 /* search area */
 
 #search-demo-container ul#results-container {list-style: none;
-font-size: 13px;position: absolute;top: 29px;right: 26px;z-index: -1;
+font-size: 13px;position: absolute;top: 27px;right: 26px;z-index: -1;
 width: 208px;padding: 5px 10px;background: #ffffff;}
 
 ul#results-container a {
@@ -381,7 +381,7 @@ li.dropdownActive a {
 }
 
 footer {
-    font-size: smaller;
+   /* font-size: smaller; */
 }
 
 
@@ -1252,6 +1252,7 @@ ol li ul li ol li ul li {
 table thead th code.highlighter-rouge {
     background-color: transparent;
 }
+
 
 .box {
     padding: 10px;

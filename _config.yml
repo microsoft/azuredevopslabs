@@ -3,7 +3,7 @@ repository: Microsoft/ALMVM
 output: web
 # this property is useful for conditional filtering of content that is separate from the PDF.
 
-topnav_title:  Azure DevOps
+topnav_title:  Azure DevOps Labs
 # this appears on the top navigation bar next to the home button
 
 site_title: Azure DevOps Hands-on-Labs
@@ -111,7 +111,6 @@ url: https://azuredevopslabs.com
 baseurl: /
 
 site.google_analytics: UA-93010880-1
-
 
 plugins:
   - jekyll-redirect-from

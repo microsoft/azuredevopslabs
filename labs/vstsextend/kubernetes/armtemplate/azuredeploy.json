@@ -10,16 +10,11 @@
                 "description": "Name of your Azure Container Registry. ACR name may contain alpha numeric characters only and must be between 5 and 50 characters."
             }
         },
-        "acrStorageType": {
-            "defaultValue": "Standard_LRS",
-            "allowedValues": [
-                "Standard_LRS",
-                "Standard_ZRS",
-                "Standard_GRS"
-            ],
+        "registrySku": {
             "type": "string",
+            "defaultValue": "Standard",
             "metadata": {
-                "description": "Type of the storage account that will store container registry data."
+                "description": "The SKU of the container registry."
             }
         },
         "DBServerName": {
@@ -146,14 +141,14 @@
         },
         "kubernetesVersion": {
             "type": "string",
-            "defaultValue": "1.12.5",
+            "defaultValue": "1.11.9",
             "allowedValues": [
-                "1.12.5",
-                "1.12.4",
-                "1.11.7",
-                "1.11.6",
+                "1.12.7",
+                "1.12.6",
+                "1.11.9",
+                "1.11.8",
+                "1.10.13",
                 "1.10.12",
-                "1.10.9",
                 "1.9.11",
                 "1.9.10"
             ],
@@ -179,39 +174,21 @@
         "kubernetesVersion": "[parameters('kubernetesVersion')]"
     },
     "resources": [
-        {
-            "type": "Microsoft.Storage/storageAccounts",
-            "name": "[variables('acrStorageName')]",
-            "apiVersion": "2015-06-15",
-            "location": "[resourceGroup().location]",
-            "tags": {
-                "displayName": "ACR Image's storage",
-                "container.registry": "[parameters('acrName')]"
-            },
-            "properties": {
-                "accountType": "[parameters('acrStorageType')]"
-            },
-            "dependsOn": []
-        },
-        {
+          {
             "type": "Microsoft.ContainerRegistry/registries",
             "name": "[parameters('acrName')]",
-            "apiVersion": "2016-06-27-preview",
+            "apiVersion": "2017-10-01",
+            "sku": {
+                "name": "[parameters('registrySku')]"
+            },
             "location": "[resourceGroup().location]",
             "tags": {
                 "displayName": "Container Registry",
                 "container.registry": "[parameters('acrName')]"
             },
             "properties": {
-                "adminUserEnabled": "true",
-                "storageAccount": {
-                    "accessKey": "[listKeys(variables('acrStorageId'),'2015-06-15').key1]",
-                    "name": "[variables('acrStorageName')]"
-                }
-            },
-            "dependsOn": [
-                "[variables('acrStorageId')]"
-            ]
+                "adminUserEnabled": "true"
+            }
         },
         {
             "type": "Microsoft.Sql/servers",

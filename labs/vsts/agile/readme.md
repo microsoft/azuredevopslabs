@@ -4,6 +4,7 @@ layout: page
 sidebar: vsts
 permalink: /labs/vsts/agile/
 folder: /labs/vsts/agile/
+redirect_to:  /labs/azuredevops/agile/
 ---
 
 Last updated : {{ "now" | date: "%b %d, %Y" }}.
@@ -18,7 +19,7 @@ To complete this lab, you will need:
 
 - **Visual Studio Team Services account**. If you don't have one, you can create from [here](https://www.visualstudio.com/team-services){:target="_blank"}
 
-- You can use the **[VSTS Demo Data generator](http://vstsdemogenerator.azurewebsites.net/Environment/Create){:target="_blank"}** to provision a project with pre-defined data on to your Visual Studio Team Services account. Please use the ***My Health Clinic*** template to follow the hands-on-labs.
+- You can use the **[VSTS Demo Data generator](http://azuredevopsdemogenerator.azurewebsites.net/Environment/Create){:target="_blank"}** to provision a project with pre-defined data on to your Visual Studio Team Services account. Please use the ***My Health Clinic*** template to follow the hands-on-labs.
 
 ## Exercise 1: Working with Teams, Areas, and Iterations
 
@@ -101,7 +102,7 @@ To complete this lab, you will need:
 
     ![images](images/77.png)
 
-1. You can create several backlog items repeating the above steps. If you used the **[VSTS Demo Data generator,](http://vstsdemogenerator.azurewebsites.net/Environment/Create)** then you can see pre-defined work items in the default team's backlog list.
+1. You can create several backlog items repeating the above steps. If you used the **[VSTS Demo Data generator,](http://azuredevopsdemogenerator.azurewebsites.net/Environment/Create)** then you can see pre-defined work items in the default team's backlog list.
 
     ![images](images/24.png)
 
@@ -131,7 +132,7 @@ To complete this lab, you will need:
 
     ![images](images/79.png)
 
-1. Prior to setting tag colors, first add tags to backlog items that you want to highlight with color. To add color to **Kanban** cards, open **Tag colors** and select a tag and the color you want it to display. If you used the **[VSTS Demo Data generator](http://vstsdemogenerator.azurewebsites.net/Environment/Create)** then you will already have a **Doctor** tag and set to green.
+1. Prior to setting tag colors, first add tags to backlog items that you want to highlight with color. To add color to **Kanban** cards, open **Tag colors** and select a tag and the color you want it to display. If you used the **[VSTS Demo Data generator](http://azuredevopsdemogenerator.azurewebsites.net/Environment/Create)** then you will already have a **Doctor** tag and set to green.
 
     ![images](images/80.png)
 

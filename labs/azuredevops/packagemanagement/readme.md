@@ -6,61 +6,31 @@ permalink: /labs/azuredevops/packagemanagement/
 folder: /labs/azuredevops/packagemanagement/
 version: Lab version - 15.8.2
 updated: Last updated - 9/5/2018
+redirect_from: "/labs/vsts/packagemanagement/index.htm"
 ---
 <div class="rw-ui-container"></div>
 <a name="Overview"></a>
 
 ## Overview ##
 
-Azure Artifacts is an extension that makes it easy to discover, install, and publish NuGet, npm, and Maven packages in Azure DevOps. It's deeply integrated with other hubs like Build so that package management can become a seamless part of your existing workflows.
+**Azure Artifacts** is an extension that makes it easy to discover, install and publish NuGet, npm and Maven packages in Azure DevOps. It's deeply integrated with other hubs like Build so that package management can become a seamless part of your existing workflows.
 
 <a name="Prerequisites"></a>
 ### Prerequisites ###
 
-- Visual Studio 2017
+- Visual Studio 2017 or later
 
 - This lab requires you to complete tasks 1 and 2 from the <a href="../prereq/">prerequisite</a>  instructions
 
 <a name="Exercise1"></a>
-## Exercise 1: Working with the package management service ##
+## Exercise 1: Working with the Azure Artifacts ##
+
+**Azure Artifacts** is an extension to Azure DevOps Services and Azure DevOps Server.  It comes pre-installed in Azure DevOps Services, Azure DevOps Server 2019 and Team Foundation Server (TFS) 2017 and 2018.
 
 <a name="Ex1Task1"></a>
-### Task 1: Configuring the service ###
+### Task 1: Creating and connecting to a feed ###
 
-1. Navigate to your team project on Azure DevOps.
-
-1. Package Management is provided as a marketplace extension. From the **Marketplace** navigation dropdown, select **Browse Marketplace**.
-
-    ![](images/000.png)
-
-1. Search for **"Package Management"**.
-
-    ![](images/001.png)
-
-1. Select the **Package Management** option.
-
-    ![](images/002.png)
-
-1. Click **Get**.
-
-    ![](images/003.png)
-
-1. Select the account to install **Package Management** into. This should be the account that contains your Parts Unlimited project. Then select the licensing option that best fits your circumstances.
-
-    ![](images/004.png)
-
-1. Click **Proceed to organization**.
-
-    ![](images/005.png)
-
-1. Click the Parts Unlimited project link to return to its dashboard.
-
-    ![](images/006.png)
-
-<a name="Ex1Task2"></a>
-### Task 2: Creating and connecting to a feed ###
-
-1. Navigate to the **Artifacts** hub. This is a new option added by the Package Management extension.
+1. Navigate to the **Artifacts** hub.
 
     ![](images/007.png)
 
@@ -92,12 +62,12 @@ Azure Artifacts is an extension that makes it easy to discover, install, and pub
 
     ![](images/013.png)
 
-<a name="Ex1Task3"></a>
-### Task 3: Creating and publishing a NuGet package ###
+<a name="Ex1Task2"></a>
+### Task 2: Creating and publishing a NuGet package ###
 
 1. From the main menu of **Visual Studio**, select **File \| New \| Project**. We will now create a shared assembly that will be published as a NuGet package so that other teams can integrate it and stay up to date without having to work directly with the project source.
 
-1. From the **Visual C#** section, select the **Class Library** template and set the **Name** to **"PartsUnlimited.Shared"**. Click **OK** to create the project.
+1. From the **Visual C#** section, select the **Class Library (.Net Framework)** template and set the **Name** to **"PartsUnlimited.Shared"**. Click **OK** to create the project.
 
     ![](images/014.png)
 
@@ -115,7 +85,7 @@ Azure Artifacts is an extension that makes it easy to discover, install, and pub
 
 1. Press **Ctrl+Shift+B** to build the project. In the next task we'll use **NuGet.exe** to generate a NuGet package directly from the built project, but it requires the project to be built first.
 
-1. Return to the browser and click **Download NuGet + VSTS Credential Provider**. Extract the zip somewhere you can easily access.
+1. Return to the browser and click **Download NuGet + Credential Provider**. Extract the zip somewhere you can easily access.
 
     ![](images/018.png)
 
@@ -165,8 +135,8 @@ Azure Artifacts is an extension that makes it easy to discover, install, and pub
 
     ![](images/027.png)
 
-<a name="Ex1Task4"></a>
-### Task 4: Importing a NuGet package ###
+<a name="Ex1Task3"></a>
+### Task 3: Importing a NuGet package ###
 
 1. Switch to the instance of **Visual Studio** that has the full **Parts Unlimited** solution open.
 
@@ -184,8 +154,8 @@ Azure Artifacts is an extension that makes it easy to discover, install, and pub
 
 1. Press **Ctrl+Shift+B** to build the project. It should succeed. The NuGet package doesn't add any value yet, but at least we know it's there.
 
-<a name="Ex1Task5"></a>
-### Task 5: Updating a NuGet package ###
+<a name="Ex1Task4"></a>
+### Task 4: Updating a NuGet package ###
 
 1. Switch to the instance of **Visual Studio** that has the **PartsUnlimited.Shared** project open (the NuGet source project).
 

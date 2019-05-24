@@ -6,6 +6,7 @@ permalink: /labs/azuredevops/git/
 folder: /labs/azuredevops/git/
 version: Lab version - 1.31.1
 updated: Last updated - 2/27/2019
+redirect_from: "/labs/vsts/git/index.htm"
 ---
 <div class="rw-ui-container"></div>
 <a name="Overview"></a>
@@ -39,7 +40,7 @@ In this lab, you will learn how to establish a local Git repository, which can e
 
 1. Open **Visual Studio Code**. In this task, you will configure a Git credential helper to securely store the Git credentials used to communicate with Azure DevOps. If you have already configured a credential helper and Git identity, you can skip to the next task.
 
-1. From the main menu, select **Terminal | New Terminal** to open a terminal window.
+1. From the main menu, select **Terminal \| New Terminal** to open a terminal window.
 
 1. Execute the command below to configure a credential helper.
 
@@ -129,7 +130,7 @@ In this lab, you will learn how to establish a local Git repository, which can e
 <a name="Exercise3"></a>
 ## Exercise 3: Saving work with commits ##
 
-When you make changes to your files, Git will record the changes in the local repository. You can select the changes that you want to commit by staging the changes. Commits are always made against your local Git repository, so you don't have to worry about the commit being perfect or ready to share with others. You can make more commits as you continue to work, and push the changes to others when they are ready to be shared.
+When you make changes to your files, Git will record the changes in the local repository. You can select the changes that you want to commit by staging the changes. Commits are always made against your local Git repository, so you don't have to worry about the commit being perfect or ready to share with others. You can make more commits as you continue to work and push the changes to others when they are ready to be shared.
 
 What's in a commit?
 
@@ -232,7 +233,7 @@ Git's use of the **Branches and Merges** feature works through pull requests, so
 
     ![](images/028.png)
 
-1. Press **Ctrl|Shift+P** to open the **Command Palette**.
+1. Press **Ctrl\|Shift+P** to open the **Command Palette**.
 
 1. Start typing **"Team"** and select **Team: View History** when it becomes available. This is a feature of the Azure Repos extension that makes it easy to jump right to the history of this file in a new browser tab.
 
@@ -259,7 +260,7 @@ Git's use of the **Branches and Merges** feature works through pull requests, so
 
 You can manage the work in your Azure DevOps Git repo from the **Branches** view on the web. You can also customize the view to track the branches you care most about so you can stay on top of changes made by your team.
 
-Committing changes to a branch will not affect other branches, and you can share branches with others without having to merge the changes into the main project. You can also create new branches to isolate changes for a feature or a bug fix from your master branch and other work. Since the branches are lightweight, switching between branches is quick and easy. Git does not create multiple copies of your source when working with branches, but rather uses the history information stored in commits to recreate the files on a branch when you start working on it. Your Git workflow should create and use branches for managing features and bugfixes. The rest of the Git workflow, such as sharing code and reviewing code with pull requests, all work through branches. Isolating work in branches makes it very simple to change what you are working on by simply changing your current branch.
+Committing changes to a branch will not affect other branches and you can share branches with others without having to merge the changes into the main project. You can also create new branches to isolate changes for a feature or a bug fix from your master branch and other work. Since the branches are lightweight, switching between branches is quick and easy. Git does not create multiple copies of your source when working with branches, but rather uses the history information stored in commits to recreate the files on a branch when you start working on it. Your Git workflow should create and use branches for managing features and bugfixes. The rest of the Git workflow, such as sharing code and reviewing code with pull requests, all work through branches. Isolating work in branches makes it very simple to change what you are working on by simply changing your current branch.
 
 <a name="Ex5Task1"></a>
 ### Task 1: Creating a new branch in your local repository ###
@@ -289,7 +290,7 @@ Committing changes to a branch will not affect other branches, and you can share
 <a name="Ex5Task2"></a>
 ### Task 2: Working with branches ###
 
-Git keeps track of which branch you are working on and makes sure that when you checkout a branch your files match the most recent commit on the branch. Branches let you work with multiple versions of the source code in the same local Git repository at the same time. You can use Visual Studio Code to publish, check out, and delete branches.
+Git keeps track of which branch you are working on and makes sure that when you checkout a branch your files match the most recent commit on the branch. Branches let you work with multiple versions of the source code in the same local Git repository at the same time. You can use Visual Studio Code to publish, check out and delete branches.
 
 1. Click the **Publish changes** button next to the branch.
 
@@ -363,7 +364,7 @@ In addition to all the functionality available in Visual Studio Code, you can al
 
 1. Switch to the Azure DevOps browser tab.
 
-1. Click **New branch**.
+1. Navigate to **Repos \| Branches**. Click **New branch**.
 
     ![](images/053.png)
 
@@ -436,7 +437,7 @@ Locking does not prevent cloning of a repo or fetching updates made in the branc
 
     ![](images/066.png)
 
-1. You have now tagged the project at this release. You could tag commits for a variety of reasons, and Azure DevOps offers the flexibility to edit and delete them, as well as manage their permissions.
+1. You have now tagged the project at this release. You could tag commits for a variety of reasons and Azure DevOps offers the flexibility to edit and delete them, as well as manage their permissions.
 
 <a name="![](images/067.png)"></a>
 ## ![](images/067.png) ##

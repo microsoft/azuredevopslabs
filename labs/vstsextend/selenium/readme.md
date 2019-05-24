@@ -4,6 +4,7 @@ layout: page
 sidebar: vsts2
 permalink: /labs/vstsextend/selenium/
 folder: /labs/vstsextend/selenium/
+redirect_from: "/labs/vsts/selenium/index.htm"
 ---
 <div class="rw-ui-container"></div>
 
@@ -11,11 +12,11 @@ folder: /labs/vstsextend/selenium/
 
 [Selenium](http://www.seleniumhq.org/){:target="_blank"} is a portable open source software-testing framework for web applications. It has the capability to operate on almost every operating system. It supports all modern browsers and multiple languages including .NET (C#), Java.
 
-In this lab, you will learn how to execute selenium testcases on a C# web application, as part of the Azure DevOps Release pipeline.
+In this lab, you will learn how to execute selenium test cases on a C# web application, as part of the Azure DevOps Release pipeline. 
 
 ### Before you begin
 
-1. Refer the [Getting Started](../Setup/) before you follow the below exercises.
+1. Refer to the [Getting Started](../Setup/) before you follow the below exercises.
 
 1. Click on the deploy to Azure button below, to provision a Windows Server 2016 virtual machine along with SQL Express 2017 and browsers - Chrome and FireFox.    
 
@@ -29,7 +30,7 @@ In this lab, you will learn how to execute selenium testcases on a C# web applic
 
 ## Exercise 1: Create a Deployment Group
 
-We will use Deployment Groups feature in Azure DevOps to deploy the application on a VM which was provisioned earlier to execute the Selenium test cases. [Deployment Groups](https://docs.microsoft.com/en-us/vsts/build-release/concepts/definitions/release/deployment-groups/){:target="_blank"} in Azure DevOps makes it easier to organize the servers that you use to host your app. A deployment group is a collection of machines with a Azure DevOps agent on each of them. Each machine interacts with Azure DevOps to coordinate deployment of your applications.
+We will use Deployment Groups feature in Azure DevOps to deploy the application on a VM which was provisioned earlier to execute the Selenium test cases. [Deployment Groups](https://docs.microsoft.com/en-us/vsts/build-release/concepts/definitions/release/deployment-groups/){:target="_blank"} in Azure DevOps makes it easier to organize the servers that you use to host your app. A deployment group is a collection of machines with a Azure DevOps agent on each of them. Each machine interacts with Azure DevOps to coordinate the deployment of your applications.
 
 We will also deploy the SQL database in the VM using Deployment Groups.
 
@@ -43,7 +44,7 @@ We will also deploy the SQL database in the VM using Deployment Groups.
 
    This will generate a PowerShell script to associate the VM to this deployment group.
 
-1. Select **Use a personal access token in the script for authentication** check the box, so that we will not have to provide password every time the script is executed. Click on **Copy script to clipboard** to copy the script which will be used in the next exercise to associate the VM to the deployment group.
+1. Select **Use a personal access token in the script for authentication** check the box, so that we will not have to provide a password every time the script is executed. Click on **Copy script to clipboard** to copy the script which will be used in the next exercise to associate the VM to the deployment group.
 
    ![create_deploymentgroup2](images/deploy5.png)
 
@@ -72,7 +73,7 @@ In this exercise, we will execute the **registration script** on the VM to assoc
 
    ![userserviceaccount-dg](images/userserviceaccount-dg.png)
 
-1. Refresh the Azure DevOps Deployment Groups page you will notice that your Deployment group i online. 
+1. Refresh the Azure DevOps Deployment Groups page you will notice that your Deployment group is online. 
 
    ![configure_deploymentgroup2](images/deployonline6.png)
 
@@ -87,8 +88,8 @@ Let us configure a ***private*** agent on this VM, since Selenium requires the a
 1. Provide the following details:
 
     - Enter server URL: Your Azure DevOps Organization URL
-    - Authentication type: Type *PAT* and press the **enter key** for PAT as the authentication type and paste the PAT in the next prompt.
-    - Let us use the default options for rest of the configuration. Press **Enter** for all prompts until the command execution completes.
+    - Authentication type: Press the **enter key** for **PAT** as the authentication type and paste the PAT in the next prompt.
+    - Let us use the default options for the rest of the configuration. Press **Enter** for all prompts until the command execution completes.
     - Once the agent is registered, type **run.cmd** and hit **Enter** to start the agent.
 
     Click [here](https://docs.microsoft.com/en-us/vsts/build-release/actions/agents/v2-windows){:target="_blank"} for more information on how to configure the agent.
@@ -109,7 +110,7 @@ The target machine is available in the deployment group to deploy the applicatio
 
    ![releasephases](images/dev9.png)
 
-   - **IIS Deployment phase**: In this phase, we deploy application to the VM using following tasks-
+   - **IIS Deployment phase**: In this phase, we deploy application to the VM using the following tasks-
 
       - **IIS Web App Manage**: This task runs on the target machine registered with the Deployment Group. It creates a *website* and an *Application Pool* locally with the name **PartsUnlimited** running under the port **82** [**http://localhost:82**](http://localhost:82)
 
@@ -117,7 +118,7 @@ The target machine is available in the deployment group to deploy the applicatio
 
    - **Database deploy phase**: In this phase, we use [**SQL Server Database Deploy**](https://github.com/Microsoft/vsts-tasks/blob/master/Tasks/SqlDacpacDeploymentOnMachineGroup/README.md){:target="_blank"} task to deploy [**dacpac**](https://docs.microsoft.com/en-us/sql/relational-databases/data-tier-applications/data-tier-applications){:target="_blank"} file to the DB server.
 
-   - **Selenium tests execution**: Executing **UI testing** as part of the release process is a great way of detecting unexpected changes, and need not be difficult. In this phase, we will execute Selenium tests on the deployed web application. The below tasks describes using Selenium to test the websites in the release pipeline.
+   - **Selenium tests execution**: Executing **UI testing** as part of the release process is a great way of detecting unexpected changes, and need not be difficult. Setting up automated browser based testing drives quality in your application, without having to do it manually. In this phase, we will execute Selenium tests on the deployed web application. The below tasks describes using Selenium to test the websites in the release pipeline.
 
      - **Visual Studio Test Platform Installer**: The [Visual Studio Test Platform Installer](https://docs.microsoft.com/en-us/azure/devops/pipelines/tasks/tool/vstest-platform-tool-installer?view=vsts){:target="_blank"} task will acquire the Microsoft test platform from nuget.org or a specified feed, and add it to the tools cache. It satisfies the 'vstest' demand and a subsequent Visual Studio Test task in a build or release pipeline can run without needing a full Visual Studio install on the agent machine.
      - **Run Selenium UI tests**: This [task](https://github.com/Microsoft/azure-pipelines-tasks/blob/master/Tasks/VsTestV2/README.md){:target="_blank"} uses **vstest.console.exe** to execute the selenium testcases on the agent machines.
@@ -130,7 +131,7 @@ The target machine is available in the deployment group to deploy the applicatio
 
    ![setuprelease_db](images/dev11.png)
 
-1. Click on **Selenium tests execution** phase and set Agent queue to **Default** then **Save** the changes.
+1. Click on **Selenium tests execution** phase and set Agent pool to **Default** then **Save** the changes.
 
    ![setuprelease_selenium](images/dev12.png)
 
