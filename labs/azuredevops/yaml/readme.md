@@ -1,18 +1,18 @@
 ---
-title: Configuring Builds as Code with YAML in Azure DevOps
+title: Configuring CI/CD Pipelines as Code with YAML in Azure DevOps
 layout: page
 sidebar: vsts
 permalink: /labs/azuredevops/yaml/
 folder: /labs/azuredevops/yaml/
-version: Lab version - 1.32
-updated: Last updated - 3/27/2019
+version: Lab version - 1.33.1
+updated: Last updated - 4/23/2019
 ---
 <div class="rw-ui-container"></div>
 
 <a name="Overview"></a>
 ## Overview ##
 
-Many teams prefer to define their builds using YAML (Yet Another Markup Language). This allows them to access the same build pipeline features as those using the visual designer, but with a markup file that can be managed like any other source file. YAML build definitions can be added to a project by simply adding their source file to the root of the repository.
+Many teams prefer to define their build and release pipelines using YAML (Yet Another Markup Language). This allows them to access the same pipeline features as those using the visual designer, but with a markup file that can be managed like any other source file. YAML build definitions can be added to a project by simply adding their source file to the root of the repository. Azure DevOps also provides default templates for popular project types, as well as a YAML designer to simplify the process of defining build and release tasks.
 
 <a name="Prerequisites"></a>
 ### Prerequisites ###
@@ -20,162 +20,269 @@ Many teams prefer to define their builds using YAML (Yet Another Markup Language
 - This lab requires you to complete task 1 from the [prerequisite instructions](../prereq).
 
 <a name="Exercise1"></a>
-## Exercise 1: Configuring Builds as Code with YAML in Azure DevOps ##
+## Exercise 1: Configuring CI/CD Pipelines as Code with YAML in Azure DevOps ##
 
 <a name="Ex1Task1"></a>
-### Task 1: Configuring the Parts Unlimited project ###
+### Task 1: Creating Azure resources ###
 
-1. Navigate to your team project on Azure DevOps. Before digging into the YAML builds, you will want to disable the continuous integration trigger for the default build definition.
+1. This lab requires a deployment of the Parts Unlimited project out to an Azure app service. To do this, you will need to spin up the necessary infrastructure. Log in to your Azure account at [https://portal.azure.com](https://portal.azure.com/).
 
-1. Navigate to **Pipelines | Builds**.
+1. Click **Create a resource** and search for **"web sql"**.
 
     ![](images/000.png)
 
-1. This project includes a default build definition, **PartsUnlimitedE2E**. Click **Edit** to edit the definition.
+1. Select the **Web App + SQL** option published by Microsoft.
 
     ![](images/001.png)
 
-1. This build is scheduled to run whenever a change is committed. We don't want to wait for this build every time there's a change, so select the **Triggers** tab and uncheck **Enable continuous integration**.
+1. Click **Create**.
 
     ![](images/002.png)
 
-1. From the **Save & queue** dropdown, select **Save**.
+1. Enter a globally unique name for the app service. You may find it easiest to incorporate your name, such as **"pul-yaml-johndoe"**. Select the option to **create a new** resource group named **"partsunlimited"**.
 
     ![](images/003.png)
 
-<a name="Ex1Task2"></a>
-### Task 2: Adding a YAML build definition ###
-
-1. Navigate to the project files using **Repos | Files**.
+1. Select the option to configure the **SQL Database**. Click **Create a new database** and enter the name **"partsunlimited"**.
 
     ![](images/004.png)
 
-1. Add a new file to the root of the repository using **New | File**. YAML build definition are simply code files you add to your project. They offer all the benefits of other source files.
+1. Select the option to configure the **Target server** and click **Create a new server**. Enter a globally unique server name, such as **"pul-yaml-johndoe"** and provide admin credentials. Click **Select** to confirm the server settings.
 
     ![](images/005.png)
 
-1. Name the new file **"azure-pipelines.yml"** and click **Create**. To make it more convenient to create YAML build definitions, Azure DevOps automatically creates a definition when you add this file to the root of your repository. The build definition is created in a folder that has the same name as the repository. Note that it is case-sensitive.
+1. Click **Select** to confirm the database settings.
 
     ![](images/006.png)
 
-1. Add the YAML markup below to the file and click **Commit**. This simply instructs the build to execute the echo at the command line so we can confirm it's all working. Once the commit has completed, it will queue a new build for this definition.
+1. Click **Create** to create the resources. Note that you may need to create an app service plan first, if you do not yet have one.
 
-    ```
-    steps:
-    - script: echo hello world
-    ```
     ![](images/007.png)
 
-1. Select **Pipelines | Builds** to navigate to the build hub.
+1. It will take a few minutes for the resources to provision, so you can move on to the next task.
+
+<a name="Ex1Task2"></a>
+### Task 2: Configuring the Parts Unlimited project ###
+
+1. Navigate to your team project on Azure DevOps in a new browser tab. Before digging into the YAML pipelines, you will want to disable the existing build pipeline.
+
+1. Navigate to **Pipelines**.
 
     ![](images/008.png)
 
-1. There will be a new pipeline created based on the YAML file saved. Select it and click **Queue**. Accept the default options for the build.
+1. Select the existing **PartsUnlimitedE2E** pipeline.
 
     ![](images/009.png)
 
-1. The newly created **PartsUnlimited CI** build will run using the YAML settings. Click the build to follow its progress.
+1. From the dropdown, select **Pause pipeline**.
 
     ![](images/010.png)
 
-1. Track the build until it completes. Select the **Logs** tab and open the **CmdLine** task.
+<a name="Ex1Task3"></a>
+### Task 3: Adding a YAML build definition ###
+
+1. Navigate to the **Pipelines** hub.
 
     ![](images/011.png)
 
-1. You can see where the script you defined earlier was generated and executed.
+1. Click **New pipeline**. We will use the wizard to automatically create the YAML definition based on our project.
 
     ![](images/012.png)
 
-1. Close the task viewer.
-
-<a name="Ex1Task3"></a>
-### Task 3: Crafting sophisticated YAML definitions ###
-
-1. You can do virtually anything with YAML that you would do with the web experience. In fact, you can even export existing build definitions as YAML if you would prefer to manage them in code. Select **Builds** to return to the hub.
+1. Select the **Azure Repos Git** as the source hosting platform. Note the others supported.
 
     ![](images/013.png)
 
-1. Switch to the folder view and select the **PartsUnlimitedE2E** build definition. Click **Edit**.
+1. Select the **PartsUnlimited** repo.
 
     ![](images/014.png)
 
-1. Select **Phase 1**.
+1. Select the **ASP.NET** template as the starting point for your pipeline.
 
     ![](images/015.png)
 
-1. Click **View YAML** to see the YAML export of this definition.
+1. Review the contents of the YAML definition. It will be saved as a new file called **"azure-pipelines.yml"** in the root of the repository and contain everything needed to build and test a typical ASP.NET solution. You can also customize the build as needed. In this case, update the **pool** to specify the build should use a Visual Studio 2017 build VM. Be sure to keep it at the same two-space indentation.
 
+    ```
+    name: Hosted VS2017
+    demands:
+    - msbuild
+    - visualstudio
+    - vstest
+    ```
     ![](images/016.png)
 
-1. Click **Copy to clipboard**. We'll take this as-is and use it for a YAML definition.
+1. Click **Save and run**.
 
     ![](images/017.png)
 
-1. Navigate to the project files using **Repos | Files**.
+1. Click **Save and run** to confirm the commit.
 
     ![](images/018.png)
 
-1. Open **.azure-pipelines.yml** in the **Editor**.
+1. Track the build until it completes. Click **Job** to see the logs.
 
     ![](images/019.png)
 
-1. Replace the contents of the file with those on your clipboard.
-
-1. Note that there is a comment block early in the file that reminds us that this definition is expecting some variables. The **SymbolPath** reference is coincidental (it's a literal needed for the build), but the **BuildPlatform** and **BuildConfguration** variables will play a role later.
+1. Each task from the YAML file is available for review, including any warnings and errors.
 
     ![](images/020.png)
 
-1. **Commit** the change back to the repo. This will queue a build.
+1. Close the tasks view.
 
     ![](images/021.png)
 
-1. Select **Pipelines | Builds** to return to the build hub.
+1. Select the **Tests** tab.
 
     ![](images/022.png)
 
-1. Click the new build to follow its progress.
+1. The tests should now succeed as expected.
 
     ![](images/023.png)
 
-1. The build should succeed. Switch to the **Summary** tab and note that it reports that there were no tests. There should have been, so now we'll need to figure out why they weren't picked up.
+<a name="Ex1Task4"></a>
+### Task 4: Adding continuous delivery to the YAML definition ###
+
+1. Now that the build and test processes are successful, we can now add delivery to the YAML definition. From the options dropdown, select **Edit pipeline**.
 
     ![](images/024.png)
 
-1. From the **Logs** tab, select the **Test Assemblies** task.
+1. Add the configuration lines below after the **trigger** section to define a **Build** stage in the YAML pipeline. You can define whatever stages you need to better organize and track pipeline progress.
 
+    ```
+    stages:
+    - stage: Build
+      jobs:
+      - job: Build
+    ```
     ![](images/025.png)
 
-1. Note that there is a warning that the test assembly pattern didn't find any matches. Upon closer inspection, it appears that it was expecting a build variable for **BuildConfiguration** to be available, but since it wasn't, the platform simply used the text as-is. This was something we probably should have expected given the warnings in the YAML.
+1. Highlight the remainder of the YAML file and indent it four spaces (two tabs). This will simply take the existing build definition and relocate it as a child of the **jobs** node.
 
     ![](images/026.png)
 
-1. Close the task view.
+1. At the bottom of the file, add the configuration below to define a second stage.
 
-1. From the options dropdown, select **Edit pipeline**.
-
+    ```
+    - stage: Deploy
+      jobs:
+      - job: Deploy
+        steps:
+    ```
     ![](images/027.png)
 
-1. From the options dropdown, select **Variables**. Although the definition itself is in YAML, we can still manage things like variables and triggers externally.
+1. Set the cursor on a new line at the end of the YAML definition. This will be the location where new tasks are added.
 
     ![](images/028.png)
 
-1. Use the **Add** button to add two new variables. **"BuildPlatform"** should be **"any cpu"** and **"BuildConfiguration"** should be **"release"**. Check the **Settable at queue time** options for each.
+1. Select the **Azure App Service Deploy** task.
 
     ![](images/029.png)
 
-1. Select the **Triggers** tab. Note that you can override the YAML settings and configure continuous integration like web-based builds.
+1. Select the Azure subscription where you created the app service earlier. Click **Authorize** and follow the path to complete authorization.
 
     ![](images/030.png)
 
-1. Select **Save & queue | Save & queue** to save the definition and queue a build.
+1. Enter the **App Service name** you used to create the app service earlier. Update the **Package or folder** to **"$(System.ArtifactsDirectory)/drop/*.zip"**. Click **Add**.
 
     ![](images/031.png)
 
-1. Click the new build to follow its progress.
+1. The YAML that defines the task will be added to the cursor location in the file.
 
     ![](images/032.png)
 
-1. When the build completes, select the **Tests** tab to confirm that everything has succeeded as expected, including the tests.
+1. With the added task still selected in the editor, indent it four spaces (two tabs) so that it is a child of the **steps** task.
 
     ![](images/033.png)
+
+1. It's important to note that these two stages will be run independently. As a result, the build output from the first stage will not be available to the second stage without special consideration. For this, we will use one task to publish the build output at the end of the build stage and another to download it in the beginning of the deploy stage. Place the cursor on a blank line at the end of the build stage.
+
+    ![](images/034.png)
+
+1. Search the tasks for **"publish build"** and select the **Publish Build Artifacts** task. There may be more than one available, so be sure to select the one that is not deprecated.
+
+    ![](images/035.png)
+
+1. Accept the defaults and click **Add**. This will publish the build artifacts to a location that will be downloadable under the alias **drop**.
+
+    ![](images/036.png)
+
+1. Indent the publish task four spaces (two tabs). You may also want to add an empty space before and after to make it easier to read.
+
+    ![](images/037.png)
+
+1. Place the cursor on the first line under the **steps** node of the deployment stage.
+
+    ![](images/038.png)
+
+1. Search the tasks for **"download build"** and select the **Download Build Artifacts** task.
+
+    ![](images/039.png)
+
+1. Set the **Artifact name** to "**drop"** and click **Add**.
+
+    ![](images/040.png)
+
+1. Indent the publish task four spaces (two tabs). You may also want to add an empty space before and after to make it easier to read.
+
+    ![](images/041.png)
+
+1. Click **Save** to commit the changes.
+
+    ![](images/042.png)
+
+1. Confirm the **Save**. This will begin a new build.
+
+    ![](images/043.png)
+
+1. Return to the **Pipelines** view.
+
+    ![](images/044.png)
+
+1. From the **Runs** tab, click the new build run to open it. Note that there are now multiple stages shown based on the YAML definition edits from earlier.
+
+    ![](images/045.png)
+
+1. When the **Build** stage completes, click the **Deploy** stage to follow each task.
+
+    ![](images/046.png)
+
+1. Expand the **AzureRmWebAppDeployment** task to review the steps performed during the Azure deployment. Once the task completes, your app will be live on Azure.
+
+    ![](images/047.png)
+
+<a name="Ex1Task5"></a>
+### Task 5: Reviewing the deployed site ###
+
+1. Return to the Azure portal browser tab.
+
+1. Navigate to the app service created earlier.
+
+1. Select the **Configuration** tab.
+
+    ![](images/048.png)
+
+1. Click the **defaultConnection** setting.
+
+    ![](images/049.png)
+
+1. Update the **Name** to **"DefaultConnectionString"**, which is the key expected by the application. This will enable it to connect to the database created for the app service. Click **Update**.
+
+    ![](images/050.png)
+
+1. Click **Save** to apply the changes.
+
+    ![](images/051.png)
+
+1. Return to the **Overview** tab.
+
+    ![](images/052.png)
+
+1. Click the **URL** to open your site in a new tab.
+
+    ![](images/053.png)
+
+1. The deployed site should load expected.
+
+    ![](images/054.png)
 
