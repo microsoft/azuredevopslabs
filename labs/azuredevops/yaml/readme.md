@@ -207,7 +207,7 @@ Many teams prefer to define their build and release pipelines using YAML (Yet An
 
     ![](images/036.png)
 
-1. Indent the publish task four spaces (two tabs). You may also want to add an empty space before and after to make it easier to read.
+1. Indent the publish task four spaces (two tabs). You may also want to add an empty line before and after to make it easier to read.
 
     ![](images/037.png)
 
@@ -223,7 +223,7 @@ Many teams prefer to define their build and release pipelines using YAML (Yet An
 
     ![](images/040.png)
 
-1. Indent the publish task four spaces (two tabs). You may also want to add an empty space before and after to make it easier to read.
+1. Indent the publish task four spaces (two tabs). You may also want to add an empty line before and after to make it easier to read.
 
     ![](images/041.png)
 
