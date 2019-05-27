@@ -144,7 +144,7 @@ description: Learn how you can implement modern DevOps practices with Azure, Azu
 					</div>
 					<div class="col-lg-9 col-md-9 col-sm-9 col-9 cont-mt cont-pl">					
 							<a href="/labs/azuredevops/pullrequests/" class="text-col-gunpower">	
-								<div class="bg-white text-font">Working with Pull Requests</div>
+								<div class="bg-white text-font">Working with Pull Requests in VS Code and Azure DevOps</div>
 							</a>
 					</div>					
 				</div>
@@ -178,7 +178,7 @@ description: Learn how you can implement modern DevOps practices with Azure, Azu
 					</div>
 					<div class="col-lg-9 col-md-9 col-sm-9 col-9 cont-mt cont-pl">					
 							<a href="/labs/azuredevops/yaml/" class="text-col-gunpower">	
-								<div class="bg-white text-font">Configuring pipeline as Code with YAML </div>
+								<div class="bg-white text-font">Configuring pipelines as Code with YAML </div>
 							</a>
 					</div>					
 				</div>
@@ -299,6 +299,40 @@ description: Learn how you can implement modern DevOps practices with Azure, Azu
 			</div>	
 			</div>
 			</div>	     
+			 <div class="row equal-height-columns my-1">  
+            <div class="col-lg-3 col-md-6 col-sm-6 col-12 mt-small-5">
+			<div class="hover-effect equal-height-column box-cover ml-forsm">
+				<div class="row">
+					<div class="col-lg-3 col-md-3 col-sm-3 col-3 pl-0 pr-lg-0 pl-small-15 img-mt">
+						<div class=" bg bg-purple p-2 text-center">
+							<div class="icon-cover"><img src="/images/appinsights.png" alt="appinsights" height="20"></div>
+						</div>
+					</div>
+					<div class="col-lg-9 col-md-9 col-sm-9 col-9 cont-mt cont-pl">					
+							<a href="/labs/azuredevops/appinsights/" class="text-col-gunpower">	
+								<div class="bg-white text-font">Monitoring App Performance with Application Insights</div>
+							</a>
+					</div>					
+				</div>
+			</div>	
+			</div>	
+			<div class="col-lg-3 col-md-6 col-sm-6 col-12 mt-small-5">
+			<div class="hover-effect equal-height-column box-cover ml-forsm">
+				<div class="row">
+					<div class="col-lg-3 col-md-3 col-sm-3 col-3 pl-0 pr-lg-0 pl-small-15 img-mt">
+						<div class=" bg bg-color-black p-2 text-center">
+							<div class="icon-cover"><img src="/images/github-42.png" alt="githubpullrequests" height="20"></div>
+						</div>
+					</div>
+					<div class="col-lg-9 col-md-9 col-sm-9 col-9 cont-mt cont-pl">					
+							<a href="/labs/azuredevops/githubpullrequests/" class="text-col-gunpower">	
+								<div class="bg-white text-font">Working with Pull Requests in VS Code and GitHub</div>
+							</a>
+					</div>					
+				</div>
+			</div>	
+			</div>
+			</div>	
             <div class="col-lg-3 col-md-6 col-sm-6 col-12 mt-small-5">			
      </div>
 		 <br />
