@@ -62,6 +62,10 @@ This lab will show how you will
 
    In this example, the server name is **myshuttle-1-mysqldbserver.mysql.database.azure.com** and the admin user name is **mysqldbuser@myshuttle-1-mysqldbserver**. 
 
+1. Select **Connection security**. Enable **Allow access to Azure services** toggle and **Save** the changes. This provides access to Azure services for  all the databases in your MySQL server.
+       
+    ![](images/mysqlaccess.png)
+       
 ## Exercise 2: Updating the App Settings for the Web App
 
 Next, navigate to the Web app that you have created. As you are deploying a Java application, you need to change the web app’s web container to Apache Tomcat. 
