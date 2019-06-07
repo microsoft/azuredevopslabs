@@ -10,7 +10,7 @@ folder: /labs/vstsextend/readyroll/
 ## Overview
 
 **Database DevOps** has come of age. It is seen as a key technical practice which can contribute to the successful implementation of DevOps, thereby eliminating the database bottleneck and having the releases faster and easier.
-A common blocker that prevents organizations from implementing DevOps is the database. It has unique requirements and often follows a completely different development process from the one used for application development. This is where [Redgate SQL Change Automation](https://documentation.red-gate.com/sca3/getting-started/about-sql-change-automation) tools helps in develop, source control, and safely automate SQL Server and Azure SQL database deployments from Visual Studio with [Redgate SQL Change Automation Core](https://documentation.red-gate.com/sca3/getting-started/about-sql-change-automation/sql-change-automation-core).
+A common blocker that prevents organizations from implementing DevOps is the database. It has unique requirements and often follows a completely different development process from the one used for application development. This is where [Redgate SQL Change Automation](https://documentation.red-gate.com/sca3/getting-started/about-sql-change-automation) helps in develop, source control, and safely automate SQL Server and Azure SQL database deployments from Visual Studio with [Redgate SQL Change Automation](https://documentation.red-gate.com/sca3/getting-started/about-sql-change-automation/sql-change-automation-core).
 
 **Redgate SQL Change Automation** is a migrations-first database development and deployment tool inside Visual Studio, allowing you to extend DevOps processes to your SQL Server databases, so you can:
 
@@ -29,7 +29,7 @@ In this lab, you will see
 
 1. You will need an Azure DevOps account. If you do not have one, you can sign up for free [here](https://azure.microsoft.com/en-us/services/devops/)
 
-1. You will need Visual Studio Enterprise 2017 or 2019 with [Redgate SQL Change Automation Core](https://marketplace.visualstudio.com/items?itemName=vs-publisher-306627.RedgateSqlChangeAutomation) extension installed. And the following extensions needs to be installed on your Azure DevOps organization.
+1. You will need Visual Studio Enterprise 2017 or 2019 with [Redgate SQL Change Automation](https://marketplace.visualstudio.com/items?itemName=vs-publisher-306627.RedgateSqlChangeAutomation) extension installed. And the following extensions needs to be installed on your Azure DevOps organization.
 
    - [SQL Change Automation: Build](https://marketplace.visualstudio.com/items?itemName=redgatesoftware.redgateDlmAutomationBuild)
    - [SQL Change Automation: Release](https://marketplace.visualstudio.com/items?itemName=redgatesoftware.redgateDlmAutomationRelease)
@@ -40,88 +40,72 @@ In this lab, you will see
 
 1. This lab requires you to complete Task 1 & 2 from  the [prerequisite](https://azuredevopslabs.com/labs/azuredevops/prereq/) instructions.
 
-1. You need to provision a Web App and SQL Database on Azure. Click [here](https://portal.azure.com/#create/Microsoft.WebSiteSQLDatabase) to create a website and an Azure SQL Database together. Name the database as `PartsUnlimited-Prod` and make a note of SQL server admin login and password.
+1. The following resources needs to be configured for this lab:
+  
+   - Azure Web App
+   - Azure SQL Server Databases (two databases)
 
-   ![](images/webappsql.png)
+1. Launch the [Azure Cloud Shell](https://docs.microsoft.com/en-in/azure/cloud-shell/overview) from the Azure portal and choose Bash.
 
-1. Once the resources are provisioned navigate to the Web App which you created. Select the **Configutaion** tab. Click the **defaultConnection** setting. Update the Name to **"DefaultConnectionString"**, which is the key expected by the application. This will enable it to connect to the database created for the app service. Click **Update**.
+1. **Create Azure Web App:**
+   
+   i.  Create a Resource Group. Replace `<region>` with the region of your choosing, for example eastus.
 
-    ![](images/editconnectionstring.png)
+   ```bash
+    az group create --name MyResourceGroup --location <region>
+   ```
 
-     ![](images/updateconnectionstring.png)
+   ii. Create App Service Plan
+     
+    ```bah
+    az appservice plan create --resource-group MyResourceGroup --name MyPlan --sku S1
 
-1. Click **Save** to apply the changes.
+    ```
 
-      ![](images/saveconnectionstring.png)
+   iii. Create the web app with a unique app name
 
-### Exercise 1: Add a ReadyRoll project to the PartsUnlimited solution.
+   ```bash
+   az webapp create --resource-group MyResourceGroup --plan MyPlan --name MyUniqueAppName
+   ```
+2. **Create Azure SQL server and Database:**   
+  
+    i. Create an Azure SQL server
 
-Here, you will create a SQL Change Automation project in your existing PartsUnlimited application solution to manage database changes alongside the application. This SQL Change Automation project contain a database's state, and a set of scripts that describe how to get to that state.
+    ```bash
+    az sql server create -l <region> -g MyResourceGroup -n <unique-sqlserver-name> -u sqladmin -p P2ssw0rd1234
+    ```
+     {% include important.html content= "Enter a unique SQL server name. Since the Azure SQL Server name does not support **UPPER** / **Camel** casing naming conventions, use lowercase for the ***SQL Server Name*** field value." %}
+
+    ii. Create two databases namely **pul-dev** and **pul-prod**
+
+    ```bash
+     az sql db create -g MyResourceGroup -s <unique-sqlserver-name> -n pul-dev --service-objective S0
+     ```
+
+     ```bash
+      az sql db create -g MyResourceGroup -s <unique-sqlserver-name> -n pul-prod --service-objective S0
+      ```
+    
+   iii. Create a firewall rule for SQL server that allows access from Azure services
+
+   ```bash
+   az sql server firewall-rule create --resource-group MyResourceGroup --server <your-sqlserver-name> --name AllowAllAzureIps --start-ip-address 0.0.0.0 --end-ip-address 0.0.0.0
+   ```
+1. Let us import some database changes to the **pul-dev** and **pul-prod** databases. This databases will be used as a starting point for SQL Change Automation project which we will create in the next exercise.
+
+1. Select the **pul-dev** SQL database from the Azure resources. In the left-hand menu, find and select **Query editor (preview)**. From the **Authorization type** drop-down menu, select **SQL Server authentication** and enter the user ID and password of the server admin account used to create the database. Select **OK**.
+
+      ![](images/queryeditor.png)
+
+1. In the next window copy the script from [here](../readyroll/dbscript/initialdbscript.sql) and paste into the **query** window. Click **Run**. This script will create initial database schema required for our application.
+      
+      ![](images/runquery.png)
+ 
+### Exercise 1: Add a Redgate SQL Change Automation project to the PartsUnlimited solution.
+
+Here, you will create a SQL Change Automation project in your existing PartsUnlimited application solution to manage database changes alongside the application. This SQL Change Automation project will contain a database's state, and a set of scripts that describe how to get to that state.
 
 1. This exercise requires to to complete Task 1 & 2 from the [prerequisite](https://azuredevopslabs.com/labs/azuredevops/prereq/) section.
-
-1. Press **F5** or click on ![](images/run.png) **Start debugging** icon to build and run the application locally.
-   
-      ![](images/debuglocally.png)
-
-    The application will look like as below
-     
-    ![](images/app.png)
-
-1. Return to Visual Studio and click the **Stop** button to stop debugging the application.
-
-    ![](images/stopdebugging.png)
-
-1. Open **SQL Server Object Explorer** in Visual studio.
-     
-    ![](images/sqlobjectexplorer.png)
-
-   From the **SQL Server Object Explorer** click **Add SQL server** icon ![](images/addsql.png) . Select **MSSQLLocalDB** from the local and click **Connect**.
-       
-    ![](images/connecttosql.png)
-
-1. In the *SQL Server* view, under **(localdb)\MSSQLLocalDB-->Databases**, you should be able to see **PartsUnlimitedWebsite** database.
-
-     ![](images/puldb.png)
-
-1. Consider this database as the development database for this application and **Redgate Data Tools** will be used to manage database changes alongside the application.
-
-1. The SQL database that was created earlier in Azure is a *blank* database. For the purpose of this lab, you will need to publish the current local database schema along with data to the Azure SQL database. You will then use the Azure SQL database as the baseline database.
-
-
-1. In SQL Server Object Explorer, click **Add Server** and connect to the Azure SQL server which you created in the previous task.
-   
-   ![](images/connectazuresql.png)
-
-   > If it prompts you a question to add your Client IP to the firewall in order to access the database, click **OK** to add your client IP to the SQL server firewall.
-
-1. To migrate the schema from the LocalDB to the new SQL Azure instance, right-click the **PartsUnlimitedWebsite** Database and select the **Schema Compare** option.
-
-   ![](images/schemacompare.png)
-
-   In the schema compare wizard,  select Azure SQL database (PartsUnlimited-Prod) as the *target* and click **Compare**.
-   
-   ![](images/schemacomparewizard.png)
-
-   Click **Update** in the next wizard to update the schema to Azure SQL database (PartsUnlimited-Prod).
- 
-     ![](images/schemaupdate.png)
-
-     ![](images/schemaupdate2.png)
-
-1. Similarly, to migrate the data from the LocalDB to the SQL Azure instance, right-click on the LocalDB instance, select the Data Compare tool and follow the walk through in the SQL Data Compare wizard.
-  
-   ![](images/datacompare.png)
-
-   In the wizard, select Azure SQL database as *target* and click **Compare**.
-
-   ![](images/datacomparewizard.png)
-
-   Click **Update** to move data to Azure SQL database.
-   
-   ![](images/datacompareupdate.png)
-
-   > Now you have two databases. One is local database **PartsUnlimitedWebsite** which will be assumed as your *development or sandbox* database. The second database on Azure (**PartsUnlimited-Prod**) will be assumed as the *Production* database. The changes you make to the application and the development database has to be deployed on to  Production. This is where the **SQL Change Automation** project helps us to manage database changes.
 
 1. Now, you will create a SQL Change Automation project project. Right click on the solution and select **Add** **-->** **New Project**.
 
@@ -203,7 +187,7 @@ Let us see how to manage database changes and deploy alongside the application.
     This will updated the changes to the local database.
 
 
-    > ReadyRoll generates numerically ordered SQL migration scripts that sit inside your Visual Studio project and take your schema from one version to the next. You can add these migration scripts to version control, use them to build and release, and automate database deployments, all in one process.
+    > SQL Change Automation generates numerically ordered SQL migration scripts that sit inside your Visual Studio project and take your schema from one version to the next. You can add these migration scripts to version control, use them to build and release, and automate database deployments, all in one process.
 
 1. Open SQL Change Automation window and click **Refresh** to check the pending changes to import.
       ![](images/refreshsqlchanges.png)
@@ -216,7 +200,7 @@ Let us see how to manage database changes and deploy alongside the application.
    ![](images/scriptadded.png)
 
 
-    >ReadyRoll generates numerically ordered SQL migration scripts that sit inside your Visual Studio project and take your schema from one version to the next. You can add these migration scripts to version control, use them to build and release, and automate database deployments, all in one process.
+    >SQL Change Automation generates numerically ordered SQL migration scripts that sit inside your Visual Studio project and take your schema from one version to the next. You can add these migration scripts to version control, use them to build and release, and automate database deployments, all in one process.
 
 1. You can rename the script for better understanding.
 
@@ -255,7 +239,7 @@ Let us see how to manage database changes and deploy alongside the application.
 
    ![](images/indexfile.png)
 
-1. Right click solution and select **Configuration Manager**. For **Release**  configuration unselect the check boxes for Build and Deploy to the PartsUnlimited Database project. We will use SQL change automation task in the pipelines to build this project.
+1. Right click solution and select **Configuration Manager**. For **Release**  configuration unselect the check boxes for Build and Deploy to the PartsUnlimited Database project. We will use SQL Change Automation task in the pipelines to build this project.
 
    ![](images/configurationmanager.png)
 
