@@ -2,8 +2,8 @@
 title: Deploying Database changes with Redgate SQL Change Automation and Azure DevOps
 layout: page
 sidebar: vsts2
-permalink: /labs/vstsextend/readyroll/
-folder: /labs/vstsextend/readyroll/
+permalink: /labs/vstsextend/redgate/
+folder: /labs/vstsextend/redgate/
 ---
 <div class="rw-ui-container"></div>
 
@@ -29,7 +29,7 @@ In this lab, you will see
 
 1. You will need an Azure DevOps account. If you do not have one, you can sign up for free [here](https://azure.microsoft.com/en-us/services/devops/)
 
-1. You will need Visual Studio Enterprise 2017 or 2019 with [Redgate SQL Change Automation](https://marketplace.visualstudio.com/items?itemName=vs-publisher-306627.RedgateSqlChangeAutomation) extension installed. And the following extensions needs to be installed on your Azure DevOps organization.
+1. You will need Visual Studio Enterprise 2017 or 2019 with [Redgate SQL Change Automation](https://marketplace.visualstudio.com/items?itemName=vs-publisher-306627.RedgateSqlChangeAutomation) extension installed. And the following extensions need to be installed on your Azure DevOps organization.
 
    - [SQL Change Automation: Build](https://marketplace.visualstudio.com/items?itemName=redgatesoftware.redgateDlmAutomationBuild)
    - [SQL Change Automation: Release](https://marketplace.visualstudio.com/items?itemName=redgatesoftware.redgateDlmAutomationRelease)
@@ -40,7 +40,7 @@ In this lab, you will see
 
 1. This lab requires you to complete Task 1 & 2 from  the [prerequisite](https://azuredevopslabs.com/labs/azuredevops/prereq/) instructions.
 
-1. The following resources needs to be configured for this lab:
+1. The following resources need to be configured for this lab:
   
    - Azure Web App
    - Azure SQL Server Databases (two databases)
@@ -62,7 +62,7 @@ In this lab, you will see
 
     ```
 
-   iii. Create the web app with a unique app name
+   iii. Create a web app with a unique app name
 
    ```bash
    az webapp create --resource-group MyResourceGroup --plan MyPlan --name MyUniqueAppName
@@ -79,11 +79,11 @@ In this lab, you will see
     ii. Create two databases namely **pul-dev** and **pul-prod**
 
     ```bash
-     az sql db create -g MyResourceGroup -s <unique-sqlserver-name> -n pul-dev --service-objective S0
+    az sql db create -g MyResourceGroup -s <unique-sqlserver-name> -n pul-dev --service-objective S0
      ```
 
      ```bash
-      az sql db create -g MyResourceGroup -s <unique-sqlserver-name> -n pul-prod --service-objective S0
+    az sql db create -g MyResourceGroup -s <unique-sqlserver-name> -n pul-prod --service-objective S0
       ```
     
    iii. Create a firewall rule for SQL server that allows access from Azure services
@@ -91,23 +91,25 @@ In this lab, you will see
    ```bash
    az sql server firewall-rule create --resource-group MyResourceGroup --server <your-sqlserver-name> --name AllowAllAzureIps --start-ip-address 0.0.0.0 --end-ip-address 0.0.0.0
    ```
-1. Let us import some database changes to the **pul-dev** and **pul-prod** databases. This databases will be used as a starting point for SQL Change Automation project which we will create in the next exercise.
+1. Let us import initial database schema to the **pul-dev** and **pul-prod** databases. This databases will be used as a starting point for SQL Change Automation project which we will create in the next exercise.
 
 1. Select the **pul-dev** SQL database from the Azure resources. In the left-hand menu, find and select **Query editor (preview)**. From the **Authorization type** drop-down menu, select **SQL Server authentication** and enter the user ID and password of the server admin account used to create the database. Select **OK**.
 
       ![](images/queryeditor.png)
 
-1. In the next window copy the script from [here](../readyroll/dbscript/initialdbscript.sql) and paste into the **query** window. Click **Run**. This script will create initial database schema required for our application.
+1. In the next window copy the script from [here](../readyroll/dbscript/initialdbscript.sql) and paste into the **query** window. Click **Run**. This script will create the initial database schema required for our application.
       
       ![](images/runquery.png)
- 
+
+9. Repeat the same steps for **pul-prod** database.
+
 ### Exercise 1: Add a Redgate SQL Change Automation project to the PartsUnlimited solution.
 
-Here, you will create a SQL Change Automation project in your existing PartsUnlimited application solution to manage database changes alongside the application. This SQL Change Automation project will contain a database's state, and a set of scripts that describe how to get to that state.
+Here, you will create a SQL Change Automation project in your existing PartsUnlimited application solution to manage database changes alongside the application. This SQL Change Automation project will contain a database's state and a set of scripts that describe how to get to that state.
 
 1. This exercise requires to to complete Task 1 & 2 from the [prerequisite](https://azuredevopslabs.com/labs/azuredevops/prereq/) section.
 
-1. Now, you will create a SQL Change Automation project project. Right click on the solution and select **Add** **-->** **New Project**.
+1. Now, you will create a SQL Change Automation project. Right click on the solution and select **Add** **-->** **New Project**.
 
      ![](images/addnewproject.png)
 
@@ -126,11 +128,11 @@ Here, you will create a SQL Change Automation project in your existing PartsUnli
 1. In **Database connections** wizard, select **Specify connection** under Development.
 
     ![](images/specifyconnection.png)
-   In the resulting window, select **MSSQLLocalDB** as server and select **PartsUnlimitedWebsite** database. Click **OK**.
+   In the resulting window, **Browse** and select **pul-dev** database from **Azure**. Click **OK**.
 
    ![](images/connecttodb.png)
 
-1. Now under **Deployment Target** section, select **Specify Connection** and select Azure SQL database.
+1. Now under **Deployment Target** section, select **Specify Connection** and select **pul-prod** Azure SQL database.
   
    ![](images/deploymenttarget.png)
 
@@ -141,28 +143,36 @@ Here, you will create a SQL Change Automation project in your existing PartsUnli
      
      ![](images/createbaseline.png)
 
-   > The schema of the Deployment Target will be read in order to create a baseline schema. This will not modify the Deployment Target in any way.
+   >The schema of the Deployment Target will be read in order to create a baseline schema. This will not modify the Deployment Target in any way.
 
 1. Now you should be able to see a database project added to your solution and also the **SQL Change Automation Edition** window.
 
       ![](images/readyrollwindow.png)
 
-   > SQL Change Automation project automatically generates a migration script which represents the current schema on the deployment target – the baseline schema. Two folders are also generated, 1.0.0-Baseline and 1.1.0-Changes. The baseline schema migration script is automatically placed in the 1.0.0-Baseline folder, and the baseline schema can be deployed to your sandbox development environment by clicking Deploy project. You can then make changes in your development environment, which will be placed in 1.1.0-Changes.
+   >SQL Change Automation project automatically generates a migration script which represents the current schema on the deployment target – the baseline schema. Two folders are also generated, 1.0.0-Baseline and 1.1.0-Changes. The baseline schema migration script is automatically placed in the 1.0.0-Baseline folder, and the baseline schema can be deployed to your sandbox development environment by clicking Deploy project. You can then make changes in your development environment, which will be placed in 1.1.0-Changes.
 
 ### Exercise 2: Make the Database and Application changes
 
 Now that the SQL Change Automation project is ready, you will need to make some changes to the database schema and data along with some code changes in the application.
 
 ### Lab Scenario: 
- Run the application locally once again. Press **F5** or click on ![](images/run.png) **Start debugging** icon to build and run the application locally.
+
+- Edit **web.config** file from **PartsUnlimitedWebsite** project. Change the connection string to connect **pul-dev** database. Update the connection string as shown below. 
+
+   ```
+    <connectionStrings>
+    <add name="DefaultConnectionString" connectionString="Server=tcp:{your_sqlservername}.database.windows.net,1433;Initial Catalog=pul-dev;Persist Security Info=False;User ID={your_sql-username};Password={your_sql-password};" providerName="System.Data.SqlClient" />
+     </connectionStrings>
+   ```
+-  Run the application locally once again. Press **F5** or click on ![](images/run.png) **Start debugging** icon to build and run the application locally.
    
-![](images/debuglocally.png)
+    ![](images/debuglocally.png)
 
-If you observe in the home page, you have some discount on Oil and Filters products.
+    If you observe in the home page, you have some discount on Oil and Filters products.
 
-![](images/applicationchange.png)
+    ![](images/applicationchange.png)
 
-**Application code change**: Customer would like to have a discount on all products as a New Year offer. This requires a code change in the existing application.
+  **Application code change**: Assume that customer would like to have a discount on all products as a New Year offer. This requires a code change in the existing application.
 
 **Database changes**: For the above application, update the pricing of the products in the database.
 
@@ -171,8 +181,10 @@ For example, under **Brakes** category the pricing needs to be updated with a di
   ![](images/datachange.png)
 
 Let us see how to manage database changes and deploy alongside the application.
-
-1. In SQL Server Object Explorer, browse the **PartUnlimitedWebsite** database under LocalDB. Expand **‘Tables’** and right click on **Products** table, select **View Designer**.
+1. From SQL Server Object Explorer, connect to the **pul-dev** Azure SQL database.
+   
+   ![](images/connecttopuldev.png)
+1. In **pul-dev** database expand **‘Tables’**. Right click on **Products** table, select **View Designer**.
    
    ![](images/viewdesigner.png)
 
@@ -184,10 +196,9 @@ Let us see how to manage database changes and deploy alongside the application.
    
    ![](images/updatedatabase.png)
 
-    This will updated the changes to the local database.
+    This will update the changes to the dev database.
 
 
-    > SQL Change Automation generates numerically ordered SQL migration scripts that sit inside your Visual Studio project and take your schema from one version to the next. You can add these migration scripts to version control, use them to build and release, and automate database deployments, all in one process.
 
 1. Open SQL Change Automation window and click **Refresh** to check the pending changes to import.
       ![](images/refreshsqlchanges.png)
@@ -206,7 +217,7 @@ Let us see how to manage database changes and deploy alongside the application.
 
      ![](images/renamescript.png)
 
-1. Select **Products** table form the local database, right click and select **View Data**.
+1. Select **Products** table form the **pul-dev** database, right click and select **View Data**.
 
    ![](images/viewdata.png)
 
@@ -229,11 +240,11 @@ Let us see how to manage database changes and deploy alongside the application.
     `
      ![](images/updateprice.png)
 
-1. To view the new price, select **Products** table and then **View Data** .
+1. To view the new price, select **Products** table and then **View Data**.
     
     ![](images/pricedata2.png)
 
-   You have made the database changes in your local and generated migration scripts. You will now change the application code.
+   You have made the database changes in your **pul-dev** and generated migration scripts. You will now change the application code.
 
 1. Open **Index.html** file from the path `src\PartsUnlimitedWebsite\Views\Home\` , make the changes as shown below and save the changes.
 
@@ -243,7 +254,7 @@ Let us see how to manage database changes and deploy alongside the application.
 
    ![](images/configurationmanager.png)
 
-1. Commit the changes to the server; create Build and Release pipelines in Azure DevOps to compile and deploy the changes. 
+1. Commit the changes to the Azure Repos.
 
    In the **Team Explorer**, select **Changes**. Enter a commit comment and select **Commit All and Push** to commit the changes to the server.
    
@@ -255,7 +266,7 @@ Let us see how to manage database changes and deploy alongside the application.
 
 Now you have version controlled both the application and database project. Next, you will create a build pipeline to build your SQL Change Automation project alongside your application.
 
-1. Navigate to **Pipelines --> Builds** in your Azure DevOps organization. Before creating new pipeline, you will want to disable the existing build pipeline.
+1. Navigate to **Pipelines --> Builds** in your Azure DevOps organization. Before creating a new pipeline, you will want to disable the existing build pipeline.
 
    Select the existing PartsUnlimitedE2E pipeline.
 
@@ -279,7 +290,7 @@ Now you have version controlled both the application and database project. Next,
 
      ![](images/dotnettemplate.png)
 
-   This template has tasks to compile and create package for your .NET project.
+   This template has tasks to compile and create a package for your .NET project.
    
 1. Add **Redgate SQL Change Automation: Build** task just below the Visual Studio build task.
 
@@ -290,7 +301,7 @@ Now you have version controlled both the application and database project. Next,
    >If you don't see the above task make sure you have installed [SQL Change Automation: Build](https://marketplace.visualstudio.com/items?itemName=redgatesoftware.redgateDlmAutomationBuild) extension.
 
 
-1. Select **Redgate SQL Change Automation: Build** task. This task will build your SQL Change Automation project and creates a Nuget package with the migration scripts . Browse & select **SQL Change Automation project**. Enter **Output Nuget Package ID** as `PartsUnlimiteDatabase`.
+1. Select **Redgate SQL Change Automation: Build** task. This task will build your SQL Change Automation project and creates a Nuget package with the migration scripts. Browse & select **SQL Change Automation project**. Enter **Output Nuget Package ID** as `PartsUnlimiteDatabase`.
 
     ![](images/sqlbuildtask.png)
 
@@ -339,9 +350,18 @@ Now you have both the application and database packages available as build artif
 
     Now you have two tasks in the pipeline.
 
-1. **Deploy Azure App Service**: Using this task you will deploy application package to Azure app service which was created. 
+1. **Deploy Azure App Service**: Using this task you will deploy application package to Azure app service which was created. And also we need to update the connection string for this app service to access **pul-prod** database. In App Service task set **XML variable substitution** option.
+    
+      ![](images/xmlvariable.png)
 
+   >XML variable substitution enables you to modify configuration settings in configuration files (*.config files) inside web packages and XML parameters files (parameters.xml). In this way, the same package can be configured based on the environment to which it will be deployed. For more information on XML Transformations click [here](https://docs.microsoft.com/en-us/azure/devops/pipelines/tasks/transforms-variable-substitution?view=azure-devops)
 
+1. Define the release variable with the name **DefaultConnectionString** and set the value as shown below. 
+
+    ```
+    Server=tcp:{your_sqlservername}.database.windows.net,1433;Initial Catalog=pul-prod;Persist Security Info=False;User ID={your_sqlusername};Password={your_sqlpassword};
+   ```
+    ![](images/xmlvariable2.png)
 1. **Redgate SQL Change Automation: Release**: This task will take the package produced by building a SQL Change Automation project and deploy it to a target database. Select  **Redgate SQL Change Automation: Release** task, select **Operation** as `Deploy database changes from a build artifact` and select package path from the build artifact.
 
       ![](images/selectdbpackage.png)
