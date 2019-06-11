@@ -10,7 +10,7 @@ folder: /labs/vstsextend/redgate/
 ## Overview
 
 **Database DevOps** has come of age. It is seen as a key technical practice which can contribute to the successful implementation of DevOps, thereby eliminating the database bottleneck and having the releases faster and easier.
-A common blocker that prevents organizations from implementing DevOps is the database. It has unique requirements and often follows a completely different development process from the one used for application development. This is where [Redgate SQL Change Automation](https://documentation.red-gate.com/sca3/getting-started/about-sql-change-automation) helps in develop, source control, and safely automate SQL Server and Azure SQL database deployments from Visual Studio with [Redgate SQL Change Automation](https://documentation.red-gate.com/sca3/getting-started/about-sql-change-automation/sql-change-automation-core).
+A common blocker that prevents organizations from implementing DevOps is the database. It has unique requirements and often follows a completely different development process from the one used for application development. This is where [Redgate SQL Change Automation](https://documentation.red-gate.com/sca3/getting-started/about-sql-change-automation) helps with development, source control, and safe automated SQL Server and Azure SQL database deployments from Visual Studio with [Redgate SQL Change Automation](https://documentation.red-gate.com/sca3/getting-started/about-sql-change-automation/sql-change-automation-core).
 
 **Redgate SQL Change Automation** is a migrations-first database development and deployment tool inside Visual Studio, allowing you to extend DevOps processes to your SQL Server databases, so you can:
 
@@ -97,7 +97,7 @@ In this lab, you will see
 
       ![](images/queryeditor.png)
 
-1. In the next window copy the script from [here](../readyroll/dbscript/initialdbscript.sql) and paste into the **query** window. Click **Run**. This script will create the initial database schema required for our application.
+1. In the next window copy the script from [here](https://raw.githubusercontent.com/microsoft/azuredevopslabs/master/labs/vstsextend/redgate/dbscript/initialdbscript.sql) and paste into the **query** window. Click **Run**. This script will create the initial database schema required for our application.
       
       ![](images/runquery.png)
 
