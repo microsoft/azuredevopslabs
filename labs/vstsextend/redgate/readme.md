@@ -137,9 +137,6 @@ Here, you will create a SQL Change Automation project in your existing PartsUnli
    ![](images/deploymenttarget.png)
 
 1. In **Database connections** wizard, select **Next** and click **Create Baseline** in the next window to complete the project creation.
-
-     ![](images/databaseconnections.png)
-
      
      ![](images/createbaseline.png)
 

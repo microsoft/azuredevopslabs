@@ -462,6 +462,10 @@ description: Learn how you can implement modern DevOps practices with Azure, Azu
                                                         class="icon-bor-p-m" />
                                                     <a href="/labs/vstsextend/teams/" class="fon-size-13">Microsoft Teams with Azure DevOps Services <img src="/images/new-tag.png" alt="new-tag" class="align-on-labs"/></a>
                                                 </li>
+												<li class="osslist align-relative"><img src="/images/redgate.png" height="42"
+                                                        class="icon-bor-p-m" />
+                                                    <a href="/labs/vstsextend/redgate/" class="fon-size-13">Deploying Database changes with Redgate SQL Change Automation and Azure DevOps<img src="/images/new-tag.png" alt="new-tag" class="align-on-labs"/></a>
+                                                </li>
                                                 <li class="osslist"> <img src="/images/docker-42.png" height="42" class="icon-bor-p-m" /><a
                                                         href="/labs/vstsextend/docker/" class="fon-size-13"> Deploying a Docker based web application to Azure App Service</a></li>
                                                  <li class="osslist"> <img src="/images/docker-42.png" height="42" class="icon-bor-p-m" /><a
