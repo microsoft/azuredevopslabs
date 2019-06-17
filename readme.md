@@ -359,7 +359,7 @@ description: Learn how you can implement modern DevOps practices with Azure, Azu
 					</a>	
 				</div>
 			</div>
-			<div class="col-sm-2 my-2">
+			<!-- <div class="col-sm-2 my-2">
 				<div class="shadow-sm hover-effect equal-height-column">
 					<a href="/labs/vstsextend/jenkins/" class="text-col-gunpower">
 						<div class="bg-sel-grey1 p-2 text-center">
@@ -368,7 +368,17 @@ description: Learn how you can implement modern DevOps practices with Azure, Azu
 						<div class="bg-white py-2 text-center">Integrating Azure DevOps with Jenkins</div>
 					</a>	
 				</div>
-			</div>
+			</div> -->
+			<div class="col-sm-2 my-2">
+				<div class="shadow-sm hover-effect equal-height-column">
+					<a href="/labs/vstsextend/redgate/" class="text-col-gunpower">
+						<div class="bg-sel-grey1 p-2 text-center">
+							<div class="icon-cover1"><img src="/images/redgate.png" alt="redgate" height="42"></div>
+						</div>
+						<div class="bg-white py-2 text-center">Database DevOps with Redgate and Azure DevOps</div>
+					</a>	
+				</div>
+			</div> 
 			<div class="col-sm-2 my-2">
 				<div class="shadow-sm hover-effect equal-height-column">
 					<a href="/labs/azuredevops/yaml/" class="text-col-gunpower">
