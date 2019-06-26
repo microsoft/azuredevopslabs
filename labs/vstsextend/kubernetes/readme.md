@@ -253,7 +253,7 @@ Kubernetes includes a web dashboard that can be used for basic management operat
 
 ## Reference
 
-The following video walk you through all the steps explained in this lab
+Thanks to **Mohamed Radwan** for making a video on this lab. You can watch the following video that walks you through all the steps explained in this lab
 
 <figure class="video_container">
   <iframe width="560" height="315" src="https://www.youtube.com/embed/4DUhc0MjdUc" frameborder="0" allowfullscreen="true"> </iframe>
