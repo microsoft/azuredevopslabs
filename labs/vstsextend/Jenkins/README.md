@@ -157,7 +157,7 @@ This lab covers both the approaches and the following tasks will be performed
 
    {% include note.html content="Note there is also **Post-build steps** section which is very similar to the actions section. The tasks configured in the post-build steps/actions are executed after all the build steps have been executed." %}
 
-1. Enter  **target/*.war** in the **Files to archive** text box. Select the **Save** button to save the settings and return to the project page.
+1. Enter  **target/*.war, \*.sql** in the **Files to archive** text box. Select the **Save** button to save the settings and return to the project page.
 
    <img class="myImg" src="images/jenkinsarchiveartifacts.png" alt="Archive War"/>
 
