@@ -191,3 +191,4 @@ As projects and teams scale in complexity, it becomes help to automate more of t
 
     ![](images/035.png)
 
+{% include note.html content="If you plan to complete further labs, you may need to reverse the changes you made in **Task 3** above." %}

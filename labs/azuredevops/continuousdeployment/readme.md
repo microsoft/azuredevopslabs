@@ -42,7 +42,7 @@ In this lab, you will learn about the release management features available in A
 
     ![](images/002.png)
 
-1. Enter a unique name for **Server name**, such as by including your name. Enter an admin username and password you can remember. Note that **"P2ssw0rd"** meets the password requirements. Click **Select** to select these options.
+1. Enter a unique name for **Server name**, such as by including your name. Enter an admin username and password you can remember. Note that **"P2ssw0rd"** meets the password requirements. Click **Select** to select these options. Be sure to check off **Allow Azure Services to access server**.
 
     ![](images/003.png)
 
