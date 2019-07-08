@@ -440,7 +440,7 @@ description: Learn how you can implement modern DevOps practices with Azure, Azu
                                             <ul class="p-l-5px">
                                             <li class="osslist align-relative"> <img src="/images/azurekeyvault.png" height="42" class="icon-bor-p-m" /><a
                                                         href="/labs/vstsextend/azurekeyvault/" class="fon-size-13">
-                                                        Using secrets from Azure Key Vault in a pipeline <img src="/images/new-tag.png" alt="new-tag" class="align-on-labs"/></a></li>
+                                                        Using secrets from Azure Key Vault in a pipeline</a></li>
                                                 <li class="osslist"> <img src="/images/launchdarkly.png" height="42" class="icon-bor-p-m" /><a
                                                         href="/labs/vstsextend/launchdarkly/" class="fon-size-13">
                                                         Feature Flag Management with LaunchDarkly</a></li>
@@ -461,7 +461,7 @@ description: Learn how you can implement modern DevOps practices with Azure, Azu
                                                         class="fon-size-13"> Configuring a CD pipeline for your Jenkins CI</a> </li>
                                                   <li class="osslist align-relative"> <img src="/images/appcenter.png" height="42"
                                                         class="icon-bor-p-m" /> <a href="/labs/vstsextend/appcenter/"
-                                                        class="fon-size-13"> Build-Test-Distribute Mobile Apps using App Center <img src="/images/new-tag.png" alt="new-tag" class="align-on-labs"/></a></li>
+                                                        class="fon-size-13"> Build-Test-Distribute Mobile Apps using App Center</a></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -470,7 +470,7 @@ description: Learn how you can implement modern DevOps practices with Azure, Azu
                                             <ul class="p-l-5px">
                                                  <li class="osslist align-relative"><img src="/images/teams.png" height="42"
                                                         class="icon-bor-p-m" />
-                                                    <a href="/labs/vstsextend/teams/" class="fon-size-13">Microsoft Teams with Azure DevOps Services <img src="/images/new-tag.png" alt="new-tag" class="align-on-labs"/></a>
+                                                    <a href="/labs/vstsextend/teams/" class="fon-size-13">Microsoft Teams with Azure DevOps Services</a>
                                                 </li>
 												<li class="osslist align-relative"><img src="/images/redgate.png" height="42"
                                                         class="icon-bor-p-m" />
@@ -503,10 +503,13 @@ description: Learn how you can implement modern DevOps practices with Azure, Azu
                                             <ul class="p-l-5px">
                                                  <li class="osslist align-relative"> <img src="/images/github-42.png" height="42"
                                                         class="icon-bor-p-m" /><a href="/labs/vstsextend/github-azurepipelines/"
-                                                        class="fon-size-13"> GitHub Integration with Azure Pipelines <img src="/images/new-tag.png" alt="new-tag" class="align-on-labs"/></a></li>
+                                                        class="fon-size-13"> GitHub Integration with Azure Pipelines</a></li>
                                                          <li class="osslist"> <img src="/images/aspnetmodernize.png" height="42"
                                                         class="icon-bor-p-m" /><a href="/labs/vstsextend/aspnetmodernize/"
                                                         class="fon-size-13"> Deploy existing .NET apps as Windows containers (Modernizing .NET apps)</a></li>
+                                                         <li class="osslist"> <img src="/images/azuredevopsproject.png" height="42"
+                                                        class="icon-bor-p-m" /><a href="/labs/vstsextend/azuredevopsprojectdotnet/"
+                                                        class="fon-size-13"> Create a CI/CD pipeline for .NET with the Azure DevOps Project</a></li>
                                                  <li class="osslist"> <img src="/images/whitesource-42.png" height="42"
                                                         class="icon-bor-p-m" /><a href="/labs/vstsextend/whitesource/"
                                                         class="fon-size-13"> Managing Open-source security and license with WhiteSource</a></li>
@@ -530,7 +533,7 @@ description: Learn how you can implement modern DevOps practices with Azure, Azu
                                             <ul class="p-l-5px">
                                                 <li class="osslist align-relative"> <img src="/images/github-42.png" height="42"
                                                         class="icon-bor-p-m" /><a href="/labs/vstsextend/github-azureboards/"
-                                                        class="fon-size-13"> GitHub Integration with Azure Boards <img src="/images/new-tag.png" alt="new-tag" class="align-on-labs"/></a></li>
+                                                        class="fon-size-13"> GitHub Integration with Azure Boards</a></li>
                                                 <li class="osslist"> <img src="/images/python-42.png" height="42" class="icon-bor-p-m" /><a
                                                         href="/labs/vstsextend/python/" class="fon-size-13"> Deploying a CD pipeline for a Django-based Python app </a></li>
                                                 <li class="osslist"> <img src="/images/php.png" height="42" class="icon-bor-p-m" /><a
