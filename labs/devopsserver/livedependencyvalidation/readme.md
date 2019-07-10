@@ -92,7 +92,7 @@ Alternatively, you can download the virtual machine from [here](../devopsvmdownl
 
     ![](images/009.png)
 
-1. Locate the **Search** method. It currently returns a **Task<IEnumerable<Product>>**. Change it to return a **Task<IEnumerable<ViewModels.ProductViewModel>>**.
+1. Locate the **Search** method. It currently returns a **Task\<IEnumerable<Product\>\>**. Change it to return a **Task\<IEnumerable\<ViewModels.ProductViewModel\>\>**.
 
     ![](images/010.png)
 
