@@ -42,7 +42,7 @@ In this lab, you will learn about the release management features available in A
 
     ![](images/002.png)
 
-1. Enter a unique name for **Server name**, such as by including your name. Enter an admin username and password you can remember. Note that **"P2ssw0rd"** meets the password requirements. Click **Select** to select these options. Be sure to check off **Allow Azure Services to access server**.
+1. Enter a unique name for **Server name**, such as by including your name. Enter an admin username and password you can remember. Note that **"P2ssw0rd"** meets the password requirements. Click **Select** to select these options. Be sure to checkmark **Allow Azure Services to access server**.
 
     ![](images/003.png)
 
@@ -58,7 +58,7 @@ In this lab, you will learn about the release management features available in A
 
     ![](images/006.png)
 
-1. For **App name**, enter a unique name, such as by using your name as part. Since this will be for our QA deployment, append the name with **"-qa"**. Select the same **Subscription** and **Resource group** as before. If required to create an **App Service plan**, accept the defaults. Click **Create** to create.
+1. For **Name**, enter a unique name, such as by using your name as part. Since this will be for our QA deployment, append the name with **"-qa"**. Be sure to select the "ASP.NET 4.7" **Runtime stack** and select the same **Subscription** and **Resource group** as before. If required to create an **App Service plan**, accept the defaults. Click **Review & Create** to create.
 
     ![](images/007.png)
 
