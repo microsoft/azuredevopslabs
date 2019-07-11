@@ -49,7 +49,7 @@ In this lab, you'll see how easy it is to set up Azure Pipelines with your GitHu
 
     ![](images/000.png)
 
-1. Click **Fork** to fork the repository to you own account.
+1. Click **Fork** to fork the repository to your own account.
 
     ![](images/001.png)
 
