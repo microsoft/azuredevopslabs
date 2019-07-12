@@ -55,9 +55,9 @@ In this lab, you will learn how to setup SonarQube on Azure and integrate with A
     |`--dns-name-label`     |  The dns name label for container with public IP.       |
     |`--cpu`     |  The required number of CPU cores of the containers.       |
     |`--memory`     |  The required memory of the containers in GB       |
-    |||
+    
 
-1. Once the deployment is successful, you will see the resources in the Azure Portal.
+1. Once the deployment is successful, you will see the following resources in the Azure Portal.
      
     ![sonarqubeaci](images/sonarqubeaci.png)
 
