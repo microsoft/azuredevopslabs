@@ -468,7 +468,7 @@ description: Learn how you can implement modern DevOps practices with Azure, Azu
                                     <div class="col-lg-3 col-md-6 col-sm-6 col-12 p-l-r-override">
                                         <div class="bg-color-white equal-height-column">
                                             <ul class="p-l-5px">
-                                                 <li class="osslist align-relative"><img src="/images/teams.png" height="42"
+                                                 <li class="osslist align-relative"><img src="/images/teams3.png" height="42"
                                                         class="icon-bor-p-m" />
                                                     <a href="/labs/vstsextend/teams/" class="fon-size-13">Microsoft Teams with Azure DevOps Services</a>
                                                 </li>
@@ -504,9 +504,10 @@ description: Learn how you can implement modern DevOps practices with Azure, Azu
                                                  <li class="osslist align-relative"> <img src="/images/github-42.png" height="42"
                                                         class="icon-bor-p-m" /><a href="/labs/vstsextend/github-azurepipelines/"
                                                         class="fon-size-13"> GitHub Integration with Azure Pipelines</a></li>
-                                                         <li class="osslist"> <img src="/images/aspnetmodernize.png" height="42"
-                                                        class="icon-bor-p-m" /><a href="/labs/vstsextend/aspnetmodernize/"
-                                                        class="fon-size-13"> Deploy existing .NET apps as Windows containers (Modernizing .NET apps)</a></li>
+                                                           <li class="osslist align-relative"><img src="/images/teams3.png" height="42"
+                                                        class="icon-bor-p-m" />
+                                                    <a href="/labs/vstsextend/teams-devopshub/" class="fon-size-13">Using Microsoft Teams as Your DevOps Hub <img src="/images/new-tag.png" alt="new-tag" class="align-on-labs"/></a>
+                                                </li>
                                                          <li class="osslist"> <img src="/images/azuredevopsproject.png" height="42"
                                                         class="icon-bor-p-m" /><a href="/labs/vstsextend/azuredevopsprojectdotnet/"
                                                         class="fon-size-13"> Create a CI/CD pipeline for .NET with the Azure DevOps Project</a></li>
@@ -533,7 +534,10 @@ description: Learn how you can implement modern DevOps practices with Azure, Azu
                                             <ul class="p-l-5px">
                                                 <li class="osslist align-relative"> <img src="/images/github-42.png" height="42"
                                                         class="icon-bor-p-m" /><a href="/labs/vstsextend/github-azureboards/"
-                                                        class="fon-size-13"> GitHub Integration with Azure Boards</a></li>
+                                                        class="fon-size-13"> GitHub Integration with Azure Boards</a></li>                                                     
+                                                   <li class="osslist"> <img src="/images/aspnetmodernize.png" height="42"
+                                                        class="icon-bor-p-m" /><a href="/labs/vstsextend/aspnetmodernize/"
+                                                        class="fon-size-13"> Deploy existing .NET apps as Windows containers (Modernizing .NET apps)</a></li>
                                                 <li class="osslist"> <img src="/images/python-42.png" height="42" class="icon-bor-p-m" /><a
                                                         href="/labs/vstsextend/python/" class="fon-size-13"> Deploying a CD pipeline for a Django-based Python app </a></li>
                                                 <li class="osslist"> <img src="/images/php.png" height="42" class="icon-bor-p-m" /><a
