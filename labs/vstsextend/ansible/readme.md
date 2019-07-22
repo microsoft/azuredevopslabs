@@ -41,9 +41,9 @@ Ansible includes a suite of modules for interacting with Azure Resource Manager,
 
     ![](images/azurecloudshell.png)
 
-1. Enter the following command by replacing ServicePrincipalName and PASSWORD with your desired values.
+1. Enter the following command by replacing ServicePrincipalName with your desired value.
 
-   `az ad sp create-for-rbac --name ServicePrincipalName --password PASSWORD `
+   `az ad sp create-for-rbac --name ServicePrincipalName `
 
    It will give you a JSON output as shown in the image. Copy the output to notepad. This details required in your next tasks.
          
