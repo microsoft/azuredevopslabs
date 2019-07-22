@@ -4,8 +4,8 @@ layout: page
 sidebar: vsts
 permalink: /labs/azuredevops/continuousintegration/
 folder: /labs/azuredevops/continuousintegration/
-version: Lab version - 15.8.2
-updated: Last updated - 9/5/2018
+version: Lab version - 1.36.1
+updated: Last updated - 7/22/2019
 redirect_from: "/labs/vsts/continuousintegration/index.htm"
 ---
 <div class="rw-ui-container"></div>
@@ -28,17 +28,17 @@ In this lab, you will learn how to configure continuous integration (CI) and con
 
 1. Navigate to your team project on Azure DevOps.
 
-1. Navigate to **Pipelines \| Builds**.
+1. Navigate to **Pipelines | Pipelines**.
 
     ![](images/000.png)
 
-1. Select **New \| New build pipeline** to create a new build pipeline.
+1. Click **New pipeline** to create a new build pipeline.
 
     ![](images/001.png)
 
 1. The default option for build pipelines involves using YAML to define the process. If you are interested in that, please check out that lab. For this lab, click **use the classic editor**.
 
-    ![](images/002-1.png)
+    ![](images/002.png)
 
 1. The first thing you'll need to do is to configure the source repository. Every major platform is available, but the default options are all we need here. This build will use the **master** branch of the **PartsUnlimited** repo. Leave the defaults and click **Continue**.
 
@@ -56,7 +56,7 @@ In this lab, you will learn how to configure continuous integration (CI) and con
 
     ![](images/006.png)
 
-1. Select the **Triggers** tab. These triggers enable you to automatically invoke builds on a schedule, when another build completes or when changes are made to the source. Check **Enable continuous integration** so that this build will get invoked whenever source changes are committed.
+1. Select the **Triggers** tab. These triggers enable you to automatically invoke builds on a schedule, when another build completes, or when changes are made to the source. Check **Enable continuous integration** so that this build will get invoked whenever source changes are committed.
 
     ![](images/007.png)
 
@@ -64,81 +64,85 @@ In this lab, you will learn how to configure continuous integration (CI) and con
 
     ![](images/008.png)
 
-1. Select the **Retention** tab. This is where you configure which builds are retained and for how long.
+1. Select the **Retention** tab. Right-click **go to the project settings to configure** and select **Open in new tab**.
 
     ![](images/009.png)
 
-1. Select the **History** tab. There's nothing here yet, but it will show a history of changes you make to the build definition.
+1. This section enables you to configure which pipeline runs are retained and for how long. Close the tab.
 
     ![](images/010.png)
 
-1. Select **Save & Queue \| Save & Queue** to save and queue a new build.
+1. Select the **History** tab. There's nothing here yet, but it will show a history of changes you make to the build definition.
 
     ![](images/011.png)
 
-1. Accept the default options by clicking **Save & queue**.
+1. Select **Save & Queue | Save & Queue** to save and queue a new build.
 
     ![](images/012.png)
 
-<a name="Ex1Task2"></a>
-### Task 2: Tracking and reviewing a build ###
-
-1. Click the link to the newly created build.
+1. Accept the default options by clicking **Save and run**.
 
     ![](images/013.png)
+
+<a name="Ex1Task2"></a>
+### Task 2: Tracking and reviewing a build ###
 
 1. Depending on load, the build may need to wait in the queue for a moment.
 
     ![](images/014.png)
 
-1. Once the build begins, you'll be able to track the console output. If you want to review an earlier task, you can click to review its logs.
+1. Once the build begins, you'll be able to track the console output per task. Click **Agent job 1**.
 
     ![](images/015.png)
 
-1. The build should eventually succeed, which you can review in the **Summary** tab.
+1. If you want to review an earlier task, you can scroll the right pane to review its logs.
 
     ![](images/016.png)
 
-1. Select the **Logs** tab to see each step and how long it took.
+1. The build should eventually succeed. You can return to the summary view by clicking the back button.
 
     ![](images/017.png)
 
-1. Select the **Tests** tab to review test performance for this build. Note that you also have easy access to the pipeline editor, the ability to queue a new build and download the artifacts of this build.
+1. The summary view provides overview details about the build, including details about commits, tests, and artifacts.
 
     ![](images/018.png)
+
+1. Select the **Tests** tab to review test performance for this build. Note that you also have easy access to the pipeline editor, the ability to queue a new build, and download the artifacts of this build.
+
+    ![](images/019.png)
 
 <a name="Ex1Task3"></a>
 ### Task 3: Invoking a continuous integration build ###
 
-1. The build was configured earlier to support continuous integration. Navigate to the code for this project using **Repos \| Files**.
-
-    ![](images/019.png)
-
-1. Open the file at **PartsUnlimited-aspnet45/src/PartsUnlimitedWebsite/Views/Home/Index.cshtml**.
+1. The build was configured earlier to support continuous integration. Navigate to the code for this project using **Repos | Files**.
 
     ![](images/020.png)
 
-1. Click **Edit**.
+1. Open the file at **PartsUnlimited-aspnet45/src/PartsUnlimitedWebsite/Views/Home/Index.cshtml**.
 
     ![](images/021.png)
 
-1. Make a minor cosmetic change, such as by tweaking the title of the document. Click **Commit**.
+1. Click **Edit**.
 
     ![](images/022.png)
 
-1. Accept the default commit details and click **Commit**.
+1. Make a minor cosmetic change, such as by tweaking the title of the document. Click **Commit**.
 
     ![](images/023.png)
 
-1. A build should be underway shortly. Select **Pipelines \| Builds** to see if it's in progress.
+1. Accept the default commit details and click **Commit**.
 
     ![](images/024.png)
 
-1. You should now see that a new build (note the **.2**) is in progress and that it was triggered by your change. Click the build to track it.
+1. A build should be underway shortly. Select **Pipelines | Pipelines** to see if it's in progress.
 
     ![](images/025.png)
 
-1. This build should run and succeed just like the previous build.
+1. You should now see that a new build (note the **.2**) is in progress and that it was triggered by your change. Click the build to track it. Note that it may be queued behind another build pipeline configured for continuous integration.
 
     ![](images/026.png)
+
+1. This build should run and succeed just like the previous build.
+
+    ![](images/027.png)
 
