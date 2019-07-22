@@ -121,7 +121,7 @@ It takes several teams to develop large software projects. Very large projects r
 
     ![](images/021.png)
 
-1. Select the **Project configuration** tab under **Work**.
+1. Select the **Project configuration** tab under **Boards**.
 
     ![](images/022.png)
 
@@ -196,7 +196,7 @@ It takes several teams to develop large software projects. Very large projects r
 
     ![](images/039.png)
 
-1. The first thing we should do is to move the branding integration work to an earlier iteration. Drag and drop the credit card story onto **Iteration 50**. In order to free up the bandwidth, drag the weather service story onto **Iteration 51**.
+1. The first thing we should do is to move the branding integration work to an earlier iteration. Drag and drop the corporate branding story onto **Iteration 50**. In order to free up the bandwidth, drag the weather service story onto **Iteration 51**.
 
     ![](images/040.png)
 
