@@ -38,9 +38,9 @@ We will create one manually using the Azure CLI. If you do already have a servic
 
     ![](images/azurecloudshell.png)
 
-1. Enter the following command by replacing ServicePrincipalName and PASSWORD with your desired values.
+1. Enter the following command by replacing ServicePrincipalName with your desired value.
 
-   `az ad sp create-for-rbac -n ServicePrincipalName -p PASSWORD `
+   `az ad sp create-for-rbac -n ServicePrincipalName `
 
    It will give you a JSON output as shown in the image. Copy the output to notepad or text file. You will need them later.
 
