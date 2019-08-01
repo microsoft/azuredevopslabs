@@ -34,7 +34,7 @@ In this exercise, you will use the release management features of Azure DevOps S
 <a name="Ex1Task1"></a>
 ### Task 1: Invoking a build ###
 
-This task will create a build as a starting point for a continuous release. If you already completed the [build lab](../build), you can skip to the next task.
+This task will create a build as a starting point for a continuous release. If you already completed the [build lab](https://www.azuredevopslabs.com/labs/devopsserver/build/), you can skip to the next task.
 
 1. Log in as **Sachin Raj (VSALM\Sachin)**. All user passwords are **P2ssw0rd**.
 
@@ -54,6 +54,10 @@ This task will create a build as a starting point for a continuous release. If y
 
     ![](images/003.png)
 
+   > If the build pipline fails with `Error: The location of 'vstest.console.exe' specified does not exist.`, edit the pipeline and select **Test Assemblies** task. Select **Specific location** for test platform and enter the path to **vstest.console.exe** as  **“C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\Common7\IDE\Extensions\TestPlatform\vstest.console.exe”** and queue the build again.
+    
+    
+      ![](images/vstestconsolepath.png)
 <a name="Ex1Task2"></a>
 ### Task 2: Creating a continuous release pipeline ###
 
