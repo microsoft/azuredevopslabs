@@ -195,7 +195,7 @@ In this exercise, you will learn how to create a basic build definition from one
 
     ![](images/027.png)
 
-1. If the installed version of Visual Studio is not available, select **Specific location** and enter the path to **vstest.console.exe**. It should be something like **"C:\Program Files (x86)\Microsoft Visual Studio\2019\Preview\Common7\IDE\Extensions\TestPlatform\vstest.console.exe"**.
+1. If the installed version of Visual Studio is not available, select **Specific location** and enter the path to **vstest.console.exe**. It should be something like **"C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\Common7\IDE\Extensions\TestPlatform\vstest.console.exe"**.
 
     ![](images/028.png)
 
