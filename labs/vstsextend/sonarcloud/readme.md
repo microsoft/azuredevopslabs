@@ -53,7 +53,7 @@ In this lab, you will learn how to integrate Azure DevOps Services with SonarClo
 
    ![sc_marketplace](images/ex1/setup_import.png)
 
-   See [here](https://docs.microsoft.com/en-us/azure/devops/repos/git/import-git-repository?view=azure-devops)for detailed instructions on importing a repository.
+   See [here](https://docs.microsoft.com/en-us/azure/devops/repos/git/import-git-repository?view=azure-devops) for detailed instructions on importing a repository.
 
    The scanning examples repository contains sample projects for a number of build systems and languages including C# with MSBuild, and Maven and Gradle with Java.
 
