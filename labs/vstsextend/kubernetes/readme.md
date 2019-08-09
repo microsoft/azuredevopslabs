@@ -9,7 +9,7 @@ folder: /labs/vstsextend/kubernetes/
 
 ## Overview
 
-[**Azure Kubernetes Service (AKS)**](https://azure.microsoft.com/en-us/services/container-service/){:target="_blank"} is the quickest way to use Kubernetes on Azure. **Azure Kubernetes Service (AKS)** manages your hosted Kubernetes environment, making it quick and easy to deploy and manage containerized applications without container orchestration expertise. It also eliminates the burden of ongoing operations and maintenance by provisioning, upgrading, and scaling resources on demand, without taking your applications offline. Azure DevOps helps in creating Docker images for faster deployments and reliability using the continuous build option.
+[**Azure Kubernetes Service (AKS)**](https://azure.microsoft.com/en-us/services/kubernetes-service/){:target="_blank"} is the quickest way to use Kubernetes on Azure. **Azure Kubernetes Service (AKS)** manages your hosted Kubernetes environment, making it quick and easy to deploy and manage containerized applications without container orchestration expertise. It also eliminates the burden of ongoing operations and maintenance by provisioning, upgrading, and scaling resources on demand, without taking your applications offline. Azure DevOps helps in creating Docker images for faster deployments and reliability using the continuous build option.
 
 One of the biggest advantage to use AKS is that instead of creating resources in cloud you can create resources and infrastructure inside Azure Kubernetes Cluster through Deployments and Services manifest files.
 
@@ -38,19 +38,19 @@ The following tasks will be performed:
 
 1. Refer the [Getting Started](../Setup/) page to know the prerequisites for this lab.
 
-1. Click the [Azure DevOps Demo Generator](http://azuredevopsdemogenerator.azurewebsites.net/?TemplateId=77372&Name=AKS) link and follow the instructions in [Getting Started](../Setup/) page to provision the project to your **Azure DevOps**.
+1. Click the [Azure DevOps Demo Generator](http://azuredevopsdemogenerator.azurewebsites.net/?TemplateId=77372&Name=AKS){:target="_blank"} link and follow the instructions in [Getting Started](../Setup/) page to provision the project to your **Azure DevOps**.
 
 ## Setting up the environment
 
 The following azure resources need to be configured for this lab:
 
-|Azure resources | Description|
-|----------------|------------|
+|Azure resources                      | Description|
+|-------------------------------------|------------|
 |![Azure Container Registry](images/container_registry.png) Azure Container Registry | Used to store the Docker images privately|
 |![AKS](images/aks.png) AKS | Docker images are deployed to Pods running inside AKS|
 |![Azure SQL Server](images/sqlserver.png) Azure SQL Server | SQL Server on Azure to host database|
 
-1. Launch the [Azure Cloud Shell](https://docs.microsoft.com/en-in/azure/cloud-shell/overview) from the Azure portal and choose **Bash**.
+1. Launch the [Azure Cloud Shell](https://docs.microsoft.com/en-in/azure/cloud-shell/overview){:target="_blank"} from the Azure portal and choose **Bash**.
 
 1. **Deploy Kubernetes to Azure, using CLI**:
 
@@ -92,7 +92,7 @@ The following azure resources need to be configured for this lab:
    az role assignment create --assignee $CLIENT_ID --role acrpull --scope $ACR_ID
    ```
 
-   > For more information see document on how to  [Authenticate with Azure Container Registry from Azure Kubernetes Service](https://docs.microsoft.com/en-us/azure/container-registry/container-registry-auth-aks)
+   > For more information see document on how to  [Authenticate with Azure Container Registry from Azure Kubernetes Service](https://docs.microsoft.com/en-us/azure/container-registry/container-registry-auth-aks){:target="_blank"}
 1. **Create Azure SQL server and Database**: 
     Create an Azure SQL server.
     
@@ -105,7 +105,7 @@ The following azure resources need to be configured for this lab:
     ```bash
     az sql db create -g akshandsonlab -s <unique-sqlserver-name> -n mhcdb --service-objective S0
     ```
-      {% include important.html content= "Enter a unique SQL server name. Since the Azure SQL Server name does not support **UPPER** / **Camel** casing naming conventions, use lowercase for the ***DB Server Name*** field value." %}
+      {% include important.html content= "Enter a unique SQL server name. Since the Azure SQL Server name does not support **UPPER** / **Camel** casing naming conventions, use lowercase for the ***SQL Server Name*** field value." %}
 1. The following components - **Container Registry**, **Kubernetes Service**, **SQL Server** along with **SQL Database** are deployed. Access each of these components individually and make a note of the details which will be used in Exercise 1.
    
    ![Deploy to Azure](images/azurecomponents.png)
@@ -138,7 +138,7 @@ Make sure that you have created the AKS project in your Azure DevOps organizatio
 
      {% include tip.html content= "If your subscription is not listed or to specify an existing service principal, follow the [Service Principal creation](https://docs.microsoft.com/en-us/azure/devops/pipelines/library/connect-to-azure?view=vsts){:target=\"_blank\"} instructions." %}
 
-1. Select appropriate values from the dropdown - **Azure subscription** and **Azure Container Registry** as shown. Repeat this for the **Build services, Push services** and **Lock services** tasks in the pipeline. Click on the **Variables** tab.
+1. Select appropriate values from the dropdown - **Azure subscription** and **Azure Container Registry** as shown. Repeat this for the **Build services, Push services** and **Lock services** tasks in the pipeline. 
 
     ![updateprocessbd](images/updateprocessbd.png)
 
@@ -160,7 +160,7 @@ Make sure that you have created the AKS project in your Azure DevOps organizatio
 
    > For more information on the deployment manifest, see [AKS Deployments and YAML manifests](https://docs.microsoft.com/en-us/azure/aks/concepts-clusters-workloads#deployments-and-yaml-manifests)
 
-1. Update **ACR** and **SQLserver** values for **Pipeline Variables** with the details noted earlier while configuring the environment. Select the **Save** button.
+1. Click on the **Variables** tab. Update **ACR** and **SQLserver** values for **Pipeline Variables** with the details noted earlier while configuring the environment. Select the **Save** button.
 
     ![updateprocessbd](images/updatevariablesbd.png)
 
