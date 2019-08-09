@@ -355,23 +355,23 @@ Setup :
 4. Close for now the Stage properties
 5. Click on the pre-deployment conditions on the Stage 1
 
-![predeploy_conditions](images/ex4/predeploy_conditions.png)
+![predeploy_conditions](images/ex4/predeploy_conditions.PNG)
 
 6. Click on **Enabled** beside **Gates**
 7. Click on **+ Add**, then select **SonarCloud QualityGate status check**
 
-![predeploy_conditions_settings](images/ex4/predeploy_conditions_settings.png)
+![predeploy_conditions_settings](images/ex4/predeploy_conditions_settings.PNG)
 
 8. In order to have the fastest result possible for this exercise, we recommend you to set the evaluations options as per this screenshot (See [how Gate evaluation flow works](https://docs.microsoft.com/en-us/azure/devops/pipelines/release/approvals/gates?view=azure-devops), as per Microsoft Documentation)
 
-![gate_setting](images/ex4/gate_setting.png)
+![gate_setting](images/ex4/gate_setting.PNG)
 
 9.  That's it. You can close this panel.
 10. Click now on **Add an artifact** on the left.
 11. Currently, only build artifacts are supported. Choose the project and the source (build pipeline) of your artifact, its alias should match the name of the artifact published in the build pipeline.
 12. Click on **Add**
 
-![artifact_setting](images/ex4/artifact_settings.png)
+![artifact_setting](images/ex4/artifact_settings.PNG)
 
 13. You can now save your pipeline.
 14. Go back to the build pipeline section, trigger a build of the pipeline where the artifact you setup above comes from.
@@ -382,7 +382,7 @@ Setup :
 15. Go to the release by either clicking on the link if a manual release has been triggered from the build (on the top of the Build page), or going to the **Releases** page.
 16. After few minutes (as set up on the point 8 of this exercise), your QualityGate check should have been performed (at least twice to get a 'go/nogo' for the stage), and if it's green, it should look like this
 
-![qg_green](images/ex4/qg_green.png)
+![qg_green](images/ex4/qg_green.PNG)
 
 Otherwise, if it's failed, then read important notes below to find out how it happened and how to get a green QualityGate.
 
