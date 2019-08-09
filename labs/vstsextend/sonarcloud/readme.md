@@ -69,7 +69,7 @@ We will set up a new build pipeline that integrates with SonarCloud to analyze t
 
 1. Select your code location, SonarCloud currently supports Azure repos, Bitbucket Cloud and GitHub for PR decoration.
 
-   ![build_source](images/ex1/build_source_yaml.png)
+   ![build_source](images/ex1/build_source_yaml.PNG)
 
 1. Select the repository where you want to build from
 1. Select a default template. Currently there are no SonarCloud template available for YAML edition
