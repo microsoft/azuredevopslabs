@@ -72,7 +72,7 @@ We will set up a new build pipeline that integrates with SonarCloud to analyze t
    ![build_source](images/ex1/build_source_yaml.PNG)
 
 1. Select the repository where you want to build from
-1. Select a default template. Currently Azure DevOps Services does not there are no SonarCloud template available for YAML edition
+1. Select a default template. Currently there are no SonarCloud template available for YAML edition
 1. Click next, you enter into the YAML file you have to fill.
 
 ### **Classic Editor**
