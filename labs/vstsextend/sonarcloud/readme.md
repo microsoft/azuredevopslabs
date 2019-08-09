@@ -12,7 +12,7 @@ folder: /labs/vstsextend/sonarcloud/
 
 Technical debt is the set of problems in a development effort that make forward progress on customer value inefficient. Technical debt saps productivity by making code hard to understand, fragile, time-consuming to change, difficult to validate, and creates unplanned work that blocks progress. Unless they are managed, technical debt can accumulate and hurt the overall quality of the software and the productivity of the development team in the long term.
 
-[SonarCloud](https://about.sonarcloud.io/){:target="\_blank"} is the code quality cloud service provided by SonarSource.
+[SonarCloud](https://about.sonarcloud.io/){:target="_blank"} is the code quality cloud service provided by SonarSource.
 The main features of SonarCloud are:
 
 - 23 languages: Java, JS, C#, C/C++, Objective-C, TypeScript, Python, ABAP, PLSQL, T-SQL and more.
