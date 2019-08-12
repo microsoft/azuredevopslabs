@@ -12,7 +12,7 @@ folder: /labs/vstsextend/sonarcloud/
 
 Technical debt is the set of problems in a development effort that make forward progress on customer value inefficient. Technical debt saps productivity by making code hard to understand, fragile, time-consuming to change, difficult to validate, and creates unplanned work that blocks progress. Unless they are managed, technical debt can accumulate and hurt the overall quality of the software and the productivity of the development team in the long term.
 
-[SonarCloud](https://about.sonarcloud.io/){:target="_blank"} is the code quality cloud service provided by SonarSource.
+[SonarCloud](https://about.sonarcloud.io/){:target="\_blank"} is the code quality cloud service provided by SonarSource.
 The main features of SonarCloud are:
 
 - 23 languages: Java, JS, C#, C/C++, Objective-C, TypeScript, Python, ABAP, PLSQL, T-SQL and more.
@@ -135,7 +135,7 @@ We will set up a new build pipeline that integrates with SonarCloud to analyze t
 
 > The first time you access SonarCloud, you will be asked to grant SonarCloud.io access to your account. The only permission that SonarCloud requires is to read your email address.
 
-   ![sc_authorize](images/ex1/sc_authorize.png)
+![sc_authorize](images/ex1/sc_authorize.png)
 
 After authorizing and logging in, we will be redirected to the **Generate token** page.
 
@@ -151,7 +151,7 @@ After authorizing and logging in, we will be redirected to the **Generate token*
 
 - click **Copy** to copy the new token to the clipboard
 
-   ![sc_generatetoken2](images/ex1/sc_generatetoken2.png)
+  ![sc_generatetoken2](images/ex1/sc_generatetoken2.png)
 
 > You should treat Personal Access Tokens like passwords. It is recommended that you save them somewhere safe so that you can re-use them for future requests.
 
@@ -162,8 +162,7 @@ We have now created an organization on SonarCloud, and have the token needed con
 - return to Azure DevOps **Add new SonarCloud Connection** page, set the **Connection name** to **SonarCloud**, and enter the **SonarCloud Token** you have just created.
 - click **Verify connection** to check the endpoint is working, then click **OK** to save the endpoint.
 
-
-   ![build_config_endpoint_completed](images/ex1/build_config_endpoint_completed.png)
+![build_config_endpoint_completed](images/ex1/build_config_endpoint_completed.png)
 
 12. Finish configuring the **Prepare analysis on SonarCloud** task.
 
@@ -171,8 +170,7 @@ We have now created an organization on SonarCloud, and have the token needed con
 - enter a unique key for your project e.g. **[your account].visualstudio.com.sonarexamples.netfx**
 - enter a friendly name for the project e.g. **Sonar Examples - NetFx**
 
-
-   ![build_config_prepare_completed](images/ex1/build_config_prepare_completed.png)
+![build_config_prepare_completed](images/ex1/build_config_prepare_completed.png)
 
 13. [Optional] Enable the _Publish Quality Gate Result_ step
 
@@ -358,7 +356,7 @@ Setup :
 ![predeploy_conditions](images/ex4/predeploy_conditions.PNG)
 
 6. Click on **Enabled** beside **Gates**
-7. Click on **+ Add**, then select **SonarCloud QualityGate status check**
+7. Click on **+ Add**, then select **SonarCloud Quality Gate status check**
 
 ![predeploy_conditions_settings](images/ex4/predeploy_conditions_settings.PNG)
 
@@ -380,19 +378,19 @@ Setup :
 ![release](images/ex4/release.png)
 
 15. Go to the release by either clicking on the link if a manual release has been triggered from the build (on the top of the Build page), or going to the **Releases** page.
-16. After few minutes (as set up on the point 8 of this exercise), your QualityGate check should have been performed (at least twice to get a 'go/nogo' for the stage), and if it's green, it should look like this:
+16. After few minutes (as set up on the point 8 of this exercise), your Quality Gate check should have been performed (at least twice to get a 'go/nogo' for the stage), and if it's green, it should look like this:
 
 ![qg_green](images/ex4/qg_green.PNG)
 
-Otherwise, if it's failed, then read important notes below to find out how it happened and how to get a green QualityGate.
+Otherwise, if it's failed, then read important notes below to find out how it happened and how to get a green Quality Gate.
 
 **Important notes about this feature**
 
 - The **Publish Quality Gate Result** task in your build pipeline has to be enabled in order for the release gate to work.
 - If the Quality Gate is in the failed state, it will not be possible to get the pre-deployment gate passing as this status will remain in its initial state. You will have to execute another build with either the current issues corrected in SonarCloud, or with another commit for fixing them.
 - Please note also that current behavior of the pre-deployment gates in Release Pipelines is to check the status every 5 minutes, for a duration of 1 day by default. However, if a Quality Gate for a build has failed it will remain failed so there is no point in re-checking the status. Knowing this, you can set the timeout after which gates fail to a maximum of 6 minutes so the gate will be evaluated only twice as described above, or just cancel the release itself.
-- Only the primary build artifact related QualityGate of the release will be checked.
-- During a build, if multiple analyses are performed, all of the related Quality Gates are checked. If one of them has the status either WARN, ERROR or NONE, then the QualityGate status on the Release Pipeline will be failed.
+- Only the primary build artifact related Quality Gate of the release will be checked.
+- During a build, if multiple analyses are performed, all of the related Quality Gates are checked. If one of them has the status either WARN, ERROR or NONE, then the Quality Gate status on the Release Pipeline will be failed.
 
 ## Summary
 
