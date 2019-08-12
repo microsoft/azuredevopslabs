@@ -18,7 +18,7 @@ The main features of SonarCloud are:
 - 23 languages: Java, JS, C#, C/C++, Objective-C, TypeScript, Python, ABAP, PLSQL, T-SQL and more.
 - Thousands of rules to track down hard-to-find bugs and quality issues thanks to powerful static code analyzers.
 - Cloud CI Integrations, with Travis, Azure DevOps, BitBucket, AppVeyor and more.
-- Deep code analysis, to explore all source files, whether in branches or pull requests, to reach a green quality gate and promote the build.
+- Deep code analysis, to explore all source files, whether in branches or pull requests, to reach a green Quality Gate and promote the build.
 - Fast and Scalable
 
 ### What's covered in this lab
@@ -67,7 +67,7 @@ We will set up a new build pipeline that integrates with SonarCloud to analyze t
 
 ### **YAML Editor**
 
-1. Select your code location, SonarCloud currently supports Azure repos, Bitbucket Cloud and GitHub for PR decoration.
+1. Select your code location. SonarCloud currently supports Azure repos, Bitbucket Cloud and GitHub for PR decoration.
 
    ![build_source](images/ex1/build_source_yaml.PNG)
 
@@ -211,7 +211,7 @@ The page has other metrics such as **_Code Smells_**, **_Coverage_**, **_Duplica
 | **Duplications**    | The duplications decoration shows which parts of the source code are duplicated                                                                                                                                                                                                           |
 | **Size**            | Provides the count of lines of code within the project including the number of statements, Functions, Classes, Files and Directories                                                                                                                                                      |
 
-{% include important.html content= "In this example, along with the bug count, a character **C** is displayed which is known as **Reliability Rating**. **C** indicates that there is **at least 1 major bug** in this code. For more information on Reliability Rating, click [here](https://docs.sonarqube.org/display/SONAR/Metric+Definitions#MetricDefinitions-Reliability). For more information on rule types and severities, see [here](https://docs.sonarqube.org/display/SONAR/Rules+-+types+and+severities)." %}
+{% include important.html content= "In this example, along with the bug count, a character **C** is displayed which is known as **Reliability Rating**. **C** indicates that there is **at least 1 major bug** in this code. For more information on Reliability Rating, click [here](https://docs.sonarqube.org/display/SONAR/Metric+Definitions#MetricDefinitions-Reliability). For more information on rule types see [here](https://docs.sonarqube.org/latest/user-guide/rules/) and for more inforamtion on severities, see [here](https://docs.sonarqube.org/latest/user-guide/issues/)." %}
 
 1. Click on the **Bugs** count to see the details of the bug.
 
@@ -332,11 +332,11 @@ Configuring SonarCloud analysis to run when a pull request is created has two pa
 
 ## Exercise 4: Check the SonarCloud Quality Gate status in a Continuous Deployment scenario (In Preview)
 
-**Disclaimer : This feature is in preview, and may not reflect it's final version. Please look at the notes at the end of this exercise for more information.**
+**Disclaimer : This feature is in preview, and may not reflect its final version. Please look at the notes at the end of this exercise for more information.**
 
-Starting from version 1.8.0 of the SonarCloud extension for Azure DevOps, a pre-deployment gate is available for your release pipeline. It allows you to, before a deployment, check the status of the SonarCloud QualityGate for the artifact you want to deploy.
+Starting from version 1.8.0 of the SonarCloud extension for Azure DevOps, a pre-deployment gate is available for your release pipeline. It allows you to check the status of the SonarCloud Quality Gate for the artifact you want to deploy and block the deployment if the Quality Gate failed.
 
-Pre-Requisites :
+Prerequisites :
 
 - Enable the **Publish Quality Gate Result** in your build pipeline
 - Have an artifact built and published in this pipeline to feed the release pipeline
@@ -348,7 +348,7 @@ Setup :
 
 ![new_release_pipeline](images/ex4/new_release_pipeline.png)
 
-3. On the template selection, choose the template you want, we will choose **Empty job** for this exercise.
+3. On the template selection, choose the template you want. We will choose **Empty job** for this exercise.
 
 ![empty_job](images/ex4/empty_job.png)
 
@@ -374,13 +374,13 @@ Setup :
 ![artifact_setting](images/ex4/artifact_settings.PNG)
 
 13. You can now save your pipeline.
-14. Go back to the build pipeline section, trigger a build of the pipeline where the artifact you setup above comes from.
+14. Go back to the build pipeline section, trigger a build of the pipeline that creates the artifact.
 15. Once the build is completed and succeeded, you can create a new release by either clicking on the **Release** button on the build page, or setting up a automatic release trigger based on a branch filter.
 
 ![release](images/ex4/release.png)
 
 15. Go to the release by either clicking on the link if a manual release has been triggered from the build (on the top of the Build page), or going to the **Releases** page.
-16. After few minutes (as set up on the point 8 of this exercise), your QualityGate check should have been performed (at least twice to get a 'go/nogo' for the stage), and if it's green, it should look like this
+16. After few minutes (as set up on the point 8 of this exercise), your QualityGate check should have been performed (at least twice to get a 'go/nogo' for the stage), and if it's green, it should look like this:
 
 ![qg_green](images/ex4/qg_green.PNG)
 
@@ -388,11 +388,11 @@ Otherwise, if it's failed, then read important notes below to find out how it ha
 
 **Important notes about this feature**
 
-- The **Publish Quality Gate Result** task (in your build pipeline) has to be enabled in order to get this gate working.
-- If the quality gate is in the failed state, it will not be possible to get the pre-deployment gate passing as this status will remain in its initial state. You will have to execute another build with either the current issues corrected in SonarCloud, or with another commit for fixing them.
-- Please note also that current behavior of the pre-deployment gates in Release Pipelines check every 5 minutes the status, for a duration of 1 day by default. Knowing the fact that if the SonarCloud quality gate is failed and it will remains like this on Azure DevOps, you can decrease this duration to a maximum of 6 minutes (so the gate will be evaluated only twice), or just cancel the release itself.
+- The **Publish Quality Gate Result** task in your build pipeline has to be enabled in order for the release gate to work.
+- If the Quality Gate is in the failed state, it will not be possible to get the pre-deployment gate passing as this status will remain in its initial state. You will have to execute another build with either the current issues corrected in SonarCloud, or with another commit for fixing them.
+- Please note also that current behavior of the pre-deployment gates in Release Pipelines is to check the status every 5 minutes, for a duration of 1 day by default. However, if a Quality Gate for a build has failed it will remain failed so there is no point in re-checking the status. Knowing this, you can set the timeout after which gates fail to a maximum of 6 minutes so the gate will be evaluated only twice as described above, or just cancel the release itself.
 - Only the primary build artifact related QualityGate of the release will be checked.
-- During a build, if multiple analyses are performed, all of the related QualityGates are checked. If one of them has the status either WARN, ERROR or NONE, then the QualityGate status on the Release Pipeline will be failed.
+- During a build, if multiple analyses are performed, all of the related Quality Gates are checked. If one of them has the status either WARN, ERROR or NONE, then the QualityGate status on the Release Pipeline will be failed.
 
 ## Summary
 
