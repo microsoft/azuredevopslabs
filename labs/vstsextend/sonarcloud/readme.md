@@ -12,7 +12,7 @@ folder: /labs/vstsextend/sonarcloud/
 
 Technical debt is the set of problems in a development effort that make forward progress on customer value inefficient. Technical debt saps productivity by making code hard to understand, fragile, time-consuming to change, difficult to validate, and creates unplanned work that blocks progress. Unless they are managed, technical debt can accumulate and hurt the overall quality of the software and the productivity of the development team in the long term.
 
-[SonarCloud](https://about.sonarcloud.io/){:target="\_blank"} is the code quality cloud service provided by SonarSource.
+[SonarCloud](https://about.sonarcloud.io/){:target="\_blank"} is the code quality and security service provided by SonarSource.
 The main features of SonarCloud are:
 
 - 23 languages: Java, JS, C#, C/C++, Objective-C, TypeScript, Python, ABAP, PLSQL, T-SQL and more.
@@ -33,9 +33,9 @@ In this lab, you will learn how to integrate Azure DevOps Services with SonarClo
 
 1. You will need a **Azure DevOps Services Account**. If you do not have one, you can sign up for free [here](https://dev.azure.com){:target="\_blank"}
 
-1. A **Microsoft Work or School account, or a GitHub/BitBucket account**. SonarCloud supports logins using any of those identity providers.
+2. A **Microsoft Work or School account, or a GitHub/BitBucket account**. SonarCloud supports logins using any of those identity providers.
 
-1. Install the SonarCloud Azure DevOps extension to your Azure DevOps account
+3. Install the SonarCloud Azure DevOps extension to your Azure DevOps account
 
    - Navigate to the [SonarCloud extension](https://marketplace.visualstudio.com/items?itemName=SonarSource.sonarcloud) in the Visual Studio Marketplace and click **Get it free** to install it.
 
@@ -45,7 +45,7 @@ In this lab, you will learn how to integrate Azure DevOps Services with SonarClo
 
    The SonarCloud extension contains build tasks, build templates and a custom dashboard widget.
 
-1. Create a new Azure DevOps project for the lab
+4. Create a new Azure DevOps project for the lab
 
    - Create a new project in your Azure DevOps account called **SonarExamples**
 
