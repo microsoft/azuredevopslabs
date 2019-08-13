@@ -4,8 +4,8 @@ layout: page
 sidebar: vsts
 permalink: /labs/azuredevops/deliveryplans/
 folder: /labs/azuredevops/deliveryplans/
-version: Lab version - 15.8.2
-updated: Last updated - 9/5/2018
+version: Lab version - 1.36.1
+updated: Last updated - 7/22/2019
 ---
 <div class="rw-ui-container"></div>
 <a name="Overview"></a>
@@ -17,7 +17,7 @@ It takes several teams to develop large software projects. Very large projects r
 <a name="Prerequisites"></a>
 ### Prerequisites ###
 
-- This lab requires you to complete task 1 from the <a href="../prereq/">prerequisite</a>  instructions
+- This lab requires you to complete task 1 from the <a href="../prereq/">prerequisite</a> instructions
 
 <a name="Exercise1"></a>
 ## Exercise 1: Managing Delivery Plans with Azure DevOps ##
@@ -215,4 +215,3 @@ It takes several teams to develop large software projects. Very large projects r
 1. You can also collapse all teams (or specific teams) using the toggle buttons next to their names.
 
     ![](images/044.png)
-
