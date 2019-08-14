@@ -42,7 +42,7 @@ In this lab, you will learn about the release management features available in A
 
     ![](images/002.png)
 
-1. Enter a unique name for **Server name**, such as by including your name. Enter an admin username and password you can remember. Note that **"P2ssw0rd"** meets the password requirements.  Be sure to checkmark **Allow Azure Services to access server**. Select OK to confirm these options. 
+1. Enter a unique name for **Server name**, such as by including your name. Enter an admin username and password you can remember. Note that **"P2ssw0rd"** meets the password requirements.  Be sure to checkmark **Allow Azure Services to access server**. Select **OK** to confirm these options. 
 
     ![](images/003.png)
 
@@ -170,7 +170,7 @@ In this lab, you will learn about the release management features available in A
 
     ![](images/030.png)
 
-1. On this blade you can configure settings for your app, such as connection strings. Locate the **Connection strings** section and add a new entry with the key **"DefaultConnectionString"** and the value pasted from the clipboard. You'll need to locate the "{your_username}" and "{your_password}" sections and replace them (including braces) with the actual SQL credentials entered earlier. Select **SQLAzure** as the Type. Press **Ok** to add new connection string.
+1. On this blade you can configure settings for your app, such as connection strings. Locate the **Connection strings** section and add a new entry with the name **"DefaultConnectionString"** and the value pasted from the clipboard. You'll need to locate the "{your_username}" and "{your_password}" sections and replace them (including braces) with the actual SQL credentials from earlier. Select **SQLAzure** as the Type. Press **Ok** to add new connection string.
 
     ```
     Server=tcp:pul-johndoe.database.windows.net,1433;Initial Catalog=partsunlimited;Persist Security Info=False;User ID={your_username};Password={your_password};MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;
