@@ -30,7 +30,7 @@ In this lab, you will learn about the release management features available in A
 
 1. Start off by creating the Azure resources needed for this lab. This includes a database and two app services: one for QA and one for production. Log into your account at [https://portal.azure.com](https://portal.azure.com/).
 
-1. Click **Create a resource** and search for **"sql"**.
+1. Click **Create a resource** and search for **"sql database"**.
 
     ![](images/000.png)
 
@@ -38,15 +38,15 @@ In this lab, you will learn about the release management features available in A
 
     ![](images/001.png)
 
-1. Enter **"partsunlimited"** as the **Database name**. Select a subscription (it doesn't matter which one, but use the same one for all steps in this lab). Select **Create new** for **Resource group** and enter **"partsunlimited"** as the name. Make sure **Select source** is set to **Blank database** and click **Configure required settings**. If you don't already have a server you want to use, click **Create a new server**.
+1. Select a subscription (it doesn't matter which one, but use the same one for all steps in this lab). Select **Create new** for **Resource group** and enter **"partsunlimited"** as the name. Enter **"partsunlimited"** as the **Database name**. If you don't already have a server you want to use, click **Create new**. 
 
     ![](images/002.png)
 
-1. Enter a unique name for **Server name**, such as by including your name. Enter an admin username and password you can remember. Note that **"P2ssw0rd"** meets the password requirements. Click **Select** to select these options. Be sure to checkmark **Allow Azure Services to access server**.
+1. Enter a unique name for **Server name**, such as by including your name. Enter an admin username and password you can remember. Note that **"P2ssw0rd"** meets the password requirements.  Be sure to checkmark **Allow Azure Services to access server**. Select OK to confirm these options. 
 
     ![](images/003.png)
 
-1. Click **Create**. It'll take some time to complete, but you can move on to the next step while it works in the background.
+1. Proceed with defaults for the other database options. Click **Review + Create**, then **Create**. It'll take some time to complete, but you can move on to the next step while it works in the background.
 
     ![](images/004.png)
 
@@ -166,18 +166,18 @@ In this lab, you will learn about the release management features available in A
 
     ![](images/029.png)
 
-1. Select the **Application settings** tab from the **Settings** section.
+1. Select the **Configuration** tab from the **Settings** section.
 
     ![](images/030.png)
 
-1. On this blade you can configure settings for your app, such as connection strings. Locate the **Connection strings** section and add a new entry with the key **"DefaultConnectionString"** and the value pasted from the clipboard. You'll need to locate the "{your_username}" and "{your_password}" sections and replace them (including braces) with the actual SQL credentials entered earlier. Press **Enter** to complete.
+1. On this blade you can configure settings for your app, such as connection strings. Locate the **Connection strings** section and add a new entry with the key **"DefaultConnectionString"** and the value pasted from the clipboard. You'll need to locate the "{your_username}" and "{your_password}" sections and replace them (including braces) with the actual SQL credentials entered earlier. Select **SQLAzure** as the Type. Press **Ok** to add new connection string.
 
     ```
     Server=tcp:pul-johndoe.database.windows.net,1433;Initial Catalog=partsunlimited;Persist Security Info=False;User ID={your_username};Password={your_password};MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;
     ```
     ![](images/031.png)
 
-1. Click **Save** from the toolbar to commit.
+1. Click **Save** from the Configuration toolbar to update the web app settings.
 
     ![](images/032.png)
 
@@ -192,7 +192,7 @@ In this lab, you will learn about the release management features available in A
 
     ![](images/033.png)
 
-1. Navigate to **PartsUnlimited-aspnet45/src/PartsUnlimitedWebsite/Views/Shared/_Layout.cshtml**. This is a file that defines the general layout of the site and is a good place to make a change that will be easily visible after deployment.
+1. Navigate to **PartsUnlimited-aspnet45/src/PartsUnlimitedWebsite/Views/Shared/_Layout.cshtml**. This is a file that defines the general layout of the site and is a good place to make a change that will be easily visible after deployment. To streamline this lab, we will make minor edits of this file directly in master to trigger releases. Best practices with branching is covered in [Version Controlling with Git in Visual Studio Code and Azure DevOps](https://www.azuredevopslabs.com/labs/azuredevops/git/).
 
     ![](images/034.png)
 
@@ -245,7 +245,7 @@ In this lab, you will learn about the release management features available in A
 
 1. Return to the Azure DevOps browser tab.
 
-1. As release pipelines get more sophisticated, it becomes important to define gates to ensure quality throughout the release pipeline. Since the next stage we're deploying to is production, we'll need to be sure to include both automated quality gates as well as a manual approver gate. Return to the release pipeline browser tab and click **Clone** in the **QA** stage. Since the production stage is virtually the same, we can reuse almost all of the existing configuration.
+1. As release pipelines get more sophisticated, it becomes important to define gates to ensure quality throughout the release pipeline. Since the next stage we're deploying to is production, we'll need to be sure to include both automated quality gates as well as a manual approver gate. Return to the release pipeline browser tab or navigate to the release pipeline PUL-CICD and select edit. Hover over the **QA** stage and select the copy icon to **Clone** this stage. Since the production stage is virtually the same, we can reuse almost all of the existing configuration.
 
     ![](images/046.png)
 
@@ -265,7 +265,7 @@ In this lab, you will learn about the release management features available in A
 
     ![](images/050.png)
 
-1. Expand **Evaluation options** and update the **Time between re-evaluation of gates** to **5**. If this gate fails, we want it to reevaluate the query every 5 minutes until it clears because engineers will need some time to confirm those critical bugs are fixed in the current version. However, if those bugs aren't cleared and the release isn't manually failed, this configuration will automatically fail the gate after 1 day.
+1. Expand **Evaluation options** and update the **Time between re-evaluation of gates** to **5**. If this gate fails, we want it to reevaluate the query every 5 minutes until it clears because engineers will need some time to confirm those critical bugs are fixed in the current version. However, if those bugs aren't cleared and the release isn't manually failed, this configuration will automatically fail the gate after 1 day or 24 hours. Close the blade to save these post-deployment conditions.
 
     ![](images/051.png)
 
@@ -299,7 +299,7 @@ In this lab, you will learn about the release management features available in A
 
 1. Repeat the process for changing the codebase at **"PartsUnlimited-aspnet45/src/PartsUnlimitedWebsite/Views/Shared/_Layout.cshtml"** followed earlier in a new tab. This time, update the version number from **"2.0"** to **"3.0"**. This will invoke the release pipeline.
 
-1. As before, follow the release until it is deploying to QA. Click to follow the release itself once available.
+1. As before, a commit will trigger a build and successive release. Follow this release until it is deploying to QA. Click to follow the release itself once available.
 
 1. When you get to the release view, click **Release (pipeline view)**. This will provide a visualization of where the release is in the pipeline.
 
@@ -370,7 +370,7 @@ In this lab, you will learn about the release management features available in A
 
     ![](images/074.png)
 
-1. Return to the Azure DevOps tab with the **Prod** stage pipeline editor.
+1. Return to the Azure DevOps tab with the **Prod** stage pipeline editor for PUL-CICD. Navigate to the **Tasks** tab.
 
 1. Select the **Deploy Azure App Service** task.
 
@@ -396,11 +396,11 @@ In this lab, you will learn about the release management features available in A
 
     ![](images/079.png)
 
-1. Return to the browser window open to the **Azure portal**. Click **Swap** in the slots blade.
+1. Return to the browser window open to the **Azure portal**. Select **Swap** in the deployment slots blade.
 
     ![](images/080.png)
 
-1. The default options here are exactly what we want: to swap the production and staging slots. Click **OK**. Note that if your apps rely on **slot-level configuration settings** (such as connection strings or app settings marked "slot"), then the worker processes will be restarted. If you're working under those circumstances and would like to warm up the app before the swap completes, you can select the **Swap with preview** swap type.
+1. The default options here are exactly what we want: to swap the production and staging slots. Click **Swap**. Note that if your apps rely on **slot-level configuration settings** (such as connection strings or app settings marked "slot"), then the worker processes will be restarted. If you're working under those circumstances and would like to warm up the app before the swap completes, you can select the **Swap with preview** swap type.
 
     ![](images/081.png)
 
