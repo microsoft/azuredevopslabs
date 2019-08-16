@@ -218,7 +218,7 @@ In this exercise, let us trigger a build manually and upon completion, an automa
 
 1. Select **MyHealth.AKS.build** pipeline. Click on **Run pipeline**
 
-    ![manualbuild](images/manualbuild.png)
+    ![manualbuild](images/runpipeline.png)
 
 1. Once the build process starts, select the build job to see the build in progress.
     
