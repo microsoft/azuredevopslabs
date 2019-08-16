@@ -56,7 +56,7 @@ In this lab, you will use PartsUnlimited which is an example eCommerce website d
 ## Exercise 2: Build your application using Azure CI Pipeline
   In this exercise, you will build your application and publish the required files to an artifact called drop.
 
-  1. Navigate to **Pipelines --> Builds**. Select **Terraform-CI** and click **Edit**.
+  1. Navigate to **Pipelines --> Pipelines**. Select **Terraform-CI** and click **Edit**.
 
       ![](images/editbuild.png)
 
@@ -70,15 +70,15 @@ In this lab, you will use PartsUnlimited which is an example eCommerce website d
 
      ![](images/copyfiles.png)
 
-1. Now click **Queue** to trigger the build. Once the build success, verify that the artifacts have**Terraform** folder and **PartsUnlimitedwebsite.zip** file in the drop.
+1. Now click **Queue** to trigger the build. Once the build success, verify that the artifacts have **Terraform** folder and **PartsUnlimitedwebsite.zip** file in the drop.
 
-      ![](images/queuebuild.gif)
+      ![](images/queuebuild2.gif)
 
 ## Exercise 3: Deploy resources using Terraform (IaC) in Azure CD pipeline
 
 In this exercise, you will create azure resources using Terraform as part of your deployment(CD) pipeline and deploy the PartsUnlimited application to the App service provisioned by Terraform.
 
-1. Navigate to **Pipelines --> Releases**. Select **Terraform-CD** and click **Edit pipeline**.
+1. Navigate to **Pipelines --> Releases**. Select **Terraform-CD** and click **Edit**.
    
     ![](images/editrelease.png)
 
@@ -109,6 +109,10 @@ In this exercise, you will create azure resources using Terraform as part of you
     If you observe the **webapp.tf** file in **Exercise 1, Step 3** you will see there are few values are suffixed and prefixed with **__**. For example **__terraformstorageaccount__**. Using **Replace tokens** task we will replace those values with the variable values defined in the release pipeline.
      
       ![](images/variables.png)
+
+1. Terraform tool installer task is used to install  a specified version of Terraform from the Internet or the tools cache and prepends it to the PATH of the Azure Pipelines Agent (hosted or private).
+      
+    ![](images/installterraform.png)
 1. When running Terraform in automation, the focus is usually on the core plan/apply cycle.
 
    The main Terraform workflow is shown below:
@@ -123,9 +127,11 @@ In this exercise, you will create azure resources using Terraform as part of you
    iii. Apply the changes described by the plan.
     
     The next Terraform tasks in your release pipeline help you to implement this workflow.
-1. Select the **Terraform init** task. Select Azure service connection from the drop-down.
+1. Select the **Terraform init** task. Select Azure service connection from the drop-down. And make sure the container name is selected as **terraform**. For the other task parameters information see [here](https://github.com/microsoft/azure-pipelines-extensions/blob/master/Extensions/Terraform/Src/Tasks/TerraformTaskV1/README.md)
        
-      ![](images/terraform-init.png)
+      ![](images/terraform-init2.png)
+
+      ![](images/terraform-init3.png)
 
     > This task runs `terraform init` command. The `terraform init` command looks through all of the *.tf files in the current working directory and automatically downloads any of the providers required for them. In this example, it will download [Azure provider](https://www.terraform.io/docs/providers/azurerm/) as we are going to deploy Azure resources. For more information about `terraform init` command click [here](https://www.terraform.io/docs/commands/init.html)
 
