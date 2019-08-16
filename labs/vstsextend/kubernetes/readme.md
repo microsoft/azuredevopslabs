@@ -205,6 +205,11 @@ Make sure that you have created the AKS project in your Azure DevOps organizatio
 
     * A secret called **mysecretkey** is created in AKS cluster through Azure DevOps by using command `kubectl create secret` in the background. This secret will be used for authorization while pulling myhealth.web image from the Azure Container Registry.
 
+1. Click **DB deployment** phase, choose **Azure Pipelines** in Agent pool section, choose **windows-2019** in Agent Specification section.
+       ![](images/aksdbdeployphase.png)
+       
+1. Click **AKS deployment** phase, chose **Azure Pipelines** in Agent pool section, choose **windows-2019** in Agent Specification section.
+       ![](images/aksdeployphase.png)
 
 1. Select the **Variables** section under the release definition, update **ACR** and **SQLserver** values for **Pipeline Variables** with the details noted earlier while configuring the environment. Select the **Save** button.
 
