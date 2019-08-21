@@ -37,22 +37,22 @@ You need to create two Azure App services for this lab.
 1. Create a Resource Group. Replace `<region>` with the region of your choosing, for example eastus.
    
    ```bash
-   az group create --name MyResourceGroup --location <region>
+   az group create -n MyResourceGroup -l <region>
    ```
 
 1. To create an App service plan
    
    ```bash
-   az appservice plan create --resource-group MyResourceGroup --name MyPlan --sku S1
+   az appservice plan create -g MyResourceGroup -n MyPlan --sku S1
    ```
 1. Create two web apps with a unique app names.
  
     ```bash
-    az webapp create --resource-group MyResourceGroup --plan MyPlan --name PartsUnlimited-Web
+    az webapp create -g MyResourceGroup -p MyPlan -n PartsUnlimited-Web
     ```
 
     ```bash
-    az webapp create --resource-group MyResourceGroup --plan MyPlan --name PartsUnlimited-API
+    az webapp create -g MyResourceGroup -p MyPlan -n PartsUnlimited-API
     ```
 
 1. Navigate to the resource group you created, you will see the resources as shown.
@@ -180,7 +180,7 @@ The Azure Functions created in this exercise will act as a switching proxy or th
 
 In this exercise, you will look at the build definition to get an insight of how the code is built as part of the CI pipeline.
 
-1. Click on the **Pipelines** hub in Azure DevOps portal and notice that **Builds** menu is the default selected option. Since there is only one build definition - **AzureFunctions_CI**, click **Edit** option in the menu to view the tasks of that build definition.
+1. Navigate to **Pipelines \| Pipelines** in Azure DevOps portal. Select **AzureFunctions_CI** and  click **Edit**.
 
     ![build definition](images/builddefinition.png)
 
@@ -189,15 +189,15 @@ In this exercise, you will look at the build definition to get an insight of how
     ![CI Trigger](images/enableci.png)
     ![Save and Queue](images/saveandqueue.png)
 
-1. A new build is started. You will see a link to the new build on the top of the page. Click the link to view the live logs of the build as it progresses. Wait for the build to complete and succeed before proceeding to the next section.
+1. A new build is queued.  Click on the Job to view the live logs of the build as it progresses. Wait for the build to complete and succeed before proceeding to the next section.
 
     ![Queued Build](images/queuedbuild.png) 
 
 ## Exercise 4: Configuring Continuous Deployment with Azure Release Pipelines
 
-1. Once the build succeeds, click the **Releases** option under the **Pipelines**.
+1. Once the build succeeds, navigate to  **Pipelines \| Releases**.
 
-1. In the Release pipelines page, click **Edit** for the highlighted release definition- **AzureFunctions_CD**. 
+1. Select **AzureFunctions_CD** pipeline and click **Edit**. 
 
     ![Edit Release](images/editrelease.png) 
 
@@ -211,11 +211,11 @@ In this exercise, you will look at the build definition to get an insight of how
 
     * If your Azure subscription is not listed or if you want to use an existing service principal, click on the `Manage` link.
 
-        * Click on the +New Service Connection button and select the Azure Resource Manager option. Provide Connection name, select the Azure Subscription from the list and the click on the Ok button. The Azure credentials will be required to authorize the connection.
+        * Click on the **+New Service Connection** button and select the Azure Resource Manager option. Provide Connection name, select the Azure Subscription from the list and the click on the Ok button. The Azure credentials will be required to authorize the connection.
 
             ![Resource Manager](images/armendpoint.png)
 
-        * If your Azure subscription is already listed, select the Azure subscription from the drop down list and click Authorize.
+        * If your Azure subscription is already listed, select the Azure subscription from the drop down list and click **Authorize**.
 
             ![Authorize](images/authorize.png) 
 
@@ -225,13 +225,13 @@ In this exercise, you will look at the build definition to get an insight of how
 
     ![PartsUnlimited API](images/api.png)
 
-1. Select the third task to deploy **PartsUnlimited Azure Function** and configure the inputs as shown below. Choose the pre-created **Azure functions** name for the **App Service Name** field from the drop down.
+1. Select the third task to deploy **PartsUnlimited Azure Function** and configure the inputs as shown below. Choose the pre-created **Azure functions** name for the **App Name** field from the drop down.
 
     ![PartsUnlimited Function](images/function.png)
 
     > As the Azure Function Apps uses the Azure App Service infrastructure, the function app referred here can use all the features of an App Service. 
 
-1. Click on *Save*. In the Save dialog box, click OK. To test the release definition, click **Release** and then **Create Release**.
+1. Click on *Save*. In the Save dialog box, click OK. To test the release definition, click on **Create Release**.
 
     ![Release Create](images/createrelease.png) 
 
