@@ -25,7 +25,7 @@ The main features of SonarCloud are:
 
 In this lab, you will learn how to integrate Azure DevOps Services with SonarCloud
 
-- Setup a Azure DevOps project and CI build to integrate with SonarCloud
+- Setup an Azure DevOps project and CI build to integrate with SonarCloud
 - Analyze SonarCloud reports
 - Integrate static analysis into the Azure DevOps pull request process
 
@@ -57,13 +57,13 @@ In this lab, you will learn how to integrate Azure DevOps Services with SonarClo
 
    The scanning examples repository contains sample projects for a number of build systems and languages including C# with MSBuild, and Maven and Gradle with Java.
 
-## Exercise 1: Set up a build definition that integrates with SonarCloud
+## Exercise 1: Set up a pipeline that integrates with SonarCloud
 
 We will set up a new build pipeline that integrates with SonarCloud to analyze the **SonarExamples** code. As part of setting up the pipeline we will create a SonarCloud account and organization.
 
-1. In your new Azure DevOps project, go to **Builds** under **Pipelines** tab, then click on **+New** to create a new build pipeline.
+1. In your new Azure DevOps project, go to **Pipelines** under **Pipelines** tab, then click on **New Pipeline** to create a new build pipeline.
 
-1. You have 2 possibilities : Configure the pipeline with the YAML editor, or with the classic assistant.
+2. You have 2 possibilities : Configure the pipeline with the YAML editor, or with the classic assistant.
 
 ### **YAML Editor**
 
@@ -89,7 +89,7 @@ We will set up a new build pipeline that integrates with SonarCloud to analyze t
 
    The template contains all of the necessary tasks and most of the required settings. We will now provide the values for the remaining settings.
 
-3. Select the _Hosted VS2017_ agent queue
+3. Select the _Azure Pipelines_ in Agent pool, then choose _vs2017-win2016_ in Agent specification
 
    ![build_config_agentqueue](images/ex1/build_config_agentqueue.png)
 
@@ -175,7 +175,7 @@ We have now created an organization on SonarCloud, and have the token needed con
 13. [Optional] Enable the _Publish Quality Gate Result_ step
 
 This step is not required unless you want to use the pre-deployment gate along with Release Pipelines.
-If this step is enabled, a summary of the analysis results will appear on the _Build Summary_ page. However, this will delay the completion of the build until the
+If this step is enabled, a summary of the analysis results will appear on the _Extensions_ tab of the _Build Summary_ page. However, this will delay the completion of the build until the
 processing on SonarCloud has finished.
 
 14. Save and queue the build.
