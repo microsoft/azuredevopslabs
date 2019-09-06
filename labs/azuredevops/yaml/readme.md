@@ -1,13 +1,9 @@
----
-title: Configuring CI/CD Pipelines as Code with YAML in Azure DevOps
-layout: page
-sidebar: vsts
-permalink: /labs/azuredevops/yaml/
-folder: /labs/azuredevops/yaml/
-version: Lab version - 1.33.1
-updated: Last updated - 5/23/2019
----
-<div class="rw-ui-container"></div>
+<a name="Title"></a>
+# Configuring CI/CD Pipelines as Code with YAML in Azure DevOps #
+
+Lab version:1.37.1
+
+Last updated:9/5/2019
 
 <a name="Overview"></a>
 ## Overview ##
@@ -167,6 +163,8 @@ Many teams prefer to define their build and release pipelines using YAML (Yet An
     - stage: Deploy
       jobs:
       - job: Deploy
+        pool:
+          name: Hosted VS2017
         steps:
     ```
     ![](images/027.png)
@@ -219,7 +217,7 @@ Many teams prefer to define their build and release pipelines using YAML (Yet An
 
     ![](images/039.png)
 
-1. Set the **Artifact name** to "**drop"** and click **Add**.
+1. Click **Add**.
 
     ![](images/040.png)
 
@@ -227,29 +225,42 @@ Many teams prefer to define their build and release pipelines using YAML (Yet An
 
     ![](images/041.png)
 
-1. Click **Save** to commit the changes.
+1. Add a property to the download task specifying the **artifactName** of **"drop"**. Be sure to match the spacing.
 
+    ```
+    artifactName: 'drop'
+    ```
     ![](images/042.png)
 
-1. Confirm the **Save**. This will begin a new build.
+1. Click **Save** to commit the changes.
 
     ![](images/043.png)
 
-1. Return to the **Pipelines** view.
+1. Confirm the **Save**. This will begin a new build.
 
     ![](images/044.png)
 
-1. From the **Runs** tab, click the new build run to open it. Note that there are now multiple stages shown based on the YAML definition edits from earlier.
+1. Return to the **Pipelines** view.
 
     ![](images/045.png)
 
-1. When the **Build** stage completes, click the **Deploy** stage to follow each task.
+1. From the **Runs** tab, click the new build run to open it. Note that there are now multiple stages shown based on the YAML definition edits from earlier.
 
     ![](images/046.png)
 
-1. Expand the **AzureRmWebAppDeployment** task to review the steps performed during the Azure deployment. Once the task completes, your app will be live on Azure.
+1. If you see an error message requiring you do **Authorize resources**, click the button to do so. Then click **Run new** from the top right corner and follow the process to queue a new build.
 
     ![](images/047.png)
+
+    ![](images/048.png)
+
+1. When the **Build** stage completes, click the **Deploy** stage to follow each task.
+
+    ![](images/049.png)
+
+1. Expand the **AzureRmWebAppDeployment** task to review the steps performed during the Azure deployment. Once the task completes, your app will be live on Azure.
+
+    ![](images/050.png)
 
 <a name="Ex1Task5"></a>
 ### Task 5: Reviewing the deployed site ###
@@ -260,29 +271,29 @@ Many teams prefer to define their build and release pipelines using YAML (Yet An
 
 1. Select the **Configuration** tab.
 
-    ![](images/048.png)
+    ![](images/051.png)
 
 1. Click the **defaultConnection** setting.
 
-    ![](images/049.png)
-
-1. Update the **Name** to **"DefaultConnectionString"**, which is the key expected by the application. This will enable it to connect to the database created for the app service. Click **Update**.
-
-    ![](images/050.png)
-
-1. Click **Save** to apply the changes.
-
-    ![](images/051.png)
-
-1. Return to the **Overview** tab.
-
     ![](images/052.png)
 
-1. Click the **URL** to open your site in a new tab.
+1. Update the **Name** to **"DefaultConnectionString"**, which is the key expected by the application. This will enable it to connect to the database created for the app service. Click **OK**.
 
     ![](images/053.png)
 
-1. The deployed site should load expected.
+1. Click **Save** to apply the changes.
 
     ![](images/054.png)
+
+1. Return to the **Overview** tab.
+
+    ![](images/055.png)
+
+1. Click **Browse** to open your site in a new tab.
+
+    ![](images/056.png)
+
+1. The deployed site should load expected.
+
+    ![](images/057.png)
 
