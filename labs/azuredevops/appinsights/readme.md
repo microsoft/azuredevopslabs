@@ -4,8 +4,8 @@ layout: page
 sidebar: vsts
 permalink: /labs/azuredevops/appinsights/
 folder: /labs/azuredevops/appinsights/
-version: Lab version - 1.31.1
-updated: Last updated - 4/25/2019
+version: Lab version - 1.37.1
+updated: Last updated - 9/9/2019
 ---
 <div class="rw-ui-container"></div>
 <a name="Overview"></a>
@@ -154,7 +154,7 @@ In this lab, you'll learn about how you can add Application Insights to an exist
 
     ![](images/028.png)
 
-1. Set the **Name** to **"Keys:ApplicationInsights:InstrumentationKey"** and paste the **Value** from earlier. Click **Update**.
+1. Set the **Name** to **"Keys:ApplicationInsights:InstrumentationKey"** and paste the **Value** from earlier. Click **OK**.
 
     ![](images/029.png)
 
@@ -162,7 +162,7 @@ In this lab, you'll learn about how you can add Application Insights to an exist
 
     ![](images/030.png)
 
-1. Update the **Name** of the setting to **"DefaultConnectionString"** and click **Update**.
+1. Update the **Name** of the setting to **"DefaultConnectionString"** and click **OK**.
 
     ![](images/031.png)
 
@@ -256,247 +256,255 @@ In this lab, you'll learn about how you can add Application Insights to an exist
 
     ![](images/050.png)
 
-1. Select the **Metrics** tab.
+1. Close the current blade.
 
     ![](images/051.png)
 
-1. Metrics in Application Insights are measured values and counts of events that are sent in telemetry from your application. They help you detect performance issues and watch trends in how your application is being used. There's a wide range of standard metrics, and you can also create your own custom metrics and events. Set the **Metric** to **Server requests**.
+1. Select the **Search** tab.
 
     ![](images/052.png)
 
-1. You can also segment your data using splitting. Click **Apply splitting**.
+1. Search provides a flexible interface to locate the exact telemetry you need to answer questions. Click **Click here** to see data from the past 24 hours.
 
     ![](images/053.png)
 
-1. Set **Values** to **Operation name**. This will split the server requests by what pages they're requesting, which you can see from the different colors in the chart.
+1. The results will include all telemetry data, which can be filtered down by multiple properties.
 
     ![](images/054.png)
 
-1. Select the **Search** tab.
+1. Click **Grouped results**. These results are generated based on how they share common properties.
 
     ![](images/055.png)
 
-1. Search provides a flexible interface to locate the exact telemetry you need to answer questions. Click **Click here** to see data from the past 24 hours.
+1. Expand the **Event types** dropdown.
 
     ![](images/056.png)
 
-1. The results will include all telemetry data, which can be filtered down by multiple properties.
+1. Deselect everything except **Exception**.
 
     ![](images/057.png)
 
-1. Click **Grouped results**. These results are generated based on how they share common properties.
+1. There should be some exceptions available from the errors generated earlier. Click one of them.
 
     ![](images/058.png)
 
-1. Expand the **Event types** dropdown.
+1. This will provide a full timeline view of the exception within the context of its request. Click **View all telemetry**.
 
     ![](images/059.png)
 
-1. Deselect everything except **Exception**.
+1. The **Telemetry** view provides the same data in a flat view.
 
     ![](images/060.png)
 
-1. There should be some exceptions available from the errors generated earlier. Click one of them.
+1. You can also review the details of the exception itself, such as its properties and call stack.
 
     ![](images/061.png)
 
-1. This will provide a full timeline view of the exception within the context of its request. Click **View all telemetry**.
+1. Close the current blade.
 
     ![](images/062.png)
 
-1. The **Telemetry** view provides the same data in a flat view.
+1. Select the **Availability** tab.
 
     ![](images/063.png)
 
-1. You can also review the details of the exception itself, such as its properties and call stack.
+1. After you've deployed your web app or web site to any server, you can set up tests to monitor its availability and responsiveness. Application Insights sends web requests to your application at regular intervals from points around the world. It alerts you if your application doesn't respond or responds slowly. Click **Add test**.
 
     ![](images/064.png)
 
-1. Close the current blade.
+1. Enter a **Test name** of **"Home page"** and set the **URL** to the root of your site. Click **Create**.
 
     ![](images/065.png)
 
-1. Select the **Availability** tab.
+1. The test will not run immediately, so there won't be any data.
 
     ![](images/066.png)
 
-1. After you've deployed your web app or web site to any server, you can set up tests to monitor its availability and responsiveness. Application Insights sends web requests to your application at regular intervals from points around the world. It alerts you if your application doesn't respond, or responds slowly. Click **Create Test**.
+1. If you check back later, you should see the availability data updated to reflect the tests against your live site. Don't wait for this now.
 
     ![](images/067.png)
 
-1. Enter a **Test name** of **"Home page"** and set the **URL** to the root of your site. Click **Create**.
+1. Select the **Failures** tab.
 
     ![](images/068.png)
 
-1. The test will not run immediately, so there won't be any data.
+1. The Failures view aggregates all exception reports into a single dashboard. From here you can easily zero in on dependencies, exceptions, and other filters. From the **Top 3 response codes** list, click the link for the **500** errors.
 
     ![](images/069.png)
 
-1. If you check back later, you should see the availability data updated to reflect the tests against your live site. Don't wait for this now.
+1. This will present a list of exceptions from this HTTP response code. Selecting the suggested exception will lead to the exception view covered earlier.
 
     ![](images/070.png)
 
-1. Select the **Failures** tab.
+1. Close the current blade.
 
     ![](images/071.png)
 
-1. The Failures view aggregates all exception reports into a single dashboard. From here you can easily zero in on dependencies, exceptions, and other filters. From the **Top 3 response codes** list, click the link for the **500** errors.
+1. Select the **Performance** tab.
 
     ![](images/072.png)
 
-1. This will present a list of exceptions from this HTTP response code. Selecting the suggested exception will lead to the exception view covered earlier.
+1. The Performance view provides a dashboard that simplifies the details of application performance based on the collected telemetry.
 
     ![](images/073.png)
 
-1. Select the **Performance** tab.
+1. Select the **Metrics** tab.
 
     ![](images/074.png)
 
-1. The Performance view provides a dashboard that simplifies the details of application performance based on the collected telemetry.
+1. Metrics in Application Insights are measured values and counts of events that are sent in telemetry from your application. They help you detect performance issues and watch trends in how your application is being used. There's a wide range of standard metrics, and you can also create your own custom metrics and events. Set the **Metric** to **Server requests**.
 
     ![](images/075.png)
+
+1. You can also segment your data using splitting. Click **Apply splitting**.
+
+    ![](images/076.png)
+
+1. Set **Values** to **Operation name**. This will split the server requests by what pages they're requesting, which you can see from the different colors in the chart.
+
+    ![](images/077.png)
 
 <a name="Ex1Task5"></a>
 ### Task 5: Tracking application usage ###
 
 1. Application Insights provides a broad set of features to track application usage. Select the **Users** tab.
 
-    ![](images/076.png)
+    ![](images/078.png)
 
 1. There aren't many users for our application yet, but we can still learn about them. Click **View More Insights**.
 
-    ![](images/077.png)
+    ![](images/079.png)
 
 1. Scroll down to review details about the geographies, operating systems, and browsers.
 
-    ![](images/078.png)
+    ![](images/080.png)
 
 1. You can also drill into specific users to get a better understanding of their usage.
 
-    ![](images/079.png)
+    ![](images/081.png)
 
 1. Select the **Events** tab.
 
-    ![](images/080.png)
+    ![](images/082.png)
 
 1. Click **View More Insights**.
 
-    ![](images/081.png)
+    ![](images/083.png)
 
 1. There will be a variety of built-in events raised so far for site navigation. You can programmatically add custom events with custom data to meet your needs.
 
-    ![](images/082.png)
+    ![](images/084.png)
 
 1. Select the **Funnels** tab.
 
-    ![](images/083.png)
+    ![](images/085.png)
 
 1. Understanding the customer experience is of the utmost importance to your business. If your application involves multiple stages, you need to know if most customers are progressing through the entire process, or if they are ending the process at some point. The progression through a series of steps in a web application is known as a funnel. You can use Azure Application Insights Funnels to gain insights into your users, and monitor step-by-step conversion rates.
 
-    ![](images/084.png)
+    ![](images/086.png)
 
 1. Select the **User Flows** tab.
 
-    ![](images/085.png)
+    ![](images/087.png)
 
 1. The User Flows tool starts from an initial page view, custom event, or exception that you specify. Given this initial event, User Flows shows the events that happened before and afterwards during user sessions. Lines of varying thickness show how many times each path was followed by users. Special Session Started nodes show where the subsequent nodes began a session. Session Ended nodes show how many users sent no page views or custom events after the preceding node, highlighting where users probably left your site.
 
-    ![](images/086.png)
+    ![](images/088.png)
 
 1. Select the **Retention** tab.
 
-    ![](images/087.png)
+    ![](images/089.png)
 
 1. The retention feature in Application Insights helps you analyze how many users return to your app, and how often they perform particular tasks or achieve goals. For example, if you run a game site, you could compare the numbers of users who return to the site after losing a game with the number who return after winning. This knowledge can help you improve both your user experience and your business strategy.
 
-    ![](images/088.png)
+    ![](images/090.png)
 
 1. Select the **Impact** tab.
 
-    ![](images/089.png)
+    ![](images/091.png)
 
 1. Impact analyzes how load times and other properties influence conversion rates for various parts of your app. To put it more precisely, it discovers how any dimension of a page view, custom event, or request affects the usage of a different page view or custom event.
 
-    ![](images/090.png)
+    ![](images/092.png)
 
 1. Select the **Cohorts** tab.
 
-    ![](images/091.png)
+    ![](images/093.png)
 
 1. A cohort is a set of users, sessions, events, or operations that have something in common. In Application Insights, cohorts are defined by an analytics query. In cases where you have to analyze a specific set of users or events repeatedly, cohorts can give you more flexibility to express exactly the set you're interested in. Cohorts are used in ways similar to filters. But cohort definitions are built from custom analytics queries, so they're much more adaptable and complex. Unlike filters, you can save cohorts so other members of your team can reuse them.
 
-    ![](images/092.png)
+    ![](images/094.png)
 
 1. Select the **More** tab. This view includes a variety of reports and templates for review.
 
-    ![](images/093.png)
+    ![](images/095.png)
 
 1. From the **Usage** category, select **Analysis of Page Views**.
 
-    ![](images/094.png)
+    ![](images/096.png)
 
 1. This particular report offers insight regarding the page views. There are many other reports available by default, and you can customize and save new ones.
 
-    ![](images/095.png)
+    ![](images/097.png)
 
 <a name="Ex1Task6"></a>
 ### Task 6: Creating application alerts ###
 
 1. Select the **Alerts** tab. Alerts enable you to set triggers that perform actions when Application Insights measurements reach specified conditions.
 
-    ![](images/096.png)
+    ![](images/098.png)
 
 1. Click **New alert rule**.
 
-    ![](images/097.png)
-
-1. The current Application Insights resource will be selected by default. Click **Add condition**.
-
-    ![](images/098.png)
-
-1. Select the **Failed requests** metric.
-
     ![](images/099.png)
 
-1. Set the **Threshold value** to **"1"**. This will trigger the alert once a second failed request is reported.
+1. The current Application Insights resource will be selected by default. Click **Add** under **Condition**.
 
     ![](images/100.png)
 
-1. By default, the conditions will be evaluated every minute and based on the aggregation of measurements over the past 5 minutes. Click **Done**.
+1. Search for **"failed"**and select the **Failed requests** metric.
 
     ![](images/101.png)
 
-1. Now that the condition is created, we need to define an **Action Group** for it to execute. Click **Create New**.
+1. Set the **Threshold value** to **"1"**. This will trigger the alert once a second failed request is reported.
 
     ![](images/102.png)
 
-1. Set the **Action group name** and **Short name** to **"Admin alert"**. Set the **Action name** to **Alert** and **Action type** to **Email/SMS/Push/Voice**. Click **Edit details**.
+1. By default, the conditions will be evaluated every minute and based on the aggregation of measurements over the past 5 minutes. Click **Done**.
 
     ![](images/103.png)
 
-1. Check the **Email** box and enter your email address.
+1. Now that the condition is created, we need to define an **Action Group** for it to execute. Click **Create action group**.
 
     ![](images/104.png)
 
-1. Click **OK** to save the action group.
+1. Set the **Action group name** and **Short name** to **"Admin alert"**. Set the **Action name** to **Alert** and **Action type** to **Email/SMS/Push/Voice**. Click **Edit details**.
 
     ![](images/105.png)
 
-1. Now that the action group has been created, it may still need to be selected If not already. Click **Select existing**.
+1. Check the **Email** box and enter your email address.
 
     ![](images/106.png)
 
-1. Check the newly created action group and click **Add**.
+1. Click **OK** to save the action group.
 
     ![](images/107.png)
 
-1. Set the **Alert rule name** to **"Any failure"** and click **Create alert rule**.
+1. Now that the action group has been created, it may still need to be selected If not already. Click **Select action group**.
 
     ![](images/108.png)
+
+1. Check the newly created action group and click **Select**.
+
+    ![](images/109.png)
+
+1. Set the **Alert rule name** to **"Any failure"** and click **Create alert rule**.
+
+    ![](images/110.png)
 
 1. Once the rule has been created, return to the web site browser tab and invoke some errors using the method from earlier.
 
 1. Around five minutes later, you should receive an email indicating that your alert was triggered.
 
-    ![](images/109.png)
+    ![](images/111.png)
 
