@@ -4,8 +4,8 @@ layout: page
 sidebar: vsts
 permalink: /labs/azuredevops/github/
 folder: /labs/azuredevops/github/
-version: Lab version - 1.33.1
-updated: Last updated - 4/15/2019
+version: Lab version - 1.38.1
+updated: Last updated - 9/9/2019
 ---
 <div class="rw-ui-container"></div>
 
@@ -80,7 +80,7 @@ In this lab, you will learn how to clone an existing Git repository from GitHub.
 
 1. When prompted, log in to your GitHub account.
 
-1. Once the cloning has completed, click **Open Repository**. You can ignore any warnings raised about opening the projects. The solution may not be in a buildable state, but that's okay since we're going to focus on working with Git and building the project itself is not necessary.
+1. Once the cloning has completed, click **Open**. You can ignore any warnings raised about opening the projects. The solution may not be in a buildable state, but that's okay since we're going to focus on working with Git and building the project itself is not necessary.
 
     ![](images/004.png)
 
@@ -236,7 +236,7 @@ Committing changes to a branch will not affect other branches, and you can share
 
     ![](images/029.png)
 
-1. Select the **master** as the reference branch.
+1. If prompted, select **master** as the reference branch.
 
     ![](images/030.png)
 
@@ -321,7 +321,7 @@ In addition to all the functionality available in Visual Studio Code, you can al
 
 1. Switch to the GitHub browser tab.
 
-1. Return to the **Code** tab.
+1. Return to the **Code** tab root.
 
     ![](images/046.png)
 
@@ -367,7 +367,7 @@ In addition to all the functionality available in Visual Studio Code, you can al
 <a name="Ex5Task3"></a>
 ### Task 3: Tagging a release ###
 
-1. While it may not seem like much, the product team has decided that this version of the site is exactly what's needed for v1.1. In order to mark it as such, navigate to the **Releases** tab.
+1. While it may not seem like much, the product team has decided that this version of the site is exactly what's needed for v1.1. In order to mark it as such, return to the **Code** tab and select **Releases**.
 
     ![](images/055.png)
 
@@ -403,7 +403,7 @@ You can create Git repos in team projects to manage your project's source code. 
 
     ![](images/061.png)
 
-1. That's it. Your repo is ready. You can now clone it with Visual Studio or your tools of choice.
+1. That's it. Your repo is ready. You now have the ability to clone it with Visual Studio or your tools of choice.
 
     ![](images/062.png)
 
