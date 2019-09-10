@@ -139,7 +139,7 @@ In this lab, you will learn
        ![](images/workassigned.gif)
 
         
-   1. Now navigate to **Changes** tab in Team Explorer and enter comment suffixed with work item id with hash tag (ex: integrated LaunchDarkly #2051) and select **Commit and Push** to push all the changes to the Repo.
+   1. Now navigate to **Changes** tab in Team Explorer and enter comment suffixed with work item id with hash tag (ex: integrated LaunchDarkly #2051) and select **Commit All and Push** to push all the changes to the Repo.
        
         ![](images/pushldchanges.gif)
 
