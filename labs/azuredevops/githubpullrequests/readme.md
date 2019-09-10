@@ -4,8 +4,8 @@ layout: page
 sidebar: vsts
 permalink: /labs/azuredevops/githubpullrequests/
 folder: /labs/azuredevops/githubpullrequests/
-version: Lab version - 1.33.1
-updated: Last updated - 4/15/2019
+version: Lab version - 1.38.0
+updated: Last updated - 9/9/2019
 ---
 <div class="rw-ui-container"></div>
 
@@ -97,61 +97,49 @@ When the Git with GitHub lab ended, we had created a new branch and made a chang
 <a name="Ex1Task3"></a>
 ### Task 3: Managing pull requests ###
 
-1. Although the current pull request is already open, you could easily navigate to it (or others) using the options available in the GitHub Pull Requests panel.
+1. Although the current pull request is already open, you could easily navigate to it (or others) using the options available in the GitHub Pull Requests panel. Once a pull request is selected, you can navigate through the changes in the pull request. Use this process to open the **Category.cs** file from the commit.
 
     ![](images/014.png)
 
-1. Once a pull request is selected, you can navigate through the changes in the pull request. Use this process to open the **Category.cs** file from the commit.
+1. The diff viewer is used to show the difference between the code in the **master** and **release** branches.
 
     ![](images/015.png)
 
-1. The diff viewer is used to show the difference between the code in the **master** and **release** branches.
+1. Click the **Add comment** button next to the added line, enter a comment, and click **Start Review**.
 
     ![](images/016.png)
 
-1. Click the **Add comment** button next to the added line and click **Start Review**.
+1. From the **Toggle Reaction** dropdown, select the thumbs up option to indicate approval.
 
     ![](images/017.png)
 
-1. Add a comment to the line of code to start a discussion and click **Add Review Comment**.
+1. Click the **Add comment** button again, enter another comment, and click **Finish Review** to complete your review.
 
     ![](images/018.png)
 
-1. Your comment will now appear in line with the code in the pull request and others can participate in the conversation.
+1. Besides the pull request navigation view, you can also use the shortcut at the bottom of the window to return to the current pull request.
 
     ![](images/019.png)
 
-1. From the **Toggle Reaction** dropdown, select the thumbs up option to indicate approval.
+1. Click **Merge Pull Request**.
 
     ![](images/020.png)
 
-1. Click the **Reply** box and click **Finish Review** to complete your review.
+1. When prompted, click **Create Merge Commit** to complete the process.
 
     ![](images/021.png)
 
-1. Besides the pull request navigation view, you can also use the shortcut at the bottom of the window to return to the current pull request.
+1. Return to the GitHub browser tab. Navigate to the repo's **Pull Requests** tab. Select the **Closed** pull requests option and click the closed pull request to open it.
 
     ![](images/022.png)
 
-1. You can see the review activity, along with the comment left earlier, in line with the pull request. Click **Merge Pull Request**.
+1. You can review all of the pull request details from this merged pull request, including the commits and conversations. Click the work item identified in the commit to see that it was automatically closed when the pull request was merged.
 
     ![](images/023.png)
 
-1. When prompted, click **Create Merge Commit** to complete the process.
+1. As expected, the issue is now marked **Closed**.
 
     ![](images/024.png)
-
-1. Return to the GitHub browser tab. Navigate to the repo's **Pull Requests** tab. Select the **Closed** pull requests option and click the closed pull request to open it.
-
-    ![](images/025.png)
-
-1. You can review all of the pull request details from this merged pull request, including the commits and conversations. You can also use the issue link to click through to the linked work item.
-
-    ![](images/026.png)
-
-1. Note that the issue has been marked as closed since the pull request was approved.
-
-    ![](images/027.png)
 
 <a name="Ex1Task4"></a>
 ### Task 4: Managing Git repo and pull request policies ###
@@ -160,29 +148,29 @@ As projects and teams scale in complexity, it becomes help to automate more of t
 
 1. Navigate to the repo's **Settings**.
 
-    ![](images/028.png)
+    ![](images/025.png)
 
 1. Select **Branches**.
 
-    ![](images/029.png)
+    ![](images/026.png)
 
 1. Policies are enforced by following rules that match the target branch. Click **Add rule** to create a new one.
 
-    ![](images/030.png)
+    ![](images/027.png)
 
 1. Set the **Branch name pattern** to **"master"**.
 
-    ![](images/031.png)
+    ![](images/028.png)
 
 1. Enable the option to **Require pull request reviews before merging**. This option ensures that the merge request has been reviewed and comes from a branch that is not protected. Note that you can also specify special behavior for stale pull request approvals and require reviews from specific code owners.
 
-    ![](images/032.png)
+    ![](images/029.png)
 
 1. Enable the option to **Require status checks to pass before merging**. This ensures that specified status checks are passed before a pull request can be created. For example, you can require that the source branch builds successfully before becoming eligible for a merge.
 
-    ![](images/033.png)
+    ![](images/030.png)
 
 1. There are additional options for requiring signed commits and also for requiring that administrators follow these pull request restrictions. Click **Create** to create the rule.
 
-    ![](images/034.png)
+    ![](images/031.png)
 

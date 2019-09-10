@@ -4,7 +4,7 @@ layout: page
 sidebar: vsts
 permalink: /labs/azuredevops/github/
 folder: /labs/azuredevops/github/
-version: Lab version - 1.38.1
+version: Lab version - 1.38.0
 updated: Last updated - 9/9/2019
 ---
 <div class="rw-ui-container"></div>
