@@ -4,8 +4,8 @@ layout: page
 sidebar: vsts
 permalink: /labs/azuredevops/exploratorytesting/
 folder: /labs/azuredevops/exploratorytesting/
-version: Lab version - 15.8.2
-updated: Last updated - 9/5/2018
+version: Lab version - 1.38.0
+updated: Last updated - 9/11/2019
 redirect_from: "/labs/vsts/exploratorytesting/index.htm"
 ---
 <div class="rw-ui-container"></div>
@@ -26,13 +26,11 @@ In this lab, you will learn about the exploratory testing and feedback managemen
 <a name="Ex1Task1"></a>
 ### Task 1: Installing the Chrome Extension ###
 
-1. Install **Google Chrome** from [http://google.com/chrome](http://google.com/chrome). This lab requires Chrome to be used as the browser.
+1. Install **Google Chrome** from [http://google.com/chrome](http://google.com/chrome). The rest of this exercise will use Chrome as its browser. If you're already using Chrome, just open a new instance for the next set of steps.
 
-1. Launch **Chrome**.
+1. Navigate to the **Azure DevOps Marketplace** at [http://marketplace.visualstudio.com](http://marketplace.visualstudio.com/).
 
-1. Navigate to the **Visual Studio Marketplace** at [http://marketplace.visualstudio.com](http://marketplace.visualstudio.com/).
-
-1. Select the **Visual Studio Team Services** tab. Search for "**feedback**" and click the **Test & Feedback** extension.
+1. Select the **Azure DevOps** tab. Search for "**feedback**" and click the **Test & Feedback** extension.
 
     ![](images/000.png)
 
@@ -56,11 +54,11 @@ In this lab, you will learn about the exploratory testing and feedback managemen
 
     ![](images/005.png)
 
-1. The extension can be used in two modes: **Connected** and **Standalone** mode. If you have Azure DevOps or Team Foundation Server (TFS), select Connected mode. Standalone mode is for users who don't have Azure DevOps or TFS and want to use the extension to file bugs and share the report with their team.
+1. The extension can be used in two modes: **Connected** and **Standalone** mode. If you have Azure DevOps or Azure DevOps Server, select Connected mode. Standalone mode is for users who don't have either and want to use the extension to file bugs and share the report with their team.
 
 1. After connecting to Azure DevOps, you will need to select the team you want these efforts associated with. Select the **Parts Unlimited Team** under the **Parts Unlimited** project and click **Save** to continue.
 
-   ![](images/006.png)
+    ![](images/006.png)
 
 <a name="Ex1Task2"></a>
 ### Task 2: Exploratory Testing with the Chrome Extension ###
@@ -89,7 +87,7 @@ In this lab, you will learn about the exploratory testing and feedback managemen
 
     ![](images/011.png)
 
-1. Click the **Exploratory Testing** icon button and select **Capture screenshot \| Browser**.
+1. Click the **Exploratory Testing** icon button and select **Capture screenshot | Browser**.
 
     ![](images/012.png)
 
