@@ -4,8 +4,8 @@ layout: page
 sidebar: vsts
 permalink: /labs/azuredevops/load/
 folder: /labs/azuredevops/load/
-version: Lab version - 15.8.2
-updated: Last updated - 9/5/2018
+version: Lab version - 1.38.0
+updated: Last updated - 9/12/2019
 redirect_from: "/labs/vsts/load/index.htm"
 ---
 <div class="rw-ui-container"></div>
@@ -30,15 +30,15 @@ In this lab, you will be introduced to the [Web performance and Load testing cap
 <a name="Ex1Task1"></a>
 ### Task 1: Recording web tests ###
 
-1. In **Solution Explorer**, right-click the solution node and select **Add \| New Project**.
+1. In **Solution Explorer**, right-click the solution node and select **Add | New Project**.
 
     ![](images/000.png)
 
-1. Select the **Visual C# \| Test** category and the **Web Performance and Load Test Project** template. Enter a **Name** of **"PULWebTest"** and click **OK**.
+1. Select the **Visual C# | Test** category and the **Web Performance and Load Test Project** template. Enter a **Name** of **"PULWebTest"** and click **OK**.
 
     ![](images/001.png)
 
-1. Once the project has been created, select **Debug \| Start Without Debugging** to build and launch the site locally.
+1. Once the project has been created, select **Debug | Start Without Debugging** to build and launch the site locally.
 
 1. Return to **Visual Studio**, leaving the browser window open to the local version of the site.
 
@@ -130,7 +130,7 @@ In this lab, you will be introduced to the [Web performance and Load testing cap
 
 1. Now we can add a more sophisticated test that involves completing a purchase. Return to **Visual Studio**.
 
-1. In **Solution Explorer**, right-click the **PULWebTest** project and select **Add \| Web Performance Test**.
+1. In **Solution Explorer**, right-click the **PULWebTest** project and select **Add | Web Performance Test**.
 
     ![](images/021.png)
 
@@ -222,7 +222,7 @@ In this lab, you will be introduced to the [Web performance and Load testing cap
 <a name="Ex1Task5"></a>
 ### Task 5: Adding a load test ###
 
-1. Now that we have two tests that cover common scenarios, let's use them as part of a load test to see how the system might perform with a variety of simultaneous users. In **Solution Explorer**, right-click the **PULWebTest** project and select **Add \| Load Test**.
+1. Now that we have two tests that cover common scenarios, let's use them as part of a load test to see how the system might perform with a variety of simultaneous users. In **Solution Explorer**, right-click the **PULWebTest** project and select **Add | Load Test**.
 
     ![](images/042.png)
 
@@ -270,7 +270,7 @@ In this lab, you will be introduced to the [Web performance and Load testing cap
 
     ![](images/053.png)
 
-1. Set the name of the computer to **ALMVM** (this VM) and check **ASP.NET** and **SQL**. Click **Finish**.
+1. Set the name of the computer to **localhost** and check **ASP.NET** and **SQL**. Click **Finish**.
 
     ![](images/054.png)
 
