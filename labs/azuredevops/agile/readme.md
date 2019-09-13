@@ -4,8 +4,8 @@ layout: page
 sidebar: vsts
 permalink: /labs/azuredevops/agile/
 folder: /labs/azuredevops/agile/
-version: Lab version - 15.8.2
-updated: Last updated - 9/5/2018
+version: Lab version - 1.37.1
+updated: Last updated - 9/5/2019
 redirect_from: "/labs/vsts/agile/index.htm"
 ---
 <div class="rw-ui-container"></div>
@@ -77,7 +77,7 @@ Work items play a prominent role in Azure DevOps. Whether describing work to be 
 
 This task is designed to illustrate a variety of ways you can create different kinds of work items, as well as to demonstrate the breadth of features available on the platform. As a result, these steps should not be viewed as prescriptive guidance for project management. The features are intended to be flexible enough to fit your process needs, so explore and experiment as you go.
 
-1. Select **Overview \| Dashboards**.
+1. Navigate to **Overview | Dashboards**.
 
     ![](images/011.png)
 
@@ -93,7 +93,7 @@ This task is designed to illustrate a variety of ways you can create different k
 
     ![](images/014.png)
 
-1. Select **Boards \| Work Items**.
+1. Navigate to **Boards | Work Items**.
 
     ![](images/015.png)
 
@@ -101,7 +101,7 @@ This task is designed to illustrate a variety of ways you can create different k
 
     ![](images/016.png)
 
-1. The work item form includes everything you could ever want to know about a work item. This includes details about who it's assigned to, its status across many parameters, and all the associated information and history for how it has been handled since creation. One of the key areas to focus on is the **Related Work**. One of the ways to add a feature to this epic is to select **Add link \| New item**.
+1. The work item form includes everything you could ever want to know about a work item. This includes details about who it's assigned to, its status across many parameters, and all the associated information and history for how it has been handled since creation. One of the key areas to focus on is the **Related Work**. One of the ways to add a feature to this epic is to select **Add link | New item**.
 
     ![](images/017.png)
 
@@ -153,45 +153,29 @@ This task is designed to illustrate a variety of ways you can create different k
 
     ![](images/029.png)
 
-1. Note that the **Cumulative flow diagram** has updated to reflect the change in work for the team.
+1. Drag the second work item to the **Committed** stage.
 
     ![](images/030.png)
 
-1. Drag the second work item to the **Committed** stage.
+1. Drag the final PBI to the **Done** stage.
 
     ![](images/031.png)
 
-1. The CFD will update again to reflect this change in status.
+1. The task board is one view into the backlog. View the tabular form by clicking **View as Backlog**.
 
     ![](images/032.png)
 
-1. Drag the final PBI to the **Done** stage.
+1. Click the **Expand** button, which allows you to view nested tasks under these work items. Another easy way to create work items is using the **Add** button on the backlog. Click it to add a new task to the first backlog item.
 
     ![](images/033.png)
 
-1. Click the CFD to open it.
+1. Set the **Title** to **"Add page for most recent tutorials"**. Set the **Remaining Work** to **"5"** and the **Activity** to **"Development"**. Click **Save & Close**.
 
     ![](images/034.png)
 
-1. There are now three work items in different stages for this team.
-
-    ![](images/035.png)
-
-1. The task board is one view into the backlog. View the tabular form by clicking **View as Backlog**.
-
-    ![](images/036.png)
-
-1. Click the **Expand** button, which allows you to view nested tasks under these work items. Another easy way to create work items is using the **Add** button on the backlog. Click it to add a new task to the first backlog item.
-
-    ![](images/037.png)
-
-1. Set the **Title** to **"Add page for most recent tutorials"**. Set the **Remaining Work** to **"5"** and the **Activity** to **"Development"**. Click **Save & Close**.
-
-    ![](images/038.png)
-
 1. Add another task to **"Optimize data query for most recent tutorials"**. Set its **Remaining Work** to **"3"** and its **Activity** to **"Design"**. Click **Save & Close**.
 
-    ![](images/039.png)
+    ![](images/035.png)
 
 <a name="Ex1Task3"></a>
 ### Task 3: Managing sprints and capacity ###
@@ -202,103 +186,99 @@ Planning meetings typically consist of two parts. In the first part, the team an
 
 1. Your sprint backlog should contain all the information your team needs to successfully plan and complete work within the time allotted without having to rush at the end. Before you start planning your sprint, you'll want to have created, prioritized, and estimated your backlog and defined your sprints. Navigate to the **Sprints** view using the navigation.
 
-    ![](images/040.png)
-
-1. Select the **PUL-Web Sprints**.
-
-    ![](images/041.png)
+    ![](images/036.png)
 
 1. From the **View options** dropdown, select the **Work details** panel option.
 
-    ![](images/042.png)
+    ![](images/037.png)
 
 1. The current sprint has a pretty limited scope. There are two tasks in the **To do** stage that combine for 8 hours of estimated work. At this point, neither task has been assigned.
 
-    ![](images/043.png)
+    ![](images/038.png)
 
 1. Assign the **Add page** task to yourself. Note that this updates the capacity view.
 
-    ![](images/044.png)
+    ![](images/039.png)
 
 1. Select the **Capacity** tab. This view enables you to define what activities a user can take on and at what level of capacity. In this case, set your capacity to allow **"1"** hour of **Development** per day. Note that you can add additional activities per user in the case they do more than just development.
 
-    ![](images/045.png)
+    ![](images/040.png)
 
 1. However, let's assume you're going to take some vacation. Click **0 days** under **Days off**.
 
-    ![](images/046.png)
+    ![](images/041.png)
 
 1. Set your vacation to span five work days during the current sprint (within the next few weeks). Click **OK**.
 
-    ![](images/047.png)
+    ![](images/042.png)
 
 1. Click **Save**.
 
-    ![](images/048.png)
+    ![](images/043.png)
 
 1. Return to the **Taskboard**.
 
-    ![](images/049.png)
+    ![](images/044.png)
 
 1. Note that the capacity view has been updated to reflect your available bandwidth. This exact number may vary, but for the screenshots here, that sprint capacity is 11 hours (1 hour per day over 11 working days).
 
-    ![](images/050.png)
+    ![](images/045.png)
 
 1. One convenient feature of the boards is that you can easily update key data in-line. It's a good practice to regularly update the **Remaining Work** estimate to reflect the amount of time expected for each task. Let's say you've reviewed the work for the **Add page** task and found that it will actually take longer than originally expected. Set it to whatever your total capacity is for this sprint.
 
-    ![](images/051.png)
+    ![](images/046.png)
 
 1. Note how this expands the **Development** and your personal capacities to their maximum. Since they're large enough to cover the assigned tasks, they stay green. However, the overall **Team** capacity is exceeded due to the additional 3 hours required by the other task.
 
-    ![](images/052.png)
+    ![](images/047.png)
 
 1. One way to resolve this capacity issue would be to move the task to a future iteration. There are a few ways this could be done. First, you could open the task here and edit it in the dialog. The **Backlog** view, on the other hand, provides an in-line menu option to move it. Don't move it now.
 
-    ![](images/053.png)
+    ![](images/048.png)
 
 1. Return to the **Taskboard** view.
 
-    ![](images/054.png)
+    ![](images/049.png)
 
 1. Select **People** from the **View options** dropdown.
 
-    ![](images/055.png)
+    ![](images/050.png)
 
 1. This adjusts your view such that you can review the progress of tasks by person instead of by backlog item.
 
-    ![](images/056.png)
+    ![](images/051.png)
 
 1. There is also a lot of customization available. Click the **Configure team settings** button.
 
-    ![](images/057.png)
+    ![](images/052.png)
 
 1. On the **Styles** tab, click **Add Styling rule** and set the **Name** to **"Development"**. Choose a green **Card color**. This will color all cards green if they meet the rule criteria set below.
 
-    ![](images/058.png)
+    ![](images/053.png)
 
 1. Add a rule for **Activity = Development**. This will set all cards assigned to **Development** activities green.
 
-    ![](images/059.png)
+    ![](images/054.png)
 
 1. The **Backlogs** tab allows you to set the levels available for navigation. Epics are not included by default, but you could change that here.
 
-    ![](images/060.png)
+    ![](images/055.png)
 
 1. You can also specify the **Working days** the team follows. This applies to capacity and burndown calculations.
 
-    ![](images/061.png)
+    ![](images/056.png)
 
 1. The **Working with bugs** tab allows you to specify how bugs are presented on the board.
 
-    ![](images/062.png)
+    ![](images/057.png)
 
 1. Click **Save and close** to save the styling rule.
 
-    ![](images/063.png)
+    ![](images/058.png)
 
 1. The task associated with **Development** is now green and very easy to identify.
 
-    ![](images/064.png)
+    ![](images/059.png)
 
 <a name="Ex1Task4"></a>
 ### Task 4: Customizing Kanban boards ###
@@ -307,65 +287,85 @@ To maximize a team's ability to consistently deliver high quality software, Kanb
 
 1. Navigate to **Boards**.
 
-    ![](images/065.png)
+    ![](images/060.png)
 
 1. Click the **Configure team settings** button.
 
-    ![](images/066.png)
+    ![](images/061.png)
 
 1. The team is emphasizing work done with data, so there is special attention paid to any task associated with accessing or storing data. Select the **Tag colors** tab. Click **Add tag color** enter a tag of **"data"**. Whenever a backlog item or bug is tagged with **data**, that tag will be highlighted.
 
-    ![](images/067.png)
+    ![](images/062.png)
 
 1. You can also specify which **Annotations** you would like included on cards to make them easier to read and navigate. When an annotation is enabled, the child work items of that type are easily accessible by clicking the visualization on each card.
 
-    ![](images/068.png)
+    ![](images/063.png)
 
 1. The **Tests** tab enables you to configure how tests appear and behave on the cards.
 
-    ![](images/069.png)
+    ![](images/064.png)
 
 1. Click **Save and close**.
 
-    ![](images/063.png)
+    ![](images/065.png)
 
-1. Open the **new tutorials** backlog item.
+1. Open the **view new tutorials** backlog item.
 
-    ![](images/071.png)
+    ![](images/066.png)
 
 1. Add tags for **"data"** and **"ux"**. Click **Save & Close**.
 
-    ![](images/072.png)
+    ![](images/067.png)
 
 1. Note that the two tags are now visible on the card, although the **data** tag is highlighted yellow as configured.
 
-    ![](images/073.png)
+    ![](images/068.png)
 
 1. Click the **Configure team settings** button.
 
-    ![](images/074.png)
+    ![](images/069.png)
 
 1. Select the **Columns** tab. This section allows you to add new stages to the workflow. Click **Add Column** and set the **Name** to **"QA Approved"**. Set the **WIP limit** to **"1"**, which indicates that only one work item should be in this stage at a time. You would ordinarily set this higher, but there are only two work items to demonstrate the feature with here. Move the stage to occur between **Committed** and **Done**.
 
-    ![](images/075.png)
+    ![](images/070.png)
 
 1. Click **Save and close**.
 
-    ![](images/063.png)
+    ![](images/071.png)
 
 1. You will now see the new stage in the workflow.
 
-    ![](images/077.png)
+    ![](images/072.png)
 
 1. Move the work items from **Committed** and **Done** into **QA Approved**.
 
-    ![](images/078.png)
+    ![](images/073.png)
 
 1. The stage now exceeds its **WIP** limit and is colored red as a warning.
 
-    ![](images/079.png)
+    ![](images/074.png)
 
 1. Move the **recently viewed** backlog item back to **Committed**.
+
+    ![](images/075.png)
+
+1. Click the **Configure team settings** button.
+
+    ![](images/076.png)
+
+1. Return to the **Columns** tab and select **QA Approved**. A lag often exists between when work gets moved into a column and when work starts. To counter that lag and reveal the actual state of work in progress, you can turn on split columns. When split, each column contains two sub-columns: **Doing** and **Done**. Split columns let your team implement a pull model. Without split columns, teams push work forward, to signal that they've completed their stage of work. However, pushing it to the next stage doesn't necessarily mean that a team member immediately starts work on that item. Check **Split column into doing and done** to create two separate columns for this.
+
+    ![](images/077.png)
+
+1. As your team updates the status of work as it progresses from one stage to the next, it helps that they agree on what **done** means. By specifying the **Definition of done** criteria for each Kanban column, you help share the essential tasks to complete before moving an item into a downstream stage. Add a **Definition of done** using markdown, such as **"Passes \*\*all\*\* tests."**. Click **Save and close**.
+
+    ![](images/078.png)
+
+1. Note that the **QA Approved** stage now has **Doing** and **Done** columns.
+
+    ![](images/079.png)
+
+1. You can also click the icon next to the column header to read the **Definition of done**.
 
     ![](images/080.png)
 
@@ -373,116 +373,104 @@ To maximize a team's ability to consistently deliver high quality software, Kanb
 
     ![](images/081.png)
 
-1. Return to the **Columns** tab and select **QA Approved**. A lag often exists between when work gets moved into a column and when work starts. To counter that lag and reveal the actual state of work in progress, you can turn on split columns. When split, each column contains two sub-columns: **Doing** and **Done**. Split columns let your team implement a pull model. Without split columns, teams push work forward, to signal that they've completed their stage of work. However, pushing it to the next stage doesn't necessarily mean that a team member immediately starts work on that item. Check **Split column into doing and done** to create two separate columns for this.
+1. Your Kanban board supports your ability to visualize the flow of work as it moves from new to done. When you add **swimlanes**, you can also visualize the status of work that supports different service-level classes. You can create a swimlane to represent any other dimension that supports your tracking needs. From the **Swimlanes** tab, click **Add Swimlane** and set the **Name** to **"Expedite"**. Click **Save and close**.
 
     ![](images/082.png)
 
-1. As your team updates the status of work as it progresses from one stage to the next, it helps that they agree on what **done** means. By specifying the **Definition of done** criteria for each Kanban column, you help share the essential tasks to complete before moving an item into a downstream stage. Add a **Definition of done** using markdown, such as **"Passes \*\*all\*\* tests."**. Click **Save and close**.
+1. Drag and drop the **Committed** work item onto **QA Approved | Doing** so that it gets recognized as having priority when QA bandwidth becomes available.
 
     ![](images/083.png)
 
-1. Note that the **QA Approved** stage now has **Doing** and **Done** columns.
+1. If you would like to review a more sophisticated board with many more work items, select the **Parts Unlimited Team** from the team dropdown.
 
     ![](images/084.png)
 
-1. You can also click the icon next to the column header to read the **Definition of done**.
-
-    ![](images/085.png)
-
-1. Click the **Configure team settings** button.
-
-    ![](images/086.png)
-
-1. Your Kanban board supports your ability to visualize the flow of work as it moves from new to done. When you add **swimlanes**, you can also visualize the status of work that supports different service-level classes. You can create a swimlane to represent any other dimension that supports your tracking needs. From the **Swimlanes** tab, click **Add Swimlane** and set the **Name** to **"Expedite"**. Click **Save**.
-
-    ![](images/087.png)
-
-1. Drag and drop the **Committed** work item onto **QA Approved \| Doing** so that it gets recognized as having priority when QA bandwidth becomes available.
-
-    ![](images/088.png)
-
-1. If you would like to review a more sophisticated board with many more work items, select the **Parts Unlimited Team** from the team dropdown.
-
-    ![](images/089.png)
-
 1. This board provides a playground for you to experiment with and review the results.
 
-    ![](images/090.png)
+    ![](images/085.png)
 
 <a name="Ex1Task5"></a>
 ### Task 5: Defining dashboards ###
 
-1. Select **Overview \| Dashboards**.
+1. Select **Overview | Dashboards**.
 
-    ![](images/091.png)
+    ![](images/086.png)
 
 1. From the dashboard dropdown, select **Parts Unlimited Team Overview**. Dashboards allow teams to visualize status and monitor progress across the project. At a glance, you can make informed decisions without having to drill down into other parts of your team project site. The Overview page provides access to a default team dashboard which you can customize by adding, removing, or rearranging the tiles. Each tile corresponds to a widget that provides access to one or more features or functions.
 
-    ![](images/092.png)
+    ![](images/087.png)
 
 1. From the dashboard dropdown, select **New dashboard**.
 
-    ![](images/093.png)
+    ![](images/088.png)
 
 1. Set the **Name** to **"Product training"** and select the **PUL-Web** team. Click **Create**.
 
-    ![](images/094.png)
+    ![](images/089.png)
+
+1. Click **Add a widget**.
+
+    ![](images/090.png)
 
 1. In the **Add Widget** panel, search for **"sprint"** to find existing widgets that focus on sprints. Select **Sprint Overview** and click **Add**.
 
-    ![](images/095.png)
+    ![](images/091.png)
 
 1. Many widgets have options you can configure. Click the **Settings** button.
 
-    ![](images/096.png)
+    ![](images/092.png)
 
 1. The quantity and depth of settings will vary by widget. Click **Close** to dismiss.
 
-    ![](images/097.png)
+    ![](images/093.png)
 
 1. Search the widgets again for **"sprint"** and add the **Sprint Capacity** widget.
 
-    ![](images/098.png)
+    ![](images/094.png)
 
 1. Click **Done Editing**.
 
-    ![](images/099.png)
+    ![](images/095.png)
 
 1. You can now review two important aspects of your current sprint on your custom dashboard.
 
-    ![](images/100.png)
+    ![](images/096.png)
 
-1. Another way of customizing dashboards is to generate charts based on work item queries, which you can share to a dashboard. Select **Boards \| Queries**.
+1. Another way of customizing dashboards is to generate charts based on work item queries, which you can share to a dashboard. Select **Boards | Queries**.
 
-    ![](images/101.png)
+    ![](images/097.png)
 
 1. Click **New query**.
 
-    ![](images/102.png)
+    ![](images/098.png)
 
 1. Set the first term to **Work Item Type = Task** and the second term to **Area Path = Parts Unlimited\PUL-Web**.
 
-    ![](images/103.png)
+    ![](images/099.png)
 
 1. Click **Save query**.
 
-    ![](images/104.png)
+    ![](images/100.png)
 
 1. Set the **Name** to **"Web tasks"** and the **Folder** to **Shared Queries**. Click **OK**.
 
-    ![](images/105.png)
+    ![](images/101.png)
 
 1. Select the **Charts** tab and click **New chart**.
 
-    ![](images/106.png)
+    ![](images/102.png)
+
+1. Click **New chart**.
+
+    ![](images/103.png)
 
 1. Set the **Name** of the chart to **"Web tasks - By assignment"** and **Group by** to **Assigned To**. Click **OK** to save.
 
-    ![](images/107.png)
+    ![](images/104.png)
 
 1. You can now add this chart to a dashboard.
 
-    ![](images/108.png)
+    ![](images/105.png)
 
 <a name="Ex1Task6"></a>
 ### Task 6: Customizing team process ###
@@ -499,74 +487,83 @@ In this task we'll create a new process that inherits from Scrum. The one change
 
 1. Click the **Azure DevOps** logo in the top left corner to navigate to the account root.
 
-    ![](images/109.png)
+    ![](images/106.png)
 
 1. From the left bottom corner, click **Organization settings**.
 
-    ![](images/110.png)
+    ![](images/107.png)
 
 1. Select the **Process** tab under **Boards**.
 
-    ![](images/111.png)
+    ![](images/108.png)
 
 1. From the **Scrum** dropdown, select **Create inherited process**.
 
-    ![](images/112.png)
+    ![](images/109.png)
 
 1. Set the name of the inherited process to **Customized Scrum** and click **Create process**.
 
-    ![](images/113.png)
+    ![](images/110.png)
 
 1. Open **Customized Scrum**. You may need to refresh the browser for this to become visible.
 
-    ![](images/114.png)
+    ![](images/111.png)
 
 1. Select **Product Backlog Item**.
 
-    ![](images/115.png)
+    ![](images/112.png)
 
 1. Click **New field**.
 
-    ![](images/116.png)
+    ![](images/113.png)
 
 1. Set the **Name** of the new field to **"PUL Ticket ID"**.
 
-    ![](images/117.png)
+    ![](images/114.png)
 
 1. On the **Layout** tab, set the **Label** to **"Ticket ID"**. Also **Create a new group** for **"PartsUnlimited"**. Click **Add field**.
 
+    ![](images/115.png)
+
+1. Now that the customized process has been configured, let's switch the Parts Unlimited project to use it. Return to the **All processes** root using the breadcrumb.
+
+    ![](images/116.png)
+
+1. Our project currently uses **Scrum**, so select that process.
+
+    ![](images/117.png)
+
+1. Switch to the **Projects** tab.
+
     ![](images/118.png)
 
-1. Return to the **All processes** root using the breadcrumb.
+1. From the context menu for **Parts Unlimited**. Select **Change process**.
 
     ![](images/119.png)
 
-1. From the **Customized Scrum** dropdown, select **Change team projects to use Customized Scrum**.
+1. Select the **Customized Scrum** process and click **Save**.
 
     ![](images/120.png)
 
-1. Select **Parts Unlimited** and click **Ok**.
+1. Return to the account dashboard using the logo link.
 
     ![](images/121.png)
 
-1. Return to the account dashboard using the logo link.
-
-    ![](images/109.png)
-
 1. Open the **Parts Unlimited** portal.
+
+    ![](images/122.png)
+
+1. Select **Boards | Work Items**.
 
     ![](images/123.png)
 
-1. Select **Boards \| Work Items**.
+1. Open the first backlog item.
 
     ![](images/124.png)
 
-1. Open the first backlog item.
+1. You will now see the **Ticket ID** field under the **PartsUnlimited** group defined during the process customization. You can treat this like any other text field.
 
     ![](images/125.png)
 
-1. You will now see the **Ticket ID** field under the **PartsUnlimited** group defined during the process customization. You can treat this like any other text field.
-
-    ![](images/126.png)
-
 1. Once the work item is saved, Azure DevOps will also save the new custom information so that it will be available for queries and through the rest of Azure DevOps.
+
