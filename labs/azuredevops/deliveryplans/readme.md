@@ -4,8 +4,8 @@ layout: page
 sidebar: vsts
 permalink: /labs/azuredevops/deliveryplans/
 folder: /labs/azuredevops/deliveryplans/
-version: Lab version - 1.36.1
-updated: Last updated - 7/22/2019
+version: Lab version - 1.37.1
+updated: Last updated - 9/9/2019
 ---
 <div class="rw-ui-container"></div>
 <a name="Overview"></a>
@@ -215,3 +215,4 @@ It takes several teams to develop large software projects. Very large projects r
 1. You can also collapse all teams (or specific teams) using the toggle buttons next to their names.
 
     ![](images/044.png)
+
