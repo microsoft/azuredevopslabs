@@ -1,11 +1,15 @@
-<a name="Title"></a>
-# Configuring CI/CD Pipelines as Code with YAML in Azure DevOps #
-
-Lab version:1.37.1
-
-Last updated:9/5/2019
-
+---
+title: Configuring CI/CD Pipelines as Code with YAML in Azure DevOps
+layout: page
+sidebar: vsts
+permalink: /labs/azuredevops/yaml/
+folder: /labs/azuredevops/yaml/
+version: Lab version - 1.37.1
+updated: Last updated - 9/5/2019
+---
+<div class="rw-ui-container"></div>
 <a name="Overview"></a>
+
 ## Overview ##
 
 Many teams prefer to define their build and release pipelines using YAML (Yet Another Markup Language). This allows them to access the same pipeline features as those using the visual designer, but with a markup file that can be managed like any other source file. YAML build definitions can be added to a project by simply adding their source file to the root of the repository. Azure DevOps also provides default templates for popular project types, as well as a YAML designer to simplify the process of defining build and release tasks.
