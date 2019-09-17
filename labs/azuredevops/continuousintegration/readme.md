@@ -4,8 +4,8 @@ layout: page
 sidebar: vsts
 permalink: /labs/azuredevops/continuousintegration/
 folder: /labs/azuredevops/continuousintegration/
-version: Lab version - 1.36.1
-updated: Last updated - 7/22/2019
+version: Lab version - 1.37.1
+updated: Last updated - 9/9/2019
 redirect_from: "/labs/vsts/continuousintegration/index.htm"
 ---
 <div class="rw-ui-container"></div>
@@ -28,7 +28,7 @@ In this lab, you will learn how to configure continuous integration (CI) and con
 
 1. Navigate to your team project on Azure DevOps.
 
-1. Navigate to **Pipelines \| Pipelines**.
+1. Navigate to **Pipelines | Pipelines**.
 
     ![](images/000.png)
 
@@ -76,7 +76,7 @@ In this lab, you will learn how to configure continuous integration (CI) and con
 
     ![](images/011.png)
 
-1. Select **Save & Queue \| Save & Queue** to save and queue a new build.
+1. Select **Save & Queue | Save & Queue** to save and queue a new build.
 
     ![](images/012.png)
 
@@ -114,7 +114,7 @@ In this lab, you will learn how to configure continuous integration (CI) and con
 <a name="Ex1Task3"></a>
 ### Task 3: Invoking a continuous integration build ###
 
-1. The build was configured earlier to support continuous integration. Navigate to the code for this project using **Repos \| Files**.
+1. The build was configured earlier to support continuous integration. Navigate to the code for this project using **Repos | Files**.
 
     ![](images/020.png)
 
@@ -134,7 +134,7 @@ In this lab, you will learn how to configure continuous integration (CI) and con
 
     ![](images/024.png)
 
-1. A build should be underway shortly. Select **Pipelines \| Pipelines** to see if it's in progress.
+1. A build should be underway shortly. Select **Pipelines | Pipelines** to see if it's in progress.
 
     ![](images/025.png)
 
