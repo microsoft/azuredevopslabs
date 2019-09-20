@@ -109,7 +109,7 @@ In this lab, you will learn about the release management features available in A
 
 1. Navigate to your team project on Azure DevOps in a new browser tab. It should be at [https://dev.azure.com/YOURACCOUNT/Parts%20Unlimited](https://dev.azure.com/YOURACCOUNT/Parts Unlimited).
 
-1. Navigate to **Pipelines | Releases**.
+1. Navigate to **Pipelines \| Releases**.
 
     ![](images/018.png)
 
@@ -295,11 +295,11 @@ In this lab, you will learn about the release management features available in A
 
     ![](images/058.png)
 
-1. There are several kinds of gates available that can automatically test virtually anything you need to make sure a deployment is in good shape. These could be the return values of Azure functions or REST APIs, queries to Azure for alerts, or work item queries in Azure DevOps. You can also configure how long the platform should delay before evaluating the gates for the first time. In this case, change that to **0** so it will test them immediately after deployment. Then click **Add** | **Query Work Items**.
+1. There are several kinds of gates available that can automatically test virtually anything you need to make sure a deployment is in good shape. These could be the return values of Azure functions or REST APIs, queries to Azure for alerts, or work item queries in Azure DevOps. You can also configure how long the platform should delay before evaluating the gates for the first time. In this case, change that to **0** so it will test them immediately after deployment. Then click **Add** \| **Query Work Items**.
 
     ![](images/059.png)
 
-1. Select the **Query** for **Shared Queries | Critical Bugs**. We will make it our policy that the QA deployment cannot be considered a success until all critical bugs have been resolved.
+1. Select the **Query** for **Shared Queries \| Critical Bugs**. We will make it our policy that the QA deployment cannot be considered a success until all critical bugs have been resolved.
 
     ![](images/060.png)
 
@@ -347,11 +347,11 @@ In this lab, you will learn about the release management features available in A
 
     ![](images/070.png)
 
-1. Open a new tab to **Boards | Queries** to locate the bug.
+1. Open a new tab to **Boards \| Queries** to locate the bug.
 
     ![](images/071.png)
 
-1. Use the query list on the **All** tab to open the **Shared Queries | Critical Bugs** query.
+1. Use the query list on the **All** tab to open the **Shared Queries \| Critical Bugs** query.
 
     ![](images/072.png)
 
