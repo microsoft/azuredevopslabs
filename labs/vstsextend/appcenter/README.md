@@ -9,7 +9,7 @@ folder: /labs/vstsextend/appcenter/
 
 ## Overview
 
-[Visual Studio App Center](https://appcenter.ms/) is an integrated mobile development lifecycle solution for iOS, Android, Windows and macOS apps. It brings together multiple services commonly used by mobile developers, including build, test, distribute, monitor, diagnose , etc., into one single integrated cloud solution.
+[Visual Studio App Center](https://appcenter.ms/signup?utm_source=Azure%20DevOps%20Lab&utm_medium=Azure) is an integrated mobile development lifecycle solution for iOS, Android, Windows and macOS apps. It brings together multiple services commonly used by mobile developers, including build, test, distribute, monitor, diagnose , etc., into one single integrated cloud solution.
 
 In this lab, we are going to automate the **Build-Test-Distribute** process for **Tailwind Traders** mobile applications using **App Center**. The code for the mobile application is on GitHub at [TailwindTraders-Mobile](https://github.com/Microsoft/TailwindTraders-Mobile.git)
 
@@ -22,7 +22,7 @@ In this lab, we are going to use [App Center Demo Generator](https://appcenterde
 ## Before you begin
 
 You must have the following - 
-  * App Center account. If you don't have one get started for free from [here](https://azure.microsoft.com/en-in/services/app-center/).
+  * **App Center account** - [Sign up with App Center](https://appcenter.ms/signup?utm_source=Azure%20DevOps%20Lab&utm_medium=Azure) for free
 
   * API Token with *Full Access* to the App Center
 
@@ -177,7 +177,7 @@ These are the build configuration steps available for your application in App Ce
 As shown above, you can Automate the lifecycle of your iOS, Android, Windows, and macOS apps. Connect your repo and within minutes build in the cloud, test on thousands of real devices, distribute to beta testers and app stores. All in one place.
 
 ## References
-
+ - [Sign up with App Center](https://appcenter.ms/signup?utm_source=Azure%20DevOps%20Lab&utm_medium=Azure)
  - [App Center Build](https://docs.microsoft.com/en-us/appcenter/build/)
  - [App Center Test](https://docs.microsoft.com/en-us/appcenter/test-cloud/)
  - [Distribute app using App Center](https://docs.microsoft.com/en-us/appcenter/distribution/)
