@@ -9,7 +9,7 @@ folder: /labs/vstsextend/appcenter/
 
 ## Overview
 
-[Visual Studio App Center](https://appcenter.ms/signup?utm_source=Azure%20DevOps%20Lab&utm_medium=Azure) is an integrated mobile development lifecycle solution for iOS, Android, Windows and macOS apps. It brings together multiple services commonly used by mobile developers, including build, test, distribute, monitor, diagnose , etc., into one single integrated cloud solution.
+[Visual Studio App Center](https://appcenter.ms/signup?utm_source=Azure%20DevOps%20Lab&utm_medium=Azure) is an integrated mobile development lifecycle solution for iOS, Android, Windows and macOS apps. It brings together multiple services commonly used by mobile developers, including build, test, distribute, monitoring, diagnostics , etc., into one single integrated cloud solution.
 
 In this lab, we are going to automate the **Build-Test-Distribute** process for **Tailwind Traders** mobile applications using **App Center**. The code for the mobile application is on GitHub at [TailwindTraders-Mobile](https://github.com/Microsoft/TailwindTraders-Mobile.git)
 
