@@ -49,12 +49,20 @@ You will configure a release definition with two environments for an Azure Web A
 
 You will create two **Web Apps** in Azure to depict two environments **Canary** and **Production** to deploy the application.
 
-1. Go to [Azure portal](https://portal.azure.com) and click on **+New** and select **Web App**.
+1. Go to [Azure portal](https://portal.azure.com) and click on **+Create a resource** and select **Web App**.
     
     ![azure_webapp](images/azure_webapp.png)
 
-1. Provide a name for the **Web App**, create new **Resource Group** or select existing one from the dropdown. Enable **Application Insights** and click **Create**.
+1. Select your **Subscription**, create a new **Resource Group** or select an existing one from the dropdown, provide a Name for your **Web App**. Select **Code** for **Publish**, select **.NET Core 2.1** as **Runtime stack**, choose **Windows** as **Operating System** and choose a **Region** of your choice. Leave the other parameters to default which will result in a new **App Service Plan** being created.
+
+    ![azure_webapp_basics](images/azure_webapp_basics.png)
+
+1. Enable **Application Insights** and click **Review + Create**.
     
+    ![azure_webapp_monitoring](images/azure_webapp_monitoring.png)
+
+1. Click **Create**.
+
     ![canary_app](images/canary_app.png)
 
 1. Once the deployment succeeds, navigate to your **Resource Group** to see the resources created.
