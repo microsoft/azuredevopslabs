@@ -56,7 +56,7 @@ In this lab, you will use PartsUnlimited which is an example eCommerce website d
 ## Exercise 2: Build your application using Azure CI Pipeline
   In this exercise, you will build your application and publish the required files to an artifact called drop.
 
-  1. Navigate to **Pipelines --> Pipelines**. Select **Terraform-CI** and click **Edit**.
+  1. Navigate to **Pipelines --> Builds**. Select **Terraform-CI** and click **Edit**.
 
       ![](images/editbuild.png)
 
@@ -73,6 +73,8 @@ In this lab, you will use PartsUnlimited which is an example eCommerce website d
 1. Now click **Queue** to trigger the build. Once the build success, verify that the artifacts have **Terraform** folder and **PartsUnlimitedwebsite.zip** file in the drop.
 
       ![](images/queuebuild2.gif)
+      
+1. NOTE THE BUILD NUMBER on the PIPELINES->BUILD screen after the build completes, you will use it in a later step!      
 
 ## Exercise 3: Deploy resources using Terraform (IaC) in Azure CD pipeline
 
@@ -153,7 +155,7 @@ In this exercise, you will create azure resources using Terraform as part of you
 
    > This task will deploy the PartsUnlimited package to Azure app service which is provisioned by Terraform tasks in previous steps.
 
-1. Once you are done **Save** the changes and **Create a release**.
+1. Once you are done **Save** the changes and **Create a release**. NOTE: WATCH THE ANIMATION, AND FILL IN **YOUR** BUILD NUMBER
    
    ![](images/releasetrigger.gif)
 
