@@ -54,6 +54,8 @@ redirect_from: "/labs/vsts/packagemanagement/index.htm"
 
 1. Select **Tools \| NuGet Package Manager \| Package Manager Settings**.
 
+    ![](images/0111.png)
+
 1. Locate the **Package Sources** section and click the **Add** button to add a new package source.
 
     ![](images/012.png)
