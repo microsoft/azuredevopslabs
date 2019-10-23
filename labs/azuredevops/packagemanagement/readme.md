@@ -87,9 +87,17 @@ redirect_from: "/labs/vsts/packagemanagement/index.htm"
 
 1. Press **Ctrl+Shift+B** to build the project. In the next task we'll use **NuGet.exe** to generate a NuGet package directly from the built project, but it requires the project to be built first.
 
-1. Return to the browser and click **Download NuGet + Credential Provider**. Extract the zip somewhere you can easily access.
+1. Return to the browser and click **Connect to feed**. 
 
     ![](images/018.png)
+    
+1. First click **Download NuGet** to download the nuget.exe file. 
+
+    ![](images/018-1.png)
+
+1. Next click **Set up the new Azure Artifacts Credential Provider**, this will open up **artifacts-credprovider** github link. Scroll down to **Manual installation on Windows**, download and extract the **Microsoft.NuGet.CredentialProvider.zip** zip file somewhere you can easily access.
+
+    ![](images/018-2.png)
 
 1. Return to **Visual Studio**. From **Solution Explorer**, right-click the **PartsUnlimited.Shared** project node and select **Open Folder in File Explorer**.
 
