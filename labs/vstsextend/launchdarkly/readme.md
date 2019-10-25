@@ -33,7 +33,7 @@ In this lab, you will learn
 
 ## Exercise 1: Create a Feature Flag in LaunchDarkly
 
-1. Sign in to your [LaunchDarkly](https://app.launchdarkly.com/) account. You’re then taken to the portal where you can create your first Feature Flag. Click    ![](images/createfeatureflag_button.png)
+1. Sign in to your [LaunchDarkly](https://app.launchdarkly.com/) account. The new dashboard loads a **Quickstart** page. Click **Feature flags**. Click    ![](images/createfeatureflag_button.png)
 
    ![](images/createfeatureflag.png)
 
