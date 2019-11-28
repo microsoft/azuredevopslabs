@@ -146,7 +146,9 @@
                    <div class="post-header" >
                     <p style="margin-bottom:0px">
                         <span class="PageTitle">{{ page.title }}</span><br />
-                       <div class="sharethis-inline-share-buttons"></div>                        
+                       <div class="sharethis-inline-share-buttons"></div>
+                       <script>console.log(this);
+                       console.log(page.url);</script>                        
                         <script>function fbs_click() {u="http://aka.ms/devopslabs";t={{page.title | url_encode}};window.open('http://www.facebook.com/sharer.php?u='+encodeURIComponent(u)+'&t='+encodeURIComponent(t),'sharer','toolbar=0,status=0,width=626,height=436');return false;}</script>
                         
                         {% if page.updated == "blank" %}
@@ -187,10 +189,17 @@
                 </div>
             
             <div class="col-sm-2 sidebar-content">
-                {% unless page.toc == false %}
-                    {% include toc.html %}
+                    {% if page.permalink == "/labs/vstsextend/terraform/" %}                   
+                    <div class="toc-bar-btn"><a href="https://docs.microsoft.com/en-us/learn/modules/provision-infrastructure-azure-pipelines/" class="btn btn-primary toc-bar-btn-link"><img src="./images/ms-logo.png" alt="ms logo" class="img-bor-none" height="20">Go to related Microsoft Learn content</a>
+                    <p class="pt-1"><a href="https://docs.microsoft.com/en-us/learn/modules/provision-infrastructure-azure-pipelines/">Provision infrastructure in Azure Pipelines</a></p></div>    
+                    {% unless page.tocnew == false %}                
+                    {% include tocnew.html %}                    
                 {% endunless %}
-
+                    {% else %} 
+                    {% unless page.toc == false %}                
+                    {% include toc.html %}                    
+                {% endunless %}
+                {% endif %}
             </div>
 
         
