@@ -152,6 +152,15 @@ In this lab, we will use **SmartHotel360-CouponManagement**, a sample Java appli
    Ansible includes a suite of modules for interacting with Azure Resource Manager, giving you the tools to easily create and orchestrate infrastructure on the Microsoft Azure Cloud.
 
    In this example, we want to deploy an Azure Resource group, App service plan, App service and MySQL database required to deploy the website. And we have added playbook file (Infrastructure as Code) to source control repository in your Azure DevOps project which can deploy the required Azure resources.
+   
+   Update the playbook **webapp.yml** as the following.
+   
+   Change the name of the App service from Linux to Windows as the following image
+   ![](images/AppServiceName.jpg)
+   
+   Also, change the EndIpAdress from 255.255.255.255 to 0.0.0.0 as the following image
+   
+    ![](images/EndIps.jpg)
 
    If you would like to learn more about the Ansible playbooks for Azure  click [here](https://docs.ansible.com/ansible/2.5/scenario_guides/guide_azure.html).
 
