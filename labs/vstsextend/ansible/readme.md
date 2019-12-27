@@ -138,7 +138,7 @@ To connect and run playbooks through Ansible VM in Azure pipelines, we need to h
 
 ### Exercise 1: Examine the Ansible playbook (IaC) in your Source code
 
-In this lab, we will use **SmartHotel360-CouponManagement**, a sample Java application backed by a MySQL database.  We will examine the Ansible playbook which helps you to provision the Azure resources required to deploy MyShuttle java application.
+In this lab, we will use **SmartHotel360-CouponManagement**, a sample Java application backed by a MySQL database.  We will examine the Ansible playbook which helps you to provision the Azure resources required to deploy SmartHotel java application.
 
 1. Navigate to your project. Select **Repos**.
 
