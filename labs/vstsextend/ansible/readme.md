@@ -168,7 +168,7 @@ In this exercise, you will build your application and publish the required files
 
    For more guidance on how to build Java projects with Azure Pipelines see [here](https://docs.microsoft.com/en-us/azure/devops/pipelines/languages/java?toc=%2Fazure%2Fdevops%2Fjava%2Ftoc.json&bc=%2Fazure%2Fdevops%2Fpipelines%2Fbreadcrumb%2Ftoc.json&view=vsts).
 
-1. In addition to the application build, we need to publish Ansible scripts  so that it will be available in CD pipeline. So, we configured Copy files task to copy Ansible playbook **.yaml** and the java web package  **.war** file to Artifacts directory.
+1. In addition to the application build, we need to publish Ansible scripts  so that it will be available in CD pipeline. So, we configured Copy files task to copy Ansible playbook **.yml** and the java web package  **.war** file to Artifacts directory.
 
      ![](images/copyfiles.png)
 
