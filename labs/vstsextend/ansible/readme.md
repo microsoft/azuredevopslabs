@@ -22,6 +22,10 @@ In this lab, you will see
 1.	How Ansible can be used to implement Infrastructure as Code (IaC)
 1.	How to automate infrastructure deployments in the Cloud with Ansible and Azure pipelines.
 
+The following image describes the lab workflow
+
+ ![](images/Ansible-workflow.gif)
+
 ### Before you begin
 
 1. Refer the [Getting Started](../Setup/) page before you begin following the exercises.
