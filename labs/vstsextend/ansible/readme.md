@@ -22,7 +22,7 @@ In this lab, you will see
 1.	How Ansible can be used to implement Infrastructure as Code (IaC)
 1.	How to automate infrastructure deployments in the Cloud with Ansible and Azure pipelines.
 
-The following image describes the lab workflow
+The following image will walk you through all the steps explained in this lab
 
  ![](images/Ansible-workflow.gif)
 
@@ -250,3 +250,12 @@ In this exercise, you will build your application and publish the required files
 In this lab, you have learnt how to deploy Azure resources automatically with **Ansible** and deploy the application with **Azure Pipelines**. 
 
 For Ansible on Azure documentation and Quick starts click [here](https://docs.microsoft.com/en-us/azure/ansible/).
+
+## Reference
+
+You can watch the following video that walks you through all the steps explained in this lab
+
+<figure class="video_container">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/Q8aWeHCrGh4" frameborder="0" allowfullscreen="true"> </iframe>
+</figure>
+
