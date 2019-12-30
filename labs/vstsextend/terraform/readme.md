@@ -23,6 +23,10 @@ In this lab, you will see
 1. How open source tools, such as Terraform can be leveraged to implement Infrastructure as Code (**IaC**)
 1. How to automate your infrastructure deployments in the Cloud with Terraform and Azure Pipelines
 
+The following image will walk you through all the steps explained in this lab
+
+ ![](images/Terraform-workflow.gif)
+
 ### Before you begin
 
 1. Refer to the [Getting Started](../Setup/) page before you begin following the exercises.
@@ -172,3 +176,11 @@ In this exercise, you will create azure resources using Terraform as part of you
 ## Summary
 
 In this lab, you have learned how to automate repeatable deployments with Terraform on Azure using Azure Pipelines.
+
+## Reference
+
+You can watch the following video that walks you through all the steps explained in this lab
+
+<figure class="video_container">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/KiCZzJlS16A" frameborder="0" allowfullscreen="true"> </iframe>
+</figure>
