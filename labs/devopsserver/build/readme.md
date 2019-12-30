@@ -20,7 +20,7 @@ In this lab, you will learn how to use Azure Pipelines to setup a continuous int
 
 In order to complete this lab you will need the Azure DevOps Server 2019 virtual machine provided by Microsoft. Click the button below to launch the virtual machine on the Microsoft Hands-on-Labs portal.
 
-<a href="https://labondemand.com/AuthenticatedLaunch/38297?providerId=4" class="launch-hol" role="button" target="_blank"><span class="lab-details">Launch the virtual machine</span></a>
+<a href="https://labondemand.com/AuthenticatedLaunch/54150?providerId=4" class="launch-hol" role="button" target="_blank"><span class="lab-details">Launch the virtual machine</span></a>
 
 Alternatively, you can download the virtual machine from [here](../devopsvmdownload).
 
@@ -195,7 +195,7 @@ In this exercise, you will learn how to create a basic build definition from one
 
     ![](images/027.png)
 
-1. If the installed version of Visual Studio is not available, select **Specific location** and enter the path to **vstest.console.exe**. It should be something like **"C:\Program Files (x86)\Microsoft Visual Studio\2019\Preview\Common7\IDE\Extensions\TestPlatform\vstest.console.exe"**.
+1. If the installed version of Visual Studio is not available, select **Specific location** and enter the path to **vstest.console.exe**. It should be something like **"C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\Common7\IDE\Extensions\TestPlatform\vstest.console.exe"**.
 
     ![](images/028.png)
 

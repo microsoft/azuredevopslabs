@@ -56,16 +56,13 @@ We need to generate SPN details to get **Tenant ID**, **Application ID** and **A
 1. Create Storage account as Azure Cloud Shell requires an Azure file share to persist files, If you already have one select it or create new. Select the subscription and click on **Create storage**. 
     ![webapp](images/DashboardMicrosoftAzure3.png)
 
-1. Once the storage account is provisioned, replace the variables within in brackets with values below  and run the command to get the SPN details.
+1. Once the storage account is provisioned, enter the following command by replacing ServicePrincipalName with your desired value.
 
-    `az ad sp create-for-rbac --name (provide a short name) --password (provide a password)`
-    
-    ![webapp](images/DashboardMicrosoftAzure5.png)
+    `az ad sp create-for-rbac -n ServicePrincipalName`
 
-1. Note down the **Tenant ID**, **Appliction ID** and the **Password** in a notepad. 
-
-    ![webapp](images/DashboardMicrosoftAzure6.png)
-
+   It will give you a JSON output as shown in the image. Copy the output to notepad or text file. You will need them later.
+   
+   ![SPN](images/azureserviceprincipal.png)
 
 ## Setting up the Deployment Target
 

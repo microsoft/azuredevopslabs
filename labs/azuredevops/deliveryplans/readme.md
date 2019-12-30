@@ -4,8 +4,8 @@ layout: page
 sidebar: vsts
 permalink: /labs/azuredevops/deliveryplans/
 folder: /labs/azuredevops/deliveryplans/
-version: Lab version - 15.8.2
-updated: Last updated - 9/5/2018
+version: Lab version - 1.37.1
+updated: Last updated - 9/9/2019
 ---
 <div class="rw-ui-container"></div>
 <a name="Overview"></a>
@@ -17,7 +17,7 @@ It takes several teams to develop large software projects. Very large projects r
 <a name="Prerequisites"></a>
 ### Prerequisites ###
 
-- This lab requires you to complete task 1 from the <a href="../prereq/">prerequisite</a>  instructions
+- This lab requires you to complete task 1 from the <a href="../prereq/">prerequisite</a> instructions
 
 <a name="Exercise1"></a>
 ## Exercise 1: Managing Delivery Plans with Azure DevOps ##
@@ -121,7 +121,7 @@ It takes several teams to develop large software projects. Very large projects r
 
     ![](images/021.png)
 
-1. Select the **Project configuration** tab under **Work**.
+1. Select the **Project configuration** tab under **Boards**.
 
     ![](images/022.png)
 
@@ -196,7 +196,7 @@ It takes several teams to develop large software projects. Very large projects r
 
     ![](images/039.png)
 
-1. The first thing we should do is to move the branding integration work to an earlier iteration. Drag and drop the credit card story onto **Iteration 50**. In order to free up the bandwidth, drag the weather service story onto **Iteration 51**.
+1. The first thing we should do is to move the branding integration work to an earlier iteration. Drag and drop the corporate branding story onto **Iteration 50**. In order to free up the bandwidth, drag the weather service story onto **Iteration 51**.
 
     ![](images/040.png)
 

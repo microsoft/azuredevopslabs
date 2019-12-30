@@ -144,7 +144,7 @@ description: Learn how you can implement modern DevOps practices with Azure, Azu
 					</div>
 					<div class="col-lg-9 col-md-9 col-sm-9 col-9 cont-mt cont-pl">					
 							<a href="/labs/azuredevops/pullrequests/" class="text-col-gunpower">	
-								<div class="bg-white text-font">Working with Pull Requests</div>
+								<div class="bg-white text-font">Working with Pull Requests in VS Code and Azure DevOps</div>
 							</a>
 					</div>					
 				</div>
@@ -178,7 +178,7 @@ description: Learn how you can implement modern DevOps practices with Azure, Azu
 					</div>
 					<div class="col-lg-9 col-md-9 col-sm-9 col-9 cont-mt cont-pl">					
 							<a href="/labs/azuredevops/yaml/" class="text-col-gunpower">	
-								<div class="bg-white text-font">Configuring pipeline as Code with YAML </div>
+								<div class="bg-white text-font">Configuring pipelines as Code with YAML </div>
 							</a>
 					</div>					
 				</div>
@@ -299,6 +299,40 @@ description: Learn how you can implement modern DevOps practices with Azure, Azu
 			</div>	
 			</div>
 			</div>	     
+			 <div class="row equal-height-columns my-1">  
+            <div class="col-lg-3 col-md-6 col-sm-6 col-12 mt-small-5">
+			<div class="hover-effect equal-height-column box-cover ml-forsm">
+				<div class="row">
+					<div class="col-lg-3 col-md-3 col-sm-3 col-3 pl-0 pr-lg-0 pl-small-15 img-mt">
+						<div class=" bg bg-purple p-2 text-center">
+							<div class="icon-cover"><img src="/images/appinsights.png" alt="appinsights" height="20"></div>
+						</div>
+					</div>
+					<div class="col-lg-9 col-md-9 col-sm-9 col-9 cont-mt cont-pl">					
+							<a href="/labs/azuredevops/appinsights/" class="text-col-gunpower">	
+								<div class="bg-white text-font">Monitoring App Performance with Application Insights</div>
+							</a>
+					</div>					
+				</div>
+			</div>	
+			</div>	
+			<div class="col-lg-3 col-md-6 col-sm-6 col-12 mt-small-5">
+			<div class="hover-effect equal-height-column box-cover ml-forsm">
+				<div class="row">
+					<div class="col-lg-3 col-md-3 col-sm-3 col-3 pl-0 pr-lg-0 pl-small-15 img-mt">
+						<div class=" bg bg-color-black p-2 text-center">
+							<div class="icon-cover"><img src="/images/github-42.png" alt="githubpullrequests" height="20"></div>
+						</div>
+					</div>
+					<div class="col-lg-9 col-md-9 col-sm-9 col-9 cont-mt cont-pl">					
+							<a href="/labs/azuredevops/githubpullrequests/" class="text-col-gunpower">	
+								<div class="bg-white text-font">Working with Pull Requests in VS Code and GitHub</div>
+							</a>
+					</div>					
+				</div>
+			</div>	
+			</div>
+			</div>	
             <div class="col-lg-3 col-md-6 col-sm-6 col-12 mt-small-5">			
      </div>
 		 <br />
@@ -325,7 +359,7 @@ description: Learn how you can implement modern DevOps practices with Azure, Azu
 					</a>	
 				</div>
 			</div>
-			<div class="col-sm-2 my-2">
+			<!-- <div class="col-sm-2 my-2">
 				<div class="shadow-sm hover-effect equal-height-column">
 					<a href="/labs/vstsextend/jenkins/" class="text-col-gunpower">
 						<div class="bg-sel-grey1 p-2 text-center">
@@ -334,7 +368,17 @@ description: Learn how you can implement modern DevOps practices with Azure, Azu
 						<div class="bg-white py-2 text-center">Integrating Azure DevOps with Jenkins</div>
 					</a>	
 				</div>
-			</div>
+			</div> -->
+			<div class="col-sm-2 my-2">
+				<div class="shadow-sm hover-effect equal-height-column">
+					<a href="/labs/vstsextend/redgate/" class="text-col-gunpower">
+						<div class="bg-sel-grey1 p-2 text-center">
+							<div class="icon-cover1"><img src="/images/redgate.png" alt="redgate" height="42"></div>
+						</div>
+						<div class="bg-white py-2 text-center">Database DevOps with Redgate and Azure DevOps</div>
+					</a>	
+				</div>
+			</div> 
 			<div class="col-sm-2 my-2">
 				<div class="shadow-sm hover-effect equal-height-column">
 					<a href="/labs/azuredevops/yaml/" class="text-col-gunpower">
@@ -396,7 +440,7 @@ description: Learn how you can implement modern DevOps practices with Azure, Azu
                                             <ul class="p-l-5px">
                                             <li class="osslist align-relative"> <img src="/images/azurekeyvault.png" height="42" class="icon-bor-p-m" /><a
                                                         href="/labs/vstsextend/azurekeyvault/" class="fon-size-13">
-                                                        Using secrets from Azure Key Vault in a pipeline <img src="/images/new-tag.png" alt="new-tag" class="align-on-labs"/></a></li>
+                                                        Using secrets from Azure Key Vault in a pipeline</a></li>
                                                 <li class="osslist"> <img src="/images/launchdarkly.png" height="42" class="icon-bor-p-m" /><a
                                                         href="/labs/vstsextend/launchdarkly/" class="fon-size-13">
                                                         Feature Flag Management with LaunchDarkly</a></li>
@@ -417,16 +461,20 @@ description: Learn how you can implement modern DevOps practices with Azure, Azu
                                                         class="fon-size-13"> Configuring a CD pipeline for your Jenkins CI</a> </li>
                                                   <li class="osslist align-relative"> <img src="/images/appcenter.png" height="42"
                                                         class="icon-bor-p-m" /> <a href="/labs/vstsextend/appcenter/"
-                                                        class="fon-size-13"> Build-Test-Distribute Mobile Apps using App Center <img src="/images/new-tag.png" alt="new-tag" class="align-on-labs"/></a></li>
+                                                        class="fon-size-13"> Build-Test-Distribute Mobile Apps using App Center</a></li>
                                             </ul>
                                         </div>
                                     </div>
                                     <div class="col-lg-3 col-md-6 col-sm-6 col-12 p-l-r-override">
                                         <div class="bg-color-white equal-height-column">
                                             <ul class="p-l-5px">
-                                                 <li class="osslist align-relative"><img src="/images/teams.png" height="42"
+                                                 <li class="osslist align-relative"><img src="/images/teams3.png" height="42"
                                                         class="icon-bor-p-m" />
-                                                    <a href="/labs/vstsextend/teams/" class="fon-size-13">Microsoft Teams with Azure DevOps Services <img src="/images/new-tag.png" alt="new-tag" class="align-on-labs"/></a>
+                                                    <a href="/labs/vstsextend/teams/" class="fon-size-13">Microsoft Teams with Azure DevOps Services</a>
+                                                </li>
+												<li class="osslist align-relative"><img src="/images/redgate.png" height="42"
+                                                        class="icon-bor-p-m" />
+                                                    <a href="/labs/vstsextend/redgate/" class="fon-size-13">Deploying Database changes with Redgate SQL Change Automation and Azure DevOps<img src="/images/new-tag.png" alt="new-tag" class="align-on-labs"/></a>
                                                 </li>
                                                 <li class="osslist"> <img src="/images/docker-42.png" height="42" class="icon-bor-p-m" /><a
                                                         href="/labs/vstsextend/docker/" class="fon-size-13"> Deploying a Docker based web application to Azure App Service</a></li>
@@ -455,10 +503,14 @@ description: Learn how you can implement modern DevOps practices with Azure, Azu
                                             <ul class="p-l-5px">
                                                  <li class="osslist align-relative"> <img src="/images/github-42.png" height="42"
                                                         class="icon-bor-p-m" /><a href="/labs/vstsextend/github-azurepipelines/"
-                                                        class="fon-size-13"> GitHub Integration with Azure Pipelines <img src="/images/new-tag.png" alt="new-tag" class="align-on-labs"/></a></li>
-                                                         <li class="osslist"> <img src="/images/aspnetmodernize.png" height="42"
-                                                        class="icon-bor-p-m" /><a href="/labs/vstsextend/aspnetmodernize/"
-                                                        class="fon-size-13"> Deploy existing .NET apps as Windows containers (Modernizing .NET apps)</a></li>
+                                                        class="fon-size-13"> GitHub Integration with Azure Pipelines</a></li>
+                                                           <li class="osslist align-relative"><img src="/images/teams3.png" height="42"
+                                                        class="icon-bor-p-m" />
+                                                    <a href="/labs/vstsextend/teams-devopshub/" class="fon-size-13">Using Microsoft Teams as Your DevOps Hub <img src="/images/new-tag.png" alt="new-tag" class="align-on-labs"/></a>
+                                                </li>
+                                                         <li class="osslist"> <img src="/images/azuredevopsproject.png" height="42"
+                                                        class="icon-bor-p-m" /><a href="/labs/vstsextend/azuredevopsprojectdotnet/"
+                                                        class="fon-size-13"> Create a CI/CD pipeline for .NET with the Azure DevOps Project</a></li>
                                                  <li class="osslist"> <img src="/images/whitesource-42.png" height="42"
                                                         class="icon-bor-p-m" /><a href="/labs/vstsextend/whitesource/"
                                                         class="fon-size-13"> Managing Open-source security and license with WhiteSource</a></li>
@@ -482,7 +534,10 @@ description: Learn how you can implement modern DevOps practices with Azure, Azu
                                             <ul class="p-l-5px">
                                                 <li class="osslist align-relative"> <img src="/images/github-42.png" height="42"
                                                         class="icon-bor-p-m" /><a href="/labs/vstsextend/github-azureboards/"
-                                                        class="fon-size-13"> GitHub Integration with Azure Boards <img src="/images/new-tag.png" alt="new-tag" class="align-on-labs"/></a></li>
+                                                        class="fon-size-13"> GitHub Integration with Azure Boards</a></li>                                                     
+                                                   <li class="osslist"> <img src="/images/aspnetmodernize.png" height="42"
+                                                        class="icon-bor-p-m" /><a href="/labs/vstsextend/aspnetmodernize/"
+                                                        class="fon-size-13"> Deploy existing .NET apps as Windows containers (Modernizing .NET apps)</a></li>
                                                 <li class="osslist"> <img src="/images/python-42.png" height="42" class="icon-bor-p-m" /><a
                                                         href="/labs/vstsextend/python/" class="fon-size-13"> Deploying a CD pipeline for a Django-based Python app </a></li>
                                                 <li class="osslist"> <img src="/images/php.png" height="42" class="icon-bor-p-m" /><a

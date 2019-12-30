@@ -790,3 +790,38 @@ transform: translate3d(0,-3px,0);
 pre,pre.highlight{
   background-color: #ecf2f6!important;
 }
+div#toc.tocNew ul {
+  padding-top: 70px;
+
+}
+div#toc.tocNew ul li ul{
+  padding-top: 1px!important;
+
+}
+/* div#toc.tocNew>ul::before {
+  content: "Provision infrastructure in Azure Pipelines";
+  font-weight: 400;
+  color: #004578;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 10px;
+} */
+.toc-bar-btn{
+  position:fixed;padding: 10px;z-index:9
+}
+.toc-bar-btn-link{
+  font-size:12px;padding: 5px 6px 5px 4px;border-radius:0px;
+}
+.img-bor-none{
+  border:none!important;
+}
+.bg-slap{
+  background-color:#00abf7;padding:5px; margin:10px;color:#8b6422;border-radius: 5px
+}
+.img-icon-cloud{
+  border:none!important;margin:0px 5px 0px 0px!important;
+}

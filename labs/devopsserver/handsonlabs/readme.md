@@ -59,7 +59,7 @@ Here are the links to the labs on Microsoft Hands-On Labs:
   </tr>
   <tr>
     <td >Test Planning and Management with Azure DevOps Server 2019</td>
-    <td ><a href="https://labondemand.com/AuthenticatedLaunch/38315?providerId=4" target="_blank">Launch Lab</a></td>
+    <td ><a href="https://www.microsoft.com/handsonlabs/selfpacedlabs/details/DT00175" target="_blank">Launch Lab</a></td>
   </tr>
   <tr>
     <td >Debugging with IntelliTrace in Visual Studio Enterprise 2019</td>
@@ -67,7 +67,7 @@ Here are the links to the labs on Microsoft Hands-On Labs:
   </tr>
   <tr>
     <td >Debugging with Snapshot Debugger</td>
-    <td ><a href="https://labondemand.com/AuthenticatedLaunch/38303?providerId=4" target="_blank">Launch Lab</a></td>
+    <td ><a href="https://www.microsoft.com/handsonlabs/selfpacedlabs/details/DT00158" target="_blank">Launch Lab</a></td>
   </tr>
   <tr>
     <td >Diagnosing Issues in Production with IntelliTrace and Visual Studio 2019</td>
@@ -99,7 +99,7 @@ Here are the links to the labs on Microsoft Hands-On Labs:
   </tr>
   <tr>
     <td >Building ASP.NET apps in Azure with SQL Database</td>
-    <td ><a href="https://labondemand.com/AuthenticatedLaunch/38313?providerId=4" target="_blank">Launch Lab</a></td>
+    <td ><a href="https://www.microsoft.com/handsonlabs/selfpacedlabs/details/DT00155" target="_blank">Launch Lab</a></td>
   </tr>
   <tr>
     <td >Working with EditorConfig in Visual Studio 2019</td>

@@ -30,11 +30,7 @@ The Web App for Containers allows the creation of custom [Docker](https://www.do
 
 ## Setting up the Environment
 
-1. Click on the **Deploy to Azure** button to initiate the configuration.
-
-   [![Deploy to Azure](http://azuredeploy.net/deploybutton.png)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FMicrosoft%2Falmvm%2Fmaster%2Flabs%2Fvstsextend%2Fdocker%2Farmtemplate%2Fazuredeploy.json){:target="_blank"}
-
-1. In Custom deployment window, select the **Subscription** type, leave the default selection for the resource group, and select the **Location**. Provide the **Registry Name**, **Site Name**, **DB Server Name**, accept the **Terms and Conditions** and click on the **Purchase** button to provision the following resources:
+1. The following resources needs to be configured for this lab:
 
    * Azure Container Registry
 
@@ -42,19 +38,64 @@ The Web App for Containers allows the creation of custom [Docker](https://www.do
 
    * Azure SQL Server Database
 
-   {% include tip.html content= "Use lower case letters for **DB Server Name**" %}
+1. Launch the [Azure Cloud Shell](https://docs.microsoft.com/en-in/azure/cloud-shell/overview) from the Azure portal and choose Bash.
 
-     {% include note.html content= " **Registry name** may contain alpha numeric characters only and must be between 5 and 50 characters." %}
+1. **Create Azure Container Registry:**
+    
+    i.  Create a Resource Group. Replace `<region>` with the region of your choosing, for example eastus.
+        
+    ```bash
+     az group create --name DockerRG --location <region>
+    ```
 
-     {% include tip.html content= "At the time of writing this lab, the only location that can be used for the creation of ACR and SQL is **SouthCentralUS**." %}
+    ii. Create ACR( Azure Container Registry)
 
-   ![Create Azure Components](images/createazurecomponents.png)
+    ```bash
+    az acr create -n <unique-acr-name> -g DockerRG --sku Standard --admin-enabled true
+    ```
 
-1. It takes approximately 3 to 4 minutes to provision the environment. Click on  **Go to resource group** to view the resource group.
+    {% include important.html content= "Enter a unique ACR name. ACR name may contain alpha numeric characters only and must be between 5 and 50 characters" %}
 
-   ![Environment Provision](images/deploymentsucceeded.png)
+1. **Create Azure Web App for Containers**:
+   
+   i. Create a Linux App Service Plan:
 
-1. The following components are provisioned post deployment.
+   ```bash
+   az appservice plan create -n myappserviceplan -g DockerRG --is-linux
+   ```
+
+   ii. Create a custom Docker container Web App: To create a web app and configuring it to run a custom Docker container, run the following command:
+
+   ```bash
+   az webapp create -n <unique-appname> -g DockerRG -p myappserviceplan -i elnably/dockerimagetest
+   ```
+1. **Create Azure SQL server and Database**: 
+    Create an Azure SQL server.
+    
+    ```bash
+    az sql server create -l <region> -g DockerRG -n <unique-sqlserver-name> -u sqladmin -p P2ssw0rd1234
+    ```
+
+    Create a database
+
+    ```bash
+    az sql db create -g DockerRG -s <unique-sqlserver-name> -n mhcdb --service-objective S0
+    ```
+      {% include important.html content= "Enter a unique SQL server name. Since the Azure SQL Server name does not support **UPPER** / **Camel** casing naming conventions, use lowercase for the ***DB Server Name*** field value." %}
+
+1. Create a firewall rule for SQL server that allows access from Azure services
+
+    ```bash
+    az sql server firewall-rule create --resource-group DockerRG --server <your-sqlserver-name> --name AllowAllAzureIps --start-ip-address 0.0.0.0 --end-ip-address 0.0.0.0
+    ```
+1. Update web app's connection string
+   
+   ```bash
+   az webapp config connection-string set -g DockerRG -n <your-appservice-name> -t SQLAzure --settings defaultConnection='Data Source=tcp:<your-sqlserver-name>.database.windows.net,1433;Initial Catalog=mhcdb;User Id=sqladmin;Password=P2ssw0rd1234;'
+   ```
+    > Update your app service name and SQL server name in the above command. This command will add a connection string to your app service with the name `defaultConnection`.
+
+1. Navigate to the resource group. You can see that the following components are provisioned.
 
    Azure Components | Description
    -----------------|------------

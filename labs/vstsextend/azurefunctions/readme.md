@@ -31,16 +31,35 @@ folder: /labs/vstsextend/azurefunctions/
 1. Click the [Azure DevOps Demo Generator](http://azuredevopsdemogenerator.azurewebsites.net/?TemplateId=77374&Name=AzureFunctions) link and follow the instructions in [Getting Started](../Setup/) page to provision the project to your Azure DevOps Organization.
 
 ## Create the required Azure resources
+You need to create two Azure App services for this lab.
+1. Launch the [Azure Cloud Shell](https://docs.microsoft.com/en-in/azure/cloud-shell/overview) from the Azure portal and choose **Bash**.
 
-1. Click the below **Deploy To Azure** button to provision an Azure App service plan with two web apps.
+1. Create a Resource Group. Replace `<region>` with the region of your choosing, for example eastus.
+   
+   ```bash
+   az group create -n MyResourceGroup -l <region>
+   ```
 
-   [![Deploy to Azure](http://azuredeploy.net/deploybutton.png)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FMicrosoft%2Falmvm%2Fmaster%2Flabs%2Fvstsextend%2Fazurefunctions%2Farmtemplate%2Fazuredeploy.json){:target="_blank"}
+1. To create an App service plan
+   
+   ```bash
+   az appservice plan create -g MyResourceGroup -n MyPlan --sku S1
+   ```
+1. Create two web apps with a unique app names.
+ 
+    ```bash
+    az webapp create -g MyResourceGroup -p MyPlan -n PartsUnlimited-Web
+    ```
 
-1. It takes approximately 5-10 minutes to provision the resources. Once the deployment is successful, you will see the resources as shown.
+    ```bash
+    az webapp create -g MyResourceGroup -p MyPlan -n PartsUnlimited-API
+    ```
+
+1. Navigate to the resource group you created, you will see the resources as shown.
 
    ![azure_resources](images/azure_resources.png)
 
-After the successfull deployment of the resources, you will see 2 App Services and an App Service Plan provisioned -
+We created two App Services and an App Service Plan.
 
   * Web App - Used to deploy the Parts Unlimited website.
   * API App - Used to redirect users to different discounts page based on the user login.
@@ -161,7 +180,7 @@ The Azure Functions created in this exercise will act as a switching proxy or th
 
 In this exercise, you will look at the build definition to get an insight of how the code is built as part of the CI pipeline.
 
-1. Click on the **Pipelines** hub in Azure DevOps portal and notice that **Builds** menu is the default selected option. Since there is only one build definition - **AzureFunctions_CI**, click **Edit** option in the menu to view the tasks of that build definition.
+1. Navigate to **Pipelines \| Pipelines** in Azure DevOps portal. Select **AzureFunctions_CI** and  click **Edit**.
 
     ![build definition](images/builddefinition.png)
 
@@ -170,15 +189,15 @@ In this exercise, you will look at the build definition to get an insight of how
     ![CI Trigger](images/enableci.png)
     ![Save and Queue](images/saveandqueue.png)
 
-1. A new build is started. You will see a link to the new build on the top of the page. Click the link to view the live logs of the build as it progresses. Wait for the build to complete and succeed before proceeding to the next section.
+1. A new build is queued.  Click on the Job to view the live logs of the build as it progresses. Wait for the build to complete and succeed before proceeding to the next section.
 
     ![Queued Build](images/queuedbuild.png) 
 
 ## Exercise 4: Configuring Continuous Deployment with Azure Release Pipelines
 
-1. Once the build succeeds, click the **Releases** option under the **Pipelines**.
+1. Once the build succeeds, navigate to  **Pipelines \| Releases**.
 
-1. In the Release pipelines page, click **Edit** for the highlighted release definition- **AzureFunctions_CD**. 
+1. Select **AzureFunctions_CD** pipeline and click **Edit**. 
 
     ![Edit Release](images/editrelease.png) 
 
@@ -192,11 +211,11 @@ In this exercise, you will look at the build definition to get an insight of how
 
     * If your Azure subscription is not listed or if you want to use an existing service principal, click on the `Manage` link.
 
-        * Click on the +New Service Connection button and select the Azure Resource Manager option. Provide Connection name, select the Azure Subscription from the list and the click on the Ok button. The Azure credentials will be required to authorize the connection.
+        * Click on the **+New Service Connection** button and select the Azure Resource Manager option. Provide Connection name, select the Azure Subscription from the list and the click on the Ok button. The Azure credentials will be required to authorize the connection.
 
             ![Resource Manager](images/armendpoint.png)
 
-        * If your Azure subscription is already listed, select the Azure subscription from the drop down list and click Authorize.
+        * If your Azure subscription is already listed, select the Azure subscription from the drop down list and click **Authorize**.
 
             ![Authorize](images/authorize.png) 
 
@@ -206,13 +225,13 @@ In this exercise, you will look at the build definition to get an insight of how
 
     ![PartsUnlimited API](images/api.png)
 
-1. Select the third task to deploy **PartsUnlimited Azure Function** and configure the inputs as shown below. Choose the pre-created **Azure functions** name for the **App Service Name** field from the drop down.
+1. Select the third task to deploy **PartsUnlimited Azure Function** and configure the inputs as shown below. Choose the pre-created **Azure functions** name for the **App Name** field from the drop down.
 
     ![PartsUnlimited Function](images/function.png)
 
     > As the Azure Function Apps uses the Azure App Service infrastructure, the function app referred here can use all the features of an App Service. 
 
-1. Click on *Save*. In the Save dialog box, click OK. To test the release definition, click **Release** and then **Create Release**.
+1. Click on *Save*. In the Save dialog box, click OK. To test the release definition, click on **Create Release**.
 
     ![Release Create](images/createrelease.png) 
 

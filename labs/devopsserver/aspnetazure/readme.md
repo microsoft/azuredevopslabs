@@ -19,7 +19,7 @@ redirect_from: "labs/tfs/aspnetazure/index.htm"
 
 In order to complete this lab you will need the Azure DevOps Server 2019 virtual machine provided by Microsoft. Click the button below to launch the virtual machine on the Microsoft Hands-on-Labs portal.
 
-<a href="https://labondemand.com/AuthenticatedLaunch/38297?providerId=4" class="launch-hol" role="button" target="_blank"><span class="lab-details">Launch the virtual machine</span></a>
+<a href="https://www.microsoft.com/handsonlabs/selfpacedlabs/details/DT00155" class="launch-hol" role="button" target="_blank"><span class="lab-details">Launch the virtual machine</span></a>
 
 Alternatively, you can download the virtual machine from [here](../devopsvmdownload).
 
@@ -66,7 +66,7 @@ You also need an [Azure account](https://azure.microsoft.com/) ([Get a $25 month
 
     ![](images/005.png)
 
-1. Set the **New resource group name** to **"MyResourceGroup"**and click **OK**.
+1. Set the **New resource group name** to **MyResourceGroup** and click **OK**.
 
     ![](images/006.png)
 
@@ -90,7 +90,7 @@ You also need an [Azure account](https://azure.microsoft.com/) ([Get a $25 month
 
     ![](images/011.png)
 
-1. After configuring the server, you will also need to define a database to create on that server. Click **OK** to accept the defaults.
+1. After configuring the server, you will also need to define a database to create on that server. In the application we are using **MyDbConnection** as Connection String Name. So, please make sure to change the Connection String Name to **MyDbConnection** as shown in below image. Click **OK** to accept the defaults.
 
     ![](images/012.png)
 
@@ -289,7 +289,9 @@ You also need an [Azure account](https://azure.microsoft.com/) ([Get a $25 month
 
     ![](images/040.png)
 
-1. Select the **Diagnostic logs** tab. Set the application logging **Level** to **Verbose**. This will include all traces. Other settings include anything as severe as the specified traces. For example, **Warning** will include **TraceWarning()** and **TraceError()**, but not **TraceInformation()** or **WriteLine()**. Click **Save**.
+   > When you click on **Open in Portal** you may prompted to a screen which will be having two options. **Download the Azure Portal app** or **Continue to Azure Portal website**. Please select **Continue to Azure Portal website** and log in to the Azure Portal if necessary.
+
+1. Select the **App Service logs** tab. Set the application logging **Level** to **Verbose**. This will include all traces. Other settings include anything as severe as the specified traces. For example, **Warning** will include **TraceWarning()** and **TraceError()**, but not **TraceInformation()** or **WriteLine()**. Click **Save**.
 
     ![](images/041.png)
 
@@ -302,12 +304,12 @@ You also need an [Azure account](https://azure.microsoft.com/) ([Get a $25 month
     ![](images/043.png)
 
 <a name="Ex1Task6_1"></a>
-### Task 6: Managing your Azure web app ###
+### Task 7: Managing your Azure web app ###
 
-    ![](images/044.png)
 
 1. If you want to delete this web app, you can click **Delete** and follow the confirmation instructions. However, that would only delete the web app component of your deployment. If you would like to delete everything created as part of this lab at once, you can do so by navigating to the **MyResourceGroup** resource group that contains all of the resources created in this lab.
-
+     
+     ![](images/044.png)
     ![](images/045.png)
 
 1. You can then follow the **Delete resource group** workflow to remove them all.

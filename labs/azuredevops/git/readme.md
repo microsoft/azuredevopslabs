@@ -271,7 +271,7 @@ Committing changes to a branch will not affect other branches and you can share 
 
     ![](images/034.png)
 
-1. Select **Create new branch**.
+1. Select **Create new branch from...**.
 
     ![](images/035.png)
 
