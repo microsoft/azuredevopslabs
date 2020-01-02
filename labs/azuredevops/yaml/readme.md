@@ -19,6 +19,10 @@ Many teams prefer to define their build and release pipelines using YAML (Yet An
 
 - This lab requires you to complete task 1 from the [prerequisite instructions](../prereq).
 
+The following image will walk you through all the steps explained in this lab
+
+ ![](images/YAML-pipeline-workflow.gif)
+ 
 <a name="Exercise1"></a>
 ## Exercise 1: Configuring CI/CD Pipelines as Code with YAML in Azure DevOps ##
 
@@ -301,3 +305,11 @@ Many teams prefer to define their build and release pipelines using YAML (Yet An
 
     ![](images/057.png)
 
+
+## Reference
+
+You can watch the following video that walks you through all the steps explained in this lab
+
+<figure class="video_container">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/i77vEEVAfB8" frameborder="0" allowfullscreen="true"> </iframe>
+</figure>
