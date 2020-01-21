@@ -22,6 +22,10 @@ In this lab, you will see
 1.	How Ansible can be used to implement Infrastructure as Code (IaC)
 1.	How to automate infrastructure deployments in the Cloud with Ansible and Azure pipelines.
 
+The following image will walk you through all the steps explained in this lab
+
+ ![](images/Ansible-workflow.gif)
+
 ### Before you begin
 
 1. Refer the [Getting Started](../Setup/) page before you begin following the exercises.
@@ -138,7 +142,7 @@ To connect and run playbooks through Ansible VM in Azure pipelines, we need to h
 
 ### Exercise 1: Examine the Ansible playbook (IaC) in your Source code
 
-In this lab, we will use **SmartHotel360-CouponManagement**, a sample Java application backed by a MySQL database.  We will examine the Ansible playbook which helps you to provision the Azure resources required to deploy MyShuttle java application.
+In this lab, we will use **SmartHotel360-CouponManagement**, a sample Java application backed by a MySQL database.  We will examine the Ansible playbook which helps you to provision the Azure resources required to deploy SmartHotel java application.
 
 1. Navigate to your project. Select **Repos**.
 
@@ -152,6 +156,15 @@ In this lab, we will use **SmartHotel360-CouponManagement**, a sample Java appli
    Ansible includes a suite of modules for interacting with Azure Resource Manager, giving you the tools to easily create and orchestrate infrastructure on the Microsoft Azure Cloud.
 
    In this example, we want to deploy an Azure Resource group, App service plan, App service and MySQL database required to deploy the website. And we have added playbook file (Infrastructure as Code) to source control repository in your Azure DevOps project which can deploy the required Azure resources.
+   
+   Update the playbook **webapp.yml** as the following.
+   
+   Change the name of the App service from Linux to Windows as the following image
+   ![](images/AppServiceName.jpg)
+   
+   Also, change the EndIpAdress from 255.255.255.255 to 0.0.0.0 as the following image
+   
+    ![](images/EndIps.jpg)
 
    If you would like to learn more about the Ansible playbooks for Azure  click [here](https://docs.ansible.com/ansible/2.5/scenario_guides/guide_azure.html).
 
@@ -168,7 +181,7 @@ In this exercise, you will build your application and publish the required files
 
    For more guidance on how to build Java projects with Azure Pipelines see [here](https://docs.microsoft.com/en-us/azure/devops/pipelines/languages/java?toc=%2Fazure%2Fdevops%2Fjava%2Ftoc.json&bc=%2Fazure%2Fdevops%2Fpipelines%2Fbreadcrumb%2Ftoc.json&view=vsts).
 
-1. In addition to the application build, we need to publish Ansible scripts  so that it will be available in CD pipeline. So, we configured Copy files task to copy Ansible playbook  **.war** file to Artifacts directory.
+1. In addition to the application build, we need to publish Ansible scripts  so that it will be available in CD pipeline. So, we configured Copy files task to copy Ansible playbook **.yml** and the java web package  **.war** file to Artifacts directory.
 
      ![](images/copyfiles.png)
 
@@ -237,3 +250,12 @@ In this exercise, you will build your application and publish the required files
 In this lab, you have learnt how to deploy Azure resources automatically with **Ansible** and deploy the application with **Azure Pipelines**. 
 
 For Ansible on Azure documentation and Quick starts click [here](https://docs.microsoft.com/en-us/azure/ansible/).
+
+## Reference
+
+You can watch the following video that walks you through all the steps explained in this lab
+
+<figure class="video_container">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/Q8aWeHCrGh4" frameborder="0" allowfullscreen="true"> </iframe>
+</figure>
+

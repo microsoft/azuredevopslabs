@@ -17,8 +17,11 @@ One of the biggest advantage to use AKS is that instead of creating resources in
 
 This lab uses a Dockerized ASP.NET Core web application - **MyHealthClinic** (MHC) and is deployed to a **Kubernetes** cluster running on **Azure Kubernetes Service (AKS)** using **Azure DevOps**.
 > There is a  **mhc-aks.yaml** manifest file which consists of definitions to spin up Deployments and Services such as **Load Balancer** in the front and **Redis Cache** in the backend. The MHC application will be running in the mhc-front pod along with the Load Balancer.
-       
-![AKS Workflow](images/aksworkflow.png)
+
+The following image will walk you through all the steps explained in this lab
+
+ ![](images/AKS-workflow.gif)
+
 
 If you are new to Kubernetes, [click here](documentation/readme.md){:target="_blank"} for description of terminology used in this lab.
 
@@ -40,9 +43,9 @@ The following tasks will be performed:
 
 1. Click the [Azure DevOps Demo Generator](http://azuredevopsdemogenerator.azurewebsites.net/?TemplateId=77372&Name=AKS){:target="_blank"} link and follow the instructions in [Getting Started](../Setup/) page to provision the project to your **Azure DevOps**.
 
-      For this lab the **Azure Kubernetes Service** template is used which is already selected when you click on the link above. There are some additional extensions required for this lab and can be automatically installed during the process.
+   For this lab the **Azure Kubernetes Service** template is used which is already selected when you click on the link above. There are some additional extensions required for this lab and can be automatically installed during the process.
 
-      ![AKS Template|50%](images/akstemplate.png)
+   ![AKStemplate](images/akstemplate.png)
 
 ## Setting up the environment
 

@@ -1,0 +1,36 @@
+
+<!-- this handles the automatic toc. use ## for subheads to auto-generate the on-page minitoc. if you use html tags, you must supply an ID for the heading element in order for it to appear in the minitoc. -->
+<script>
+        $( document ).ready(function() {
+          // Handler for .ready() called.
+        
+        $('#toc').toc({ minimumHeaders: 0, listType: 'ul', showSpeed: 0, showEffect: 'fadeIn', headers: 'h2,h3' });
+        /* this offset helps account for the space taken up by the floating toolbar. */
+        $("#toc ul li a:first").addClass("active");
+        
+        $('#toc').on('click', 'a', function() {  
+          var target = $(this.getAttribute('href'))
+            , scroll_target = target.offset().top -70    
+          $(window).scrollTop(scroll_target - 0); 
+          $('#toc a').removeClass('active');
+        $(this).addClass('active');      
+          return false
+        });
+        
+        });
+        </script>
+        <script>
+          /* on scroll highlight the respective section heading on right side bar */
+        $(window).on('scroll', function() {
+             $('.post-content h2, .post-content h3').each(function() {
+                   if($(window).scrollTop() >= $(this).offset().top-90) {
+                    var id = $(this).attr('id');
+                    $('#toc a').removeClass('active');
+                    $('#toc a[href="#'+ id +'"]').addClass('active');
+                    
+                }
+            });
+        });
+        </script>
+        <div id="toc" class="tocNew"></div>
+        

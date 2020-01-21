@@ -13,12 +13,19 @@ folder: /labs/vstsextend/terraform/
 
 Configuration files describe to **Terraform** the components needed to run a single application or your entire datacenter. Terraform generates an execution plan describing what it will do to reach the desired state, and then executes it to build the described infrastructure. As the configuration changes, Terraform is able to determine what changed and create incremental execution plans which can be applied. 
 
+<div class="bg-slap"><img src="./images/MicrosoftTeams-image.png" class="img-icon-cloud" alt="MS teams">Want more hands-on experience? Check out <a href="https://docs.microsoft.com/en-us/learn/modules/provision-infrastructure-azure-pipelines/"><b><u> Provision infrastructure
+in Azure Pipelines</u></b></a> on Microsoft Learn.</div>
+
 ### What’s covered in this lab
 
 In this lab, you will see
 
 1. How open source tools, such as Terraform can be leveraged to implement Infrastructure as Code (**IaC**)
 1. How to automate your infrastructure deployments in the Cloud with Terraform and Azure Pipelines
+
+The following image will walk you through all the steps explained in this lab
+
+ ![](images/Terraform-workflow.gif)
 
 ### Before you begin
 
@@ -169,3 +176,11 @@ In this exercise, you will create azure resources using Terraform as part of you
 ## Summary
 
 In this lab, you have learned how to automate repeatable deployments with Terraform on Azure using Azure Pipelines.
+
+## Reference
+
+You can watch the following video that walks you through all the steps explained in this lab
+
+<figure class="video_container">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/KiCZzJlS16A" frameborder="0" allowfullscreen="true"> </iframe>
+</figure>
