@@ -1,5 +1,5 @@
 ---
-title: Automating your infrastructure deployments in the Cloud with Terraform and Azure Pipelines
+title: Automating Infrastructure Deployments in the Cloud with Terraform and Azure Pipelines
 layout: page
 sidebar: vsts2
 permalink: /labs/vstsextend/terraform/
