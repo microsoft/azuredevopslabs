@@ -1,8 +1,8 @@
-https://devopsservervm2019.blob.core.windows.net/vhd/DevOpsServerVM2019.Spring2019.part001.exe
-https://devopsservervm2019.blob.core.windows.net/vhd/DevOpsServerVM2019.Spring2019.part002.rar
-https://devopsservervm2019.blob.core.windows.net/vhd/DevOpsServerVM2019.Spring2019.part003.rar
-https://devopsservervm2019.blob.core.windows.net/vhd/DevOpsServerVM2019.Spring2019.part004.rar
-https://devopsservervm2019.blob.core.windows.net/vhd/DevOpsServerVM2019.Spring2019.part005.rar
-https://devopsservervm2019.blob.core.windows.net/vhd/DevOpsServerVM2019.Spring2019.part006.rar
-https://devopsservervm2019.blob.core.windows.net/vhd/DevOpsServerVM2019.Spring2019.part007.rar
-https://devopsservervm2019.blob.core.windows.net/vhd/DevOpsServerVM2019.Spring2019.part008.rar
+https://devopslabvmimages.blob.core.windows.net/devopsservervm2019/DevOpsServerVM2019.Spring2019.part001.exe
+https://devopslabvmimages.blob.core.windows.net/devopsservervm2019/DevOpsServerVM2019.Spring2019.part002.rar
+https://devopslabvmimages.blob.core.windows.net/devopsservervm2019/DevOpsServerVM2019.Spring2019.part003.rar
+https://devopslabvmimages.blob.core.windows.net/devopsservervm2019/DevOpsServerVM2019.Spring2019.part004.rar
+https://devopslabvmimages.blob.core.windows.net/devopsservervm2019/DevOpsServerVM2019.Spring2019.part005.rar
+https://devopslabvmimages.blob.core.windows.net/devopsservervm2019/DevOpsServerVM2019.Spring2019.part006.rar
+https://devopslabvmimages.blob.core.windows.net/devopsservervm2019/DevOpsServerVM2019.Spring2019.part007.rar
+https://devopslabvmimages.blob.core.windows.net/devopsservervm2019/DevOpsServerVM2019.Spring2019.part008.rar
