@@ -33,7 +33,7 @@ description: Learn how you can implement modern DevOps practices with Azure, Azu
   <ul class="carousel-indicators">
     <li data-target="#demo" data-slide-to="0" class="active"></li>
     <li data-target="#demo" data-slide-to="1"></li>
-    <li data-target="#demo" data-slide-to="2"></li>
+     <!--<li data-target="#demo" data-slide-to="2"></li>-->
   </ul>
 
   <!-- The slideshow -->
@@ -51,13 +51,13 @@ description: Learn how you can implement modern DevOps practices with Azure, Azu
 <p><a href="https://go.microsoft.com/fwlink/?LinkId=2014881" class="btn btn-sm btn-primary mt-1">Sign Up for free now</a></p>
       </div>
     </div>
-    <div class="carousel-item banner3">
+    <!-- <div class="carousel-item banner3">
       <div class="text-center p-t-60px">
       <p class="bannerTitle">Azure DevOps Server Labs available now</p>
       <p class="bannerText">Learn how you can remove barriers between teams, encourage collaboration, and improve the flow of value to your customers.<br></p>
       <p><a href="/labs/devopsserver/" class="btn btn-sm btn-primary mt-1">Start Learning</a></p>
-      </div>
-    </div>  
+      </div> 
+    </div>  -->
   </div>
 
   <!-- Left and right controls -->
@@ -336,9 +336,9 @@ description: Learn how you can implement modern DevOps practices with Azure, Azu
             <div class="col-lg-3 col-md-6 col-sm-6 col-12 mt-small-5">			
      </div>
 		 <br />
-      <div class="row" style="margin-left: 10px;margin-top: 10px;">
+     <!--  <div class="row" style="margin-left: 10px;margin-top: 10px;">
       <p>For the on-premises platform, Azure DevOps Server (previously named Visual Studio Team Foundation Server), see  <a href="/labs/devopsserver/" class="btn btn-sm btn-primary">Azure DevOps Server 2019 Labs</a></p>
-      </div>
+      </div> -->
      </div>
 
 <hr height="1" style="width: 75%;" />  
