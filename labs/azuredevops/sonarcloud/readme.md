@@ -68,7 +68,7 @@ Technical debt is the set of problems in a development effort that make forward 
 
     ![](images/007.png)
 
-1. Click **use the visual designer**.
+1. Click **use the classic editor**.
 
     ![](images/008.png)
 
