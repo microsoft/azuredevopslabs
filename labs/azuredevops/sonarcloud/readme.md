@@ -60,11 +60,11 @@ Technical debt is the set of problems in a development effort that make forward 
 <a name="Ex1Task2"></a>
 ### Task 2: Integrating a build with SonarCloud ###
 
-1. Navigate to **Pipelines \| Builds**.
+1. Navigate to **Pipelines \| Pipelines**.
 
     ![](images/006.png)
 
-1. Select **New \| New build pipeline** to create a new build pipeline.
+1. Select **New pipeline** to create a new build pipeline.
 
     ![](images/007.png)
 
@@ -100,7 +100,11 @@ Technical debt is the set of problems in a development effort that make forward 
 
     ![](images/015.png)
 
-1. Sign in to your SonarCloud account.
+1. Navigate to [https://sonarcloud.io](https://sonarcloud.io/) and sign in to your SonarCloud account.
+
+1. Click "My account link" and move to "Security" tab
+
+    ![](images/015a.png)
 
 1. To generate a token, enter a name like **"azuredevops"** and click **Generate**.
 
@@ -110,9 +114,7 @@ Technical debt is the set of problems in a development effort that make forward 
 
     ![](images/017.png)
 
-1. Close the browser tab to return to the tab with the build definition.
-
-1. Enter a **Connection name** of **"SonarCloud"** and paste the token as the **SonarCloud Token**. Click **Verify connection** to make sure it works and click **OK**.
+1. Enter a **Service connection name** of **"SonarCloud"** and paste the token as the **SonarCloud Token**. Click **Verify and save**.
 
     ![](images/018.png)
 
