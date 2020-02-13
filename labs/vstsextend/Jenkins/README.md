@@ -175,7 +175,7 @@ This lab covers both the approaches and the following tasks will be performed
 
 Next, we will explore the two different options available to trigger the Jenkins CI job when a code is pushed to Azure Repos. 
 
-## Preparing jenkins machine to use service hook in Azure DevOps
+## Preparing Jenkins machine to use service hook in Azure DevOps
 
 For the service hook in Azure DevOps to work - Jenkins machine should accept incoming connections to port 8080. 
 
