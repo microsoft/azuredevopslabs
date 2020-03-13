@@ -26,7 +26,7 @@ In this lab, you will learn how to execute selenium test cases on a C# web appli
 
    ![azure_resources](images/azure_resources.png)
 
-1. Use the [Azure DevOps Demo Generator](https://azuredevopsdemogenerator.azurewebsites.net/?Name=Selenium&TemplateId=77367){:target="_blank"} to provision the project on your Azure DevOps Organization.
+1. Use the [Azure DevOps Demo Generator](https://azuredevopsdemogenerator.azurewebsites.net/?Name=Selenium&TemplateId=77367){:target="_blank"} to provision the project on your Azure DevOps Organization. Use the Selenium template, located under the DevOps Labs group.
 
 ## Exercise 1: Create a Deployment Group
 
