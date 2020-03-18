@@ -1,5 +1,5 @@
 ---
-title: Automating your infrastructure deployments in the Cloud with Terraform and Azure Pipelines
+title: Automating infrastructure deployments in the Cloud with Terraform and Azure Pipelines
 layout: page
 sidebar: vsts2
 permalink: /labs/vstsextend/terraform/
@@ -134,7 +134,7 @@ In this exercise, you will create azure resources using Terraform as part of you
    iii. Apply the changes described by the plan.
     
     The next Terraform tasks in your release pipeline help you to implement this workflow.
-1. Select the **Terraform init** task. Select Azure service connection from the drop-down. And make sure the container name is selected as **terraform**. For the other task parameters information see [here](https://github.com/microsoft/azure-pipelines-extensions/blob/master/Extensions/Terraform/Src/Tasks/TerraformTaskV1/README.md)
+1. Select the **Terraform init** task. Select Azure service connection from the drop-down. And make sure to enter the container name  as **terraform**. For the other task parameters information see [here](https://github.com/microsoft/azure-pipelines-extensions/blob/master/Extensions/Terraform/Src/Tasks/TerraformTaskV1/README.md)
        
       ![](images/terraform-init2.png)
 
