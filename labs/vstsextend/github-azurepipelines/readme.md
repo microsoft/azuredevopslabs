@@ -39,6 +39,8 @@ These items are required for this lab.
 -  Azure Pipelines extension for Visual Studio Code installed from
     <https://marketplace.visualstudio.com/items?itemName=ms-azure-devops.azure-pipelines>.
 
+-  GitHub Pull Requests extension for Visual Studio Code installed from
+    <https://marketplace.visualstudio.com/items?itemName=GitHub.vscode-pull-request-github>.
 
 ## Setting up the environment
 
