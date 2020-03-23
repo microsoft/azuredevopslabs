@@ -18,7 +18,23 @@ custom reporting. By connecting Azure Boards with GitHub repositories, teams can
 In this lab, you'll see how easy it is to set up
 **Azure Boards** with your **GitHub** projects and how you can achieve an end-to-end traceability from work items to code change, commit, to build and release.
 
- {% include important.html content= "Before you proceed with this lab we recommend you to complete the **[GitHub integration with Azure Pipelines](../github-azurepipelines)** lab." %}
+ {% include important.html content= "Before you proceed with this lab, we highly recommend to complete the **[GitHub integration with Azure Pipelines](../github-azurepipelines)** lab." %}
+
+## Prerequisites
+
+These items are required for this lab.
+
+-  The **[GitHub integration with Azure Pipelines](../github-azurepipelines)** Lab
+
+-  A GitHub account from <https://github.com>.
+
+-  An Azure DevOps account from <https://dev.azure.com>
+
+-  Visual Studio Code installed from <https://code.visualstudio.com>.
+
+-  GitHub Pull Requests extension for Visual Studio Code installed from
+    <https://marketplace.visualstudio.com/items?itemName=GitHub.vscode-pull-request-github>.
+
 
 ## Exercise 1: Managing GitHub Projects with Azure DevOps
 
