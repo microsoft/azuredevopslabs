@@ -9,7 +9,7 @@ folder: /labs/vstsextend/azurekeyvault/
 <div class="rw-ui-container"></div>
 
 ## Overview 
-Azure Key Vault helps teams to securely store and manage sensitive information such as keys, password, certificates, etc. in a centralized storage which are safeguarded by industry-standard algorithms, key lengths, and even hardware security modules. This prevents information exposure through source code,  a common mistake that many developers make. Many developers leave sensitive information such as database connection strings, passwords, private keys, etc. in their source code which when gained by malicious users can result in undesired consequences. Access to a key vault requires proper authentication and authorization and with RBAC, teams can have even fine granular control who has what permissions over the sensitive data.
+Azure Key Vault helps teams to securely store and manage sensitive information such as keys, passwors, certificates, etc., in a centralized storage which are safeguarded by industry-standard algorithms, key lengths, and even hardware security modules. This prevents the disclosure of information through source code,  a common mistake that many developers make. Many developers leave confidential details such as database connection strings, passwords, private keys, etc., in their source code which when gained by malicious users can result in undesired consequences. Access to a key vault requires proper authentication and authorization and with RBAC, teams can have even fine granular control who has what permissions over the sensitive data.
 
 ## What’s covered in this lab
 In this lab, you will see how you can use Azure Key Vault in a pipeline.
@@ -22,7 +22,10 @@ In this lab, you will see how you can use Azure Key Vault in a pipeline.
 
 1. Refer the [Getting Started](../Setup/) page before you begin following the exercises.
 
-1. Use the [Azure DevOps Demo Generator](https://azuredevopsdemogenerator.azurewebsites.net/?name=keyvault) to provision a new project.
+1. Use the [Azure DevOps Demo Generator](https://azuredevopsdemogenerator.azurewebsites.net/?name=keyvault){:target="_blank"} to provision the project on your Azure DevOps organization.
+   This URL will automatically select **Azure Key Vault** template in the demo generator. If you want to try other projects, use this URL instead -[azuredevops generator](https://azuredevopsdemogenerator.azurewebsites.net/)
+
+   Follow the [simple walkthrough](https://docs.microsoft.com/en-us/azure/devops/demo-gen/use-vsts-demo-generator-v2?view=vsts){:target="_blank"} to know how to use the Azure DevOps Demo Generator.
 
 ### Task 1: Creating a service principal 
 
@@ -63,12 +66,14 @@ Next, we will create a key vault in Azure. For this lab scenario, we have a node
     ![](images/addkeyvault.png)
 
 1. Provide a name, subscription, resource group and location for the vault.
-    ![](images/kv_t2_s4.png)
+
+     ![](images/kv_t2_s4.png)
 
     Because data in Key Vaults are sensitive and business critical, you need to secure access to your key vaults by allowing only authorized applications and users. To access the data from the vault, you will need to provide read (Get) permissions to the service principal that you will be using for authentication in the pipeline. 
 
 1. Select **Access policy** and then select **+ Add Access Policy** to setup a new policy.
-    ![](images/kv_t2_s5.png)
+
+     ![](images/kv_t2_s5.png)
 
 1. You will need specify the permission that you intend to grant the application. This can be permissions to manage the keys and data(secrets). In any case, applications can access the key vault in two ways:
 
@@ -92,15 +97,15 @@ Next, we will create a key vault in Azure. For this lab scenario, we have a node
 
 ### Task 3: Check the Azure Pipeline
 
-Now, lets go to the Azure DevOps project that you provisioned using the demo generator and configure the Azure Pipelines to read the secret from the key vault.
+Now, lets go to the Azure DevOps project that you provisioned using the [Azure DevOps Demo Generator](https://azuredevopsdemogenerator.azurewebsites.net/?name=keyvault) and configure the Azure Pipelines to read the secret from the key vault.
 
 1. Navigate to the Azure DevOps project.
 
     ![](images/project.png)
 
-1. Select **Pipelines | Pipelines** from the left navigation bar.
+1. Select **Pipelines \| Pipelines** from the left navigation bar.
 
-1. To trigger a build product, choose the **SmartHotel-CouponManagement-CI** definition and then **Run Pipeline** to manually queue it.
+1. To trigger a build, choose the **SmartHotel-CouponManagement-CI** definition and then **Run Pipeline** to manually queue it.
 
     ![](images/kv_t3_s3.png)
 
@@ -108,11 +113,15 @@ Now, lets go to the Azure DevOps project that you provisioned using the demo gen
 
 1. Under **Tasks**, notice the release definition for **Dev** stage has a **Azure Key Vault** task. This task downloads *Secrets* from an Azure Key Vault. You will need to point to the subscription and the Azure Key Vault resource created earlier in the lab.
 
-1. You need to authorize the pipeline to deploy to Azure. Azure pipelines can automatically create a service connection with a new service principal, but we want to use the one we created earlier. From the drop down beside the *Authorize* button, select the **Advanced Options** and use the full service dialog(blue text at the bottom) to enter the Service principal ID(appId), passphrase(password), and tenant ID(tenant).
+1. You need to authorize the pipeline to deploy to Azure. Azure pipelines can automatically create a service connection with a new service principal, but we want to use the one we created earlier. Click **Manage**, this will redirect to the Service connections page. 
+    
+    ![](images/clickmanage.png)
 
-    ![](images/azureserviceconnection.png)
+   Follow the instruction [here](https://docs.microsoft.com/en-us/azure/devops/pipelines/library/connect-to-azure?view=azure-devops#create-an-azure-resource-manager-service-connection-with-an-existing-service-principal) to create an Azure Resource Manager service connection with an existing service principal.
+   
+1. Select the Service connection you created in previous step for Azure subsciption in Azure Key Vault task.  
 
-1. Press **OK** to save and close the dialog. Once the connection is established, you can enter the name or select the key vault you created from the drop-down.
+1. You can enter the name or select the key vault you created from the drop-down.
 
 1. In the **Secrets filter** field, you can specify an *asterisk* (*) to read all secrets or if you want only specific ones, you can provide the names of the secrets as comma-separated values.
 
@@ -125,13 +134,13 @@ Now, lets go to the Azure DevOps project that you provisioned using the demo gen
 
     ![](images/armtemplatedeploytask.png)
 
-Notice the **Override template parameters** field has the database user name as a string but the password value is passed as a variable.
+   Notice the **Override template parameters** field has the database user name as a string but the password value is passed as a variable.
 
- `-webAppName $(webappName) -mySQLAdminLoginName "azureuser" -mySQLAdminLoginPassword $(sqldbpassword)`
+   `-webAppName $(webappName) -mySQLAdminLoginName "azureuser" -mySQLAdminLoginPassword $(sqldbpassword)`
 
-This will provision the MySQL database defined in the ARM template using the password that you have specified in the key vault. 
+   This will provision the MySQL database defined in the ARM template using the password that you have specified in the key vault. 
 
-You may want to complete the pipeline definition by specifying the subscription and location for the task. Repeat the same for the last task in the pipeline **Azure App Service Deploy**. Finally, save and create a new release to start the deployment.
+   You may want to complete the pipeline definition by specifying the subscription and location for the task. Repeat the same for the last task in the pipeline **Azure App Service Deploy**. Finally, save and create a new release to start the deployment.
 
 {% include note.html content= "You may wonder that we could have passed the value as a secret task variable itself within Azure Pipelines. While that is possible, task variables are specific to a pipeline and can't be used outside the definition it is created. Also, in most cases, secrets such as these are defined by Ops who may not want to set this for every pipeline." %}
 

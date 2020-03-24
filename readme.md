@@ -438,7 +438,7 @@ description: Learn how you can implement modern DevOps practices with Azure, Azu
                                     <div class="col-lg-3 col-md-6 col-sm-6 col-12 p-l-r-override">
                                         <div class="bg-color-white equal-height-column">
                                             <ul class="p-l-5px">
-                                            <li class="osslist align-relative"> <img src="/images/azurekeyvault.png" height="42" class="icon-bor-p-m" /><a
+                                            <li class="osslist align-relative"> <img src="/images/azurekeyvault2.png" height="42" class="icon-bor-p-m" /><a
                                                         href="/labs/vstsextend/azurekeyvault/" class="fon-size-13">
                                                         Using secrets from Azure Key Vault in a pipeline</a></li>
                                                 <li class="osslist"> <img src="/images/launchdarkly.png" height="42" class="icon-bor-p-m" /><a
