@@ -43,11 +43,11 @@ This lab covers both the approaches and the following tasks will be performed
 
 ## Setting up the Jenkins VM
 
-1. To configure Jenkins, the Jenkins VM image available on the Azure Marketplace will be used. This will install the latest stable Jenkins version on an Ubuntu Linux VM along with the tools and plugins configured to work with the Azure. Click on the **Deploy to Azure** button below to get started.
+1. To configure Jenkins, the Jenkins VM image available on the Azure Marketplace will be used. This will install the latest stable Jenkins version on an Ubuntu Linux VM along with the tools and plugins configured to work with the Azure. Click on the **Deploy to Azure** button below to get started. Note: After clickign creat, choose Password as the Authentication Type. Make note of the username and password.
 
    [![Jenkins Configuration](http://azuredeploy.net/deploybutton.png)](https://portal.azure.com/#create/azure-oss.jenkinsjenkins){:target="_blank"}
 
-1. Once the Jenkins VM is provisioned, select the **Connect** button and make a note of the `username` and the `ip address`. This information will be required to connect to the Jenkins VM from ***Putty***
+1. Once the Jenkins VM is provisioned, navigate to the VM's overview page and make a note of the `public IP address`. This information will be required to connect to the Jenkins VM from ***Putty***
 
    <img class="myImg" src="images/vmconnect_ssh1.png" alt="Connecting to the virtual machine" />
 
@@ -58,7 +58,7 @@ This lab covers both the approaches and the following tasks will be performed
         <img class="modal-content" id="img01" style="display: block;margin-left: auto; margin-right: auto;"><div id="caption"></div>
     </div> -->
 
-1. To initiate an SSH tunnel, the following command needs to be run from a Command Prompt. An SSH tunnel creates a secure connection between your host and remote computer through which services can be relayed. If this command is successful, you should be able to access the remote Jenkins on port 8080 on your local machine.
+1. To initiate an SSH tunnel, the following command needs to be run from a Command Prompt. An SSH tunnel creates a secure connection between your host and remote computer through which services can be relayed. If this command is successful, you should be able to access the remote Jenkins on port 8080 on your local machine. Note: If you have a website on 8080, you may need to choose another port.
 
     ```cmd
     putty.exe -ssh -L 8080:localhost:8080 <username>@<ip address>
@@ -139,7 +139,7 @@ This lab covers both the approaches and the following tasks will be performed
 
    <img class="myImg" src="images/vsts-generategitcreds.png" alt="Generating Git Credentials"/>
 
-1. Select the **Add \| Jenkins** option to add a new credential. Provide the `User name` and `Password` created earlier and click the **Add** button to close the wizard
+1. Select the **Add \| Jenkins** option to add a new credential. Provide the `User name` and `Password` created in the previous step and click the **Add** button to close the wizard
 
     <img class="myImg" src="images/jenkinscredentials.png" alt="Adding Credentials to Jenkins"/>
 
@@ -204,7 +204,7 @@ In this approach, a service hook will be configured in Azure DevOps to trigger a
 1. Provide the following details in the **Select and configure the action to perform** screen
    1. Select the **Trigger generic build** option
 
-   1. Provide the **Jenkins base URL** in `http://{ip address or the host name}` format 
+   1. Provide the **Jenkins base URL** in `http://{ip address}:8080` format 
 
    1. Provide the **User name**  and **Password** to trigger the build. Note that the username and password is the credentials of the Jenkins administrator user that you configured earlier
    
@@ -228,7 +228,7 @@ To begin, an endpoint to the Jenkins Server for communication with Azure DevOps 
 
 1. Go to your project settings. Select **Pipelines** and **Service connections**, click **New service connection** and choose **Jenkins** from the dropdown.
 
-1. Provide a connection name, Jenkins server URL in the format `http://[server IP address or DNS name]` and Jenkins user name with password. Select **Verify Connection** and validate the configuration. If it successful, then select **Ok**.
+1. Provide a connection name, Jenkins server URL in the format `http://[server IP address or DNS name]` and Jenkins user name with password. Select **Verify Connection** and validate the configuration. If it successful, then select **Ok**. If verification fails, add the port at the end of the Jenkins server URL, such as `http://[server IP address]:8080`
 
    <img class="myImg" src="images/jenkinsendpoint.png" alt ="Jenkins Endpoint" />
 
