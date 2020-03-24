@@ -65,7 +65,7 @@ Next, we will create a key vault in Azure. For this lab scenario, we have a node
 1. Provide a name, subscription, resource group and location for the vault.
     ![](images/kv_t2_s4.png)
 
-    Because data in the Key Vaults are sensitive and business critical, you need to secure access to your key vaults by allowing only authorized applications and users. To access the data from the vault, you will need to provide read (Get) permissions to the service principal that you will be using for authentication in the pipeline. 
+    Because data in Key Vaults are sensitive and business critical, you need to secure access to your key vaults by allowing only authorized applications and users. To access the data from the vault, you will need to provide read (Get) permissions to the service principal that you will be using for authentication in the pipeline. 
 
 1. Select **Access policy** and then select **+ Add Access Policy** to setup a new policy.
     ![](images/kv_t2_s5.png)
@@ -84,7 +84,7 @@ Next, we will create a key vault in Azure. For this lab scenario, we have a node
 
     ![](images/kv_t2_s8.png)
 
-1.  Click **OK** to close the open blades and select **Create** to create the vault.
+1.  Click **Review + create** to close the open blades and select **Create** to create the vault.
 
 1. It should only take a couple of minutes for the service to be created. Once it is provisioned, select the key vault and add a new secret. Let's name it **sqldbpassword**. Provide any value that will be accepted as a password for a MySQL database.
 
