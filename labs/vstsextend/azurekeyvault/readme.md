@@ -98,17 +98,17 @@ Now, lets go to the Azure DevOps project that you provisioned using the demo gen
 
     ![](images/project.png)
 
-1. Select **Pipelines** and choose **Builds**
+1. Select **Pipelines | Pipelines** from the left navigation bar.
 
-1. Select the **Queue** button to manually queue the build definition. Wait for the build to complete.
+1. To trigger a build product, choose the **SmartHotel-CouponManagement-CI** definition and then **Run Pipeline** to manually queue it.
 
-    ![](images/build.png)
+    ![](images/kv_t3_s3.png)
 
 1. Go to **Releases** under **Pipelines** and then select and edit the **SmartHotel-CouponManagement-CD** definition.
 
-1. You will notice the release definition for **Dev** stage has **Azure Key Vault** task at the top. This task downloads *Secrets* from an Azure Key Vault. You will need to point to the subscription and the Azure Key Vault resource you created earlier in the lab.
+1. Under **Tasks**, notice the release definition for **Dev** stage has a **Azure Key Vault** task. This task downloads *Secrets* from an Azure Key Vault. You will need to point to the subscription and the Azure Key Vault resource created earlier in the lab.
 
-1. You need to authorize the pipeline to deploy to Azure. Azure pipelines can automatically create a service connection with a new service principal but we want to use the one we created earlier. So, choose the **Advanced Options** from the drop down next to the *Authorize* button and use the full service dialog to enter the Service principal ID, passphrase, tenant ID, etc. 
+1. You need to authorize the pipeline to deploy to Azure. Azure pipelines can automatically create a service connection with a new service principal, but we want to use the one we created earlier. From the drop down beside the *Authorize* button, select the **Advanced Options** and use the full service dialog(blue text at the bottom) to enter the Service principal ID(appId), passphrase(password), and tenant ID(tenant).
 
     ![](images/azureserviceconnection.png)
 
@@ -119,7 +119,7 @@ Now, lets go to the Azure DevOps project that you provisioned using the demo gen
     ![](images/keyvaulttask.png)
 
 
-    At runtime, Azure Pipelines will fetch the latest values of the secrets and set them as task variables which can be consumed in the following tasks which means  the password we stored earlier can be read using **$(sqldbpassword)**.  
+    At runtime, Azure Pipelines will fetch the latest values of the secrets and set them as task variables which can be consumed in the following tasks which means the password we stored earlier can be read using **$(sqldbpassword)**.  
 
 1. We pass this value in the next task, **Azure Deployment** where we deploy an ARM template.
 
@@ -131,7 +131,7 @@ Notice the **Override template parameters** field has the database user name as 
 
 This will provision the MySQL database defined in the ARM template using the password that you have specified in the key vault. 
 
-You may want to complete the pipeline definition by specifying the subscription., location for the task. Repeat the same for the last task in the pipeline **Azure App Service Deploy**. Finally, save and create a new release to start the deployment.
+You may want to complete the pipeline definition by specifying the subscription and location for the task. Repeat the same for the last task in the pipeline **Azure App Service Deploy**. Finally, save and create a new release to start the deployment.
 
 {% include note.html content= "You may wonder that we could have passed the value as a secret task variable itself within Azure Pipelines. While that is possible, task variables are specific to a pipeline and can't be used outside the definition it is created. Also, in most cases, secrets such as these are defined by Ops who may not want to set this for every pipeline." %}
 
