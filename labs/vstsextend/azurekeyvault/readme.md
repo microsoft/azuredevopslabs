@@ -52,9 +52,9 @@ We will create one manually using the Azure CLI. If you do already have a servic
 
 ### Task 2: Creating a key vault
 
-Next, we will create a key vault in Azure. For this lab scenario, since we are using a node-based app that connects to a MySQL database, we will  store the password of MySQL database as a secret in the key vault.
+Next, we will create a key vault in Azure. For this lab scenario, we have a node app that connects to a MySQL database where we will store the password for the MySQL database as a secret in the key vault.
 
-1. If not already logged in, login to the [Azure Portal](https://portal.azure.com)
+1. If not already logged in, login to the [Azure Portal](https://portal.azure.com).
 
 1. Enter "Key vault" in the search field and press enter. Select **Key Vaults** under services.
 
@@ -63,12 +63,14 @@ Next, we will create a key vault in Azure. For this lab scenario, since we are u
     ![](images/addkeyvault.png)
 
 1. Provide a name, subscription, resource group and location for the vault.
+    ![](images/kv_t2_s4.png)
 
     Because data in the Key Vaults are sensitive and business critical, you need to secure access to your key vaults by allowing only authorized applications and users. To access the data from the vault, you will need to provide read (Get) permissions to the service principal that you will be using for authentication in the pipeline. 
 
-1. Select **Access policies** and then select **+Add new** to setup a new policy.
+1. Select **Access policy** and then select **+ Add Access Policy** to setup a new policy.
+    ![](images/kv_t2_s5.png)
 
-1. You will need specify the permission that you intend to grant the application. This can be permissions to manage the keys, data(secrets), . In any case, applications can access the key vault in two ways:
+1. You will need specify the permission that you intend to grant the application. This can be permissions to manage the keys and data(secrets). In any case, applications can access the key vault in two ways:
 
     * User + Application access: Access is granted to specific user who can then be allowed to use any application or can be restricted to use a specific application. 
 
@@ -76,11 +78,11 @@ Next, we will create a key vault in Azure. For this lab scenario, since we are u
 
 1. Select the **Select principal** and search for the security principal that you created earlier and select it. You can search by name or ID of the principal.
 
-    ![](images/addkeyvault-1.png)
+    ![](images/kv_t2_s7.png)
 
-1. Next, we will select the permission to be granted. For now, we will select to provide **read-only** permissions (Get, List) to just the secrets.
+1. Next, we will select the permission to be granted. For now, we will provide **read-only** permissions (Get, List) to secrets only.
 
-    ![](images/addkeyvault-2.png)
+    ![](images/kv_t2_s8.png)
 
 1.  Click **OK** to close the open blades and select **Create** to create the vault.
 
