@@ -43,7 +43,7 @@ This lab covers both the approaches and the following tasks will be performed
 
 ## Setting up the Jenkins VM
 
-1. To configure Jenkins, the Jenkins VM image available on the Azure Marketplace will be used. This will install the latest stable Jenkins version on an Ubuntu Linux VM along with the tools and plugins configured to work with the Azure. Click on the **Deploy to Azure** button below to get started. Note: After clickign creat, choose Password as the Authentication Type. Make note of the username and password.
+1. To configure Jenkins, the Jenkins VM image available on the Azure Marketplace will be used. This will install the latest stable Jenkins version on an Ubuntu Linux VM along with the tools and plugins configured to work with the Azure. Click on the **Deploy to Azure** button below to get started. Note: After clicking create, choose Password as the Authentication Type. Make note of the username and password.
 
    [![Jenkins Configuration](http://azuredeploy.net/deploybutton.png)](https://portal.azure.com/#create/azure-oss.jenkinsjenkins){:target="_blank"}
 
