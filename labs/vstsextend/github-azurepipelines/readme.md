@@ -216,7 +216,7 @@ An important sign for a quality project is its build status badge. When someone 
 
     ![](images/signin-github.png)
 
-1. Go to the readme file on the browser and you will see the status. It's that easy :)
+1. Go to the readme file on the browser and you will see the status.
 
      ![](images/statusbadge-github.png)
 
@@ -247,7 +247,8 @@ Now that we have our CI successfully built, it's time to deploy but how do we kn
    steps:
      - task: Npm@1
        inputs:
-         command: install
+         command: 'custom'
+         customcommand: 'install --production'
      - script: 'npm test'
        displayName: 'Run unit tests'
        continueOnError: true
@@ -290,7 +291,7 @@ Now that we have our CI successfully built, it's time to deploy but how do we kn
     ![](images/image44.png)
 
 
-1. Back in Azure DevOps, navigate to **Pipelines --> Builds**. We can see that our build pipeline has kicked off a new build.
+1. Back in Azure DevOps, navigate to **Pipelines --> Pipelines**. We can see that our build pipeline has kicked off a new build.
 
     ![](images/updated-build.png)
     
@@ -322,7 +323,7 @@ From the results, we can see all 40 tests have passed which means we have not br
  
  Like the build templates, there are many packaged options available that cover common deployment scenarios, such as publishing to Azure. But to illustrate how flexible and productive the experience is, we will build this pipeline from an empty template.
 
-1.  From the build summary page, click **Release** to create a new CD pipeline to deploy the artifacts produced by the build.
+1.  From the left hand menu, under **Pipelines** click **Releases**. Click **New Pipeline** to create a new CD pipeline to deploy the artifacts produced by the build.
 
     ![](images/image13.png)
 
@@ -502,11 +503,12 @@ From the results, we can see all 40 tests have passed which means we have not br
 
 1. Select **Create** to start a new release. 
 
-1. Click **In progress** to follow the release process.
+1. Navigate to the release summary by clicking on the **Release-1** link that appears. Click **In progress** to follow the release process.
 
     ![](images/image51.png)
 
 1. Note that it will take a few minutes (around 5 at the time of drafting) for the app to finish deploying due to heavy first-time operations. 
+
     ![](images/image52.png)
 
 1. Select the **App Service Deploy** task to view the detailed log. You should find the URL to the published website here. **Ctrl+Click** the link to open it in a separate tab.
