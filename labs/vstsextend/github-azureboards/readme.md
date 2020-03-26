@@ -18,7 +18,12 @@ custom reporting. By connecting Azure Boards with GitHub repositories, teams can
 In this lab, you'll see how easy it is to set up
 **Azure Boards** with your **GitHub** projects and how you can achieve an end-to-end traceability from work items to code change, commit, to build and release.
 
- {% include important.html content= "Before you proceed with this lab we recommend you to complete the **[GitHub integration with Azure Pipelines](../github-azurepipelines)** lab." %}
+## Prerequisites
+
+These items are required for this lab.
+
+-  The **[GitHub integration with Azure Pipelines](../github-azurepipelines)** Lab
+
 
 ## Exercise 1: Managing GitHub Projects with Azure DevOps
 
