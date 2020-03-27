@@ -44,7 +44,7 @@ In this lab, you will learn about the agile planning and portfolio management to
 
     ![](images/003.png)
 
-1. By default, the new team has only you as its member. You can use this view to manage membership, notifications, dashboards, and more. But first you will want to define the schedule and scope of the team. Click **Iterations and areas**.
+1. By default, the new team has only you as its member. You can use this view to manage membership, notifications, dashboards, and more. But first you will want to define the schedule and scope of the team. Click **Iterations and Area Paths**.
 
     ![](images/004.png)
 
