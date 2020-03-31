@@ -103,11 +103,11 @@ In this lab, you will learn how to setup SonarQube on Azure and integrate with A
 
    ![qualitygate](images/qualitygate.png)
 
-1. Let us add a condition to check for the number of bugs in the code. Click on **Add Condition** drop down, choose the value **Bugs**.
+1. Let us add a condition to check for the number of bugs in the code. Click on **Add Condition** drop down, select **On Overall Code**, choose the value **Bugs**.
 
    ![qg-bugs](images/qg-bugs.png)
 
-1. Change the **Operator** value to **is greater than** and the **ERROR** threshold value to **0** (zero) and click on the **Add** button.
+1. Set the **is greater than** value to **0** (zero) and click on the **Add** button.
 
    {% include note.html content= "This condition means that if the number of bugs in Sonar Analysis is greater than 0 (zero), then the quality gate will fail and this fails the VSTS build." %}
 
@@ -121,7 +121,7 @@ In this lab, you will learn how to setup SonarQube on Azure and integrate with A
 
 Now that the SonarQube server is running, we will modify Azure Build pipeline to integrate with SonarQube to analyze the java code provisioned by the Azure DevOps Demo Generator system.
 
-1. Go to **Builds** under **Pipelines** tab, edit the build pipeline **SonarQube**. This is a Java application and we are using [Maven](https://docs.microsoft.com/en-us/azure/devops/pipelines/tasks/build/maven?view=azure-devops) to build the code. And we are using [SonarQube](https://marketplace.visualstudio.com/items?itemName=SonarSource.sonarqube) extension tasks to prepare  analysis on SonarQube and publish Quality Gate results.
+1. Go to **pipelines** under **Pipelines** tab, edit the build pipeline **SonarQube**. This is a Java application and we are using [Maven](https://docs.microsoft.com/en-us/azure/devops/pipelines/tasks/build/maven?view=azure-devops) to build the code. And we are using [SonarQube](https://marketplace.visualstudio.com/items?itemName=SonarSource.sonarqube) extension tasks to prepare  analysis on SonarQube and publish Quality Gate results.
 
 1. **Prepare Analysis Configuration** task is to configure all the required settings before executing the build. Click **+ NEW** to add SonarQube server endpoint. 
     
