@@ -143,6 +143,7 @@
             "type": "string",
             "defaultValue": "1.11.9",
             "allowedValues": [
+                "1.14.7",
                 "1.12.7",
                 "1.12.6",
                 "1.11.9",
