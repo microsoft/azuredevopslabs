@@ -32,49 +32,56 @@ In this lab, you’ll learn about how **Azure DevOps** integrates with **Microso
 
    ![](images/launch_teams.png)
 
-1. After launching the app, on the left side of **Teams**, click **Teams**, and then at the bottom of the teams list, click **Join or create a team**. A team is a collection of people who gather together around a common goal. 
+1. After launching the app, on the left side of **Teams**, click **Teams** and then at the bottom of the teams list, click **Join or create a team**. A team is a collection of people who gather together around a common goal. 
     
-    ![](images/create_team.png)
+    ![](images/create_team_new.png)
 
 1. In the **Join or create team** window select **Create team**.
     
     ![](images/create_team2.png)
 
-1. Give a name for your team and description if needed. Select the privacy settings and click on **Next**.
+1. Select **Build a team from scratch** and then select the privacy settings.
 
-    ![](images/create_team3.png)
+    ![](images/create_team3_new.png)
+   
+    ![](images/create_team3_new01.png)
+
+1. Give a name for your team and description if needed and click on **Create**.
+
+    ![](images/create_team3_new02.png)
+
 
 1. Add members for your team in order to get notified the events that occur and also start conversations with your team members.
 
-   ![](images/add_members.png)
+   ![](images/add_members_new.png)
 
 ## Integrating Microsoft Teams with Azure DevOps Services
 
 **Azure DevOps Services** integration with Microsoft Teams provides a comprehensive chat and collaborative experience across the development cycle. Teams can easily stay informed of important activities in your Azure DevOps team projects with notifications and alerts on work items, pull requests, code commits, build and release.
 
-1. Select **Tailwind Traders** team that was created.  Click the ellipsis or **'...'** at the top nav of your team channel, and then select **Connectors**.
+1. Select **Tailwind Traders** team that was created.  Click the ellipsis or **'...'** right side at the top nav of your team channel, and then select **Connectors**.
    
-    ![](images/connectors.png)
+    ![](images/connectors_new.png)
 
 1. Select **Azure DevOps** connector from the list and click **Add**.
 
    ![](images/azuredevops_connector.png)
 
-1. Click **Install** to add the connector for your team.
+1. Click **Add** to add the connector for your team.
    
-    ![](images/install_connector.png)
+    ![](images/install_connector_new.png)
 
-1. Select your organization (you may be prompted to sign in first), the project, and your team. Choose the type of activity you want to be notified about. Depending on the event, you may be given further fields to filter down the notifications so you can filter out notifications your team does not care about. For example, for work item events, you can filter by area path, work item type, and even particular field changes.
+1. Select your organization (you may be prompted to sign in first), the project and your team. Choose the type of activity you want to be notified about. Depending on the event, you may be given further fields to filter down the notifications so you can filter out notifications your team does not care about. For example, for work item events, you can filter by area path, work item type, and even particular field changes.
 
-   ![](images/connector_configuration.png)
+   ![](images/connector_configuration_new.png)
 
    When you are happy with the configuration, **Save** it.
 
 1. Since Azure DevOps is configured now, activity from your Azure DevOps Services project will start appearing in your Teams channel.
    
-   ![](images/azuredevops_activity.png)
+   ![](images/azuredevops_activity_new.png)
 
-1. If you want to make a change to an existing connector, navigate to the **Configured** tab on the **Connector** dialog, find the connector, and click **Manage**. 
+1. If you want to make a change to an existing connector, navigate to the **Configured** tab on the **Connector** dialog, find the connector and click **Manage**. 
 
    ![](images/manage_connector.png)
 
@@ -87,7 +94,7 @@ These can be added using Tabs. **Tabs** allow team members to access your servic
 
 1. To bring your Kanban board or Dashboard into Microsoft Teams, click the **+** icon to add new tab. Find the Azure DevOps icon and select **Azure DevOps**
 
-   ![](images/add_kanbanboard.png)
+   ![](images/add_kanbanboard_new.png)
 
    ![](images/azuredevops_tab.png)
 
@@ -95,7 +102,7 @@ These can be added using Tabs. **Tabs** allow team members to access your servic
 
 1. Select the Organization
 
-   ![](images/kanban_selectorg.png)
+   ![](images/kanban_selectorg_new.png)
 
    ![](images/kanban_selectorg2.png)
 
@@ -114,7 +121,7 @@ These can be added using Tabs. **Tabs** allow team members to access your servic
 
 1. Now you can see the **Kanban Board** appearing in the tab.
 
-   ![](images/kanbanboard_teams.png)
+   ![](images/kanbanboard_teams_new.png)
 
 1. All the work can be monitored during the daily standup's and the updates are real when the work items states are changed. It also allows us to customize the Kanban Board from within the Teams and synced.
 
@@ -128,13 +135,16 @@ Azure Pipelines app on Microsoft Teams enables you to monitor the events for you
     
      ![](images/add_azurepipelines.png)
 
-1. In the app, window select your team and click **Install**.
+1. In the app,click on **Add**.
      
-      ![](images/install_azurepipelines.png)
+      ![](images/install_azurepipelines_new.png)
 
-1. Once the app is installed to your team, select channel and click **Set up**
+1. Once the app is added, click on the drop down and select **Add to a team**
       
-      ![](images/add_channel_azurepipelines.png)
+      ![](images/add_to_team.png)
+
+1. Select your team and click on **Set up a bot**
+      ![](images/set_up_bots.png)
 
 1. Use the `@azure pipelines` handle to start interacting with the app.
 
@@ -190,20 +200,20 @@ Run the `@Azure Pipelines subscriptions` command and select **Add Subscription**
    ![](images/azurepipelines_managesub.png)
 
    - **Get notifications only for failed builds**
-    ![](images/azurepipelines_custombuildsub.png)
+    ![](images/azurepipelines_custombuildsub_new.png)
 
  - **Get notifications only if the deployments are pushed to prod environment** 
    
-   ![](images/azurepipelines_customreleasesub.png)
+   ![](images/azurepipelines_customreleasesub_new.png)
 
 
 ## Collaboration Experience
 
 Messages are a good way to connect and keep a history of the conversation. It's even better to use emoji, stickers, and GIFs to make a great impression.
 
-1. Start having conversations with your team members by selecting the **Conversations** tab.
+1. Start having conversations with your team members by selecting the **Posts** tab.
 
-   ![](images/conversations.png)
+   ![](images/posts.png)
 
 1. All the conversations could be retrieved at any time without losing the history which helps the entire team to have a collaborative experience
 
@@ -211,8 +221,8 @@ Messages are a good way to connect and keep a history of the conversation. It's 
 
 1. **Easily find and discuss work items from DevOps in Teams** : You can easily search, find and discuss work items from Azure DevOps in Teams, keeping the conversation and collaboration within your Teams app. For example if you would like to discuss about any User Story you can click on **Azure DevOps** icon. It will prompt a window where you can search your project workitems. Select the work item to discuss and enter your comments.
 
-      ![](images/workitems.png)
-      ![](images/workitems2.png)
+      ![](images/workitems_new.png)
+      ![](images/workitems2_new.png)
       
 For more information about using the Conversation tab in Microsoft Teams click [here](https://support.office.com/en-us/article/using-the-conversation-tab-in-microsoft-teams-53d1c530-3797-4a6f-9892-6760f8763df2)
 
@@ -227,15 +237,15 @@ For more information about using the Conversation tab in Microsoft Teams click [
 To learn more about best practices for creating teams and channels view this short [video](https://youtu.be/hjJWtoaRJeE).
 1. Select the **Team** that was created earlier and click on **ellipsis (...)**
 
-   ![](images/add_channel.png)
+   ![](images/add_channel_new.png)
 
-1. Give a name and description for your channel and click on **Add**
+1. Give a name, description for your channel and select privacy and  click on **Add**
 
-   ![](images/create_channel.png)
+   ![](images/create_channel_new.png)
 
 1. Once the channel is created, the conversations can be started among the team members.
 
-   ![](images/channel_added.png)
+   ![](images/channel_added_new.png)
 
 ## Sharing the Contents
 
@@ -243,7 +253,7 @@ As your team works together you'll undoubtedly have files that you'll want to sh
 
 1. Select **Files** and select **Upload** to share a document with the team. You can also use **Drag and drop** (Using your mouse, drag the file from where it's currently located and drop it on the Teams window among the files.) method to upload files.
 
-   ![](images/upload_files.png)
+   ![](images/Upload_file_new.png)
 
 1. Click on the document that was uploaded from the list to start editing and having a live conversation with your team members
 
@@ -253,21 +263,21 @@ As your team works together you'll undoubtedly have files that you'll want to sh
 
 1. Navigate to your Azure DevOps projects Wiki page. Copy the URL.
        
-    ![](images/wikipage.png)
+    ![](images/wikipage_new.png)
 
 1. Now switch back to the **Teams**. Click on **+** and select **Website**
 
-   ![](images/add_tab.png)
+   ![](images/add_tab_new.png)
 
    ![](images/add_website.png)
 
 1. Provide a name for the website, enter the wiki URL copied in previous step and click on **Save**. It appears on the channel where all of the team members can access to get quick information if there were any updates done
 
-    ![](images/wikiasweb.png)
+    ![](images/wikiasweb_new.png)
 
 1. This is how the website/Wiki looks when added to the channel.
 
-   ![](images/wikiasweb2.png)
+   ![](images/wikiasweb2_new.png)
 
 Now that you have connected Microsoft Teams and Azure DevOps think about the other development team information that you can expose via Microsoft teams, for example: 
 
