@@ -26,64 +26,42 @@ In this lab, you will learn how to execute selenium test cases on a C# web appli
 
    ![azure_resources](images/azure_resources.png)
 
-1. Use the [Azure DevOps Demo Generator](https://azuredevopsdemogenerator.azurewebsites.net/?Name=Selenium&TemplateId=77367){:target="_blank"} to provision the project on your Azure DevOps Organization.
+1. Use the [Azure DevOps Demo Generator](https://azuredevopsdemogenerator.azurewebsites.net/?Name=Selenium&TemplateId=77367){:target="_blank"} to provision the project on your Azure DevOps Organization. This URL will automatically select Ansible template in the demo generator. If you want to try other projects, use this URL instead - https://azuredevopsdemogenerator.azurewebsites.net/
 
-## Exercise 1: Create a Deployment Group
 
-We will use Deployment Groups feature in Azure DevOps to deploy the application on a VM which was provisioned earlier to execute the Selenium test cases. [Deployment Groups](https://docs.microsoft.com/en-us/vsts/build-release/concepts/definitions/release/deployment-groups/){:target="_blank"} in Azure DevOps makes it easier to organize the servers that you use to host your app. A deployment group is a collection of machines with a Azure DevOps agent on each of them. Each machine interacts with Azure DevOps to coordinate the deployment of your applications.
+Follow the [simple walkthrough](https://docs.microsoft.com/en-us/azure/devops/demo-gen/use-vsts-demo-generator-v2?view=vsts) to know how to use the Azure DevOps Demo Generator.
 
-We will also deploy the SQL database in the VM using Deployment Groups.
 
-1. Go to **Deployment Groups** under **Pipelines** tab. Click on **Add a deployment group** .
+## Exercise 1: Configure agent on the VM
 
-   ![add_deploymentgroup](images/deploy3.png)
-
-1. Provide deployment group name and click on **Create**.
-
-   ![create_deploymentgroup](images/deployname4.png)
-
-   This will generate a PowerShell script to associate the VM to this deployment group.
-
-1. Select **Use a personal access token in the script for authentication** check the box, so that we will not have to provide a password every time the script is executed. Click on **Copy script to clipboard** to copy the script which will be used in the next exercise to associate the VM to the deployment group.
-
-   ![create_deploymentgroup2](images/deploy5.png)
-
-## Exercise 2: Associate the VM to Deployment Group
-
-In this exercise, we will execute the **registration script** on the VM to associate with the deployment group.
+Let us configure a ***private*** slef-hosted agent on this VM. Selenium requires the agent to be run in **interactive** mode to execute the UI tests.
 
 1. Login to the VM using [RDP](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/connect-logon){:target="_blank"} with the following credentials
 
    - **Username**: vmadmin
    - **Password**: P2ssw0rd@123
 
-1. Open **Windows PowerShell** in **administrator** mode, paste the copied **Registration script** and hit **Enter**.
+1. In the VM open web browser, sign in to your Azure DevOps organization and navigate to the Agent pools tab:
 
-   ![configure_deploymentgroup-2](images/configure_deploymentgroup-2.png)
+    - Choose  **Azure DevOps**, **Organization settings**.
 
-1. When the **Enter deployment group tags for agent? (Y/N) (press enter for N) >** message is prompted in the PowerShell window, type **Y** and hit enter.
+      ![](images/orgsettings.png)
 
-   ![deploygroup_agent](images/deploygroup_agent.png)
+    - Choose **Agent pools**.
 
-1. Enter **web, db** for the tags
+       ![](images/agentpools.png)
 
-   ![configure_deploymentgroup](images/configure_deploymentgroup.png)
+    - Select the **Default** pool, select the **Agents** tab and choose **New agent**.
 
-1. When prompt -**Enter User account to use for the service (press enter for NT AUTHORITY\SYSTEM) >** is displayed, hit **Enter** to configure the service to run under **NT AUTHORITY\SYSTEM** account.
+    - On  **Get the agent** dialog box, choose **Windows** and **Download** agent.
+       
+         ![](images/downloadagent.png)
 
-   ![userserviceaccount-dg](images/userserviceaccount-dg.png)
+1. Make a directory in **C Drive** with the name **AzAgent** and extract the downloaded agent zip file  to this directory.
+  
+    ![](images/extractagent.png)
 
-1. Refresh the Azure DevOps Deployment Groups page you will notice that your Deployment group is online. 
-
-   ![configure_deploymentgroup2](images/deployonline6.png)
-
-## Exercise 3: Configure agent on the VM
-
-Let us configure a ***private*** agent on this VM, since Selenium requires the agent to be run in **interactive** mode to execute the UI tests.
-
-1. Go to the VM and open the folder **C:\VSTSwinAgent**.
-
-1. Open a command prompt in **administrator mode**. Change the path to **C:\VSTSWinAgent** and type **Config.cmd** and hit **Enter**.
+1. Open Powershell in **administrator mode**. Change the path to **C:\AzAgent** and type **Config.cmd** and hit **Enter**.
 
 1. Provide the following details:
 
@@ -94,25 +72,25 @@ Let us configure a ***private*** agent on this VM, since Selenium requires the a
 
     Click [here](https://docs.microsoft.com/en-us/vsts/build-release/actions/agents/v2-windows){:target="_blank"} for more information on how to configure the agent.
 
-   ![configure_windowsagent](images/configure_windowsagent.png)
+   ![configure_windowsagent](images/configureagent.png)
 
-## Exercise 4: Configure Release Pipeline
+## Exercise 2: Configure Release Pipeline
 
-The target machine is available in the deployment group to deploy the applications and run selenium testcases. The release definition uses **[Phases](https://docs.microsoft.com/en-us/vsts/build-release/concepts/process/phases){:target="_blank"}** to deploy to target servers.
+The target machine is having agent configured to deploy the applications and run selenium testcases. The release definition uses **[Phases](https://docs.microsoft.com/en-us/vsts/build-release/concepts/process/phases){:target="_blank"}** to deploy to target servers.
 
 1. Go to **Releases** under **Pipelines** tab. Select **Selenium** release definition and click on **Edit**.
 
-   ![setuprelease](images/release7.png)
+   ![setuprelease](images/editrelease.png)
 
 1. Open **Dev** environment to see the three deployment phases.
 
-   ![setuprelease2](images/dev8.png)
+   ![setuprelease2](images/devtasks.png)
 
-   ![releasephases](images/dev9.png)
+   ![releasephases](images/deploymentphases.png)
 
    - **IIS Deployment phase**: In this phase, we deploy application to the VM using the following tasks-
 
-      - **IIS Web App Manage**: This task runs on the target machine registered with the Deployment Group. It creates a *website* and an *Application Pool* locally with the name **PartsUnlimited** running under the port **82** [**http://localhost:82**](http://localhost:82)
+      - **IIS Web App Manage**: This task runs on the target machine where we registered agent. It creates a *website* and an *Application Pool* locally with the name **PartsUnlimited** running under the port **82** , [**http://localhost:82**](http://localhost:82)
 
       - **IIS Web App Deploy**: This task deploys the application to the IIS server using **Web Deploy**.
 
@@ -123,33 +101,33 @@ The target machine is available in the deployment group to deploy the applicatio
      - **Visual Studio Test Platform Installer**: The [Visual Studio Test Platform Installer](https://docs.microsoft.com/en-us/azure/devops/pipelines/tasks/tool/vstest-platform-tool-installer?view=vsts){:target="_blank"} task will acquire the Microsoft test platform from nuget.org or a specified feed, and add it to the tools cache. It satisfies the 'vstest' demand and a subsequent Visual Studio Test task in a build or release pipeline can run without needing a full Visual Studio install on the agent machine.
      - **Run Selenium UI tests**: This [task](https://github.com/Microsoft/azure-pipelines-tasks/blob/master/Tasks/VsTestV2/README.md){:target="_blank"} uses **vstest.console.exe** to execute the selenium testcases on the agent machines.
 
-1. Click on **IIS Deployment** phase and select the Deployment Group which we have created in **Exercise 2**.
+1. Click on **IIS Deployment** phase and select the **Default** Agent pool where we registered the agent in **Exercise 1**. In case if you have registered the agent to different agent pool, you need to select that.
 
-   ![setuprelease_IIS](images/dev10.png)
+   ![setuprelease_IIS](images/iisdeployphase.png)
 
 1. Repeat the above step for **SQL Deployment** phase
 
-   ![setuprelease_db](images/dev11.png)
+   ![setuprelease_db](images/sqldeployphase.png)
 
 1. Click on **Selenium tests execution** phase and set Agent pool to **Default** then **Save** the changes.
 
-   ![setuprelease_selenium](images/dev12.png)
+   ![setuprelease_selenium](images/testphase.png)
 
-## Exercise 5: Trigger Build and Release
+## Exercise 3: Trigger Build and Release
 
 In this exercise, we will trigger the **Build** to compile Selenium C# scripts along with the Web application. The resulting binaries are copied to Azure VM and finally the selenium scripts are executed as part of the automated **Release**.
 
-1. Navigate to **Builds** under **Pipelines** tab and queue the build.
+1. Navigate to **Pipelines** under **Pipelines**. Select **Selenium** build pipeline and click **Run pipeline**.
 
-   ![buildqueue](images/Builds13.png)
+   ![buildqueue](images/selectbuildpipeline.png)
+
+    ![buildqueue](images/runbuildpipeline.png)
 
 1. This build will publish the test artifacts to Azure DevOps, which will be used in release.
 
-   ![buildqueue2](images/Buildsuccess_1.png)
-
 1. Once the build is successful, release will be triggered. Navigate to **Releases** tab to see the deployment in-progress.
 
-   ![releasequeue](images/release14.png)
+   ![releasequeue](images/releasepipelinequeued.png)
 
 1. When **Selenium test execution** phase starts, connect back to the VM provisioned earlier to see UI tests execution.
 
