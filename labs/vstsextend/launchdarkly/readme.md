@@ -145,7 +145,7 @@ In this lab, you will learn
 
 ## Exercise 3: Automatically rollout your LaunchDarkly feature flags during release.
 
-1. We need a LaunchDarkly access token to integrate with Azure DevOps services. Visit the [Access Tokens](https://app.launchdarkly.com/settings/tokens) tab on the Account Settings page in LaunchDarkly. If you don't have, create one and copy access token to the clipboard.
+1. We need a LaunchDarkly access token to integrate with Azure DevOps services. Visit the [Access Tokens](https://app.launchdarkly.com/settings/tokens) tab on the Account Settings page in LaunchDarkly. If you don't have, create one and copy access token to the clipboard. Make sure the token has at least **Write** access
   
    ![](images/launchdarklypat.png)
 
@@ -188,7 +188,7 @@ In this lab, you will learn
 1. Select **Azure App Service Deploy** task and choose your Azure subscription.
 
     ![](images/task3.png)
-1. Select **Variables** and for **launchdarkly-pat** variable enter your Azure DevOps services **Personal Access Token (PAT)**. If you don't have one click [here](https://docs.microsoft.com/en-us/azure/devops/organizations/accounts/use-personal-access-tokens-to-authenticate?view=vsts) to know how to create personal access tokens for Azure DevOps Services.  **Save** your changes.
+1. Select **Variables** and for **launchdarkly-pat** variable enter your Azure DevOps services **Personal Access Token (PAT)**. If you don't have one click [here](https://docs.microsoft.com/en-us/azure/devops/organizations/accounts/use-personal-access-tokens-to-authenticate?view=vsts) to know how to create personal access tokens for Azure DevOps Services. Also fill out the **launchdarkly-account-name** and **launchdarkly-project-name** variables with the name of your Azure DevOps account and the project name.  **Save** your changes.
 
      ![](images/azuredevopsPAT.png)
      
