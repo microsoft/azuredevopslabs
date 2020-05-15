@@ -59,23 +59,23 @@ The Azure DevOps makes it easier to organize the servers for deploying the appli
 
  > Since there is no configuration change required for the build pipeline, the build will be triggered automatically after the project is provisioned.
 
-1. From the pipelines, select the [**Deployment Groups**](https://docs.microsoft.com/en-us/vsts/build-release/concepts/definitions/release/deployment-groups/){:target="_blank"} option. Click on the **Add deployment group** button to configure.
+1. From the pipelines, select the [**Deployment Groups**](https://docs.microsoft.com/en-us/vsts/build-release/concepts/definitions/release/deployment-groups/){:target="_blank"} option. Click on the **Add a deployment group** button to configure.
 
    ![Deployment group](images/deploymentgroup.png)
 
-1. Provide a `Deployment group name`, and click on the **Create** button. A registration script generated will be displayed.
+1. Provide a **Deployment group name** of your choice and click on the **Create** button. A registration script generated will be displayed.
 
    ![Deployment group](images/deploymentgroup2.png)
 
    ![Registration script](images/dgscript.png)
 
-   > The target servers are available in the deployment group for deploying the application. The release definition uses **Phases** to deploy the application to the target servers. A [Phase](https://docs.microsoft.com/en-us/vsts/build-release/concepts/process/phases){:target="_blank"} is a logical grouping of the tasks that defines the runtime target on which the tasks will execute. A deployment group phase executes tasks on the machines defined in a deployment group.
+   > The target servers will be available in the deployment group for deploying the application. You can register the target servers using the script above. In this lab, we automatically register our target servers in the release pipeline. The release definition uses **Phases** to deploy the application to the target servers. A [Phase](https://docs.microsoft.com/en-us/vsts/build-release/concepts/process/phases){:target="_blank"} is a logical grouping of the tasks that defines the runtime target on which the tasks will execute. A deployment group phase executes tasks on the machines defined in a deployment group.
 
-1. From the pipelines, click on the **Releases** option and click **Edit**.
+1. Naviagate to **Pipelines** \| **Releases**. Select the release pipeline and click **Edit**.
 
     ![Release](images/releasepipeline.png)
 
-1. You will see the pipeline. Select the environment **Dev** from the tasks dropdown.
+1. In the pipeline select the stage **Dev** from the tasks dropdown to view the  deployment tasks in pipeline.
 
    ![Environment](images/releaseenvironment.png)
 
@@ -83,30 +83,34 @@ The Azure DevOps makes it easier to organize the servers for deploying the appli
 
    ![Phases](images/differentphases.png)
 
-   * **Agent Phase**: In this phase, the target servers will be associated to the deployment group using the Azure Resource Group Deployment task.
+1. **Agent Phase**: In this phase, the target servers will be associated to the deployment group using the Azure Resource Group Deployment task.
 
      * **Azure Resource Group Deployment**: This task will automate the configuration of the deployment group agents to the web and db servers. 
 
         ![Agent Phase](images/agent_phase.png)
      
-       - Authorize the correct Azure subscription from the drop down or click `Manage` to associate a new Azure subscription. 
-       - Choose the **Resource Group** that was created previously.
-       - In the **Azure Pipelines/TFS service connection**, click **+ New** to create a new service connection of your Azure DevOps account. With the *Token Based Authentication*, provide the **Name, Azure DevOps URL and PAT**. Verify the connection successfully and click *OK*.
+       - Authorize the correct Azure subscription from the drop down or click **Manage** to associate a new Azure subscription. 
+       - Choose the **Resource Group** that was created previously in Azure Portal.
+       - In the **Azure Pipelines service connection**, click **+ New** to create a new service connection of your Azure DevOps account. 
+       
+       - With the *Token Based Authentication*, provide the **Name, Azure DevOps URL and PAT**. Then click **Verify and save**.
+
+         ![Service Connection](images/azuredevopsserviceconnection.png)
+
        - Choose the **Team Project** that was provisioned with Azure DevOps Demo Generator tool.
        - Choose the **Deployment Group**.
 
-       ![Service Connection](images/serviceconnection1.png)
-       ![Resource Group Deploy](images/argd.png)
+         ![Resource Group Deploy](images/teamprojectdg.png)
 
-   * **Deployment group phase**: This deployment group phase executes tasks on the machines defined in the deployment group. This phase is linked to the **db** tag. Choose the **Deployment Group** from the drop down.
+  1.  **Deployment group phase**: This deployment group phase executes tasks on the machines defined in the deployment group. This phase is linked to the **db** tag. Choose the **Deployment Group** from the drop down.
 
-     * **Deploy Dacpac**: This task is used to deploy the dacpac file to the DB server.
+      ![tag](images/db_tag.png)
 
-       ![tag](images/db_tag.png)
+      * **Deploy Dacpac**: This task is used to deploy the dacpac file to the DB server.
 
-       ![dacpac](images/dacpac.png)
+        ![dacpac](images/dacpac.png)
 
-   * **IIS Deployment phase**: In this phase, the application will be deployed to the web servers using the below tasks. This phase is linked to **web** tag. Choose the **Deployment Group** from the drop down. 
+   1. **IIS Deployment phase**: In this phase, the application will be deployed to the web servers using the below tasks. This phase is linked to **web** tag. Choose the **Deployment Group** from the drop down. 
 
       * **Azure Network Load Balancer**: As the target machines are connected to the NLB, this task will disconnect the machines from the NLB prior to the deployment and reconnect them back to the NLB after the deployment.
 
@@ -142,13 +146,31 @@ The Azure DevOps makes it easier to organize the servers for deploying the appli
 
     ![Connect load balancer](images/connect_lb.png)
 
-1. Click on the **Variables** tab and select the **Pipeline Variables** option. Replace the value of the **DefaultConnectionString** variable with the `SQL DNS` value noted earlier.
+1. Click on the **Variables** tab and select the **Pipeline Variables** option. Enter the variable values as below
 
-   ![Release variable](images/release_variable.png)
+         
+   | Variable Name | Variable Value  |
+   |--|--|
+   | DatabaseName | PartsUnlimited-Dev |
+   | DBPassword | P2ssw0rd@123 |
+   | DBUserName |sqladmin  |
+   | DefaultConnectionString | Data Source=YOUR_DNS_NAME.cloudapp.azure.com;Initial Catalog=PartsUnlimited-Dev;User ID=sqladmin;Password=P2ssw0rd@123;MultipleActiveResultSets=False;Connection Timeout=30; |
+   | ServerName | localhost |
 
-1. Click on the **Save** button and then click on the **Create release** option.
+    {% include important.html content= "Make sure to replace your SQL server DNS name (which you noted from Azure Portal earlier) in **DefaultConnectionString** variable" %}
 
-   ![New Release](images/release.png)
+    It will look like as below
+
+    ![Variables](images/variables.png)
+
+    Your DefaultConnectionString will be like as below after replacing SQL DNS.
+
+    `Data Source=dgsqlw4zktxlvx7ddu.centralindia.cloudapp.azure.com.cloudapp.azure.com;Initial Catalog=PartsUnlimited-Dev;User ID=sqladmin;Password=P2ssw0rd@123;MultipleActiveResultSets=False;Connection Timeout=30;`
+
+
+1.  **Save** the changes and click on the **Create release** then **Create**
+
+    ![New Release](images/release.png)
 
 1. Once the release is completed, the deployments will be completed in the DB and Web servers. Click on the logs to view the release summary.
 
