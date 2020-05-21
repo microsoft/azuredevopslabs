@@ -34,7 +34,7 @@ Follow the [simple walkthrough](https://docs.microsoft.com/en-us/azure/devops/de
 
 ## Exercise 1: Configure agent on the VM
 
-Let us configure a ***private*** slef-hosted agent on this VM. Selenium requires the agent to be run in **interactive** mode to execute the UI tests.
+Let us configure a ***private*** self-hosted agent on this VM. Selenium requires the agent to be run in **interactive** mode to execute the UI tests.
 
 1. Login to the VM using [RDP](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/connect-logon){:target="_blank"} with the following credentials
 
