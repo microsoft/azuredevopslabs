@@ -26,7 +26,7 @@ In this lab, you will learn how to execute selenium test cases on a C# web appli
 
    ![azure_resources](images/azure_resources.png)
 
-1. Use the [Azure DevOps Demo Generator](https://azuredevopsdemogenerator.azurewebsites.net/?Name=Selenium&TemplateId=77367){:target="_blank"} to provision the project on your Azure DevOps Organization. This URL will automatically select Ansible template in the demo generator. If you want to try other projects, use this URL instead - https://azuredevopsdemogenerator.azurewebsites.net/
+1. Use the [Azure DevOps Demo Generator](https://azuredevopsdemogenerator.azurewebsites.net/?Name=Selenium&TemplateId=77367){:target="_blank"} to provision the project on your Azure DevOps Organization. This URL will automatically select Selenium template in the demo generator. If you want to try other projects, use this URL instead - https://azuredevopsdemogenerator.azurewebsites.net/
 
 
 Follow the [simple walkthrough](https://docs.microsoft.com/en-us/azure/devops/demo-gen/use-vsts-demo-generator-v2?view=vsts) to know how to use the Azure DevOps Demo Generator.
@@ -34,7 +34,7 @@ Follow the [simple walkthrough](https://docs.microsoft.com/en-us/azure/devops/de
 
 ## Exercise 1: Configure agent on the VM
 
-Let us configure a ***private*** slef-hosted agent on this VM. Selenium requires the agent to be run in **interactive** mode to execute the UI tests.
+Let us configure a ***private*** self-hosted agent on this VM. Selenium requires the agent to be run in **interactive** mode to execute the UI tests.
 
 1. Login to the VM using [RDP](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/connect-logon){:target="_blank"} with the following credentials
 
