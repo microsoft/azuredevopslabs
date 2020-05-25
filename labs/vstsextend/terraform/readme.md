@@ -77,7 +77,7 @@ In this lab, you will use PartsUnlimited which is an example eCommerce website d
 
      ![](images/copyfiles.png)
 
-1. Now click **Queue** to trigger the build. Once the build success, verify that the artifacts have **Terraform** folder and **PartsUnlimitedwebsite.zip** file in the drop.
+1. Now click **Queue** to trigger the build. Once the build succeeds, verify that the artifacts have **Terraform** folder and **PartsUnlimitedwebsite.zip** file in the drop.
 
       ![](images/queuebuild2.gif)
 
