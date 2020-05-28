@@ -14,6 +14,10 @@ updated: Last updated - 9/9/2019
 
 It takes several teams to develop large software projects. Very large projects require multiple autonomous teams that can manage their own backlog and priority while contributing to a unified direction for that project. Regular reviews of the project schedule with these teams help ensure that the teams are working toward common goals. Delivery Plans provide the needed multi-team view of your project schedule.
 
+
+<div class="bg-slap"><img src="./images/mslearn.png" class="img-icon-cloud" alt="MS teams" style="
+    width: 48px; height: 48px;">Do you like more hands-on experience? Check out <a href="https://docs.microsoft.com/en-us/learn/modules/manage-delivery-plans/" target="_blank"><b><u> Manage Agile software delivery plans across teams </u></b></a> module on Microsoft Learn.</div>
+
 <a name="Prerequisites"></a>
 ### Prerequisites ###
 

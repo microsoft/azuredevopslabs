@@ -13,6 +13,9 @@ folder: /labs/vstsextend/python/
 
 This lab shows how to deploy a **Python** application to **Azure App Service** using **Azure DevOps**. We will be using [Django](https://www.djangoproject.com/){:target="_blank"} framework for deployment.
 
+<div class="bg-slap"><img src="./images/mslearn.png" class="img-icon-cloud" alt="MS teams" style="width: 48px; height: 48px;">Do you like more hands-on experience? Check out <a href="https://docs.microsoft.com/en-us/learn/modules/deploy-python/" target="_blank"><b><u> Automate Python deployments with Azure Pipelines </u></b></a> module on Microsoft Learn.</div>
+
+
 ### Prerequisites for the lab
 
 1. Refer the [Getting Started](../Setup/) page to know the prerequisites for this lab.

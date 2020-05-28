@@ -14,6 +14,8 @@ redirect_from: "/labs/vsts/selenium/index.htm"
 
 In this lab, you will learn how to execute selenium test cases on a C# web application, as part of the Azure DevOps Release pipeline. 
 
+<div class="bg-slap"><img src="./images/mslearn.png" class="img-icon-cloud" alt="MS teams" style="width: 48px; height: 48px;">Do you like more hands-on experience? Check out <a href="https://docs.microsoft.com/en-us/learn/modules/run-functional-tests-azure-pipelines/" target="_blank"><b><u> Run functional tests in Azure Pipelines </u></b></a> module on Microsoft Learn.</div>
+
 ### Before you begin
 
 1. Refer to the [Getting Started](../Setup/) before you follow the below exercises.

@@ -13,8 +13,8 @@ folder: /labs/vstsextend/terraform/
 
 Configuration files describe to **Terraform** the components needed to run a single application or your entire datacenter. Terraform generates an execution plan describing what it will do to reach the desired state, and then executes it to build the described infrastructure. As the configuration changes, Terraform is able to determine what changed and create incremental execution plans which can be applied. 
 
-<div class="bg-slap"><img src="./images/MicrosoftTeams-image.png" class="img-icon-cloud" alt="MS teams">Want more hands-on experience? Check out <a href="https://docs.microsoft.com/en-us/learn/modules/provision-infrastructure-azure-pipelines/"><b><u> Provision infrastructure
-in Azure Pipelines</u></b></a> on Microsoft Learn.</div>
+<div class="bg-slap"><img src="./images/mslearn.png" class="img-icon-cloud" alt="MS teams" style="width: 48px; height: 48px;">Do you like more hands-on experience? Check out <a href="https://docs.microsoft.com/en-us/learn/modules/provision-infrastructure-azure-pipelines/" target="_blank"><b><u> Provision infrastructure
+in Azure Pipelines</u></b></a> module on Microsoft Learn.</div>
 
 ### What’s covered in this lab
 
