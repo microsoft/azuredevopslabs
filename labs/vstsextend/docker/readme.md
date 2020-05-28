@@ -21,6 +21,7 @@ The Web App for Containers allows the creation of custom [Docker](https://www.do
 
 1. Deploy and run the images inside the Docker Containers
 
+<div class="bg-slap"><img src="./images/mslearn.png" class="img-icon-cloud" alt="MS teams" style="width: 48px; height: 48px;">Do you like more hands-on experience? Check out <a href="https://docs.microsoft.com/en-us/learn/modules/deploy-docker/" target="_blank"><b><u> Automate Docker container deployments </u></b></a> module on Microsoft Learn.</div>
 
 ## Before you begin
 

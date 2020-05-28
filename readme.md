@@ -33,7 +33,7 @@ description: Learn how you can implement modern DevOps practices with Azure, Azu
   <ul class="carousel-indicators">
     <li data-target="#demo" data-slide-to="0" class="active"></li>
     <li data-target="#demo" data-slide-to="1"></li>
-     <!--<li data-target="#demo" data-slide-to="2"></li>-->
+     <li data-target="#demo" data-slide-to="2"></li>
   </ul>
 
   <!-- The slideshow -->
@@ -58,6 +58,13 @@ description: Learn how you can implement modern DevOps practices with Azure, Azu
       <p><a href="/labs/devopsserver/" class="btn btn-sm btn-primary mt-1">Start Learning</a></p>
       </div> 
     </div>  -->
+	<div class="carousel-item banner3">
+      <div class="text-center p-t-60px">
+      <p class="bannerTitle">Azure DevOps Learning Path</p>
+      <p class="bannerText">Learn new skills and discover the power of Azure DevOps. Start your journey today by exploring Azure DevOps learning paths and modules.<br></p>
+      <p><a href="https://docs.microsoft.com/en-us/learn/browse/?products=azure-devops" class="btn btn-sm btn-primary mt-1">Start Learning</a></p>
+      </div> 
+    </div> 
   </div>
 
   <!-- Left and right controls -->
@@ -339,6 +346,10 @@ description: Learn how you can implement modern DevOps practices with Azure, Azu
      <!--  <div class="row" style="margin-left: 10px;margin-top: 10px;">
       <p>For the on-premises platform, Azure DevOps Server (previously named Visual Studio Team Foundation Server), see  <a href="/labs/devopsserver/" class="btn btn-sm btn-primary">Azure DevOps Server 2019 Labs</a></p>
       </div> -->
+
+<div class="row" style="margin-left: 10px;margin-top: 10px;">
+      <p> Do you like more hands-on experience? Azure DevOps Learning paths and modules available now on Microsoft Learn. <a href="https://docs.microsoft.com/en-us/learn/browse/?products=azure-devops" target="_blank" class="btn btn-sm btn-primary">Azure DevOps Learning Path</a></p>
+      </div> 
      </div>
 
 <hr height="1" style="width: 75%;" />  
