@@ -12,7 +12,7 @@ updated: blank
 
 In this lab, we will present a scenario where Visual Studio Team Services (VSTS) can enable Node.js developers with continuous integration and deployment features. The scenario demonstrates how a Node.js developer using [Visual Studio Code](http://code.visualstudio.com) and various Azure-related VS Code extensions to create a new Azure App Service and use Git-based deployment. You'll learn how a Node.js developer can use VSTS to ensure that their code is deployed automatically to an Azure App Service when code is committed to a VSTS Git repository.
 
-<div class="bg-slap"><img src="./media/mslearn.png" class="img-icon-cloud" alt="MS teams" style="width: 48px; height: 48px;">Do you like more hands-on experience? Check out <a href="https://docs.microsoft.com/en-us/learn/modules/deploy-nodejs/" target="_blank"><b><u> Automate Node.js deployments with Azure Pipelines </u></b></a> module on Microsoft Learn.</div>
+<div class="bg-slap"><img src="./media/mslearn.png" class="img-icon-cloud" alt="MS teams" style="width: 48px; height: 48px;">Want additional learning? Check out the <a href="https://docs.microsoft.com/en-us/learn/modules/deploy-nodejs/" target="_blank"><b><u> Automate Node.js deployments with Azure Pipelines </u></b></a> module on Microsoft Learn.</div>
 
 ## Prerequisites
 

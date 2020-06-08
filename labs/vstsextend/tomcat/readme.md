@@ -14,7 +14,7 @@ In this lab, you will learn how you can use Azure Pipelines to deploy a Java web
 
 For this lab, you will use Azure App Service and Azure Database for MySQL, a relational database service based on the open source MySQL Server engine. It is a fully managed database as a service, capable of handing mission-critical workload with predictable performance and dynamic scalability.
 
-<div class="bg-slap"><img src="./images/mslearn.png" class="img-icon-cloud" alt="MS teams" style="width: 48px; height: 48px;">Do you like more hands-on experience? Check out <a href="https://docs.microsoft.com/en-us/learn/modules/deploy-java-containers/" target="_blank"><b><u> Automate Java container deployments </u></b></a> module on Microsoft Learn.</div>
+<div class="bg-slap"><img src="./images/mslearn.png" class="img-icon-cloud" alt="MS teams" style="width: 48px; height: 48px;">Want additional learning? Check out the <a href="https://docs.microsoft.com/en-us/learn/modules/deploy-java-containers/" target="_blank"><b><u> Automate Java container deployments </u></b></a> module on Microsoft Learn.</div>
 
 ### What's covered in this lab
 
