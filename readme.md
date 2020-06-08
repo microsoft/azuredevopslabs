@@ -61,8 +61,8 @@ description: Learn how you can implement modern DevOps practices with Azure, Azu
 	<div class="carousel-item banner3">
       <div class="text-center p-t-60px">
       <p class="bannerTitle">Azure DevOps Learning Path</p>
-      <p class="bannerText">Learn new skills and discover the power of Azure DevOps. Start your journey today by exploring Azure DevOps learning paths and modules.<br></p>
-      <p><a href="https://docs.microsoft.com/en-us/learn/browse/?products=azure-devops" class="btn btn-sm btn-primary mt-1">Start Learning</a></p>
+      <p class="bannerText">Learn new skills and discover the power of Azure DevOps at Microsoft Learn. Start your learning journey today.<br></p>
+      <p><a href="https://docs.microsoft.com/en-us/learn/browse/?products=azure-devops" class="btn btn-sm btn-primary mt-1">Visit Microsoft Learn</a></p>
       </div> 
     </div> 
   </div>
@@ -348,7 +348,7 @@ description: Learn how you can implement modern DevOps practices with Azure, Azu
       </div> -->
 
 <div class="row" style="margin-left: 10px;margin-top: 10px;">
-      <p> Do you like more hands-on experience? Azure DevOps Learning paths and modules available now on Microsoft Learn. <a href="https://docs.microsoft.com/en-us/learn/browse/?products=azure-devops" target="_blank" class="btn btn-sm btn-primary">Azure DevOps Learning Path</a></p>
+      <p> Want even more hands-on experience? Azure DevOps courses are now available on Microsoft Learn. <a href="https://docs.microsoft.com/en-us/learn/browse/?products=azure-devops" target="_blank" class="btn btn-sm btn-primary">Visit Microsoft Learn</a></p>
       </div> 
      </div>
 

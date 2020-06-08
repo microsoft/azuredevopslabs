@@ -13,7 +13,7 @@ folder: /labs/vstsextend/azurefunctions/
 
 **Lab Scenario**: In this lab, you will be using a fictional eCommerce website - **PartsUnlimited**. The PartsUnlimited team wants to roll out a new discount for its employees and customers and wants to build Azure Functions that will retrieve the right discount depending on whether the logged in user is an employee or a customer.
 
-<div class="bg-slap"><img src="./images/mslearn.png" class="img-icon-cloud" alt="MS teams" style="width: 48px; height: 48px;">Do you like more hands-on experience? Check out <a href="https://docs.microsoft.com/en-us/learn/modules/deploy-azure-functions/" target="_blank"><b><u> Automate Azure Functions deployments with Azure Pipelines </u></b></a> module on Microsoft Learn.</div>
+<div class="bg-slap"><img src="./images/mslearn.png" class="img-icon-cloud" alt="MS teams" style="width: 48px; height: 48px;">Want additional learning? Check out the <a href="https://docs.microsoft.com/en-us/learn/modules/deploy-azure-functions/" target="_blank"><b><u> Automate Azure Functions deployments with Azure Pipelines </u></b></a> module on Microsoft Learn.</div>
 
 ## What is covered in this lab?
 
