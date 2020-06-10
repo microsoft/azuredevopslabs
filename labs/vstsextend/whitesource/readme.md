@@ -45,11 +45,11 @@ Upon activation, the below message is displayed.
 
 You have a **Java code** provisioned by the Azure DevOps demo generator. You will use **WhiteSource Bolt** extension to check the vulnerable components present in this code.
 
-1. Go to **Builds** section under **Pipelines** tab, select the build definition **WhiteSourceBolt** and click on **Queue** to trigger a build.
+1. Go to **Pipelines** section under **Pipelines** tab, select the build definition **WhiteSourceBolt** and click on **Run pipeline** to trigger a build.
 
    ![build-def](images/buildtrigger4.png)
 
-1. To view the build in progress status, click on ellipsis and select **View build results**.
+1. To view the build in progress status, click on job named **Phase 1**.
 
    ![inprogress_build](images/build5.png)
 
