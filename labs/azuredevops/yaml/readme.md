@@ -31,13 +31,12 @@ The following image will walk you through all the steps explained in this lab
 
 1. This lab requires a deployment of the Parts Unlimited project out to an Azure app service. To do this, you will need to spin up the necessary infrastructure. Log in to your Azure account at [https://portal.azure.com](https://portal.azure.com/).
 
-1. Click **Create a resource** and search for **"web sql"**.
+1. Click **Create a resource** and search for **"Web App + SQL"**.
 
-    ![](images/000.png)
 
 1. Select the **Web App + SQL** option published by Microsoft.
 
-    ![](images/001.png)
+    ![](images/createresource.png)
 
 1. Click **Create**.
 
@@ -105,16 +104,10 @@ The following image will walk you through all the steps explained in this lab
 
     ![](images/015.png)
 
-1. Review the contents of the YAML definition. It will be saved as a new file called **"azure-pipelines.yml"** in the root of the repository and contain everything needed to build and test a typical ASP.NET solution. You can also customize the build as needed. In this case, update the **pool** to specify the build should use a Visual Studio 2017 build VM. Be sure to keep it at the same two-space indentation.
+1. Review the contents of the YAML definition. It will be saved as a new file called **"azure-pipelines.yml"** in the root of the repository and contain everything needed to build and test a typical ASP.NET solution. You can also customize the build as needed. In this case, update the **pool** to specify the build should use a Visual Studio 2017 build VM. 
 
-    ```
-    name: Hosted VS2017
-    demands:
-    - msbuild
-    - visualstudio
-    - vstest
-    ```
-    ![](images/016.png)
+  
+    ![](images/poolimage.png)
 
 1. Click **Save and run**.
 
@@ -159,11 +152,11 @@ The following image will walk you through all the steps explained in this lab
       jobs:
       - job: Build
     ```
-    ![](images/025.png)
+    ![](images/addingbuildstage.png)
 
 1. Highlight the remainder of the YAML file and indent it four spaces (two tabs). This will simply take the existing build definition and relocate it as a child of the **jobs** node.
 
-    ![](images/026.png)
+    ![](images/pipelineindent.png)
 
 1. At the bottom of the file, add the configuration below to define a second stage.
 
@@ -172,14 +165,14 @@ The following image will walk you through all the steps explained in this lab
       jobs:
       - job: Deploy
         pool:
-          name: Hosted VS2017
+          vmImage: 'vs2017-win2016'
         steps:
     ```
-    ![](images/027.png)
+    ![](images/deploystage.png)
 
 1. Set the cursor on a new line at the end of the YAML definition. This will be the location where new tasks are added.
 
-    ![](images/028.png)
+    ![](images/028-2.png)
 
 1. Select the **Azure App Service Deploy** task.
 
@@ -199,7 +192,7 @@ The following image will walk you through all the steps explained in this lab
 
 1. With the added task still selected in the editor, indent it four spaces (two tabs) so that it is a child of the **steps** task.
 
-    ![](images/033.png)
+    ![](images/azureappservicetask.png)
 
 1. It's important to note that these two stages will be run independently. As a result, the build output from the first stage will not be available to the second stage without special consideration. For this, we will use one task to publish the build output at the end of the build stage and another to download it in the beginning of the deploy stage. Place the cursor on a blank line at the end of the build stage.
 
@@ -219,7 +212,7 @@ The following image will walk you through all the steps explained in this lab
 
 1. Place the cursor on the first line under the **steps** node of the deployment stage.
 
-    ![](images/038.png)
+    ![](images/firstlineofdeploy.png)
 
 1. Search the tasks for **"download build"** and select the **Download Build Artifacts** task.
 
