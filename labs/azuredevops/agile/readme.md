@@ -80,7 +80,7 @@ Work items play a prominent role in Azure DevOps. Whether describing work to be 
 
 This task is designed to illustrate a variety of ways you can create different kinds of work items, as well as to demonstrate the breadth of features available on the platform. As a result, these steps should not be viewed as prescriptive guidance for project management. The features are intended to be flexible enough to fit your process needs, so explore and experiment as you go.
 
-1. Navigate to **Overview | Dashboards**.
+1. Navigate to **Overview \| Dashboards**.
 
     ![](images/011.png)
 
@@ -96,7 +96,7 @@ This task is designed to illustrate a variety of ways you can create different k
 
     ![](images/014.png)
 
-1. Navigate to **Boards | Work Items**.
+1. Navigate to **Boards \| Work Items**.
 
     ![](images/015.png)
 
@@ -104,7 +104,7 @@ This task is designed to illustrate a variety of ways you can create different k
 
     ![](images/016.png)
 
-1. The work item form includes everything you could ever want to know about a work item. This includes details about who it's assigned to, its status across many parameters, and all the associated information and history for how it has been handled since creation. One of the key areas to focus on is the **Related Work**. One of the ways to add a feature to this epic is to select **Add link | New item**.
+1. The work item form includes everything you could ever want to know about a work item. This includes details about who it's assigned to, its status across many parameters, and all the associated information and history for how it has been handled since creation. One of the key areas to focus on is the **Related Work**. One of the ways to add a feature to this epic is to select **Add link \| New item**.
 
     ![](images/017.png)
 
@@ -380,7 +380,7 @@ To maximize a team's ability to consistently deliver high quality software, Kanb
 
     ![](images/082.png)
 
-1. Drag and drop the **Committed** work item onto **QA Approved | Doing** so that it gets recognized as having priority when QA bandwidth becomes available.
+1. Drag and drop the **Committed** work item onto **QA Approved \| Doing** so that it gets recognized as having priority when QA bandwidth becomes available.
 
     ![](images/083.png)
 
@@ -395,7 +395,7 @@ To maximize a team's ability to consistently deliver high quality software, Kanb
 <a name="Ex1Task5"></a>
 ### Task 5: Defining dashboards ###
 
-1. Select **Overview | Dashboards**.
+1. Select **Overview \| Dashboards**.
 
     ![](images/086.png)
 
@@ -439,7 +439,7 @@ To maximize a team's ability to consistently deliver high quality software, Kanb
 
     ![](images/096.png)
 
-1. Another way of customizing dashboards is to generate charts based on work item queries, which you can share to a dashboard. Select **Boards | Queries**.
+1. Another way of customizing dashboards is to generate charts based on work item queries, which you can share to a dashboard. Select **Boards \| Queries**.
 
     ![](images/097.png)
 
@@ -556,7 +556,7 @@ In this task we'll create a new process that inherits from Scrum. The one change
 
     ![](images/122.png)
 
-1. Select **Boards | Work Items**.
+1. Select **Boards \| Work Items**.
 
     ![](images/123.png)
 
