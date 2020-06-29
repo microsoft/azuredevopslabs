@@ -430,7 +430,7 @@ In this lab, you will learn about the release management features available in A
 
     ![](images/088.png)
 
-1. Return to the browser window open to the **Azure portal**. Click **Swap** in the slots blade.
+1. Return to the browser window open to the **Azure portal**. Click **Swap** in the deployment slots blade.
 
     ![](images/089.png)
 
