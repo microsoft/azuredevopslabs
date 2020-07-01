@@ -10,9 +10,7 @@ folder: /labs/vstsextend/sonarcloud/
 
 ## Overview
 
-Technical debt is the set of problems in a development effort that make forward progress on customer value inefficient. Technical debt saps productivity by making code hard to understand, fragile, time-consuming to change, difficult to validate, and creates unplanned work that blocks progress. Unless they are managed, technical debt can accumulate and hurt the overall quality of the software and the productivity of the development team in the long term.
-
-[SonarCloud](https://about.sonarcloud.io/){:target="\_blank"} is the code quality and security service provided by SonarSource.
+[SonarCloud](https://about.sonarcloud.io/){:target="\_blank"} is a cloud-based code quality and security service.
 The main features of SonarCloud are:
 
 - 23 languages: Java, JS, C#, C/C++, Objective-C, TypeScript, Python, ABAP, PLSQL, T-SQL and more.
@@ -25,7 +23,7 @@ The main features of SonarCloud are:
 
 ### What's covered in this lab
 
-In this lab, you will learn how to integrate Azure DevOps Services with SonarCloud
+In this lab, you will learn how to integrate Azure DevOps Services with SonarCloud:
 
 - Setup an Azure DevOps project and CI build to integrate with SonarCloud
 - Analyze SonarCloud reports
@@ -33,206 +31,230 @@ In this lab, you will learn how to integrate Azure DevOps Services with SonarClo
 
 ### Prerequisites for the lab
 
-1. You will need a **Azure DevOps Services Account**. If you do not have one, you can sign up for free [here](https://dev.azure.com){:target="\_blank"}
+1. You will need a Microsoft account.
 
-1. A **Microsoft Work or School account, or a GitHub/BitBucket account**. SonarCloud supports logins using any of those identity providers.
+2. Using this account, sign in to [**Azure DevOps Services**](https://dev.azure.com){:target="\_blank"}.
 
-1. Install the SonarCloud Azure DevOps extension to your Azure DevOps account
+3. Create a new Azure DevOps project for this lab:
+  
+   Every project in Azure DevOps belongs to an organization. You will be placed into an automatically created default organization on sign in, the name of which is based on your user name (in our example, the user Claudia Sonarova has been given the organization **claudiasonarova**).
+   
+   Inside this organization, create a project called **SonarExamples**:
+   
+   > Unless you intend to sign up for a paid plan with SonarCloud (see below), make sure that you set your Azure DevOps project to be public. If you *do* intend to sign up for a paid plan, then you can use a private or public project.
 
-   - Navigate to the [SonarCloud extension](https://marketplace.visualstudio.com/items?itemName=SonarSource.sonarcloud) in the Visual Studio Marketplace and click **Get it free** to install it.
+   ![Create project](images/azdo_create_project.png)
 
-   ![sc_marketplace](images/ex1/sc_marketplace.png)
+   Import the **Sonar Scanning Examples repository** from GitHub at https://github.com/SonarSource/sonar-scanning-examples.git.
+   
+   Go to **Repos** in your project overview:
 
-   > If you do not have the appropriate permissions to install an extension from the marketplace, a request will be sent to the account administrator to ask them to approve the installation.
+   ![Go to repos](images/azdo_project_repos.png)
 
-   The SonarCloud extension contains build tasks, build templates and a custom dashboard widget.
+   Then, click **Import**:
 
-1. Create a new Azure DevOps project for the lab
-
-   - Create a new project in your Azure DevOps account called **SonarExamples**
-
-   - Import the **Sonar Scanning Examples repository** from GitHub at https://github.com/SonarSource/sonar-scanning-examples.git
-
-   ![sc_marketplace](images/ex1/setup_import.png)
+   ![Import repo](images/azdo_import_repo.png)
 
    See [here](https://docs.microsoft.com/en-us/azure/devops/repos/git/import-git-repository?view=azure-devops) for detailed instructions on importing a repository.
 
    The scanning examples repository contains sample projects for a number of build systems and languages including C# with MSBuild, and Maven and Gradle with Java.
 
+4. Install the SonarCloud Azure DevOps extension in your Azure DevOps account
+
+   Navigate to the [SonarCloud extension](https://marketplace.visualstudio.com/items?itemName=SonarSource.sonarcloud) in the Visual Studio Marketplace and click **Get it free** to install it.
+
+   ![Marketplace](images/ex1/sc_marketplace.png)
+
+   > If you do not have the appropriate permissions to install an extension from the marketplace, a request will be sent to the account administrator to ask them to approve the installation.
+
+   The SonarCloud extension contains build tasks, build templates and a custom dashboard widget.
+
+5. Using the same account as you used for Azure Devops, sign into SonarCloud.
+   
+6. In SonarCloud, create an organization and, within that, a new project. The organization and project you set up in SonarCloud will mirror the organization and project that you set up in Azure DevOps.
+
+   Once you sign in, click **Create an organization** on the welcome page:
+
+   ![SonarCloud Welcome](images/sc_welcome.png)
+
+   Choose an organization key. Note that the key must be unique within the SonarCloud system. In our example, we will use
+   
+   **`claudiasonarova-azdo-org`**
+   
+   ![New SonarCloud organization](images/sc_create_org_key.png)
+
+   Make sure that the the green checkmark appears beside the **Key** field. This indicates that the key is unique across SonarCloud.
+
+   Next, you can choose your plan. For this example, we choose a free plan (that is, one for public repos only), but you can choose a paid plan if you intend to have private repos:
+
+   ![Create SonarCloud organization](images/sc_create_org.png)
+
+   You have now created the SonarCloud organization that will mirror your Azure DevOps organization.
+
+   The next step is to create, within that organization, the SonarCloud project that will mirror the Azure DevOps project **SonarExamples**. As with the SonarCloud organization, the key of your project must be unique across the SonarCloud system.
+   In our example we use
+   
+   **`sonar-examples-claudiasonarova-azdo`**
+
+   ![Create SonarCloud project](images/sc_create_project.png)
+
+   Make sure that the checkmarks are green, indicating that your key is unique and your name is valid (the name can be different from the key and need not be unique. Here we leave it the same as the key).
+
+   Click **Set Up** and you will see the following:
+
+   ![SonarCloud project is set up](images/sc_project_set_up.png)
+
+   Following the link will lead you to this document.
+   
+   The next step is to set up the Azure DevOps integration with SonarCloud.
+
 ## Exercise 1: Set up a pipeline that integrates with SonarCloud
 
-We will set up a new build pipeline that integrates with SonarCloud to analyze the **SonarExamples** code. As part of setting up the pipeline, we will create a SonarCloud account and organization.
+We will set up a new build pipeline that integrates with SonarCloud to analyze the **SonarExamples** code. 
 
-1. In your new Azure DevOps project, go to **Pipelines** under **Pipelines** tab, then click on **New Pipeline** to create a new build pipeline.
+1. In your new Azure DevOps project, go to **Pipelines** under the **Pipelines** tab, then click on **Create Pipeline**:
 
-1. You have 2 possibilities: Configure the pipeline with the YAML editor, or with the classic assistant.
+![Create pipeline](images/azdo_create_pipeline.png)
 
-### **YAML Editor**
+Here you have two options. You can can configure the pipeline with either the **YAML editor**, or with the **classic editor**.
 
-1. Select your code location. SonarCloud currently supports Azure Repos, Bitbucket Cloud and GitHub for PR decoration.
+With the classic editor, you can take advantage of the pre-defined templates that were installed as part of the SonarCloud Extension, above. With the YAML editor you need to use a separately provided YAML file (link provided below).
 
-   ![build_source](images/ex1/build_source_yaml.PNG)
+### YAML Editor
 
-1. Select the repository where you want to build from
-1. Select a default template. Currently, there are no SonarCloud template available for YAML edition
-1. Click next, you enter into the YAML file you have to fill.
+1. Select the location of your code. Azure DevOps lets you build and release code located not only in this Azure DevOps account but also in other, external, repositories. We will not be using this feature today. In our case we want to analyze code in the git repo that we imported earlier, right in the same account as this pipeline. So, we select **Azure Repos Git**:
 
-### **Classic Editor**
+   ![Select Azure Repos](images/azdo_yaml_select_azure_repos.png)
 
-1. Click **Continue** to accept the default values for **source**, **Team project**, **Repository** and **Default branch**
+2. On the next screen select the git repository that you imported earlier, **SonarExamples**:
 
-   ![build_source](images/ex1/build_source.png)
+   ![Select SonarExamples](images/azdo_yaml_select_sonarexamples.png)
 
-   > The SonarCloud extension contains custom build templates for Maven, Gradle, .NET Core and .NET Desktop applications. The templates are based on the standard Azure DevOps templates but with additional analysis-specific tasks and some pre-configured settings.
+3. Now select a YAML file template. We will be building and analyzing the .NET code in our example imported repository, so we will start by choosing the **.NET Desktop** YAML template:
 
-1. Select the .NET Desktop with SonarCloud template.
+   ![Choose .NET Desktop template](images/azdo_yaml_configure_pipeline_dot_net.png)
 
-   ![build_templates](images/ex1/build_templates.png)
+4. The YAML editor will open with the template YAML file. In order to configure it correctly you will need to adjust it (or replace it) so that it looks like the following example file:
 
-   The template contains all of the necessary tasks and most of the required settings. We will now provide the values for the remaining settings.
+   [net-desktop-sonarcloud.yml](https://github.com/SonarSource/sonar-scanner-vsts/blob/master/yaml-pipeline-templates/net-desktop-sonarcloud.yml)
 
-1. Select the _Azure Pipelines_ in Agent pool, then choose _vs2017-win2016_ in Agent specification
+   When you are done making the changes to the file, click **Save and Run**:
 
-   ![build_config_agentqueue](images/ex1/build_config_agentqueue.png)
+   ![Save and run YAML](images/azdo_yaml_save_run.png)
 
-1. Configure the _Prepare analysis on SonarCloud_ task
+   ![Commit YAML](images/azdo_yaml_save_run_commit.png)
 
-   ![build_config_prepare](images/ex1/build_config_prepare.png)
+### Classic Editor
 
-   There are three settings that need to be configured:
+1. To configure the pipeline using the classic editor, select **Use the classic editor** on the **Where is your code?** page:
 
-   | Setting                         | Value                                                                 | Notes                                                             |
-   | ------------------------------- | --------------------------------------------------------------------- | ----------------------------------------------------------------- |
-   | **SonarCloud Service Endpoint** | SonarCloudSamples                                                     | The name of the Azure DevOps endpoint that connects to SonarCloud |
-   | **Organization**                | {your SonarCloud org id}                                              | The unique key of your organization in SonarCloud                 |
-   | **Project Key**                 | {your Azure DevOps account name}.visualstudio.com.sonarexamples.netfx | The unique key of the project in SonarCloud                       |
+   ![Use classic editor](images/azdo_classic_select.png)
 
-   > Currently the project key must be globally unique across all projects in SonarCloud. In the future, the project key will only need to be unique within your SonarCloud organization.
+2. Select **Azure Repos Git**, choose **SonarExamples** under **Repository** and **master** under **Default branch...**, then click **Continue**:
 
-   We will now create the endpoint and an account on SonarCloud.
+   ![Select SonarExamples](images/azdo_classic_select_sonarexamples.png)
 
-1. Create a service endpoint for SonarCloud
+   > The SonarCloud extension installed earlier provides SonarCloud-enabled custom build templates for Maven, Gradle, .NET Core and .NET Desktop applications. The templates are based on the standard Azure DevOps templates but with additional analysis-specific tasks and some pre-configured settings.
 
-   - Click on the _New_ button to start creating a new endpoint
+3. Select the **.NET Desktop with SonarCloud** template.
 
-     ![build_config_prepare_newendpoint](images/ex1/build_config_prepare_newendpoint.png)
+   ![.NET Desktop with SonarCloud template](images/azdo_classic_select_template.png)
 
-1. Create a SonarCloud account
+   The template contains all of the necessary tasks and most of the required settings. However, You will need to provide a few additional settings.
 
-   A service endpoint provides the information Azure DevOps requires to connect to an external service, in this case, SonarCloud. There is a custom SonarCloud endpoint that requires two pieces of information: the identity of the organization in SonarCloud, and a token that the Azure DevOps build can use to connect to SonarCloud. We will create both while setting up the endpoint.
+4. Select _Azure Pipelines_ in **Agent pool**, then choose _vs2017-win2016_ in **Agent Specification**:
 
-   - Click on the **your SonarCloud account security page** link
+   ![Agent pool](images/azdo_agent_pool.png)
 
-     ![build_config_endpoint](images/ex1/build_config_endpoint.png)
+5. Get the SonarCloud endpoint token. This is a token generated by SonarCloud that identifies your account on that system and allows other services, in this case, Azure DevOps, to connect to that account.
 
-1. Select the identity provider to use to log in to SonarCloud
+   Go back to SonarCloud (if you are not logged in, log back in with the same account that you used at the start of this lab) and click **My Account** in the top right dropdown:
 
-   As we are not currently logged in to SonarCloud we will be taken to the SonarCloud login page.
+   ![My account](images/sc_my_account.png)
 
-   - Select the identity provider you want to use and complete the login process
+6. On the **My Account** page go to the **Security** tab. Here you can generate the endpoint token. Give the the token a name (like `azure_devops`) and click **Generate**:
 
-     ![sc_identity_providers](images/ex1/sc_identity_providers.png)
+   ![Generate token](images/sc_generate_token.png)
 
-1. Authorize SonarCloud to use the identity provider
+   SonarCloud will generate a token. Copy the token immediately to the clipboard by clicking **Copy**, go back to Azure DevOps.Click the _Prepare analysis on SonarCloud_ task:
 
-   > The first time you access SonarCloud, you will be asked to grant SonarCloud.io access to your account. The only permission that SonarCloud requires is to read your email address.
+   ![Prepare analysis](images/azdo_prepare_analysis.png)
 
-     ![sc_authorize](images/ex1/sc_authorize.png)
+   Then click on the **+ New** button:
 
-   After authorizing and logging in, we will be redirected to the **Generate token** page.
+   ![Click new endpoint](images/azdo_click_new_endpoint.png)
 
-1. Generate a token to allow Azure DevOps to access your account on SonarCloud:
+   Paste the endpoint token that you copied in to the field **SonarCloud Token**, give the endpoint a name and click **Verify and save**:
 
-   - Enter a descriptive name for the token e.g. "vsts_build" and click **Generate**
+   ![New service connection](images/azdo_new_service_connection.png)
 
-   - Click **Generate**
+7. If the token was correctly copied, Azure DevOps should connect with your SonarCloud account and you should be able to click on the **Organization** drop-down and see the organization you created earlier and choose it from the dropdown (in our case `claudiasonarova-azdo-org`):
 
-     ![sc_generatetoken1](images/ex1/sc_generatetoken.png)
+   ![New service connection](images/azdo_choose_org.png)
 
-1. Copy the generated token
+   Now enter the key of the project that you created within that organization on SonarCloud (in our case `sonarexamples-claudiasonarova-azdo`):
 
-    - Click **Copy** to copy the new token to the clipboard
+   ![New service connection](images/azdo_enter_project.png)
 
-      ![sc_generatetoken2](images/ex1/sc_generatetoken2.png)
+8. [Optional] Enable the _Publish Quality Gate Result_ step
 
-      > You should treat Personal Access Tokens like passwords. It is recommended that you save them somewhere safe so that you can re-use them for future requests.
-
-    We have now created an organization on SonarCloud, and have the token needed configure the Azure DevOps endpoint.
-
-1. Finish creating the endpoint in Azure DevOps
-
-    - Return to Azure DevOps **Add new SonarCloud Connection** page, set the **Connection name** to **SonarCloud**, and enter the **SonarCloud Token** you have just created.
-    - Click **Verify connection** to check the endpoint is working, then click **OK** to save the endpoint.
-
-      ![build_config_endpoint_completed](images/ex1/build_config_endpoint_completed.png)
-
-1. Finish configuring the **Prepare analysis on SonarCloud** task.
-
-    - Click on the **Organization** drop-down and select your organization.
-    - Enter a unique key for your project e.g. **[your account].visualstudio.com.sonarexamples.netfx**
-    - Enter a friendly name for the project e.g. **Sonar Examples - NetFx**
-
-      ![build_config_prepare_completed](images/ex1/build_config_prepare_completed.png)
-
-1. [Optional] Enable the _Publish Quality Gate Result_ step
-
-    This step is not required unless you want to use the pre-deployment gate along with Release Pipelines.
+   This step is not required unless you want to use the pre-deployment gate along with Release Pipelines.
     If this step is enabled, a summary of the analysis results will appear on the _Extensions_ tab of the _Build Summary_ page. However, this will delay the completion of the build until the processing on SonarCloud has finished.
 
-1. Save and queue the build.
+   ![New service connection](images/azdo_publish_quality_gate.png)
 
-    ![build_in_progress](images/ex1/build_run_in_progress.png)
+9. Save and queue the build. Once the build has completed you should see something like this:
 
-1. If you enabled the _Publish Quality Gate Result_ step above the Build Summary will contain a summary of the analysis report.
+   ![Recently run pipelines](images/azdo_manually_run.png)
 
-    ![build_completed](images/ex1/build_run_completed.png)
+10. If you enabled the _Publish Quality Gate Result_ step above the Build Summary will contain a summary of the analysis report.
 
-1. Either click on the **Detailed SonarCloud Report** link in the build summary to open the project in SonarCloud, or browse to SonarCloud and view the project.
+   ![SonarCloud analysis report](images/azdo_sc_analysis_report.png)
 
-    ![sc_analysis_report](images/ex1/sc_analysis_report.png)
+11. Either click on the **Detailed SonarCloud Report** link in the build summary to open the project in SonarCloud, or browse to SonarCloud and view the project.
 
-    We have now created a new organization on SonarCloud and configured an Azure DevOps build to perform analysis and push the results of the build to SonarCloud.
+   ![SonarCloud report](images/sc_report.png)
+
+   We have now created a new organization on SonarCloud and configured an Azure DevOps build to perform analysis and push the results of the build to SonarCloud.
 
 ## Exercise 2: Analyze SonarCloud Reports
 
-Open the **Sonar Examples - NetFx** project in the SonarCloud Dashboard. Under **_Bugs and Vulnerabilities_**, we can see a bug has been caught.
+Open the **SonarExamples** project in the SonarCloud Dashboard. Under **_Bugs and Vulnerabilities_**, we can see a bug has been found.
 
-![sonar_portal](images/ex2/sonar_portal_bug.png)
+![Bug found](images/sc_bug_found.png)
 
 The page has other metrics such as **_Code Smells_**, **_Coverage_**, **_Duplications_** and **_Size_**. The following table briefly explains each of these terms.
 
-| Terms               | Description                                                                                                                                                                                                                                                                               |
-| ------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Bugs**            | An issue that represents something wrong in the code. If this has not broken yet, it will, and probably at the worst possible moment. This needs to be fixed                                                                                                                              |
-| **Vulnerabilities** | A security-related issue which represents a potential backdoor for attackers                                                                                                                                                                                                              |
-| **Code Smells**     | A maintainability-related issue in the code. Leaving it as-is means that at best maintainers will have a harder time than they should make changes to the code. At worst, they'll be so confused by the state of the code that they'll introduce additional errors as they make changes |
-| **Coverage**        | To determine what proportion of your project's code is actually being tested by tests such as unit tests, code coverage is used. To guard effectively against bugs, these tests should exercise or 'cover' a large proportion of your code                                                |
-| **Duplications**    | The duplications decoration shows which parts of the source code are duplicated                                                                                                                                                                                                           |
-| **Size**            | Provides the count of lines of code within the project including the number of statements, Functions, Classes, Files and Directories                                                                                                                                                      |
+| Terms | Description |
+| --- | --- |
+| **Bugs** | An issue that represents something wrong in the code. If this has not broken yet, it will, and probably at the worst possible moment. This needs to be fixed |
+| **Vulnerabilities** | A security-related issue which represents a potential backdoor for attackers |
+| **Code Smells** | A maintainability-related issue in the code. Leaving it as-is means that at best maintainers will have a harder time than they should make changes to the code. At worst, they'll be so confused by the state of the code that they'll introduce additional errors as they make changes |
+| **Coverage** | To determine what proportion of your project's code is actually being tested by tests such as unit tests, code coverage is used. To guard effectively against bugs, these tests should exercise or 'cover' a large proportion of your code |
+| **Duplications** | The duplications decoration shows which parts of the source code are duplicated |
+| **Size** | Provides the count of lines of code within the project including the number of statements, Functions, Classes, Files and Directories |
 
-{% include important.html content= "In this example, along with the bug count, a character **C** is displayed which is known as **Reliability Rating**. **C** indicates that there is **at least 1 major bug** in this code. For more information on Reliability Rating, click [here](https://docs.sonarqube.org/display/SONAR/Metric+Definitions#MetricDefinitions-Reliability). For more information on rule types see [here](https://docs.sonarqube.org/latest/user-guide/rules/) and for more information on severities, see [here](https://docs.sonarqube.org/latest/user-guide/issues/)." %}
+{% include important.html content= "Notice that a **C** is displayed alongside the bug count. This is the **Reliability Rating**. **C** indicates that there is **at least 1 major bug** in this code. For more information on Reliability Rating, click [here](https://docs.sonarqube.org/display/SONAR/Metric+Definitions#MetricDefinitions-Reliability). For more information on rule types see [here](https://docs.sonarqube.org/latest/user-guide/rules/) and for more information on severities, see [here](https://docs.sonarqube.org/latest/user-guide/issues/)." %}
 
-1. Click on the **Bugs** count to see the details of the bug.
+1. Click on the **Bugs** count to see the details of the bug. The Issues page will appear:
 
-   ![sonar_portal](images/ex2/sonar_portal_bug.png)
+   ![Click on bugs](images/sc_issues.png)
 
-1. Click on the bug to navigate to the code
+2. Click on the bug to navigate to the code. You will see the error in line number 9 of **Program.cs** file as **Change this condition so that it does not always evaluate to 'true'; some subsequent code is never executed.**:
 
-   ![bug_details](images/ex2/bug_details.png)
+   ![Bug details](images/sc_bug_in_code.png)
 
-1. You will see the error in line number 9 of **Program.cs** file as **Change this condition so that it does not always evaluate to 'true'; some subsequent code is never executed.**.
+3. We can also see which lines of code are not covered by tests:
 
-   ![bug_details_2](images/ex2/bug_details_2.png)
-
-   We can also see which lines of code are not covered by tests.
-
-   ![bug_details_code_coverage](images/ex2/bug_details_code_coverage.png)
+   ![Test coverage](images/sc_bug_in_code_coverage.png)
 
    Our sample project is very small and has no historical data. However, there are thousands of [public projects on SonarCloud](https://sonarcloud.io/explore/projects){:target="\_blank"} that have more interesting and realistic results.
 
+[DONE TO HERE]
+
 ## Exercise 3: Set up pull request integration
 
-Configuring SonarCloud analysis to run when a pull request is created has two parts:
+Configuring SonarCloud analysis to run when a pull request is created involves two steps:
 
 - A SonarCloud project needs to be provided with an access token so it can add PR comments to Azure DevOps, and
 - Branch Policy needs to be configured in Azure DevOps to trigger the PR build
@@ -243,95 +265,104 @@ Configuring SonarCloud analysis to run when a pull request is created has two pa
 
      > SonarCloud will post comments to the pull request as if it is a user who owns the personal access token. The recommended practice is to create a separate "bot" Azure DevOps user for this so that it is clear which comments are from real developers and which are from SonarCloud.
 
-     ![vsts_pat_permissions](images/ex3/vsts_pat_permissions.png)
+   Make sure to set the scope under **Code** to **Read & write**:
+
+   ![Personal access token permissions](images/azdo_create_pat.png)
+
+   Click **Create** and copy the generated token:
+
+   ![Copy personal access token](images/azdo_copy_pat.png)
 
    > You should treat Personal Access Tokens like passwords. It is recommended that you save them somewhere safe so that you can re-use them for future requests.
 
-1. Configure SonarCloud to analyze pull requests
+2. Configure SonarCloud to analyze pull requests
 
-   - Browse to the **Sonar Examples - NetFx** dashboard in SonarCloud
-   - Click on **Administration**, **General Settings**
+   - Browse to the **Sonar Examples** dashboard in SonarCloud
+   - Click on **Administration** > **General Settings**
 
-     ![sc_admin](images/ex3/sc_admin.png)
+     ![Click general settings](images/sc_click_general_settings.png)
 
    - Select the **Pull Requests** tab
-   - Set the **Provider** drop-down to **Azure DevOps Services**
-   - Set the **Personal access token**
-   - Click **Save**
+   - Set the **Provider** drop-down to **Azure DevOps Services** and click **Save**
+   - Paste in the **Personal access token** you copied earlier and click **Save**
 
-     ![sc_general_settings](images/ex3/sc_general_settings.png)
+     ![Pull request configuration](images/sc_pull_request_config.png)
 
-1. Configure the branch policy for the project in Azure DevOps
+3. Configure the branch policy for the project in Azure DevOps
 
-   - navigate to the **SonarExamples** project in Azure DevOps
+   - Navigate to the **SonarExamples** project in Azure DevOps
    - Click on **Repos**, **Branches** to view the list of branches
-
-     ![vsts_home](images/ex3/vsts_home.png)
-
    - Click on the settings link ("**...**") for **master** and select **Branch policies**
 
-     ![vsts_branches](images/ex3/vsts_branches.png)
+     ![Click branch policies](images/azdo_click_branch_policies.png)
 
-   - Click **Add Build Policy**
+   - Click the **+** beside **Build Validation** to add a new build policy:
 
-     ![vsts_branch_policy](images/ex3/vsts_branch_policy.png)
+     ![Click add build policy](images/azdo_click_add_build_policy.png)
 
    - Select the build definition we created earlier from the **Build definition** drop-down
    - Set the **Display name** to **SonarCloud analysis**
    - Click **Save**
 
-     ![vsts_branch_policy_add](images/ex3/vsts_branch_policy_add.png)
+     ![Add build policy](images/azdo_add_build_policy.png)
 
    Azure DevOps is now configured to trigger a SonarCloud analysis when any pull request targeting the **master** branch is created.
 
-1. Create a new pull request
+4. Create a new pull request
 
-   Now we need to make a change to a file and create a new request so we check that the pull request triggers the analysis.
+   Now we will make a change to a file and create a new request so that we can check that the pull request triggers an analysis.
 
    - Navigate to the code file **Program.cs** at **sonarqube-scanner-msbuild/CSharpProject/SomeConsoleApplication/Program.cs** and click **Edit**
    - Add an empty method to the code as shown in the following screen shot, then click **Commit...**
 
-     ![vsts_program_edit](images/ex3/vsts_program_edit.png)
+      ![Edit program](images/azdo_add_unused.png)
 
-   In the dialogue that appears:
+   In the dialog that appears,
 
    - Change the branch name from **master** to **branch1**
    - Check the **Create a pull request** checkbox
    - Click **Commit**, then click **Create** on the next screen to submit the pull request
 
-     ![vsts_program_commit](images/ex3/vsts_program_commit.png)
+      ![Commit changes](images/azdo_commit_pr.png)
 
-     If the pull request integration is correctly configured the UI will show that an analysis build is in progress.
+      ![Create pull request](images/azdo_create_pr.png)
 
-     ![vsts_pr_in_progress_partial](images/ex3/vsts_pr_in_progress_partial.png)
+      If the pull request integration is correctly configured the UI will show that an analysis build is in progress.
 
-1. Review the results of the Pull Request analysis
+     ![Analysis in progress](images/azdo_pr_analysis_in_progress.png)
+
+5. Review the results of the Pull Request analysis
 
    The results show that the analysis builds completed successfully, but that the new code in the PR failed the Code Quality check.
    Comment has been posted to the PR for the new issue that was discovered.
 
-   ![vsts_pr_check_failed](images/ex3/vsts_pr_check_failed.png)
+   ![Check failed](images/azdo_check_failed.png)
+
+   ![Check failed](images/azdo_pr_comment.png)
 
    Note that the only issues in code that was changed or added in the pull request are reported - pre-existing issues in **Program.cs** and other files are ignored.
 
-1. Block pull requests if the Code Quality check failed
+6. Block pull requests if the Code Quality check failed
 
    At this point, it is still possible to complete the pull request and commit the changes even though the Code Quality check has failed.
    However, it is simple to configure Azure DevOps to block the commit unless the Code Quality check passes:
 
-   - Return to the **Branch Policy** page
+   - Go to the **Branch Policy** page of the **master** branch (since the master branch is the one you will want your pull requests to merge into, this is where you have to adjust the policy).
    - Click **Add status policy**
+
+      ![Return to branch policies](images/azdo_add_status_check.png)
+
    - Select **SonarCloud/quality gate** from the **Status to check** drop-down
    - Set the **Policy requirement** to **Required**
    - Click **Save**
 
-     ![vsts_status_policy_add](images/ex3/vsts_status_policy_add.png)
+     ![vsts_status_policy_add](images/azdo_add_status_policy.png)
 
-   Users will now be unable to merge the pull request until the Code Quality check is successful, either because all of the issues have been fixed or the issues have been marked as **confirmed** or **resolved** in SonarCloud.
+   Users will now be unable to merge the pull request until the Code Quality check is successful (the Code Quality check succeeds when all issues have been either fixed or marked as **confirmed** or **resolved** in SonarCloud).
 
 ## Exercise 4: Check the SonarCloud Quality Gate status in a Continuous Deployment scenario (In Preview)
 
-** Disclaimer: This feature is in preview, and may not reflect its final version. Please look at the notes at the end of this exercise for more information.**
+**Disclaimer: This feature is in preview, and may not reflect its final version. Please look at the notes at the end of this exercise for more information.**
 
 Starting from version 1.8.0 of the SonarCloud extension for Azure DevOps, a pre-deployment gate is available for your release pipeline. It allows you to check the status of the SonarCloud Quality Gate for the artifact you want to deploy and block the deployment if the Quality Gate failed.
 
@@ -354,12 +385,12 @@ Setup :
 1. Close for now the Stage properties
 1. Click on the pre-deployment conditions on Stage 1
 
-   ![predeploy_conditions](images/ex4/predeploy_conditions.PNG)
+   ![pre_deploy_conditions](images/ex4/predeploy_conditions.PNG)
 
 1. Click on **Enabled** beside **Gates**
 1. Click on **+ Add**, then select **SonarCloud Quality Gate status check**
 
-   ![predeploy_conditions_settings](images/ex4/predeploy_conditions_settings.PNG)
+   ![pre_deploy_conditions_settings](images/ex4/predeploy_conditions_settings.PNG)
 
 1. In order to have the fastest result possible for this exercise, we recommend you to set the evaluations options as per this screenshot (See [how Gate evaluation flow works](https://docs.microsoft.com/en-us/azure/devops/pipelines/release/approvals/gates?view=azure-devops), as per Microsoft Documentation)
 
@@ -389,7 +420,7 @@ Otherwise, if it's failed, then read important notes below to find out how it ha
 
 - The **Publish Quality Gate Result** task in your build pipeline has to be enabled in order for the release gate to work.
 - If the Quality Gate is in the failed state, it will not be possible to get the pre-deployment gate passing as this status will remain in its initial state. You will have to execute another build with either the current issues corrected in SonarCloud or with another commit for fixing them.
-- Please note also that current behaviour of the pre-deployment gates in Release Pipelines is to check the status every 5 minutes, for a duration of 1 day by default. However, if a Quality Gate for a build has failed it will remain failed so there is no point in re-checking the status. Knowing this, you can set the timeout after which gates fail to a maximum of 6 minutes so the gate will be evaluated only twice as described above, or just cancel the release itself.
+- Please note also that current behavior of the pre-deployment gates in Release Pipelines is to check the status every 5 minutes, for a duration of 1 day by default. However, if a Quality Gate for a build has failed it will remain failed so there is no point in re-checking the status. Knowing this, you can set the timeout after which gates fail to a maximum of 6 minutes so the gate will be evaluated only twice as described above, or just cancel the release itself.
 - Only the primary build artifact related Quality Gate of the release will be checked.
 - During a build, if multiple analyses are performed, all of the related Quality Gates are checked. If one of them has the status either WARN, ERROR or NONE, then the Quality Gate status on the Release Pipeline will be failed.
 
