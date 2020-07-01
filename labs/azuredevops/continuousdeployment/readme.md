@@ -58,10 +58,6 @@ In this lab, you will learn about the release management features available in A
 
     ![](images/005.png)
 
-1. Enter **"partsunlimited"** as the **Database name**. Select a subscription (it doesn't matter which one, but use the same one for all steps in this lab). Select **Create new** for **Resource group** and enter **"partsunlimited"** as the name. Make sure **Select source** is set to **Blank database** and click **Configure required settings**. If you don't already have a server you want to use, click **Create a new server**.
-
-    ![](images/006.png)
-
 1. Enter a unique name for **Server name**, such as by including your name. Enter an admin username and password you can remember. Note that **"P2ssw0rd"** meets the password requirements. Enable **Allow Azure services to access server**. Click **OK** to confirm these options.
 
     ![](images/007.png)
@@ -434,7 +430,7 @@ In this lab, you will learn about the release management features available in A
 
     ![](images/088.png)
 
-1. Return to the browser window open to the **Azure portal**. Click **Swap** in the slots blade.
+1. Return to the browser window open to the **Azure portal**. Click **Swap** in the deployment slots blade.
 
     ![](images/089.png)
 
