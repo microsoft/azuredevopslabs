@@ -21,13 +21,15 @@ This lab will show how you can
 * Create a new MySQL database
 * Use Azure App Service Task to deploy a WAR file
 
+<div class="bg-slap"><img src="./images/mslearn.png" class="img-icon-cloud" alt="MS teams" style="width: 48px; height: 48px;">Want additional learning? Check out the <a href="https://docs.microsoft.com/en-us/learn/modules/deploy-java-containers/" target="_blank"><b><u> Automate Java container deployments with Azure Pipelines </u></b></a> module on Microsoft Learn.</div>
+
 ### Prerequisites for the lab
 
 1. Refer the [Getting Started](../Setup/) page to know the prerequisites for this lab.
 
 1. Use the [Azure DevOps Demo Generator](https://azuredevopsdemogenerator.azurewebsites.net/?TemplateId=77371&Name=MyShuttle) to provision the project to your Azure DevOps Org. Use the **MyShuttle** template.
 
-  {% include note.html content= "If you are following this lab from Working with Jenkins, VSTS and Azure, you can skip the next two exercises and go to [deploy](#exercise-2-deploying-to-an-azure-web-app-for-containers)" %}
+  {% include note.html content= "If you are following this lab from Working with Jenkins, Azure DevOps and Azure, you can skip the next exercise and go to [deploy](#exercise-2-deploying-to-an-azure-web-app-for-containers)" %}
 
 ## Exercise 1:  Configuring a CI pipeline to build and publish Docker image
 
@@ -35,11 +37,15 @@ In this task, you will configure a CI pipeline that will build and push the imag
 
 1. Open the <a href="https://portal.azure.com" target="_blank">Azure Portal</a>.
 
-1. Select **+ Create a resource** and search for **Container Registry**. Select **Create**. In the *Create Container Registry* dialog, enter a name for the service, select the resource group, location, **Enable** Admin User and click **Create**.
+1. Select **+ Create a resource** and search for **Container Registry**. Select **Create**. In the *Create Container Registry* dialog, enter a name for the service, select the resource group, location and click **Review + Create**. Once the validation is success click **Create**.
 
-    ![Create Azure Container Registry](images/createacr.png)
+    ![Create Azure Container Registry](images/createacr2.png)
 
-1. In the Azure DevOps portal, select **Builds** from **Pipelines**. Select **MyShuttleDockerBuild** and click **Edit**. 
+1. Once the resource is provisioned navigate to the resource and Enable Admin user for Container Registry.
+
+    ![Enable Admin User](images/acrenableadminuser.png)
+
+1. Navigate to your Azure DevOps project, select **Pipelines** from **Pipelines**. Select **MyShuttleDockerBuild** and click **Edit**. 
 
 1. Lets look at the tasks used in the build definition.
 
@@ -94,7 +100,7 @@ In this task, you will configure a CI pipeline that will build and push the imag
 1. Click the **Save and Queue** button to save and queue this build. Make sure you are using the **Hosted Ubuntu 1604** build agent.
 
 1. Wait for the build to complete. When it is successful, you can go to your Azure portal and verify if the images were pushed successfully. 
-    ![images/Azure Container Registry Images](images/portal-acrrepo.png)
+    ![images/Azure Container Registry Images](images/portal-acrrepo2.png)
 
 1. If you are following this from the Eclipse lab, you can also verify if the images were pushed correctly from the **Azure Explorer** view. *Sign in* to Azure, refresh Azure Container Registry. Right click and select **Explore Container Registry**. You should see the image - tagged with the build number.
 
@@ -104,23 +110,22 @@ In this task, you will configure a CI pipeline that will build and push the imag
 
 In this exercise, we will setup a Release pipeline to deploy the web application to an Azure web app. First,let's create a Web App for Container with MYSQL.
 
-1. Sign into your [Azure Portal](https://portal.azure.com){:target="_blank"}.
+1. Navigate back to your [Azure Portal](https://portal.azure.com){:target="_blank"}.
 
-1. In the Azure Portal, choose **+ Create a resource**, search for **Web App for Containers + MYSQL**, select and click *Create*.
+1. In the Azure Portal, choose **+ Create a resource**, search for **Web App**, select and click *Create*.
 
-     ![New Web App for Containers](images/newwebapp.png)
-
-1. Provide the following details and click **Create**- 
+1. Provide the following details and click **Next**- 
 
     * Enter a name for the new web app
     * Choose the Azure subscription 
     * Select existing or create new resource group for the web app. 
     * Leave the App Service plan/Location as it is.
-    * In the *Configure Container* option, select **Azure   Container Registry**. Select the **Registry, Image and Tag** from the respective drop-downs and click **Apply**.
-    * In the *Database* section, provide all the required mandatory information and note down **Server Name, Server admin login name, Password** to a notepad. We will use it later in the Deployment pipeline.
 
-    ![Creating MyShuttle Web App for Containers](images/myshuttle-webapp2.png)
-    ![Creating MYSQL Server](images/mysql-webapp.png)
+      ![](images/azurewebappcreate1.png)
+
+1. In the Docker tab, select **Azure   Container Registry** as Image source. Select the **Registry, Image and Tag** from the respective drop-downs and click **Review + create** and then **Create**.
+
+    ![](images/azurewebappcreate1.png)
 
 1. Once the provisioning is complete, go to the web app Overview page, and select the URL to browse the web app. You should see the default **Tomcat** page.
 
@@ -130,7 +135,20 @@ In this exercise, we will setup a Release pipeline to deploy the web application
  
     We could configure *Continuous Deployment* to deploy the web app when a new image is pushed to the registry, within the Azure portal itself. However, setting up an Azure Pipeline will provide more flexibility and additional controls (approvals, release gates, etc.) for application deployment.
 
-1. Back in Azure DevOps account, select **Releases** from the **Pipelines** hub. Select the Release definition - **MyShuttleDockerRelease** and click *Edit Pipeline*.
+1. We need to create Azure Database for MySQL as well. Choose **+ Create a resource**, search for **Azure Database for MySQL**, select and click *Create*. Provide all the required mandatory information and note down **Password** to a notepad. We will use it later in the Deployment pipeline. Click **Review + create** and then **Create**.
+
+    
+    ![Creating MYSQL Server](images/mysqldbcreate.png)
+
+1. Navigate to the Azure Database for MySQL server provisioned.  Save the **Server name** and **Server admin login name** to a notepad.
+    
+     ![](images/azuredbmysql2.png)
+
+1. Select Connection security. Enable **Allow access to Azure services** toggle and **Save** the changes. This provides access to Azure services for all the databases in your MySQL server.
+
+   ![](images/accesstoazureservices.png)
+
+1. Back in Azure DevOps account, select **Releases** from the **Pipelines** hub. Select the Release definition - **MyShuttleDockerRelease** and click **Edit**.
 
      ![editrelease](images/editrelease.png)
 
@@ -143,8 +161,8 @@ In this exercise, we will setup a Release pipeline to deploy the web application
 
 1. Select the **Execute Azure MYSQL:SqlTaskFile** task, choose the Azure subscription, and provide the DB details which were noted down earlier during the creation of the database server. 
 
-    * Select the *Host Name* from the drop down. You can find this value in the **Properties** page of the created MYSQL database in Azure portal.
-    * *Server Admin Login* - You can find this value in the **Properties** page of the created MYSQL database in Azure portal. Go to **Variables** section and enter the value for the variable - *$(DBUSER)*. 
+    * Select the *Host Name* from the drop down. 
+    * *Server Admin Login* - Go to **Variables** section and enter the value for the variable - *$(DBUSER)*. 
     * Enter the *Password*. This is the password provided during the creation of MYSQL database in Azure portal. Go to **Variables** section and enter the value for the variable - *$(DBPASSWORD)*. Click the **lock** icon to decrypt the dummy value and then, enter the password.
 
     ![Variables](images/variables.png)
@@ -161,7 +179,7 @@ In this exercise, we will setup a Release pipeline to deploy the web application
 
     ![Build Tags](images/vsts-buildtag.png)
  
-1. Select **Save** and then click **+ Release** \| **Create Release**.
+1. Select **Save** and then click **Create Release**.
 
 1. Check the artifact version you want to use and then select **Create**.
 
@@ -169,12 +187,12 @@ In this exercise, we will setup a Release pipeline to deploy the web application
 
 ## Exercise 3: Configuring MySQL connection strings in the Web App
 
-1. Navigate to the Web app that you have created. Click **Application Settings** and scroll down to the **Connection Strings** section
+1. Navigate to the Web app that you have created. Click **Configuration** and select **Application Settings**. Scroll down to the **Connection Strings** section.
 
 1. Add a new MySQL connection string with **MyShuttleDb** as the name and the following string - `jdbc:mysql://`**`{MySQL Server Name}`**`.mysql.database.azure.com:3306/alm?useSSL=true&requireSSL=false&autoReconnect=true&user=`**`{your user name}`**`@`**`{MySQL Server Name}`**`&password=`**`{your password}`**. Replace the following with values that you have noted down
 
-    * MYSQL Server Name - **Server Name** in the MYSQL Server *Properties* page
-    * Your user name -  **SERVER ADMIN LOGIN NAME** in the MYSQL Server *Properties* page  
+    * MYSQL Server Name - **Server Name** in the MYSQL Server *Overview* page
+    * Your user name -  **SERVER ADMIN LOGIN NAME** in the MYSQL Server *Overview* page  
     * Your password -**Password** that you provided during the creation of MYSQL server in Azure
 
     ![MySQL Connection](images/mysqldbconn.png)
