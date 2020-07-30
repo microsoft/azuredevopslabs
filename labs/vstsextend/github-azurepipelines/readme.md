@@ -351,7 +351,7 @@ From the results, we can see all 40 tests have passed which means we have not br
 
     ![](images/image17.png)
 
-1.  **Enable** continuous integration, if it is not already enabled.
+1.  **Enable** continuous deployment, if it is not already enabled.
 
     ![](images/image18.png)
 
