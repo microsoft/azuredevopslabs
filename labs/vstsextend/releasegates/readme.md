@@ -306,3 +306,12 @@ Gates ensures that the release waits for you to react to the feedback and fix an
 If a new release is required to fix the issues, then you can cancel the deployment and manually abandon the current release.
 
 So here are release gates, enabling teams to release applications with higher confidence with fewer manual steps. There is now a built-in audit of all the necessary criteria for a deployment being met.
+
+
+## Reference
+
+Thanks to **Nagaraj Bhairaji** for making a video on this lab. You can watch the following video that walks you through all the steps explained in this lab
+
+<figure class="video_container">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/8jbMnFiEow0" frameborder="0" allowfullscreen="true"> </iframe>
+</figure>

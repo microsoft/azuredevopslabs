@@ -307,3 +307,12 @@ You can also link GitHub issues to work items in Azure Boards.
 1. **View or open links from the Development section** : The Development section within the work item form lists the links created to GitHub commits and pull requests with the   GitHub icon. Choose the link provided to open the commit or pull request in GitHub.
 
      ![](images/githublinks.png)
+
+
+## Reference
+
+Thanks to **Nagaraj Bhairaji** for making a video on this lab. You can watch the following video that walks you through all the steps explained in this lab
+
+<figure class="video_container">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/ufdkW0tiZVc" frameborder="0" allowfullscreen="true"> </iframe>
+</figure>
