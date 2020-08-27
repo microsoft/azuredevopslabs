@@ -249,7 +249,9 @@ Now that we have our CI successfully built, it's time to deploy but how do we kn
        inputs:
          command: 'custom'
          customcommand: 'install --production'
-     - script: 'npm test'
+     - script: |
+         npm install
+         npm test
        displayName: 'Run unit tests'
        continueOnError: true
      - task: PublishTestResults@2
