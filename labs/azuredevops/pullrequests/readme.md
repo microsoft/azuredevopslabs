@@ -21,6 +21,7 @@ It is required that you complete the [Git lab](../git) prior to taking this lab.
 
 - [Visual Studio Code](https://code.visualstudio.com/) with the C# extension installed.
 
+- [Azure Repos Extension](https://marketplace.visualstudio.com/items?itemName=ms-vsts.team) for Visual Studio Code
 - This lab requires you to complete task 1 from the [prerequisite instructions](../prereq).
 
 - The [Git lab](../git) is required to be completed as a prerequisite for this lab.

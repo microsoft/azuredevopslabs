@@ -125,7 +125,7 @@ In this exercise, we will setup a Release pipeline to deploy the web application
 
 1. In the Docker tab, select **Azure   Container Registry** as Image source. Select the **Registry, Image and Tag** from the respective drop-downs and click **Review + create** and then **Create**.
 
-    ![](images/azurewebappcreate1.png)
+    ![](images/azurewebappcreate2.png)
 
 1. Once the provisioning is complete, go to the web app Overview page, and select the URL to browse the web app. You should see the default **Tomcat** page.
 
