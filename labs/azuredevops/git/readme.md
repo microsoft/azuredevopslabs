@@ -26,7 +26,7 @@ In this lab, you will learn how to establish a local Git repository, which can e
 <a name="Prerequisites"></a>
 ### Prerequisites ###
 
-- [Visual Studio Code](https://code.visualstudio.com/) with the C# extension installed.
+- [Visual Studio Code](https://code.visualstudio.com/) with the [C#](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp) extension installed.
 
 - [Git for Windows](https://gitforwindows.org/) 2.21.0 or later.
 
@@ -90,9 +90,9 @@ In this lab, you will learn how to establish a local Git repository, which can e
 
 1. When prompted, log in to your Azure DevOps account.
 
-1. Once the cloning has completed, click **Open Repository**. You can ignore any warnings raised about opening the projects. The solution may not be in a buildable state, but that's okay since we're going to focus on working with Git and building the project itself is not necessary.
+1. Once the cloning has completed, click **Open** to open the cloned repository. You can ignore any warnings raised about opening the projects. The solution may not be in a buildable state, but that's okay since we're going to focus on working with Git and building the project itself is not necessary.
 
-    ![](images/005.png)
+    ![](images/005_new.png)
 
 <a name="Ex2Task2"></a>
 ### Task 2: Installing the Azure Repos extension for Visual Studio Code ###
@@ -119,9 +119,9 @@ In this lab, you will learn how to establish a local Git repository, which can e
 
     ![](images/010.png)
 
-1. Paste the code in to the login box and click **Continue**.
+1. Paste the code in to the login box and click **Next**.
 
-    ![](images/011.png)
+    ![](images/011_new.png)
 
 1. Select the Microsoft account associated with your Azure DevOps account.
 
@@ -209,7 +209,7 @@ Staging changes allows you to selectively add certain files to a commit while pa
 
 1. Enter a comment of **"Added comments"**. From the **More Actions** dropdown, select **Commit Staged**.
 
-    ![](images/025.png)
+    ![](images/025_new.png)
 
 1. Click the **Synchronize Changes** button to synchronize the committed changes with the server. Note that since only the staged changes were committed, the other changes are still pending locally.
 
@@ -249,11 +249,11 @@ Git's use of the **Branches and Merges** feature works through pull requests, so
 
 1. From the dropdown for **Merged PR 27**, select **Browse Files**.
 
-    ![](images/032.png)
+    ![](images/032_new.png)
 
 1. This view offers the ability to navigate around the state of the source at that commit so you can review and download those files.
 
-    ![](images/033.png)
+    ![](images/033_new.png)
 
 <a name="Exercise5"></a>
 ## Exercise 5: Working with branches ##
@@ -300,9 +300,9 @@ Git keeps track of which branch you are working on and makes sure that when you 
 
     ![](images/040.png)
 
-1. You should see the newly pushed **dev** branch. Click the **Delete branch** button to delete it. Confirm the delete.
+1. You should see the newly pushed **dev** branch. Click on more actions drop down and Select the **Delete branch** button to delete it. Confirm the delete.
 
-    ![](images/041.png)
+    ![](images/041_new.png)
 
 1. Return to **Visual Studio Code**.
 
@@ -366,11 +366,11 @@ In addition to all the functionality available in Visual Studio Code, you can al
 
 1. Navigate to **Repos \| Branches**. Click **New branch**.
 
-    ![](images/053.png)
+    ![](images/053_new.png)
 
 1. Enter a name of **"release"** for the new branch. Use the **Work items to link** dropdown to select one or more work items to link to this new branch. Click **Create branch** to create it.
 
-    ![](images/054.png)
+    ![](images/054_new.png)
 
 1. After the branch has been created, it will be available in the list.
 
@@ -395,13 +395,13 @@ In addition to all the functionality available in Visual Studio Code, you can al
 <a name="Ex6Task2"></a>
 ### Task 2: Deleting a branch ###
 
-1. Return to Azure DevOps and click the **Delete** button that appears when you hover over the **release** branch to delete it.
+1. Return to Azure DevOps and click the **Delete branch** from the more actions drop down to delete it.
 
-    ![](images/059.png)
+    ![](images/059_new.png)
 
-1. However, maybe we should keep it around for a little longer. From its context menu, select **Restore branch**.
+1. You can **Restore branch** if you want by searching for an exact branch name. Select **Restore branch** as shown below.
 
-    ![](images/060.png)
+    ![](images/060_new.png)
 
 <a name="Ex6Task3"></a>
 ### Task 3: Locking a branch ###
@@ -439,8 +439,8 @@ Locking does not prevent cloning of a repo or fetching updates made in the branc
 
 1. You have now tagged the project at this release. You could tag commits for a variety of reasons and Azure DevOps offers the flexibility to edit and delete them, as well as manage their permissions.
 
-<a name="![](images/067.png)"></a>
-## ![](images/067.png) ##
+     <a name="![](images/067.png)"></a>
+     ## ![](images/067.png) ##
 
 <a name="Exercise7"></a>
 ## Exercise 7: Managing repositories ##
