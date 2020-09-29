@@ -53,9 +53,11 @@ redirect_from: "/labs/vsts/packagemanagement/index.htm"
 
     ![](images/004.png)
 
-1. Launch a new instance of **Visual Studio**. Do not use the instance open from cloning the primary **Parts Unlimited** solution.
+1. Launch a **new** instance of **Visual Studio**. 
 
 1. Select **Tools | NuGet Package Manager | Package Manager Settings**.
+
+    ![](images/033.png)
 
 1. Locate the **Package Sources** section and click the **Add** button to add a new package source.
 
