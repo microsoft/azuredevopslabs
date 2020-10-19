@@ -5,7 +5,7 @@ sidebar: vsts
 permalink: /labs/azuredevops/appinsights/
 folder: /labs/azuredevops/appinsights/
 version: Lab version - 1.37.1
-updated: Last updated - 9/9/2019
+updated: Last updated - 19/10/2020
 ---
 <div class="rw-ui-container"></div>
 <a name="Overview"></a>
@@ -26,85 +26,52 @@ In this lab, you'll learn about how you can add Application Insights to an exist
 
 <a name="Ex1Task1"></a>
 ### Task 1: Creating Azure resources ###
-
 1. This lab requires a deployment of the Parts Unlimited project out to an Azure app service. To do this, you will need to spin up the necessary infrastructure. Log in to your Azure account at [https://portal.azure.com](https://portal.azure.com/).
 
-1.  Click **Create a resource** and search for **"sql"**.
+1. Click **Create a resource** and search for **"Web App + SQL"**.
 
-    ![](images/000.png)
 
-1. Select **SQL Database**.
+1. Select the **Web App + SQL** option published by Microsoft.
 
-    ![](images/001.png)
-
-1. Click **Create**.
-
-    ![](images/002.png)
-
-1. Under **Resource group**, click **Create new**.
-
-    ![](images/003.png)
-
-1. Enter a **Name** of **"partsunlimited"** and click **OK**.
-
-    ![](images/004.png)
-
-1. Enter a **Database name** of **"partsunlimited"** and click **Create new** to create a new server.
-
-    ![](images/005.png)
-
-1. Enter a unique name for **Server name**, such as by including your name. Enter an admin username and password you can remember. Note that **"P2ssw0rd"** meets the password requirements. Enable **Allow Azure services to access server**. Click **OK** to confirm these options.
-
-    ![](images/007.png)
-
-1. Click **Review + create**.
-
-    ![](images/008.png)
-
-1. Click **Create**. It'll take some time to complete, but you can move on to the next step while it works in the background.
-
-    ![](images/009.png)
-
-1. Click **Create a resource** and search for **"web"**.
-
-    ![](images/010.png)
-
-1. Select the **Web App** template.
-
-    ![](images/011.png)
+    ![](images/createresource.png)
 
 1. Click **Create**.
 
-    ![](images/012.png)
+    ![](images/002_copy.png)
 
-1. Under **Project Details**, select the same **Subscription** and **Resource Group** used for the database.
+1. Enter a globally unique name for the app service. You may find it easiest to incorporate your name, such as **"pul-ai-johndoe"**. Select the option to **create a new** resource group named **"partsunlimited"**.
 
-    ![](images/013.png)
+    ![](images/003_copy.png)
 
-1. For **Name**, enter a unique name, such as by using your name as part. Select the **ASP.NET 4.7 Runtime stack**.
+1. Select the option to configure the **SQL Database**. Click **Create a new database** and enter the name **"partsunlimited"**.
 
-    ![](images/014.png)
+    ![](images/004_copy.png)
+
+1. Select the option to configure the **Target server** and click **Create a new server**. Enter a globally unique server name, such as **"pul-ai-johndoe"** and provide admin credentials. Click **Select** to confirm the server settings.
+
+    ![](images/005_copy.png)
+
+1. Click **Select** to confirm the database settings.
+
+    ![](images/006_copy.png)
 
 1. By default, the template will generate an Application Insights resource and attach it to the app service.
+     
+     ![](images/ai-resource.png)
 
-    ![](images/017.png)
+1. Click **Create** to create the resources. Note that you may need to create an app service plan first, if you do not yet have one.
 
-1. Click **Review and create**.
-
-    ![](images/015.png)
-
-1. Click **Create**.
-
-    ![](images/016.png)
+    ![](images/007_copy.png)
 
 1. It will take a few minutes for the resources to provision, so you can move on to the next task.
+
 
 <a name="Ex1Task2"></a>
 ### Task 2: Deploying a web app to Azure ###
 
 1. Open a new browser tab to your team project on Azure DevOps. The default demo project includes a continuous integration build that we can use as-is. There is also a continuous delivery release pipeline that will require a bit of configuration before it is ready to deploy to the infrastructure created earlier.
 
-1. Use the navigation to navigate to **Pipelines | Releases**.
+1. Use the navigation to navigate to **Pipelines \| Releases**.
 
     ![](images/018.png)
 
