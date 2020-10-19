@@ -50,7 +50,7 @@ The following image will walk you through all the steps explained in this lab
 
     ![](images/004.png)
 
-1. Select the option to configure the **Target server** and click **Create a new server**. Enter a globally unique server name, such as **"pul-yaml-johndoe"** and provide admin credentials. Click **Select** to confirm the server settings.
+1. Select the option to configure the **Target server** and click **Create a new server**. Enter a globally unique server name, such as **"pul-yaml-johndoe"** and provide admin credentials. Make sure **Allow Azure services to access server** checkbox is selected. Click **Select** to confirm the server settings.
 
     ![](images/005.png)
 
@@ -146,7 +146,7 @@ The following image will walk you through all the steps explained in this lab
 
 1. Add the configuration lines below after the **trigger** section to define a **Build** stage in the YAML pipeline. You can define whatever stages you need to better organize and track pipeline progress.
 
-    ```
+    ```yaml
     stages:
     - stage: Build
       jobs:
