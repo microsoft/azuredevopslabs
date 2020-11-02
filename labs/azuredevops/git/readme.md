@@ -30,7 +30,7 @@ In this lab, you will learn how to establish a local Git repository, which can e
 
 - [Git for Windows](https://gitforwindows.org/) 2.21.0 or later.
 
-- This lab requires you to complete task 1 from the [prerequisite instructions](../prereq).
+- This lab requires you to complete task 1 from the [prerequisite instructions](../prereq) (Skip cloning, it is done in the exercise).
 
 <a name="Exercise1"></a>
 ## Exercise 1: Configuring the lab environment ##
@@ -94,38 +94,6 @@ In this lab, you will learn how to establish a local Git repository, which can e
 
     ![](images/005_new.png)
 
-<a name="Ex2Task2"></a>
-### Task 2: Installing the Azure Repos extension for Visual Studio Code ###
-
-1. The Azure Repos extension provides convenient access to many features of Azure DevOps. From the **Extensions** tab, search for **"Azure Repos"** and click **Install** to install it.
-
-    ![](images/006.png)
-
-1. Click **Reload** once the extension has finished installing. If this option is not available, reopen **Visual Studio Code**.
-
-    ![](images/007.png)
-
-1. Press **Ctrl+Shift+P** to show the **Command Palette**.
-
-1. Search for **"Team"** to see all the new commands that are now available for working with Azure Repos. Select **Team: Signin**.
-
-    ![](images/008.png)
-
-1. Select **Authenticate and get an access token automatically**. Note that you could alternatively provide the token created earlier if following the manual path.
-
-    ![](images/009.png)
-
-1. Copy the provided token and press **Enter** to launch a browser tab.
-
-    ![](images/010.png)
-
-1. Paste the code in to the login box and click **Next**.
-
-    ![](images/011_new.png)
-
-1. Select the Microsoft account associated with your Azure DevOps account.
-
-1. When the process has complete, close the browser tab.
 
 <a name="Exercise3"></a>
 ## Exercise 3: Saving work with commits ##
