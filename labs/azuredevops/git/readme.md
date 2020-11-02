@@ -426,17 +426,19 @@ You can create Git repos in team projects to manage your project's source code. 
 
 1. Sometimes you'll have a need to rename or delete a repo, which is just as easy. Open **Project settings**.
 
-    ![](images/071.png)
+    ![](images/ps.png)
 
 1. Select **Repositories** under **Repos**.
 
-    ![](images/072.png)
+
+    ![](images/settings-repos.png)
+
 
 1. From the **New Repo** context menu, select **Delete repository**. Alternatively, you could rename it here.
 
-    ![](images/073.png)
+    ![](images/repo-delete.png)
 
 1. Enter the name **"New Repo"** to confirm the repo and click **Delete**.
 
-    ![](images/074.png)
+    ![](images/deleterepowindow.png)
 
