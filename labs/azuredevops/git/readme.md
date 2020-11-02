@@ -201,17 +201,8 @@ Git's use of the **Branches and Merges** feature works through pull requests, so
 
     ![](images/028.png)
 
-1. Press **Ctrl\|Shift+P** to open the **Command Palette**.
 
-1. Start typing **"Team"** and select **Team: View History** when it becomes available. This is a feature of the Azure Repos extension that makes it easy to jump right to the history of this file in a new browser tab.
-
-    ![](images/029.png)
-
-1. Note the history of **Category.cs**. Close the newly created tab, which will should return you to the **Commits** tab from earlier.
-
-    ![](images/030.png)
-
-1. Scroll down in the **Commits** view to locate some of the source branches and merges. These provide a convenient way to visualize when and how changes were made to the source.
+1. Go to the  **Commits** view in **Azure DevOps** to locate some of the source branches and merges. These provide a convenient way to visualize when and how changes were made to the source.
 
     ![](images/031.png)
 
