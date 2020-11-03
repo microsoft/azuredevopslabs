@@ -106,9 +106,6 @@ redirect_from: "/labs/vsts/packagemanagement/index.htm"
 
 1. On the opened window, select nuget.exe version **v5.5.1**
 
-1. Download the latest version of **nuget.exe** to the desktop. Close the browser tab.
-
-    ![](images/012.png)
 
 1. Return to **Visual Studio**. From **Solution Explorer**, right-click the **PartsUnlimited.Shared** project node and select **Open Folder in File Explorer**.
 
