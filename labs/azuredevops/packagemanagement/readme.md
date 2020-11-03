@@ -41,15 +41,17 @@ redirect_from: "/labs/vsts/packagemanagement/index.htm"
 
     ![](images/create-feed.png)
 
-1. This feed will include common functionality that can be shared across projects in this organization. Set the name to **"PartsUnlimitedShared"** and click **Create**. Leave the default security options.
+1. This feed will include common functionality that can be shared across projects in this organization (scope=organization). Set the name to **"PartsUnlimitedShared"** and click **Create**. Leave the default options.
 
-    ![](images/002.png)
+    ![](images/create-feed-window2.png) 
 
 1. Any user who wants to connect to this NuGet feed must configure their environment. Click **Connect to feed**.
 
     ![](images/003.png)
 
-1. Copy the **Package source URL**. This is the only thing Visual Studio and NuGet need to start taking advantage of the new feed. Leave the dialog open in the browser.
+    ![](images/connect-feed.png)
+
+1. Copy the **Source** url . This is the only thing Visual Studio and NuGet need to start taking advantage of the new feed. Leave the dialog open in the browser.
 
     ![](images/004.png)
 
