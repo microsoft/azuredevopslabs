@@ -51,7 +51,7 @@ In this lab, you will learn how to configure continuous integration (CI) and con
 
 1. Locate the **ASP.NET** template and click **Apply** to apply this template to the build definition. Note that there are many options that should cover all of our mainstream scenarios. For our purposes here, we'll just build the project using the baseline ASP.NET template.
 
-    ![](images/004.png)
+    ![](images/template.png)
 
 1. The process for this build pipeline is easy to follow. After getting the source, Azure DevOps will use NuGet to restore any dependent packages. Then, the project will be built and tested. The results will then be published to the configured target.
 
