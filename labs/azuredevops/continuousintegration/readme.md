@@ -37,7 +37,15 @@ In this lab, you will learn how to configure continuous integration (CI) and con
 
     ![](images/000.png)
 
-1. Click **New pipeline** to create a new build pipeline.
+1. Open (click) the existing **PartsUnlimitedE2E** pipeline (which was created by the demo generator tool) and click on **Edit**
+
+    ![](images/edit-pipeline.png)
+
+1. Not to have two pipelines triggered later in the lab, disable the CI trigger for the template created pipeline (uncheck).
+
+    ![](images/disable-ci.png)
+ 
+1. Go again to **Pipelines | Pipelines** and click **New pipeline** to create a new build pipeline.
 
     ![](images/001.png)
 
