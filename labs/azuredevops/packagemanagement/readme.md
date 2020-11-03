@@ -49,11 +49,11 @@ redirect_from: "/labs/vsts/packagemanagement/index.htm"
 
     ![](images/003.png)
 
-    ![](images/connect-feed.png)
+    
 
 1. Copy the **Source** url . This is the only thing Visual Studio and NuGet need to start taking advantage of the new feed. Leave the dialog open in the browser.
 
-    ![](images/004.png)
+   ![](images/connect-feed.png)
 
 1. Launch a new instance of **Visual Studio**. Do not use the instance open from cloning the primary **Parts Unlimited** solution.
 
@@ -70,11 +70,19 @@ redirect_from: "/labs/vsts/packagemanagement/index.htm"
 <a name="Ex1Task2"></a>
 ### Task 2: Creating and publishing a NuGet package ###
 
-1. From the main menu of **Visual Studio**, select **File | New | Project**. We will now create a shared assembly that will be published as a NuGet package so that other teams can integrate it and stay up to date without having to work directly with the project source.
+1. From the main menu of **Visual Studio**, select **File | New | Project** ("Create a new project" in VS2019). We will now create a shared assembly that will be published as a NuGet package so that other teams can integrate it and stay up to date without having to work directly with the project source.
 
 1. From the **Visual C#** section, select the **Class Library (.NET Framework)** template and set the **Name** to **"PartsUnlimited.Shared"**. Click **OK** to create the project.
+(If VS2019 used, look for "class" in the finder and select **Class Library (.NET Framework)** and choose version 4.5.1)
+
+    **VS2017**
 
     ![](images/007.png)
+
+    **VS2019**
+
+    ![](images/create-project-vs2019.png)
+    ![](images/conf-project-vs2019.png)
 
 1. In **Solution Explorer**, delete **Class1.cs**.
 
@@ -84,7 +92,7 @@ redirect_from: "/labs/vsts/packagemanagement/index.htm"
 
     ![](images/009.png)
 
-1. Set the **Target framework** to **.NET Framework 4.5.1** and click **Yes** to confirm the change.
+1. (just confirm in VS2019) Set the **Target framework** to **.NET Framework 4.5.1** and click **Yes** to confirm the change.
 
     ![](images/010.png)
 
