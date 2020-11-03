@@ -98,9 +98,13 @@ redirect_from: "/labs/vsts/packagemanagement/index.htm"
 
 1. Press **Ctrl+Shift+B** to build the project. In the next task we'll use **NuGet.exe** to generate a NuGet package directly from the built project, but it requires the project to be built first.
 
-1. Return to the Azure DevOps browser tab. Click **NuGet**.
+1. Return to the Azure DevOps browser tab. On the feed created bofere click **Connect to Feed**,  **NuGet.exe**, **Get the tools**.
 
-    ![](images/011.png)
+1. Click on **Download the latest Nuget**
+
+    ![](images/dowon-nuget.png)
+
+1. On the opened window, select nuget.exe version **v5.5.1**
 
 1. Download the latest version of **nuget.exe** to the desktop. Close the browser tab.
 
