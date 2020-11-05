@@ -72,7 +72,9 @@ In this lab, you will learn how to integrate Azure DevOps Services with SonarClo
 
    The SonarCloud extension contains build tasks, build templates and a custom dashboard widget.
 
-5. Using the same account as you used for Azure Devops, sign into SonarCloud.
+5. Using the same account as you used for Azure Devops, sign into SonarCloud: https://sonarcloud.io/
+
+   ![SonarCloud Welcome](images/sonarcloud.io.png)
    
 6. In SonarCloud, create an organization and, within that, a new project. The organization and project you set up in SonarCloud will mirror the organization and project that you set up in Azure DevOps.
 
