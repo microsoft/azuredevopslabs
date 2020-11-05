@@ -5,7 +5,7 @@ sidebar: vsts
 permalink: /labs/azuredevops/packagemanagement/
 folder: /labs/azuredevops/packagemanagement/
 version: Lab version - 1.38.0
-updated: Last updated - 9/11/2019
+updated: Last updated - 05/11/2020
 redirect_from: "/labs/vsts/packagemanagement/index.htm"
 ---
 <div class="rw-ui-container"></div>
@@ -28,7 +28,7 @@ redirect_from: "/labs/vsts/packagemanagement/index.htm"
 <a name="Exercise1"></a>
 ## Exercise 1: Working with Azure Artifacts ##
 
-**Azure Artifacts** is an extension to Azure DevOps Services and Azure DevOps Server.  It comes pre-installed in Azure DevOps Services, Azure DevOps Server 2019 and Team Foundation Server (TFS) 2017 and 2018.
+**Azure Artifacts** is an extension to Azure DevOps Services and Azure DevOps Server.  It comes pre-installed in Azure DevOps Services, Azure DevOps Server 2019, Team Foundation Server (TFS) 2017 and 2018.
 
 <a name="Ex1Task1"></a>
 ### Task 1: Creating and connecting to a feed ###
@@ -39,9 +39,9 @@ redirect_from: "/labs/vsts/packagemanagement/index.htm"
 
 1. Click **Create feed**. This feed will be a collection of NuGet packages available to users within the organization and will sit alongside the public NuGet feed as a peer. The scenario in this lab will focus on the workflow for using Azure Artifacts, so the actual architectural and development decisions are purely illustrative.
 
-    ![](images/create-feed.png)
+    ![](images/createfeed.png)
 
-1. This feed will include common functionality that can be shared across projects in this organization (scope=organization). Set the name to **"PartsUnlimitedShared"** and click **Create**. Leave the default options.
+1. This feed will include common functionality that can be shared across projects in this organization. Select the scope as **Organization** for this lab. Set the name to **"PartsUnlimitedShared"** and click **Create**. Leave the default options.
 
     ![](images/create-feed-window2.png) 
 
@@ -51,14 +51,15 @@ redirect_from: "/labs/vsts/packagemanagement/index.htm"
 
     
 
-1. Copy the **Source** url . This is the only thing Visual Studio and NuGet need to start taking advantage of the new feed. Leave the dialog open in the browser.
+1. In the **Connect to feed** window, select **Visual Studio** and copy the **Source** url . This is the only thing Visual Studio and NuGet need to start taking advantage of the new feed. Leave the dialog open in the browser.
 
    ![](images/connect-feed.png)
 
-1. Launch a new instance of **Visual Studio**. Do not use the instance open from cloning the primary **Parts Unlimited** solution.
+1. Launch a **new** instance of **Visual Studio**. Do not use the instance open from cloning the primary **Parts Unlimited** solution.
 
-1. Select **Tools | NuGet Package Manager | Package Manager Settings**.
-
+1. Select **Tools \| NuGet Package Manager \| Package Manager Settings**.
+     
+     ![](images/packagemanagersettings.png)
 1. Locate the **Package Sources** section and click the **Add** button to add a new package source.
 
     ![](images/005.png)
@@ -70,7 +71,7 @@ redirect_from: "/labs/vsts/packagemanagement/index.htm"
 <a name="Ex1Task2"></a>
 ### Task 2: Creating and publishing a NuGet package ###
 
-1. From the main menu of **Visual Studio**, select **File | New | Project** ("Create a new project" in VS2019). We will now create a shared assembly that will be published as a NuGet package so that other teams can integrate it and stay up to date without having to work directly with the project source.
+1. From the main menu of **Visual Studio**, select **File \| New \| Project** ("Create a new project" in VS2019). We will now create a shared assembly that will be published as a NuGet package so that other teams can integrate it and stay up to date without having to work directly with the project source.
 
 1. From the **Visual C#** section, select the **Class Library (.NET Framework)** template and set the **Name** to **"PartsUnlimited.Shared"**. Click **OK** to create the project.
 (If VS2019 used, look for "class" in the finder and select **Class Library (.NET Framework)** and choose version 4.5.1)
@@ -92,17 +93,19 @@ redirect_from: "/labs/vsts/packagemanagement/index.htm"
 
     ![](images/009.png)
 
-1. (just confirm in VS2019) Set the **Target framework** to **.NET Framework 4.5.1** and click **Yes** to confirm the change.
+1. Set the **Target framework** to **.NET Framework 4.5.1** and click **Yes** to confirm the change. (Confirm the same if you are using VS2019)
 
     ![](images/010.png)
 
 1. Press **Ctrl+Shift+B** to build the project. In the next task we'll use **NuGet.exe** to generate a NuGet package directly from the built project, but it requires the project to be built first.
 
-1. Return to the Azure DevOps browser tab. On the feed created bofere click **Connect to Feed**,  **NuGet.exe**, **Get the tools**.
+1. Return to the Azure DevOps browser tab. On the feed created before click **Connect to Feed** \| **NuGet.exe** \| **Get the tools**.
+
+    ![](images/getthetools.png)
 
 1. Click on **Download the latest Nuget**
 
-    ![](images/dowon-nuget.png)
+    ![](images/downloadthenuget.png)
 
 1. On the opened window, select nuget.exe version **v5.5.1**
 
@@ -115,7 +118,7 @@ redirect_from: "/labs/vsts/packagemanagement/index.htm"
 
     ![](images/014.png)
 
-1. In the same **Windows Explorer** window, select **File | Open Windows PowerShell | Open Windows PowerShell as administrator**.
+1. In the same **Windows Explorer** window, select **File \| Open Windows PowerShell \| Open Windows PowerShell as administrator**.
 
     ![](images/015.png)
 
@@ -177,7 +180,7 @@ redirect_from: "/labs/vsts/packagemanagement/index.htm"
 
 1. Switch to the instance of **Visual Studio** that has the **PartsUnlimited.Shared** project open (the NuGet source project).
 
-1. In **Solution Explorer**, right-click the **PartsUnlimited.Shared** project node and select **Add | New Item**.
+1. In **Solution Explorer**, right-click the **PartsUnlimited.Shared** project node and select **Add \| New Item**.
 
     ![](images/025.png)
 
