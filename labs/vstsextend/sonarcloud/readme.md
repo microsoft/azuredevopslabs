@@ -78,17 +78,29 @@ In this lab, you will learn how to integrate Azure DevOps Services with SonarClo
    
 6. In SonarCloud, create an organization and, within that, a new project. The organization and project you set up in SonarCloud will mirror the organization and project that you set up in Azure DevOps.
 
-   Once you sign in, click **Create an organization** on the welcome page:
+   Once you sign in, click **Import project from Azure** on the welcome page:
 
-   ![SonarCloud Welcome](images/sc_welcome.png)
+   ![SonarCloud Welcome](images/import.png)
 
+   Add your Azure DevOps organization name (dev.azure.com/{YOUR-ORG}) , create and provide  a personal access token in your Azure DevOps organization settings. **Check the following scope: Code (Read & Write)**. [Create PAT](https://docs.microsoft.com/en-us/azure/devops/organizations/accounts/use-personal-access-tokens-to-authenticate?view=azure-devops&tabs=preview-page)
+
+   ![PAT](images/pat1.png)
+
+
+   ![PAT](images/pat2.png)
+
+    ![SonarCloud org creation](images/org-create.png)
+   
    Choose an organization key. Note that the key must be unique within the SonarCloud system. In our example, we will use
    
-   **`claudiasonarova-azdo-org`**
-   
-   ![New SonarCloud organization](images/sc_create_org_key.png)
+   **`YOURNAME-azdo-org`**
 
+   Click **Continue**
+   
    Make sure that the the green checkmark appears beside the **Key** field. This indicates that the key is unique across SonarCloud.
+
+   ![SonarCloud org creation](images/org-create2.png)
+
 
    Next, you can choose your plan. For this example, we choose a free plan (that is, one for public repos only), but you can choose a paid plan if you intend to have private repos:
 
