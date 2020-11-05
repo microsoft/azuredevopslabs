@@ -37,21 +37,23 @@ redirect_from: "/labs/vsts/packagemanagement/index.htm"
 
     ![](images/000.png)
 
-1. Click **New feed**. This feed will be a collection of NuGet packages available to users within the organization and will sit alongside the public NuGet feed as a peer. The scenario in this lab will focus on the workflow for using Azure Artifacts, so the actual architectural and development decisions are purely illustrative.
+1. Click **Create feed**. This feed will be a collection of NuGet packages available to users within the organization and will sit alongside the public NuGet feed as a peer. The scenario in this lab will focus on the workflow for using Azure Artifacts, so the actual architectural and development decisions are purely illustrative.
 
-    ![](images/001.png)
+    ![](images/create-feed.png)
 
-1. This feed will include common functionality that can be shared across projects in this organization. Set the name to **"PartsUnlimitedShared"** and click **Create**. Leave the default security options.
+1. This feed will include common functionality that can be shared across projects in this organization (scope=organization). Set the name to **"PartsUnlimitedShared"** and click **Create**. Leave the default options.
 
-    ![](images/002.png)
+    ![](images/create-feed-window2.png) 
 
 1. Any user who wants to connect to this NuGet feed must configure their environment. Click **Connect to feed**.
 
     ![](images/003.png)
 
-1. Copy the **Package source URL**. This is the only thing Visual Studio and NuGet need to start taking advantage of the new feed. Leave the dialog open in the browser.
+    
 
-    ![](images/004.png)
+1. Copy the **Source** url . This is the only thing Visual Studio and NuGet need to start taking advantage of the new feed. Leave the dialog open in the browser.
+
+   ![](images/connect-feed.png)
 
 1. Launch a new instance of **Visual Studio**. Do not use the instance open from cloning the primary **Parts Unlimited** solution.
 
@@ -68,11 +70,19 @@ redirect_from: "/labs/vsts/packagemanagement/index.htm"
 <a name="Ex1Task2"></a>
 ### Task 2: Creating and publishing a NuGet package ###
 
-1. From the main menu of **Visual Studio**, select **File | New | Project**. We will now create a shared assembly that will be published as a NuGet package so that other teams can integrate it and stay up to date without having to work directly with the project source.
+1. From the main menu of **Visual Studio**, select **File | New | Project** ("Create a new project" in VS2019). We will now create a shared assembly that will be published as a NuGet package so that other teams can integrate it and stay up to date without having to work directly with the project source.
 
 1. From the **Visual C#** section, select the **Class Library (.NET Framework)** template and set the **Name** to **"PartsUnlimited.Shared"**. Click **OK** to create the project.
+(If VS2019 used, look for "class" in the finder and select **Class Library (.NET Framework)** and choose version 4.5.1)
+
+    **VS2017**
 
     ![](images/007.png)
+
+    **VS2019**
+
+    ![](images/create-project-vs2019.png)
+    ![](images/conf-project-vs2019.png)
 
 1. In **Solution Explorer**, delete **Class1.cs**.
 
@@ -82,19 +92,20 @@ redirect_from: "/labs/vsts/packagemanagement/index.htm"
 
     ![](images/009.png)
 
-1. Set the **Target framework** to **.NET Framework 4.5.1** and click **Yes** to confirm the change.
+1. (just confirm in VS2019) Set the **Target framework** to **.NET Framework 4.5.1** and click **Yes** to confirm the change.
 
     ![](images/010.png)
 
 1. Press **Ctrl+Shift+B** to build the project. In the next task we'll use **NuGet.exe** to generate a NuGet package directly from the built project, but it requires the project to be built first.
 
-1. Return to the Azure DevOps browser tab. Click **NuGet**.
+1. Return to the Azure DevOps browser tab. On the feed created bofere click **Connect to Feed**,  **NuGet.exe**, **Get the tools**.
 
-    ![](images/011.png)
+1. Click on **Download the latest Nuget**
 
-1. Download the latest version of **nuget.exe** to the desktop. Close the browser tab.
+    ![](images/dowon-nuget.png)
 
-    ![](images/012.png)
+1. On the opened window, select nuget.exe version **v5.5.1**
+
 
 1. Return to **Visual Studio**. From **Solution Explorer**, right-click the **PartsUnlimited.Shared** project node and select **Open Folder in File Explorer**.
 
