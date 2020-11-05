@@ -37,7 +37,15 @@ In this lab, you will learn how to configure continuous integration (CI) and con
 
     ![](images/000.png)
 
-1. Click **New pipeline** to create a new build pipeline.
+1. Open (click) the existing **PartsUnlimitedE2E** pipeline (which was created by the demo generator tool) and click on **Edit**
+
+    ![](images/edit-pipeline.png)
+
+1. Not to have two pipelines triggered later in the lab, disable the CI trigger for the template created pipeline (uncheck).
+
+    ![](images/disable-ci.png)
+ 
+1. Go again to **Pipelines | Pipelines** and click **New pipeline** to create a new build pipeline.
 
     ![](images/001.png)
 
@@ -51,7 +59,7 @@ In this lab, you will learn how to configure continuous integration (CI) and con
 
 1. Locate the **ASP.NET** template and click **Apply** to apply this template to the build definition. Note that there are many options that should cover all of our mainstream scenarios. For our purposes here, we'll just build the project using the baseline ASP.NET template.
 
-    ![](images/004.png)
+    ![](images/template.png)
 
 1. The process for this build pipeline is easy to follow. After getting the source, Azure DevOps will use NuGet to restore any dependent packages. Then, the project will be built and tested. The results will then be published to the configured target.
 
@@ -129,7 +137,7 @@ In this lab, you will learn how to configure continuous integration (CI) and con
 
 1. Click **Edit**.
 
-    ![](images/022.png)
+    ![](images/edit.png)
 
 1. Make a minor cosmetic change, such as by tweaking the title of the document. Click **Commit**.
 
