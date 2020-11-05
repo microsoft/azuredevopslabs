@@ -108,12 +108,15 @@ In this lab, you will learn how to integrate Azure DevOps Services with SonarClo
 
    You have now created the SonarCloud organization that will mirror your Azure DevOps organization.
 
-   The next step is to create, within that organization, the SonarCloud project that will mirror the Azure DevOps project **SonarExamples**. As with the SonarCloud organization, the key of your project must be unique across the SonarCloud system.
-   In our example we use
-   
-   **`sonar-examples-claudiasonarova-azdo`**
+   The next step is to create, within that organization, the SonarCloud project that will mirror the Azure DevOps project **SonarExamples**. Click on **Analyze new project**.
 
-   ![Create SonarCloud project](images/sc_create_project.png)
+   ![Create SonarCloud project](images/new-project.png)
+
+   Choose your Azure DevOps project and click **Set up**.
+
+   ![Create SonarCloud project](images/choose-project.png)
+   
+   
 
    Make sure that the checkmarks are green, indicating that your key is unique and your name is valid (the name can be different from the key and need not be unique. Here we leave it the same as the key).
 
