@@ -326,6 +326,8 @@ Configuring SonarCloud analysis to run when a pull request is created involves t
    - Navigate to the code file **Program.cs** at **sonarqube-scanner-msbuild/CSharpProject/SomeConsoleApplication/Program.cs** and click **Edit**
    - Add an empty method to the code as shown in the following screen shot, then click **Commit...**
 
+   ``public void Unused(){}``
+
       ![Edit program](images/azdo_add_unused.png)
 
    In the dialog that appears,
@@ -347,7 +349,7 @@ Configuring SonarCloud analysis to run when a pull request is created involves t
    The results show that the analysis builds completed successfully, but that the new code in the PR failed the Code Quality check.
    Comment has been posted to the PR for the new issue that was discovered.
 
-   ![Check failed](images/azdo_check_failed.png)
+   ![Check failed](images/check_failed.png)
 
    ![Check failed](images/azdo_pr_comment.png)
 
