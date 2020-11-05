@@ -61,9 +61,12 @@ In this lab, you will learn how to integrate Azure DevOps Services with SonarClo
 
 4. Install the SonarCloud Azure DevOps extension in your Azure DevOps account
 
-   Navigate to the [SonarCloud extension](https://marketplace.visualstudio.com/items?itemName=SonarSource.sonarcloud) in the Visual Studio Marketplace and click **Get it free** to install it.
+   Navigate to the [SonarCloud extension](https://marketplace.visualstudio.com/items?itemName=SonarSource.sonarcloud) in the Visual Studio Marketplace and click **Get it free** to install it, and **Proceed to organization** once the installation has finished.
 
    ![Marketplace](images/ex1/sc_marketplace.png)
+
+
+   ![Marketplace installed](images/ext-installed.png)
 
    > If you do not have the appropriate permissions to install an extension from the marketplace, a request will be sent to the account administrator to ask them to approve the installation.
 
