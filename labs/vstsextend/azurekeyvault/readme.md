@@ -23,7 +23,9 @@ In this lab, you will see how you can use Azure Key Vault in a pipeline.
 1. Refer the [Getting Started](../Setup/) page before you begin following the exercises.
 
 1. Use the [Azure DevOps Demo Generator](https://azuredevopsdemogenerator.azurewebsites.net/?name=keyvault){:target="_blank"} to provision the project on your Azure DevOps organization.
-   This URL will automatically select **Azure Key Vault** template in the demo generator. If you want to try other projects, use this URL instead -[azuredevops generator](https://azuredevopsdemogenerator.azurewebsites.net/)
+   This **URL will automatically select Azure Key Vault** template in the demo generator. If you want to try other projects, use this URL instead -[azuredevops generator](https://azuredevopsdemogenerator.azurewebsites.net/)
+
+   ![](images/template-kv.png)
 
    Follow the [simple walkthrough](https://docs.microsoft.com/en-us/azure/devops/demo-gen/use-vsts-demo-generator-v2?view=vsts){:target="_blank"} to know how to use the Azure DevOps Demo Generator.
 
@@ -67,7 +69,7 @@ Next, we will create a key vault in Azure. For this lab scenario, we have a node
 
 1. Provide a name, subscription, resource group and location for the vault.
 
-     ![](images/kv_t2_s4.png)
+     ![](images/kv-create.png)
 
     Because data in Key Vaults are sensitive and business critical, you need to secure access to your key vaults by allowing only authorized applications and users. To access the data from the vault, you will need to provide read (Get) permissions to the service principal that you will be using for authentication in the pipeline. 
 
@@ -83,7 +85,7 @@ Next, we will create a key vault in Azure. For this lab scenario, we have a node
 
 1. Select the **Select principal** and search for the security principal that you created earlier and select it. You can search by name or ID of the principal.
 
-    ![](images/kv_t2_s7.png)
+    ![](images/select-sp.png)
 
 1. Next, we will select the permission to be granted. For now, we will provide **read-only** permissions (Get, List) to secrets only.
 
@@ -93,7 +95,7 @@ Next, we will create a key vault in Azure. For this lab scenario, we have a node
 
 1. It should only take a couple of minutes for the service to be created. Once it is provisioned, select the key vault and add a new secret. Let's name it **sqldbpassword**. Provide any value that will be accepted as a password for a MySQL database.
 
-    ![](images/createsecret.png)
+    ![](images/create-secret.png)
 
 ### Task 3: Check the Azure Pipeline
 
