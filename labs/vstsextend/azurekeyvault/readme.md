@@ -111,7 +111,7 @@ Now, lets go to the Azure DevOps project that you provisioned using the [Azure D
 
     ![](images/kv_t3_s3.png)
 
-1. Go to **Releases** under **Pipelines** and then select and edit the **SmartHotel-CouponManagement-CD** definition.
+1. Go to **Releases** under **Pipelines** and then select and **Edit** the **SmartHotel-CouponManagement-CD** definition.
 
 1. Under **Tasks**, notice the release definition for **Dev** stage has a **Azure Key Vault** task. This task downloads *Secrets* from an Azure Key Vault. You will need to point to the subscription and the Azure Key Vault resource created earlier in the lab.
 
@@ -119,7 +119,17 @@ Now, lets go to the Azure DevOps project that you provisioned using the [Azure D
     
     ![](images/clickmanage.png)
 
-   Follow the instruction [here](https://docs.microsoft.com/en-us/azure/devops/pipelines/library/connect-to-azure?view=azure-devops#create-an-azure-resource-manager-service-connection-with-an-existing-service-principal) to create an Azure Resource Manager service connection with an existing service principal.
+   Click on **New Service connection** -> **Azure Resource Manager** -> **Service Principal (manual)**.
+   Fill the information from previously created service principal:
+
+    -  Subscription Id and name: can be found in the keyvault resource overview page.
+    -  Service Principal Id = AppId in the copied notes.
+    -  Service Principal key = Password in the copied notes.
+    -  TenantId , copy from the notes.
+
+    Click on **Verify** to check it works, give the connection a name and click **Verify and Save**.
+
+    ![](images/SC-create.png)
    
 1. Select the Service connection you created in previous step for Azure subsciption in Azure Key Vault task.  
 
