@@ -58,7 +58,7 @@ In this lab, you will learn about the release management features available in A
 
     ![](images/005.png)
 
-1. Enter a unique name for **Server name**, such as by including your name. Enter an admin username and password you can remember. Note that **"P2ssw0rd"** meets the password requirements. Enable **Allow Azure services to access server**. Click **OK** to confirm these options.
+1. Enter a unique name for **Server name**, such as by including your name. Enter an admin username and password you can remember. Note that **"P2ssw0rd"** meets the password requirements. Click **OK** to confirm these options.
 
     ![](images/007.png)
 
@@ -86,7 +86,7 @@ In this lab, you will learn about the release management features available in A
 
     ![](images/013.png)
 
-1. For **Name**, enter a unique name, such as by using your name as part. Since this will be for our QA deployment, append the name with **"-qa"**. Select the **ASP.NET 4.7 Runtime stack**.
+1. For **Name**, enter a unique name, such as by using your name as part. Since this will be for our QA deployment, append the name with **"-qa"**. Select the **ASP.NET 4.8 Runtime stack**.
 
     ![](images/014.png)
 
@@ -102,7 +102,19 @@ In this lab, you will learn about the release management features available in A
 
     ![](images/017.png)
 
-1. It may take a few minutes for all of your new Azure resources to become available, so continue on to the next task. Leave this browser tab open for later.
+1. While the Azure resources are created, go ahead and configure the SQL server.
+
+1. Click the **Resource groups** tab from the left menu. Locate and click the **partsunlimited** group.
+
+1. Click the SQL server resource created earlier.
+
+1. Select the **Firewalls and virtual networks** tab from the **Security** section.
+
+1. Set **"Allow Azure services and resources to access this server"** to **Yes** to allow the App Services to access this SQL server.
+
+1. Click **Save** on the top of the tab.
+
+1. Continue on to the next task. Leave this browser tab open for later.
 
 <a name="Ex1Task2"></a>
 ### Task 2: Creating a continuous release to the QA stage ###
