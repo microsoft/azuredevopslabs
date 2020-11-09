@@ -499,7 +499,7 @@ In this task we'll create a new process that inherits from Scrum. The one change
 
 1. Select the **Process** tab under **Boards**.
 
-    ![](images/108.png)
+    ![](images/process.png)
 
 1. From the **Scrum** dropdown, select **Create inherited process**.
 
