@@ -33,13 +33,13 @@ In this lab, you will learn about the agile planning and portfolio management to
 
 1. Open the settings page using the **Project settings** navigation located at the bottom left of the page.
 
-    ![](images/000.png)
+    ![](images/settings.png)
 
 1. Select the **Teams** tab. There are already a few teams in this project, but you'll make a new one for this lab. Click **New team**.
 
     ![](images/001.png)
 
-1. Use **"PUL-Web"** as the **Team name** and click **Create team**.
+1. Use **"PUL-Web"** as the **Team name** and click **Create team** (Leave defaults).
 
     ![](images/002.png)
 
