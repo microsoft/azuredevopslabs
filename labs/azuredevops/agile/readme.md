@@ -53,13 +53,13 @@ In this lab, you will learn about the agile planning and portfolio management to
 
 1. Select the **Iterations** tab and click **Select iterations**. This team will use the same iteration schedule that's already in place for the other teams, although you can take a different route if that's better for your organization.
 
-    ![](images/005.png)
+    ![](images/iteration.png)
 
 1. Select **Parts Unlimited\Sprint 1** and click **Save and close**. Note that this first sprint has already passed. This is because the demo data generator is designed to build out project history so that this sprint occurs in the past.
 
     ![](images/006.png)
 
-1. Repeat the process to add **Sprint 2** and **Sprint 3**. The second sprint is our current iteration, and the third is in the near future.
+1. Repeat the process to add **Sprint 2** and **Sprint 3** (add them as in previous step). The second sprint is our current iteration, and the third is in the near future.
 
     ![](images/007.png)
 
