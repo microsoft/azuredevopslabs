@@ -5,7 +5,7 @@ sidebar: vsts
 permalink: /labs/azuredevops/continuousdeployment/
 folder: /labs/azuredevops/continuousdeployment/
 version: Lab version - 1.38.0
-updated: Last updated - 9/11/2019
+updated: Last updated - 10/11/2020
 redirect_from: "/labs/vsts/continuousdeployment/index.htm"
 ---
 <div class="rw-ui-container"></div>
@@ -237,7 +237,7 @@ In this lab, you will learn about the release management features available in A
 
 1. Return to the browser tab open to your Azure DevOps project.
 
-1. Now that the release pipeline is in place, it's time to commit a change in order to invoke a build and release. You'll need to make a few changes like this over the course of this lab, so it's recommended that you use a separate tab for **Code | Files** to keep that part of the process separate.
+1. Now that the release pipeline is in place, it's time to commit a change in order to invoke a build and release. You'll need to make a few changes like this over the course of this lab, so it's recommended that you use a separate tab for **Code \| Files** to keep that part of the process separate.
 
     ![](images/043.png)
 

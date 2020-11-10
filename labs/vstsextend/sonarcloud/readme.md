@@ -45,7 +45,7 @@ In this lab, you will learn how to integrate Azure DevOps Services with SonarClo
 
    ![Create project](images/azdo_create_project.png)
 
-   Import the **Sonar Scanning Examples repository** from GitHub at https://github.com/SonarSource/sonar-scanning-examples.git.
+   Import the **Sonar Scanning Examples repository** from GitHub at https://github.com/SonarSource/sonar-scanning-examples.git .
    
    Go to **Repos** in your project overview:
 
@@ -220,11 +220,11 @@ With the classic editor, you can take advantage of the pre-defined templates tha
 
 10. If you enabled the _Publish Quality Gate Result_ step above the Build Summary will contain a summary of the analysis report.
 
-   ![SonarCloud analysis report](images/azdo_sc_analysis_report.png)
+    ![SonarCloud analysis report](images/azdo_sc_analysis_report.png)
 
 11. Either click on the **Detailed SonarCloud Report** link in the build summary to open the project in SonarCloud, or browse to SonarCloud and view the project.
 
-   ![SonarCloud report](images/sc_report.png)
+    ![SonarCloud report](images/sc_report.png)
 
    We have now created a new organization on SonarCloud and configured an Azure DevOps build to perform analysis and push the results of the build to SonarCloud.
 
@@ -261,7 +261,7 @@ The page has other metrics such as **_Code Smells_**, **_Coverage_**, **_Duplica
 
    Our sample project is very small and has no historical data. However, there are thousands of [public projects on SonarCloud](https://sonarcloud.io/explore/projects){:target="\_blank"} that have more interesting and realistic results.
 
-[DONE TO HERE]
+
 
 ## Exercise 3: Set up pull request integration
 

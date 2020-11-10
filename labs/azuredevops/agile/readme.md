@@ -5,7 +5,7 @@ sidebar: vsts
 permalink: /labs/azuredevops/agile/
 folder: /labs/azuredevops/agile/
 version: Lab version - 1.37.1
-updated: Last updated - 9/5/2019
+updated: Last updated - 10/11/2020
 redirect_from: "/labs/vsts/agile/index.htm"
 ---
 <div class="rw-ui-container"></div>
