@@ -83,7 +83,7 @@ Next, we will create a key vault in Azure. For this lab scenario, we have a node
 
     * Application-only access: Access is granted to the application which can be run as a daemon service or background job. 
 
-1. Select the **Select principal** and search for the security principal that you created earlier and select it. You can search by name or ID of the principal.
+1. Select the **Select principal**  and search for the security principal that you created earlier and select it. You can search by name or ID of the principal.
 
     ![](images/select-sp.png)
 
