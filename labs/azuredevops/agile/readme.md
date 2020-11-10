@@ -21,7 +21,7 @@ In this lab, you will learn about the agile planning and portfolio management to
 <a name="Prerequisites"></a>
 ### Prerequisites ###
 
-- This lab requires you to complete task 1 from the <a href="../prereq/">prerequisite</a> instructions.
+- This lab requires you to complete task 1 from the <a href="../prereq/">prerequisite</a> instructions. (No cloning needed for this lab, skip Task 2)
 
 <a name="Exercise1"></a>
 ## Exercise 1: Agile Project Management ##
@@ -33,13 +33,13 @@ In this lab, you will learn about the agile planning and portfolio management to
 
 1. Open the settings page using the **Project settings** navigation located at the bottom left of the page.
 
-    ![](images/000.png)
+    ![](images/settings.png)
 
 1. Select the **Teams** tab. There are already a few teams in this project, but you'll make a new one for this lab. Click **New team**.
 
     ![](images/001.png)
 
-1. Use **"PUL-Web"** as the **Team name** and click **Create team**.
+1. Use **"PUL-Web"** as the **Team name** and click **Create team** (Leave defaults).
 
     ![](images/002.png)
 
@@ -53,13 +53,13 @@ In this lab, you will learn about the agile planning and portfolio management to
 
 1. Select the **Iterations** tab and click **Select iterations**. This team will use the same iteration schedule that's already in place for the other teams, although you can take a different route if that's better for your organization.
 
-    ![](images/005.png)
+    ![](images/iteration.png)
 
 1. Select **Parts Unlimited\Sprint 1** and click **Save and close**. Note that this first sprint has already passed. This is because the demo data generator is designed to build out project history so that this sprint occurs in the past.
 
     ![](images/006.png)
 
-1. Repeat the process to add **Sprint 2** and **Sprint 3**. The second sprint is our current iteration, and the third is in the near future.
+1. Repeat the process to add **Sprint 2** and **Sprint 3** (add them as in previous step). The second sprint is our current iteration, and the third is in the near future.
 
     ![](images/007.png)
 
@@ -90,6 +90,7 @@ This task is designed to illustrate a variety of ways you can create different k
 
 1. There are many ways to create work items in Azure DevOps, and we'll explore a few of them. Sometimes it's as simple as firing one off from a dashboard. In the **New Work Item** form, type **"Product training"** and select the **Epic** type. Click **Create**.
 
+    ![](images/new-wit.png)
     ![](images/013.png)
 
 1. Assign the new work item to yourself and set the **Area** to **Parts Unlimited\PUL-Web**. Set the **Iteration** to **Parts Unlimited\Sprint 2** and click **Save & Close**. Ordinarily you would want to fill out as much information as possible, but you can run lean here for the purposes of this lab.
@@ -498,7 +499,7 @@ In this task we'll create a new process that inherits from Scrum. The one change
 
 1. Select the **Process** tab under **Boards**.
 
-    ![](images/108.png)
+    ![](images/process.png)
 
 1. From the **Scrum** dropdown, select **Create inherited process**.
 
