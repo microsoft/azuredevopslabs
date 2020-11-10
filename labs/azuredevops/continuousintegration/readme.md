@@ -5,7 +5,7 @@ sidebar: vsts
 permalink: /labs/azuredevops/continuousintegration/
 folder: /labs/azuredevops/continuousintegration/
 version: Lab version - 1.37.1
-updated: Last updated - 9/9/2019
+updated: Last updated - 05/11/2020
 redirect_from: "/labs/vsts/continuousintegration/index.htm"
 ---
 <div class="rw-ui-container"></div>
@@ -33,7 +33,7 @@ In this lab, you will learn how to configure continuous integration (CI) and con
 
 1. Navigate to your team project on Azure DevOps.
 
-1. Navigate to **Pipelines | Pipelines**.
+1. Navigate to **Pipelines \| Pipelines**.
 
     ![](images/000.png)
 
@@ -41,11 +41,11 @@ In this lab, you will learn how to configure continuous integration (CI) and con
 
     ![](images/edit-pipeline.png)
 
-1. Not to have two pipelines triggered later in the lab, disable the CI trigger for the template created pipeline (uncheck).
+1. Not to have two pipelines triggered later in the lab, disable the CI trigger for the template created pipeline (uncheck) and **Save**.
 
     ![](images/disable-ci.png)
  
-1. Go again to **Pipelines | Pipelines** and click **New pipeline** to create a new build pipeline.
+1. Navigate back to **Pipelines \| Pipelines** and click **New pipeline** to create a new build pipeline.
 
     ![](images/001.png)
 
@@ -89,7 +89,7 @@ In this lab, you will learn how to configure continuous integration (CI) and con
 
     ![](images/011.png)
 
-1. Select **Save & Queue | Save & Queue** to save and queue a new build.
+1. Select **Save & Queue \| Save & Queue** to save and queue a new build.
 
     ![](images/012.png)
 
@@ -127,7 +127,7 @@ In this lab, you will learn how to configure continuous integration (CI) and con
 <a name="Ex1Task3"></a>
 ### Task 3: Invoking a continuous integration build ###
 
-1. The build was configured earlier to support continuous integration. Navigate to the code for this project using **Repos | Files**.
+1. The build was configured earlier to support continuous integration. Navigate to the code for this project using **Repos \| Files**.
 
     ![](images/020.png)
 
@@ -147,7 +147,7 @@ In this lab, you will learn how to configure continuous integration (CI) and con
 
     ![](images/024.png)
 
-1. A build should be underway shortly. Select **Pipelines | Pipelines** to see if it's in progress.
+1. A build should be underway shortly. Select **Pipelines \| Pipelines** to see if it's in progress.
 
     ![](images/025.png)
 
