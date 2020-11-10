@@ -154,7 +154,7 @@ The following image will walk you through all the steps explained in this lab
     ```
     ![](images/addingbuildstage.png)
 
-1. Highlight the remainder of the YAML file and indent it four spaces (two tabs). This will simply take the existing build definition and relocate it as a child of the **jobs** node.
+1. Highlight(select) the remainder of the YAML file and indent it four spaces (two tabs). Everything after "pool" (included) should fall under "job: Build". This will simply take the existing build definition and relocate it as a child of the **jobs** node.
 
     ![](images/pipelineindent.png)
 
