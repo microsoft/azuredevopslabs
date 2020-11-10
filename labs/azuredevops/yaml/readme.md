@@ -194,7 +194,7 @@ The following image will walk you through all the steps explained in this lab
 
     ![](images/azureappservicetask.png)
 
-1. NOTE: The **packageForLinux** parameter is a bit misleading in the example but is valid for Windows or Linux. It's an alias of **Package**, so it could be shortened to that.
+1. NOTE: The **packageForLinux** parameter is a bit misleading in the example but is valid for Windows or Linux. It's an alias of **Package**, so it could be shortened to that
 
 1. It's important to note that these two stages will be run independently. As a result, the build output from the first stage will not be available to the second stage without special consideration. For this, we will use one task to publish the build output at the end of the build stage and another to download it in the beginning of the deploy stage. Place the cursor on a blank line at the end of the build stage.
 
@@ -251,13 +251,13 @@ The following image will walk you through all the steps explained in this lab
 
     ![](images/046.png)
 
-1. If you see an error message requiring you do **Authorize resources**, click the button to do so. Then click **Run new** from the top right corner and follow the process to queue a new build.
+1. If you see an error message requiring you need permission , click the **view** button to do so. Then click **Permit** twice.
 
-    ![](images/047.png)
+    ![](images/authorize.png)
 
-    ![](images/048.png)
+    ![](images/authorize-2.png)
 
-1. When the **Build** stage completes, click the **Deploy** stage to follow each task.
+1. Click the **Deploy** stage to follow each task.
 
     ![](images/049.png)
 
