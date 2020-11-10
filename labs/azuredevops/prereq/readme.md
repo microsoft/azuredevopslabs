@@ -45,8 +45,8 @@ Certain Azure DevOps labs require a preconfigured **Parts Unlimited** team proje
 
     ![](images/004.png)
 
-1. Click **Clone** and select **Clone in Visual Studio**.
-
+1. Click **Clone** and select **Clone in Visual Studio** (choose it in the dropdown if other option shown as default).
+    ![](images/clone.png)
     ![](images/005.png)
 
 1. Follow the workflow to clone and configure the project in Visual Studio. Click **Connect** to copy the repo locally.
