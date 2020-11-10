@@ -182,7 +182,7 @@ The following image will walk you through all the steps explained in this lab
 
     ![](images/030.png)
 
-1. Enter the **App Service name** you used to create the app service earlier. Update the **Package or folder** to **"$(System.ArtifactsDirectory)/drop/*.zip"**. Click **Add**.
+1. Enter the **App Service name** you used to create the app service earlier. Update the **Package or folder** to **"$(System.ArtifactsDirectory)/drop/*.zip"**. **Not $(System.DefaultWorkingDirectory)!** . Click **Add**.
 
     ![](images/031.png)
 
