@@ -194,6 +194,8 @@ The following image will walk you through all the steps explained in this lab
 
     ![](images/azureappservicetask.png)
 
+1. NOTE: The **packageForLinux** parameter is a bit misleading in the example but is valid for Windows or Linux. It's an alias of **Package**, so it could be shortened to that.
+
 1. It's important to note that these two stages will be run independently. As a result, the build output from the first stage will not be available to the second stage without special consideration. For this, we will use one task to publish the build output at the end of the build stage and another to download it in the beginning of the deploy stage. Place the cursor on a blank line at the end of the build stage.
 
     ![](images/034.png)
