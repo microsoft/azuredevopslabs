@@ -61,29 +61,46 @@ In this lab, you will learn how to integrate Azure DevOps Services with SonarClo
 
 4. Install the SonarCloud Azure DevOps extension in your Azure DevOps account
 
-   Navigate to the [SonarCloud extension](https://marketplace.visualstudio.com/items?itemName=SonarSource.sonarcloud) in the Visual Studio Marketplace and click **Get it free** to install it.
+   Navigate to the [SonarCloud extension](https://marketplace.visualstudio.com/items?itemName=SonarSource.sonarcloud) in the Visual Studio Marketplace and click **Get it free** to install it, and **Proceed to organization** once the installation has finished.
 
    ![Marketplace](images/ex1/sc_marketplace.png)
+
+
+   ![Marketplace installed](images/ext-installed.png)
 
    > If you do not have the appropriate permissions to install an extension from the marketplace, a request will be sent to the account administrator to ask them to approve the installation.
 
    The SonarCloud extension contains build tasks, build templates and a custom dashboard widget.
 
-5. Using the same account as you used for Azure Devops, sign into SonarCloud.
+5. Using the same account as you used for Azure Devops, sign into SonarCloud: https://sonarcloud.io/
+
+   ![SonarCloud Welcome](images/sonarcloud.io.png)
    
 6. In SonarCloud, create an organization and, within that, a new project. The organization and project you set up in SonarCloud will mirror the organization and project that you set up in Azure DevOps.
 
-   Once you sign in, click **Create an organization** on the welcome page:
+   Once you sign in, click **Import project from Azure** on the welcome page:
 
-   ![SonarCloud Welcome](images/sc_welcome.png)
+   ![SonarCloud Welcome](images/import.png)
 
+   Add your Azure DevOps organization name (dev.azure.com/{YOUR-ORG}) , create and provide  a personal access token in your Azure DevOps organization settings. **Check the following scope: Code (Read & Write)**. [Create PAT](https://docs.microsoft.com/en-us/azure/devops/organizations/accounts/use-personal-access-tokens-to-authenticate?view=azure-devops&tabs=preview-page)
+
+   ![PAT](images/pat1.png)
+
+
+   ![PAT](images/pat2.png)
+
+    ![SonarCloud org creation](images/org-create.png)
+   
    Choose an organization key. Note that the key must be unique within the SonarCloud system. In our example, we will use
    
-   **`claudiasonarova-azdo-org`**
-   
-   ![New SonarCloud organization](images/sc_create_org_key.png)
+   **`YOURNAME-azdo-org`**
 
+   Click **Continue**
+   
    Make sure that the the green checkmark appears beside the **Key** field. This indicates that the key is unique across SonarCloud.
+
+   ![SonarCloud org creation](images/org-create2.png)
+
 
    Next, you can choose your plan. For this example, we choose a free plan (that is, one for public repos only), but you can choose a paid plan if you intend to have private repos:
 
@@ -91,22 +108,22 @@ In this lab, you will learn how to integrate Azure DevOps Services with SonarClo
 
    You have now created the SonarCloud organization that will mirror your Azure DevOps organization.
 
-   The next step is to create, within that organization, the SonarCloud project that will mirror the Azure DevOps project **SonarExamples**. As with the SonarCloud organization, the key of your project must be unique across the SonarCloud system.
-   In our example we use
-   
-   **`sonar-examples-claudiasonarova-azdo`**
+   The next step is to create, within that organization, the SonarCloud project that will mirror the Azure DevOps project **SonarExamples**. Click on **Analyze new project**.
 
-   ![Create SonarCloud project](images/sc_create_project.png)
+   ![Create SonarCloud project](images/new-project.png)
 
-   Make sure that the checkmarks are green, indicating that your key is unique and your name is valid (the name can be different from the key and need not be unique. Here we leave it the same as the key).
+   Choose your Azure DevOps project and click **Set up**.
 
-   Click **Set Up** and you will see the following:
+   ![Create SonarCloud project](images/choose-project.png)
 
-   ![SonarCloud project is set up](images/sc_project_set_up.png)
 
-   Following the link will lead you to this document.
-   
-   The next step is to set up the Azure DevOps integration with SonarCloud.
+   Lets follow the guide in Sonarqube to set up the scanning in Azure Pipelines:
+
+   ![Scan using pipeline](images/with-pipelines.png)
+
+   You can skip extension creation (if done previosly). Click **Continue**. Keep these instructions close for Exercise 1. We will need the information shown  to set up a Service Connection (from Azure DevOps to Sonarcloud) and configure the scanning in the pipeline.
+
+   ![Scan using pipeline](images/pipeline-guide2.png)
 
 ## Exercise 1: Set up a pipeline that integrates with SonarCloud
 
@@ -166,17 +183,11 @@ With the classic editor, you can take advantage of the pre-defined templates tha
 
    ![Agent pool](images/azdo_agent_pool.png)
 
-5. Get the SonarCloud endpoint token. This is a token generated by SonarCloud that identifies your account on that system and allows other services, in this case, Azure DevOps, to connect to that account.
+5. Get the SonarCloud endpoint token from previous sonarcloud guide. This is a token generated by SonarCloud that identifies your account on that system and allows other services, in this case, Azure DevOps, to connect to that account.
 
-   Go back to SonarCloud (if you are not logged in, log back in with the same account that you used at the start of this lab) and click **My Account** in the top right dropdown:
+   ![Token](images/sc_my_account.png)
 
-   ![My account](images/sc_my_account.png)
-
-6. On the **My Account** page go to the **Security** tab. Here you can generate the endpoint token. Give the the token a name (like `azure_devops`) and click **Generate**:
-
-   ![Generate token](images/sc_generate_token.png)
-
-   SonarCloud will generate a token. Copy the token immediately to the clipboard by clicking **Copy**, go back to Azure DevOps.Click the _Prepare analysis on SonarCloud_ task:
+6. Copy the token and in Azure DevOps:
 
    ![Prepare analysis](images/azdo_prepare_analysis.png)
 
@@ -192,7 +203,7 @@ With the classic editor, you can take advantage of the pre-defined templates tha
 
    ![New service connection](images/azdo_choose_org.png)
 
-   Now enter the key of the project that you created within that organization on SonarCloud (in our case `sonarexamples-claudiasonarova-azdo`):
+   Now enter the key of the project that you created within that organization on SonarCloud (you can find it on the sonarcloud setup guide):
 
    ![New service connection](images/azdo_enter_project.png)
 
@@ -315,6 +326,8 @@ Configuring SonarCloud analysis to run when a pull request is created involves t
    - Navigate to the code file **Program.cs** at **sonarqube-scanner-msbuild/CSharpProject/SomeConsoleApplication/Program.cs** and click **Edit**
    - Add an empty method to the code as shown in the following screen shot, then click **Commit...**
 
+   ``public void Unused(){}``
+
       ![Edit program](images/azdo_add_unused.png)
 
    In the dialog that appears,
@@ -336,7 +349,7 @@ Configuring SonarCloud analysis to run when a pull request is created involves t
    The results show that the analysis builds completed successfully, but that the new code in the PR failed the Code Quality check.
    Comment has been posted to the PR for the new issue that was discovered.
 
-   ![Check failed](images/azdo_check_failed.png)
+   ![Check failed](images/check_failed.png)
 
    ![Check failed](images/azdo_pr_comment.png)
 
