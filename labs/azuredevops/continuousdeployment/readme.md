@@ -319,6 +319,14 @@ In this lab, you will learn about the release management features available in A
 
     ![](images/061.png)
 
+1. For the Query Gate to work, we need to give the pipeline permissions to query Azure Boards. Go to **Azure Boards > Queries > All > Shared Queries > "..." > Security.
+
+    ![](images/permissions.png)
+
+1. Search for the **"(YOUR PROJECT NAME) Build Service "**, not included by default (not  Project Collection Build Service!) and give it **Read > Allow" permission.
+
+    ![](images/permissions2.png)
+
 1. We can now turn our focus to the production stage. Select the **Copy of QA** stage.
 
     ![](images/062.png)
