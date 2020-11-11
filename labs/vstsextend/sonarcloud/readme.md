@@ -135,23 +135,23 @@ We will set up a new build pipeline that integrates with SonarCloud to analyze t
 
 Here you have two options. You can can configure the pipeline with either the **YAML editor**, or with the **classic editor**.
 
-With the classic editor, you can take advantage of the pre-defined templates that were installed as part of the SonarCloud Extension, above. With the YAML editor you need to use a separately provided YAML file (link provided below).
+With the classic editor, you can take advantage of the pre-defined templates that were installed as part of the SonarCloud Extension, above. With the YAML editor you need to use a separately provided YAML file. **Choose one of the options (YAML OR CLASSIC)**:
 
 ### YAML Editor
 
-1. Select the location of your code. Azure DevOps lets you build and release code located not only in this Azure DevOps account but also in other, external, repositories. We will not be using this feature today. In our case we want to analyze code in the git repo that we imported earlier, right in the same account as this pipeline. So, we select **Azure Repos Git**:
+1. We will not be using this feature today. In our case we want to analyze code in the git repo that we imported earlier, right in the same account as this pipeline. So, we select **Azure Repos Git**:
 
    ![Select Azure Repos](images/azdo_yaml_select_azure_repos.png)
 
-2. On the next screen select the git repository that you imported earlier, **SonarExamples**:
+1. On the next screen select the git repository that you imported earlier, **SonarExamples**:
 
    ![Select SonarExamples](images/azdo_yaml_select_sonarexamples.png)
 
-3. Now select a YAML file template. We will be building and analyzing the .NET code in our example imported repository, so we will start by choosing the **.NET Desktop** YAML template:
+1. Now select a YAML file template. We will be building and analyzing the .NET code in our example imported repository, so we will start by choosing the **.NET Desktop** YAML template:
 
    ![Choose .NET Desktop template](images/azdo_yaml_configure_pipeline_dot_net.png)
 
-4. The YAML editor will open with the template YAML file. In order to configure it correctly you will need to adjust it (or replace it) so that it looks like the following example file:
+1. The YAML editor will open with the template YAML file. In order to configure it correctly you will need to adjust it (or replace it) so that it looks like the following example file:
 
    [net-desktop-sonarcloud.yml](https://github.com/SonarSource/sonar-scanner-vsts/blob/master/yaml-pipeline-templates/net-desktop-sonarcloud.yml)
 
