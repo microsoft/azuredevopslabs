@@ -153,7 +153,8 @@ With the classic editor, you can take advantage of the pre-defined templates tha
 
 1. The YAML editor will open with the template YAML file. In order to configure it correctly you will need to adjust it (or replace it) so that it looks like the following example file:
 
-   
+   [net-desktop-sonarcloud.yml](https://github.com/SonarSource/sonar-scanner-vsts/blob/master/yaml-pipeline-templates/net-desktop-sonarcloud.yml)
+
    When you are done making the changes to the file, click **Save and Run**:
 
    ![Save and run YAML](images/azdo_yaml_save_run.png)
