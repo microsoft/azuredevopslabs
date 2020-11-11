@@ -201,15 +201,15 @@ With the classic editor, you can take advantage of the pre-defined templates tha
 
    ![Token](images/pipeline-guide2.png)
 
-6. Copy the token and in Azure DevOps:
+6. Copy the token and in Azure DevOps pipeline > Prepare Analysis:
 
    ![Prepare analysis](images/azdo_prepare_analysis.png)
 
-   Then click on the **+ New** button:
+   Click on the **+ New** button:
 
    ![Click new endpoint](images/azdo_click_new_endpoint.png)
 
-   Paste the endpoint token that you copied in to the field **SonarCloud Token**, give the endpoint a name and click **Verify and save**:
+   Paste the endpoint token  in to the field **SonarCloud Token**, give the endpoint a name and click **Verify and save**:
 
    ![New service connection](images/azdo_new_service_connection.png)
 
@@ -217,7 +217,7 @@ With the classic editor, you can take advantage of the pre-defined templates tha
 
    ![New service connection](images/azdo_choose_org.png)
 
-   Now enter the key of the project that you created within that organization on SonarCloud (you can find it on the sonarcloud setup guide):
+   Now enter the key of the project that you created within that organization on SonarCloud (**you can find it on the sonarcloud setup guide too**):
 
    ![New service connection](images/azdo_enter_project.png)
 
@@ -237,6 +237,12 @@ With the classic editor, you can take advantage of the pre-defined templates tha
    ![SonarCloud analysis report](images/azdo_sc_analysis_report.png)
 
 11. Either click on the **Detailed SonarCloud Report** link in the build summary to open the project in SonarCloud, or browse to SonarCloud and view the project.
+
+   To be able to see the Quality gate result, after running he first report we need to "Set New Code Definition" and choose "Previous Version". Next pipeline runs will be able to get a Quality Gate result.
+
+   ![SonarCloud New code def](images/new-code-def.png)
+
+   ![SonarCloud New code def](images/new-code-def2.png)
 
    ![SonarCloud report](images/sc_report.png)
 
