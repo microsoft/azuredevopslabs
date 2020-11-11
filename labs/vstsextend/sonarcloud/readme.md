@@ -155,13 +155,27 @@ With the classic editor, you can take advantage of the pre-defined templates tha
 
    [net-desktop-sonarcloud.yml](https://github.com/SonarSource/sonar-scanner-vsts/blob/master/yaml-pipeline-templates/net-desktop-sonarcloud.yml)
 
+   we need to customize it to our needs:
+
+   1. Modify the Build task, change the pointer to the solution **(add wildcards as our solution is not located in the root of the repo):
+
+      ![](images/wildcard.png)
+
+   1. Modify the Prepare Sonarcloud task with your own information. Follow the information in Sonarcloud previous windows to:
+   
+      1. **Setup a service connection**
+      1. Modify the task with **the values provided on the Sonarcloud window guide**. Use your service endpoint created and organization/project name and key values, not the default ones!! click **Add** after modifying those values.
+
+   ![guide](images/pipeline-guide2.png)
+   ![task](images/task.png)
+
    When you are done making the changes to the file, click **Save and Run**:
 
    ![Save and run YAML](images/azdo_yaml_save_run.png)
 
    ![Commit YAML](images/azdo_yaml_save_run_commit.png)
 
-### Classic Editor
+### Classic Editor (skip if YAML option chosen before)
 
 1. To configure the pipeline using the classic editor, select **Use the classic editor** on the **Where is your code?** page:
 
