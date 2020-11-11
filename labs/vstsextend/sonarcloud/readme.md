@@ -121,7 +121,7 @@ In this lab, you will learn how to integrate Azure DevOps Services with SonarClo
 
    ![Scan using pipeline](images/with-pipelines.png)
 
-   You can skip extension creation (if done previosly). Click **Continue**. Keep these instructions close for Exercise 1. We will need the information shown  to set up a Service Connection (from Azure DevOps to Sonarcloud) and configure the scanning in the pipeline.
+   You can skip extension creation (if done previosly). Click **Continue**. Click on the **.NET** option and keep these instructions close for Exercise 1. We will need the information shown  to set up a Service Connection (from Azure DevOps to Sonarcloud) and configure the scanning in the pipeline.
 
    ![Scan using pipeline](images/pipeline-guide2.png)
 
