@@ -436,13 +436,16 @@ Setup :
 
     ![artifact_setting](images/ex4/artifact_settings.PNG)
 
+1. Setup the CD trigger.
+
+   ![artifact_setting](images/cd.PNG)
+
 1. You can now save your pipeline.
 1. Go back to the build pipeline section, trigger a build of the pipeline that creates the artifact.
-1. Once the build is completed and succeeded, you can create a new release by either clicking on the **Release** button on the build page or set up an automatic release trigger based on a branch filter.
+1. Once the build is completed and succeeded, it will trigger the CD automatically.
 
-    ![release](images/ex4/release.png)
-
-1. Go to the release by either clicking on the link if a manual release has been triggered from the build (on the top of the Build page), or going to the **Releases** page.
+   
+1. Go to the  **Releases** page.
 1. After few minutes (as set up on the point 8 of this exercise), your Quality Gate check should have been performed (at least twice to get a 'go/nogo' for the stage), and if it's green, it should look like this:
 
    ![qg_green](images/ex4/qg_green.PNG)
