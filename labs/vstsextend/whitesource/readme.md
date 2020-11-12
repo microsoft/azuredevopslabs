@@ -34,7 +34,7 @@ Azure DevOps integration with WhiteSource Bolt will enable you to:
 
 In your Azure DevOps Project, under **Pipelines** section, go to **White Source Bolt** tab, provide your **Work Email**, **Company Name** and click *Get Started* button to start using the *Free* version.
 
-![Dev_Essentials](images/white3.png)
+![Dev_Essentials](images/activate.png)
 
 Upon activation, the below message is displayed.
 
@@ -45,16 +45,16 @@ Upon activation, the below message is displayed.
 
 You have a **Java code** provisioned by the Azure DevOps demo generator. You will use **WhiteSource Bolt** extension to check the vulnerable components present in this code.
 
-1. Go to **Pipelines** section under **Pipelines** tab, select the build definition **WhiteSourceBolt** and click on **Run pipeline** to trigger a build.
+1. Go to **Pipelines** section under **Pipelines** tab, select the build definition **WhiteSourceBolt** and click on **Run pipeline** to trigger a build. Click **Run** (leave defaults).
 
-   ![build-def](images/buildtrigger4.png)
+   ![build-def](images/run.png)
 
 1. To view the build in progress status, click on job named **Phase 1**.
 
-   ![inprogress_build](images/build5.png)
+   ![inprogress_build](images/phase.png)
 
 
-   ![queue-build](images/build6.png)
+   ![queue-build](images/progress.png)
 
 1. While the build is in progress, let's explore the build definition. The tasks that are used in the build definition are listed in the table below.
 
@@ -68,9 +68,11 @@ You have a **Java code** provisioned by the Azure DevOps demo generator. You wil
     
 1. Once the build is completed, you will see the summary which shows **Test results, Build artifacts** etc. as shown below.
 
-   ![build_summary](images/buildsuccess.png)
+   ![go back](images/back.png)
 
-1. Navigate to **White Source Bolt** tab under **Pipelines** section and wait for the report generation of the completed build to see the vulnerability report.
+1. Navigate to **WhiteSource Bolt Build Report** tab  and wait for the report generation of the completed build to see the vulnerability report.
+
+   ![build_summary](images/buildsummary.png)
 
    ![report](images/WhiteSourceBolt13.png)
 
