@@ -5,7 +5,7 @@ sidebar: vsts
 permalink: /labs/azuredevops/prereq/
 folder: /labs/azuredevops/prereq/
 version: Lab version - 1.38.0
-updated: Last updated - 9/12/2019
+updated: Last updated - 13/11/2020
 ---
 <a name="Overview"></a>
 ## Overview ##
@@ -53,7 +53,7 @@ Certain Azure DevOps labs require a preconfigured **Parts Unlimited** team proje
 
     ![](images/clone-2.png)
 
-1. From **Team Explorer**, double-click **PartsUnlimited.sln** from the **Solutions** section to open the solution. You can ignore warnings about unsupported project types (just click OK on the prompted window and ignore the migration report opened on the browser)
+1. From **Team Explorer**, double-click **PartsUnlimited.sln** from the **Solutions** section to open the solution. You can ignore if you see any warnings about unsupported project types (just click OK on the prompted window and ignore the migration report opened on the browser)
 
     ![](images/007.png)
 

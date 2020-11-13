@@ -287,8 +287,8 @@ In this lab, you will learn about the release management features available in A
 
 1. In a new browser tab, navigate to the QA site. It will be the name of your app service plus **".azurewebsites.net"**. It should show the **v2.0** added earlier.
 
-<a name="![](images/055.png)"></a>
-### ![](images/055.png) ###
+    <a name="![](images/055.png)"></a>
+     ### ![](images/055.png) ###
 
 <a name="Ex1Task5"></a>
 ### Task 5: Creating a gated release to the production stage ###
@@ -319,11 +319,11 @@ In this lab, you will learn about the release management features available in A
 
     ![](images/061.png)
 
-1. For the Query Gate to work, we need to give the pipeline permissions to query Azure Boards. Go to **Azure Boards > Queries > All > Shared Queries > "..." > Security.
+1. For the Query Gate to work, Project Build Service would require Read permission to queries. Go to **Azure Boards > Queries > All > Shared Queries > "..." > Security**.
 
     ![](images/permissions.png)
 
-1. Search for the **"(YOUR PROJECT NAME) Build Service "**, not included by default (not  Project Collection Build Service!) and give it **Read > Allow" permission.
+1. Search for the **"(YOUR PROJECT NAME) Build Service "**, if not included by default (not  Project Collection Build Service!) and give it **Read > Allow** permission.
 
     ![](images/permissions2.png)
 
