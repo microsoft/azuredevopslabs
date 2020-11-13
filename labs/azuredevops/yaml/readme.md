@@ -5,7 +5,7 @@ sidebar: vsts
 permalink: /labs/azuredevops/yaml/
 folder: /labs/azuredevops/yaml/
 version: Lab version - 1.37.1
-updated: Last updated - 9/5/2019
+updated: Last updated - 13/11/2020
 ---
 <div class="rw-ui-container"></div>
 <a name="Overview"></a>
@@ -182,7 +182,7 @@ The following image will walk you through all the steps explained in this lab
 
     ![](images/030.png)
 
-1. Enter the **App Service name** you used to create the app service earlier. Update the **Package or folder** to **"$(System.ArtifactsDirectory)/drop/*.zip"**. **Not $(System.DefaultWorkingDirectory)!** . Click **Add**.
+1. Enter the **App Service name** you used to create the app service earlier. Update the **Package or folder** to **"$(System.ArtifactsDirectory)/drop/*.zip"**. Not **$(System.DefaultWorkingDirectory)!** . Click **Add**.
 
     ![](images/031.png)
 
@@ -194,7 +194,7 @@ The following image will walk you through all the steps explained in this lab
 
     ![](images/azureappservicetask.png)
 
-1. NOTE: The **packageForLinux** parameter is a bit misleading in the example but is valid for Windows or Linux. It's an alias of **Package**, so it could be shortened to that
+   >Note: The **packageForLinux** parameter is a bit misleading in the example but is valid for Windows or Linux. It's an alias of **Package**, so it could be shortened to that
 
 1. It's important to note that these two stages will be run independently. As a result, the build output from the first stage will not be available to the second stage without special consideration. For this, we will use one task to publish the build output at the end of the build stage and another to download it in the beginning of the deploy stage. Place the cursor on a blank line at the end of the build stage.
 

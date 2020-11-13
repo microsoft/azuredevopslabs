@@ -66,14 +66,14 @@ You have a **Java code** provisioned by the Azure DevOps demo generator. You wil
     |![copy-files](images/copy-files.png) **Copy Files**| copies the resulting JAR files from the source to the destination folder using match patterns|
     |![publish-build-artifacts](images/publish-build-artifacts.png) **Publish Build Artifacts**| publishes the artifacts produced by the build
     
-1. Once the build is completed, you will see the summary which shows **Test results, Build artifacts** etc. as shown below.
+1. Once the build is completed, click back navigation to  see the summary which shows **Test results, Build artifacts** etc. as shown below. 
 
    ![go back](images/back.png)
+   ![build_summary](images/build_summarynew.png)
 
 1. Navigate to **WhiteSource Bolt Build Report** tab  and wait for the report generation of the completed build to see the vulnerability report.
 
-   ![build_summary](images/buildsummary.png)
-
+   ![](images/selectwhitesourcetab.png)
    ![report](images/WhiteSourceBolt13.png)
 
 ## Exercise 3: Analyze Reports

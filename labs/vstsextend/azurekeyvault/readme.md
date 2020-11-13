@@ -95,7 +95,7 @@ Next, we will create a key vault in Azure. For this lab scenario, we have a node
 
 1. It should only take a couple of minutes for the service to be created. Once it is provisioned, select the key vault and add a new secret. Let's name it **sqldbpassword**. Provide any value that will be accepted as a password for a MySQL database.
 
-    ![](images/create-secret.png)
+    ![](images/createsecretnew.png)
 
 ### Task 3: Check the Azure Pipeline
 
