@@ -45,17 +45,19 @@ Certain Azure DevOps labs require a preconfigured **Parts Unlimited** team proje
 
     ![](images/004.png)
 
-1. Click **Clone** and select **Clone in Visual Studio**.
-
+1. Click **Clone** and select **Clone in Visual Studio** (choose it in the dropdown if other option shown as default).
+    ![](images/clone.png)
     ![](images/005.png)
 
-1. Follow the workflow to clone and configure the project in Visual Studio. Click **Connect** to copy the repo locally.
+1. Follow the workflow to clone and configure the project in Visual Studio. Click **Clone** to copy the repo locally.
 
-    ![](images/006.png)
+    ![](images/clone-2.png)
 
-1. From **Team Explorer**, double-click **PartsUnlimited.sln** from the **Solutions** section to open the solution. You can ignore warnings about unsupported project types.
+1. From **Team Explorer**, double-click **PartsUnlimited.sln** from the **Solutions** section to open the solution. You can ignore warnings about unsupported project types (just click OK on the prompted window and ignore the migration report opened on the browser)
 
     ![](images/007.png)
+
+    ![](images/unsupported.png)
 
 1. Leave Visual Studio open for use in your lab.
 
