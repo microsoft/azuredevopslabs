@@ -156,15 +156,19 @@ In this exercise, we will setup a Release pipeline to deploy the web application
 
     ![cd](images/cd.png)
 
+1. Click on **MyShuttleDockerBuild** artifact and select **Latest** as Default version.
+
+    ![cd](images/latest.png)
 
 1. Hover the mouse on **Tasks** and select **Azure-Dev**. Configure the environment as below - 
 
-    **Unlink all**
+    **Unlink all** and **Confirm**
 
     ![unlink](images/unlink.png)
 
 1. Select the **Execute Azure MYSQL:SqlTaskFile** task, choose the Azure subscription, and provide the DB details which were noted down earlier during the creation of the database server. 
 
+    * Link to your Azure Subscription.
     * Select the *Host Name* from the drop down. 
     * *Server Admin Login* - Go to **Variables** section and enter the value for the variable - *$(DBUSER)*. 
     * Enter the *Password*. This is the password provided during the creation of MYSQL database in Azure portal. Go to **Variables** section and enter the value for the variable - *$(DBPASSWORD)*. Click the **lock** icon to decrypt the dummy value and then, enter the password.
@@ -175,8 +179,9 @@ In this exercise, we will setup a Release pipeline to deploy the web application
 
     ![MySQL DB](images/mysqlcreatetask.png)
 
-1. Select the Deploy Azure App Service task and make sure that the following values are provided. Note that the task allows you to specify the Tag that you want to pull. This will allow you to achieve end-to-end traceability from code to deployment by using a build-specific tag for each deployment. For example, with the Docker build tasks you can tag your images with the Build.Number for each deployment.
+1. Select the **Deploy Azure App Service** task and make sure that the following values are provided. Note that the task allows you to specify the Tag that you want to pull. This will allow you to achieve end-to-end traceability from code to deployment by using a build-specific tag for each deployment. For example, with the Docker build tasks you can tag your images with the Build.Number for each deployment.
 
+    - Select your Azure Subscription and previously created App Service.
     - Registry or Namespace - Provide the value of Login server of the created Container Registry. You will find it in the Overview section.
     - Image - Provide the value as web. This is where the container image is stored after build.
     - Tag - Provide the value as $(Build.BuildNumber).
