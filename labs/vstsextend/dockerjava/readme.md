@@ -152,12 +152,16 @@ In this exercise, we will setup a Release pipeline to deploy the web application
 
      ![editrelease](images/editrelease.png)
 
+1. For enabling CD, click on the "lighting icon" and enable **Continuous deployment trigger".
+
+    ![cd](images/cd.png)
+
+
 1. Hover the mouse on **Tasks** and select **Azure-Dev**. Configure the environment as below - 
 
-    * Pick the Azure subscription
-    * Enter the **App Service** that you created
+    **Unlink all**
 
-    ![VSTS Release Defintion](images/vsts-cd-webapp.png)
+    ![unlink](images/unlink.png)
 
 1. Select the **Execute Azure MYSQL:SqlTaskFile** task, choose the Azure subscription, and provide the DB details which were noted down earlier during the creation of the database server. 
 
