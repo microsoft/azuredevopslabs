@@ -266,11 +266,15 @@ In this exercise, let us trigger a build manually and upon completion, an automa
 
     ![finalresult](images/finalresult.png)
 
-### Access the Kubernetes web dashboard in Azure Kubernetes Service (AKS)
+### Kubernetes resource view in the Azure portal (preview)
 
-Kubernetes includes a web dashboard that can be used for basic management operations. This dashboard lets you view basic health status and metrics for your applications, create and deploy services, and edit existing applications. Follow [these instructions](https://docs.microsoft.com/en-us/azure/aks/kubernetes-dashboard) to access the Kubernetes web dashboard in Azure Kubernetes Service (AKS).
+The Azure portal includes a Kubernetes resource viewer (preview) for easy access to the Kubernetes resources in your Azure Kubernetes Service (AKS) cluster. Viewing Kubernetes resources from the Azure portal reduces context switching between the Azure portal and the kubectl command-line tool, streamlining the experience for viewing and editing your Kubernetes resources. The resource viewer currently includes multiple resource types, such as deployments, pods, and replica sets.
 
-![finalresult](images/aksdashboard.png)
+The Kubernetes resource view from the Azure portal replaces the AKS dashboard add-on, which is set for deprecation.
+
+![resource review](images/aks-monitor.png)
+
+More information found at: https://docs.microsoft.com/en-us/azure/aks/kubernetes-portal
 
 ## Summary
 
