@@ -5,7 +5,7 @@ sidebar: vsts
 permalink: /labs/azuredevops/yaml/
 folder: /labs/azuredevops/yaml/
 version: Lab version - 1.37.1
-updated: Last updated - 9/5/2019
+updated: Last updated - 13/11/2020
 ---
 <div class="rw-ui-container"></div>
 <a name="Overview"></a>
@@ -154,7 +154,7 @@ The following image will walk you through all the steps explained in this lab
     ```
     ![](images/addingbuildstage.png)
 
-1. Highlight the remainder of the YAML file and indent it four spaces (two tabs). This will simply take the existing build definition and relocate it as a child of the **jobs** node.
+1. Highlight(select) the remainder of the YAML file and indent it four spaces (two tabs). Everything after "pool" (included) should fall under "job: Build". This will simply take the existing build definition and relocate it as a child of the **jobs** node.
 
     ![](images/pipelineindent.png)
 
@@ -182,7 +182,7 @@ The following image will walk you through all the steps explained in this lab
 
     ![](images/030.png)
 
-1. Enter the **App Service name** you used to create the app service earlier. Update the **Package or folder** to **"$(System.ArtifactsDirectory)/drop/*.zip"**. Click **Add**.
+1. Enter the **App Service name** you used to create the app service earlier. Update the **Package or folder** to **"$(System.ArtifactsDirectory)/drop/*.zip"**. Not **$(System.DefaultWorkingDirectory)!** . Click **Add**.
 
     ![](images/031.png)
 
@@ -193,6 +193,8 @@ The following image will walk you through all the steps explained in this lab
 1. With the added task still selected in the editor, indent it four spaces (two tabs) so that it is a child of the **steps** task.
 
     ![](images/azureappservicetask.png)
+
+   >Note: The **packageForLinux** parameter is a bit misleading in the example but is valid for Windows or Linux. It's an alias of **Package**, so it could be shortened to that
 
 1. It's important to note that these two stages will be run independently. As a result, the build output from the first stage will not be available to the second stage without special consideration. For this, we will use one task to publish the build output at the end of the build stage and another to download it in the beginning of the deploy stage. Place the cursor on a blank line at the end of the build stage.
 
@@ -249,13 +251,13 @@ The following image will walk you through all the steps explained in this lab
 
     ![](images/046.png)
 
-1. If you see an error message requiring you do **Authorize resources**, click the button to do so. Then click **Run new** from the top right corner and follow the process to queue a new build.
+1. If you see an error message requiring you need permission , click the **view** button to do so. Then click **Permit** twice.
 
-    ![](images/047.png)
+    ![](images/authorize.png)
 
-    ![](images/048.png)
+    ![](images/authorize-2.png)
 
-1. When the **Build** stage completes, click the **Deploy** stage to follow each task.
+1. Click the **Deploy** stage to follow each task.
 
     ![](images/049.png)
 

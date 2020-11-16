@@ -45,7 +45,7 @@ In this lab, you will learn how to integrate Azure DevOps Services with SonarClo
 
    ![Create project](images/azdo_create_project.png)
 
-   Import the **Sonar Scanning Examples repository** from GitHub at https://github.com/SonarSource/sonar-scanning-examples.git.
+   Import the **Sonar Scanning Examples repository** from GitHub at https://github.com/SonarSource/sonar-scanning-examples.git .
    
    Go to **Repos** in your project overview:
 
@@ -75,7 +75,7 @@ In this lab, you will learn how to integrate Azure DevOps Services with SonarClo
 5. Using the same account as you used for Azure Devops, sign into SonarCloud: https://sonarcloud.io/
 
    ![SonarCloud Welcome](images/sonarcloud.io2.png)
-   
+
 6. In SonarCloud, create an organization and, within that, a new project. The organization and project you set up in SonarCloud will mirror the organization and project that you set up in Azure DevOps.
 
    Once you sign in, click **Import project from Azure** on the welcome page:
@@ -120,6 +120,7 @@ In this lab, you will learn how to integrate Azure DevOps Services with SonarClo
    Lets follow the guide in Sonarqube to set up the scanning in Azure Pipelines:
 
    ![Scan using pipeline](images/with-pipelines.png)
+
 
    You can skip extension creation (if done previosly). Click **Continue**. Click on the **.NET** option and keep these instructions close for Exercise 1. We will need the information shown  to set up a Service Connection (from Azure DevOps to Sonarcloud) and configure the scanning in the pipeline.
 
@@ -203,6 +204,7 @@ With the classic editor, you can take advantage of the pre-defined templates tha
 
 6. Copy the token and in Azure DevOps pipeline > Prepare Analysis:
 
+
    ![Prepare analysis](images/azdo_prepare_analysis.png)
 
    Click on the **+ New** button:
@@ -217,7 +219,9 @@ With the classic editor, you can take advantage of the pre-defined templates tha
 
    ![New service connection](images/azdo_choose_org.png)
 
+
    Now enter the key of the project that you created within that organization on SonarCloud (**you can find it on the sonarcloud setup guide too**):
+
 
    ![New service connection](images/azdo_enter_project.png)
 
@@ -234,9 +238,10 @@ With the classic editor, you can take advantage of the pre-defined templates tha
 
 10. If you enabled the _Publish Quality Gate Result_ step above the Build Summary will contain a summary of the analysis report.
 
-   ![SonarCloud analysis report](images/azdo_sc_analysis_report.png)
+    ![SonarCloud analysis report](images/azdo_sc_analysis_report.png)
 
 11. Either click on the **Detailed SonarCloud Report** link in the build summary to open the project in SonarCloud, or browse to SonarCloud and view the project.
+
 
    To be able to see the Quality gate result, after running he first report we need to "Set New Code Definition" and choose "Previous Version". Next pipeline runs will be able to get a Quality Gate result.
 
@@ -245,6 +250,7 @@ With the classic editor, you can take advantage of the pre-defined templates tha
    ![SonarCloud New code def](images/new-code-def2.png)
 
    ![SonarCloud report](images/sc_report.png)
+
 
    We have now created a new organization on SonarCloud and configured an Azure DevOps build to perform analysis and push the results of the build to SonarCloud.
 
@@ -281,7 +287,7 @@ The page has other metrics such as **_Code Smells_**, **_Coverage_**, **_Duplica
 
    Our sample project is very small and has no historical data. However, there are thousands of [public projects on SonarCloud](https://sonarcloud.io/explore/projects){:target="\_blank"} that have more interesting and realistic results.
 
-[DONE TO HERE]
+
 
 ## Exercise 3: Set up pull request integration
 
