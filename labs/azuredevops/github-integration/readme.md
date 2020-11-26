@@ -145,6 +145,8 @@ In this lab, you'll see how easy it is to set up Azure Pipelines with your GitHu
     ```
     ![](images/020.png)
 
+1. Also, update the **trigger** to point to **master** instead of **main**, since the default branch of this repository is called master
+
 1. Scroll to the bottom of the page, provide some documentation for the change and click **Commit changes**. Again, it's okay to commit this change directly to the master branch for the purposes of this lab.
 
     ![](images/021.png)
