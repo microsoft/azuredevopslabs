@@ -9,7 +9,7 @@ folder: /labs/vstsextend/azurekeyvault/
 <div class="rw-ui-container"></div>
 
 ## Overview 
-Azure Key Vault helps teams to securely store and manage sensitive information such as keys, passwors, certificates, etc., in a centralized storage which are safeguarded by industry-standard algorithms, key lengths, and even hardware security modules. This prevents the disclosure of information through source code,  a common mistake that many developers make. Many developers leave confidential details such as database connection strings, passwords, private keys, etc., in their source code which when gained by malicious users can result in undesired consequences. Access to a key vault requires proper authentication and authorization and with RBAC, teams can have even fine granular control who has what permissions over the sensitive data.
+Azure Key Vault helps teams to securely store and manage sensitive information such as keys, passwords, certificates, etc., in a centralized storage which are safeguarded by industry-standard algorithms, key lengths, and even hardware security modules. This prevents the disclosure of information through source code,  a common mistake that many developers make. Many developers leave confidential details such as database connection strings, passwords, private keys, etc., in their source code which when gained by malicious users can result in undesired consequences. Access to a key vault requires proper authentication and authorization and with RBAC, teams can have even fine granular control who has what permissions over the sensitive data.
 
 ## What’s covered in this lab
 In this lab, you will see how you can use Azure Key Vault in a pipeline.
@@ -23,7 +23,9 @@ In this lab, you will see how you can use Azure Key Vault in a pipeline.
 1. Refer the [Getting Started](../Setup/) page before you begin following the exercises.
 
 1. Use the [Azure DevOps Demo Generator](https://azuredevopsdemogenerator.azurewebsites.net/?name=keyvault){:target="_blank"} to provision the project on your Azure DevOps organization.
-   This URL will automatically select **Azure Key Vault** template in the demo generator. If you want to try other projects, use this URL instead -[azuredevops generator](https://azuredevopsdemogenerator.azurewebsites.net/)
+   This **URL will automatically select Azure Key Vault** template in the demo generator. If you want to try other projects, use this URL instead -[azuredevops generator](https://azuredevopsdemogenerator.azurewebsites.net/)
+
+   ![](images/template-kv.png)
 
    Follow the [simple walkthrough](https://docs.microsoft.com/en-us/azure/devops/demo-gen/use-vsts-demo-generator-v2?view=vsts){:target="_blank"} to know how to use the Azure DevOps Demo Generator.
 
@@ -67,7 +69,7 @@ Next, we will create a key vault in Azure. For this lab scenario, we have a node
 
 1. Provide a name, subscription, resource group and location for the vault.
 
-     ![](images/kv_t2_s4.png)
+     ![](images/kv-create.png)
 
     Because data in Key Vaults are sensitive and business critical, you need to secure access to your key vaults by allowing only authorized applications and users. To access the data from the vault, you will need to provide read (Get) permissions to the service principal that you will be using for authentication in the pipeline. 
 
@@ -81,9 +83,9 @@ Next, we will create a key vault in Azure. For this lab scenario, we have a node
 
     * Application-only access: Access is granted to the application which can be run as a daemon service or background job. 
 
-1. Select the **Select principal** and search for the security principal that you created earlier and select it. You can search by name or ID of the principal.
+1. Select the **Select principal**  and search for the security principal that you created earlier and select it. You can search by name or ID of the principal.
 
-    ![](images/kv_t2_s7.png)
+    ![](images/select-sp.png)
 
 1. Next, we will select the permission to be granted. For now, we will provide **read-only** permissions (Get, List) to secrets only.
 
@@ -93,7 +95,7 @@ Next, we will create a key vault in Azure. For this lab scenario, we have a node
 
 1. It should only take a couple of minutes for the service to be created. Once it is provisioned, select the key vault and add a new secret. Let's name it **sqldbpassword**. Provide any value that will be accepted as a password for a MySQL database.
 
-    ![](images/createsecret.png)
+    ![](images/createsecretnew.png)
 
 ### Task 3: Check the Azure Pipeline
 
@@ -109,7 +111,7 @@ Now, lets go to the Azure DevOps project that you provisioned using the [Azure D
 
     ![](images/kv_t3_s3.png)
 
-1. Go to **Releases** under **Pipelines** and then select and edit the **SmartHotel-CouponManagement-CD** definition.
+1. Go to **Releases** under **Pipelines** and then select and **Edit** the **SmartHotel-CouponManagement-CD** definition.
 
 1. Under **Tasks**, notice the release definition for **Dev** stage has a **Azure Key Vault** task. This task downloads *Secrets* from an Azure Key Vault. You will need to point to the subscription and the Azure Key Vault resource created earlier in the lab.
 
@@ -117,7 +119,17 @@ Now, lets go to the Azure DevOps project that you provisioned using the [Azure D
     
     ![](images/clickmanage.png)
 
-   Follow the instruction [here](https://docs.microsoft.com/en-us/azure/devops/pipelines/library/connect-to-azure?view=azure-devops#create-an-azure-resource-manager-service-connection-with-an-existing-service-principal) to create an Azure Resource Manager service connection with an existing service principal.
+   Click on **New Service connection** -> **Azure Resource Manager** -> **Service Principal (manual)**.
+   Fill the information from previously created service principal:
+
+    -  Subscription Id and name: can be found in the keyvault resource overview page.
+    -  Service Principal Id = AppId in the copied notes.
+    -  Service Principal key = Password in the copied notes.
+    -  TenantId , copy from the notes.
+
+    Click on **Verify** to check it works, give the connection a name and click **Verify and Save**.
+
+    ![](images/SC-create.png)
    
 1. Select the Service connection you created in previous step for Azure subsciption in Azure Key Vault task.  
 

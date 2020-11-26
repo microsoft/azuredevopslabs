@@ -13,7 +13,7 @@ folder: /labs/vstsextend/jenkins/
 
 There are two ways to integrate Jenkins with Azure Pipelines:
 
-* One way is to  **run CI jobs in Jenkins** separately. This involves configuration of a CI pipeline in Jenkins and a web hook in Azure DevOps that invokes the CI process when source code is pushed to a repository or a branch.
+* One way is to  **run CI jobs in Jenkins** separately. This involves the configuration of a CI pipeline in Jenkins and a webhook in Azure DevOps that invokes the CI process when source code is pushed to a repository or a branch.
 
 * The alternate way is to **wrap a Jenkins CI job inside an Azure pipeline**. In this approach, a build definition will be configured in Azure Pipelines to use the **Jenkins** tasks to invoke a CI job in Jenkins, download and publish the artifacts produced by Jenkins. 
 
@@ -45,13 +45,13 @@ This lab covers both the approaches and the following tasks will be performed
 
 1. To configure Jenkins, the Jenkins VM image available on the Azure Marketplace will be used. This will install the latest stable Jenkins version on an Ubuntu Linux VM along with the tools and plugins configured to work with the Azure. Click on the **Deploy to Azure** button below to get started. Note: After clicking create, choose Password as the Authentication Type. Make note of the username and password.
 
-   [![Jenkins Configuration](http://azuredeploy.net/deploybutton.png)](https://portal.azure.com/#create/azure-oss.jenkinsjenkins){:target="_blank"}
+   [![Jenkins Configuration](http://azuredeploy.net/deploybutton.png)](https://portal.azure.com/#create/bitnami.jenkins1-650){:target="_blank"}
 
 1. Once the Jenkins VM is provisioned, navigate to the VM's overview page and make a note of the `public IP address`. This information will be required to connect to the Jenkins VM from ***Putty***
 
-   <img class="myImg" src="images/vmconnect_ssh1.png" alt="Connecting to the virtual machine" />
+   <img class="myImg" src="images/vmip.png" alt="Connecting to the virtual machine" />
 
-   {% include note.html content= "Jenkins, by default, listens on port 8080 using HTTP. To configure a secure HTTPS connection, an SSL certificate will be required. If HTTPS communication is not being configured, the best way to ensure that the sign-in credentials are not leaked due to a \"Man-in-the-middle\" attack is by logging-in using the SSH tunneling. An SSH tunnel is an encrypted tunnel created through an SSH protocol connection, that can be used to transfer unencrypted traffic over an unsecured network." %}
+   {% include note.html content= "Jenkins, by default, listens on port 8080 using HTTP. To configure a secure HTTPS connection, an SSL certificate will be required. If HTTPS communication is not being configured, the best way to ensure that the sign-in credentials are not leaked due to a \"Man-in-the-middle\" attack is by logging-in using the SSH tunnelling. An SSH tunnel is an encrypted tunnel created through an SSH protocol connection, that can be used to transfer unencrypted traffic over an unsecured network." %}
 
    <!-- <div id="myModal" class="modal">
         <span class="close">&times;</span>
@@ -70,16 +70,17 @@ This lab covers both the approaches and the following tasks will be performed
 
 1. Log in with the user name and password that you have provided while provisioning the Jenkins VM.
 
-1. Once the connection is successful, open a browser on the host machine and navigate to the URL [http://localhost:8080](http://localhost:8080). The **Getting Started** page for Jenkins will be displayed.
+1. Once the connection is successful, open a browser on the host machine and navigate to the URL [http://localhost:8080](http://localhost:8080). The **Sign in** page for Jenkins will be displayed.
 
-1. For security reasons, Jenkins generates an initial password and save it in a file on the server. This password will need to be retrieved and provided to unlock Jenkins. Return to the **Putty** terminal and type the following command to open the password file and copy the password. You can double click on the password text and use **CTRL+C** to copy the text and place it in the clipboard. Press the **Esc** button and then type **:q!** at the prompt to exit the vi editor without saving the file.
+1. For security reasons, the application credentials are stored in a standalone file in the VM. This credentials will need to be retrieved and provided to sign in to Jenkins. Return to the **Putty** terminal and type the following command to open the credentials file and copy the user name and password. 
 
-    `sudo vi /var/lib/jenkins/secrets/initialAdminPassword`
+    `sudo cat /home/bitnami/bitnami_credentials`
 
-1. Return to the browser, paste the copied text in the Administrator password text box and click on the **Continue** button.
+     ![](images/jenkins-credentials.png)
 
-     <img class="myImg" src="images/jenkinsinitialpwd.png" alt="Unlock Jenkins - First Time"/>  
+1. Return to the browser, paste the copied Username and Password to sign in to the Jenkins.
 
+<!--
 1. Jenkins has a vast ecosystem with a strong and active open source community users contributing hundreds of useful plugins. While configuring Jenkins,  you can choose between installing the most commonly used plugins or go for specific selected plugins. Select **Install suggested plugins**  to initiate the configuration with default plugins. We will install other plugins such as Maven, Azure DevOps manually later.
 
       <img class="myImg" src="images/customizejenkins-plugins.png" alt="Customize Jenkins Plugins"/>
@@ -92,6 +93,7 @@ This lab covers both the approaches and the following tasks will be performed
 
     <img class="myImg" src="images/jenkinsready.png" alt="Jenkins Ready"/>
     
+    -->
 
 ### Installing and Configuring Plugins
 
@@ -116,7 +118,7 @@ This lab covers both the approaches and the following tasks will be performed
 
     <img class="myImg" src="images/manage-tools-config.png" alt="Global Tool Configuration"/>
 
-   {% include note.html content="Jenkins provides great out-of-the-box support for Maven. Since Maven is not yet installed, it can be manually installed by extracting the `tar` file located in a shared folder. Alternatively, when the **Install automatically** option is selected in the **Global Tool Configuration** screen, Jenkins will download and install Maven from the Apache website when a build job requires it." %}
+   {% include note.html content=" Jenkins provides great out-of-the-box support for Maven. Since Maven is not yet installed, it can be manually installed by extracting the `tar` file located in a shared folder. Alternatively, when the **Install automatically** option is selected in the **Global Tool Configuration** screen, Jenkins will download and install Maven from the Apache website when a build job requires it." %}
 
 1. To install Maven, select the **Install automatically** option and select the **Apply** button. The latest version of Maven at the time of writing this lab is 3.5.4
 
@@ -135,11 +137,11 @@ This lab covers both the approaches and the following tasks will be performed
 
    <img class="myImg" src="images/jenkins-vstsrepo.png" alt="Configuring Azure DevOps Git URL"/>
 
-1. Your Azure repo is very likely to be private. Unless you have a public repo, you should provide the credentials to access the repository. If you do not have one or don't remember the credentials, go to your Azure Repos and select the **Clone** option. Select **Generate Credentials** and enter a `User name` and `Password`. Click **Save Git Credentials** to save.
+1. Your Azure repo is very likely to be private. Unless you have a public repo, you should provide the credentials to access the repository. If you do not have one or don't remember the credentials, go to your Azure Repos and select the **Clone** option. Select **Generate Credentials** and note down `Username` and `Password`.
 
-   <img class="myImg" src="images/vsts-generategitcreds.png" alt="Generating Git Credentials"/>
+   <img class="myImg" src="images/azurerepo-credentials.png" alt="Generating Git Credentials"/>
 
-1. Select the **Add \| Jenkins** option to add a new credential. Provide the `User name` and `Password` created in the previous step and click the **Add** button to close the wizard
+1. Select the **Add \| Jenkins** option to add a new credential. Provide the `Username` and `Password` created in the previous step and click the **Add** button to close the wizard
 
     <img class="myImg" src="images/jenkinscredentials.png" alt="Adding Credentials to Jenkins"/>
 
@@ -181,13 +183,18 @@ For the service hook in Azure DevOps to work - Jenkins machine should accept inc
 
 1. Open [https://portal.azure.com/](https://portal.azure.com/) and access your virtual machine with Jenkins. 
 
-1. Click the "Networking" link in Settings tab and click "Add inbound port rule" button 
+1. Click the "Networking" link in the Settings tab and click "Add inbound port rule" button 
 
     <img class="myImg" src="images/azuredevops-jenkins-addinbound.png" alt="Access inbound port rules" />
 
-1. Set inbound rule for port 8080
+1. Set an inbound rule for port 8080
 
     <img class="myImg" src="images/azuredevops-jenkins-accept8080.png" alt="Accept 8080 inbound port" />
+1. Navigate to your Jenkins page and go to **User \| Configure**. Click on **Add new token** under API Token section and give some name and click **Generate**. Make a note of the Token generated. We would be using this Token as Jenkins password in Azure DevOps
+   
+     ![](images/jenkinstoken1.png)
+
+     ![](images/jenkinstoken2.png)
 
 ## Approach 1: Triggering the CI via a service hook in Azure DevOps
 
@@ -204,13 +211,14 @@ In this approach, a service hook will be configured in Azure DevOps to trigger a
 1. Provide the following details in the **Select and configure the action to perform** screen
    1. Select the **Trigger generic build** option
 
-   1. Provide the **Jenkins base URL** in `http://{ip address}:8080` format 
+   1. Provide the **Jenkins base URL** in `Http://{ip address}:8080` format 
 
-   1. Provide the **User name**  and **Password** to trigger the build. Note that the username and password is the credentials of the Jenkins administrator user that you configured earlier
+   1. Provide the **User name**  and **User API Token** to trigger the build. Note that the username and Token are the credentials of the Jenkins user. For Token use, the API Token generated earlier from Jenkins
    
-   1. Select the **Build** job you created in in Jenkins.
+   
+   1. Select the **Build** job you created in Jenkins.
      
-      <img class="myImg" src="images/jenkins-trigger-genericbuild.png" alt="VSTS - Trigger Code Pushed" />
+      <img class="myImg" src="images/jenkinstriggeraz.png" alt="VSTS - Trigger Code Pushed" />
 
     <!-- <img class="myImg" src="images/vsts-jenkinssubscription1.png" alt="VSTS - Trigger Code Pushed" /> -->
 1. Click the **Test** button to validate the configuration and then click **Finish**. This will set the trigger to initiate the Jenkins CI build whenever a source code change is committed on the repository.
@@ -228,15 +236,15 @@ To begin, an endpoint to the Jenkins Server for communication with Azure DevOps 
 
 1. Go to your project settings. Select **Pipelines** and **Service connections**, click **New service connection** and choose **Jenkins** from the dropdown.
 
-1. Provide a connection name, Jenkins server URL in the format `http://[server IP address or DNS name]` and Jenkins user name with password. Select **Verify Connection** and validate the configuration. If it successful, then select **Ok**. If verification fails, add the port at the end of the Jenkins server URL, such as `http://[server IP address]:8080`
+1. Provide a connection name, Jenkins server URL in the format `http://[server IP address]:8080` and Jenkins user name with password (Use Jenkins User API Token as password). Select **Verify Connection** and validate the configuration. If it is successful, then select **Ok**. 
 
-   <img class="myImg" src="images/jenkinsendpoint.png" alt ="Jenkins Endpoint" />
+   <img class="myImg" src="images/jenkinsserviceconnection.png" alt ="Jenkins Endpoint" />
 
    The next step would be to configure the build pipeline.
 
-1. Go to **Azure Pipelines** and **Builds**, Click **+New**  and select **New build pipeline** to create a new build definition.
+1. Go to **Pipelines \| Pipelines**, Click **New Pipeline**  to create a new build definition.
 
-1. At the time of writing this lab, Azure Pipelines did not support Jenkins in YAML. Select **Use the classic editor** to create a pipeline without a YAML. 
+1. Select **Use the classic editor** to create a pipeline without a YAML. 
 
 1. Select **Myshuttle** project, repository and click *Continue*.
 
@@ -244,9 +252,9 @@ To begin, an endpoint to the Jenkins Server for communication with Azure DevOps 
 
     <img class="myImg" src="images/jenkinsbuildtemplate.png" alt="[Jenkins Template" />
 
-1. Select **Hosted VS2017** for the Agent pool, provide **MyShuttle** as the Job name ( name of the build definition that was created in Jenkins)  and then select the Jenkins service endpoint created earlier.
+1. Select **vs2017-win2016** for the Agent specification, provide **MyShuttle** as the Job name ( name of the build definition that was created in Jenkins)  and then select the Jenkins service endpoint created earlier.
 
-    <img class="myImg" src="images/vsts-buildjenkinssettings2.png" alt="Jenkins Settings in Team Build" />
+    <img class="myImg" src="images/azuredevops-jenkinsbuild.png" alt="Jenkins Settings in Team Build" />
 
     <!-- <img class="myImg" src="images/vsts-buildjenkinssettings.png" alt="Jenkins Settings in Team Build" /> -->
 
@@ -292,4 +300,4 @@ Next, you will configure an Azure CD pipeline to fetch and deploy the artifacts 
 
    1. Otherwise, point this to the Azure CI build pipeline from which the Jenkins CI is executed.  
 
-1. Now, the artifact is linked for deployment. Please refer the [Deploying a MySQL Backed Tomcat app on Azure Web App](../tomcat/) lab for deploying the WAR file to Azure App Service. 
+1. Now, the artifact is linked for deployment. Please refer the [Deploying a MySQL Backed Tomcat app on Azure Web App](../tomcat/) lab for deploying the WAR file to Azure App Service.

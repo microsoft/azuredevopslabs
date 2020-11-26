@@ -5,7 +5,7 @@ sidebar: vsts
 permalink: /labs/azuredevops/continuousdeployment/
 folder: /labs/azuredevops/continuousdeployment/
 version: Lab version - 1.38.0
-updated: Last updated - 9/11/2019
+updated: Last updated - 10/11/2020
 redirect_from: "/labs/vsts/continuousdeployment/index.htm"
 ---
 <div class="rw-ui-container"></div>
@@ -14,6 +14,10 @@ redirect_from: "/labs/vsts/continuousdeployment/index.htm"
 ## Overview ##
 
 In this lab, you will learn about the release management features available in Azure Pipelines that automate the deployment of applications. These features help development and operations teams integrate with Azure DevOps Server to configure and automate complex deployments of their automated builds to target stages more easily. Development teams can also model their release processes and track approvals, sign-offs, and visualize their release status.
+
+
+<div class="bg-slap"><img src="./images/mslearn.png" class="img-icon-cloud" alt="MS teams" style="width: 48px; height: 48px;">Want additional learning? Check out the <a href="https://docs.microsoft.com/en-us/learn/modules/create-release-pipeline/" target="_blank"><b><u> Create a release pipeline in Azure Pipelines </u></b></a> module on Microsoft Learn.</div>
+
 
 <a name="Prerequisites"></a>
 ### Prerequisites ###
@@ -54,11 +58,7 @@ In this lab, you will learn about the release management features available in A
 
     ![](images/005.png)
 
-1. Enter **"partsunlimited"** as the **Database name**. Select a subscription (it doesn't matter which one, but use the same one for all steps in this lab). Select **Create new** for **Resource group** and enter **"partsunlimited"** as the name. Make sure **Select source** is set to **Blank database** and click **Configure required settings**. If you don't already have a server you want to use, click **Create a new server**.
-
-    ![](images/006.png)
-
-1. Enter a unique name for **Server name**, such as by including your name. Enter an admin username and password you can remember. Note that **"P2ssw0rd"** meets the password requirements. Enable **Allow Azure services to access server**. Click **OK** to confirm these options.
+1. Enter a unique name for **Server name**, such as by including your name. Enter an admin username and password you can remember. Note that **"P2ssw0rd"** meets the password requirements. Click **OK** to confirm these options.
 
     ![](images/007.png)
 
@@ -86,7 +86,7 @@ In this lab, you will learn about the release management features available in A
 
     ![](images/013.png)
 
-1. For **Name**, enter a unique name, such as by using your name as part. Since this will be for our QA deployment, append the name with **"-qa"**. Select the **ASP.NET 4.7 Runtime stack**.
+1. For **Name**, enter a unique name, such as by using your name as part. Since this will be for our QA deployment, append the name with **"-qa"**. Select the **ASP.NET 4.8 Runtime stack**.
 
     ![](images/014.png)
 
@@ -102,7 +102,19 @@ In this lab, you will learn about the release management features available in A
 
     ![](images/017.png)
 
-1. It may take a few minutes for all of your new Azure resources to become available, so continue on to the next task. Leave this browser tab open for later.
+1. While the Azure resources are created, go ahead and configure the SQL server.
+
+1. Click the **Resource groups** tab from the left menu. Locate and click the **partsunlimited** group.
+
+1. Click the SQL server resource created earlier.
+
+1. Select the **Firewalls and virtual networks** tab from the **Security** section.
+
+1. Set **"Allow Azure services and resources to access this server"** to **Yes** to allow the App Services to access this SQL server.
+
+1. Click **Save** on the top of the tab.
+
+1. Continue on to the next task. Leave this browser tab open for later.
 
 <a name="Ex1Task2"></a>
 ### Task 2: Creating a continuous release to the QA stage ###
@@ -225,7 +237,7 @@ In this lab, you will learn about the release management features available in A
 
 1. Return to the browser tab open to your Azure DevOps project.
 
-1. Now that the release pipeline is in place, it's time to commit a change in order to invoke a build and release. You'll need to make a few changes like this over the course of this lab, so it's recommended that you use a separate tab for **Code | Files** to keep that part of the process separate.
+1. Now that the release pipeline is in place, it's time to commit a change in order to invoke a build and release. You'll need to make a few changes like this over the course of this lab, so it's recommended that you use a separate tab for **Code \| Files** to keep that part of the process separate.
 
     ![](images/043.png)
 
@@ -275,8 +287,8 @@ In this lab, you will learn about the release management features available in A
 
 1. In a new browser tab, navigate to the QA site. It will be the name of your app service plus **".azurewebsites.net"**. It should show the **v2.0** added earlier.
 
-<a name="![](images/055.png)"></a>
-### ![](images/055.png) ###
+    <a name="![](images/055.png)"></a>
+     ### ![](images/055.png) ###
 
 <a name="Ex1Task5"></a>
 ### Task 5: Creating a gated release to the production stage ###
@@ -306,6 +318,14 @@ In this lab, you will learn about the release management features available in A
 1. Expand **Evaluation options** and update the **Time between re-evaluation of gates** to **5**. If this gate fails, we want it to reevaluate the query every 5 minutes until it clears because engineers will need some time to confirm those critical bugs are fixed in the current version. However, if those bugs aren't cleared and the release isn't manually failed, this configuration will automatically fail the gate after 1 day.
 
     ![](images/061.png)
+
+1. For the Query Gate to work, Project Build Service would require Read permission to queries. Go to **Azure Boards > Queries > All > Shared Queries > "..." > Security**.
+
+    ![](images/permissions.png)
+
+1. Search for the **"(YOUR PROJECT NAME) Build Service "**, if not included by default (not  Project Collection Build Service!) and give it **Read > Allow** permission.
+
+    ![](images/permissions2.png)
 
 1. We can now turn our focus to the production stage. Select the **Copy of QA** stage.
 
@@ -430,7 +450,7 @@ In this lab, you will learn about the release management features available in A
 
     ![](images/088.png)
 
-1. Return to the browser window open to the **Azure portal**. Click **Swap** in the slots blade.
+1. Return to the browser window open to the **Azure portal**. Click **Swap** in the deployment slots blade.
 
     ![](images/089.png)
 

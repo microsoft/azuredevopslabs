@@ -4,6 +4,7 @@ layout: page
 sidebar: vsts2
 permalink: /labs/vstsextend/azurefunctions/
 folder: /labs/vstsextend/azurefunctions/
+updated: Last updated - 30/10/2020
 ---
 <div class="rw-ui-container"></div>
 
@@ -12,6 +13,8 @@ folder: /labs/vstsextend/azurefunctions/
 **Azure Functions** is an event-driven, compute-on-demand experience that extends the existing Azure application platform with capabilities to implement the code, triggered by events occurring in Azure or third-party services as well as on-premises systems. Azure Functions allows developers to act, by connecting to data sources or messaging solutions, thus making it easy to process and react to events. Developers can leverage Azure Functions to build HTTP-based API endpoints that are accessible by a wide range of applications, mobile and IoT devices.
 
 **Lab Scenario**: In this lab, you will be using a fictional eCommerce website - **PartsUnlimited**. The PartsUnlimited team wants to roll out a new discount for its employees and customers and wants to build Azure Functions that will retrieve the right discount depending on whether the logged in user is an employee or a customer.
+
+<div class="bg-slap"><img src="./images/mslearn.png" class="img-icon-cloud" alt="MS teams" style="width: 48px; height: 48px;">Want additional learning? Check out the <a href="https://docs.microsoft.com/en-us/learn/modules/deploy-azure-functions/" target="_blank"><b><u> Automate Azure Functions deployments with Azure Pipelines </u></b></a> module on Microsoft Learn.</div>
 
 ## What is covered in this lab?
 
@@ -66,9 +69,10 @@ We created two App Services and an App Service Plan.
 
 ## Exercise 1: Cloning an existing repository
 
-1. Navigate to the **Repos**. Select **Clone** and select **Clone in Visual Studio**.
+1. Navigate to the **Repos**. Select **Clone** on the right side top corner. In the **Clone Repository** tab  select **Clone in Visual Studio** from the IDE's list.
 
-     ![clonetherepo](images/clonetherepo.png)
+      ![](images/clickclone.png)
+     ![clonetherepo](images/clonerepowindow.png)
 
 1. An instance of **Visual Studio** opens. Sign in to Visual Studio if prompted.
 
@@ -86,11 +90,11 @@ In this exercise, you will create an **Azure Functions** App from the Azure port
 
 The Azure Functions created in this exercise will act as a switching proxy or the mechanism to return to different (discount) information based on the user logged in to the application. Although you have used a simple condition here, this could also use more complex rules which could potentially be hidden behind another web api call.
 
-1. Login to the Azure Portal. Select the **+ Create a resource** button on the upper left-hand corner of the Azure portal, then select **Compute > Function App**.
+1. Login to the [Azure Portal](https://portal.azure.com/). Select the **+ Create a resource** button on the upper left-hand corner of the Azure portal, then select **Compute > Function App**.
 
     ![createfunctionapp](images/createfunctionapp.png)
 
-1. Create a Function app with similar settings as specified in the below image. Click **Create** to provision and deploy the function app.
+1. Create a Function app with similar settings as specified in the below image. Click **Review + create** and then **Create** to provision and deploy the function app.
 
     ![functionapp](images/functionapp.png)
 
@@ -98,21 +102,17 @@ The Azure Functions created in this exercise will act as a switching proxy or th
 
     ![notification](images/notifications.png)
 
-1. Expand your new function app, then click the + button next to **Functions**.
+1. In Function app window select **Functions**. Click on **+Add** and select **Http trigger** from the templates.
 
-1. In the *Azure Functions for .NET - getting started* page, select `In-portal` and click **Continue**. In the resulting page, choose **Webhook + API** and click **Create**.
-
-    ![Options](images/inportal.png) 
-    ![webhook](images/webhook.png) 
-
-
-   > This lab uses CSharp as the development language for the function, but a function can be created in any supported language.
-
-1. Select **HttpTrigger1** in Functions and click `</>Get Function Url`.
-
-    ![httptrigger](images/httptrigger.png)
+    ![](images/selecthttptriggerfunction.png)
     
-1. Copy the Azure Function URL and save to notepad. You will need this URL later in the exercise.
+  
+   > This lab uses CSharp as the development language for the function, but a function can be created in any supported language.
+1. In the **New Function** window leave the defaults and click on **Create function**.
+
+    ![](images/newfunction.png)
+
+1. In the **HttpTrigger1** function page, click on **Get Function Url**. Copy the Azure Function URL and save to notepad. You will need this URL later in the exercise.
 
     ![copyfunctionurl](images/copyurl.png)
 

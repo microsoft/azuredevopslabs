@@ -5,7 +5,7 @@ sidebar: vsts
 permalink: /labs/azuredevops/continuousintegration/
 folder: /labs/azuredevops/continuousintegration/
 version: Lab version - 1.37.1
-updated: Last updated - 9/9/2019
+updated: Last updated - 05/11/2020
 redirect_from: "/labs/vsts/continuousintegration/index.htm"
 ---
 <div class="rw-ui-container"></div>
@@ -14,6 +14,11 @@ redirect_from: "/labs/vsts/continuousintegration/index.htm"
 ## Overview ##
 
 In this lab, you will learn how to configure continuous integration (CI) and continuous deployment (CD) for your applications using Build and Release in Azure Pipelines. This scriptable CI/CD system is both web-based and cross-platform, while also providing a modern interface for visualizing sophisticated workflows. Although we won't demonstrate all of the cross-platform possibilities in this lab, it is important to point out that you can also build for iOS, Android, Java (using Ant, Maven, or Gradle) and Linux.
+
+
+<div class="bg-slap"><img src="./images/mslearn.png" class="img-icon-cloud" alt="MS teams" style="
+    width: 48px; height: 48px;">Want additional learning? Check out the <a href="https://docs.microsoft.com/en-us/learn/modules/create-a-build-pipeline/" target="_blank"><b><u> Create a build pipeline with Azure Pipelines </u></b></a> module on Microsoft Learn.</div>
+
 
 <a name="Prerequisites"></a>
 ### Prerequisites ###
@@ -28,11 +33,19 @@ In this lab, you will learn how to configure continuous integration (CI) and con
 
 1. Navigate to your team project on Azure DevOps.
 
-1. Navigate to **Pipelines | Pipelines**.
+1. Navigate to **Pipelines \| Pipelines**.
 
     ![](images/000.png)
 
-1. Click **New pipeline** to create a new build pipeline.
+1. Open (click) the existing **PartsUnlimitedE2E** pipeline (which was created by the demo generator tool) and click on **Edit**
+
+    ![](images/edit-pipeline.png)
+
+1. Not to have two pipelines triggered later in the lab, disable the CI trigger for the template created pipeline (uncheck) and **Save**.
+
+    ![](images/disable-ci.png)
+ 
+1. Navigate back to **Pipelines \| Pipelines** and click **New pipeline** to create a new build pipeline.
 
     ![](images/001.png)
 
@@ -46,7 +59,7 @@ In this lab, you will learn how to configure continuous integration (CI) and con
 
 1. Locate the **ASP.NET** template and click **Apply** to apply this template to the build definition. Note that there are many options that should cover all of our mainstream scenarios. For our purposes here, we'll just build the project using the baseline ASP.NET template.
 
-    ![](images/004.png)
+    ![](images/template.png)
 
 1. The process for this build pipeline is easy to follow. After getting the source, Azure DevOps will use NuGet to restore any dependent packages. Then, the project will be built and tested. The results will then be published to the configured target.
 
@@ -76,7 +89,7 @@ In this lab, you will learn how to configure continuous integration (CI) and con
 
     ![](images/011.png)
 
-1. Select **Save & Queue | Save & Queue** to save and queue a new build.
+1. Select **Save & Queue \| Save & Queue** to save and queue a new build.
 
     ![](images/012.png)
 
@@ -114,7 +127,7 @@ In this lab, you will learn how to configure continuous integration (CI) and con
 <a name="Ex1Task3"></a>
 ### Task 3: Invoking a continuous integration build ###
 
-1. The build was configured earlier to support continuous integration. Navigate to the code for this project using **Repos | Files**.
+1. The build was configured earlier to support continuous integration. Navigate to the code for this project using **Repos \| Files**.
 
     ![](images/020.png)
 
@@ -124,7 +137,7 @@ In this lab, you will learn how to configure continuous integration (CI) and con
 
 1. Click **Edit**.
 
-    ![](images/022.png)
+    ![](images/edit.png)
 
 1. Make a minor cosmetic change, such as by tweaking the title of the document. Click **Commit**.
 
@@ -134,7 +147,7 @@ In this lab, you will learn how to configure continuous integration (CI) and con
 
     ![](images/024.png)
 
-1. A build should be underway shortly. Select **Pipelines | Pipelines** to see if it's in progress.
+1. A build should be underway shortly. Select **Pipelines \| Pipelines** to see if it's in progress.
 
     ![](images/025.png)
 

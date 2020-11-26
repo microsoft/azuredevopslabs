@@ -30,15 +30,15 @@ In this lab, you will be introduced to the [Web performance and Load testing cap
 <a name="Ex1Task1"></a>
 ### Task 1: Recording web tests ###
 
-1. In **Solution Explorer**, right-click the solution node and select **Add | New Project**.
+1. In **Solution Explorer**, right-click the solution node and select **Add \| New Project**.
 
     ![](images/000.png)
 
-1. Select the **Visual C# | Test** category and the **Web Performance and Load Test Project** template. Enter a **Name** of **"PULWebTest"** and click **OK**.
+1. Select the **Visual C# \| Test** category and the **Web Performance and Load Test Project** template. Enter a **Name** of **"PULWebTest"** and click **OK**.
 
     ![](images/001.png)
 
-1. Once the project has been created, select **Debug | Start Without Debugging** to build and launch the site locally.
+1. Once the project has been created, select **Debug \| Start Without Debugging** to build and launch the site locally.
 
 1. Return to **Visual Studio**, leaving the browser window open to the local version of the site.
 

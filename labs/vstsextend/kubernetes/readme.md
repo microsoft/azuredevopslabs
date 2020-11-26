@@ -37,6 +37,8 @@ The following tasks will be performed:
 
 * Initiate the build to automatically deploy the application
 
+<div class="bg-slap"><img src="./images/mslearn.png" class="img-icon-cloud" alt="MS teams" style="width: 48px; height: 48px;">Want additional learning? Check out the <a href="https://docs.microsoft.com/en-us/learn/modules/deploy-kubernetes/" target="_blank"><b><u> Automate multi-container Kubernetes deployments</u></b></a> module on Microsoft Learn.</div>
+
 ## Before you begin
 
 1. Refer the [Getting Started](../Setup/) page to know the prerequisites for this lab.

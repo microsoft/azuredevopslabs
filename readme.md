@@ -33,7 +33,7 @@ description: Learn how you can implement modern DevOps practices with Azure, Azu
   <ul class="carousel-indicators">
     <li data-target="#demo" data-slide-to="0" class="active"></li>
     <li data-target="#demo" data-slide-to="1"></li>
-     <!--<li data-target="#demo" data-slide-to="2"></li>-->
+     <li data-target="#demo" data-slide-to="2"></li>
   </ul>
 
   <!-- The slideshow -->
@@ -58,6 +58,13 @@ description: Learn how you can implement modern DevOps practices with Azure, Azu
       <p><a href="/labs/devopsserver/" class="btn btn-sm btn-primary mt-1">Start Learning</a></p>
       </div> 
     </div>  -->
+	<div class="carousel-item banner3">
+      <div class="text-center p-t-60px">
+      <p class="bannerTitle">Azure DevOps Learning Path</p>
+      <p class="bannerText">Learn new skills and discover the power of Azure DevOps at Microsoft Learn. Start your learning journey today.<br></p>
+      <p><a href="https://docs.microsoft.com/en-us/learn/browse/?products=azure-devops" class="btn btn-sm btn-primary mt-1">Visit Microsoft Learn</a></p>
+      </div> 
+    </div> 
   </div>
 
   <!-- Left and right controls -->
@@ -339,6 +346,10 @@ description: Learn how you can implement modern DevOps practices with Azure, Azu
      <!--  <div class="row" style="margin-left: 10px;margin-top: 10px;">
       <p>For the on-premises platform, Azure DevOps Server (previously named Visual Studio Team Foundation Server), see  <a href="/labs/devopsserver/" class="btn btn-sm btn-primary">Azure DevOps Server 2019 Labs</a></p>
       </div> -->
+
+<div class="row" style="margin-left: 10px;margin-top: 10px;">
+      <p> Want even more hands-on experience? Azure DevOps courses are now available on Microsoft Learn. <a href="https://docs.microsoft.com/en-us/learn/browse/?products=azure-devops" target="_blank" class="btn btn-sm btn-primary">Visit Microsoft Learn</a></p>
+      </div> 
      </div>
 
 <hr height="1" style="width: 75%;" />  
@@ -459,9 +470,12 @@ description: Learn how you can implement modern DevOps practices with Azure, Azu
                                                 <li class="osslist"> <img src="/images/jenkins-42.png" height="42"
                                                         class="icon-bor-p-m" /> <a href="/labs/vstsextend/Jenkins/"
                                                         class="fon-size-13"> Configuring a CD pipeline for your Jenkins CI</a> </li>
-                                                  <li class="osslist align-relative"> <img src="/images/appcenter.png" height="42"
+														<li class="osslist"> <img src="/images/octopus-42.png" height="42"
+                                                        class="icon-bor-p-m" /><a href="/labs/vstsextend/octopus/"
+                                                        class="fon-size-13"> Automating Deployments from Azure Repos with  Octopus Deploy</a></li>
+                                                 <!-- <li class="osslist align-relative"> <img src="/images/appcenter.png" height="42"
                                                         class="icon-bor-p-m" /> <a href="/labs/vstsextend/appcenter/"
-                                                        class="fon-size-13"> Build-Test-Distribute Mobile Apps using App Center</a></li>
+                                                        class="fon-size-13"> Build-Test-Distribute Mobile Apps using App Center</a></li> -->
                                             </ul>
                                         </div>
                                     </div>
@@ -489,9 +503,9 @@ description: Learn how you can implement modern DevOps practices with Azure, Azu
                                                 <li class="osslist"> <img src="/images/eclipse-42.png" height="42"
                                                         class="icon-bor-p-m" /><a href="/labs/vstsextend/eclipse/"
                                                         class="fon-size-13"> Integrating Azure Repos and Azure Pipelines with Eclipse</a></li>
-                                                <li class="osslist"> <img src="/images/octopus-42.png" height="42"
-                                                        class="icon-bor-p-m" /><a href="/labs/vstsextend/octopus/"
-                                                        class="fon-size-13"> Automating Deployments from Azure Repos with  Octopus Deploy</a></li>
+														 <li class="osslist"> <img src="/images/vsts-1-42.png" height="42" class="icon-bor-p-m" /><a
+                                                        href="/labs/vstsextend/releasegates/" class="fon-size-13">
+                                                        Controlling Deployments using Release Gates</a> </li>
                                                 <!-- <li class="osslist"> <img src="/images/java-42.png" height="42" class="icon-bor-p-m" />
                                                     <a href="/labs/java/" class="fon-size-13"> DevOps with VSTS and
                                                         Azure for Java Projects </a> </li> -->
@@ -523,9 +537,9 @@ description: Learn how you can implement modern DevOps practices with Azure, Azu
                                                 <li class="osslist"> <img src="/images/AzureFunction.jpg" height="42" class="icon-bor-p-m" /><a
                                                         href="/labs/vstsextend/azurefunctions/" class="fon-size-13">
                                                         Setting up a CI/CD pipeline for Azure Functions</a></li>
-                                                 <li class="osslist"> <img src="/images/vsts-1-42.png" height="42" class="icon-bor-p-m" /><a
-                                                        href="/labs/vstsextend/releasegates/" class="fon-size-13">
-                                                        Controlling Deployments using Release Gates</a> </li>
+														<li class="osslist"> <img src="/images/7pacetimetracker-42.png" height="42"
+                                                        class="icon-bor-p-m" /><a href="/labs/vstsextend/timetracker/"
+                                                        class="fon-size-13"> Track Time With 7pace Timetracker</a> </li>
                                             </ul>
                                         </div>
                                     </div>
@@ -557,9 +571,6 @@ description: Learn how you can implement modern DevOps practices with Azure, Azu
                                                         class="icon-bor-p-m" /><a href="/labs/vstsextend/parasoft/"
                                                         class="fon-size-13"> Leverage Virtual Services with Parasoft
                                                         Virtualize</a></li>
-                                                <li class="osslist"> <img src="/images/7pacetimetracker-42.png" height="42"
-                                                        class="icon-bor-p-m" /><a href="/labs/vstsextend/timetracker/"
-                                                        class="fon-size-13"> Track Time With 7pace Timetracker</a> </li>
                                             </ul>
                                         </div>
                                     </div>

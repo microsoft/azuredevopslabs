@@ -5,7 +5,7 @@ sidebar: vsts
 permalink: /labs/azuredevops/git/
 folder: /labs/azuredevops/git/
 version: Lab version - 1.31.1
-updated: Last updated - 2/27/2019
+updated: Last updated - 06/11/2020
 redirect_from: "/labs/vsts/git/index.htm"
 ---
 <div class="rw-ui-container"></div>
@@ -26,11 +26,11 @@ In this lab, you will learn how to establish a local Git repository, which can e
 <a name="Prerequisites"></a>
 ### Prerequisites ###
 
-- [Visual Studio Code](https://code.visualstudio.com/) with the C# extension installed.
+- [Visual Studio Code](https://code.visualstudio.com/) with the [C#](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp) extension installed.
 
 - [Git for Windows](https://gitforwindows.org/) 2.21.0 or later.
 
-- This lab requires you to complete task 1 from the [prerequisite instructions](../prereq).
+- This lab requires you to complete task 1 from the [prerequisite instructions](../prereq) (Skip cloning, it is done in the exercise).
 
 <a name="Exercise1"></a>
 ## Exercise 1: Configuring the lab environment ##
@@ -90,42 +90,10 @@ In this lab, you will learn how to establish a local Git repository, which can e
 
 1. When prompted, log in to your Azure DevOps account.
 
-1. Once the cloning has completed, click **Open Repository**. You can ignore any warnings raised about opening the projects. The solution may not be in a buildable state, but that's okay since we're going to focus on working with Git and building the project itself is not necessary.
+1. Once the cloning has completed, click **Open** to open the cloned repository. You can ignore any warnings raised about opening the projects. The solution may not be in a buildable state, but that's okay since we're going to focus on working with Git and building the project itself is not necessary.
 
-    ![](images/005.png)
+    ![](images/005_new.png)
 
-<a name="Ex2Task2"></a>
-### Task 2: Installing the Azure Repos extension for Visual Studio Code ###
-
-1. The Azure Repos extension provides convenient access to many features of Azure DevOps. From the **Extensions** tab, search for **"Azure Repos"** and click **Install** to install it.
-
-    ![](images/006.png)
-
-1. Click **Reload** once the extension has finished installing. If this option is not available, reopen **Visual Studio Code**.
-
-    ![](images/007.png)
-
-1. Press **Ctrl+Shift+P** to show the **Command Palette**.
-
-1. Search for **"Team"** to see all the new commands that are now available for working with Azure Repos. Select **Team: Signin**.
-
-    ![](images/008.png)
-
-1. Select **Authenticate and get an access token automatically**. Note that you could alternatively provide the token created earlier if following the manual path.
-
-    ![](images/009.png)
-
-1. Copy the provided token and press **Enter** to launch a browser tab.
-
-    ![](images/010.png)
-
-1. Paste the code in to the login box and click **Continue**.
-
-    ![](images/011.png)
-
-1. Select the Microsoft account associated with your Azure DevOps account.
-
-1. When the process has complete, close the browser tab.
 
 <a name="Exercise3"></a>
 ## Exercise 3: Saving work with commits ##
@@ -209,7 +177,7 @@ Staging changes allows you to selectively add certain files to a commit while pa
 
 1. Enter a comment of **"Added comments"**. From the **More Actions** dropdown, select **Commit Staged**.
 
-    ![](images/025.png)
+    ![](images/025_new.png)
 
 1. Click the **Synchronize Changes** button to synchronize the committed changes with the server. Note that since only the staged changes were committed, the other changes are still pending locally.
 
@@ -233,27 +201,18 @@ Git's use of the **Branches and Merges** feature works through pull requests, so
 
     ![](images/028.png)
 
-1. Press **Ctrl\|Shift+P** to open the **Command Palette**.
 
-1. Start typing **"Team"** and select **Team: View History** when it becomes available. This is a feature of the Azure Repos extension that makes it easy to jump right to the history of this file in a new browser tab.
-
-    ![](images/029.png)
-
-1. Note the history of **Category.cs**. Close the newly created tab, which will should return you to the **Commits** tab from earlier.
-
-    ![](images/030.png)
-
-1. Scroll down in the **Commits** view to locate some of the source branches and merges. These provide a convenient way to visualize when and how changes were made to the source.
+1. Go to the  **Commits** view in **Azure DevOps** to locate some of the source branches and merges. These provide a convenient way to visualize when and how changes were made to the source.
 
     ![](images/031.png)
 
 1. From the dropdown for **Merged PR 27**, select **Browse Files**.
 
-    ![](images/032.png)
+    ![](images/032_new.png)
 
 1. This view offers the ability to navigate around the state of the source at that commit so you can review and download those files.
 
-    ![](images/033.png)
+    ![](images/033_new.png)
 
 <a name="Exercise5"></a>
 ## Exercise 5: Working with branches ##
@@ -300,9 +259,9 @@ Git keeps track of which branch you are working on and makes sure that when you 
 
     ![](images/040.png)
 
-1. You should see the newly pushed **dev** branch. Click the **Delete branch** button to delete it. Confirm the delete.
+1. You should see the newly pushed **dev** branch. Click on more actions drop down and Select the **Delete branch** button to delete it. Confirm the delete.
 
-    ![](images/041.png)
+    ![](images/041_new.png)
 
 1. Return to **Visual Studio Code**.
 
@@ -366,11 +325,11 @@ In addition to all the functionality available in Visual Studio Code, you can al
 
 1. Navigate to **Repos \| Branches**. Click **New branch**.
 
-    ![](images/053.png)
+    ![](images/053_new.png)
 
 1. Enter a name of **"release"** for the new branch. Use the **Work items to link** dropdown to select one or more work items to link to this new branch. Click **Create branch** to create it.
 
-    ![](images/054.png)
+    ![](images/054_new.png)
 
 1. After the branch has been created, it will be available in the list.
 
@@ -395,13 +354,13 @@ In addition to all the functionality available in Visual Studio Code, you can al
 <a name="Ex6Task2"></a>
 ### Task 2: Deleting a branch ###
 
-1. Return to Azure DevOps and click the **Delete** button that appears when you hover over the **release** branch to delete it.
+1. Return to Azure DevOps and click the **Delete branch** from the more actions drop down to delete it.
 
-    ![](images/059.png)
+    ![](images/059_new.png)
 
-1. However, maybe we should keep it around for a little longer. From its context menu, select **Restore branch**.
+1. You can **Restore branch** if you want by searching for an exact branch name. Select **Restore branch** as shown below.
 
-    ![](images/060.png)
+    ![](images/060_new.png)
 
 <a name="Ex6Task3"></a>
 ### Task 3: Locking a branch ###
@@ -439,8 +398,8 @@ Locking does not prevent cloning of a repo or fetching updates made in the branc
 
 1. You have now tagged the project at this release. You could tag commits for a variety of reasons and Azure DevOps offers the flexibility to edit and delete them, as well as manage their permissions.
 
-<a name="![](images/067.png)"></a>
-## ![](images/067.png) ##
+     <a name="![](images/067.png)"></a>
+     ## ![](images/067.png) ##
 
 <a name="Exercise7"></a>
 ## Exercise 7: Managing repositories ##
@@ -467,17 +426,19 @@ You can create Git repos in team projects to manage your project's source code. 
 
 1. Sometimes you'll have a need to rename or delete a repo, which is just as easy. Open **Project settings**.
 
-    ![](images/071.png)
+    ![](images/ps.png)
 
 1. Select **Repositories** under **Repos**.
 
-    ![](images/072.png)
+
+    ![](images/settings-repos.png)
+
 
 1. From the **New Repo** context menu, select **Delete repository**. Alternatively, you could rename it here.
 
-    ![](images/073.png)
+    ![](images/repo-delete.png)
 
 1. Enter the name **"New Repo"** to confirm the repo and click **Delete**.
 
-    ![](images/074.png)
+    ![](images/deleterepowindow.png)
 

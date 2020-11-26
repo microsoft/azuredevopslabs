@@ -249,7 +249,9 @@ Now that we have our CI successfully built, it's time to deploy but how do we kn
        inputs:
          command: 'custom'
          customcommand: 'install --production'
-     - script: 'npm test'
+     - script: |
+         npm install
+         npm test
        displayName: 'Run unit tests'
        continueOnError: true
      - task: PublishTestResults@2
@@ -351,7 +353,7 @@ From the results, we can see all 40 tests have passed which means we have not br
 
     ![](images/image17.png)
 
-1.  **Enable** continuous integration, if it is not already enabled.
+1.  **Enable** continuous deployment, if it is not already enabled.
 
     ![](images/image18.png)
 
@@ -388,14 +390,18 @@ From the results, we can see all 40 tests have passed which means we have not br
 
     ![](images/image24.png)
 
-1. Search for **"resource"** and **Add** an **Azure Resource Group
-    Deployment** task.
+1. Search for **"arm"** and **Add** an **ARM template
+    deployment** task.
 
     ![](images/image25.png)
 
 1. Select the newly created task.
 
     ![](images/image26.png)
+
+    Then, select the **Task version** to **2.\***.
+
+    ![](images/image26-1.png)
 
 1. Select and authorize an Azure subscription. 
 
@@ -422,7 +428,7 @@ From the results, we can see all 40 tests have passed which means we have not br
     ![](images/image-release3.png)
 
     Template:
-    **\$(System.DefaultWorkingDirectory)/\_ContosoAir-CI/drop/Templates/azuredeploy.json**
+    **\$(System.DefaultWorkingDirectory)/\_ContosoAir-CI/drop/Templates/azuredeploy.json**  
     Template parameters:
     **\$(System.DefaultWorkingDirectory)/\_ContosoAir-CI/drop/Templates/azuredeploy.parameters.json**
 

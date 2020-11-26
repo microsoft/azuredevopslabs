@@ -9,7 +9,7 @@ folder: /labs/vstsextend/releasegates/
 
 ## Overview
 
-As you may be aware, a release pipeline specifies the end-to-end release process for an application to be deployed across a range of environments. Deployments to each environment are fully automated by using phases and tasks. 
+As you may be aware, a release pipeline specifies the end-to-end release process for an application to be deployed across a range of environments. Deployments to each environment are fully automated by using jobs and tasks. 
 Ideally, you do not want new updates to the applications to be exposed to all the users at the same time. It is a best practice to expose updates in a phased manner i.e. expose to a subset of users, monitor their usage and expose to other users based on the experience the initial set of users had.
 
 Approvals and gates enable you to take control over the start and completion of the deployments in a release. 
@@ -48,40 +48,96 @@ You will configure a release definition with two environments for an Azure Web A
 ## Setting up the Target Environment
 
 You will create two **Web Apps** in Azure to depict two environments **Canary** and **Production** to deploy the application.
+1. Launch the [Azure Cloud Shell](https://docs.microsoft.com/en-in/azure/cloud-shell/overview) from the Azure portal and choose **Bash**.
 
-1. Go to [Azure portal](https://portal.azure.com) and click on **+New** and select **Web App**.
+1. Create a Resource Group. Replace `<region>` with the region of your choosing, for example eastus.
+   
+   ```bash
+   az group create -n MyResourceGroup -l <region>
+   ```
+
+1. To create an App service plan
+   
+   ```bash
+   az appservice plan create -g MyResourceGroup -n MyPlan --sku S1
+   ```
+1. Create two web apps with a unique app names.
+ 
+    ```bash
+    az webapp create -g MyResourceGroup -p MyPlan -n PartsUnlimited-Canary
+    ```
+
+    ```bash
+    az webapp create -g MyResourceGroup -p MyPlan -n PartsUnlimited-Prod
+    ```
+
+1. Navigate to the resource group you created, you will see the resources as shown.
+
+   ![azure_resources](images/azureresources.png)
+
+1. Now select the **Canary** web app and click on **Application insights** setting. Select **Turn on Application Insights**.
+
+    ![](images/configureappinsights.png)
+
+1. With the default settings click **Apply** to create and connect Application insights resource to your Canary web app.
+     
+      ![](images/appinsightsapply.png)
+
+1. Now navigate back to your resource group and select application insights resource created.
+     
+     ![](images/appinsightsselect.png)
+
+1. You will create monitor alerts here, which you will use in later part of this lab. Choose **Alerts** and click **New alert rule**.
+
+     ![](images/newaialert.png)
+
+1. The **Create alert rule** pane appears. Choose **Select condition**. Search for **Failed Requests** rule and select.
     
-    ![azure_webapp](images/azure_webapp.png)
+    ![](images/addaialert.png)
 
-1. Provide a name for the **Web App**, create new **Resource Group** or select existing one from the dropdown. Enable **Application Insights** and click **Create**.
+   In the resulting pane configure **Alert logic** as shown below and click on **Done**.
+
+    ![](images/alertlogic.png)
+
+1. Now in Create alert rule pane enter Alert rule details as below
     
-    ![canary_app](images/canary_app.png)
+    ![](images/alertruledetails.png)
 
-1. Once the deployment succeeds, navigate to your **Resource Group** to see the resources created.
-    
-    ![deployment_success](images/deployment_success.png)
+1. Once the rule is created you will be able to see that rule under **Alerts**
+       ![](images/managealerts.png)
+        ![](images/alertsview.png)
 
-1. You will see a Web App and an Application Insights being provisioned.
-[Application Insights](https://azure.microsoft.com/en-in/services/application-insights/) is used to monitor the Web app.
-    
-    ![select_ai](images/select_ai.png)
+   You can create multiple alert rules on different metrics like 
 
-1. Repeat **Step 1 & Step 2** to create Web App for **Production**.
+       
+       Availability < 99 Percent
+
+       Server response time > 5 Seconds
+
+       Server exceptions > 0 Count
+       
+    For this lab we just created one monitor alert to trigger on condition `Whenever the count requests/failed is greater than 0`
+
 
 ## Exercise 1: Configure Release pipeline
 
+
+
+Navigate to the project created by Azure DevOps Demo Generator above.
 ### Update Release Tasks
 
-1. Navigate to **Releases** under **Pipelines** and **Edit** the pipeline **PartsUnlimited-CD**. In this pipeline, you have two environments viz. *Canary Environment* & *Production*. Click on **“1 job, 3 tasks”** link for Canary Environment to update the tasks.
+1. Navigate to **Releases** under **Pipelines** and **Edit** the pipeline **PartsUnlimited-CD**. 
    ![Edit Release](images/editrelease.png)
+
+   In this pipeline, you have two environments viz. *Canary Environment* & *Production*. Click on **“1 job, 2 tasks”** link for Canary Environment to view and update the tasks.
 
    ![canary_env](images/canary_env.png)
 
-1. The canary environment has 3 tasks which will publish the package to Azure Web App, enables continuous monitoring of the application after deployment and also Application Insights Alerts will be configured. 
+1. The canary environment has 2 tasks which will publish the package to Azure Web App, enables continuous monitoring of the application after deployment. 
 
    ![canary_release](images/canary_release.png)
 
-1. In Azure Subscription field, select your Azure subscription from the dropdown and click on **Authorize**. Provide your credentials, if required, to complete the authorization to your Azure account.
+1. Select **Canarys Environment** stage. In Azure Subscription field, select your Azure subscription from the dropdown and click on **Authorize**. Provide your credentials, if required, to complete the authorization to your Azure account.
 
    ![azure_subscription](images/azure_subscription.png)
 
@@ -95,11 +151,14 @@ You will create two **Web Apps** in Azure to depict two environments **Canary** 
 
    ![prod_release](images/prod_release.png)
 
-1. Navigate to **Builds** under **Pipelines** and **Queue new build** for the build definition **PartsUnlimited-CI**.
+1. Navigate to **Pipelines \| Pipelines** and select **PartsUnlimited-CI** build pipeline.
+
+   ![](images/selectbuildpipeline.png) 
+
+   Click on **Run Pipeline** then select **Run** to trigger the pipeline.
 
    ![queue_build](images/queue_build.png)
 
-   ![queue_build1](images/queue_build1.png)
 
 1. After the build succeeds, the release will be triggered automatically and the application will be deployed to both the environments. Browse the websites after the application is deployed.
 
@@ -107,17 +166,13 @@ You will create two **Web Apps** in Azure to depict two environments **Canary** 
 
    ![release1_complete](images/release1_complete.png)
 
-1. This will automatically hook the Web App with Application Insights and configure the Alerts in Azure under *CanaryRelease* Application Insights **Alerts** section. Click **View classic alerts** to view the metrics.
-
-   ![ai_alerts](images/ai_alerts.png)
-
-   ![ai_alerts](images/ai_alerts1.png)
+Now we have our application with CI/CD configured. In the following exercise we will see how to setup Gates in release pipeline.
 
 ## Exercise 2: Configure Deployment Gates.
 
 ### Enabling Pre-deployment Gate
 
-1. Edit the release pipeline **PartsUnlimited-CD** in *Releases* under **Pipelines**.
+1. Edit the release pipeline **PartsUnlimited-CD**.
 
    ![edit_release](images/edit_release.png)
 
@@ -125,19 +180,19 @@ You will create two **Web Apps** in Azure to depict two environments **Canary** 
 
    ![predeployment](images/predeployment.png)
 
-1. You will see **Triggers**, **Pre-deployment approvals**, **Gates** and **Deployment queue settings**. Enable **Pre-deployment approvals** and **Gates**.
-
-
-   ![VSTS Demo Generator](images/enable_gates.png)
-
-1. Add yourself as an **Approver** and by default, the user requesting a release or deployment should not approve. However, for the purpose of this lab, **uncheck** this condition.
+1. In Pre-deployment conditions pane, enable **Pre-deployment approvals**. Add yourself as an **Approver** for the lab purpose.
 
    ![add_approver](images/add_approver.png) 
+
+1. In the same pane enable **Gates** and click on **+Add**
+   
+    ![](images/enableGates.png)
+
 1. Add **Query Work Items** to the Gates.
 
    ![querywi](images/querywi.png)
 
-1. Select **Bugs** under **Shared Queries** in the Query field. As the maximum threshold is set to "0", if this query returns any active bug work Item, the release gate will fail.
+1. Select **Bugs** under **Shared Queries** in the Query field. As the maximum threshold is set to "**0**", if this query returns any active bug work Item, the release gate will fail.
 
    ![qwi](images/qwi.png)
 
@@ -159,9 +214,10 @@ You will create two **Web Apps** in Azure to depict two environments **Canary** 
 
 1. Click on **Post-deployment conditions**
 
-   ![edit_pipeline](images/edit_pipeline.png)
+   ![PostDeploymentGates](images/clickonpostdeploygates.png)
 
 1. Enable **Gates** and Add **Query Azure Monitor Alerts** to the gate.
+   ![enablegates2](images/enablegates2.png)
 
    ![qam](images/qam.png)
 
@@ -169,7 +225,7 @@ You will create two **Web Apps** in Azure to depict two environments **Canary** 
 
    ![monitor_details](images/monitor_details.png)
 
-1.  Expand the **Evaluation options** and specify the *delay*, *sampling interval* and the *timeout*. Select **On successful gates, ask for approvals** radio button.
+1.  Expand the **Evaluation options** and specify the details as below.
 
     ![post_deployment_gates](images/post_deployment_gates.png)
 
@@ -181,14 +237,11 @@ You will create two **Web Apps** in Azure to depict two environments **Canary** 
 In this exercise, you will make a small code change in the application and commit to the repository which in-turn triggers build and release.
 
 1. Go to **Repos** and click *Files*. Navigate to the path *"src/PartsUnlimitedWebsite/Views/Home/Index.cshtml"* and modify the content to ***"30%"*** from ***"20%"*** in **line 30**.
-
-   ![update_key](images/update_key.png)
-
-1. After the modification, **Commit** the changes.
+After the modification, **Commit** the changes.
    
    ![commit](images/commit.png)
 
-1. The build will automatically trigger as we have *Continuous Integration (CI)* trigger type enabled in the build pipeline. Once the build succeeds, navigate to the **Releases** tab. You will notice the release have been triggered after the successful build.
+1. Run **PartsUnlimited-CI** build pipeline. Once the build succeeds, navigate to the **Releases** tab. You will notice the release have been triggered after the successful build.
 
 1. Go to release **Logs** to see the progress. You will see **Query Work Items** gate have failed in a delay before evaluation, which indicates there are active bugs. These bugs should be closed in order to proceed further. Next sampling time will be after 5 minutes.
 
@@ -234,6 +287,7 @@ Azure Portal and click on **Browse**.
 1. This exception is monitored by **Application Insights** which will trigger an alert. In Azure Portal, we will be able to see the alert triggered.
 
    ![alert_triggered](images/alert_triggered.png)
+   ![alert_triggered](images/alert_triggered2.png)
 
 1. As there was an alert triggered by the exception, **Query Azure Monitor** gate failed. However, the gate is still under a delay period, you should wait for the next evaluation to proceed.
 
@@ -252,3 +306,12 @@ Gates ensures that the release waits for you to react to the feedback and fix an
 If a new release is required to fix the issues, then you can cancel the deployment and manually abandon the current release.
 
 So here are release gates, enabling teams to release applications with higher confidence with fewer manual steps. There is now a built-in audit of all the necessary criteria for a deployment being met.
+
+
+## Reference
+
+Thanks to **Nagaraj Bhairaji** for making a video on this lab. You can watch the following video that walks you through all the steps explained in this lab
+
+<figure class="video_container">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/8jbMnFiEow0" frameborder="0" allowfullscreen="true"> </iframe>
+</figure>

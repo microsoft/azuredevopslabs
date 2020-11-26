@@ -5,7 +5,7 @@ sidebar: vsts
 permalink: /labs/azuredevops/agile/
 folder: /labs/azuredevops/agile/
 version: Lab version - 1.37.1
-updated: Last updated - 9/5/2019
+updated: Last updated - 10/11/2020
 redirect_from: "/labs/vsts/agile/index.htm"
 ---
 <div class="rw-ui-container"></div>
@@ -15,10 +15,13 @@ redirect_from: "/labs/vsts/agile/index.htm"
 
 In this lab, you will learn about the agile planning and portfolio management tools and processes provided by Azure Boards and how they can help you quickly plan, manage, and track work across your entire team. You will explore the product backlog, sprint backlog, and task boards which can be used to track the flow of work during the course of an iteration. We will also take a look at how the tools have been enhanced in this release to scale for larger teams and organizations.
 
+<div class="bg-slap"><img src="./images/mslearn.png" class="img-icon-cloud" alt="MS teams" style="
+    width: 48px; height: 48px;">Want additional learning? Check out the  <a href="https://docs.microsoft.com/en-us/learn/modules/choose-an-agile-approach/" target="_blank"><b><u> Agile approach to software development </u></b></a> module on Microsoft Learn.</div>
+
 <a name="Prerequisites"></a>
 ### Prerequisites ###
 
-- This lab requires you to complete task 1 from the <a href="../prereq/">prerequisite</a> instructions.
+- This lab requires you to complete task 1 from the <a href="../prereq/">prerequisite</a> instructions. (No cloning needed for this lab, skip Task 2)
 
 <a name="Exercise1"></a>
 ## Exercise 1: Agile Project Management ##
@@ -30,13 +33,13 @@ In this lab, you will learn about the agile planning and portfolio management to
 
 1. Open the settings page using the **Project settings** navigation located at the bottom left of the page.
 
-    ![](images/000.png)
+    ![](images/settings.png)
 
 1. Select the **Teams** tab. There are already a few teams in this project, but you'll make a new one for this lab. Click **New team**.
 
     ![](images/001.png)
 
-1. Use **"PUL-Web"** as the **Team name** and click **Create team**.
+1. Use **"PUL-Web"** as the **Team name** and click **Create team** (Leave defaults).
 
     ![](images/002.png)
 
@@ -50,13 +53,13 @@ In this lab, you will learn about the agile planning and portfolio management to
 
 1. Select the **Iterations** tab and click **Select iterations**. This team will use the same iteration schedule that's already in place for the other teams, although you can take a different route if that's better for your organization.
 
-    ![](images/005.png)
+    ![](images/iteration.png)
 
 1. Select **Parts Unlimited\Sprint 1** and click **Save and close**. Note that this first sprint has already passed. This is because the demo data generator is designed to build out project history so that this sprint occurs in the past.
 
     ![](images/006.png)
 
-1. Repeat the process to add **Sprint 2** and **Sprint 3**. The second sprint is our current iteration, and the third is in the near future.
+1. Repeat the process to add **Sprint 2** and **Sprint 3** (add them as in previous step). The second sprint is our current iteration, and the third is in the near future.
 
     ![](images/007.png)
 
@@ -77,7 +80,7 @@ Work items play a prominent role in Azure DevOps. Whether describing work to be 
 
 This task is designed to illustrate a variety of ways you can create different kinds of work items, as well as to demonstrate the breadth of features available on the platform. As a result, these steps should not be viewed as prescriptive guidance for project management. The features are intended to be flexible enough to fit your process needs, so explore and experiment as you go.
 
-1. Navigate to **Overview | Dashboards**.
+1. Navigate to **Overview \| Dashboards**.
 
     ![](images/011.png)
 
@@ -87,13 +90,14 @@ This task is designed to illustrate a variety of ways you can create different k
 
 1. There are many ways to create work items in Azure DevOps, and we'll explore a few of them. Sometimes it's as simple as firing one off from a dashboard. In the **New Work Item** form, type **"Product training"** and select the **Epic** type. Click **Create**.
 
+    ![](images/new-wit.png)
     ![](images/013.png)
 
 1. Assign the new work item to yourself and set the **Area** to **Parts Unlimited\PUL-Web**. Set the **Iteration** to **Parts Unlimited\Sprint 2** and click **Save & Close**. Ordinarily you would want to fill out as much information as possible, but you can run lean here for the purposes of this lab.
 
     ![](images/014.png)
 
-1. Navigate to **Boards | Work Items**.
+1. Navigate to **Boards \| Work Items**.
 
     ![](images/015.png)
 
@@ -101,7 +105,7 @@ This task is designed to illustrate a variety of ways you can create different k
 
     ![](images/016.png)
 
-1. The work item form includes everything you could ever want to know about a work item. This includes details about who it's assigned to, its status across many parameters, and all the associated information and history for how it has been handled since creation. One of the key areas to focus on is the **Related Work**. One of the ways to add a feature to this epic is to select **Add link | New item**.
+1. The work item form includes everything you could ever want to know about a work item. This includes details about who it's assigned to, its status across many parameters, and all the associated information and history for how it has been handled since creation. One of the key areas to focus on is the **Related Work**. One of the ways to add a feature to this epic is to select **Add link \| New item**.
 
     ![](images/017.png)
 
@@ -377,7 +381,7 @@ To maximize a team's ability to consistently deliver high quality software, Kanb
 
     ![](images/082.png)
 
-1. Drag and drop the **Committed** work item onto **QA Approved | Doing** so that it gets recognized as having priority when QA bandwidth becomes available.
+1. Drag and drop the **Committed** work item onto **QA Approved \| Doing** so that it gets recognized as having priority when QA bandwidth becomes available.
 
     ![](images/083.png)
 
@@ -392,7 +396,7 @@ To maximize a team's ability to consistently deliver high quality software, Kanb
 <a name="Ex1Task5"></a>
 ### Task 5: Defining dashboards ###
 
-1. Select **Overview | Dashboards**.
+1. Select **Overview \| Dashboards**.
 
     ![](images/086.png)
 
@@ -436,7 +440,7 @@ To maximize a team's ability to consistently deliver high quality software, Kanb
 
     ![](images/096.png)
 
-1. Another way of customizing dashboards is to generate charts based on work item queries, which you can share to a dashboard. Select **Boards | Queries**.
+1. Another way of customizing dashboards is to generate charts based on work item queries, which you can share to a dashboard. Select **Boards \| Queries**.
 
     ![](images/097.png)
 
@@ -495,7 +499,7 @@ In this task we'll create a new process that inherits from Scrum. The one change
 
 1. Select the **Process** tab under **Boards**.
 
-    ![](images/108.png)
+    ![](images/process.png)
 
 1. From the **Scrum** dropdown, select **Create inherited process**.
 
@@ -553,7 +557,7 @@ In this task we'll create a new process that inherits from Scrum. The one change
 
     ![](images/122.png)
 
-1. Select **Boards | Work Items**.
+1. Select **Boards \| Work Items**.
 
     ![](images/123.png)
 
@@ -567,3 +571,11 @@ In this task we'll create a new process that inherits from Scrum. The one change
 
 1. Once the work item is saved, Azure DevOps will also save the new custom information so that it will be available for queries and through the rest of Azure DevOps.
 
+
+## Reference
+
+Thanks to **Nagaraj Bhairaji** for making a video on this lab. You can watch the following video that walks you through all the steps explained in this lab
+
+<figure class="video_container">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/WWUf5OWeBD0" frameborder="0" allowfullscreen="true"> </iframe>
+</figure>
