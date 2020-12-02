@@ -122,6 +122,10 @@ The following azure resources need to be configured for this lab:
 
    ![Deploy to Azure](images/getdbserverurl.png)
 
+1. Click on "Set server Firewall" and enable "Allow Azure services ..." option.
+
+    ![Allow Services ](images/allow.png)
+
 1. Navigate to the resource group, select the created container registry and make a note of the **Login server** name.
 
     ![Deploy to Azure](images/getacrserver.png)
