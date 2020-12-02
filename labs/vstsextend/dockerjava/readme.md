@@ -73,7 +73,7 @@ In this task, you will configure a CI pipeline that will build and push the imag
     | --------------- | ---------------------------- | ----------------------------------------------------------- |
     |Path to publish| $(build.artifactstagingdirectory)| Copy contents from the staging folder|
     |Artifact name|drop|Provide a name for the artifact folder.  |
-    |Artifact publish location |Visual Studio Team Services/TFS|we will publish it to Azure pipelines|
+    |Artifact publish location |Azure Pipelines|we will publish it to Azure pipelines|
 
 
 1. Next, there are two **Docker** tasks to build and publish the images. Select the first **Docker** task and notice that the **Command** is set to **Build**. The other settings of the Docker compose tasks are as follows:
