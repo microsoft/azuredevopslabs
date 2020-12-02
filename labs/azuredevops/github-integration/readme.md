@@ -145,6 +145,8 @@ In this lab, you'll see how easy it is to set up Azure Pipelines with your GitHu
     ```
     ![](images/020.png)
 
+1. Also, update the **trigger** to point to **master** instead of **main**, since the default branch of this repository is called master
+
 1. Scroll to the bottom of the page, provide some documentation for the change and click **Commit changes**. Again, it's okay to commit this change directly to the master branch for the purposes of this lab.
 
     ![](images/021.png)
@@ -299,6 +301,11 @@ In this lab, you'll see how easy it is to set up Azure Pipelines with your GitHu
 1. You now have a dynamic build status badge on your project's front page that allows everyone to know that you're effectively managing your project.
 
     ![](images/054.png)
+
+**Note**
+If the badge is broken, you have to enable anonymous access to badges in your Azure DevOps account. This has to be done both at the project level, and the organization level. 
+
+Go to Project Settings (https://dev.azure.com/<account>/<project>/_settings) and select Settings in the Pipelines section. Make sure that the **Disable anonymous access to badges** is not selected. Now go to the Organization Settings (https://dev.azure.com/account>/_settings) and repeat the same step.
 
 <a name="Summary"></a>
 ## Summary ##
