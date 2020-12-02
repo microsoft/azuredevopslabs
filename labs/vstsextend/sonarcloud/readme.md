@@ -74,8 +74,8 @@ In this lab, you will learn how to integrate Azure DevOps Services with SonarClo
 
 5. Using the same account as you used for Azure Devops, sign into SonarCloud: https://sonarcloud.io/
 
-   ![SonarCloud Welcome](images/sonarcloud.io.png)
-   
+   ![SonarCloud Welcome](images/sonarcloud.io2.png)
+
 6. In SonarCloud, create an organization and, within that, a new project. The organization and project you set up in SonarCloud will mirror the organization and project that you set up in Azure DevOps.
 
    Once you sign in, click **Import project from Azure** on the welcome page:
@@ -121,9 +121,10 @@ In this lab, you will learn how to integrate Azure DevOps Services with SonarClo
 
    ![Scan using pipeline](images/with-pipelines.png)
 
-   You can skip extension creation (if done previosly). Click **Continue**. Keep these instructions close for Exercise 1. We will need the information shown  to set up a Service Connection (from Azure DevOps to Sonarcloud) and configure the scanning in the pipeline.
 
-   ![Scan using pipeline](images/pipeline-guide2.png)
+   You can skip extension creation (if done previosly). Click **Continue**. Click on the **.NET** option and keep these instructions close for Exercise 1. We will need the information shown  to set up a Service Connection (from Azure DevOps to Sonarcloud) and configure the scanning in the pipeline.
+
+   ![Scan using pipeline](images/pipeline-guide3.png)
 
 ## Exercise 1: Set up a pipeline that integrates with SonarCloud
 
@@ -135,25 +136,39 @@ We will set up a new build pipeline that integrates with SonarCloud to analyze t
 
 Here you have two options. You can can configure the pipeline with either the **YAML editor**, or with the **classic editor**.
 
-With the classic editor, you can take advantage of the pre-defined templates that were installed as part of the SonarCloud Extension, above. With the YAML editor you need to use a separately provided YAML file (link provided below).
+With the classic editor, you can take advantage of the pre-defined templates that were installed as part of the SonarCloud Extension, above. With the YAML editor you need to use a separately provided YAML file. **Choose one of the options (YAML OR CLASSIC)**:
 
 ### YAML Editor
 
-1. Select the location of your code. Azure DevOps lets you build and release code located not only in this Azure DevOps account but also in other, external, repositories. We will not be using this feature today. In our case we want to analyze code in the git repo that we imported earlier, right in the same account as this pipeline. So, we select **Azure Repos Git**:
+1. We will not be using this feature today. In our case we want to analyze code in the git repo that we imported earlier, right in the same account as this pipeline. So, we select **Azure Repos Git**:
 
    ![Select Azure Repos](images/azdo_yaml_select_azure_repos.png)
 
-2. On the next screen select the git repository that you imported earlier, **SonarExamples**:
+1. On the next screen select the git repository that you imported earlier, **SonarExamples**:
 
    ![Select SonarExamples](images/azdo_yaml_select_sonarexamples.png)
 
-3. Now select a YAML file template. We will be building and analyzing the .NET code in our example imported repository, so we will start by choosing the **.NET Desktop** YAML template:
+1. Now select a YAML file template. We will be building and analyzing the .NET code in our example imported repository, so we will start by choosing the **.NET Desktop** YAML template:
 
    ![Choose .NET Desktop template](images/azdo_yaml_configure_pipeline_dot_net.png)
 
-4. The YAML editor will open with the template YAML file. In order to configure it correctly you will need to adjust it (or replace it) so that it looks like the following example file:
+1. The YAML editor will open with the template YAML file. In order to configure it correctly you will need to adjust it (or replace it) so that it looks like the following example file:
 
    [net-desktop-sonarcloud.yml](https://github.com/SonarSource/sonar-scanner-vsts/blob/master/yaml-pipeline-templates/net-desktop-sonarcloud.yml)
+
+   we need to customize it to our needs:
+
+   1. Modify the Build task, change the pointer to the solution **(add wildcards as our solution is not located in the root of the repo):
+
+      ![](images/wildcard.png)
+
+   1. Modify the Prepare Sonarcloud task with your own information. Follow the information in Sonarcloud previous windows to:
+   
+      1. **Setup a service connection**
+      1. Modify the task with **the values provided on the Sonarcloud window guide**. Use your service endpoint created and organization/project name and key values, not the default ones!! click **Add** after modifying those values.
+
+   ![guide](images/pipeline-guide3.png)
+   ![task](images/task.png)
 
    When you are done making the changes to the file, click **Save and Run**:
 
@@ -161,7 +176,7 @@ With the classic editor, you can take advantage of the pre-defined templates tha
 
    ![Commit YAML](images/azdo_yaml_save_run_commit.png)
 
-### Classic Editor
+### Classic Editor (skip if YAML option chosen before)
 
 1. To configure the pipeline using the classic editor, select **Use the classic editor** on the **Where is your code?** page:
 
@@ -183,19 +198,20 @@ With the classic editor, you can take advantage of the pre-defined templates tha
 
    ![Agent pool](images/azdo_agent_pool.png)
 
-5. Get the SonarCloud endpoint token from previous sonarcloud guide. This is a token generated by SonarCloud that identifies your account on that system and allows other services, in this case, Azure DevOps, to connect to that account.
+5. Get the SonarCloud endpoint token from previous sonarcloud guide. This is a token generated by SonarCloud that identifies your account on that system and allows other services, in this case, Azure DevOps, to connect to that account. (token in "Add a new Sonarcloud Service Endpoint)
 
-   ![Token](images/sc_my_account.png)
+   ![Token](images/pipeline-guide3.png)
 
-6. Copy the token and in Azure DevOps:
+6. Copy the token and in Azure DevOps pipeline > Prepare Analysis:
+
 
    ![Prepare analysis](images/azdo_prepare_analysis.png)
 
-   Then click on the **+ New** button:
+   Click on the **+ New** button:
 
    ![Click new endpoint](images/azdo_click_new_endpoint.png)
 
-   Paste the endpoint token that you copied in to the field **SonarCloud Token**, give the endpoint a name and click **Verify and save**:
+   Paste the endpoint token  in to the field **SonarCloud Token**, give the endpoint a name and click **Verify and save**:
 
    ![New service connection](images/azdo_new_service_connection.png)
 
@@ -203,7 +219,9 @@ With the classic editor, you can take advantage of the pre-defined templates tha
 
    ![New service connection](images/azdo_choose_org.png)
 
-   Now enter the key of the project that you created within that organization on SonarCloud (you can find it on the sonarcloud setup guide):
+
+   Now enter the key of the project that you created within that organization on SonarCloud (**you can find it on the sonarcloud setup guide too**):
+
 
    ![New service connection](images/azdo_enter_project.png)
 
@@ -224,7 +242,15 @@ With the classic editor, you can take advantage of the pre-defined templates tha
 
 11. Either click on the **Detailed SonarCloud Report** link in the build summary to open the project in SonarCloud, or browse to SonarCloud and view the project.
 
-    ![SonarCloud report](images/sc_report.png)
+
+   To be able to see the Quality gate result, after running he first report we need to "Set New Code Definition" and choose "Previous Version". Next pipeline runs will be able to get a Quality Gate result.
+
+   ![SonarCloud New code def](images/new-code-def.png)
+
+   ![SonarCloud New code def](images/new-code-def2.png)
+
+   ![SonarCloud report](images/sc_report.png)
+
 
    We have now created a new organization on SonarCloud and configured an Azure DevOps build to perform analysis and push the results of the build to SonarCloud.
 
@@ -416,13 +442,16 @@ Setup :
 
     ![artifact_setting](images/ex4/artifact_settings.PNG)
 
+1. Setup the CD trigger.
+
+   ![artifact_setting](images/cd.PNG)
+
 1. You can now save your pipeline.
 1. Go back to the build pipeline section, trigger a build of the pipeline that creates the artifact.
-1. Once the build is completed and succeeded, you can create a new release by either clicking on the **Release** button on the build page or set up an automatic release trigger based on a branch filter.
+1. Once the build is completed and succeeded, it will trigger the CD automatically.
 
-    ![release](images/ex4/release.png)
-
-1. Go to the release by either clicking on the link if a manual release has been triggered from the build (on the top of the Build page), or going to the **Releases** page.
+   
+1. Go to the  **Releases** page.
 1. After few minutes (as set up on the point 8 of this exercise), your Quality Gate check should have been performed (at least twice to get a 'go/nogo' for the stage), and if it's green, it should look like this:
 
    ![qg_green](images/ex4/qg_green.PNG)
