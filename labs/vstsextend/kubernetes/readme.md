@@ -88,11 +88,11 @@ The following azure resources need to be configured for this lab:
     az acr create --resource-group akshandsonlab --name <unique-acr-name> --sku Standard --location <region>
     ```
     {% include important.html content= "Enter a unique ACR name. ACR name may contain alpha numeric characters only and must be between 5 and 50 characters" %}
-1. **Grant AKS-generated Service Principal access to ACR** : Authorize the AKS cluster to connect to the Azure Container Registry using the AKS generated Service Principal. Replace the variables `$AKS_RESOURCE_GROUP, $AKS_CLUSTER_NAME, $ACR_RESOURCE_GROUP` with appropriate values below and run the commands.
+1. **Grant AKS-generated Managed Identity access to ACR** : Authorize the AKS cluster to connect to the Azure Container Registry using the AKS generated Managed Identity. Replace the variables `$AKS_RESOURCE_GROUP, $AKS_CLUSTER_NAME, $ACR_RESOURCE_GROUP` with appropriate values below and run the commands.
 
     ```bash
-    # Get the id of the service principal configured for AKS
-    CLIENT_ID=$(az aks show --resource-group $AKS_RESOURCE_GROUP --name $AKS_CLUSTER_NAME --query "servicePrincipalProfile.clientId" --output tsv)
+    # Get the id of the Managed Identity configured for AKS
+    CLIENT_ID=$(az aks show --resource-group $AKS_RESOURCE_GROUP --name $AKS_CLUSTER_NAME --query "identityProfile.kubeletidentity.clientId" --output tsv)
 
     # Get the ACR registry resource id
     ACR_ID=$(az acr show --name $ACR_NAME --resource-group $ACR_RESOURCE_GROUP --query "id" --output tsv)
