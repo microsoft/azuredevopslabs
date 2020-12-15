@@ -46,7 +46,7 @@ The following image will walk you through all the steps explained in this lab
 
     ![](images/003.png)
 
-1. Select the option to configure the **SQL Database**. Click **Create a new database** and enter the name **"partsunlimited"**.
+1. Select the option to configure the **SQL Database**. Click **Create a new database** and enter the name **"partsunlimited-yaml"**.
 
     ![](images/004.png)
 
