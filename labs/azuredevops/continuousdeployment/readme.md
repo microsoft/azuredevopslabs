@@ -302,6 +302,8 @@ In this lab, you will learn about the release management features available in A
 
 1. Return to the Azure DevOps browser tab.
 
+1. Click on **Pipelines>Pipelines** and click on **Edit** (top-right) to modify the release definition.
+
 1. As release pipelines get more sophisticated, it becomes important to define gates to ensure quality throughout the release pipeline. Since the next stage we're deploying to is production, we'll need to be sure to include both automated quality gates as well as a manual approver gate. Return to the release pipeline browser tab and click **Clone** in the **QA** stage. Since the production stage is virtually the same, we can reuse almost all of the existing configuration.
 
     ![](images/056.png)
