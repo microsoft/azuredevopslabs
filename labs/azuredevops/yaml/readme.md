@@ -54,6 +54,10 @@ The following image will walk you through all the steps explained in this lab
 
     ![](images/005.png)
 
+1. On **Pricing Tier** , Sselect **Standard** and leave default options.
+
+   ![](images/conf_sql.png)
+
 1. Click **Select** to confirm the database settings.
 
     ![](images/006.png)
