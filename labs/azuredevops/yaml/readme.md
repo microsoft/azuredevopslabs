@@ -108,10 +108,11 @@ The following image will walk you through all the steps explained in this lab
 
     ![](images/015.png)
 
-1. Review the contents of the YAML definition. It will be saved as a new file called **"azure-pipelines.yml"** in the root of the repository and contain everything needed to build and test a typical ASP.NET solution. You can also customize the build as needed. In this case, update the **pool** to specify the build should use a Visual Studio 2017 build VM. 
+1. Review the contents of the YAML definition. It will be saved as a new file called **"azure-pipelines.yml"** in the root of the repository and contain everything needed to build and test a typical ASP.NET solution. You can also customize the build as needed. In this case, update the **pool** to specify the build should use a Visual Studio 2017 build VM.
 
-  
     ![](images/poolimage.png)
+
+1. Review trigger and point to **master** if you repo does not have **main** (new repos will have "main" instead of "master").
 
 1. Click **Save and run**.
 
