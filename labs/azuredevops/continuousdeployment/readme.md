@@ -40,11 +40,10 @@ In this lab, you will learn about the release management features available in A
 
 1. Select **SQL Database**.
 
-    ![](images/001.png)
+    ![](images/sql.png)
 
 1. Click **Create**.
 
-    ![](images/002.png)
 
 1. Under **Resource group**, click **Create new**.
 
@@ -62,6 +61,10 @@ In this lab, you will learn about the release management features available in A
 
     ![](images/007.png)
 
+1. In **Compute + storage** select **Configure Database**. click on **looking for basic, standard and premium?** , leave the defaults for standard and click **apply**.
+
+    ![](images/confsql.png)
+
 1. Click **Review + create**.
 
     ![](images/008.png)
@@ -76,11 +79,10 @@ In this lab, you will learn about the release management features available in A
 
 1. Select the **Web App** template.
 
-    ![](images/011.png)
+    ![](images/webapp.png)
 
 1. Click **Create**.
 
-    ![](images/012.png)
 
 1. Under **Project Details**, select the same **Subscription** and **Resource Group** used for the database.
 
@@ -90,6 +92,11 @@ In this lab, you will learn about the release management features available in A
 
     ![](images/014.png)
 
+1. On **App Service plan** select **create new** and name it **plan**. Change the size to **S1** (under Production).
+
+    ![](images/s1.png)
+
+
 1. Click **Review and create**.
 
     ![](images/015.png)
@@ -98,7 +105,7 @@ In this lab, you will learn about the release management features available in A
 
     ![](images/016.png)
 
-1. Repeat the process above to create a second app service for the production stage. This time, append the **Name** with **"-prod"** instead.
+1. Repeat the process above to create a second app service for the production stage. This time, append the **Name** with **"-prod"** instead. **You can use the same App Service Plan created before for QA**.
 
     ![](images/017.png)
 
@@ -294,6 +301,8 @@ In this lab, you will learn about the release management features available in A
 ### Task 5: Creating a gated release to the production stage ###
 
 1. Return to the Azure DevOps browser tab.
+
+1. Click on **Pipelines>Pipelines** and click on **Edit** (top-right) to modify the release definition.
 
 1. As release pipelines get more sophisticated, it becomes important to define gates to ensure quality throughout the release pipeline. Since the next stage we're deploying to is production, we'll need to be sure to include both automated quality gates as well as a manual approver gate. Return to the release pipeline browser tab and click **Clone** in the **QA** stage. Since the production stage is virtually the same, we can reuse almost all of the existing configuration.
 
