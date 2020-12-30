@@ -46,13 +46,17 @@ The following image will walk you through all the steps explained in this lab
 
     ![](images/003.png)
 
-1. Select the option to configure the **SQL Database**. Click **Create a new database** and enter the name **"partsunlimited"**.
+1. Select the option to configure the **SQL Database**. Click **Create a new database** and enter the name **"partsunlimited-yaml"**.
 
     ![](images/004.png)
 
 1. Select the option to configure the **Target server** and click **Create a new server**. Enter a globally unique server name, such as **"pul-yaml-johndoe"** and provide admin credentials. Make sure **Allow Azure services to access server** checkbox is selected. Click **Select** to confirm the server settings.
 
     ![](images/005.png)
+
+1. On **Pricing Tier** , Sselect **Standard** and leave default options. Click **Apply**.
+
+   ![](images/conf_sql.png)
 
 1. Click **Select** to confirm the database settings.
 
@@ -104,10 +108,11 @@ The following image will walk you through all the steps explained in this lab
 
     ![](images/015.png)
 
-1. Review the contents of the YAML definition. It will be saved as a new file called **"azure-pipelines.yml"** in the root of the repository and contain everything needed to build and test a typical ASP.NET solution. You can also customize the build as needed. In this case, update the **pool** to specify the build should use a Visual Studio 2017 build VM. 
+1. Review the contents of the YAML definition. It will be saved as a new file called **"azure-pipelines.yml"** in the root of the repository and contain everything needed to build and test a typical ASP.NET solution. You can also customize the build as needed. In this case, update the **pool** to specify the build should use a Visual Studio 2017 build VM.
 
-  
     ![](images/poolimage.png)
+
+1. Review trigger and point to **master** if you repo does not have **main** (new repos will have "main" instead of "master").
 
 1. Click **Save and run**.
 
