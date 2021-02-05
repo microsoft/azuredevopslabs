@@ -50,9 +50,13 @@ In this lab, you will learn
    ![](images/sdkkey.png)
 
 ## Exercise 2: Integrate LaunchDarkly in your Web application
-   1. Make sure **Work Item management** toggle is **On** in your Azure DevOps services project as shown below. This will automatically create links for work items mentioned in a commit comment.
+   1. Make sure **Commit mention linking** toggle is **On** in your Azure DevOps services project as shown below. This will automatically create links for work items mentioned in a commit comment.
       
        ![](images/workitemlinking.png)
+
+   1. Navigate to **Boards \| Work items**. Select User Story with the title `Implement FeatureFlag Management using LaunchDarkly` and assign it to yourself if its not assigned.
+
+      ![](images/assignuserstory.png)
 
    1. Now navigate to the **Repos** within the project portal, select **Clone** and then select **Clone in Visual Studio**.
 
@@ -149,11 +153,13 @@ In this lab, you will learn
   
    ![](images/launchdarklypat.png)
 
-1. In Azure DevOps project navigate to Project Settings-->Build and Release-->Service connections. Select **+New service connection** and choose **LaunchDarkly**.
+   ![](images/launchdarklypat2.png)
+
+1. In Azure DevOps project navigate to **Project Settings \| Pipelines \| Service connections**. Select **Create service connection** , choose **LaunchDarkly** and click **Next**.
 
       ![](images/launchdarklyendpoint.png)
 
-1. In **Add LaunchDarkly service connection** window give connection name and paste the access token which you copied in the first step and click **OK**
+1. In **New LaunchDarkly service connection** window give connection name and paste the access token which you copied in the first step and click **Save**
 
    ![](images/ldserviceconnection.png)
 
@@ -161,7 +167,7 @@ In this lab, you will learn
 
    ![](images/selectfeatureflanginWit.png)
 
-1. Navigate to **Releases** under **Pipelines**. Select **LaunchDarkly_CD** pipeline and click **Edit pipeline**.
+1. Navigate to **Releases** under **Pipelines**. Select **LaunchDarkly_CD** pipeline and click **Edit**.
 
    ![](images/editpipeline.png)
 
@@ -192,7 +198,7 @@ In this lab, you will learn
 
      ![](images/azuredevopsPAT.png)
      
-1. Now you are done with the configuring release pipeline. Navigate to **Pipelines-->Builds** and Queue **LaunchDarkly-CI** build. This CI pipeline has tasks to compile .Net Core project. For more guidance on how to build .Net Core projects with Azure Pipelines see [here](https://docs.microsoft.com/en-us/azure/devops/pipelines/languages/dotnet-core?view=vsts&tabs=designer#build-your-project). Once the build completes successfully a release would be triggered to deploy app and rollout feature flag in LaunchDarkly.
+1. Now you are done with the configuring release pipeline. Navigate to **Pipelines-->Pipelines** and Queue **LaunchDarkly-CI** build. This CI pipeline has tasks to compile .Net Core project. For more guidance on how to build .Net Core projects with Azure Pipelines see [here](https://docs.microsoft.com/en-us/azure/devops/pipelines/languages/dotnet-core?view=vsts&tabs=designer#build-your-project). Once the build completes successfully a release would be triggered to deploy app and rollout feature flag in LaunchDarkly.
    
     ![](images/buildandrelease.gif)
 
