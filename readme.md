@@ -486,10 +486,12 @@ description: Learn how you can implement modern DevOps practices with Azure, Azu
                                                         class="icon-bor-p-m" />
                                                     <a href="/labs/vstsextend/teams/" class="fon-size-13">Microsoft Teams with Azure DevOps Services</a>
                                                 </li>
-												<li class="osslist align-relative"><img src="/images/redgate.png" height="42"
+												<!--<li class="osslist align-relative"><img src="/images/redgate.png" height="42"
                                                         class="icon-bor-p-m" />
                                                     <a href="/labs/vstsextend/redgate/" class="fon-size-13">Deploying Database changes with Redgate SQL Change Automation and Azure DevOps<img src="/images/new-tag.png" alt="new-tag" class="align-on-labs"/></a>
-                                                </li>
+                                                </li> -->
+												 <li class="osslist"> <img src="/images/redgate.png" height="42" class="icon-bor-p-m" /><a
+                                                        href="/labs/vstsextend/redgate/" class="fon-size-13">Deploying Database changes with Redgate SQL Change Automation and Azure DevOps</a></li>
                                                 <li class="osslist"> <img src="/images/docker-42.png" height="42" class="icon-bor-p-m" /><a
                                                         href="/labs/vstsextend/docker/" class="fon-size-13"> Deploying a Docker based web application to Azure App Service</a></li>
                                                  <li class="osslist"> <img src="/images/docker-42.png" height="42" class="icon-bor-p-m" /><a
@@ -518,10 +520,13 @@ description: Learn how you can implement modern DevOps practices with Azure, Azu
                                                  <li class="osslist align-relative"> <img src="/images/github-42.png" height="42"
                                                         class="icon-bor-p-m" /><a href="/labs/vstsextend/github-azurepipelines/"
                                                         class="fon-size-13"> GitHub Integration with Azure Pipelines</a></li>
-                                                           <li class="osslist align-relative"><img src="/images/teams3.png" height="42"
+                                                         <!--  <li class="osslist align-relative"><img src="/images/teams3.png" height="42"
                                                         class="icon-bor-p-m" />
                                                     <a href="/labs/vstsextend/teams-devopshub/" class="fon-size-13">Using Microsoft Teams as Your DevOps Hub <img src="/images/new-tag.png" alt="new-tag" class="align-on-labs"/></a>
-                                                </li>
+                                                </li> -->
+												<li class="osslist"> <img src="/images/teams3.png" height="42"
+                                                        class="icon-bor-p-m" /><a href="/labs/vstsextend/teams-devopshub/"
+                                                        class="fon-size-13"> Using Microsoft Teams as Your DevOps Hub</a></li>
                                                          <li class="osslist"> <img src="/images/azuredevopsproject.png" height="42"
                                                         class="icon-bor-p-m" /><a href="/labs/vstsextend/azuredevopsprojectdotnet/"
                                                         class="fon-size-13"> Create a CI/CD pipeline for .NET with the Azure DevOps Project</a></li>
