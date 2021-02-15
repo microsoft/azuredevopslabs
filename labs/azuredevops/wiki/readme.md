@@ -63,7 +63,7 @@ In this lab, you'll learn about the wiki feature of Azure DevOps that enables ea
 
     ![](images/008.png)
 
-1. This time, select the **Save | Save with revision message** to specify a comment.
+1. This time, select the **Save \| Save with revision message** to specify a comment.
 
     ![](images/009.png)
 
@@ -91,7 +91,7 @@ In this lab, you'll learn about the wiki feature of Azure DevOps that enables ea
 
     ![](images/015.png)
 
-1. Use the **Save | Save with revision message** dropdown to provide a more descriptive commit message.
+1. Use the **Save \| Save with revision message** dropdown to provide a more descriptive commit message.
 
     ![](images/016.png)
 
@@ -203,7 +203,7 @@ In this lab, you'll learn about the wiki feature of Azure DevOps that enables ea
 
 1. You can edit the repo however you like, whether it's using Visual Studio or any other Git-compatible tools. You can also continue to edit the wiki in the browser, which we will do in this lab. Return to the tab open to the wiki repo.
 
-1. From the dropdown for the **Docs** repo root, select **New | Folder**.
+1. From the dropdown for the **Docs** repo root, select **New \| Folder**.
 
     ![](images/042.png)
 
@@ -223,7 +223,7 @@ In this lab, you'll learn about the wiki feature of Azure DevOps that enables ea
 
 1. Return to the tab open to the wiki repo.
 
-1. From the **Upcoming-events** dropdown, select **New | File**.
+1. From the **Upcoming-events** dropdown, select **New \| File**.
 
     ![](images/046.png)
 
