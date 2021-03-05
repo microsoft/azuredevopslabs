@@ -76,6 +76,7 @@ Let us configure a ***private*** self-hosted agent on this VM. Selenium requires
 
    ![configure_windowsagent](images/configureagent.png)
 
+1. Download and install [Microsoft SQL Server Data-Tier Application Framework](https://www.microsoft.com/en-us/download/details.aspx?id=58207&WT.mc_id=rss_alldownloads_extensions). This would be required to deploy DACPAC using SqlPackage.exe in the release pipeline, which will be explained in the next exercise.
 ## Exercise 2: Configure Release Pipeline
 
 The target machine is having agent configured to deploy the applications and run selenium testcases. The release definition uses **[Phases](https://docs.microsoft.com/en-us/vsts/build-release/concepts/process/phases){:target="_blank"}** to deploy to target servers.
