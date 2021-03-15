@@ -54,7 +54,7 @@ The following image will walk you through all the steps explained in this lab
 
     ![](images/005.png)
 
-1. On **Pricing Tier** , Sselect **Standard** and leave default options. Click **Apply**.
+1. On **Pricing Tier** , Select **Standard** and leave default options. Click **Apply**.
 
    ![](images/conf_sql.png)
 
