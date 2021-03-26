@@ -41,9 +41,9 @@ In this exercise, you will examine the source code provisioned by [Azure DevOps 
 
 ## Exercise 2: Examine the CI pipeline
 
-**Python** is an interpreted language, and hence compilation is not required. In this exercise, we will run unit tests and we will archive the application files to use in the release for deployment.
+**Python** is an interpreted language and hence compilation is not required. In this exercise, we will run unit tests and we will archive the application files to use in the release for deployment.
 
-1. Navigate to **Pipelines –> Builds**. Select **Python-CI** and click **Edit**.
+1. Navigate to **Pipelines –> Pipelines**. Select **Python-CI** and click **Edit**.
 
     ![](images/python-ci-edit.png)
 
@@ -101,6 +101,10 @@ In this exercise, you will configure release (CD) pipeline to create Azure resou
    
    ![](images/cd-tasks.png)
 
+1. Select **Agent Phase** and select Agent pool as shown below
+    
+     ![](images/agentpoolselect.png)
+
 1. Select the **Azure CLI** task. Select the Azure subscription from the drop-down list and click **Authorize** to configure Azure service connection. 
 
     ![](images/azure-cli.png)
@@ -123,7 +127,7 @@ In this exercise, you will configure release (CD) pipeline to create Azure resou
 
     ![](images/run-functionaltests.png)
 
-1. Let us enable **Continuous deployment trigger**. Select **Pipelines** and click ****Continuous deployment trigger** option. Enable the trigger and **Save** the changes.
+1. Let us enable **Continuous deployment trigger**. Select **Pipelines** and click **Continuous deployment trigger** option. Enable the trigger and **Save** the changes.
     
       ![](images/enable-cd.png)
 
@@ -143,7 +147,7 @@ In this exercise, you will configure release (CD) pipeline to create Azure resou
     
      ![](images/commit_code.png)
 
- 1. Since we have enabled CI-CD triggers a build will be queued automatically. Go to **Builds**, under **Pipelines** tab to see the build in progress.
+ 1. Since we have enabled CI-CD triggers a build will be queued automatically. Go to **Pipelines**, under **Pipelines** tab to see the build in progress.
 
      ![](images/build-progress.gif)
   
