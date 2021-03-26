@@ -5,7 +5,7 @@ sidebar: vsts
 permalink: /labs/azuredevops/load/
 folder: /labs/azuredevops/load/
 version: Lab version - 1.38.0
-updated: Last updated - 9/12/2019
+updated: Last updated - 03/26/2021
 redirect_from: "/labs/vsts/load/index.htm"
 ---
 <div class="rw-ui-container"></div>
