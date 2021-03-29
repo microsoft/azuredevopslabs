@@ -5,7 +5,7 @@ sidebar: vsts
 permalink: /labs/azuredevops/load/
 folder: /labs/azuredevops/load/
 version: Lab version - 1.38.0
-updated: Last updated - 9/12/2019
+updated: Last updated - 03/26/2021
 redirect_from: "/labs/vsts/load/index.htm"
 ---
 <div class="rw-ui-container"></div>
@@ -24,6 +24,7 @@ In this lab, you will be introduced to the [Web performance and Load testing cap
 
 - This lab requires Microsoft Excel.
 
+{% include note.html content= "Azure DevOps cloud-based load testing service feature is deprecated. And Visual Studio 2019 will be the last version of Visual Studio with the web performance and load test capability. For more information click [here](https://devblogs.microsoft.com/devops/cloud-based-load-testing-service-eol/) " %}
 <a name="Exercise1"></a>
 ## Exercise 1: Web Application Load and Performance Testing with Visual Studio 2017 ##
 
@@ -130,7 +131,7 @@ In this lab, you will be introduced to the [Web performance and Load testing cap
 
 1. Now we can add a more sophisticated test that involves completing a purchase. Return to **Visual Studio**.
 
-1. In **Solution Explorer**, right-click the **PULWebTest** project and select **Add | Web Performance Test**.
+1. In **Solution Explorer**, right-click the **PULWebTest** project and select **Add \| Web Performance Test**.
 
     ![](images/021.png)
 
@@ -222,7 +223,7 @@ In this lab, you will be introduced to the [Web performance and Load testing cap
 <a name="Ex1Task5"></a>
 ### Task 5: Adding a load test ###
 
-1. Now that we have two tests that cover common scenarios, let's use them as part of a load test to see how the system might perform with a variety of simultaneous users. In **Solution Explorer**, right-click the **PULWebTest** project and select **Add | Load Test**.
+1. Now that we have two tests that cover common scenarios, let's use them as part of a load test to see how the system might perform with a variety of simultaneous users. In **Solution Explorer**, right-click the **PULWebTest** project and select **Add \| Load Test**.
 
     ![](images/042.png)
 
@@ -230,6 +231,7 @@ In this lab, you will be introduced to the [Web performance and Load testing cap
 
     ![](images/043.png)
 
+  
 1. The **Run Settings** enable you to indicate whether you'd like to run the test for a specified duration or if you'd like to run for a certain number of iterations. In this scenario, select **Load test duration** and set the **Run duration** to **1** minute. You can also configure a variety of details for testing, such as the **Sampling rate** for collecting data. Keep this at **15** seconds. Click **Next**.
 
     ![](images/044.png)
