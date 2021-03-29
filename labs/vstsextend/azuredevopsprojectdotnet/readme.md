@@ -31,6 +31,8 @@ DevOps Projects does all the work for the initial configuration of a DevOps pipe
 
 1. You will need an Azure DevOps account. If you do not have one, you can sign up for free [here](https://azure.microsoft.com/en-us/services/devops/).
 
+{% include note.html content= "This lab is deprecated. DevOps project feature in Azure portal is now DevOps Starter and it will create Repo and Pipelines in your GitHub account instead of Azure DevOps. For .Net project CI/CD please follow [Enabling Continuous Integration with Azure Pipelines](https://azuredevopslabs.com/labs/azuredevops/continuousintegration/)  and [Embracing Continuous Delivery with Azure Pipelines](https://azuredevopslabs.com/labs/azuredevops/continuousdeployment/) labs." %}
+
 ## Exercise 1: Setting up a sample ASP.NET project using Azure DevOps Project
 
 
