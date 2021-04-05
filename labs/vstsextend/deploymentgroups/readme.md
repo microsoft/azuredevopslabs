@@ -165,7 +165,7 @@ The Azure DevOps makes it easier to organize the servers for deploying the appli
 
     Your DefaultConnectionString will be like as below after replacing SQL DNS.
 
-    `Data Source=dgsqlw4zktxlvx7ddu.centralindia.cloudapp.azure.com.cloudapp.azure.com;Initial Catalog=PartsUnlimited-Dev;User ID=sqladmin;Password=P2ssw0rd@123;MultipleActiveResultSets=False;Connection Timeout=30;`
+    `Data Source=dgsqlw4zktxlvx7ddu.centralindia.cloudapp.azure.com;Initial Catalog=PartsUnlimited-Dev;User ID=sqladmin;Password=P2ssw0rd@123;MultipleActiveResultSets=False;Connection Timeout=30;`
 
 
 1.  **Save** the changes and click on the **Create release** then **Create**
