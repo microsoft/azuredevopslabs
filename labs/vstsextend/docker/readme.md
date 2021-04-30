@@ -120,9 +120,9 @@ The Web App for Containers allows the creation of custom [Docker](https://www.do
 
 Now that the required resources are provisioned, the **Build** and the **Release** definition need to be manually configured with the new information. The dacpac will also be deployed to the mhcdb database so that the schema and data is configured for the backend.
 
-1. Navigate to the **Builds** option under the **Pipelines** tab. Select the build definition `MHCDocker.build`, and select the **Edit** option.
+1. Navigate to the **Pipelines** option under the **Pipelines** tab. Select the build definition `MHCDocker.build`, and select the **Edit** option.
 
-   ![Build](images/build1_4.png)
+   ![Build](images/editbuild.png)
 
 1. In the **Run services, Build services and Push services** tasks, authorize (only for the first task) the **Azure subscription** and update **Azure Container Registry** with the endpoint component from the dropdown and click on **Save**.
 
@@ -139,9 +139,9 @@ Now that the required resources are provisioned, the **Build** and the **Release
    |![Push services](images/icon.png) **Push services**| pushes **myhealth.web** image tagged with **$(Build.BuildId)** to container registry|
    |![Publish Build Artifacts](images/publish-build-artifacts.png) **Publish Build Artifacts**| used to share dacpac for database deployment through Azure DevOps artifacts|
 
-1. Navigate to the **Releases** section under the **Pipelines** tab. Select the release definition `MHCDocker.release`, click **Edit Pipeline** option and then click on the **Tasks** section.
+1. Navigate to the **Releases** section under the **Pipelines** tab. Select the release definition `MHCDocker.release`, click **Edit** option and then click on the **Tasks** section.
 
-   ![Release](images/release1_6.png)
+   ![Release](images/editrelease.png)
 
    ![Release Tasks](images/release9.png)
 
@@ -183,15 +183,15 @@ In this exercise, the source code will be modified to trigger the CI-CD.
     ![Line Edit](images/code14.png)
 
 
-1. Click on **Builds** tab, you will see `MHCDoker.build` buils is queued. Double click on **Build #** or **Commit** to view the build in progress.
+1. Click on **Pipelines** tab, you will see `MHCDoker.build` build is queued. Double click on **Build #** or **Commit** to view the build in progress.
 
-    ![Build](images/build1_1.png)
+    ![Build](images/buildtrigger.png)
 
-    ![Build](images/prog1_1.png)
+    ![Build](images/buildprogress.png)
 
 1. The Build will generate and push the docker image of the web application to the Azure Container Registry. Once the build is completed, the build summary will be displayed.
 
-    ![Build Summary](images/bsumm.png)
+    ![Build Summary](images/buildsummary.png)
 
 1. Navigate to the [Azure Portal](https://portal.azure.com){:target="_blank"} and click on the **App Service** that was created at the beginning of this lab. Select the **Container Settings** option and provide the information as suggested and then click the **Save** button.
 
@@ -212,9 +212,11 @@ In this exercise, the source code will be modified to trigger the CI-CD.
 
 1. Navigate to the **Releases** section under **Pipelines** tab, and double-click on the latest release displayed on the page. Click on **Logs** to view the details of the release in progress.
 
-    ![Release Progress](images/dobleclick.png)
+    ![Release Progress](images/devclick.png)
 
-    ![Release Progress](images/lgs1_1.png)
+    ![Release Progress](images/viewlogs.png)
+
+    ![Release Progress](images/releaseprogress.png)
 
 1. The release will deploy the docker image to the App Service based on the **BuildID** tagged with the docker image. Once the release is completed, the release **Logs** will be displayed.
 
