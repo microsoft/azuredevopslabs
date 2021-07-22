@@ -9,7 +9,7 @@ description: Learn how you can plan better, code together and ship faster with A
 <div class="vstsMain">
    <div class="productcolmain">
       <div class="pageheader">
-         <b>DevOps with Visual Studio Team Services</b> 
+         <b>DevOps with Azure DevOps</b> 
       </div>
       <div class="herotext2">
          Learn how you can plan better, code together and ship faster with Azure DevOps
@@ -32,8 +32,8 @@ description: Learn how you can plan better, code together and ship faster with A
    <a href="https://go.microsoft.com/fwlink/?LinkId=2014881" class="launch-hol" role="button" target="_blank" onclick="pageTracker._trackEvent('SignUp', 'Click', 'New User SignUp');" style="
       align-self:  right;"><span class="lab-details">Sign up for free now</span></a>
 </div>
-</div>
-</div>
+<!--</div>
+</div> --> 
 <div class="tab-content bg-color-wit-mlr">
 <div id="services-labs" class="container tab-pane active">
 <div class="col-sm-12">
