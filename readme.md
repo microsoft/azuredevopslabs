@@ -30,11 +30,6 @@ description: Learn how you can implement modern DevOps practices with Azure, Azu
 <div id="demo" class="carousel slide" data-ride="carousel">
 
   <!-- Indicators -->
-  <ul class="carousel-indicators">
-    <li data-target="#demo" data-slide-to="0" class="active"></li>
-    <li data-target="#demo" data-slide-to="1"></li>
-     <li data-target="#demo" data-slide-to="2"></li>
-  </ul>
 
   <!-- The slideshow -->
   <div class="carousel-inner">
