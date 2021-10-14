@@ -1,32 +1,4 @@
----
-layout: homepage
-title: Azure DevOps Hands-On Labs
-keywords: ALM VM homepage
-tags: [overview]
-permalink: default.html
-comments: true
-landingpage: false
-description: Learn how you can implement modern DevOps practices with Azure, Azure DevOps Services and Team Foundation Server.
----
 
-<!-- <div class="bg-image">
-    <div class="container" style="padding-top:45px">
-        <div class="row">
-            <div class="col-sm-7">
-                <h1 class="mt-2">Azure DevOps Hands-On Labs</h1>
-                <div class="herotext2">
-                    <p>Evaluating your next DevOps tool chain? Want to dive deeper and learn how you can implement
-                        modern DevOps practice?</p>
-                    <p>Learn to plan smartly, collaborate better, and ship faster with a set of modern development
-                        services. </p>
-                </div>
-            </div>
-            <div class="align-items-center col-sm-5">
-                <img src="/images/lab.png" alt="banner-image" style="max-width:100%;margin-top:15px">
-            </div>
-        </div>
-    </div>
-</div> -->
 <div id="demo" class="carousel slide" data-ride="carousel">
 
   <!-- Indicators -->
