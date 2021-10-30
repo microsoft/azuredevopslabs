@@ -66,6 +66,8 @@ In this lab, you will use PartsUnlimited which is an example eCommerce website d
   1. Navigate to **Pipelines --> Pipelines**. Select **Terraform-CI** and click **Edit**.
 
       ![](images/editbuild.png)
+    
+     {% include note.html content= "We also have a YAML build pipeline if that's something you're interested in. To proceed through the YAML pipeline, choose **Terraform-CI-YAML** and click **Edit** to view the YAML pipeline. If you utilize the YAML pipeline, make sure to update the **Terraform-CD** release definition's artifact link." %}
 
   1. Your build pipeline will look like as below. This CI pipeline has tasks to compile .Net Core project. The `dotnet` tasks in the pipeline will restore dependencies, build, test and publish the build output into a zip file (package)  which can be deployed to a web application.
     
