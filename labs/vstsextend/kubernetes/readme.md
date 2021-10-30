@@ -126,7 +126,7 @@ The following azure resources need to be configured for this lab:
 Now you have all the required azure components to follow this lab.
 
 
-## Exercise 1: Configure Build and Release pipeline
+## Exercise 1: Configure Build pipeline
 
 Make sure that you have created the AKS project in your Azure DevOps organization through [Azure DevOps Demo Generator](http://azuredevopsdemogenerator.azurewebsites.net/?TemplateId=77372&Name=AKS) (as mentioned in pre-requisites). We will manually map Azure resources such as AKS and Azure Container Registry to the build and release definitions.
 
@@ -182,6 +182,42 @@ Make sure that you have created the AKS project in your Azure DevOps organizatio
 
     ![updateprocessbd](images/savebuild.png)
 
+## Exercise 1.1: Configure Build pipeline (YAML) -Optional
+We also have a YAML build pipeline if that's something you're interested in. To proceed through the YAML pipeline, choose **MyHealth.AKS.Build-YAML** and click **Edit**. If you utilize the YAML pipeline, make sure to update the **MyHealth.AKS.Release** release definition's artifact link.
+
+1. Navigate to **Pipelines –> Pipelines**.
+
+1. Select **MyHealth.AKS.Build - YAML** pipeline and click **Edit**.
+    
+    ![buildyaml](images/build-yamledit.png)
+
+1. In **Run Services** task, select **settings**. Select your **Azure subscription** from Azure subscription dropdown. Click **Authorize**.
+    
+    ![AzureAuthyaml](images/azureauthyaml.png)
+
+   You will be prompted to authorize this connection with Azure credentials. Disable pop-up blocker in your browser if you see a blank screen after clicking the OK button, and please retry the step.
+   This creates an **Azure Resource Manager Service Endpoint**, which defines and secures a connection to a Microsoft Azure subscription, using Service Principal Authentication (SPA). This endpoint will be used to connect **Azure DevOps** and **Azure**.
+
+     {% include tip.html content= "If your subscription is not listed or to specify an existing service principal, follow the [Service Principal creation](https://docs.microsoft.com/en-us/azure/devops/pipelines/library/connect-to-azure?view=vsts){:target=\"_blank\"} instructions." %}
+
+1. Following the successful authentication, select appropriate values from the dropdown - **Azure subscription** and **Azure Container Registry** as shown and click **Add**.
+    
+    ![runservicesyaml](images/runservicesyaml.png)
+   
+   Repeat this for the **Build services**, **Push services** and **Lock services** tasks in the pipeline.
+    
+     ![otherdockercomposeyaml](images/otherdockercomposeyaml.png)
+
+1. Click on the **Variables** tab.
+   
+    ![editvariables](images/editvariables.png)
+
+1. Update **ACR** and **SQLserver** values for Pipeline Variables with the details noted earlier while configuring the environment.
+   
+   ![variablesyaml](images/variablesyaml.png)
+
+## Exercise 2: Configure Release pipeline
+
 1. Navigate to **Pipelines \| Releases**. Select **MyHealth.AKS.Release** pipeline and click **Edit**.
 
    ![release](images/release.png)
@@ -218,7 +254,7 @@ Make sure that you have created the AKS project in your Azure DevOps organizatio
 
    ![releasevariables](images/releasevariables.png)
 
-## Exercise 2: Trigger a Build and deploy application
+## Exercise 3: Trigger a Build and deploy application
 
 In this exercise, let us trigger a build manually and upon completion, an automatic deployment of the application will be triggered. Our application is designed to be deployed in the pod with the **load balancer** in the front-end and **Redis cache** in the back-end.
 
