@@ -47,6 +47,7 @@ In this task, you will configure a CI pipeline that will build and push the imag
 
 1. Navigate to your Azure DevOps project, select **Pipelines** from **Pipelines**. Select **MyShuttleDockerBuild** and click **Edit**. 
 
+    {% include note.html content= "We also have a YAML build pipeline if that's something you're interested in. To proceed through the YAML pipeline, choose **MyShuttle-Docker-YAML** and click **Edit** to view the YAML pipeline. If you utilize the YAML pipeline, make sure to update the **MyShuttleDockerRelease** release definition's artifact link." %}
 1. Lets look at the tasks used in the build definition.
 
 1. Select the **Maven** task. This task is used to build the pom.xml file. The maven task is updated with the following additional settings
