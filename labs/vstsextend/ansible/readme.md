@@ -171,15 +171,17 @@ In this lab, we will use **SmartHotel360-CouponManagement**, a sample Java appli
 ### Exercise 2: Build your application using Azure CI Pipeline
 In this exercise, you will build your application and publish the required files to an artifact called drop.
 
-1. Navigate to **Pipeline > Builds**. Select **Ansible-CI** and click **Edit**.
+1. Navigate to **Pipelines --> Pipelines**. Select **Ansible-CI** and click **Edit**.
    
-    ![](images/edit-ci-pipeline.png)
+    ![](images/edit-ci-pipeline2.png)
 
 1. Your build pipeline will look like as below. This CI pipeline has tasks to compile Java project. The Maven in the pipeline will restore dependencies, build, test and publish the build output into a war file (package) which can be deployed to a web application.
  
      ![](images/ci-pipeline.png)
 
    For more guidance on how to build Java projects with Azure Pipelines see [here](https://docs.microsoft.com/en-us/azure/devops/pipelines/languages/java?toc=%2Fazure%2Fdevops%2Fjava%2Ftoc.json&bc=%2Fazure%2Fdevops%2Fpipelines%2Fbreadcrumb%2Ftoc.json&view=vsts).
+   
+   {% include note.html content= "We also have a YAML build pipeline if that's something you're interested in. To proceed through the YAML pipeline, choose **Ansible-CI-YAML** and click **Edit** to view the YAML pipeline. If you utilize the YAML pipeline, make sure to update the **Ansible-CD** release definition's artifact link." %}
 
 1. In addition to the application build, we need to publish Ansible scripts  so that it will be available in CD pipeline. So, we configured Copy files task to copy Ansible playbook **.yml** and the java web package  **.war** file to Artifacts directory.
 
@@ -193,9 +195,9 @@ In this exercise, you will build your application and publish the required files
 
  In this exercise, we will create azure resources using Ansible as part of our deployment (CD) pipeline and deploy the SmartHotel Coupon management application to the App service provisioned by Ansible.
 
-1. Navigate to **Pipeline >> Releases**. Select **Ansible-CD** and click **Edit** pipeline. 
+1. Navigate to **Pipelines >> Releases**. Select **Ansible-CD** and click **Edit** pipeline. 
 
-    ![](images/edit-cd-pipeline.png)
+    ![](images/edit-cd-pipeline2.png)
 
 1. Select **Azure Dev** stage and click **View stage tasks** to view the pipeline tasks.
 
