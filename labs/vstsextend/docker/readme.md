@@ -122,8 +122,9 @@ Now that the required resources are provisioned, the **Build** and the **Release
 
 1. Navigate to the **Pipelines** option under the **Pipelines** tab. Select the build definition `MHCDocker.build`, and select the **Edit** option.
 
-   ![Build](images/editbuild.png)
-
+   ![Build](images/editbuild2.png)
+   
+   {% include note.html content= "We also have a YAML build pipeline if that's something you're interested in. To proceed through the YAML pipeline, choose **MHCDocker.build-YAML** and click **Edit** to view the YAML pipeline. If you utilize the YAML pipeline, make sure to update the **MHCDocker.release** release definition's artifact link." %}
 1. In the **Run services, Build services and Push services** tasks, authorize (only for the first task) the **Azure subscription** and update **Azure Container Registry** with the endpoint component from the dropdown and click on **Save**.
 
    ![Tasks](images/build5.png)
@@ -138,7 +139,11 @@ Now that the required resources are provisioned, the **Build** and the **Release
    |![Build services](images/icon.png) **Build services**| builds **myhealth.web** image |
    |![Push services](images/icon.png) **Push services**| pushes **myhealth.web** image tagged with **$(Build.BuildId)** to container registry|
    |![Publish Build Artifacts](images/publish-build-artifacts.png) **Publish Build Artifacts**| used to share dacpac for database deployment through Azure DevOps artifacts|
-
+  
+   > If you are using **MHCDocker.build-YAML** build pipeline, select **Settings** on the **Run services, Build services and Push services** tasks snippet, authorize  the **Azure subscription** and update **Azure Container Registry** with the endpoint component from the dropdown and click on **Add** to update the yaml snippet.
+    
+    > ![edityamlbuild](images/edityamlbuild.png)
+       
 1. Navigate to the **Releases** section under the **Pipelines** tab. Select the release definition `MHCDocker.release`, click **Edit** option and then click on the **Tasks** section.
 
    ![Release](images/editrelease.png)
