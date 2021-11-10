@@ -112,12 +112,13 @@ You have now setup and configured all the resources that is needed to deploy and
 
 ## Exercise 3: Deploy the changes to Web App
 
-1. Select **Pipelines** and then, **Builds**. Choose the build **MyShuttleBuild** and click **Edit Pipeline** to view the build definition.
+1. Select **Pipelines \| Pipelines**. Choose the pipeline **MyShuttleBuild** and click **Edit Pipeline** to view the build definition.
 
-   ![Builds](images/choosebuilddefn.png)
+   ![Builds](images/editbuild2.png)
 
    > The lab uses the standard **Maven** build template to compile the code, copy and publish the resulting artifacts for deployment. An additional file which is copied here is the `CreateMYSQLDB.sql` file which creates a MySQL database and inserts a few records into it during the deployment.
-
+   
+    {% include note.html content= "We also have a YAML build pipeline if that's something you're interested in. To proceed through the YAML pipeline, choose **MyShuttle-YAML** and click **Edit** to view the YAML pipeline. If you utilize the YAML pipeline, make sure to update the **MyShuttleRelease** release definition's artifact link." %}
 1. Click **Queue** to trigger the build and wait for the build to complete.
 
    ![Queue Build](images/queuebuild.png)
