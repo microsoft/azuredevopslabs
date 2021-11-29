@@ -183,6 +183,8 @@ In this exercise, you will look at the build definition to get an insight of how
 1. Navigate to **Pipelines \| Pipelines** in Azure DevOps portal. Select **AzureFunctions_CI** and  click **Edit**.
 
     ![build definition](images/builddefinition.png)
+ 
+   {% include note.html content= "We also have a YAML build pipeline if that's something you're interested in. To proceed through the YAML pipeline, choose **AzureFunctions_CI-YAML** and click **Edit** to view the YAML pipeline. If you utilize the YAML pipeline, make sure to update the **AzureFunctions_CD** release definition's artifact link." %}
 
 1. Before the build is executed, you will make this a **CI** build. Click the **Triggers** tab in the build definition. Enable the **Continuous Integration** trigger. Click **Save & queue**  to save the changes and trigger a build. This will ensure that the build process is automatically triggered every time you commit a change to your repository.
 
