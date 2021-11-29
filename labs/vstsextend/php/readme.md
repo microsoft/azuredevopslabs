@@ -59,6 +59,9 @@ The **Azure DevOps Demo Generator** creates a Git repository with code in your A
 
    Let's explore the build definition. The tasks used in the build definition are listed below.
 
+  {% include note.html content= "We also have a YAML build pipeline if that's something you're interested in. To proceed through the YAML pipeline, choose **PHP-YAML** and click **Edit** to view the YAML pipeline. If you utilize the YAML pipeline, make sure to update the **PHP** release definition's artifact link." %}
+
+
    ![Build Definition](images/builddef.png)
 
    <table width="70%">
