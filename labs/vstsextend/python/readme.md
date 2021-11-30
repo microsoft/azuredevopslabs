@@ -47,6 +47,8 @@ In this exercise, you will examine the source code provisioned by [Azure DevOps 
 
     ![](images/python-ci-edit.png)
 
+   {% include note.html content= "We also have a YAML build pipeline if that's something you're interested in. To proceed through the YAML pipeline, choose **Python-CI-YAML** and click **Edit** to view the YAML pipeline. If you utilize the YAML pipeline, make sure to update the **Python-CD** release definition's artifact link." %}
+   
 1. Your build pipeline will look like as below. This pipeline has tasks to install dependencies of application, run unit tests, archive& publish the application into a zip file (package) which can be deployed to a web application.
 
      ![](images/ci-pipeline.png)

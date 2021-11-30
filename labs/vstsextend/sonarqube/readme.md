@@ -123,6 +123,9 @@ Now that the SonarQube server is running, we will modify Azure Build pipeline to
 
 1. Go to **pipelines** under **Pipelines** tab, edit the build pipeline **SonarQube**. This is a Java application and we are using [Maven](https://docs.microsoft.com/en-us/azure/devops/pipelines/tasks/build/maven?view=azure-devops) to build the code. And we are using [SonarQube](https://marketplace.visualstudio.com/items?itemName=SonarSource.sonarqube) extension tasks to prepare  analysis on SonarQube and publish Quality Gate results.
 
+
+   {% include note.html content= "We also have a YAML build pipeline if that's something you're interested in. To proceed through the YAML pipeline, choose **SonarQube-YAML** and click **Edit** to view the YAML pipeline." %}
+
 1. **Prepare Analysis Configuration** task is to configure all the required settings before executing the build. Click **+ NEW** to add SonarQube server endpoint. 
     
     ![](images/prepare-analysis.png)

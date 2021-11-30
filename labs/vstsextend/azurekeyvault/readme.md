@@ -9,7 +9,7 @@ folder: /labs/vstsextend/azurekeyvault/
 <div class="rw-ui-container"></div>
 
 ## Overview 
-Azure Key Vault helps teams to securely store and manage sensitive information such as keys, passwords, certificates, etc., in a centralized storage which are safeguarded by industry-standard algorithms, key lengths, and even hardware security modules. This prevents the disclosure of information through source code,  a common mistake that many developers make. Many developers leave confidential details such as database connection strings, passwords, private keys, etc., in their source code which when gained by malicious users can result in undesired consequences. Access to a key vault requires proper authentication and authorization and with RBAC, teams can have even fine granular control who has what permissions over the sensitive data.
+**Azure Key Vault** helps teams to securely store and manage sensitive information such as keys, passwords, certificates, etc., in a centralized storage which are safeguarded by industry-standard algorithms, key lengths, and even hardware security modules. This prevents the disclosure of information through source code,  a common mistake that many developers make. Many developers leave confidential details such as database connection strings, passwords, private keys, etc., in their source code which when gained by malicious users can result in undesired consequences. Access to a key vault requires proper authentication and authorization and with RBAC, teams can have even fine granular control who has what permissions over the sensitive data.
 
 ## What’s covered in this lab
 In this lab, you will see how you can use Azure Key Vault in a pipeline.
@@ -33,7 +33,7 @@ In this lab, you will see how you can use Azure Key Vault in a pipeline.
 
 You will need a service principal to deploy an app to an Azure resource from Azure Pipelines. Since we are going to retrieve secrets in a pipeline, we will need to grant permission to the service when we create the key vault. 
 
-A service principal is automatically created by Azure Pipeline when you connect to an Azure subscription from inside a pipeline definition or when you create a new service connection from the project settings page. You can also manually create the service principal from the portal or using Azure CLI,  and re-use it across projects. It is recommended that you use an existing service principal when you want to have a pre-defined set of permissions.
+A service principal is automatically created by Azure Pipeline when you connect to an Azure subscription from inside a pipeline definition or when you create a new service connection from the project settings page. You can also manually create the service principal from the portal or using Azure CLI and re-use it across projects. It is recommended that you use an existing service principal when you want to have a pre-defined set of permissions.
 
 We will create one manually using the Azure CLI. If you do already have a service principal, you can skip this task.
 
@@ -63,7 +63,7 @@ Next, we will create a key vault in Azure. For this lab scenario, we have a node
 
 1. Enter "Key vault" in the search field and press enter. Select **Key Vaults** under services.
 
-1. Select **Add** or the **Create key vault** button to create a new key vault.
+1. Select **Create** or the **Create key vault** button to create a new key vault.
 
     ![](images/addkeyvault.png)
 
@@ -110,6 +110,8 @@ Now, lets go to the Azure DevOps project that you provisioned using the [Azure D
 1. To trigger a build, choose the **SmartHotel-CouponManagement-CI** definition and then **Run Pipeline** to manually queue it.
 
     ![](images/kv_t3_s3.png)
+
+   {% include note.html content= "We also have a YAML build pipeline if that's something you're interested in. To proceed through the YAML pipeline, choose **SmartHotel-CouponManagement-CI-YAML** and click **Edit**. If you utilize the YAML pipeline, make sure to update the **SmartHotel-CouponManagement-CD** release definition's artifact link." %}
 
 1. Go to **Releases** under **Pipelines** and then select and **Edit** the **SmartHotel-CouponManagement-CD** definition.
 

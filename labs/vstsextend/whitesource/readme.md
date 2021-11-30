@@ -48,6 +48,8 @@ You have a **Java code** provisioned by the Azure DevOps demo generator. You wil
 1. Go to **Pipelines** section under **Pipelines** tab, select the build definition **WhiteSourceBolt** and click on **Run pipeline** to trigger a build. Click **Run** (leave defaults).
 
    ![build-def](images/run.png)
+   
+   {% include note.html content= "We also have a YAML build pipeline if that's something you're interested in. To proceed through the YAML pipeline, choose **WhiteSourceBolt-YAML** and click **Edit** to view the YAML pipeline." %}
 
 1. To view the build in progress status, click on job named **Phase 1**.
 
