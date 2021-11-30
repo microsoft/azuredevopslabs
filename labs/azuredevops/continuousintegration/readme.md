@@ -77,13 +77,6 @@ In this lab, you will learn how to configure continuous integration (CI) and con
 
     ![](images/008.png)
 
-1. Select the **Retention** tab. Right-click **go to the project settings to configure** and select **Open in new tab**.
-
-    ![](images/009.png)
-
-1. This section enables you to configure which pipeline runs are retained and for how long. Close the tab.
-
-    ![](images/010.png)
 
 1. Select the **History** tab. There's nothing here yet, but it will show a history of changes you make to the build definition.
 
