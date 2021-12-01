@@ -22,7 +22,9 @@ Visual Studio Team Services provides a first-class support for **Git** with seve
 The primary difference between the two is that VSTS is focused on closed source projects and GitHub is focused more on open source projects. GitHub offers both private and public repositories. However, it doesn't have an integrated build server.
 
 Teams can overcome this shortfall by using Visual Studio Team Services (VSTS) as a continuous integration platform for GitHub.
-
+ {% include note.html content= "This Lab is Deprecated. We have new set of labs
+https://azuredevopslabs.com/labs/vstsextend/github-azurepipelines/
+https://azuredevopslabs.com/labs/vstsextend/github-azureboards/" %}
 ### What's covered in this lab
 
 In this hands-on lab, we will introduce you to open source DevOps using **GitHub, Visual Studio Team Services** and **Azure**. You will learn how to deploy an **ASP.Net** application to Azure App Service using CI/CD pipeline in Visual Studio Team Services with code repository in GitHub.We will cover the following steps:
