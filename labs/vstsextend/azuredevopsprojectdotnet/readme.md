@@ -1,5 +1,5 @@
 ---
-title: Create a CI/CD pipeline for .NET with the Azure DevOps Project
+title: Create a CI/CD pipeline for .NET with the DevOps Starter Project
 layout: page
 sidebar: vsts2
 permalink: /labs/vstsextend/azuredevopsprojectdotnet/
@@ -9,15 +9,15 @@ folder: /labs/vstsextend/azuredevopsprojectdotnet/
 
 ## Overview
 
-The **Azure DevOps Project** simplifies the setup of an entire continuous integration (CI) and continuous delivery (CD) pipeline to Azure with Azure DevOps. You can start with existing code or use one of the provided sample applications. Then you can quickly deploy that application to various Azure services such as Virtual Machines, App Service, Azure Kubernetes Services (AKS), Azure SQL Database, and Azure Service Fabric.
+The **DevOps Starter Project** simplifies the setup of an entire continuous integration (CI) and continuous delivery (CD) pipeline to Azure with Azure DevOps. You can start with existing code or use one of the provided sample applications. Then you can quickly deploy that application to various Azure services such as Virtual Machines, App Service, Azure Kubernetes Services (AKS), Azure SQL Database and Azure Service Fabric.
 
 DevOps Projects does all the work for the initial configuration of a DevOps pipeline including everything from setting up the initial Git repository, configuring the CI/CD pipeline, creating an Application Insights resource for monitoring, and providing a single view of the entire solution with the creation of a DevOps Projects dashboard in the Azure portal.
 
 ## What's covered in this lab?
 
  In this lab, you will
-* Create an ASP.NET sample DevOps project using **Azure DevOps Project** feature in Azure
-* Examine the CI/CD pipelines configured by **Azure DevOps Project**
+* Create an ASP.NET sample DevOps project using **DevOps Starter** feature in Azure
+* Examine the CI/CD pipelines configured by **DevOps Starter**
 * Commit the code changes and execute CI/CD
 * Configure Azure Application Insights monitoring
 
@@ -31,25 +31,29 @@ DevOps Projects does all the work for the initial configuration of a DevOps pipe
 
 1. You will need an Azure DevOps account. If you do not have one, you can sign up for free [here](https://azure.microsoft.com/en-us/services/devops/).
 
-{% include note.html content= "This lab is deprecated. DevOps project feature in Azure portal is now DevOps Starter and it will create Repo and Pipelines in your GitHub account instead of Azure DevOps. For .Net project CI/CD please follow [Enabling Continuous Integration with Azure Pipelines](https://azuredevopslabs.com/labs/azuredevops/continuousintegration/)  and [Embracing Continuous Delivery with Azure Pipelines](https://azuredevopslabs.com/labs/azuredevops/continuousdeployment/) labs." %}
 
-## Exercise 1: Setting up a sample ASP.NET project using Azure DevOps Project
+## Exercise 1: Setting up a sample ASP.NET project using DevOps Starter Project
 
 
 1. Sign into the [Microsoft Azure portal](https://portal.azure.com).
 
-1. Choose the **+ Create a resource** icon in the left navigation bar, then search for **DevOps project**. Then choose **DevOps Project** in the list. Select  **Create**.
+1. In the search box, type DevOps , and then select **DevOps Starter**. Then click on **Create DevOps Starter**
 
-    ![searchdevopsproject](images/searchdevopsproject.png)
+    ![searchdevopsproject](images/searchdevopsstarter.png)
 
-    ![createdevopsproject](images/createdevopsproject.png)
+    ![createdevopsproject](images/createdevopsstarter.png)
 
-1. Select the **.NET** sample application and click **Next**. 
+1. By default DevOps Starter project setup with GitHub. Click on change settings **here** to change the destination to Azure DevOps and click **Done**
+    
+    ![](images/changesettings.png)
+
+
+1. Now select the **.NET** sample application and click **Next**. 
 
    ![selectdotnet](images/selectdotnet.png)
 
 
-1. The .NET samples include a choice of either the open source ASP.NET framework or the cross-platform .NET Core framework.  Select the .NET Core application framework. This sample is an ASP.NET Core MVC application. And also enable **Add a database** toggle to add the database to the application. When you're done, choose **Next**.
+1. The .NET samples include a choice of either the open source ASP.NET framework or the cross-platform .NET Core framework.  Select the .NET Core application framework. This sample is an ASP.NET Core MVC application. And also enable **Add a database** toggle to add the database to the application. When you’re done, choose Next.
 
    ![aspnetframework](images/aspnetframework.png)
 
@@ -58,7 +62,7 @@ DevOps Projects does all the work for the initial configuration of a DevOps pipe
    ![selectwebapp](images/selectwebapp.png)
 
 
-1. Select your Azure DevOps organization and choose a **name** for your project and  Web app. When you're done, choose **Done**.
+1. Select your Azure DevOps organization and choose a name for your project and Web app. When you’re done, choose **Review + Create**.
 
     ![vstsproject](images/vstsproject.png)
   
@@ -77,8 +81,12 @@ DevOps Projects does all the work for the initial configuration of a DevOps pipe
    
    DevOps project 
    - Created a team project with sample .NET code repository
-   - Created Azure Web App and Azure SQL database in Azure
+   
    - Created a build and release pipelines to compile, test and deploy the application
+
+   - Created Azure Web App and Azure SQL database in Azure using Azure Pipelines
+
+     >If Azure Resources are not created, they will be created by CI/CD pipeline. You can track pipeline status in 'CI/CD pipeline' section
 
    You're now ready to collaborate with a team on an ASP.NET Core app with a CI/CD process that automatically deploys your latest work to your web site.
 
@@ -92,7 +100,7 @@ DevOps Projects does all the work for the initial configuration of a DevOps pipe
 
       
 ## Exercise 2: Examine the  CI/CD pipelines configured by Azure DevOps Project
-  The Azure DevOps project automatically configured a full CI/CD pipeline in your Azure DevOps organization. You can explore and customize the pipeline as needed. Follow the steps below to familiarize yourself with the Azure DevOps build and release pipelines.
+  The Azure DevOps Starter project automatically configured a full CI/CD pipeline in your Azure DevOps organization. You can explore and customize the pipeline as needed. Follow the steps below to familiarize yourself with the Azure DevOps build and release pipelines.
 
   1. Select **Build Pipelines** from the top of the Azure DevOps project dashboard. This link opens a browser tab and the Azure DevOps build pipeline for your new project.
 
@@ -111,11 +119,10 @@ DevOps Projects does all the work for the initial configuration of a DevOps pipe
 1. Under your build pipeline name, select **History**. You see an audit trail of your recent changes for the build. Azure DevOps keeps track of any changes made to the build definition and allows you to compare versions.
 
   
-1. Select **Triggers**. The Azure DevOps project automatically created a CI trigger, and every commit to the repository initiates a new build. You can optionally choose to include or exclude branches from the CI process.
+1. Select **Triggers**. The Azure DevOps project automatically created a CI trigger and every commit to the repository initiates a new build. You can optionally choose to include or exclude branches from the CI process.
 
    ![triggers](images/triggers.png)
 
-1. Select **Retention**. Depending on your scenario, you can specify policies to keep or remove a certain number of builds.
 
 1.  Select **Releases** under **Pipelines** section.
    
@@ -182,7 +189,7 @@ The Azure DevOps project created a Git repository in your Azure DevOps organizat
       ![addcode2](images/addcode.png)
 
 
-1. In your browser, navigate to the **Pipelines \| Builds**. You should now see a build is in progress. The changes you just made are automatically built and deployed via  Azure DevOps CI/CD pipelines.
+1. In your browser, navigate to the **Pipelines \| Pipelines**. You should now see a build is in progress. The changes you just made are automatically built and deployed via  Azure DevOps CI/CD pipelines.
 
     ![buildqueue](images/buildqueue.png)
 
