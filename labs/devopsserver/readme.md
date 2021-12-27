@@ -399,17 +399,7 @@ redirect_from: "/labs/tfs/index.htm"
                                         virtual machine, you can access them from the <a href="./handsonlabs/"><strong>Microsoft
                                                 Hands-on-Labs</strong></a> center. You only need a browser. There is
                                         absolutely no download or setup required!
-                                    </li><!--
-                                    <li>
-                                        <strong>Run it on Azure</strong> - Though the VM is currently not supported to
-                                        run on Azure, you can simply upload the VHD to Azure as a specialized VHD and
-                                        create a VM from it. Thanks to <strong>Pieter Gheysens</strong> who has written
-                                        a PowerShell script to create VM instances based on the DevOps VM. His <a href="https://intovsts.net/2018/01/03/generating-azure-vms-from-a-specialized-vhd-file/"
-                                            target="_blank">blog</a> has more details.
-                                        If you want to and customize and upload the VHD yourself, please see this
-                                        article for step-by-step instructions - <a href="https://docs.microsoft.com/en-us/azure/virtual-machines/windows/create-vm-specialized"
-                                            target="_blank">Create a Windows VM from a specialized disk</a>
-                                    </li>-->
+                                    </li>
                                 </ul>
                             </div>
      </div>	 
