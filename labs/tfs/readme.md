@@ -88,6 +88,6 @@ You can get access to the virtual machine the following ways:
 
 - **Try it on Microsoft Hands-on Labs** - If you are evaluating or want to try the labs without the hassle of downloading or setting up the virtual machine, you can access them from the [**Microsoft Hands-on-Labs**](technet/) center. You only need a browser. There is absolutely no download or setup required!
 
-- **Run it on Azure** - Though the VM is currently not supported to run on Azure, you can simply upload the VHD to Azure as a specialized VHD and create a VM from it. Thanks to **Pieter Gheysens** who has written a PowerShell script to create VM instances based on the ALM VM. His [blog](https://intovsts.net/2018/01/03/generating-azure-vms-from-a-specialized-vhd-file/){:target="_blank"} has more details.
+- **Run it on Azure** - Though the VM is currently not supported to run on Azure, you can simply upload the VHD to Azure as a specialized VHD and create a VM from it. Checkout [our documentation to learn more](https://docs.microsoft.com/azure/virtual-machines/windows/create-vm-specialized-portal){:target="_blank"}.
 
   If you want to and customize and upload the VHD yourself, please see this article for step-by-step instructions - [Create a Windows VM from a specialized disk](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/create-vm-specialized){:target="_blank"}
