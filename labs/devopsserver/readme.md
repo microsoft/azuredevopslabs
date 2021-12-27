@@ -6,6 +6,7 @@ comments: true
 folder: /labs/devopsserver/
 landing-page: false
 description: Learn how you can remove barriers between teams, encourage collaboration, and improve the flow of value to your customers with Visual Studio and Azure DevOps Server
+redirect_from: "/labs/tfs/index.htm"
 ---
             
 <div class="banner4 text-white">            
