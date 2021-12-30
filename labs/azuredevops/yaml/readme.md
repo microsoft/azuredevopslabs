@@ -31,10 +31,10 @@ The following image will walk you through all the steps explained in this lab
 
 1. This lab requires a deployment of the Parts Unlimited project out to an Azure app service. To do this, you will need to spin up the necessary infrastructure. Log in to your Azure account at [https://portal.azure.com](https://portal.azure.com/).
 
-1. Click **Create a resource** and search for **"Web App + SQL"**.
+1. Click **Create a resource** and search for **"Web App + Database"**.
 
 
-1. Select the **Web App + SQL** option published by Microsoft.
+1. Select the **Web App + Database** option published by Microsoft.
 
     ![](images/createresource.png)
 
