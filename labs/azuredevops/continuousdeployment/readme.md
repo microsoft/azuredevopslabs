@@ -4,8 +4,8 @@ layout: page
 sidebar: vsts
 permalink: /labs/azuredevops/continuousdeployment/
 folder: /labs/azuredevops/continuousdeployment/
-version: Lab version - 1.38.0
-updated: Last updated - 10/11/2020
+version: Lab version - 1.39.0
+updated: Last updated - 20/01/2022
 redirect_from: "/labs/vsts/continuousdeployment/index.htm"
 ---
 <div class="rw-ui-container"></div>
@@ -34,15 +34,14 @@ In this lab, you will learn about the release management features available in A
 
 1. Start off by creating the Azure resources needed for this lab. This includes a database and two app services: one for QA and one for production. Log into your account at [https://portal.azure.com](https://portal.azure.com/).
 
-1. Click **Create a resource** and search for **"sql"**.
+1. Click **Create a resource** and search for **"SQL Database"**. Select **SQL Database**.
 
-    ![](images/000.png)
+    ![](images/searchsqldb.png)
 
-1. Select **SQL Database**.
-
-    ![](images/sql.png)
 
 1. Click **Create**.
+    
+    ![](images/clickcreatesql.png)
 
 
 1. Under **Resource group**, click **Create new**.
@@ -59,11 +58,14 @@ In this lab, you will learn about the release management features available in A
 
 1. Enter a unique name for **Server name**, such as by including your name. Enter an admin username and password you can remember. Note that **"P2ssw0rd"** meets the password requirements. Click **OK** to confirm these options.
 
-    ![](images/007.png)
+    ![](images/sqlserverdetails.png)
 
-1. In **Compute + storage** select **Configure Database**. click on **looking for basic, standard and premium?** , leave the defaults for standard and click **apply**.
+1. In **Compute + storage** select **Configure Database**. Select **Basic** service tier and click **Apply**.
 
-    ![](images/confsql.png)
+    ![](images/configuredb.png)
+
+    ![](images/basicsqltier.png)
+
 
 1. Click **Review + create**.
 
@@ -73,16 +75,14 @@ In this lab, you will learn about the release management features available in A
 
     ![](images/009.png)
 
-1. Click **Create a resource** and search for **"web"**.
+1. From Azure Portal home page search for **"App Services"** and select **App Services**.
 
-    ![](images/010.png)
+    ![](images/searchappservices.png)
 
-1. Select the **Web App** template.
 
-    ![](images/webapp.png)
-
-1. Click **Create**.
-
+1. Click **Create** in App Services page.
+    
+    ![](images/createappservice.png)
 
 1. Under **Project Details**, select the same **Subscription** and **Resource Group** used for the database.
 
@@ -118,7 +118,8 @@ In this lab, you will learn about the release management features available in A
 1. Select the **Firewalls and virtual networks** tab from the **Security** section.
 
 1. Set **"Allow Azure services and resources to access this server"** to **Yes** to allow the App Services to access this SQL server.
-
+   
+   ![](images/sqlfirewall.png)
 1. Click **Save** on the top of the tab.
 
 1. Continue on to the next task. Leave this browser tab open for later.
