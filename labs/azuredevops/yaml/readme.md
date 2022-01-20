@@ -4,8 +4,8 @@ layout: page
 sidebar: vsts
 permalink: /labs/azuredevops/yaml/
 folder: /labs/azuredevops/yaml/
-version: Lab version - 1.37.1
-updated: Last updated - 13/11/2020
+version: Lab version - 1.37.2
+updated: Last updated - 20/01/2022
 ---
 <div class="rw-ui-container"></div>
 <a name="Overview"></a>
@@ -31,45 +31,80 @@ The following image will walk you through all the steps explained in this lab
 
 1. This lab requires a deployment of the Parts Unlimited project out to an Azure app service. To do this, you will need to spin up the necessary infrastructure. Log in to your Azure account at [https://portal.azure.com](https://portal.azure.com/).
 
-1. Click **Create a resource** and search for **"Web App + SQL"**.
+1. In the home page search for **"SQL"** and select **SQL Databases**
+   
+      ![](images/searchSQL.png)
+1. Click on **Create** in SQL data bases page
 
+    ![](images/clickcreatesql.png)
 
-1. Select the **Web App + SQL** option published by Microsoft.
+1. Under **Resource group**, click **Create new**. Enter a Name of **“partsunlimited”** and click **OK**.
+     
+     ![](images/createrg.png)
 
-    ![](images/createresource.png)
+1. In Database details Enter a Database name of **“partsunlimited-yaml”** and click **Create new** to create a new SQL server.
+     
+    ![](images/dbname.png)
 
-1. Click **Create**.
+1. Enter a globally unique server name, such as **“pul-yaml-johndoe”** and provide admin credentials, then click **OK**.
+    
+    ![](images/sqlserverdetails.png)
 
-    ![](images/002.png)
+1. In Database details  under **Compute + storage**, click on **Configure database**. Then select **Basic** Service tier and click **Apply**
 
-1. Enter a globally unique name for the app service. You may find it easiest to incorporate your name, such as **"pul-yaml-johndoe"**. Select the option to **create a new** resource group named **"partsunlimited"**.
+   ![](images/clickconfiguredb.png)
 
-    ![](images/003.png)
+   ![](images/basicdb.png)
 
-1. Select the option to configure the **SQL Database**. Click **Create a new database** and enter the name **"partsunlimited-yaml"**.
+1. In Create SQL database page, click **Review + create**. Then click **Create**. It’ll take some time to complete, but you can move on to the next step while it works in the background.
+    
+    ![](images/reviewandcreate.png)
 
-    ![](images/004.png)
+1. In the home page search for **App Services** and select **App Services**
+    
+    ![](images/searchappservices.png)
 
-1. Select the option to configure the **Target server** and click **Create a new server**. Enter a globally unique server name, such as **"pul-yaml-johndoe"** and provide admin credentials. Make sure **Allow Azure services to access server** checkbox is selected. Click **Select** to confirm the server settings.
+1. Click **Create** in App Services page 
 
-    ![](images/005.png)
+    ![](images/clickcreateapp.png)
 
-1. On **Pricing Tier** , Select **Standard** and leave default options. Click **Apply**.
-
-   ![](images/conf_sql.png)
-
-1. Click **Select** to confirm the database settings.
-
-    ![](images/006.png)
-
-1. Click **Create** to create the resources. Note that you may need to create an app service plan first, if you do not yet have one.
-
-    ![](images/007.png)
-
-1. It will take a few minutes for the resources to provision, so you can move on to the next task.
+1. Under Project Details, select the same Subscription and Resource Group used for the database. For Name, enter a unique name, such as by using your name as part. Select the **ASP.NET 4.8 Runtime** stack. Click **Review + Create** and then **Create**
+    ![](images/createwebapp.png)
 
 <a name="Ex1Task2"></a>
-### Task 2: Configuring the Parts Unlimited project ###
+### Task 2: Configuring the Azure App Service ###
+
+1. Navigate to the **PartsUnlimited** resource group created in previous task and select SQL server created
+
+     ![](images/selectsqlserver.png)
+
+1. In Security select **Firewalls and virtual networks**. Set **Allow Azure services and resources to access this server** flag to **Yes** and click **Save**
+
+    ![](images/firewallsql.png)
+
+1. Now select Database created from the resource group
+     ![](images/selectdb.png)
+1. Select **Connection strings** and Copy the **ADO.NET** string to your clipboard and Notepad so that you can configure your new web site to use it. Close this blade.
+     
+      ![](images/dbconnectionstring.png)
+
+1. Select app service created earlier.
+     
+    ![](images/selectappservice.png)
+
+1. Select the **Configuration** tab from the **Settings** section. Click **New connection string**
+    
+    ![](images/selectconnectionstring.png)
+
+1. Add name as **“DefaultConnectionString”** and paste the ADO.Net connection string value copied.
+You’ll need to locate the **“{your_username}”** and **“{your_password}”** sections and replace them (including braces) with the actual SQL credentials entered earlier. Be sure the **Type** is set to **SQLAzure** and click **OK**. 
+
+     ![](images/createconnectionstring.png)
+
+1. Click **Save** to commit.
+
+<a name="Ex1Task3"></a>
+### Task 3: Configuring the Parts Unlimited project ###
 
 1. Navigate to your team project on Azure DevOps in a new browser tab. Before digging into the YAML pipelines, you will want to disable the existing build pipeline.
 
@@ -85,8 +120,8 @@ The following image will walk you through all the steps explained in this lab
 
     ![](images/010.png)
 
-<a name="Ex1Task3"></a>
-### Task 3: Adding a YAML build definition ###
+<a name="Ex1Task4"></a>
+### Task 4: Adding a YAML build definition ###
 
 1. Navigate to the **Pipelines** hub.
 
@@ -142,8 +177,8 @@ The following image will walk you through all the steps explained in this lab
 
     ![](images/023.png)
 
-<a name="Ex1Task4"></a>
-### Task 4: Adding continuous delivery to the YAML definition ###
+<a name="Ex1Task5"></a>
+### Task 5: Adding continuous delivery to the YAML definition ###
 
 1. Now that the build and test processes are successful, we can now add delivery to the YAML definition. From the options dropdown, select **Edit pipeline**.
 
@@ -270,30 +305,14 @@ The following image will walk you through all the steps explained in this lab
 
     ![](images/050.png)
 
-<a name="Ex1Task5"></a>
-### Task 5: Reviewing the deployed site ###
+<a name="Ex1Task6"></a>
+### Task 6: Reviewing the deployed site ###
 
 1. Return to the Azure portal browser tab.
 
 1. Navigate to the app service created earlier.
 
-1. Select the **Configuration** tab.
-
-    ![](images/051.png)
-
-1. Click the **defaultConnection** setting.
-
-    ![](images/052.png)
-
-1. Update the **Name** to **"DefaultConnectionString"**, which is the key expected by the application. This will enable it to connect to the database created for the app service. Click **OK**.
-
-    ![](images/053.png)
-
-1. Click **Save** to apply the changes.
-
-    ![](images/054.png)
-
-1. Return to the **Overview** tab.
+1. Go to the **Overview** tab.
 
     ![](images/055.png)
 
