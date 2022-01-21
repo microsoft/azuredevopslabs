@@ -5,7 +5,7 @@ sidebar: vsts
 permalink: /labs/azuredevops/continuousdeployment/
 folder: /labs/azuredevops/continuousdeployment/
 version: Lab version - 1.39.0
-updated: Last updated - 20/01/2022
+updated: Last updated - 21/01/2022
 redirect_from: "/labs/vsts/continuousdeployment/index.htm"
 ---
 <div class="rw-ui-container"></div>
