@@ -14,6 +14,8 @@ folder: /labs/vstsextend/appcenter/
 In this lab, we are going to automate the **Build-Test-Distribute** process for **Tailwind Traders** mobile applications using **App Center**. The code for the mobile application is on GitHub at [TailwindTraders-Mobile](https://github.com/Microsoft/TailwindTraders-Mobile.git)
 
   ![](images/mobile.png)
+  
+{% include important.html content= "This lab is deprecated." %}
 
 In this lab, we are going to use [App Center Demo Generator](https://appcenterdemogenerator.azurewebsites.net/) 
  to automatically provision required source code repository in your GitHub account and to configure a project in your App Center account.
