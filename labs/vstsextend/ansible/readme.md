@@ -12,7 +12,7 @@ folder: /labs/vstsextend/ansible/
 [Ansible](https://www.ansible.com/) is an open-source tool that automates cloud provisioning, configuration management, and application deployments. Using Ansible you can provision virtual machines, containers, network, and complete cloud infrastructures. In addition, Ansible allows you to automate the deployment and configuration of resources in your environment.
 
 
-Ansible includes a suite of [Ansible modules](http://docs.ansible.com/ansible/latest/modules_by_category.html) that can be executed directly on remote hosts or via playbooks. Users can also create their own modules. Modules can be used to control system resources - such as services, packages, or files - or execute system commands.
+Ansible includes a suite of [Ansible modules](https://docs.ansible.com/ansible/2.9/modules/modules_by_category.html) that can be executed directly on remote hosts or via playbooks. Users can also create their own modules. Modules can be used to control system resources - such as services, packages, or files - or execute system commands.
 
 For interacting with Azure services, Ansible includes a suite of [Ansible cloud modules](https://docs.ansible.com/ansible/2.9/modules/list_of_cloud_modules.html#azure) that provides the tools to easily create and orchestrate your infrastructure on Azure.
 
@@ -78,14 +78,16 @@ To create and provision the resources in Azure with Ansible, we need to have a L
       
     ![](images/selectvm.png)
 
-1. Click **Connect** and copy the login command under the **SSH** tab.
+1. Select **Overview** and copy the **Public IP address**.
    
-    ![](images/connecttovm.png)
+    ![](images/publicipnote.png)
 
-1. Open a Command prompt and paste the copied login command and log in. It will prompt for confirmation to connect, type **Yes** and provide the Password you have given in step 1.
+1. Open a Command prompt and enter the below command
+  ` ssh vmadmin@<Public IP> ` to login to VM. It will prompt for confirmation to connect, type **Yes** and provide the Password you have given in step 1.
 
    ![](images/sshtovm.png) 
-
+   
+   Note: Replace *vmadmin* with your VM username in the above command.
 1. Now we must create a directory named **.azure** in the home directory and a credentials file under it. Type the following commands to create them.
 
    `mkdir ~/.azure`
@@ -132,11 +134,13 @@ To connect and run playbooks through Ansible VM in Azure pipelines, we need to h
 
 1. Navigate to the project we created above using [Azure DevOps Demo Generator](https://azuredevopsdemogenerator.azurewebsites.net/?Name=Ansible).
 
-1. Navigate to **Project Settings** --> **Service Connections**. Select **+New service connection** and select **SSH**
+1. Navigate to **Project Settings** --> **Service Connections**. Select **Create service connection**.
 
    ![](images/sshendpoint.png) 
+1. In **New Service Connection** windows select **SSH** and click **Next**
 
-1. In **Add an SSH service connection** window provide the required details and click **OK** to save the connection.
+    ![](images/selectSSH.png)
+1. In **New SSH service connection** window provide the required details and click **Save** to save the connection.
    
    ![](images/SSHserviceconnection.png)
 
@@ -207,7 +211,7 @@ In this exercise, you will build your application and publish the required files
 
    ![](images/cdpipeline-tasks.png)
 
-1. Select the **Replace Tokens** task.
+1. Select the **Replace Tokens** task. And make sure Token pattern is selected as **__'''\__** as shown in image.
 
    ![](images/replacetokens.png)
 
