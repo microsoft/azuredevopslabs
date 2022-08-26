@@ -12,7 +12,7 @@ folder: /labs/vstsextend/ansible/
 [Ansible](https://www.ansible.com/) is an open-source tool that automates cloud provisioning, configuration management, and application deployments. Using Ansible you can provision virtual machines, containers, network, and complete cloud infrastructures. In addition, Ansible allows you to automate the deployment and configuration of resources in your environment.
 
 
-Ansible includes a suite of [Ansible modules](http://docs.ansible.com/ansible/latest/modules_by_category.html) that can be executed directly on remote hosts or via playbooks. Users can also create their own modules. Modules can be used to control system resources - such as services, packages, or files - or execute system commands.
+Ansible includes a suite of [Ansible modules](https://docs.ansible.com/ansible/2.9/modules/modules_by_category.html) that can be executed directly on remote hosts or via playbooks. Users can also create their own modules. Modules can be used to control system resources - such as services, packages, or files - or execute system commands.
 
 For interacting with Azure services, Ansible includes a suite of [Ansible cloud modules](https://docs.ansible.com/ansible/2.9/modules/list_of_cloud_modules.html#azure) that provides the tools to easily create and orchestrate your infrastructure on Azure.
 
@@ -45,53 +45,82 @@ Ansible includes a suite of modules for interacting with Azure Resource Manager,
 
     ![](images/azurecloudshell.png)
 
-1. Enter the following command by replacing ServicePrincipalName with your desired value.
-
-   `az ad sp create-for-rbac --name ServicePrincipalName `
-
-   It will give you a JSON output as shown in the image. Copy the output to notepad. This details required in your next tasks.
-         
-    ![](images/azureserviceprincipal.png)
-
 1. Enter the following command to get Azure SubscriptionID and copy the same to notepad.
    
     `az account show`
 
       ![](images/subscriptionid.png)
 
+1. Enter the following command by replacing ServicePrincipalName with your desired value and Subscription ID from the previous step.
+
+   `az ad sp create-for-rbac --name ServicePrincipalName --role Contributor --scopes /subscriptions/<subscriptionid> `
+
+   It will give you a JSON output as shown in the image. Copy the output to notepad. This details required in your next tasks.
+         
+    ![](images/azureserviceprincipal.png)
+
+
     For more information about Azure service principal click [here](https://docs.microsoft.com/en-us/cli/azure/create-an-azure-service-principal-azure-cli?view=azure-cli-latest#create-the-service-principal).
 
 
 ### Task 2: Configure Ansible in a Linux machine
 
-To create and provision the resources in Azure with Ansible, we need to have a Linux VM with Ansible configured. In this exercise, you will deploy an Azure Linux VM which is pre-installed and configured with Ansible.
+To create and provision the resources in Azure with Ansible, we need to have a Linux VM with Ansible configured. In this exercise, you will deploy an Azure Linux VM and configure Ansible on the virtual machine
 
-1. Click on the **Deploy to Azure** button to provision a **Ubuntu 18.04 VM** with Ansible.
+1. In the Azure Cloud shell enter below command to create Azure resource group
 
-   [![Deploy to Azure](http://azuredeploy.net/deploybutton.png)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FMicrosoft%2Fazuredevopslabs%2Fmaster%2Flabs%2Fvstsextend%2Fansible%2Farmtemplate%2Fansible_vm_deploy.json){:target="_blank"}
+   `az group create --name AnsibleVM --location eastus`
 
-   Provide all the necessary information as is shown. It takes approximately 5-10 minutes to complete the deployment. 
-    
-     ![](images/azureubuntuvm.png)
+1. Create the Azure virtual machine for Ansible.
+
+   `az vm create --resource-group AnsibleVM --name AnsibleVM 
+--image OpenLogic:CentOS:7.7:latest 
+--admin-username azureuser 
+--admin-password <password>`
+
+    Replace the `<password>` with your password.
 
 1. Once the deployment is successful, navigate to the resource group and select the VM.
       
     ![](images/selectvm.png)
 
-1. Click **Connect** and copy the login command under the **SSH** tab.
+1. Select **Overview** and copy the **Public IP address**.
    
-    ![](images/connecttovm.png)
+    ![](images/publicipnote.png)
 
-1. Open a Command prompt and paste the copied login command and log in. It will prompt for confirmation to connect, type **Yes** and provide the Password you have given in step 1.
+1. Open a Command prompt and enter the below command
+  `ssh azureuser@<PublicIP>` to login to VM. It will prompt for confirmation to connect, type **Yes** and provide the Password you have given in step 1.
 
    ![](images/sshtovm.png) 
+   
+   Note: Replace *azureuser* with your VM username in the above command.
 
-1. Now we must create a directory named **.azure** in the home directory and a credentials file under it. Type the following commands to create them.
+1. Run the following commands to configure Ansible on Centos:
+   
+   ```bash
+    #!/bin/bash
 
-   `mkdir ~/.azure`
+    # Update all packages that have available updates.
+    sudo yum update -y
 
-   `nano ~/.azure/credentials`
+    # Install Python 3 and pip.
+    sudo yum install -y python3-pip
 
+    # Upgrade pip3.
+    sudo pip3 install --upgrade pip
+
+    # Install Ansible.
+    pip3 install "ansible==2.9.17"
+
+    # Install Ansible azure_rm module for interacting with Azure.
+    pip3 install ansible[azure]
+    ```
+1. Now we must create a directory named **.azure** in the home directory and a credentials file under it. This local credentials file is to provide credentials to Ansible. Type the following commands to create them.
+   ```bash
+   mkdir ~/.azure
+
+   nano ~/.azure/credentials
+   ```
 1. Insert the following lines into the **credentials** file. Replace the placeholders with the information from the service principal details you copied in the previuous task. Press **Ctrl+O** to save the file and **Ctrl+X** to exit from the text editor.
 
    `[default]`
@@ -104,6 +133,10 @@ To create and provision the resources in Azure with Ansible, we need to have a L
 
    `tenant=<azure serviceprincipal-tenant>`
 
+1. Run `nano .bashrc` and insert the following text into **.bashrc**. Press **Ctrl+O** to save the file and **Ctrl+X** to exit from the text editor.
+   
+   `PATH=$PATH:$HOME/.local/bin:$HOME/bin`
+
 1. Ansible is an agentless architecture based automation tool . Only it needs ssh authentication using Ansible Control Machine private/public key pair. Now let us create a pair of private and public keys. Run the following command to generate a private/public key pair for ssh and to install the public key in the local machine.
 
    `ssh-keygen -t rsa`
@@ -114,9 +147,9 @@ To create and provision the resources in Azure with Ansible, we need to have a L
 
    `chmod 644 ~/.ssh/authorized_keys`
 
-   `ssh-copy-id vmadmin@127.0.0.1`
+   `ssh-copy-id azureuser@127.0.0.1`
 
-   >Note: Replace **vmadmin** with your VM username in the above command.
+   >Note: Replace **azureuser** with your VM username in the above command.
 
    ![](images/sshkeys.png) 
 
@@ -132,11 +165,13 @@ To connect and run playbooks through Ansible VM in Azure pipelines, we need to h
 
 1. Navigate to the project we created above using [Azure DevOps Demo Generator](https://azuredevopsdemogenerator.azurewebsites.net/?Name=Ansible).
 
-1. Navigate to **Project Settings** --> **Service Connections**. Select **+New service connection** and select **SSH**
+1. Navigate to **Project Settings** --> **Service Connections**. Select **Create service connection**.
 
    ![](images/sshendpoint.png) 
+1. In **New Service Connection** windows select **SSH** and click **Next**
 
-1. In **Add an SSH service connection** window provide the required details and click **OK** to save the connection.
+    ![](images/selectSSH.png)
+1. In **New SSH service connection** window provide the required details and click **Save** to save the connection.
    
    ![](images/SSHserviceconnection.png)
 
@@ -207,7 +242,7 @@ In this exercise, you will build your application and publish the required files
 
    ![](images/cdpipeline-tasks.png)
 
-1. Select the **Replace Tokens** task.
+1. Select the **Replace Tokens** task. And make sure Token pattern is selected as **__'''\__** as shown in image.
 
    ![](images/replacetokens.png)
 
