@@ -530,7 +530,7 @@ description: Learn how you can implement modern DevOps practices with Azure, Azu
                                                          <li class="osslist"> <img src="/images/azuredevopsproject.png" height="42"
                                                         class="icon-bor-p-m" /><a href="/labs/vstsextend/azuredevopsprojectdotnet/"
                                                         class="fon-size-13"> Create a CI/CD pipeline for .NET with the Azure DevOps Project</a></li>
-                                                 <li class="osslist"> <img src="/images/whitesource-42.png" height="42"
+                                                 <li class="osslist"> <img src="/images/mend2.png" height="42"
                                                         class="icon-bor-p-m" /><a href="/labs/vstsextend/whitesource/"
                                                         class="fon-size-13"> Managing Open-source security and license with WhiteSource</a></li>
                                                 <li class="osslist"> <img src="/images/selenium-42.png" height="42"
