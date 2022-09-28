@@ -1,9 +1,234 @@
 {
-  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
   "contentVersion": "1.0.0.0",
   "parameters": {
+    "location": {
+      "value": "eastus"
+    },
+    "networkInterfaceName": {
+      "value": "selennium-vm898"
+    },
+    "enableAcceleratedNetworking": {
+      "value": true
+    },
+    "networkSecurityGroupName": {
+      "value": "selennium-vm-nsg"
+    },
+    "networkSecurityGroupRules": {
+      "value": [
+        {
+          "name": "RDP",
+          "properties": {
+            "priority": 300,
+            "protocol": "TCP",
+            "access": "Allow",
+            "direction": "Inbound",
+            "sourceAddressPrefix": "*",
+            "sourcePortRange": "*",
+            "destinationAddressPrefix": "*",
+            "destinationPortRange": "3389"
+          }
+        }
+      ]
+    },
+    "subnetName": {
+      "value": "default"
+    },
+    "virtualNetworkName": {
+      "value": "Selenium_VM_RG-vnet"
+    },
+    "addressPrefixes": {
+      "value": [
+        "10.1.0.0/16"
+      ]
+    },
+    "subnets": {
+      "value": [
+        {
+          "name": "default",
+          "properties": {
+            "addressPrefix": "10.1.0.0/24"
+          }
+        }
+      ]
+    },
+    "publicIpAddressName": {
+      "value": "selennium-vm-ip"
+    },
+    "publicIpAddressType": {
+      "value": "Dynamic"
+    },
+    "publicIpAddressSku": {
+      "value": "Basic"
+    },
+    "pipDeleteOption": {
+      "value": "Detach"
+    },
     "virtualMachineName": {
-      "value": null
+      "value": "selennium-vm"
+    },
+    "virtualMachineComputerName": {
+      "value": "selennium-vm"
+    },
+    "virtualMachineRG": {
+      "value": "Selenium_VM_RG"
+    },
+    "osDiskType": {
+      "value": "Premium_LRS"
+    },
+    "osDiskDeleteOption": {
+      "value": "Delete"
+    },
+    "dataDisks": {
+      "value": [
+        {
+          "lun": 0,
+          "createOption": "attach",
+          "deleteOption": "Detach",
+          "caching": "ReadOnly",
+          "writeAcceleratorEnabled": false,
+          "id": null,
+          "name": "selennium-vm_DataDisk_0",
+          "storageAccountType": null,
+          "diskSizeGB": null,
+          "diskEncryptionSet": null
+        }
+      ]
+    },
+    "dataDiskResources": {
+      "value": [
+        {
+          "name": "selennium-vm_DataDisk_0",
+          "sku": "Premium_LRS",
+          "properties": {
+            "diskSizeGB": 128,
+            "creationData": {
+              "createOption": "empty"
+            }
+          }
+        }
+      ]
+    },
+    "virtualMachineSize": {
+      "value": "Standard_D2s_v3"
+    },
+    "nicDeleteOption": {
+      "value": "Detach"
+    },
+    "adminUsername": {
+      "value": "vmadmin"
+    },
+    "adminPassword": {
+      "value": "P2ssw0rd@123"
+    },
+    "patchMode": {
+      "value": "AutomaticByOS"
+    },
+    "enableHotpatching": {
+      "value": "false"
+    },
+    "sqlVirtualMachineLocation": {
+      "value": "eastus"
+    },
+    "sqlVirtualMachineName": {
+      "value": "selennium-vm"
+    },
+    "sqlConnectivityType": {
+      "value": "Private"
+    },
+    "sqlPortNumber": {
+      "value": 1433
+    },
+    "sqlStorageDisksCount": {
+      "value": 1
+    },
+    "sqlStorageWorkloadType": {
+      "value": "OLTP"
+    },
+    "sqlStorageDisksConfigurationType": {
+      "value": "NEW"
+    },
+    "sqlStorageStartingDeviceId": {
+      "value": 2
+    },
+    "sqlStorageDeploymentToken": {
+      "value": 91256
+    },
+    "sqlAutopatchingDayOfWeek": {
+      "value": "Sunday"
+    },
+    "sqlAutopatchingStartHour": {
+      "value": "2"
+    },
+    "sqlAutopatchingWindowDuration": {
+      "value": "60"
+    },
+    "sqlAuthenticationLogin": {
+      "value": "vmadmin"
+    },
+    "sqlAuthenticationPassword": {
+      "value": "P2ssw0rd@123"
+    },
+    "dataPath": {
+      "value": "F:\\data"
+    },
+    "dataDisksLUNs": {
+      "value": [
+        0
+      ]
+    },
+    "logPath": {
+      "value": "F:\\log"
+    },
+    "logDisksLUNs": {
+      "value": [
+        0
+      ]
+    },
+    "tempDbPath": {
+      "value": "D:\\tempDb"
+    },
+    "dataFileCount": {
+      "value": 2
+    },
+    "dataFileSize": {
+      "value": 8
+    },
+    "dataGrowth": {
+      "value": 64
+    },
+    "logFileSize": {
+      "value": 8
+    },
+    "logGrowth": {
+      "value": 64
+    },
+    "SQLSystemDbOnDataDisk": {
+      "value": "false"
+    },
+    "rServicesEnabled": {
+      "value": "false"
+    },
+    "maxdop": {
+      "value": 0
+    },
+    "isOptimizeForAdHocWorkloadsEnabled": {
+      "value": "false"
+    },
+    "collation": {
+      "value": "SQL_Latin1_General_CP1_CI_AS"
+    },
+    "minServerMemoryMB": {
+      "value": 0
+    },
+    "maxServerMemoryMB": {
+      "value": 2147483647
+    },
+    "isLPIMEnabled": {
+      "value": "false"
+    },
+    "isIFIEnabled": {
+      "value": "false"
     }
   }
 }
