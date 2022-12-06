@@ -1,11 +1,11 @@
 ---
-title: Managing project schedules across teams with Delivery Plans 
+title: Building a roadmap and tracking dependencies across teams with Delivery Plans 
 layout: page
 sidebar: vsts
 permalink: /labs/azuredevops/deliveryplans/
 folder: /labs/azuredevops/deliveryplans/
 version: Lab version - 1.37.1
-updated: Last updated - 9/9/2019
+updated: Last updated - 12/05/2022
 ---
 <div class="rw-ui-container"></div>
 <a name="Overview"></a>
@@ -14,6 +14,7 @@ updated: Last updated - 9/9/2019
 
 It takes several teams to develop large software projects. Very large projects require multiple autonomous teams that can manage their own backlog and priority while contributing to a unified direction for that project. Regular reviews of the project schedule with these teams help ensure that the teams are working toward common goals. Delivery Plans provide the needed multi-team view of your project schedule.
 
+**Delivery plans** provide visibility into features under development by several teams across several sprints. With Delivery Plans, portfolio managers can review the schedule of stories or features their teams plan to deliver. Delivery Plans show the scheduled work items by sprint (iteration path) of selected teams against a calendar view.
 
 <div class="bg-slap"><img src="./images/mslearn.png" class="img-icon-cloud" alt="MS teams" style="
     width: 48px; height: 48px;">Want additional learning? Check out the <a href="https://docs.microsoft.com/en-us/learn/modules/manage-delivery-plans/" target="_blank"><b><u> Manage Agile software delivery plans across teams </u></b></a> module on Microsoft Learn.</div>
@@ -27,42 +28,9 @@ It takes several teams to develop large software projects. Very large projects r
 ## Exercise 1: Managing Delivery Plans with Azure DevOps ##
 
 <a name="Ex1Task1"></a>
-### Task 1: Installing the Delivery Plans extension ###
+### Task 1: Creating a delivery plan ###
 
-1. Navigate to your team project on Azure DevOps.
-
-1. Delivery Plans is provided as a marketplace extension. From the **Marketplace** navigation dropdown, select **Browse Marketplace**.
-
-    ![](images/000.png)
-
-1. Search for **"Delivery Plans"**.
-
-    ![](images/001.png)
-
-1. Select the **Delivery Plans** option.
-
-    ![](images/002.png)
-
-1. Click **Get it free**.
-
-    ![](images/003.png)
-
-1. Select the organization to install **Delivery Plans** into. This should be the organization that contains your Parts Unlimited project. Click **Install**.
-
-    ![](images/004.png)
-
-1. Click **Proceed to organization**.
-
-    ![](images/005.png)
-
-1. Click the Parts Unlimited project link to return to its dashboard.
-
-    ![](images/006.png)
-
-<a name="Ex1Task2"></a>
-### Task 2: Creating a delivery plan ###
-
-1. From the **Boards** dropdown, select **Plans**.
+1. From the **Boards** dropdown, select **Delivery Plans**.
 
     ![](images/007.png)
 
@@ -78,7 +46,7 @@ It takes several teams to develop large software projects. Very large projects r
 
     ![](images/010.png)
 
-1. Click the **Configure plan settings** button.
+1. Click the **Settings** button.
 
     ![](images/011.png)
 
@@ -102,16 +70,14 @@ It takes several teams to develop large software projects. Very large projects r
 
     ![](images/016.png)
 
-1. Another neat feature of the delivery plan extension is the ability to easily scale the calendar. Drag the **Scale** slider all the way to the left to view multiple months at once.
+1. Another neat feature of the delivery plan extension is the ability to easily scale the calendar. You can use **Zoom out** to view multiple months at once. And **Zoom in** to a much more precise view.
 
     ![](images/017.png)
 
-1. Slide it all the way to the right to zoom in to a much more precise view.
 
-    ![](images/018.png)
 
-<a name="Ex1Task3"></a>
-### Task 3: Adding an external team to the project ###
+<a name="Ex1Task2"></a>
+### Task 2: Adding an external team to the project ###
 
 1. Our delivery plan has been pretty simple so far because we only have the one team. However, the real power of delivery planning comes into play when orchestrating multiple autonomous teams across their efforts. Open the settings page using the **Project Settings** navigation located at the bottom left of the page.
 
@@ -149,7 +115,7 @@ It takes several teams to develop large software projects. Very large projects r
 
     ![](images/027.png)
 
-1. Click **Iterations and areas**.
+1. Click **Iterations and Area Paths**.
 
     ![](images/028.png)
 
@@ -161,16 +127,18 @@ It takes several teams to develop large software projects. Very large projects r
 
     ![](images/030.png)
 
-<a name="Ex1Task4"></a>
-### Task 4: Making delivery decisions ###
+<a name="Ex1Task3"></a>
+### Task 3: Making delivery decisions ###
 
-1. From the **Boards** dropdown, select **Plans**.
+1. From the **Boards** dropdown, select **Delivery Plans**.
 
-    ![](images/031.png)
+    ![](images/007.png)
 
-1. Click the **Configure plan settings** button.
+1. Select the **Web Delivery** plan.
+1. Click the **Settings** button.
 
-    ![](images/032.png)
+    ![](images/011.png)
+
 
 1. Select the **Teams** tab and click **Add team**.
 
@@ -180,7 +148,7 @@ It takes several teams to develop large software projects. Very large projects r
 
     ![](images/034.png)
 
-1. Use the **Scale** slider to fit the width of **Iteration 50** and **Iteration 51**.
+1. Use the **Zoom out** to fit the width of **Iteration 50** and **Iteration 51**.
 
     ![](images/035.png)
 
@@ -212,14 +180,43 @@ It takes several teams to develop large software projects. Very large projects r
 
     ![](images/042.png)
 
-1. There are a lot of ways to quickly customize the view of the delivery plan. For example, pressing the **'t'** key will toggle between showing all configured fields and showing just the title. Try that now.
 
-    ![](images/043.png)
-
-1. You can also collapse all teams (or specific teams) using the toggle buttons next to their names.
+1. There are a lot of ways to quickly customize the view of the delivery plan. For example, you can collapse all teams (or specific teams) using the toggle buttons next to their names.
 
     ![](images/044.png)
 
+### Task 4 : Track dependencies by using Delivery Plans
+With Delivery Plans, you can track dependencies that have been added to work items. Dependency tracking supports the **Predecessor/Successor** link type between work items. 
+
+1. Navigate to **Web Delivery** Plan.
+1. Move branding feature to **Sprint 1**
+
+    ![](images/dependecytracker_01.png)
+
+1. And click on **Links** tab and add **Integrate with weather service** and **integrating with corporate branding assets** features as **Successors** and **Save & Close**
+
+    ![](images/dependecytracker_02.png)
+
+1. Now your delivery plan looks like below. Click on ![](images/dependency-green-icon.png) to view the dependency summary
+    
+    ![](images/dependecytracker_03.png)
+
+1. You can see the Dependencies detailed view. This  indicates that the work item has two successors and no issues with delivery dates.
+
+   ![](images/dependencydetailedview.png)
+
+1. Now move the branding feature to **sprint 2** and refresh the page.
+
+1. Now you can see red icon ![](images/dependency-red-icon.png) on feature. Click to see the details. Here we can see one feature has delivery issue. With this information we can plan the delivery of the dependent feature.
+
+   ![](images/dependencytracker_06.png)
+
+   ![](images/dependencytracker_07.png)
+
+1. Click on **Show all dependencies** icon. Dependency lines that have no issues show up as black lines. Dependency lines that have issues, show up with red lines. To view the issue or details you can click on those lines.
+
+   ![](images/dependencytracker_08.png)
+  
 ## Reference
 
 Thanks to **Nagaraj Bhairaji** for making a video on this lab. You can watch the following video that walks you through all the steps explained in this lab
