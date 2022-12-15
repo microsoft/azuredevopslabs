@@ -109,7 +109,7 @@ This task is designed to illustrate a variety of ways you can create different k
 
     ![](images/017.png)
 
-1. Set the **Work item type** to **Feature** and set the **Title** to **"Training dashboard"**. Click **OK**.
+1. Set the **Link Type** to **Child**, **Work item type** to **Feature** and set the **Title** to **"Training dashboard"**. Click **OK**.
 
     ![](images/018.png)
 
@@ -182,7 +182,41 @@ This task is designed to illustrate a variety of ways you can create different k
     ![](images/035.png)
 
 <a name="Ex1Task3"></a>
-### Task 3: Managing sprints and capacity ###
+### Task 3: Working with filters in backlogs and boards ###
+
+Azure Boards comes with filtering capabilities. With filter functions, you can interactively apply one or more filters to an Azure Boards tool.  Filter functions available in Work items, Boards, Backlogs, Sprint Backlogs and Taskboards, Queries, and Delivery Plans. In this exercise, you will see the filters in the boards and backlogs.
+
+1. Navigate to the **Backlog Items** view. 
+1. Choose Filter ![](images/filter-icon.png) Or, enter the **Ctrl+Shift+f** keyboard shortcut.
+  
+   ![](images/backlog_filter.png)
+
+1. Choose the filters of interest. The filter icon changes to a solid icon, Filter ![](images/filtered.png) , to indicate filtering is applied.
+
+   Only those work items that satisfy all of the chosen filter criteria are showed on the page.
+
+
+   ![](images/backlog_filter2.png)
+
+    {% include note.html content= "When filtering is applied for backlogs, the add-a-backlog-item panel, reordering (stack ranking), and forecasting tools are disabled." %}
+
+1. To clear the filtering, choose **Clear and dismiss filters**.
+   ![](images/clearfilters.png)
+
+   Filters remain in place until you explicitly clear them. When you refresh your backlog, board, or other tool, or sign in from another browser, filters remain set to your previous values.
+
+1. Filtering functions similarly in Boards and Backlog view. To choose the filter criteria, switch to the Boards view and select filter.
+    
+    ![](images/boards_filter.png)
+
+1. You can filter the work items in boards or backlog view uisng a key word or Assigned To, Work Item Type, States, Area Path and Iteration Path fields.
+
+    {% include tip.html content= "For more detailed information about the filter functions and how you can apply one or more filters to an Azure Boards tool visit this  page
+    [Interactively filter backlogs, boards, queries, and plans in Azure Boards](https://learn.microsoft.com/en-us/azure/devops/boards/backlogs/filter-backlogs-boards-plans?view=azure-devops) {:target=\"_blank\"}" %}
+
+
+<a name="Ex1Task4"></a>
+### Task 4: Managing sprints and capacity ###
 
 Your team builds the sprint backlog during the sprint planning meeting, typically held on the first day of the sprint. Each sprint corresponds to a time-boxed interval which supports your team's ability to work using Agile processes and tools. During the planning meeting, your product owner works with your team to identify those stories or backlog items to complete in the sprint.
 
@@ -284,14 +318,32 @@ Planning meetings typically consist of two parts. In the first part, the team an
 
     ![](images/059.png)
 
-<a name="Ex1Task4"></a>
-### Task 4: Customizing Kanban boards ###
+<a name="Ex1Task5"></a>
+### Task 5: Customizing Kanban boards ###
 
 To maximize a team's ability to consistently deliver high quality software, Kanban emphasize two main practices. The first, visualize the flow of work, requires you to map your team's workflow stages and configure your Kanban board to match. The second, constrain the amount of work in progress, requires you to set work-in-progress (WIP) limits. You're then ready to track progress on your Kanban board and monitor key metrics to reduce lead or cycle time. Your Kanban board turns your backlog into an interactive signboard, providing a visual flow of work. As work progresses from idea to completion, you update the items on the board. Each column represents a work stage, and each card represents a user story (blue cards) or a bug (red cards) at that stage of work. However, every team develops its own process over time, so the ability to customize the Kanban board to match the way your team works is crucial.
 
 1. Navigate to **Boards**.
 
     ![](images/060.png)
+
+1. Click the **Configure team settings** button.
+
+    ![](images/061.png)
+
+1. You can apply style rules to change the color of cards on kanban boards and task boards. Styling rules make the cards with important information stand out. Select **Styles** tab. On the Styles tab, click Add Styling rule and set the Name to “High Priority”. Choose a Red Card color. This will color all cards red if they meet the rule criteria set below.
+    
+    ![](images/styles_kanban.png)
+
+1. Add a rule for **Priority = 1**. This will set all cards with priority **1** to  red. You can add more clauses in the query if required. Open the work item **As a customer, I want to view new tutorials** and change priority to **1**
+    
+    ![](images/styles_kanban2.png)
+
+1. Click **Save and close** to save the styling rule.
+
+1. The backlogs with priority **1** is now red and very easy to identify.
+   
+    ![](images/styles_kanban3.png)
 
 1. Click the **Configure team settings** button.
 
@@ -393,8 +445,8 @@ To maximize a team's ability to consistently deliver high quality software, Kanb
 
     ![](images/085.png)
 
-<a name="Ex1Task5"></a>
-### Task 5: Defining dashboards ###
+<a name="Ex1Task6"></a>
+### Task 6: Defining dashboards ###
 
 1. Select **Overview \| Dashboards**.
 
@@ -476,8 +528,8 @@ To maximize a team's ability to consistently deliver high quality software, Kanb
 
     ![](images/105.png)
 
-<a name="Ex1Task6"></a>
-### Task 6: Customizing team process ###
+<a name="Ex1Task7"></a>
+### Task 7: Customizing team process ###
 
 In Azure DevOps, you customize your work tracking experience through a process. A process defines the building blocks of the work item tracking system as well as other sub-systems you access through Azure DevOps. Whenever you create a team project, you select the process which contains the building blocks you want for your project.
 
@@ -571,8 +623,19 @@ In this task we'll create a new process that inherits from Scrum. The one change
 
 1. Once the work item is saved, Azure DevOps will also save the new custom information so that it will be available for queries and through the rest of Azure DevOps.
 
+## Introduction to Delivery Plans
 
-## Reference
+ In this lab, you learnt about the agile planning and portfolio management tools and processes provided by Azure Boards and how they can help you quickly plan, manage, and track work across your entire team. 
+ 
+ When you are working with multiple backlogs, multiple teams, and team backlogs from different projects, you would require a roadmap view for your plan, a view to track dependencies, and a progress view of your plan. **Delivery Plans** is the way to go.
+
+ **Delivery Plans** is part of the Azure Boards offering that brings roadmap plans to customers. **Delivery Plans** provide visibility into features under development by several teams across several sprints. With Delivery Plans, portfolio managers can review the schedule of stories or features their teams plan to deliver. Delivery Plans show the scheduled work items by sprint (iteration path) of selected teams against a calendar view.
+
+
+ <div class="bg-slap"><img src="./images/deliveryplans.png" class="img-icon-cloud" alt="MS teams" style="
+    width: 48px; height: 48px;">Want additional learning about Delivery Plans? Check out the  <a href="https://azuredevopslabs.com/labs/azuredevops/deliveryplans/" target="_blank"><b><u> Building a roadmap and tracking dependencies across teams with Delivery Plans </u></b></a> lab.</div>
+
+## Reference Video
 
 Thanks to **Nagaraj Bhairaji** for making a video on this lab. You can watch the following video that walks you through all the steps explained in this lab
 
