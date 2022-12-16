@@ -51,6 +51,22 @@ We will create one manually using the Azure CLI. If you do already have a servic
 
     ![](images/azureserviceprincipal.png)
 
+1. Now, we need to grant contributor permission to service principal. For that, go to **Subscriptions** section in Azure portal
+
+   ![](images/subscription.png)
+
+1. In left pane, select **Access control(IAM)** and then click on **Add role assignment** option that is available under Grant access to this resource section.
+
+    ![](images/addrole.png)
+
+1. Select **Contributor** and then click on **Next**
+
+   ![](images/contributor.png)
+
+1. Now, using **+ Select Members** select the service principal that has been craeted and click on Next. **Review + assign** now to finish role assignment.
+
+   ![](images/role-assignment.png)
+
 1. Enter the following command to get Azure SubscriptionID and copy the subscription ID and name to notepad.
 
     `az account show`
@@ -73,9 +89,9 @@ Next, we will create a key vault in Azure. For this lab scenario, we have a node
 
     Because data in Key Vaults are sensitive and business critical, you need to secure access to your key vaults by allowing only authorized applications and users. To access the data from the vault, you will need to provide read (Get) permissions to the service principal that you will be using for authentication in the pipeline. 
 
-1. Select **Access policy** and then select **+ Create** to setup a new policy.
+1. Click on Next to change **Access policy** and then select **+ Create** to setup a new policy.
 
-     ![image](https://user-images.githubusercontent.com/36665779/208043256-ae9f1074-e4fb-4d16-946b-9cba3c5cee27.png)
+     ![](images/accesspolicy.png)
 
 
 1. You will need specify the permission that you intend to grant the application. This can be permissions to manage the keys and data(secrets). In any case, applications can access the key vault in two ways:
@@ -83,14 +99,18 @@ Next, we will create a key vault in Azure. For this lab scenario, we have a node
     * User + Application access: Access is granted to specific user who can then be allowed to use any application or can be restricted to use a specific application. 
 
     * Application-only access: Access is granted to the application which can be run as a daemon service or background job. 
-
+1. Next, we will select the permission to be granted. For now, we will provide **read-only** permissions (Get, List) to secrets only.
+  
+    ![](images/providingaccess.png)
+ 
 1. Select the **Select principal**  and search for the security principal that you created earlier and select it. You can search by name or ID of the principal.
 
-    ![](images/select-sp.png)
+    ![](images/spselection.png)
 
-1. Next, we will select the permission to be granted. For now, we will provide **read-only** permissions (Get, List) to secrets only.
+1. In **Application (optional)** section click on  **Next** since we have chosen the service principal and then create the access policy.
 
-    ![](images/kv_t2_s8.png)
+    ![](images/application-opt.png)
+
 
 1.  Click **Review + create** to close the open blades and select **Create** to create the vault.
 
@@ -110,7 +130,7 @@ Now, lets go to the Azure DevOps project that you provisioned using the [Azure D
 
 1. To trigger a build, choose the **SmartHotel-CouponManagement-CI** definition and then **Run Pipeline** to manually queue it.
 
-    ![](images/kv_t3_s3.png)
+    ![](images/createbuild.png)
 
    {% include note.html content= "We also have a YAML build pipeline if that's something you're interested in. To proceed through the YAML pipeline, choose **SmartHotel-CouponManagement-CI-YAML** and click **Edit**. If you utilize the YAML pipeline, make sure to update the **SmartHotel-CouponManagement-CD** release definition's artifact link." %}
 
