@@ -73,9 +73,10 @@ Next, we will create a key vault in Azure. For this lab scenario, we have a node
 
     Because data in Key Vaults are sensitive and business critical, you need to secure access to your key vaults by allowing only authorized applications and users. To access the data from the vault, you will need to provide read (Get) permissions to the service principal that you will be using for authentication in the pipeline. 
 
-1. Select **Access policy** and then select **+ Add Access Policy** to setup a new policy.
+1. Select **Access policy** and then select **+ Create** to setup a new policy.
 
-     ![](images/kv_t2_s5.png)
+     ![image](https://user-images.githubusercontent.com/36665779/208043256-ae9f1074-e4fb-4d16-946b-9cba3c5cee27.png)
+
 
 1. You will need specify the permission that you intend to grant the application. This can be permissions to manage the keys and data(secrets). In any case, applications can access the key vault in two ways:
 
