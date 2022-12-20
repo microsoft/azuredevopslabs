@@ -107,7 +107,8 @@ The following azure resources need to be configured for this lab:
     ```bash
     az sql db create -g akshandsonlab -s <unique-sqlserver-name> -n mhcdb --service-objective S0
     ```
-      {% include important.html content= "Enter a unique SQL server name. Since the Azure SQL Server name does not support **UPPER** / **Camel** casing naming conventions, use lowercase for the ***SQL Server Name*** field value." %}
+      {% include important.html content= "Enter a unique SQL server name. Since the Azure SQL Server name does not support **UPPER** / **Camel** casing naming conventions, use lowercase for the ***SQL Server Name*** field value.
+      Press y in case if the prompt is asking for default geo-redundant storage" %}
 1. The following components - **Container Registry**, **Kubernetes Service**, **SQL Server** along with **SQL Database** are deployed. Access each of these components individually and make a note of the details which will be used in Exercise 1.
    
    ![Deploy to Azure](images/azurecomponents.png)
