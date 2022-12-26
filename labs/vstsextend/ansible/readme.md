@@ -133,7 +133,7 @@ To create and provision the resources in Azure with Ansible, we need to have a L
 
    `tenant=<azure serviceprincipal-tenant>`
 
-1. Run `nano .bashrc` and insert the following text into **.bashrc**. Press **Ctrl+O** to save the file and **Ctrl+X** to exit from the text editor.
+1. Run `nano ~/.bashrc` and insert the following text into **.bashrc**. Press **Ctrl+O** to save the file and **Ctrl+X** to exit from the text editor.
    
    `PATH=$PATH:$HOME/.local/bin:$HOME/bin`
 
@@ -150,6 +150,8 @@ To create and provision the resources in Azure with Ansible, we need to have a L
    `ssh-copy-id azureuser@127.0.0.1`
 
    >Note: Replace **azureuser** with your VM username in the above command.
+
+   >When asked for the password give the password of the VM that has been noted 
 
    ![](images/sshkeys.png) 
 
