@@ -40,9 +40,9 @@ In this lab, you’ll learn about how **Azure DevOps** integrates with **Microso
     
     ![](images/create_team2.png)
 
-1. Select **Build a team from scratch** and then select the privacy settings.
+1. Select **From scratch** and then select the privacy settings.
 
-    ![](images/create_team3_new.png)
+    ![](images/create_team3_new1.png)
    
     ![](images/create_team3_new01.png)
 
@@ -65,11 +65,11 @@ In this lab, you’ll learn about how **Azure DevOps** integrates with **Microso
 
 1. Select **Azure DevOps** connector from the list and click **Add**.
 
-   ![](images/azuredevops_connector.png)
+   ![](images/azuredevops_connector1.png)
 
-1. Click **Add** to add the connector for your team.
+1. Click **Add** to add the connector for your team. Navigate back to Connectors option to start configuring it
    
-    ![](images/install_connector_new.png)
+    ![](images/install_connector_new1.png)
 
 1. Select your organization (you may be prompted to sign in first), the project and your team. Choose the type of activity you want to be notified about. Depending on the event, you may be given further fields to filter down the notifications so you can filter out notifications your team does not care about. For example, for work item events, you can filter by area path, work item type, and even particular field changes.
 
@@ -137,14 +137,14 @@ Azure Pipelines app on Microsoft Teams enables you to monitor the events for you
 
 1. In the app,click on **Add**.
      
-      ![](images/install_azurepipelines_new.png)
+      ![](images/install_azurepipelines_new1.png)
 
 1. Once the app is added, click on the drop down and select **Add to a team**
       
-      ![](images/add_to_team.png)
+      ![](images/add_to_team1.png)
 
 1. Select your team and click on **Set up a bot**
-      ![](images/set_up_bots.png)
+      ![](images/set_up_bots1.png)
 
 1. Use the `@azure pipelines` handle to start interacting with the app.
 
@@ -241,7 +241,7 @@ To learn more about best practices for creating teams and channels view this sho
 
 1. Give a name, description for your channel and select privacy and  click on **Add**
 
-   ![](images/create_channel_new.png)
+   ![](images/create_channel_new1.png)
 
 1. Once the channel is created, the conversations can be started among the team members.
 
