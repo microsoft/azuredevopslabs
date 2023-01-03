@@ -92,13 +92,13 @@ In this task, you will configure a CI pipeline that will build and push the imag
     |Qualify image name| Check (set to true)|   
     | Include Latest Tag | Check (set to true) | Adds the `latest` tag to the images produced by this build |
 
-    ![Docker build task](images/dockerbuildtask.png)
+    ![Docker build task](images/dockerbuildtask1.png)
 
 1. There is a second **Docker** task with almost the same settings. The only change is the **Command** is set to **Push** and the **Image name** is set to  `Web:$(Build.BuildNumber)`. This action will instruct the task to push the Web image to the container registry.
 
       ![Maven task settings](images/dockerpublishtask.png)
 
-1. Click the **Save and Queue** button to save and queue this build. Make sure you are using the **Hosted Ubuntu 1604** build agent.
+1. Click the **Save and Queue** button to save and queue this build. Make sure you choose **Azure Pipelines** in Agent pool and Agent Specification should be **ubuntu-18.04**
 
 1. Wait for the build to complete. When it is successful, you can go to your Azure portal and verify if the images were pushed successfully. 
     ![images/Azure Container Registry Images](images/portal-acrrepo2.png)
@@ -122,7 +122,7 @@ In this exercise, we will setup a Release pipeline to deploy the web application
     * Select existing or create new resource group for the web app. 
     * Leave the App Service plan/Location as it is.
 
-      ![](images/azurewebappcreate1.png)
+      ![](images/azurewebappcreate01.png)
 
 1. In the Docker tab, select **Azure   Container Registry** as Image source. Select the **Registry, Image and Tag** from the respective drop-downs and click **Review + create** and then **Create**.
 
@@ -136,18 +136,28 @@ In this exercise, we will setup a Release pipeline to deploy the web application
  
     We could configure *Continuous Deployment* to deploy the web app when a new image is pushed to the registry, within the Azure portal itself. However, setting up an Azure Pipeline will provide more flexibility and additional controls (approvals, release gates, etc.) for application deployment.
 
-1. We need to create Azure Database for MySQL as well. Choose **+ Create a resource**, search for **Azure Database for MySQL**, select and click *Create*. Provide all the required mandatory information and note down **Password** to a notepad. We will use it later in the Deployment pipeline. Click **Review + create** and then **Create**.
+ 1. We need to create Azure Database for MySQL as well. Choose **+ Create a resource**, search for **Azure Database for MySQL**, select and click *Create*. Now select **Flexible server** option in Resource type and click on **Create**
+
+    ![Choosing Flexible server](images/chooserecommended.png)
+
+1. Provide all the required mandatory information and note down **Password** to a notepad. We will use it later in the Deployment pipeline. 
 
     
-    ![Creating MYSQL Server](images/mysqldbcreate.png)
+    ![Creating MYSQL Server](images/mysqldbcreate1.png)
+
+    ![Creating MYSQL Server](images/mysqldbcreate2.png)
+
+1. Navigate to Networking section and select the check box that says **Allow public access from any Azure service within Azure to this server**. Now **Review + create** and then **Create**
+
+   ![](images/networking.png)
+
 
 1. Navigate to the Azure Database for MySQL server provisioned.  Save the **Server name** and **Server admin login name** to a notepad.
     
      ![](images/azuredbmysql2.png)
 
-1. Select Connection security. Enable **Allow access to Azure services** toggle and **Save** the changes. This provides access to Azure services for all the databases in your MySQL server.
 
-   ![](images/accesstoazureservices.png)
+
 
 1. Back in Azure DevOps account, select **Releases** from the **Pipelines** hub. Select the Release definition - **MyShuttleDockerRelease** and click **Edit**.
 
