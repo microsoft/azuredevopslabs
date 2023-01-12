@@ -73,33 +73,35 @@ In this lab, you will learn how to setup SonarQube on Azure and integrate with A
 
    ![access_sonar_aci](images/access_sonar_aci.png)
 
-1. Open a browser and login to the SonarQube Portal using the following credentials-
+1. Open a browser and login to the SonarQube Portal using the following credentials. 
 
    >**Username= admin, Password= admin**
 
-1. Click **Skip this tutorial** in the pop-up window to see the home page.
- 
-   ![Skip tutorial](images/skiptutorial.png)
 
-      ![sonarqube_portal](images/sonarqube_portal.png)
+1. Change the password to a different value. Then you will see a below page.
+![intro_page_sonarqube](images/sonarpage1.png)
+
+ 
 
 1. Choose **Administration** in the toolbar, click **Projects** tab and then **Management**.
 
    ![sonar_admin](images/sonar_admin.png)
 
-1. Create a project with **Name** and **Key** as **MyShuttle**.
+1. Create a project with **Name** and **Key** as **MyShuttle**. Provide **Main branch name** as master. Then click on **Create** 
 
    - **Name**: Name of the SonarQube project that will be displayed on the web interface.
 
    - **Key**: The SonarQube project key that is unique for each project.
 
+   - **Main branch name**: Name of the major branch of the repository. This in some cases will be *main* and in some cases *master*
+
    - Leave the **Visibility** option to **Public**.
 
-   ![project_creation](images/project_creation.png)
+   ![project_creation](images/project_creation1.png)
 
    Let us create a Quality Gate to enforce a policy which fails the gate if there are bugs in the code. A Quality Gate is a PASS/FAIL check on a code quality that must be enforced before releasing software.
 
-1. Click the **Quality Gates** menu and click **Create** in the Quality Gates screen. Enter a name for the Quality Gate and click **Create**.
+1. Click the **Quality Gates** menu and click **Create** in the Quality Gates screen. Enter a name for the Quality Gate and click **Save**.
 
    ![qualitygate](images/qualitygate.png)
 
@@ -132,7 +134,7 @@ Now that the SonarQube server is running, we will modify Azure Build pipeline to
 
    In the **Add SonarQube service connection** wizard enter the SonarQube server URL and SonarQube security token detials. If you don't have SonarQube security token follow [this](https://docs.sonarqube.org/latest/user-guide/user-token/) to create one. And make sure SonarQube project name and project key are same as you entered while creating SonarQube project in **Exercise 1**. 
    
-    ![](images/sonar_endpoint.png)
+    ![](images/sonar_endpoint1.png)
 
    {% include note.html content= "The tokens are used to run analysis or invoke web services without access to the user's actual credentials." %}
 

@@ -87,21 +87,25 @@ You will create two **Web Apps** in Azure to depict two environments **Canary** 
      
      ![](images/appinsightsselect.png)
 
-1. You will create monitor alerts here, which you will use in later part of this lab. Choose **Alerts** and click **New alert rule**.
+1. You will create monitor alerts here, which you will use in later part of this lab. Choose **Alerts** and click on **+Create** and choose **Add rule**.
 
-     ![](images/newaialert.png)
+     ![](images/newaialert1.png)
 
-1. The **Create alert rule** pane appears. Choose **Select condition**. Search for **Failed Requests** rule and select.
+1. Choose **Select condition**. Search for **Failed Requests** rule and select.
     
-    ![](images/addaialert.png)
+    ![](images/addaialert1.png)
 
-   In the resulting pane configure **Alert logic** as shown below and click on **Done**.
+1. In the **Condition** section set Threshold value as **0**.
 
-    ![](images/alertlogic.png)
+    ![](images/alertlogic1.png)
 
-1. Now in Create alert rule pane enter Alert rule details as below
+1. Now in **Actions** section, choose the values as below
     
-    ![](images/alertruledetails.png)
+    ![](images/alertruledetails1.png)
+
+1. Now in **Details** section, provide the value for Alert rule name. Then **Review + Create**
+    
+    ![](images/alertruledetails2.png)
 
 1. Once the rule is created you will be able to see that rule under **Alerts**
        ![](images/managealerts.png)
