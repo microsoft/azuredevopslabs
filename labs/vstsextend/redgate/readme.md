@@ -349,7 +349,7 @@ Now you have both the application and database packages available as build artif
 
 1. **Deploy Azure App Service**: Using this task you will deploy application package to Azure app service which was created. And also we need to update the connection string for this app service to access **pul-prod** database. In App Service task set **XML variable substitution** option.
     
-      ![](images/xmlvariable.png)
+      ![](images/xmlvariable1.png)
 
    >XML variable substitution enables you to modify configuration settings in configuration files (*.config files) inside web packages and XML parameters files (parameters.xml). In this way, the same package can be configured based on the environment to which it will be deployed. For more information on XML Transformations click [here](https://docs.microsoft.com/en-us/azure/devops/pipelines/tasks/transforms-variable-substitution?view=azure-devops)
 

@@ -97,16 +97,16 @@ This lab covers both the approaches and the following tasks will be performed
 
 ### Installing and Configuring Plugins
 
-1. We will now install the Maven and VSTS (yet to be renamed Azure DevOps!) plugins that we require for this lab. Click **Manage Jenkins**  on the Jenkins home page and select **Manage Plugins**. Select the **Available** tab and search for `team services` 
+1. We will now install the Maven and VSTS (yet to be renamed Azure DevOps!) plugins that we require for this lab. Click **Manage Jenkins**  on the Jenkins home page and select **Manage Plugins**. Select the **Available plugins** tab and search for `team services` 
 
-    <img class="myImg" src="images/manage-jenkins1.png" alt="Manage Jenkins"/>
+    <img class="myImg" src="images/manage-jenkins3.png" alt="Manage Jenkins"/>
 
   
 
 
 1. Select **VS Team Services Continuous Deployment** plugin and select **Install without restart**
     
-    <img class="myImg" src="images/jenkins-vstsplugin.png" alt="Manage Jenkins"/>
+    <img class="myImg" src="images/jenkins-vstsplugin1.png" alt="Manage Jenkins"/>
 
 1. Select **Manage Plugins**, select the **Available** tab and search for `maven-plugin`
 
@@ -116,13 +116,13 @@ This lab covers both the approaches and the following tasks will be performed
 
 1. Once the plugin is installed, go back to **Manage Jenkins** and select the **Global Tool Configuration** option.
 
-    <img class="myImg" src="images/manage-tools-config.png" alt="Global Tool Configuration"/>
+    <img class="myImg" src="images/manage-tools-config1.png" alt="Global Tool Configuration"/>
 
    {% include note.html content=" Jenkins provides great out-of-the-box support for Maven. Since Maven is not yet installed, it can be manually installed by extracting the `tar` file located in a shared folder. Alternatively, when the **Install automatically** option is selected in the **Global Tool Configuration** screen, Jenkins will download and install Maven from the Apache website when a build job requires it." %}
 
-1. To install Maven, select the **Install automatically** option and select the **Apply** button. The latest version of Maven at the time of writing this lab is 3.5.4
+1. To install Maven, go to Maven section and click on **Add Maven** option and provide a  name. Then select the **Apply** button. The latest version of Maven at the time of writing this lab is 3.8.6
 
-   <img class="myImg" src="images/maveninstallerconfig.png" alt="Maven Installer"/>
+   <img class="myImg" src="images/maveninstallerconfig1.png" alt="Maven Installer"/>
 
 1. Select the **Back to Dashboard** button to return to the home page. We are done with the setup. Let's go and create a new CI job. 
 
@@ -151,11 +151,11 @@ This lab covers both the approaches and the following tasks will be performed
 
 1. The source code for this application has both unit tests and UI tests. We are not ready to run the UI test at this point. So, we will specify to run only the unit tests. Scroll down to the **Build** section and provide the text `package -Dtest=FaresTest,SimpleTest` in the **Goals and options** field. 
 
-     <img class="myImg" src="images/jenkins-buildsettings.png" alt="Build Settings in Jenkins"/>
+     <img class="myImg" src="images/jenkins-buildsettings1.png" alt="Build Settings in Jenkins"/>
 
 1. Once the build is complete, you can specify what action you want to take. For instance, you can archive the build artifacts, trigger an Azure CD pipeline, deploy directly to Azure App Service, etc., We will choose the **Archive the artifacts** option in the **Post-build Actions**. 
 
-   <img class="myImg" src="images/jenkinspostbuildaction.png" alt="Post Build Action"/>
+   <img class="myImg" src="images/jenkinspostbuildaction1.png" alt="Post Build Action"/>
 
    {% include note.html content="Note there is also **Post-build steps** section which is very similar to the actions section. The tasks configured in the post-build steps/actions are executed after all the build steps have been executed." %}
 
@@ -165,7 +165,7 @@ This lab covers both the approaches and the following tasks will be performed
 
 1. The configuration is now completed, Select the **Build Now** option to initiate an Ad-hoc build. The build progress will be displayed on the left pane in the **Build History** section
 
-   <img class="myImg" src="images/adhocbuild.png" alt="Running Ad-hoc Build"/>
+   <img class="myImg" src="images/adhocbuild1.png" alt="Running Ad-hoc Build"/>
 
 1. To view the build details and the list of build artifacts, select the build number displayed in the **Build History** section.
 
@@ -190,11 +190,11 @@ For the service hook in Azure DevOps to work - Jenkins machine should accept inc
 1. Set an inbound rule for port 8080
 
     <img class="myImg" src="images/azuredevops-jenkins-accept8080.png" alt="Accept 8080 inbound port" />
-1. Navigate to your Jenkins page and go to **User \| Configure**. Click on **Add new token** under API Token section and give some name and click **Generate**. Make a note of the Token generated. We would be using this Token as Jenkins password in Azure DevOps
+1. Navigate to your Jenkins page and go to **User \| Configure**. Click on **Add new token** under API Token section and give some name and click **Generate**. Make a note of the Token generated. We would be using this Token as Jenkins password in Azure DevOps. Save the settings
    
-     ![](images/jenkinstoken1.png)
+     ![](images/jenkinstoken3.png)
 
-     ![](images/jenkinstoken2.png)
+     ![](images/jenkinstoken4.png)
 
 ## Approach 1: Triggering the CI via a service hook in Azure DevOps
 
@@ -252,7 +252,7 @@ To begin, an endpoint to the Jenkins Server for communication with Azure DevOps 
 
     <img class="myImg" src="images/jenkinsbuildtemplate.png" alt="[Jenkins Template" />
 
-1. Select **vs2017-win2016** for the Agent specification, provide **MyShuttle** as the Job name ( name of the build definition that was created in Jenkins)  and then select the Jenkins service endpoint created earlier.
+1. Select **windows-2019** for the Agent specification, provide **MyShuttle** as the Job name ( name of the build definition that was created in Jenkins)  and then select the Jenkins service endpoint created earlier.
 
     <img class="myImg" src="images/azuredevops-jenkinsbuild.png" alt="Jenkins Settings in Team Build" />
 

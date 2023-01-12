@@ -66,7 +66,7 @@ This lab will show how you will
 
 1. Select **Connection security**. Enable **Allow access to Azure services** toggle and **Save** the changes. This provides access to Azure services for  all the databases in your MySQL server.
        
-    ![](images/mysqlaccess.png)
+    ![](images/mysqlaccess1.png)
        
 ## Exercise 2: Updating the App Settings for the Web App
 
@@ -74,7 +74,7 @@ Next, navigate to the Web app that you have created. As you are deploying a Java
 
 1. Select **Configuration**. Set the **Stack settings** as shown in below image and click **Save**.
 
-    ![Setting Web container to Tomcat](images/webcontainer.png)
+    ![Setting Web container to Tomcat](images/webcontainer1.png)
 
 1. Select **Overview** and click **Browse**.
 
@@ -94,7 +94,7 @@ Next, navigate to the Web app that you have created. As you are deploying a Java
 
    > <code style="color:black;">jdbc:mysql://{MySQL Server Name}:3306/alm?useSSL=true&requireSSL=false&autoReconnect=true&user={your user name}&password={your password}</code>
 
-   ![DB Connection](images/dbconnstrings.png)
+   ![DB Connection](images/dbconnstrings1.png)
 
    - MySQL Server Name : Value that you copied previously from the MySQL server Properties.
    - your user name : Value that you copied previously from the MySQL server Properties.
