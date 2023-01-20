@@ -17,7 +17,7 @@ The lab guides you in forking a copy of an existing project from Microsoft GitHu
 
 ![Architecture](images/architecture.png)
     
-Jenkins then deploys the Java application to an Azure Web App which is backed by Azure database for MYSQL. Once the application is accessed, its performance metrics are captured with Azure Application Insights and is monitored continuously to improve its performance.
+Jenkins then deploys the Java application to an Azure Web App which is backed by Azure Database for MySQL. Once the application is accessed, its performance metrics are captured with Azure Application Insights and is monitored continuously to improve its performance.
 
 ## What's covered in this lab
 
