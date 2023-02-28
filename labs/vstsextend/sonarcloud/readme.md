@@ -33,9 +33,9 @@ In this lab, you will learn how to integrate Azure DevOps Services with SonarClo
 
 1. You will need a Microsoft account.
 
-2. Using this account, sign in to [**Azure DevOps Services**](https://dev.azure.com){:target="\_blank"}.
+1. Using this account, sign in to [**Azure DevOps Services**](https://dev.azure.com){:target="\_blank"}.
 
-3. Create a new Azure DevOps project for this lab:
+1. Create a new Azure DevOps project for this lab:
   
    Every project in Azure DevOps belongs to an organization. You will be placed into an automatically created default organization on sign in, the name of which is based on your user name (in our example, the user Claudia Sonarova has been given the organization **claudiasonarova**).
    
@@ -59,7 +59,7 @@ In this lab, you will learn how to integrate Azure DevOps Services with SonarClo
 
    The scanning examples repository contains sample projects for a number of build systems and languages including C# with MSBuild, and Maven and Gradle with Java.
 
-4. Install the SonarCloud Azure DevOps extension in your Azure DevOps account
+1. Install the SonarCloud Azure DevOps extension in your Azure DevOps account
 
    Navigate to the [SonarCloud extension](https://marketplace.visualstudio.com/items?itemName=SonarSource.sonarcloud) in the Visual Studio Marketplace and click **Get it free** to install it, and **Proceed to organization** once the installation has finished.
 
@@ -72,15 +72,19 @@ In this lab, you will learn how to integrate Azure DevOps Services with SonarClo
 
    The SonarCloud extension contains build tasks, build templates and a custom dashboard widget.
 
-5. Using the same account as you used for Azure Devops, sign into SonarCloud: https://sonarcloud.io/
+1. Using the same account as you used for Azure Devops, sign into SonarCloud: https://sonarcloud.io/
 
-   ![SonarCloud Welcome](images/sonarcloud.io2.png)
+   ![SonarCloud Welcome](images/sonarcloud.io3.png)
 
-6. In SonarCloud, create an organization and, within that, a new project. The organization and project you set up in SonarCloud will mirror the organization and project that you set up in Azure DevOps.
+1. In SonarCloud, create an organization and, within that, a new project. The organization and project you set up in SonarCloud will mirror the organization and project that you set up in Azure DevOps.
 
-   Once you sign in, click **Import project from Azure** on the welcome page:
+   Once you sign in, click **Analyze new project** on the welcome page:
 
-   ![SonarCloud Welcome](images/import.png)
+   ![SonarCloud Welcome](images/import1.png)
+
+   Click on **Import another organization** option 
+
+   ![Importing Organization](images/import2.png)
 
    Add your Azure DevOps organization name (dev.azure.com/{YOUR-ORG}) , create and provide  a personal access token in your Azure DevOps organization settings. **Check the following scope: Code (Read & Write)**. [Create PAT](https://docs.microsoft.com/en-us/azure/devops/organizations/accounts/use-personal-access-tokens-to-authenticate?view=azure-devops&tabs=preview-page)
 
@@ -99,7 +103,7 @@ In this lab, you will learn how to integrate Azure DevOps Services with SonarClo
    
    Make sure that the the green checkmark appears beside the **Key** field. This indicates that the key is unique across SonarCloud.
 
-   ![SonarCloud org creation](images/org-create2.png)
+   ![SonarCloud org creation](images/org-create3.png)
 
 
    Next, you can choose your plan. For this example, we choose a free plan (that is, one for public repos only), but you can choose a paid plan if you intend to have private repos:
@@ -110,16 +114,18 @@ In this lab, you will learn how to integrate Azure DevOps Services with SonarClo
 
    The next step is to create, within that organization, the SonarCloud project that will mirror the Azure DevOps project **SonarExamples**. Click on **Analyze new project**.
 
-   ![Create SonarCloud project](images/new-project.png)
+   ![Create SonarCloud project](images/new-project1.png)
 
    Choose your Azure DevOps project and click **Set up**.
 
-   ![Create SonarCloud project](images/choose-project.png)
+   ![Create SonarCloud project](images/choose-project1.png)
 
 
    Lets follow the guide in Sonarqube to set up the scanning in Azure Pipelines:
 
-   ![Scan using pipeline](images/with-pipelines.png)
+   Create a service connection in the Azure DevOps project by following the provided instructions
+
+   ![Scan using pipeline](images/service-connection.png)
 
 
    You can skip extension creation (if done previosly). Click **Continue**. Click on the **.NET** option and keep these instructions close for Exercise 1. We will need the information shown  to set up a Service Connection (from Azure DevOps to Sonarcloud) and configure the scanning in the pipeline.
