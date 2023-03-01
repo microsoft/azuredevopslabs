@@ -323,7 +323,7 @@ Configuring SonarCloud analysis to run when a pull request is created involves t
    - Browse to the **Sonar Examples** dashboard in SonarCloud
    - Click on **Administration** > **General Settings**
 
-     ![Click general settings](images/sc_click_general_settings.png)
+     ![Click general settings](images/sc_click_general_settings1.png)
 
    - Select the **Pull Requests** tab
    - Set the **Provider** drop-down to **Azure DevOps Services** and click **Save**
