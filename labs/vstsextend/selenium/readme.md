@@ -63,7 +63,7 @@ Let us configure a ***private*** self-hosted agent on this VM. Selenium requires
   
     ![](images/extractagent.png)
 
-1. Open Powershell in **administrator mode**. Change the path to **C:\AzAgent** and type **Config.cmd** and hit **Enter**.
+1. Open Powershell in **administrator mode**. Change the path to **C:\AzAgent** and type **.\config.cmd** and hit **Enter**.
 
 1. Provide the following details:
 

@@ -94,11 +94,14 @@ In this exercise, you will create a SQL Azure instance and migrate the applicati
 
 ## Exercise 2: Add Docker Support and debug the application locally within the Docker container using Visual Studio
 
-1. Visual Studio has great support for Docker. In order to containerize the application using Docker, all you have to do is right-click on the project, select **Add->Container Orchestrator Support**
+1. Visual Studio has great support for Docker. In order to containerize the application using Docker, all you have to do is right-click on the project, select **Add->Container Orchestrator Support**.
 
    ![adddockersupport](images/adddockersupport.png)
 
-2. Visual Studio then adds the Docker file, compose files and a specific Docker project to the solution. It also inspects the project to determine the proper base image to use for your project.
+1. Choose **Docker Compose** in Container Orchestrator drop-down.
+
+   ![choosecontorch](images/dockercompose.png)
+1. Visual Studio then adds the Docker file, compose files and a specific Docker project to the solution. It also inspects the project to determine the proper base image to use for your project.
 
    ![dockersupportfiles](images/dockersupportfiles.png)
 
@@ -111,7 +114,7 @@ In this exercise, you will create a SQL Azure instance and migrate the applicati
    COPY ${source:-obj/Docker/publish} .
    ```
 
-3. To run the application locally and debug within the Docker container using Visual Studio and to test the connectivity to the SQL Azure instance, set the **docker-compose** as the startup project and click on **Docker**.
+1. To run the application locally and debug within the Docker container using Visual Studio and to test the connectivity to the SQL Azure instance, set the **docker-compose** as the startup project and click on **Docker**.
 
    ![rundocker](images/rundocker.png)
 
