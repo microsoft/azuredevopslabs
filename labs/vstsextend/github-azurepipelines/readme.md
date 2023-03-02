@@ -85,7 +85,7 @@ This will involve setting up a pipeline so that commits to the GitHub repo invok
 
 1. Search for "**pipelines**" and click **Azure Pipelines**.
    
-    ![](images/azurepipelines-extension.png)
+    ![](images/azurepipelines-extension1.png)
 
 1. Scroll to the bottom and click **Install it for free**. If you previously installed Azure Pipelines, select **Configure access** instead to skip steps 6-8.
     

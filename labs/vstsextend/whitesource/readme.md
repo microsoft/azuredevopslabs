@@ -76,26 +76,26 @@ You have a **Java code** provisioned by the Azure DevOps demo generator. You wil
    ![go back](images/back.png)
    ![build_summary](images/build_summarynew.png)
 
-1. Navigate to **Mend Bolt** tab  and wait for the report generation of the completed build to see the vulnerability report.
+1. Navigate to **WhiteSource Bolt Build Report** tab  and wait for the report generation of the completed build to see the vulnerability report. This report shows the list of all vulnerable open source components with **Vulnerability Score**, **Vulnerable Libraries**, **Severity Distribution**
 
    
-   ![report](images/mendboltreport.png)
+   ![report](images/whitesourcebuildreport.png)
 
 ## Exercise 3: Analyze Reports
 
 Mend bolt automatically detects OpenSource components in the software including transitive dependencies and their respective licenses.
 
-### Security Dashboard
+### Security Vulnerabilities
 
-The security dashboard shows the vulnerability of the build.
-This report shows the list of all vulnerable open source components with **Vulnerability Score, Vulnerable Libraries, Severity Distribution**.
+The security vulnerability section shows **vulnerabilty**, **name of the library**, **description** and **Top Fix**
 
-![Security](images/mendsecuritytab.png)
+
+![Security](images/securityvelnerability.png)
 
 ### License risks
 You can see the opensource license distribution and a detailed view of all components and links to their metadata and licensed references.
 
- ![LicenceRisks](images/mendlicencerisks.png)
+ ![LicenceRisks](images/mendlicencerisks1.png)
 
 
 
