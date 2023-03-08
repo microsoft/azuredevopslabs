@@ -52,7 +52,7 @@ In this lab, you will learn how to integrate Azure DevOps Services with SonarClo
 
    Then, select **Import**:
 
-   ![Import repo](images/azure_import_repo.png)
+   ![Import repo](images/azure-import-repo.png)
 
    See [this Microsoft documentation](https://docs.microsoft.com/en-us/azure/devops/repos/git/import-git-repository?view=azure-devops) for detailed instructions on importing a repository.
 
