@@ -266,38 +266,46 @@ We have now created a new organization on SonarCloud and configured our Azure De
 
 In Exercise 2, we will look at what to do with those reports in SonarCloud.
 
-## Exercise 2: Analyze SonarCloud Reports
+## Exercise 2: Review SonarCloud Reports
 
-Open the **SonarExamples** project in the SonarCloud Dashboard. Under **_Bugs and Vulnerabilities_**, we can see a bug has been found.
+Continuing to use the **SonarExamples** project to illustrate concepts in this tutorial, navigate in SonarCloud to **My Project** > **SonarExamples** and go to the **Summary** page by selecting **Main Branch**. 
 
-![Bug found](images/sc_bug_found.png)
+![Overview page](images/2/sonarcloud-overview.png)
 
-The page has other metrics such as **_Code Smells_**, **_Coverage_**, **_Duplications_** and **_Size_**. The following table briefly explains each of these terms.
+In the **Reliability** container, we can see a bug has been found.
+
+![Bug found](images/2/sonarcloud-bug-found.png)
+
+The **Summary** page has other metrics such as **Vulnerabilities**, **Coverage**, **Code Smells**, **Security Hotspots**, **Duplications**, and will tell you how many **Lines of Code** you are using in this project. The following table briefly explains each of these terms.
 
 | Terms | Description |
 | --- | --- |
 | **Bugs** | An issue that represents something wrong in the code. If this has not broken yet, it will, and probably at the worst possible moment. This needs to be fixed |
 | **Vulnerabilities** | A security-related issue which represents a potential backdoor for attackers |
-| **Code Smells** | A maintainability-related issue in the code. Leaving it as-is means that at best maintainers will have a harder time than they should make changes to the code. At worst, they'll be so confused by the state of the code that they'll introduce additional errors as they make changes |
 | **Coverage** | To determine what proportion of your project's code is actually being tested by tests such as unit tests, code coverage is used. To guard effectively against bugs, these tests should exercise or 'cover' a large proportion of your code |
+| **Code Smells** | A maintainability-related issue in the code. Leaving it as-is means that at best maintainers will have a harder time than they should make changes to the code. At worst, they'll be so confused by the state of the code that they'll introduce additional errors as they make changes |
 | **Duplications** | The duplications decoration shows which parts of the source code are duplicated |
-| **Size** | Provides the count of lines of code within the project including the number of statements, Functions, Classes, Files and Directories |
+| **Lines of Code** | Provides a count of lines of code being analyzed within the project; including the number of statements, functions, classes, files, and directories |
 
-{% include important.html content= "Notice that a **C** is displayed alongside the bug count. This is the **Reliability Rating**. **C** indicates that there is **at least 1 major bug** in this code. For more information on Reliability Rating, click [here](https://docs.sonarqube.org/display/SONAR/Metric+Definitions#MetricDefinitions-Reliability). For more information on rule types see [here](https://docs.sonarqube.org/latest/user-guide/rules/) and for more information on severities, see [here](https://docs.sonarqube.org/latest/user-guide/issues/)." %}
+{% include important.html content= "Notice that a letter **C** grade is displayed alongside the bug count; this is the **Reliability Rating**. The grade **C** indicates that there is **at least 1 major bug** in this code. For more information on reliability ratings, check out our page on [Metric Definitions](https://docs.sonarcloud.io/digging-deeper/metric-definitions/#reliability). For information about how issues are defined by those metric definitions, see [here](https://docs.sonarcloud.io/digging-deeper/issues/); and also check out the information on [rule types and severities](https://docs.sonarcloud.io/digging-deeper/rules/#rule-types-and-severities) for more details about those topics." %}
 
-1. Click on the **Bugs** count to see the details of the bug. The Issues page will appear:
+1. Click on the **Bugs** count number to open the **Issues** page with the Bug filter applied:
 
-   ![Click on bugs](images/sc_issues.png)
+   ![Click on bugs](images/2/sonarcloud-issues-bugs.png)
 
-2. Click on the bug to navigate to the code. You will see the error in line number 9 of **Program.cs** file as **Change this condition so that it does not always evaluate to 'true'; some subsequent code is never executed.**:
+2. Click on the issue to navigate to the code. This bug is on line number 9 of the `Program.cs` file (note the breadcrumb in the UI): **Change this condition so that it does not always evaluate to 'true'; some subsequent code is never executed.**:
 
-   ![Bug details](images/sc_bug_in_code.png)
+   ![Bug details](images/2/sonarcloud-bug-in-code.png)
 
-3. We can also see which lines of code are not covered by tests:
+3. We can also see which lines of code are *not covered* by tests; hover over those red lines to see a pop-up message giving you more details:
 
-   ![Test coverage](images/sc_bug_in_code_coverage.png)
+   ![Test coverage](images/2/sonarcloud-not-covered-by-tests.png)
 
-   Our sample project is very small and has no historical data. However, there are thousands of [public projects on SonarCloud](https://sonarcloud.io/explore/projects){:target="\_blank"} that have more interesting and realistic results.
+   And you can select and review other issues nearby (in your code) by clicking on the issue list (in teh left menu) or on the type icons (in the code explorer):
+
+   ![Nearby issues](images/2/sonarcloud-nearby-issues.png)
+
+Our sample project is very small and has no historical data. However, there are thousands of [public projects on SonarCloud](https://sonarcloud.io/explore/projects){:target="\_blank"} that have more interesting and realistic results. Go have a look!
 
 
 
