@@ -10,13 +10,15 @@ folder: /labs/vstsextend/sonarcloud/
 
 ## Overview
 
-[SonarCloud](https://www.sonarsource.com/products/sonarcloud/){:target="\_blank"} is the Clean Code solution for your cloud-based development workflow featuring:
+[SonarCloud](https://www.sonarsource.com/products/sonarcloud/?utm_medium=referral&utm_source=azuredevopslab&utm_campaign=sc-signup&utm_content=signup-sonarcloud-listing-x-x&utm_term=ww-psp-x){:target="\_blank"} is a cloud-based clean code (code quality and security) service that is free for open source projects and offers a free trial for private projects. It features:
 
 - 26 languages, including Java, JS, C#, C/C++, Objective-C, TypeScript, Python, ABAP, PLSQL, T-SQL, and more.
-- Thousands of rules to track down hard-to-find bugs and quality issues thanks to powerful static code analyzers.
+- More than 5,000 rules to track down hard-to-find bugs and quality issues thanks to powerful static code analyzers.
 - Cloud CI Integrations, with Travis, Azure DevOps, BitBucket, AppVeyor and more.
 - Deep code analysis, to explore all source files, whether in branches or pull requests, to reach a green Quality Gate and promote the build.
 - Fast, automatic analysis of most languages - no configuration required.
+- Free analysis for open-source projects and a no-commitment, free 14-day trial for your private repositories.
+- IDE support with SonarLint when using [Connected Mode](https://docs.sonarcloud.io/improving/sonarlint/?utm_medium=referral&utm_source=azuredevopslab&utm_campaign=sc-signup&utm_content=signup-sonarcloud-listing-x-x&utm_term=ww-psp-x) to find code issues on the fly. SonarCloud rules and quality profiles synchronize with SonarLint, aligning teams around a single standard of Clean Code.
 
 <div class="bg-slap"><img src="./images/mslearn.png" class="img-icon-cloud" alt="MS teams" style="width: 48px; height: 48px;">Want additional learning? Check out the <a href="https://docs.microsoft.com/en-us/learn/modules/scan-for-vulnerabilities/" target="_blank"><b><u> Scan code for vulnerabilities in Azure Pipelines</u></b></a> module on Microsoft Learn.</div>
 
@@ -40,7 +42,7 @@ In this lab, you will learn how to integrate Azure DevOps Services with SonarClo
    
    Inside this organization, create a project called **SonarExamples**:
    
-   > Unless you intend to sign up for a paid plan with SonarCloud (see below), make sure that you set your Azure DevOps project to be public. If you *do* intend to sign up for a paid plan, then you can use a private or public project. More details about [Pricing](https://docs.sonarcloud.io/managing-your-subscription/pricing/){:target="_blank"} is explained in the docs.
+   > SonarCloud supports both private and public projects and offers a no-commitment, 14-day trial of SonarCloud for your private repositories completely free. Remember, SonarCloud analysis is always free for open-source projects! More details about [Pricing](https://docs.sonarcloud.io/managing-your-subscription/pricing/){:target="_blank"} is explained in the docs.
 
    ![Create project](images/azure-create-project.png)
 
@@ -488,4 +490,8 @@ Otherwise, if it's failed, then read important notes below to find out how it ha
 
 ## Summary
 
-With the **SonarCloud** extension for **Azure DevOps Services**, you can embed automated testing in your CI/CD pipeline to automate the measurement of your technical debt including code semantics, testing coverage, vulnerabilities. etc. You can also integrate the analysis into the Azure DevOps pull request process so that issues are discovered before they are merged.
+With the [**SonarCloud** extension](https://www.sonarsource.com/products/sonarcloud/features/integrations/azure-integration-2/?utm_medium=referral&utm_source=azuredevopslab&utm_campaign=sc-signup&utm_content=signup-sonarcloud-listing-x-x&utm_term=ww-psp-x) for **Azure DevOps Services**, you can embed automated testing in your CI/CD pipeline to deliver clean code consistently and efficiently with static analysis seamlessly integrated into your workflow. Integrating your SonarCloud analysis into the Azure DevOps pull request process ensures that issues are discovered before they are merged.
+
+SonarCloud helps you consistently deliver cleaner, secure software that future developers will appreciate and your users will love. [Start scanning now](https://www.sonarsource.com/products/sonarcloud/signup/?utm_medium=referral&utm_source=azuredevopslab&utm_campaign=sc-signup&utm_content=signup-sonarcloud-listing-x-x&utm_term=ww-psp-x).
+
+Do you want to see more examples of SonarCloud in action? Please explore current [open-source projects in SonarCloud](https://sonarcloud.io/explore/projects?sort=-analysis_date) that use the [Clean as You Code](https://docs.sonarcloud.io/improving/clean-as-you-code/?utm_medium=referral&utm_source=azuredevopslab&utm_campaign=sc-signup&utm_content=signup-sonarcloud-listing-x-x&utm_term=ww-psp-x) methodology.

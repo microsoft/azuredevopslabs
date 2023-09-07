@@ -40,7 +40,7 @@ description: Learn how you can extend and integrate your DevOps Toolchain with V
           <li> <img src="images/aspnet-logo.png" height="32" width="32"><a href="aspnetmodernize/"> Modernizing your existing ASP.NET Apps with Azure</a></li><br />
           <li> <img src="images/azure.png" height="32" width="32"><a href="devopsprojectforjava/"> Azure DevOps Project for Java</a></li><br />
           <li> <img src="images/azure.png" height="32" width="32"><a href="azuredevopsprojectdotnet/"> Azure DevOps Project for .NET</a></li><br />
-          <li> <img src="images/sonarcloud.png" height="32" width="32"><a href="sonarcloud/"> Managing Technical Debt using VSTS and SonarCloud</a> </li><br />
+          <li> <img src="images/sonarcloud.png" height="32" width="32"><a href="sonarcloud/"> Managing Code Quality using VSTS and SonarCloud</a> </li><br />
           <li> <img src="images/vsts.png" height="32" width="32"><a href="releasegates/"> Controlling deployments using Release Gates</a></li><br />
           <li> <img src="images/7pacetimetracker.png" height="32" width="32"><a href="timetracker/"> Track Time With 7pace Timetracker</a> </li><br />
         </ul>
