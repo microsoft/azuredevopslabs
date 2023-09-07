@@ -62,7 +62,9 @@ In this lab, you will learn how to integrate Azure DevOps Services with SonarClo
 
    Find the [SonarCloud extension](https://marketplace.visualstudio.com/items?itemName=SonarSource.sonarcloud) on the Visual Studio Marketplace and click **Get it free** to install it, then select **Proceed to organization** after the installation has finished.
 
-   ![Marketplace](images/sonar-vs-marketplace.png)
+   ![Marketplace](images/sonar-visual-studio-marketplace.png)
+
+   The page will update when your installation is complete. 
 
    ![Marketplace installed](images/sonar-extension-installed.png)
 
@@ -78,7 +80,7 @@ In this lab, you will learn how to integrate Azure DevOps Services with SonarClo
 
    ![SonarCloud Welcome](images/import-organization-from-azure.png)
 
-   Follow the SonarCloud in-product tutorial to create an organization. First, add your **Azure DevOps organization name** (dev.azure.com/{YOUR-ORG}) in SonarCloud. Next in Azure, go to **Azure DevOps** > **User settings** > **Security** > **Personal access tokens** to create a new Personal Access Token; the SonarCloud in-product tutorial provides a link to Azure's User settings so if you are doing this in parallel, creating a PAT will be easy. See the Microsoft documentation to [Create a PAT](https://docs.microsoft.com/en-us/azure/devops/organizations/accounts/use-personal-access-tokens-to-authenticate?view=azure-devops&tabs=preview-page) if more details are needed.
+   Follow the SonarCloud in-product tutorial to create an organization. First, add your **Azure DevOps organization name** (dev.azure.com/{YOUR-ORG}) in SonarCloud. Next in Azure, go to **Azure DevOps** > **User settings** > **Security** > **Personal access tokens** to create a new Personal Access Token (PAT); the SonarCloud in-product tutorial provides a link to Azure's User settings so if you are doing this in parallel, creating a PAT will be easy. See the Microsoft documentation to [Create a PAT](https://docs.microsoft.com/en-us/azure/devops/organizations/accounts/use-personal-access-tokens-to-authenticate?view=azure-devops&tabs=preview-page) if more details are needed.
 
    ![PAT](images/azure-create-personal-access-token.png)
 
@@ -313,113 +315,120 @@ Our sample project is very small and has no historical data. However, there are 
 
 ## Exercise 3: Set up pull request integration
 
-Configuring SonarCloud analysis to run when a pull request is created involves two steps:
+Configuring SonarCloud analysis to run when a pull request is created involves two steps.
 
-- A SonarCloud project needs to be provided with an access token so it can add PR comments to Azure DevOps, and
-- Branch Policy needs to be configured in Azure DevOps to trigger the PR build
+1. A SonarCloud project needs to be provided with an access token so it can add PR comments to Azure DevOps, and
+2.  A Branch Policy needs to be configured in Azure DevOps to trigger the PR build
 
-1. Create a **Personal Access Token** in Azure DevOps.
+### **Step 1: Create a PAT and apply it to SonarCloud**
 
-   - Follow the instructions in this [article](https://docs.microsoft.com/en-us/azure/devops/organizations/accounts/use-personal-access-tokens-to-authenticate?view=azure-devops) to create a token with **Code (read and write)** scope.
+- 1.1. To create a PAT in Azure DevOps:
 
-     > SonarCloud will post comments to the pull request as if it is a user who owns the personal access token. The recommended practice is to create a separate "bot" Azure DevOps user for this so that it is clear which comments are from real developers and which are from SonarCloud.
+   - Navigate to **User settings** > **Personal access tokens**, then select **New Token**.
 
-   Make sure to set the scope under **Code** to **Read & write**:
+   - Make sure to set the scope under **Code** to **Read & write**. 
 
-   ![Personal access token permissions](images/azdo_create_pat.png)
+   - When ready, click **Create** and copy the generated token and save it to a secure location. Personal Access Tokens are like passwords; it is recommended that you save them somewhere safe so that you can re-use them for future requests.
 
-   Click **Create** and copy the generated token:
+      <img src="images/azure-scope-of-personal-access-token.png"  width="400" alt="Personal access token permissions">
 
-   ![Copy personal access token](images/azdo_copy_pat.png)
+   If you need more details about creating tokens, there are instructions in this [article](https://docs.microsoft.com/en-us/azure/devops/organizations/accounts/use-personal-access-tokens-to-authenticate?view=azure-devops).
 
-   > You should treat Personal Access Tokens like passwords. It is recommended that you save them somewhere safe so that you can re-use them for future requests.
+   > SonarCloud will post comments to the pull request as if it is a user who owns the personal access token. The recommended practice is to create a separate "bot" Azure DevOps user for this so that it is clear which comments are from real developers and which are from SonarCloud.
 
-2. Configure SonarCloud to analyze pull requests
+- 1.2 Apply your PAT to SonarCloud:
 
-   - Browse to the **Sonar Examples** dashboard in SonarCloud
-   - Click on **Administration** > **General Settings**
+   - Navigate to the **Sonar Examples** dashboard in SonarCloud (or your Project's dashboard).
+   - Select **Administration** > **General Settings**
 
-     ![Click general settings](images/sc_click_general_settings1.png)
+     ![Navigate to general settings](images/3/sonar-general-settings.png)
 
-   - Select the **Pull Requests** tab
-   - Set the **Provider** drop-down to **Azure DevOps Services** and click **Save**
-   - Paste in the **Personal access token** you copied earlier and click **Save**
+   - Select the **Pull Requests** tab.
+   - Set the **Provider** drop-down to **Azure DevOps Services** and **Save**.
+   - Paste in the **Personal access token** you copied earlier and **Save**.
 
-     ![Pull request configuration](images/sc_pull_request_config.png)
+      ![Update general settings](images/3/sonar-provider-settings.png)
 
-3. Configure the branch policy for the project in Azure DevOps
+Remember that your PAT will expire and should be updated as needed or your PR analysis will fail. In addition, Azure DevOps cannot allow PATs to be configured at the organization *and* project levels simultaneously.
+
+### **Step 2: Add a branch policy to your project in Azure**
+
+   - 2.1. To configure the branch policy for the project in Azure DevOps:
 
    - Navigate to the **SonarExamples** project in Azure DevOps
-   - Click on **Repos**, **Branches** to view the list of branches
-   - Click on the settings link ("**...**") for **master** and select **Branch policies**
+   - Select **Repos** > **Branches** to view the list of branches.
+   - Find your `master` branch and click on the 3-dots menu to open the **More options** > **Branch policies** page.
 
-     ![Click branch policies](images/azdo_click_branch_policies.png)
+     ![Click Branch policies](images/3/azure-find-branch-policy.png)
 
    - Click the **+** beside **Build Validation** to add a new build policy:
 
-     ![Click add build policy](images/azdo_click_add_build_policy.png)
+      ![Add a build policy](images/3/azure-add-build-policy.png)
 
-   - Select the build definition we created earlier from the **Build definition** drop-down
-   - Set the **Display name** to **SonarCloud analysis**
-   - Click **Save**
+   - From the **Build definition** drop-down, select the build policy your just created, 
+   - Set the **Display name** to *SonarCloud analysis* and,
+   - click **Save**.
 
-     ![Add build policy](images/azdo_add_build_policy.png)
+     ![Add build policy](images/3/aure-edit-build-policy.png)
 
    Azure DevOps is now configured to trigger a SonarCloud analysis when any pull request targeting the **master** branch is created.
 
-4. Create a new pull request
+### **Test your setup**
 
-   Now we will make a change to a file and create a new request so that we can check that the pull request triggers an analysis.
+Now we will make a change to a file and create a new request so that we can check that the pull request triggers an analysis.
 
-   - Navigate to the code file **Program.cs** at **sonarqube-scanner-msbuild/CSharpProject/SomeConsoleApplication/Program.cs** and click **Edit**
-   - Add an empty method to the code as shown in the following screen shot, then click **Commit...**
+1. Create a new pull request
 
-   ``public void Unused(){}``
+   - In Azure, navigate to the code file **Program.cs** at **sonarqube-scanner-msbuild/CSharpProject/SomeConsoleApplication/Program.cs** and select **Edit**
+   - Add an empty method (such as ``public void Unused(){}``) to the code as shown in the following screen shot.
+   - Then select **Commit...** to continue:
 
-      ![Edit program](images/azdo_add_unused.png)
+      ![Edit program](images/3/azure-add-empty-method.png)
 
-   In the dialog that appears,
+   In the Commit dialog box that appears:
 
-   - Change the branch name from **master** to **branch1**
-   - Check the **Create a pull request** checkbox
-   - Click **Commit**, then click **Create** on the next screen to submit the pull request
+   - Change the branch name from **master** to **branch1**.
+   - Select the **Create a pull request** checkbox.
+   - Then select **Commit**, and **Create** on the next screen to create a new pull request.
 
-      ![Commit changes](images/azdo_commit_pr.png)
 
-      ![Create pull request](images/azdo_create_pr.png)
+      <img src="images/3/azure-commit-pr.png"  width="300" alt="PAT">
 
-      If the pull request integration is correctly configured the UI will show that an analysis build is in progress.
+      ![Create pull request](images/3/azure-create-pr.png)
 
-     ![Analysis in progress](images/azdo_pr_analysis_in_progress.png)
+      If the pull request integration is configured correctly, the UI will show that an analysis build is in progress.
 
-5. Review the results of the Pull Request analysis
+     ![Analysis in progress](images/3/azure-pr-analysis-in-progress.png)
+
+[* SECTION IMAGES MUST BE UPDATED BECAUSE THE NEXT SECTION, 3, IS ALREADY IMPLIMENTED AND IS THUS, FAILING THE PR BECAUSE THE QUALITY GATE FAILED... AND WE SHOULD BE ABLE TO PASS THE PR IN THIS SECTION]
+
+2. Review the results of the Pull Request analysis
 
    The results show that the analysis builds completed successfully, but that the new code in the PR failed the Code Quality check.
    Comment has been posted to the PR for the new issue that was discovered.
 
-   ![Check failed](images/check_failed.png)
+   ![Check failed](images/3/azure-failed-check.png)
 
-   ![Check failed](images/azdo_pr_comment.png)
+   ![Check failed comment](images/3/azure-pr-comment.png)
 
-   Note that the only issues in code that was changed or added in the pull request are reported - pre-existing issues in **Program.cs** and other files are ignored.
+   Note that the only issues in code that were changed or added in the pull request are reported - pre-existing issues in **Program.cs** and other files are ignored.
 
-6. Block pull requests if the Code Quality check failed
+### **Block pull requests if the Code Quality check failed**
 
-   At this point, it is still possible to complete the pull request and commit the changes even though the Code Quality check has failed.
-   However, it is simple to configure Azure DevOps to block the commit unless the Code Quality check passes:
+   At this point, it is still possible to complete the pull request and commit the changes even though the code quality check has failed. Nevertheless, it is simple to configure Azure DevOps to block the PR unless the Sonar Quality Gate check passes.
 
-   - Go to the **Branch Policy** page of the **master** branch (since the master branch is the one you will want your pull requests to merge into, this is where you have to adjust the policy).
-   - Click **Add status policy**
+1. As we did in Step 2.1 above to add a branch policy, go to the **Branch Policy** page of the **master** branch. Because the `master` branch is the one you will want your PRs to merge into, this is where you have to adjust the policy.
+   - Under Status Checks, Click **Add status policy**
 
-      ![Return to branch policies](images/azdo_add_status_check.png)
+      ![Return to branch policies](images/3/azure-add-status-check.png)
 
-   - Select **SonarCloud/quality gate** from the **Status to check** drop-down
-   - Set the **Policy requirement** to **Required**
-   - Click **Save**
+   - Select **SonarCloud/quality gate** from the **Status to check** drop-down.
+   - Set the **Policy requirement** to **Required**.
+   - Select **Save** to continue.
 
-     ![vsts_status_policy_add](images/azdo_add_status_policy.png)
+     ![add VSTS status policy](images/3/azure-add-status-policy.png)
 
-   Users will now be unable to merge the pull request until the Code Quality check is successful (the Code Quality check succeeds when all issues have been either fixed or marked as **confirmed** or **resolved** in SonarCloud).
+   Users will now be unable to merge their pull request until the Code Quality check is successful (the Code Quality check succeeds when all issues have been either fixed or marked as **confirmed** or **resolved** in SonarCloud).
 
 ## Exercise 4: Check the SonarCloud Quality Gate status in a Continuous Deployment scenario (In Preview)
 
@@ -434,64 +443,56 @@ Prerequisites :
 
 Setup :
 
-1. Click on **Pipelines** on the left pane, then click on **Releases**
-1. Click on **New Pipeline**
+1. In the left panel, navigate to **Pipelines** > **Releases**, and select **New pipeline** to get started.
 
-   ![new_release_pipeline](images/ex4/new_release_pipeline.png)
+   ![create a new release pipeline](images/4/azure-create-pipeline-for-continuous-deployment.png)
 
-1. On the template selection, choose the template you want. We will choose **Empty job** for this exercise.
+1. On the next page, choose the template you want. We will select **Empty job** for this exercise.
 
-   ![empty_job](images/ex4/empty_job.png)
+   ![empty job](images/4/azure-create-pipeline-with-template.png)
 
-1. Close for now the Stage properties
-1. Click on the pre-deployment conditions on Stage 1
+1. For now, ignore the Stage properties and select the **Pre-deployment conditions** on Stage 1.
 
-   ![pre_deploy_conditions](images/ex4/predeploy_conditions.PNG)
+   ![add predeployment conditions](images/4/azure-pre-deployment-conditions.PNG)
 
-1. Click on **Enabled** beside **Gates**
-1. Click on **+ Add**, then select **SonarCloud Quality Gate status check**
+1. Select **Enabled** beside **Gates**
+1. Select **+ Add**, then choose the **SonarCloud Quality Gate status check** Deployment gate. 
 
-   ![pre_deploy_conditions_settings](images/ex4/predeploy_conditions_settings.PNG)
+   ![define predeployment conditions](images/4/azure-pre-deployment-conditions-gates.PNG)
 
-1. In order to have the fastest result possible for this exercise, we recommend you to set the evaluations options as per this screenshot (See [how Gate evaluation flow works](https://docs.microsoft.com/en-us/azure/devops/pipelines/release/approvals/gates?view=azure-devops), as per Microsoft Documentation)
+1. [* BETTER DESCRIBE FOR EVALUATION OPTIONS; UPDATE TO MENTION "One successful gates...."] To have the fastest result possible for this exercise, we recommend you to define the Evaluation options as shown in this screenshot. Check the Microsoft Documentation for more information about how [Deployments gates](https://docs.microsoft.com/en-us/azure/devops/pipelines/release/approvals/gates?view=azure-devops) in Azure DevOps.
 
-   ![gate_setting](images/ex4/gate_setting.PNG)
+   ![define gate settings](images/4/azure-pre-deployment-conditions-define-gates.PNG)
 
-1.  That's it. You can close this panel.
-1. Click now on **Add an artifact** on the left.
-1. Currently, only build artifacts are supported. Choose the project and the source (build pipeline) of your artifact, its alias should match the name of the artifact published in the build pipeline.
-1. Click on **Add**
+1. That's it. You can close this panel.
+1. Next, select **Add an artifact** on the left. Currently, only build artifacts are supported. Choose the project and the source (the build pipeline) of your artifact; its alias should match the name of the artifact published in the build pipeline.
+1. When finished defining the Project, Source, and alias, select **Add** to continue.
 
-    ![artifact_setting](images/ex4/artifact_settings.PNG)
+    ![define artifact settings](images/4/azure-add-artifact-to-pipeline.PNG)
 
-1. Setup the CD trigger.
+1. Enable the **Continuous deployment trigger**.
 
-   ![artifact_setting](images/cd.PNG)
+   ![enable the CD trigger](images/4/azure-activate-cd-trigger.PNG)
 
-1. You can now save your pipeline.
-1. Go back to the build pipeline section, trigger a build of the pipeline that creates the artifact.
-1. Once the build is completed and succeeded, it will trigger the CD automatically.
-
+1. You can now **Save** your pipeline.
+1. Go back to the build pipeline section and trigger a build of the pipeline that creates CD artifact. Once the build is completed and succeeded, it will trigger the CD automatically.
    
-1. Go to the  **Releases** page.
-1. After few minutes (as set up on the point 8 of this exercise), your Quality Gate check should have been performed (at least twice to get a 'go/nogo' for the stage), and if it's green, it should look like this:
+1. Go to the **Pipelines** > **Releases** page. After few minutes, (as defined by adding an artifact in step 8 of this exercise) your Quality Gate check should have been performed at least twice to get a 'go/nogo' for the stage. If it's green, it should look like this:
 
-   ![qg_green](images/ex4/qg_green.PNG)
+   ![green quality gate](images/4/azure-green-quality-gate.PNG)
 
-Otherwise, if it's failed, then read important notes below to find out how it happened and how to get a green Quality Gate.
+Otherwise, if it's failed, then read the important notes below to find out what happened and how to get a green Sonar Quality Gate.
 
 **Important notes about this feature**
 
 - The **Publish Quality Gate Result** task in your build pipeline has to be enabled in order for the release gate to work.
-- If the Quality Gate is in the failed state, it will not be possible to get the pre-deployment gate passing as this status will remain in its initial state. You will have to execute another build with either the current issues corrected in SonarCloud or with another commit for fixing them.
-- Please note also that current behavior of the pre-deployment gates in Release Pipelines is to check the status every 5 minutes, for a duration of 1 day by default. However, if a Quality Gate for a build has failed it will remain failed so there is no point in re-checking the status. Knowing this, you can set the timeout after which gates fail to a maximum of 6 minutes so the gate will be evaluated only twice as described above, or just cancel the release itself.
-- Only the primary build artifact related Quality Gate of the release will be checked.
-- During a build, if multiple analyses are performed, all of the related Quality Gates are checked. If one of them has the status either WARN, ERROR or NONE, then the Quality Gate status on the Release Pipeline will be failed.
+- If the Sonar Quality Gate is in the failed state, it will not be possible to get the pre-deployment gate passing because the initial status will remain unchanged. You will have to execute another build with either the current issues corrected in SonarCloud, or with another commit that fixed those issues.
+- Please note also that the current default behavior of pre-deployment gates in release pipelines is to check the status every 5 minutes, for a duration of 1 day. However, if a Sonar Quality Gate for a build has failed, it will remain failed so there is no point in re-checking the status. Knowing this, you can either set the timeout after which gates fail to a maximum of 6 minutes so the gate will be evaluated only twice, or just cancel the release itself.
+- Only the primary build artifact-related quality gate of the release will be checked.
+- If multiple analyses are performed during a build, all of the related quality gates are checked. If one of the checks has the status either WARN, ERROR, or NONE, then the quality gate status on the Release Pipeline will be **Failed**.
 
 ## Summary
 
-With the [**SonarCloud** extension](https://www.sonarsource.com/products/sonarcloud/features/integrations/azure-integration-2/?utm_medium=referral&utm_source=azuredevopslab&utm_campaign=sc-signup&utm_content=signup-sonarcloud-listing-x-x&utm_term=ww-psp-x) for **Azure DevOps Services**, you can embed automated testing in your CI/CD pipeline to deliver clean code consistently and efficiently with static analysis seamlessly integrated into your workflow. Integrating your SonarCloud analysis into the Azure DevOps pull request process ensures that issues are discovered before they are merged.
-
-SonarCloud helps you consistently deliver cleaner, secure software that future developers will appreciate and your users will love. [Start scanning now](https://www.sonarsource.com/products/sonarcloud/signup/?utm_medium=referral&utm_source=azuredevopslab&utm_campaign=sc-signup&utm_content=signup-sonarcloud-listing-x-x&utm_term=ww-psp-x).
+With the **SonarCloud** extension for **Azure DevOps Services**, you can embed automated testing in your CI/CD pipeline to automate the measurement of your technical debt including code semantics, testing coverage, vulnerabilities. etc. You can also integrate the analysis into the Azure DevOps pull request process so that issues are discovered before they are merged.
 
 Do you want to see more examples of SonarCloud in action? Please explore current [open-source projects in SonarCloud](https://sonarcloud.io/explore/projects?sort=-analysis_date) that use the [Clean as You Code](https://docs.sonarcloud.io/improving/clean-as-you-code/?utm_medium=referral&utm_source=azuredevopslab&utm_campaign=sc-signup&utm_content=signup-sonarcloud-listing-x-x&utm_term=ww-psp-x) methodology.
