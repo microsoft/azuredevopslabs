@@ -272,15 +272,15 @@ In Exercise 2, we will look at what to do with those reports in SonarCloud.
 
 ## Exercise 2: Review SonarCloud Reports
 
-Continuing to use the **SonarExamples** project to illustrate concepts in this tutorial, navigate in SonarCloud to **My Project** > **SonarExamples** and go to the **Summary** page by selecting **Main Branch**. 
+Let's keep using the **SonarExamples** project to illustrate concepts in this tutorial. In SonarCloud, navigate to **My Project** > **SonarExamples** and go to the **Summary** page by selecting **Main Branch**. 
 
 ![Overview page](images/2/sonarcloud-overview.png)
 
-In the **Reliability** container, we can see a bug has been found.
+In the **Maintainability** container, we can see that two code smells have been found.
 
-![Bug found](images/2/sonarcloud-bug-found.png)
+![Code Smell found](images/2/sonarcloud-code-smell-found.png)
 
-The **Summary** page has other metrics such as **Vulnerabilities**, **Coverage**, **Code Smells**, **Security Hotspots**, **Duplications**, and will tell you how many **Lines of Code** you are using in this project. The following table briefly explains each of these terms.
+The **Summary** page has other metrics such as **Vulnerabilities**, **Coverage**, **Code Smells**, **Security Hotspots**, **Duplications**, and will tell you how many **Lines of Code** you are using in this project. The following table briefly explains each of those terms.
 
 | Terms | Description |
 | --- | --- |
@@ -291,25 +291,25 @@ The **Summary** page has other metrics such as **Vulnerabilities**, **Coverage**
 | **Duplications** | The duplications decoration shows which parts of the source code are duplicated |
 | **Lines of Code** | Provides a count of lines of code being analyzed within the project; including the number of statements, functions, classes, files, and directories |
 
-{% include important.html content= "Notice that a letter **C** grade is displayed alongside the bug count; this is the **Reliability Rating**. The grade **C** indicates that there is **at least 1 major bug** in this code. For more information on reliability ratings, check out our page on [Metric Definitions](https://docs.sonarcloud.io/digging-deeper/metric-definitions/#reliability). For information about how issues are defined by those metric definitions, see [here](https://docs.sonarcloud.io/digging-deeper/issues/); and also check out the information on [rule types and severities](https://docs.sonarcloud.io/digging-deeper/rules/#rule-types-and-severities) for more details about those topics." %}
+{% include important.html content= "Notice, inside of the **Reliability** container that a letter **C** grade is displayed alongside the bug count; this is the **Reliability Rating**. The grade **C** indicates that there is *at least 1 major bug* in this code. For more information on reliability ratings, check out our page on [Metric Definitions](https://docs.sonarcloud.io/digging-deeper/metric-definitions/#reliability). For information about how issues are defined by those metric definitions, see [here](https://docs.sonarcloud.io/digging-deeper/issues/); and also check out the information on [rule types and severities](https://docs.sonarcloud.io/digging-deeper/rules/#rule-types-and-severities) for more details about those topics." %}
 
-1. Click on the **Bugs** count number to open the **Issues** page with the Bug filter applied:
+1. Click on the **Code Smells** count number to open the **Issues** page with the Code Smell type filter applied:
 
-   ![Click on bugs](images/2/sonarcloud-issues-bugs.png)
+   ![Click on Code Smells](images/2/sonarcloud-issues-code-smells.png)
 
-2. Click on the issue to navigate to the code. This bug is on line number 9 of the `Program.cs` file (note the breadcrumb in the UI): **Change this condition so that it does not always evaluate to 'true'; some subsequent code is never executed.**:
+2. Click on the issue to navigate to the code. If you select the first issue, you fill find that it is on line number 4 of the `Program.cs` file (note the breadcrumb in the UI): **Add a 'protected' constructor or the 'static' keyword to the class declaration.**:
 
-   ![Bug details](images/2/sonarcloud-bug-in-code.png)
+   ![Issue details](images/2/sonarcloud-code-smell-in-code.png)
 
 3. We can also see which lines of code are *not covered* by tests; hover over those red lines to see a pop-up message giving you more details:
 
    ![Test coverage](images/2/sonarcloud-not-covered-by-tests.png)
 
-   And you can select and review other issues nearby (in your code) by clicking on the issue list (in teh left menu) or on the type icons (in the code explorer):
+   And you can select and review other issues nearby (in your code) by clicking on the issue list (in the left menu) or on the grey dot (in the code explorer):
 
-   ![Nearby issues](images/2/sonarcloud-nearby-issues.png)
+   ![Nearby issues](images/2/sonarcloud-nearby-issues.png) 
 
-Our sample project is very small and has no historical data. However, there are thousands of [public projects on SonarCloud](https://sonarcloud.io/explore/projects){:target="\_blank"} that have more interesting and realistic results. Go have a look!
+Our sample project is very small and has no historical data but, there are thousands of [public projects on SonarCloud](https://sonarcloud.io/explore/projects){:target="\_blank"} that have more interesting and realistic results. Go have a look!
 
 
 
