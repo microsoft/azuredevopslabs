@@ -339,6 +339,23 @@ description: Learn how you can implement modern DevOps practices with Azure, Azu
 				</div>
 			</div>	
 			</div>
+			<div class="col-lg-3 col-md-6 col-sm-6 col-12 mt-small-5">
+                <div class="hover-effect equal-height-column box-cover ml-forsm">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-3 col-sm-3 col-3 pl-0 pr-lg-0 pl-small-15 img-mt">
+                            <div class=" bg bg-color-black p-2 text-center">
+                                <div class="icon-cover"><img src="/images/github-42.png" alt="githubadvancedsecurity"
+                                        height="20"></div>
+                            </div>
+                        </div>
+                        <div class="col-lg-9 col-md-9 col-sm-9 col-9 cont-mt cont-pl">
+                            <a href="/labs/azuredevops/advancesecurity/" class="text-col-gunpower">
+                                <div class="bg-white text-font">Working with GitHub Advanced Security for Azure DevOps</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
 			</div>	
             <div class="col-lg-3 col-md-6 col-sm-6 col-12 mt-small-5">			
      </div>
