@@ -18,9 +18,9 @@ Azure DevOps Advanced Security provides a range of security features to help org
 
 - Dependency Scanning
 
-- Secret scanning-push 
+- Secret scanning-during the push 
 
-- Secret scanning-repo
+- Secret scanning-inside the repository
 
 - Code scanning
 
@@ -29,11 +29,17 @@ This lab is designed to help familiarize you with GitHub Advanced Security (GHAS
 ## What’s covered in this lab
 In this lab, you will see how you can use Advanced Security to protect the Azure Repo.
 
-1. We will 
+1. We will cover on enabling the advanced security for the repository and setting up the permissions for it.
+
+1. We will set up the dependency scanning, understand the alert and resolve it.
+
+1. We will check on protecting the repository from the secret leak
+
+1. We will configure code scanning and check on the resolution of the code scanning alert.
 
 
 ### Before you begin
-- 
+
 - This lab requires you to complete task 1 from the <a href="../prereq-advsec/">prerequisite</a> instructions.
 
 
@@ -47,11 +53,11 @@ GitHub Advanced Security for Azure DevOps includes extra permissions for more le
 
 1.	Navigate to the Azure DevOps organization and Team Project you want to check.
 
-1.	In the lower-left corner, click on **Project Settings**. In the left menu area under Repos, click **Repositories**.
+1.	In the lower-left corner, click on **Project Settings**. In the left menu area under Repos, click **Repositories**.
 
-1.	Click on the **eShopOnWeb** repository.
+1.	Click on the **eShopOnWeb** repository.
 
-1.	Click on Settings, then click **Advanced Security**, On to turn it on.
+1.	Click on Settings, then click **Advanced Security**, On to turn it on.
 
     ![setup](images/ghas/setup-enable.png)
 
@@ -62,11 +68,11 @@ GitHub Advanced Security for Azure DevOps includes extra permissions for more le
 1.	Advanced Security and Push Protection are now enabled. You can also onboard Advanced Security at [Project-level](https://learn.microsoft.com/en-us/azure/devops/repos/security/configure-github-advanced-security-features?view=azure-devops&tabs=yaml#project-level-onboarding) and [Organization-level](https://learn.microsoft.com/en-us/azure/devops/repos/security/configure-github-advanced-security-features?view=azure-devops&tabs=yaml#organization-level-onboarding) as well
  
 
-||**Note:** GitHub Advanced Security for Azure DevOps includes extra permissions for more levels of control around Advanced Security results and management. Be sure to adjust individual permissions for your repository||
+{% include note.html content= "GitHub Advanced Security for Azure DevOps includes extra permissions for more levels of control around Advanced Security results and management. Be sure to adjust individual permissions for your repository." %}
 
 
 ### Task 2: Setup Advanced Security permissions
-1.	Select Security, under Azure DevOps Groups, and click on **Project Administrators**.
+1.	Select Security, under Azure DevOps Groups, and click on **Project Administrators**.
 
 2.	Next to Advanced Security: manage and dismiss alerts, click the dropdown and select  **Allow**.
 
@@ -82,7 +88,7 @@ GitHub Advanced Security for Azure DevOps includes extra permissions for more le
 ### Task 3: Setup Dependency Scanning
 Dependency Scanning scans your project's dependencies such as libraries, frameworks, and packages, to identify any known security vulnerabilities or outdated versions that may pose a risk to your application
 
-1.	Select and Edit the pipeline you want to add scanning to, **eShopOnweb**
+1.	Select and Edit the pipeline you want to add scanning to **eShopOnweb**
 
     ![choose-pipeline](images/ghas/Choose_pipeline.png)
 
@@ -102,9 +108,9 @@ Dependency Scanning scans your project's dependencies such as libraries, framewo
 
 ### Task 4: Resolution of Dependency Detections
 
-1.	Go to the Repos tab and click on the Advanced Security menu item at the bottom.
+1.	Go to the **Repos** tab and click on the **Advanced Security** menu item at the bottom.
 
-1.	Click on **Dependencies** to see a list of all the dependencies alerts that have been found. This includes the Alert, Vulnerable package, and First detected date. We can easily clean up the dependencies.
+1.	Click on **Dependencies** to see a list of all the dependencies alerts that have been found. This includes the Alert, Vulnerable package, and First detected date. We can easily clean up the dependencies.
 
 ### Dependency Scanning Alert Details
 
@@ -119,16 +125,21 @@ Dependency Scanning scans your project's dependencies such as libraries, framewo
 
 4.	Click on Detections to see the different builds that detected this alert.
 
-    >**ProTip!** - When a vulnerable component is no longer detected in the latest build for pipelines with the dependency scanning task, the state of the associated alert is automatically changed to Closed. To see these resolved alerts, you can use the State filter in the main toolbar and select Closed.
+    > **NOTE**  
+    When a vulnerable component is no longer detected in the latest build for pipelines with the dependency scanning task, the state of the associated alert is automatically changed to Closed. To see these resolved alerts, you can use the State filter in the main toolbar and select Closed.
 
-### Understanding Dependency Alerts 
+
+### Understanding Dependency Alerts
+
 In your repository, there are two types of dependencies: direct and transitive (also known as indirect).
 
-- Direct dependencies, and components in your project.
+- **Direct dependencies** are components in your project.
 
-- Transitive dependencies are components used by direct dependencies. 
-Summary of Direct and Transitive Dependencies 
-Fixing Dependency Alerts 
+- **Transitive dependencies** are components used by direct dependencies.
+
+
+**Fixing Dependency Alerts**
+
 You can follow the recommended steps to manually update dependencies.
 
 When a Dependency Alert is created in Azure DevOps Advanced Security, it will contain details about the vulnerability and steps you can take to resolve it.
@@ -137,16 +148,18 @@ When a Dependency Alert is created in Azure DevOps Advanced Security, it will co
 
 1.	Review Recommendation, Location, Description, and Severity to understand the vulnerability and how to resolve it.
 
-    > Note: The reccomendation will provide you with the steps to resolve the vulnerability. For this one, simply update the package version from 1.0.4.1   to 1.0.4.2 to fix the vulerability
+   {% include tip.html content= "The recommendation will provide you with the steps to resolve the vulnerability. For this one, simply update the package version from 1.0.4.1 to 1.0.4.2 to fix the vulnerability." %}
 
 1.	Click on the Locations to see the code that triggered the alert.
  
 1.	From the code editor, update the package to 1.0.4.2. To do that, here we will use Visual Studio
 
-1.	Clone the repository in Visual Studio and switch the *fixalert* branch 
-  
+1.	Clone the repository in Visual Studio and switch the *fixalert* branch
 
-    > Note: This step is necessary since the main branch is protected by a pull request pipeline
+  
+    > **NOTE**
+      This step is necessary since the main branch is protected by a pull request pipeline.
+
 
 1. Once the source code is opened in Solution Explorer, navigate to the **Dependencies** section under Web.
 
@@ -168,15 +181,22 @@ When a Dependency Alert is created in Azure DevOps Advanced Security, it will co
 
 1. Make sure to follow the policies and changes are merged in the *main*
 
-    > Note: The build will run automatically, initiating the dependency scanning task and publishing the results to Advanced Security and alert automatically closed
 
-    > **ProTip!** Squash Merge is important. If we just commit, the exposed credential will still be in the history. To avoid this, fix code, use a Squash Merge, push it to repo, and you're done!
+    > **Note**
+    The build will run automatically, initiating the dependency scanning task and publishing the results to Advanced Security and alert automatically closed.
 
-1.	Once the pipeline has been completed, **eShopOnWeb****, go to the Azure DevOps Advanced Security dashboard and click on Dependencies.
+
+    >**ProTip!** Squash Merge is important. If we just commit, the exposed credential will still be in the history. To avoid this, fix code, use a Squash Merge, push it to repo, and you're done!
+
+
+1.	Once the pipeline has been completed, **eShopOnWeb**, go to the Azure DevOps Advanced Security dashboard and click on Dependencies.
 
 1.	You will see that the alert *Improper Input Validation in IpMatcher....*... no longer exists, as it is now closed.
 
-    > Note: This is a great way to ensure you are using the latest and greatest versions of your dependencies, and also, ensure you are not using any vulnerable versions
+
+    > **NOTE**
+     This is a great way to ensure you are using the latest and greatest versions of your dependencies, and also, ensure you are not using any vulnerable versions.
+
 
 ### Task 5: Secret Scanning Alerts
 
@@ -187,11 +207,11 @@ Once this is toggled on, it starts off a background scan of this repo and looks 
 ### Secret Scanning Alerts (Gain Insights) 
 The Advance Security Alert hub is where all alerts are raised and where we gain insights, specifically under the category of Secrets. When a secret is found, you can click on it to access more information. The secret may be located in different places, including various commits. 
 Secrets Review 
-1.	Go to the Repos tab and click on the Advanced Security menu item at the bottom.
+1.	Go to the **Repos** tab and click on the **Advanced Security** menu item at the bottom.
 
     ![Advances Sec](images/ghas/Advanced_sec.png)
 
-2.	Click on Secrets to see a list of all the exposed Secrets alerts that have been found. This includes the Alert and Introduced date. Click on the Microsoft Azure Storage account access key identifiable... to see more details about the alert and what you can do to clean up the secret.
+2.	Click on **Secrets** to see a list of all the exposed Secrets alerts that have been found. This includes the Alert and Introduced date. Click on the Microsoft Azure Storage account access key identifiable... to see more details about the alert and what you can do to clean up the secret.
     ![Secrets page](images/ghas/secrets_page.png)
 
 4.	Notice this includes the Recommendation, Locations found, Remediation Steps, Severity, and the Date it was first introduced. We can easily clean this up and dismiss the alert.
@@ -200,7 +220,10 @@ Secrets Review
 ### Task 6: Protection of Repositories (Stop the Leak) 
 Once a credential touches the repo, it's too late. Hackers might have already exploited it. The only way forward is to eliminate these leaks permanently and to find all the places they're actually being used in production.
 
->**Note:** Good news, GHAzDO focuses on preventing this in the first place. Bad news, these need to be manually fixed. There isn't an Easy Button.
+    > **NOTE**
+    Good news, GHAzDO focuses on preventing this in the first place. Bad news, these need to be manually fixed. There isn't an Easy Button.
+
+
 
 ## Push Protection
 
@@ -233,7 +256,7 @@ You can follow these steps to update a file.
 You can follow these steps to fix the exposed secret. 
 1.	Click Cancel to return to the code editor.
 
-    >Note: This scenario is all too common. A developer is testing an application locally and needs to connect to a database, so what do they do? Of course, just put the connection string in the appsettings.json file. They forget to remove it before checking in the code. Now the secret is exposed in the repo, and not just the tip. The exposed credential will still be in the history. This is a huge security hole!
+    > **Note** This scenario is all too common. A developer is testing an application locally and needs to connect to a database, so what do they do? Of course, just put the connection string in the appsettings.json file. They forget to remove it before checking in the code. Now the secret is exposed in the repo, and not just the tip. The exposed credential will still be in the history. This is a huge security hole!
 
 1.	On line 9, copy the STORAGE_ID value and note it down in a notepad. Now, replace this value with        #{STORAGE_ID}#.
 
@@ -241,7 +264,7 @@ You can follow these steps to fix the exposed secret.
 
     ![Remove STORAGE_ID](images/ghas/Commit-token.png)
 
-    > Note: This step is necessary since the main branch is protected by a pull request pipeline
+    > **Note:** This step is necessary since the main branch is protected by a pull request pipeline
 
 1.	Next, we need to update the build pipeline to add a variable. Click on Pipelines and click on eShoponWeb.
 
@@ -283,27 +306,32 @@ You can follow these steps to fix the exposed secret.
 
     ![Completing merge](images/ghas/completing-merge.png)
 
-ProTip! Squash Merge is important. If we just commit, the exposed credential will still be in the history. To avoid this, fix the code, use a Squash Merge, push it to repo, and you're done!
 
-||Note: The build will run automatically, initiating the secret scanning task, and publishing the results to Advanced Security, and an alert will automatically be closed. However, the exposed issue will still be in the history and must be dismissed||
+    > **ProTip!**
+    Squash Merge is important. If we just commit, the exposed credential will still be in the history. To avoid this, fix the code, use a Squash Merge, push it to repo, and you're done!
+
+    > **NOTE**
+    The build will run automatically, initiating the secret scanning task, and publishing the results to Advanced Security, and an alert will automatically be closed. However, the exposed issue will still be in the history and must be dismissed.
 
 ### Dismissing Alert
-You can follow these steps to dismiss the alert. 
-1.	Once the pipeline eShoponWeb has been completed, go to the Azure DevOps Advanced Security dashboard and click on Secrets. 
+You can follow these steps to dismiss the alert.
 
-2.	Click on the following item, Microsoft Storage account... to see the exposed secret and how we easily dismiss the alert. 
+1.	Once the pipeline eShoponWeb has been completed, go to the Azure DevOps Advanced Security dashboard and click on Secrets. 
 
-3.	Click on Close alert to dismiss the alert, select Revoked, then click Close.
+1.	Click on the following item, Microsoft Storage account... to see the exposed secret and how we easily dismiss the alert. 
+
+1.	Click on Close alert to dismiss the alert, select Revoked, then click Close.
+    
     ![Closing Alert](images/ghas/closing-alert.png)
 
-
-    >**Note:** Once the code is merged into main, GHAzDO starts off a background scan of this repo and looks for exposed credentials. The scan doesn't just look at tip of main either, since attackers would look through all the branches and entire commit history||
+    >**NOTE**: Once the code is merged into main, GHAzDO starts off a background scan of this repo and looks for exposed credentials. The scan doesn't just look at tip of main either, since attackers would look through all the branches and entire commit history.
 
 4.	Go to the Azure DevOps Advanced Security dashboard and click on Secrets, you will see a list of other exposed Secrets alerts that have been found. 
 
 5.	You will see that the alert Microsoft Storage account... no longer exists, as it is now revoked.
 
-    >**Note:** Anyone with contributor permissions for a repository can view a summary of all alerts for a repository but only project administrators can dismiss Advanced Security alerts
+    >**NOTE**: Anyone with contributor permissions for a repository can view a summary of all alerts for a repository but only project administrators can dismiss Advanced Security alerts.
+
 
 ### Task 7: Setup Code Scanning
 
@@ -326,7 +354,7 @@ Code scanning in GitHub Advanced Security for Azure DevOps lets you analyze the 
 
 ### Task 8: Review Code Scanning Alert (Gain Insights)
 
-1.	Go to the Repos tab and click on the Advanced Security menu item at the bottom.
+1.	Go to the **Repos** tab and click on the Advanced Security menu item at the bottom.
 
 1.	Click on **Code scanning** to see a list of all the code scanning alerts that have been found. This includes the Alert, Vulnerable code details, and First detected date.
 
@@ -343,7 +371,10 @@ Code scanning in GitHub Advanced Security for Azure DevOps lets you analyze the 
 
 4.	Click on Detections to see the different builds that detected this alert.
 
-    >**ProTip!** - When a vulnerable component is no longer detected in the latest build for pipelines with the dependency scanning task, the state of the associated alert is automatically changed to Closed. To see these resolved alerts, you can use the State filter in the main toolbar and select Closed.
+
+    > ProTip!
+    > When a vulnerable component is no longer detected in the latest build for pipelines with the dependency scanning task, the state of the associated alert is automatically changed to Closed. To see these resolved alerts, you can use the State filter in the main toolbar and select Closed.
+
 
 ### Fixing the Code to resolve the alert
 1.	This is simple to fix using the method using parameters with dynamic SQL described in the Remediation steps.
