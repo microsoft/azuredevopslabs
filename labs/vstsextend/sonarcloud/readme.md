@@ -400,8 +400,6 @@ Now we will make a change to a file and create a new request so that we can chec
 
      ![Analysis in progress](images/3/azure-pr-analysis-in-progress.png)
 
-[* SECTION IMAGES MUST BE UPDATED BECAUSE THE NEXT SECTION, 3, IS ALREADY IMPLIMENTED AND IS THUS, FAILING THE PR BECAUSE THE QUALITY GATE FAILED... AND WE SHOULD BE ABLE TO PASS THE PR IN THIS SECTION]
-
 2. Review the results of the Pull Request analysis
 
    The results show that the analysis builds completed successfully, but that the new code in the PR failed the Code Quality check.
@@ -453,33 +451,33 @@ Setup :
 
 1. For now, ignore the Stage properties and select the **Pre-deployment conditions** on Stage 1.
 
-   ![add predeployment conditions](images/4/azure-pre-deployment-conditions.PNG)
+   ![add predeployment conditions](images/4/azure-pre-deployment-conditions.png)
 
 1. Select **Enabled** beside **Gates**
 1. Select **+ Add**, then choose the **SonarCloud Quality Gate status check** Deployment gate. 
 
-   ![define predeployment conditions](images/4/azure-pre-deployment-conditions-gates.PNG)
+   ![define predeployment conditions](images/4/azure-pre-deployment-conditions-gates.png)
 
-1. [* BETTER DESCRIBE FOR EVALUATION OPTIONS; UPDATE TO MENTION "One successful gates...."] To have the fastest result possible for this exercise, we recommend you to define the Evaluation options as shown in this screenshot. Check the Microsoft Documentation for more information about how [Deployments gates](https://docs.microsoft.com/en-us/azure/devops/pipelines/release/approvals/gates?view=azure-devops) in Azure DevOps.
+1. To have the fastest result possible for this exercise, we recommend you to define the Evaluation options as shown in this screenshot. Check the Microsoft Documentation for more information about how [Deployments gates](https://docs.microsoft.com/en-us/azure/devops/pipelines/release/approvals/gates?view=azure-devops) in Azure DevOps.
 
-   ![define gate settings](images/4/azure-pre-deployment-conditions-define-gates.PNG)
+   ![define gate settings](images/4/azure-pre-deployment-conditions-define-gates.png)
 
 1. That's it. You can close this panel.
 1. Next, select **Add an artifact** on the left. Currently, only build artifacts are supported. Choose the project and the source (the build pipeline) of your artifact; its alias should match the name of the artifact published in the build pipeline.
 1. When finished defining the Project, Source, and alias, select **Add** to continue.
 
-    ![define artifact settings](images/4/azure-add-artifact-to-pipeline.PNG)
+    ![define artifact settings](images/4/azure-add-artifact-to-pipeline.png)
 
 1. Enable the **Continuous deployment trigger**.
 
-   ![enable the CD trigger](images/4/azure-activate-cd-trigger.PNG)
+   ![enable the CD trigger](images/4/azure-activate-cd-trigger.png)
 
 1. You can now **Save** your pipeline.
 1. Go back to the build pipeline section and trigger a build of the pipeline that creates CD artifact. Once the build is completed and succeeded, it will trigger the CD automatically.
    
 1. Go to the **Pipelines** > **Releases** page. After few minutes, (as defined by adding an artifact in step 8 of this exercise) your Quality Gate check should have been performed at least twice to get a 'go/nogo' for the stage. If it's green, it should look like this:
 
-   ![green quality gate](images/4/azure-green-quality-gate.PNG)
+   ![green quality gate](images/4/azure-green-quality-gate.png)
 
 Otherwise, if it's failed, then read the important notes below to find out what happened and how to get a green Sonar Quality Gate.
 
