@@ -33,7 +33,7 @@ In this lab, you will see how you can use Advanced Security to protect the Azure
 
 1. We will set up the dependency scanning, understand the alert and resolve it.
 
-1. We will check on protecting the repository from the secret leak
+1. We will check on protecting the repository from the secret leak.
 
 1. We will configure code scanning and check on the resolution of the code scanning alert.
 
@@ -112,7 +112,7 @@ Dependency Scanning scans your project's dependencies such as libraries, framewo
 
 1.	Click on **Dependencies** to see a list of all the dependencies alerts that have been found. This includes the Alert, Vulnerable package, and First detected date. We can easily clean up the dependencies.
 
-### Dependency Scanning Alert Details
+#### Dependency Scanning Alert Details
 
 1.	Click on the item ***Improper Input Validation in IpMatcher...*** to see the details about this alert.
 
@@ -125,11 +125,11 @@ Dependency Scanning scans your project's dependencies such as libraries, framewo
 
 4.	Click on Detections to see the different builds that detected this alert.
 
-    > **NOTE**  
+    > **Note**  
     When a vulnerable component is no longer detected in the latest build for pipelines with the dependency scanning task, the state of the associated alert is automatically changed to Closed. To see these resolved alerts, you can use the State filter in the main toolbar and select Closed.
 
 
-### Understanding Dependency Alerts
+#### Understanding Dependency Alerts
 
 In your repository, there are two types of dependencies: direct and transitive (also known as indirect).
 
@@ -138,7 +138,7 @@ In your repository, there are two types of dependencies: direct and transi
 - **Transitive dependencies** are components used by direct dependencies.
 
 
-**Fixing Dependency Alerts**
+#### Fixing Dependency Alerts
 
 You can follow the recommended steps to manually update dependencies.
 
@@ -157,8 +157,8 @@ When a Dependency Alert is created in Azure DevOps Advanced Security, it will co
 1.	Clone the repository in Visual Studio and switch the *fixalert* branch
 
   
-    > **NOTE**
-      This step is necessary since the main branch is protected by a pull request pipeline.
+    > **Note:**
+    This step is necessary since the main branch is protected by a pull request pipeline.
 
 
 1. Once the source code is opened in Solution Explorer, navigate to the **Dependencies** section under Web.
@@ -182,21 +182,21 @@ When a Dependency Alert is created in Azure DevOps Advanced Security, it will co
 1. Make sure to follow the policies and changes are merged in the *main*
 
 
-    > **Note**
+    > **Note:**
     The build will run automatically, initiating the dependency scanning task and publishing the results to Advanced Security and alert automatically closed.
 
 
-    >**ProTip!** Squash Merge is important. If we just commit, the exposed credential will still be in the history. To avoid this, fix code, use a Squash Merge, push it to repo, and you're done!
+    >**ProTip!** Squash Merge is important. If we just commit, the exposed credential will still be in the history. To avoid this, fix code, use a Squash Merge, push it to repo, and you're done!
 
 
 1.	Once the pipeline has been completed, **eShopOnWeb**, go to the Azure DevOps Advanced Security dashboard and click on Dependencies.
 
 1.	You will see that the alert *Improper Input Validation in IpMatcher....*... no longer exists, as it is now closed.
 
+> **Note:**
+    This is a great way to ensure you are using the latest and greatest versions of your dependencies, and also, ensure you are not using any vulnerable versions.
 
-    > **NOTE**
-     This is a great way to ensure you are using the latest and greatest versions of your dependencies, and also, ensure you are not using any vulnerable versions.
-
+     
 
 ### Task 5: Secret Scanning Alerts
 
@@ -204,14 +204,14 @@ Secret Scanning scans your codebase and other resources to identify potential se
 
 Once this is toggled on, it starts off a background scan of this repo and looks for exposed credentials. The scan doesn't just look at the tip of the main since attackers would look through all the branches and the entire commit history.
 
-### Secret Scanning Alerts (Gain Insights) 
+#### Secret Scanning Alerts (Gain Insights) 
 The Advance Security Alert hub is where all alerts are raised and where we gain insights, specifically under the category of Secrets. When a secret is found, you can click on it to access more information. The secret may be located in different places, including various commits. 
 Secrets Review 
 1.	Go to the **Repos** tab and click on the **Advanced Security** menu item at the bottom.
 
     ![Advances Sec](images/ghas/Advanced_sec.png)
 
-2.	Click on **Secrets** to see a list of all the exposed Secrets alerts that have been found. This includes the Alert and Introduced date. Click on the Microsoft Azure Storage account access key identifiable... to see more details about the alert and what you can do to clean up the secret.
+2.	Click on **Secrets** to see a list of all the exposed Secrets alerts that have been found. This includes the Alert and Introduced date. Click on the Microsoft Azure Storage account access key identifiable... to see more details about the alert and what you can do to clean up the secret.
     ![Secrets page](images/ghas/secrets_page.png)
 
 4.	Notice this includes the Recommendation, Locations found, Remediation Steps, Severity, and the Date it was first introduced. We can easily clean this up and dismiss the alert.
@@ -220,16 +220,15 @@ Secrets Review
 ### Task 6: Protection of Repositories (Stop the Leak) 
 Once a credential touches the repo, it's too late. Hackers might have already exploited it. The only way forward is to eliminate these leaks permanently and to find all the places they're actually being used in production.
 
-    > **NOTE**
-    Good news, GHAzDO focuses on preventing this in the first place. Bad news, these need to be manually fixed. There isn't an Easy Button.
+    > **Note:** Good news, GHAzDO focuses on preventing this in the first place. Bad news, these need to be manually fixed. There isn't an Easy Button.
 
 
 
-## Push Protection
+#### Push Protection
 
 Push Protection helps protect your repository by preventing unauthorized or malicious code from being pushed to your repository's branches.
 
-### Updating Secrets:
+#### Updating Secrets:
 
 You can follow these steps to update a file. 
 1.	While viewing the alert details, click on the line of code, _Constants._ _cs_.
@@ -251,7 +250,7 @@ You can follow these steps to update a file.
 
     > **ProTip!** This can't happen during a Pull Request. Once the code has pushed into topic branch, it's too late. PR analysis is best for dependency scanning but not secret push scanning, they are different.
 
-### Fixing Exposed Secrets
+#### Fixing Exposed Secrets
 
 You can follow these steps to fix the exposed secret. 
 1.	Click Cancel to return to the code editor.
@@ -310,10 +309,10 @@ You can follow these steps to fix the exposed secret.
     > **ProTip!**
     Squash Merge is important. If we just commit, the exposed credential will still be in the history. To avoid this, fix the code, use a Squash Merge, push it to repo, and you're done!
 
-    > **NOTE**
+    > **Note**
     The build will run automatically, initiating the secret scanning task, and publishing the results to Advanced Security, and an alert will automatically be closed. However, the exposed issue will still be in the history and must be dismissed.
 
-### Dismissing Alert
+#### Dismissing Alert
 You can follow these steps to dismiss the alert.
 
 1.	Once the pipeline eShoponWeb has been completed, go to the Azure DevOps Advanced Security dashboard and click on Secrets. 
@@ -324,13 +323,13 @@ You can follow these steps to dismiss the alert.
     
     ![Closing Alert](images/ghas/closing-alert.png)
 
-    >**NOTE**: Once the code is merged into main, GHAzDO starts off a background scan of this repo and looks for exposed credentials. The scan doesn't just look at tip of main either, since attackers would look through all the branches and entire commit history.
+    >**Note**: Once the code is merged into main, GHAzDO starts off a background scan of this repo and looks for exposed credentials. The scan doesn't just look at tip of main either, since attackers would look through all the branches and entire commit history.
 
 4.	Go to the Azure DevOps Advanced Security dashboard and click on Secrets, you will see a list of other exposed Secrets alerts that have been found. 
 
 5.	You will see that the alert Microsoft Storage account... no longer exists, as it is now revoked.
 
-    >**NOTE**: Anyone with contributor permissions for a repository can view a summary of all alerts for a repository but only project administrators can dismiss Advanced Security alerts.
+    >**Note**: Anyone with contributor permissions for a repository can view a summary of all alerts for a repository but only project administrators can dismiss Advanced Security alerts.
 
 
 ### Task 7: Setup Code Scanning
@@ -358,7 +357,7 @@ Code scanning in GitHub Advanced Security for Azure DevOps lets you analyze the 
 
 1.	Click on **Code scanning** to see a list of all the code scanning alerts that have been found. This includes the Alert, Vulnerable code details, and First detected date.
 
-### Code scanning Alert Details
+#### Code scanning Alert Details
 
 1.	Click on the item ***Uncontrolled command line...*** to see the details about this alert.
 
@@ -376,7 +375,7 @@ Code scanning in GitHub Advanced Security for Azure DevOps lets you analyze the 
     > When a vulnerable component is no longer detected in the latest build for pipelines with the dependency scanning task, the state of the associated alert is automatically changed to Closed. To see these resolved alerts, you can use the State filter in the main toolbar and select Closed.
 
 
-### Fixing the Code to resolve the alert
+#### Fixing the Code to resolve the alert
 1.	This is simple to fix using the method using parameters with dynamic SQL described in the Remediation steps.
 
 1.	Click on Locations found to see the code that triggered the alert.
