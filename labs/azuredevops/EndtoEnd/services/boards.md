@@ -4,7 +4,7 @@ Delivers a suite of Agile tools to support planning and tracking work, code defe
 ### Overview
 In this lab, you will learn about the agile planning and portfolio management tools and processes provided by Azure Boards and how they can help you quickly plan, manage, and track work across your entire team. You will explore the product backlog, sprint backlog, and task boards which can be used to track the flow of work during the course of an iteration. We will also take a look at how the tools have been enhanced in this release to scale for larger teams and organizations.
 
-#### Task 1: Working with teams, areas, and iterations ####
+### Task 1: Working with teams, areas, and iterations ####
 
 1. Navigate to your eShopOnWeb project on Azure DevOps. It will be something like [https://dev.azure.com/yourorganization/eShopOnWeb]
 
@@ -57,7 +57,7 @@ You define area and iteration paths for a project. Teams can then choose which p
 
 <a name="Ex1Task2"></a>
 
-#### Task 2: Working with work items
+### Task 2: Working with work items
 
 Work items play a prominent role in Azure DevOps. You use work items to track features and requirements you're developing, code defects or bugs, and issues or risks to your project. Each work item is based on a work item type that determines the work item fields available for tracking information. The work item types available to you differ depending on the process used when your project was created: Agile, Basic, Scrum, or CMMI. In this task, you'll focus on using various work items to set up the plan to extend the eShopOnWeb site with a product training section. While it can be daunting to build out such a substantial part of a company's offering, Azure DevOps and the Scrum process make it very manageable.
 
@@ -159,7 +159,7 @@ This task is designed to illustrate a variety of ways you can create different t
 
 <a name="Ex1Task3"></a>
 
-#### Task 3: Working with queries ####
+### Task 3: Working with queries ####
 
 You can track your work by using managed queries in Azure Boards. Queries let you list bugs, user stories, or other work items based on field criteria you specify. You can then review these lists with your team, triage work, or bulk update work items. Along with managed queries, the semantic search tool provides some overlapping and different functionality worth exploring.
 
@@ -171,7 +171,7 @@ Use managed queries to support these operations:
 * Share a list of work items with a team member
   
 
-1. To create charts based on work item queries that you can share on a dashboard, select **Boards | Queries**.
+1. To create charts based on work item queries that you can share on a dashboard, select **Boards** | **Queries**.
 
      ![](images/097.png)
 
@@ -216,7 +216,7 @@ Use managed queries to support these operations:
 
 
 <a name="Ex1Task4"></a>
-#### Task 4: Managing sprints and capacity ####
+### Task 4: Managing sprints and capacity ####
 
 Your team builds the sprint backlog during the sprint planning meeting, typically held on the first day of the sprint. Each sprint corresponds to a time-boxed interval which supports your team's ability to work using Agile processes and tools. During the planning meeting, your product owner works with your team to identify those stories or backlog items to complete in the sprint.
 
@@ -323,7 +323,7 @@ Planning meetings typically consist of two parts. In the first part, the team an
     ![](images/059.png)
 
 <a name="Ex1Task5"></a>
-#### Task 5: Customizing Kanban boards ####
+### Task 5: Customizing Kanban boards ####
 
 To maximize a team's ability to consistently deliver high-quality software, Kanban emphasizes two main practices. The first, visualizing the flow of work, requires you to map your team's workflow stages and configure your Kanban board to match. The second, constraining the amount of work in progress requires you to set work-in-progress (WIP) limits. You're then ready to track progress on your Kanban board and monitor key metrics to reduce lead or cycle time. Your Kanban board turns your backlog into an interactive signboard, providing a visual flow of work. As work progresses from idea to completion, you update the items on the board. Each column represents a work stage, and each card represents a user story (blue cards) or a bug (red cards) at that stage of work. However, every team develops its own process over time, so the ability to customize the Kanban board to match the way your team works is crucial.
 

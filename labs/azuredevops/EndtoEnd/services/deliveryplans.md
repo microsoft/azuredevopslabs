@@ -1,4 +1,4 @@
-### Task 7: Delivery Plans
+### Tracking dependency by using Delivery Plans
 
 A delivery plan shows the scheduled work items by sprint (iteration path) of selected teams against a calendar view. Use the Delivery Plans feature to ensure that your teams are aligned with your organizational goals. You can view multiple backlogs and multiple teams across your whole account.
 
@@ -26,3 +26,5 @@ A delivery plan shows the scheduled work items by sprint (iteration path) of sel
 1. This will create a marker with the provided name in the board view, which will help to plan the delivery.
    
     ![](images/dp07.png)
+
+    **Note:** For learning Delivery Plans in detail you can <a href="https://www.azuredevopslabs.com/labs/azuredevops/deliveryplans/"><u>Access this separate detailed lab</u></a>
