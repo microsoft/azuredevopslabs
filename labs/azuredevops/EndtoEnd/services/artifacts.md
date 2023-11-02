@@ -1,5 +1,6 @@
-## Azure Artifacts 
-Allows teams to share packages such as Maven, npm, NuGet, and more from public and private sources and integrate package sharing into your pipelines. For more information about Azure Artifacts, see <a href="https://learn.microsoft.com/en-us/azure/devops/pipelines/artifacts/artifacts-overview?view=azure-devops"><u>Overview of Azure Artifacts</u></a>
+## Azure Artifacts
+
+Azure Artifacts enable developers to consume and publish different types of packages to Artifacts feeds and public registries such as NuGet.org and npmjs.com. You can use Azure Artifacts in conjunction with Azure Pipelines to deploy packages, publish build artifacts, or integrate files between your pipeline stages to build, test, or deploy your application. To learn more about Azure Artifacts, see <a href="https://learn.microsoft.com/azure/devops/pipelines/artifacts/artifacts-overview?view=azure-devops"><u>Overview of Azure Artifacts</u></a>
 
 <a href="https://www.azuredevopslabs.com/labs/azuredevops/packagemanagement/"><u>Package Management with Azure Artifacts</u></a>
 

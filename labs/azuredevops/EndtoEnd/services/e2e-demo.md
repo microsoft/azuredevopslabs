@@ -1,27 +1,10 @@
-# Azure DevOps Sellers Demo
-
-This script helps you prepare for an end-to-end demo of Azure DevOps and explain its various value propositions in one flow. It is intended to be used by the field to provide a high-level overview of Azure DevOps while showcasing all of its value propositions. It is not intended to be an in-depth tutorial into any particular area of Azure DevOps.
-
-Preparing to deliver this demo requires practice. You must try the end-to-end demo at least twice before delivering it in front of a customer. There are some preparation steps that must be completed each time before starting the demo.
-
-> You can also see a suggested commentary to go along with each portion of the demo.
-
-## Preparation
-
-Carefully walk through all of these preparatory steps so that you have a fully working demo. Let us start with some basic prerequisites even before you get into preparation.
 
 ### Prerequisites
-
-- A live ID (e.g., @outlook.com). Do not use a @microsoft.com account to set up the demo as you won't be able to walk through the GitHub Advanced Security portions of this demo with a @microsoft.com account.
 
 - An Azure subscription (free from https://azure.microsoft.com/free). Your live ID should be the owner or co-owner of the subscription. You should have enough credits to be able to create a database and a couple of web apps in the subscription.
 
 - An Azure DevOps organization (free from https://azure.microsoft.com/services/devops). You should have created this organization with your live id and not your Microsoft account. It does not matter if you created some projects in this organization since we will be creating a new one anyway in this script.
 
-- GitHub Advance Security (GHAS) for Azure DevOps must be enabled for your Azure DevOps organization. Send an email to free_ghazdo_requests@microsoft.com to have this enabled for your organization. Note that this can take up to a week to be enabled. So, get started on your prerequisites well in advance.
-
-Use your live ID to perform all of the following steps.
- 
 ### Task 1: Configuring the eShopOnWeb team project
 
 1. Navigate to [https://azuredevopsdemogenerator.azurewebsites.net](https://azuredevopsdemogenerator.azurewebsites.net/). This utility site will automate the process of creating a new Azure DevOps project within your account that is prepopulated with content (work items, repos, etc.) required for the demo. For more information on the site, please see [https://docs.microsoft.com/en-us/azure/devops/demo-gen](https://docs.microsoft.com/en-us/azure/devops/demo-gen).
@@ -47,7 +30,7 @@ Use your live ID to perform all of the following steps.
 
     ![](images/create_project.png)
 
-1. Navigate to your eShopOnWeb project on Azure DevOps. It will be something like [https://dev.azure.com/YOURACCOUNT/eShopOnWeb]()
+1. Navigate to your eShopOnWeb project on Azure DevOps. It will be something like [https://dev.azure.com/yourorganization/eShopOnWeb]()
 
 ### Task 2: Configure the approvals and checks in environments
 
@@ -124,7 +107,8 @@ To create an Azure Resource Manager service connection, you must be the owner or
 
     ![](images/pipelines/Choose_your_subscription.png)
 
-> Note: It is important that you name the service connection as **eShopOnWeb** (with that exact case). Otherwise, your pipeline will fail.
+> **Note:** 
+    It is important that you name the service connection as **eShopOnWeb** (with that exact case). Otherwise, your pipeline will fail.
 
 1. Choose the Security option on the Kebab menu &#8942; of the newly created service connection
     

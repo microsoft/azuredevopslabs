@@ -114,7 +114,7 @@ description: Learn how you can implement modern DevOps practices with Azure, Azu
                 <div class="hover-effect equal-height-column box-cover ml-forsm">
                     <div class="row">
                         <div class="col-lg-3 col-md-3 col-sm-3 col-3 pl-0 pr-lg-0 pl-small-15 img-mt">
-                            <div class=" bg bg-color-orangered p-2 text-center" style="background-color: #21618C;">
+                            <div class=" bg bg-color-orangered p-2 text-center" style="background-color: #2586C8;">
                                 <div class="icon-cover"><img src="/images/AzureDevOps-EtoE.png" alt="azuredevopsetoe"
                                 height="20"></div>
                             </div>

@@ -1,8 +1,8 @@
 ## Azure Pipelines
 
-Provides build and release services to support continuous integration and delivery of your applications. For more information about <a href="https://learn.microsoft.com/en-us/azure/devops/pipelines/get-started/what-is-azure-pipelines?view=azure-devops"><u>Azure Pipelines, see What is Azure Pipelines?</u></a>.
+Azure Pipelines automatically builds and tests code projects. It supports all major languages and project types and combines continuous integration, continuous delivery, and continuous testing to build, test, and deliver your code to any destination.
 
-<a href="https://www.azuredevopslabs.com/labs/azuredevops/yaml/"><u>Configuring CI/CD Pipelines as Code with YAML in Azure DevOps</u></a>
+To learn more about Azure Pipelines, see <a href="https://learn.microsoft.com/en-us/azure/devops/pipelines/get-started/what-is-azure-pipelines?view=azure-devops"><u> What is Azure Pipelines?</u></a> and <a href="https://www.azuredevopslabs.com/labs/azuredevops/yaml/"><u>Configuring CI/CD Pipelines as Code with YAML in Azure DevOps</u></a>
 
 ### Task 1: Creating a service connection to Azure
 

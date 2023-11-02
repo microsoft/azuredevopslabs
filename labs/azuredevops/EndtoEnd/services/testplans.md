@@ -1,8 +1,8 @@
 ## Azure Test Plans
 
-Provides several tools to test your apps, including manual/exploratory testing and continuous testing. For more information about Azure Test Plans, see <a href="https://learn.microsoft.com/en-us/azure/devops/test/overview?view=azure-devops"><u> Overview of Azure Test Plans</u></a>.
+Azure Test Plans provides rich and powerful tools everyone in the team can use to drive quality and collaboration throughout the development process. The easy-to-use, browser-based test management solution provides all the capabilities required for planned manual testing, user acceptance testing, exploratory testing, and gathering feedback from stakeholders.
 
-<a href="https://www.azuredevopslabs.com/labs/azuredevops/testmanagement/"><u>Test Planning and Management with Azure Test Plans</u></a>
+To learn more about Azure Test Plans, see <a href="https://learn.microsoft.com/azure/devops/test/overview?view=azure-devops"><u> What is Azure Test Plans?</u></a> and <a href="https://www.azuredevopslabs.com/labs/azuredevops/testmanagement/"><u>Test Planning and Management with Azure Test Plans</u></a>.
 
 ### Task 1: Understanding Test Plans, Suites and Cases ###
 
@@ -264,7 +264,7 @@ In this exercise, you will learn how to create a manual test plan and populate i
     |Log out||
     |Close browser||
 
-   **Note:** If you end up with an extra empty step, delete it.
+>**Note:** If you end up with an extra empty step, delete it.
 
 
 1. At this point, the **Steps** panel should look similar to the following:
@@ -308,8 +308,7 @@ In this exercise, you will learn how to create a manual test plan and populate i
 1. The first step in the test is to open the project site. To do this,
     - If application is hosted in IIS - switch to the **Visual Studio** instance that has the **eShopOnWeb** solution loaded. From the **IIS Express** target dropdown, select **Browse With...**.
 
-    |
-    Note: If application is hosted in Azure - open the respective URL  and move to **Step 8**|
+>**Note:** If application is hosted in Azure - open the respective URL  and move to **Step 8**|
 
     ![](images/testplans/061.png)
 

@@ -1,6 +1,6 @@
 ## Azure Repos
 
-Provides Git repositories or Team Foundation Version Control (TFVC) for source control of your code. For more information about Azure Repos, see <a href ="https://learn.microsoft.com/en-us/azure/devops/repos/get-started/what-is-repos?view=azure-devops"> <u>What is Azure Repos?</u></a>. 
+Azure Repos is a set of version control tools that you can use to manage your code. Whether your software project is large or small, using version control as soon as possible is a good idea. Azure Repos provides two types of version control: Git and Team Foundation Version Control (TFVC). For more information about Azure Repos, see <a href ="https://learn.microsoft.com/azure/devops/repos/get-started/what-is-repos?view=azure-devops"> <u>What is Azure Repos?</u></a>. 
 
 <a href="https://www.azuredevopslabs.com/labs/azuredevops/git/"><u>Version Controlling with Azure Repos</u></a>
 

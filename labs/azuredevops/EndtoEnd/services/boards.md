@@ -1,15 +1,20 @@
 ## Azure Boards
 Delivers a suite of Agile tools to support planning and tracking work, code defects, and issues using Kanban and Scrum methods. For more information about Azure Boards, see<a href="https://learn.microsoft.com/en-us/azure/devops/boards/get-started/what-is-azure-boards?view=azure-devops"> <u>What is Azure Boards?</u></a>.
 
-<a href="https://www.azuredevopslabs.com/labs/azuredevops/agile/"><u>Agile Planning and Portfolio Management with Azure Boards</u></a>
+### Overview
+In this lab, you will learn about the agile planning and portfolio management tools and processes provided by Azure Boards and how they can help you quickly plan, manage, and track work across your entire team. You will explore the product backlog, sprint backlog, and task boards which can be used to track the flow of work during the course of an iteration. We will also take a look at how the tools have been enhanced in this release to scale for larger teams and organizations.
 
-### Task 1: Working with teams, areas, and iterations ###
+#### Task 1: Working with teams, areas, and iterations ####
 
-1. Navigate to your eShopOnWeb project on Azure DevOps. It will be something like [https://dev.azure.com/YOURACCOUNT/eShopOnWeb]
+1. Navigate to your eShopOnWeb project on Azure DevOps. It will be something like [https://dev.azure.com/yourorganization/eShopOnWeb]
 
 1. Open the settings page using the **Project settings** navigation located at the bottom left of the page.
 
     ![](images/projset.png)
+
+As your organization grows, you add teams to support that growth. You create a team in Azure DevOps that corresponds to a group of project members focused on specific products, services, or feature areas. You add teams to provide them the tools they need to manage their backlog, plan sprints, configure dashboards, define alerts, and set team favorites.
+
+Each new project is configured with a default team with the project name. For example, the project named eShoponweb is configured with the default team eShoponweb Team. You can rename the default team and you can reassign a new team as the default. We will now create a new team and will name it Middleware Team. 
 
 1. Select the **Teams** tab. There are already a few teams in this project, but you'll make a new one for this lab. Click **New Team**.
 
@@ -27,6 +32,10 @@ Delivers a suite of Agile tools to support planning and tracking work, code defe
 
     ![](images/itandarea.png)
 
+Area paths allow you to group work items by team, product, or feature area. Iteration paths allow you to group work into sprints, milestones, or other event-specific or time-related period. Both these fields allow you to define a hierarchy of paths.
+
+You define area and iteration paths for a project. Teams can then choose which paths are used to support their backlog and other Agile tools. To understand how Agile tools use area and iteration paths, see <a href="https://learn.microsoft.com/en-us/azure/devops/organizations/settings/about-teams-and-settings?view=azure-devops"><u> Agile tools that rely on areas and iterations</u></a>.
+
 1. Select the **Iterations** tab and click **Select Iterations**. This team will use the same iteration schedule that's already in place for the other teams, although you can take a different route if that's better for your organization.
 
     ![](images/selectit.png)
@@ -38,7 +47,7 @@ Delivers a suite of Agile tools to support planning and tracking work, code defe
 
     ![](images/threeitr.png)
 
-1. Select the **Areas** tab. By default, there is an area matching the name of the team.
+1. Select the **Areas** tab, notice that by default, there is an area matching the name of the team.
 
     ![](images/defarea.png)
 
@@ -47,26 +56,19 @@ Delivers a suite of Agile tools to support planning and tracking work, code defe
     ![](images/includesubareas.png)
 
 <a name="Ex1Task2"></a>
-### Task 2: Working with work items ###
 
-Work items play a prominent role in Azure DevOps. Whether describing work to be done, impediments to release, test definitions, or other key items, work items are the workhorse of modern projects. In this task, you'll focus on using various work items to set up the plan to extend the eShopOnWeb site with a product training section. While it can be daunting to build out such a substantial part of a company's offering, Azure DevOps and the Scrum process make it very manageable.
+#### Task 2: Working with work items
+
+Work items play a prominent role in Azure DevOps. You use work items to track features and requirements you're developing, code defects or bugs, and issues or risks to your project. Each work item is based on a work item type that determines the work item fields available for tracking information. The work item types available to you differ depending on the process used when your project was created: Agile, Basic, Scrum, or CMMI. In this task, you'll focus on using various work items to set up the plan to extend the eShopOnWeb site with a product training section. While it can be daunting to build out such a substantial part of a company's offering, Azure DevOps and the Scrum process make it very manageable.
 
 ![](images/workflow.png)
 
-This task is designed to illustrate a variety of ways you can create different kinds of work items, as well as to demonstrate the breadth of features available on the platform. As a result, these steps should not be viewed as prescriptive guidance for project management. The features are intended to be flexible enough to fit your process needs, so explore and experiment as you go.
+This task is designed to illustrate a variety of ways you can create different types of work items, as well as to demonstrate the breadth of features available on the platform. As a result, these steps should not be viewed as prescriptive guidance for project management. The features are intended to be flexible enough to fit your process needs, so explore and experiment as you go.
 
-1. Navigate to **Overview | Dashboards**.
+1. There are many ways to create work items in Azure DevOps, and we'll explore a few of them. Click on '+' icon and choose **New Work Item** then click on **Epic** 
+    ![](images/newoption.png)
 
-    ![](images/ovdb.png)
-
-1. Select the **Overview** dashboard for **eShopOnWeb Team**.
-
-    ![](images/ovdb.png)
-
-1. There are many ways to create work items in Azure DevOps, and we'll explore a few of them. Sometimes it's as simple as firing one off from a dashboard. In the **New Work Item** form, type **"Product training"** and select the **Epic** type. Click **Create**.
-
-    ![](images/newwork.png)
-    ![](images/newepic.png)
+1. type **"Product training"** as a title.
 
 1. Assign the new work item to yourself and set the **Area** to **eShoponweb\Middleware Team**. Set the **Iteration** to **eShoponweb\Iteration 2** and click **Save & Close**. Ordinarily, you would want to fill out as much information as possible, but you can run lean here for the purposes of this lab.
 
@@ -156,12 +158,20 @@ This task is designed to illustrate a variety of ways you can create different k
     ![](images/task2.png)
 
 <a name="Ex1Task3"></a>
-### Task 3: Working with queries ###
 
+#### Task 3: Working with queries ####
 
-  *Content related to creating and using queries will be added here
+You can track your work by using managed queries in Azure Boards. Queries let you list bugs, user stories, or other work items based on field criteria you specify. You can then review these lists with your team, triage work, or bulk update work items. Along with managed queries, the semantic search tool provides some overlapping and different functionality worth exploring.
 
-  1. Generate charts based on work item queries, which you can share with a dashboard. Select **Boards | Queries**.
+Use managed queries to support these operations:
+
+* Bulk update of work items using the web portal
+* Triage and update work items
+* Review a hierarchy of work items
+* Share a list of work items with a team member
+  
+
+1. To create charts based on work item queries that you can share on a dashboard, select **Boards | Queries**.
 
      ![](images/097.png)
 
@@ -193,13 +203,20 @@ This task is designed to illustrate a variety of ways you can create different k
 
     ![](images/104.png)
 
-1. You can now add this chart to a dashboard.
+1. You can now add this chart to a dashboard so then it could be accessible from Dashboard section.
 
     ![](images/105.png)
 
+1. To visualize the project details by using widgets, we can access the **Dashboard** of the project. Choose **eShopOnWeb** to see the already existing widgets related to that team.
+
+    ![](images/106.png)
+
+    ![](images/107.png)
+
+
 
 <a name="Ex1Task4"></a>
-### Task 4: Managing sprints and capacity ###
+#### Task 4: Managing sprints and capacity ####
 
 Your team builds the sprint backlog during the sprint planning meeting, typically held on the first day of the sprint. Each sprint corresponds to a time-boxed interval which supports your team's ability to work using Agile processes and tools. During the planning meeting, your product owner works with your team to identify those stories or backlog items to complete in the sprint.
 
@@ -306,7 +323,7 @@ Planning meetings typically consist of two parts. In the first part, the team an
     ![](images/059.png)
 
 <a name="Ex1Task5"></a>
-### Task 5: Customizing Kanban boards ###
+#### Task 5: Customizing Kanban boards ####
 
 To maximize a team's ability to consistently deliver high-quality software, Kanban emphasizes two main practices. The first, visualizing the flow of work, requires you to map your team's workflow stages and configure your Kanban board to match. The second, constraining the amount of work in progress requires you to set work-in-progress (WIP) limits. You're then ready to track progress on your Kanban board and monitor key metrics to reduce lead or cycle time. Your Kanban board turns your backlog into an interactive signboard, providing a visual flow of work. As work progresses from idea to completion, you update the items on the board. Each column represents a work stage, and each card represents a user story (blue cards) or a bug (red cards) at that stage of work. However, every team develops its own process over time, so the ability to customize the Kanban board to match the way your team works is crucial.
 
