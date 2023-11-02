@@ -45,7 +45,7 @@ call gem install --local update.gem
 call update_rubygems --no-ri --no-rdoc > updaterubygemsout
 ECHO What's our new Rubygems version?
 call gem --version
-call gem uninstall rubygems-update -x
+REM call gem uninstall rubygems-update -x
 
 popd
 
