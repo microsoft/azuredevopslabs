@@ -2,7 +2,9 @@
 
 In this lab, you will learn about all the features of Azure DevOps like Kanban boards, Delivery Plans, Build and Release pipelines the usage of Advanced security features like:
 
-- Preventing the leaks of sensitive data by scanning for vulnerabilities.
+- Preventing the leaks of sensitive data by scanning for vulnerabilities, 
+
+- Scanning code for vulnerabilities and resolving it
 
 - Dependency scanning in the software development process.
 
