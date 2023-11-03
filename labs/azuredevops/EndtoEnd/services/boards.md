@@ -1,3 +1,14 @@
+---
+title: Agile Planning and Portfolio Management with Azure Boards
+layout: page
+sidebar: vsts
+permalink: /labs/azuredevops/EndtoEnd/services/
+folder: /labs/azuredevops/EndtoEnd/services/
+version: Lab version - 1.0.0
+updated: Last updated - 01/11/2023
+---
+<div class="rw-ui-container"></div>
+
 ## Azure Boards
 Delivers a suite of Agile tools to support planning and tracking work, code defects, and issues using Kanban and Scrum methods. For more information about Azure Boards, see<a href="https://learn.microsoft.com/en-us/azure/devops/boards/get-started/what-is-azure-boards?view=azure-devops"> <u>What is Azure Boards?</u></a>.
 
@@ -171,7 +182,7 @@ Use managed queries to support these operations:
 * Share a list of work items with a team member
   
 
-1. To create charts based on work item queries that you can share on a dashboard, select **Boards** | **Queries**.
+1. To create charts based on work item queries that you can share on a dashboard, select **Boards** and then click on **Queries**.
 
      ![](images/097.png)
 

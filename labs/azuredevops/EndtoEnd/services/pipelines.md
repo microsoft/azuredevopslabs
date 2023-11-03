@@ -1,3 +1,14 @@
+---
+title: Implementing Build and Deployment using Azure DevOps
+layout: page
+sidebar: vsts
+permalink: /labs/azuredevops/EndtoEnd/services/
+folder: /labs/azuredevops/EndtoEnd/services/
+version: Lab version - 1.0.0
+updated: Last updated - 01/11/2023
+---
+<div class="rw-ui-container"></div>
+
 ## Azure Pipelines
 
 Azure Pipelines automatically builds and tests code projects. It supports all major languages and project types and combines continuous integration, continuous delivery, and continuous testing to build, test, and deliver your code to any destination.

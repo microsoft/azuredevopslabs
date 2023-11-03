@@ -1,3 +1,14 @@
+---
+title: Test Planning and Management with Azure Test Plans
+layout: page
+sidebar: vsts
+permalink: /labs/azuredevops/EndtoEnd/services/
+folder: /labs/azuredevops/EndtoEnd/services/
+version: Lab version - 1.0.0
+updated: Last updated - 01/11/2023
+---
+<div class="rw-ui-container"></div>
+
 ## Azure Test Plans
 
 Azure Test Plans provides rich and powerful tools everyone in the team can use to drive quality and collaboration throughout the development process. The easy-to-use, browser-based test management solution provides all the capabilities required for planned manual testing, user acceptance testing, exploratory testing, and gathering feedback from stakeholders.

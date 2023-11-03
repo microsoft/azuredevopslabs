@@ -1,3 +1,14 @@
+---
+title: Building a roadmap and tracking dependencies across teams with Delivery Plans
+layout: page
+sidebar: vsts
+permalink: /labs/azuredevops/EndtoEnd/services/
+folder: /labs/azuredevops/EndtoEnd/services/
+version: Lab version - 1.0.0
+updated: Last updated - 01/11/2023
+---
+<div class="rw-ui-container"></div>
+
 ### Tracking dependency by using Delivery Plans
 
 A delivery plan shows the scheduled work items by sprint (iteration path) of selected teams against a calendar view. Use the Delivery Plans feature to ensure that your teams are aligned with your organizational goals. You can view multiple backlogs and multiple teams across your whole account.

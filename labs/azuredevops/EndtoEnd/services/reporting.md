@@ -1,6 +1,17 @@
+---
+title: Using the Azure Dashboard to Analyze the Project Reports
+layout: page
+sidebar: vsts
+permalink: /labs/azuredevops/EndtoEnd/services/
+folder: /labs/azuredevops/EndtoEnd/services/
+version: Lab version - 1.0.0
+updated: Last updated - 01/11/2023
+---
+<div class="rw-ui-container"></div>
+
 ## Azure Analytics and Reporting
 
-Reporting in Azure DevOps enables software development teams to make data-driven decisions and deliver value to their customers faster. For more information about Azure Analytics and Reporting, see<a href="https://learn.microsoft.com/en-us/azure/devops/report/?view=azure-devops"> <u>What is Azure Analytics and Reporting?</u></a>
+Reporting in Azure DevOps enables software development teams to make data-driven decisions and deliver value to their customers faster. For more information about Azure Analytics and Reporting, see<a href="https://learn.microsoft.com/en-us/azure/devops/report/?view=azure-devops"> <u> What is Azure Analytics and Reporting?</u></a>
 
 ### Task 1: Defining dashboards ###
 

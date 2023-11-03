@@ -1,3 +1,14 @@
+---
+title: Package Management with Azure Artifacts
+layout: page
+sidebar: vsts
+permalink: /labs/azuredevops/EndtoEnd/services/
+folder: /labs/azuredevops/EndtoEnd/services/
+version: Lab version - 1.0.0
+updated: Last updated - 01/11/2023
+---
+<div class="rw-ui-container"></div>
+
 ## Azure Artifacts
 
 Azure Artifacts enable developers to consume and publish different types of packages to Artifacts feeds and public registries such as NuGet.org and npmjs.com. You can use Azure Artifacts in conjunction with Azure Pipelines to deploy packages, publish build artifacts, or integrate files between your pipeline stages to build, test, or deploy your application. To learn more about Azure Artifacts, see <a href="https://learn.microsoft.com/azure/devops/pipelines/artifacts/artifacts-overview?view=azure-devops"><u>Overview of Azure Artifacts</u></a>

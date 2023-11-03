@@ -1,4 +1,13 @@
-
+---
+title: Using GitHub Advanced Security for Azure DevOps
+layout: page
+sidebar: vsts
+permalink: /labs/azuredevops/EndtoEnd/services/
+folder: /labs/azuredevops/EndtoEnd/services/
+version: Lab version - 1.0.0
+updated: Last updated - 01/11/2023
+---
+<div class="rw-ui-container"></div>
 # Advanced Security
 
 GitHub Advanced Security for Azure DevOps brings the **secret scanning, dependency scanning** and **CodeQL code scanning** solutions already available for GitHub users and natively integrates them into Azure DevOps to protect your Azure Repos and Pipelines. 
