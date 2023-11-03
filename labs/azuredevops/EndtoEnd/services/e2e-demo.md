@@ -1,38 +1,8 @@
+### Before you begin
 
-### Prerequisites
+- This requires an Azure subscription (free from https://azure.microsoft.com/free). Your live ID should be the owner or co-owner of the subscription. You should have enough credits to be able to create a database and a couple of web apps in the subscription.
 
-- An Azure subscription (free from https://azure.microsoft.com/free). Your live ID should be the owner or co-owner of the subscription. You should have enough credits to be able to create a database and a couple of web apps in the subscription.
-
-- An Azure DevOps organization (free from https://azure.microsoft.com/services/devops). You should have created this organization with your live id and not your Microsoft account. It does not matter if you created some projects in this organization since we will be creating a new one anyway in this script.
-
-### Task 1: Configuring the eShopOnWeb team project
-
-1. Navigate to [https://azuredevopsdemogenerator.azurewebsites.net](https://azuredevopsdemogenerator.azurewebsites.net/). This utility site will automate the process of creating a new Azure DevOps project within your account that is prepopulated with content (work items, repos, etc.) required for the demo. For more information on the site, please see [https://docs.microsoft.com/en-us/azure/devops/demo-gen](https://docs.microsoft.com/en-us/azure/devops/demo-gen).
-
-1. Sign in using the Microsoft account associated with your Azure DevOps subscription.
-
-    ![](images/pre01.png)
-
-1. **Accept** the permission requests for accessing your subscription.
-
-1. Select your Azure DevOps organization and enter the project name **"eShopOnWeb"**. Click **Choose Template**.
-
-    ![](images/choose_tempalte.png)
-
-1. Select the **eShopOnWeb** template and click **Select Template**.
-
-    #Need to update image
-    ![](images/select_eshop.png)
-
-1. Provide a project name and choose your Organization.
-
-1. Click **Create Project** and wait for the process to complete.
-
-    ![](images/create_project.png)
-
-1. Navigate to your eShopOnWeb project on Azure DevOps. It will be something like [https://dev.azure.com/yourorganization/eShopOnWeb]()
-
-### Task 2: Configure the approvals and checks in environments
+### Task 1: Configure the approvals and checks in environments
 
 Once you provision the project follow the below steps to configure the approvals and checks for production and test environments.
 
@@ -87,7 +57,7 @@ Once you provision the project follow the below steps to configure the approvals
 
 1. Navigate back to the list of environments, and now select the **Test** environment. Select **Security** option. In the **Pipeline permissions** section choose **+** button and select the **eShopOnWeb** pipeline.
 
-### Task 3: Create an Azure Resource Manager service connection
+### Task 2: Create an Azure Resource Manager service connection
 
 To create an Azure Resource Manager service connection, you must be the owner or co-owner of the Azure Subscription
 
@@ -118,7 +88,7 @@ To create an Azure Resource Manager service connection, you must be the owner or
 
     ![](images/pipelines/Choose_pipeline.png)
 
-### Task 4: Run the pipeline
+### Task 3: Run the pipeline
 
 1. Navigate the **Pipelines** menu in the project. Select the **eShopOnWeb** pipeline and **Edit** it. In the YAML file, verify that the name of the service connection you created (**eShopOnWeb**) matches the name of the connection specified in the YAML file under various tasks. Look for:
 

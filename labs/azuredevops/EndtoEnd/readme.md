@@ -23,7 +23,12 @@ If you're new to Azure DevOps, follow the links below to get started with your n
 
 If you are familiar with Azure DevOps, follow the steps listed below to learn about each service.
 
-- Complete [this prerequisites](/services/e2e-demo.md) before proceeding further
+- Complete this [prerequisites](/services/prerequisite.md) before proceeding further.
+
+Once you complete the prerequisties, follow the [next steps](/services/e2e-demo.md) to configure your own pipeline, service connection to build and deploy **eShopOnWeb** application to Azure App Service.
+
+
+To learn more on Azure DevOps, follow the below learning material:
 
 
 - [Azure Boards](/services/boards.md)
