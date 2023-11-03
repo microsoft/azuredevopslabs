@@ -2,7 +2,6 @@
 title: Using GitHub Advanced Security for Azure DevOps
 layout: page
 sidebar: vsts
-permalink: /labs/azuredevops/EndtoEnd/services/
 folder: /labs/azuredevops/EndtoEnd/services/
 version: Lab version - 1.0.0
 updated: Last updated - 01/11/2023

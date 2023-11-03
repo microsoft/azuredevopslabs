@@ -2,7 +2,6 @@
 title: Version Controlling With Azure Repos
 layout: page
 sidebar: vsts
-permalink: /labs/azuredevops/EndtoEnd/services/repos.md
 folder: /labs/azuredevops/EndtoEnd/services/
 version: Lab version - 1.0.0
 updated: Last updated - 01/11/2023

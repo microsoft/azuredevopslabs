@@ -2,7 +2,6 @@
 title: Package Management with Azure Artifacts
 layout: page
 sidebar: vsts
-permalink: /labs/azuredevops/EndtoEnd/services/artifacts.md
 folder: /labs/azuredevops/EndtoEnd/services/
 version: Lab version - 1.0.0
 updated: Last updated - 01/11/2023

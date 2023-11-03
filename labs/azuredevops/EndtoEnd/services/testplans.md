@@ -2,7 +2,6 @@
 title: Test Planning and Management with Azure Test Plans
 layout: page
 sidebar: vsts
-permalink: /labs/azuredevops/EndtoEnd/services/testplans.md
 folder: /labs/azuredevops/EndtoEnd/services/
 version: Lab version - 1.0.0
 updated: Last updated - 01/11/2023
