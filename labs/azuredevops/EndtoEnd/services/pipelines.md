@@ -2,7 +2,7 @@
 title: Implementing Build and Deployment using Azure DevOps
 layout: page
 sidebar: vsts
-permalink: /labs/azuredevops/EndtoEnd/services/
+permalink: /labs/azuredevops/EndtoEnd/services/pipelines.md
 folder: /labs/azuredevops/EndtoEnd/services/
 version: Lab version - 1.0.0
 updated: Last updated - 01/11/2023

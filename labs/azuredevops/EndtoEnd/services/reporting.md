@@ -2,7 +2,7 @@
 title: Using the Azure Dashboard to Analyze the Project Reports
 layout: page
 sidebar: vsts
-permalink: /labs/azuredevops/EndtoEnd/services/
+permalink: /labs/azuredevops/EndtoEnd/services/reporting.md
 folder: /labs/azuredevops/EndtoEnd/services/
 version: Lab version - 1.0.0
 updated: Last updated - 01/11/2023
