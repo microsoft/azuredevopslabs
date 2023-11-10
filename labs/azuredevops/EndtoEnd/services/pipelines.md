@@ -154,7 +154,7 @@ Click on Verify to check it works, give the connection a name and click **Verify
     ![](images/pipelines/choose-sub2.png)
 
 
-### For your information:
+#### For your information:
   - **Resource group:** Value we are passing in the variable section
   - **Location: Southeast Asia** is selected. You can change it as per your preference.
 

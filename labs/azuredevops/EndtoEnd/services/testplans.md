@@ -14,6 +14,10 @@ Azure Test Plans provides rich and powerful tools everyone in the team can use t
 
 To learn more about Azure Test Plans, see <a href="https://learn.microsoft.com/azure/devops/test/overview?view=azure-devops"><u> What is Azure Test Plans?</u></a> and <a href="https://www.azuredevopslabs.com/labs/azuredevops/testmanagement/"><u>Test Planning and Management with Azure Test Plans</u></a>.
 
+## Exercise 1: Managing Test Plans, Suites and Cases
+
+In this exercise, you will learn how to create and manage test plans, test suites and test cases
+
 ### Task 1: Understanding Test Plans, Suites and Cases ###
 
 1. Navigate to your team project on Azure DevOps.
