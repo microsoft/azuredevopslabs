@@ -253,7 +253,7 @@ In this exercise, you will learn how to create a manual test plan and populate i
 
     ![](images/testplans/051.png)
 
-1. From the **Tests** tab, select **New | New test case** to create a new test case.
+1. From the **Tests** tab, select **New** | **New test case** to create a new test case.
 
     ![](images/testplans/052.png)
 
