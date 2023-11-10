@@ -320,9 +320,10 @@ In this exercise, you will learn how to create a manual test plan and populate i
 
 
 1. The first step in the test is to open the project site. To do this,
+
     - If application is hosted in IIS - switch to the **Visual Studio** instance that has the **eShopOnWeb** solution loaded. From the **IIS Express** target dropdown, select **Browse With...**.
 
->**Note:** If application is hosted in Azure - open the respective URL  and move to **Step 8**|
+    > **Note:** If application is hosted in Azure - open the respective URL  and move to **Step 8**
 
     ![](images/testplans/061.png)
 
