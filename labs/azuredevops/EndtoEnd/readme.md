@@ -2,11 +2,11 @@
 
 In this lab, you will learn about all the features of Azure DevOps like Kanban boards, Delivery Plans, Build and Release pipelines the usage of Advanced security features like:
 
-- Preventing the leaks of sensitive data by scanning for vulnerabilities, 
+- Preventing the leaks of sensitive data by scanning for vulnerabilities 
 
 - Scanning code for vulnerabilities and resolving it
 
-- Dependency scanning in the software development process.
+- Dependency scanning in the software development process
 
 ## What is Azure DevOps?
 
@@ -25,7 +25,7 @@ If you're new to Azure DevOps, follow the links below to get started with your n
 
 If you are familiar with Azure DevOps, follow the steps listed below to learn about each service.
 
-- Complete this [prerequisites](/services/prerequisite.md) before proceeding further.
+- Complete these [prerequisites](/services/prerequisite.md) before proceeding further.
 
 Once you complete the prerequisties, follow the [next steps](/services/e2e-demo.md) to configure your own pipeline, service connection to build and deploy **eShopOnWeb** application to Azure App Service.
 
