@@ -16,7 +16,7 @@ echo No Ruby, need to get it!
 
 REM Get Ruby and Rails
 REM 64bit
-curl -o ruby231.zip -L https://bintray.com/artifact/download/oneclick/rubyinstaller/ruby-2.3.1-x64-mingw32.7z?direct
+curl -o ruby231.zip -L -k https://github.com/oneclick/rubyinstaller/releases/download/ruby-2.3.1/ruby-2.3.1-x64-mingw32.7z
 REM Azure puts 7zip here!
 echo START Unzipping Ruby
 SetLocal DisableDelayedExpansion & d:\7zip\7za x -xr!*.ri -y ruby231.zip > rubyout
@@ -24,7 +24,7 @@ echo DONE Unzipping Ruby
 
 REM Get DevKit to build Ruby native gems  
 REM If you don't need DevKit, rem this out.
-curl -o DevKit.zip http://cdn.rubyinstaller.org/archives/devkits/DevKit-mingw64-64-4.7.2-20130224-1432-sfx.exe
+curl -o DevKit.zip -L -k https://github.com/oneclick/rubyinstaller/releases/download/devkit-4.7.2/DevKit-mingw64-64-4.7.2-20130224-1432-sfx.exe
 echo START Unzipping DevKit
 d:\7zip\7za x -y -oDevKit DevKit.zip > devkitout
 echo DONE Unzipping DevKit
@@ -40,7 +40,7 @@ REM Setup DevKit
 ruby DevKit\dk.rb install
 
 REM Update until someone fixes the Ruby Windows installer https://github.com/oneclick/rubyinstaller/issues/261
-curl -L -o update.gem https://rubygems.org/gems/rubygems-update-2.6.8.gem
+curl -L -o update.gem -k https://rubygems.org/gems/rubygems-update-3.0.1.gem
 call gem install --local update.gem
 call update_rubygems --no-ri --no-rdoc > updaterubygemsout
 ECHO What's our new Rubygems version?
@@ -55,7 +55,7 @@ REM Need to be in Reposistory
 cd %DEPLOYMENT_SOURCE%
 cd
 
-call gem install bundler --no-ri --no-rdoc
+call gem install bundler
 
 ECHO Bundler install (not update!)
 call bundle install
