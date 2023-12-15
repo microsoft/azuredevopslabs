@@ -41,6 +41,7 @@ In this lab, you will see how you can use Advanced Security to protect the Azure
 ### Before you begin
 
 - This lab requires you to complete task 1 from the <a href="../prereq-advsec/">prerequisite</a> instructions.
+- Since GitHub Advanced Security for Azure DevOps requires billing, you must have <a href="https://learn.microsoft.com/en-us/azure/devops/organizations/billing/set-up-billing-for-your-organization-vs?view=azure-devops">set up a billing subscription</a> for your organization.
 
 
 ### Task 1: Enable Advanced Security from Portal
@@ -184,9 +185,6 @@ When a Dependency Alert is created in Azure DevOps Advanced Security, it will co
 
     > **Note:**
     The build will run automatically, initiating the dependency scanning task and publishing the results to Advanced Security and alert automatically closed.
-
-
-    >**ProTip!** Squash Merge is important. If we just commit, the exposed credential will still be in the history. To avoid this, fix code, use a Squash Merge, push it to repo, and you're done!
 
 
 1.	Once the pipeline has been completed, **eShopOnWeb**, go to the Azure DevOps Advanced Security dashboard and click on Dependencies.
@@ -369,10 +367,6 @@ Code scanning in GitHub Advanced Security for Azure DevOps lets you analyze the 
     ![where_detected](images/ghas/Where_CodeAlert_detected.png)
 
 4.	Click on Detections to see the different builds that detected this alert.
-
-
-    > ProTip!
-    > When a vulnerable component is no longer detected in the latest build for pipelines with the dependency scanning task, the state of the associated alert is automatically changed to Closed. To see these resolved alerts, you can use the State filter in the main toolbar and select Closed.
 
 
 #### Fixing the Code to resolve the alert
