@@ -369,10 +369,6 @@ Code scanning in GitHub Advanced Security for Azure DevOps lets you analyze the 
 4.	Click on Detections to see the different builds that detected this alert.
 
 
-    > **ProTip!**
-    > When a vulnerable component is no longer detected in the latest build for pipelines with the dependency scanning task, the state of the associated alert is automatically changed to Closed. To see these resolved alerts, you can use the State filter in the main toolbar and select Closed.
-
-
 #### Fixing the Code to resolve the alert
 1.	This is simple to fix using the method using parameters with dynamic SQL described in the Remediation steps.
 
