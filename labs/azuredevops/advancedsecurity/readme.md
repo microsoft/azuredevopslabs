@@ -187,9 +187,6 @@ When a Dependency Alert is created in Azure DevOps Advanced Security, it will co
     The build will run automatically, initiating the dependency scanning task and publishing the results to Advanced Security and alert automatically closed.
 
 
-    >**ProTip!** Squash Merge is important. If we just commit, the exposed credential will still be in the history. To avoid this, fix code, use a Squash Merge, push it to repo, and you're done!
-
-
 1.	Once the pipeline has been completed, **eShopOnWeb**, go to the Azure DevOps Advanced Security dashboard and click on Dependencies.
 
 1.	You will see that the alert *Improper Input Validation in IpMatcher....*... no longer exists, as it is now closed.
