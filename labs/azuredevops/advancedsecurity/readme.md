@@ -41,6 +41,7 @@ In this lab, you will see how you can use Advanced Security to protect the Azure
 ### Before you begin
 
 - This lab requires you to complete task 1 from the <a href="../prereq-advsec/">prerequisite</a> instructions.
+- Since GitHub Advanced Security for Azure DevOps requires billing, you must have <a href="https://learn.microsoft.com/en-us/azure/devops/organizations/billing/set-up-billing-for-your-organization-vs?view=azure-devops">set up a billing subscription</a> for your organization.
 
 
 ### Task 1: Enable Advanced Security from Portal
