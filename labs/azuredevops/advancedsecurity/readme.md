@@ -205,7 +205,7 @@ Secret Scanning scans your codebase and other resources to identify potential se
 Once this is toggled on, it starts off a background scan of this repo and looks for exposed credentials. The scan doesn't just look at the tip of the main since attackers would look through all the branches and the entire commit history.
 
 #### Secret Scanning Alerts (Gain Insights) 
-The Advance Security Alert hub is where all alerts are raised and where we gain insights, specifically under the category of Secrets. When a secret is found, you can click on it to access more information. The secret may be located in different places, including various commits. 
+The Advanced Security Alert hub is where all alerts are raised and where we gain insights, specifically under the category of Secrets. When a secret is found, you can click on it to access more information. The secret may be located in different places, including various commits. 
 Secrets Review 
 1.	Go to the **Repos** tab and click on the **Advanced Security** menu item at the bottom.
 
