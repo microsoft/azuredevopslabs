@@ -19,10 +19,10 @@ This lab will walk you through a typical end-to-end workflow for a Java develope
 
 In this lab, you will
 
-* Provision a Azure DevOps Organization team project with sample data and users
+* Provision an Azure DevOps Organization team project with sample data and users
 * Install **Eclipse Photon** and **Team Explorer Everywhere**, the Azure DevOps plug-in for Eclipse
 * Install and explore **Azure Toolkit for Eclipse**
-* Setup an Azure Build pipeline to build and test the code, then push it to a Azure Container Registry
+* Setup an Azure Build pipeline to build and test the code, then push it to an Azure Container Registry
 * Setup an Azure Web app and configure an Azure Release pipeline to deploy the image to Azure Web App
 
 **Estimated time to complete the lab:**  1 hour
