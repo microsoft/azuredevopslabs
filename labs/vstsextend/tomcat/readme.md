@@ -110,49 +110,80 @@ Next, navigate to the Web app that you have created. As you are deploying a Java
 
 You have now setup and configured all the resources that is needed to deploy and run the MyShuttle application.
 
-## Exercise 3: Deploy the changes to Web App
 
-1. Select **Pipelines \| Pipelines**. Choose the pipeline **MyShuttleBuild** and click **Edit Pipeline** to view the build definition.
+## Exercise 3: Create service connection
 
-   ![Builds](images/editbuild2.png)
+1. Select **Project settings** and click on **Service connections** under **Pipelines**. Click on **New service connection** and select **Azure Resource Manager**, select **Next** to choose the **Authentication Method**.
+
+   ![Service Connection](images/001.png)
+
+1. Select **Service principal (automatic)** and click on **Next**.
+   
+   ![Service Connection](images/002.png)
+
+
+1. Select the appropriate **Subscription**, **Resource Group** and provide the Serviec connection name **MyShuttleConnection** . Click on **Save** to create the service connection.
+   
+   ![Service Connection](images/003.png)
+   
+      {% include note.html content= "Service connections are used to connect to external and remote services. They are used to connect to Azure services, servers, and other services that are external to Azure DevOps." %}
+
+1. Click on the service connection created, select the **Security** menu to add pipeline permission to use the service connection.
+
+   ![Service Connection](images/004.png)
+
+1. Click on **+** to add the pipeline to the service connection. Choose **myshuttle-YAML**.
+
+   ![Service Connection](images/005.png)
+
+## Exercise 4: Update the pipeline variables
+
+1. Once the build succeeds, select **Edit pipeline** button ellipse.
+
+   ![Edit Pipeline](images/009.png)
+
+1. Scroll down to **Deploy** stage. 
+**MySQL database deploy** and Azure **App Service deploy** expecting few parameters to be passed. Add the following details in the variable section and save the variables.
+
+   ![Variables](images/010.png)
+
+   - **SERVERNAME** : The MySQL server name that you noted down previously.
+   - **SQLUSERNAME** : The MySQL server admin login name that you noted down previously.
+   - **SQLPASSWORD** : The password that you created during the creation of MySQL server in the Azure portal.
+   - **WEBAPPNAME** : The name of the web app that you created.
+
+   ![variablevalues](images/011.png)
+
+1. Make sure that the **Azure Subscription** is selected correctly.
+
+   {% include note.html content= "We are using the **Azure App Service** task. This task is used to update Azure App Service to deploy Web Apps and WebJobs to Azure.  The task works on cross platform agents running Windows, Linux or Mac and uses the underlying deployment technologies of Web Deploy and Kudu. The task works for ASP.NET, ASP.NET Core 1 and Node.js based web applications. Note that this task works with  Azure Resource Manager APIs only." %}
+
+1. Click on **Validate and save** pipeline.
+
+## Exercise 5: Deploy the changes to Web App
+
+1. Select **Pipelines \| Pipelines**. Choose the pipeline **MyShuttle-YAML** and click **Run pipeline** to trigger the build and wait for the build to complete.
+
+   ![Builds](images/006.png)
+
+1. Click on the **Run** button to start the build.
+   To view the detailed logs, enable the check box **Enable system diagnostics**.
+
+   ![Run](images/007.png)
+
+1. Build stage will be running. Click on the **Stage** to view the detailed logs.
+
+   ![Build Stage](images/008.png)
 
    > The lab uses the standard **Maven** build template to compile the code, copy and publish the resulting artifacts for deployment. An additional file which is copied here is the `CreateMYSQLDB.sql` file which creates a MySQL database and inserts a few records into it during the deployment.
-   
-    {% include note.html content= "We also have a YAML build pipeline if that's something you're interested in. To proceed through the YAML pipeline, choose **MyShuttle-YAML** and click **Edit** to view the YAML pipeline. If you utilize the YAML pipeline, make sure to update the **MyShuttleRelease** release definition's artifact link." %}
-1. Click **Queue** to trigger the build and wait for the build to complete.
-
-   ![Queue Build](images/queuebuild.png)
-   ![Queue Build 2](images/clickqueue.png)
-
-1. Once the build succeeds, select **Releases** under **Pipelines**.
-
-1. Select **MyShuttle Release** and click **Edit** to open the release definition.
-
-   ![Edit MyShuttle Release Definition ](images/editrelease.png)
-
-1. Make sure the artifact is pointing to the **Build** artifact as shown below. If you are following this lab from Jenkins hands-on-lab, make sure the artifact is pointing to Jenkins.
-
-   ![Team Build Artifact](images/addartifacts.png)
-
-1. Click **Tasks**. Select **Execute Azure MySQL : SqlTaskFile** task and provide the following details.
-
-   - Azure Subscription Details : Select the appropriate subscription. Click **Authorize** and login to your Azure subscription in the pop-up window.
-   - Host Name : Select the **MySQL Database server** host name that was created.
-   - Server Admin Login : Provide the **Server admin login name** that you noted down previously.
-   - Password : Provide the password that you created during the creation of MySQL server in the Azure portal.
-
-   ![Execute Azure MySQL Task](images/azuremysqltask.png)
-
-1. Select the **Deploy Azure App Service** task, choose the **Azure subscription** details and select **App Service name** from the dropdown.
-   ![](images/azureappservicetask.png)
-
-   {% include note.html content= "We are using the **Deploy Azure App Service** task. This task is used to update Azure App Service to deploy Web Apps and WebJobs to Azure.  The task works on cross platform agents running Windows, Linux or Mac and uses the underlying deployment technologies of Web Deploy and Kudu. The task works for ASP.NET, ASP.NET Core 1 and Node.js based web applications. Note that this task works with  Azure Resource Manager APIs only." %}
-
-1. Click on **Save** and then **+Release \| Create Release** to start a new release
-
-   ![MyShuttle Release Definition](images/createrelease.png)
 
 1. Wait for the release to complete. Then navigate to the Web App and select the **URL** from the overview blade. Add **/myshuttledev** context to the URL. For instance - [http://myshuttle1.azurewebsites.net/myshuttledev](http://myshuttle1.azurewebsites.net/myshuttledev){:target="\_blank"}
+
+   ![Release running](images/012.png)
+
+1. The MyShuttle application will be displayed.
+   
+      ![MyShuttle page](images/013.png)
 
 1. Select **Login** and try logging in to the site with any one of the following credentials.
 
