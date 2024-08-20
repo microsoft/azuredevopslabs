@@ -5,7 +5,7 @@ sidebar: vsts
 permalink: /labs/azuredevops/continuousintegration/
 folder: /labs/azuredevops/continuousintegration/
 version: Lab version - 1.37.1
-updated: Last updated - 05/11/2020
+updated: Last updated - 22/04/2024
 redirect_from: "/labs/vsts/continuousintegration/index.htm"
 ---
 <div class="rw-ui-container"></div>
@@ -37,11 +37,13 @@ In this lab, you will learn how to configure continuous integration (CI) and con
 
     ![](images/000.png)
 
-1. Open (click) the existing **PartsUnlimitedE2E** pipeline (which was created by the demo generator tool) and click on **Edit**
+1. Open (click) the existing **PartsUnlimited** pipeline (which was created by the demo generator tool) and click on **Edit**
 
     ![](images/edit-pipeline.png)
 
-1. Not to have two pipelines triggered later in the lab, disable the CI trigger for the template created pipeline (uncheck) and **Save**.
+1. Not to have two pipelines triggered later in the lab, disable the CI trigger for the template created, by navigating to the triggeres section of the pipeline, enable the checkbox to override the current trigger option and **Save**.
+
+    ![](images/edit-triggers.png)
 
     ![](images/disable-ci.png)
  
@@ -49,46 +51,31 @@ In this lab, you will learn how to configure continuous integration (CI) and con
 
     ![](images/001.png)
 
-1. The default option for build pipelines involves using YAML to define the process. If you are interested in that, please check out that lab. For this lab, click **use the classic editor**.
+1. The default option for build pipelines involves using YAML to define the process.
 
     ![](images/002.png)
 
-1. The first thing you'll need to do is to configure the source repository. Every major platform is available, but the default options are all we need here. This build will use the **master** branch of the **PartsUnlimited** repo. Leave the defaults and click **Continue**.
+1. The first thing you'll need to do is to configure the source repository. Every major platform is available, but the default options are all we need here. This build will use the **master** branch of the **PartsUnlimited** repo.
 
-    ![](images/003.png)
+    ![](images/002-01.png)
 
-1. Locate the **ASP.NET** template and click **Apply** to apply this template to the build definition. Note that there are many options that should cover all of our mainstream scenarios. For our purposes here, we'll just build the project using the baseline ASP.NET template.
+1. Configure the pipeline with the existing YAML file. Click **Existing Azure Pipelines YAML file**.
 
-    ![](images/template.png)
+    ![](images/002-02.png)
 
-1. The process for this build pipeline is easy to follow. After getting the source, Azure DevOps will use NuGet to restore any dependent packages. Then, the project will be built and tested. The results will then be published to the configured target.
+1. Choose the YAML file path from the **master** branch of the PartsUnlimited repo. Click **Continue**.
 
-    ![](images/005.png)
+    ![](images/002-03.png)
 
-1. Select the **Variables** tab. Here you can configure special parameters to be used during the build, such as the configuration or platform.
+1. Review the YAML file and click **Save** or **Run** the pipeline. 
 
-    ![](images/006.png)
-
-1. Select the **Triggers** tab. These triggers enable you to automatically invoke builds on a schedule, when another build completes, or when changes are made to the source. Check **Enable continuous integration** so that this build will get invoked whenever source changes are committed.
-
-    ![](images/007.png)
-
-1. Select the **Options** tab. This section includes a wide variety of options related to the build workflow. Note that you'll generally configure options for specific build tasks on the configuration views of the tasks themselves.
-
-    ![](images/008.png)
+    ![](images/002-04.png)
 
 
-1. Select the **History** tab. There's nothing here yet, but it will show a history of changes you make to the build definition.
+    > **Note:** The YAML file contains the deployment script, which helps to deploy the application to Azure App Service. This needs to be updated with the correct Azure Subscription and App Service Name. This will be converd in the next lab.
 
-    ![](images/011.png)
+1. Continious Integration trigger will be enabled for the pipeline, click on **Run** to trigger the build. Refer to the document for more details on [YAML Pipeline Triggers](https://learn.microsoft.com/en-us/azure/devops/pipelines/build/triggers?view=azure-devops#branch-consideration-for-triggers-in-yaml-pipelines).
 
-1. Select **Save & Queue \| Save & Queue** to save and queue a new build.
-
-    ![](images/012.png)
-
-1. Accept the default options by clicking **Save and run**.
-
-    ![](images/013.png)
 
 <a name="Ex1Task2"></a>
 ### Task 2: Tracking and reviewing a build ###
@@ -102,18 +89,12 @@ In this lab, you will learn how to configure continuous integration (CI) and con
     ![](images/015.png)
 
 1. If you want to review an earlier task, you can scroll the right pane to review its logs.
-
-    ![](images/016.png)
-
+    ![](images/016-00.png)
 1. The build should eventually succeed. You can return to the summary view by clicking the back button.
 
-    ![](images/017.png)
+    ![](images/016-01.png)
 
 1. The summary view provides overview details about the build, including details about commits, tests, and artifacts.
-
-    ![](images/018.png)
-
-1. Select the **Tests** tab to review test performance for this build. Note that you also have easy access to the pipeline editor, the ability to queue a new build, and download the artifacts of this build.
 
     ![](images/019.png)
 
@@ -144,11 +125,10 @@ In this lab, you will learn how to configure continuous integration (CI) and con
 
     ![](images/025.png)
 
-1. You should now see that a new build (note the **.2**) is in progress and that it was triggered by your change. Click the build to track it. Note that it may be queued behind another build pipeline configured for continuous integration.
 
-    ![](images/026.png)
-
-1. This build should run and succeed just like the previous build.
+1. This build should run and succeed just like the previous build, and waiting for permission to continue with the next stages to deploy the application.
 
     ![](images/027.png)
 
+
+Follow the instructions in the next exercise to deploy the application to Azure App Service using <a href="../continuousdeployment/"> Continuous Deployment with Azure Pipelines</a>.

@@ -14,7 +14,7 @@ Certain Azure DevOps labs require a preconfigured **Parts Unlimited** team proje
 <a name="Ex0Task1"></a>
 ### Task 1: Configuring the Parts Unlimited team project ###
 
-1. Navigate to [https://azuredevopsdemogenerator.azurewebsites.net](https://azuredevopsdemogenerator.azurewebsites.net/). This utility site will automate the process of creating a new Azure DevOps project within your account that is prepopulated with content (work items, repos, etc.) required for the lab. For more information on the site, please see [https://docs.microsoft.com/en-us/azure/devops/demo-gen](https://docs.microsoft.com/en-us/azure/devops/demo-gen).
+1. Navigate to [https://azuredevopsdemogenerator.azurewebsites.net](https://azuredevopsdemogenerator.azurewebsites.net/). This utility site will automate the process of creating a new Azure DevOps project within your account that is prepopulated with content (work items, repos, etc.) required for the lab. For more information on the site, please see [https://learn.microsoft.com/azure/devops/demo-gen/?view=azure-devops](https://learn.microsoft.com/azure/devops/demo-gen/?view=azure-devops).
 
 1. Sign in using the Microsoft account associated with your Azure DevOps subscription.
 
