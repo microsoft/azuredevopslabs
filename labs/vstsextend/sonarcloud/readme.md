@@ -1,5 +1,5 @@
 ---
-title: Driving continuous quality of your code with SonarCloud
+title: Driving continuous quality of your code with SonarQube Cloud
 layout: page
 sidebar: vsts2
 permalink: /labs/vstsextend/sonarcloud/
@@ -10,7 +10,7 @@ folder: /labs/vstsextend/sonarcloud/
 
 ## Overview
 
-[SonarCloud](https://www.sonarsource.com/products/sonarcloud/?utm_medium=referral&utm_source=azuredevopslab&utm_campaign=sc-signup&utm_content=signup-sonarcloud-listing-x-x&utm_term=ww-psp-x){:target="\_blank"} is a cloud-based clean code (code quality and security) service that is free for open source projects and offers a free trial for private projects. It features:
+[SonarQube Cloud](https://www.sonarsource.com/products/sonarcloud/){:target="\_blank"} is a cloud-based clean code (code quality and security) service that is free for open source projects and offers a free trial for private projects. It features:
 
 - 26 languages, including Java, JS, C#, C/C++, Objective-C, TypeScript, Python, ABAP, PLSQL, T-SQL, and more.
 - More than 5,000 rules to track down hard-to-find bugs and quality issues thanks to powerful static code analyzers.
@@ -18,16 +18,16 @@ folder: /labs/vstsextend/sonarcloud/
 - Deep code analysis, to explore all source files, whether in branches or pull requests, to reach a green Quality Gate and promote the build.
 - Fast, automatic analysis of most languages - no configuration required.
 - Free analysis for open-source projects and a no-commitment, free 14-day trial for your private repositories.
-- IDE support with SonarLint when using [Connected Mode](https://docs.sonarcloud.io/improving/sonarlint/?utm_medium=referral&utm_source=azuredevopslab&utm_campaign=sc-signup&utm_content=signup-sonarcloud-listing-x-x&utm_term=ww-psp-x) to find code issues on the fly. SonarCloud rules and quality profiles synchronize with SonarLint, aligning teams around a single standard of Clean Code.
+- IDE support with SonarLint when using [Connected Mode](https://docs.sonarsource.com/sonarqube-cloud/improving/sonarlint/?utm_medium=referral&utm_source=azuredevopslab&utm_campaign=sc-signup&utm_content=signup-sonarcloud-listing-x-x&utm_term=ww-psp-x) to find code issues on the fly. SonarCloud rules and quality profiles synchronize with SonarLint, aligning teams around a single standard of Clean Code.
 
 <div class="bg-slap"><img src="./images/mslearn.png" class="img-icon-cloud" alt="MS teams" style="width: 48px; height: 48px;">Want additional learning? Check out the <a href="https://docs.microsoft.com/en-us/learn/modules/scan-for-vulnerabilities/" target="_blank"><b><u> Scan code for vulnerabilities in Azure Pipelines</u></b></a> module on Microsoft Learn.</div>
 
 ### What's covered in this lab
 
-In this lab, you will learn how to integrate Azure DevOps Services with SonarCloud:
+In this lab, you will learn how to integrate Azure DevOps Services with SonarQube Cloud:
 
-- Setup an Azure DevOps project and CI build to integrate with SonarCloud.
-- Analyze SonarCloud reports.
+- Setup an Azure DevOps project and CI build to integrate with SonarQube Cloud.
+- Analyze SonarQube Cloud reports.
 - Integrate static analysis into the Azure DevOps pull request process.
 
 ### Prerequisites for the lab
@@ -42,7 +42,7 @@ In this lab, you will learn how to integrate Azure DevOps Services with SonarClo
    
    Inside this organization, create a project called **SonarExamples**:
    
-   > SonarCloud supports both private and public projects and offers a no-commitment, 14-day trial of SonarCloud for your private repositories completely free. Remember, SonarCloud analysis is always free for open-source projects! More details about [Pricing](https://docs.sonarcloud.io/managing-your-subscription/pricing/){:target="_blank"} is explained in the docs.
+   > SonarQube Cloud supports both private and public projects and offers a no-commitment, 14-day trial of SonarQube Cloud for your private repositories completely free. Remember, SonarQube Cloud analysis is always free for open-source projects! More details about [Pricing](https://docs.sonarcloud.io/managing-your-subscription/pricing/){:target="_blank"} is explained in the docs.
 
    ![Create project](images/azure-create-project.png)
 
@@ -58,9 +58,9 @@ In this lab, you will learn how to integrate Azure DevOps Services with SonarClo
 
    See [this Microsoft documentation](https://docs.microsoft.com/en-us/azure/devops/repos/git/import-git-repository?view=azure-devops) for detailed instructions on importing a repository.
 
-1. Install the SonarCloud Azure DevOps extension in your Azure DevOps account. The SonarCloud extension contains build tasks, build templates and a custom dashboard widget to help with the construction of your pipeline.
+1. Install the SonarQube Cloud Azure DevOps extension in your Azure DevOps account. The SonarQube Cloud extension contains build tasks, build templates and a custom dashboard widget to help with the construction of your pipeline.
 
-   Find the [SonarCloud extension](https://marketplace.visualstudio.com/items?itemName=SonarSource.sonarcloud) on the Visual Studio Marketplace and click **Get it free** to install it, then select **Proceed to organization** after the installation has finished.
+   Find the [SonarQube Cloud extension](https://marketplace.visualstudio.com/items?itemName=SonarSource.sonarcloud) on the Visual Studio Marketplace and click **Get it free** to install it, then select **Proceed to organization** after the installation has finished.
 
    ![Marketplace](images/sonar-visual-studio-marketplace.png)
 
@@ -70,17 +70,17 @@ In this lab, you will learn how to integrate Azure DevOps Services with SonarClo
 
    > If you do not have the appropriate permissions to install an extension from the marketplace, a request will be sent to the account administrator to ask them to approve the installation.
 
-1. Using the same account as you used for Azure DevOps, sign into SonarCloud: [https://sonarcloud.io/login](https://sonarcloud.io/login)
+1. Using the same account as you used for Azure DevOps, sign into SonarQube Cloud: [https://sonarcloud.io/login](https://sonarcloud.io/login)
 
-   ![SonarCloud Login](images/sonarcloud-login.png)
+   ![SonarQube Cloud Login](images/sonarcloud-login.png)
 
-1. In SonarCloud, create an organization and, within that, a new project. The organization and project you set up in SonarCloud will mirror the organization and project that you set up in Azure DevOps.
+1. In SonarQube Cloud, create an organization and, within that, a new project. The organization and project you set up in SonarQube Cloud will mirror the organization and project that you set up in Azure DevOps.
 
-   Once you sign in, select **Import an organization from Azure** on the Welcome to SonarCloud page.
+   Once you sign in, select **Import an organization from Azure** on the Welcome to SonarQube Cloud page.
 
-   ![SonarCloud Welcome](images/import-organization-from-azure.png)
+   ![SonarQube Cloud Welcome](images/import-organization-from-azure.png)
 
-   Follow the SonarCloud in-product tutorial to create an organization. First, add your **Azure DevOps organization name** (dev.azure.com/{YOUR-ORG}) in SonarCloud. Next in Azure, go to **Azure DevOps** > **User settings** > **Security** > **Personal access tokens** to create a new Personal Access Token (PAT); the SonarCloud in-product tutorial provides a link to Azure's User settings so if you are doing this in parallel, creating a PAT will be easy. See the Microsoft documentation to [Create a PAT](https://docs.microsoft.com/en-us/azure/devops/organizations/accounts/use-personal-access-tokens-to-authenticate?view=azure-devops&tabs=preview-page) if more details are needed.
+   Follow the SonarQube Cloud in-product tutorial to create an organization. First, add your **Azure DevOps organization name** (dev.azure.com/{YOUR-ORG}) in SonarQube Cloud. Next in Azure, go to **Azure DevOps** > **User settings** > **Security** > **Personal access tokens** to create a new Personal Access Token (PAT); the SonarQube Cloud in-product tutorial provides a link to Azure's User settings so if you are doing this in parallel, creating a PAT will be easy. See the Microsoft documentation to [Create a PAT](https://docs.microsoft.com/en-us/azure/devops/organizations/accounts/use-personal-access-tokens-to-authenticate?view=azure-devops&tabs=preview-page) if more details are needed.
 
    ![PAT](images/azure-create-personal-access-token.png)
 
@@ -88,45 +88,45 @@ In this lab, you will learn how to integrate Azure DevOps Services with SonarClo
 
    <img src="images/azure-scope-of-personal-access-token.png"  width="300" alt="PAT">
    
-   Copy your PAT from Azure and paste it into SonarCloud before continuing with the SonarCloud in-product tutorial.
+   Copy your PAT from Azure and paste it into SonarQube Cloud before continuing with the SonarQube Cloud in-product tutorial.
 
-    ![SonarCloud organization access token](images/create-organization.png)
+    ![SonarQube Cloud organization access token](images/create-organization.png)
    
-   Define an **Organization Key**. A key will be automatically formatted for you if you define the **Name** above. Note that the name/key must be unique within the SonarCloud system or you cannot continue. You have an opportunity to add additional info if desired.
+   Define an **Organization Key**. A key will be automatically formatted for you if you define the **Name** above. Note that the name/key must be unique within the SonarQube Cloud system or you cannot continue. You have an opportunity to add additional info if desired.
 
    Select **Continue** to move to the final step.
 
-   ![SonarCloud org creation](images/create-organization2.png)
+   ![SonarQube Cloud org creation](images/create-organization2.png)
 
    Lastly, choose your plan. For this example, we selected a free plan (that is, one for public repos only), but you can choose a paid plan if you intend to have private repos:
 
-   ![Choose SonarCloud plan](images/create-organization3.png)
+   ![Choose SonarQube Cloud plan](images/create-organization3.png)
 
-   You have now created the SonarCloud organization that will mirror your Azure DevOps organization.
+   You have now created the SonarQube Cloud organization that will mirror your Azure DevOps organization.
 
-   Now, from within your new organization, create a SonarCloud project that will mirror the Azure DevOps project *SonarExamples* we imported earlier. Select **Analyze a new project** to continue.
+   Now, from within your new organization, create a SonarQube Cloud project that will mirror the Azure DevOps project *SonarExamples* we imported earlier. Select **Analyze a new project** to continue.
 
-   ![Create SonarCloud project](images/analyze-new-project.png)
+   ![Create SonarQube Cloud project](images/analyze-new-project.png)
 
-   Choose your Azure DevOps project(s) to add and select **Set Up** to create a project on SonarCloud.
+   Choose your Azure DevOps project(s) to add and select **Set Up** to create a project on SonarQube Cloud.
 
-   ![Choose SonarCloud project](images/sonar-choose-project.png)
+   ![Choose SonarQube Cloud project](images/sonar-choose-project.png)
 
-   Let's follow the SonarCloud in-product tutorial to set up the scanning in Azure Pipelines. Select **With Azure DevOps Pipelines** to get started: 
+   Let's follow the SonarQube Cloud in-product tutorial to set up the scanning in Azure Pipelines. Select **With Azure DevOps Pipelines** to get started: 
 
    ![Scan using Azure Pipelines](images/choose-analysis-method.png)
 
    - You can skip **Install our extension** if done previously. 
-   - Next, **Add a new SonarCloud Service Endpoint** to your Azure project. Go to **Project settings** > **Service connections** and use the token provided by the in-product tutorial.
+   - Next, **Add a new SonarQube Cloud Service Endpoint** to your Azure project. Go to **Project settings** > **Service connections** and use the token provided by the in-product tutorial.
    - With your Service Endpoint verified, move on to **Configure Azure Pipeline** and select the option that best describes your build: 
    
       ![Analyze Azure project tutorial](images/analyze-project-tutorial.png)
          
       We will use a **.NET** project for Exercise 1 to configure the Azure DevOps Pipeline.
 
-## Exercise 1: Set up a pipeline that integrates with SonarCloud
+## Exercise 1: Set up a pipeline that integrates with SonarQube Cloud
 
-We will set up a new build pipeline that integrates with SonarCloud to analyze the **SonarExamples** project. 
+We will set up a new build pipeline that integrates with SonarQube Cloud to analyze the **SonarExamples** project. 
 
 Azure DevOps offers two ways to create pipeline: using a .YAML file or with the classic editor. Both methods begin the same way, by creating a new pipeline.
 
@@ -136,7 +136,7 @@ In your new Azure DevOps project, go to the **Pipelines** > **Pipelines** tab an
 
 Here you have two options: you can configure the pipeline with either the **YAML** editor or choose to use the **Classic editor** to create a pipeline without YAML.
 
-With the classic editor, you can take advantage of the pre-defined templates that were installed as part of the SonarCloud Extension above. With the YAML editor, you can use a separately provided YAML template file. We will cover both methods in this exercise, starting with the **YAML** editor.
+With the classic editor, you can take advantage of the pre-defined templates that were installed as part of the SonarQube Cloud Extension above. With the YAML editor, you can use a separately provided YAML template file. We will cover both methods in this exercise, starting with the **YAML** editor.
 
 ### YAML Editor
 
@@ -163,17 +163,17 @@ With the classic editor, you can take advantage of the pre-defined templates tha
 
       ![](images/1/yaml-template-update.png)
 
-   1. **Modify the `SonarcloudPrepare` task with your information**: Follow in-product tutorial from Sonarcloud to add the required steps in your pipeline. The steps will be different depending on your build option and because we are using .NET for this tutorial, we have these items to configure:
+   1. **Modify the `SonarcloudPrepare` task with your information**: Follow in-product tutorial from SonarQube Cloud to add the required steps in your pipeline. The steps will be different depending on your build option and because we are using .NET for this tutorial, we have these items to configure:
 
-      ![SonarCloud Tutorial](images/1/sonar-in-product-tutorial.png)
+      ![SonarQube Cloud Tutorial](images/1/sonar-in-product-tutorial.png)
    
-      1. **Set your Fetch Depth**: See SonarCloud for the code sample to copy/paste.
+      1. **Set your Fetch Depth**: See SonarQube Cloud for the code sample to copy/paste.
       
-      1. **Prepare Analysis Configuration**: To continue, type `sonarcloud` in the Azure task search bar and select **Prepare Analysis Configuration**. Then, using the values provided by the SonarCloud in-product tutorial, complete the following steps:
+      1. **Prepare Analysis Configuration**: To continue, type `sonarcloud` in the Azure task search bar and select **Prepare Analysis Configuration**. Then, using the values provided by the SonarQube Cloud in-product tutorial, complete the following steps:
       
-         1. Select the SonarCloud endpoint you created a few minutes ago.
+         1. Select the SonarQube Cloud endpoint you created a few minutes ago.
          2. Copy/paste your **Organization**.
-         3. Depending on your choosen build option, SonarCloud will recommend the correct way to run the analysis.
+         3. Depending on your choosen build option, SonarQube Cloud will recommend the correct way to run the analysis.
          4. Copy/paste the **Project Key**.
          5. Copy/paste the **Project Name**.
 
@@ -190,9 +190,9 @@ With the classic editor, you can take advantage of the pre-defined templates tha
 
 ### Classic Editor (skip this method if you chose the YAML option)
 
-Use of the classic editor is still supported by Azure DevOps and therefore still supported by SonarCloud. 
+Use of the classic editor is still supported by Azure DevOps and therefore still supported by SonarQube Cloud. 
 
-To continue with this alternate part of **Exercise 1**, you should have already started the setup process in SonarCloud so that your service endpoint is created, and installed the [SonarCloud extension](https://marketplace.visualstudio.com/items?itemName=SonarSource.sonarcloud) in Azure DevOps.
+To continue with this alternate part of **Exercise 1**, you should have already started the setup process in SonarQube Cloud so that your service endpoint is created, and installed the [SonarQube Cloud extension](https://marketplace.visualstudio.com/items?itemName=SonarSource.sonarcloud) in Azure DevOps.
 
 1. To configure the pipeline using the classic editor, select **Use the classic editor** on the **Where is your code?** page:
 
@@ -202,11 +202,11 @@ To continue with this alternate part of **Exercise 1**, you should have already 
 
    ![Select your source](images/1/azure-classic-select-source.png)
 
-   > The [SonarCloud extension](https://marketplace.visualstudio.com/items?itemName=SonarSource.sonarcloud) installed earlier provides SonarCloud-enabled custom build templates for Maven, Gradle, .NET Core and .NET Desktop applications. The templates are based on the standard Azure DevOps templates and have additional analysis-specific tasks as well as some pre-configured settings to make the process easierto configure.
+   > The [SonarQube Cloud extension](https://marketplace.visualstudio.com/items?itemName=SonarSource.sonarcloud) installed earlier provides SonarCloud-enabled custom build templates for Maven, Gradle, .NET Core and .NET Desktop applications. The templates are based on the standard Azure DevOps templates and have additional analysis-specific tasks as well as some pre-configured settings to make the process easierto configure.
 
-1. Select the **.NET Desktop with SonarCloud** template and click **Apply**.
+1. Select the **.NET Desktop with SonarQube Cloud** template and click **Apply**.
 
-   ![.NET Desktop with SonarCloud template](images/1/azure-classic-select-template.png)
+   ![.NET Desktop with SonarQube Cloud template](images/1/azure-classic-select-template.png)
 
    The template contains all of the necessary tasks and most of the required settings. However, You will need to provide a few additional settings.
 
@@ -214,23 +214,23 @@ To continue with this alternate part of **Exercise 1**, you should have already 
 
    ![Agent pool](images/1/azure-classic-agent-specs.png)
 
-1. Go to **Get sources** in Azure and disable your **Fetch Depth**. The SonarCloud tutorial recommends to set the Fetch depth to `0`, but this is not an option when using the Classic editor. When the fetch depth is ≠ 0, some features, such as automatic assignment of issues, may be missing or broken. Disabling shallow clone is recommended for improving the relevancy of reports, but it is not required to run an analysis.
+1. Go to **Get sources** in Azure and disable your **Fetch Depth**. The SonarQube Cloud tutorial recommends to set the Fetch depth to `0`, but this is not an option when using the Classic editor. When the fetch depth is ≠ 0, some features, such as automatic assignment of issues, may be missing or broken. Disabling shallow clone is recommended for improving the relevancy of reports, but it is not required to run an analysis.
 
    ![Set fetch depth](images/1/azure-fetch-depth.png)
 
-1. Next, we must add the analysis configuration values given by the SonarCloud in-product tutorial to the **Prepare analysis on SonarCloud** step in the pipeline.
+1. Next, we must add the analysis configuration values given by the SonarQube Cloud in-product tutorial to the **Prepare analysis on SonarQube Cloud** step in the pipeline.
    
-   1. If you haven't already defined your **SonarCloud Service Endpoint**, do it now; it was the last step we took in SonarCloud before starting [Exercise 1](#exercise-1-set-up-a-pipeline-that-integrates-with-sonarcloud). To create a new service endpoint, click the **New** button then add your **SonarCloud Token** and **Verify** the connection. If verification works, give your token a name then select **Verify and save** to define it in the task.
+   1. If you haven't already defined your **SonarQube Cloud Service Endpoint**, do it now; it was the last step we took in SonarQube Cloud before starting [Exercise 1](#exercise-1-set-up-a-pipeline-that-integrates-with-sonarcloud). To create a new service endpoint, click the **New** button then add your **SonarQube Cloud Token** and **Verify** the connection. If verification works, give your token a name then select **Verify and save** to define it in the task.
 
       ![Create new Service Endpoint](images/1/azure-classic-create-endpoint.png) 
 
-      The SonarCloud in-product tutorial will generate an endpoint token for you during project setup. This token identifies your account on that system and allows other services, in this case, Azure DevOps, to connect to that account. You can create and revoke tokens at any time by going to **My Account** > **Security** in [SonarCloud](https://sonarcloud.io/account/security). For this tutorial, we used the token provided by the in-product tutorial.
+      The SonarQube Cloud in-product tutorial will generate an endpoint token for you during project setup. This token identifies your account on that system and allows other services, in this case, Azure DevOps, to connect to that account. You can create and revoke tokens at any time by going to **My Account** > **Security** in [SonarQube Cloud](https://sonarcloud.io/account/security). For this tutorial, we used the token provided by the in-product tutorial.
 
       ![Token for service endpoint](images/1/analyze-project-tutorial-2.png)
 
-   1. If the token was correctly copied, Azure DevOps should connect with your SonarCloud account and you should be able to click on the **Organization** drop-down to select the organization you created earlier; choose it from the dropdown (in our case `claudiasonarova-azdo-org`).
+   1. If the token was correctly copied, Azure DevOps should connect with your SonarQube Cloud account and you should be able to click on the **Organization** drop-down to select the organization you created earlier; choose it from the dropdown (in our case `claudiasonarova-azdo-org`).
 
-   1. SonarCloud's in-product tutorial gives you the next values you must define: **Choose the way to run the analysis**, copy/paste your **Project Key**, and copy/paste your **Project Name** (items 3 & 4 in the image).
+   1. SonarQube Cloud's in-product tutorial gives you the next values you must define: **Choose the way to run the analysis**, copy/paste your **Project Key**, and copy/paste your **Project Name** (items 3 & 4 in the image).
 
       ![New service connection](images/1/azure-classic-analysis-configuration.png)
 
@@ -238,7 +238,7 @@ To continue with this alternate part of **Exercise 1**, you should have already 
 
       <img src="images/1/azure-classic-save-and-run.png"  width="300" alt="Save and run">
 
-   If you set up everything correctly, the pipeline will run and your SonarCloud in-product tutorial page will refresh and present your project's first analysis results!
+   If you set up everything correctly, the pipeline will run and your SonarQube Cloud in-product tutorial page will refresh and present your project's first analysis results!
 
    ![First analysis](images/1/azure-classic-first-analysis.png)
 
@@ -254,25 +254,25 @@ To continue with this alternate part of **Exercise 1**, you should have already 
 
 1. If you did not change the default **Enabled** value in the _Publish Quality Gate Result_ step of your pipeline, the **Build Summary** > **Extensions** tab in Azure will contain a summary of the analysis report. See step 11 about setting up your Sonar Quality Gate.
 
-    ![SonarCloud analysis report](images/1/azure-classic-quality-gate-status.png)
+    ![SonarQube Cloud analysis report](images/1/azure-classic-quality-gate-status.png)
 
-1. Either select the **Detailed SonarCloud report >** link in the Azure build summary, or browse to SonarCloud and open the project to view the analysis results in SonarCloud.
+1. Either select the **Detailed SonarQube Cloud report >** link in the Azure build summary, or browse to SonarQube Cloud and open the project to view the analysis results in SonarQube Cloud.
 
 
 1. To be able to see the Sonar Quality Gate result in your Azure Build summary, you must:
-   - Run your first analysis to connect your Azure DevOps pipeline to your SonarCloud project. 
-   - Define your [New Code Period](https://docs.sonarcloud.io/improving/new-code-definition/), and
-   - Issue your first PR to check the new code against your [Quality Gate](https://docs.sonarcloud.io/improving/quality-gates/).
+   - Run your first analysis to connect your Azure DevOps pipeline to your SonarQube Cloud project. 
+   - Define your [New Code Period](https://docs.sonarsource.com/sonarqube-cloud/core-concepts/clean-as-you-code/about-new-code/), and
+   - Issue your first PR to check the new code against your [Quality Gate](https://docs.sonarsource.com/sonarqube-cloud/improving/quality-gates/).
 
-We have now created a new organization on SonarCloud and configured our Azure DevOps build to perform an analysis and push the results of the build to SonarCloud.
+We have now created a new organization on SonarQube Cloud and configured our Azure DevOps build to perform an analysis and push the results of the build to SonarQube Cloud.
 
-![SonarCloud report](images/1/sonar-full-analysis.png)
+![SonarQube Cloud report](images/1/sonar-full-analysis.png)
 
-In Exercise 2, we will look at what to do with those reports in SonarCloud.
+In Exercise 2, we will look at what to do with those reports in SonarQube Cloud.
 
-## Exercise 2: Review SonarCloud Reports
+## Exercise 2: Review SonarQube Cloud Reports
 
-Let's keep using the **SonarExamples** project to illustrate concepts in this tutorial. In SonarCloud, navigate to **My Project** > **SonarExamples** and go to the **Summary** page by selecting **Main Branch**. 
+Let's keep using the **SonarExamples** project to illustrate concepts in this tutorial. In SonarQube Cloud, navigate to **My Project** > **SonarExamples** and go to the **Summary** page by selecting **Main Branch**. 
 
 ![Overview page](images/2/sonarcloud-overview.png)
 
@@ -291,7 +291,7 @@ The **Summary** page has other metrics such as **Vulnerabilities**, **Coverage**
 | **Duplications** | The duplications decoration shows which parts of the source code are duplicated |
 | **Lines of Code** | Provides a count of lines of code being analyzed within the project; including the number of statements, functions, classes, files, and directories |
 
-{% include important.html content= "Notice, inside of the **Reliability** container that a letter **C** grade is displayed alongside the bug count; this is the **Reliability Rating**. The grade **C** indicates that there is *at least 1 major bug* in this code. For more information on reliability ratings, check out our page on [Metric Definitions](https://docs.sonarcloud.io/digging-deeper/metric-definitions/#reliability). For information about how issues are defined by those metric definitions, see [here](https://docs.sonarcloud.io/digging-deeper/issues/); and also check out the information on [rule types and severities](https://docs.sonarcloud.io/digging-deeper/rules/#rule-types-and-severities) for more details about those topics." %}
+{% include important.html content= "Notice, inside of the **Reliability** container that a letter **C** grade is displayed alongside the bug count; this is the **Reliability Rating**. The grade **C** indicates that there is *at least 1 major bug* in this code. For more information on reliability ratings, check out our page on [Metric Definitions](https://docs.sonarsource.com/sonarqube-cloud/digging-deeper/metric-definitions/#reliability). For information about how issues are defined by those metric definitions, see [here](https://docs.sonarsource.com/sonarqube-cloud/managing-your-projects/issues/introduction/); and also check out the information on [rule types and severities](https://docs.sonarsource.com/sonarqube-cloud/managing-your-projects/issues/introduction/) for more details about those topics." %}
 
 1. Click on the **Code Smells** count number to open the **Issues** page with the Code Smell type filter applied:
 
@@ -315,12 +315,12 @@ Our sample project is very small and has no historical data but, there are thous
 
 ## Exercise 3: Set up pull request integration
 
-Configuring SonarCloud analysis to run when a pull request is created involves two steps.
+Configuring SonarQube Cloud analysis to run when a pull request is created involves two steps.
 
-1. A SonarCloud project needs to be provided with an access token so it can add PR comments to Azure DevOps, and
+1. A SonarQube Cloud project needs to be provided with an access token so it can add PR comments to Azure DevOps, and
 2.  A Branch Policy needs to be configured in Azure DevOps to trigger the PR build
 
-### **Step 1: Create a PAT and apply it to SonarCloud**
+### **Step 1: Create a PAT and apply it to SonarQube Cloud**
 
 - 1.1. To create a PAT in Azure DevOps:
 
@@ -334,11 +334,11 @@ Configuring SonarCloud analysis to run when a pull request is created involves t
 
    If you need more details about creating tokens, there are instructions in this [article](https://docs.microsoft.com/en-us/azure/devops/organizations/accounts/use-personal-access-tokens-to-authenticate?view=azure-devops).
 
-   > SonarCloud will post comments to the pull request as if it is a user who owns the personal access token. The recommended practice is to create a separate "bot" Azure DevOps user for this so that it is clear which comments are from real developers and which are from SonarCloud.
+   > SonarQube Cloud will post comments to the pull request as if it is a user who owns the personal access token. The recommended practice is to create a separate "bot" Azure DevOps user for this so that it is clear which comments are from real developers and which are from SonarQube Cloud.
 
-- 1.2 Apply your PAT to SonarCloud:
+- 1.2 Apply your PAT to SonarQube Cloud:
 
-   - Navigate to the **Sonar Examples** dashboard in SonarCloud (or your Project's dashboard).
+   - Navigate to the **Sonar Examples** dashboard in SonarQube Cloud (or your Project's dashboard).
    - Select **Administration** > **General Settings**
 
      ![Navigate to general settings](images/3/sonar-general-settings.png)
@@ -371,7 +371,7 @@ Remember that your PAT will expire and should be updated as needed or your PR an
 
      ![Add build policy](images/3/aure-edit-build-policy.png)
 
-   Azure DevOps is now configured to trigger a SonarCloud analysis when any pull request targeting the **master** branch is created.
+   Azure DevOps is now configured to trigger a SonarQube Cloud analysis when any pull request targeting the **master** branch is created.
 
 ### **Test your setup**
 
@@ -426,13 +426,13 @@ Now we will make a change to a file and create a new request so that we can chec
 
      ![add VSTS status policy](images/3/azure-add-status-policy.png)
 
-   Users will now be unable to merge their pull request until the Code Quality check is successful (the Code Quality check succeeds when all issues have been either fixed or marked as **confirmed** or **resolved** in SonarCloud).
+   Users will now be unable to merge their pull request until the Code Quality check is successful (the Code Quality check succeeds when all issues have been either fixed or marked as **confirmed** or **resolved** in SonarQube Cloud).
 
-## Exercise 4: Check the SonarCloud Quality Gate status in a Continuous Deployment scenario (In Preview)
+## Exercise 4: Check the SonarQube Cloud Quality Gate status in a Continuous Deployment scenario (In Preview)
 
 **Disclaimer: This feature is in preview, and may not reflect its final version. Please look at the notes at the end of this exercise for more information.**
 
-Starting from version 1.8.0 of the SonarCloud extension for Azure DevOps, a pre-deployment gate is available for your release pipeline. It allows you to check the status of the SonarCloud Quality Gate for the artifact you want to deploy and block the deployment if the Quality Gate failed.
+Starting from version 1.8.0 of the SonarQube Cloud extension for Azure DevOps, a pre-deployment gate is available for your release pipeline. It allows you to check the status of the SonarQube Cloud Quality Gate for the artifact you want to deploy and block the deployment if the Quality Gate failed.
 
 Prerequisites :
 
@@ -454,7 +454,7 @@ Setup :
    ![add predeployment conditions](images/4/azure-pre-deployment-conditions.png)
 
 1. Select **Enabled** beside **Gates**
-1. Select **+ Add**, then choose the **SonarCloud Quality Gate status check** Deployment gate. 
+1. Select **+ Add**, then choose the **SonarQube Cloud Quality Gate status check** Deployment gate. 
 
    ![define predeployment conditions](images/4/azure-pre-deployment-conditions-gates.png)
 
@@ -484,13 +484,13 @@ Otherwise, if it's failed, then read the important notes below to find out what 
 **Important notes about this feature**
 
 - The **Publish Quality Gate Result** task in your build pipeline has to be enabled in order for the release gate to work.
-- If the Sonar Quality Gate is in the failed state, it will not be possible to get the pre-deployment gate passing because the initial status will remain unchanged. You will have to execute another build with either the current issues corrected in SonarCloud, or with another commit that fixed those issues.
+- If the Sonar Quality Gate is in the failed state, it will not be possible to get the pre-deployment gate passing because the initial status will remain unchanged. You will have to execute another build with either the current issues corrected in SonarQube Cloud, or with another commit that fixed those issues.
 - Please note also that the current default behavior of pre-deployment gates in release pipelines is to check the status every 5 minutes, for a duration of 1 day. However, if a Sonar Quality Gate for a build has failed, it will remain failed so there is no point in re-checking the status. Knowing this, you can either set the timeout after which gates fail to a maximum of 6 minutes so the gate will be evaluated only twice, or just cancel the release itself.
 - Only the primary build artifact-related quality gate of the release will be checked.
 - If multiple analyses are performed during a build, all of the related quality gates are checked. If one of the checks has the status either WARN, ERROR, or NONE, then the quality gate status on the Release Pipeline will be **Failed**.
 
 ## Summary
 
-With the **SonarCloud** extension for **Azure DevOps Services**, you can embed automated testing in your CI/CD pipeline to automate the measurement of your technical debt including code semantics, testing coverage, vulnerabilities. etc. You can also integrate the analysis into the Azure DevOps pull request process so that issues are discovered before they are merged.
+With the **SonarQube Cloud** extension for **Azure DevOps Services**, you can embed automated testing in your CI/CD pipeline to automate the measurement of your technical debt including code semantics, testing coverage, vulnerabilities. etc. You can also integrate the analysis into the Azure DevOps pull request process so that issues are discovered before they are merged.
 
-Do you want to see more examples of SonarCloud in action? Please explore current [open-source projects in SonarCloud](https://sonarcloud.io/explore/projects?sort=-analysis_date) that use the [Clean as You Code](https://docs.sonarcloud.io/improving/clean-as-you-code/?utm_medium=referral&utm_source=azuredevopslab&utm_campaign=sc-signup&utm_content=signup-sonarcloud-listing-x-x&utm_term=ww-psp-x) methodology.
+Do you want to see more examples of SonarQube Cloud in action? Please explore current [open-source projects in SonarQube Cloud](https://sonarcloud.io/explore/projects?sort=-analysis_date) that use the [Clean as You Code](https://docs.sonarsource.com/sonarqube-cloud/core-concepts/clean-as-you-code/introduction/?utm_medium=referral&utm_source=azuredevopslab&utm_campaign=sc-signup&utm_content=signup-sonarcloud-listing-x-x&utm_term=ww-psp-x) methodology.

@@ -1,5 +1,5 @@
 ---
-title: Managing technical debt with SonarQube and Azure DevOps
+title: Managing technical debt with SonarQube Server and Azure DevOps
 layout: page
 sidebar: vsts2
 permalink: /labs/vstsextend/sonarqube/
@@ -11,7 +11,7 @@ folder: /labs/vstsextend/sonarqube/
 
 Technical debt is the set of problems in a development effort that make forward progress on customer value inefficient. Technical debt saps productivity by making code hard to understand, fragile, time-consuming to change, difficult to validate, and creates unplanned work that blocks progress. Unless they are managed, technical debt can accumulate and hurt the overall quality of the software and the productivity of the development team in the long term
 
-[SonarQube](https://www.sonarqube.org/){:target="_blank"} an open source platform for continuous inspection of code quality to perform automatic reviews with static analysis of code to:
+[SonarQube Server](https://www.sonarsource.com/products/sonarqube/){:target="_blank"} an open source platform for continuous inspection of code quality to perform automatic reviews with static analysis of code to:
 
 - Detect Bugs
 - Code Smells
@@ -20,12 +20,12 @@ Technical debt is the set of problems in a development effort that make forward 
 
 ### What's covered in this lab
 
-In this lab, you will learn how to setup SonarQube on Azure and integrate with Azure DevOps project
+In this lab, you will learn how to setup SonarQube Server on Azure and integrate with Azure DevOps project
 
 - Provision SonarQube server as [Azure Container Instance](https://docs.microsoft.com/en-in/azure/container-instances/) from SonarQube Docker image
-- Setup SonarQube project
-- Provision an Azure DevOps Project and configure CI pipeline to integrate with SonarQube
-- Analyze SonarQube reports
+- Setup SonarQube Server project
+- Provision an Azure DevOps Project and configure CI pipeline to integrate with SonarQube Server
+- Analyze SonarQube Server reports
 
 ### Before you begin
 
@@ -51,7 +51,7 @@ In this lab, you will learn how to setup SonarQube on Azure and integrate with A
     |---------|---------|
     |`--name`     | Name of the container instance.        |
     |`--image`     |  The container image name. Here we are fetching official [SonarQube image](https://hub.docker.com/_/sonarqube) from DockerHub       |
-    |`--ports`     |  The ports to open. The default port for SoanrQube is `9000`. We need to expose this port to access SonarQube.       |
+    |`--ports`     |  The ports to open. The default port for SoanrQube is `9000`. We need to expose this port to access SonarQube Server.       |
     |`--dns-name-label`     |  The dns name label for container with public IP.       |
     |`--cpu`     |  The required number of CPU cores of the containers.       |
     |`--memory`     |  The required memory of the containers in GB       |
@@ -61,25 +61,25 @@ In this lab, you will learn how to setup SonarQube on Azure and integrate with A
      
     ![sonarqubeaci](images/sonarqubeaci.png)
 
-   {% include note.html content= "If you would like to setup the SonarQube server in Azure VM using ARM template follow the instruction [here](sonarqube-arm/)" %}
+   {% include note.html content= "If you would like to setup the SonarQube Server in Azure VM using ARM template follow the instruction [here](sonarqube-arm/)" %}
 
 1. Use the [Azure DevOps Demo Generator](https://azuredevopsdemogenerator.azurewebsites.net/?TemplateId=77364&Name=SonarQube){:target="_blank"} to provision a project on your Azure DevOps Organization.
 
-## Exercise 1: Create a SonarQube Project and configure Quality Gate
+## Exercise 1: Create a SonarQube Server Project and configure Quality Gate
 
-1. Access the **SonarQube** portal providing the DNS name (Or Public IP) suffixed by the port number.
+1. Access the **SonarQube Server** portal providing the DNS name (Or Public IP) suffixed by the port number.
 
-   {% include important.html content= "The default port for SonarQube is 9000. Copy the DNS name from the created Container Instance in Azure Portal as shown and append :9000 at the end. The final **SonarQube** URL will be **http://YOUR_DNS_NAME:9000**" %}
+   {% include important.html content= "The default port for SonarQube Server is 9000. Copy the DNS name from the created Container Instance in Azure Portal as shown and append :9000 at the end. The final **SonarQube Server** URL will be **http://YOUR_DNS_NAME:9000**" %}
 
    ![access_sonar_aci](images/access_sonar_aci.png)
 
-1. Open a browser and login to the SonarQube Portal using the following credentials. 
+1. Open a browser and login to the SonarQube Server Portal using the following credentials. 
 
    >**Username= admin, Password= admin**
 
 
 1. Change the password to a different value. Then you will see a below page.
-![intro_page_sonarqube](images/sonarpage1.png)
+![intro_page_Sonarqube Server](images/sonarpage1.png)
 
  
 
@@ -89,9 +89,9 @@ In this lab, you will learn how to setup SonarQube on Azure and integrate with A
 
 1. Create a project with **Name** and **Key** as **MyShuttle**. Provide **Main branch name** as master. Then click on **Create** 
 
-   - **Name**: Name of the SonarQube project that will be displayed on the web interface.
+   - **Name**: Name of the SonarQube Server project that will be displayed on the web interface.
 
-   - **Key**: The SonarQube project key that is unique for each project.
+   - **Key**: The SonarQube Server project key that is unique for each project.
 
    - **Main branch name**: Name of the major branch of the repository. This in some cases will be *main* and in some cases *master*
 
@@ -119,20 +119,20 @@ In this lab, you will learn how to setup SonarQube on Azure and integrate with A
 
    ![qg-selectproject](images/qg-selectproject.png)
 
-## Exercise 2: Modify the Build to Integrate with SonarQube
+## Exercise 2: Modify the Build to Integrate with SonarQube Server
 
-Now that the SonarQube server is running, we will modify Azure Build pipeline to integrate with SonarQube to analyze the java code provisioned by the Azure DevOps Demo Generator system.
+Now that the SonarQube server is running, we will modify Azure Build pipeline to integrate with SonarQube Server to analyze the java code provisioned by the Azure DevOps Demo Generator system.
 
-1. Go to **pipelines** under **Pipelines** tab, edit the build pipeline **SonarQube**. This is a Java application and we are using [Maven](https://docs.microsoft.com/en-us/azure/devops/pipelines/tasks/build/maven?view=azure-devops) to build the code. And we are using [SonarQube](https://marketplace.visualstudio.com/items?itemName=SonarSource.sonarqube) extension tasks to prepare  analysis on SonarQube and publish Quality Gate results.
+1. Go to **pipelines** under **Pipelines** tab, edit the build pipeline **SonarQube Server**. This is a Java application and we are using [Maven](https://docs.microsoft.com/en-us/azure/devops/pipelines/tasks/build/maven?view=azure-devops) to build the code. And we are using [SonarQube Server](https://marketplace.visualstudio.com/items?itemName=SonarSource.sonarqube) extension tasks to prepare  analysis on SonarQube Server and publish Quality Gate results.
 
 
-   {% include note.html content= "We also have a YAML build pipeline if that's something you're interested in. To proceed through the YAML pipeline, choose **SonarQube-YAML** and click **Edit** to view the YAML pipeline." %}
+   {% include note.html content= "We also have a YAML build pipeline if that's something you're interested in. To proceed through the YAML pipeline, choose **SonarQube Server-YAML** and click **Edit** to view the YAML pipeline." %}
 
 1. **Prepare Analysis Configuration** task is to configure all the required settings before executing the build. Click **+ NEW** to add SonarQube server endpoint. 
     
     ![](images/prepare-analysis.png)
 
-   In the **Add SonarQube service connection** wizard enter the SonarQube server URL and SonarQube security token detials. If you don't have SonarQube security token follow [this](https://docs.sonarqube.org/latest/user-guide/user-token/) to create one. And make sure SonarQube project name and project key are same as you entered while creating SonarQube project in **Exercise 1**. 
+   In the **Add SonarQube Server service connection** wizard, enter the SonarQube server URL and SonarQube Server security token details. If you don't have SonarQube Server security token follow [this](https://docs.sonarsource.com/sonarqube-server/latest/user-guide/managing-tokens/) to create one. And make sure SonarQube Server project name and project key are same as you entered while creating SonarQube Server project in **Exercise 1**. 
    
     ![](images/sonar_endpoint1.png)
 
@@ -146,17 +146,17 @@ Now that the SonarQube server is running, we will modify Azure Build pipeline to
 
    ![build_in_progress](images/build_in_progress.png)
 
-1. You will see that the build has succeeded but the associated  **SonarQube Quality Gate** has **failed**. The  count of bugs is also displayed under **SonarQube Analysis Report**.
+1. You will see that the build has succeeded but the associated  **SonarQube Server Quality Gate** has **failed**. The  count of bugs is also displayed under **SonarQube Server Analysis Report**.
 
    ![build_summary](images/build_summary.png)
 
-1. Click on the **Detailed SonarQube Report** link in the build summary to open the project in SonarQube.
+1. Click on the **Detailed SonarQube Server Report** link in the build summary to open the project in SonarQube Server.
 
    ![analysis_report](images/analysis_report.png)
 
-## Exercise 3: Analyze SonarQube Reports
+## Exercise 3: Analyze SonarQube Server Reports
 
-The link will open the **MyShuttle** project in the SonarQube Dashboard.  Under ***Bugs and Vulnerabilities***, we can see that there are 4 bugs reported.
+The link will open the **MyShuttle** project in the SonarQube Server Dashboard.  Under ***Bugs and Vulnerabilities***, we can see that there are 4 bugs reported.
 
   ![sonar_portal](images/sonar_portal.png)
 
@@ -171,14 +171,14 @@ The link will open the **MyShuttle** project in the SonarQube Dashboard.  Under 
    |**Duplications**|The duplications decoration shows which parts of the source code are duplicated|
    |**Size**|Provides the count of lines of code within the project including the number of statements, Functions, Classes, Files and Directories|
 
-  {% include important.html content= "In this example, along with the bug count, a character **D** is displayed which is known as **Reliability Rating**. **D** indicates that there is **atleast 1 critical bug** in this code. For more information on Reliability Rating, click [here](https://docs.sonarqube.org/display/SONAR/Metric+Definitions#MetricDefinitions-Reliability)" %}
+  {% include important.html content= "In this example, along with the bug count, a character **D** is displayed which is known as **Reliability Rating**. **D** indicates that there is **atleast 1 critical bug** in this code. For more information on Reliability Rating, click [here](https://docs.sonarsource.com/sonarqube-server/latest/user-guide/code-metrics/metrics-definition/)" %}
 
 1. Click on the **Bugs** count to see the details of the bug.
 
    ![bug_details](images/bug_details.png)
 
-With Azure DevOps and SonarQube, the capability is to not only show the health of an application but also to highlight newer issues. With a Quality Gate in place, you can fix the leak and therefore improve code quality systematically. 
+With Azure DevOps and SonarQube Server, the capability is to not only show the health of an application but also to highlight newer issues. With a Quality Gate in place, you can fix the leak and therefore improve code quality systematically. 
 
 ## Summary
 
-With SonarQube direct integration with Azure Pipeline, you learnt how to have a quality management tool to ensure that your code is up to standards. You can embed automated testing in your CI/CD pipleine to automate the measurement of your technical debt including code semantics, testing coverage, vulnerabilities. etc.
+With SonarQube Server direct integration with Azure Pipeline, you learnt how to have a quality management tool to ensure that your code is up to standards. You can embed automated testing in your CI/CD pipleine to automate the measurement of your technical debt including code semantics, testing coverage, vulnerabilities. etc.
