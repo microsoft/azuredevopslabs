@@ -21,6 +21,8 @@ In this lab, you will learn about the agile planning and portfolio management to
 <a name="Prerequisites"></a>
 ### Prerequisites ###
 
+- Clone and build <a href="../buildapp/">Azure DevOps Demo Generator</a>
+
 - This lab requires you to complete task 1 from the <a href="../prereq/">prerequisite</a> instructions. (No cloning needed for this lab, skip Task 2)
 
 <a name="Exercise1"></a>

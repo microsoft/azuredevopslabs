@@ -24,6 +24,8 @@ In this lab, you will learn about the release management features available in A
 
 - An Azure account (free from [https://azure.com/free](https://azure.com/free)).
 
+- Clone and build <a href="../buildapp/">Azure DevOps Demo Generator</a>
+
 - Complete task 1 from the <a href="../prereq/">prerequisite</a>  instructions.
 
 <a name="Exercise1"></a>

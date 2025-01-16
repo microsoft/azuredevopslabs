@@ -23,6 +23,8 @@ In this lab, you will learn how to configure continuous integration (CI) and con
 <a name="Prerequisites"></a>
 ### Prerequisites ###
 
+- Clone and build <a href="../buildapp/">Azure DevOps Demo Generator</a>
+
 - This lab requires you to complete task 1 from the <a href="../prereq/">prerequisite</a> instructions.
 
 <a name="Exercise1"></a>
