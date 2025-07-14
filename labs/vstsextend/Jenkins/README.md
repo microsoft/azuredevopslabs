@@ -37,7 +37,7 @@ This lab covers both the approaches and the following tasks will be performed
 
 1. **Microsoft Azure Account**: You will need a valid and active Azure account for the Azure labs. If you do not have one, you can sign up for a [free trial](https://azure.microsoft.com/en-us/free/){:target="_blank"}
     
-1. <a href="http://www.putty.org/" target="_blank"> Putty</a> a free SSH and Telnet client
+1. <a href="https://www.chiark.greenend.org.uk/~sgtatham/putty/" target="_blank">Putty</a> a free SSH and Telnet client
 
 1. Set up your Azure DevOps project using the **MyShuttle** template in the <a href="https://azuredevopsdemogenerator.azurewebsites.net/?TemplateId=77371&Name=MyShuttle" target="_blank">Azure DevOps Demo Generator</a>. We will use a Java web app that connects to a MySQL backend.
 
